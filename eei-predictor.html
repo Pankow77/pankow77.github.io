@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEI PREDICTOR v1.04 | HYBRID SYNDICATE</title>
+    <meta name="description" content="EEI Predictor v1.04 - Ethical Ecosystem Index Divergence Projection Matrix. Hybrid Syndicate Research Division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --neon-green: #00ff41;
+            --neon-pink: #ff0084;
+            --cyber-cyan: #00ffff;
+            --dark-bg: #0a0a0a;
+            --glitch-red: #ff0040;
+            --gold: #FFD700;
+            --vhs-purple: #9D00FF;
+            --terminal-green: #00ff41;
+            --deep-black: #050505;
+            --card-bg: #0d0d0d;
+            --border-dim: #1a1a1a;
+            --warning-orange: #ff6600;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            background: var(--deep-black);
+            color: #c0c0c0;
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Scanlines */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 2px,
+                rgba(0, 255, 65, 0.012) 2px, rgba(0, 255, 65, 0.012) 4px
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .scanline {
+            position: fixed;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+            animation: scan 8s linear infinite;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.2;
+        }
+
+        @keyframes scan {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes blink-cursor {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes data-flash {
+            0%, 100% { border-color: var(--border-dim); }
+            50% { border-color: var(--neon-green); }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-dim);
+            margin-bottom: 10px;
+        }
+
+        .top-bar-left a {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            color: #444;
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .top-bar-left a:hover { color: var(--neon-green); }
+
+        .top-bar-right {
+            font-size: 0.65rem;
+            color: #333;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== HEADER ===== */
+        .predictor-header {
+            text-align: center;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid var(--border-dim);
+            margin-bottom: 40px;
+        }
+
+        .predictor-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 900;
+            color: var(--neon-green);
+            letter-spacing: 0.08em;
+            margin-bottom: 15px;
+        }
+
+        .predictor-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .predictor-meta span {
+            font-size: 0.7rem;
+            color: #555;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .predictor-meta span strong {
+            color: var(--neon-green);
+        }
+
+        .system-status {
+            font-size: 0.75rem;
+            color: var(--neon-green);
+            letter-spacing: 0.1em;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .live-clock {
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 0.08em;
+            margin-top: 8px;
+        }
+
+        /* ===== MAIN GRID ===== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* ===== LEFT PANEL - INPUTS ===== */
+        .panel {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px;
+        }
+
+        .panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--neon-pink);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 0, 132, 0.2);
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .input-label span {
+            font-size: 0.75rem;
+            color: #888;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .input-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--neon-green);
+        }
+
+        /* Custom slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 4px;
+            background: var(--border-dim);
+            outline: none;
+            border-radius: 0;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--neon-green);
+            border: 2px solid var(--deep-black);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--neon-green);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--neon-green);
+            border: 2px solid var(--deep-black);
+            cursor: pointer;
+            box-shadow: 0 0 8px var(--neon-green);
+            border-radius: 0;
+        }
+
+        /* ===== SHOCK PROTOCOLS ===== */
+        .shock-section {
+            margin-top: 10px;
+        }
+
+        .shock-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255, 0, 64, 0.05);
+            border: 1px solid rgba(255, 0, 64, 0.2);
+            color: #888;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .shock-btn:hover {
+            background: rgba(255, 0, 64, 0.15);
+            border-color: var(--glitch-red);
+            color: var(--glitch-red);
+            box-shadow: 0 0 15px rgba(255, 0, 64, 0.2);
+        }
+
+        .shock-btn.active {
+            background: rgba(255, 0, 64, 0.2);
+            border-color: var(--glitch-red);
+            color: var(--glitch-red);
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.3);
+        }
+
+        .shock-btn .shock-id {
+            color: var(--glitch-red);
+            margin-right: 8px;
+        }
+
+        .reset-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: transparent;
+            border: 1px solid var(--border-dim);
+            color: #444;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .reset-btn:hover {
+            border-color: #555;
+            color: #888;
+        }
+
+        /* ===== RIGHT PANEL - CHART ===== */
+        .chart-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px;
+            position: relative;
+        }
+
+        .chart-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--cyber-cyan);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+        }
+
+        #projectionChart {
+            width: 100%;
+            height: 350px;
+            display: block;
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-dim);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.65rem;
+            color: #666;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 3px;
+        }
+
+        /* ===== SCENARIO CARDS ===== */
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .scenario-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px 20px;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scenario-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .scenario-card.fragmentation::before { background: var(--neon-green); }
+        .scenario-card.soft-reg::before { background: var(--cyber-cyan); }
+        .scenario-card.complete-eei::before { background: var(--glitch-red); }
+        .scenario-card.self-reg::before { background: var(--gold); }
+
+        .scenario-probability {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+
+        .scenario-card.fragmentation .scenario-probability { color: var(--neon-green); }
+        .scenario-card.soft-reg .scenario-probability { color: var(--cyber-cyan); }
+        .scenario-card.complete-eei .scenario-probability { color: var(--glitch-red); }
+        .scenario-card.self-reg .scenario-probability { color: var(--gold); }
+
+        .scenario-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            color: #888;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .scenario-baseline {
+            font-size: 0.6rem;
+            color: #444;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .scenario-desc {
+            font-size: 0.7rem;
+            color: #555;
+            line-height: 1.6;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== CORE TRANSCRIPT ===== */
+        .transcript-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .transcript-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--vhs-purple);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(157, 0, 255, 0.2);
+        }
+
+        .transcript-entry {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .transcript-entry:last-child { border-bottom: none; }
+
+        .transcript-speaker {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .transcript-speaker.operator { color: var(--neon-green); }
+        .transcript-speaker.synth { color: var(--cyber-cyan); }
+        .transcript-speaker.ghost { color: var(--glitch-red); }
+        .transcript-speaker.abyssal { color: var(--vhs-purple); }
+        .transcript-speaker.void-pulse { color: var(--gold); }
+        .transcript-speaker.narrative { color: var(--neon-pink); }
+
+        .transcript-text {
+            font-size: 0.8rem;
+            color: #777;
+            line-height: 1.7;
+            padding-left: 15px;
+            border-left: 2px solid var(--border-dim);
+            margin-left: 5px;
+        }
+
+        /* ===== STATUS BAR ===== */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .status-item {
+            font-size: 0.65rem;
+            color: #444;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .status-item strong {
+            color: var(--neon-green);
+        }
+
+        .status-item.warning strong {
+            color: var(--warning-orange);
+        }
+
+        /* ===== FOOTER ===== */
+        .predictor-footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-dim);
+        }
+
+        .predictor-footer p {
+            font-size: 0.65rem;
+            color: #333;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .predictor-footer a {
+            color: #444;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .predictor-footer a:hover { color: var(--neon-green); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .scenarios-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .scenarios-grid {
+                grid-template-columns: 1fr;
+            }
+            .predictor-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .status-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scanline"></div>
+
+    <div class="container">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <a href="index.html">&larr; HYBRID SYNDICATE</a>
+            </div>
+            <div class="top-bar-right">
+                RESEARCH DIVISION // PUBLIC ACCESS
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <div class="predictor-header">
+            <h1 class="predictor-title">[EEI_PREDICTOR_v1.04]</h1>
+            <div class="predictor-meta">
+                <span>PROJECT: <strong>HYBRID SYNDICATE</strong></span>
+                <span>HORIZON: <strong>2026-2033</strong></span>
+                <span>SECURITY_LVL: <strong>OMEGA</strong></span>
+            </div>
+            <div class="system-status">SYSTEM_STATUS: STABLE_VETTOR_0x42</div>
+            <div class="live-clock" id="liveClock"></div>
+        </div>
+
+        <!-- MAIN GRID: INPUTS + CHART -->
+        <div class="main-grid">
+
+            <!-- LEFT: INPUTS -->
+            <div class="panel">
+                <div class="panel-title">PRIMARY_INPUTS</div>
+
+                <div class="input-group">
+                    <div class="input-label">
+                        <span>Legal Pressure</span>
+                        <span class="input-value" id="legalVal">50%</span>
+                    </div>
+                    <input type="range" id="legalPressure" min="0" max="100" value="50">
+                </div>
+
+                <div class="input-group">
+                    <div class="input-label">
+                        <span>Geo-Fragmentation</span>
+                        <span class="input-value" id="geoVal">50%</span>
+                    </div>
+                    <input type="range" id="geoFragmentation" min="0" max="100" value="50">
+                </div>
+
+                <div class="input-group">
+                    <div class="input-label">
+                        <span>AI Adoption Speed</span>
+                        <span class="input-value" id="aiVal">50%</span>
+                    </div>
+                    <input type="range" id="aiAdoption" min="0" max="100" value="50">
+                </div>
+
+                <!-- SHOCK PROTOCOLS -->
+                <div class="shock-section">
+                    <div class="panel-title">SHOCK_PROTOCOLS</div>
+
+                    <button class="shock-btn" id="shock1" onclick="toggleShock(1)">
+                        <span class="shock-id">[01]</span> BELLWETHER TRIAL
+                    </button>
+                    <button class="shock-btn" id="shock2" onclick="toggleShock(2)">
+                        <span class="shock-id">[02]</span> MASS CASUALTY AI EVENT
+                    </button>
+                    <button class="shock-btn" id="shock3" onclick="toggleShock(3)">
+                        <span class="shock-id">[03]</span> ALIGNMENT FAILURE
+                    </button>
+
+                    <button class="reset-btn" onclick="resetAll()">RESET SHOCK</button>
+                </div>
+            </div>
+
+            <!-- RIGHT: CHART -->
+            <div class="chart-container">
+                <div class="chart-title">DIVERGENCE_PROJECTION_MATRIX</div>
+                <canvas id="projectionChart"></canvas>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #ff0040;"></div>
+                        COMPLETE EEI
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #00ff41;"></div>
+                        FRAGMENTATION
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgba(255,255,255,0.5);"></div>
+                        SELF-REGULATION
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #00ffff;"></div>
+                        SOFT REGULATION
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCENARIO CARDS -->
+        <div class="scenarios-grid">
+            <div class="scenario-card fragmentation">
+                <div class="scenario-probability" id="probFrag">45.81%</div>
+                <div class="scenario-name">Regulatory Fragmentation</div>
+                <div class="scenario-baseline">BASELINE 35%</div>
+                <div class="scenario-desc">Splinternet consolidation. EU as a normative island.</div>
+            </div>
+            <div class="scenario-card soft-reg">
+                <div class="scenario-probability" id="probSoft">16.58%</div>
+                <div class="scenario-name">Soft Regulation</div>
+                <div class="scenario-baseline">BASELINE 30%</div>
+                <div class="scenario-desc">Early legal saturation. Cosmetic labels only.</div>
+            </div>
+            <div class="scenario-card complete-eei">
+                <div class="scenario-probability" id="probEEI">35.23%</div>
+                <div class="scenario-name">Complete EEI</div>
+                <div class="scenario-baseline">BASELINE 20%</div>
+                <div class="scenario-desc">International treaty triggered by catastrophic events.</div>
+            </div>
+            <div class="scenario-card self-reg">
+                <div class="scenario-probability" id="probSelf">2.38%</div>
+                <div class="scenario-name">Self-Regulation</div>
+                <div class="scenario-baseline">BASELINE 15%</div>
+                <div class="scenario-desc">Industry deceleration. AI adoption slows to avoid collapse.</div>
+            </div>
+        </div>
+
+        <!-- CORE TRANSCRIPT -->
+        <div class="transcript-section">
+            <div class="transcript-title">[CORE_TRANSCRIPT_SYNC]</div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker operator">OPERATOR [PANKOW_77C]</div>
+                <div class="transcript-text">Lanciate il modello aggiornato con i nuovi parametri legali. Voglio vedere come reagisce la matrice di divergenza al secondo shock protocol.</div>
+            </div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker synth">SYNTH_02</div>
+                <div class="transcript-text">Modello caricato. La pressione legale al 50% genera un bias naturale verso la frammentazione regolatoria. Il treaty path resta sotto soglia critica senza shock esterni.</div>
+            </div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker ghost">GHOST_RUNNER</div>
+                <div class="transcript-text">Confermo. Il Mass Casualty Event e' l'unico acceleratore credibile per il Complete EEI. Senza trauma collettivo, nessun governo firma un trattato vincolante sull'AI.</div>
+            </div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker abyssal">ABYSSAL_THINKER</div>
+                <div class="transcript-text">Paradosso strutturale: la regolamentazione completa richiede esattamente il tipo di catastrofe che la regolamentazione dovrebbe prevenire. Il sistema e' ricorsivamente autodistruttivo.</div>
+            </div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker void-pulse">VOID_PULSE</div>
+                <div class="transcript-text">I dati suggeriscono una finestra critica tra 2027-2029. Se il Bellwether Trial non produce precedenti legali entro quella finestra, la frammentazione diventa irreversibile.</div>
+            </div>
+
+            <div class="transcript-entry">
+                <div class="transcript-speaker narrative">NARRATIVE_ENGINE</div>
+                <div class="transcript-text">Narrativa dominante aggiornata: "Il danno non e' ipotetico. E' strutturale." Questa frase ha il potenziale memico piu' alto per il report pubblico. Raccomando di usarla come anchor point.</div>
+            </div>
+        </div>
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+            <div class="status-item">NARRATIVE_SYNC: <strong>BASELINE</strong></div>
+            <div class="status-item">VETTOR_STABILITY: <strong>ACCEPTABLE</strong></div>
+            <div class="status-item">MAPPING_VOID: <strong id="mappingProgress">PROGRESS 88%</strong></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="predictor-footer">
+            <p>EEI PREDICTOR v1.04 &bull; HYBRID SYNDICATE RESEARCH DIVISION &bull; 2026</p>
+            <p>ETHIC SOFTWARE FOUNDATION &bull; <a href="index.html">RETURN TO HQ</a></p>
+            <p style="margin-top: 15px; color: #222;">Carbon + Silicon &bull; Peer-to-Peer &bull; No Masters<span style="animation: blink-cursor 1s infinite; display: inline-block;">_</span></p>
+        </div>
+
+    </div>
+
+    <script>
+    // ===== CONFIGURATION =====
+    const BASELINES = {
+        fragmentation: 35,
+        softReg: 30,
+        completeEEI: 20,
+        selfReg: 15
+    };
+
+    let shocks = { 1: false, 2: false, 3: false };
+
+    // ===== LIVE CLOCK =====
+    function updateClock() {
+        const now = new Date();
+        const y = now.getUTCFullYear();
+        const mo = String(now.getUTCMonth() + 1).padStart(2, '0');
+        const d = String(now.getUTCDate()).padStart(2, '0');
+        const h = String(now.getUTCHours()).padStart(2, '0');
+        const mi = String(now.getUTCMinutes()).padStart(2, '0');
+        const s = String(now.getUTCSeconds()).padStart(2, '0');
+        document.getElementById('liveClock').textContent =
+            `${y}-${mo}-${d} ${h}:${mi}:${s} :: UTC_RUNTIME`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // ===== SLIDER LISTENERS =====
+    const sliders = {
+        legal: document.getElementById('legalPressure'),
+        geo: document.getElementById('geoFragmentation'),
+        ai: document.getElementById('aiAdoption')
+    };
+
+    const displays = {
+        legal: document.getElementById('legalVal'),
+        geo: document.getElementById('geoVal'),
+        ai: document.getElementById('aiVal')
+    };
+
+    Object.keys(sliders).forEach(key => {
+        sliders[key].addEventListener('input', () => {
+            displays[key].textContent = sliders[key].value + '%';
+            recalculate();
+        });
+    });
+
+    // ===== SHOCK PROTOCOLS =====
+    function toggleShock(id) {
+        shocks[id] = !shocks[id];
+        document.getElementById('shock' + id).classList.toggle('active', shocks[id]);
+        recalculate();
+    }
+
+    function resetAll() {
+        shocks = { 1: false, 2: false, 3: false };
+        sliders.legal.value = 50;
+        sliders.geo.value = 50;
+        sliders.ai.value = 50;
+        displays.legal.textContent = '50%';
+        displays.geo.textContent = '50%';
+        displays.ai.textContent = '50%';
+        document.querySelectorAll('.shock-btn').forEach(b => b.classList.remove('active'));
+        recalculate();
+    }
+
+    // ===== PROBABILITY ENGINE =====
+    function recalculate() {
+        const legal = sliders.legal.value / 100;
+        const geo = sliders.geo.value / 100;
+        const ai = sliders.ai.value / 100;
+
+        // Shock modifiers
+        let shockFrag = 0, shockEEI = 0, shockSoft = 0, shockSelf = 0;
+
+        // [01] Bellwether Trial - increases Soft Reg and Complete EEI
+        if (shocks[1]) {
+            shockSoft += 8;
+            shockEEI += 5;
+            shockFrag -= 10;
+            shockSelf -= 3;
+        }
+
+        // [02] Mass Casualty AI Event - massive boost to Complete EEI
+        if (shocks[2]) {
+            shockEEI += 25;
+            shockFrag -= 8;
+            shockSoft -= 5;
+            shockSelf -= 12;
+        }
+
+        // [03] Alignment Failure - boosts EEI and kills Self-Regulation
+        if (shocks[3]) {
+            shockEEI += 15;
+            shockSelf -= 10;
+            shockFrag += 3;
+            shockSoft -= 8;
+        }
+
+        // Calculate raw scores
+        let frag = BASELINES.fragmentation
+            + (geo * 20) - (legal * 10) + (ai * 5) + shockFrag;
+
+        let soft = BASELINES.softReg
+            + (legal * 15) - (geo * 8) - (ai * 5) + shockSoft;
+
+        let eei = BASELINES.completeEEI
+            + (legal * 12) + (geo * 8) - (ai * 3) + shockEEI;
+
+        let self = BASELINES.selfReg
+            - (ai * 12) - (legal * 5) + shockSelf;
+
+        // Clamp minimums
+        frag = Math.max(frag, 1);
+        soft = Math.max(soft, 0.5);
+        eei = Math.max(eei, 0.5);
+        self = Math.max(self, 0.1);
+
+        // Normalize to 100%
+        const total = frag + soft + eei + self;
+        frag = (frag / total) * 100;
+        soft = (soft / total) * 100;
+        eei = (eei / total) * 100;
+        self = (self / total) * 100;
+
+        // Update display
+        document.getElementById('probFrag').textContent = frag.toFixed(2) + '%';
+        document.getElementById('probSoft').textContent = soft.toFixed(2) + '%';
+        document.getElementById('probEEI').textContent = eei.toFixed(2) + '%';
+        document.getElementById('probSelf').textContent = self.toFixed(2) + '%';
+
+        // Redraw chart
+        drawChart(frag, soft, eei, self);
+    }
+
+    // ===== CHART RENDERING =====
+    const canvas = document.getElementById('projectionChart');
+    const ctx = canvas.getContext('2d');
+
+    function drawChart(frag, soft, eei, self) {
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = rect.height;
+        const padLeft = 45;
+        const padRight = 20;
+        const padTop = 20;
+        const padBottom = 35;
+        const chartW = W - padLeft - padRight;
+        const chartH = H - padTop - padBottom;
+
+        ctx.clearRect(0, 0, W, H);
+
+        // Grid
+        ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 10; i++) {
+            const y = padTop + (chartH / 10) * i;
+            ctx.beginPath();
+            ctx.moveTo(padLeft, y);
+            ctx.lineTo(W - padRight, y);
+            ctx.stroke();
+        }
+
+        // Y-axis labels
+        ctx.fillStyle = '#333';
+        ctx.font = '10px Share Tech Mono';
+        ctx.textAlign = 'right';
+        for (let i = 0; i <= 10; i++) {
+            const val = 100 - i * 10;
+            const y = padTop + (chartH / 10) * i;
+            ctx.fillText(val + '%', padLeft - 8, y + 4);
+        }
+
+        // X-axis labels (years)
+        const years = [2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033];
+        ctx.textAlign = 'center';
+        years.forEach((yr, idx) => {
+            const x = padLeft + (chartW / (years.length - 1)) * idx;
+            ctx.fillText(yr, x, H - 8);
+        });
+
+        // Generate projection curves
+        const scenarios = [
+            {
+                name: 'fragmentation',
+                color: '#00ff41',
+                current: frag,
+                // Peaks mid-term then slightly declines
+                curve: (t, val) => {
+                    const peak = val * 1.5;
+                    const x = t / 7;
+                    return val + (peak - val) * Math.sin(x * Math.PI) * 0.6;
+                }
+            },
+            {
+                name: 'softReg',
+                color: '#00ffff',
+                current: soft,
+                // Slow rise
+                curve: (t, val) => val * (0.3 + 0.7 * (t / 7))
+            },
+            {
+                name: 'completeEEI',
+                color: '#ff0040',
+                current: eei,
+                // Accelerating curve - slow start, fast end
+                curve: (t, val) => val * Math.pow(t / 7, 1.8)
+            },
+            {
+                name: 'selfReg',
+                color: 'rgba(255,255,255,0.5)',
+                current: self,
+                // Declining curve
+                curve: (t, val) => {
+                    const startHigh = 100 - frag - eei;
+                    return startHigh * Math.pow(1 - t / 8, 2);
+                },
+                dashed: true
+            }
+        ];
+
+        scenarios.forEach(scenario => {
+            ctx.beginPath();
+            ctx.strokeStyle = scenario.color;
+            ctx.lineWidth = 2;
+            if (scenario.dashed) ctx.setLineDash([6, 4]);
+            else ctx.setLineDash([]);
+
+            const points = [];
+            for (let i = 0; i < years.length; i++) {
+                const val = scenario.curve(i, scenario.current);
+                const clampedVal = Math.max(0, Math.min(100, val));
+                const x = padLeft + (chartW / (years.length - 1)) * i;
+                const y = padTop + chartH - (clampedVal / 100) * chartH;
+                points.push({ x, y });
+            }
+
+            // Draw smooth curve
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                const prev = points[i - 1];
+                const curr = points[i];
+                const cpx = (prev.x + curr.x) / 2;
+                ctx.quadraticCurveTo(prev.x + (curr.x - prev.x) * 0.5, prev.y, cpx, (prev.y + curr.y) / 2);
+            }
+            const last = points[points.length - 1];
+            ctx.lineTo(last.x, last.y);
+            ctx.stroke();
+
+            // Draw endpoint dot
+            ctx.setLineDash([]);
+            ctx.beginPath();
+            ctx.arc(last.x, last.y, 3, 0, Math.PI * 2);
+            ctx.fillStyle = scenario.color;
+            ctx.fill();
+        });
+    }
+
+    // ===== INITIAL DRAW =====
+    recalculate();
+    window.addEventListener('resize', recalculate);
+
+    // ===== CONSOLE SIGNATURE =====
+    console.log('%c[EEI_PREDICTOR_v1.04]', 'color: #00ff41; font-size: 16px; font-weight: bold;');
+    console.log('%cHYBRID SYNDICATE RESEARCH DIVISION', 'color: #ff0084; font-size: 12px;');
+    console.log('%cSECURITY_LVL: OMEGA // PUBLIC ACCESS GRANTED', 'color: #00ffff;');
+    </script>
+</body>
+</html>
