@@ -555,6 +555,267 @@
                 align-items: flex-start;
             }
         }
+
+        /* ===== PROTOTYPE BADGE ===== */
+        .prototype-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,191,0,0.08);
+            border: 1px solid rgba(255,191,0,0.3);
+            color: #ffbf00;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.12em;
+            padding: 6px 14px;
+            margin-top: 12px;
+            text-transform: uppercase;
+        }
+
+        .prototype-badge .badge-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: #ffbf00;
+            border-radius: 50%;
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* ===== MONTE CARLO SECTION ===== */
+        .mc-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .mc-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--warning-orange);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 102, 0, 0.2);
+        }
+
+        .mc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .mc-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-dim);
+            padding: 18px 14px;
+            text-align: center;
+        }
+
+        .mc-card .mc-card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: #666;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .mc-mean {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .mc-ci {
+            font-size: 0.65rem;
+            color: #555;
+            letter-spacing: 0.05em;
+        }
+
+        .mc-runs {
+            font-size: 0.6rem;
+            color: #444;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-dim);
+        }
+
+        /* ===== SENSITIVITY ANALYSIS SECTION ===== */
+        .sens-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .sens-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--cyber-cyan);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+        }
+
+        .sens-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 70px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        .sens-row .sens-label {
+            font-size: 0.65rem;
+            color: #666;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .sens-bar-container {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-dim);
+            position: relative;
+        }
+
+        .sens-bar {
+            height: 100%;
+            transition: width 0.5s ease;
+        }
+
+        .sens-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-align: right;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== METHODOLOGY SECTION ===== */
+        .methodology-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dim);
+            margin-bottom: 30px;
+        }
+
+        .methodology-toggle {
+            display: block;
+            width: 100%;
+            padding: 18px 25px;
+            background: transparent;
+            border: none;
+            color: #888;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: left;
+            transition: color 0.3s;
+        }
+
+        .methodology-toggle:hover {
+            color: var(--neon-green);
+        }
+
+        .methodology-content {
+            display: none;
+            padding: 0 25px 25px;
+            color: #666;
+            font-size: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .methodology-content.open {
+            display: block;
+        }
+
+        .methodology-content h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            color: var(--neon-green);
+            letter-spacing: 0.12em;
+            margin: 20px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .methodology-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .methodology-content p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .methodology-content pre {
+            background: rgba(0, 255, 65, 0.03);
+            border: 1px solid rgba(0, 255, 65, 0.1);
+            padding: 15px;
+            font-size: 0.65rem;
+            color: #888;
+            line-height: 1.8;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        /* ===== EXPORT SECTION ===== */
+        .export-section {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .export-btn {
+            padding: 12px 24px;
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            color: var(--neon-green);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .export-btn:hover {
+            background: rgba(0, 255, 65, 0.15);
+            border-color: var(--neon-green);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+        }
+
+        /* ===== RESPONSIVE: MC & SENS ===== */
+        @media (max-width: 900px) {
+            .mc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .sens-row {
+                grid-template-columns: 100px 1fr 60px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .mc-grid {
+                grid-template-columns: 1fr;
+            }
+            .sens-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+            .sens-value {
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
@@ -589,6 +850,7 @@
                 <span>SECURITY_LVL: <strong>OMEGA</strong></span>
             </div>
             <div class="system-status">SYSTEM_STATUS: STABLE_VETTOR_0x42</div>
+            <div class="prototype-badge"><span class="badge-dot"></span>PROTOTYPE v1.04 — COMPUTATION ENGINE: ACTIVE — DATA LAYER: LOCAL ONLY</div>
             <div class="live-clock" id="liveClock"></div>
         </div>
 
@@ -694,6 +956,51 @@
             </div>
         </div>
 
+        <!-- MONTE CARLO ANALYSIS -->
+        <div class="mc-section">
+            <div class="mc-title">MONTE_CARLO_ANALYSIS [N=500]</div>
+            <div class="mc-grid" id="mcGrid">
+                <!-- 4 cards: one per scenario with mean, 95% CI -->
+            </div>
+            <div class="mc-runs" id="mcStatus">LAST RUN: INITIALIZING...</div>
+        </div>
+
+        <!-- SENSITIVITY ANALYSIS -->
+        <div class="sens-section">
+            <div class="sens-title">SENSITIVITY_ANALYSIS</div>
+            <div id="sensContainer">
+                <!-- Rows for each parameter showing impact bars -->
+            </div>
+        </div>
+
+        <!-- METHODOLOGY PANEL -->
+        <div class="methodology-section">
+            <button class="methodology-toggle" onclick="toggleMethodology()">
+                METHODOLOGY &amp; COMPUTATION TRANSPARENCY <span id="methArrow">&#9656;</span>
+            </button>
+            <div class="methodology-content" id="methodologyContent">
+                <h4>MODEL ARCHITECTURE</h4>
+                <p>EEI Predictor uses a weighted parametric model with Monte Carlo uncertainty quantification.</p>
+                <h4>BASE PROBABILITY ENGINE</h4>
+                <pre>
+P(scenario) = BASELINE + &Sigma;(weight_i &times; input_i) + &Sigma;(shock_modifier_j)
+
+BASELINES: Fragmentation=35%, Soft Regulation=30%, Complete EEI=20%, Self-Regulation=15%
+
+Legal Pressure:  Frag -10, Soft +15, EEI +12, Self -5
+Geo-Fragment:    Frag +20, Soft -8,  EEI +8,  Self  0
+AI Speed:        Frag +5,  Soft -5,  EEI -3,  Self -12
+
+Normalization: P_final(i) = P_raw(i) / &Sigma; P_raw(all) &times; 100%</pre>
+                <h4>MONTE CARLO UNCERTAINTY (N=500)</h4>
+                <p>Each simulation run adds Gaussian noise (&sigma;=5%) to all input parameters. After 500 runs, we compute the mean and 95% confidence interval (&plusmn;1.96&sigma;) for each scenario probability. This shows how sensitive the model is to input uncertainty.</p>
+                <h4>SENSITIVITY ANALYSIS</h4>
+                <p>Each input parameter is swept from 0&rarr;100% while others are held constant. The resulting probability range for each scenario quantifies that parameter's influence. Higher range = higher sensitivity.</p>
+                <h4>LIMITATIONS</h4>
+                <p>This is a parametric estimation model, not a causal simulation. It captures directional relationships between inputs and scenarios based on geopolitical analysis, but does not model feedback loops, non-linear phase transitions, or emergent phenomena. Treat outputs as structured scenario exploration, not prediction.</p>
+            </div>
+        </div>
+
         <!-- CORE TRANSCRIPT -->
         <div class="transcript-section">
             <div class="transcript-title">[CORE_TRANSCRIPT_SYNC]</div>
@@ -734,6 +1041,12 @@
             <div class="status-item">NARRATIVE_SYNC: <strong>BASELINE</strong></div>
             <div class="status-item">VETTOR_STABILITY: <strong>ACCEPTABLE</strong></div>
             <div class="status-item">MAPPING_VOID: <strong id="mappingProgress">PROGRESS 88%</strong></div>
+        </div>
+
+        <!-- EXPORT -->
+        <div class="export-section">
+            <button class="export-btn" onclick="exportResults()">EXPORT RESULTS [JSON]</button>
+            <button class="export-btn" onclick="saveState()">SAVE STATE</button>
         </div>
 
         <!-- FOOTER -->
@@ -879,6 +1192,22 @@
 
         // Redraw chart
         drawChart(frag, soft, eei, self);
+
+        // Trigger Monte Carlo and sensitivity updates (debounced)
+        clearTimeout(window._mcTimer);
+        window._mcTimer = setTimeout(() => {
+            updateMonteCarlo();
+            calculateSensitivity();
+        }, 300);
+
+        // Auto-save to localStorage
+        localStorage.setItem('eei_predictor_state', JSON.stringify({
+            legal: sliders.legal.value,
+            geo: sliders.geo.value,
+            ai: sliders.ai.value,
+            shocks: { ...shocks },
+            timestamp: new Date().toISOString()
+        }));
     }
 
     // ===== CHART RENDERING =====
@@ -1009,9 +1338,249 @@
         });
     }
 
+    // ===== MONTE CARLO SIMULATION =====
+    function gaussianNoise(mean, sigma) {
+        let u = 0, v = 0;
+        while(u === 0) u = Math.random();
+        while(v === 0) v = Math.random();
+        return mean + sigma * Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
+    }
+
+    function runMonteCarlo(n) {
+        const legal = sliders.legal.value / 100;
+        const geo = sliders.geo.value / 100;
+        const ai = sliders.ai.value / 100;
+        const sigma = 0.05;
+
+        const results = { frag: [], soft: [], eei: [], self: [] };
+
+        for (let iter = 0; iter < n; iter++) {
+            const lNoise = Math.max(0, Math.min(1, gaussianNoise(legal, sigma)));
+            const gNoise = Math.max(0, Math.min(1, gaussianNoise(geo, sigma)));
+            const aNoise = Math.max(0, Math.min(1, gaussianNoise(ai, sigma)));
+
+            let shockFrag = 0, shockEEI = 0, shockSoft = 0, shockSelf = 0;
+            if (shocks[1]) { shockSoft += 8; shockEEI += 5; shockFrag -= 10; shockSelf -= 3; }
+            if (shocks[2]) { shockEEI += 25; shockFrag -= 8; shockSoft -= 5; shockSelf -= 12; }
+            if (shocks[3]) { shockEEI += 15; shockSelf -= 10; shockFrag += 3; shockSoft -= 8; }
+
+            let f = Math.max(1, BASELINES.fragmentation + (gNoise * 20) - (lNoise * 10) + (aNoise * 5) + shockFrag);
+            let s = Math.max(0.5, BASELINES.softReg + (lNoise * 15) - (gNoise * 8) - (aNoise * 5) + shockSoft);
+            let e = Math.max(0.5, BASELINES.completeEEI + (lNoise * 12) + (gNoise * 8) - (aNoise * 3) + shockEEI);
+            let r = Math.max(0.1, BASELINES.selfReg - (aNoise * 12) - (lNoise * 5) + shockSelf);
+
+            const total = f + s + e + r;
+            results.frag.push((f / total) * 100);
+            results.soft.push((s / total) * 100);
+            results.eei.push((e / total) * 100);
+            results.self.push((r / total) * 100);
+        }
+
+        return results;
+    }
+
+    function calcStats(arr) {
+        const mean = arr.reduce((a, b) => a + b, 0) / arr.length;
+        const variance = arr.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / arr.length;
+        const std = Math.sqrt(variance);
+        const sorted = [...arr].sort((a, b) => a - b);
+        return {
+            mean: mean,
+            std: std,
+            ci95Low: sorted[Math.floor(arr.length * 0.025)],
+            ci95High: sorted[Math.floor(arr.length * 0.975)],
+            min: sorted[0],
+            max: sorted[sorted.length - 1]
+        };
+    }
+
+    function updateMonteCarlo() {
+        const mc = runMonteCarlo(500);
+        const stats = {
+            frag: calcStats(mc.frag),
+            soft: calcStats(mc.soft),
+            eei: calcStats(mc.eei),
+            self: calcStats(mc.self)
+        };
+
+        const scenarios = [
+            { key: 'frag', name: 'FRAGMENTATION', color: '#00ff41' },
+            { key: 'soft', name: 'SOFT REGULATION', color: '#00ffff' },
+            { key: 'eei', name: 'COMPLETE EEI', color: '#ff0040' },
+            { key: 'self', name: 'SELF-REGULATION', color: 'rgba(255,255,255,0.7)' }
+        ];
+
+        const grid = document.getElementById('mcGrid');
+        grid.innerHTML = scenarios.map(sc => {
+            const s = stats[sc.key];
+            return '<div class="mc-card">' +
+                '<div class="mc-card-title">' + sc.name + '</div>' +
+                '<div class="mc-mean" style="color:' + sc.color + '">' + s.mean.toFixed(1) + '%</div>' +
+                '<div class="mc-ci">95% CI: [' + s.ci95Low.toFixed(1) + '% — ' + s.ci95High.toFixed(1) + '%]</div>' +
+                '<div class="mc-ci" style="margin-top:4px">\u03C3 = ' + s.std.toFixed(2) + '</div>' +
+            '</div>';
+        }).join('');
+
+        document.getElementById('mcStatus').textContent = 'LAST RUN: ' + new Date().toISOString().slice(0,19) + ' UTC // N=500 // \u03C3_input=0.05';
+
+        window._mcStats = stats;
+    }
+
+    // ===== SENSITIVITY ANALYSIS =====
+    function calculateSensitivity() {
+        const params = [
+            { name: 'Legal Pressure', key: 'legal' },
+            { name: 'Geo-Fragmentation', key: 'geo' },
+            { name: 'AI Adoption Speed', key: 'ai' }
+        ];
+        const scenarioKeys = ['frag', 'soft', 'eei', 'self'];
+        const scenarioNames = ['Fragmentation', 'Soft Regulation', 'Complete EEI', 'Self-Regulation'];
+        const scenarioColors = ['#00ff41', '#00ffff', '#ff0040', 'rgba(255,215,0,0.8)'];
+
+        const container = document.getElementById('sensContainer');
+        container.innerHTML = '';
+
+        params.forEach(param => {
+            const ranges = { frag: [], soft: [], eei: [], self: [] };
+
+            for (let v = 0; v <= 100; v += 5) {
+                const testLegal = (param.key === 'legal' ? v : sliders.legal.value) / 100;
+                const testGeo = (param.key === 'geo' ? v : sliders.geo.value) / 100;
+                const testAi = (param.key === 'ai' ? v : sliders.ai.value) / 100;
+
+                let shockFrag = 0, shockEEI = 0, shockSoft = 0, shockSelf = 0;
+                if (shocks[1]) { shockSoft += 8; shockEEI += 5; shockFrag -= 10; shockSelf -= 3; }
+                if (shocks[2]) { shockEEI += 25; shockFrag -= 8; shockSoft -= 5; shockSelf -= 12; }
+                if (shocks[3]) { shockEEI += 15; shockSelf -= 10; shockFrag += 3; shockSoft -= 8; }
+
+                let f = Math.max(1, BASELINES.fragmentation + (testGeo*20) - (testLegal*10) + (testAi*5) + shockFrag);
+                let s = Math.max(0.5, BASELINES.softReg + (testLegal*15) - (testGeo*8) - (testAi*5) + shockSoft);
+                let e = Math.max(0.5, BASELINES.completeEEI + (testLegal*12) + (testGeo*8) - (testAi*3) + shockEEI);
+                let r = Math.max(0.1, BASELINES.selfReg - (testAi*12) - (testLegal*5) + shockSelf);
+                const total = f + s + e + r;
+
+                ranges.frag.push((f/total)*100);
+                ranges.soft.push((s/total)*100);
+                ranges.eei.push((e/total)*100);
+                ranges.self.push((r/total)*100);
+            }
+
+            const paramHeader = document.createElement('div');
+            paramHeader.style.cssText = 'font-family:Orbitron,monospace;font-size:0.6rem;color:#888;letter-spacing:0.1em;margin:15px 0 8px;text-transform:uppercase;';
+            paramHeader.textContent = param.name;
+            container.appendChild(paramHeader);
+
+            scenarioKeys.forEach((sk, idx) => {
+                const arr = ranges[sk];
+                const range = Math.max(...arr) - Math.min(...arr);
+                const maxRange = 60;
+                const pct = Math.min(100, (range / maxRange) * 100);
+
+                const row = document.createElement('div');
+                row.className = 'sens-row';
+                row.innerHTML = '<div class="sens-label">' + scenarioNames[idx] + '</div>' +
+                    '<div class="sens-bar-container"><div class="sens-bar" style="width:' + pct + '%;background:' + scenarioColors[idx] + ';"></div></div>' +
+                    '<div class="sens-value" style="color:' + scenarioColors[idx] + '">\u00B1' + (range/2).toFixed(1) + '%</div>';
+                container.appendChild(row);
+            });
+        });
+    }
+
+    // ===== METHODOLOGY TOGGLE =====
+    function toggleMethodology() {
+        const content = document.getElementById('methodologyContent');
+        const arrow = document.getElementById('methArrow');
+        content.classList.toggle('open');
+        arrow.textContent = content.classList.contains('open') ? '\u25BE' : '\u25B8';
+    }
+
+    // ===== LOCAL STORAGE =====
+    function saveState() {
+        const state = {
+            legal: sliders.legal.value,
+            geo: sliders.geo.value,
+            ai: sliders.ai.value,
+            shocks: { ...shocks },
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('eei_predictor_state', JSON.stringify(state));
+        const btn = event.target;
+        btn.textContent = 'STATE SAVED \u2713';
+        setTimeout(() => { btn.textContent = 'SAVE STATE'; }, 2000);
+    }
+
+    function restoreState() {
+        const saved = localStorage.getItem('eei_predictor_state');
+        if (!saved) return false;
+        try {
+            const state = JSON.parse(saved);
+            sliders.legal.value = state.legal;
+            sliders.geo.value = state.geo;
+            sliders.ai.value = state.ai;
+            displays.legal.textContent = state.legal + '%';
+            displays.geo.textContent = state.geo + '%';
+            displays.ai.textContent = state.ai + '%';
+            if (state.shocks) {
+                Object.keys(state.shocks).forEach(k => {
+                    shocks[k] = state.shocks[k];
+                    document.getElementById('shock' + k).classList.toggle('active', shocks[k]);
+                });
+            }
+            return true;
+        } catch(e) { return false; }
+    }
+
+    // ===== EXPORT =====
+    function exportResults() {
+        const results = {
+            tool: 'EEI_PREDICTOR_v1.04',
+            timestamp: new Date().toISOString(),
+            inputs: {
+                legalPressure: parseInt(sliders.legal.value),
+                geoFragmentation: parseInt(sliders.geo.value),
+                aiAdoptionSpeed: parseInt(sliders.ai.value),
+                shockProtocols: {
+                    bellwetherTrial: shocks[1],
+                    massCasualtyAIEvent: shocks[2],
+                    alignmentFailure: shocks[3]
+                }
+            },
+            scenarioProbabilities: {
+                fragmentation: parseFloat(document.getElementById('probFrag').textContent),
+                softRegulation: parseFloat(document.getElementById('probSoft').textContent),
+                completeEEI: parseFloat(document.getElementById('probEEI').textContent),
+                selfRegulation: parseFloat(document.getElementById('probSelf').textContent)
+            },
+            monteCarlo: window._mcStats ? {
+                iterations: 500,
+                inputSigma: 0.05,
+                fragmentation: window._mcStats.frag,
+                softRegulation: window._mcStats.soft,
+                completeEEI: window._mcStats.eei,
+                selfRegulation: window._mcStats.self
+            } : null,
+            methodology: 'Weighted parametric model with Monte Carlo uncertainty quantification. See METHODOLOGY panel for details.',
+            disclaimer: 'PROTOTYPE v1.04 - Parametric estimation model, not causal simulation. Outputs represent structured scenario exploration.'
+        };
+
+        const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'eei-predictor-results-' + new Date().toISOString().slice(0,10) + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+    }
+
     // ===== INITIAL DRAW =====
+    const restored = restoreState();
     recalculate();
+    updateMonteCarlo();
+    calculateSensitivity();
     window.addEventListener('resize', recalculate);
+    if (restored) {
+        console.log('%c[EEI] State restored from localStorage', 'color: #ffbf00;');
+    }
 
     // ===== CONSOLE SIGNATURE =====
     console.log('%c[EEI_PREDICTOR_v1.04]', 'color: #00ff41; font-size: 16px; font-weight: bold;');

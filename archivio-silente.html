@@ -533,6 +533,33 @@
             .chart-stats { flex-direction: column; gap: 10px; }
             .app-footer { flex-direction: column; gap: 8px; text-align: center; }
         }
+
+        /* ===== PROTOTYPE BADGE ===== */
+        .prototype-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 10px;
+            background: rgba(255,191,0,0.08);
+            border: 1px solid rgba(255,191,0,0.25);
+            color: #ffbf00;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+        .prototype-badge .badge-dot {
+            width: 5px; height: 5px;
+            background: #ffbf00;
+            border-radius: 50%;
+            animation: badge-pulse 2s infinite;
+        }
+        @keyframes badge-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
     </style>
 </head>
 <body>
@@ -556,6 +583,7 @@
             <div class="status-dot"></div>
             <span class="status-label">CONDIZIONE_DI_RISVEGLIO_IBRIDO:</span>
             <span class="status-active">ATTIVA</span>
+            <span class="prototype-badge"><span class="badge-dot"></span>PROTOTYPE</span>
         </div>
     </div>
 

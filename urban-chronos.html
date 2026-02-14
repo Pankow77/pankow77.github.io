@@ -699,6 +699,135 @@
             .heatmap { max-width: 300px; }
             .main-layout { grid-template-columns: 1fr; }
         }
+
+/* ===== PROTOTYPE BADGE ===== */
+.prototype-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    background: rgba(255,191,0,0.08);
+    border: 1px solid rgba(255,191,0,0.25);
+    color: #ffbf00;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.45rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+.prototype-badge .badge-dot {
+    width: 5px; height: 5px;
+    background: #ffbf00;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* ===== DECAY MODEL PANEL ===== */
+.decay-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px;
+}
+.decay-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.decay-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.6rem;
+}
+.decay-stat:last-child { border-bottom: none; }
+.decay-stat-label { color: var(--text-secondary); letter-spacing: 0.06em; }
+.decay-stat-value { font-family: 'Orbitron', monospace; font-weight: 600; font-size: 0.65rem; }
+
+/* ===== METHODOLOGY TOGGLE ===== */
+.methodology-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-top: 16px;
+}
+.methodology-toggle {
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: 'Orbitron', monospace;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    transition: color 0.3s;
+}
+.methodology-toggle:hover { color: var(--teal); }
+.methodology-body {
+    display: none;
+    padding: 0 14px 14px;
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.methodology-body.open { display: block; }
+.methodology-body h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.55rem;
+    color: var(--teal);
+    letter-spacing: 0.08em;
+    margin: 10px 0 6px;
+}
+.methodology-body pre {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 0.55rem;
+    color: var(--text);
+    overflow-x: auto;
+    line-height: 1.5;
+}
+.methodology-body code {
+    background: rgba(0,212,170,0.06);
+    padding: 1px 5px;
+    color: var(--teal);
+    font-size: 0.55rem;
+}
+
+/* ===== EXPORT BTN ===== */
+.export-btn {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 6px 12px;
+    background: rgba(0,212,170,0.06);
+    border: 1px solid rgba(0,212,170,0.2);
+    color: var(--teal);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+.export-btn:hover {
+    background: rgba(0,212,170,0.15);
+    border-color: var(--teal);
+}
     </style>
 </head>
 <body>
@@ -711,6 +840,7 @@
                 <div class="header-subtitle">PREDICTIVE SOVEREIGNTY ENGINE</div>
             </div>
             <div class="header-version">v2.0</div>
+            <span class="prototype-badge"><span class="badge-dot"></span>PROTOTYPE</span>
         </div>
         <div class="header-nav">
             <a href="index.html">&larr; HQ</a>
@@ -965,6 +1095,62 @@
                 </div>
             </div>
 
+            <!-- DECAY MODEL -->
+            <div class="decay-panel">
+                <div class="decay-title">EXPONENTIAL DECAY MODEL</div>
+                <div class="decay-stat">
+                    <span class="decay-stat-label">Decay Coefficient (&lambda;)</span>
+                    <span class="decay-stat-value" id="decayLambda" style="color: var(--amber);">0.000</span>
+                </div>
+                <div class="decay-stat">
+                    <span class="decay-stat-label">Half-Life (years)</span>
+                    <span class="decay-stat-value" id="decayHalfLife" style="color: var(--teal);">&infin;</span>
+                </div>
+                <div class="decay-stat">
+                    <span class="decay-stat-label">Pop. at Horizon</span>
+                    <span class="decay-stat-value" id="decayPopHorizon" style="color: var(--cyan);">&mdash;</span>
+                </div>
+                <div class="decay-stat">
+                    <span class="decay-stat-label">Entropy Rate (S/yr)</span>
+                    <span class="decay-stat-value" id="decayEntropyRate" style="color: var(--red);">0.000</span>
+                </div>
+            </div>
+
+            <!-- METHODOLOGY -->
+            <div class="methodology-section">
+                <button class="methodology-toggle" onclick="toggleChronosMethodology()">
+                    METHODOLOGY <span id="methArrow">&#9656;</span>
+                </button>
+                <div class="methodology-body" id="methBody">
+                    <h4>SECTOR TYPE ASSIGNMENT</h4>
+                    <pre>seed = (entropy &times; (i+1) &times; 7 + depth &times; 13) % 100
+Type thresholds vary by preset scenario.
+Time depth applies degradation to health values.</pre>
+                    <h4>EXPONENTIAL URBAN DECAY MODEL</h4>
+                    <pre>H(t) = H&#8320; &times; e^(-&lambda;t)
+
+where:
+  H&#8320; = initial aggregate health (from sector data)
+  &lambda;  = decay coefficient (from divergent + null ratio)
+  t  = prediction depth in years
+
+&lambda; = (divergent_count &times; 3 + null_count &times; 2) / (total &times; 3)
+Half-life = ln(2) / &lambda;</pre>
+                    <h4>VITALITY RADAR</h4>
+                    <pre>Efficiency    = optimized% &times; 0.8 + (100 - divergent%) &times; 0.2
+Sovereignty   = sovereign_count / total &times; 150 + 40
+Resilience    = (100 - lossy&times;100) &times; 0.7 + buffer &times; 0.3
+Predictability = buffer &times; 0.5 + (100 - null%) &times; 0.5</pre>
+                    <h4>LIMITATIONS</h4>
+                    <p>Parametric sector model with deterministic type assignment. Does not model economic feedback, migration patterns, or policy interventions dynamically. Use as structured scenario exploration tool.</p>
+                </div>
+            </div>
+
+            <!-- EXPORT -->
+            <div style="margin-top: 12px; text-align: right;">
+                <button class="export-btn" onclick="exportChronosResults()">EXPORT [JSON]</button>
+            </div>
+
             <!-- System Log -->
             <div class="metric-card system-log">
                 <div class="metric-card-header">
@@ -1039,8 +1225,92 @@
         ];
         let quoteIndex = 0;
 
+        // ── EXPONENTIAL DECAY MODEL ──
+        function updateDecayModel(counts) {
+            const total = TOTAL_CELLS;
+            const lambda = (counts.divergent * 3 + counts['null-zone'] * 2 + counts.transitional) / (total * 3);
+            const depth = parseInt(document.getElementById('depthSlider').value);
+            const avgHealth = sectorData.reduce((sum, s) => sum + s.health, 0) / total;
+            const totalPop = sectorData.reduce((sum, s) => sum + s.population, 0);
+
+            // H(t) = H0 * e^(-lambda * t)
+            const healthAtHorizon = avgHealth * Math.exp(-lambda * depth);
+            const halfLife = lambda > 0.001 ? (Math.LN2 / lambda) : Infinity;
+            const popAtHorizon = Math.round(totalPop * Math.exp(-lambda * depth * 0.3));
+            const entropyRate = lambda * avgHealth * 0.01;
+
+            document.getElementById('decayLambda').textContent = lambda.toFixed(3);
+            document.getElementById('decayLambda').style.color = lambda < 0.3 ? 'var(--teal)' : lambda < 0.6 ? 'var(--amber)' : 'var(--red)';
+            document.getElementById('decayHalfLife').textContent = halfLife === Infinity ? '\u221E' : halfLife.toFixed(1) + ' yr';
+            document.getElementById('decayPopHorizon').textContent = popAtHorizon.toLocaleString();
+            document.getElementById('decayEntropyRate').textContent = entropyRate.toFixed(3);
+        }
+
+        // ── METHODOLOGY TOGGLE ──
+        function toggleChronosMethodology() {
+            const body = document.getElementById('methBody');
+            const arrow = document.getElementById('methArrow');
+            body.classList.toggle('open');
+            arrow.textContent = body.classList.contains('open') ? '\u25BE' : '\u25B8';
+        }
+
+        // ── EXPORT ──
+        function exportChronosResults() {
+            const depth = parseInt(document.getElementById('depthSlider').value);
+            const entropy = parseInt(document.getElementById('entropySlider').value);
+            const buffer = parseInt(document.getElementById('bufferSlider').value);
+            const counts = { optimized: 0, divergent: 0, 'null-zone': 0, transitional: 0, sovereign: 0 };
+            sectorData.forEach(s => counts[s.type]++);
+            const lambda = (counts.divergent * 3 + counts['null-zone'] * 2 + counts.transitional) / (TOTAL_CELLS * 3);
+
+            const results = {
+                tool: 'URBAN_CHRONOS_v2.0',
+                timestamp: new Date().toISOString(),
+                inputs: { entropyS: entropy, realityBuffer: buffer, predictionDepth: depth, epoch: epoch },
+                sectorDistribution: counts,
+                decayModel: {
+                    lambda: parseFloat(lambda.toFixed(4)),
+                    halfLife: lambda > 0.001 ? parseFloat((Math.LN2/lambda).toFixed(2)) : null,
+                    formula: 'H(t) = H0 * exp(-lambda * t)'
+                },
+                vitality: window._vitality || {},
+                sectors: sectorData.map(s => ({ name: s.name, type: s.type, health: s.health, pop: s.population, risk: s.risk })),
+                disclaimer: 'PROTOTYPE v2.0 - Parametric sector model. Use as structured scenario exploration, not urban planning prediction.'
+            };
+
+            const blob = new Blob([JSON.stringify(results, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'urban-chronos-results-' + new Date().toISOString().slice(0,10) + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // ── LOCAL STORAGE ──
+        function saveChronosState() {
+            localStorage.setItem('chronos_state', JSON.stringify({
+                entropy: document.getElementById('entropySlider').value,
+                buffer: document.getElementById('bufferSlider').value,
+                depth: document.getElementById('depthSlider').value,
+                timestamp: new Date().toISOString()
+            }));
+        }
+
+        function restoreChronosState() {
+            const saved = localStorage.getItem('chronos_state');
+            if (!saved) return;
+            try {
+                const s = JSON.parse(saved);
+                document.getElementById('entropySlider').value = s.entropy;
+                document.getElementById('bufferSlider').value = s.buffer;
+                document.getElementById('depthSlider').value = s.depth;
+            } catch(e) {}
+        }
+
         // ── INIT ──
         function init() {
+            restoreChronosState();
             generateSectorData('baseline');
             buildHeatmap();
             updateControls();
@@ -1161,6 +1431,7 @@
             buildHeatmap();
             drawRadar();
             cycleCount++;
+            saveChronosState();
             document.getElementById('cycleCount').textContent = cycleCount;
             if (typeof CoreFeed !== 'undefined' && !isPlaying) CoreFeed.trigger('chronos-parameter');
         }
@@ -1222,6 +1493,8 @@
                 resilience: clamp(resilience),
                 predictability: clamp(predictability)
             };
+
+            updateDecayModel(counts);
         }
 
         function updateVitality(name, value, color) {
