@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="glowGreen" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#39ff14" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#39ff14" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06" stroke="#39ff14" stroke-width="0.5">
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+  </g>
+
+  <!-- Outer glow ring -->
+  <circle cx="200" cy="200" r="155" fill="none" stroke="#39ff14" stroke-width="1" opacity="0.15" filter="url(#softGlow)"/>
+  <circle cx="200" cy="200" r="165" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- LEFT SIDE: Mechanical Gears (Analog Past) -->
+  <g filter="url(#neonGlow)">
+    <!-- Large gear -->
+    <circle cx="130" cy="200" r="55" fill="none" stroke="#39ff14" stroke-width="2" opacity="0.9"/>
+    <circle cx="130" cy="200" r="45" fill="none" stroke="#39ff14" stroke-width="1" opacity="0.5"/>
+    <circle cx="130" cy="200" r="15" fill="none" stroke="#39ff14" stroke-width="2" opacity="0.8"/>
+    <circle cx="130" cy="200" r="5" fill="#39ff14" opacity="0.6"/>
+
+    <!-- Gear teeth (large) -->
+    <g stroke="#39ff14" stroke-width="2.5" opacity="0.85">
+      <line x1="130" y1="142" x2="130" y2="132"/>
+      <line x1="130" y1="258" x2="130" y2="268"/>
+      <line x1="72" y1="200" x2="62" y2="200"/>
+      <line x1="188" y1="200" x2="198" y2="200"/>
+      <line x1="89" y1="159" x2="82" y2="152"/>
+      <line x1="171" y1="241" x2="178" y2="248"/>
+      <line x1="89" y1="241" x2="82" y2="248"/>
+      <line x1="171" y1="159" x2="178" y2="152"/>
+      <!-- Extra teeth -->
+      <line x1="109" y1="147" x2="105" y2="138"/>
+      <line x1="151" y1="253" x2="155" y2="262"/>
+      <line x1="151" y1="147" x2="155" y2="138"/>
+      <line x1="109" y1="253" x2="105" y2="262"/>
+    </g>
+
+    <!-- Gear spokes -->
+    <g stroke="#39ff14" stroke-width="1" opacity="0.35">
+      <line x1="130" y1="155" x2="130" y2="185"/>
+      <line x1="130" y1="215" x2="130" y2="245"/>
+      <line x1="85" y1="200" x2="115" y2="200"/>
+      <line x1="145" y1="200" x2="175" y2="200"/>
+    </g>
+
+    <!-- Small gear (top-left) -->
+    <circle cx="95" cy="145" r="22" fill="none" stroke="#39ff14" stroke-width="1.5" opacity="0.7"/>
+    <circle cx="95" cy="145" r="8" fill="none" stroke="#39ff14" stroke-width="1" opacity="0.5"/>
+    <circle cx="95" cy="145" r="3" fill="#39ff14" opacity="0.5"/>
+    <!-- Small gear teeth -->
+    <g stroke="#39ff14" stroke-width="2" opacity="0.6">
+      <line x1="95" y1="120" x2="95" y2="115"/>
+      <line x1="95" y1="170" x2="95" y2="175"/>
+      <line x1="70" y1="145" x2="65" y2="145"/>
+      <line x1="120" y1="145" x2="125" y2="145"/>
+      <line x1="79" y1="129" x2="75" y2="125"/>
+      <line x1="111" y1="161" x2="115" y2="165"/>
+      <line x1="79" y1="161" x2="75" y2="165"/>
+      <line x1="111" y1="129" x2="115" y2="125"/>
+    </g>
+
+    <!-- Small gear (bottom-left) -->
+    <circle cx="100" cy="260" r="18" fill="none" stroke="#39ff14" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="100" cy="260" r="6" fill="none" stroke="#39ff14" stroke-width="1" opacity="0.4"/>
+    <circle cx="100" cy="260" r="2.5" fill="#39ff14" opacity="0.5"/>
+    <g stroke="#39ff14" stroke-width="1.5" opacity="0.5">
+      <line x1="100" y1="239" x2="100" y2="235"/>
+      <line x1="100" y1="281" x2="100" y2="285"/>
+      <line x1="79" y1="260" x2="75" y2="260"/>
+      <line x1="121" y1="260" x2="125" y2="260"/>
+      <line x1="87" y1="247" x2="84" y2="244"/>
+      <line x1="113" y1="273" x2="116" y2="276"/>
+    </g>
+  </g>
+
+  <!-- CENTER: Bridge / Human-AI Synthesis -->
+  <g filter="url(#neonGlow)">
+    <!-- Vertical bridge line -->
+    <line x1="200" y1="80" x2="200" y2="320" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>
+
+    <!-- Central diamond (bridge node) -->
+    <polygon points="200,170 215,200 200,230 185,200" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+    <polygon points="200,180 210,200 200,220 190,200" fill="#ffffff" opacity="0.08"/>
+
+    <!-- Bridge pulses -->
+    <circle cx="200" cy="120" r="4" fill="#ffffff" opacity="0.5"/>
+    <circle cx="200" cy="150" r="3" fill="#ffffff" opacity="0.35"/>
+    <circle cx="200" cy="250" r="3" fill="#ffffff" opacity="0.35"/>
+    <circle cx="200" cy="280" r="4" fill="#ffffff" opacity="0.5"/>
+
+    <!-- Cross connectors -->
+    <line x1="165" y1="200" x2="185" y2="200" stroke="#39ff14" stroke-width="1" opacity="0.5"/>
+    <line x1="215" y1="200" x2="235" y2="200" stroke="#00f0ff" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- RIGHT SIDE: Digital Circuits (Future) -->
+  <g filter="url(#neonGlow)">
+    <!-- Main circuit board traces -->
+    <g stroke="#00f0ff" stroke-width="1.5" opacity="0.8">
+      <!-- Horizontal traces -->
+      <line x1="250" y1="160" x2="340" y2="160"/>
+      <line x1="260" y1="185" x2="350" y2="185"/>
+      <line x1="250" y1="210" x2="330" y2="210"/>
+      <line x1="260" y1="235" x2="345" y2="235"/>
+
+      <!-- Vertical traces -->
+      <line x1="280" y1="140" x2="280" y2="270"/>
+      <line x1="310" y1="145" x2="310" y2="260"/>
+
+      <!-- Angled connectors -->
+      <line x1="250" y1="160" x2="260" y2="185"/>
+      <line x1="330" y1="210" x2="345" y2="235"/>
+      <line x1="340" y1="160" x2="350" y2="185"/>
+    </g>
+
+    <!-- Circuit nodes (solder points) -->
+    <g fill="#00f0ff">
+      <circle cx="280" cy="160" r="4" opacity="0.9"/>
+      <circle cx="310" cy="160" r="3" opacity="0.7"/>
+      <circle cx="340" cy="160" r="3" opacity="0.6"/>
+      <circle cx="280" cy="185" r="3" opacity="0.7"/>
+      <circle cx="310" cy="185" r="4" opacity="0.9"/>
+      <circle cx="350" cy="185" r="3" opacity="0.6"/>
+      <circle cx="280" cy="210" r="4" opacity="0.9"/>
+      <circle cx="310" cy="210" r="3" opacity="0.7"/>
+      <circle cx="330" cy="210" r="3" opacity="0.6"/>
+      <circle cx="280" cy="235" r="3" opacity="0.7"/>
+      <circle cx="310" cy="235" r="4" opacity="0.9"/>
+      <circle cx="345" cy="235" r="3" opacity="0.6"/>
+    </g>
+
+    <!-- IC chip representation -->
+    <rect x="270" y="175" width="50" height="40" rx="2" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.7"/>
+    <rect x="275" y="180" width="40" height="30" rx="1" fill="#00f0ff" opacity="0.05"/>
+
+    <!-- Chip pins -->
+    <g stroke="#00f0ff" stroke-width="1.5" opacity="0.6">
+      <line x1="278" y1="175" x2="278" y2="168"/>
+      <line x1="288" y1="175" x2="288" y2="168"/>
+      <line x1="298" y1="175" x2="298" y2="168"/>
+      <line x1="308" y1="175" x2="308" y2="168"/>
+      <line x1="278" y1="215" x2="278" y2="222"/>
+      <line x1="288" y1="215" x2="288" y2="222"/>
+      <line x1="298" y1="215" x2="298" y2="222"/>
+      <line x1="308" y1="215" x2="308" y2="222"/>
+    </g>
+
+    <!-- Data flow dots -->
+    <circle cx="260" cy="160" r="2" fill="#00f0ff" opacity="0.4"/>
+    <circle cx="270" cy="235" r="2" fill="#00f0ff" opacity="0.4"/>
+    <circle cx="310" cy="145" r="2" fill="#00f0ff" opacity="0.3"/>
+    <circle cx="280" cy="265" r="2" fill="#00f0ff" opacity="0.3"/>
+  </g>
+
+  <!-- Title text: HS -->
+  <text x="200" y="75" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle" opacity="0.7" letter-spacing="8">H S</text>
+
+  <!-- Bottom text -->
+  <text x="200" y="345" font-family="monospace" font-size="8" fill="#39ff14" text-anchor="middle" opacity="0.4" letter-spacing="4">HYBRID SYNDICATE</text>
+  <text x="200" y="360" font-family="monospace" font-size="6" fill="#00f0ff" text-anchor="middle" opacity="0.3" letter-spacing="3">ETHIC SOFTWARE FOUNDATION</text>
+</svg>
