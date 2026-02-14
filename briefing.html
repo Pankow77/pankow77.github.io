@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIEFING | Intelligence Report Generator</title>
+    <meta name="description" content="BRIEFING - Automated Intelligence Reports. Hybrid Syndicate.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #060c18;
+            --bg-card: #0a1222;
+            --border: #12203a;
+            --cyan: #00c8ff;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --orange: #ff8833;
+            --gold: #ffbf00;
+            --green: #00dd66;
+            --pink: #ff0084;
+            --purple: #9d00ff;
+            --text: #c8d6e5;
+            --text2: #6b7fa3;
+            --dim: #3a4f6f;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,200,255,0.005) 3px, rgba(0,200,255,0.005) 6px);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* HEADER */
+        .br-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .br-brand {
+            display: flex; align-items: center; gap: 10px;
+        }
+        .br-icon {
+            width: 24px; height: 24px;
+            border: 2px solid var(--cyan);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 900;
+            color: var(--cyan);
+        }
+        .br-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+        }
+        .br-sub {
+            font-size: 0.5rem;
+            color: var(--dim);
+            letter-spacing: 0.08em;
+        }
+        .br-nav {
+            display: flex; gap: 12px;
+        }
+        .br-nav a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.2s;
+        }
+        .br-nav a:hover { color: var(--cyan); }
+
+        /* CONTROLS */
+        .br-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            background: #050a14;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .br-period-tabs {
+            display: flex; gap: 6px;
+        }
+        .br-period-tab {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            padding: 8px 18px;
+            letter-spacing: 0.1em;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--dim);
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .br-period-tab:hover { border-color: var(--cyan); color: var(--text2); }
+        .br-period-tab.active {
+            border-color: var(--cyan);
+            color: var(--cyan);
+            background: rgba(0,200,255,0.06);
+        }
+        .br-actions { display: flex; gap: 8px; }
+        .br-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text2);
+            cursor: pointer;
+            letter-spacing: 0.06em;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .br-btn:hover { border-color: var(--cyan); color: var(--text); background: rgba(0,200,255,0.04); }
+        .br-btn.primary { border-color: var(--cyan); color: var(--cyan); }
+        .br-btn.export { border-color: rgba(0,212,170,0.4); color: var(--teal); }
+        .br-btn.export:hover { background: rgba(0,212,170,0.06); }
+        .br-btn.print { border-color: rgba(255,191,0,0.3); color: var(--gold); }
+        .br-btn.print:hover { background: rgba(255,191,0,0.04); }
+
+        /* REPORT CONTAINER */
+        .br-report {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 24px 60px;
+        }
+
+        /* REPORT HEADER */
+        .rpt-header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 2px solid var(--cyan);
+            margin-bottom: 30px;
+        }
+        .rpt-classification {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--dim);
+            margin-bottom: 8px;
+        }
+        .rpt-main-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--cyan);
+            letter-spacing: 0.15em;
+            margin-bottom: 6px;
+        }
+        .rpt-period {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text2);
+            letter-spacing: 0.08em;
+        }
+        .rpt-date {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--dim);
+            margin-top: 4px;
+        }
+
+        /* THREAT BANNER */
+        .rpt-threat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 16px;
+            border: 1px solid;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .rpt-threat-level {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+        }
+        .rpt-threat-score {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            opacity: 0.7;
+        }
+        .rpt-threat-detail {
+            font-size: 0.6rem;
+            color: var(--text2);
+        }
+
+        /* SECTION */
+        .rpt-section {
+            margin-bottom: 30px;
+        }
+        .rpt-section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--text2);
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        /* OVERVIEW GRID */
+        .rpt-overview {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .rpt-ov-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+            text-align: center;
+        }
+        .rpt-ov-val {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+        .rpt-ov-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--dim);
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+
+        /* DOMAIN CARD */
+        .rpt-domain {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--cyan);
+        }
+        .rpt-dom-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .rpt-dom-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        .rpt-dom-stats {
+            display: flex; gap: 16px;
+        }
+        .rpt-dom-stat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--dim);
+        }
+        .rpt-dom-stat strong { color: var(--text2); }
+        .rpt-dom-trend {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+        }
+        .rpt-dom-signals {
+            margin-top: 12px;
+        }
+        .rpt-dom-signal {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(18,32,58,0.3);
+            font-size: 0.58rem;
+        }
+        .rpt-dom-signal:last-child { border-bottom: none; }
+        .rpt-dom-sev {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            font-weight: 700;
+            width: 50px;
+            flex-shrink: 0;
+        }
+        .rpt-dom-sig-title {
+            color: var(--text2);
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .rpt-dom-sig-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .rpt-dom-sig-title a:hover { color: var(--text); text-decoration: underline; }
+        .rpt-dom-sig-source {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--dim);
+            flex-shrink: 0;
+        }
+
+        /* PATTERNS */
+        .rpt-pattern {
+            padding: 12px 16px;
+            border-left: 3px solid var(--gold);
+            background: var(--bg-card);
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 8px;
+        }
+        .rpt-pattern-sev {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+        .rpt-pattern-msg {
+            font-size: 0.6rem;
+            color: var(--text2);
+            line-height: 1.5;
+        }
+
+        /* CORRELATIONS */
+        .rpt-corr {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 10px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .rpt-corr-icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .rpt-corr-body { flex: 1; }
+        .rpt-corr-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-bottom: 2px;
+        }
+        .rpt-corr-desc {
+            font-size: 0.55rem;
+            color: var(--dim);
+        }
+        .rpt-corr-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.4rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        /* SOURCES TABLE */
+        .rpt-sources {
+            width: 100%;
+        }
+        .rpt-src-row {
+            display: grid;
+            grid-template-columns: 1fr 60px 60px 80px;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(18,32,58,0.3);
+            align-items: center;
+        }
+        .rpt-src-row:last-child { border-bottom: none; }
+        .rpt-src-name {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text2);
+        }
+        .rpt-src-val {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        .rpt-src-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .rpt-src-bar-fill {
+            height: 100%;
+            background: var(--cyan);
+            border-radius: 2px;
+            opacity: 0.5;
+        }
+        .rpt-src-head {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.4rem;
+            color: var(--dim);
+            letter-spacing: 0.08em;
+            text-align: center;
+        }
+
+        /* FOOTER */
+        .rpt-footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 2px solid var(--border);
+            margin-top: 30px;
+        }
+        .rpt-footer-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--dim);
+            letter-spacing: 0.06em;
+        }
+        .rpt-footer-motto {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            color: var(--dim);
+            letter-spacing: 0.15em;
+            margin-top: 6px;
+            opacity: 0.5;
+        }
+
+        /* EMPTY */
+        .rpt-empty {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .rpt-empty-icon { font-size: 2.5rem; opacity: 0.15; margin-bottom: 16px; }
+        .rpt-empty-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--dim);
+            line-height: 1.8;
+        }
+
+        /* PRINT */
+        @media print {
+            body { background: #fff; color: #000; }
+            body::before { display: none; }
+            .br-header, .br-controls { display: none; }
+            .rpt-header { border-bottom-color: #000; }
+            .rpt-main-title { color: #000; }
+            .br-report { padding: 0; max-width: 100%; }
+            .rpt-domain, .rpt-pattern, .rpt-corr, .rpt-ov-card { background: #f8f8f8; border-color: #ddd; }
+            .rpt-dom-sig-title, .rpt-dom-sig-title a, .rpt-corr-desc, .rpt-pattern-msg { color: #333; }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .rpt-overview { grid-template-columns: repeat(2, 1fr); }
+            .rpt-src-row { grid-template-columns: 1fr 50px 50px; }
+            .rpt-src-row > :last-child { display: none; }
+            .br-controls { flex-direction: column; align-items: stretch; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="br-header">
+        <div class="br-brand">
+            <div class="br-icon">B</div>
+            <div>
+                <div class="br-title">BRIEFING</div>
+                <div class="br-sub">INTELLIGENCE REPORT GENERATOR // v1.0</div>
+            </div>
+        </div>
+        <div class="br-nav">
+            <a href="index.html">&larr; HQ</a>
+            <a href="oracle.html" style="color: #00c8ff;">ORACLE</a>
+            <a href="signal-dashboard.html" style="color: #ffbf00;">DASHBOARD</a>
+            <a href="nerve-center.html" style="color: #ff0084;">NERVE</a>
+            <a href="archivio-silente.html" style="color: #00d4ff;">ARCHIVIO</a>
+        </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="br-controls">
+        <div class="br-period-tabs">
+            <button class="br-period-tab active" data-period="24h" onclick="setPeriod('24h', this)">24 ORE</button>
+            <button class="br-period-tab" data-period="7d" onclick="setPeriod('7d', this)">7 GIORNI</button>
+            <button class="br-period-tab" data-period="30d" onclick="setPeriod('30d', this)">30 GIORNI</button>
+        </div>
+        <div class="br-actions">
+            <button class="br-btn primary" onclick="renderReport()">GENERA BRIEFING</button>
+            <button class="br-btn export" onclick="exportReport()">EXPORT .TXT</button>
+            <button class="br-btn print" onclick="window.print()">STAMPA</button>
+        </div>
+    </div>
+
+    <!-- REPORT -->
+    <div class="br-report" id="brReport"></div>
+
+    <script>
+    let currentPeriod = '24h';
+    let currentBriefing = null;
+
+    function esc(s) {
+        if (!s) return '';
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+    }
+
+    function setPeriod(p, el) {
+        currentPeriod = p;
+        document.querySelectorAll('.br-period-tab').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+        renderReport();
+    }
+
+    function renderReport() {
+        if (typeof BriefingEngine === 'undefined') return;
+
+        const briefing = BriefingEngine.generateBriefing(currentPeriod);
+        currentBriefing = briefing;
+
+        const container = document.getElementById('brReport');
+        const now = new Date(briefing.generatedAt);
+        const dateStr = now.toLocaleDateString('it-IT', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        const timeStr = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+
+        if (briefing.signalCount === 0) {
+            container.innerHTML = `
+                <div class="rpt-empty">
+                    <div class="rpt-empty-icon">&#9776;</div>
+                    <div class="rpt-empty-text">
+                        NESSUN SEGNALE NEL PERIODO SELEZIONATO<br><br>
+                        Archivio totale: ${briefing.totalArchive} segnali<br>
+                        Prova a selezionare un periodo piu ampio,<br>
+                        oppure attendi che il Signal Interceptor raccolga nuovi dati.
+                    </div>
+                </div>
+            `;
+            return;
+        }
+
+        const t = briefing.threatAssessment;
+        const threatBorder = `${t.color}44`;
+        const threatBg = `${t.color}08`;
+
+        let html = '';
+
+        // Report header
+        html += `
+            <div class="rpt-header">
+                <div class="rpt-classification">HYBRID SYNDICATE // ETHIC SOFTWARE FOUNDATION</div>
+                <div class="rpt-main-title">INTELLIGENCE BRIEFING</div>
+                <div class="rpt-period">${briefing.periodLabel}</div>
+                <div class="rpt-date">${dateStr} — ${timeStr} UTC</div>
+            </div>
+        `;
+
+        // Threat banner
+        html += `
+            <div class="rpt-threat" style="border-color: ${threatBorder}; background: ${threatBg};">
+                <div>
+                    <div class="rpt-threat-level" style="color: ${t.color};">THREAT LEVEL: ${t.level}</div>
+                    <div class="rpt-threat-score" style="color: ${t.color};">COMPOSITE SCORE: ${t.score}/100</div>
+                </div>
+                <div class="rpt-threat-detail">${briefing.signalCount} segnali analizzati | ${briefing.totalArchive} in archivio totale</div>
+            </div>
+        `;
+
+        // Overview stats
+        const critical = briefing.topSignals.filter(s => s.severity >= 70).length;
+        const domainCount = briefing.domainAnalyses.length;
+        const avgSev = briefing.signalCount ?
+            Math.round(briefing.domainAnalyses.reduce((s, d) => s + d.avgSeverity * d.count, 0) /
+            briefing.domainAnalyses.reduce((s, d) => s + d.count, 0)) : 0;
+
+        html += `
+            <div class="rpt-overview">
+                <div class="rpt-ov-card">
+                    <div class="rpt-ov-val" style="color: var(--cyan);">${briefing.signalCount}</div>
+                    <div class="rpt-ov-label">SEGNALI</div>
+                </div>
+                <div class="rpt-ov-card">
+                    <div class="rpt-ov-val" style="color: var(--red);">${critical}</div>
+                    <div class="rpt-ov-label">CRITICI (70%+)</div>
+                </div>
+                <div class="rpt-ov-card">
+                    <div class="rpt-ov-val" style="color: var(--gold);">${avgSev}%</div>
+                    <div class="rpt-ov-label">SEVERITY MEDIA</div>
+                </div>
+                <div class="rpt-ov-card">
+                    <div class="rpt-ov-val" style="color: var(--green);">${domainCount}</div>
+                    <div class="rpt-ov-label">DOMINI ATTIVI</div>
+                </div>
+            </div>
+        `;
+
+        // Emerging patterns
+        if (briefing.emergingPatterns.length > 0) {
+            html += `<div class="rpt-section">
+                <div class="rpt-section-title">EMERGING PATTERNS</div>`;
+            briefing.emergingPatterns.forEach(p => {
+                const sevColors = { CRITICAL: '#ff0084', HIGH: '#ff3344', MODERATE: '#ffbf00', LOW: '#00d4aa' };
+                const sc = sevColors[p.severity] || '#666';
+                html += `
+                    <div class="rpt-pattern" style="border-left-color: ${p.color || sc};">
+                        <div class="rpt-pattern-sev" style="color: ${sc};">${p.severity} — ${p.type}</div>
+                        <div class="rpt-pattern-msg">${esc(p.message)}</div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+        }
+
+        // Cross-domain correlations
+        if (briefing.correlations.length > 0) {
+            html += `<div class="rpt-section">
+                <div class="rpt-section-title">CROSS-DOMAIN CORRELATIONS</div>`;
+            briefing.correlations.forEach(c => {
+                const tc = { CRITICAL: '#ff0084', HIGH: '#ff3344', ELEVATED: '#ffbf00', MODERATE: '#00d4aa' };
+                const color = tc[c.threat] || '#666';
+                html += `
+                    <div class="rpt-corr">
+                        <div class="rpt-corr-icon">${c.icon}</div>
+                        <div class="rpt-corr-body">
+                            <div class="rpt-corr-name" style="color: ${c.color};">${c.name}</div>
+                            <div class="rpt-corr-desc">${esc(c.description)}</div>
+                        </div>
+                        <div class="rpt-corr-badge" style="color: ${color}; background: ${color}12; border: 1px solid ${color}33;">${c.threat} ${c.strength}%</div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+        }
+
+        // Domain analysis
+        html += `<div class="rpt-section">
+            <div class="rpt-section-title">DOMAIN ANALYSIS</div>`;
+        briefing.domainAnalyses.forEach(da => {
+            const trendColor = da.trend === 'RISING' ? '#ff3344' : da.trend === 'DECLINING' ? '#00d4aa' : '#ffbf00';
+            const trendBg = `${trendColor}12`;
+            const trendArrow = da.trend === 'RISING' ? '▲' : da.trend === 'DECLINING' ? '▼' : '●';
+
+            html += `
+                <div class="rpt-domain" style="border-left-color: ${da.meta.color};">
+                    <div class="rpt-dom-header">
+                        <div class="rpt-dom-name" style="color: ${da.meta.color};">${da.meta.icon} ${da.domain}</div>
+                        <div class="rpt-dom-stats">
+                            <div class="rpt-dom-stat">SIGNALS: <strong>${da.count}</strong></div>
+                            <div class="rpt-dom-stat">AVG_SEV: <strong>${da.avgSeverity}%</strong></div>
+                            <div class="rpt-dom-stat">MAX: <strong>${da.maxSeverity}%</strong></div>
+                            <span class="rpt-dom-trend" style="color: ${trendColor}; background: ${trendBg};">${trendArrow} ${da.trend} ${da.trendDelta > 0 ? '+' : ''}${da.trendDelta}</span>
+                        </div>
+                    </div>
+                    <div class="rpt-dom-signals">
+                        ${da.topSignals.map(s => {
+                            const sc = s.severity >= 70 ? '#ff3344' : s.severity >= 50 ? '#ff8833' : '#ffbf00';
+                            const titleH = s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
+                            return `
+                                <div class="rpt-dom-signal">
+                                    <span class="rpt-dom-sev" style="color: ${sc};">SEV:${s.severity}%</span>
+                                    <span class="rpt-dom-sig-title">${titleH}</span>
+                                    <span class="rpt-dom-sig-source">${esc(s.source)}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        });
+        html += `</div>`;
+
+        // Sources
+        if (briefing.sources.length > 0) {
+            const maxSrc = briefing.sources[0].count;
+            html += `<div class="rpt-section">
+                <div class="rpt-section-title">SOURCE BREAKDOWN</div>
+                <div class="rpt-sources">
+                    <div class="rpt-src-row">
+                        <span class="rpt-src-head" style="text-align: left;">FONTE</span>
+                        <span class="rpt-src-head">SEGNALI</span>
+                        <span class="rpt-src-head">AVG SEV</span>
+                        <span class="rpt-src-head">VOLUME</span>
+                    </div>
+                    ${briefing.sources.map(s => `
+                        <div class="rpt-src-row">
+                            <span class="rpt-src-name">${esc(s.name)}</span>
+                            <span class="rpt-src-val" style="color: var(--cyan);">${s.count}</span>
+                            <span class="rpt-src-val" style="color: ${s.avgSev >= 60 ? 'var(--red)' : s.avgSev >= 40 ? 'var(--gold)' : 'var(--teal)'};">${s.avgSev}%</span>
+                            <div class="rpt-src-bar"><div class="rpt-src-bar-fill" style="width: ${s.count/maxSrc*100}%;"></div></div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>`;
+        }
+
+        // Footer
+        html += `
+            <div class="rpt-footer">
+                <div class="rpt-footer-text">HYBRID SYNDICATE // ETHIC SOFTWARE FOUNDATION</div>
+                <div class="rpt-footer-text">Report generato: ${dateStr} ${timeStr}</div>
+                <div class="rpt-footer-text">${briefing.signalCount} segnali | ${domainCount} domini | ${briefing.sources.length} fonti</div>
+                <div class="rpt-footer-motto">TRUTH WITHOUT COMPROMISE</div>
+            </div>
+        `;
+
+        container.innerHTML = html;
+    }
+
+    function exportReport() {
+        if (!currentBriefing || typeof BriefingEngine === 'undefined') {
+            renderReport();
+        }
+        if (currentBriefing) {
+            BriefingEngine.downloadReport(currentBriefing);
+        }
+    }
+
+    // INIT
+    function init() {
+        renderReport();
+
+        setTimeout(() => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('ORACLE_CORE', 'Briefing generato. Intelligence report pronto per l\'operatore.');
+            }
+        }, 2000);
+    }
+
+    console.log('%cBRIEFING v1.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+    console.log('%cINTELLIGENCE REPORT GENERATOR', 'color: #ff0084;');
+
+    window.addEventListener('DOMContentLoaded', init);
+    </script>
+<script src="js/core-feed.js"></script>
+<script src="js/persistence-manager.js"></script>
+<script src="js/correlation-engine.js"></script>
+<script src="js/briefing-engine.js"></script>
+<script src="js/signal-interceptor.js"></script>
+</body>
+</html>
