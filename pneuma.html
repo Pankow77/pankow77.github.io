@@ -1106,6 +1106,7 @@ function switchModule(name) {
 
     document.getElementById('module' + name.charAt(0).toUpperCase() + name.slice(1)).classList.add('active');
     document.getElementById('tab' + name.charAt(0).toUpperCase() + name.slice(1)).classList.add('active-' + name);
+    if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('pneuma-' + name);
 }
 
 // ===== DEMETER =====
@@ -1166,6 +1167,7 @@ function toggleNode(id) {
 
     updateUrbanix();
     addInfraLog(`NODE_${id} ${node.active ? 'ACTIVATED' : 'DEACTIVATED'}`);
+    if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('pneuma-urbanix');
 }
 
 function updateUrbanix() {
@@ -1219,6 +1221,7 @@ function commitRecord() {
     document.getElementById('fileName').value = '';
     document.getElementById('fileContent').value = '';
     toggleRecordForm();
+    if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('pneuma-nexus');
 }
 
 function renderArchive(filter) {
@@ -1268,5 +1271,6 @@ console.log('%cPNEUMA', 'color: #39ff14; font-size: 20px; font-weight: bold;');
 console.log('%cLOCAL OPERATIONAL SANCTUARY', 'color: #ffbf00; font-size: 11px;');
 console.log('%cDELTA S < 0 CONFIRMED', 'color: #00d4ff;');
 </script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>

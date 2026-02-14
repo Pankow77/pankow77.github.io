@@ -1162,6 +1162,7 @@
             drawRadar();
             cycleCount++;
             document.getElementById('cycleCount').textContent = cycleCount;
+            if (typeof CoreFeed !== 'undefined' && !isPlaying) CoreFeed.trigger('chronos-parameter');
         }
 
         // ── METRICS ──
@@ -1339,6 +1340,7 @@
                 btn.textContent = '⏸';
                 btn.classList.add('active-play');
                 addLog('success', 'Temporal playback STARTED');
+                if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('chronos-play');
                 playInterval = setInterval(() => {
                     const slider = document.getElementById('depthSlider');
                     let val = parseInt(slider.value) + 1;
@@ -1373,6 +1375,7 @@
             }
 
             addLog('success', 'Preset loaded: ' + name.toUpperCase());
+            if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('chronos-preset');
             updateControls();
         }
 
@@ -1445,5 +1448,6 @@
         // ── INIT ──
         window.addEventListener('DOMContentLoaded', init);
     </script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>
