@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NERVE_CENTER | Live Intelligence Command</title>
+    <meta name="description" content="NERVE_CENTER - Live Intelligence Command Center. Hybrid Syndicate.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #050a14;
+            --bg-card: #0a1222;
+            --bg-card-hover: #0d1830;
+            --border: #12203a;
+            --border-light: #1a2d50;
+            --cyan: #00c8ff;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --green: #00dd66;
+            --purple: #9d00ff;
+            --pink: #ff0084;
+            --gold: #ffbf00;
+            --text-primary: #c8d6e5;
+            --text-secondary: #6b7fa3;
+            --text-dim: #3a4f6f;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,0,132,0.004) 2px, rgba(255,0,132,0.004) 4px);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ═══ HEADER ═══ */
+        .nc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nc-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nc-pulse {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--pink);
+            box-shadow: 0 0 12px rgba(255,0,132,0.6);
+            animation: nc-live 1.5s infinite;
+        }
+        @keyframes nc-live {
+            0%, 100% { opacity: 1; box-shadow: 0 0 12px rgba(255,0,132,0.6); }
+            50% { opacity: 0.4; box-shadow: 0 0 4px rgba(255,0,132,0.2); }
+        }
+        .nc-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--pink);
+            letter-spacing: 0.12em;
+        }
+        .nc-sub {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+        .nc-nav {
+            display: flex;
+            gap: 12px;
+        }
+        .nc-nav a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.2s;
+        }
+        .nc-nav a:hover { color: var(--cyan); }
+
+        /* ═══ STATUS TICKER ═══ */
+        .nc-ticker {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 6px 20px;
+            background: #030710;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+        .nc-tick {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.52rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .nc-tick strong { color: var(--text-secondary); }
+        .nc-tick .vr { color: var(--red); }
+        .nc-tick .vg { color: var(--green); }
+        .nc-tick .vc { color: var(--cyan); }
+        .nc-tick .vp { color: var(--pink); }
+        .nc-tick .vo { color: var(--gold); }
+
+        /* ═══ MAIN LAYOUT ═══ */
+        .nc-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* ═══ LEFT: MAIN AREA ═══ */
+        .nc-main {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        /* ═══ CORRELATION ALERTS BAR ═══ */
+        .nc-corr-bar {
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,0,132,0.02);
+        }
+        .nc-corr-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: var(--pink);
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+        .nc-corr-list {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .nc-corr-list::-webkit-scrollbar { height: 2px; }
+        .nc-corr-list::-webkit-scrollbar-thumb { background: var(--border); }
+
+        .nc-corr-card {
+            flex-shrink: 0;
+            width: 260px;
+            padding: 10px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--pink);
+            border-radius: 2px;
+        }
+        .nc-corr-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.48rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+        .nc-corr-desc {
+            font-size: 0.52rem;
+            color: var(--text-dim);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .nc-corr-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nc-corr-threat {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.4rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+        .nc-corr-strength {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+        }
+        .nc-corr-strength strong { color: var(--pink); }
+        .nc-corr-empty {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            padding: 8px 0;
+        }
+
+        /* ═══ HEATMAP ═══ */
+        .nc-heatmap-section {
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .nc-heatmap-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            margin-bottom: 8px;
+        }
+        .nc-heatmap-grid {
+            display: grid;
+            grid-template-columns: 60px repeat(24, 1fr);
+            gap: 2px;
+            align-items: center;
+        }
+        .nc-hm-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.38rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-align: right;
+            padding-right: 6px;
+        }
+        .nc-hm-cell {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 1px;
+            min-width: 8px;
+            min-height: 8px;
+            transition: all 0.3s;
+        }
+        .nc-hm-cell:hover {
+            transform: scale(1.8);
+            z-index: 2;
+            position: relative;
+        }
+        .nc-hm-hour {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.32rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        /* ═══ LIVE SIGNAL FEED ═══ */
+        .nc-feed-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .nc-feed-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.3);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .nc-feed-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+        }
+        .nc-feed-count {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+        .nc-feed-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+        }
+        .nc-feed-list::-webkit-scrollbar { width: 3px; }
+        .nc-feed-list::-webkit-scrollbar-thumb { background: var(--border); }
+
+        /* ═══ SIGNAL CARD ═══ */
+        .nc-signal {
+            display: grid;
+            grid-template-columns: 8px 90px 1fr 65px 55px 50px;
+            gap: 10px;
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(18,32,58,0.5);
+            align-items: center;
+            transition: background 0.15s;
+            animation: nc-card-in 0.4s ease;
+        }
+        .nc-signal:hover {
+            background: rgba(255,0,132,0.015);
+        }
+        @keyframes nc-card-in {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .nc-sig-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nc-sig-domain {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+        }
+        .nc-sig-title {
+            font-size: 0.58rem;
+            color: var(--text-secondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 1.3;
+        }
+        .nc-sig-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .nc-sig-title a:hover { color: var(--text-primary); text-decoration: underline; }
+        .nc-sig-source {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+        }
+        .nc-sig-sev {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 700;
+            text-align: right;
+        }
+        .nc-sig-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            text-align: right;
+        }
+        .nc-sig-watchlist {
+            background: rgba(255,0,132,0.1);
+            border: 1px solid rgba(255,0,132,0.3);
+        }
+
+        /* ═══ RIGHT SIDEBAR ═══ */
+        .nc-sidebar {
+            background: #040810;
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .nc-side-section {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .nc-side-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ═══ CORRELATION MATRIX ═══ */
+        .nc-matrix {
+            display: grid;
+            grid-template-columns: 50px repeat(6, 1fr);
+            gap: 2px;
+        }
+        .nc-mx-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.34rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.03em;
+        }
+        .nc-mx-cell {
+            aspect-ratio: 1;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.35rem;
+            color: rgba(255,255,255,0.5);
+            transition: transform 0.2s;
+            cursor: default;
+        }
+        .nc-mx-cell:hover { transform: scale(1.15); }
+
+        /* ═══ WATCHLIST ═══ */
+        .nc-wl-input-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .nc-wl-input {
+            flex: 1;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            padding: 6px 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            outline: none;
+            border-radius: 2px;
+        }
+        .nc-wl-input:focus { border-color: var(--pink); }
+        .nc-wl-input::placeholder { color: var(--text-dim); }
+        .nc-wl-btn {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            background: rgba(255,0,132,0.1);
+            border: 1px solid rgba(255,0,132,0.3);
+            color: var(--pink);
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+        .nc-wl-btn:hover { background: rgba(255,0,132,0.2); }
+        .nc-wl-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .nc-wl-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            padding: 3px 10px;
+            background: rgba(255,0,132,0.06);
+            border: 1px solid rgba(255,0,132,0.2);
+            color: var(--pink);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: default;
+        }
+        .nc-wl-tag-x {
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+            font-size: 0.6rem;
+        }
+        .nc-wl-tag-x:hover { opacity: 1; }
+        .nc-wl-empty {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+
+        /* ═══ SEVERITY SPIKE ═══ */
+        .nc-spike {
+            padding: 10px 12px;
+            border-radius: 4px;
+            border: 1px solid;
+        }
+        .nc-spike-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+        .nc-spike-detail {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+        .nc-spike-detail strong { color: var(--text-secondary); }
+
+        /* ═══ CLUSTER ALERTS ═══ */
+        .nc-cluster {
+            padding: 8px 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            margin-bottom: 6px;
+        }
+        .nc-cluster-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        .nc-cluster-count {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        .nc-cluster-domains {
+            display: flex;
+            gap: 4px;
+        }
+        .nc-cluster-pill {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.32rem;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.04em;
+        }
+        .nc-cluster-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+        }
+
+        /* ═══ FOOTER ═══ */
+        .nc-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 20px;
+            background: #030710;
+            border-top: 1px solid var(--border);
+        }
+        .nc-foot-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+        .nc-foot-motto {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            color: var(--pink);
+            letter-spacing: 0.12em;
+            opacity: 0.6;
+        }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 900px) {
+            .nc-layout { grid-template-columns: 1fr; }
+            .nc-sidebar { border-left: none; border-top: 1px solid var(--border); max-height: 400px; }
+            .nc-signal { grid-template-columns: 8px 70px 1fr 50px; }
+            .nc-sig-source, .nc-sig-time { display: none; }
+            .nc-heatmap-grid { grid-template-columns: 50px repeat(12, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="nc-header">
+        <div class="nc-brand">
+            <div class="nc-pulse"></div>
+            <div>
+                <div class="nc-title">NERVE_CENTER</div>
+                <div class="nc-sub">LIVE INTELLIGENCE COMMAND // v1.0</div>
+            </div>
+        </div>
+        <div class="nc-nav">
+            <a href="index.html">&larr; HQ</a>
+            <a href="oracle.html" style="color: #00c8ff;">ORACLE</a>
+            <a href="eei-predictor.html" style="color: #ff0084;">EEI</a>
+            <a href="agora.html" style="color: #39ff14;">AGORA</a>
+            <a href="signal-dashboard.html" style="color: #ffbf00;">DASHBOARD</a>
+            <a href="archivio-silente.html" style="color: #00d4ff;">ARCHIVIO</a>
+        </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="nc-ticker" id="ncTicker"></div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="nc-layout">
+
+        <!-- LEFT: MAIN -->
+        <div class="nc-main">
+
+            <!-- CORRELATION ALERTS -->
+            <div class="nc-corr-bar">
+                <div class="nc-corr-title">CROSS-DOMAIN CORRELATIONS</div>
+                <div class="nc-corr-list" id="ncCorrList"></div>
+            </div>
+
+            <!-- ACTIVITY HEATMAP -->
+            <div class="nc-heatmap-section">
+                <div class="nc-heatmap-title">ACTIVITY HEATMAP // LAST 24H BY DOMAIN</div>
+                <div class="nc-heatmap-grid" id="ncHeatmap"></div>
+            </div>
+
+            <!-- LIVE SIGNAL FEED -->
+            <div class="nc-feed-section">
+                <div class="nc-feed-header">
+                    <span class="nc-feed-title">LIVE SIGNAL FEED</span>
+                    <span class="nc-feed-count" id="ncFeedCount">0 SEGNALI</span>
+                </div>
+                <div class="nc-feed-list" id="ncFeedList"></div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="nc-sidebar">
+
+            <!-- CORRELATION MATRIX -->
+            <div class="nc-side-section">
+                <div class="nc-side-title" style="color: var(--purple);">CORRELATION MATRIX</div>
+                <div class="nc-matrix" id="ncMatrix"></div>
+            </div>
+
+            <!-- SEVERITY SPIKE -->
+            <div class="nc-side-section">
+                <div class="nc-side-title" style="color: var(--red);">SEVERITY TREND</div>
+                <div id="ncSpike"></div>
+            </div>
+
+            <!-- WATCHLIST -->
+            <div class="nc-side-section">
+                <div class="nc-side-title" style="color: var(--pink);">WATCHLIST</div>
+                <div class="nc-wl-input-row">
+                    <input type="text" class="nc-wl-input" id="ncWlInput" placeholder="Keyword da monitorare...">
+                    <button class="nc-wl-btn" onclick="addWatchlistItem()">ADD</button>
+                </div>
+                <div class="nc-wl-tags" id="ncWlTags"></div>
+            </div>
+
+            <!-- TEMPORAL CLUSTERS -->
+            <div class="nc-side-section" style="flex: 1;">
+                <div class="nc-side-title" style="color: var(--gold);">TEMPORAL CLUSTERS</div>
+                <div id="ncClusters"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="nc-footer">
+        <span class="nc-foot-text" id="ncFooter">NERVE_CENTER v1.0 // READY</span>
+        <span class="nc-foot-motto">EVERYTHING IS CONNECTED</span>
+    </div>
+
+    <script>
+    // ═══════════════════════════════════════════════════════════════
+    // NERVE_CENTER — Live Intelligence Command Engine
+    // ═══════════════════════════════════════════════════════════════
+
+    const DOMAIN_CFG = {
+        CLIMATE:     { color: '#00c8ff', icon: '◈', short: 'CLIM' },
+        GEOPOLITICS: { color: '#ff3344', icon: '◆', short: 'GEO' },
+        ECONOMY:     { color: '#00d4aa', icon: '◇', short: 'ECON' },
+        TECHNOLOGY:  { color: '#39ff14', icon: '◉', short: 'TECH' },
+        SOCIAL:      { color: '#ff6633', icon: '◎', short: 'SOC' },
+        ENERGY:      { color: '#ffbf00', icon: '◐', short: 'ENER' },
+    };
+
+    function getArchive() {
+        if (typeof PersistenceManager !== 'undefined') return PersistenceManager.getArchive();
+        try { return JSON.parse(localStorage.getItem('hs_signal_archive') || '[]'); } catch (e) { return []; }
+    }
+
+    function escHtml(s) {
+        if (!s) return '';
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+    }
+
+    // ═════ TICKER ═════
+    function renderTicker() {
+        const archive = getArchive();
+        const now = Date.now();
+        const total = archive.length;
+        const last1h = archive.filter(s => (now - s.time) < 3600000).length;
+        const critical = archive.filter(s => s.severity >= 70).length;
+        const avgSev = total ? Math.round(archive.reduce((a, s) => a + (s.severity || 0), 0) / total) : 0;
+        const domains = Object.keys(DOMAIN_CFG);
+        const domCounts = {};
+        domains.forEach(d => domCounts[d] = 0);
+        archive.forEach(s => { if (domCounts[s.domain] !== undefined) domCounts[s.domain]++; });
+        const topDomain = Object.entries(domCounts).sort((a, b) => b[1] - a[1])[0];
+
+        const analysis = typeof CorrelationEngine !== 'undefined' ? CorrelationEngine.runFullAnalysis() : null;
+        const corrCount = analysis ? analysis.correlations.length : 0;
+
+        document.getElementById('ncTicker').innerHTML = `
+            <div class="nc-tick">ARCHIVIO: <strong class="vo">${total}</strong></div>
+            <div class="nc-tick">LAST_1H: <strong class="vc">${last1h}</strong></div>
+            <div class="nc-tick">CRITICI: <strong class="vr">${critical}</strong></div>
+            <div class="nc-tick">AVG_SEV: <strong>${avgSev}%</strong></div>
+            <div class="nc-tick">TOP_DOMAIN: <strong class="vp">${topDomain ? topDomain[0] : '—'}</strong></div>
+            <div class="nc-tick">CORRELAZIONI: <strong class="vr">${corrCount}</strong></div>
+            <div class="nc-tick">WATCHLIST: <strong class="vp">${typeof CorrelationEngine !== 'undefined' ? CorrelationEngine.getWatchlist().length : 0}</strong></div>
+            <div class="nc-tick">UTC: <strong class="vg">${new Date().toISOString().slice(11, 19)}</strong></div>
+        `;
+    }
+
+    // ═════ CORRELATIONS ═════
+    function renderCorrelations() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const analysis = CorrelationEngine.runFullAnalysis();
+        const list = document.getElementById('ncCorrList');
+
+        if (analysis.correlations.length === 0) {
+            list.innerHTML = '<div class="nc-corr-empty">Nessuna correlazione cross-dominio attiva. I pattern emergeranno con piu segnali.</div>';
+            return;
+        }
+
+        list.innerHTML = analysis.correlations.map(c => {
+            const threatColors = { CRITICAL: '#ff0084', HIGH: '#ff3344', ELEVATED: '#ffbf00', MODERATE: '#00d4aa' };
+            const threatBg = { CRITICAL: 'rgba(255,0,132,0.12)', HIGH: 'rgba(255,51,68,0.1)', ELEVATED: 'rgba(255,191,0,0.08)', MODERATE: 'rgba(0,212,170,0.06)' };
+            const tc = threatColors[c.threat] || '#666';
+            const tb = threatBg[c.threat] || 'transparent';
+
+            return `
+                <div class="nc-corr-card" style="border-left-color: ${c.color};">
+                    <div class="nc-corr-name" style="color: ${c.color};">${c.icon} ${c.name}</div>
+                    <div class="nc-corr-desc">${c.description}</div>
+                    <div class="nc-corr-meta">
+                        <span class="nc-corr-threat" style="color: ${tc}; background: ${tb}; border: 1px solid ${tc}33;">${c.threat}</span>
+                        <span class="nc-corr-strength">STR: <strong>${c.strength}%</strong> // ${c.signalCount} signals</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ HEATMAP ═════
+    function renderHeatmap() {
+        const archive = getArchive();
+        const now = Date.now();
+        const domains = Object.keys(DOMAIN_CFG);
+        const hours = 24;
+
+        // Build data: domain × hour
+        const data = {};
+        domains.forEach(d => { data[d] = new Array(hours).fill(0); });
+
+        archive.forEach(s => {
+            const age = now - s.time;
+            if (age > hours * 3600000) return;
+            const hourIdx = hours - 1 - Math.floor(age / 3600000);
+            if (hourIdx >= 0 && hourIdx < hours && data[s.domain]) {
+                data[s.domain][hourIdx]++;
+            }
+        });
+
+        const maxVal = Math.max(...domains.flatMap(d => data[d]), 1);
+        const container = document.getElementById('ncHeatmap');
+
+        // Hour labels row
+        let html = '<div></div>'; // empty corner
+        for (let h = 0; h < hours; h++) {
+            const hourLabel = new Date(now - (hours - 1 - h) * 3600000).getHours();
+            html += `<div class="nc-hm-hour">${h % 3 === 0 ? hourLabel + 'h' : ''}</div>`;
+        }
+
+        // Domain rows
+        domains.forEach(d => {
+            const cfg = DOMAIN_CFG[d];
+            html += `<div class="nc-hm-label" style="color: ${cfg.color};">${cfg.short}</div>`;
+            for (let h = 0; h < hours; h++) {
+                const val = data[d][h];
+                const intensity = val / maxVal;
+                const alpha = val === 0 ? 0.03 : 0.15 + intensity * 0.85;
+                html += `<div class="nc-hm-cell" style="background: ${cfg.color}; opacity: ${alpha};" title="${d}: ${val} signals (${new Date(now - (hours - 1 - h) * 3600000).getHours()}:00)"></div>`;
+            }
+        });
+
+        container.innerHTML = html;
+    }
+
+    // ═════ LIVE FEED ═════
+    function renderFeed() {
+        const archive = getArchive();
+        const watchlist = typeof CorrelationEngine !== 'undefined' ? CorrelationEngine.getWatchlist() : [];
+        const signals = archive.slice(0, 100);
+
+        document.getElementById('ncFeedCount').textContent = `${archive.length} SEGNALI`;
+
+        const list = document.getElementById('ncFeedList');
+        if (signals.length === 0) {
+            list.innerHTML = '<div style="padding: 40px; text-align: center; color: var(--text-dim); font-family: Share Tech Mono, monospace; font-size: 0.6rem;">IN ATTESA DI SEGNALI...<br>Il Signal Interceptor raccogliera dati automaticamente.</div>';
+            return;
+        }
+
+        list.innerHTML = signals.map(s => {
+            const cfg = DOMAIN_CFG[s.domain] || { color: '#666', icon: '?', short: '?' };
+            const sevColor = s.severity >= 70 ? '#ff3344' : s.severity >= 50 ? '#ff8833' : s.severity >= 30 ? '#ffbf00' : '#00d4aa';
+            const date = new Date(s.time);
+            const timeStr = date.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            const dateStr = date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short' });
+            const titleHtml = s.link ? `<a href="${escHtml(s.link)}" target="_blank" rel="noopener">${escHtml(s.title)}</a>` : escHtml(s.title);
+
+            // Watchlist check
+            const text = ((s.title || '') + ' ' + (s.description || '')).toLowerCase();
+            const isWatchlist = watchlist.some(kw => text.includes(kw));
+
+            return `
+                <div class="nc-signal ${isWatchlist ? 'nc-sig-watchlist' : ''}">
+                    <div class="nc-sig-dot" style="background: ${cfg.color}; box-shadow: 0 0 6px ${cfg.color}44;"></div>
+                    <div class="nc-sig-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain || '?'}</div>
+                    <div class="nc-sig-title">${titleHtml}</div>
+                    <div class="nc-sig-source">${escHtml(s.source)}</div>
+                    <div class="nc-sig-sev" style="color: ${sevColor};">${s.severity}%</div>
+                    <div class="nc-sig-time">${dateStr} ${timeStr}</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ CORRELATION MATRIX ═════
+    function renderMatrix() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const archive = getArchive();
+        const { domains, matrix } = CorrelationEngine.buildCorrelationMatrix(archive);
+
+        const maxVal = Math.max(...domains.flatMap(a => domains.map(b => matrix[a][b])), 1);
+        const container = document.getElementById('ncMatrix');
+
+        // Top labels
+        let html = '<div></div>';
+        domains.forEach(d => {
+            const cfg = DOMAIN_CFG[d] || { color: '#666', short: d.slice(0, 4) };
+            html += `<div class="nc-mx-label" style="color: ${cfg.color};">${cfg.short}</div>`;
+        });
+
+        // Rows
+        domains.forEach((a, i) => {
+            const cfgA = DOMAIN_CFG[a] || { color: '#666', short: a.slice(0, 4) };
+            html += `<div class="nc-mx-label" style="color: ${cfgA.color};">${cfgA.short}</div>`;
+            domains.forEach((b, j) => {
+                if (i === j) {
+                    html += `<div class="nc-mx-cell" style="background: ${cfgA.color}22;">—</div>`;
+                } else {
+                    const val = matrix[a][b];
+                    const intensity = val / maxVal;
+                    const alpha = val === 0 ? 0.03 : 0.1 + intensity * 0.7;
+                    const mix = intensity > 0.5 ? '#ff0084' : '#9d00ff';
+                    html += `<div class="nc-mx-cell" style="background: ${mix}; opacity: ${alpha};" title="${a} × ${b}: ${val}">${val || ''}</div>`;
+                }
+            });
+        });
+
+        container.innerHTML = html;
+    }
+
+    // ═════ SEVERITY SPIKE ═════
+    function renderSpike() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const archive = getArchive();
+        const spike = CorrelationEngine.detectSeveritySpikes(archive);
+        const container = document.getElementById('ncSpike');
+
+        if (!spike) {
+            const avgSev = archive.length ? Math.round(archive.reduce((a, s) => a + (s.severity || 0), 0) / archive.length) : 0;
+            container.innerHTML = `
+                <div class="nc-spike" style="border-color: var(--border); background: var(--bg-card);">
+                    <div class="nc-spike-label" style="color: var(--teal);">STABLE</div>
+                    <div class="nc-spike-detail">Nessun spike rilevato. Severity media: <strong>${avgSev}%</strong></div>
+                </div>
+            `;
+            return;
+        }
+
+        const isUp = spike.direction === 'UP';
+        container.innerHTML = `
+            <div class="nc-spike" style="border-color: ${spike.color}33; background: ${spike.color}08;">
+                <div class="nc-spike-label" style="color: ${spike.color};">${isUp ? '▲' : '▼'} ${spike.type} (${spike.delta > 0 ? '+' : ''}${spike.delta}%)</div>
+                <div class="nc-spike-detail">
+                    Ultime 6h: <strong>${spike.recentAvg}%</strong> (${spike.recentCount} segnali)<br>
+                    Baseline 24h: <strong>${spike.baselineAvg}%</strong> (${spike.baselineCount} segnali)
+                </div>
+            </div>
+        `;
+    }
+
+    // ═════ WATCHLIST UI ═════
+    function renderWatchlist() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const list = CorrelationEngine.getWatchlist();
+        const container = document.getElementById('ncWlTags');
+
+        if (list.length === 0) {
+            container.innerHTML = '<div class="nc-wl-empty">Nessuna keyword. Aggiungi parole da monitorare.</div>';
+            return;
+        }
+
+        container.innerHTML = list.map(kw => `
+            <div class="nc-wl-tag">
+                ${escHtml(kw)}
+                <span class="nc-wl-tag-x" onclick="removeWatchlistItem('${escHtml(kw)}')">&times;</span>
+            </div>
+        `).join('');
+    }
+
+    function addWatchlistItem() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const input = document.getElementById('ncWlInput');
+        const keyword = input.value.trim();
+        if (!keyword) return;
+
+        if (CorrelationEngine.addToWatchlist(keyword)) {
+            input.value = '';
+            renderWatchlist();
+            renderFeed();
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SIGNAL_HUNTER', `Watchlist aggiornata: "${keyword}" sotto monitoraggio.`);
+            }
+        }
+    }
+
+    function removeWatchlistItem(keyword) {
+        if (typeof CorrelationEngine === 'undefined') return;
+        CorrelationEngine.removeFromWatchlist(keyword);
+        renderWatchlist();
+        renderFeed();
+    }
+
+    // Enter key for watchlist input
+    document.addEventListener('DOMContentLoaded', () => {
+        const input = document.getElementById('ncWlInput');
+        if (input) {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') addWatchlistItem();
+            });
+        }
+    });
+
+    // ═════ CLUSTERS ═════
+    function renderClusters() {
+        if (typeof CorrelationEngine === 'undefined') return;
+        const archive = getArchive();
+        const clusters = CorrelationEngine.detectClusters(archive);
+        const container = document.getElementById('ncClusters');
+
+        if (clusters.length === 0) {
+            container.innerHTML = '<div style="font-size: 0.5rem; color: var(--text-dim);">Nessun cluster temporale rilevato.</div>';
+            return;
+        }
+
+        container.innerHTML = clusters.slice(0, 5).map(c => {
+            const startTime = new Date(c.timeStart).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            const endTime = new Date(c.timeEnd).toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            const dateStr = new Date(c.timeStart).toLocaleDateString('it-IT', { day: '2-digit', month: 'short' });
+
+            return `
+                <div class="nc-cluster">
+                    <div class="nc-cluster-head">
+                        <span class="nc-cluster-count">${c.count} SEGNALI</span>
+                        <div class="nc-cluster-domains">
+                            ${c.domains.map(d => {
+                                const cfg = DOMAIN_CFG[d] || { color: '#666', short: '?' };
+                                return `<span class="nc-cluster-pill" style="color: ${cfg.color}; background: ${cfg.color}15; border: 1px solid ${cfg.color}33;">${cfg.short}</span>`;
+                            }).join('')}
+                        </div>
+                    </div>
+                    <div class="nc-cluster-time">${dateStr} ${startTime} — ${endTime} // AVG_SEV: ${c.avgSeverity}%</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ REFRESH ALL ═════
+    function refreshAll() {
+        renderTicker();
+        renderCorrelations();
+        renderHeatmap();
+        renderFeed();
+        renderMatrix();
+        renderSpike();
+        renderWatchlist();
+        renderClusters();
+
+        document.getElementById('ncFooter').textContent =
+            `NERVE_CENTER v1.0 // LAST_REFRESH: ${new Date().toLocaleTimeString('it-IT')} // ${getArchive().length} signals`;
+    }
+
+    // ═════ INIT ═════
+    function init() {
+        refreshAll();
+
+        // Auto-refresh every 20 seconds
+        setInterval(refreshAll, 20000);
+
+        // Listen for new signals
+        window.addEventListener('signal-intercepted', () => {
+            setTimeout(refreshAll, 1500);
+        });
+
+        // CoreFeed
+        setTimeout(() => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('PANKOW_77C', 'NERVE_CENTER attivo. Sala comando operativa.');
+                setTimeout(() => {
+                    CoreFeed.addMessage('SENTINEL', 'Tutti i sensori online. Correlazioni monitorate.');
+                }, 2000);
+            }
+        }, 1500);
+    }
+
+    console.log('%cNERVE_CENTER v1.0', 'color: #ff0084; font-size: 16px; font-weight: bold;');
+    console.log('%cLIVE INTELLIGENCE COMMAND', 'color: #ffbf00; font-size: 11px;');
+    console.log('%cEVERYTHING IS CONNECTED', 'color: #9d00ff;');
+
+    window.addEventListener('DOMContentLoaded', init);
+    </script>
+<script src="js/core-feed.js"></script>
+<script src="js/persistence-manager.js"></script>
+<script src="js/correlation-engine.js"></script>
+<script src="js/signal-interceptor.js"></script>
+</body>
+</html>
