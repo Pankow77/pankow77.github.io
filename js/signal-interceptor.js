@@ -502,6 +502,7 @@ const SignalInterceptor = (() => {
     }
 
     function storeSignal(signal) {
+        // Store in legacy si_archive for backward compatibility
         try {
             let archive = JSON.parse(localStorage.getItem('si_archive') || '[]');
             archive.unshift({
@@ -512,14 +513,18 @@ const SignalInterceptor = (() => {
                 link: signal.link,
                 time: signal.classifiedAt
             });
-            // Trim archive
             if (archive.length > CONFIG.maxStoredSignals) {
                 archive = archive.slice(0, CONFIG.maxStoredSignals);
             }
             localStorage.setItem('si_archive', JSON.stringify(archive));
         } catch (e) {
-            // Storage full — clear archive
             localStorage.removeItem('si_archive');
+        }
+
+        // Store full signal in PersistenceManager
+        if (typeof PersistenceManager !== 'undefined') {
+            PersistenceManager.addSignal(signal);
+            PersistenceManager.updateBtnCount();
         }
     }
 
