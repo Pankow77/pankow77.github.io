@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORACLE v2.0 | Planetary Intelligence Distributed System</title>
+    <meta name="description" content="ORACLE v2.0 - Planetary Intelligence Distributed System. Hybrid Syndicate Research Division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #070d1a;
+            --bg-card: #0b1526;
+            --bg-card-hover: #0e1a30;
+            --border: #152240;
+            --border-light: #1a2d50;
+            --cyan: #00c8ff;
+            --cyan-dim: #0088aa;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --red-dim: #cc2233;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --green: #00dd66;
+            --purple: #8855ff;
+            --pink: #ff0084;
+            --text-primary: #c8d6e5;
+            --text-secondary: #6b7fa3;
+            --text-dim: #3a4f6f;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Subtle scanline */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(0, 200, 255, 0.008) 3px, rgba(0, 200, 255, 0.008) 6px
+            );
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ===== TOP HEADER BAR ===== */
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #060c18;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .oracle-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pulse-icon {
+            width: 28px;
+            height: 28px;
+            position: relative;
+        }
+
+        .pulse-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .pulse-icon .pulse-line {
+            stroke: var(--cyan);
+            stroke-width: 2;
+            fill: none;
+            filter: drop-shadow(0 0 4px var(--cyan));
+        }
+
+        .oracle-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+        }
+
+        .oracle-subtitle {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 1px;
+        }
+
+        .top-stats {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-stat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .top-stat strong {
+            color: var(--text-secondary);
+        }
+
+        .top-stat .val-green { color: var(--green); }
+        .top-stat .val-cyan { color: var(--cyan); }
+
+        .back-link {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover { color: var(--cyan); }
+
+        /* ===== TABS ===== */
+        .tab-bar {
+            display: flex;
+            padding: 0 24px;
+            background: #060c18;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 12px 24px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab:hover {
+            color: var(--text-secondary);
+        }
+
+        .tab.active {
+            color: var(--cyan);
+            border-bottom-color: var(--cyan);
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 0;
+            min-height: calc(100vh - 100px);
+        }
+
+        .main-content {
+            padding: 24px;
+        }
+
+        .sidebar {
+            background: #060c18;
+            border-left: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header .focus-tag {
+            color: var(--cyan);
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
+        /* ===== DOMAIN CARDS GRID ===== */
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .domain-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-light);
+        }
+
+        .domain-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+
+        .domain-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .domain-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .domain-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .status-critical { color: var(--red); }
+        .status-high { color: var(--orange); }
+        .status-elevated { color: var(--yellow); }
+        .status-moderate { color: var(--cyan); }
+
+        /* Risk bar */
+        .risk-section {
+            margin-bottom: 16px;
+        }
+
+        .risk-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .risk-label span {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .risk-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .risk-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .risk-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 1.5s ease-out;
+        }
+
+        .risk-bar-fill.critical { background: linear-gradient(90deg, var(--red-dim), var(--red)); box-shadow: 0 0 8px rgba(255, 51, 68, 0.3); }
+        .risk-bar-fill.high { background: linear-gradient(90deg, var(--orange), var(--red)); box-shadow: 0 0 8px rgba(255, 136, 51, 0.3); }
+        .risk-bar-fill.elevated { background: linear-gradient(90deg, var(--cyan-dim), var(--cyan)); box-shadow: 0 0 8px rgba(0, 200, 255, 0.2); }
+        .risk-bar-fill.moderate { background: linear-gradient(90deg, var(--teal), var(--cyan)); box-shadow: 0 0 8px rgba(0, 212, 170, 0.2); }
+
+        /* Trend indicators */
+        .trend-indicators {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+
+        .trend-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .trend-name {
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.03em;
+        }
+
+        .trend-visual {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .trend-line {
+            width: 50px;
+            height: 16px;
+        }
+
+        .trend-arrow {
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .trend-arrow.up { color: var(--red); }
+        .trend-arrow.down { color: var(--green); }
+        .trend-arrow.stable { color: var(--yellow); }
+
+        /* Core lead */
+        .domain-lead {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+
+        .lead-name {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .lead-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--cyan);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ===== SYSTEMIC STABILITY MATRIX ===== */
+        .stability-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .stability-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .stability-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .refresh-rate {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+
+        #stabilityChart {
+            width: 100%;
+            height: 180px;
+            display: block;
+        }
+
+        /* ===== SIDEBAR: INTELLIGENCE FEED ===== */
+        .sidebar-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+        }
+
+        .sidebar-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .feed-entry {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+        }
+
+        .feed-entry:last-child { border-bottom: none; }
+
+        .feed-id {
+            color: var(--cyan-dim);
+            margin-right: 6px;
+        }
+
+        .feed-entry.active { color: var(--text-secondary); }
+        .feed-entry.system { color: var(--green); }
+
+        /* ===== SIDEBAR: ALERTS ===== */
+        .alert-entry {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .alert-entry:last-child { border-bottom: none; }
+
+        .alert-title {
+            font-size: 0.68rem;
+            color: var(--text-primary);
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .alert-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .alert-domain {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .alert-level {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        .alert-level.critical {
+            color: var(--red);
+            background: rgba(255, 51, 68, 0.1);
+            border: 1px solid rgba(255, 51, 68, 0.2);
+        }
+
+        .alert-level.high {
+            color: var(--orange);
+            background: rgba(255, 136, 51, 0.1);
+            border: 1px solid rgba(255, 136, 51, 0.2);
+        }
+
+        .alert-level.medium {
+            color: var(--yellow);
+            background: rgba(255, 204, 0, 0.08);
+            border: 1px solid rgba(255, 204, 0, 0.15);
+        }
+
+        /* ===== STATUS BAR (FOOTER) ===== */
+        .status-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            background: #050a14;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .status-footer-left,
+        .status-footer-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sf-item {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sf-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        .sf-item .val { color: var(--text-secondary); }
+
+        .sf-motto {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1000px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid var(--border);
+            }
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+            .top-stats {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-header {
+                padding: 10px 16px;
+            }
+            .main-content {
+                padding: 16px;
+            }
+            .status-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <div class="oracle-logo">
+                <div class="pulse-icon">
+                    <svg viewBox="0 0 28 28">
+                        <polyline class="pulse-line" points="0,14 6,14 9,6 12,22 15,10 18,18 21,14 28,14"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="oracle-title">ORACLE v2.0</div>
+                    <div class="oracle-subtitle">Planetary Intelligence Distributed System</div>
+                </div>
+            </div>
+        </div>
+        <div class="top-stats">
+            <div class="top-stat">ANALYSIS_FOCAL_POINT: <strong class="val-cyan">GLOBAL</strong></div>
+            <div class="top-stat">CORES: <strong class="val-green">16/16</strong></div>
+            <div class="top-stat">NUCLEI: <strong>10.4K</strong></div>
+            <div class="top-stat">LATENCY: <strong class="val-green">STABLE</strong></div>
+        </div>
+        <a href="index.html" class="back-link">&larr; HQ</a>
+    </div>
+
+    <!-- TABS -->
+    <div class="tab-bar">
+        <div class="tab active" onclick="switchTab(this)">DASHBOARD</div>
+        <div class="tab" onclick="switchTab(this)">SCENARIOS</div>
+        <div class="tab" onclick="switchTab(this)">PROTOCOLS</div>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+
+        <!-- LEFT: MAIN CONTENT -->
+        <div class="main-content">
+            <div class="section-header">
+                CORE FUNCTIONAL DOMAINS<span class="focus-tag">// FOCUS: GLOBAL</span>
+            </div>
+
+            <div class="domains-grid">
+
+                <!-- CLIMATE/ECOLOGY -->
+                <div class="domain-card" id="domain-climate">
+                    <div class="domain-card-header">
+                        <div class="domain-name">CLIMATE / ECOLOGY</div>
+                        <div class="domain-icon">🌍</div>
+                    </div>
+                    <div class="domain-status status-critical">CRITICAL_OVERSHOOT_LIKELY</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--red);">78%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill high" style="width: 78%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Arctic Albedo</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">AMOC Stability</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="down" data-color="#00dd66"></canvas>
+                                <span class="trend-arrow down">&#9660;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: ORACLE_CORE</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+                <!-- GEOPOLITICS -->
+                <div class="domain-card" id="domain-geo">
+                    <div class="domain-card-header">
+                        <div class="domain-name">GEOPOLITICS</div>
+                        <div class="domain-icon">&#9878;</div>
+                    </div>
+                    <div class="domain-status status-critical">MULTI_POLAR_FRICTION_HIGH</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--red);">85%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill critical" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Resource Chokepoints</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up" data-color="#ff3344"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">Kinetic Escalation</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: MARXIAN_CORE</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+                <!-- ECONOMICS -->
+                <div class="domain-card" id="domain-econ">
+                    <div class="domain-card-header">
+                        <div class="domain-name">ECONOMICS</div>
+                        <div class="domain-icon">&#9879;</div>
+                    </div>
+                    <div class="domain-status status-high">LIQUIDITY_FRAGILITY_DETECTED</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--cyan);">71%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill elevated" style="width: 71%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Derivative Exposure</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">Supply Chain Cohesion</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="down-slight" data-color="#00dd66"></canvas>
+                                <span class="trend-arrow down">&#9660;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: CODE_ENCODER</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+                <!-- TECHNOLOGY -->
+                <div class="domain-card" id="domain-tech">
+                    <div class="domain-card-header">
+                        <div class="domain-name">TECHNOLOGY</div>
+                        <div class="domain-icon">&#9881;</div>
+                    </div>
+                    <div class="domain-status status-moderate">ALIGNMENT_DRIFT_OBSERVED</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--teal);">62%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill moderate" style="width: 62%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Compute Concentration</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">Bio-Vulnerability</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up-slight" data-color="#ff8833"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: GHOST_RUNNER</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+                <!-- EPISTEMOLOGY -->
+                <div class="domain-card" id="domain-epist">
+                    <div class="domain-card-header">
+                        <div class="domain-name">EPISTEMOLOGY</div>
+                        <div class="domain-icon">&#128065;</div>
+                    </div>
+                    <div class="domain-status status-critical">CONSENSUS_REALITY_COLLAPSE</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--red);">94%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill critical" style="width: 94%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Synthetic Content Saturation</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">Institutional Trust</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="down-steep" data-color="#00dd66"></canvas>
+                                <span class="trend-arrow down">&#9660;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: AFFECTIVE_CORE</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+                <!-- SOCIAL -->
+                <div class="domain-card" id="domain-social">
+                    <div class="domain-card-header">
+                        <div class="domain-name">SOCIAL</div>
+                        <div class="domain-icon">&#9734;</div>
+                    </div>
+                    <div class="domain-status status-high">COHESION_DEGRADATION</div>
+                    <div class="risk-section">
+                        <div class="risk-label">
+                            <span>Aggregate Risk</span>
+                            <span class="risk-value" style="color: var(--orange);">68%</span>
+                        </div>
+                        <div class="risk-bar"><div class="risk-bar-fill elevated" style="width: 68%;"></div></div>
+                    </div>
+                    <div class="trend-indicators">
+                        <div class="trend-row">
+                            <span class="trend-name">Inequality Gap</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-name">Mobilization Potential</span>
+                            <div class="trend-visual">
+                                <canvas class="trend-line" data-trend="up-slight" data-color="#ff8833"></canvas>
+                                <span class="trend-arrow up">&#9650;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-lead">
+                        <span class="lead-name">LEAD: NARRATIVE_ENGINE</span>
+                        <span class="lead-status">ACTIVE_LINK</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SYSTEMIC STABILITY MATRIX -->
+            <div class="stability-section">
+                <div class="stability-header">
+                    <div class="stability-title">SYSTEMIC STABILITY MATRIX</div>
+                    <div class="refresh-rate">REFRESH_RATE: 0.8s</div>
+                </div>
+                <canvas id="stabilityChart"></canvas>
+            </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="sidebar">
+
+            <!-- INTELLIGENCE FEED -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">INTELLIGENCE_FEED</div>
+                <div id="intelligenceFeed">
+                    <div class="feed-entry"><span class="feed-id">[0]</span> WAITING FOR INPUT...</div>
+                    <div class="feed-entry system"><span class="feed-id">[1]</span> HYMPA INITIALIZED</div>
+                    <div class="feed-entry system"><span class="feed-id">[2]</span> SYSTEM READY</div>
+                </div>
+            </div>
+
+            <!-- ACTIVE ALERT PROTOCOL -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">ACTIVE_ALERT_PROTOCOL</div>
+
+                <div class="alert-entry">
+                    <div class="alert-title">Regional Decay</div>
+                    <div class="alert-meta">
+                        <span class="alert-domain">GLOBAL &bull; SYNTHESIS</span>
+                        <span class="alert-level high">High</span>
+                    </div>
+                </div>
+
+                <div class="alert-entry">
+                    <div class="alert-title">Epistemic Decoupling</div>
+                    <div class="alert-meta">
+                        <span class="alert-domain">SOCIAL</span>
+                        <span class="alert-level high">High</span>
+                    </div>
+                </div>
+
+                <div class="alert-entry">
+                    <div class="alert-title">Thermal Inversion</div>
+                    <div class="alert-meta">
+                        <span class="alert-domain">NORTH ATLANTIC &bull; CLIMATE</span>
+                        <span class="alert-level critical">Critical</span>
+                    </div>
+                </div>
+
+                <div class="alert-entry">
+                    <div class="alert-title">Quantum Infra Breach</div>
+                    <div class="alert-meta">
+                        <span class="alert-domain">TECH</span>
+                        <span class="alert-level medium">Medium</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- STATUS FOOTER -->
+    <div class="status-footer">
+        <div class="status-footer-left">
+            <div class="sf-item"><span class="sf-dot"></span> SINGAPORE_NODE: <span class="val">ONLINE</span></div>
+            <div class="sf-item">LATENCY: <span class="val">42ms</span></div>
+            <div class="sf-item">VERSION: <span class="val">2.0.1-STABLE</span></div>
+            <div class="sf-item">TARGET: <span class="val">GLOBAL</span></div>
+        </div>
+        <div class="status-footer-right">
+            <div class="sf-motto">TRUTH WITHOUT COMPROMISE</div>
+            <div class="sf-item">USER: <span class="val">ANONYMOUS_OPERATOR</span></div>
+        </div>
+    </div>
+
+    <script>
+    // ===== TAB SWITCHING =====
+    function switchTab(el) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+    }
+
+    // ===== MINI TREND LINES =====
+    function drawTrendLines() {
+        document.querySelectorAll('.trend-line').forEach(canvas => {
+            const trend = canvas.dataset.trend;
+            const color = canvas.dataset.color || '#ff3344';
+            const dpr = window.devicePixelRatio || 1;
+            const w = 50, h = 16;
+            canvas.width = w * dpr;
+            canvas.height = h * dpr;
+            canvas.style.width = w + 'px';
+            canvas.style.height = h + 'px';
+            const ctx = canvas.getContext('2d');
+            ctx.scale(dpr, dpr);
+
+            // Generate trend points
+            let points = [];
+            const steps = 8;
+            for (let i = 0; i <= steps; i++) {
+                const x = (w / steps) * i;
+                let y;
+                const t = i / steps;
+                const noise = (Math.random() - 0.5) * 3;
+                switch(trend) {
+                    case 'up-steep':
+                        y = h - 2 - (t * t * (h - 4)) + noise;
+                        break;
+                    case 'up':
+                        y = h - 2 - (t * (h - 4) * 0.7) + noise;
+                        break;
+                    case 'up-slight':
+                        y = h - 2 - (t * (h - 4) * 0.4) + noise;
+                        break;
+                    case 'down-steep':
+                        y = 2 + (t * t * (h - 4)) + noise;
+                        break;
+                    case 'down':
+                        y = 2 + (t * (h - 4) * 0.7) + noise;
+                        break;
+                    case 'down-slight':
+                        y = 2 + (t * (h - 4) * 0.3) + noise;
+                        break;
+                    default:
+                        y = h / 2 + noise;
+                }
+                y = Math.max(1, Math.min(h - 1, y));
+                points.push({ x, y });
+            }
+
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1.5;
+            ctx.moveTo(points[0].x, points[0].y);
+            for (let i = 1; i < points.length; i++) {
+                ctx.lineTo(points[i].x, points[i].y);
+            }
+            ctx.stroke();
+        });
+    }
+    drawTrendLines();
+
+    // ===== SYSTEMIC STABILITY MATRIX CHART =====
+    const stabCanvas = document.getElementById('stabilityChart');
+    const stabCtx = stabCanvas.getContext('2d');
+
+    const domains = ['CLI/ECO', 'GEO', 'ECON', 'TECH', 'EPIST', 'SOCIAL'];
+    const domainColors = {
+        risk: '#ff3344',
+        resilience: '#00d4aa',
+        volatility: '#00c8ff'
+    };
+
+    let stabilityData = {
+        risk: [78, 85, 71, 62, 94, 68],
+        resilience: [35, 22, 48, 55, 12, 40],
+        volatility: [60, 72, 55, 45, 88, 52]
+    };
+
+    function drawStabilityChart() {
+        const dpr = window.devicePixelRatio || 1;
+        const rect = stabCanvas.getBoundingClientRect();
+        stabCanvas.width = rect.width * dpr;
+        stabCanvas.height = rect.height * dpr;
+        stabCtx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = rect.height;
+        const padLeft = 50;
+        const padRight = 20;
+        const padTop = 10;
+        const padBottom = 30;
+        const chartW = W - padLeft - padRight;
+        const chartH = H - padTop - padBottom;
+
+        stabCtx.clearRect(0, 0, W, H);
+
+        // Grid lines
+        stabCtx.strokeStyle = 'rgba(255,255,255,0.04)';
+        stabCtx.lineWidth = 1;
+        for (let i = 0; i <= 5; i++) {
+            const y = padTop + (chartH / 5) * i;
+            stabCtx.beginPath();
+            stabCtx.moveTo(padLeft, y);
+            stabCtx.lineTo(W - padRight, y);
+            stabCtx.stroke();
+        }
+
+        // Y labels
+        stabCtx.fillStyle = '#3a4f6f';
+        stabCtx.font = '10px Share Tech Mono';
+        stabCtx.textAlign = 'right';
+        for (let i = 0; i <= 5; i++) {
+            const val = 100 - i * 20;
+            const y = padTop + (chartH / 5) * i;
+            stabCtx.fillText(val + '%', padLeft - 8, y + 4);
+        }
+
+        // Draw grouped bars
+        const groupCount = domains.length;
+        const barTypes = ['risk', 'resilience', 'volatility'];
+        const groupWidth = chartW / groupCount;
+        const barWidth = groupWidth * 0.2;
+        const barGap = 4;
+
+        domains.forEach((domain, gi) => {
+            const groupX = padLeft + groupWidth * gi + groupWidth * 0.15;
+
+            barTypes.forEach((type, bi) => {
+                const val = stabilityData[type][gi] + (Math.random() - 0.5) * 4;
+                const clampVal = Math.max(0, Math.min(100, val));
+                const barH = (clampVal / 100) * chartH;
+                const x = groupX + (barWidth + barGap) * bi;
+                const y = padTop + chartH - barH;
+
+                stabCtx.fillStyle = domainColors[type];
+                stabCtx.globalAlpha = 0.8;
+                stabCtx.fillRect(x, y, barWidth, barH);
+                stabCtx.globalAlpha = 1;
+            });
+
+            // Domain label
+            stabCtx.fillStyle = '#3a4f6f';
+            stabCtx.font = '9px Share Tech Mono';
+            stabCtx.textAlign = 'center';
+            const labelX = groupX + ((barWidth + barGap) * barTypes.length) / 2;
+            stabCtx.fillText(domain, labelX, H - 8);
+        });
+
+        // Legend
+        const legendX = W - padRight - 200;
+        const legendY = padTop + 5;
+        barTypes.forEach((type, i) => {
+            stabCtx.fillStyle = domainColors[type];
+            stabCtx.fillRect(legendX + i * 70, legendY, 12, 3);
+            stabCtx.fillStyle = '#3a4f6f';
+            stabCtx.font = '9px Share Tech Mono';
+            stabCtx.textAlign = 'left';
+            stabCtx.fillText(type.toUpperCase(), legendX + i * 70 + 16, legendY + 4);
+        });
+    }
+
+    drawStabilityChart();
+
+    // Refresh chart periodically with slight variations
+    setInterval(() => {
+        drawStabilityChart();
+    }, 800);
+
+    window.addEventListener('resize', () => {
+        drawTrendLines();
+        drawStabilityChart();
+    });
+
+    // ===== INTELLIGENCE FEED - LIVE UPDATES =====
+    const feedMessages = [
+        'SCANNING GEOPOLITICAL VECTORS...',
+        'EPISTEMIC DRIFT DETECTED IN SECTOR_7',
+        'AMOC DATA REFRESH COMPLETE',
+        'NARRATIVE_ENGINE: SYNTHESIS_CYCLE_42',
+        'RISK MATRIX RECALIBRATED',
+        'GHOST_RUNNER: ALIGNMENT CHECK PASSED',
+        'DERIVATIVE EXPOSURE INDEX UPDATED',
+        'VOID_PULSE: TEMPORAL WINDOW NARROWING',
+        'ABYSSAL_THINKER: RECURSION DEPTH OK',
+        'CLIMATE MODEL v4.2 LOADED',
+        'KINETIC ESCALATION PROBABILITY +0.3%',
+        'INSTITUTIONAL TRUST INDEX: -1.2',
+        'SYNTHETIC CONTENT SATURATION: 67.4%',
+        'MARX_CORE: CLASS DYNAMICS SHIFT DETECTED',
+        'ORACLE_CORE: OVERSHOOT THRESHOLD BREACHED',
+        'SUPPLY CHAIN NODE FAILURE: SECTOR_12',
+        'BIO-VULNERABILITY SCAN COMPLETE',
+        'QUANTUM INFRA: MONITORING ACTIVE',
+    ];
+
+    let feedCounter = 3;
+    function addFeedEntry() {
+        const feed = document.getElementById('intelligenceFeed');
+        const msg = feedMessages[Math.floor(Math.random() * feedMessages.length)];
+        const entry = document.createElement('div');
+        entry.className = 'feed-entry active';
+        entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${msg}`;
+        feed.appendChild(entry);
+        feedCounter++;
+
+        // Keep only last 12 entries
+        while (feed.children.length > 12) {
+            feed.removeChild(feed.firstChild);
+        }
+
+        // Auto-scroll
+        feed.scrollTop = feed.scrollHeight;
+    }
+
+    setInterval(addFeedEntry, 3000 + Math.random() * 2000);
+
+    // ===== CONSOLE SIGNATURE =====
+    console.log('%cORACLE v2.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+    console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
+    console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
+    </script>
+</body>
+</html>
