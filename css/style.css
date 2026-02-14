@@ -1358,6 +1358,7 @@ section {
     max-width: 600px;
     width: 100%;
     animation: sway 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
 }
 
 .hero-image {
@@ -1466,11 +1467,6 @@ section {
         opacity: 0;
         transform: translateX(-5px);
     }
-}
-
-/* Glow effect for the image */
-.hero-image-wrapper {
-    filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
 }
 
 /* Responsive adjustments */

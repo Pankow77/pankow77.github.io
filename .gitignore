@@ -1,0 +1,23 @@
+# Nuxt.js extracted files (not used)
+pages/
+components/
+assets/css/
+nuxt.config.ts
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+.nuxt/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
