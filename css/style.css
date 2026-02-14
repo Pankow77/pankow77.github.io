@@ -1359,14 +1359,17 @@ section {
     width: 100%;
     animation: sway 4s ease-in-out infinite;
     filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
+    aspect-ratio: 2 / 1; /* Maintain 800x400 aspect ratio */
+    min-height: 200px;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     position: relative;
     animation: glitch 3s infinite;
+    object-fit: contain;
 }
 
 /* Glitch effect animation */
