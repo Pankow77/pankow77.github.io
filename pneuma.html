@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNEUMA | Local Operational Sanctuary</title>
+    <meta name="description" content="PNEUMA - Local Operational Sanctuary. DEMETER / URBANIX / NEXUS. Hybrid Syndicate Ethic Software Foundation.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0c10;
+            --bg-panel: #0d1117;
+            --bg-card: #111820;
+            --border: #1c2633;
+            --border-active: #2a3a4f;
+            --green: #39ff14;
+            --green-dim: #1a7a0a;
+            --amber: #ffbf00;
+            --amber-dim: #7a5c00;
+            --purple: #9d00ff;
+            --purple-dim: #4a0080;
+            --cyan: #00d4ff;
+            --red: #ff3344;
+            --text: #c8d0d8;
+            --text-dim: #4a5568;
+            --text-dark: #2d3748;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ===== BOOT SEQUENCE ===== */
+        #bootScreen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s;
+        }
+
+        #bootScreen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .boot-container {
+            max-width: 600px;
+            width: 90%;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .boot-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--green);
+            text-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+            letter-spacing: 0.2em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .boot-line {
+            font-size: 0.8rem;
+            color: var(--green);
+            margin-bottom: 6px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            letter-spacing: 0.03em;
+        }
+
+        .boot-line.visible { opacity: 1; }
+        .boot-line.amber { color: var(--amber); }
+        .boot-line.purple { color: var(--purple); }
+        .boot-line.cyan { color: var(--cyan); }
+        .boot-line.dim { color: var(--text-dim); }
+        .boot-line.bold { font-weight: 600; }
+
+        .boot-progress {
+            margin-top: 30px;
+            height: 2px;
+            background: #111;
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .boot-progress-fill {
+            height: 100%;
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* ===== MAIN APP ===== */
+        #mainApp {
+            display: none;
+            min-height: 100vh;
+        }
+
+        #mainApp.active { display: block; }
+
+        /* Header */
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            background: #080a0e;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .app-logo-text {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--green);
+            letter-spacing: 0.15em;
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+        }
+
+        .app-logo-sub {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .app-nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .app-nav a {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .app-nav a:hover { color: var(--cyan); border-color: var(--cyan); }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex;
+            background: #080a0e;
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            color: var(--text-dim);
+        }
+
+        .tab:hover { color: var(--text); }
+
+        .tab.active-demeter {
+            color: var(--green);
+            border-bottom-color: var(--green);
+            text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+        }
+
+        .tab.active-urbanix {
+            color: var(--amber);
+            border-bottom-color: var(--amber);
+            text-shadow: 0 0 8px rgba(255, 191, 0, 0.3);
+        }
+
+        .tab.active-nexus {
+            color: var(--purple);
+            border-bottom-color: var(--purple);
+            text-shadow: 0 0 8px rgba(157, 0, 255, 0.3);
+        }
+
+        /* Module panels */
+        .module { display: none; padding: 24px; }
+        .module.active { display: block; }
+
+        /* ===== DEMETER ===== */
+        .module-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .demeter-title { color: var(--green); border-color: rgba(57,255,20,0.2); }
+        .urbanix-title { color: var(--amber); border-color: rgba(255,191,0,0.2); }
+        .nexus-title { color: var(--purple); border-color: rgba(157,0,255,0.2); }
+
+        .demeter-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 24px;
+        }
+
+        .control-panel {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .control-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .slider-group {
+            margin-bottom: 20px;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .slider-label span {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .slider-val {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: var(--border);
+            outline: none;
+            border-radius: 2px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            background: var(--green);
+            border: 2px solid var(--bg);
+            cursor: pointer;
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        .growth-indicator {
+            margin-top: 20px;
+            padding: 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .growth-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .growth-status {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .growth-status.critical { color: var(--red); text-shadow: 0 0 8px rgba(255,51,68,0.3); }
+        .growth-status.warning { color: var(--amber); text-shadow: 0 0 8px rgba(255,191,0,0.3); }
+        .growth-status.optimal { color: var(--green); text-shadow: 0 0 8px rgba(57,255,20,0.3); }
+
+        /* Colony display */
+        .colony-area {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .colonies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .colony-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .colony-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: var(--green);
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+        }
+
+        .colony-plant {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 8px rgba(57, 255, 20, 0.3));
+        }
+
+        .colony-stats {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        .action-refs {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-ref {
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--green);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-ref:hover {
+            border-color: var(--green);
+            background: rgba(57,255,20,0.03);
+        }
+
+        .action-ref .ref-id {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--green);
+            margin-right: 8px;
+        }
+
+        /* ===== URBANIX ===== */
+        .urbanix-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 24px;
+        }
+
+        .grid-area {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            min-height: 350px;
+            position: relative;
+        }
+
+        .grid-hint {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.6rem;
+            color: var(--text-dark);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .grid-node {
+            width: 120px;
+            height: 120px;
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .grid-node.active {
+            border-color: var(--amber);
+            box-shadow: 0 0 25px rgba(255,191,0,0.2), inset 0 0 15px rgba(255,191,0,0.05);
+        }
+
+        .grid-node.active .node-icon {
+            color: var(--amber);
+            text-shadow: 0 0 10px rgba(255,191,0,0.5);
+        }
+
+        .grid-node.inactive {
+            border-color: var(--border);
+            opacity: 0.4;
+        }
+
+        .grid-node.small {
+            width: 90px;
+            height: 90px;
+        }
+
+        .node-icon {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            color: var(--text-dim);
+            transition: all 0.3s;
+        }
+
+        .grid-node.small .node-icon { font-size: 1.3rem; }
+
+        .node-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            max-width: 100px;
+            transition: color 0.3s;
+        }
+
+        .grid-node.active .node-label { color: var(--amber); }
+
+        /* Connection lines */
+        .grid-connections {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+        }
+
+        .urbanix-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .urb-stat-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+        }
+
+        .urb-stat-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .urb-stat-val {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--amber);
+        }
+
+        .infra-log {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+            flex: 1;
+        }
+
+        .infra-log-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--amber);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .log-entry {
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+            padding-left: 10px;
+            border-left: 2px solid var(--border);
+        }
+
+        .log-entry.active-log { color: var(--amber); border-color: var(--amber); }
+
+        /* ===== NEXUS ===== */
+        .nexus-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 16px;
+        }
+
+        .nexus-btn {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid;
+        }
+
+        .btn-new {
+            background: rgba(157,0,255,0.1);
+            border-color: rgba(157,0,255,0.3);
+            color: var(--purple);
+        }
+
+        .btn-new:hover {
+            background: rgba(157,0,255,0.2);
+            border-color: var(--purple);
+            box-shadow: 0 0 15px rgba(157,0,255,0.2);
+        }
+
+        .btn-cancel {
+            background: rgba(255,51,68,0.1);
+            border-color: rgba(255,51,68,0.3);
+            color: var(--red);
+        }
+
+        .btn-cancel:hover {
+            background: rgba(255,51,68,0.2);
+            box-shadow: 0 0 15px rgba(255,51,68,0.2);
+        }
+
+        .nexus-search {
+            flex: 1;
+            max-width: 400px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 8px 14px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text);
+            outline: none;
+        }
+
+        .nexus-search:focus { border-color: var(--purple); }
+        .nexus-search::placeholder { color: var(--text-dark); }
+
+        /* Archive table */
+        .archive-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .archive-table th {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .archive-table td {
+            font-size: 0.75rem;
+            color: var(--text);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .archive-table tr:hover td {
+            background: rgba(157,0,255,0.02);
+        }
+
+        .tag-medical {
+            font-size: 0.55rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            background: rgba(255,51,68,0.1);
+            color: var(--red);
+            border: 1px solid rgba(255,51,68,0.2);
+            letter-spacing: 0.06em;
+        }
+
+        .tag-technical {
+            font-size: 0.55rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            background: rgba(0,212,255,0.1);
+            color: var(--cyan);
+            border: 1px solid rgba(0,212,255,0.2);
+            letter-spacing: 0.06em;
+        }
+
+        .tag-survival {
+            font-size: 0.55rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            background: rgba(57,255,20,0.1);
+            color: var(--green);
+            border: 1px solid rgba(57,255,20,0.2);
+            letter-spacing: 0.06em;
+        }
+
+        .view-btn {
+            font-size: 1rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-dim);
+            transition: color 0.3s;
+        }
+
+        .view-btn:hover { color: var(--purple); }
+
+        /* New record form */
+        .record-form {
+            display: none;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .record-form.active { display: block; }
+
+        .form-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: var(--purple);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 10px 14px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text);
+            outline: none;
+        }
+
+        .form-input:focus { border-color: var(--purple); }
+        .form-input::placeholder { color: var(--text-dark); }
+
+        textarea.form-input {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-commit {
+            background: rgba(157,0,255,0.15);
+            border: 1px solid rgba(157,0,255,0.4);
+            color: var(--purple);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-commit:hover {
+            background: rgba(157,0,255,0.25);
+            box-shadow: 0 0 20px rgba(157,0,255,0.3);
+        }
+
+        /* ===== COMMAND LINE ===== */
+        .cmd-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px 24px;
+            background: #060810;
+            border-top: 1px solid var(--border);
+        }
+
+        .cmd-prompt {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--green);
+            margin-right: 8px;
+            white-space: nowrap;
+        }
+
+        .cmd-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text);
+            outline: none;
+        }
+
+        .cmd-input::placeholder { color: var(--text-dark); }
+
+        /* Status footer */
+        .status-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 24px;
+            background: #040608;
+            border-top: 1px solid var(--border);
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .sf-green { color: var(--green); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .demeter-layout, .urbanix-layout { grid-template-columns: 1fr; }
+            .colonies-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .app-nav { display: none; }
+            .tab { padding: 10px 14px; font-size: 0.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== BOOT SEQUENCE ===== -->
+<div id="bootScreen">
+    <div class="boot-container">
+        <div class="boot-title">PNEUMA</div>
+        <div id="bootLines"></div>
+        <div class="boot-progress">
+            <div class="boot-progress-fill" id="bootProgress"></div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== MAIN APPLICATION ===== -->
+<div id="mainApp">
+
+    <!-- Header -->
+    <div class="app-header">
+        <div class="app-logo">
+            <div>
+                <div class="app-logo-text">PNEUMA</div>
+                <div class="app-logo-sub">Local Operational Sanctuary</div>
+            </div>
+        </div>
+        <div class="app-nav">
+            <a href="index.html">&larr; HQ</a>
+            <a href="agora.html">AGORA</a>
+            <a href="oracle.html">ORACLE</a>
+            <a href="eei-predictor.html" style="color: #ff0040;">EEI</a>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tab-bar">
+        <div class="tab active-demeter" id="tabDemeter" onclick="switchModule('demeter')">DEMETER</div>
+        <div class="tab" id="tabUrbanix" onclick="switchModule('urbanix')">URBANIX</div>
+        <div class="tab" id="tabNexus" onclick="switchModule('nexus')">NEXUS</div>
+    </div>
+
+    <!-- ===== DEMETER MODULE ===== -->
+    <div class="module active" id="moduleDemeter">
+        <div class="module-title demeter-title">DEMETER / OPERATIONAL BIO-SIMULATOR V1.4</div>
+
+        <div class="demeter-layout">
+            <!-- Controls -->
+            <div class="control-panel">
+                <div class="control-title">MANUAL OVERRIDE</div>
+
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Soil Moisture</span>
+                        <span class="slider-val" id="moistureVal">12%</span>
+                    </div>
+                    <input type="range" id="moisture" min="0" max="100" value="12" oninput="updateDemeter()">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>pH Level</span>
+                        <span class="slider-val" id="phVal">6.8</span>
+                    </div>
+                    <input type="range" id="phLevel" min="0" max="140" value="68" oninput="updateDemeter()">
+                </div>
+
+                <div class="growth-indicator">
+                    <div class="growth-label">Estimated Growth Success</div>
+                    <div class="growth-status critical" id="growthStatus">CRITICAL</div>
+                </div>
+            </div>
+
+            <!-- Colonies -->
+            <div class="colony-area">
+                <div class="colonies-grid">
+                    <div class="colony-box">
+                        <div class="colony-label">COLONY_A</div>
+                        <div class="colony-plant" id="plantA">&#x1F331;</div>
+                        <div class="colony-stats">
+                            STRAIN: Amaranthus<br>
+                            CYCLE: 14d<br>
+                            STATUS: <span id="colAStatus" style="color: var(--amber);">GERMINATING</span>
+                        </div>
+                    </div>
+                    <div class="colony-box">
+                        <div class="colony-label">COLONY_B</div>
+                        <div class="colony-plant" id="plantB">&#x1F33F;</div>
+                        <div class="colony-stats">
+                            STRAIN: Solanum<br>
+                            CYCLE: 28d<br>
+                            STATUS: <span id="colBStatus" style="color: var(--green);">VEGETATIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-refs">
+                    <div class="action-ref">
+                        <span class="ref-id">ACTION_REF_10:</span> Amaranth Genesis Protocol
+                    </div>
+                    <div class="action-ref">
+                        <span class="ref-id">ACTION_REF_11:</span> Grey-Water Filtration System
+                    </div>
+                    <div class="action-ref">
+                        <span class="ref-id">ACTION_REF_12:</span> Mycelium Network Integration
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== URBANIX MODULE ===== -->
+    <div class="module" id="moduleUrbanix">
+        <div class="module-title urbanix-title">URBANIX / GRID COMMAND &amp; CONTROL V4.0 / MODE: MANUAL OVERRIDE</div>
+
+        <div class="urbanix-layout">
+            <div class="grid-area">
+                <div class="grid-node active" id="node1" onclick="toggleNode(1)">
+                    <div class="node-icon">&#x26A1;</div>
+                    <div class="node-label">SUBSTATION_A</div>
+                </div>
+                <div class="grid-node active" id="node2" onclick="toggleNode(2)">
+                    <div class="node-icon">&#x1F4A7;</div>
+                    <div class="node-label">WATER_PUMP<br>PRIMARY</div>
+                </div>
+                <div class="grid-node small inactive" id="node3" onclick="toggleNode(3)">
+                    <div class="node-icon">&#x1F4A1;</div>
+                    <div class="node-label">SANCTUARY<br>LIGHTS</div>
+                </div>
+                <div class="grid-hint">CLICK NODES TO TOGGLE ENERGY DISTRIBUTION</div>
+            </div>
+
+            <div class="urbanix-sidebar">
+                <div class="urb-stat-card">
+                    <div class="urb-stat-label">Active Nodes</div>
+                    <div class="urb-stat-val" id="activeNodes">2 / 3</div>
+                </div>
+                <div class="urb-stat-card">
+                    <div class="urb-stat-label">Consumption</div>
+                    <div class="urb-stat-val" id="consumption">1.6 kW</div>
+                </div>
+                <div class="urb-stat-card">
+                    <div class="urb-stat-label">Grid Stability</div>
+                    <div class="urb-stat-val" id="gridStability" style="color: var(--green);">STABLE</div>
+                </div>
+                <div class="infra-log">
+                    <div class="infra-log-title">INFRASTRUCTURE_LOG</div>
+                    <div id="infraLog">
+                        <div class="log-entry active-log">&gt; NODE_1 STATUS: ONLINE</div>
+                        <div class="log-entry active-log">&gt; NODE_2 STATUS: ONLINE</div>
+                        <div class="log-entry">&gt; NODE_3 STATUS: OFFLINE</div>
+                        <div class="log-entry">&gt; GRID INITIALIZED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NEXUS MODULE ===== -->
+    <div class="module" id="moduleNexus">
+        <div class="module-title nexus-title">NEXUS / LEGACY DATA_ENTRY CONSOLE</div>
+
+        <div class="nexus-toolbar">
+            <button class="nexus-btn btn-new" id="btnNewRecord" onclick="toggleRecordForm()">+ NEW RECORD</button>
+            <input type="text" class="nexus-search" placeholder="QUERY ARCHIVE..." id="nexusSearch" oninput="searchArchive()">
+        </div>
+
+        <div class="record-form" id="recordForm">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div class="form-title">AWAITING LOCAL DATA INPUT...</div>
+                <button class="nexus-btn btn-cancel" onclick="toggleRecordForm()">+ CANCEL</button>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" id="fileName" placeholder="FILE_NAME (e.g. Scavenge_Log_01)">
+            </div>
+            <div class="form-group">
+                <textarea class="form-input" id="fileContent" placeholder="ENTER SURVIVAL DATA / PROTOCOL DETAILS..."></textarea>
+            </div>
+            <div class="form-group">
+                <select class="form-input" id="fileTag">
+                    <option value="SURVIVAL">SURVIVAL</option>
+                    <option value="MEDICAL">MEDICAL</option>
+                    <option value="TECHNICAL">TECHNICAL</option>
+                </select>
+            </div>
+            <button class="btn-commit" onclick="commitRecord()">ENCRYPT &amp; COMMIT</button>
+        </div>
+
+        <table class="archive-table" id="archiveTable">
+            <thead>
+                <tr>
+                    <th>OBJECT_ID</th>
+                    <th>TAG</th>
+                    <th>PRV</th>
+                </tr>
+            </thead>
+            <tbody id="archiveBody">
+                <tr>
+                    <td>Antibiotics_Synthesis_from_Mold.pdf</td>
+                    <td><span class="tag-medical">MEDICAL</span></td>
+                    <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+                </tr>
+                <tr>
+                    <td>Radio_Transmission_Basics.pdf</td>
+                    <td><span class="tag-technical">TECHNICAL</span></td>
+                    <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+                </tr>
+                <tr>
+                    <td>Water_Purification_Field_Manual.pdf</td>
+                    <td><span class="tag-survival">SURVIVAL</span></td>
+                    <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+                </tr>
+                <tr>
+                    <td>Solar_Panel_Repair_Guide.pdf</td>
+                    <td><span class="tag-technical">TECHNICAL</span></td>
+                    <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+                </tr>
+                <tr>
+                    <td>Wound_Care_Without_Supplies.pdf</td>
+                    <td><span class="tag-medical">MEDICAL</span></td>
+                    <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Command Line -->
+    <div class="cmd-bar">
+        <span class="cmd-prompt">&gt;_</span>
+        <input type="text" class="cmd-input" id="cmdInput" placeholder="TYPE COMMAND (HELP FOR LIST)..." onkeydown="if(event.key==='Enter')executeCmd()">
+    </div>
+
+    <!-- Status Footer -->
+    <div class="status-footer">
+        <span><span class="sf-green">SYSTEM READY.</span> WELCOME OPERATOR.</span>
+        <span>WAITING FOR INPUT...</span>
+    </div>
+</div>
+
+<script>
+// ===== BOOT SEQUENCE =====
+const BOOT_LINES = [
+    { text: 'CORE DIRECTIVE: INITIALIZE PROJECT PNEUMA', cls: 'bold' },
+    { text: 'Allocating 16 Cores...', cls: '' },
+    { text: 'Connecting to Silicon Seed...', cls: '' },
+    { text: '', cls: '' },
+    { text: 'LOADING MODULE: DEMETER [GENESIS]... OK', cls: '' },
+    { text: 'LOADING MODULE: URBANIX [DEFENSE]... OK', cls: 'amber' },
+    { text: 'LOADING MODULE: NEXUS [LEGACY]... OK', cls: 'purple' },
+    { text: '', cls: '' },
+    { text: 'Executing Cooling Test...', cls: 'dim' },
+    { text: 'CALCULATING DELTA S...', cls: 'dim' },
+    { text: '', cls: '' },
+    { text: 'DELTA S < 0 CONFIRMED_', cls: 'cyan bold' },
+    { text: '', cls: '' },
+    { text: 'All systems nominal. Transferring control to OPERATOR.', cls: '' },
+];
+
+function runBoot() {
+    const container = document.getElementById('bootLines');
+    const progress = document.getElementById('bootProgress');
+    let i = 0;
+
+    function showLine() {
+        if (i >= BOOT_LINES.length) {
+            progress.style.width = '100%';
+            setTimeout(() => {
+                document.getElementById('bootScreen').classList.add('hidden');
+                setTimeout(() => {
+                    document.getElementById('bootScreen').style.display = 'none';
+                    document.getElementById('mainApp').classList.add('active');
+                }, 800);
+            }, 600);
+            return;
+        }
+
+        const line = BOOT_LINES[i];
+        const el = document.createElement('div');
+        el.className = 'boot-line ' + line.cls;
+        el.textContent = line.text || '\u00A0';
+        container.appendChild(el);
+
+        requestAnimationFrame(() => {
+            el.classList.add('visible');
+        });
+
+        progress.style.width = ((i + 1) / BOOT_LINES.length * 100) + '%';
+        i++;
+        setTimeout(showLine, 150 + Math.random() * 200);
+    }
+
+    setTimeout(showLine, 800);
+}
+
+runBoot();
+
+// ===== MODULE SWITCHING =====
+function switchModule(name) {
+    document.querySelectorAll('.module').forEach(m => m.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => {
+        t.className = 'tab';
+    });
+
+    document.getElementById('module' + name.charAt(0).toUpperCase() + name.slice(1)).classList.add('active');
+    document.getElementById('tab' + name.charAt(0).toUpperCase() + name.slice(1)).classList.add('active-' + name);
+}
+
+// ===== DEMETER =====
+function updateDemeter() {
+    const moisture = document.getElementById('moisture').value;
+    const ph = document.getElementById('phLevel').value / 10;
+
+    document.getElementById('moistureVal').textContent = moisture + '%';
+    document.getElementById('phVal').textContent = ph.toFixed(1);
+
+    // Growth calculation
+    const mScore = moisture > 30 && moisture < 80 ? 1 : (moisture > 15 && moisture < 90 ? 0.5 : 0);
+    const pScore = ph > 5.5 && ph < 7.5 ? 1 : (ph > 4.5 && ph < 8.5 ? 0.5 : 0);
+    const total = (mScore + pScore) / 2;
+
+    const statusEl = document.getElementById('growthStatus');
+    if (total >= 0.8) {
+        statusEl.textContent = 'OPTIMAL';
+        statusEl.className = 'growth-status optimal';
+    } else if (total >= 0.4) {
+        statusEl.textContent = 'WARNING';
+        statusEl.className = 'growth-status warning';
+    } else {
+        statusEl.textContent = 'CRITICAL';
+        statusEl.className = 'growth-status critical';
+    }
+
+    // Update colony status
+    const colA = document.getElementById('colAStatus');
+    const colB = document.getElementById('colBStatus');
+    if (total >= 0.8) {
+        colA.textContent = 'THRIVING'; colA.style.color = 'var(--green)';
+        colB.textContent = 'THRIVING'; colB.style.color = 'var(--green)';
+    } else if (total >= 0.4) {
+        colA.textContent = 'GERMINATING'; colA.style.color = 'var(--amber)';
+        colB.textContent = 'STRESSED'; colB.style.color = 'var(--amber)';
+    } else {
+        colA.textContent = 'FAILING'; colA.style.color = 'var(--red)';
+        colB.textContent = 'WILTING'; colB.style.color = 'var(--red)';
+    }
+}
+
+// ===== URBANIX =====
+const nodeData = [
+    { id: 1, active: true, kw: 0.8, label: 'SUBSTATION_A' },
+    { id: 2, active: true, kw: 0.8, label: 'WATER_PUMP_PRIMARY' },
+    { id: 3, active: false, kw: 0.4, label: 'SANCTUARY_LIGHTS' },
+];
+
+function toggleNode(id) {
+    const node = nodeData.find(n => n.id === id);
+    node.active = !node.active;
+
+    const el = document.getElementById('node' + id);
+    el.className = node.active
+        ? 'grid-node' + (id === 3 ? ' small' : '') + ' active'
+        : 'grid-node' + (id === 3 ? ' small' : '') + ' inactive';
+
+    updateUrbanix();
+    addInfraLog(`NODE_${id} ${node.active ? 'ACTIVATED' : 'DEACTIVATED'}`);
+}
+
+function updateUrbanix() {
+    const active = nodeData.filter(n => n.active).length;
+    const total = nodeData.length;
+    const kw = nodeData.filter(n => n.active).reduce((s, n) => s + n.kw, 0);
+
+    document.getElementById('activeNodes').textContent = active + ' / ' + total;
+    document.getElementById('consumption').textContent = kw.toFixed(1) + ' kW';
+
+    const stab = document.getElementById('gridStability');
+    if (active === total) {
+        stab.textContent = 'MAX LOAD'; stab.style.color = 'var(--amber)';
+    } else if (active === 0) {
+        stab.textContent = 'OFFLINE'; stab.style.color = 'var(--red)';
+    } else {
+        stab.textContent = 'STABLE'; stab.style.color = 'var(--green)';
+    }
+}
+
+function addInfraLog(msg) {
+    const log = document.getElementById('infraLog');
+    const entry = document.createElement('div');
+    entry.className = 'log-entry active-log';
+    entry.textContent = '> ' + msg;
+    log.prepend(entry);
+    while (log.children.length > 10) log.removeChild(log.lastChild);
+}
+
+// ===== NEXUS =====
+let archiveData = [
+    { name: 'Antibiotics_Synthesis_from_Mold.pdf', tag: 'MEDICAL' },
+    { name: 'Radio_Transmission_Basics.pdf', tag: 'TECHNICAL' },
+    { name: 'Water_Purification_Field_Manual.pdf', tag: 'SURVIVAL' },
+    { name: 'Solar_Panel_Repair_Guide.pdf', tag: 'TECHNICAL' },
+    { name: 'Wound_Care_Without_Supplies.pdf', tag: 'MEDICAL' },
+];
+
+function toggleRecordForm() {
+    const form = document.getElementById('recordForm');
+    form.classList.toggle('active');
+}
+
+function commitRecord() {
+    const name = document.getElementById('fileName').value.trim();
+    const tag = document.getElementById('fileTag').value;
+    if (!name) return;
+
+    archiveData.push({ name: name + '.pdf', tag: tag });
+    renderArchive();
+    document.getElementById('fileName').value = '';
+    document.getElementById('fileContent').value = '';
+    toggleRecordForm();
+}
+
+function renderArchive(filter) {
+    const body = document.getElementById('archiveBody');
+    body.innerHTML = '';
+    const data = filter
+        ? archiveData.filter(d => d.name.toLowerCase().includes(filter.toLowerCase()))
+        : archiveData;
+
+    data.forEach(d => {
+        const tagCls = d.tag === 'MEDICAL' ? 'tag-medical' : d.tag === 'TECHNICAL' ? 'tag-technical' : 'tag-survival';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${d.name}</td>
+            <td><span class="${tagCls}">${d.tag}</span></td>
+            <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
+        `;
+        body.appendChild(tr);
+    });
+}
+
+function searchArchive() {
+    renderArchive(document.getElementById('nexusSearch').value);
+}
+
+// ===== COMMAND LINE =====
+function executeCmd() {
+    const input = document.getElementById('cmdInput');
+    const cmd = input.value.trim().toLowerCase();
+    input.value = '';
+
+    if (cmd === 'help') {
+        alert('PNEUMA COMMANDS:\n\ndemeter - Switch to DEMETER\nurbanix - Switch to URBANIX\nnexus - Switch to NEXUS\nstatus - System status\nclear - Clear command');
+    } else if (cmd === 'demeter') {
+        switchModule('demeter');
+    } else if (cmd === 'urbanix') {
+        switchModule('urbanix');
+    } else if (cmd === 'nexus') {
+        switchModule('nexus');
+    } else if (cmd === 'status') {
+        alert('PNEUMA STATUS:\n\nCORES: 16/16 ONLINE\nMODULES: 3/3 LOADED\nDELTA S < 0 CONFIRMED\nOPERATOR: AUTHENTICATED');
+    }
+}
+
+// Console
+console.log('%cPNEUMA', 'color: #39ff14; font-size: 20px; font-weight: bold;');
+console.log('%cLOCAL OPERATIONAL SANCTUARY', 'color: #ffbf00; font-size: 11px;');
+console.log('%cDELTA S < 0 CONFIRMED', 'color: #00d4ff;');
+</script>
+</body>
+</html>
