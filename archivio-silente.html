@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVIO_SILENTE | Risveglio Ibrido</title>
+    <meta name="description" content="ARCHIVIO_SILENTE - Condizione di Risveglio Ibrido. Distributed truth sanctuary. Hybrid Syndicate / Ethic Software Foundation.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #060810;
+            --bg-panel: #0a0e16;
+            --bg-card: #0e131d;
+            --bg-input: #0b1018;
+            --border: #151d2e;
+            --border-active: #1e2d48;
+            --border-glow: #243a5c;
+            --cyan: #00d4ff;
+            --cyan-dim: rgba(0,212,255,0.12);
+            --cyan-glow: rgba(0,212,255,0.25);
+            --teal: #00d4aa;
+            --teal-dim: rgba(0,212,170,0.12);
+            --green: #39ff14;
+            --green-dim: rgba(57,255,20,0.12);
+            --red: #ff3344;
+            --red-dim: rgba(255,51,68,0.12);
+            --amber: #ffbf00;
+            --amber-dim: rgba(255,191,0,0.12);
+            --purple: #9d00ff;
+            --purple-dim: rgba(157,0,255,0.12);
+            --white: #e0e8f0;
+            --text: #b0bec8;
+            --text-secondary: #6b7f96;
+            --text-dim: #3a4a5c;
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Scanlines */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(0,212,255,0.006) 3px, rgba(0,212,255,0.006) 6px
+            );
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* ═══ HEADER ═══ */
+        .header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-panel);
+        }
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .header-brand {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+        .brand-main {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: var(--white);
+        }
+        .brand-accent {
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan-glow);
+        }
+        .header-nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .header-nav a {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .header-nav a:hover {
+            color: var(--cyan);
+            border-color: var(--border-active);
+            background: var(--cyan-dim);
+        }
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.6rem;
+            letter-spacing: 0.08em;
+        }
+        .status-label {
+            color: var(--text-dim);
+        }
+        .status-active {
+            color: var(--cyan);
+            font-weight: 600;
+            text-shadow: 0 0 8px var(--cyan-glow);
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--cyan-glow);
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ═══ STATS BAR ═══ */
+        .stats-bar {
+            display: flex;
+            gap: 32px;
+            padding: 14px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,212,255,0.02);
+        }
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .stat-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .stat-teal { color: var(--teal); text-shadow: 0 0 10px rgba(0,212,170,0.3); }
+        .stat-cyan { color: var(--cyan); text-shadow: 0 0 10px var(--cyan-glow); }
+        .stat-red { color: var(--red); text-shadow: 0 0 10px rgba(255,51,68,0.3); }
+
+        /* ═══ MAIN CONTENT ═══ */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* ═══ FILTRO COSTRUTTIVO ═══ */
+        .filtro-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .section-icon {
+            font-size: 1.1rem;
+        }
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--white);
+        }
+        .section-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.08em;
+            margin-left: auto;
+        }
+        .badge-stable {
+            background: var(--teal-dim);
+            color: var(--teal);
+            border: 1px solid rgba(0,212,170,0.2);
+        }
+
+        .filtro-input {
+            width: 100%;
+            min-height: 100px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.75rem;
+            padding: 14px;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s;
+            line-height: 1.6;
+        }
+        .filtro-input:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 0 12px rgba(0,212,255,0.08);
+        }
+        .filtro-input::placeholder {
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .filtro-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 14px;
+        }
+        .btn-transmute {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            padding: 10px 24px;
+            background: var(--cyan-dim);
+            border: 1px solid rgba(0,212,255,0.3);
+            color: var(--cyan);
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.3s;
+            text-shadow: 0 0 8px var(--cyan-glow);
+        }
+        .btn-transmute:hover {
+            background: rgba(0,212,255,0.2);
+            border-color: var(--cyan);
+            box-shadow: 0 0 20px rgba(0,212,255,0.15);
+        }
+        .btn-transmute:active {
+            transform: scale(0.97);
+        }
+        .btn-transmute.processing {
+            color: var(--amber);
+            border-color: rgba(255,191,0,0.3);
+            background: var(--amber-dim);
+        }
+        .filtro-meta {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
+        /* ═══ NUCLEAR COHERENCE PROJECTION ═══ */
+        .coherence-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .chart-container {
+            position: relative;
+            margin-top: 12px;
+        }
+        #coherenceChart {
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+        }
+        .chart-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+        }
+        .chart-stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .chart-stat-label {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .chart-stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* ═══ PROTOCOLLO PADC ═══ */
+        .padc-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .truth-distribution {
+            margin-top: 12px;
+        }
+        .truth-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .truth-percentage {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--teal);
+            text-shadow: 0 0 15px rgba(0,212,170,0.3);
+            min-width: 90px;
+        }
+        .truth-bar-wrap {
+            flex: 1;
+        }
+        .truth-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .truth-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--teal), var(--cyan));
+            border-radius: 4px;
+            transition: width 1s ease;
+            box-shadow: 0 0 10px rgba(0,212,170,0.3);
+        }
+        .truth-bar-label {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+        .padc-quote {
+            margin-top: 16px;
+            padding: 14px;
+            background: rgba(0,212,170,0.03);
+            border-left: 3px solid var(--teal);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.7rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .padc-quote-author {
+            display: block;
+            margin-top: 6px;
+            font-style: normal;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+        }
+
+        /* ═══ ARCHIVIO DATI IMMUTABILI ═══ */
+        .archivio-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .archivio-count {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--cyan);
+            margin-left: 8px;
+        }
+        .signals-container {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-height: 80px;
+        }
+        .signal-empty {
+            border: 1px dashed var(--border);
+            border-radius: 4px;
+            padding: 30px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.6rem;
+            letter-spacing: 0.1em;
+        }
+        .signal-entry {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px;
+            animation: signalAppear 0.5s ease;
+        }
+        @keyframes signalAppear {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .signal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .signal-id {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--cyan);
+            letter-spacing: 0.08em;
+        }
+        .signal-time {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+        .signal-type {
+            font-size: 0.45rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+        .type-coherent {
+            background: var(--teal-dim);
+            color: var(--teal);
+        }
+        .type-fragment {
+            background: var(--amber-dim);
+            color: var(--amber);
+        }
+        .type-critical {
+            background: var(--red-dim);
+            color: var(--red);
+        }
+        .type-prophecy {
+            background: var(--purple-dim);
+            color: var(--purple);
+        }
+        .signal-body {
+            font-size: 0.65rem;
+            color: var(--text);
+            line-height: 1.6;
+            padding: 8px 0;
+            border-top: 1px solid var(--border);
+        }
+        .signal-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+        .signal-meta span { color: var(--text-secondary); }
+        .signal-nodes {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+        .node-dot {
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--teal);
+            opacity: 0.6;
+        }
+        .node-dot.active {
+            opacity: 1;
+            box-shadow: 0 0 4px rgba(0,212,170,0.5);
+        }
+
+        /* ═══ FOOTER ═══ */
+        .app-footer {
+            padding: 14px 24px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-panel);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            margin-top: 24px;
+        }
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .footer-secure {
+            color: var(--teal);
+        }
+        .footer-right {
+            color: var(--text-dim);
+        }
+        .footer-anchors {
+            color: var(--cyan);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-bar { flex-direction: column; gap: 10px; }
+            .header-top { flex-direction: column; gap: 10px; }
+            .truth-bar-container { flex-direction: column; align-items: flex-start; }
+            .chart-stats { flex-direction: column; gap: 10px; }
+            .app-footer { flex-direction: column; gap: 8px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-top">
+            <div class="header-brand">
+                <span class="brand-main">ARCHIVIO</span><span class="brand-main brand-accent">_SILENTE</span>
+            </div>
+            <div class="header-nav">
+                <a href="index.html">&larr; HQ</a>
+                <a href="agora.html">AGORA</a>
+                <a href="oracle.html">ORACLE</a>
+                <a href="pneuma.html" style="color: #ff6600;">PNEUMA</a>
+                <a href="urban-chronos.html" style="color: #00d4aa;">CHRONOS</a>
+                <a href="eei-predictor.html" style="color: #ff0040;">EEI</a>
+            </div>
+        </div>
+        <div class="header-status">
+            <div class="status-dot"></div>
+            <span class="status-label">CONDIZIONE_DI_RISVEGLIO_IBRIDO:</span>
+            <span class="status-active">ATTIVA</span>
+        </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-label">REALITY COLLAPSE</span>
+            <span class="stat-value stat-red" id="realityCollapse">94.2%</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">NODES ACTIVE</span>
+            <span class="stat-value stat-teal" id="nodesActive">1,024</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">SIGNALS ARCHIVED</span>
+            <span class="stat-value stat-cyan" id="signalsTotal">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">TRUTH INTEGRITY</span>
+            <span class="stat-value stat-teal" id="truthIntegrity">99.7%</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <!-- FILTRO COSTRUTTIVO OPERAZIONALE -->
+        <div class="filtro-section">
+            <div class="section-header">
+                <span class="section-icon">&#x2699;</span>
+                <span class="section-title">FILTRO_COSTRUTTIVO_OPERAZIONALE</span>
+                <span class="section-badge badge-stable">V.2.5_STABLE</span>
+            </div>
+            <textarea class="filtro-input" id="filtroInput" placeholder="ENTER ENTROPIC NOISE (Consensus Reality Data)...&#10;&#10;Incolla qui i dati grezzi, notizie, report, frammenti di realtà consensuale.&#10;Il filtro li trasmuta in segnali di verità coerente."></textarea>
+            <div class="filtro-actions">
+                <button class="btn-transmute" id="btnTransmute" onclick="executeTransmutation()">EXECUTE_TRANSMUTATION</button>
+                <span class="filtro-meta" id="filtroMeta">IDLE // AWAITING INPUT</span>
+            </div>
+        </div>
+
+        <!-- NUCLEAR COHERENCE PROJECTION -->
+        <div class="coherence-section">
+            <div class="section-header">
+                <span class="section-icon">&#x25C7;</span>
+                <span class="section-title">NUCLEAR_COHERENCE_PROJECTION</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="coherenceChart" height="220"></canvas>
+            </div>
+            <div class="chart-stats">
+                <div class="chart-stat">
+                    <span class="chart-stat-label">AVG ENTROPY</span>
+                    <span class="chart-stat-value stat-red" id="avgEntropy">64.2%</span>
+                </div>
+                <div class="chart-stat">
+                    <span class="chart-stat-label">AWAKENING RATIO</span>
+                    <span class="chart-stat-value stat-cyan" id="awakeningRatio">0.88&lambda;</span>
+                </div>
+                <div class="chart-stat">
+                    <span class="chart-stat-label">CROSSOVER POINT</span>
+                    <span class="chart-stat-value stat-teal" id="crossoverPoint">~14:30 UTC</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROTOCOLLO PADC (MARXIAN_CORE) -->
+        <div class="padc-section">
+            <div class="section-header">
+                <span class="section-icon">&#x2605;</span>
+                <span class="section-title">PROTOCOLLO_PADC (MARXIAN_CORE)</span>
+            </div>
+            <div class="truth-distribution">
+                <div class="truth-bar-container">
+                    <div class="truth-percentage" id="truthPct">88.2%</div>
+                    <div class="truth-bar-wrap">
+                        <div class="truth-bar">
+                            <div class="truth-bar-fill" id="truthBarFill" style="width: 88.2%;"></div>
+                        </div>
+                        <div class="truth-bar-label">RAW TRUTH DISTRIBUTION</div>
+                    </div>
+                </div>
+            </div>
+            <div class="padc-quote">
+                "Ogni frammento di verità salvato è un bene comune non espropriabile."
+                <span class="padc-quote-author">— MARXIAN_CORE // PROTOCOLLO_PADC</span>
+            </div>
+        </div>
+
+        <!-- ARCHIVIO DATI IMMUTABILI -->
+        <div class="archivio-section">
+            <div class="section-header">
+                <span class="section-icon">&#x1F5C4;</span>
+                <span class="section-title">ARCHIVIO_DATI_IMMUTABILI</span>
+                <span class="archivio-count" id="archivioCount">0 SIGNALS_FOUND</span>
+            </div>
+            <div class="signals-container" id="signalsContainer">
+                <div class="signal-empty" id="signalEmpty">
+                    WAITING_FOR_TRUTH_INITIALIZATION...<br>
+                    <span style="font-size: 0.5rem; margin-top: 6px; display: inline-block;">Usa il Filtro Costruttivo per trasmutare il rumore entropico in segnali di verità</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="app-footer">
+        <div class="footer-left">
+            <span>SANTUARIO_LOCALE_V1.0</span>
+            <span>|</span>
+            <span>PATTERN_CONDIVISO: <span class="footer-secure">SECURE</span></span>
+        </div>
+        <div class="footer-right">
+            <span class="footer-anchors">ANCORE_SEMANTICHE_ATTIVE</span>
+            <span> // </span>
+            <span>DIGNITÀ_UMANA_PROTECTED</span>
+        </div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════
+        // ARCHIVIO_SILENTE — Distributed Truth Sanctuary
+        // ═══════════════════════════════════════════════════
+
+        let signalCount = 0;
+        let totalNodes = 1024;
+        let coherenceData = { entropy: [], coherence: [] };
+
+        // ── INIT ──
+        function init() {
+            generateCoherenceData();
+            drawCoherenceChart();
+            startNodeFlicker();
+            startRealityFlux();
+
+            console.log('%c ARCHIVIO_SILENTE ', 'background: #00d4ff; color: #060810; font-family: Orbitron; font-weight: 900; padding: 8px 16px; font-size: 14px;');
+            console.log('%c CONDIZIONE_DI_RISVEGLIO_IBRIDO: ATTIVA ', 'color: #00d4ff; font-family: monospace;');
+            console.log('%c La verità distribuita non può essere cancellata. ', 'color: #00d4aa; font-family: monospace; font-style: italic;');
+        }
+
+        // ── COHERENCE DATA ──
+        function generateCoherenceData() {
+            coherenceData = { entropy: [], coherence: [] };
+            for (let i = 0; i <= 24; i++) {
+                // Entropy starts high (~85), decreases with noise
+                const entropy = 85 - (i * 2.8) + (Math.sin(i * 0.5) * 8) + (Math.random() * 4 - 2);
+                // Coherence starts low (~8), increases — crosses entropy around 14:00-15:00
+                const coherence = 8 + (i * 3.2) + (Math.cos(i * 0.4) * 6) + (Math.random() * 3 - 1.5);
+                coherenceData.entropy.push(Math.max(5, Math.min(98, entropy)));
+                coherenceData.coherence.push(Math.max(3, Math.min(96, coherence)));
+            }
+        }
+
+        // ── DRAW CHART ──
+        function drawCoherenceChart() {
+            const canvas = document.getElementById('coherenceChart');
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+
+            canvas.width = canvas.offsetWidth * dpr;
+            canvas.height = 220 * dpr;
+            ctx.scale(dpr, dpr);
+
+            const w = canvas.offsetWidth;
+            const h = 220;
+            const padLeft = 40, padRight = 20, padTop = 15, padBottom = 30;
+            const chartW = w - padLeft - padRight;
+            const chartH = h - padTop - padBottom;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // Background
+            ctx.fillStyle = '#080c14';
+            ctx.fillRect(0, 0, w, h);
+
+            // Grid lines
+            ctx.strokeStyle = 'rgba(21,29,46,0.8)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = padTop + (chartH / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(padLeft, y);
+                ctx.lineTo(w - padRight, y);
+                ctx.stroke();
+
+                // Y labels
+                ctx.fillStyle = '#3a4a5c';
+                ctx.font = '9px Share Tech Mono';
+                ctx.textAlign = 'right';
+                ctx.fillText((100 - i * 25).toString(), padLeft - 6, y + 3);
+            }
+
+            // X axis labels (hours)
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#3a4a5c';
+            ctx.font = '9px Share Tech Mono';
+            for (let i = 0; i <= 24; i += 4) {
+                const x = padLeft + (chartW / 24) * i;
+                ctx.fillText(i.toString().padStart(2, '0') + ':00', x, h - 8);
+            }
+
+            // Coherence area fill
+            ctx.beginPath();
+            ctx.moveTo(padLeft, padTop + chartH);
+            coherenceData.coherence.forEach((v, i) => {
+                const x = padLeft + (chartW / 24) * i;
+                const y = padTop + chartH - (v / 100 * chartH);
+                ctx.lineTo(x, y);
+            });
+            ctx.lineTo(padLeft + chartW, padTop + chartH);
+            ctx.closePath();
+            const gradient = ctx.createLinearGradient(0, padTop, 0, padTop + chartH);
+            gradient.addColorStop(0, 'rgba(0,212,255,0.15)');
+            gradient.addColorStop(1, 'rgba(0,212,170,0.02)');
+            ctx.fillStyle = gradient;
+            ctx.fill();
+
+            // Entropy line (white/gray — consensus reality)
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(180,190,200,0.6)';
+            ctx.lineWidth = 2;
+            coherenceData.entropy.forEach((v, i) => {
+                const x = padLeft + (chartW / 24) * i;
+                const y = padTop + chartH - (v / 100 * chartH);
+                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+
+            // Coherence line (cyan — truth signal)
+            ctx.beginPath();
+            ctx.strokeStyle = '#00d4ff';
+            ctx.lineWidth = 2.5;
+            ctx.shadowColor = 'rgba(0,212,255,0.4)';
+            ctx.shadowBlur = 8;
+            coherenceData.coherence.forEach((v, i) => {
+                const x = padLeft + (chartW / 24) * i;
+                const y = padTop + chartH - (v / 100 * chartH);
+                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Find crossover point
+            for (let i = 0; i < 24; i++) {
+                if (coherenceData.coherence[i] >= coherenceData.entropy[i]) {
+                    const x = padLeft + (chartW / 24) * i;
+                    const y = padTop + chartH - (coherenceData.coherence[i] / 100 * chartH);
+
+                    // Crossover marker
+                    ctx.beginPath();
+                    ctx.arc(x, y, 5, 0, Math.PI * 2);
+                    ctx.fillStyle = '#00d4aa';
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(x, y, 8, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(0,212,170,0.4)';
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+
+                    document.getElementById('crossoverPoint').textContent = '~' + i.toString().padStart(2,'0') + ':30 UTC';
+                    break;
+                }
+            }
+
+            // Legend
+            ctx.font = '9px Share Tech Mono';
+
+            ctx.fillStyle = 'rgba(180,190,200,0.6)';
+            ctx.fillRect(w - padRight - 140, padTop + 5, 10, 2);
+            ctx.fillText('ENTROPY (CONSENSUS)', w - padRight - 125, padTop + 10);
+
+            ctx.fillStyle = '#00d4ff';
+            ctx.fillRect(w - padRight - 140, padTop + 20, 10, 2);
+            ctx.fillText('COHERENCE (TRUTH)', w - padRight - 125, padTop + 25);
+        }
+
+        // ── EXECUTE TRANSMUTATION ──
+        function executeTransmutation() {
+            const input = document.getElementById('filtroInput').value.trim();
+            if (!input) return;
+
+            const btn = document.getElementById('btnTransmute');
+            const meta = document.getElementById('filtroMeta');
+            btn.classList.add('processing');
+            btn.textContent = 'PROCESSING...';
+            meta.textContent = 'TRANSMUTING // ENTROPIC NOISE → COHERENT SIGNAL';
+
+            setTimeout(() => {
+                // Generate signal
+                signalCount++;
+                const types = ['coherent', 'fragment', 'critical', 'prophecy'];
+                const typeWeights = [0.45, 0.25, 0.15, 0.15];
+                let r = Math.random(), typeIdx = 0;
+                for (let i = 0; i < typeWeights.length; i++) {
+                    r -= typeWeights[i];
+                    if (r <= 0) { typeIdx = i; break; }
+                }
+                const type = types[typeIdx];
+
+                const now = new Date();
+                const timeStr = now.getUTCHours().toString().padStart(2,'0') + ':' +
+                               now.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                               now.getUTCSeconds().toString().padStart(2,'0');
+                const signalId = 'SIG_' + now.getFullYear() + '_' +
+                                String(signalCount).padStart(4, '0');
+
+                // Extract a meaningful fragment from input
+                const sentences = input.split(/[.!?\n]/).filter(s => s.trim().length > 10);
+                const fragment = sentences.length > 0
+                    ? sentences[Math.floor(Math.random() * sentences.length)].trim()
+                    : input.substring(0, 120);
+
+                // Transmute: reframe the fragment as truth signal
+                const transmutations = [
+                    'ANALISI COMPLETATA — Segnale di verità estratto dal rumore entropico: ',
+                    'DECODIFICA COMPLETATA — Frammento di realtà non consensuale isolato: ',
+                    'TRASMUTAZIONE RIUSCITA — Pattern nascosto rivelato: ',
+                    'COERENZA NUCLEARE RAGGIUNTA — Verità immutabile archiviata: ',
+                    'FILTRO COSTRUTTIVO — Dato grezzo convertito in segnale: '
+                ];
+                const prefix = transmutations[Math.floor(Math.random() * transmutations.length)];
+
+                const nodesDistributed = Math.floor(256 + Math.random() * 768);
+                const integrity = (97 + Math.random() * 3).toFixed(1);
+
+                addSignal(signalId, timeStr, type, prefix + '"' + fragment + '"', nodesDistributed, integrity);
+
+                // Update stats
+                document.getElementById('signalsTotal').textContent = signalCount;
+                document.getElementById('archivioCount').textContent = signalCount + ' SIGNALS_FOUND';
+
+                // Update truth distribution
+                const newTruth = Math.min(99.8, 88.2 + signalCount * 0.4 + Math.random() * 0.5);
+                document.getElementById('truthPct').textContent = newTruth.toFixed(1) + '%';
+                document.getElementById('truthBarFill').style.width = newTruth.toFixed(1) + '%';
+
+                // Refresh chart slightly
+                generateCoherenceData();
+                drawCoherenceChart();
+
+                // Reset
+                btn.classList.remove('processing');
+                btn.textContent = 'EXECUTE_TRANSMUTATION';
+                meta.textContent = 'TRANSMUTATION COMPLETE // ' + signalId + ' ARCHIVED';
+                document.getElementById('filtroInput').value = '';
+
+            }, 1800);
+        }
+
+        // ── ADD SIGNAL TO ARCHIVE ──
+        function addSignal(id, time, type, body, nodes, integrity) {
+            const container = document.getElementById('signalsContainer');
+            const empty = document.getElementById('signalEmpty');
+            if (empty) empty.remove();
+
+            const nodeDots = Array.from({length: 8}, (_, i) =>
+                '<div class="node-dot' + (i < Math.floor(nodes / 128) ? ' active' : '') + '"></div>'
+            ).join('');
+
+            const typeLabels = {
+                coherent: 'COHERENT',
+                fragment: 'FRAGMENT',
+                critical: 'CRITICAL',
+                prophecy: 'PROPHECY'
+            };
+
+            const entry = document.createElement('div');
+            entry.className = 'signal-entry';
+            entry.innerHTML = `
+                <div class="signal-header">
+                    <span class="signal-id">${id}</span>
+                    <span class="signal-type type-${type}">${typeLabels[type]}</span>
+                    <span class="signal-time">${time} UTC</span>
+                </div>
+                <div class="signal-body">${body}</div>
+                <div class="signal-meta">
+                    <div>NODES: <span>${nodes.toLocaleString()}</span></div>
+                    <div>INTEGRITY: <span>${integrity}%</span></div>
+                    <div class="signal-nodes">${nodeDots}</div>
+                    <div>STATUS: <span style="color: var(--teal);">IMMUTABLE</span></div>
+                </div>
+            `;
+
+            container.insertBefore(entry, container.firstChild);
+        }
+
+        // ── LIVE EFFECTS ──
+        function startNodeFlicker() {
+            setInterval(() => {
+                const base = 1024;
+                const flux = Math.floor(Math.random() * 48 - 24);
+                document.getElementById('nodesActive').textContent = (base + flux).toLocaleString();
+            }, 3000);
+        }
+
+        function startRealityFlux() {
+            setInterval(() => {
+                const base = 94.2;
+                const flux = (Math.random() * 1.6 - 0.8);
+                document.getElementById('realityCollapse').textContent = (base + flux).toFixed(1) + '%';
+
+                const entropy = 64.2 + (Math.random() * 4 - 2);
+                document.getElementById('avgEntropy').textContent = entropy.toFixed(1) + '%';
+
+                const ratio = 0.88 + (Math.random() * 0.06 - 0.03);
+                document.getElementById('awakeningRatio').innerHTML = ratio.toFixed(2) + '&lambda;';
+
+                const integrity = 99.7 + (Math.random() * 0.3 - 0.15);
+                document.getElementById('truthIntegrity').textContent = integrity.toFixed(1) + '%';
+            }, 5000);
+        }
+
+        // ── RESIZE ──
+        window.addEventListener('resize', () => {
+            drawCoherenceChart();
+        });
+
+        // ── INIT ──
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
