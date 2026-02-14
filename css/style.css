@@ -837,6 +837,72 @@ section {
 }
 
 /* === MODEL === */
+.model-price {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 2rem;
+    background: rgba(57, 255, 20, 0.03);
+    border: 2px solid rgba(57, 255, 20, 0.15);
+    border-radius: 8px;
+}
+
+.model-price .price-tag {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 900;
+    color: var(--neon-green);
+    text-shadow:
+        0 0 20px var(--neon-green),
+        0 0 40px rgba(57, 255, 20, 0.4);
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.model-price .price-sub {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.model-price .price-detail {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: rgba(204, 204, 204, 0.5);
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+}
+
+.model-ethics {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    background: rgba(26, 26, 26, 0.5);
+    border: 2px solid rgba(0, 240, 255, 0.2);
+    border-radius: 8px;
+}
+
+.model-ethics .ethics-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px var(--neon-cyan);
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.model-ethics .ethics-text {
+    font-size: 1.05rem;
+    color: var(--text-gray);
+    line-height: 1.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .model-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
