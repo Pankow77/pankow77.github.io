@@ -449,19 +449,22 @@ const CoreFeed = (() => {
 
     // ── INIT ──
     function init() {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                createFeedPanel();
-                startAmbient();
-                // Initial boot message
-                addMessage('SYNTH_02', 'CORE_FEED online. 16 nuclei attivi.');
-                addMessage('PANKOW_77C', 'Operatore connesso. Inizio sessione.');
-            });
-        } else {
+        const boot = () => {
             createFeedPanel();
             startAmbient();
             addMessage('SYNTH_02', 'CORE_FEED online. 16 nuclei attivi.');
             addMessage('PANKOW_77C', 'Operatore connesso. Inizio sessione.');
+
+            // Cleanup on page unload to prevent memory leaks
+            window.addEventListener('beforeunload', () => {
+                if (ambientInterval) clearInterval(ambientInterval);
+            });
+        };
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', boot);
+        } else {
+            boot();
         }
     }
 

@@ -267,6 +267,16 @@ const SignalInterceptor = (() => {
         cycleCount: 0,
     };
 
+    // AbortSignal.timeout polyfill for older browsers
+    function createTimeoutSignal(ms) {
+        if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) {
+            return AbortSignal.timeout(ms);
+        }
+        const controller = new AbortController();
+        setTimeout(() => controller.abort(), ms);
+        return controller.signal;
+    }
+
     // ══════════════════════════════════════════════
     // LAYER 1: FEED_HARVESTER
     // ══════════════════════════════════════════════
@@ -277,7 +287,7 @@ const SignalInterceptor = (() => {
         // Try primary proxy
         try {
             const resp = await fetch(CONFIG.proxyUrl + encodedUrl, {
-                signal: AbortSignal.timeout(15000)
+                signal: createTimeoutSignal(15000)
             });
             const data = await resp.json();
             if (data && data.contents) {
@@ -291,7 +301,7 @@ const SignalInterceptor = (() => {
         // Fallback proxy (rss2json)
         try {
             const resp = await fetch(CONFIG.proxyFallback + encodedUrl, {
-                signal: AbortSignal.timeout(15000)
+                signal: createTimeoutSignal(15000)
             });
             const data = await resp.json();
             if (data && data.items) {
@@ -502,26 +512,7 @@ const SignalInterceptor = (() => {
     }
 
     function storeSignal(signal) {
-        // Store in legacy si_archive for backward compatibility
-        try {
-            let archive = JSON.parse(localStorage.getItem('si_archive') || '[]');
-            archive.unshift({
-                title: signal.title,
-                domain: signal.domain,
-                severity: signal.severity,
-                source: signal.source,
-                link: signal.link,
-                time: signal.classifiedAt
-            });
-            if (archive.length > CONFIG.maxStoredSignals) {
-                archive = archive.slice(0, CONFIG.maxStoredSignals);
-            }
-            localStorage.setItem('si_archive', JSON.stringify(archive));
-        } catch (e) {
-            localStorage.removeItem('si_archive');
-        }
-
-        // Store full signal in PersistenceManager
+        // Single source of truth: PersistenceManager
         if (typeof PersistenceManager !== 'undefined') {
             PersistenceManager.addSignal(signal);
             PersistenceManager.updateBtnCount();
@@ -768,9 +759,15 @@ const SignalInterceptor = (() => {
 
         // Fetch all feeds in parallel
         const promises = FEEDS.map(feed => fetchFeed(feed).catch(() => []));
-        const results = await Promise.allSettled(promises);
 
-        results.forEach((result, i) => {
+        // Promise.allSettled fallback for older browsers
+        const settleAll = typeof Promise.allSettled === 'function'
+            ? (p) => Promise.allSettled(p)
+            : (p) => Promise.all(p.map(pr => pr.then(v => ({ status: 'fulfilled', value: v }), e => ({ status: 'rejected', reason: e }))));
+
+        const results = await settleAll(promises);
+
+        results.forEach((result) => {
             if (result.status === 'fulfilled' && result.value) {
                 allArticles = allArticles.concat(result.value);
             }
@@ -859,6 +856,11 @@ const SignalInterceptor = (() => {
 
             // Then poll every 10 minutes
             pollTimer = setInterval(pollCycle, CONFIG.pollInterval);
+
+            // Cleanup on page unload to prevent memory leaks
+            window.addEventListener('beforeunload', () => {
+                if (pollTimer) clearInterval(pollTimer);
+            });
         };
 
         if (document.readyState === 'loading') {
@@ -878,7 +880,7 @@ const SignalInterceptor = (() => {
         pollCycle,
         triggerManualPoll,
         getStats: () => ({ ...stats }),
-        getArchive: () => JSON.parse(localStorage.getItem('si_archive') || '[]'),
+        getArchive: () => typeof PersistenceManager !== 'undefined' ? PersistenceManager.getArchive() : [],
         FEEDS,
         DOMAINS
     };
