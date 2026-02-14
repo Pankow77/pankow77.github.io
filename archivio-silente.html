@@ -842,6 +842,7 @@
             btn.classList.add('processing');
             btn.textContent = 'PROCESSING...';
             meta.textContent = 'TRANSMUTING // ENTROPIC NOISE → COHERENT SIGNAL';
+            if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('archivio-transmute');
 
             setTimeout(() => {
                 // Generate signal
@@ -976,5 +977,6 @@
         // ── INIT ──
         window.addEventListener('DOMContentLoaded', init);
     </script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>

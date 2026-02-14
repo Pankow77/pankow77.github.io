@@ -1164,10 +1164,16 @@
 
     setInterval(addFeedEntry, 3000 + Math.random() * 2000);
 
+    // Core feed integration - trigger on chart refresh cycles
+    setInterval(() => {
+        if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('oracle-scan');
+    }, 15000);
+
     // ===== CONSOLE SIGNATURE =====
     console.log('%cORACLE v2.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
     console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
     console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
     </script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>

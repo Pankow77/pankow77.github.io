@@ -788,6 +788,7 @@
         sliders[key].addEventListener('input', () => {
             displays[key].textContent = sliders[key].value + '%';
             recalculate();
+            if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('eei-slider');
         });
     });
 
@@ -796,6 +797,7 @@
         shocks[id] = !shocks[id];
         document.getElementById('shock' + id).classList.toggle('active', shocks[id]);
         recalculate();
+        if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('eei-shock');
     }
 
     function resetAll() {
@@ -1016,5 +1018,6 @@
     console.log('%cHYBRID SYNDICATE RESEARCH DIVISION', 'color: #ff0084; font-size: 12px;');
     console.log('%cSECURITY_LVL: OMEGA // PUBLIC ACCESS GRANTED', 'color: #00ffff;');
     </script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>
