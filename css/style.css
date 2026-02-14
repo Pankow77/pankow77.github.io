@@ -1405,3 +1405,134 @@ section {
 .mb-2 { margin-bottom: 2rem; }
 .mb-3 { margin-bottom: 3rem; }
 .mb-4 { margin-bottom: 4rem; }
+
+/* === HYBRID SYNDICATE IMAGE === */
+.hybrid-image-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-15px) translateX(5px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-5px);
+    }
+    75% {
+        transform: translateY(-20px) translateX(3px);
+    }
+}
+
+.hybrid-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.6))
+            drop-shadow(0 0 50px rgba(57, 255, 20, 0.4));
+}
+
+/* Cyberpunk Glitch Effect for Image */
+.glitch-image {
+    position: relative;
+    animation: glitch-image-main 8s infinite;
+}
+
+.glitch-image::before,
+.glitch-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../hybrid-syndicate.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.8;
+}
+
+.glitch-image::before {
+    animation: glitch-image-before 4s infinite;
+    filter: drop-shadow(2px 0 5px rgba(255, 7, 58, 0.8));
+    z-index: -1;
+}
+
+.glitch-image::after {
+    animation: glitch-image-after 3s infinite;
+    filter: drop-shadow(-2px 0 5px rgba(0, 240, 255, 0.8));
+    z-index: -2;
+}
+
+@keyframes glitch-image-main {
+    0%, 92%, 100% {
+        transform: translate(0);
+    }
+    93% {
+        transform: translate(-3px, 3px);
+    }
+    94% {
+        transform: translate(3px, -3px);
+    }
+    95% {
+        transform: translate(-2px, 2px);
+    }
+    96% {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes glitch-image-before {
+    0%, 94%, 100% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+    }
+    95% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translate(-5px, 5px);
+    }
+    96% {
+        clip-path: inset(20% 0 60% 0);
+        transform: translate(5px, -5px);
+    }
+    97% {
+        clip-path: inset(60% 0 20% 0);
+        transform: translate(-3px, 3px);
+    }
+}
+
+@keyframes glitch-image-after {
+    0%, 91%, 100% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+    }
+    92% {
+        clip-path: inset(30% 0 50% 0);
+        transform: translate(4px, -4px);
+    }
+    93% {
+        clip-path: inset(70% 0 10% 0);
+        transform: translate(-4px, 4px);
+    }
+    94% {
+        clip-path: inset(10% 0 70% 0);
+        transform: translate(3px, -3px);
+    }
+}
+
+/* Responsive adjustments for hybrid image */
+@media (max-width: 768px) {
+    .hybrid-image-container {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+}
