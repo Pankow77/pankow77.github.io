@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGINT_CONSOLE | OSINT Workbench</title>
+    <meta name="description" content="SIGINT Console - Professional OSINT Intelligence Workbench. Hybrid Syndicate.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #050a14;
+            --bg-card: #0a1222;
+            --bg-card-hover: #0d1830;
+            --bg-input: #060e1c;
+            --border: #12203a;
+            --border-light: #1a2d50;
+            --cyan: #00c8ff;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --green: #00dd66;
+            --purple: #9d00ff;
+            --pink: #ff0084;
+            --gold: #ffbf00;
+            --text-primary: #c8d6e5;
+            --text-secondary: #6b7fa3;
+            --text-dim: #3a4f6f;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,200,255,0.003) 2px, rgba(0,200,255,0.003) 4px);
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ═══ HEADER ═══ */
+        .sc-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .sc-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sc-pulse {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 12px rgba(0,200,255,0.6);
+            animation: sc-live 1.5s infinite;
+        }
+        @keyframes sc-live {
+            0%, 100% { opacity: 1; box-shadow: 0 0 12px rgba(0,200,255,0.6); }
+            50% { opacity: 0.4; box-shadow: 0 0 4px rgba(0,200,255,0.2); }
+        }
+        .sc-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+        }
+        .sc-sub {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+        .sc-nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .sc-nav a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.2s;
+        }
+        .sc-nav a:hover { color: var(--cyan); }
+
+        /* ═══ TAB BAR ═══ */
+        .sc-tabs {
+            display: flex;
+            gap: 0;
+            padding: 0 20px;
+            background: #030710;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+        }
+        .sc-tab {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            padding: 10px 18px;
+            color: var(--text-dim);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .sc-tab:hover { color: var(--text-secondary); }
+        .sc-tab.active {
+            color: var(--cyan);
+            border-bottom-color: var(--cyan);
+        }
+
+        /* ═══ MAIN CONTENT ═══ */
+        .sc-content {
+            padding: 20px;
+            min-height: calc(100vh - 90px);
+        }
+
+        .sc-panel {
+            display: none;
+        }
+        .sc-panel.active {
+            display: block;
+        }
+
+        /* ═══ ENTITIES PANEL ═══ */
+        .entity-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .entity-filter {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            padding: 5px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.06em;
+        }
+        .entity-filter:hover { border-color: var(--cyan); color: var(--cyan); }
+        .entity-filter.active { background: rgba(0,200,255,0.1); border-color: var(--cyan); color: var(--cyan); }
+
+        .entity-search {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            padding: 5px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 2px;
+            outline: none;
+            min-width: 200px;
+        }
+        .entity-search:focus { border-color: var(--cyan); }
+
+        .entity-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .entity-stat {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 12px;
+            border-radius: 2px;
+            text-align: center;
+        }
+        .entity-stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .entity-stat-label {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            margin-top: 4px;
+        }
+
+        .entity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+        .entity-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 14px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .entity-card:hover {
+            border-color: var(--cyan);
+            background: var(--bg-card-hover);
+        }
+        .entity-card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .entity-icon {
+            font-size: 1rem;
+        }
+        .entity-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .entity-type {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+            margin-left: auto;
+        }
+        .entity-meta {
+            display: flex;
+            gap: 12px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+            flex-wrap: wrap;
+        }
+        .entity-meta span strong {
+            color: var(--text-secondary);
+        }
+        .entity-domains {
+            display: flex;
+            gap: 4px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+        .entity-domain-pill {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.4rem;
+            padding: 1px 6px;
+            border-radius: 2px;
+            background: rgba(0,200,255,0.08);
+            border: 1px solid var(--border);
+            letter-spacing: 0.04em;
+        }
+        .entity-severity-bar {
+            height: 3px;
+            background: var(--border);
+            margin-top: 8px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .entity-severity-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+
+        /* ═══ CASES PANEL ═══ */
+        .case-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            padding: 8px 16px;
+            border: 1px solid var(--cyan);
+            background: rgba(0,200,255,0.08);
+            color: var(--cyan);
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn:hover {
+            background: rgba(0,200,255,0.2);
+            box-shadow: 0 0 12px rgba(0,200,255,0.2);
+        }
+        .btn-red { border-color: var(--red); color: var(--red); background: rgba(255,51,68,0.08); }
+        .btn-red:hover { background: rgba(255,51,68,0.2); box-shadow: 0 0 12px rgba(255,51,68,0.2); }
+        .btn-green { border-color: var(--green); color: var(--green); background: rgba(0,221,102,0.08); }
+        .btn-green:hover { background: rgba(0,221,102,0.2); }
+
+        .case-list { display: flex; flex-direction: column; gap: 10px; }
+        .case-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 16px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .case-card:hover {
+            border-color: var(--cyan);
+            background: var(--bg-card-hover);
+        }
+        .case-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .case-id {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+        }
+        .case-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            padding: 2px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.08em;
+        }
+        .case-status.OPEN { background: rgba(0,200,255,0.15); color: var(--cyan); }
+        .case-status.ACTIVE { background: rgba(0,221,102,0.15); color: var(--green); }
+        .case-status.CLOSED { background: rgba(107,127,163,0.15); color: var(--text-secondary); }
+        .case-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .case-desc {
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .case-meta {
+            display: flex;
+            gap: 16px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+        }
+        .case-meta strong { color: var(--text-secondary); }
+
+        .priority-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+        }
+        .priority-CRITICAL { background: rgba(255,51,68,0.2); color: var(--red); }
+        .priority-HIGH { background: rgba(255,136,51,0.2); color: var(--orange); }
+        .priority-MEDIUM { background: rgba(255,204,0,0.2); color: var(--yellow); }
+        .priority-LOW { background: rgba(0,200,255,0.15); color: var(--cyan); }
+
+        /* ═══ MODAL ═══ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 500;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal {
+            background: var(--bg-deep);
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 24px;
+        }
+        .modal-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 14px;
+        }
+        .form-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            padding: 8px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            border-radius: 2px;
+            outline: none;
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            border-color: var(--cyan);
+        }
+        .form-textarea { resize: vertical; min-height: 80px; }
+        .form-select { cursor: pointer; }
+        .form-select option { background: var(--bg-deep); }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: flex-end;
+        }
+
+        /* ═══ LINK ANALYSIS PANEL ═══ */
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .link-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 14px;
+        }
+        .link-card-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 10px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+        }
+        .link-arrow {
+            color: var(--cyan);
+            font-weight: 700;
+        }
+        .link-strength {
+            margin-left: auto;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 700;
+        }
+        .link-bar {
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .link-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cyan), var(--teal));
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
+        .link-co {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        /* ═══ SOURCES PANEL ═══ */
+        .source-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .source-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            padding: 14px;
+        }
+        .source-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+        }
+        .source-matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .source-rating-box {
+            text-align: center;
+            padding: 8px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+        .source-rating-code {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        .source-rating-label {
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            margin-top: 2px;
+        }
+        .source-composite {
+            text-align: center;
+            padding: 8px;
+            background: rgba(0,200,255,0.05);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+        .source-composite-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        .source-composite-label {
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+
+        /* ═══ TIMELINE PANEL ═══ */
+        .timeline-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .timeline-event:hover {
+            border-color: var(--cyan);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -26px;
+            top: 14px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid var(--cyan);
+            background: var(--bg-deep);
+        }
+        .timeline-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+        .timeline-title {
+            font-size: 0.65rem;
+            font-weight: 500;
+            margin: 4px 0;
+        }
+        .timeline-meta {
+            display: flex;
+            gap: 10px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            flex-wrap: wrap;
+        }
+        .timeline-entities {
+            display: flex;
+            gap: 4px;
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+        .timeline-entity-tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.4rem;
+            padding: 1px 6px;
+            border-radius: 2px;
+            border: 1px solid;
+            letter-spacing: 0.04em;
+        }
+
+        /* ═══ WATCHLIST PANEL ═══ */
+        .watchlist-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .watch-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+        }
+        .watch-pattern {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--cyan);
+            flex: 1;
+        }
+        .watch-matches {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+        .watch-remove {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.2s;
+        }
+        .watch-remove:hover { color: var(--red); }
+
+        /* ═══ REPORT PANEL ═══ */
+        .report-output {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 2px;
+            max-height: 70vh;
+            overflow-y: auto;
+            color: var(--text-secondary);
+        }
+
+        /* ═══ CASE DETAIL VIEW ═══ */
+        .case-detail {
+            display: none;
+        }
+        .case-detail.active {
+            display: block;
+        }
+        .case-detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .case-detail-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .case-signals-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .case-signal-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            font-size: 0.55rem;
+        }
+        .case-signal-domain {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.4rem;
+            padding: 1px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+        }
+        .case-signal-title {
+            flex: 1;
+            color: var(--text-secondary);
+        }
+        .case-signal-severity {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.45rem;
+            font-weight: 700;
+        }
+        .case-notes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .case-note-item {
+            padding: 10px 14px;
+            background: var(--bg-input);
+            border-left: 3px solid var(--cyan);
+            border-radius: 0 2px 2px 0;
+            font-size: 0.55rem;
+            line-height: 1.6;
+        }
+        .case-note-meta {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+        }
+
+        /* ═══ ENTITY DETAIL MODAL ═══ */
+        .pol-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 14px 0;
+        }
+        .pol-item {
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 2px;
+            text-align: center;
+        }
+        .pol-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .pol-label {
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            margin-top: 2px;
+        }
+        .pol-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            margin-bottom: 3px;
+        }
+        .pol-bar {
+            flex: 1;
+            height: 6px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .pol-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            background: var(--cyan);
+        }
+
+        /* ═══ EMPTY STATE ═══ */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-dim);
+        }
+        .empty-state-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .empty-state-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+        .empty-state-text {
+            font-size: 0.55rem;
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 768px) {
+            .sc-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+            .sc-tabs { padding: 0 10px; }
+            .sc-content { padding: 12px; }
+            .entity-grid { grid-template-columns: 1fr; }
+            .link-grid { grid-template-columns: 1fr; }
+            .source-grid { grid-template-columns: 1fr; }
+            .entity-stats { grid-template-columns: repeat(2, 1fr); }
+            .pol-grid { grid-template-columns: 1fr; }
+            .modal { width: 95%; padding: 16px; }
+        }
+
+        /* ═══ SCROLLBAR ═══ */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="sc-header">
+        <div class="sc-brand">
+            <div class="sc-pulse"></div>
+            <div>
+                <div class="sc-title">SIGINT_CONSOLE</div>
+                <div class="sc-sub">PROFESSIONAL OSINT WORKBENCH v1.0</div>
+            </div>
+        </div>
+        <nav class="sc-nav">
+            <a href="index.html">HOME</a>
+            <a href="signal-dashboard.html">SIGNALS</a>
+            <a href="nerve-center.html">NERVE</a>
+            <a href="briefing.html">BRIEFING</a>
+            <a href="oracle.html">ORACLE</a>
+        </nav>
+    </header>
+
+    <!-- ═══ TAB BAR ═══ -->
+    <div class="sc-tabs">
+        <button class="sc-tab active" data-tab="entities">◎ ENTITIES</button>
+        <button class="sc-tab" data-tab="cases">◆ CASES</button>
+        <button class="sc-tab" data-tab="links">◈ LINK ANALYSIS</button>
+        <button class="sc-tab" data-tab="timeline">◉ TIMELINE</button>
+        <button class="sc-tab" data-tab="sources">◇ SOURCES</button>
+        <button class="sc-tab" data-tab="watchlist">◐ WATCHLIST</button>
+        <button class="sc-tab" data-tab="report">◑ REPORT</button>
+    </div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <div class="sc-content">
+
+        <!-- ═══ ENTITIES PANEL ═══ -->
+        <div class="sc-panel active" id="panel-entities">
+            <div class="entity-stats" id="entity-stats"></div>
+            <div class="entity-controls">
+                <input type="text" class="entity-search" id="entity-search" placeholder="Search entities...">
+                <button class="entity-filter active" data-type="ALL">ALL</button>
+                <button class="entity-filter" data-type="PERSON">👤 PERSON</button>
+                <button class="entity-filter" data-type="ORG">🏛 ORG</button>
+                <button class="entity-filter" data-type="LOCATION">📍 LOCATION</button>
+                <button class="entity-filter" data-type="EVENT">⚡ EVENT</button>
+                <button class="btn" id="btn-refresh-entities">↻ SCAN ARCHIVE</button>
+            </div>
+            <div class="entity-grid" id="entity-grid"></div>
+        </div>
+
+        <!-- ═══ CASES PANEL ═══ -->
+        <div class="sc-panel" id="panel-cases">
+            <div class="case-header">
+                <div style="font-family: 'Orbitron', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em;">
+                    INVESTIGATION CASE MANAGEMENT
+                </div>
+                <button class="btn" id="btn-new-case">+ NEW CASE</button>
+            </div>
+            <div class="case-list" id="case-list"></div>
+
+            <!-- Case Detail View -->
+            <div class="case-detail" id="case-detail">
+                <div class="case-detail-header">
+                    <div>
+                        <div class="case-id" id="detail-case-id"></div>
+                        <div class="case-title" id="detail-case-title" style="font-size: 1rem; margin-top: 4px;"></div>
+                        <div class="case-desc" id="detail-case-desc"></div>
+                    </div>
+                    <div class="case-detail-actions">
+                        <button class="btn" id="btn-add-note">+ NOTE</button>
+                        <button class="btn" id="btn-add-signal">+ SIGNAL</button>
+                        <button class="btn" id="btn-generate-report">◑ REPORT</button>
+                        <button class="btn-red btn" id="btn-close-case">CLOSE</button>
+                        <button class="btn" id="btn-back-cases">← BACK</button>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <div style="font-family: 'Orbitron', monospace; font-size: 0.5rem; color: var(--cyan); letter-spacing: 0.1em; margin-bottom: 10px;">
+                            EVIDENCE CHAIN
+                        </div>
+                        <div class="case-signals-list" id="detail-signals"></div>
+                    </div>
+                    <div>
+                        <div style="font-family: 'Orbitron', monospace; font-size: 0.5rem; color: var(--cyan); letter-spacing: 0.1em; margin-bottom: 10px;">
+                            ANALYST NOTES
+                        </div>
+                        <div class="case-notes-list" id="detail-notes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ LINK ANALYSIS PANEL ═══ -->
+        <div class="sc-panel" id="panel-links">
+            <div style="font-family: 'Orbitron', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 6px;">
+                ENTITY RELATIONSHIP MAP — CO-OCCURRENCE ANALYSIS
+            </div>
+            <div style="font-size: 0.5rem; color: var(--text-dim); margin-bottom: 16px;">
+                Entities appearing together in signals indicate potential relationships. Strength = co-occurrence frequency.
+            </div>
+            <div class="link-grid" id="link-grid"></div>
+        </div>
+
+        <!-- ═══ TIMELINE PANEL ═══ -->
+        <div class="sc-panel" id="panel-timeline">
+            <div class="timeline-controls">
+                <input type="text" class="entity-search" id="timeline-entity-filter" placeholder="Filter by entity...">
+                <select class="form-select" id="timeline-domain-filter" style="width: auto; min-width: 120px;">
+                    <option value="">All Domains</option>
+                    <option value="CLIMATE">CLIMATE</option>
+                    <option value="GEOPOLITICS">GEOPOLITICS</option>
+                    <option value="ECONOMY">ECONOMY</option>
+                    <option value="TECHNOLOGY">TECHNOLOGY</option>
+                    <option value="SOCIAL">SOCIAL</option>
+                    <option value="ENERGY">ENERGY</option>
+                </select>
+                <button class="btn" id="btn-build-timeline">BUILD TIMELINE</button>
+            </div>
+            <div class="timeline-container" id="timeline-container">
+                <div class="timeline-line"></div>
+            </div>
+        </div>
+
+        <!-- ═══ SOURCES PANEL ═══ -->
+        <div class="sc-panel" id="panel-sources">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <div style="font-family: 'Orbitron', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em;">
+                        SOURCE RELIABILITY ASSESSMENT — NATO ADMIRALTY SYSTEM
+                    </div>
+                    <div style="font-size: 0.45rem; color: var(--text-dim); margin-top: 4px;">
+                        A-F Reliability × 1-6 Credibility = Composite Score
+                    </div>
+                </div>
+                <button class="btn" id="btn-rate-source">+ RATE SOURCE</button>
+            </div>
+            <div class="source-grid" id="source-grid"></div>
+        </div>
+
+        <!-- ═══ WATCHLIST PANEL ═══ -->
+        <div class="sc-panel" id="panel-watchlist">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <div style="font-family: 'Orbitron', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em;">
+                        ADVANCED WATCHLIST — PATTERN MONITORING
+                    </div>
+                    <div style="font-size: 0.45rem; color: var(--text-dim); margin-top: 4px;">
+                        Monitor keywords and regex patterns across all incoming signals.
+                    </div>
+                </div>
+                <button class="btn" id="btn-add-watch">+ ADD PATTERN</button>
+            </div>
+            <div class="watchlist-items" id="watchlist-items"></div>
+        </div>
+
+        <!-- ═══ REPORT PANEL ═══ -->
+        <div class="sc-panel" id="panel-report">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <div>
+                    <div style="font-family: 'Orbitron', monospace; font-size: 0.6rem; color: var(--text-dim); letter-spacing: 0.1em;">
+                        OSINT REPORT GENERATOR
+                    </div>
+                    <div style="font-size: 0.45rem; color: var(--text-dim); margin-top: 4px;">
+                        Select a case to generate a professional intelligence report.
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <select class="form-select" id="report-case-select" style="width: auto; min-width: 200px;">
+                        <option value="">Select Case...</option>
+                    </select>
+                    <button class="btn" id="btn-gen-report">GENERATE</button>
+                    <button class="btn-green btn" id="btn-download-report" style="display: none;">↓ DOWNLOAD</button>
+                </div>
+            </div>
+            <div class="report-output" id="report-output" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- ═══ MODALS ═══ -->
+
+    <!-- New Case Modal -->
+    <div class="modal-overlay" id="modal-new-case">
+        <div class="modal">
+            <div class="modal-title">CREATE INVESTIGATION CASE</div>
+            <div class="form-group">
+                <label class="form-label">TITLE</label>
+                <input type="text" class="form-input" id="case-form-title" placeholder="Investigation subject...">
+            </div>
+            <div class="form-group">
+                <label class="form-label">DESCRIPTION</label>
+                <textarea class="form-textarea" id="case-form-desc" placeholder="Describe the investigation scope..."></textarea>
+            </div>
+            <div class="form-group">
+                <label class="form-label">PRIORITY</label>
+                <select class="form-select" id="case-form-priority">
+                    <option value="LOW">LOW</option>
+                    <option value="MEDIUM" selected>MEDIUM</option>
+                    <option value="HIGH">HIGH</option>
+                    <option value="CRITICAL">CRITICAL</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">CLASSIFICATION</label>
+                <select class="form-select" id="case-form-class">
+                    <option value="UNCLASSIFIED">UNCLASSIFIED</option>
+                    <option value="RESTRICTED">RESTRICTED</option>
+                    <option value="CONFIDENTIAL">CONFIDENTIAL</option>
+                    <option value="SECRET">SECRET</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">TAGS (comma separated)</label>
+                <input type="text" class="form-input" id="case-form-tags" placeholder="osint, geopolitics, energy...">
+            </div>
+            <div class="form-actions">
+                <button class="btn" id="btn-cancel-case">CANCEL</button>
+                <button class="btn-green btn" id="btn-save-case">CREATE CASE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Note Modal -->
+    <div class="modal-overlay" id="modal-add-note">
+        <div class="modal">
+            <div class="modal-title">ADD ANALYST NOTE</div>
+            <div class="form-group">
+                <label class="form-label">NOTE</label>
+                <textarea class="form-textarea" id="note-form-text" placeholder="Your analysis, observations, hypotheses..." style="min-height: 120px;"></textarea>
+            </div>
+            <div class="form-actions">
+                <button class="btn" id="btn-cancel-note">CANCEL</button>
+                <button class="btn-green btn" id="btn-save-note">ADD NOTE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Signal to Case Modal -->
+    <div class="modal-overlay" id="modal-add-signal">
+        <div class="modal">
+            <div class="modal-title">ADD SIGNAL TO CASE</div>
+            <div class="form-group">
+                <label class="form-label">SEARCH ARCHIVE</label>
+                <input type="text" class="form-input" id="signal-search-input" placeholder="Search signals by title...">
+            </div>
+            <div id="signal-search-results" style="max-height: 300px; overflow-y: auto; margin-top: 10px;"></div>
+            <div class="form-actions">
+                <button class="btn" id="btn-cancel-signal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rate Source Modal -->
+    <div class="modal-overlay" id="modal-rate-source">
+        <div class="modal">
+            <div class="modal-title">RATE SOURCE — ADMIRALTY SYSTEM</div>
+            <div class="form-group">
+                <label class="form-label">SOURCE NAME</label>
+                <input type="text" class="form-input" id="source-form-name" placeholder="e.g. ANSA Mondo, The Guardian...">
+            </div>
+            <div class="form-group">
+                <label class="form-label">RELIABILITY (A-F)</label>
+                <select class="form-select" id="source-form-reliability">
+                    <option value="A">A — Completely Reliable</option>
+                    <option value="B" selected>B — Usually Reliable</option>
+                    <option value="C">C — Fairly Reliable</option>
+                    <option value="D">D — Not Usually Reliable</option>
+                    <option value="E">E — Unreliable</option>
+                    <option value="F">F — Cannot Be Judged</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">CREDIBILITY (1-6)</label>
+                <select class="form-select" id="source-form-credibility">
+                    <option value="1">1 — Confirmed</option>
+                    <option value="2" selected>2 — Probably True</option>
+                    <option value="3">3 — Possibly True</option>
+                    <option value="4">4 — Doubtfully True</option>
+                    <option value="5">5 — Improbable</option>
+                    <option value="6">6 — Cannot Be Judged</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">NOTES</label>
+                <textarea class="form-textarea" id="source-form-notes" placeholder="Assessment context..."></textarea>
+            </div>
+            <div class="form-actions">
+                <button class="btn" id="btn-cancel-source">CANCEL</button>
+                <button class="btn-green btn" id="btn-save-source">RATE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Watchlist Item Modal -->
+    <div class="modal-overlay" id="modal-add-watch">
+        <div class="modal">
+            <div class="modal-title">ADD WATCHLIST PATTERN</div>
+            <div class="form-group">
+                <label class="form-label">PATTERN</label>
+                <input type="text" class="form-input" id="watch-form-pattern" placeholder="Keyword or regex pattern...">
+            </div>
+            <div class="form-group">
+                <label class="form-label">LABEL</label>
+                <input type="text" class="form-input" id="watch-form-label" placeholder="Human-readable label...">
+            </div>
+            <div class="form-group">
+                <label class="form-label">IS REGEX</label>
+                <select class="form-select" id="watch-form-regex">
+                    <option value="false">No — Plain keyword match</option>
+                    <option value="true">Yes — Regular expression</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">PRIORITY</label>
+                <select class="form-select" id="watch-form-priority">
+                    <option value="LOW">LOW</option>
+                    <option value="MEDIUM" selected>MEDIUM</option>
+                    <option value="HIGH">HIGH</option>
+                    <option value="CRITICAL">CRITICAL</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">MIN SEVERITY (%)</label>
+                <input type="number" class="form-input" id="watch-form-severity" value="0" min="0" max="100">
+            </div>
+            <div class="form-actions">
+                <button class="btn" id="btn-cancel-watch">CANCEL</button>
+                <button class="btn-green btn" id="btn-save-watch">ADD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Entity Detail Modal -->
+    <div class="modal-overlay" id="modal-entity-detail">
+        <div class="modal" style="max-width: 700px;">
+            <div class="modal-title" id="entity-detail-title"></div>
+            <div id="entity-detail-content"></div>
+            <div class="form-actions">
+                <button class="btn" id="btn-close-entity-detail">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="js/persistence-manager.js"></script>
+    <script src="js/correlation-engine.js"></script>
+    <script src="js/osint-engine.js"></script>
+    <script>
+    // ═══════════════════════════════════════════════════════════════
+    // SIGINT CONSOLE — Interface Controller
+    // ═══════════════════════════════════════════════════════════════
+
+    (() => {
+        'use strict';
+
+        // ══════════════════════════════════════════════
+        // STATE
+        // ══════════════════════════════════════════════
+
+        let currentEntities = [];
+        let currentEntityFilter = 'ALL';
+        let currentCaseId = null;
+        let currentReport = '';
+
+        // Domain color mapping
+        const DOMAIN_COLORS = {
+            CLIMATE: '#00c8ff',
+            GEOPOLITICS: '#ff3344',
+            ECONOMY: '#00d4aa',
+            TECHNOLOGY: '#39ff14',
+            SOCIAL: '#ff8833',
+            ENERGY: '#ffbf00',
+        };
+
+        // ══════════════════════════════════════════════
+        // TAB NAVIGATION
+        // ══════════════════════════════════════════════
+
+        document.querySelectorAll('.sc-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.sc-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.sc-panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                const panelId = 'panel-' + tab.dataset.tab;
+                document.getElementById(panelId).classList.add('active');
+
+                // Load data for each panel
+                switch (tab.dataset.tab) {
+                    case 'entities': renderEntities(); break;
+                    case 'cases': renderCases(); break;
+                    case 'links': renderLinks(); break;
+                    case 'timeline': renderTimeline(); break;
+                    case 'sources': renderSources(); break;
+                    case 'watchlist': renderWatchlist(); break;
+                    case 'report': loadReportCases(); break;
+                }
+            });
+        });
+
+        // ══════════════════════════════════════════════
+        // ENTITIES
+        // ══════════════════════════════════════════════
+
+        function renderEntities() {
+            currentEntities = OsintEngine.extractFromArchive();
+            renderEntityStats();
+            renderEntityGrid();
+        }
+
+        function renderEntityStats() {
+            const stats = document.getElementById('entity-stats');
+            const byType = {
+                PERSON: currentEntities.filter(e => e.type === 'PERSON').length,
+                ORG: currentEntities.filter(e => e.type === 'ORG').length,
+                LOCATION: currentEntities.filter(e => e.type === 'LOCATION').length,
+                EVENT: currentEntities.filter(e => e.type === 'EVENT').length,
+            };
+            stats.innerHTML = `
+                <div class="entity-stat">
+                    <div class="entity-stat-value" style="color: var(--cyan);">${currentEntities.length}</div>
+                    <div class="entity-stat-label">TOTAL ENTITIES</div>
+                </div>
+                <div class="entity-stat">
+                    <div class="entity-stat-value" style="color: #ff8833;">${byType.PERSON}</div>
+                    <div class="entity-stat-label">👤 PERSONS</div>
+                </div>
+                <div class="entity-stat">
+                    <div class="entity-stat-value" style="color: #9d00ff;">${byType.ORG}</div>
+                    <div class="entity-stat-label">🏛 ORGANIZATIONS</div>
+                </div>
+                <div class="entity-stat">
+                    <div class="entity-stat-value" style="color: #00d4aa;">${byType.LOCATION}</div>
+                    <div class="entity-stat-label">📍 LOCATIONS</div>
+                </div>
+                <div class="entity-stat">
+                    <div class="entity-stat-value" style="color: #ff0084;">${byType.EVENT}</div>
+                    <div class="entity-stat-label">⚡ EVENTS</div>
+                </div>
+            `;
+        }
+
+        function renderEntityGrid() {
+            const grid = document.getElementById('entity-grid');
+            const search = document.getElementById('entity-search').value.toLowerCase();
+            let filtered = currentEntities;
+
+            if (currentEntityFilter !== 'ALL') {
+                filtered = filtered.filter(e => e.type === currentEntityFilter);
+            }
+            if (search) {
+                filtered = filtered.filter(e => e.name.includes(search));
+            }
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-state-icon">◎</div>
+                        <div class="empty-state-title">NO ENTITIES FOUND</div>
+                        <div class="empty-state-text">
+                            ${currentEntities.length === 0
+                                ? 'Click "SCAN ARCHIVE" to extract entities from your signal archive.'
+                                : 'No entities match the current filter. Try a different search or filter.'}
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.slice(0, 50).map(entity => {
+                const domains = Object.entries(entity.domains)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([d, count]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${d} (${count})</span>`)
+                    .join('');
+
+                const sevColor = entity.severity.avg > 60 ? 'var(--red)' : entity.severity.avg > 35 ? 'var(--orange)' : 'var(--cyan)';
+
+                return `
+                    <div class="entity-card" data-entity="${entity.name}" data-type="${entity.type}">
+                        <div class="entity-card-header">
+                            <span class="entity-icon">${entity.icon}</span>
+                            <span class="entity-name" style="color: ${entity.color};">${entity.name}</span>
+                            <span class="entity-type" style="color: ${entity.color}; background: ${entity.color}15; border: 1px solid ${entity.color}30;">${entity.type}</span>
+                        </div>
+                        <div class="entity-meta">
+                            <span>Mentions: <strong>${entity.mentions}</strong></span>
+                            <span>Avg Severity: <strong style="color: ${sevColor};">${entity.severity.avg.toFixed(0)}%</strong></span>
+                            <span>Max: <strong>${entity.severity.max}%</strong></span>
+                        </div>
+                        <div class="entity-domains">${domains}</div>
+                        <div class="entity-severity-bar">
+                            <div class="entity-severity-fill" style="width: ${entity.severity.avg}%; background: ${sevColor};"></div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Click handlers for entity detail
+            grid.querySelectorAll('.entity-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    showEntityDetail(card.dataset.entity);
+                });
+            });
+        }
+
+        function showEntityDetail(entityName) {
+            const pol = OsintEngine.patternOfLife(entityName);
+            if (!pol) return;
+
+            document.getElementById('entity-detail-title').textContent = `PATTERN OF LIFE: ${entityName.toUpperCase()}`;
+
+            const maxHourly = Math.max(1, ...pol.hourlyDistribution);
+            const hourlyBars = pol.hourlyDistribution.map((count, hour) =>
+                `<div class="pol-bar-row">
+                    <span style="width: 24px;">${String(hour).padStart(2, '0')}h</span>
+                    <div class="pol-bar"><div class="pol-bar-fill" style="width: ${(count / maxHourly) * 100}%;"></div></div>
+                    <span style="width: 16px; text-align: right;">${count}</span>
+                </div>`
+            ).join('');
+
+            const trendColor = pol.trend === 'RISING' ? 'var(--red)' : pol.trend === 'DECLINING' ? 'var(--green)' : 'var(--cyan)';
+            const trendIcon = pol.trend === 'RISING' ? '▲' : pol.trend === 'DECLINING' ? '▼' : '─';
+
+            const domainItems = Object.entries(pol.domainAffinity)
+                .sort((a, b) => b[1] - a[1])
+                .map(([d, c]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${d}: ${c}</span>`)
+                .join(' ');
+
+            document.getElementById('entity-detail-content').innerHTML = `
+                <div class="pol-grid">
+                    <div class="pol-item">
+                        <div class="pol-value" style="color: var(--cyan);">${pol.totalMentions}</div>
+                        <div class="pol-label">TOTAL MENTIONS</div>
+                    </div>
+                    <div class="pol-item">
+                        <div class="pol-value" style="color: ${trendColor};">${trendIcon} ${pol.trend}</div>
+                        <div class="pol-label">TREND (7D)</div>
+                    </div>
+                    <div class="pol-item">
+                        <div class="pol-value" style="color: var(--orange);">${pol.avgSeverity}%</div>
+                        <div class="pol-label">AVG SEVERITY</div>
+                    </div>
+                    <div class="pol-item">
+                        <div class="pol-value" style="color: var(--teal);">${pol.peakHour}</div>
+                        <div class="pol-label">PEAK HOUR</div>
+                    </div>
+                </div>
+
+                <div style="margin: 16px 0;">
+                    <div style="font-family: 'Orbitron', monospace; font-size: 0.5rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 8px;">
+                        DOMAIN AFFINITY
+                    </div>
+                    <div style="display: flex; gap: 4px; flex-wrap: wrap;">${domainItems}</div>
+                </div>
+
+                <div style="margin: 16px 0;">
+                    <div style="font-family: 'Orbitron', monospace; font-size: 0.5rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 8px;">
+                        HOURLY DISTRIBUTION (UTC)
+                    </div>
+                    ${hourlyBars}
+                </div>
+
+                <div style="display: flex; gap: 20px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; color: var(--text-dim); margin-top: 16px;">
+                    <span>First Seen: <strong style="color: var(--text-secondary);">${pol.firstSeen}</strong></span>
+                    <span>Last Seen: <strong style="color: var(--text-secondary);">${pol.lastSeen}</strong></span>
+                    <span>Peak Day: <strong style="color: var(--text-secondary);">${pol.peakDay}</strong></span>
+                </div>
+            `;
+
+            document.getElementById('modal-entity-detail').classList.add('active');
+        }
+
+        // Entity filters
+        document.querySelectorAll('.entity-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.entity-filter').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentEntityFilter = btn.dataset.type;
+                renderEntityGrid();
+            });
+        });
+
+        document.getElementById('entity-search').addEventListener('input', () => renderEntityGrid());
+        document.getElementById('btn-refresh-entities').addEventListener('click', () => renderEntities());
+
+        // ══════════════════════════════════════════════
+        // CASES
+        // ══════════════════════════════════════════════
+
+        function renderCases() {
+            const list = document.getElementById('case-list');
+            const cases = OsintEngine.getCases();
+            document.getElementById('case-detail').classList.remove('active');
+            list.style.display = '';
+
+            if (cases.length === 0) {
+                list.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">◆</div>
+                        <div class="empty-state-title">NO CASES</div>
+                        <div class="empty-state-text">Create your first investigation case to start organizing signals and building evidence chains.</div>
+                    </div>
+                `;
+                return;
+            }
+
+            list.innerHTML = cases.map(c => `
+                <div class="case-card" data-case-id="${c.id}">
+                    <div class="case-card-header">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span class="case-id">${c.id}</span>
+                            <span class="priority-badge priority-${c.priority}">${c.priority}</span>
+                        </div>
+                        <span class="case-status ${c.status}">${c.status}</span>
+                    </div>
+                    <div class="case-title">${c.title}</div>
+                    <div class="case-desc">${c.description || 'No description'}</div>
+                    <div class="case-meta">
+                        <span>Signals: <strong>${c.signals.length}</strong></span>
+                        <span>Notes: <strong>${c.notes.length}</strong></span>
+                        <span>Created: <strong>${new Date(c.created).toLocaleDateString('it-IT')}</strong></span>
+                        <span>Classification: <strong>${c.classification}</strong></span>
+                    </div>
+                </div>
+            `).join('');
+
+            list.querySelectorAll('.case-card').forEach(card => {
+                card.addEventListener('click', () => openCaseDetail(card.dataset.caseId));
+            });
+        }
+
+        function openCaseDetail(caseId) {
+            const cases = OsintEngine.getCases();
+            const theCase = cases.find(c => c.id === caseId);
+            if (!theCase) return;
+
+            currentCaseId = caseId;
+            document.getElementById('case-list').style.display = 'none';
+            document.getElementById('case-detail').classList.add('active');
+
+            document.getElementById('detail-case-id').textContent = `${theCase.id} — ${theCase.status} — ${theCase.priority}`;
+            document.getElementById('detail-case-title').textContent = theCase.title;
+            document.getElementById('detail-case-desc').textContent = theCase.description || '';
+
+            // Render signals
+            const signalsDiv = document.getElementById('detail-signals');
+            if (theCase.signals.length === 0) {
+                signalsDiv.innerHTML = '<div style="font-size: 0.5rem; color: var(--text-dim); padding: 20px;">No signals added yet. Click "+ SIGNAL" to add evidence.</div>';
+            } else {
+                signalsDiv.innerHTML = theCase.signals.map(s => {
+                    const domColor = DOMAIN_COLORS[s.domain] || '#666';
+                    const sevColor = s.severity > 60 ? 'var(--red)' : s.severity > 35 ? 'var(--orange)' : 'var(--cyan)';
+                    return `
+                        <div class="case-signal-item">
+                            <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${s.domain}</span>
+                            <span class="case-signal-title">${s.title}</span>
+                            <span class="case-signal-severity" style="color: ${sevColor};">${s.severity}%</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Render notes
+            const notesDiv = document.getElementById('detail-notes');
+            if (theCase.notes.length === 0) {
+                notesDiv.innerHTML = '<div style="font-size: 0.5rem; color: var(--text-dim); padding: 20px;">No notes yet. Click "+ NOTE" to add analysis.</div>';
+            } else {
+                notesDiv.innerHTML = theCase.notes.map(n => `
+                    <div class="case-note-item">
+                        <div class="case-note-meta">${new Date(n.timestamp).toLocaleString('it-IT')} — ${n.analyst}</div>
+                        ${n.text}
+                    </div>
+                `).join('');
+            }
+        }
+
+        // New Case
+        document.getElementById('btn-new-case').addEventListener('click', () => {
+            document.getElementById('modal-new-case').classList.add('active');
+        });
+        document.getElementById('btn-cancel-case').addEventListener('click', () => {
+            document.getElementById('modal-new-case').classList.remove('active');
+        });
+        document.getElementById('btn-save-case').addEventListener('click', () => {
+            const title = document.getElementById('case-form-title').value.trim();
+            if (!title) return;
+            OsintEngine.createCase({
+                title,
+                description: document.getElementById('case-form-desc').value.trim(),
+                priority: document.getElementById('case-form-priority').value,
+                classification: document.getElementById('case-form-class').value,
+                tags: document.getElementById('case-form-tags').value.split(',').map(t => t.trim()).filter(Boolean),
+            });
+            document.getElementById('modal-new-case').classList.remove('active');
+            document.getElementById('case-form-title').value = '';
+            document.getElementById('case-form-desc').value = '';
+            document.getElementById('case-form-tags').value = '';
+            renderCases();
+        });
+
+        // Add Note
+        document.getElementById('btn-add-note').addEventListener('click', () => {
+            document.getElementById('modal-add-note').classList.add('active');
+        });
+        document.getElementById('btn-cancel-note').addEventListener('click', () => {
+            document.getElementById('modal-add-note').classList.remove('active');
+        });
+        document.getElementById('btn-save-note').addEventListener('click', () => {
+            const text = document.getElementById('note-form-text').value.trim();
+            if (!text || !currentCaseId) return;
+            OsintEngine.addNoteToCase(currentCaseId, text);
+            document.getElementById('modal-add-note').classList.remove('active');
+            document.getElementById('note-form-text').value = '';
+            openCaseDetail(currentCaseId);
+        });
+
+        // Add Signal
+        document.getElementById('btn-add-signal').addEventListener('click', () => {
+            document.getElementById('modal-add-signal').classList.add('active');
+            document.getElementById('signal-search-input').value = '';
+            document.getElementById('signal-search-results').innerHTML = '';
+        });
+        document.getElementById('btn-cancel-signal').addEventListener('click', () => {
+            document.getElementById('modal-add-signal').classList.remove('active');
+        });
+        document.getElementById('signal-search-input').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length < 2) {
+                document.getElementById('signal-search-results').innerHTML = '';
+                return;
+            }
+            if (typeof PersistenceManager === 'undefined') return;
+            const archive = PersistenceManager.getArchive();
+            const results = archive
+                .filter(s => s.title.toLowerCase().includes(query) || (s.description && s.description.toLowerCase().includes(query)))
+                .slice(0, 20);
+
+            document.getElementById('signal-search-results').innerHTML = results.map(s => {
+                const domColor = DOMAIN_COLORS[s.domain] || '#666';
+                return `
+                    <div class="case-signal-item" style="cursor: pointer;" data-signal-id="${s.id}" data-signal-title="${s.title}" data-signal-domain="${s.domain}" data-signal-severity="${s.severity}" data-signal-time="${s.time}" data-signal-source="${s.source}" data-signal-link="${s.link || ''}">
+                        <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${s.domain}</span>
+                        <span class="case-signal-title">${s.title}</span>
+                        <span class="case-signal-severity" style="color: ${s.severity > 60 ? 'var(--red)' : 'var(--cyan)'};">${s.severity}%</span>
+                    </div>
+                `;
+            }).join('');
+
+            // Click to add
+            document.getElementById('signal-search-results').querySelectorAll('.case-signal-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    if (!currentCaseId) return;
+                    const signal = {
+                        id: item.dataset.signalId,
+                        title: item.dataset.signalTitle,
+                        domain: item.dataset.signalDomain,
+                        severity: parseInt(item.dataset.signalSeverity),
+                        time: parseInt(item.dataset.signalTime),
+                        source: item.dataset.signalSource,
+                        link: item.dataset.signalLink,
+                    };
+                    const added = OsintEngine.addSignalToCase(currentCaseId, signal);
+                    if (added) {
+                        item.style.borderColor = 'var(--green)';
+                        item.style.opacity = '0.5';
+                        setTimeout(() => openCaseDetail(currentCaseId), 300);
+                    }
+                });
+            });
+        });
+
+        // Close Case
+        document.getElementById('btn-close-case').addEventListener('click', () => {
+            if (!currentCaseId) return;
+            OsintEngine.updateCase(currentCaseId, { status: 'CLOSED' });
+            openCaseDetail(currentCaseId);
+        });
+
+        // Back to cases list
+        document.getElementById('btn-back-cases').addEventListener('click', () => {
+            currentCaseId = null;
+            renderCases();
+        });
+
+        // Generate report from case detail
+        document.getElementById('btn-generate-report').addEventListener('click', () => {
+            if (!currentCaseId) return;
+            // Switch to report tab and generate
+            document.querySelectorAll('.sc-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.sc-panel').forEach(p => p.classList.remove('active'));
+            document.querySelector('[data-tab="report"]').classList.add('active');
+            document.getElementById('panel-report').classList.add('active');
+            loadReportCases();
+            document.getElementById('report-case-select').value = currentCaseId;
+            generateReport(currentCaseId);
+        });
+
+        // ══════════════════════════════════════════════
+        // LINK ANALYSIS
+        // ══════════════════════════════════════════════
+
+        function renderLinks() {
+            const grid = document.getElementById('link-grid');
+            const links = OsintEngine.buildLinkAnalysis();
+
+            if (links.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-state-icon">◈</div>
+                        <div class="empty-state-title">NO LINKS DETECTED</div>
+                        <div class="empty-state-text">Link analysis requires signals with co-occurring entities. Collect more signals to build the relationship map.</div>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = links.slice(0, 30).map(link => `
+                <div class="link-card">
+                    <div class="link-card-header">
+                        <span style="color: ${link.entityA.color};">${link.entityA.name.toUpperCase()}</span>
+                        <span class="link-arrow">↔</span>
+                        <span style="color: ${link.entityB.color};">${link.entityB.name.toUpperCase()}</span>
+                        <span class="link-strength" style="color: ${link.strength > 70 ? 'var(--red)' : link.strength > 40 ? 'var(--orange)' : 'var(--cyan)'};">${link.strength}%</span>
+                    </div>
+                    <div class="link-bar">
+                        <div class="link-bar-fill" style="width: ${link.strength}%;"></div>
+                    </div>
+                    <div class="link-co">
+                        ${link.coOccurrences} co-occurrence${link.coOccurrences !== 1 ? 's' : ''} •
+                        ${link.entityA.type} ↔ ${link.entityB.type}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ══════════════════════════════════════════════
+        // TIMELINE
+        // ══════════════════════════════════════════════
+
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            const entityFilter = document.getElementById('timeline-entity-filter').value;
+            const domainFilter = document.getElementById('timeline-domain-filter').value;
+
+            const options = {};
+            if (entityFilter) options.entity = entityFilter;
+            if (domainFilter) options.domain = domainFilter;
+
+            const events = OsintEngine.buildTimeline(options);
+
+            // Keep timeline line
+            let html = '<div class="timeline-line"></div>';
+
+            if (events.length === 0) {
+                html += `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">◉</div>
+                        <div class="empty-state-title">NO EVENTS</div>
+                        <div class="empty-state-text">Adjust filters or collect more signals to build the timeline.</div>
+                    </div>
+                `;
+            } else {
+                // Limit to most recent 100
+                const display = events.slice(-100);
+                display.forEach(event => {
+                    const domColor = DOMAIN_COLORS[event.domain] || '#666';
+                    const sevColor = event.severity > 60 ? 'var(--red)' : event.severity > 35 ? 'var(--orange)' : 'var(--cyan)';
+                    const entityTags = event.entities.map(e =>
+                        `<span class="timeline-entity-tag" style="color: ${e.color}; border-color: ${e.color}40;">${e.icon} ${e.name}</span>`
+                    ).join('');
+
+                    html += `
+                        <div class="timeline-event">
+                            <div class="timeline-dot" style="border-color: ${domColor};"></div>
+                            <div class="timeline-time">${event.timeFormatted}</div>
+                            <div class="timeline-title">${event.title}</div>
+                            <div class="timeline-meta">
+                                <span style="color: ${domColor};">● ${event.domain}</span>
+                                <span>SEV: <strong style="color: ${sevColor};">${event.severity}%</strong></span>
+                                <span>Source: ${event.source}</span>
+                            </div>
+                            ${entityTags ? `<div class="timeline-entities">${entityTags}</div>` : ''}
+                        </div>
+                    `;
+                });
+            }
+
+            container.innerHTML = html;
+        }
+
+        document.getElementById('btn-build-timeline').addEventListener('click', () => renderTimeline());
+
+        // ══════════════════════════════════════════════
+        // SOURCES
+        // ══════════════════════════════════════════════
+
+        function renderSources() {
+            const grid = document.getElementById('source-grid');
+            const ratings = OsintEngine.getSourceRatings();
+            const sources = Object.values(ratings);
+
+            if (sources.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-state-icon">◇</div>
+                        <div class="empty-state-title">NO SOURCE RATINGS</div>
+                        <div class="empty-state-text">Click "RATE SOURCE" to assess source reliability using the NATO Admiralty System (A-F × 1-6).</div>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = sources.map(src => {
+                const rel = OsintEngine.RELIABILITY_SCALE[src.latest.reliability];
+                const cred = OsintEngine.CREDIBILITY_SCALE[src.latest.credibility];
+                const compColor = src.compositeScore > 70 ? 'var(--green)' : src.compositeScore > 40 ? 'var(--orange)' : 'var(--red)';
+
+                return `
+                    <div class="source-card">
+                        <div class="source-name" style="color: var(--text-primary);">${src.name}</div>
+                        <div class="source-matrix">
+                            <div class="source-rating-box">
+                                <div class="source-rating-code" style="color: ${rel.color};">${src.latest.reliability}</div>
+                                <div class="source-rating-label">${rel.label.toUpperCase()}</div>
+                            </div>
+                            <div class="source-rating-box">
+                                <div class="source-rating-code" style="color: ${cred.color};">${src.latest.credibility}</div>
+                                <div class="source-rating-label">${cred.label.toUpperCase()}</div>
+                            </div>
+                        </div>
+                        <div class="source-composite">
+                            <div class="source-composite-value" style="color: ${compColor};">${src.compositeScore}%</div>
+                            <div class="source-composite-label">COMPOSITE SCORE — ${src.latest.code}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Rate Source
+        document.getElementById('btn-rate-source').addEventListener('click', () => {
+            document.getElementById('modal-rate-source').classList.add('active');
+        });
+        document.getElementById('btn-cancel-source').addEventListener('click', () => {
+            document.getElementById('modal-rate-source').classList.remove('active');
+        });
+        document.getElementById('btn-save-source').addEventListener('click', () => {
+            const name = document.getElementById('source-form-name').value.trim();
+            if (!name) return;
+            OsintEngine.rateSource(
+                name,
+                document.getElementById('source-form-reliability').value,
+                document.getElementById('source-form-credibility').value,
+                document.getElementById('source-form-notes').value.trim()
+            );
+            document.getElementById('modal-rate-source').classList.remove('active');
+            document.getElementById('source-form-name').value = '';
+            document.getElementById('source-form-notes').value = '';
+            renderSources();
+        });
+
+        // ══════════════════════════════════════════════
+        // WATCHLIST
+        // ══════════════════════════════════════════════
+
+        function renderWatchlist() {
+            const container = document.getElementById('watchlist-items');
+            const items = OsintEngine.getWatchlist();
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">◐</div>
+                        <div class="empty-state-title">WATCHLIST EMPTY</div>
+                        <div class="empty-state-text">Add patterns to monitor across all incoming signals. Supports plain keywords and regular expressions.</div>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = items.map(item => {
+                const priorityColor = { CRITICAL: 'var(--red)', HIGH: 'var(--orange)', MEDIUM: 'var(--yellow)', LOW: 'var(--cyan)' }[item.priority] || 'var(--cyan)';
+                return `
+                    <div class="watch-item">
+                        <span class="priority-badge priority-${item.priority}" style="flex-shrink: 0;">${item.priority}</span>
+                        <span class="watch-pattern">${item.isRegex ? '/' : ''}${item.pattern}${item.isRegex ? '/' : ''}</span>
+                        <span style="font-size: 0.42rem; color: var(--text-dim);">${item.label}</span>
+                        <span class="watch-matches" style="color: ${item.matches > 0 ? priorityColor : 'var(--text-dim)'};">${item.matches} matches</span>
+                        <span style="font-size: 0.42rem; color: var(--text-dim);">${item.lastMatch ? new Date(item.lastMatch).toLocaleDateString('it-IT') : 'never'}</span>
+                        <button class="watch-remove" data-watch-id="${item.id}">✕</button>
+                    </div>
+                `;
+            }).join('');
+
+            container.querySelectorAll('.watch-remove').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    OsintEngine.removeWatchItem(btn.dataset.watchId);
+                    renderWatchlist();
+                });
+            });
+        }
+
+        // Add Watch Item
+        document.getElementById('btn-add-watch').addEventListener('click', () => {
+            document.getElementById('modal-add-watch').classList.add('active');
+        });
+        document.getElementById('btn-cancel-watch').addEventListener('click', () => {
+            document.getElementById('modal-add-watch').classList.remove('active');
+        });
+        document.getElementById('btn-save-watch').addEventListener('click', () => {
+            const pattern = document.getElementById('watch-form-pattern').value.trim();
+            if (!pattern) return;
+            OsintEngine.addWatchItem({
+                pattern,
+                label: document.getElementById('watch-form-label').value.trim() || pattern,
+                isRegex: document.getElementById('watch-form-regex').value === 'true',
+                priority: document.getElementById('watch-form-priority').value,
+                minSeverity: parseInt(document.getElementById('watch-form-severity').value) || 0,
+            });
+            document.getElementById('modal-add-watch').classList.remove('active');
+            document.getElementById('watch-form-pattern').value = '';
+            document.getElementById('watch-form-label').value = '';
+            renderWatchlist();
+        });
+
+        // ══════════════════════════════════════════════
+        // REPORT
+        // ══════════════════════════════════════════════
+
+        function loadReportCases() {
+            const select = document.getElementById('report-case-select');
+            const cases = OsintEngine.getCases();
+            select.innerHTML = '<option value="">Select Case...</option>' +
+                cases.map(c => `<option value="${c.id}">${c.id} — ${c.title}</option>`).join('');
+        }
+
+        function generateReport(caseId) {
+            const report = OsintEngine.generateOsintReport(caseId);
+            if (!report) return;
+
+            currentReport = report;
+            document.getElementById('report-output').style.display = 'block';
+            document.getElementById('report-output').textContent = report;
+            document.getElementById('btn-download-report').style.display = '';
+        }
+
+        document.getElementById('btn-gen-report').addEventListener('click', () => {
+            const caseId = document.getElementById('report-case-select').value;
+            if (!caseId) return;
+            generateReport(caseId);
+        });
+
+        document.getElementById('btn-download-report').addEventListener('click', () => {
+            if (!currentReport) return;
+            const blob = new Blob([currentReport], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `OSINT_REPORT_${currentCaseId || 'unknown'}_${new Date().toISOString().split('T')[0]}.txt`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // ══════════════════════════════════════════════
+        // MODAL CLOSE ON OVERLAY CLICK
+        // ══════════════════════════════════════════════
+
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+        });
+
+        // Close entity detail
+        document.getElementById('btn-close-entity-detail').addEventListener('click', () => {
+            document.getElementById('modal-entity-detail').classList.remove('active');
+        });
+
+        // ══════════════════════════════════════════════
+        // KEYBOARD SHORTCUTS
+        // ══════════════════════════════════════════════
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(m => m.classList.remove('active'));
+            }
+        });
+
+        // ══════════════════════════════════════════════
+        // INIT
+        // ══════════════════════════════════════════════
+
+        console.log('[SIGINT_CONSOLE] v1.0 initialized — Professional OSINT Workbench');
+        renderEntities();
+
+    })();
+    </script>
+
+    <!-- CoreFeed & SignalInterceptor (background systems) -->
+    <script src="js/signal-interceptor.js"></script>
+    <script src="js/core-feed.js"></script>
+</body>
+</html>
