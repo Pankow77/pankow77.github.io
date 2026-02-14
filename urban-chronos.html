@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN_CHRONOS v2.0 | Predictive Sovereignty Engine</title>
+    <meta name="description" content="URBAN_CHRONOS v2.0 - Predictive Sovereignty Engine. Urban evolution modeling in seconds, not years. Hybrid Syndicate / Ethic Software Foundation.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #080c12;
+            --bg-panel: #0c1018;
+            --bg-card: #10161f;
+            --bg-hover: #141c28;
+            --border: #1a2436;
+            --border-active: #243450;
+            --teal: #00d4aa;
+            --teal-dim: rgba(0,212,170,0.15);
+            --teal-glow: rgba(0,212,170,0.3);
+            --cyan: #00c8ff;
+            --cyan-dim: rgba(0,200,255,0.15);
+            --green: #39ff14;
+            --green-dim: rgba(57,255,20,0.15);
+            --red: #ff3344;
+            --red-dim: rgba(255,51,68,0.15);
+            --amber: #ffbf00;
+            --amber-dim: rgba(255,191,0,0.15);
+            --purple: #9d00ff;
+            --gray: #3a4a5c;
+            --gray-dim: rgba(58,74,92,0.15);
+            --text: #c0cdd8;
+            --text-secondary: #6b7f96;
+            --text-dim: #3a4a5c;
+            --null-color: #2a3040;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Subtle scanline overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(0,212,170,0.008) 3px, rgba(0,212,170,0.008) 6px
+            );
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* ═══ HEADER ═══ */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-panel);
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .header-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--teal);
+            text-shadow: 0 0 12px var(--teal-glow);
+        }
+        .header-subtitle {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        .header-version {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--teal);
+            background: var(--teal-dim);
+            padding: 2px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.1em;
+        }
+        .header-nav {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .header-nav a {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            padding: 4px 8px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .header-nav a:hover {
+            color: var(--teal);
+            border-color: var(--border-active);
+            background: var(--teal-dim);
+        }
+
+        /* ═══ STATUS BAR ═══ */
+        .status-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 20px;
+            background: rgba(0,212,170,0.03);
+            border-bottom: 1px solid var(--border);
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+        .status-bar .status-group {
+            display: flex;
+            gap: 20px;
+        }
+        .status-val { color: var(--teal); font-weight: 600; }
+        .status-warn { color: var(--amber); }
+        .status-danger { color: var(--red); }
+
+        /* ═══ MAIN LAYOUT ═══ */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr 280px;
+            height: calc(100vh - 90px);
+            overflow: hidden;
+        }
+
+        /* ═══ LEFT PANEL — INTERVENTION LAYER ═══ */
+        .left-panel {
+            background: var(--bg-panel);
+            border-right: 1px solid var(--border);
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .panel-header {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--teal);
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .panel-header::before {
+            content: '';
+            width: 4px;
+            height: 12px;
+            background: var(--teal);
+            box-shadow: 0 0 6px var(--teal-glow);
+        }
+        .control-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px;
+        }
+        .control-label {
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .control-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            color: var(--teal);
+            font-weight: 600;
+        }
+        .slider-container {
+            position: relative;
+            margin-bottom: 8px;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--teal);
+            box-shadow: 0 0 8px var(--teal-glow), 0 0 16px rgba(0,212,170,0.2);
+            cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--teal);
+            box-shadow: 0 0 8px var(--teal-glow);
+            cursor: pointer;
+            border: none;
+        }
+        .slider-track {
+            height: 2px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+            margin-top: -4px;
+            border-radius: 1px;
+            pointer-events: none;
+        }
+        .slider-ticks {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+
+        /* Toggle switch */
+        .toggle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .toggle-switch {
+            width: 40px;
+            height: 20px;
+            background: var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.3s;
+        }
+        .toggle-switch.active {
+            background: var(--teal-dim);
+            border: 1px solid var(--teal);
+        }
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 3px; left: 3px;
+            width: 14px; height: 14px;
+            background: var(--text-dim);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        .toggle-switch.active::after {
+            left: 23px;
+            background: var(--teal);
+            box-shadow: 0 0 8px var(--teal-glow);
+        }
+
+        /* Intervention presets */
+        .preset-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+        .preset-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            padding: 8px 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: 2px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+        }
+        .preset-btn:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+            background: var(--teal-dim);
+        }
+        .preset-btn.active {
+            border-color: var(--teal);
+            color: var(--teal);
+            background: var(--teal-dim);
+            box-shadow: 0 0 8px rgba(0,212,170,0.1);
+        }
+
+        /* Epoch control */
+        .epoch-display {
+            text-align: center;
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+        .epoch-year {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--teal);
+            text-shadow: 0 0 20px var(--teal-glow);
+            line-height: 1;
+        }
+        .epoch-label {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.2em;
+            margin-top: 4px;
+        }
+        .epoch-controls {
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .epoch-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            padding: 4px 12px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+        .epoch-btn:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+        .epoch-btn.active-play {
+            border-color: var(--green);
+            color: var(--green);
+            background: var(--green-dim);
+        }
+
+        /* ═══ CENTER — SECTOR VIEW ═══ */
+        .center-panel {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .sector-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sector-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--text);
+        }
+        .sector-meta {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            display: flex;
+            gap: 16px;
+        }
+        .sector-meta span { color: var(--teal); }
+
+        .sector-grid-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            gap: 12px;
+        }
+
+        /* Heatmap Grid */
+        .heatmap-wrapper {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .heatmap {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 3px;
+            width: 100%;
+            max-width: 520px;
+            aspect-ratio: 1;
+        }
+        .sector-cell {
+            border-radius: 2px;
+            position: relative;
+            cursor: crosshair;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.4rem;
+            color: transparent;
+            border: 1px solid transparent;
+        }
+        .sector-cell:hover {
+            transform: scale(1.08);
+            z-index: 2;
+            color: rgba(255,255,255,0.7);
+            border-color: rgba(255,255,255,0.15);
+        }
+        .sector-cell.optimized {
+            background: linear-gradient(135deg, rgba(0,212,170,0.6), rgba(0,212,170,0.3));
+            box-shadow: inset 0 0 8px rgba(0,212,170,0.2);
+        }
+        .sector-cell.divergent {
+            background: linear-gradient(135deg, rgba(255,51,68,0.6), rgba(255,140,0,0.3));
+            box-shadow: inset 0 0 8px rgba(255,51,68,0.2);
+        }
+        .sector-cell.null-zone {
+            background: linear-gradient(135deg, rgba(42,48,64,0.6), rgba(42,48,64,0.3));
+            box-shadow: inset 0 0 4px rgba(42,48,64,0.3);
+        }
+        .sector-cell.transitional {
+            background: linear-gradient(135deg, rgba(255,191,0,0.5), rgba(255,191,0,0.2));
+            box-shadow: inset 0 0 8px rgba(255,191,0,0.15);
+        }
+        .sector-cell.sovereign {
+            background: linear-gradient(135deg, rgba(0,200,255,0.5), rgba(0,200,255,0.25));
+            box-shadow: inset 0 0 8px rgba(0,200,255,0.15);
+        }
+
+        /* Tooltip */
+        .cell-tooltip {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-panel);
+            border: 1px solid var(--border-active);
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 0.55rem;
+            white-space: nowrap;
+            z-index: 100;
+            color: var(--text);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .sector-cell:hover .cell-tooltip { display: block; }
+        .tooltip-name { color: var(--teal); font-weight: 600; }
+        .tooltip-status { margin-top: 2px; }
+
+        /* Legend */
+        .legend {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 0.55rem;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+        }
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+        }
+
+        /* Vitality Radar */
+        .vitality-section {
+            padding: 0 20px 12px;
+        }
+        .vitality-header {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .vitality-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #radarChart {
+            flex-shrink: 0;
+        }
+        .vitality-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            flex: 1;
+        }
+        .vstat {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 8px 10px;
+            border-radius: 3px;
+        }
+        .vstat-label {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .vstat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        .vstat-bar {
+            height: 2px;
+            background: var(--border);
+            margin-top: 4px;
+            border-radius: 1px;
+            overflow: hidden;
+        }
+        .vstat-bar-fill {
+            height: 100%;
+            border-radius: 1px;
+            transition: width 0.8s ease;
+        }
+
+        /* ═══ RIGHT PANEL ═══ */
+        .right-panel {
+            background: var(--bg-panel);
+            border-left: 1px solid var(--border);
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px;
+        }
+        .metric-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .metric-card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+        .metric-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.05em;
+        }
+        .metric-big-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+        .metric-unit {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            margin-top: 2px;
+        }
+        .metric-detail {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+        .metric-detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 2px 0;
+        }
+        .detail-val { color: var(--text-secondary); }
+
+        /* System Log */
+        .system-log {
+            flex: 1;
+            min-height: 120px;
+        }
+        .log-feed {
+            max-height: 200px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        .log-entry {
+            font-size: 0.5rem;
+            padding: 4px 8px;
+            background: rgba(0,212,170,0.02);
+            border-left: 2px solid var(--border);
+            color: var(--text-dim);
+            animation: logSlide 0.3s ease;
+        }
+        .log-entry.log-info { border-left-color: var(--teal); }
+        .log-entry.log-warn { border-left-color: var(--amber); }
+        .log-entry.log-error { border-left-color: var(--red); }
+        .log-entry.log-success { border-left-color: var(--green); }
+        .log-time { color: var(--text-dim); margin-right: 6px; }
+        .log-msg { color: var(--text-secondary); }
+
+        @keyframes logSlide {
+            from { opacity: 0; transform: translateX(-8px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Quote rotator */
+        .quote-bar {
+            padding: 8px 20px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-panel);
+            text-align: center;
+            font-size: 0.55rem;
+            font-style: italic;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .quote-text {
+            transition: opacity 0.5s ease;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-active); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto;
+                height: auto;
+            }
+            .left-panel {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                flex-direction: row;
+                flex-wrap: wrap;
+                overflow: visible;
+            }
+            .right-panel {
+                border-left: none;
+                border-top: 1px solid var(--border);
+            }
+            .heatmap { max-width: 400px; }
+        }
+
+        @media (max-width: 600px) {
+            .header { flex-direction: column; gap: 8px; }
+            .status-bar { flex-direction: column; gap: 4px; }
+            .vitality-container { flex-direction: column; }
+            .heatmap { max-width: 300px; }
+            .main-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-left">
+            <div>
+                <div class="header-title">URBAN_CHRONOS</div>
+                <div class="header-subtitle">PREDICTIVE SOVEREIGNTY ENGINE</div>
+            </div>
+            <div class="header-version">v2.0</div>
+        </div>
+        <div class="header-nav">
+            <a href="index.html">&larr; HQ</a>
+            <a href="agora.html">AGORA</a>
+            <a href="oracle.html">ORACLE</a>
+            <a href="pneuma.html" style="color: #ff6600;">PNEUMA</a>
+            <a href="eei-predictor.html" style="color: #ff0040;">EEI</a>
+        </div>
+    </div>
+
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <div class="status-group">
+            <div>ENGINE: <span class="status-val">ACTIVE</span></div>
+            <div>GRID: <span class="status-val" id="gridSize">10x10</span></div>
+            <div>SECTORS: <span class="status-val" id="sectorCount">100</span></div>
+            <div>CYCLE: <span class="status-val" id="cycleCount">0</span></div>
+        </div>
+        <div class="status-group">
+            <div>EPOCH: <span class="status-val" id="statusEpoch">2026</span></div>
+            <div>UTC: <span class="status-val" id="utcClock">--:--:--</span></div>
+        </div>
+    </div>
+
+    <!-- MAIN 3-COL LAYOUT -->
+    <div class="main-layout">
+
+        <!-- LEFT: INTERVENTION LAYER -->
+        <div class="left-panel">
+            <div class="panel-header">INTERVENTION LAYER</div>
+
+            <!-- Entropy Seed -->
+            <div class="control-group">
+                <div class="control-label">
+                    ENTROPY SEED
+                    <span class="control-value" id="entropyVal">42</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" id="entropySlider" min="0" max="100" value="42" oninput="updateControls()">
+                </div>
+                <div class="slider-ticks">
+                    <span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
+                </div>
+            </div>
+
+            <!-- Reality Buffer -->
+            <div class="control-group">
+                <div class="control-label">
+                    REALITY BUFFER
+                    <span class="control-value" id="bufferVal">65%</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" id="bufferSlider" min="0" max="100" value="65" oninput="updateControls()">
+                </div>
+                <div class="slider-ticks">
+                    <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+                </div>
+            </div>
+
+            <!-- Null Zone Toggle -->
+            <div class="control-group">
+                <div class="toggle-row">
+                    <div>
+                        <div class="control-label" style="margin-bottom:0">NULL ZONE OVERRIDE</div>
+                        <div style="font-size:0.5rem; color: var(--text-dim); margin-top:2px;">Render unmapped sectors</div>
+                    </div>
+                    <div class="toggle-switch" id="nullToggle" onclick="toggleNull()"></div>
+                </div>
+            </div>
+
+            <!-- Prediction Depth -->
+            <div class="control-group">
+                <div class="control-label">
+                    PREDICTION DEPTH
+                    <span class="control-value" id="depthVal">5yr</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" id="depthSlider" min="1" max="50" value="5" oninput="updateControls()">
+                </div>
+                <div class="slider-ticks">
+                    <span>1yr</span><span>10yr</span><span>25yr</span><span>50yr</span>
+                </div>
+            </div>
+
+            <!-- Epoch Display -->
+            <div class="epoch-display">
+                <div class="epoch-label">TARGET EPOCH</div>
+                <div class="epoch-year" id="epochYear">2031</div>
+                <div class="epoch-controls">
+                    <button class="epoch-btn" onclick="shiftEpoch(-5)">&laquo; -5</button>
+                    <button class="epoch-btn" onclick="shiftEpoch(-1)">-1</button>
+                    <button class="epoch-btn active-play" id="playBtn" onclick="togglePlay()">&#9654;</button>
+                    <button class="epoch-btn" onclick="shiftEpoch(1)">+1</button>
+                    <button class="epoch-btn" onclick="shiftEpoch(5)">+5 &raquo;</button>
+                </div>
+            </div>
+
+            <!-- Presets -->
+            <div class="control-group">
+                <div class="control-label">SCENARIO PRESETS</div>
+                <div class="preset-grid">
+                    <button class="preset-btn active" onclick="loadPreset('baseline')">BASELINE</button>
+                    <button class="preset-btn" onclick="loadPreset('growth')">GROWTH</button>
+                    <button class="preset-btn" onclick="loadPreset('decay')">DECAY</button>
+                    <button class="preset-btn" onclick="loadPreset('sovereign')">SOVEREIGN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTER: SECTOR VIEW -->
+        <div class="center-panel">
+            <div class="sector-header">
+                <div class="sector-title">SECTOR VIEW</div>
+                <div class="sector-meta">
+                    OPTIMIZED: <span id="metaOptimized">0</span> &nbsp;
+                    DIVERGENT: <span id="metaDivergent">0</span> &nbsp;
+                    NULL: <span id="metaNull">0</span>
+                </div>
+            </div>
+
+            <div class="sector-grid-container">
+                <!-- Heatmap -->
+                <div class="heatmap-wrapper">
+                    <div class="heatmap" id="heatmap"></div>
+                </div>
+
+                <!-- Legend -->
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: rgba(0,212,170,0.6);"></div>OPTIMIZED
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: rgba(255,51,68,0.5);"></div>DIVERGENT
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: rgba(255,191,0,0.5);"></div>TRANSITIONAL
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: rgba(0,200,255,0.5);"></div>SOVEREIGN
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: rgba(42,48,64,0.5);"></div>NULL
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vitality Radar -->
+            <div class="vitality-section">
+                <div class="vitality-header">SYSTEM VITALITY</div>
+                <div class="vitality-container">
+                    <canvas id="radarChart" width="180" height="180"></canvas>
+                    <div class="vitality-stats">
+                        <div class="vstat">
+                            <div class="vstat-label">EFFICIENCY</div>
+                            <div class="vstat-value" id="vEfficiency" style="color: var(--teal);">72%</div>
+                            <div class="vstat-bar"><div class="vstat-bar-fill" id="vEffBar" style="width:72%; background: var(--teal);"></div></div>
+                        </div>
+                        <div class="vstat">
+                            <div class="vstat-label">SOVEREIGNTY</div>
+                            <div class="vstat-value" id="vSovereignty" style="color: var(--cyan);">85%</div>
+                            <div class="vstat-bar"><div class="vstat-bar-fill" id="vSovBar" style="width:85%; background: var(--cyan);"></div></div>
+                        </div>
+                        <div class="vstat">
+                            <div class="vstat-label">RESILIENCE</div>
+                            <div class="vstat-value" id="vResilience" style="color: var(--green);">61%</div>
+                            <div class="vstat-bar"><div class="vstat-bar-fill" id="vResBar" style="width:61%; background: var(--green);"></div></div>
+                        </div>
+                        <div class="vstat">
+                            <div class="vstat-label">PREDICTABILITY</div>
+                            <div class="vstat-value" id="vPredictability" style="color: var(--amber);">78%</div>
+                            <div class="vstat-bar"><div class="vstat-bar-fill" id="vPredBar" style="width:78%; background: var(--amber);"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: METRICS + LOG -->
+        <div class="right-panel">
+            <div class="panel-header">ANALYTICS</div>
+
+            <!-- Lossy Urbanism -->
+            <div class="metric-card">
+                <div class="metric-card-header">
+                    <div class="metric-card-title">LOSSY URBANISM INDEX</div>
+                    <div class="metric-badge" id="lossyBadge" style="background: var(--teal-dim); color: var(--teal);">STABLE</div>
+                </div>
+                <div class="metric-big-number" id="lossyValue" style="color: var(--teal);">0.73</div>
+                <div class="metric-unit">DECAY COEFFICIENT</div>
+                <div class="metric-detail">
+                    <div class="metric-detail-row">
+                        <span>Structural entropy</span>
+                        <span class="detail-val" id="lossyEntropy">0.42</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Infrastructure drift</span>
+                        <span class="detail-val" id="lossyDrift">+0.08/yr</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Gentrification pressure</span>
+                        <span class="detail-val" id="lossyGentrify">LOW</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reality Buffer -->
+            <div class="metric-card">
+                <div class="metric-card-header">
+                    <div class="metric-card-title">REALITY BUFFER</div>
+                    <div class="metric-badge" id="bufferBadge" style="background: var(--cyan-dim); color: var(--cyan);">ACTIVE</div>
+                </div>
+                <div class="metric-big-number" id="bufferDisplay" style="color: var(--cyan);">65%</div>
+                <div class="metric-unit">SIMULATION FIDELITY</div>
+                <div class="metric-detail">
+                    <div class="metric-detail-row">
+                        <span>Data sources mapped</span>
+                        <span class="detail-val" id="bufferSources">47/52</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Census integration</span>
+                        <span class="detail-val" id="bufferCensus">SYNCED</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Cartographic accuracy</span>
+                        <span class="detail-val" id="bufferAccuracy">94.2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Null Zones -->
+            <div class="metric-card">
+                <div class="metric-card-header">
+                    <div class="metric-card-title">NULL ZONES</div>
+                    <div class="metric-badge" id="nullBadge" style="background: var(--gray-dim); color: var(--gray);">12 SECTORS</div>
+                </div>
+                <div class="metric-big-number" id="nullDisplay" style="color: var(--gray);">12</div>
+                <div class="metric-unit">UNMAPPED SECTORS</div>
+                <div class="metric-detail">
+                    <div class="metric-detail-row">
+                        <span>Recovery potential</span>
+                        <span class="detail-val" id="nullRecovery">34%</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Data gaps</span>
+                        <span class="detail-val" id="nullGaps">8 critical</span>
+                    </div>
+                    <div class="metric-detail-row">
+                        <span>Last survey</span>
+                        <span class="detail-val">2024-11-30</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Log -->
+            <div class="metric-card system-log">
+                <div class="metric-card-header">
+                    <div class="metric-card-title">SYSTEM LOG</div>
+                    <div class="metric-badge" style="background: var(--green-dim); color: var(--green);">LIVE</div>
+                </div>
+                <div class="log-feed" id="logFeed"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUOTE BAR -->
+    <div class="quote-bar">
+        <div class="quote-text" id="quoteText">"The city is not a problem to be solved. It is a living system to be understood." — URBAN_CHRONOS</div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════
+        // URBAN_CHRONOS v2.0 — Predictive Sovereignty Engine
+        // ═══════════════════════════════════════════════
+
+        // ── SECTOR NAMES ──
+        const sectorNames = [
+            'CENTRO_STORICO','PORTO_ANTICO','QUARTIERE_NORD','ZONA_INDUSTRIALE','PARCO_URBANO',
+            'STAZIONE_CENTRALE','UNIVERSITA','OSPEDALE_DIST','MERCATO_COPERTO','PERIFERIA_EST',
+            'ZONA_RESIDENZIALE','LUNGOMURA','PIAZZA_LIBERTA','CANTIERE_OVEST','VIALE_EUROPA',
+            'BORGO_NUOVO','WATERFRONT','TERMINAL_SUD','CAMPUS_TECH','ZONA_VERDE',
+            'DISTRETTO_FINANZIARIO','AREA_PORTUALE','NUCLEO_STORICO_2','COMPLESSO_SPORTIVO','GIARDINI_PUBBLICI',
+            'INFRASTRUTTURA_A','SETTORE_LOGISTICO','AREA_COMMERCIALE','HOUSING_BLOCK_1','HOUSING_BLOCK_2',
+            'ENERGY_HUB','TREATMENT_PLANT','RECYCLING_NODE','COMMS_TOWER','CIVIC_CENTER',
+            'FOOD_DISTRICT','TRANSIT_HUB_N','TRANSIT_HUB_S','CULTURAL_ZONE','INNOVATION_LAB',
+            'SECTOR_41','SECTOR_42','SECTOR_43','SECTOR_44','SECTOR_45',
+            'SECTOR_46','SECTOR_47','SECTOR_48','SECTOR_49','SECTOR_50',
+            'RESIDENTIAL_NW','RESIDENTIAL_NE','RESIDENTIAL_SW','RESIDENTIAL_SE','MIXED_USE_A',
+            'MIXED_USE_B','MIXED_USE_C','INDUSTRIAL_EXT','LOGISTICS_PORT','MILITARY_ZONE',
+            'AGRICULTURAL_N','AGRICULTURAL_S','SOLAR_FARM','WIND_CORRIDOR','DESALINATION',
+            'VERTICAL_FARM_1','VERTICAL_FARM_2','UNDERGROUND_NET','SKYLINE_BRIDGE','TRANSIT_LOOP',
+            'HERITAGE_ZONE_A','HERITAGE_ZONE_B','GREEN_CORRIDOR','BLUE_ZONE','TECH_CAMPUS',
+            'BIOTECH_PARK','DATA_CENTER','ARTISAN_QUARTER','NIGHT_MARKET','FLOATING_DIST',
+            'EDGE_NORTH','EDGE_SOUTH','EDGE_EAST','EDGE_WEST','BORDER_ZONE_A',
+            'BORDER_ZONE_B','EXPANSION_A','EXPANSION_B','EXPANSION_C','EXPANSION_D',
+            'RESERVE_1','RESERVE_2','RESERVE_3','RESERVE_4','RESERVE_5',
+            'DEADZONE_ALPHA','DEADZONE_BETA','DEADZONE_GAMMA','VOID_SECTOR','UNMAPPED_ZONE'
+        ];
+
+        // ── STATE ──
+        const GRID_SIZE = 10;
+        const TOTAL_CELLS = GRID_SIZE * GRID_SIZE;
+        let sectorData = [];
+        let epoch = 2031;
+        let baseEpoch = 2026;
+        let isPlaying = false;
+        let playInterval = null;
+        let cycleCount = 0;
+        let nullOverride = false;
+
+        const TYPES = ['optimized','divergent','null-zone','transitional','sovereign'];
+        const TYPE_LABELS = {OPTIMIZED:'optimized', DIVERGENT:'divergent', NULL:'null-zone', TRANSITIONAL:'transitional', SOVEREIGN:'sovereign'};
+
+        // ── QUOTES ──
+        const quotes = [
+            '"The city is not a problem to be solved. It is a living system to be understood." — URBAN_CHRONOS',
+            '"10 seconds of prediction > 1 year of guesswork." — PANKOW_77C',
+            '"Every null zone is a question the city hasn\'t answered yet." — GHOST_RUNNER',
+            '"Sovereignty begins at the neighborhood level." — MARXIAN_CORE',
+            '"Data without ethics is just surveillance." — ETHIC_COMPILER',
+            '"The map is not the territory — but our map learns." — ABYSSAL_THINKER',
+            '"Urban entropy is not decay. It is transformation." — NARRATIVE_ENGINE',
+            '"We don\'t predict the future. We simulate possibility." — ORACLE_CORE',
+            '"Infrastructure is memory. Buildings are arguments." — CHRONO_WEAVER',
+            '"€10 buys sovereignty. Not a subscription — a revolution." — HYBRID SYNDICATE'
+        ];
+        let quoteIndex = 0;
+
+        // ── INIT ──
+        function init() {
+            generateSectorData('baseline');
+            buildHeatmap();
+            updateControls();
+            drawRadar();
+            startClock();
+            startLogFeed();
+            startQuoteRotation();
+            addLog('info', 'URBAN_CHRONOS v2.0 initialized');
+            addLog('success', 'Sector grid loaded: ' + TOTAL_CELLS + ' sectors mapped');
+            addLog('info', 'Prediction engine: STANDBY');
+            console.log('%c URBAN_CHRONOS v2.0 ', 'background: #00d4aa; color: #080c12; font-family: Orbitron; font-weight: 900; padding: 8px 16px; font-size: 14px;');
+            console.log('%c Predictive Sovereignty Engine ', 'color: #00d4aa; font-family: monospace;');
+        }
+
+        // ── SECTOR DATA GENERATION ──
+        function generateSectorData(preset) {
+            sectorData = [];
+            const entropy = parseInt(document.getElementById('entropySlider').value);
+            const buffer = parseInt(document.getElementById('bufferSlider').value);
+            const depth = parseInt(document.getElementById('depthSlider').value);
+
+            for (let i = 0; i < TOTAL_CELLS; i++) {
+                const seed = (entropy * (i + 1) * 7 + depth * 13) % 100;
+                let type, health, population, risk;
+
+                if (preset === 'baseline') {
+                    if (seed < 35) { type = 'optimized'; health = 60 + (seed % 35); risk = 'LOW'; }
+                    else if (seed < 55) { type = 'transitional'; health = 40 + (seed % 30); risk = 'MEDIUM'; }
+                    else if (seed < 72) { type = 'divergent'; health = 15 + (seed % 30); risk = 'HIGH'; }
+                    else if (seed < 85) { type = 'sovereign'; health = 70 + (seed % 25); risk = 'LOW'; }
+                    else { type = 'null-zone'; health = 0; risk = 'UNKNOWN'; }
+                } else if (preset === 'growth') {
+                    if (seed < 50) { type = 'optimized'; health = 70 + (seed % 25); risk = 'LOW'; }
+                    else if (seed < 70) { type = 'sovereign'; health = 75 + (seed % 20); risk = 'LOW'; }
+                    else if (seed < 85) { type = 'transitional'; health = 50 + (seed % 30); risk = 'MEDIUM'; }
+                    else if (seed < 93) { type = 'divergent'; health = 20 + (seed % 25); risk = 'HIGH'; }
+                    else { type = 'null-zone'; health = 0; risk = 'UNKNOWN'; }
+                } else if (preset === 'decay') {
+                    if (seed < 20) { type = 'optimized'; health = 40 + (seed % 30); risk = 'MEDIUM'; }
+                    else if (seed < 50) { type = 'divergent'; health = 10 + (seed % 30); risk = 'CRITICAL'; }
+                    else if (seed < 65) { type = 'transitional'; health = 25 + (seed % 30); risk = 'HIGH'; }
+                    else if (seed < 75) { type = 'sovereign'; health = 55 + (seed % 25); risk = 'MEDIUM'; }
+                    else { type = 'null-zone'; health = 0; risk = 'UNKNOWN'; }
+                } else { // sovereign
+                    if (seed < 45) { type = 'sovereign'; health = 80 + (seed % 15); risk = 'LOW'; }
+                    else if (seed < 70) { type = 'optimized'; health = 65 + (seed % 30); risk = 'LOW'; }
+                    else if (seed < 82) { type = 'transitional'; health = 50 + (seed % 25); risk = 'MEDIUM'; }
+                    else if (seed < 90) { type = 'divergent'; health = 25 + (seed % 20); risk = 'HIGH'; }
+                    else { type = 'null-zone'; health = 0; risk = 'UNKNOWN'; }
+                }
+
+                // Apply time depth degradation / improvement
+                const timeFactor = depth / 50;
+                if (type === 'optimized') health = Math.max(10, health - timeFactor * 15 + buffer * 0.1);
+                if (type === 'divergent') health = Math.max(5, health - timeFactor * 20);
+
+                population = type === 'null-zone' ? 0 : Math.floor(800 + seed * 45 + Math.random() * 500);
+
+                sectorData.push({
+                    id: i,
+                    name: sectorNames[i] || 'SECTOR_' + i,
+                    type: type,
+                    health: Math.min(100, Math.round(health)),
+                    population: population,
+                    risk: risk
+                });
+            }
+        }
+
+        // ── BUILD HEATMAP ──
+        function buildHeatmap() {
+            const grid = document.getElementById('heatmap');
+            grid.innerHTML = '';
+            let counts = { optimized: 0, divergent: 0, 'null-zone': 0, transitional: 0, sovereign: 0 };
+
+            sectorData.forEach((s, i) => {
+                const cell = document.createElement('div');
+                cell.className = 'sector-cell ' + s.type;
+                cell.innerHTML = `
+                    <span>${s.health || '—'}</span>
+                    <div class="cell-tooltip">
+                        <div class="tooltip-name">${s.name}</div>
+                        <div class="tooltip-status">Status: ${s.type.replace('-', ' ').toUpperCase()}</div>
+                        <div>Health: ${s.health}% | Pop: ${s.population.toLocaleString()}</div>
+                        <div>Risk: ${s.risk}</div>
+                    </div>
+                `;
+                grid.appendChild(cell);
+                counts[s.type]++;
+            });
+
+            document.getElementById('metaOptimized').textContent = counts.optimized + counts.sovereign;
+            document.getElementById('metaDivergent').textContent = counts.divergent;
+            document.getElementById('metaNull').textContent = counts['null-zone'];
+
+            updateMetrics(counts);
+        }
+
+        // ── UPDATE CONTROLS ──
+        function updateControls() {
+            const entropy = document.getElementById('entropySlider').value;
+            const buffer = document.getElementById('bufferSlider').value;
+            const depth = document.getElementById('depthSlider').value;
+
+            document.getElementById('entropyVal').textContent = entropy;
+            document.getElementById('bufferVal').textContent = buffer + '%';
+            document.getElementById('depthVal').textContent = depth + 'yr';
+            document.getElementById('bufferDisplay').textContent = buffer + '%';
+
+            epoch = baseEpoch + parseInt(depth);
+            document.getElementById('epochYear').textContent = epoch;
+            document.getElementById('statusEpoch').textContent = epoch;
+
+            const activePreset = document.querySelector('.preset-btn.active');
+            const preset = activePreset ? activePreset.textContent.toLowerCase() : 'baseline';
+
+            generateSectorData(preset);
+            buildHeatmap();
+            drawRadar();
+            cycleCount++;
+            document.getElementById('cycleCount').textContent = cycleCount;
+        }
+
+        // ── METRICS ──
+        function updateMetrics(counts) {
+            const total = TOTAL_CELLS;
+            const optPct = ((counts.optimized + counts.sovereign) / total * 100);
+            const divPct = (counts.divergent / total * 100);
+            const nullCt = counts['null-zone'];
+
+            // Lossy Urbanism Index (lower = less decay)
+            const lossy = (counts.divergent * 3 + counts['null-zone'] * 2 + counts.transitional) / (total * 3);
+            const lossyVal = Math.min(1, lossy).toFixed(2);
+            document.getElementById('lossyValue').textContent = lossyVal;
+            const lossyEl = document.getElementById('lossyValue');
+            const lossyBadge = document.getElementById('lossyBadge');
+            if (lossy < 0.3) {
+                lossyEl.style.color = 'var(--teal)'; lossyBadge.textContent = 'STABLE';
+                lossyBadge.style.background = 'var(--teal-dim)'; lossyBadge.style.color = 'var(--teal)';
+            } else if (lossy < 0.6) {
+                lossyEl.style.color = 'var(--amber)'; lossyBadge.textContent = 'WARNING';
+                lossyBadge.style.background = 'var(--amber-dim)'; lossyBadge.style.color = 'var(--amber)';
+            } else {
+                lossyEl.style.color = 'var(--red)'; lossyBadge.textContent = 'CRITICAL';
+                lossyBadge.style.background = 'var(--red-dim)'; lossyBadge.style.color = 'var(--red)';
+            }
+            document.getElementById('lossyEntropy').textContent = (lossy * 0.6).toFixed(2);
+            document.getElementById('lossyDrift').textContent = (lossy > 0.5 ? '+' : '') + (lossy * 0.12 - 0.02).toFixed(2) + '/yr';
+            document.getElementById('lossyGentrify').textContent = lossy < 0.3 ? 'LOW' : lossy < 0.6 ? 'MODERATE' : 'HIGH';
+
+            // Null zones
+            document.getElementById('nullDisplay').textContent = nullCt;
+            document.getElementById('nullBadge').textContent = nullCt + ' SECTORS';
+            document.getElementById('nullRecovery').textContent = Math.max(0, Math.round(100 - nullCt * 6)) + '%';
+            document.getElementById('nullGaps').textContent = Math.max(0, Math.round(nullCt * 0.7)) + ' critical';
+
+            // Buffer sources
+            const buf = parseInt(document.getElementById('bufferSlider').value);
+            const sources = Math.round(30 + buf * 0.22);
+            document.getElementById('bufferSources').textContent = sources + '/52';
+            document.getElementById('bufferAccuracy').textContent = (80 + buf * 0.15).toFixed(1) + '%';
+
+            // Vitality
+            const efficiency = Math.round(optPct * 0.8 + (100 - divPct) * 0.2);
+            const sovereignty = Math.round(counts.sovereign / total * 100 * 1.5 + 40);
+            const resilience = Math.round((100 - lossy * 100) * 0.7 + buf * 0.3);
+            const predictability = Math.round(buf * 0.5 + (100 - counts['null-zone'] / total * 100) * 0.5);
+
+            const clamp = v => Math.min(100, Math.max(0, v));
+            updateVitality('Efficiency', clamp(efficiency), 'var(--teal)');
+            updateVitality('Sovereignty', clamp(sovereignty), 'var(--cyan)');
+            updateVitality('Resilience', clamp(resilience), 'var(--green)');
+            updateVitality('Predictability', clamp(predictability), 'var(--amber)');
+
+            window._vitality = {
+                efficiency: clamp(efficiency),
+                sovereignty: clamp(sovereignty),
+                resilience: clamp(resilience),
+                predictability: clamp(predictability)
+            };
+        }
+
+        function updateVitality(name, value, color) {
+            const key = name.charAt(0).toLowerCase() + name.slice(1);
+            document.getElementById('v' + name).textContent = value + '%';
+            document.getElementById('v' + name.substring(0,3) + 'Bar').style.width = value + '%';
+        }
+
+        // ── RADAR CHART ──
+        function drawRadar() {
+            const canvas = document.getElementById('radarChart');
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width, h = canvas.height;
+            const cx = w / 2, cy = h / 2;
+            const r = 70;
+
+            ctx.clearRect(0, 0, w, h);
+
+            const v = window._vitality || { efficiency: 72, sovereignty: 85, resilience: 61, predictability: 78 };
+            const axes = [
+                { label: 'EFF', value: v.efficiency / 100, color: '#00d4aa' },
+                { label: 'SOV', value: v.sovereignty / 100, color: '#00c8ff' },
+                { label: 'RES', value: v.resilience / 100, color: '#39ff14' },
+                { label: 'PRE', value: v.predictability / 100, color: '#ffbf00' }
+            ];
+            const n = axes.length;
+
+            // Grid rings
+            for (let ring = 1; ring <= 4; ring++) {
+                const rr = r * ring / 4;
+                ctx.beginPath();
+                for (let i = 0; i <= n; i++) {
+                    const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+                    const x = cx + Math.cos(angle) * rr;
+                    const y = cy + Math.sin(angle) * rr;
+                    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = 'rgba(26,36,54,0.6)';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
+
+            // Axis lines + labels
+            axes.forEach((a, i) => {
+                const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+                const x = cx + Math.cos(angle) * r;
+                const y = cy + Math.sin(angle) * r;
+                ctx.beginPath();
+                ctx.moveTo(cx, cy);
+                ctx.lineTo(x, y);
+                ctx.strokeStyle = 'rgba(26,36,54,0.4)';
+                ctx.stroke();
+
+                const lx = cx + Math.cos(angle) * (r + 16);
+                const ly = cy + Math.sin(angle) * (r + 16);
+                ctx.fillStyle = a.color;
+                ctx.font = '600 8px Orbitron';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(a.label, lx, ly);
+            });
+
+            // Data polygon
+            ctx.beginPath();
+            axes.forEach((a, i) => {
+                const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+                const x = cx + Math.cos(angle) * r * a.value;
+                const y = cy + Math.sin(angle) * r * a.value;
+                i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+            });
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(0,212,170,0.12)';
+            ctx.fill();
+            ctx.strokeStyle = 'rgba(0,212,170,0.7)';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Data points
+            axes.forEach((a, i) => {
+                const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+                const x = cx + Math.cos(angle) * r * a.value;
+                const y = cy + Math.sin(angle) * r * a.value;
+                ctx.beginPath();
+                ctx.arc(x, y, 3, 0, Math.PI * 2);
+                ctx.fillStyle = a.color;
+                ctx.fill();
+                ctx.beginPath();
+                ctx.arc(x, y, 6, 0, Math.PI * 2);
+                ctx.strokeStyle = a.color + '40';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            });
+        }
+
+        // ── CONTROLS ──
+        function toggleNull() {
+            nullOverride = !nullOverride;
+            document.getElementById('nullToggle').classList.toggle('active');
+            addLog(nullOverride ? 'warn' : 'info', 'Null zone override: ' + (nullOverride ? 'ENABLED' : 'DISABLED'));
+            updateControls();
+        }
+
+        function shiftEpoch(delta) {
+            const slider = document.getElementById('depthSlider');
+            let val = parseInt(slider.value) + delta;
+            val = Math.max(1, Math.min(50, val));
+            slider.value = val;
+            updateControls();
+            addLog('info', 'Epoch shifted to ' + epoch);
+        }
+
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            const btn = document.getElementById('playBtn');
+            if (isPlaying) {
+                btn.textContent = '⏸';
+                btn.classList.add('active-play');
+                addLog('success', 'Temporal playback STARTED');
+                playInterval = setInterval(() => {
+                    const slider = document.getElementById('depthSlider');
+                    let val = parseInt(slider.value) + 1;
+                    if (val > 50) { val = 1; }
+                    slider.value = val;
+                    updateControls();
+                }, 1200);
+            } else {
+                btn.innerHTML = '&#9654;';
+                btn.classList.remove('active-play');
+                addLog('info', 'Temporal playback PAUSED at epoch ' + epoch);
+                clearInterval(playInterval);
+            }
+        }
+
+        function loadPreset(name) {
+            document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (name === 'baseline') {
+                document.getElementById('entropySlider').value = 42;
+                document.getElementById('bufferSlider').value = 65;
+            } else if (name === 'growth') {
+                document.getElementById('entropySlider').value = 28;
+                document.getElementById('bufferSlider').value = 80;
+            } else if (name === 'decay') {
+                document.getElementById('entropySlider').value = 78;
+                document.getElementById('bufferSlider').value = 30;
+            } else if (name === 'sovereign') {
+                document.getElementById('entropySlider').value = 15;
+                document.getElementById('bufferSlider').value = 90;
+            }
+
+            addLog('success', 'Preset loaded: ' + name.toUpperCase());
+            updateControls();
+        }
+
+        // ── CLOCK ──
+        function startClock() {
+            setInterval(() => {
+                const now = new Date();
+                document.getElementById('utcClock').textContent =
+                    now.getUTCHours().toString().padStart(2,'0') + ':' +
+                    now.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                    now.getUTCSeconds().toString().padStart(2,'0');
+            }, 1000);
+        }
+
+        // ── LOG FEED ──
+        const logMessages = [
+            ['info', 'Sector scan cycle completed'],
+            ['info', 'Census data refresh queued'],
+            ['success', 'Grid stability: nominal'],
+            ['warn', 'Divergent cluster detected: ZONA_INDUSTRIALE'],
+            ['info', 'Cartographic alignment verified'],
+            ['success', 'Prediction model retrained'],
+            ['info', 'Infrastructure telemetry synced'],
+            ['warn', 'Null zone expansion: DEADZONE_ALPHA'],
+            ['info', 'Population density recalculated'],
+            ['success', 'Sovereignty index updated'],
+            ['info', 'Lossy urbanism coefficient recalibrated'],
+            ['warn', 'Gentrification pressure rising: WATERFRONT'],
+            ['info', 'Transit network efficiency: 78.3%'],
+            ['success', 'Energy grid: balanced'],
+            ['info', 'Agricultural output nominal: VERTICAL_FARM_1'],
+            ['warn', 'Water table anomaly: TREATMENT_PLANT sector'],
+            ['info', 'Heritage zone preservation: ACTIVE'],
+            ['success', 'Data center uplink: 99.97% uptime']
+        ];
+        let logIdx = 0;
+
+        function addLog(type, msg) {
+            const feed = document.getElementById('logFeed');
+            const now = new Date();
+            const time = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0') + ':' + now.getSeconds().toString().padStart(2,'0');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry log-' + type;
+            entry.innerHTML = '<span class="log-time">[' + time + ']</span><span class="log-msg">' + msg + '</span>';
+            feed.insertBefore(entry, feed.firstChild);
+            if (feed.children.length > 30) feed.removeChild(feed.lastChild);
+        }
+
+        function startLogFeed() {
+            setInterval(() => {
+                const [type, msg] = logMessages[logIdx % logMessages.length];
+                addLog(type, msg);
+                logIdx++;
+            }, 4000);
+        }
+
+        // ── QUOTE ROTATION ──
+        function startQuoteRotation() {
+            setInterval(() => {
+                quoteIndex = (quoteIndex + 1) % quotes.length;
+                const el = document.getElementById('quoteText');
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.textContent = quotes[quoteIndex];
+                    el.style.opacity = 1;
+                }, 500);
+            }, 8000);
+        }
+
+        // ── INIT ──
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
