@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNAL_DASHBOARD | Intelligence Analytics Center</title>
+    <meta name="description" content="SIGNAL_DASHBOARD - Visual Intelligence Analytics. Hybrid Syndicate Research Division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #070d1a;
+            --bg-card: #0b1526;
+            --bg-card-hover: #0e1a30;
+            --border: #152240;
+            --border-light: #1a2d50;
+            --cyan: #00c8ff;
+            --cyan-dim: #0088aa;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --red-dim: #cc2233;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --green: #00dd66;
+            --purple: #8855ff;
+            --pink: #ff0084;
+            --gold: #ffbf00;
+            --text-primary: #c8d6e5;
+            --text-secondary: #6b7fa3;
+            --text-dim: #3a4f6f;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* Scanline */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(255, 191, 0, 0.005) 3px, rgba(255, 191, 0, 0.005) 6px
+            );
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ===== TOP HEADER ===== */
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #060c18;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .top-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .dash-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .dash-icon {
+            width: 28px;
+            height: 28px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dash-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+        .dash-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+        }
+        .dash-subtitle {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 1px;
+        }
+        .top-stats {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .top-stat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .top-stat strong { color: var(--text-secondary); }
+        .top-stat .val-green { color: var(--green); }
+        .top-stat .val-gold { color: var(--gold); }
+        .top-stat .val-red { color: var(--red); }
+        .top-stat .val-cyan { color: var(--cyan); }
+
+        .back-link {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--cyan); }
+
+        /* ===== LIVE STATUS BAR ===== */
+        .live-bar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 8px 24px;
+            background: #060a14;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 8px rgba(0,221,102,0.5);
+            animation: live-pulse 2s infinite;
+        }
+        @keyframes live-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        .live-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: var(--green);
+            letter-spacing: 0.12em;
+        }
+        .live-stat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+        .live-stat strong { color: var(--text-secondary); }
+
+        /* ===== MAIN GRID ===== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 320px;
+            gap: 0;
+            min-height: calc(100vh - 100px);
+        }
+
+        /* ===== CARD STYLE ===== */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            background: rgba(0,0,0,0.2);
+            border-bottom: 1px solid var(--border);
+        }
+        .card-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+        .card-meta {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+        .card-body {
+            padding: 16px;
+        }
+
+        /* ===== LEFT + CENTER COLUMNS ===== */
+        .col-left, .col-center {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .col-center {
+            border-left: 1px solid var(--border);
+        }
+
+        /* ===== RIGHT SIDEBAR ===== */
+        .col-right {
+            background: #060c18;
+            border-left: 1px solid var(--border);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow-y: auto;
+        }
+
+        /* ===== OVERVIEW STATS GRID ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        .stat-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+            margin-top: 2px;
+        }
+
+        /* ===== CANVAS CONTAINERS ===== */
+        .chart-container {
+            position: relative;
+            width: 100%;
+        }
+        .chart-container canvas {
+            width: 100%;
+            display: block;
+        }
+
+        /* ===== DOMAIN BARS ===== */
+        .domain-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .domain-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .domain-bar-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.48rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            width: 90px;
+            flex-shrink: 0;
+            text-align: right;
+        }
+        .domain-bar-track {
+            flex: 1;
+            height: 16px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+        .domain-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 1s ease-out;
+            position: relative;
+        }
+        .domain-bar-fill::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: rgba(255,255,255,0.4);
+        }
+        .domain-bar-count {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            width: 40px;
+            text-align: right;
+        }
+
+        /* ===== SEVERITY DISTRIBUTION ===== */
+        .sev-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        .sev-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        .sev-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .sev-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        .sev-bar {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 2px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .sev-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 1s ease;
+        }
+
+        /* ===== SOURCE TABLE ===== */
+        .source-table {
+            width: 100%;
+        }
+        .source-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(21,34,64,0.3);
+        }
+        .source-row:last-child { border-bottom: none; }
+        .source-name {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.04em;
+        }
+        .source-count {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+        .source-bar-mini {
+            width: 80px;
+            height: 4px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 10px;
+            flex-shrink: 0;
+        }
+        .source-bar-mini-fill {
+            height: 100%;
+            background: var(--gold);
+            border-radius: 2px;
+            opacity: 0.6;
+        }
+
+        /* ===== CRITICAL ALERTS ===== */
+        .alert-item {
+            padding: 10px 12px;
+            border-left: 2px solid var(--red);
+            background: rgba(255,51,68,0.03);
+            margin-bottom: 8px;
+            border-radius: 0 4px 4px 0;
+        }
+        .alert-item.high { border-left-color: var(--orange); background: rgba(255,136,51,0.03); }
+        .alert-item.moderate { border-left-color: var(--gold); background: rgba(255,191,0,0.02); }
+
+        .alert-domain {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            margin-bottom: 3px;
+        }
+        .alert-title {
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+        .alert-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .alert-title a:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+        .alert-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .alert-source {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+        }
+        .alert-sev {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.42rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== TIMELINE ENTRIES ===== */
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+        .timeline-list::-webkit-scrollbar { width: 3px; }
+        .timeline-list::-webkit-scrollbar-track { background: transparent; }
+        .timeline-list::-webkit-scrollbar-thumb { background: #1a2436; border-radius: 2px; }
+
+        .tl-entry {
+            display: grid;
+            grid-template-columns: 60px 70px 1fr 50px;
+            gap: 8px;
+            padding: 6px 10px;
+            align-items: center;
+            border-bottom: 1px solid rgba(21,34,64,0.2);
+            font-size: 0.55rem;
+            transition: background 0.15s;
+        }
+        .tl-entry:hover { background: rgba(255,191,0,0.02); }
+        .tl-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+        }
+        .tl-domain {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.4rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        .tl-title {
+            color: var(--text-secondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .tl-sev {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.4rem;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* ===== EMPTY STATE ===== */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 10px;
+        }
+        .empty-icon {
+            font-size: 1.5rem;
+            opacity: 0.2;
+        }
+        .empty-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-align: center;
+        }
+
+        /* ===== STATUS FOOTER ===== */
+        .status-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            background: #050a14;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .sf-item {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sf-item .val { color: var(--text-secondary); }
+        .sf-motto {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .main-grid { grid-template-columns: 1fr 1fr; }
+            .col-right { display: none; }
+        }
+        @media (max-width: 800px) {
+            .main-grid { grid-template-columns: 1fr; }
+            .col-center { border-left: none; border-top: 1px solid var(--border); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .sev-grid { grid-template-columns: repeat(2, 1fr); }
+            .top-stats { display: none; }
+        }
+        @media (max-width: 600px) {
+            .top-header { padding: 10px 16px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .status-footer { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <div class="dash-logo">
+                <div class="dash-icon">
+                    <svg viewBox="0 0 28 28" fill="none">
+                        <circle cx="14" cy="14" r="12" stroke="#ffbf00" stroke-width="1" opacity="0.4"/>
+                        <circle cx="14" cy="14" r="7" stroke="#ffbf00" stroke-width="1.5" opacity="0.7"/>
+                        <circle cx="14" cy="14" r="2" fill="#ffbf00"/>
+                        <line x1="14" y1="2" x2="14" y2="8" stroke="#ffbf00" stroke-width="1" opacity="0.5"/>
+                        <line x1="14" y1="20" x2="14" y2="26" stroke="#ffbf00" stroke-width="1" opacity="0.5"/>
+                        <line x1="2" y1="14" x2="8" y2="14" stroke="#ffbf00" stroke-width="1" opacity="0.5"/>
+                        <line x1="20" y1="14" x2="26" y2="14" stroke="#ffbf00" stroke-width="1" opacity="0.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="dash-title">SIGNAL_DASHBOARD</div>
+                    <div class="dash-subtitle">Intelligence Analytics Center // v1.0</div>
+                </div>
+            </div>
+        </div>
+        <div class="top-stats" id="topStats">
+            <div class="top-stat">SIGNALS: <strong class="val-gold" id="topTotal">0</strong></div>
+            <div class="top-stat">CRITICAL: <strong class="val-red" id="topCritical">0</strong></div>
+            <div class="top-stat">AVG_SEVERITY: <strong class="val-cyan" id="topAvgSev">0%</strong></div>
+            <div class="top-stat">DOMAINS: <strong class="val-green">6</strong></div>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <a href="index.html" class="back-link">&larr; HQ</a>
+            <a href="oracle.html" class="back-link" style="color: #00c8ff;">ORACLE</a>
+            <a href="eei-predictor.html" class="back-link" style="color: #ff0084;">EEI</a>
+            <a href="agora.html" class="back-link" style="color: #39ff14;">AGORA</a>
+            <a href="pneuma.html" class="back-link" style="color: #ff6600;">PNEUMA</a>
+            <a href="archivio-silente.html" class="back-link" style="color: #00d4ff;">ARCHIVIO</a>
+        </div>
+    </div>
+
+    <!-- LIVE STATUS BAR -->
+    <div class="live-bar" id="liveBar">
+        <div class="live-dot"></div>
+        <span class="live-label">LIVE ANALYTICS</span>
+        <span class="live-stat">ARCHIVIO: <strong id="liveTotal">0</strong> segnali</span>
+        <span class="live-stat">ULTIMO AGGIORNAMENTO: <strong id="liveLastUpdate">—</strong></span>
+        <span class="live-stat">SESSIONE: <strong id="liveSession">1</strong></span>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+
+            <!-- OVERVIEW STATS -->
+            <div id="overviewStats" class="stats-grid"></div>
+
+            <!-- DOMAIN DISTRIBUTION -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--gold);">DOMAIN DISTRIBUTION</span>
+                    <span class="card-meta">SIGNAL_COUNT_BY_DOMAIN</span>
+                </div>
+                <div class="card-body">
+                    <div class="domain-bars" id="domainBars"></div>
+                </div>
+            </div>
+
+            <!-- RADAR CHART -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--cyan);">DOMAIN RADAR</span>
+                    <span class="card-meta">MULTI-AXIS ANALYSIS</span>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="radarChart" height="280"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CENTER COLUMN -->
+        <div class="col-center">
+
+            <!-- SEVERITY DISTRIBUTION -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--red);">SEVERITY DISTRIBUTION</span>
+                    <span class="card-meta">THREAT_LEVEL_BREAKDOWN</span>
+                </div>
+                <div class="card-body">
+                    <div class="sev-grid" id="sevGrid"></div>
+                </div>
+            </div>
+
+            <!-- SIGNAL FREQUENCY TIMELINE -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--teal);">SIGNAL FREQUENCY</span>
+                    <span class="card-meta">TEMPORAL_ANALYSIS</span>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="frequencyChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOURCE MATRIX -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--green);">SOURCE MATRIX</span>
+                    <span class="card-meta">FEED_RELIABILITY</span>
+                </div>
+                <div class="card-body">
+                    <div class="source-table" id="sourceTable"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="col-right">
+
+            <!-- CRITICAL ALERTS -->
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--red);">CRITICAL ALERTS</span>
+                    <span class="card-meta" id="alertCount">0</span>
+                </div>
+                <div class="card-body" id="criticalAlerts" style="max-height: 300px; overflow-y: auto;"></div>
+            </div>
+
+            <!-- RECENT TIMELINE -->
+            <div class="card" style="flex: 1;">
+                <div class="card-header">
+                    <span class="card-title" style="color: var(--gold);">SIGNAL TIMELINE</span>
+                    <span class="card-meta">LAST_50</span>
+                </div>
+                <div class="card-body" style="padding: 8px;">
+                    <div class="timeline-list" id="timelineList"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- STATUS FOOTER -->
+    <div class="status-footer">
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div class="sf-item"><span class="val">SIGNAL_DASHBOARD v1.0</span></div>
+            <div class="sf-item">ARCHIVIO: <span class="val" id="footTotal">0</span></div>
+            <div class="sf-item">LAST_REFRESH: <span class="val" id="footRefresh">—</span></div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: center;">
+            <div class="sf-motto">IL DETECTIVE HA LA MEMORIA</div>
+        </div>
+    </div>
+
+    <script>
+    // ═══════════════════════════════════════════════════════════════
+    // SIGNAL_DASHBOARD — Intelligence Analytics Engine
+    // ═══════════════════════════════════════════════════════════════
+
+    const DOMAIN_CONFIG = {
+        CLIMATE:     { color: '#00c8ff', icon: '◈', label: 'CLIMATE' },
+        GEOPOLITICS: { color: '#ff3344', icon: '◆', label: 'GEOPOLITICS' },
+        ECONOMY:     { color: '#00d4aa', icon: '◇', label: 'ECONOMY' },
+        TECHNOLOGY:  { color: '#39ff14', icon: '◉', label: 'TECHNOLOGY' },
+        SOCIAL:      { color: '#ff6633', icon: '◎', label: 'SOCIAL' },
+        ENERGY:      { color: '#ffbf00', icon: '◐', label: 'ENERGY' },
+    };
+
+    function getArchive() {
+        // Try PersistenceManager first, then fallback
+        if (typeof PersistenceManager !== 'undefined') {
+            return PersistenceManager.getArchive();
+        }
+        try {
+            return JSON.parse(localStorage.getItem('hs_signal_archive') || '[]');
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    // ═════ OVERVIEW STATS ═════
+    function renderOverviewStats() {
+        const archive = getArchive();
+        const total = archive.length;
+        const critical = archive.filter(s => s.severity >= 70).length;
+        const avgSev = total ? Math.round(archive.reduce((sum, s) => sum + (s.severity || 0), 0) / total) : 0;
+
+        // Unique domains
+        const domainSet = new Set(archive.map(s => s.domain).filter(Boolean));
+        const uniqueSources = new Set(archive.map(s => s.source).filter(Boolean));
+
+        // Last 24h count
+        const now = Date.now();
+        const last24h = archive.filter(s => (now - s.time) < 86400000).length;
+
+        const container = document.getElementById('overviewStats');
+        container.innerHTML = `
+            <div class="stat-card">
+                <div class="stat-value" style="color: var(--gold);">${total}</div>
+                <div class="stat-label">SEGNALI TOTALI</div>
+                <div class="stat-sub">${last24h} nelle ultime 24h</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: var(--red);">${critical}</div>
+                <div class="stat-label">CRITICI (70%+)</div>
+                <div class="stat-sub">${total ? Math.round(critical / total * 100) : 0}% del totale</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" style="color: var(--cyan);">${avgSev}%</div>
+                <div class="stat-label">SEVERITY MEDIA</div>
+                <div class="stat-sub">${domainSet.size} domini / ${uniqueSources.size} fonti</div>
+            </div>
+        `;
+
+        // Update header stats
+        document.getElementById('topTotal').textContent = total;
+        document.getElementById('topCritical').textContent = critical;
+        document.getElementById('topAvgSev').textContent = avgSev + '%';
+        document.getElementById('liveTotal').textContent = total;
+        document.getElementById('footTotal').textContent = total;
+
+        // Session stats
+        try {
+            const stats = JSON.parse(localStorage.getItem('hs_session_stats') || '{}');
+            document.getElementById('liveSession').textContent = stats.totalSessions || 1;
+        } catch (e) {}
+    }
+
+    // ═════ DOMAIN DISTRIBUTION BARS ═════
+    function renderDomainBars() {
+        const archive = getArchive();
+        const domainCounts = {};
+        const domainSeverity = {};
+        Object.keys(DOMAIN_CONFIG).forEach(d => { domainCounts[d] = 0; domainSeverity[d] = []; });
+
+        archive.forEach(s => {
+            if (domainCounts[s.domain] !== undefined) {
+                domainCounts[s.domain]++;
+                domainSeverity[s.domain].push(s.severity || 0);
+            }
+        });
+
+        const maxCount = Math.max(...Object.values(domainCounts), 1);
+        const container = document.getElementById('domainBars');
+
+        // Sort by count descending
+        const sorted = Object.entries(domainCounts).sort((a, b) => b[1] - a[1]);
+
+        container.innerHTML = sorted.map(([domain, count]) => {
+            const cfg = DOMAIN_CONFIG[domain];
+            const pct = maxCount > 0 ? (count / maxCount * 100) : 0;
+            const avgSev = domainSeverity[domain].length
+                ? Math.round(domainSeverity[domain].reduce((a, b) => a + b, 0) / domainSeverity[domain].length)
+                : 0;
+
+            return `
+                <div class="domain-bar-row">
+                    <span class="domain-bar-label" style="color: ${cfg.color};">${cfg.icon} ${cfg.label}</span>
+                    <div class="domain-bar-track">
+                        <div class="domain-bar-fill" style="width: ${pct}%; background: ${cfg.color}; opacity: 0.6;"></div>
+                    </div>
+                    <span class="domain-bar-count" style="color: ${cfg.color};">${count}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ RADAR CHART ═════
+    function drawRadarChart() {
+        const canvas = document.getElementById('radarChart');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+
+        canvas.width = rect.width * dpr;
+        canvas.height = 280 * dpr;
+        canvas.style.height = '280px';
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = 280;
+        const cx = W / 2;
+        const cy = H / 2;
+        const R = Math.min(cx, cy) - 40;
+
+        ctx.clearRect(0, 0, W, H);
+
+        const archive = getArchive();
+        const domains = Object.keys(DOMAIN_CONFIG);
+        const n = domains.length;
+
+        // Calculate per-domain metrics
+        const domainCounts = {};
+        const domainAvgSev = {};
+        domains.forEach(d => { domainCounts[d] = 0; domainAvgSev[d] = 0; });
+
+        archive.forEach(s => {
+            if (domainCounts[s.domain] !== undefined) {
+                domainCounts[s.domain]++;
+            }
+        });
+
+        // Normalize to 0-1 (count-based)
+        const maxCount = Math.max(...Object.values(domainCounts), 1);
+
+        // Draw grid rings
+        for (let ring = 1; ring <= 5; ring++) {
+            const r = (R / 5) * ring;
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= n; i++) {
+                const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+                const x = cx + Math.cos(angle) * r;
+                const y = cy + Math.sin(angle) * r;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        // Draw axis lines and labels
+        domains.forEach((domain, i) => {
+            const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+            const x = cx + Math.cos(angle) * R;
+            const y = cy + Math.sin(angle) * R;
+
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(x, y);
+            ctx.stroke();
+
+            // Label
+            const lx = cx + Math.cos(angle) * (R + 22);
+            const ly = cy + Math.sin(angle) * (R + 22);
+            ctx.fillStyle = DOMAIN_CONFIG[domain].color;
+            ctx.font = '9px Orbitron';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(domain.slice(0, 6), lx, ly);
+        });
+
+        // Draw data polygon (count-based)
+        ctx.beginPath();
+        domains.forEach((domain, i) => {
+            const val = domainCounts[domain] / maxCount;
+            const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+            const x = cx + Math.cos(angle) * (R * val);
+            const y = cy + Math.sin(angle) * (R * val);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(255,191,0,0.08)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,191,0,0.6)';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Draw data points
+        domains.forEach((domain, i) => {
+            const val = domainCounts[domain] / maxCount;
+            const angle = (Math.PI * 2 / n) * i - Math.PI / 2;
+            const x = cx + Math.cos(angle) * (R * val);
+            const y = cy + Math.sin(angle) * (R * val);
+
+            ctx.beginPath();
+            ctx.arc(x, y, 3, 0, Math.PI * 2);
+            ctx.fillStyle = DOMAIN_CONFIG[domain].color;
+            ctx.fill();
+        });
+
+        // Center label
+        ctx.fillStyle = 'rgba(255,191,0,0.3)';
+        ctx.font = '8px Share Tech Mono';
+        ctx.textAlign = 'center';
+        ctx.fillText(archive.length + ' SIGNALS', cx, cy + 3);
+    }
+
+    // ═════ SEVERITY DISTRIBUTION ═════
+    function renderSeverityDistribution() {
+        const archive = getArchive();
+        const total = archive.length || 1;
+
+        const critical = archive.filter(s => s.severity >= 70).length;
+        const high = archive.filter(s => s.severity >= 50 && s.severity < 70).length;
+        const moderate = archive.filter(s => s.severity >= 30 && s.severity < 50).length;
+        const low = archive.filter(s => s.severity < 30).length;
+
+        const container = document.getElementById('sevGrid');
+        container.innerHTML = `
+            <div class="sev-card">
+                <div class="sev-value" style="color: var(--red);">${critical}</div>
+                <div class="sev-label">CRITICAL 70%+</div>
+                <div class="sev-bar"><div class="sev-bar-fill" style="width: ${critical/total*100}%; background: var(--red);"></div></div>
+            </div>
+            <div class="sev-card">
+                <div class="sev-value" style="color: var(--orange);">${high}</div>
+                <div class="sev-label">HIGH 50-69%</div>
+                <div class="sev-bar"><div class="sev-bar-fill" style="width: ${high/total*100}%; background: var(--orange);"></div></div>
+            </div>
+            <div class="sev-card">
+                <div class="sev-value" style="color: var(--gold);">${moderate}</div>
+                <div class="sev-label">MODERATE 30-49%</div>
+                <div class="sev-bar"><div class="sev-bar-fill" style="width: ${moderate/total*100}%; background: var(--gold);"></div></div>
+            </div>
+            <div class="sev-card">
+                <div class="sev-value" style="color: var(--teal);">${low}</div>
+                <div class="sev-label">LOW &lt;30%</div>
+                <div class="sev-bar"><div class="sev-bar-fill" style="width: ${low/total*100}%; background: var(--teal);"></div></div>
+            </div>
+        `;
+    }
+
+    // ═════ FREQUENCY CHART ═════
+    function drawFrequencyChart() {
+        const canvas = document.getElementById('frequencyChart');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+
+        canvas.width = rect.width * dpr;
+        canvas.height = 200 * dpr;
+        canvas.style.height = '200px';
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = 200;
+        const padLeft = 40;
+        const padRight = 16;
+        const padTop = 16;
+        const padBottom = 30;
+        const chartW = W - padLeft - padRight;
+        const chartH = H - padTop - padBottom;
+
+        ctx.clearRect(0, 0, W, H);
+
+        const archive = getArchive();
+        if (archive.length === 0) {
+            ctx.fillStyle = '#3a4f6f';
+            ctx.font = '11px Share Tech Mono';
+            ctx.textAlign = 'center';
+            ctx.fillText('IN ATTESA DI SEGNALI...', W / 2, H / 2);
+            return;
+        }
+
+        // Group by day (last 14 days)
+        const now = Date.now();
+        const days = 14;
+        const dayMs = 86400000;
+        const buckets = new Array(days).fill(0);
+        const labels = [];
+
+        for (let i = 0; i < days; i++) {
+            const dayStart = now - (days - 1 - i) * dayMs;
+            const dayEnd = dayStart + dayMs;
+            const date = new Date(dayStart);
+            labels.push(date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short' }));
+
+            archive.forEach(s => {
+                if (s.time >= dayStart && s.time < dayEnd) {
+                    buckets[i]++;
+                }
+            });
+        }
+
+        const maxVal = Math.max(...buckets, 1);
+
+        // Grid
+        ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 4; i++) {
+            const y = padTop + (chartH / 4) * i;
+            ctx.beginPath();
+            ctx.moveTo(padLeft, y);
+            ctx.lineTo(W - padRight, y);
+            ctx.stroke();
+
+            ctx.fillStyle = '#3a4f6f';
+            ctx.font = '9px Share Tech Mono';
+            ctx.textAlign = 'right';
+            const val = Math.round(maxVal - (maxVal / 4) * i);
+            ctx.fillText(val, padLeft - 6, y + 3);
+        }
+
+        // Area fill
+        ctx.beginPath();
+        buckets.forEach((val, i) => {
+            const x = padLeft + (chartW / (days - 1)) * i;
+            const y = padTop + chartH - (val / maxVal) * chartH;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        // Close the area
+        ctx.lineTo(padLeft + chartW, padTop + chartH);
+        ctx.lineTo(padLeft, padTop + chartH);
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(255,191,0,0.06)';
+        ctx.fill();
+
+        // Line
+        ctx.beginPath();
+        buckets.forEach((val, i) => {
+            const x = padLeft + (chartW / (days - 1)) * i;
+            const y = padTop + chartH - (val / maxVal) * chartH;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.strokeStyle = '#ffbf00';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Points
+        buckets.forEach((val, i) => {
+            const x = padLeft + (chartW / (days - 1)) * i;
+            const y = padTop + chartH - (val / maxVal) * chartH;
+
+            ctx.beginPath();
+            ctx.arc(x, y, 3, 0, Math.PI * 2);
+            ctx.fillStyle = val > 0 ? '#ffbf00' : '#3a4f6f';
+            ctx.fill();
+        });
+
+        // X labels (every 2 days)
+        ctx.fillStyle = '#3a4f6f';
+        ctx.font = '8px Share Tech Mono';
+        ctx.textAlign = 'center';
+        labels.forEach((label, i) => {
+            if (i % 2 === 0 || i === days - 1) {
+                const x = padLeft + (chartW / (days - 1)) * i;
+                ctx.fillText(label, x, H - 8);
+            }
+        });
+    }
+
+    // ═════ SOURCE MATRIX ═════
+    function renderSourceMatrix() {
+        const archive = getArchive();
+        const sourceCounts = {};
+
+        archive.forEach(s => {
+            if (s.source) {
+                sourceCounts[s.source] = (sourceCounts[s.source] || 0) + 1;
+            }
+        });
+
+        const sorted = Object.entries(sourceCounts).sort((a, b) => b[1] - a[1]);
+        const maxCount = sorted.length > 0 ? sorted[0][1] : 1;
+        const container = document.getElementById('sourceTable');
+
+        if (sorted.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">&#9778;</div>
+                    <div class="empty-text">NESSUNA FONTE REGISTRATA</div>
+                </div>
+            `;
+            return;
+        }
+
+        container.innerHTML = sorted.map(([source, count]) => {
+            const pct = (count / maxCount * 100);
+            return `
+                <div class="source-row">
+                    <span class="source-name">${escapeHtml(source)}</span>
+                    <div class="source-bar-mini">
+                        <div class="source-bar-mini-fill" style="width: ${pct}%;"></div>
+                    </div>
+                    <span class="source-count">${count}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ CRITICAL ALERTS ═════
+    function renderCriticalAlerts() {
+        const archive = getArchive();
+        const critical = archive
+            .filter(s => s.severity >= 50)
+            .sort((a, b) => b.severity - a.severity)
+            .slice(0, 15);
+
+        const container = document.getElementById('criticalAlerts');
+        document.getElementById('alertCount').textContent = critical.length;
+
+        if (critical.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">&#9711;</div>
+                    <div class="empty-text">NESSUN ALERT CRITICO<br>Severity &lt; 50% per tutti i segnali</div>
+                </div>
+            `;
+            return;
+        }
+
+        container.innerHTML = critical.map(s => {
+            const cfg = DOMAIN_CONFIG[s.domain] || { color: '#666', icon: '?' };
+            const sevColor = s.severity >= 70 ? 'var(--red)' : s.severity >= 50 ? 'var(--orange)' : 'var(--gold)';
+            const cls = s.severity >= 70 ? '' : s.severity >= 50 ? 'high' : 'moderate';
+            const titleHtml = s.link
+                ? `<a href="${escapeHtml(s.link)}" target="_blank" rel="noopener">${escapeHtml(s.title)}</a>`
+                : escapeHtml(s.title);
+
+            return `
+                <div class="alert-item ${cls}">
+                    <div class="alert-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain}</div>
+                    <div class="alert-title">${titleHtml}</div>
+                    <div class="alert-meta-row">
+                        <span class="alert-source">${escapeHtml(s.source)}</span>
+                        <span class="alert-sev" style="color: ${sevColor};">SEV:${s.severity}%</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ SIGNAL TIMELINE ═════
+    function renderTimeline() {
+        const archive = getArchive();
+        const recent = archive.slice(0, 50);
+
+        const container = document.getElementById('timelineList');
+
+        if (recent.length === 0) {
+            container.innerHTML = `
+                <div class="empty-state">
+                    <div class="empty-icon">&#8987;</div>
+                    <div class="empty-text">IN ATTESA DI SEGNALI...<br>I segnali appariranno automaticamente.</div>
+                </div>
+            `;
+            return;
+        }
+
+        container.innerHTML = recent.map(s => {
+            const cfg = DOMAIN_CONFIG[s.domain] || { color: '#666', icon: '?' };
+            const date = new Date(s.time);
+            const timeStr = date.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+            const dateStr = date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short' });
+            const sevColor = s.severity >= 70 ? 'var(--red)' : s.severity >= 50 ? 'var(--orange)' : s.severity >= 30 ? 'var(--gold)' : 'var(--teal)';
+
+            return `
+                <div class="tl-entry">
+                    <span class="tl-time">${dateStr} ${timeStr}</span>
+                    <span class="tl-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain || '?'}</span>
+                    <span class="tl-title">${escapeHtml(s.title)}</span>
+                    <span class="tl-sev" style="color: ${sevColor};">${s.severity}%</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // ═════ REFRESH ALL ═════
+    function refreshAll() {
+        renderOverviewStats();
+        renderDomainBars();
+        drawRadarChart();
+        renderSeverityDistribution();
+        drawFrequencyChart();
+        renderSourceMatrix();
+        renderCriticalAlerts();
+        renderTimeline();
+
+        // Update timestamp
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        document.getElementById('liveLastUpdate').textContent = timeStr;
+        document.getElementById('footRefresh').textContent = timeStr;
+    }
+
+    // ═════ INIT ═════
+    function init() {
+        refreshAll();
+
+        // Auto-refresh every 30 seconds
+        setInterval(refreshAll, 30000);
+
+        // Listen for new signals
+        window.addEventListener('signal-intercepted', () => {
+            setTimeout(refreshAll, 2000); // Wait for storage
+        });
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            drawRadarChart();
+            drawFrequencyChart();
+        });
+
+        // CoreFeed announcement
+        setTimeout(() => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('PANKOW_77C', 'SIGNAL_DASHBOARD online. Analisi visuale attivata.');
+                CoreFeed.addMessage('ORACLE_CORE', 'Tutti i domini sotto osservazione. Grafici sincronizzati.');
+            }
+        }, 2000);
+    }
+
+    // ═════ CONSOLE ═════
+    console.log('%cSIGNAL_DASHBOARD v1.0', 'color: #ffbf00; font-size: 16px; font-weight: bold;');
+    console.log('%cINTELLIGENCE ANALYTICS CENTER', 'color: #ff0084; font-size: 11px;');
+    console.log('%cIL DETECTIVE HA LA MEMORIA', 'color: #00d4aa;');
+
+    window.addEventListener('DOMContentLoaded', init);
+    </script>
+<script src="js/core-feed.js"></script>
+<script src="js/persistence-manager.js"></script>
+<script src="js/signal-interceptor.js"></script>
+</body>
+</html>
