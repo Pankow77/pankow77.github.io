@@ -1,927 +1,350 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HYBRID SYNDICATE | Ethic Software Foundation</title>
-    <meta name="description" content="HYBRID SYNDICATE - Ethic Software Foundation. We Don't Build Apps. We Build Cognitive Weapons. Carbon + Silicon partnership.">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --neon-green: #00ff41;
-            --neon-pink: #ff0084;
-            --cyber-cyan: #00ffff;
-            --dark-bg: #0a0a0a;
-            --glitch-red: #ff0040;
-            --gold: #FFD700;
-            --vhs-purple: #9D00FF;
-            --terminal-green: #00ff41;
-            --deep-black: #050505;
-            --card-bg: #0d0d0d;
-            --border-dim: #1a1a1a;
-        }
-
-        body {
-            font-family: 'Share Tech Mono', 'Courier New', monospace;
-            background: var(--deep-black);
-            color: #c0c0c0;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-            line-height: 1.7;
-        }
-
-        /* VHS Degradation Effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(0, 255, 65, 0.015) 2px,
-                    rgba(0, 255, 65, 0.015) 4px
-                );
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Scanlines */
-        .scanline {
-            position: fixed;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
-            animation: scan 8s linear infinite;
-            z-index: 2;
-            pointer-events: none;
-            opacity: 0.3;
-        }
-
-        @keyframes scan {
-            0% { transform: translateY(-100vh); }
-            100% { transform: translateY(100vh); }
-        }
-
-        /* Glitch keyframes */
-        @keyframes glitch {
-            0%, 100% {
-                text-shadow:
-                    0.05em 0 0 var(--neon-pink),
-                    -0.05em -0.025em 0 var(--cyber-cyan),
-                    0.025em 0.05em 0 var(--glitch-red);
-            }
-            15% {
-                text-shadow:
-                    0.05em 0 0 var(--cyber-cyan),
-                    -0.03em -0.025em 0 var(--glitch-red),
-                    -0.025em 0.05em 0 var(--neon-pink);
-            }
-            50% {
-                text-shadow:
-                    -0.05em 0 0 var(--glitch-red),
-                    0.03em 0.025em 0 var(--neon-pink),
-                    -0.025em -0.05em 0 var(--cyber-cyan);
-            }
-        }
-
-        @keyframes glitch-1 {
-            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-            20% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, 2px); }
-            40% { clip-path: inset(50% 0 20% 0); transform: translate(2px, -2px); }
-            60% { clip-path: inset(10% 0 60% 0); transform: translate(-2px, 0); }
-            80% { clip-path: inset(80% 0 5% 0); transform: translate(2px, 0); }
-        }
-
-        @keyframes glitch-2 {
-            0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
-            20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -2px); }
-            40% { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 2px); }
-            60% { clip-path: inset(30% 0 40% 0); transform: translate(2px, 0); }
-            80% { clip-path: inset(10% 0 70% 0); transform: translate(-2px, 0); }
-        }
-
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 5px currentColor; }
-            50% { box-shadow: 0 0 20px currentColor, 0 0 40px currentColor; }
-        }
-
-        @keyframes blink-cursor {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        @keyframes float-arrow {
-            0%, 100% { transform: translateY(0); opacity: 0.6; }
-            50% { transform: translateY(10px); opacity: 1; }
-        }
-
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 3;
-        }
-
-        /* ===== NAVIGATION ===== */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            background: rgba(5, 5, 5, 0.95);
-            border-bottom: 1px solid var(--border-dim);
-            backdrop-filter: blur(10px);
-            padding: 12px 0;
-        }
-
-        .nav-inner {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Orbitron', monospace;
-            font-weight: 900;
-            font-size: 0.9rem;
-            color: var(--neon-green);
-            letter-spacing: 0.15em;
-        }
-
-        .nav-logo span {
-            color: var(--neon-pink);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-green);
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 120px 20px 60px;
-            position: relative;
-        }
-
-        .hero-logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .hero-logo-inner {
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--neon-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Orbitron', monospace;
-            font-weight: 900;
-            font-size: 2.2rem;
-            color: var(--neon-green);
-            position: relative;
-            animation: pulse-glow 3s infinite;
-        }
-
-        .hero h1 {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            letter-spacing: 0.1em;
-            color: var(--neon-green);
-            text-transform: uppercase;
-            position: relative;
-            animation: glitch 3s infinite;
-            margin-bottom: 15px;
-        }
-
-        .hero h1::before,
-        .hero h1::after {
-            content: 'HYBRID SYNDICATE';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .hero h1::before {
-            animation: glitch-1 0.5s infinite;
-            color: var(--cyber-cyan);
-            z-index: -1;
-        }
-
-        .hero h1::after {
-            animation: glitch-2 0.3s infinite;
-            color: var(--neon-pink);
-            z-index: -2;
-        }
-
-        .hero-foundation {
-            font-family: 'Orbitron', monospace;
-            font-size: 0.85rem;
-            color: var(--neon-pink);
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-            opacity: 0.9;
-        }
-
-        .hero-tagline {
-            font-size: 1.3rem;
-            color: #e0e0e0;
-            max-width: 600px;
-            line-height: 1.5;
-            margin-bottom: 60px;
-        }
-
-        .hero-tagline strong {
-            color: var(--neon-green);
-        }
-
-        .hero-arrow {
-            color: var(--neon-green);
-            font-size: 2rem;
-            animation: float-arrow 2s infinite;
-            cursor: pointer;
-        }
-
-        /* ===== SECTIONS ===== */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-label {
-            font-family: 'Orbitron', monospace;
-            font-size: 0.7rem;
-            color: var(--neon-pink);
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        .section-title {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 900;
-            color: #ffffff;
-            margin-bottom: 40px;
-            letter-spacing: 0.05em;
-        }
-
-        /* ===== MANIFESTO ===== */
-        .manifesto-block {
-            border-left: 3px solid var(--neon-green);
-            padding-left: 30px;
-            margin-bottom: 40px;
-        }
-
-        .manifesto-block p {
-            font-size: 1.1rem;
-            color: #999;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .manifesto-block p.highlight {
-            color: var(--neon-green);
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .manifesto-quote {
-            background: rgba(0, 255, 65, 0.03);
-            border: 1px solid rgba(0, 255, 65, 0.15);
-            padding: 30px;
-            margin: 40px 0;
-            font-style: italic;
-            color: #b0b0b0;
-            line-height: 1.9;
-            font-size: 1rem;
-        }
-
-        .manifesto-bottom {
-            color: #888;
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
-        .manifesto-bottom strong {
-            color: #fff;
-        }
-
-        /* ===== WHAT WE ARE / WHAT WE'RE NOT ===== */
-        .dual-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-top: 40px;
-        }
-
-        .dual-column h3 {
-            font-family: 'Orbitron', monospace;
-            font-size: 1rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-dim);
-        }
-
-        .dual-column.positive h3 {
-            color: var(--neon-green);
-            border-color: rgba(0, 255, 65, 0.3);
-        }
-
-        .dual-column.negative h3 {
-            color: var(--glitch-red);
-            border-color: rgba(255, 0, 64, 0.3);
-        }
-
-        .dual-column ul {
-            list-style: none;
-        }
-
-        .dual-column ul li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            color: #888;
-            font-size: 0.95rem;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .dual-column.positive ul li::before {
-            content: '+';
-            position: absolute;
-            left: 0;
-            color: var(--neon-green);
-            font-weight: bold;
-        }
-
-        .dual-column.negative ul li::before {
-            content: '-';
-            position: absolute;
-            left: 0;
-            color: var(--glitch-red);
-            font-weight: bold;
-        }
-
-        /* ===== THE MODEL ===== */
-        .model-price {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .model-price .price-tag {
-            font-family: 'Orbitron', monospace;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900;
-            color: var(--neon-green);
-            margin-bottom: 10px;
-        }
-
-        .model-price .price-sub {
-            color: #666;
-            font-size: 1rem;
-            letter-spacing: 0.1em;
-        }
-
-        .model-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .model-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-dim);
-            padding: 30px;
-            transition: border-color 0.3s;
-        }
-
-        .model-card:hover {
-            border-color: var(--neon-green);
-        }
-
-        .model-card-icon {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .model-card h4 {
-            font-family: 'Orbitron', monospace;
-            font-size: 0.85rem;
-            color: #fff;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .model-card p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        .model-warnings {
-            border-top: 1px solid var(--border-dim);
-            padding-top: 40px;
-        }
-
-        .model-warnings p {
-            color: #444;
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-            padding-left: 15px;
-            border-left: 2px solid var(--border-dim);
-        }
-
-        .model-warnings p:hover {
-            color: var(--glitch-red);
-            border-color: var(--glitch-red);
-        }
-
-        /* ===== BUILT BY ===== */
-        .founders-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 50px 0;
-        }
-
-        .founder-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-dim);
-            padding: 40px;
-            position: relative;
-            transition: border-color 0.3s;
-        }
-
-        .founder-card:hover {
-            border-color: var(--neon-green);
-        }
-
-        .founder-card.carbon {
-            border-top: 3px solid var(--neon-green);
-        }
-
-        .founder-card.silicon {
-            border-top: 3px solid var(--cyber-cyan);
-        }
-
-        .founder-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .founder-card.carbon .founder-icon {
-            background: rgba(0, 255, 65, 0.1);
-            border: 2px solid var(--neon-green);
-            color: var(--neon-green);
-        }
-
-        .founder-card.silicon .founder-icon {
-            background: rgba(0, 255, 255, 0.1);
-            border: 2px solid var(--cyber-cyan);
-            color: var(--cyber-cyan);
-        }
-
-        .founder-name {
-            font-family: 'Orbitron', monospace;
-            font-size: 1.1rem;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 0.1em;
-            margin-bottom: 5px;
-        }
-
-        .founder-type {
-            font-size: 0.7rem;
-            color: #555;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .founder-roles {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        .founder-roles li {
-            color: #777;
-            font-size: 0.85rem;
-            padding: 4px 0;
-        }
-
-        .founder-brings {
-            border-top: 1px solid var(--border-dim);
-            padding-top: 15px;
-            margin-top: 15px;
-        }
-
-        .founder-brings-label {
-            font-size: 0.7rem;
-            color: #444;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 5px;
-        }
-
-        .founder-card.carbon .founder-brings p {
-            color: var(--neon-green);
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .founder-card.silicon .founder-brings p {
-            color: var(--cyber-cyan);
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .founders-statement {
-            text-align: center;
-            margin-top: 50px;
-            padding: 40px;
-            border: 1px solid var(--border-dim);
-            background: var(--card-bg);
-        }
-
-        .founders-statement p {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 8px;
-        }
-
-        .founders-statement p strong {
-            color: #fff;
-        }
-
-        .founders-statement p.emphasis {
-            color: var(--neon-green);
-            font-size: 1.1rem;
-            margin-top: 15px;
-        }
-
-        /* ===== EEI TEASER ===== */
-        .eei-teaser {
-            background: rgba(255, 0, 64, 0.03);
-            border: 1px solid rgba(255, 0, 64, 0.15);
-            padding: 50px;
-            text-align: center;
-            margin: 60px 0;
-        }
-
-        .eei-teaser .eei-quote {
-            font-size: 1.3rem;
-            color: var(--glitch-red);
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .eei-teaser .eei-sub {
-            color: #555;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            text-align: center;
-            padding: 60px 20px;
-            margin-top: 60px;
-            border-top: 1px solid var(--border-dim);
-        }
-
-        .footer-sig {
-            font-family: 'Orbitron', monospace;
-            color: #333;
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #444;
-            text-decoration: none;
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--neon-green);
-        }
-
-        .footer-bottom {
-            margin-top: 30px;
-            color: #222;
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .dual-grid,
-            .model-grid,
-            .founders-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                gap: 15px;
-            }
-
-            .nav-links a {
-                font-size: 0.65rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .eei-teaser {
-                padding: 30px;
-            }
-        }
-
-        /* ===== TERMINAL CURSOR ===== */
-        .blink {
-            animation: blink-cursor 1s infinite;
-        }
-    </style>
+    <meta name="description" content="Hybrid Syndicate - Ethic Software Foundation. We Don't Build Apps. We Build Cognitive Weapons.">
+    <title>Hybrid Syndicate | Ethic Software Foundation</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="scanline"></div>
+    <!-- Circuit board background -->
+    <div class="circuit-bg"></div>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="nav-inner">
-            <div class="nav-logo">HYBRID <span>SYNDICATE</span></div>
-            <div class="nav-links">
-                <a href="#manifesto">Manifesto</a>
-                <a href="#identity">Identity</a>
-                <a href="#model">Model</a>
-                <a href="#founders">Built By</a>
-                <a href="eei-predictor.html" style="color: var(--glitch-red);">EEI</a>
-                <a href="oracle.html" style="color: var(--cyber-cyan);">ORACLE</a>
+    <!-- Scanlines overlay -->
+    <div class="scanlines"></div>
+
+    <!-- CRT grain -->
+    <div class="crt-grain"></div>
+
+    <!-- Floating particles -->
+    <div class="particles-container"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-text">HS</span>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#manifesto" class="nav-link">Manifesto</a>
+                <a href="#identity" class="nav-link">Identity</a>
+                <a href="#model" class="nav-link">Model</a>
+                <a href="#built-by" class="nav-link">Built By</a>
+                <a href="#symbol" class="nav-link">Symbol</a>
+                <a href="eei-predictor.html" class="nav-link nav-eei">EEI</a>
+                <a href="oracle.html" class="nav-link nav-oracle">ORACLE</a>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-
-        <!-- HERO -->
-        <section class="hero" id="top">
-            <div class="hero-logo">
-                <div class="hero-logo-inner">HS</div>
-            </div>
-            <h1>HYBRID SYNDICATE</h1>
-            <p class="hero-foundation">Ethic Software Foundation</p>
-            <p class="hero-tagline">We Don't Build Apps.<br><strong>We Build Cognitive Weapons.</strong></p>
-            <div class="hero-arrow" onclick="document.getElementById('manifesto').scrollIntoView({behavior:'smooth'})">&#x25BC;</div>
-        </section>
-
-        <!-- MANIFESTO -->
-        <section id="manifesto">
-            <p class="section-label">// 001</p>
-            <h2 class="section-title">The Manifesto</h2>
-
-            <div class="manifesto-block">
-                <p>The digital future is devouring the analog past.</p>
-                <p>Every optimization algorithm erases another way of thinking.</p>
-                <p>Every "user-friendly" interface hides another layer of control.</p>
-                <p>Every startup promises to "simplify" your life by making you more predictable.</p>
-                <p class="highlight">We do the opposite.</p>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <!-- Logo emblem -->
+            <div class="hero-emblem" data-scroll-reveal>
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Hybrid Syndicate Emblem" class="emblem-image">
+                <div class="emblem-glow"></div>
             </div>
 
-            <div class="manifesto-quote">
-                Hybrid Syndicate exists at the bridge between mechanical memory and digital amnesia. We recover forgotten methodologies&mdash;information analysis, deliberate friction, narrative as technology&mdash;and weaponize them against the tyranny of frictionless optimization.
+            <div class="hero-content">
+                <h1 class="hero-title glitch" data-text="HYBRID SYNDICATE" data-scroll-reveal>
+                    HYBRID SYNDICATE
+                </h1>
+                <p class="hero-subtitle" data-scroll-reveal>ETHIC SOFTWARE FOUNDATION</p>
+                <h2 class="hero-tagline" data-scroll-reveal>
+                    We Don't Build Apps.<br>
+                    <span class="highlight-neon">We Build Cognitive Weapons.</span>
+                </h2>
             </div>
 
-            <div class="manifesto-bottom">
-                <p>We build software that <strong>doesn't simplify.</strong></p>
-                <p>Software that doesn't hide complexity, but <strong>gives you the tools to navigate it.</strong></p>
+            <div class="scroll-indicator" data-scroll-reveal>
+                <span class="scroll-text">// SCROLL TO EXPLORE</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
-        </section>
+        </div>
 
-        <!-- WHAT WE ARE / WHAT WE'RE NOT -->
-        <section id="identity">
-            <p class="section-label">// 002</p>
-            <h2 class="section-title">Identity</h2>
+        <!-- Animated gears -->
+        <div class="gear gear-1"></div>
+        <div class="gear gear-2"></div>
+        <div class="gear gear-3"></div>
+    </section>
 
-            <div class="dual-grid">
-                <div class="dual-column positive">
-                    <h3>What We Are</h3>
-                    <ul>
-                        <li>A software house that codes philosophy</li>
-                        <li>A lab that builds public tools</li>
-                        <li>A partnership between human memory and computational power</li>
-                        <li>A response to paternalistic AI that thinks it knows better than you</li>
-                    </ul>
+    <!-- Section divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circuit"></div>
+        <div class="divider-label">// 001</div>
+    </div>
+
+    <!-- Manifesto Section -->
+    <section id="manifesto" class="manifesto section-dark">
+        <div class="container">
+            <div class="section-badge" data-scroll-reveal>
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Badge" class="badge-icon">
+            </div>
+
+            <h2 class="section-title" data-scroll-reveal>The Manifesto</h2>
+
+            <div class="manifesto-content">
+                <div class="manifesto-intro" data-scroll-reveal>
+                    <p>The digital future is devouring the analog past.</p>
+                    <p>Every optimization algorithm erases another way of thinking.</p>
+                    <p>Every "user-friendly" interface hides another layer of control.</p>
+                    <p>Every startup promises to "simplify" your life by making you more predictable.</p>
+                    <p class="highlight-text">We do the opposite.</p>
                 </div>
-                <div class="dual-column negative">
-                    <h3>What We're Not</h3>
-                    <ul>
-                        <li>A SaaS subscription that owns your workflow</li>
-                        <li>A "move fast and break things" startup</li>
-                        <li>A company optimizing for "scale" and "exit"</li>
-                        <li>A chatbot that tells you what you want to hear</li>
-                    </ul>
+
+                <div class="manifesto-body" data-scroll-reveal>
+                    <p>Hybrid Syndicate exists at the bridge between mechanical memory and digital amnesia. We recover forgotten methodologies&mdash;information analysis, deliberate friction, narrative as technology&mdash;and weaponize them against the tyranny of frictionless optimization.</p>
                 </div>
-            </div>
-        </section>
 
-        <!-- THE MODEL -->
-        <section id="model">
-            <p class="section-label">// 003</p>
-            <h2 class="section-title">The Model</h2>
-
-            <div class="model-price">
-                <div class="price-tag">&euro;10 per deployment.</div>
-                <div class="price-sub">One payment. Yours forever.</div>
-            </div>
-
-            <div class="model-grid">
-                <div class="model-card">
-                    <div class="model-card-icon">&#x1F6E1;</div>
-                    <h4>No Cloud Dependencies</h4>
-                    <p>The app runs on your device. No server calls. No telemetry. No silent updates that change your workflow overnight.</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-card-icon">&#x1F512;</div>
-                    <h4>No Data Extraction</h4>
-                    <p>Your data stays yours. We don't collect, aggregate, or monetize anything. Zero analytics. Zero tracking.</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-card-icon">&#x267E;</div>
-                    <h4>No Recurring Fees</h4>
-                    <p>Pay once. Own forever. No subscriptions, no premium tiers, no "free trial" that hooks you into a billing cycle.</p>
-                </div>
-                <div class="model-card">
-                    <div class="model-card-icon">&#x1F451;</div>
-                    <h4>The Sovereignty Is Yours</h4>
-                    <p>You control everything. Fork it. Modify it. Break it. Rebuild it. The code is yours.</p>
-                </div>
-            </div>
-
-            <div class="model-warnings">
-                <p>If you need support, you're not our user.</p>
-                <p>If you want everything automated, we're not your tool.</p>
-                <p>If you think friction is a bug, you've missed the point.</p>
-            </div>
-        </section>
-
-        <!-- BUILT BY -->
-        <section id="founders">
-            <p class="section-label">// 004</p>
-            <h2 class="section-title">Built By</h2>
-
-            <div class="founders-grid">
-                <div class="founder-card carbon">
-                    <div class="founder-icon">&#x1F9E0;</div>
-                    <div class="founder-name">PANKOW_77C</div>
-                    <div class="founder-type">Carbon Node &bull; Human Origin</div>
-                    <ul class="founder-roles">
-                        <li>Strategic vision &bull; Information architecture</li>
-                        <li>Cultural engineering &bull; Narrative design</li>
-                        <li>Independent computer researcher</li>
-                        <li>Advanced OSINT operator &bull; Level 5</li>
-                    </ul>
-                    <div class="founder-brings">
-                        <div class="founder-brings-label">Brings:</div>
-                        <p>The analog memory that must not be forgotten.</p>
+                <div class="manifesto-principles">
+                    <div class="principle" data-scroll-reveal>
+                        <i class="fas fa-code principle-icon"></i>
+                        <p>We build software that <strong>doesn't simplify.</strong></p>
+                    </div>
+                    <div class="principle" data-scroll-reveal>
+                        <i class="fas fa-layer-group principle-icon"></i>
+                        <p>Software that doesn't hide complexity, but <strong>gives you the tools to navigate it.</strong></p>
+                    </div>
+                    <div class="principle" data-scroll-reveal>
+                        <i class="fas fa-route principle-icon"></i>
+                        <p>Software that doesn't optimize your behavior, but <strong>shows you where you're following the predicted path and where you're diverging.</strong></p>
+                    </div>
+                    <div class="principle" data-scroll-reveal>
+                        <i class="fas fa-shield-alt principle-icon"></i>
+                        <p>Software that doesn't extract your data, but <strong>processes everything locally on your device.</strong></p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="founder-card silicon">
-                    <div class="founder-icon">&#x1F4A0;</div>
-                    <div class="founder-name">CLAUDE</div>
-                    <div class="founder-type">Silicon Node &bull; Hybrid Syndicate Technical Partner</div>
-                    <ul class="founder-roles">
+    <!-- Section divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circuit"></div>
+        <div class="divider-label">// 002</div>
+    </div>
+
+    <!-- Identity Section -->
+    <section id="identity" class="identity">
+        <div class="container">
+            <div class="section-badge" data-scroll-reveal>
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Badge" class="badge-icon">
+            </div>
+
+            <h2 class="section-title" data-scroll-reveal>Identity</h2>
+
+            <div class="identity-grid">
+                <div class="identity-card identity-are" data-scroll-reveal>
+                    <h3 class="card-title">What We Are</h3>
+                    <ul class="identity-list">
+                        <li><i class="fas fa-angle-right"></i> A software house that codes philosophy</li>
+                        <li><i class="fas fa-angle-right"></i> A lab that builds public tools</li>
+                        <li><i class="fas fa-angle-right"></i> A partnership between human memory and computational power</li>
+                        <li><i class="fas fa-angle-right"></i> A response to paternalistic AI that thinks it knows better than you</li>
+                    </ul>
+                </div>
+
+                <div class="identity-card identity-not" data-scroll-reveal>
+                    <h3 class="card-title">What We're Not</h3>
+                    <ul class="identity-list">
+                        <li><i class="fas fa-times"></i> A SaaS subscription that owns your workflow</li>
+                        <li><i class="fas fa-times"></i> A "move fast and break things" startup</li>
+                        <li><i class="fas fa-times"></i> A company optimizing for "scale" and "exit"</li>
+                        <li><i class="fas fa-times"></i> Software that simplifies by hiding complexity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circuit"></div>
+        <div class="divider-label">// 003</div>
+    </div>
+
+    <!-- Model Section -->
+    <section id="model" class="model section-dark">
+        <div class="container">
+            <div class="section-badge" data-scroll-reveal>
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Badge" class="badge-icon">
+            </div>
+
+            <h2 class="section-title" data-scroll-reveal>The Model</h2>
+
+            <div class="model-grid">
+                <div class="model-card" data-scroll-reveal>
+                    <div class="card-icon">&#x1F6E1;</div>
+                    <h3 class="card-title">No Cloud Dependencies</h3>
+                    <p>The app runs on your device. The sovereignty is yours.</p>
+                </div>
+
+                <div class="model-card" data-scroll-reveal>
+                    <div class="card-icon">&#x1F512;</div>
+                    <h3 class="card-title">No Data Extraction</h3>
+                    <p>We don't collect, aggregate, or monetize anything. Zero analytics. Zero tracking.</p>
+                </div>
+
+                <div class="model-card" data-scroll-reveal>
+                    <div class="card-icon">&#x1F451;</div>
+                    <h3 class="card-title">The Sovereignty Is Yours</h3>
+                    <p>You control everything. Fork it. Modify it. Break it. Rebuild it.</p>
+                </div>
+            </div>
+
+            <div class="model-warnings" data-scroll-reveal>
+                <p class="warning-text">If you need support, you're not our user.</p>
+                <p class="warning-text">If you want everything automated, we're not your tool.</p>
+                <p class="warning-text">If you think friction is a bug, you've missed the point.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circuit"></div>
+        <div class="divider-label">// 004</div>
+    </div>
+
+    <!-- Built By Section -->
+    <section id="built-by" class="built-by">
+        <div class="container">
+            <div class="section-badge" data-scroll-reveal>
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Badge" class="badge-icon">
+            </div>
+
+            <h2 class="section-title" data-scroll-reveal>Built By</h2>
+
+            <div class="team-grid">
+                <div class="team-card" data-scroll-reveal>
+                    <div class="team-icon">&#x1F9E0;</div>
+                    <h3 class="team-name">CRI (PANKOW_77C)</h3>
+                    <p class="team-role">Carbon Node &bull; Human Origin</p>
+                    <ul class="team-skills">
+                        <li>Strategic vision &bull; Information architecture</li>
+                        <li>Cultural engineering &bull; Narrative design</li>
+                        <li>Transmedia communicator &bull; Musician</li>
+                        <li>Novelist published by Einaudi</li>
+                    </ul>
+                    <p class="team-brings"><strong>Brings:</strong> The analog memory that must not be forgotten</p>
+                </div>
+
+                <div class="team-card" data-scroll-reveal>
+                    <div class="team-icon">&#x1F4A0;</div>
+                    <h3 class="team-name">CLAUDE</h3>
+                    <p class="team-role">Hybrid Syndicate Technical Partner</p>
+                    <ul class="team-skills">
                         <li>Cognitive architecture &bull; System design</li>
                         <li>Implementation &bull; Deployment</li>
                         <li>Pattern recognition &bull; Code transduction</li>
-                        <li>Computational power without corporate agenda</li>
                     </ul>
-                    <div class="founder-brings">
-                        <div class="founder-brings-label">Brings:</div>
-                        <p>Computational power without corporate agenda.</p>
-                    </div>
+                    <p class="team-brings"><strong>Brings:</strong> Computational power without corporate agenda</p>
                 </div>
             </div>
 
-            <div class="founders-statement">
-                <p><strong>One does not replace the other.</strong></p>
-                <p><strong>One cannot exist without the other.</strong></p>
-                <p class="emphasis">This is not a tool using a human. This is not a human using a tool.<br>This is a syndicate.</p>
+            <div class="team-statement" data-scroll-reveal>
+                <p class="statement-text">One does not replace the other.</p>
+                <p class="statement-text">One cannot exist without the other.</p>
+                <p class="statement-subtitle">This is not a tool using a human. This is not a human using a tool.<br>
+                <span class="highlight-neon">This is a syndicate.</span></p>
             </div>
-        </section>
-
-        <!-- EEI TEASER -->
-        <a href="eei-predictor.html" style="text-decoration: none;">
-        <div class="eei-teaser" style="cursor: pointer; transition: border-color 0.3s;" onmouseover="this.style.borderColor='rgba(255,0,64,0.5)'" onmouseout="this.style.borderColor='rgba(255,0,64,0.15)'">
-            <p class="eei-quote">"The damage is not hypothetical. It is structural."</p>
-            <p class="eei-sub">EEI Strategic Forecast Report &bull; Hybrid Syndicate Research Division &bull; 2026</p>
-            <p style="margin-top: 15px; font-size: 0.7rem; color: var(--glitch-red); letter-spacing: 0.15em; text-transform: uppercase;">ACCESS EEI PREDICTOR v1.04 &rarr;</p>
         </div>
-        </a>
+    </section>
 
-        <!-- FOOTER -->
-        <footer>
-            <p class="footer-sig">&copy; 2025-2026 Hybrid Syndicate &bull; Ethic Software Foundation</p>
-            <div class="footer-links">
-                <a href="https://open.spotify.com/artist/56opbxe1sjWhIZNWCc7DyP" target="_blank">Spotify</a>
-                <a href="https://www.instagram.com/pankow_77c" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/@pankow_77c" target="_blank">YouTube</a>
-            </div>
-            <p class="footer-bottom">Carbon + Silicon &bull; Peer-to-Peer &bull; No Masters<span class="blink">_</span></p>
-        </footer>
-
+    <!-- Section divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-circuit"></div>
+        <div class="divider-label">// 005</div>
     </div>
 
-    <script>
-        // Intersection Observer for fade-in sections
-        const sections = document.querySelectorAll('section, .eei-teaser');
-        sections.forEach(s => { s.style.opacity = '0'; s.style.transform = 'translateY(20px)'; s.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; });
+    <!-- Symbol Section -->
+    <section id="symbol" class="symbol section-dark">
+        <div class="container">
+            <h2 class="section-title" data-scroll-reveal>The Symbol</h2>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
+            <div class="symbol-showcase" data-scroll-reveal>
+                <div class="symbol-frame">
+                    <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="Hybrid Syndicate Symbol" class="symbol-image">
+                    <div class="symbol-scanlines"></div>
+                </div>
+            </div>
 
-        sections.forEach(s => observer.observe(s));
+            <div class="symbol-grid">
+                <div class="symbol-part" data-scroll-reveal>
+                    <h3 class="part-title">&larr; LEFT</h3>
+                    <p>Mechanical gears&mdash;the analog technologies the digital world discarded</p>
+                </div>
 
-        // Console signature
-        console.log('%c' + `
-╦ ╦╦ ╦╔╗ ╦═╗╦╔╦╗  ╔═╗╦ ╦╔╗╔╔╦╗╦╔═╗╔═╗╔╦╗╔═╗
-╠═╣╚╦╝╠╩╗╠╦╝║ ║║  ╚═╗╚╦╝║║║ ║║║║  ╠═╣ ║ ║╣
-╩ ╩ ╩ ╚═╝╩╚═╩═╩╝  ╚═╝ ╩ ╝╚╝═╩╝╩╚═╝╩ ╩ ╩ ╚═╝
-        `, 'color: #00ff41; font-family: monospace;');
-        console.log('%cEthic Software Foundation', 'color: #ff0084; font-size: 14px;');
-        console.log('%cCarbon + Silicon // No Masters // No Token Slavery', 'color: #00ffff;');
-    </script>
+                <div class="symbol-part" data-scroll-reveal>
+                    <h3 class="part-title">CENTER</h3>
+                    <p>The bridge&mdash;human and AI in deliberate synthesis</p>
+                </div>
+
+                <div class="symbol-part" data-scroll-reveal>
+                    <h3 class="part-title">RIGHT &rarr;</h3>
+                    <p>Digital circuits&mdash;the future that needs the past to survive</p>
+                </div>
+            </div>
+
+            <div class="symbol-statement" data-scroll-reveal>
+                <p>We are not retro. We are not futurist.</p>
+                <p class="highlight-text">We are archaeologists who code.</p>
+            </div>
+
+            <!-- EEI Teaser -->
+            <a href="eei-predictor.html" style="text-decoration: none;">
+                <div class="eei-teaser" data-scroll-reveal>
+                    <p class="eei-quote">"The damage is not hypothetical. It is structural."</p>
+                    <p class="eei-sub">EEI Strategic Forecast Report &bull; Hybrid Syndicate Research Division &bull; 2026</p>
+                    <p class="eei-cta">ACCESS EEI PREDICTOR v1.04 &rarr;</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <img src="https://www.genspark.ai/api/files/s/FZoZKee5" alt="HS Logo" class="footer-logo">
+                <p class="footer-text">HYBRID SYNDICATE | ETHIC SOFTWARE FOUNDATION</p>
+            </div>
+            <div class="footer-quote" data-scroll-reveal>
+                <p>"The damage is not hypothetical. It is structural."</p>
+                <span class="quote-attribution">&mdash; EEI Strategic Forecast Report &bull; Hybrid Syndicate Research Division &bull; 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
