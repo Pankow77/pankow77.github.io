@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEI ANALYSIS | Strategic Forecast Report 2026-2033</title>
+    <meta name="description" content="EEI Strategic Analysis - Ethical Ecosystem Index: The damage is not hypothetical. It is structural. Hybrid Syndicate Research Division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #060808;
+            --bg-card: #0a0e10;
+            --bg-section: #080a0c;
+            --border: #141a1e;
+            --border-accent: #ff073a33;
+            --red: #ff073a;
+            --red-dim: #cc0030;
+            --cyan: #00d4ff;
+            --green: #39ff14;
+            --gold: #ffd700;
+            --orange: #ff6600;
+            --purple: #9d00ff;
+            --text-primary: #c8d0d8;
+            --text-secondary: #6b7888;
+            --text-dim: #3a444e;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.7;
+            /* padding-top handled by hs-nav.js */
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(255, 7, 58, 0.006) 3px, rgba(255, 7, 58, 0.006) 6px
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .doc-header {
+            text-align: center;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        .doc-classification {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            color: var(--red);
+            letter-spacing: 0.3em;
+            margin-bottom: 16px;
+            text-shadow: 0 0 10px rgba(255, 7, 58, 0.4);
+        }
+        .doc-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--red);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+            text-shadow: 0 0 20px rgba(255, 7, 58, 0.3);
+        }
+        .doc-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .doc-quote {
+            font-style: italic;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin: 16px 0;
+        }
+        .doc-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            flex-wrap: wrap;
+        }
+        .doc-meta span {
+            border: 1px solid var(--border);
+            padding: 4px 10px;
+            border-radius: 2px;
+        }
+
+        /* Sections */
+        .doc-section {
+            padding: 36px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            color: var(--red-dim);
+            letter-spacing: 0.2em;
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        .subsection-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: var(--red);
+            letter-spacing: 0.08em;
+            margin: 24px 0 10px;
+            padding-left: 12px;
+            border-left: 2px solid var(--red-dim);
+        }
+
+        p { margin-bottom: 12px; font-size: 0.8rem; }
+        p.warning {
+            background: rgba(255, 7, 58, 0.05);
+            border-left: 3px solid var(--red);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 2px 2px 0;
+        }
+        p.insight {
+            background: var(--bg-card);
+            border-left: 3px solid var(--cyan);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 2px 2px 0;
+        }
+        strong { color: #e0e4e8; }
+
+        ul, ol { margin: 12px 0; padding-left: 24px; }
+        li { font-size: 0.78rem; margin-bottom: 6px; }
+        li strong { color: var(--cyan); }
+
+        /* Domain Cards */
+        .domain-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .domain-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 2px;
+        }
+        .domain-card h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .domain-card p {
+            font-size: 0.7rem;
+            margin-bottom: 0;
+        }
+        .severity-bar {
+            height: 4px;
+            background: #111;
+            border-radius: 2px;
+            margin: 8px 0 4px;
+            overflow: hidden;
+        }
+        .severity-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+        }
+        .severity-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+        }
+
+        /* Tables */
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 0.7rem;
+        }
+        .doc-table th {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            color: var(--red);
+            letter-spacing: 0.1em;
+            text-align: left;
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--red-dim);
+            background: var(--bg-card);
+        }
+        .doc-table td {
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        blockquote {
+            border-left: 3px solid var(--red);
+            padding: 12px 16px;
+            margin: 16px 0;
+            background: rgba(255, 7, 58, 0.03);
+            font-style: italic;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        .doc-footer {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .doc-footer a {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--cyan);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            border-radius: 2px;
+            transition: all 0.3s;
+            margin: 0 8px;
+        }
+        .doc-footer a:hover {
+            border-color: var(--cyan);
+            background: rgba(0, 212, 255, 0.05);
+        }
+        .doc-footer a.red { color: var(--red); }
+        .doc-footer a.red:hover { border-color: var(--red); background: rgba(255, 7, 58, 0.05); }
+
+        @media (max-width: 600px) {
+            .doc-title { font-size: 1rem; }
+            .domain-grid { grid-template-columns: 1fr; }
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+        <div class="doc-classification">HYBRID SYNDICATE // RESEARCH DIVISION // STRATEGIC FORECAST</div>
+        <h1 class="doc-title">EEI STRATEGIC ANALYSIS</h1>
+        <div class="doc-subtitle">Ethical Ecosystem Index: Divergence Projection 2026&ndash;2033</div>
+        <div class="doc-quote">"The damage is not hypothetical. It is structural."</div>
+        <div class="doc-meta">
+            <span>HORIZON: 2026-2033</span>
+            <span>CONFIDENCE: 87.3%</span>
+            <span>SECURITY: OMEGA</span>
+            <span>REV: 2026.02</span>
+        </div>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="doc-section">
+        <div class="section-number">// 001</div>
+        <div class="section-title">Executive Summary</div>
+        <p>The Ethical Ecosystem Index (EEI) measures the divergence between technological capability and ethical governance across six critical domains. Our analysis projects a <strong>widening structural gap</strong> between 2026 and 2033, with several domains approaching irreversible tipping points.</p>
+        <p class="warning"><strong>Key Finding:</strong> The rate of ethical divergence is accelerating faster than institutional capacity to respond. By 2028, three of six domains are projected to cross critical thresholds without significant policy intervention.</p>
+        <p>This is not a prediction of doom. It is a diagnostic instrument. The EEI Predictor allows users to model intervention scenarios and assess the probability space of different policy choices. The point is not to paralyze&mdash;it is to arm decision-makers with clarity.</p>
+    </div>
+
+    <!-- THE SIX DOMAINS -->
+    <div class="doc-section">
+        <div class="section-number">// 002</div>
+        <div class="section-title">The Six Domains</div>
+        <p>The EEI monitors six interconnected domains. No domain operates in isolation&mdash;cascading effects are the norm, not the exception.</p>
+
+        <div class="domain-grid">
+            <div class="domain-card">
+                <h4 style="color: #ff3344;">GEOPOLITICS</h4>
+                <p>Multipolar fragmentation. Proxy conflicts. Sanctions regimes. Nuclear posture shifts. Alliance restructuring.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 78%; background: #ff3344;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 78/100 BY 2028</div>
+            </div>
+            <div class="domain-card">
+                <h4 style="color: #ffcc00;">ECONOMY</h4>
+                <p>Inflation persistence. Debt spirals. AI displacement. De-dollarization. Supply chain restructuring.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 72%; background: #ffcc00;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 72/100 BY 2028</div>
+            </div>
+            <div class="domain-card">
+                <h4 style="color: #00dd66;">CLIMATE</h4>
+                <p>Tipping point proximity. Extreme weather frequency. Agricultural disruption. Water stress. Migration pressure.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 85%; background: #ff6600;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 85/100 BY 2028</div>
+            </div>
+            <div class="domain-card">
+                <h4 style="color: #00c8ff;">TECHNOLOGY</h4>
+                <p>AI governance gap. Surveillance normalization. Deepfake proliferation. Autonomous weapons. Digital divide.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 81%; background: #00c8ff;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 81/100 BY 2028</div>
+            </div>
+            <div class="domain-card">
+                <h4 style="color: #ff6633;">SOCIAL</h4>
+                <p>Inequality acceleration. Mental health crisis. Demographic shifts. Education disruption. Trust erosion.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 68%; background: #ff6633;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 68/100 BY 2028</div>
+            </div>
+            <div class="domain-card">
+                <h4 style="color: #8855ff;">EPISTEMIC</h4>
+                <p>Information warfare. Platform manipulation. AI-generated disinfo. Journalism collapse. Cognitive fragmentation.</p>
+                <div class="severity-bar"><div class="severity-bar-fill" style="width: 74%; background: #8855ff;"></div></div>
+                <div class="severity-label">PROJECTED SEVERITY: 74/100 BY 2028</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CROSS-DOMAIN CASCADES -->
+    <div class="doc-section">
+        <div class="section-number">// 003</div>
+        <div class="section-title">Cross-Domain Cascade Analysis</div>
+        <p>The most dangerous aspect of the current trajectory is not any single domain's deterioration, but the <strong>cascade effects</strong> between domains. When one domain crosses a critical threshold, it amplifies pressure on connected domains.</p>
+
+        <div class="subsection-title">3.1 Primary Cascade Vectors</div>
+        <table class="doc-table">
+            <thead>
+                <tr>
+                    <th>CASCADE</th>
+                    <th>MECHANISM</th>
+                    <th>RISK LEVEL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Climate &rarr; Economy</strong></td>
+                    <td>Extreme weather disrupts agriculture, infrastructure. Insurance markets stress. Commodity spikes.</td>
+                    <td style="color: #ff0040;">CRITICAL</td>
+                </tr>
+                <tr>
+                    <td><strong>Geopolitics &rarr; Economy</strong></td>
+                    <td>Sanctions, trade wars, supply chain weaponization. Energy security becomes leverage.</td>
+                    <td style="color: #ff0040;">CRITICAL</td>
+                </tr>
+                <tr>
+                    <td><strong>Technology &rarr; Epistemic</strong></td>
+                    <td>AI-generated content floods information channels. Trust in all media collapses.</td>
+                    <td style="color: #ff6600;">HIGH</td>
+                </tr>
+                <tr>
+                    <td><strong>Economy &rarr; Social</strong></td>
+                    <td>Job displacement + inflation = social unrest. Mental health crisis amplifies.</td>
+                    <td style="color: #ff6600;">HIGH</td>
+                </tr>
+                <tr>
+                    <td><strong>Climate &rarr; Geopolitics</strong></td>
+                    <td>Resource scarcity drives territorial conflicts. Climate migration triggers border crises.</td>
+                    <td style="color: #ff6600;">HIGH</td>
+                </tr>
+                <tr>
+                    <td><strong>Epistemic &rarr; Social</strong></td>
+                    <td>Polarization makes collective action impossible. Conspiracy thinking normalizes.</td>
+                    <td style="color: #ffcc00;">ELEVATED</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="insight"><strong>Key insight:</strong> The cascade between Climate and Economy has the highest potential for irreversible damage because both domains have physical tipping points. Unlike political or epistemic shifts, environmental and economic collapses cannot be easily reversed with policy changes.</p>
+    </div>
+
+    <!-- INTERVENTION SCENARIOS -->
+    <div class="doc-section">
+        <div class="section-number">// 004</div>
+        <div class="section-title">Intervention Scenarios</div>
+        <p>The EEI Predictor models four primary intervention scenarios. Each scenario adjusts seven policy parameters and projects outcomes across all six domains.</p>
+
+        <div class="subsection-title">4.1 Scenario Matrix</div>
+        <table class="doc-table">
+            <thead>
+                <tr>
+                    <th>SCENARIO</th>
+                    <th>DESCRIPTION</th>
+                    <th>EEI 2030</th>
+                    <th>OUTLOOK</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong style="color: var(--green);">CONVERGENCE</strong></td>
+                    <td>Aggressive coordinated intervention across all domains</td>
+                    <td>45-55</td>
+                    <td style="color: var(--green);">Stabilizing</td>
+                </tr>
+                <tr>
+                    <td><strong style="color: var(--gold);">DRIFT</strong></td>
+                    <td>Current trajectory maintained, incremental policy</td>
+                    <td>65-75</td>
+                    <td style="color: var(--orange);">Deteriorating</td>
+                </tr>
+                <tr>
+                    <td><strong style="color: var(--orange);">FRAGMENTATION</strong></td>
+                    <td>International cooperation collapses, nationalist responses</td>
+                    <td>78-88</td>
+                    <td style="color: var(--red);">Critical</td>
+                </tr>
+                <tr>
+                    <td><strong style="color: var(--red);">CASCADE</strong></td>
+                    <td>Multiple domain tipping points crossed, systemic failure</td>
+                    <td>88-100</td>
+                    <td style="color: var(--red);">Catastrophic</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="warning"><strong>Current trajectory maps to DRIFT scenario with 73% confidence.</strong> Without significant intervention by 2027, transition to FRAGMENTATION becomes likely (probability > 50%).</p>
+    </div>
+
+    <!-- METHODOLOGY -->
+    <div class="doc-section">
+        <div class="section-number">// 005</div>
+        <div class="section-title">Methodology</div>
+        <p>The EEI is a composite index built from publicly available data sources, weighted by domain impact and cascade multipliers. It is designed as a <strong>cognitive tool</strong>, not a prediction engine.</p>
+
+        <div class="subsection-title">5.1 Data Sources</div>
+        <ul>
+            <li><strong>Geopolitics:</strong> SIPRI, ACLED, ICG conflict trackers</li>
+            <li><strong>Economy:</strong> IMF, World Bank, BIS, national central banks</li>
+            <li><strong>Climate:</strong> IPCC, NASA GISS, NOAA, Copernicus</li>
+            <li><strong>Technology:</strong> AI Index (Stanford), CSET, ITU, EFF</li>
+            <li><strong>Social:</strong> WHO, ILO, UN HDI, Gallup World Poll</li>
+            <li><strong>Epistemic:</strong> Reuters Institute, V-Dem, Freedom House, MIT Media Lab</li>
+        </ul>
+
+        <div class="subsection-title">5.2 Limitations</div>
+        <ul>
+            <li>Black swan events are inherently unmodelable. The EEI projects <em>trends</em>, not events.</li>
+            <li>Cascade multipliers are estimated from historical analogies (limited sample size).</li>
+            <li>Domain boundaries are heuristic, not ontological. Reality doesn't respect our categories.</li>
+            <li>The index is intentionally <strong>pessimistic in its baseline</strong>. This is by design: it is better to be wrong about danger than wrong about safety.</li>
+        </ul>
+
+        <blockquote>
+            "A tool that makes you comfortable is not a tool&mdash;it's a sedative. The EEI is designed to make you uncomfortable, because the situation warrants discomfort."
+            <cite style="display: block; margin-top: 8px; font-size: 0.65rem; color: var(--text-dim); font-style: normal;">&mdash; Hybrid Syndicate Design Philosophy</cite>
+        </blockquote>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="doc-section" style="text-align: center; border-bottom: none; padding: 50px 0;">
+        <p style="font-size: 0.9rem; color: var(--text-secondary);">The damage is not hypothetical. It is structural.</p>
+        <p style="font-size: 0.75rem; color: var(--text-dim);">But structural damage can be diagnosed, mapped, and&mdash;if we act with clarity&mdash;mitigated.</p>
+        <p style="font-family: 'Orbitron', monospace; font-size: 0.55rem; color: var(--red); letter-spacing: 0.15em; margin-top: 24px;">// END OF REPORT // EEI STRATEGIC ANALYSIS // HYBRID SYNDICATE RESEARCH DIVISION //</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer">
+        <a href="eei-predictor.html" class="red">OPEN EEI PREDICTOR &rarr;</a>
+        <a href="index.html">&larr; RETURN TO HQ</a>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="js/state-manager.js"></script>
+<script src="js/hs-nav.js"></script>
+<script src="js/core-feed.js"></script>
+</body>
+</html>

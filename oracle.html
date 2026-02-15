@@ -1174,6 +1174,75 @@
     console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
     console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
     </script>
+<script src="js/state-manager.js"></script>
+<script src="js/rss-pipeline.js"></script>
+<script src="js/cascade-detector.js"></script>
+<script src="js/briefing-engine.js"></script>
+<script src="js/hs-nav.js"></script>
 <script src="js/core-feed.js"></script>
+<script>
+// ── ORACLE Intelligence Integration ──
+(function() {
+    'use strict';
+
+    // Start the intelligence pipeline
+    RSSPipeline.start();
+    CascadeDetector.start();
+
+    // Wire RSS signals into ORACLE's intelligence feed
+    if (typeof StateManager !== 'undefined') {
+        StateManager.on('signal:batch', async () => {
+            const recent = await StateManager.signals.getRecent(1, 10);
+            recent.forEach(sig => {
+                if (typeof CoreFeed !== 'undefined' && sig.severity >= 50) {
+                    const coreMap = {
+                        geopolitics: 'MARXIAN_CORE',
+                        economy: 'CODE_ENCODER',
+                        climate: 'ORACLE_CORE',
+                        technology: 'GHOST_RUNNER',
+                        social: 'NARRATIVE_ENGINE',
+                        epistemic: 'AFFECTIVE_CORE'
+                    };
+                    const coreId = coreMap[sig.domain] || 'SIGNAL_HUNTER';
+                    CoreFeed.addMessage(coreId, '[RSS] ' + sig.title.slice(0, 80));
+                }
+            });
+        });
+
+        StateManager.on('cascade:detected', (data) => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SENTINEL', '⚠ CASCADE: ' + data.patterns.join(' + ') + ' | Severity: ' + data.maxSeverity);
+                CoreFeed.addMessage('BRIDGE_KEEPER', 'Cross-domain correlation confermata. ' + data.count + ' cascade attive.');
+            }
+        });
+    }
+
+    // Add briefing generation button to ORACLE
+    const tabBar = document.querySelector('.tab-bar');
+    if (tabBar) {
+        const briefingTab = document.createElement('div');
+        briefingTab.className = 'tab';
+        briefingTab.textContent = 'BRIEFING';
+        briefingTab.onclick = async function() {
+            // Switch tab visual
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+
+            const mainContent = document.querySelector('.main-content');
+            if (!mainContent) return;
+
+            mainContent.innerHTML = '<div style="text-align: center; padding: 40px; color: #3a4f6f; font-size: 0.7rem;">GENERATING INTELLIGENCE BRIEFING...</div>';
+
+            try {
+                const briefing = await BriefingEngine.generate({ hours: 6 });
+                mainContent.innerHTML = briefing.html || '<div style="padding: 20px; color: #ff3344;">Briefing generation failed. Insufficient signals.</div>';
+            } catch(e) {
+                mainContent.innerHTML = '<div style="padding: 20px; color: #ff3344;">Error: ' + e.message + '</div>';
+            }
+        };
+        tabBar.appendChild(briefingTab);
+    }
+})();
+</script>
 </body>
 </html>
