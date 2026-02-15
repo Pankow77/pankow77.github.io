@@ -840,6 +840,10 @@ const SignalInterceptor = (() => {
                             penalty: 0.85, // 15% severity reduction
                             drift: madThreshold,
                         };
+                        // ── SystemState: register graylist ──
+                        if (typeof SystemState !== 'undefined') {
+                            SystemState.graylistSource(sourceName);
+                        }
                         console.warn(`[TRUST] Graylisted ${sourceName}: drift=${madThreshold.toFixed(2)}, median=${windowMedian.toFixed(1)}, baseline=${trust.driftBaseline.toFixed(1)}`);
                     }
                     trust.trustScore = Math.max(trust.trustScore - 1, 15);
@@ -849,6 +853,10 @@ const SignalInterceptor = (() => {
                     // Un-graylist if stable for long enough
                     if (GRAYLIST[sourceName] && (now - GRAYLIST[sourceName].graylistedAt > 30 * 60 * 1000)) {
                         delete GRAYLIST[sourceName];
+                        // ── SystemState: un-graylist ──
+                        if (typeof SystemState !== 'undefined') {
+                            SystemState.ungraylistSource(sourceName);
+                        }
                         console.log(`[TRUST] ${sourceName} removed from graylist (stable)`);
                     }
                 }
@@ -1019,6 +1027,10 @@ const SignalInterceptor = (() => {
                 health.quarantined = false;
                 health.failures = 0;
                 console.log(`[SIGNAL_INTERCEPTOR] Feed ${feedId} released from quarantine`);
+                // ── SystemState: release feed ──
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.releaseFeed(feedId);
+                }
                 if (typeof IndexedStore !== 'undefined') {
                     IndexedStore.removeFromQuarantine(feedId);
                 }
@@ -1037,6 +1049,11 @@ const SignalInterceptor = (() => {
             health.quarantined = true;
             health.quarantinedAt = Date.now();
             console.warn(`[SIGNAL_INTERCEPTOR] Feed ${feedId} QUARANTINED after ${health.failures} failures: ${reason}`);
+
+            // ── SystemState: register quarantine ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.quarantineFeed(feedId);
+            }
 
             if (typeof IndexedStore !== 'undefined') {
                 IndexedStore.saveQuarantineEntry({
@@ -1062,6 +1079,10 @@ const SignalInterceptor = (() => {
         if (Date.now() - health.quarantinedAt > 60 * 60 * 1000) {
             health.quarantined = false;
             health.failures = 0;
+            // ── SystemState: auto-release ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.releaseFeed(feedId);
+            }
             return false;
         }
         return true;
@@ -1119,11 +1140,23 @@ const SignalInterceptor = (() => {
             workerCircuit.disabled = true;
             console.warn(`[SIGNAL_INTERCEPTOR] Worker circuit OPEN after ${workerCircuit.failures} failures — disabled for ${CONFIG.workerCircuitReset / 60000}min`);
         }
+        // ── SystemState: update worker state ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.updateWorker({
+                failures: workerCircuit.failures,
+                openUntil: workerCircuit.disabled ? workerCircuit.lastFailure + CONFIG.workerCircuitReset : 0,
+            });
+            SystemState.logEvent('WORKER_FAILURE', { failures: workerCircuit.failures, disabled: workerCircuit.disabled });
+        }
     }
 
     function recordWorkerSuccess() {
         workerCircuit.failures = 0;
         workerCircuit.disabled = false;
+        // ── SystemState: worker healthy ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.updateWorker({ failures: 0, openUntil: 0 });
+        }
     }
 
     function initWorker() {
@@ -1561,6 +1594,14 @@ const SignalInterceptor = (() => {
         setFetching(true);
 
         const cycleStart = performance.now();
+
+        // ── SystemState: IDLE → POLLING ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.setPhase('POLLING');
+            SystemState.advanceCycle();
+            SystemState.logEvent('POLL_START', { cycle: stats.cycleCount });
+        }
+
         console.log('%c[SIGNAL_INTERCEPTOR] Polling cycle ' + stats.cycleCount + ' started', 'color: #00d4ff;');
 
         // Fetch feeds in staggered batches (not all 20 at once)
@@ -1568,8 +1609,23 @@ const SignalInterceptor = (() => {
 
         stats.totalFetched += allArticles.length;
 
+        // Update feed state
+        if (typeof SystemState !== 'undefined') {
+            const activeCount = FEEDS.filter(f => !isFeedQuarantined(f.id)).length;
+            SystemState.updateFeeds({
+                activeCount,
+                totalFeeds: FEEDS.length,
+                lastFetchMs: Math.round(performance.now() - cycleStart),
+            });
+        }
+
         // Deduplicate
         const newArticles = deduplicate(allArticles);
+
+        // ── SystemState: POLLING → CLASSIFYING ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.setPhase('CLASSIFYING');
+        }
 
         // Try Web Worker classification first, fallback to main-thread chunked processing
         const workerResult = await classifyViaWorker(newArticles);
@@ -1588,6 +1644,11 @@ const SignalInterceptor = (() => {
 
     function finalizeCycle(signalQueue, fetchedCount, newCount, cycleStart) {
         const signalCount = signalQueue.length;
+
+        // ── SystemState: CLASSIFYING → DISTRIBUTING ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.setPhase('DISTRIBUTING');
+        }
 
         // Distribute signals with staggered timing
         signalQueue.forEach((signal, i) => {
@@ -1611,6 +1672,27 @@ const SignalInterceptor = (() => {
             `${fetchedCount} fetched, ${newCount} new, ${signalCount} classified (${cycleTime}ms)`,
             'color: #39ff14;'
         );
+
+        // ── SystemState: DISTRIBUTING → IDLE, log cycle completion ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.setPhase('IDLE');
+            SystemState.updateWorker({
+                ready: workerReady,
+                totalClassified: stats.totalSignals,
+                lastClassifyMs: cycleTime,
+            });
+            SystemState.updateReputation({ sourcesTracked: Object.keys(SOURCE_TRUST).length });
+            SystemState.logEvent('POLL_COMPLETE', {
+                cycle: stats.cycleCount,
+                fetched: fetchedCount,
+                new: newCount,
+                classified: signalCount,
+                durationMs: cycleTime,
+                worker: workerReady,
+            });
+            // Run health check after each cycle
+            SystemState.checkHealth();
+        }
 
         // Announce via CoreFeed
         if (signalCount > 0 && typeof CoreFeed !== 'undefined') {
@@ -1662,6 +1744,24 @@ const SignalInterceptor = (() => {
             // Trigger IndexedDB migration from localStorage
             if (typeof IndexedStore !== 'undefined') {
                 IndexedStore.migrateFromLocalStorage();
+            }
+
+            // ── SystemState: BOOT → IDLE ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.setPhase('IDLE');
+                SystemState.updateWorker({ ready: workerReady, enabled: typeof Worker !== 'undefined' });
+                SystemState.updateFeeds({ totalFeeds: FEEDS.length, activeCount: FEEDS.length });
+                // Register quarantined feeds
+                Object.keys(FEED_HEALTH).forEach(fid => {
+                    if (FEED_HEALTH[fid].quarantined) SystemState.quarantineFeed(fid);
+                });
+                // Register graylisted sources
+                Object.keys(GRAYLIST).forEach(src => SystemState.graylistSource(src));
+                SystemState.updateReputation({ sourcesTracked: Object.keys(SOURCE_TRUST).length });
+                SystemState.logEvent('INTERCEPTOR_INIT', {
+                    feeds: FEEDS.length, worker: workerReady,
+                    quarantined: Object.keys(FEED_HEALTH).filter(k => FEED_HEALTH[k].quarantined).length,
+                });
             }
 
             console.log('%c╔══════════════════════════════════════════╗', 'color: #ff0084;');

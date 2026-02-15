@@ -47,10 +47,11 @@ const PersistenceManager = (() => {
 
     function updateCycleLedger(signalCount) {
         cycleId++;
+        const lsCount = getArchive().length;
         const ledger = {
             cycleId,
             timestamp: Date.now(),
-            lsCount: getArchive().length,
+            lsCount,
             signalsAdded: signalCount,
             sourceOfTruth: CONFIG.sourceOfTruth,
         };
@@ -61,6 +62,12 @@ const PersistenceManager = (() => {
         // Also write to IndexedDB for cross-check
         if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
             IndexedStore.setMeta('cycle_ledger', ledger);
+        }
+
+        // ── SystemState: update storage counts ──
+        if (typeof SystemState !== 'undefined') {
+            SystemState.updateStorage({ lsCount });
+            SystemState.logEvent('LEDGER_UPDATE', { cycleId, lsCount, signalsAdded: signalCount });
         }
     }
 
@@ -74,11 +81,26 @@ const PersistenceManager = (() => {
 
             if (idbCount < 0) return; // IDB not available
 
+            // ── SystemState: update storage state ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.updateStorage({
+                    lsCount,
+                    idbCount,
+                    idbAvailable: true,
+                    lastReconcile: Date.now(),
+                });
+            }
+
             const drift = Math.abs(lsCount - idbCount);
             const threshold = Math.max(lsCount * 0.1, 10); // 10% tolerance
 
             if (drift > threshold) {
                 console.warn(`[PERSISTENCE] Store divergence detected: localStorage=${lsCount}, IndexedDB=${idbCount} (drift=${drift})`);
+
+                // ── SystemState: log divergence ──
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.logEvent('STORE_DIVERGENCE', { lsCount, idbCount, drift });
+                }
 
                 // localStorage is source of truth — sync IDB from it
                 if (CONFIG.sourceOfTruth === 'localStorage' && lsCount > idbCount) {
@@ -174,6 +196,11 @@ const PersistenceManager = (() => {
             const trimmed = current.slice(0, keep);
             saveArchive(trimmed);
             console.warn(`[PERSISTENCE] Emergency purge: storage at ${storage.mbUsed}MB, trimmed to ${trimmed.length} signals`);
+            // ── SystemState: pruning event ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.updateStorage({ pruningActive: true, lastPrune: Date.now(), lsCount: trimmed.length });
+                SystemState.logEvent('EMERGENCY_PURGE', { before: current.length, after: trimmed.length, mbUsed: storage.mbUsed });
+            }
             if (typeof CoreFeed !== 'undefined') {
                 CoreFeed.addMessage('SENTINEL', `Storage critico (${storage.mbUsed}MB). Archivio ridotto a ${trimmed.length} segnali.`);
             }
@@ -1264,8 +1291,23 @@ const PersistenceManager = (() => {
             createUI();
             setupKeyboard();
 
-            const idbStatus = typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()
+            const idbAvailable = typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable();
+            const idbStatus = idbAvailable
                 ? 'IndexedDB: ON' : 'IndexedDB: OFF (localStorage only)';
+
+            // ── SystemState: initial storage state ──
+            if (typeof SystemState !== 'undefined') {
+                SystemState.updateStorage({
+                    lsCount: getArchive().length,
+                    idbAvailable,
+                });
+                SystemState.logEvent('PERSISTENCE_INIT', {
+                    version: CONFIG.version,
+                    lsCount: getArchive().length,
+                    idbAvailable,
+                    sourceOfTruth: CONFIG.sourceOfTruth,
+                });
+            }
 
             console.log('%c[PERSISTENCE_MANAGER] v2.1 ONLINE', 'color: #ffbf00; font-weight: bold;');
             console.log('%c Archive: ' + getArchive().length + ' signals | ' + idbStatus + ' | SoT: ' + CONFIG.sourceOfTruth + ' | Ctrl+Shift+A to browse', 'color: #4a5a6c;');

@@ -130,6 +130,7 @@
         <button onclick="runSuite('worker')">WORKER CHAOS</button>
         <button onclick="runSuite('consistency')">CONSISTENCY</button>
         <button onclick="runSuite('reputation')">REPUTATION</button>
+        <button onclick="runSuite('invariants')">INVARIANTS</button>
         <button onclick="dumpSystemState()">DUMP STATE</button>
     </div>
 
@@ -149,6 +150,7 @@
     <div class="state-dump" id="stateDump">Click DUMP STATE to inspect all modules...</div>
 
     <!-- Load the ecosystem modules -->
+    <script src="js/system-state.js"></script>
     <script src="js/indexed-store.js"></script>
     <script src="js/core-feed.js"></script>
     <script src="js/persistence-manager.js"></script>
@@ -806,6 +808,186 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    // SUITE 8: SYSTEM CONSTITUTION — INVARIANTS + STATE MACHINE
+    // ═══════════════════════════════════════════════════════════════
+
+    function testInvariants() {
+        const tests = [];
+        log('═══ SYSTEM CONSTITUTION — INVARIANTS ═══');
+
+        const hasState = typeof SystemState !== 'undefined';
+
+        // Test 1: SystemState module loaded
+        tests.push({
+            name: 'SystemState module loaded',
+            result: assert('ss_loaded', hasState),
+            detail: hasState ? 'OK' : 'MISSING',
+        });
+
+        if (!hasState) {
+            renderSuite('invariants', tests);
+            updateSummary();
+            return;
+        }
+
+        // Test 2: Boot phase → should be IDLE (init already ran)
+        const phase = SystemState.getPhase();
+        tests.push({
+            name: 'Phase after boot: IDLE (not BOOT)',
+            result: assert('phase_idle', phase === 'IDLE', `got ${phase}`),
+            detail: phase,
+        });
+
+        // Test 3: Cycle ID starts at 0
+        const cycleId = SystemState.getCycleId();
+        tests.push({
+            name: 'Cycle ID >= 0',
+            result: assert('cycle_id', cycleId >= 0, `got ${cycleId}`),
+            detail: String(cycleId),
+        });
+
+        // Test 4: Cycle advance monotonicity
+        const prevId = SystemState.getCycleId();
+        SystemState.advanceCycle();
+        const newId = SystemState.getCycleId();
+        tests.push({
+            name: 'Cycle advance: newId > prevId',
+            result: assert('cycle_mono', newId > prevId, `${newId} > ${prevId}`),
+            detail: `${prevId} → ${newId}`,
+        });
+
+        // Test 5: Invalid phase transition rejected
+        const invalidResult = SystemState.setPhase('BOOT'); // IDLE → BOOT is invalid
+        tests.push({
+            name: 'Invalid transition (IDLE→BOOT) rejected',
+            result: assert('invalid_phase', invalidResult === false),
+            detail: `setPhase("BOOT") = ${invalidResult}`,
+        });
+
+        // Test 6: Valid phase transitions work
+        const toPoll = SystemState.setPhase('POLLING');
+        tests.push({
+            name: 'Valid transition: IDLE → POLLING',
+            result: assert('valid_phase_1', toPoll === true, `got ${toPoll}`),
+            detail: `phase = ${SystemState.getPhase()}`,
+        });
+
+        const toClassify = SystemState.setPhase('CLASSIFYING');
+        tests.push({
+            name: 'Valid transition: POLLING → CLASSIFYING',
+            result: assert('valid_phase_2', toClassify === true),
+            detail: `phase = ${SystemState.getPhase()}`,
+        });
+
+        const toDist = SystemState.setPhase('DISTRIBUTING');
+        tests.push({
+            name: 'Valid transition: CLASSIFYING → DISTRIBUTING',
+            result: assert('valid_phase_3', toDist === true),
+            detail: `phase = ${SystemState.getPhase()}`,
+        });
+
+        const toIdle = SystemState.setPhase('IDLE');
+        tests.push({
+            name: 'Valid transition: DISTRIBUTING → IDLE',
+            result: assert('valid_phase_4', toIdle === true),
+            detail: `phase = ${SystemState.getPhase()}`,
+        });
+
+        // Test 7: Quarantine isolation invariant
+        SystemState.quarantineFeed('test-quarantine-001');
+        const qCheck = SystemState.assertFeedNotQuarantined('test-quarantine-001');
+        tests.push({
+            name: 'Quarantine isolation: quarantined feed fails assertion',
+            result: assert('q_isolation', qCheck === false),
+            detail: `assertFeedNotQuarantined = ${qCheck}`,
+        });
+
+        // Test 8: Release and re-check
+        SystemState.releaseFeed('test-quarantine-001');
+        const qCheck2 = SystemState.assertFeedNotQuarantined('test-quarantine-001');
+        tests.push({
+            name: 'Feed release: un-quarantined feed passes assertion',
+            result: assert('q_release', qCheck2 === true),
+            detail: `assertFeedNotQuarantined = ${qCheck2}`,
+        });
+
+        // Test 9: Graylist source
+        SystemState.graylistSource('test-source-sybil');
+        const repState = SystemState.getReputationState();
+        const isGraylisted = repState.graylisted.includes('test-source-sybil');
+        tests.push({
+            name: 'Graylist source registered in state',
+            result: assert('graylist_reg', isGraylisted),
+            detail: `graylisted: ${repState.graylisted}`,
+        });
+
+        SystemState.ungraylistSource('test-source-sybil');
+        const repState2 = SystemState.getReputationState();
+        const isStillGraylisted = repState2.graylisted.includes('test-source-sybil');
+        tests.push({
+            name: 'Un-graylist source removed from state',
+            result: assert('ungraylist', !isStillGraylisted),
+            detail: `graylisted: ${repState2.graylisted}`,
+        });
+
+        // Test 10: Health check returns valid status
+        const health = SystemState.checkHealth();
+        const validStatuses = ['HEALTHY', 'DEGRADED', 'CRITICAL'];
+        tests.push({
+            name: 'Health check returns valid status',
+            result: assert('health_valid', validStatuses.includes(health.status), health.status),
+            detail: `${health.status}, reasons: ${health.reasons.length}`,
+        });
+
+        // Test 11: Event log captures events
+        SystemState.logEvent('TEST_EVENT', { msg: 'torture-test' });
+        const eventLog = SystemState.getEventLog({ type: 'TEST_EVENT' });
+        tests.push({
+            name: 'Event log captures custom events',
+            result: assert('event_log', eventLog.length > 0),
+            detail: `${eventLog.length} TEST_EVENT entries`,
+        });
+
+        // Test 12: Verify all invariants
+        const allInvariants = SystemState.verifyAllInvariants();
+        const allPass = allInvariants.every(r => r.pass);
+        tests.push({
+            name: 'verifyAllInvariants: all pass',
+            result: assert('all_invariants', allPass, allInvariants.filter(r => !r.pass).map(r => r.id).join(', ')),
+            detail: allInvariants.map(r => `${r.id}: ${r.pass ? 'PASS' : 'FAIL'}`).join(' | '),
+        });
+
+        // Test 13: Serialization round-trip
+        const serialized = SystemState.serialize();
+        const hasAllKeys = ['cycle', 'worker', 'storage', 'feeds', 'reputation', 'health', 'eventLog', 'timestamp']
+            .every(k => k in serialized);
+        tests.push({
+            name: 'State serialization includes all sections',
+            result: assert('serialize', hasAllKeys),
+            detail: Object.keys(serialized).join(', '),
+        });
+
+        // Test 14: Ledger convergence invariant (should be healthy in test)
+        const storageState = SystemState.getStorageState();
+        tests.push({
+            name: 'Storage state accessible (divergence tracked)',
+            result: assert('storage_state', typeof storageState.divergence === 'number'),
+            detail: `divergence=${storageState.divergence}, lsCount=${storageState.lsCount}`,
+        });
+
+        // Test 15: Event log snapshot
+        const snapshot = SystemState.getEventLogSnapshot();
+        tests.push({
+            name: 'Event log snapshot reports entries',
+            result: assert('log_snapshot', snapshot.entries > 0),
+            detail: `entries=${snapshot.entries}, types=${snapshot.types.join(',')}`,
+        });
+
+        renderSuite('invariants', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     // ORCHESTRATION
     // ═══════════════════════════════════════════════════════════════
 
@@ -817,6 +999,7 @@
         worker: testWorkerChaos,
         consistency: testConsistency,
         reputation: testReputation,
+        invariants: testInvariants,
     };
 
     async function runSuite(name) {
@@ -853,6 +1036,18 @@
 
     function dumpSystemState() {
         const dump = {};
+
+        // SystemState — centralized truth
+        try {
+            if (typeof SystemState !== 'undefined') {
+                dump.systemState = SystemState.serialize();
+                dump.systemState.invariants = SystemState.verifyAllInvariants();
+                dump.systemState.eventLogSnapshot = SystemState.getEventLogSnapshot();
+                dump.systemState.recentEvents = SystemState.getEventLog({ limit: 20 });
+            } else {
+                dump.systemState = { error: 'NOT LOADED' };
+            }
+        } catch (e) { dump.systemState = { error: e.message }; }
 
         // PersistenceManager state
         try {

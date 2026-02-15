@@ -169,6 +169,7 @@
         <!-- Panels injected by JS -->
     </div>
 
+    <script src="js/system-state.js"></script>
     <script src="js/indexed-store.js"></script>
     <script src="js/core-feed.js"></script>
     <script src="js/persistence-manager.js"></script>
@@ -198,6 +199,41 @@
     async function refreshAll() {
         const grid = document.getElementById('grid');
         let html = '';
+
+        // ── 0. SystemState — Constitution ──
+        if (typeof SystemState !== 'undefined') {
+            const state = SystemState.serialize();
+            const health = SystemState.checkHealth();
+            const invariants = SystemState.verifyAllInvariants();
+            const allPass = invariants.every(r => r.pass);
+            const snapshot = SystemState.getEventLogSnapshot();
+            const recentEvents = SystemState.getEventLog({ limit: 8 });
+
+            const healthColor = health.status === 'HEALTHY' ? 'dot-green' : health.status === 'DEGRADED' ? 'dot-yellow' : 'dot-red';
+            const phaseColor = state.cycle.phase === 'IDLE' ? '#00d4aa' : state.cycle.phase === 'DEGRADED' ? '#ff3344' : '#ffbf00';
+
+            html += `
+            <div class="panel" style="grid-column: span 2;">
+                <div class="panel-title">
+                    SYSTEM CONSTITUTION
+                    <span class="status-dot ${healthColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Phase</span><span class="value" style="color:${phaseColor}">${esc(state.cycle.phase)}</span></div>
+                <div class="metric"><span class="label">Cycle ID</span><span class="value info">${state.cycle.id}</span></div>
+                <div class="metric"><span class="label">Health</span><span class="value ${health.status === 'HEALTHY' ? 'good' : health.status === 'DEGRADED' ? 'warn' : 'bad'}">${health.status}</span></div>
+                ${health.reasons.length > 0 ? `<div class="metric"><span class="label">Degraded Reasons</span><span class="value warn">${health.reasons.map(r => esc(r)).join('<br>')}</span></div>` : ''}
+                <div class="metric"><span class="label">Invariants</span><span class="value ${allPass ? 'good' : 'bad'}">${allPass ? 'ALL PASS' : invariants.filter(r => !r.pass).map(r => r.id).join(', ')}</span></div>
+                <div class="metric"><span class="label">Worker</span><span class="value ${state.worker.ready ? 'good' : 'warn'}">${state.worker.ready ? 'READY' : 'OFF'} | Failures: ${state.worker.failures} | Classified: ${state.worker.totalClassified}</span></div>
+                <div class="metric"><span class="label">Feeds</span><span class="value">Active: ${state.feeds.activeCount}/${state.feeds.totalFeeds} | Quarantined: ${state.feeds.quarantineSet.length}</span></div>
+                <div class="metric"><span class="label">Storage</span><span class="value">LS: ${state.storage.lsCount} | IDB: ${state.storage.idbCount >= 0 ? state.storage.idbCount : '?'} | Divergence: ${state.storage.divergence}</span></div>
+                <div class="metric"><span class="label">Reputation</span><span class="value">Tracked: ${state.reputation.sourcesTracked} | Graylisted: ${state.reputation.graylisted.length}</span></div>
+                <div class="metric"><span class="label">Event Log</span><span class="value">${snapshot.entries} entries | Violations: ${snapshot.violations}</span></div>
+                ${recentEvents.length > 0 ? `
+                <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:140px;overflow-y:auto;font-size:10px;line-height:1.6;">
+                    ${recentEvents.map(e => `<div style="color:${e.type.includes('VIOLATION') ? '#ff3344' : e.type.includes('QUARANTINED') || e.type.includes('GRAYLISTED') ? '#ffbf00' : '#4a6a8c'}">[${new Date(e.t).toLocaleTimeString()}] <span style="color:#8898a8">${esc(e.type)}</span> ${e.data ? '<span style="color:#4a5a6c">' + esc(JSON.stringify(e.data)).substring(0, 80) + '</span>' : ''}</div>`).join('')}
+                </div>` : ''}
+            </div>`;
+        }
 
         // ── 1. Signal Interceptor Status ──
         const siStats = typeof SignalInterceptor !== 'undefined' ? SignalInterceptor.getStats() : null;
