@@ -479,6 +479,198 @@ const CorrelationEngine = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // CASCADE PATTERN DETECTION
+    // ══════════════════════════════════════════════
+    // Detects multi-domain escalation ladders where
+    // signals in one domain predict cascading effects
+    // across interconnected domains.
+
+    const CASCADE_RULES = [
+        {
+            id: 'economic-social-cascade',
+            name: 'ECONOMIC → SOCIAL CASCADE',
+            trigger: { domain: 'ECONOMY', minSeverity: 60 },
+            cascade: [
+                { domain: 'SOCIAL', lag: 'days', probability: 0.78, mechanism: 'Wage pressure + inequality → mobilization' },
+            ],
+            description: 'Economic stress cascades into social unrest through wage pressure and inequality dynamics.',
+            severity: 'HIGH',
+        },
+        {
+            id: 'climate-energy-economy',
+            name: 'CLIMATE → ENERGY → ECONOMY TRIPLE CASCADE',
+            trigger: { domain: 'CLIMATE', minSeverity: 55 },
+            cascade: [
+                { domain: 'ENERGY', lag: 'weeks', probability: 0.65, mechanism: 'Extreme weather → supply disruption' },
+                { domain: 'ECONOMY', lag: 'months', probability: 0.52, mechanism: 'Energy price shock → recession risk' },
+            ],
+            description: 'Climate events destabilize energy supply, cascading into economic disruption.',
+            severity: 'CRITICAL',
+        },
+        {
+            id: 'geopolitics-energy-economy',
+            name: 'GEOPOLITICS → ENERGY → ECONOMY ESCALATION',
+            trigger: { domain: 'GEOPOLITICS', minSeverity: 65 },
+            cascade: [
+                { domain: 'ENERGY', lag: 'days', probability: 0.72, mechanism: 'Conflict → supply chokepoint disruption' },
+                { domain: 'ECONOMY', lag: 'weeks', probability: 0.61, mechanism: 'Resource scarcity → market shock' },
+            ],
+            description: 'Geopolitical conflict disrupts energy supply chains, triggering economic instability.',
+            severity: 'CRITICAL',
+        },
+        {
+            id: 'tech-economy-social',
+            name: 'TECHNOLOGY → ECONOMY → SOCIAL DISRUPTION',
+            trigger: { domain: 'TECHNOLOGY', minSeverity: 50 },
+            cascade: [
+                { domain: 'ECONOMY', lag: 'months', probability: 0.58, mechanism: 'Automation/AI → labor displacement' },
+                { domain: 'SOCIAL', lag: 'months', probability: 0.45, mechanism: 'Unemployment → social polarization' },
+            ],
+            description: 'Technological disruption displaces labor, creating economic stress and social polarization.',
+            severity: 'ELEVATED',
+        },
+        {
+            id: 'climate-geopolitics-social',
+            name: 'CLIMATE → GEOPOLITICS → SOCIAL MIGRATION CASCADE',
+            trigger: { domain: 'CLIMATE', minSeverity: 60 },
+            cascade: [
+                { domain: 'GEOPOLITICS', lag: 'months', probability: 0.55, mechanism: 'Resource scarcity → territorial disputes' },
+                { domain: 'SOCIAL', lag: 'months', probability: 0.68, mechanism: 'Migration pressure → social tension' },
+            ],
+            description: 'Climate stress triggers resource conflicts and migration, cascading into social disruption.',
+            severity: 'HIGH',
+        },
+        {
+            id: 'synchronized-pressure',
+            name: 'MULTI-THEATER SYNCHRONIZED PRESSURE',
+            trigger: { domain: 'GEOPOLITICS', minSeverity: 70 },
+            cascade: [
+                { domain: 'TECHNOLOGY', lag: 'hours', probability: 0.62, mechanism: 'Cyber warfare component in hybrid conflict' },
+                { domain: 'ECONOMY', lag: 'days', probability: 0.70, mechanism: 'Sanctions / trade weaponization' },
+                { domain: 'SOCIAL', lag: 'days', probability: 0.55, mechanism: 'Information warfare / social polarization' },
+            ],
+            description: 'Coordinated geopolitical pressure manifests simultaneously across technology, economy, and social domains.',
+            severity: 'CRITICAL',
+        },
+    ];
+
+    function detectCascadePatterns(archive) {
+        if (!archive || archive.length < 5) return [];
+
+        const now = Date.now();
+        const cascades = [];
+        const WINDOW_6H = 6 * 60 * 60 * 1000;
+        const WINDOW_24H = 24 * 60 * 60 * 1000;
+        const WINDOW_7D = 7 * 24 * 60 * 60 * 1000;
+
+        const recentSignals = archive.filter(s => (now - s.time) < WINDOW_7D);
+
+        // Group by domain
+        const byDomain = {};
+        recentSignals.forEach(s => {
+            if (!byDomain[s.domain]) byDomain[s.domain] = [];
+            byDomain[s.domain].push(s);
+        });
+
+        CASCADE_RULES.forEach(rule => {
+            const triggerSignals = (byDomain[rule.trigger.domain] || [])
+                .filter(s => s.severity >= rule.trigger.minSeverity);
+
+            if (triggerSignals.length === 0) return;
+
+            // Check if cascade domains show activity
+            const cascadeEvidence = rule.cascade.map(step => {
+                const domainSignals = byDomain[step.domain] || [];
+                const recentDomainSignals = domainSignals.filter(s => (now - s.time) < WINDOW_24H);
+                const avgSeverity = recentDomainSignals.length > 0
+                    ? recentDomainSignals.reduce((sum, s) => sum + s.severity, 0) / recentDomainSignals.length
+                    : 0;
+
+                return {
+                    ...step,
+                    signalCount: recentDomainSignals.length,
+                    avgSeverity: Math.round(avgSeverity),
+                    active: recentDomainSignals.length >= 2 && avgSeverity > 40,
+                    topSignals: recentDomainSignals
+                        .sort((a, b) => b.severity - a.severity)
+                        .slice(0, 3),
+                };
+            });
+
+            const activeCascades = cascadeEvidence.filter(c => c.active);
+            const cascadeStrength = activeCascades.length / rule.cascade.length;
+
+            if (activeCascades.length > 0) {
+                cascades.push({
+                    rule: rule.id,
+                    name: rule.name,
+                    description: rule.description,
+                    severity: rule.severity,
+                    triggerDomain: rule.trigger.domain,
+                    triggerSignalCount: triggerSignals.length,
+                    triggerAvgSeverity: Math.round(
+                        triggerSignals.reduce((s, x) => s + x.severity, 0) / triggerSignals.length
+                    ),
+                    cascadeEvidence,
+                    activeCascades: activeCascades.length,
+                    totalCascadeSteps: rule.cascade.length,
+                    cascadeStrength: Math.round(cascadeStrength * 100),
+                    detectedAt: now,
+                });
+            }
+        });
+
+        return cascades.sort((a, b) => b.cascadeStrength - a.cascadeStrength);
+    }
+
+    // ══════════════════════════════════════════════
+    // ENTITY-AWARE CORRELATION
+    // ══════════════════════════════════════════════
+    // Uses OsintEngine entity extraction to find
+    // correlations through shared actors/locations
+
+    function detectEntityCorrelations(archive) {
+        if (typeof OsintEngine === 'undefined' || !archive || archive.length < 5) return [];
+
+        const now = Date.now();
+        const recent = archive.filter(s => (now - s.time) < 24 * 60 * 60 * 1000);
+        const entityLinks = {};
+
+        recent.forEach(signal => {
+            const entities = OsintEngine.extractEntities(`${signal.title} ${signal.description || ''}`);
+            entities.forEach(entity => {
+                const key = `${entity.type}:${entity.name}`;
+                if (!entityLinks[key]) {
+                    entityLinks[key] = { entity, signals: [], domains: new Set() };
+                }
+                entityLinks[key].signals.push(signal);
+                entityLinks[key].domains.add(signal.domain);
+            });
+        });
+
+        // Find entities that bridge multiple domains
+        const bridging = Object.values(entityLinks)
+            .filter(e => e.domains.size >= 2 && e.signals.length >= 3)
+            .map(e => ({
+                entity: e.entity,
+                domains: [...e.domains],
+                signalCount: e.signals.length,
+                avgSeverity: Math.round(
+                    e.signals.reduce((sum, s) => sum + s.severity, 0) / e.signals.length
+                ),
+                topSignals: e.signals
+                    .sort((a, b) => b.severity - a.severity)
+                    .slice(0, 5)
+                    .map(s => ({ title: s.title, domain: s.domain, severity: s.severity })),
+                bridgeScore: e.domains.size * e.signals.length,
+            }))
+            .sort((a, b) => b.bridgeScore - a.bridgeScore)
+            .slice(0, 10);
+
+        return bridging;
+    }
+
+    // ══════════════════════════════════════════════
     // FULL ANALYSIS
     // ══════════════════════════════════════════════
 
@@ -502,6 +694,8 @@ const CorrelationEngine = (() => {
             sourceDiversity: analyzeSourceDiversity(archive),
             bursts: detectBursts(archive),
             manipulationWarnings: detectManipulation(archive),
+            cascadePatterns: detectCascadePatterns(archive),
+            entityCorrelations: detectEntityCorrelations(archive),
             storageReport: typeof PersistenceManager !== 'undefined' ? PersistenceManager.getStorageReport() : null,
             watchlistHits: archive.slice(0, 50).map(s => ({
                 signal: s,
@@ -524,12 +718,15 @@ const CorrelationEngine = (() => {
         analyzeSourceDiversity,
         detectBursts,
         detectManipulation,
+        detectCascadePatterns,
+        detectEntityCorrelations,
         checkWatchlist,
         getWatchlist,
         addToWatchlist,
         removeFromWatchlist,
         runFullAnalysis,
         CROSS_DOMAIN_RULES,
+        CASCADE_RULES,
     };
 
 })();

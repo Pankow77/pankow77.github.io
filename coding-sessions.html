@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
+    <title>HS // ENTROPIC PROCESS LOCK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #060a12;
+            color: #c8d6e5;
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            font-size: 12px;
+            min-height: 100vh;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: #080e1c;
+            border-bottom: 1px solid #1a2436;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            color: #9d00ff;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+        .header .subtitle {
+            font-size: 10px;
+            color: #4a5a6c;
+            letter-spacing: 0.08em;
+        }
+        .header-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 10px;
+            padding: 6px 14px;
+            background: #0d1528;
+            border: 1px solid #1a2d50;
+            color: #00c8ff;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+            transition: all 0.2s;
+        }
+        .btn:hover { background: #152040; }
+        .btn.active { border-color: #9d00ff; color: #9d00ff; }
+        .btn.danger { color: #ff3344; border-color: #3a1520; }
+        .btn.danger:hover { background: #1a0a10; }
+        .btn.success { color: #00d4aa; border-color: #0a3a2d; }
+        .btn.success:hover { background: #0a1a18; }
+        .back-link {
+            color: #4a5a6c;
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+        }
+        .back-link:hover { color: #9d00ff; }
+
+        /* ── STATUS BAR ── */
+        .status-bar {
+            background: #080e1c;
+            border-bottom: 1px solid #0f1a2e;
+            padding: 8px 24px;
+            display: flex;
+            gap: 24px;
+            font-size: 10px;
+            color: #4a5a6c;
+            overflow-x: auto;
+        }
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        .status-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-green { background: #00d4aa; box-shadow: 0 0 6px rgba(0,212,170,0.5); }
+        .dot-yellow { background: #ffbf00; box-shadow: 0 0 6px rgba(255,191,0,0.5); }
+        .dot-red { background: #ff3344; box-shadow: 0 0 6px rgba(255,51,68,0.5); }
+        .dot-purple { background: #9d00ff; box-shadow: 0 0 6px rgba(157,0,255,0.5); }
+        .dot-gray { background: #4a5a6c; }
+
+        /* ── GRID ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 1px;
+            background: #1a2436;
+            padding: 1px;
+        }
+        .panel {
+            background: #0a1020;
+            padding: 16px;
+        }
+        .panel-full { grid-column: 1 / -1; }
+        .panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            color: #9d00ff;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .panel-title .tag {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 9px;
+            padding: 2px 8px;
+            border-radius: 2px;
+            letter-spacing: 0.05em;
+        }
+        .tag-live { background: rgba(0,212,170,0.1); color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+        .tag-static { background: rgba(74,90,108,0.1); color: #4a5a6c; border: 1px solid rgba(74,90,108,0.3); }
+
+        /* ── METRICS ── */
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(26,36,54,0.3);
+            font-size: 11px;
+        }
+        .metric:last-child { border-bottom: none; }
+        .metric .label { color: #6a7a8c; }
+        .metric .value { color: #c8d6e5; font-weight: bold; }
+        .value.good { color: #00d4aa; }
+        .value.warn { color: #ffbf00; }
+        .value.bad { color: #ff3344; }
+        .value.info { color: #00c8ff; }
+        .value.purple { color: #9d00ff; }
+
+        /* ── BAR ── */
+        .bar {
+            height: 4px;
+            background: #1a2436;
+            border-radius: 2px;
+            margin-top: 2px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+        .bar-green { background: #00d4aa; }
+        .bar-yellow { background: #ffbf00; }
+        .bar-red { background: #ff3344; }
+        .bar-purple { background: #9d00ff; }
+
+        /* ── CHAIN VISUALIZATION ── */
+        .chain-viz {
+            display: flex;
+            gap: 2px;
+            overflow-x: auto;
+            padding: 8px 0;
+            align-items: flex-end;
+            height: 80px;
+        }
+        .chain-viz::-webkit-scrollbar { height: 3px; }
+        .chain-viz::-webkit-scrollbar-track { background: transparent; }
+        .chain-viz::-webkit-scrollbar-thumb { background: #1a2436; border-radius: 2px; }
+        .chain-block {
+            min-width: 4px;
+            width: 4px;
+            border-radius: 1px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .chain-block:hover {
+            opacity: 0.8;
+            transform: scaleX(2);
+        }
+        .chain-block.selected {
+            box-shadow: 0 0 6px rgba(157,0,255,0.8);
+        }
+
+        /* ── ENTROPY HEATMAP ── */
+        .entropy-heatmap {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 8px);
+            gap: 1px;
+            padding: 8px 0;
+        }
+        .entropy-cell {
+            width: 8px;
+            height: 8px;
+            border-radius: 1px;
+        }
+
+        /* ── CYCLE DETAIL ── */
+        .cycle-detail {
+            background: #0d1528;
+            border: 1px solid #1a2d50;
+            padding: 12px;
+            margin-top: 8px;
+            font-size: 10px;
+            display: none;
+        }
+        .cycle-detail.visible { display: block; }
+        .cycle-detail .hash {
+            color: #9d00ff;
+            word-break: break-all;
+            font-size: 9px;
+            padding: 4px 0;
+        }
+
+        /* ── SIGNATURE CARDS ── */
+        .sig-card {
+            background: #0d1528;
+            border: 1px solid #1a2d50;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+        .sig-card .sig-id {
+            font-family: 'Orbitron', monospace;
+            font-size: 10px;
+            color: #9d00ff;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+        .sig-card .sig-hash {
+            font-size: 9px;
+            color: #4a5a6c;
+            word-break: break-all;
+            padding: 4px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 2px;
+            margin-top: 6px;
+        }
+
+        /* ── TIMELINE ── */
+        .timeline-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 3px 0;
+            border-bottom: 1px solid rgba(26,36,54,0.15);
+            font-size: 10px;
+        }
+        .timeline-n {
+            color: #4a5a6c;
+            min-width: 40px;
+            text-align: right;
+        }
+        .timeline-hash {
+            color: #9d00ff;
+            font-size: 9px;
+            min-width: 120px;
+        }
+        .timeline-delta {
+            color: #00c8ff;
+            min-width: 60px;
+        }
+        .timeline-entropy {
+            min-width: 50px;
+        }
+        .timeline-coherence {
+            min-width: 50px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .header { padding: 12px 16px; }
+            .status-bar { padding: 6px 16px; }
+        }
+
+        /* ── ANIMATIONS ── */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        .pulse { animation: pulse-glow 2s infinite; }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <div class="header">
+        <div>
+            <a href="index.html" class="back-link">&lt; HYBRID SYNDICATE</a>
+            <h1>ENTROPIC PROCESS LOCK</h1>
+            <div class="subtitle">PROOF-OF-PROCESS ENGINE // IRREVERSIBLE TEMPORAL CHAIN</div>
+        </div>
+        <div class="header-controls">
+            <button class="btn success" id="btnStart" onclick="startEngine()">START</button>
+            <button class="btn danger" id="btnStop" onclick="stopEngine()" disabled>STOP</button>
+            <button class="btn" onclick="generateSig()">GEN SIGNATURE</button>
+            <button class="btn" onclick="exportData()">EXPORT</button>
+            <button class="btn" onclick="refreshUI()">REFRESH</button>
+        </div>
+    </div>
+
+    <!-- ═══ STATUS BAR ═══ -->
+    <div class="status-bar" id="statusBar">
+        <div class="status-item">
+            <span class="status-dot dot-gray" id="dotEngine"></span>
+            ENGINE: <span id="statusEngine">OFFLINE</span>
+        </div>
+        <div class="status-item">
+            <span class="status-dot dot-gray" id="dotChain"></span>
+            CHAIN: <span id="statusChain">-</span>
+        </div>
+        <div class="status-item">
+            CYCLES: <span id="statusCycles">0</span>
+        </div>
+        <div class="status-item">
+            ENTROPY: <span id="statusEntropy">-</span>
+        </div>
+        <div class="status-item">
+            COHERENCE: <span id="statusCoherence">-</span>
+        </div>
+        <div class="status-item">
+            SIGNATURES: <span id="statusSigs">0</span>
+        </div>
+        <div class="status-item">
+            UPTIME: <span id="statusUptime">-</span>
+        </div>
+    </div>
+
+    <!-- ═══ MAIN GRID ═══ -->
+    <div class="grid">
+
+        <!-- ── CHAIN OVERVIEW ── -->
+        <div class="panel">
+            <div class="panel-title">
+                CHAIN STATISTICS
+                <span class="tag tag-live" id="tagLive" style="display:none;">LIVE</span>
+            </div>
+            <div id="chainStats">
+                <div class="metric"><span class="label">Total Cycles</span><span class="value" id="statCycles">0</span></div>
+                <div class="metric"><span class="label">Chain Length</span><span class="value" id="statLength">0</span></div>
+                <div class="metric"><span class="label">Genesis Time</span><span class="value info" id="statGenesis">-</span></div>
+                <div class="metric"><span class="label">Last Cycle</span><span class="value" id="statLastCycle">-</span></div>
+                <div class="metric"><span class="label">Uptime</span><span class="value purple" id="statUptime">-</span></div>
+                <div class="metric">
+                    <span class="label">Chain Integrity</span>
+                    <span class="value" id="statIntegrity">-</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Integrity Checks</span>
+                    <span class="value" id="statChecks">-</span>
+                </div>
+                <div class="metric">
+                    <span class="label">Failures</span>
+                    <span class="value" id="statFailures">-</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── ENTROPY QUALITY ── -->
+        <div class="panel">
+            <div class="panel-title">
+                ENTROPY QUALITY
+                <span class="tag tag-static">KERNEL</span>
+            </div>
+            <div id="entropyStats">
+                <div class="metric"><span class="label">Mean Quality</span><span class="value" id="entMean">-</span></div>
+                <div class="bar"><div class="bar-fill bar-purple" id="entMeanBar" style="width:0%"></div></div>
+                <div class="metric"><span class="label">Min Quality</span><span class="value" id="entMin">-</span></div>
+                <div class="metric"><span class="label">Max Quality</span><span class="value" id="entMax">-</span></div>
+                <div class="metric"><span class="label">Verdict</span><span class="value" id="entVerdict">-</span></div>
+            </div>
+            <div style="margin-top:10px; font-size:9px; color:#4a5a6c; letter-spacing:0.08em;">ENTROPY HEATMAP (last 100 cycles)</div>
+            <div class="entropy-heatmap" id="entropyHeatmap"></div>
+        </div>
+
+        <!-- ── TIMING PROFILE ── -->
+        <div class="panel">
+            <div class="panel-title">
+                TIMING PROFILE
+                <span class="tag tag-static">PERF.NOW</span>
+            </div>
+            <div id="timingStats">
+                <div class="metric"><span class="label">Avg Delta</span><span class="value info" id="timDelta">-</span></div>
+                <div class="metric"><span class="label">Min Delta</span><span class="value" id="timDeltaMin">-</span></div>
+                <div class="metric"><span class="label">Max Delta</span><span class="value" id="timDeltaMax">-</span></div>
+                <div class="metric"><span class="label">Avg Jitter</span><span class="value" id="timJitter">-</span></div>
+                <div class="metric"><span class="label">Min Jitter</span><span class="value" id="timJitterMin">-</span></div>
+                <div class="metric"><span class="label">Max Jitter</span><span class="value" id="timJitterMax">-</span></div>
+                <div class="metric"><span class="label">Coherence Mean</span><span class="value" id="timCoherence">-</span></div>
+                <div class="bar"><div class="bar-fill bar-green" id="timCoherenceBar" style="width:0%"></div></div>
+            </div>
+        </div>
+
+        <!-- ── PROCESS SIGNATURES ── -->
+        <div class="panel">
+            <div class="panel-title">
+                PROCESS SIGNATURES
+                <span class="tag tag-static">PROOF</span>
+            </div>
+            <div id="sigList" style="max-height: 300px; overflow-y: auto;">
+                <div style="color:#4a5a6c; font-size:10px; text-align:center; padding:20px;">No signatures generated yet. Start engine and wait for signature window.</div>
+            </div>
+        </div>
+
+        <!-- ── CHAIN VISUALIZATION ── -->
+        <div class="panel panel-full">
+            <div class="panel-title">
+                COMPUTATIONAL TRAJECTORY
+                <span class="tag tag-live" id="tagTrajLive" style="display:none;">LIVE</span>
+            </div>
+            <div style="font-size:9px; color:#4a5a6c; margin-bottom:4px;">
+                Each block = 1 cycle. Height = entropy quality. Color = timing coherence (green=nominal, yellow=drift, red=break).
+            </div>
+            <div class="chain-viz" id="chainViz"></div>
+            <div class="cycle-detail" id="cycleDetail"></div>
+        </div>
+
+        <!-- ── CHAIN LOG ── -->
+        <div class="panel panel-full">
+            <div class="panel-title">
+                CHAIN LOG (last 50 cycles)
+                <span class="tag tag-static">APPEND-ONLY</span>
+            </div>
+            <div style="overflow-x:auto;">
+                <div style="display:flex; gap:8px; padding:4px 0; font-size:9px; color:#4a5a6c; border-bottom:1px solid #1a2436; margin-bottom:4px;">
+                    <span style="min-width:40px; text-align:right;">#</span>
+                    <span style="min-width:120px;">HASH</span>
+                    <span style="min-width:60px;">DELTA</span>
+                    <span style="min-width:50px;">ENTROPY</span>
+                    <span style="min-width:50px;">COHER.</span>
+                    <span style="min-width:60px;">JITTER</span>
+                    <span style="min-width:100px;">TIME</span>
+                </div>
+                <div id="chainLog" style="max-height: 400px; overflow-y: auto;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="js/entropic-process-lock.js"></script>
+    <script src="js/core-feed.js"></script>
+    <script>
+        // ── UI STATE ──
+        let refreshTimer = null;
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        // ── ENGINE CONTROLS ──
+        function startEngine() {
+            EntropicProcessLock.start();
+            document.getElementById('btnStart').disabled = true;
+            document.getElementById('btnStop').disabled = false;
+            document.getElementById('tagLive').style.display = '';
+            document.getElementById('tagTrajLive').style.display = '';
+            refreshTimer = setInterval(refreshUI, 2000);
+            refreshUI();
+        }
+
+        function stopEngine() {
+            EntropicProcessLock.stop();
+            document.getElementById('btnStart').disabled = false;
+            document.getElementById('btnStop').disabled = true;
+            document.getElementById('tagLive').style.display = 'none';
+            document.getElementById('tagTrajLive').style.display = 'none';
+            if (refreshTimer) { clearInterval(refreshTimer); refreshTimer = null; }
+            refreshUI();
+        }
+
+        async function generateSig() {
+            const sig = await EntropicProcessLock.generateProcessSignature();
+            if (sig) {
+                refreshUI();
+            }
+        }
+
+        function exportData() {
+            const data = EntropicProcessLock.exportChain();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `HS_EPL_EXPORT_${new Date().toISOString().slice(0,10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // ── FORMATTING ──
+        function formatTime(ms) {
+            if (!ms || ms <= 0) return '-';
+            const s = Math.floor(ms / 1000);
+            const m = Math.floor(s / 60);
+            const h = Math.floor(m / 60);
+            if (h > 0) return `${h}h ${m % 60}m`;
+            if (m > 0) return `${m}m ${s % 60}s`;
+            return `${s}s`;
+        }
+
+        function qualityClass(score) {
+            if (score >= 70) return 'good';
+            if (score >= 40) return 'warn';
+            return 'bad';
+        }
+
+        function entropyColor(quality) {
+            if (quality >= 70) return '#00d4aa';
+            if (quality >= 40) return '#ffbf00';
+            return '#ff3344';
+        }
+
+        function coherenceColor(score) {
+            if (score >= 80) return '#00d4aa';
+            if (score >= 50) return '#ffbf00';
+            return '#ff3344';
+        }
+
+        // ── REFRESH UI ──
+        function refreshUI() {
+            const stats = EntropicProcessLock.getChainStats();
+            const chain = EntropicProcessLock.getChain();
+            const sigs = EntropicProcessLock.getSignatures();
+            const running = EntropicProcessLock.isRunning();
+
+            // Status bar
+            const dotEngine = document.getElementById('dotEngine');
+            dotEngine.className = 'status-dot ' + (running ? 'dot-purple pulse' : 'dot-gray');
+            document.getElementById('statusEngine').textContent = running ? 'RUNNING' : 'OFFLINE';
+            document.getElementById('statusEngine').style.color = running ? '#9d00ff' : '#4a5a6c';
+
+            const integrity = stats.empty ? null : stats.chainIntegrity;
+            const dotChain = document.getElementById('dotChain');
+            if (integrity) {
+                dotChain.className = 'status-dot ' + (integrity.valid ? 'dot-green' : 'dot-red');
+                document.getElementById('statusChain').textContent = integrity.valid ? 'INTACT' : 'BROKEN';
+                document.getElementById('statusChain').style.color = integrity.valid ? '#00d4aa' : '#ff3344';
+            }
+
+            document.getElementById('statusCycles').textContent = stats.empty ? '0' : stats.cycleCount;
+            document.getElementById('statusEntropy').textContent = stats.empty ? '-' : stats.entropy.mean + '%';
+            document.getElementById('statusCoherence').textContent = stats.empty ? '-' : stats.coherence.mean + '%';
+            document.getElementById('statusSigs').textContent = sigs.length;
+            document.getElementById('statusUptime').textContent = stats.empty ? '-' : formatTime(stats.uptime);
+
+            // Chain stats panel
+            document.getElementById('statCycles').textContent = stats.empty ? '0' : stats.cycleCount;
+            document.getElementById('statLength').textContent = chain.length;
+            document.getElementById('statGenesis').textContent = stats.empty ? '-' : new Date(stats.genesisTime).toLocaleString();
+            document.getElementById('statLastCycle').textContent = stats.empty ? '-' : new Date(stats.lastCycleTime).toLocaleString();
+            document.getElementById('statUptime').textContent = stats.empty ? '-' : formatTime(stats.uptime);
+
+            if (integrity) {
+                const intEl = document.getElementById('statIntegrity');
+                intEl.textContent = integrity.valid ? 'VALID' : 'BROKEN';
+                intEl.className = 'value ' + (integrity.valid ? 'good' : 'bad');
+                document.getElementById('statChecks').textContent = integrity.checks;
+                const failEl = document.getElementById('statFailures');
+                failEl.textContent = integrity.failures.length;
+                failEl.className = 'value ' + (integrity.failures.length === 0 ? 'good' : 'bad');
+            }
+
+            // Entropy panel
+            if (!stats.empty) {
+                const em = document.getElementById('entMean');
+                em.textContent = stats.entropy.mean + '%';
+                em.className = 'value ' + qualityClass(stats.entropy.mean);
+                document.getElementById('entMeanBar').style.width = stats.entropy.mean + '%';
+
+                document.getElementById('entMin').textContent = stats.entropy.min + '%';
+                document.getElementById('entMin').className = 'value ' + qualityClass(stats.entropy.min);
+                document.getElementById('entMax').textContent = stats.entropy.max + '%';
+
+                const verdict = stats.entropy.mean > 60 ? 'STRONG' : stats.entropy.mean > 30 ? 'DEGRADED' : 'COMPROMISED';
+                const vEl = document.getElementById('entVerdict');
+                vEl.textContent = verdict;
+                vEl.className = 'value ' + qualityClass(stats.entropy.mean);
+            }
+
+            // Entropy heatmap
+            const heatmap = document.getElementById('entropyHeatmap');
+            heatmap.innerHTML = '';
+            const last100 = chain.slice(-100);
+            last100.forEach(link => {
+                const cell = document.createElement('div');
+                cell.className = 'entropy-cell';
+                cell.style.background = entropyColor(link.entropyQuality.quality);
+                cell.style.opacity = (0.3 + link.entropyQuality.quality / 100 * 0.7).toFixed(2);
+                cell.title = `Cycle ${link.n}: quality ${link.entropyQuality.quality}%`;
+                heatmap.appendChild(cell);
+            });
+
+            // Timing panel
+            if (!stats.empty) {
+                document.getElementById('timDelta').textContent = stats.delta.mean + ' ms';
+                document.getElementById('timDeltaMin').textContent = stats.delta.min + ' ms';
+                document.getElementById('timDeltaMax').textContent = stats.delta.max + ' ms';
+                document.getElementById('timJitter').textContent = stats.jitter.mean + ' ms';
+                document.getElementById('timJitterMin').textContent = stats.jitter.min + ' ms';
+                document.getElementById('timJitterMax').textContent = stats.jitter.max + ' ms';
+                const tc = document.getElementById('timCoherence');
+                tc.textContent = stats.coherence.mean + '%';
+                tc.className = 'value ' + qualityClass(stats.coherence.mean);
+                document.getElementById('timCoherenceBar').style.width = stats.coherence.mean + '%';
+            }
+
+            // Process signatures
+            renderSignatures(sigs);
+
+            // Chain visualization
+            renderChainViz(chain);
+
+            // Chain log
+            renderChainLog(chain);
+        }
+
+        // ── RENDER SIGNATURES ──
+        function renderSignatures(sigs) {
+            const container = document.getElementById('sigList');
+            if (sigs.length === 0) {
+                container.innerHTML = '<div style="color:#4a5a6c; font-size:10px; text-align:center; padding:20px;">No signatures generated yet.</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            [...sigs].reverse().forEach(sig => {
+                const verification = EntropicProcessLock.verifySignature(sig);
+                const card = document.createElement('div');
+                card.className = 'sig-card';
+                card.innerHTML = `
+                    <div class="sig-id">${escapeHtml(sig.id)}</div>
+                    <div class="metric"><span class="label">Window</span><span class="value info">${sig.cycleRange.from} - ${sig.cycleRange.to} (${sig.windowSize} cycles)</span></div>
+                    <div class="metric"><span class="label">Entropy</span><span class="value ${qualityClass(sig.entropy.mean)}">${sig.entropy.mean}% (${sig.entropy.verdict})</span></div>
+                    <div class="metric"><span class="label">Jitter</span><span class="value">${sig.timing.jitterMean} ms (sd: ${sig.timing.jitterStdDev})</span></div>
+                    <div class="metric"><span class="label">Coherence</span><span class="value ${qualityClass(sig.coherence)}">${sig.coherence}%</span></div>
+                    <div class="metric"><span class="label">Chain OK</span><span class="value ${sig.chainCoherence ? 'good' : 'bad'}">${sig.chainCoherence ? 'YES' : 'NO'}</span></div>
+                    <div class="metric"><span class="label">Verification</span><span class="value ${verification.valid ? 'good' : 'bad'}">${verification.verdict} (${verification.confidence}%)</span></div>
+                    <div class="metric"><span class="label">Generated</span><span class="value">${new Date(sig.generatedAt).toLocaleString()}</span></div>
+                    <div class="sig-hash">DIGEST: ${escapeHtml(sig.chainDigest)}</div>
+                    <div class="sig-hash">SIG: ${escapeHtml(sig.signatureHash)}</div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // ── RENDER CHAIN VISUALIZATION ──
+        function renderChainViz(chain) {
+            const container = document.getElementById('chainViz');
+            container.innerHTML = '';
+
+            chain.forEach((link, idx) => {
+                const block = document.createElement('div');
+                block.className = 'chain-block';
+
+                // Height based on entropy quality (20-60px)
+                const height = 20 + (link.entropyQuality.quality / 100) * 40;
+                block.style.height = height + 'px';
+
+                // Color based on coherence
+                block.style.background = coherenceColor(link.timingCoherence.score);
+                block.style.opacity = (0.5 + link.timingCoherence.score / 100 * 0.5).toFixed(2);
+
+                block.title = `#${link.n} | entropy: ${link.entropyQuality.quality}% | coherence: ${link.timingCoherence.score}% | delta: ${link.deltaMs}ms`;
+
+                block.onclick = () => showCycleDetail(link);
+
+                container.appendChild(block);
+            });
+
+            // Auto-scroll to end
+            container.scrollLeft = container.scrollWidth;
+        }
+
+        // ── SHOW CYCLE DETAIL ──
+        function showCycleDetail(link) {
+            const el = document.getElementById('cycleDetail');
+            el.className = 'cycle-detail visible';
+            el.innerHTML = `
+                <div style="font-family:'Orbitron',monospace; font-size:10px; color:#9d00ff; margin-bottom:8px;">CYCLE #${link.n}</div>
+                <div class="metric"><span class="label">Hash</span></div>
+                <div class="hash">${escapeHtml(link.hash)}</div>
+                <div class="metric"><span class="label">Previous Hash</span></div>
+                <div class="hash">${escapeHtml(link.previousHash)}</div>
+                <div class="metric"><span class="label">Entropy (truncated)</span><span class="value">${escapeHtml(link.entropy)}</span></div>
+                <div class="metric"><span class="label">Delta</span><span class="value info">${link.deltaMs} ms</span></div>
+                <div class="metric"><span class="label">Jitter</span><span class="value">${link.jitter} ms</span></div>
+                <div class="metric"><span class="label">performance.now()</span><span class="value">${link.perfNow}</span></div>
+                <div class="metric"><span class="label">Wall Clock</span><span class="value">${new Date(link.wallClock).toLocaleString()}</span></div>
+                <div class="metric"><span class="label">Entropy Quality</span><span class="value ${qualityClass(link.entropyQuality.quality)}">${link.entropyQuality.quality}% (${link.entropyQuality.verdict})</span></div>
+                <div class="metric"><span class="label">Chi-Squared</span><span class="value">${link.entropyQuality.chiSquared}</span></div>
+                <div class="metric"><span class="label">Timing Coherence</span><span class="value ${qualityClass(link.timingCoherence.score)}">${link.timingCoherence.score}% (${link.timingCoherence.reason})</span></div>
+            `;
+        }
+
+        // ── RENDER CHAIN LOG ──
+        function renderChainLog(chain) {
+            const container = document.getElementById('chainLog');
+            container.innerHTML = '';
+
+            const last50 = chain.slice(-50).reverse();
+            last50.forEach(link => {
+                const row = document.createElement('div');
+                row.className = 'timeline-row';
+                row.innerHTML = `
+                    <span class="timeline-n">${link.n}</span>
+                    <span class="timeline-hash">${escapeHtml(link.hash.substring(0, 20))}...</span>
+                    <span class="timeline-delta" style="color:#00c8ff;">${link.deltaMs}ms</span>
+                    <span class="timeline-entropy" style="color:${entropyColor(link.entropyQuality.quality)}">${link.entropyQuality.quality}%</span>
+                    <span class="timeline-coherence" style="color:${coherenceColor(link.timingCoherence.score)}">${link.timingCoherence.score}%</span>
+                    <span style="color:#4a5a6c; min-width:60px;">${link.jitter}ms</span>
+                    <span style="color:#4a5a6c; min-width:100px;">${new Date(link.wallClock).toLocaleTimeString()}</span>
+                `;
+                row.style.cursor = 'pointer';
+                row.onclick = () => showCycleDetail(link);
+                container.appendChild(row);
+            });
+        }
+
+        // ── LISTEN TO EPL EVENTS ──
+        EntropicProcessLock.on('cycle', (link) => {
+            // Live update - append to viz and log without full refresh
+            if (EntropicProcessLock.isRunning()) {
+                refreshUI();
+            }
+        });
+
+        EntropicProcessLock.on('coherence-break', (data) => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SENTINEL', `PROCESS LOCK: Rottura coerenza rilevata! ${data.failures.length} failure(s) nella catena entropica.`);
+            }
+        });
+
+        EntropicProcessLock.on('signature', (sig) => {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('GHOST_RUNNER', `Process Signature generata: ${sig.id}. Entropy: ${sig.entropy.verdict}. Coherence: ${sig.coherence}%.`);
+            }
+        });
+
+        // ── INIT ──
+        refreshUI();
+
+        // Auto-start if chain already exists
+        const existingStats = EntropicProcessLock.getChainStats();
+        if (!existingStats.empty) {
+            // Has existing chain — show it
+            refreshUI();
+        }
+    </script>
+
+</body>
+</html>

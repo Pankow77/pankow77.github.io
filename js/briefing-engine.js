@@ -166,6 +166,221 @@ const BriefingEngine = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // ACTIONABLE INTELLIGENCE GENERATION
+    // ══════════════════════════════════════════════
+    // Produces operator-usable intelligence:
+    //   - Key indicators to watch
+    //   - Recommended actions
+    //   - Escalation scenarios with probabilities
+
+    function generateActionableIntel(signals) {
+        const indicators = [];
+        const actions = [];
+        const scenarios = [];
+
+        // Analyze domain states
+        const domainStates = {};
+        Object.keys(DOMAIN_META).forEach(d => {
+            const domSignals = signals.filter(s => s.domain === d);
+            const avgSev = domSignals.length > 0
+                ? domSignals.reduce((sum, s) => sum + s.severity, 0) / domSignals.length
+                : 0;
+            domainStates[d] = {
+                signalCount: domSignals.length,
+                avgSeverity: Math.round(avgSev),
+                topSignals: domSignals.sort((a, b) => b.severity - a.severity).slice(0, 3),
+            };
+        });
+
+        // Get cascade patterns if available
+        let cascades = [];
+        if (typeof CorrelationEngine !== 'undefined' && CorrelationEngine.detectCascadePatterns) {
+            cascades = CorrelationEngine.detectCascadePatterns(signals);
+        }
+
+        // Get entity correlations
+        let entityBridges = [];
+        if (typeof CorrelationEngine !== 'undefined' && CorrelationEngine.detectEntityCorrelations) {
+            entityBridges = CorrelationEngine.detectEntityCorrelations(signals);
+        }
+
+        // GEOPOLITICS indicators
+        if (domainStates.GEOPOLITICS.avgSeverity > 60) {
+            indicators.push({
+                indicator: 'Geopolitical escalation signals',
+                domain: 'GEOPOLITICS',
+                priority: 'HIGH',
+                details: `${domainStates.GEOPOLITICS.signalCount} signals, avg severity ${domainStates.GEOPOLITICS.avgSeverity}%`,
+                watchFor: 'Military posturing, alliance statements, sanctions announcements',
+            });
+            actions.push({
+                action: 'Monitor major power official statements and military deployments',
+                priority: 'HIGH',
+                domain: 'GEOPOLITICS',
+            });
+        }
+
+        // ECONOMY indicators
+        if (domainStates.ECONOMY.avgSeverity > 55) {
+            indicators.push({
+                indicator: 'Economic stress signals',
+                domain: 'ECONOMY',
+                priority: 'HIGH',
+                details: `${domainStates.ECONOMY.signalCount} signals, avg severity ${domainStates.ECONOMY.avgSeverity}%`,
+                watchFor: 'Central bank actions, currency volatility, supply chain disruptions',
+            });
+            actions.push({
+                action: 'Track financial market volatility and central bank communications',
+                priority: 'MEDIUM',
+                domain: 'ECONOMY',
+            });
+        }
+
+        // ENERGY indicators
+        if (domainStates.ENERGY.avgSeverity > 50) {
+            indicators.push({
+                indicator: 'Energy supply disruption risk',
+                domain: 'ENERGY',
+                priority: 'ELEVATED',
+                details: `${domainStates.ENERGY.signalCount} signals, avg severity ${domainStates.ENERGY.avgSeverity}%`,
+                watchFor: 'Pipeline status, OPEC decisions, extreme weather impact on infrastructure',
+            });
+        }
+
+        // CLIMATE indicators
+        if (domainStates.CLIMATE.avgSeverity > 50) {
+            indicators.push({
+                indicator: 'Climate event escalation',
+                domain: 'CLIMATE',
+                priority: 'ELEVATED',
+                details: `${domainStates.CLIMATE.signalCount} signals, avg severity ${domainStates.CLIMATE.avgSeverity}%`,
+                watchFor: 'Extreme weather events, agricultural disruptions, COP negotiations',
+            });
+        }
+
+        // TECHNOLOGY indicators
+        if (domainStates.TECHNOLOGY.avgSeverity > 55) {
+            indicators.push({
+                indicator: 'Technology disruption signals',
+                domain: 'TECHNOLOGY',
+                priority: 'HIGH',
+                details: `${domainStates.TECHNOLOGY.signalCount} signals, avg severity ${domainStates.TECHNOLOGY.avgSeverity}%`,
+                watchFor: 'Cyber incidents, AI regulatory developments, semiconductor supply',
+            });
+            actions.push({
+                action: 'Monitor cybersecurity advisories and tech sector regulatory actions',
+                priority: 'MEDIUM',
+                domain: 'TECHNOLOGY',
+            });
+        }
+
+        // SOCIAL indicators
+        if (domainStates.SOCIAL.avgSeverity > 55) {
+            indicators.push({
+                indicator: 'Social unrest potential',
+                domain: 'SOCIAL',
+                priority: 'HIGH',
+                details: `${domainStates.SOCIAL.signalCount} signals, avg severity ${domainStates.SOCIAL.avgSeverity}%`,
+                watchFor: 'Protest movements, labor strikes, election instability',
+            });
+        }
+
+        // CASCADE-DRIVEN INDICATORS
+        cascades.forEach(cascade => {
+            if (cascade.cascadeStrength > 50) {
+                indicators.push({
+                    indicator: `CASCADE: ${cascade.name}`,
+                    domain: cascade.triggerDomain,
+                    priority: cascade.severity,
+                    details: `${cascade.activeCascades}/${cascade.totalCascadeSteps} cascade steps active, strength ${cascade.cascadeStrength}%`,
+                    watchFor: cascade.cascadeEvidence.map(e => e.mechanism).join('; '),
+                });
+                actions.push({
+                    action: `Monitor cascade progression: ${cascade.description}`,
+                    priority: cascade.severity === 'CRITICAL' ? 'HIGH' : 'MEDIUM',
+                    domain: cascade.triggerDomain,
+                });
+            }
+        });
+
+        // ENTITY-DRIVEN INDICATORS
+        entityBridges.forEach(bridge => {
+            if (bridge.bridgeScore > 6) {
+                indicators.push({
+                    indicator: `ENTITY BRIDGE: ${bridge.entity.name} (${bridge.entity.type})`,
+                    domain: bridge.domains[0],
+                    priority: bridge.avgSeverity > 60 ? 'HIGH' : 'ELEVATED',
+                    details: `Bridges ${bridge.domains.join(' ↔ ')} with ${bridge.signalCount} signals`,
+                    watchFor: `Activity related to ${bridge.entity.name} across multiple domains`,
+                });
+            }
+        });
+
+        // SCENARIOS based on current state
+        const highDomains = Object.entries(domainStates)
+            .filter(([, s]) => s.avgSeverity > 60)
+            .map(([d]) => d);
+
+        if (highDomains.includes('GEOPOLITICS') && highDomains.includes('ENERGY')) {
+            scenarios.push({
+                scenario: 'Resource conflict escalation',
+                probability: 0.45,
+                timeframe: '7-14 days',
+                indicators: ['Military deployments near energy infrastructure', 'Sanctions escalation', 'OPEC emergency sessions'],
+                domains: ['GEOPOLITICS', 'ENERGY'],
+            });
+        }
+
+        if (highDomains.includes('ECONOMY') && highDomains.includes('SOCIAL')) {
+            scenarios.push({
+                scenario: 'Economic crisis triggers social instability',
+                probability: 0.38,
+                timeframe: '14-30 days',
+                indicators: ['Unemployment spike', 'Inflation acceleration', 'Protest coordination'],
+                domains: ['ECONOMY', 'SOCIAL'],
+            });
+        }
+
+        if (highDomains.includes('CLIMATE') && highDomains.includes('ENERGY')) {
+            scenarios.push({
+                scenario: 'Climate event disrupts energy supply',
+                probability: 0.42,
+                timeframe: '7-21 days',
+                indicators: ['Extreme weather forecasts', 'Grid stress reports', 'Emergency declarations'],
+                domains: ['CLIMATE', 'ENERGY'],
+            });
+        }
+
+        if (highDomains.length >= 3) {
+            scenarios.push({
+                scenario: 'Systemic multi-domain crisis',
+                probability: 0.22,
+                timeframe: '30+ days',
+                indicators: ['Simultaneous high-severity signals across 3+ domains', 'Cascade pattern activation'],
+                domains: highDomains,
+            });
+        }
+
+        // Sort by priority
+        const priorityOrder = { HIGH: 0, CRITICAL: 0, ELEVATED: 1, MEDIUM: 2, MODERATE: 2, LOW: 3 };
+        indicators.sort((a, b) => (priorityOrder[a.priority] || 3) - (priorityOrder[b.priority] || 3));
+        actions.sort((a, b) => (priorityOrder[a.priority] || 3) - (priorityOrder[b.priority] || 3));
+        scenarios.sort((a, b) => b.probability - a.probability);
+
+        return {
+            indicators: indicators.slice(0, 10),
+            actions: actions.slice(0, 8),
+            scenarios: scenarios.slice(0, 5),
+            dataQuality: {
+                signalCount: signals.length,
+                domainCoverage: Object.values(domainStates).filter(d => d.signalCount > 0).length,
+                maxDomains: Object.keys(DOMAIN_META).length,
+                completeness: Math.round(Object.values(domainStates).filter(d => d.signalCount > 0).length / Object.keys(DOMAIN_META).length * 100),
+            },
+        };
+    }
+
+    // ══════════════════════════════════════════════
     // GENERATE FULL BRIEFING
     // ══════════════════════════════════════════════
 
@@ -194,6 +409,15 @@ const BriefingEngine = (() => {
 
         const periodLabels = { '24h': 'ULTIME 24 ORE', '7d': 'ULTIMI 7 GIORNI', '30d': 'ULTIMI 30 GIORNI' };
 
+        // Actionable intelligence
+        const actionableIntel = generateActionableIntel(signals);
+
+        // Cascade patterns
+        let cascadePatterns = [];
+        if (typeof CorrelationEngine !== 'undefined' && CorrelationEngine.detectCascadePatterns) {
+            cascadePatterns = CorrelationEngine.detectCascadePatterns(signals);
+        }
+
         return {
             period,
             periodLabel: periodLabels[period] || period,
@@ -205,6 +429,8 @@ const BriefingEngine = (() => {
             emergingPatterns: patterns,
             topSignals,
             correlations,
+            cascadePatterns,
+            actionableIntel,
             sources: getSourceSummary(signals),
         };
     }
@@ -276,6 +502,59 @@ const BriefingEngine = (() => {
             });
         }
 
+        // Cascade patterns
+        if (briefing.cascadePatterns && briefing.cascadePatterns.length > 0) {
+            report += `\n\n  CASCADE PATTERNS\n`;
+            report += `${thin}\n`;
+            briefing.cascadePatterns.forEach(c => {
+                report += `  [${c.severity}] ${c.name} (strength: ${c.cascadeStrength}%)\n`;
+                report += `  ${c.description}\n`;
+                c.cascadeEvidence.forEach(e => {
+                    const status = e.active ? 'ACTIVE' : 'DORMANT';
+                    report += `    → ${e.domain} [${status}]: ${e.mechanism}\n`;
+                });
+                report += '\n';
+            });
+        }
+
+        // Actionable Intelligence
+        if (briefing.actionableIntel) {
+            const ai = briefing.actionableIntel;
+            if (ai.indicators.length > 0) {
+                report += `\n\n  KEY INDICATORS TO WATCH\n`;
+                report += `${thin}\n`;
+                ai.indicators.forEach(ind => {
+                    report += `  [${ind.priority}] ${ind.indicator}\n`;
+                    report += `    ${ind.details}\n`;
+                    report += `    Watch for: ${ind.watchFor}\n\n`;
+                });
+            }
+            if (ai.actions.length > 0) {
+                report += `\n  RECOMMENDED ACTIONS\n`;
+                report += `${thin}\n`;
+                ai.actions.forEach((act, i) => {
+                    report += `  ${i + 1}. [${act.priority}] ${act.action}\n`;
+                });
+            }
+            if (ai.scenarios.length > 0) {
+                report += `\n\n  ESCALATION SCENARIOS\n`;
+                report += `${thin}\n`;
+                ai.scenarios.forEach(sc => {
+                    report += `  ⚠ ${sc.scenario}\n`;
+                    report += `    Probability: ${Math.round(sc.probability * 100)}% | Timeframe: ${sc.timeframe}\n`;
+                    report += `    Domains: ${sc.domains.join(', ')}\n`;
+                    report += `    Indicators:\n`;
+                    sc.indicators.forEach(ind => {
+                        report += `      • ${ind}\n`;
+                    });
+                    report += '\n';
+                });
+            }
+            report += `\n  DATA QUALITY\n`;
+            report += `${thin}\n`;
+            report += `  Signals: ${ai.dataQuality.signalCount} | Domain coverage: ${ai.dataQuality.domainCoverage}/${ai.dataQuality.maxDomains} (${ai.dataQuality.completeness}%)\n`;
+        }
+
         // Top signals
         report += `\n\n  TOP ${briefing.topSignals.length} SIGNALS BY SEVERITY\n`;
         report += `${thin}\n`;
@@ -330,6 +609,7 @@ const BriefingEngine = (() => {
         downloadReport,
         assessThreatLevel,
         detectEmergingPatterns,
+        generateActionableIntel,
         DOMAIN_META,
     };
 

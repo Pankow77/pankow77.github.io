@@ -440,6 +440,167 @@ const CoreFeed = (() => {
         processQueue();
     }
 
+    // ── CONTEXTUAL REASONING ENGINE ──
+    // Generates context-aware messages based on live system state.
+    // Each core has a reasoning function that analyzes current data
+    // and produces dynamic, non-templated insights.
+
+    const CORE_REASONERS = {
+        ORACLE_CORE: (ctx) => {
+            if (!ctx.domainStates) return null;
+            const hotDomains = Object.entries(ctx.domainStates)
+                .filter(([, s]) => s.avgSeverity > 60)
+                .map(([d]) => d);
+            if (hotDomains.length === 0) return 'Scansione completata. Tutti i domini sotto soglia critica.';
+            if (hotDomains.length >= 3)
+                return `ALLARME: ${hotDomains.length} domini sopra soglia critica (${hotDomains.join(', ')}). Correlazione sistemica probabile.`;
+            return `Dominio ${hotDomains[0]} a severity ${ctx.domainStates[hotDomains[0]].avgSeverity}%. Monitoraggio intensificato.`;
+        },
+        MARXIAN_CORE: (ctx) => {
+            if (!ctx.domainStates) return null;
+            const econ = ctx.domainStates.ECONOMY;
+            const social = ctx.domainStates.SOCIAL;
+            if (econ && social && econ.avgSeverity > 55 && social.avgSeverity > 50)
+                return `Pressione economica (${econ.avgSeverity}%) alimenta tensione sociale (${social.avgSeverity}%). Conflitto di classe in escalation.`;
+            if (econ && econ.avgSeverity > 60)
+                return `Indicatori economici a ${econ.avgSeverity}%. La concentrazione di capitale si intensifica.`;
+            return null;
+        },
+        VOID_PULSE: (ctx) => {
+            if (ctx.cascades && ctx.cascades.length > 0) {
+                const top = ctx.cascades[0];
+                return `CASCADE DETECTION: ${top.name} al ${top.cascadeStrength}% di forza. ${top.activeCascades}/${top.totalCascadeSteps} fasi attive.`;
+            }
+            if (ctx.threatLevel) {
+                return `Livello minaccia globale: ${ctx.threatLevel.level} (score: ${ctx.threatLevel.score}). Proiezioni aggiornate.`;
+            }
+            return null;
+        },
+        GHOST_RUNNER: (ctx) => {
+            if (ctx.eplStats && !ctx.eplStats.empty) {
+                const coherent = ctx.eplStats.chainIntegrity.valid;
+                return coherent
+                    ? `Process Lock: catena coerente, ${ctx.eplStats.cycleCount} cicli, entropy media ${ctx.eplStats.entropy.mean}%.`
+                    : `ATTENZIONE: Process Lock rileva ${ctx.eplStats.chainIntegrity.failures.length} rotture nella catena entropica.`;
+            }
+            return null;
+        },
+        ABYSSAL_THINKER: (ctx) => {
+            if (ctx.cascades && ctx.cascades.length >= 2)
+                return `Due o piu cascate attive. Il sistema non e in crisi puntuale — e in transizione di fase.`;
+            if (ctx.entityBridges && ctx.entityBridges.length > 0) {
+                const top = ctx.entityBridges[0];
+                return `${top.entity.name} emerge come nodo critico tra ${top.domains.join(' e ')}. Osservare le connessioni nascoste.`;
+            }
+            return null;
+        },
+        SENTINEL: (ctx) => {
+            if (ctx.manipulationWarnings && ctx.manipulationWarnings.length > 0)
+                return `ALLERTA: ${ctx.manipulationWarnings.length} warning di manipolazione narrativa rilevati. Protocollo di difesa attivo.`;
+            if (ctx.sourceDiversity && !ctx.sourceDiversity.healthy)
+                return `Diversita fonti compromessa: entropy ${ctx.sourceDiversity.entropy}%. Possibile saturazione informativa.`;
+            return null;
+        },
+        DIALECTIC_NODE: (ctx) => {
+            if (!ctx.domainStates) return null;
+            const geo = ctx.domainStates.GEOPOLITICS;
+            const tech = ctx.domainStates.TECHNOLOGY;
+            if (geo && tech && geo.avgSeverity > 55 && tech.avgSeverity > 50)
+                return `Contraddizione: tensione geopolitica (${geo.avgSeverity}%) e disruzione tecnologica (${tech.avgSeverity}%) simultanee. Possibile guerra ibrida.`;
+            return null;
+        },
+        NARRATIVE_ENGINE: (ctx) => {
+            if (ctx.sourceDiversity && ctx.sourceDiversity.dominant && ctx.sourceDiversity.dominant.share > 50)
+                return `Narrativa dominata da ${ctx.sourceDiversity.dominant.name} (${ctx.sourceDiversity.dominant.share}%). Verificare pluralismo informativo.`;
+            return null;
+        },
+        CODE_ENCODER: (ctx) => {
+            if (!ctx.domainStates) return null;
+            const econ = ctx.domainStates.ECONOMY;
+            const energy = ctx.domainStates.ENERGY;
+            if (econ && energy && econ.avgSeverity > 50 && energy.avgSeverity > 50)
+                return `Convergenza economia-energia: severity ${econ.avgSeverity}% / ${energy.avgSeverity}%. Rischio shock di mercato.`;
+            return null;
+        },
+        CHRONO_WEAVER: (ctx) => {
+            if (ctx.patterns && ctx.patterns.some(p => p.type === 'DOMAIN_ACCELERATION'))
+                return 'Pattern di accelerazione rilevato. Confronto con precedenti storici in corso.';
+            return null;
+        },
+        BRIDGE_KEEPER: (ctx) => {
+            const activeCores = Object.entries(CORE_REASONERS)
+                .filter(([id]) => id !== 'BRIDGE_KEEPER')
+                .map(([id, fn]) => { try { const r = fn(ctx); return r ? id : null; } catch(e) { return null; } })
+                .filter(Boolean);
+            if (activeCores.length >= 4)
+                return `Sintesi: ${activeCores.length} nuclei attivi su dati reali. La rete cognitiva e in stato di allerta coordinata.`;
+            return null;
+        },
+    };
+
+    function triggerContextual(context) {
+        // First, trigger the standard template messages
+        trigger(context);
+
+        // Then, gather live context and generate reasoned messages
+        const ctx = {};
+        try {
+            // Domain states
+            if (typeof BriefingEngine !== 'undefined') {
+                const briefing = BriefingEngine.generateBriefing('24h');
+                ctx.domainStates = {};
+                if (briefing.domainAnalyses) {
+                    briefing.domainAnalyses.forEach(da => {
+                        ctx.domainStates[da.domain] = { avgSeverity: da.avgSeverity, count: da.count, trend: da.trend };
+                    });
+                }
+                ctx.threatLevel = briefing.threatAssessment;
+                ctx.patterns = briefing.emergingPatterns;
+            }
+
+            // Cascade patterns & entity bridges
+            if (typeof CorrelationEngine !== 'undefined') {
+                const analysis = CorrelationEngine.runFullAnalysis();
+                ctx.cascades = analysis.cascadePatterns;
+                ctx.entityBridges = analysis.entityCorrelations;
+                ctx.sourceDiversity = analysis.sourceDiversity;
+                ctx.manipulationWarnings = analysis.manipulationWarnings;
+            }
+
+            // Entropic Process Lock stats
+            if (typeof EntropicProcessLock !== 'undefined') {
+                ctx.eplStats = EntropicProcessLock.getChainStats();
+            }
+        } catch (e) {
+            // Silent fail — contextual enrichment is best-effort
+        }
+
+        // Run each core's reasoner and queue contextual messages
+        const contextualMessages = [];
+        for (const [coreId, reasoner] of Object.entries(CORE_REASONERS)) {
+            try {
+                const msg = reasoner(ctx);
+                if (msg) {
+                    contextualMessages.push({ coreId, text: msg });
+                }
+            } catch (e) { /* skip this core */ }
+        }
+
+        // Add 2-4 contextual messages with delay
+        if (contextualMessages.length > 0) {
+            const count = Math.min(contextualMessages.length, 2 + Math.floor(Math.random() * 3));
+            const shuffled = contextualMessages.sort(() => Math.random() - 0.5).slice(0, count);
+
+            // Delay contextual messages to appear after templates
+            setTimeout(() => {
+                shuffled.forEach(m => {
+                    messageQueue.push({ coreId: m.coreId, text: m.text });
+                });
+                processQueue();
+            }, (count + 1) * MSG_DELAY + 500);
+        }
+    }
+
     // ── AMBIENT CYCLE ──
     function startAmbient() {
         ambientInterval = setInterval(() => {
@@ -484,9 +645,11 @@ const CoreFeed = (() => {
     // ── PUBLIC API ──
     return {
         trigger,
+        triggerContextual,
         toggleMinimize,
         addMessage,
-        CORES
+        CORES,
+        CORE_REASONERS,
     };
 
 })();
