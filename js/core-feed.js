@@ -171,12 +171,17 @@ const CoreFeed = (() => {
         ],
     };
 
+    // ── PRIORITY LEVELS ──
+    const PRIORITY = { CRITICAL: 0, HIGH: 1, NORMAL: 2, LOW: 3 };
+    const PRIORITY_LABELS = ['CRITICAL', 'HIGH', 'NORMAL', 'LOW'];
+    const MAX_QUEUE = 40;
+
     // ── STATE ──
     let feedEl = null;
     let feedList = null;
     let isMinimized = false;
     let ambientInterval = null;
-    let messageQueue = [];
+    let messageQueue = []; // { coreId, text, priority }
     let isProcessing = false;
     const MAX_MESSAGES = 25;
     const AMBIENT_INTERVAL = 6000;
@@ -394,13 +399,64 @@ const CoreFeed = (() => {
         if (el) el.remove();
     }
 
+    // ── QUEUE INSERT (sorted by priority) ──
+    function enqueue(coreId, text, priority) {
+        priority = (priority !== undefined) ? priority : PRIORITY.NORMAL;
+
+        // Overflow: drop lowest-priority messages
+        if (messageQueue.length >= MAX_QUEUE) {
+            // Find and remove the lowest priority (highest number) item from the end
+            let dropIdx = -1;
+            let worstPriority = -1;
+            for (let i = messageQueue.length - 1; i >= 0; i--) {
+                if (messageQueue[i].priority > worstPriority) {
+                    worstPriority = messageQueue[i].priority;
+                    dropIdx = i;
+                }
+            }
+            // Only drop if our new message is higher priority (lower number)
+            if (dropIdx >= 0 && priority < worstPriority) {
+                messageQueue.splice(dropIdx, 1);
+            } else if (priority >= worstPriority) {
+                return; // Queue full with higher/equal priority items, discard this one
+            }
+        }
+
+        // Insert in sorted position (lower priority number = earlier in queue)
+        let inserted = false;
+        for (let i = 0; i < messageQueue.length; i++) {
+            if (priority < messageQueue[i].priority) {
+                messageQueue.splice(i, 0, { coreId, text, priority });
+                inserted = true;
+                break;
+            }
+        }
+        if (!inserted) messageQueue.push({ coreId, text, priority });
+    }
+
     // ── PROCESS QUEUE ──
     function processQueue() {
         if (isProcessing || messageQueue.length === 0) return;
         isProcessing = true;
 
-        const { coreId, text } = messageQueue.shift();
+        const { coreId, text, priority } = messageQueue.shift();
+
+        // CRITICAL messages skip typing animation — instant display
+        if (priority === PRIORITY.CRITICAL) {
+            addMessage(coreId, text);
+            isProcessing = false;
+            if (messageQueue.length > 0) {
+                setTimeout(processQueue, 150);
+            }
+            return;
+        }
+
         const typingEl = showTyping(coreId);
+
+        // HIGH priority = faster delay
+        const delay = priority === PRIORITY.HIGH
+            ? 300 + Math.random() * 200
+            : MSG_DELAY + Math.random() * 400;
 
         setTimeout(() => {
             removeTyping();
@@ -409,7 +465,7 @@ const CoreFeed = (() => {
             if (messageQueue.length > 0) {
                 setTimeout(processQueue, 300);
             }
-        }, MSG_DELAY + Math.random() * 400);
+        }, delay);
     }
 
     // ── TRIGGER (called by pages) ──
@@ -423,9 +479,15 @@ const CoreFeed = (() => {
         const selected = shuffled.slice(0, count);
 
         selected.forEach(m => {
-            messageQueue.push({ coreId: m.core, text: m.msg });
+            enqueue(m.core, m.msg, PRIORITY.NORMAL);
         });
 
+        processQueue();
+    }
+
+    // ── ADD WITH PRIORITY (public API for intelligence systems) ──
+    function addPriority(coreId, text, priorityLevel) {
+        enqueue(coreId, text, priorityLevel !== undefined ? priorityLevel : PRIORITY.NORMAL);
         processQueue();
     }
 
@@ -435,7 +497,7 @@ const CoreFeed = (() => {
             if (messageQueue.length > 3) return; // Don't pile up
             const pool = MESSAGES.ambient;
             const m = pool[Math.floor(Math.random() * pool.length)];
-            messageQueue.push({ coreId: m.core, text: m.msg });
+            enqueue(m.core, m.msg, PRIORITY.LOW);
             processQueue();
         }, AMBIENT_INTERVAL);
     }
@@ -472,7 +534,9 @@ const CoreFeed = (() => {
         trigger,
         toggleMinimize,
         addMessage,
-        CORES
+        addPriority,
+        CORES,
+        PRIORITY
     };
 
 })();
