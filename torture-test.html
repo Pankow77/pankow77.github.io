@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HS // SYSTEM TORTURE TEST</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #060a12;
+            color: #c8d6e5;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff0084;
+            font-size: 16px;
+            letter-spacing: 0.15em;
+            margin-bottom: 4px;
+        }
+        .subtitle { color: #4a5a6c; font-size: 11px; margin-bottom: 20px; }
+        .test-suite {
+            border: 1px solid #1a2436;
+            margin-bottom: 16px;
+            background: #0a1020;
+        }
+        .suite-header {
+            background: #0d1528;
+            padding: 10px 16px;
+            color: #ffbf00;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid #1a2436;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .suite-header .badge {
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+        .badge-pass { background: rgba(0,212,170,0.15); color: #00d4aa; border: 1px solid rgba(0,212,170,0.3); }
+        .badge-fail { background: rgba(255,51,68,0.15); color: #ff3344; border: 1px solid rgba(255,51,68,0.3); }
+        .badge-running { background: rgba(255,191,0,0.15); color: #ffbf00; border: 1px solid rgba(255,191,0,0.3); }
+        .badge-pending { background: rgba(74,90,108,0.15); color: #4a5a6c; border: 1px solid rgba(74,90,108,0.3); }
+        .test-row {
+            padding: 6px 16px;
+            border-bottom: 1px solid rgba(26,36,54,0.4);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+        }
+        .test-row:last-child { border-bottom: none; }
+        .test-name { color: #8898a8; }
+        .test-result { font-weight: bold; letter-spacing: 0.05em; }
+        .pass { color: #00d4aa; }
+        .fail { color: #ff3344; }
+        .warn { color: #ffbf00; }
+        .info { color: #00c8ff; }
+        .log-area {
+            background: #050810;
+            border: 1px solid #1a2436;
+            padding: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 10px;
+            color: #4a5a6c;
+            margin-bottom: 16px;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .log-area .err { color: #ff3344; }
+        .log-area .ok { color: #00d4aa; }
+        .log-area .wrn { color: #ffbf00; }
+        .controls {
+            margin-bottom: 16px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        button {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            padding: 8px 16px;
+            background: #0d1528;
+            border: 1px solid #1a2d50;
+            color: #00c8ff;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+        }
+        button:hover { background: #152040; }
+        button.run-all { color: #ff0084; border-color: rgba(255,0,132,0.4); }
+        .summary {
+            padding: 12px 16px;
+            background: #0d1528;
+            border: 1px solid #1a2436;
+            margin-bottom: 16px;
+            display: flex;
+            gap: 24px;
+            font-size: 12px;
+        }
+        .summary .val { font-weight: bold; }
+        .state-dump {
+            background: #050810;
+            border: 1px solid #1a2436;
+            padding: 12px;
+            font-size: 10px;
+            color: #6a7a8c;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>HYBRID SYNDICATE // SYSTEM TORTURE TEST</h1>
+    <div class="subtitle">Integration test harness — Cross-module state verification</div>
+
+    <div class="controls">
+        <button class="run-all" onclick="runAllTests()">RUN ALL TESTS</button>
+        <button onclick="runSuite('fuzz')">FUZZ FEEDS</button>
+        <button onclick="runSuite('url')">URL SANITIZATION</button>
+        <button onclick="runSuite('unicode')">UNICODE</button>
+        <button onclick="runSuite('storage')">STORAGE ABUSE</button>
+        <button onclick="runSuite('worker')">WORKER CHAOS</button>
+        <button onclick="runSuite('consistency')">CONSISTENCY</button>
+        <button onclick="runSuite('reputation')">REPUTATION</button>
+        <button onclick="dumpSystemState()">DUMP STATE</button>
+    </div>
+
+    <div class="summary" id="summary">
+        <span>TOTAL: <span class="val" id="sumTotal">0</span></span>
+        <span>PASS: <span class="val pass" id="sumPass">0</span></span>
+        <span>FAIL: <span class="val fail" id="sumFail">0</span></span>
+        <span>WARN: <span class="val warn" id="sumWarn">0</span></span>
+    </div>
+
+    <div id="suites"></div>
+
+    <h1 style="margin-top:20px;">LOG</h1>
+    <div class="log-area" id="logArea"></div>
+
+    <h1>SYSTEM STATE DUMP</h1>
+    <div class="state-dump" id="stateDump">Click DUMP STATE to inspect all modules...</div>
+
+    <!-- Load the ecosystem modules -->
+    <script src="js/indexed-store.js"></script>
+    <script src="js/core-feed.js"></script>
+    <script src="js/persistence-manager.js"></script>
+    <script src="js/correlation-engine.js"></script>
+    <!-- NOTE: signal-interceptor.js not loaded — we test functions in isolation -->
+
+    <script>
+    // ═══════════════════════════════════════════════════════════════
+    // TEST FRAMEWORK
+    // ═══════════════════════════════════════════════════════════════
+
+    const results = { total: 0, pass: 0, fail: 0, warn: 0 };
+    const suiteResults = {};
+
+    function log(msg, cls) {
+        const area = document.getElementById('logArea');
+        const line = document.createElement('div');
+        if (cls) line.className = cls;
+        line.textContent = `[${new Date().toISOString().slice(11,19)}] ${msg}`;
+        area.appendChild(line);
+        area.scrollTop = area.scrollHeight;
+    }
+
+    function assert(name, condition, detail) {
+        results.total++;
+        if (condition) {
+            results.pass++;
+            log(`PASS: ${name}${detail ? ' — ' + detail : ''}`, 'ok');
+            return 'pass';
+        } else {
+            results.fail++;
+            log(`FAIL: ${name}${detail ? ' — ' + detail : ''}`, 'err');
+            return 'fail';
+        }
+    }
+
+    function warn(name, detail) {
+        results.warn++;
+        log(`WARN: ${name}${detail ? ' — ' + detail : ''}`, 'wrn');
+        return 'warn';
+    }
+
+    function updateSummary() {
+        document.getElementById('sumTotal').textContent = results.total;
+        document.getElementById('sumPass').textContent = results.pass;
+        document.getElementById('sumFail').textContent = results.fail;
+        document.getElementById('sumWarn').textContent = results.warn;
+    }
+
+    function renderSuite(name, tests) {
+        const container = document.getElementById('suites');
+        let suite = document.getElementById('suite-' + name);
+        if (!suite) {
+            suite = document.createElement('div');
+            suite.className = 'test-suite';
+            suite.id = 'suite-' + name;
+            container.appendChild(suite);
+        }
+
+        const passCount = tests.filter(t => t.result === 'pass').length;
+        const failCount = tests.filter(t => t.result === 'fail').length;
+        const badgeClass = failCount > 0 ? 'badge-fail' : 'badge-pass';
+        const badgeText = failCount > 0 ? `${failCount} FAIL` : `${passCount} PASS`;
+
+        suite.innerHTML = `
+            <div class="suite-header">
+                ${name.toUpperCase()}
+                <span class="badge ${badgeClass}">${badgeText}</span>
+            </div>
+            ${tests.map(t => `
+                <div class="test-row">
+                    <span class="test-name">${esc(t.name)}</span>
+                    <span class="test-result ${t.result}">${t.result.toUpperCase()}${t.detail ? ' — ' + esc(t.detail) : ''}</span>
+                </div>
+            `).join('')}
+        `;
+    }
+
+    function esc(s) {
+        const d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 1: FUZZ FEED ARTICLES
+    // ═══════════════════════════════════════════════════════════════
+
+    function testFuzzFeeds() {
+        const tests = [];
+        log('═══ FUZZ FEEDS ═══');
+
+        // Generate malformed articles
+        const fuzzCases = [
+            { name: 'null article', article: null },
+            { name: 'empty object', article: {} },
+            { name: 'missing title', article: { id: '1', source: 'test' } },
+            { name: 'missing source', article: { id: '1', title: 'test' } },
+            { name: 'missing id', article: { title: 'test', source: 'test' } },
+            { name: 'title=number', article: { id: '1', title: 12345, source: 'test' } },
+            { name: 'XSS in title', article: { id: '1', title: '<script>alert(1)</script>', source: 'test' } },
+            { name: 'XSS in description', article: { id: '1', title: 'ok', source: 'test', description: '<img onerror=alert(1) src=x>' } },
+            { name: 'huge title (10K)', article: { id: '1', title: 'A'.repeat(10000), source: 'test' } },
+            { name: 'huge description (100K)', article: { id: '1', title: 'ok', source: 'test', description: 'B'.repeat(100000) } },
+            { name: 'bidi override in title', article: { id: '1', title: 'normal \u202E\u0065\u0076\u0069\u006C text', source: 'test' } },
+            { name: 'null bytes in title', article: { id: '1', title: 'hello\x00world', source: 'test' } },
+            { name: 'control chars', article: { id: '1', title: '\x01\x02\x03test\x1F', source: 'test' } },
+            { name: 'array as article', article: [1, 2, 3] },
+            { name: 'string as article', article: 'not an object' },
+            { name: 'prototype pollution attempt', article: { id: '1', title: 'ok', source: 'test', __proto__: { admin: true }, constructor: { prototype: { admin: true } } } },
+        ];
+
+        // Test validation — none should crash, invalid ones should be rejected
+        fuzzCases.forEach(tc => {
+            try {
+                // Simulate the validation that signal-interceptor does
+                const result = validateArticleSafe(tc.article);
+                if (tc.name.includes('XSS') || tc.name.includes('missing') || tc.name === 'null article' ||
+                    tc.name === 'empty object' || tc.name === 'title=number' ||
+                    tc.name === 'array as article' || tc.name === 'string as article') {
+                    tests.push({ name: tc.name, result: assert(tc.name, !result.valid, 'correctly rejected'), detail: result.reason || 'rejected' });
+                } else {
+                    tests.push({ name: tc.name, result: assert(tc.name, true, 'did not crash'), detail: 'handled' });
+                }
+            } catch (e) {
+                tests.push({ name: tc.name, result: assert(tc.name, false, 'CRASHED: ' + e.message), detail: 'CRASH' });
+            }
+        });
+
+        renderSuite('fuzz', tests);
+        updateSummary();
+    }
+
+    // Mirror signal-interceptor's validateArticle
+    function validateArticleSafe(article) {
+        if (!article || typeof article !== 'object' || Array.isArray(article)) return { valid: false, reason: 'not_object' };
+        if (!article.title || typeof article.title !== 'string' || article.title.trim().length === 0) {
+            return { valid: false, reason: 'missing_title' };
+        }
+        if (!article.id) return { valid: false, reason: 'missing_id' };
+        if (!article.source || typeof article.source !== 'string') {
+            return { valid: false, reason: 'missing_source' };
+        }
+        if (article.title.length > 500) article.title = article.title.substring(0, 500);
+        if (article.description && article.description.length > 5000) article.description = article.description.substring(0, 5000);
+        if (article.link && !/^https?:\/\//.test(article.link)) article.link = '';
+        return { valid: true };
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 2: URL SANITIZATION
+    // ═══════════════════════════════════════════════════════════════
+
+    function testUrlSanitization() {
+        const tests = [];
+        log('═══ URL SANITIZATION ═══');
+
+        const SAFE_SCHEMES = new Set(['http:', 'https:']);
+
+        function sanitizeUrl(url) {
+            if (!url || typeof url !== 'string') return '';
+            try {
+                const parsed = new URL(url.trim());
+                if (!SAFE_SCHEMES.has(parsed.protocol)) return '';
+                if (parsed.username || parsed.password) return '';
+                if (!parsed.hostname) return '';
+                return parsed.href;
+            } catch (e) {
+                return '';
+            }
+        }
+
+        const urlCases = [
+            { name: 'valid https', url: 'https://www.bbc.com/news', expect: true },
+            { name: 'valid http', url: 'http://example.com', expect: true },
+            { name: 'javascript: URI', url: 'javascript:alert(1)', expect: false },
+            { name: 'data: URI', url: 'data:text/html,<script>alert(1)</script>', expect: false },
+            { name: 'vbscript: URI', url: 'vbscript:msgbox', expect: false },
+            { name: 'blob: URI', url: 'blob:http://evil.com/uuid', expect: false },
+            { name: 'userinfo @', url: 'http://legit.com@evil.com/path', expect: false },
+            { name: 'password in URL', url: 'http://user:pass@evil.com', expect: false },
+            { name: 'empty string', url: '', expect: false },
+            { name: 'null', url: null, expect: false },
+            { name: 'number', url: 12345, expect: false },
+            { name: 'malformed', url: 'not-a-url', expect: false },
+            { name: 'ftp scheme', url: 'ftp://files.com/data.txt', expect: false },
+            { name: 'file scheme', url: 'file:///etc/passwd', expect: false },
+            { name: 'double-encoded', url: 'https://evil.com/%2e%2e/admin', expect: true }, // URL() normalizes this
+            { name: 'unicode hostname', url: 'https://xn--n3h.com/', expect: true }, // valid punycode
+        ];
+
+        urlCases.forEach(tc => {
+            try {
+                const result = sanitizeUrl(tc.url);
+                const passed = tc.expect ? result !== '' : result === '';
+                tests.push({
+                    name: tc.name,
+                    result: assert(tc.name, passed, tc.expect ? 'allowed' : 'blocked'),
+                    detail: result || 'blocked'
+                });
+            } catch (e) {
+                tests.push({ name: tc.name, result: assert(tc.name, false, 'CRASHED'), detail: e.message });
+            }
+        });
+
+        renderSuite('url', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 3: UNICODE NORMALIZATION
+    // ═══════════════════════════════════════════════════════════════
+
+    function testUnicode() {
+        const tests = [];
+        log('═══ UNICODE NORMALIZATION ═══');
+
+        const BIDI_CHARS = /[\u200E\u200F\u202A-\u202E\u2066-\u2069\u200B\u200C\u200D\uFEFF]/g;
+        const CONTROL_CHARS = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g;
+
+        function normalizeText(str) {
+            if (!str || typeof str !== 'string') return '';
+            return str.normalize('NFC').replace(BIDI_CHARS, '').replace(CONTROL_CHARS, '').trim();
+        }
+
+        const cases = [
+            { name: 'normal text', input: 'Hello World', contains: 'Hello World' },
+            { name: 'NFC normalization', input: 'caf\u0065\u0301', contains: 'caf\u00E9' },
+            { name: 'bidi RLO stripped', input: 'abc\u202Edef', notContains: '\u202E' },
+            { name: 'bidi LRO stripped', input: 'abc\u202Ddef', notContains: '\u202D' },
+            { name: 'zero-width space stripped', input: 'ab\u200Bcd', notContains: '\u200B' },
+            { name: 'BOM stripped', input: '\uFEFFhello', notContains: '\uFEFF' },
+            { name: 'null bytes stripped', input: 'he\x00llo', notContains: '\x00' },
+            { name: 'control chars stripped', input: '\x01\x02test\x1F', notContains: '\x01' },
+            { name: 'tabs preserved', input: 'col1\tcol2', contains: '\t' },
+            { name: 'newlines preserved', input: 'line1\nline2', contains: '\n' },
+            { name: 'null input', input: null, expectEmpty: true },
+            { name: 'number input', input: 42, expectEmpty: true },
+        ];
+
+        cases.forEach(tc => {
+            try {
+                const result = normalizeText(tc.input);
+                let passed = true;
+                let detail = '';
+
+                if (tc.expectEmpty) {
+                    passed = result === '';
+                    detail = passed ? 'empty' : 'not empty: ' + result;
+                } else if (tc.contains) {
+                    passed = result.includes(tc.contains);
+                    detail = passed ? 'contains expected' : 'missing: ' + tc.contains;
+                } else if (tc.notContains) {
+                    passed = !result.includes(tc.notContains);
+                    detail = passed ? 'stripped' : 'still contains char';
+                }
+
+                tests.push({ name: tc.name, result: assert(tc.name, passed, detail), detail });
+            } catch (e) {
+                tests.push({ name: tc.name, result: assert(tc.name, false, 'CRASHED'), detail: e.message });
+            }
+        });
+
+        renderSuite('unicode', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 4: STORAGE ABUSE
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testStorageAbuse() {
+        const tests = [];
+        log('═══ STORAGE ABUSE ═══');
+
+        // Test 1: PersistenceManager storage report
+        try {
+            const report = PersistenceManager.getStorageReport();
+            tests.push({
+                name: 'storage report available',
+                result: assert('storage report', report && typeof report.bytesUsed === 'number', 'has bytesUsed'),
+                detail: `${report.kbUsed}KB used (${report.percentFull}%)`
+            });
+        } catch (e) {
+            tests.push({ name: 'storage report', result: 'fail', detail: e.message });
+        }
+
+        // Test 2: Add many signals rapidly
+        try {
+            const before = PersistenceManager.getArchive().length;
+            let added = 0;
+            for (let i = 0; i < 100; i++) {
+                const ok = PersistenceManager.addSignal({
+                    id: 'torture-' + Date.now() + '-' + i,
+                    title: 'Torture test signal #' + i,
+                    description: 'Generated by test harness',
+                    domain: ['CLIMATE', 'GEOPOLITICS', 'ECONOMY', 'TECHNOLOGY', 'SOCIAL', 'ENERGY'][i % 6],
+                    severity: 10 + (i % 80),
+                    source: 'TortureTest',
+                    link: 'https://test.local/torture/' + i,
+                    time: Date.now() - (i * 60000),
+                });
+                if (ok) added++;
+            }
+            const after = PersistenceManager.getArchive().length;
+            tests.push({
+                name: 'rapid 100 signal writes',
+                result: assert('rapid writes', added > 80, `added ${added}/100`),
+                detail: `before=${before}, after=${after}`
+            });
+        } catch (e) {
+            tests.push({ name: 'rapid writes', result: assert('rapid writes', false, e.message), detail: e.message });
+        }
+
+        // Test 3: TTL cleanup works
+        try {
+            PersistenceManager.cleanupExpiredSignals();
+            tests.push({
+                name: 'TTL cleanup runs without crash',
+                result: assert('TTL cleanup', true, 'no crash'),
+                detail: 'ok'
+            });
+        } catch (e) {
+            tests.push({ name: 'TTL cleanup', result: 'fail', detail: e.message });
+        }
+
+        // Test 4: IndexedDB available
+        try {
+            const idbAvail = typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable();
+            tests.push({
+                name: 'IndexedDB available',
+                result: idbAvail ? assert('IDB available', true) : warn('IDB not available', 'localStorage-only mode'),
+                detail: idbAvail ? 'yes' : 'no'
+            });
+        } catch (e) {
+            tests.push({ name: 'IDB check', result: 'fail', detail: e.message });
+        }
+
+        // Test 5: IndexedDB quota guard
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            try {
+                const est = await IndexedStore.getStorageEstimate();
+                tests.push({
+                    name: 'IDB storage estimate',
+                    result: assert('IDB estimate', est && typeof est.usage === 'number'),
+                    detail: `${est.usageMB}MB / ${est.quotaMB}MB (${est.percentUsed}%)`
+                });
+            } catch (e) {
+                tests.push({ name: 'IDB estimate', result: 'fail', detail: e.message });
+            }
+        }
+
+        // Cleanup torture signals
+        try {
+            const archive = PersistenceManager.getArchive();
+            const cleaned = archive.filter(s => !s.id || !s.id.startsWith('torture-'));
+            localStorage.setItem('hs_signal_archive', JSON.stringify(cleaned));
+            log('Cleaned up torture test signals');
+        } catch (e) {
+            log('Cleanup failed: ' + e.message, 'err');
+        }
+
+        renderSuite('storage', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 5: WORKER CHAOS
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testWorkerChaos() {
+        const tests = [];
+        log('═══ WORKER CHAOS ═══');
+
+        // Test 1: Worker can be created
+        try {
+            const w = new Worker('js/signal-worker.js');
+            const ready = await new Promise((resolve) => {
+                const timeout = setTimeout(() => resolve(false), 5000);
+                w.onmessage = (e) => {
+                    if (e.data && e.data.type === 'ready') {
+                        clearTimeout(timeout);
+                        resolve(true);
+                    }
+                };
+                w.onerror = () => { clearTimeout(timeout); resolve(false); };
+                w.postMessage({
+                    type: 'init',
+                    payload: {
+                        domains: { TEST: { color: '#fff', icon: 'T', keywords: ['test', 'hello'] } },
+                        urgencyWords: { high: ['breaking'], medium: ['warning'] }
+                    }
+                });
+            });
+            tests.push({
+                name: 'worker initialization',
+                result: assert('worker init', ready, 'responds to init'),
+                detail: ready ? 'ready' : 'timeout'
+            });
+
+            if (ready) {
+                // Test 2: Classification works
+                const classified = await new Promise((resolve) => {
+                    const timeout = setTimeout(() => resolve(null), 5000);
+                    w.onmessage = (e) => {
+                        if (e.data && e.data.type === 'classified') {
+                            clearTimeout(timeout);
+                            resolve(e.data.payload);
+                        }
+                    };
+                    w.postMessage({
+                        type: 'classify',
+                        id: 1,
+                        payload: {
+                            articles: [
+                                { id: 'w1', title: 'Hello test world breaking news', description: 'test description', source: 'WorkerTest', feedId: 'wt', lang: 'en' }
+                            ]
+                        }
+                    });
+                });
+                tests.push({
+                    name: 'worker classification',
+                    result: assert('worker classify', classified && classified.length > 0, `${classified ? classified.length : 0} signals`),
+                    detail: classified ? JSON.stringify(classified[0] && classified[0].domain) : 'null'
+                });
+
+                // Test 3: Empty batch
+                const empty = await new Promise((resolve) => {
+                    const timeout = setTimeout(() => resolve(null), 3000);
+                    w.onmessage = (e) => {
+                        if (e.data && e.data.type === 'classified') {
+                            clearTimeout(timeout);
+                            resolve(e.data.payload);
+                        }
+                    };
+                    w.postMessage({ type: 'classify', id: 2, payload: { articles: [] } });
+                });
+                tests.push({
+                    name: 'worker empty batch',
+                    result: assert('empty batch', empty && empty.length === 0, 'returns []'),
+                    detail: 'handled'
+                });
+
+                // Test 4: Invalid message (no type)
+                try {
+                    w.postMessage({ garbage: true });
+                    tests.push({
+                        name: 'worker ignores invalid message',
+                        result: assert('invalid msg', true, 'no crash'),
+                        detail: 'ok'
+                    });
+                } catch (e) {
+                    tests.push({ name: 'invalid msg', result: 'fail', detail: e.message });
+                }
+
+                // Test 5: Message ID propagation
+                const idCheck = await new Promise((resolve) => {
+                    const timeout = setTimeout(() => resolve(null), 3000);
+                    w.onmessage = (e) => {
+                        if (e.data && e.data.type === 'classified') {
+                            clearTimeout(timeout);
+                            resolve(e.data.id);
+                        }
+                    };
+                    w.postMessage({ type: 'classify', id: 42, payload: { articles: [] } });
+                });
+                tests.push({
+                    name: 'worker returns correct message ID',
+                    result: assert('msg id', idCheck === 42, `id=${idCheck}`),
+                    detail: `expected 42, got ${idCheck}`
+                });
+            }
+
+            w.terminate();
+        } catch (e) {
+            tests.push({ name: 'worker creation', result: assert('worker', false, e.message), detail: e.message });
+        }
+
+        renderSuite('worker', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 6: CONSISTENCY (Dual-write / Reconciliation)
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testConsistency() {
+        const tests = [];
+        log('═══ CONSISTENCY ═══');
+
+        // Test 1: Cycle ledger
+        try {
+            PersistenceManager.updateCycleLedger(5);
+            const ledger = PersistenceManager.getCycleLedger();
+            tests.push({
+                name: 'cycle ledger write/read',
+                result: assert('ledger', ledger && ledger.cycleId > 0 && ledger.signalsAdded === 5),
+                detail: `cycleId=${ledger.cycleId}, SoT=${ledger.sourceOfTruth}`
+            });
+        } catch (e) {
+            tests.push({ name: 'cycle ledger', result: 'fail', detail: e.message });
+        }
+
+        // Test 2: Reconciliation runs
+        try {
+            await PersistenceManager.reconcileStores();
+            tests.push({
+                name: 'reconciliation runs without crash',
+                result: assert('reconcile', true, 'no crash'),
+                detail: 'ok'
+            });
+        } catch (e) {
+            tests.push({ name: 'reconciliation', result: 'fail', detail: e.message });
+        }
+
+        // Test 3: localStorage and IDB signal counts
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            try {
+                const lsCount = PersistenceManager.getArchive().length;
+                const idbCount = await IndexedStore.getSignalCount();
+                const drift = Math.abs(lsCount - idbCount);
+                const healthy = drift <= Math.max(lsCount * 0.1, 10);
+
+                tests.push({
+                    name: 'store coherence (LS vs IDB)',
+                    result: healthy ? assert('coherence', true, `drift=${drift}`) : warn('store drift', `LS=${lsCount}, IDB=${idbCount}, drift=${drift}`),
+                    detail: `LS=${lsCount}, IDB=${idbCount}`
+                });
+            } catch (e) {
+                tests.push({ name: 'store coherence', result: 'fail', detail: e.message });
+            }
+        }
+
+        // Test 4: Archive integrity
+        try {
+            const archive = PersistenceManager.getArchive();
+            let malformed = 0;
+            archive.forEach(s => {
+                if (!s.id && !s.link) malformed++;
+                if (!s.domain) malformed++;
+                if (typeof s.severity !== 'number') malformed++;
+            });
+            tests.push({
+                name: 'archive integrity check',
+                result: assert('integrity', malformed === 0, `${malformed} malformed records`),
+                detail: `${archive.length} signals, ${malformed} malformed`
+            });
+        } catch (e) {
+            tests.push({ name: 'archive integrity', result: 'fail', detail: e.message });
+        }
+
+        renderSuite('consistency', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE 7: REPUTATION MODEL
+    // ═══════════════════════════════════════════════════════════════
+
+    function testReputation() {
+        const tests = [];
+        log('═══ REPUTATION MODEL ═══');
+
+        // Test median function
+        function median(arr) {
+            if (arr.length === 0) return 0;
+            const sorted = [...arr].sort((a, b) => a - b);
+            const mid = Math.floor(sorted.length / 2);
+            return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+        }
+
+        function mad(arr) {
+            const med = median(arr);
+            return median(arr.map(v => Math.abs(v - med)));
+        }
+
+        // Test 1: Median correctness
+        tests.push({
+            name: 'median([1,2,3,4,5]) = 3',
+            result: assert('median odd', median([1,2,3,4,5]) === 3),
+            detail: String(median([1,2,3,4,5]))
+        });
+
+        tests.push({
+            name: 'median([1,2,3,4]) = 2.5',
+            result: assert('median even', median([1,2,3,4]) === 2.5),
+            detail: String(median([1,2,3,4]))
+        });
+
+        tests.push({
+            name: 'median([]) = 0',
+            result: assert('median empty', median([]) === 0),
+            detail: '0'
+        });
+
+        // Test 2: MAD correctness
+        const madVal = mad([1, 1, 2, 2, 4, 6, 9]);
+        tests.push({
+            name: 'MAD([1,1,2,2,4,6,9]) = 1',
+            result: assert('MAD', madVal === 1, `got ${madVal}`),
+            detail: String(madVal)
+        });
+
+        // Test 3: Severity dampening (simulate)
+        function calcSeverity(keywordScore, burstCount, graylistPenalty, trustScore) {
+            let severity = Math.min(keywordScore * 10, 55);
+            if (burstCount > 5) severity *= 0.7;
+            severity *= graylistPenalty;
+            if (trustScore < 30) severity *= 0.75;
+            else if (trustScore < 50) severity *= 0.9;
+            if (severity > 75) severity = 75 + (severity - 75) * 0.3;
+            return Math.min(Math.max(Math.round(severity), 5), 98);
+        }
+
+        const normalSev = calcSeverity(4, 0, 1.0, 70);
+        const burstSev = calcSeverity(4, 10, 1.0, 70);
+        const graylistSev = calcSeverity(4, 0, 0.85, 70);
+        const lowTrustSev = calcSeverity(4, 0, 1.0, 25);
+
+        tests.push({
+            name: 'burst dampening reduces severity',
+            result: assert('burst damp', burstSev < normalSev, `${burstSev} < ${normalSev}`),
+            detail: `normal=${normalSev}, burst=${burstSev}`
+        });
+
+        tests.push({
+            name: 'graylist penalty reduces severity',
+            result: assert('graylist', graylistSev < normalSev, `${graylistSev} < ${normalSev}`),
+            detail: `normal=${normalSev}, graylisted=${graylistSev}`
+        });
+
+        tests.push({
+            name: 'low trust reduces severity',
+            result: assert('low trust', lowTrustSev < normalSev, `${lowTrustSev} < ${normalSev}`),
+            detail: `normal=${normalSev}, lowTrust=${lowTrustSev}`
+        });
+
+        // Test 4: Sigmoid capping
+        const highSev = calcSeverity(10, 0, 1.0, 90);
+        tests.push({
+            name: 'severity capped below 98',
+            result: assert('sev cap', highSev <= 98, `${highSev}`),
+            detail: String(highSev)
+        });
+
+        const lowSev = calcSeverity(0.5, 0, 1.0, 90);
+        tests.push({
+            name: 'severity floor at 5',
+            result: assert('sev floor', lowSev >= 5, `${lowSev}`),
+            detail: String(lowSev)
+        });
+
+        renderSuite('reputation', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // ORCHESTRATION
+    // ═══════════════════════════════════════════════════════════════
+
+    const SUITES = {
+        fuzz: testFuzzFeeds,
+        url: testUrlSanitization,
+        unicode: testUnicode,
+        storage: testStorageAbuse,
+        worker: testWorkerChaos,
+        consistency: testConsistency,
+        reputation: testReputation,
+    };
+
+    async function runSuite(name) {
+        if (SUITES[name]) {
+            log(`\n▶ Running suite: ${name.toUpperCase()}`);
+            await SUITES[name]();
+        }
+    }
+
+    async function runAllTests() {
+        results.total = 0;
+        results.pass = 0;
+        results.fail = 0;
+        results.warn = 0;
+        document.getElementById('suites').innerHTML = '';
+        document.getElementById('logArea').innerHTML = '';
+
+        log('╔══════════════════════════════════════════╗');
+        log('║   HYBRID SYNDICATE — TORTURE TEST v1.0   ║');
+        log('║   Cross-module integration verification   ║');
+        log('╚══════════════════════════════════════════╝');
+        log('');
+
+        for (const name of Object.keys(SUITES)) {
+            await runSuite(name);
+            log('');
+        }
+
+        log('═══════════════════════════════════════════');
+        log(`TOTAL: ${results.total} | PASS: ${results.pass} | FAIL: ${results.fail} | WARN: ${results.warn}`);
+        log(results.fail === 0 ? 'ALL TESTS PASSED' : `${results.fail} TESTS FAILED`, results.fail === 0 ? 'ok' : 'err');
+        updateSummary();
+    }
+
+    function dumpSystemState() {
+        const dump = {};
+
+        // PersistenceManager state
+        try {
+            dump.persistence = {
+                archiveSize: PersistenceManager.getArchive().length,
+                storageReport: PersistenceManager.getStorageReport(),
+                cycleLedger: PersistenceManager.getCycleLedger(),
+                stats: PersistenceManager.getStats(),
+            };
+        } catch (e) { dump.persistence = { error: e.message }; }
+
+        // CorrelationEngine state
+        try {
+            const analysis = CorrelationEngine.runFullAnalysis();
+            dump.correlation = {
+                archiveSize: analysis.archiveSize,
+                correlations: analysis.correlations.length,
+                clusters: analysis.clusters.length,
+                severitySpike: analysis.severitySpike,
+                sourceDiversity: analysis.sourceDiversity,
+                bursts: analysis.bursts.length,
+                manipulationWarnings: analysis.manipulationWarnings.length,
+                watchlistHits: analysis.watchlistHits.length,
+            };
+        } catch (e) { dump.correlation = { error: e.message }; }
+
+        // IndexedStore state
+        if (typeof IndexedStore !== 'undefined') {
+            dump.indexedStore = {
+                available: IndexedStore.isAvailable(),
+            };
+            // Async parts
+            IndexedStore.getSignalCount().then(count => {
+                dump.indexedStore.signalCount = count;
+                document.getElementById('stateDump').textContent = JSON.stringify(dump, null, 2);
+            });
+            IndexedStore.getStorageEstimate().then(est => {
+                dump.indexedStore.estimate = est;
+                document.getElementById('stateDump').textContent = JSON.stringify(dump, null, 2);
+            });
+            IndexedStore.getAllReputations().then(reps => {
+                dump.indexedStore.reputations = reps.length;
+                document.getElementById('stateDump').textContent = JSON.stringify(dump, null, 2);
+            });
+            IndexedStore.getAllQuarantined().then(q => {
+                dump.indexedStore.quarantined = q.length;
+                document.getElementById('stateDump').textContent = JSON.stringify(dump, null, 2);
+            });
+        }
+
+        // localStorage summary
+        try {
+            let totalSize = 0;
+            const keys = {};
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                const size = (localStorage.getItem(key) || '').length * 2;
+                keys[key] = Math.round(size / 1024) + 'KB';
+                totalSize += size;
+            }
+            dump.localStorage = {
+                totalKB: Math.round(totalSize / 1024),
+                keys: keys,
+            };
+        } catch (e) { dump.localStorage = { error: e.message }; }
+
+        document.getElementById('stateDump').textContent = JSON.stringify(dump, null, 2);
+        log('System state dumped');
+    }
+    </script>
+</body>
+</html>

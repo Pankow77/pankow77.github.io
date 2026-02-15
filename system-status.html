@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
+    <title>HS // SYSTEM STATUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #060a12;
+            color: #c8d6e5;
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            font-size: 12px;
+            min-height: 100vh;
+        }
+        .header {
+            background: #080e1c;
+            border-bottom: 1px solid #1a2436;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            color: #ff0084;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+        .header .subtitle {
+            font-size: 10px;
+            color: #4a5a6c;
+            letter-spacing: 0.08em;
+        }
+        .header .refresh-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 10px;
+            padding: 6px 14px;
+            background: #0d1528;
+            border: 1px solid #1a2d50;
+            color: #00c8ff;
+            cursor: pointer;
+            letter-spacing: 0.08em;
+        }
+        .header .refresh-btn:hover { background: #152040; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1px;
+            background: #1a2436;
+            padding: 1px;
+        }
+        .panel {
+            background: #0a1020;
+            padding: 16px;
+        }
+        .panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            color: #ffbf00;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .panel-title .status-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot-green { background: #00d4aa; box-shadow: 0 0 6px rgba(0,212,170,0.5); }
+        .dot-yellow { background: #ffbf00; box-shadow: 0 0 6px rgba(255,191,0,0.5); }
+        .dot-red { background: #ff3344; box-shadow: 0 0 6px rgba(255,51,68,0.5); }
+        .dot-gray { background: #4a5a6c; }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(26,36,54,0.3);
+            font-size: 11px;
+        }
+        .metric:last-child { border-bottom: none; }
+        .metric .label { color: #6a7a8c; }
+        .metric .value { color: #c8d6e5; font-weight: bold; }
+        .metric .value.good { color: #00d4aa; }
+        .metric .value.warn { color: #ffbf00; }
+        .metric .value.bad { color: #ff3344; }
+        .metric .value.info { color: #00c8ff; }
+        .bar {
+            height: 4px;
+            background: #1a2436;
+            border-radius: 2px;
+            margin-top: 2px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s;
+        }
+        .bar-green { background: #00d4aa; }
+        .bar-yellow { background: #ffbf00; }
+        .bar-red { background: #ff3344; }
+        .trust-table {
+            width: 100%;
+            font-size: 10px;
+            margin-top: 8px;
+        }
+        .trust-table th {
+            text-align: left;
+            color: #4a5a6c;
+            font-weight: normal;
+            padding: 4px 6px;
+            border-bottom: 1px solid #1a2436;
+            font-family: 'Orbitron', monospace;
+            font-size: 9px;
+            letter-spacing: 0.08em;
+        }
+        .trust-table td {
+            padding: 3px 6px;
+            border-bottom: 1px solid rgba(26,36,54,0.2);
+            color: #8898a8;
+        }
+        .trust-table .graylisted { color: #ff3344; }
+        .feed-table {
+            width: 100%;
+            font-size: 10px;
+            margin-top: 8px;
+        }
+        .feed-table th {
+            text-align: left;
+            color: #4a5a6c;
+            font-weight: normal;
+            padding: 4px 6px;
+            border-bottom: 1px solid #1a2436;
+            font-family: 'Orbitron', monospace;
+            font-size: 9px;
+        }
+        .feed-table td {
+            padding: 3px 6px;
+            border-bottom: 1px solid rgba(26,36,54,0.2);
+        }
+        .feed-table .quarantined { color: #ff3344; font-weight: bold; }
+        .feed-table .healthy { color: #00d4aa; }
+        .auto-refresh { color: #4a5a6c; font-size: 10px; }
+        @media (max-width: 700px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>SYSTEM STATUS INSPECTOR</h1>
+            <div class="subtitle">Real-time state of all defensive systems // Auto-refresh 10s</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+            <span class="auto-refresh" id="lastRefresh">—</span>
+            <button class="refresh-btn" onclick="refreshAll()">REFRESH</button>
+        </div>
+    </div>
+
+    <div class="grid" id="grid">
+        <!-- Panels injected by JS -->
+    </div>
+
+    <script src="js/indexed-store.js"></script>
+    <script src="js/core-feed.js"></script>
+    <script src="js/persistence-manager.js"></script>
+    <script src="js/correlation-engine.js"></script>
+    <script src="js/signal-interceptor.js"></script>
+
+    <script>
+    function esc(s) {
+        if (s === null || s === undefined) return '—';
+        const d = document.createElement('div');
+        d.textContent = String(s);
+        return d.innerHTML;
+    }
+
+    function cls(val, thresholds) {
+        if (thresholds.bad !== undefined && val >= thresholds.bad) return 'bad';
+        if (thresholds.warn !== undefined && val >= thresholds.warn) return 'warn';
+        return 'good';
+    }
+
+    function barColor(pct) {
+        if (pct >= 85) return 'bar-red';
+        if (pct >= 60) return 'bar-yellow';
+        return 'bar-green';
+    }
+
+    async function refreshAll() {
+        const grid = document.getElementById('grid');
+        let html = '';
+
+        // ── 1. Signal Interceptor Status ──
+        const siStats = typeof SignalInterceptor !== 'undefined' ? SignalInterceptor.getStats() : null;
+        if (siStats) {
+            const primaryCB = siStats.circuitBreaker.primary;
+            const fallbackCB = siStats.circuitBreaker.fallback;
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    SIGNAL INTERCEPTOR
+                    <span class="status-dot ${siStats.workerActive ? 'dot-green' : 'dot-yellow'}"></span>
+                </div>
+                <div class="metric"><span class="label">Cycle Count</span><span class="value info">${siStats.cycleCount}</span></div>
+                <div class="metric"><span class="label">Total Fetched</span><span class="value">${siStats.totalFetched}</span></div>
+                <div class="metric"><span class="label">Total Signals</span><span class="value good">${siStats.totalSignals}</span></div>
+                <div class="metric"><span class="label">Errors</span><span class="value ${cls(siStats.errors, {warn:3, bad:10})}">${siStats.errors}</span></div>
+                <div class="metric"><span class="label">Worker</span><span class="value ${siStats.workerActive ? 'good' : 'warn'}">${siStats.workerActive ? 'ACTIVE' : 'OFF (main thread)'}</span></div>
+                <div class="metric"><span class="label">Primary Proxy</span><span class="value ${primaryCB.open ? 'bad' : 'good'}">${primaryCB.open ? 'CIRCUIT OPEN' : 'OK'} (${primaryCB.failures} failures)</span></div>
+                <div class="metric"><span class="label">Fallback Proxy</span><span class="value ${fallbackCB.open ? 'bad' : 'good'}">${fallbackCB.open ? 'CIRCUIT OPEN' : 'OK'} (${fallbackCB.failures} failures)</span></div>
+                <div class="metric"><span class="label">Last Poll</span><span class="value">${siStats.lastPoll ? new Date(siStats.lastPoll).toLocaleTimeString() : 'never'}</span></div>
+            </div>`;
+        }
+
+        // ── 2. Storage Status ──
+        const storageReport = typeof PersistenceManager !== 'undefined' ? PersistenceManager.getStorageReport() : null;
+        if (storageReport) {
+            const pct = storageReport.percentFull;
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    STORAGE
+                    <span class="status-dot ${storageReport.critical ? 'dot-red' : storageReport.healthy ? 'dot-green' : 'dot-yellow'}"></span>
+                </div>
+                <div class="metric"><span class="label">localStorage Used</span><span class="value ${cls(pct, {warn:60, bad:85})}">${storageReport.mbUsed}MB (${pct}%)</span></div>
+                <div class="bar"><div class="bar-fill ${barColor(pct)}" style="width:${Math.min(pct,100)}%"></div></div>
+                <div class="metric"><span class="label">IndexedDB</span><span class="value ${storageReport.indexedDB ? 'good' : 'warn'}">${storageReport.indexedDB ? 'AVAILABLE' : 'UNAVAILABLE'}</span></div>
+                <div class="metric"><span class="label">Archive Size</span><span class="value">${PersistenceManager.getArchive().length} signals</span></div>
+                <div class="metric"><span class="label">Health</span><span class="value ${storageReport.healthy ? 'good' : 'bad'}">${storageReport.healthy ? 'HEALTHY' : storageReport.critical ? 'CRITICAL' : 'WARNING'}</span></div>
+            </div>`;
+        }
+
+        // ── 3. IndexedDB Detail ──
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            try {
+                const est = await IndexedStore.getStorageEstimate();
+                const idbCount = await IndexedStore.getSignalCount();
+                const reps = await IndexedStore.getAllReputations();
+                const quarantined = await IndexedStore.getAllQuarantined();
+                html += `
+                <div class="panel">
+                    <div class="panel-title">INDEXEDDB<span class="status-dot dot-green"></span></div>
+                    <div class="metric"><span class="label">Signal Count</span><span class="value info">${idbCount}</span></div>
+                    <div class="metric"><span class="label">Usage</span><span class="value">${est.usageMB}MB / ${est.quotaMB}MB (${est.percentUsed}%)</span></div>
+                    <div class="bar"><div class="bar-fill ${barColor(est.percentUsed)}" style="width:${Math.min(est.percentUsed,100)}%"></div></div>
+                    <div class="metric"><span class="label">Reputations Stored</span><span class="value">${reps.length}</span></div>
+                    <div class="metric"><span class="label">Feeds Quarantined</span><span class="value ${quarantined.length > 0 ? 'bad' : 'good'}">${quarantined.length}</span></div>
+                </div>`;
+            } catch (e) {
+                html += `<div class="panel"><div class="panel-title">INDEXEDDB<span class="status-dot dot-red"></span></div><div class="metric"><span class="label">Error</span><span class="value bad">${esc(e.message)}</span></div></div>`;
+            }
+        }
+
+        // ── 4. Source Reputation ──
+        if (typeof SignalInterceptor !== 'undefined') {
+            const trust = SignalInterceptor.getSourceTrust();
+            const graylist = SignalInterceptor.getGraylist();
+            const groups = SignalInterceptor.getDomainGroups();
+            const sources = Object.entries(trust);
+            const graylisted = Object.keys(graylist);
+
+            html += `
+            <div class="panel" style="grid-column: span 2;">
+                <div class="panel-title">
+                    SOURCE REPUTATION
+                    <span class="status-dot ${graylisted.length > 0 ? 'dot-yellow' : 'dot-green'}"></span>
+                </div>
+                <div class="metric"><span class="label">Sources Tracked</span><span class="value info">${sources.length}</span></div>
+                <div class="metric"><span class="label">Domain Groups</span><span class="value">${Object.keys(groups).length}</span></div>
+                <div class="metric"><span class="label">Graylisted</span><span class="value ${graylisted.length > 0 ? 'warn' : 'good'}">${graylisted.length}</span></div>
+                ${sources.length > 0 ? `
+                <table class="trust-table">
+                    <tr><th>SOURCE</th><th>TRUST</th><th>SIGNALS</th><th>BURST</th><th>MEDIAN</th><th>MAD</th><th>GRAY</th></tr>
+                    ${sources.map(([name, t]) => `
+                    <tr class="${t.graylisted ? 'graylisted' : ''}">
+                        <td>${esc(name)}</td>
+                        <td style="color:${t.trustScore >= 60 ? '#00d4aa' : t.trustScore >= 30 ? '#ffbf00' : '#ff3344'}">${Math.round(t.trustScore)}</td>
+                        <td>${t.historicalSignals}</td>
+                        <td>${t.burstCount}</td>
+                        <td>${t.severityMedian !== null ? Math.round(t.severityMedian) : '—'}</td>
+                        <td>${t.severityMAD !== null ? t.severityMAD.toFixed(1) : '—'}</td>
+                        <td>${t.graylisted ? 'YES' : '—'}</td>
+                    </tr>
+                    `).join('')}
+                </table>` : ''}
+            </div>`;
+        }
+
+        // ── 5. Feed Health ──
+        if (typeof SignalInterceptor !== 'undefined') {
+            const feedHealth = SignalInterceptor.getFeedHealth();
+            const feeds = Object.entries(feedHealth);
+
+            if (feeds.length > 0) {
+                html += `
+                <div class="panel" style="grid-column: span 2;">
+                    <div class="panel-title">FEED HEALTH</div>
+                    <table class="feed-table">
+                        <tr><th>FEED</th><th>OK</th><th>FAIL</th><th>ARTICLES</th><th>INVALID</th><th>STATUS</th></tr>
+                        ${feeds.map(([id, h]) => `
+                        <tr>
+                            <td>${esc(id)}</td>
+                            <td class="healthy">${h.successes}</td>
+                            <td style="color:${h.failures > 0 ? '#ff3344' : '#6a7a8c'}">${h.failures}</td>
+                            <td>${h.totalArticles}</td>
+                            <td style="color:${h.invalidArticles > 0 ? '#ffbf00' : '#6a7a8c'}">${h.invalidArticles}</td>
+                            <td class="${h.quarantined ? 'quarantined' : 'healthy'}">${h.quarantined ? 'QUARANTINED' : 'ACTIVE'}</td>
+                        </tr>
+                        `).join('')}
+                    </table>
+                </div>`;
+            }
+        }
+
+        // ── 6. Correlation Engine ──
+        if (typeof CorrelationEngine !== 'undefined') {
+            try {
+                const analysis = CorrelationEngine.runFullAnalysis();
+                html += `
+                <div class="panel">
+                    <div class="panel-title">
+                        CORRELATION ENGINE
+                        <span class="status-dot ${analysis.manipulationWarnings.length > 0 ? 'dot-red' : 'dot-green'}"></span>
+                    </div>
+                    <div class="metric"><span class="label">Active Correlations</span><span class="value info">${analysis.correlations.length}</span></div>
+                    <div class="metric"><span class="label">Temporal Clusters</span><span class="value">${analysis.clusters.length}</span></div>
+                    <div class="metric"><span class="label">Source Diversity</span><span class="value ${analysis.sourceDiversity.healthy ? 'good' : 'warn'}">${analysis.sourceDiversity.entropy}% entropy</span></div>
+                    <div class="metric"><span class="label">Active Bursts</span><span class="value ${analysis.bursts.length > 0 ? 'warn' : 'good'}">${analysis.bursts.length}</span></div>
+                    <div class="metric"><span class="label">Manipulation Warnings</span><span class="value ${analysis.manipulationWarnings.length > 0 ? 'bad' : 'good'}">${analysis.manipulationWarnings.length}</span></div>
+                    <div class="metric"><span class="label">Severity Spike</span><span class="value">${analysis.severitySpike ? analysis.severitySpike.type + ' (' + analysis.severitySpike.delta + ')' : 'none'}</span></div>
+                    <div class="metric"><span class="label">Watchlist Hits</span><span class="value ${analysis.watchlistHits.length > 0 ? 'warn' : 'good'}">${analysis.watchlistHits.length}</span></div>
+                </div>`;
+            } catch (e) {
+                html += `<div class="panel"><div class="panel-title">CORRELATION ENGINE<span class="status-dot dot-red"></span></div><div class="metric"><span class="value bad">${esc(e.message)}</span></div></div>`;
+            }
+        }
+
+        // ── 7. Cycle Ledger ──
+        if (typeof PersistenceManager !== 'undefined') {
+            const ledger = PersistenceManager.getCycleLedger();
+            html += `
+            <div class="panel">
+                <div class="panel-title">DUAL-WRITE LEDGER</div>
+                <div class="metric"><span class="label">Cycle ID</span><span class="value">${ledger.cycleId || 0}</span></div>
+                <div class="metric"><span class="label">Last Write</span><span class="value">${ledger.timestamp ? new Date(ledger.timestamp).toLocaleTimeString() : '—'}</span></div>
+                <div class="metric"><span class="label">LS Count at Write</span><span class="value">${ledger.lsCount || 0}</span></div>
+                <div class="metric"><span class="label">Source of Truth</span><span class="value info">${ledger.sourceOfTruth || 'localStorage'}</span></div>
+            </div>`;
+        }
+
+        grid.innerHTML = html;
+        document.getElementById('lastRefresh').textContent = 'Last: ' + new Date().toLocaleTimeString();
+    }
+
+    // Auto-refresh every 10 seconds
+    refreshAll();
+    setInterval(refreshAll, 10000);
+    </script>
+</body>
+</html>
