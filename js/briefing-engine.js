@@ -83,13 +83,16 @@ const BriefingEngine = (() => {
     // ══════════════════════════════════════════════
 
     function assessThreatLevel(signals) {
-        if (signals.length === 0) return { level: 'UNKNOWN', color: '#666', score: 0 };
+        if (!signals || signals.length === 0) return { level: 'UNKNOWN', color: '#666', score: 0 };
 
         const avgSev = signals.reduce((s, x) => s + (x.severity || 0), 0) / signals.length;
         const criticalCount = signals.filter(s => s.severity >= 70).length;
         const criticalRatio = criticalCount / signals.length;
 
-        const score = Math.round(avgSev * 0.6 + criticalRatio * 100 * 0.4);
+        // Confidence discount for low signal counts — need volume to be certain
+        const volumeConfidence = Math.min(1, signals.length / 10);
+        const rawScore = avgSev * 0.6 + criticalRatio * 100 * 0.4;
+        const score = Math.round(rawScore * (0.5 + volumeConfidence * 0.5));
 
         if (score >= 65) return { level: 'CRITICAL', color: '#ff3344', score };
         if (score >= 50) return { level: 'HIGH', color: '#ff8833', score };
@@ -316,49 +319,84 @@ const BriefingEngine = (() => {
             }
         });
 
-        // SCENARIOS based on current state
-        const highDomains = Object.entries(domainStates)
-            .filter(([, s]) => s.avgSeverity > 60)
+        // SCENARIOS based on current state — probabilities derived from signals
+        // Graduated threshold: domains qualify with a continuous confidence score
+        const domainConfidence = {};
+        Object.entries(domainStates).forEach(([d, s]) => {
+            // Graduated score: 0 at severity 40, 1 at severity 80
+            const sevScore = Math.max(0, Math.min(1, (s.avgSeverity - 40) / 40));
+            // Volume factor: more signals = higher confidence
+            const volScore = Math.max(0, Math.min(1, (s.signalCount - 1) / 10));
+            domainConfidence[d] = sevScore * 0.7 + volScore * 0.3;
+        });
+
+        // Derive probability from domain confidence scores (not hardcoded)
+        function deriveScenarioProbability(domains) {
+            const scores = domains.map(d => domainConfidence[d] || 0);
+            if (scores.some(s => s <= 0)) return 0;
+            // Geometric mean of domain confidences * base ceiling
+            const geoMean = Math.pow(scores.reduce((p, s) => p * s, 1), 1 / scores.length);
+            return Math.round(geoMean * 60) / 100; // Max ~0.60 for perfect signals
+        }
+
+        const highDomains = Object.entries(domainConfidence)
+            .filter(([, c]) => c > 0.4)
             .map(([d]) => d);
 
-        if (highDomains.includes('GEOPOLITICS') && highDomains.includes('ENERGY')) {
-            scenarios.push({
-                scenario: 'Resource conflict escalation',
-                probability: 0.45,
-                timeframe: '7-14 days',
-                indicators: ['Military deployments near energy infrastructure', 'Sanctions escalation', 'OPEC emergency sessions'],
-                domains: ['GEOPOLITICS', 'ENERGY'],
-            });
+        if (domainConfidence.GEOPOLITICS > 0.3 && domainConfidence.ENERGY > 0.3) {
+            const prob = deriveScenarioProbability(['GEOPOLITICS', 'ENERGY']);
+            if (prob > 0.05) {
+                scenarios.push({
+                    scenario: 'Resource conflict escalation',
+                    probability: prob,
+                    timeframe: '7-14 days',
+                    indicators: ['Military deployments near energy infrastructure', 'Sanctions escalation', 'OPEC emergency sessions'],
+                    domains: ['GEOPOLITICS', 'ENERGY'],
+                    derivedFrom: { geoConf: domainConfidence.GEOPOLITICS.toFixed(2), energyConf: domainConfidence.ENERGY.toFixed(2) },
+                });
+            }
         }
 
-        if (highDomains.includes('ECONOMY') && highDomains.includes('SOCIAL')) {
-            scenarios.push({
-                scenario: 'Economic crisis triggers social instability',
-                probability: 0.38,
-                timeframe: '14-30 days',
-                indicators: ['Unemployment spike', 'Inflation acceleration', 'Protest coordination'],
-                domains: ['ECONOMY', 'SOCIAL'],
-            });
+        if (domainConfidence.ECONOMY > 0.3 && domainConfidence.SOCIAL > 0.3) {
+            const prob = deriveScenarioProbability(['ECONOMY', 'SOCIAL']);
+            if (prob > 0.05) {
+                scenarios.push({
+                    scenario: 'Economic crisis triggers social instability',
+                    probability: prob,
+                    timeframe: '14-30 days',
+                    indicators: ['Unemployment spike', 'Inflation acceleration', 'Protest coordination'],
+                    domains: ['ECONOMY', 'SOCIAL'],
+                    derivedFrom: { econConf: domainConfidence.ECONOMY.toFixed(2), socialConf: domainConfidence.SOCIAL.toFixed(2) },
+                });
+            }
         }
 
-        if (highDomains.includes('CLIMATE') && highDomains.includes('ENERGY')) {
-            scenarios.push({
-                scenario: 'Climate event disrupts energy supply',
-                probability: 0.42,
-                timeframe: '7-21 days',
-                indicators: ['Extreme weather forecasts', 'Grid stress reports', 'Emergency declarations'],
-                domains: ['CLIMATE', 'ENERGY'],
-            });
+        if (domainConfidence.CLIMATE > 0.3 && domainConfidence.ENERGY > 0.3) {
+            const prob = deriveScenarioProbability(['CLIMATE', 'ENERGY']);
+            if (prob > 0.05) {
+                scenarios.push({
+                    scenario: 'Climate event disrupts energy supply',
+                    probability: prob,
+                    timeframe: '7-21 days',
+                    indicators: ['Extreme weather forecasts', 'Grid stress reports', 'Emergency declarations'],
+                    domains: ['CLIMATE', 'ENERGY'],
+                    derivedFrom: { climateConf: domainConfidence.CLIMATE.toFixed(2), energyConf: domainConfidence.ENERGY.toFixed(2) },
+                });
+            }
         }
 
         if (highDomains.length >= 3) {
-            scenarios.push({
-                scenario: 'Systemic multi-domain crisis',
-                probability: 0.22,
-                timeframe: '30+ days',
-                indicators: ['Simultaneous high-severity signals across 3+ domains', 'Cascade pattern activation'],
-                domains: highDomains,
-            });
+            const prob = deriveScenarioProbability(highDomains);
+            if (prob > 0.05) {
+                scenarios.push({
+                    scenario: 'Systemic multi-domain crisis',
+                    probability: prob,
+                    timeframe: '30+ days',
+                    indicators: ['Simultaneous high-severity signals across 3+ domains', 'Cascade pattern activation'],
+                    domains: highDomains,
+                    derivedFrom: Object.fromEntries(highDomains.map(d => [d, domainConfidence[d].toFixed(2)])),
+                });
+            }
         }
 
         // Sort by priority

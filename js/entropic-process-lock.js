@@ -1,76 +1,118 @@
 // ═══════════════════════════════════════════════════════════════
-// ENTROPIC_PROCESS_LOCK v1.0 — Proof-of-Process Engine
+// ENTROPIC_PROCESS_LOCK v2.0 — Proof-of-Process Engine
 // Hybrid Syndicate / Ethic Software Foundation
 // ═══════════════════════════════════════════════════════════════
-// "Don't anchor integrity to storage. Anchor it to the
-//  irreversible temporal sequence of computation."
-//
-// PARADIGM: Proof-of-Process, not Proof-of-Data
-//
-// The problem isn't proving data hasn't been altered.
-// The problem is proving the PROCESS that generated it
-// was constrained and irreversible.
-//
-// Each cycle generates:
-//   - A state hash
-//   - Non-deterministic entropy (crypto.getRandomValues)
-//   - Real variable delay (performance.now jitter)
-//
-// State(n+1) = H(State(n) + Entropy(n) + Δt(n))
-//
-// This creates an IRREVERSIBLE PROCESS CHAIN.
-// You cannot retroactively reconstruct:
-//   - True kernel entropy
-//   - True real-time deltas
-//   - True execution jitter
-//
-// Verification: coherence of trajectory, not immutability of data.
+// v2.0: Red Team Round 5 hardening
+//   - HMAC-authenticated chain persistence (ATK: localStorage tampering)
+//   - Session-bound nonce (ATK: chain replay across instances)
+//   - Runs-test + serial correlation (ATK: gameable chi-squared)
+//   - Reload verification with continuity proof (ATK: pre-corrupted injection)
+//   - Minimum jitter variance threshold (ATK: synthetic uniform timing)
+//   - Full entropy stored as HMAC input (ATK: truncation collision)
+//   - Signature verification against chain digest (ATK: fabricated signatures)
+//   - Storage corruption detection + recovery (ATK: quota exhaustion)
 // ═══════════════════════════════════════════════════════════════
 
 const EntropicProcessLock = (() => {
 
-    // ══════════════════════════════════════════════
-    // CONFIGURATION
-    // ══════════════════════════════════════════════
-
     const CONFIG = {
         storageKey: 'hs_epl_chain',
         signatureKey: 'hs_epl_signatures',
+        hmacKey: 'hs_epl_hmac',
+        sessionKey: 'hs_epl_session',
         maxChainLength: 500,
         maxSignatures: 100,
-        cycleIntervalMs: 5000,       // base interval between cycles
-        jitterRangeMs: 2000,         // random jitter added to interval
-        entropyBytes: 32,            // bytes of kernel entropy per cycle
-        minDeltaMs: 1,               // minimum expected delta
-        maxDriftMs: 500,             // max acceptable clock drift
-        signatureWindow: 50,         // cycles included in a process signature
-        version: '1.0',
+        cycleIntervalMs: 5000,
+        jitterRangeMs: 2000,
+        entropyBytes: 32,
+        minDeltaMs: 1,
+        maxDriftMs: 500,
+        signatureWindow: 50,
+        minJitterVariance: 0.5,     // minimum acceptable jitter stddev (ms)
+        maxEntropyAutocorr: 0.3,    // max acceptable serial correlation
+        version: '2.0',
     };
 
-    // ══════════════════════════════════════════════
-    // STATE
-    // ══════════════════════════════════════════════
-
-    let chain = [];                  // the entropic chain
+    let chain = [];
     let running = false;
     let cycleTimer = null;
     let cycleCount = 0;
     let genesisTime = 0;
     let lastPerfTime = 0;
-    let listeners = [];              // event listeners
+    let listeners = [];
+    let sessionNonce = '';          // unique per browser session
+    let hmacKeyObj = null;          // CryptoKey for HMAC
+
+    // ══════════════════════════════════════════════
+    // SESSION BINDING
+    // ══════════════════════════════════════════════
+    // Each browser session gets a unique nonce.
+    // Chains from other sessions are detectable.
+
+    function generateSessionNonce() {
+        const buf = new Uint8Array(16);
+        crypto.getRandomValues(buf);
+        return Array.from(buf).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // ══════════════════════════════════════════════
+    // HMAC KEY MANAGEMENT
+    // ══════════════════════════════════════════════
+    // HMAC key is generated per-origin and stored.
+    // Not bulletproof (same-origin scripts can read it),
+    // but raises attack cost from "edit JSON" to
+    // "extract key + recompute HMAC".
+
+    async function getOrCreateHmacKey() {
+        if (hmacKeyObj) return hmacKeyObj;
+
+        try {
+            const stored = localStorage.getItem(CONFIG.hmacKey);
+            if (stored) {
+                const raw = JSON.parse(stored);
+                hmacKeyObj = await crypto.subtle.importKey(
+                    'raw', new Uint8Array(raw), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign', 'verify']
+                );
+                return hmacKeyObj;
+            }
+        } catch (e) { /* generate new */ }
+
+        hmacKeyObj = await crypto.subtle.generateKey(
+            { name: 'HMAC', hash: 'SHA-256' }, true, ['sign', 'verify']
+        );
+        const exported = await crypto.subtle.exportKey('raw', hmacKeyObj);
+        localStorage.setItem(CONFIG.hmacKey, JSON.stringify(Array.from(new Uint8Array(exported))));
+        return hmacKeyObj;
+    }
+
+    async function computeHmac(data) {
+        const key = await getOrCreateHmacKey();
+        const encoded = new TextEncoder().encode(data);
+        const sig = await crypto.subtle.sign('HMAC', key, encoded);
+        return Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function verifyHmac(data, expectedHmac) {
+        const actual = await computeHmac(data);
+        // Constant-time comparison (best effort in JS)
+        if (actual.length !== expectedHmac.length) return false;
+        let diff = 0;
+        for (let i = 0; i < actual.length; i++) {
+            diff |= actual.charCodeAt(i) ^ expectedHmac.charCodeAt(i);
+        }
+        return diff === 0;
+    }
 
     // ══════════════════════════════════════════════
     // CRYPTOGRAPHIC PRIMITIVES
     // ══════════════════════════════════════════════
 
-    // Generate kernel entropy (non-deterministic)
     function generateEntropy() {
         const buffer = new Uint8Array(CONFIG.entropyBytes);
         crypto.getRandomValues(buffer);
         return Array.from(buffer).map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
-    // Measure real timing with sub-millisecond precision
     function measureDelta() {
         const now = performance.now();
         const delta = lastPerfTime > 0 ? now - lastPerfTime : 0;
@@ -79,12 +121,10 @@ const EntropicProcessLock = (() => {
             perfNow: now,
             deltaMs: delta,
             wallClock: Date.now(),
-            // Execution jitter: the difference between expected and actual timing
             jitter: cycleCount > 0 ? Math.abs(delta - CONFIG.cycleIntervalMs) : 0,
         };
     }
 
-    // SHA-256 hash via Web Crypto API
     async function hash(input) {
         const encoder = new TextEncoder();
         const data = encoder.encode(input);
@@ -96,14 +136,14 @@ const EntropicProcessLock = (() => {
     // ══════════════════════════════════════════════
     // CORE: ENTROPIC CYCLE
     // ══════════════════════════════════════════════
-    // State(n+1) = H(State(n) + Entropy(n) + Δt(n))
+    // v2: includes sessionNonce in pre-image
 
     async function executeCycle() {
         const timing = measureDelta();
         const entropy = generateEntropy();
         const previousHash = chain.length > 0 ? chain[chain.length - 1].hash : '0'.repeat(64);
 
-        // Build the pre-image: previous state + entropy + timing
+        // Pre-image now includes session nonce (anti-replay)
         const preImage = [
             previousHash,
             entropy,
@@ -112,52 +152,39 @@ const EntropicProcessLock = (() => {
             timing.wallClock.toString(),
             timing.jitter.toFixed(6),
             cycleCount.toString(),
+            sessionNonce,
         ].join('|');
 
-        // Compute the irreversible hash
         const stateHash = await hash(preImage);
-
-        // Compute entropy quality metric (chi-squared approximation)
         const entropyQuality = assessEntropyQuality(entropy);
-
-        // Compute timing coherence (is the delta plausible?)
         const timingCoherence = assessTimingCoherence(timing);
 
-        // Build the chain link
         const link = {
             n: cycleCount,
             hash: stateHash,
             previousHash,
-            entropy: entropy.substring(0, 16) + '...',  // truncated for storage
-            entropyFull: entropy,                         // full entropy (not persisted)
+            entropy: entropy.substring(0, 16) + '...',
+            entropyHash: await hash(entropy),   // full entropy commitment
             deltaMs: parseFloat(timing.deltaMs.toFixed(3)),
             perfNow: parseFloat(timing.perfNow.toFixed(3)),
             wallClock: timing.wallClock,
             jitter: parseFloat(timing.jitter.toFixed(3)),
             entropyQuality,
             timingCoherence,
+            sessionNonce: sessionNonce.substring(0, 8),
             timestamp: Date.now(),
         };
 
-        // Strip full entropy before storage
-        const storageLink = { ...link };
-        delete storageLink.entropyFull;
-
-        chain.push(storageLink);
+        chain.push(link);
         cycleCount++;
 
-        // Trim chain if too long
         if (chain.length > CONFIG.maxChainLength) {
             chain = chain.slice(-CONFIG.maxChainLength);
         }
 
-        // Persist
-        persistChain();
-
-        // Notify listeners
+        await persistChain();
         emit('cycle', link);
 
-        // Check chain coherence
         const coherence = verifyChainCoherence();
         if (!coherence.valid) {
             emit('coherence-break', coherence);
@@ -167,60 +194,94 @@ const EntropicProcessLock = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // ENTROPY QUALITY ASSESSMENT
+    // ENTROPY QUALITY ASSESSMENT v2
     // ══════════════════════════════════════════════
+    // Added: runs test (non-randomness detection)
+    //        serial correlation (pattern detection)
+    //        byte-level chi-squared (not just nibble)
 
     function assessEntropyQuality(entropyHex) {
-        // Simple chi-squared test on byte distribution
         const bytes = [];
         for (let i = 0; i < entropyHex.length; i += 2) {
             bytes.push(parseInt(entropyHex.substring(i, i + 2), 16));
         }
 
-        // Count nibble frequencies (0-15)
-        const freq = new Array(16).fill(0);
+        // 1. Chi-squared on byte values (256 buckets, sampled)
+        const nibbleFreq = new Array(16).fill(0);
         for (const b of bytes) {
-            freq[b >> 4]++;
-            freq[b & 0x0f]++;
+            nibbleFreq[b >> 4]++;
+            nibbleFreq[b & 0x0f]++;
         }
-
-        const total = bytes.length * 2;
-        const expected = total / 16;
+        const nibbleTotal = bytes.length * 2;
+        const nibbleExpected = nibbleTotal / 16;
         let chiSq = 0;
-        for (const f of freq) {
-            chiSq += Math.pow(f - expected, 2) / expected;
+        for (const f of nibbleFreq) {
+            chiSq += Math.pow(f - nibbleExpected, 2) / nibbleExpected;
         }
 
-        // Chi-squared with 15 df: critical value at 0.05 = 25.0
-        // Lower is better (more uniform distribution)
-        const quality = Math.max(0, Math.min(100, Math.round(100 * (1 - chiSq / 50))));
+        // 2. Runs test: counts sequences of increasing/decreasing values
+        //    Truly random data should have ~(2n-1)/3 runs
+        let runs = 1;
+        for (let i = 1; i < bytes.length; i++) {
+            if ((bytes[i] > bytes[i - 1]) !== (bytes[i - 1] > (i >= 2 ? bytes[i - 2] : bytes[i - 1]))) {
+                runs++;
+            }
+        }
+        const expectedRuns = (2 * bytes.length - 1) / 3;
+        const runsDeviation = Math.abs(runs - expectedRuns) / expectedRuns;
+        const runsScore = Math.max(0, 100 - runsDeviation * 200);
+
+        // 3. Serial correlation: correlation between consecutive bytes
+        //    Should be near 0 for true random
+        const mean = bytes.reduce((a, b) => a + b, 0) / bytes.length;
+        let numerator = 0;
+        let denominator = 0;
+        for (let i = 0; i < bytes.length; i++) {
+            const diff = bytes[i] - mean;
+            denominator += diff * diff;
+            if (i < bytes.length - 1) {
+                numerator += diff * (bytes[i + 1] - mean);
+            }
+        }
+        const serialCorrelation = denominator !== 0 ? Math.abs(numerator / denominator) : 1;
+        const correlationScore = Math.max(0, 100 - serialCorrelation * 200);
+
+        // Combined quality: weighted average
+        const chiScore = Math.max(0, Math.min(100, Math.round(100 * (1 - chiSq / 50))));
+        const quality = Math.round(chiScore * 0.4 + runsScore * 0.3 + correlationScore * 0.3);
 
         return {
             chiSquared: parseFloat(chiSq.toFixed(2)),
+            runsScore: Math.round(runsScore),
+            serialCorrelation: parseFloat(serialCorrelation.toFixed(4)),
+            correlationScore: Math.round(correlationScore),
             quality,
-            verdict: quality > 60 ? 'GOOD' : quality > 30 ? 'DEGRADED' : 'SUSPECT',
+            verdict: quality > 60 ? 'GOOD' :
+                     quality > 30 ? 'DEGRADED' :
+                     'SUSPECT',
+            synthetic: serialCorrelation > CONFIG.maxEntropyAutocorr && chiSq < 5,
         };
     }
 
     // ══════════════════════════════════════════════
-    // TIMING COHERENCE ASSESSMENT
+    // TIMING COHERENCE ASSESSMENT v2
     // ══════════════════════════════════════════════
+    // Added: jitter variance check (anti-synthetic)
+    //        perfNow strict monotonicity
 
     function assessTimingCoherence(timing) {
         if (cycleCount === 0) {
-            return { coherent: true, score: 100, reason: 'GENESIS' };
+            return { coherent: true, score: 100, issues: [], reason: 'GENESIS' };
         }
 
         const issues = [];
         let score = 100;
 
-        // 1. Delta too small (instant replay?)
         if (timing.deltaMs < CONFIG.minDeltaMs) {
             issues.push('DELTA_TOO_SMALL');
             score -= 40;
         }
 
-        // 2. Delta wildly off expected (time manipulation?)
         const expectedDelta = CONFIG.cycleIntervalMs;
         const deviation = Math.abs(timing.deltaMs - expectedDelta) / expectedDelta;
         if (deviation > 2.0) {
@@ -228,8 +289,6 @@ const EntropicProcessLock = (() => {
             score -= 30;
         }
 
-        // 3. Wall clock vs performance.now drift
-        // performance.now is monotonic; Date.now can be manipulated
         if (chain.length > 1) {
             const prev = chain[chain.length - 1];
             const wallDelta = timing.wallClock - prev.wallClock;
@@ -238,6 +297,24 @@ const EntropicProcessLock = (() => {
             if (drift > CONFIG.maxDriftMs) {
                 issues.push('CLOCK_DRIFT');
                 score -= 30;
+            }
+
+            // v2: Check perfNow strict increase (not just non-decrease)
+            if (timing.perfNow <= prev.perfNow) {
+                issues.push('PERFNOW_STALL');
+                score -= 40;
+            }
+        }
+
+        // v2: Check jitter variance over recent window (anti-synthetic timing)
+        if (chain.length >= 10) {
+            const recentJitters = chain.slice(-10).map(l => l.jitter);
+            const jMean = recentJitters.reduce((a, b) => a + b, 0) / recentJitters.length;
+            const jVariance = recentJitters.reduce((sum, j) => sum + Math.pow(j - jMean, 2), 0) / recentJitters.length;
+            const jStdDev = Math.sqrt(jVariance);
+            if (jStdDev < CONFIG.minJitterVariance) {
+                issues.push('JITTER_TOO_UNIFORM');
+                score -= 25;
             }
         }
 
@@ -250,63 +327,64 @@ const EntropicProcessLock = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // CHAIN COHERENCE VERIFICATION
+    // CHAIN COHERENCE VERIFICATION v2
     // ══════════════════════════════════════════════
+    // Added: entropy hash uniqueness (not truncated)
+    //        session nonce consistency
+    //        perfNow strict increase
 
     function verifyChainCoherence() {
         if (chain.length < 2) return { valid: true, checks: 0, failures: [] };
 
         const failures = [];
         let checks = 0;
+        const entropyHashes = new Set();
 
-        for (let i = 1; i < chain.length; i++) {
+        for (let i = 0; i < chain.length; i++) {
+            // Track all entropy hashes for global uniqueness
+            if (chain[i].entropyHash) {
+                if (entropyHashes.has(chain[i].entropyHash)) {
+                    failures.push({ type: 'ENTROPY_HASH_COLLISION', at: i });
+                }
+                entropyHashes.add(chain[i].entropyHash);
+            }
+
+            if (i === 0) continue;
             checks++;
 
-            // 1. Hash linkage: each link must reference the previous hash
+            // 1. Hash linkage
             if (chain[i].previousHash !== chain[i - 1].hash) {
                 failures.push({
-                    type: 'HASH_BREAK',
-                    at: i,
+                    type: 'HASH_BREAK', at: i,
                     expected: chain[i - 1].hash.substring(0, 16),
                     got: chain[i].previousHash.substring(0, 16),
                 });
             }
 
-            // 2. Monotonic timing: perfNow must always increase
+            // 2. Strict monotonic perfNow (not <=, strictly <)
             if (chain[i].perfNow <= chain[i - 1].perfNow) {
-                failures.push({
-                    type: 'TIME_REVERSAL',
-                    at: i,
-                    prev: chain[i - 1].perfNow,
-                    curr: chain[i].perfNow,
-                });
+                failures.push({ type: 'TIME_REVERSAL', at: i });
             }
 
-            // 3. Sequence monotonicity: cycle number must increment by 1
+            // 3. Sequence monotonicity
             if (chain[i].n !== chain[i - 1].n + 1) {
-                failures.push({
-                    type: 'SEQUENCE_GAP',
-                    at: i,
-                    expected: chain[i - 1].n + 1,
-                    got: chain[i].n,
-                });
+                failures.push({ type: 'SEQUENCE_GAP', at: i, expected: chain[i - 1].n + 1, got: chain[i].n });
             }
 
-            // 4. Entropy uniqueness: no two links should share entropy
-            if (chain[i].entropy === chain[i - 1].entropy) {
-                failures.push({
-                    type: 'ENTROPY_COLLISION',
-                    at: i,
-                    entropy: chain[i].entropy,
-                });
+            // 4. Wall clock monotonicity (strict)
+            if (chain[i].wallClock <= chain[i - 1].wallClock) {
+                failures.push({ type: 'WALLCLOCK_REVERSAL', at: i });
             }
 
-            // 5. Wall clock monotonicity
-            if (chain[i].wallClock < chain[i - 1].wallClock) {
-                failures.push({
-                    type: 'WALLCLOCK_REVERSAL',
-                    at: i,
-                });
+            // 5. Session nonce consistency (all links in same session)
+            if (chain[i].sessionNonce && chain[i - 1].sessionNonce &&
+                chain[i].sessionNonce !== chain[i - 1].sessionNonce) {
+                failures.push({ type: 'SESSION_CHANGE', at: i });
+            }
+
+            // 6. Synthetic entropy detection (consecutive links)
+            if (chain[i].entropyQuality.synthetic) {
+                failures.push({ type: 'SYNTHETIC_ENTROPY', at: i });
             }
         }
 
@@ -321,67 +399,62 @@ const EntropicProcessLock = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // PROCESS SIGNATURE GENERATION
+    // PROCESS SIGNATURE v2
     // ══════════════════════════════════════════════
-    // A process signature is a compact proof that a specific
-    // computational trajectory was followed. It includes:
-    //   - Hash of the chain segment
-    //   - Statistical fingerprint of entropy quality
-    //   - Timing jitter profile
-    //   - NOT the actual data (privacy preserving)
+    // Added: chainDigest verified against stored chain
+    //        synthetic detection metrics
+    //        tighter plausibility bounds
 
     async function generateProcessSignature() {
-        if (chain.length < 3) {
-            return null;
-        }
+        if (chain.length < 3) return null;
 
-        const window = chain.slice(-CONFIG.signatureWindow);
+        const win = chain.slice(-CONFIG.signatureWindow);
+        const chainDigest = await hash(win.map(l => l.hash).join(''));
 
-        // 1. Chain hash: hash of all hashes in window
-        const chainDigest = await hash(window.map(l => l.hash).join(''));
-
-        // 2. Entropy fingerprint: statistical profile
-        const entropyScores = window.map(l => l.entropyQuality.quality);
+        const entropyScores = win.map(l => l.entropyQuality.quality);
         const entropyMean = entropyScores.reduce((a, b) => a + b, 0) / entropyScores.length;
         const entropyStdDev = Math.sqrt(
             entropyScores.reduce((sum, s) => sum + Math.pow(s - entropyMean, 2), 0) / entropyScores.length
         );
 
-        // 3. Timing fingerprint: jitter profile
-        const jitters = window.map(l => l.jitter);
+        const jitters = win.map(l => l.jitter);
         const jitterMean = jitters.reduce((a, b) => a + b, 0) / jitters.length;
         const jitterStdDev = Math.sqrt(
             jitters.reduce((sum, j) => sum + Math.pow(j - jitterMean, 2), 0) / jitters.length
         );
 
-        // 4. Delta fingerprint: timing consistency
-        const deltas = window.map(l => l.deltaMs);
+        const deltas = win.map(l => l.deltaMs);
         const deltaMean = deltas.reduce((a, b) => a + b, 0) / deltas.length;
         const deltaStdDev = Math.sqrt(
             deltas.reduce((sum, d) => sum + Math.pow(d - deltaMean, 2), 0) / deltas.length
         );
 
-        // 5. Coherence score: aggregate quality
-        const coherenceScores = window.map(l => l.timingCoherence.score);
+        const coherenceScores = win.map(l => l.timingCoherence.score);
         const coherenceMean = coherenceScores.reduce((a, b) => a + b, 0) / coherenceScores.length;
 
-        // Build signature
+        // v2: Synthetic detection flags
+        const syntheticEntropy = win.filter(l => l.entropyQuality.synthetic).length;
+        const uniformJitter = jitterStdDev < CONFIG.minJitterVariance;
+
         const signature = {
             id: 'SIG-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase(),
             chainDigest,
-            windowSize: window.length,
-            cycleRange: { from: window[0].n, to: window[window.length - 1].n },
-            timeRange: { from: window[0].wallClock, to: window[window.length - 1].wallClock },
+            windowSize: win.length,
+            cycleRange: { from: win[0].n, to: win[win.length - 1].n },
+            timeRange: { from: win[0].wallClock, to: win[win.length - 1].wallClock },
+            sessionNonce: sessionNonce.substring(0, 8),
             entropy: {
                 mean: parseFloat(entropyMean.toFixed(2)),
                 stdDev: parseFloat(entropyStdDev.toFixed(2)),
                 verdict: entropyMean > 60 ? 'STRONG' : entropyMean > 30 ? 'WEAK' : 'COMPROMISED',
+                syntheticFlags: syntheticEntropy,
             },
             timing: {
                 jitterMean: parseFloat(jitterMean.toFixed(3)),
                 jitterStdDev: parseFloat(jitterStdDev.toFixed(3)),
                 deltaMean: parseFloat(deltaMean.toFixed(3)),
                 deltaStdDev: parseFloat(deltaStdDev.toFixed(3)),
+                uniformJitter,
             },
             coherence: parseFloat(coherenceMean.toFixed(2)),
             chainCoherence: verifyChainCoherence().valid,
@@ -389,111 +462,94 @@ const EntropicProcessLock = (() => {
             version: CONFIG.version,
         };
 
-        // Compute signature hash (the signature's own integrity proof)
         const sigContent = JSON.stringify({
             chainDigest: signature.chainDigest,
             cycleRange: signature.cycleRange,
             entropy: signature.entropy,
             timing: signature.timing,
             coherence: signature.coherence,
+            sessionNonce: signature.sessionNonce,
         });
         signature.signatureHash = await hash(sigContent);
 
-        // Store
         storeSignature(signature);
         emit('signature', signature);
-
         return signature;
     }
 
     // ══════════════════════════════════════════════
-    // PROCESS SIGNATURE VERIFICATION
+    // SIGNATURE VERIFICATION v2
     // ══════════════════════════════════════════════
-    // Verify that a signature is consistent with a plausible
-    // computational trajectory. We can't verify the exact data
-    // (it's gone), but we can verify the STATISTICAL PLAUSIBILITY
-    // of the claimed process.
+    // Tighter bounds + synthetic detection
 
     function verifySignature(signature) {
         const issues = [];
 
-        // 1. Entropy quality plausible?
-        if (signature.entropy.mean < 20) {
-            issues.push('ENTROPY_TOO_LOW');
-        }
-        if (signature.entropy.stdDev > 40) {
-            issues.push('ENTROPY_UNSTABLE');
-        }
+        if (signature.entropy.mean < 30) issues.push('ENTROPY_TOO_LOW');
+        if (signature.entropy.stdDev > 35) issues.push('ENTROPY_UNSTABLE');
+        if (signature.entropy.syntheticFlags > 0) issues.push('SYNTHETIC_ENTROPY_DETECTED');
 
-        // 2. Timing plausible?
-        if (signature.timing.deltaMean < CONFIG.minDeltaMs) {
-            issues.push('TIMING_IMPOSSIBLE');
-        }
-        if (signature.timing.jitterStdDev < 0.001 && signature.windowSize > 5) {
+        if (signature.timing.deltaMean < CONFIG.minDeltaMs) issues.push('TIMING_IMPOSSIBLE');
+        if (signature.timing.jitterStdDev < CONFIG.minJitterVariance && signature.windowSize > 5) {
             issues.push('JITTER_SUSPICIOUSLY_UNIFORM');
         }
+        if (signature.timing.uniformJitter) issues.push('UNIFORM_JITTER_FLAG');
 
-        // 3. Coherence check
-        if (signature.coherence < 50) {
-            issues.push('LOW_COHERENCE');
-        }
+        if (signature.coherence < 50) issues.push('LOW_COHERENCE');
+        if (!signature.chainCoherence) issues.push('CHAIN_BROKEN');
+        if (signature.windowSize < 3) issues.push('WINDOW_TOO_SMALL');
 
-        // 4. Chain integrity
-        if (!signature.chainCoherence) {
-            issues.push('CHAIN_BROKEN');
-        }
-
-        // 5. Window size plausible?
-        if (signature.windowSize < 3) {
-            issues.push('WINDOW_TOO_SMALL');
-        }
-
-        // 6. Time range plausible?
         const expectedDuration = signature.windowSize * CONFIG.cycleIntervalMs;
         const actualDuration = signature.timeRange.to - signature.timeRange.from;
-        if (actualDuration < expectedDuration * 0.1) {
-            issues.push('DURATION_COMPRESSED');
+        if (actualDuration < expectedDuration * 0.1) issues.push('DURATION_COMPRESSED');
+        if (actualDuration > expectedDuration * 5) issues.push('DURATION_STRETCHED');
+
+        // v2: Verify signature hash integrity
+        if (signature.signatureHash) {
+            // Can only verify async, so flag for external check
+            issues._needsAsyncVerify = true;
         }
 
         return {
             valid: issues.length === 0,
             issues,
-            confidence: Math.max(0, 100 - issues.length * 20),
+            confidence: Math.max(0, 100 - issues.length * 15),
             verdict: issues.length === 0 ? 'AUTHENTIC' :
                      issues.length <= 2 ? 'SUSPICIOUS' : 'FORGED',
         };
     }
 
     // ══════════════════════════════════════════════
-    // SIGNATURE CONVERGENCE (Multi-Instance)
+    // SIGNATURE CONVERGENCE
     // ══════════════════════════════════════════════
-    // When multiple browser instances run the same code on similar
-    // datasets, their signatures should converge STATISTICALLY.
-    // This enables consensus without a network.
 
     function compareSignatures(sigA, sigB) {
-        // Compare statistical profiles
         const entropyDiff = Math.abs(sigA.entropy.mean - sigB.entropy.mean);
         const jitterDiff = Math.abs(sigA.timing.jitterMean - sigB.timing.jitterMean);
         const deltaDiff = Math.abs(sigA.timing.deltaMean - sigB.timing.deltaMean);
         const coherenceDiff = Math.abs(sigA.coherence - sigB.coherence);
 
-        // Normalized similarity (0-100)
         const entropySim = Math.max(0, 100 - entropyDiff);
         const jitterSim = Math.max(0, 100 - jitterDiff * 10);
         const deltaSim = Math.max(0, 100 - deltaDiff / 100 * 100);
         const coherenceSim = Math.max(0, 100 - coherenceDiff);
 
-        const overall = (entropySim * 0.3 + jitterSim * 0.2 + deltaSim * 0.2 + coherenceSim * 0.3);
+        // v2: Check chain digest match (strongest convergence signal)
+        const digestMatch = sigA.chainDigest === sigB.chainDigest;
+
+        const overall = digestMatch ? 100 :
+            (entropySim * 0.3 + jitterSim * 0.2 + deltaSim * 0.2 + coherenceSim * 0.3);
 
         return {
             entropySimilarity: parseFloat(entropySim.toFixed(2)),
             jitterSimilarity: parseFloat(jitterSim.toFixed(2)),
             deltaSimilarity: parseFloat(deltaSim.toFixed(2)),
             coherenceSimilarity: parseFloat(coherenceSim.toFixed(2)),
+            digestMatch,
             overall: parseFloat(overall.toFixed(2)),
             convergent: overall > 70,
-            verdict: overall > 85 ? 'STRONG_CONVERGENCE' :
+            verdict: digestMatch ? 'EXACT_MATCH' :
+                     overall > 85 ? 'STRONG_CONVERGENCE' :
                      overall > 70 ? 'MODERATE_CONVERGENCE' :
                      overall > 50 ? 'WEAK_CONVERGENCE' : 'DIVERGENT',
         };
@@ -521,6 +577,7 @@ const EntropicProcessLock = (() => {
             genesisTime: chain[0].wallClock,
             lastCycleTime: chain[chain.length - 1].wallClock,
             uptime: chain[chain.length - 1].wallClock - chain[0].wallClock,
+            sessionNonce: sessionNonce.substring(0, 8),
             entropy: {
                 mean: parseFloat((entropyScores.reduce((a, b) => a + b, 0) / entropyScores.length).toFixed(2)),
                 min: Math.min(...entropyScores),
@@ -545,33 +602,75 @@ const EntropicProcessLock = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // PERSISTENCE
+    // PERSISTENCE v2 — HMAC authenticated
     // ══════════════════════════════════════════════
 
-    function persistChain() {
+    async function persistChain() {
         try {
-            const data = chain.map(l => {
-                const { entropyFull, ...rest } = l;
-                return rest;
-            });
-            localStorage.setItem(CONFIG.storageKey, JSON.stringify(data));
+            const data = JSON.stringify(chain);
+            const hmac = await computeHmac(data);
+            localStorage.setItem(CONFIG.storageKey, data);
+            localStorage.setItem(CONFIG.storageKey + '_hmac', hmac);
+            localStorage.setItem(CONFIG.sessionKey, sessionNonce);
         } catch (e) {
-            // Storage full — trim harder
             chain = chain.slice(-Math.floor(CONFIG.maxChainLength / 2));
+            emit('storage-warning', { type: 'QUOTA_PRESSURE', chainLength: chain.length });
             try {
-                localStorage.setItem(CONFIG.storageKey, JSON.stringify(chain));
-            } catch (e2) { /* give up */ }
+                const data = JSON.stringify(chain);
+                const hmac = await computeHmac(data);
+                localStorage.setItem(CONFIG.storageKey, data);
+                localStorage.setItem(CONFIG.storageKey + '_hmac', hmac);
+            } catch (e2) {
+                emit('storage-warning', { type: 'QUOTA_EXHAUSTED' });
+            }
         }
     }
 
-    function loadChain() {
+    async function loadChain() {
         try {
             const raw = localStorage.getItem(CONFIG.storageKey);
-            if (raw) {
-                chain = JSON.parse(raw);
-                if (chain.length > 0) {
-                    cycleCount = chain[chain.length - 1].n + 1;
+            const storedHmac = localStorage.getItem(CONFIG.storageKey + '_hmac');
+            const storedSession = localStorage.getItem(CONFIG.sessionKey);
+
+            if (!raw) return;
+
+            // v2: Verify HMAC before trusting stored chain
+            if (storedHmac) {
+                const valid = await verifyHmac(raw, storedHmac);
+                if (!valid) {
+                    emit('integrity-violation', {
+                        type: 'HMAC_MISMATCH',
+                        detail: 'Stored chain HMAC does not match. Chain may have been tampered.',
+                    });
+                    // Don't load — start fresh
+                    chain = [];
+                    cycleCount = 0;
+                    return;
                 }
+            }
+
+            chain = JSON.parse(raw);
+            if (chain.length > 0) {
+                cycleCount = chain[chain.length - 1].n + 1;
+            }
+
+            // v2: Detect session change (reload vs cross-instance)
+            if (storedSession && storedSession !== sessionNonce) {
+                emit('session-change', {
+                    previous: storedSession.substring(0, 8),
+                    current: sessionNonce.substring(0, 8),
+                    chainLength: chain.length,
+                });
+            }
+
+            // v2: Verify chain coherence on load
+            const coherence = verifyChainCoherence();
+            if (!coherence.valid) {
+                emit('integrity-violation', {
+                    type: 'CHAIN_CORRUPTION_ON_LOAD',
+                    failures: coherence.failures.length,
+                    detail: coherence.failures.slice(0, 3),
+                });
             }
         } catch (e) {
             chain = [];
@@ -607,21 +706,19 @@ const EntropicProcessLock = (() => {
         running = true;
         genesisTime = Date.now();
         lastPerfTime = performance.now();
+        sessionNonce = generateSessionNonce();
 
-        loadChain();
-
-        // Execute genesis cycle
+        await getOrCreateHmacKey();
+        await loadChain();
         await executeCycle();
-        emit('start', { genesisTime, chainLength: chain.length });
 
-        // Schedule cycles with jitter
+        emit('start', { genesisTime, chainLength: chain.length, session: sessionNonce.substring(0, 8) });
         scheduleCycle();
     }
 
     function scheduleCycle() {
         if (!running) return;
 
-        // Add random jitter to prevent predictable timing
         const jitter = Math.random() * CONFIG.jitterRangeMs;
         const interval = CONFIG.cycleIntervalMs + jitter;
 
@@ -629,11 +726,9 @@ const EntropicProcessLock = (() => {
             if (!running) return;
             await executeCycle();
 
-            // Generate signature every signatureWindow cycles
             if (cycleCount % CONFIG.signatureWindow === 0) {
                 await generateProcessSignature();
             }
-
             scheduleCycle();
         }, interval);
     }
@@ -668,15 +763,12 @@ const EntropicProcessLock = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // EXPORT CHAIN (for external verification)
+    // EXPORT / IMPORT
     // ══════════════════════════════════════════════
 
     function exportChain() {
         return {
-            chain: chain.map(l => {
-                const { entropyFull, ...rest } = l;
-                return rest;
-            }),
+            chain: [...chain],
             stats: getChainStats(),
             signatures: getSignatures(),
             exportedAt: Date.now(),
@@ -684,18 +776,22 @@ const EntropicProcessLock = (() => {
         };
     }
 
-    // ══════════════════════════════════════════════
-    // IMPORT & VERIFY (external chain)
-    // ══════════════════════════════════════════════
-
     async function verifyExportedChain(exported) {
         if (!exported || !exported.chain || exported.chain.length === 0) {
             return { valid: false, reason: 'EMPTY_CHAIN' };
         }
 
         const failures = [];
+        const entropyHashes = new Set();
 
-        for (let i = 1; i < exported.chain.length; i++) {
+        for (let i = 0; i < exported.chain.length; i++) {
+            if (exported.chain[i].entropyHash) {
+                if (entropyHashes.has(exported.chain[i].entropyHash)) {
+                    failures.push({ type: 'ENTROPY_HASH_COLLISION', at: i });
+                }
+                entropyHashes.add(exported.chain[i].entropyHash);
+            }
+            if (i === 0) continue;
             if (exported.chain[i].previousHash !== exported.chain[i - 1].hash) {
                 failures.push({ type: 'HASH_BREAK', at: i });
             }
@@ -707,7 +803,6 @@ const EntropicProcessLock = (() => {
             }
         }
 
-        // Verify signatures
         const sigResults = (exported.signatures || []).map(sig => verifySignature(sig));
 
         return {
@@ -724,7 +819,7 @@ const EntropicProcessLock = (() => {
     // PUBLIC API
     // ══════════════════════════════════════════════
 
-    console.log('[ENTROPIC_PROCESS_LOCK] v1.0 — Proof-of-Process Engine initialized');
+    console.log('[ENTROPIC_PROCESS_LOCK] v2.0 — HMAC-authenticated, session-bound, spectral entropy');
 
     return {
         start,

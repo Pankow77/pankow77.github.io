@@ -554,12 +554,27 @@ const CorrelationEngine = (() => {
         },
     ];
 
+    // Minimum trigger signals to consider a cascade pattern valid.
+    // Prevents false cascades from small injection bursts.
+    const CASCADE_MIN_TRIGGER_SIGNALS = 3;
+    // Minimum cascade domain signals to consider a step "active"
+    const CASCADE_MIN_STEP_SIGNALS = 3;
+    // Minimum average severity for a cascade step to be "active" (graduated)
+    const CASCADE_STEP_BASE_SEVERITY = 40;
+
+    // Graduated severity scoring — returns 0..1 based on how far
+    // above threshold the value is, with a soft ramp instead of cliff edge.
+    function graduatedScore(value, threshold, ceiling) {
+        if (value <= threshold) return 0;
+        if (value >= ceiling) return 1;
+        return (value - threshold) / (ceiling - threshold);
+    }
+
     function detectCascadePatterns(archive) {
-        if (!archive || archive.length < 5) return [];
+        if (!archive || archive.length < 10) return [];
 
         const now = Date.now();
         const cascades = [];
-        const WINDOW_6H = 6 * 60 * 60 * 1000;
         const WINDOW_24H = 24 * 60 * 60 * 1000;
         const WINDOW_7D = 7 * 24 * 60 * 60 * 1000;
 
@@ -572,11 +587,25 @@ const CorrelationEngine = (() => {
             byDomain[s.domain].push(s);
         });
 
+        // Compute overall signal density per domain (signals per day)
+        const totalDays = Math.max(1, (now - Math.min(...recentSignals.map(s => s.time))) / (24 * 60 * 60 * 1000));
+        const domainDensity = {};
+        Object.entries(byDomain).forEach(([d, signals]) => {
+            domainDensity[d] = signals.length / totalDays;
+        });
+
         CASCADE_RULES.forEach(rule => {
             const triggerSignals = (byDomain[rule.trigger.domain] || [])
                 .filter(s => s.severity >= rule.trigger.minSeverity);
 
-            if (triggerSignals.length === 0) return;
+            // Require minimum trigger count to prevent injection attacks
+            if (triggerSignals.length < CASCADE_MIN_TRIGGER_SIGNALS) return;
+
+            // Require diverse sources among trigger signals (anti-injection)
+            const triggerSources = new Set(triggerSignals.map(s => s.source));
+            if (triggerSources.size < 2 && triggerSignals.length >= 5) return;
+
+            const triggerAvgSeverity = triggerSignals.reduce((s, x) => s + x.severity, 0) / triggerSignals.length;
 
             // Check if cascade domains show activity
             const cascadeEvidence = rule.cascade.map(step => {
@@ -586,11 +615,17 @@ const CorrelationEngine = (() => {
                     ? recentDomainSignals.reduce((sum, s) => sum + s.severity, 0) / recentDomainSignals.length
                     : 0;
 
+                // Graduated activation: both signal count AND severity must pass thresholds
+                const countScore = graduatedScore(recentDomainSignals.length, CASCADE_MIN_STEP_SIGNALS - 1, CASCADE_MIN_STEP_SIGNALS * 3);
+                const severityScore = graduatedScore(avgSeverity, CASCADE_STEP_BASE_SEVERITY, 80);
+                const activationScore = countScore * severityScore; // Both must be non-zero
+
                 return {
                     ...step,
                     signalCount: recentDomainSignals.length,
                     avgSeverity: Math.round(avgSeverity),
-                    active: recentDomainSignals.length >= 2 && avgSeverity > 40,
+                    active: recentDomainSignals.length >= CASCADE_MIN_STEP_SIGNALS && avgSeverity > CASCADE_STEP_BASE_SEVERITY,
+                    activationScore: Math.round(activationScore * 100),
                     topSignals: recentDomainSignals
                         .sort((a, b) => b.severity - a.severity)
                         .slice(0, 3),
@@ -598,9 +633,18 @@ const CorrelationEngine = (() => {
             });
 
             const activeCascades = cascadeEvidence.filter(c => c.active);
-            const cascadeStrength = activeCascades.length / rule.cascade.length;
 
             if (activeCascades.length > 0) {
+                // Cascade strength is a composite of:
+                //   1. Proportion of steps active (0..1)
+                //   2. Average activation score across active steps (0..1)
+                //   3. Trigger severity factor (graduated, 0..1)
+                const stepProportion = activeCascades.length / rule.cascade.length;
+                const avgActivation = activeCascades.reduce((s, c) => s + c.activationScore, 0) / (activeCascades.length * 100);
+                const triggerFactor = graduatedScore(triggerAvgSeverity, rule.trigger.minSeverity, 90);
+
+                const cascadeStrength = Math.round(stepProportion * 40 + avgActivation * 35 + triggerFactor * 25);
+
                 cascades.push({
                     rule: rule.id,
                     name: rule.name,
@@ -608,13 +652,12 @@ const CorrelationEngine = (() => {
                     severity: rule.severity,
                     triggerDomain: rule.trigger.domain,
                     triggerSignalCount: triggerSignals.length,
-                    triggerAvgSeverity: Math.round(
-                        triggerSignals.reduce((s, x) => s + x.severity, 0) / triggerSignals.length
-                    ),
+                    triggerSourceCount: triggerSources.size,
+                    triggerAvgSeverity: Math.round(triggerAvgSeverity),
                     cascadeEvidence,
                     activeCascades: activeCascades.length,
                     totalCascadeSteps: rule.cascade.length,
-                    cascadeStrength: Math.round(cascadeStrength * 100),
+                    cascadeStrength,
                     detectedAt: now,
                 });
             }
@@ -639,22 +682,29 @@ const CorrelationEngine = (() => {
         recent.forEach(signal => {
             const entities = OsintEngine.extractEntities(`${signal.title} ${signal.description || ''}`);
             entities.forEach(entity => {
-                const key = `${entity.type}:${entity.name}`;
+                // Normalize entity name to prevent collision attacks
+                // (e.g., "putin" vs "Putin" vs "PUTIN" collapsing into one)
+                const normalizedName = entity.name.trim().toLowerCase().replace(/[^a-z0-9\s\-]/g, '');
+                if (normalizedName.length < 2) return; // Skip degenerate names
+                const key = `${entity.type}:${normalizedName}`;
                 if (!entityLinks[key]) {
-                    entityLinks[key] = { entity, signals: [], domains: new Set() };
+                    entityLinks[key] = { entity: { ...entity, name: normalizedName }, signals: [], domains: new Set(), sources: new Set() };
                 }
                 entityLinks[key].signals.push(signal);
                 entityLinks[key].domains.add(signal.domain);
+                entityLinks[key].sources.add(signal.source);
             });
         });
 
         // Find entities that bridge multiple domains
+        // Require source diversity to prevent single-source entity injection
         const bridging = Object.values(entityLinks)
-            .filter(e => e.domains.size >= 2 && e.signals.length >= 3)
+            .filter(e => e.domains.size >= 2 && e.signals.length >= 3 && e.sources.size >= 2)
             .map(e => ({
                 entity: e.entity,
                 domains: [...e.domains],
                 signalCount: e.signals.length,
+                sourceCount: e.sources.size,
                 avgSeverity: Math.round(
                     e.signals.reduce((sum, s) => sum + s.severity, 0) / e.signals.length
                 ),
@@ -662,7 +712,7 @@ const CorrelationEngine = (() => {
                     .sort((a, b) => b.severity - a.severity)
                     .slice(0, 5)
                     .map(s => ({ title: s.title, domain: s.domain, severity: s.severity })),
-                bridgeScore: e.domains.size * e.signals.length,
+                bridgeScore: e.domains.size * e.signals.length * (e.sources.size / Math.max(1, e.signals.length)),
             }))
             .sort((a, b) => b.bridgeScore - a.bridgeScore)
             .slice(0, 10);

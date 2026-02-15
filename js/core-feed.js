@@ -182,6 +182,18 @@ const CoreFeed = (() => {
     const AMBIENT_INTERVAL = 6000;
     const MSG_DELAY = 800;
 
+    // Priority levels for message queue ordering.
+    // Lower number = higher priority. SENTINEL/CRITICAL messages
+    // are processed before ambient/template messages.
+    const MSG_PRIORITY = {
+        CRITICAL: 0,
+        SENTINEL: 0,
+        HIGH: 1,
+        CONTEXTUAL: 2,
+        NORMAL: 3,
+        AMBIENT: 4,
+    };
+
     // ── CREATE UI ──
     function createFeedPanel() {
         const style = document.createElement('style');
@@ -410,6 +422,14 @@ const CoreFeed = (() => {
         if (isProcessing || messageQueue.length === 0) return;
         isProcessing = true;
 
+        // Sort by priority before dequeuing — critical messages jump ahead
+        messageQueue.sort((a, b) => (a.priority || MSG_PRIORITY.NORMAL) - (b.priority || MSG_PRIORITY.NORMAL));
+
+        // When queue is overflowing, drop lowest-priority (ambient) messages
+        while (messageQueue.length > MAX_MESSAGES) {
+            messageQueue.pop(); // Remove lowest priority (highest number, sorted to end)
+        }
+
         const { coreId, text } = messageQueue.shift();
         const typingEl = showTyping(coreId);
 
@@ -434,7 +454,7 @@ const CoreFeed = (() => {
         const selected = shuffled.slice(0, count);
 
         selected.forEach(m => {
-            messageQueue.push({ coreId: m.core, text: m.msg });
+            messageQueue.push({ coreId: m.core, text: m.msg, priority: MSG_PRIORITY.NORMAL });
         });
 
         processQueue();
@@ -543,62 +563,74 @@ const CoreFeed = (() => {
         trigger(context);
 
         // Then, gather live context and generate reasoned messages
-        const ctx = {};
-        try {
-            // Domain states
-            if (typeof BriefingEngine !== 'undefined') {
-                const briefing = BriefingEngine.generateBriefing('24h');
-                ctx.domainStates = {};
-                if (briefing.domainAnalyses) {
-                    briefing.domainAnalyses.forEach(da => {
-                        ctx.domainStates[da.domain] = { avgSeverity: da.avgSeverity, count: da.count, trend: da.trend };
-                    });
-                }
-                ctx.threatLevel = briefing.threatAssessment;
-                ctx.patterns = briefing.emergingPatterns;
-            }
+        // NON-BLOCKING: use requestIdleCallback/setTimeout to avoid blocking
+        // the main thread with heavy BriefingEngine + CorrelationEngine analysis
+        const scheduleAnalysis = typeof requestIdleCallback === 'function'
+            ? (fn) => requestIdleCallback(fn, { timeout: 3000 })
+            : (fn) => setTimeout(fn, 50);
 
-            // Cascade patterns & entity bridges
-            if (typeof CorrelationEngine !== 'undefined') {
-                const analysis = CorrelationEngine.runFullAnalysis();
-                ctx.cascades = analysis.cascadePatterns;
-                ctx.entityBridges = analysis.entityCorrelations;
-                ctx.sourceDiversity = analysis.sourceDiversity;
-                ctx.manipulationWarnings = analysis.manipulationWarnings;
-            }
-
-            // Entropic Process Lock stats
-            if (typeof EntropicProcessLock !== 'undefined') {
-                ctx.eplStats = EntropicProcessLock.getChainStats();
-            }
-        } catch (e) {
-            // Silent fail — contextual enrichment is best-effort
-        }
-
-        // Run each core's reasoner and queue contextual messages
-        const contextualMessages = [];
-        for (const [coreId, reasoner] of Object.entries(CORE_REASONERS)) {
+        scheduleAnalysis(() => {
+            const ctx = {};
             try {
-                const msg = reasoner(ctx);
-                if (msg) {
-                    contextualMessages.push({ coreId, text: msg });
+                // Domain states
+                if (typeof BriefingEngine !== 'undefined') {
+                    const briefing = BriefingEngine.generateBriefing('24h');
+                    ctx.domainStates = {};
+                    if (briefing.domainAnalyses) {
+                        briefing.domainAnalyses.forEach(da => {
+                            ctx.domainStates[da.domain] = { avgSeverity: da.avgSeverity, count: da.count, trend: da.trend };
+                        });
+                    }
+                    ctx.threatLevel = briefing.threatAssessment;
+                    ctx.patterns = briefing.emergingPatterns;
                 }
-            } catch (e) { /* skip this core */ }
-        }
 
-        // Add 2-4 contextual messages with delay
-        if (contextualMessages.length > 0) {
-            const count = Math.min(contextualMessages.length, 2 + Math.floor(Math.random() * 3));
-            const shuffled = contextualMessages.sort(() => Math.random() - 0.5).slice(0, count);
+                // Cascade patterns & entity bridges
+                if (typeof CorrelationEngine !== 'undefined') {
+                    const analysis = CorrelationEngine.runFullAnalysis();
+                    ctx.cascades = analysis.cascadePatterns;
+                    ctx.entityBridges = analysis.entityCorrelations;
+                    ctx.sourceDiversity = analysis.sourceDiversity;
+                    ctx.manipulationWarnings = analysis.manipulationWarnings;
+                }
 
-            // Delay contextual messages to appear after templates
-            setTimeout(() => {
-                shuffled.forEach(m => {
-                    messageQueue.push({ coreId: m.coreId, text: m.text });
-                });
-                processQueue();
-            }, (count + 1) * MSG_DELAY + 500);
-        }
+                // Entropic Process Lock stats
+                if (typeof EntropicProcessLock !== 'undefined') {
+                    ctx.eplStats = EntropicProcessLock.getChainStats();
+                }
+            } catch (e) {
+                // Log failure instead of silent swallow — aids debugging
+                console.warn('[CORE_FEED] Contextual enrichment failed:', e.message);
+            }
+
+            // Run each core's reasoner and queue contextual messages
+            const contextualMessages = [];
+            for (const [coreId, reasoner] of Object.entries(CORE_REASONERS)) {
+                try {
+                    const msg = reasoner(ctx);
+                    if (msg) {
+                        // SENTINEL gets CRITICAL priority; others get CONTEXTUAL
+                        const priority = coreId === 'SENTINEL'
+                            ? MSG_PRIORITY.SENTINEL
+                            : MSG_PRIORITY.CONTEXTUAL;
+                        contextualMessages.push({ coreId, text: msg, priority });
+                    }
+                } catch (e) { /* skip this core */ }
+            }
+
+            // Add 2-4 contextual messages with delay after templates
+            if (contextualMessages.length > 0) {
+                const count = Math.min(contextualMessages.length, 2 + Math.floor(Math.random() * 3));
+                const shuffled = contextualMessages.sort(() => Math.random() - 0.5).slice(0, count);
+
+                setTimeout(() => {
+                    shuffled.forEach(m => {
+                        messageQueue.push({ coreId: m.coreId, text: m.text, priority: m.priority });
+                    });
+                    processQueue();
+                }, (count + 1) * MSG_DELAY + 500);
+            }
+        });
     }
 
     // ── AMBIENT CYCLE ──
@@ -607,7 +639,7 @@ const CoreFeed = (() => {
             if (messageQueue.length > 3) return; // Don't pile up
             const pool = MESSAGES.ambient;
             const m = pool[Math.floor(Math.random() * pool.length)];
-            messageQueue.push({ coreId: m.core, text: m.msg });
+            messageQueue.push({ coreId: m.core, text: m.msg, priority: MSG_PRIORITY.AMBIENT });
             processQueue();
         }, AMBIENT_INTERVAL);
     }
