@@ -175,6 +175,7 @@
     <script src="js/persistence-manager.js"></script>
     <script src="js/correlation-engine.js"></script>
     <script src="js/signal-interceptor.js"></script>
+    <script src="js/coherence-ledger.js"></script>
     <script src="js/watchdog.js"></script>
 
     <script>
@@ -420,6 +421,70 @@
                 </div>` : ''}
             </div>`;
         }
+        }
+
+        // ── 9. Coherence Ledger — Self-Contradiction Accumulator ──
+        if (typeof CoherenceLedger !== 'undefined') {
+            const decl = CoherenceLedger.selfDeclare();
+            const d = decl.degradation;
+            const verdictColors = {
+                'COHERENT': 'good', 'FRICTION': 'warn',
+                'DISSONANT': 'bad', 'INCOHERENT': 'bad',
+                'NARRATIVE_COLLAPSE': 'bad',
+            };
+            const verdictDotColors = {
+                'COHERENT': 'dot-green', 'FRICTION': 'dot-yellow',
+                'DISSONANT': 'dot-red', 'INCOHERENT': 'dot-red',
+                'NARRATIVE_COLLAPSE': 'dot-red',
+            };
+            const recentLog = CoherenceLedger.getLog({ limit: 5 });
+
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    COHERENCE LEDGER
+                    <span class="status-dot ${verdictDotColors[d.verdict] || 'dot-yellow'}"></span>
+                </div>
+                <div class="metric"><span class="label">Verdict</span><span class="value ${verdictColors[d.verdict] || 'warn'}">${d.verdict}</span></div>
+                <div class="metric"><span class="label">Degradation Index</span><span class="value ${d.index > 0.3 ? 'bad' : d.index > 0.1 ? 'warn' : 'good'}">${d.index.toFixed(3)}</span></div>
+                <div class="metric"><span class="label">Narrative</span><span class="value">${d.narrative.toFixed(3)}</span></div>
+                <div class="metric"><span class="label">Epistemic</span><span class="value">${d.epistemic.toFixed(3)}</span></div>
+                <div class="metric"><span class="label">Regression</span><span class="value ${d.regression > 0.3 ? 'bad' : 'good'}">${d.regression.toFixed(3)}</span></div>
+                <div class="metric"><span class="label">Trend</span><span class="value ${d.trend === 'degrading' ? 'bad' : d.trend === 'recovering' ? 'good' : 'good'}">${d.trend.toUpperCase()}</span></div>
+                <div class="metric"><span class="label">Contradictions</span><span class="value">${d.contradictions}</span></div>
+                ${decl.declarations.length > 0 ? `
+                <div style="margin-top:8px;padding:8px;background:#0a0012;border:1px solid #2a1436;font-size:10px;line-height:1.6;color:#c084fc;">
+                    ${decl.declarations.map(d => '<div>→ ' + esc(d) + '</div>').join('')}
+                </div>` : ''}
+                ${recentLog.length > 0 ? `
+                <div style="margin-top:6px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:80px;overflow-y:auto;font-size:10px;line-height:1.5;">
+                    ${recentLog.map(e => `<div style="color:${e.severity === 'epistemic' ? '#ff0084' : e.severity === 'regression' ? '#ff6b35' : '#4a6a8c'}">[${new Date(e.t).toLocaleTimeString()}] ${e.severity}: ${esc(e.detail)}</div>`).join('')}
+                </div>` : ''}
+            </div>`;
+        }
+
+        // ── 10. Hash Anchor — External Verifiability ──
+        if (typeof SystemState !== 'undefined' && typeof SystemState.exportAnchor === 'function') {
+            const anchor = SystemState.exportAnchor();
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    HASH ANCHOR
+                    <span class="status-dot ${anchor ? 'dot-green' : 'dot-yellow'}"></span>
+                </div>
+                ${anchor ? `
+                <div class="metric"><span class="label">Head Hash</span><span class="value" style="font-family:monospace;font-size:10px;">${esc(anchor.headHash)}</span></div>
+                <div class="metric"><span class="label">Genesis Hash</span><span class="value" style="font-family:monospace;font-size:10px;">${esc(anchor.genesisHash)}</span></div>
+                <div class="metric"><span class="label">Chain Length</span><span class="value">${anchor.chainLength}</span></div>
+                <div class="metric"><span class="label">Fingerprint</span><span class="value" style="font-family:monospace;font-size:10px;">${esc(anchor.fingerprint)}</span></div>
+                <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a3624;font-family:monospace;font-size:10px;color:#4ade80;word-break:break-all;cursor:pointer;" onclick="navigator.clipboard.writeText('${anchor.anchor}');this.style.color='#fff';setTimeout(()=>this.style.color='#4ade80',500)" title="Click to copy">
+                    ${esc(anchor.anchor)}
+                </div>
+                <div style="margin-top:4px;font-size:9px;color:#4a6a8c;text-align:center;">Click anchor to copy. Save externally to verify chain integrity later.</div>
+                ` : `
+                <div class="metric"><span class="label">Status</span><span class="value warn">NO CHAIN DATA</span></div>
+                `}
+            </div>`;
         }
 
         grid.innerHTML = html;

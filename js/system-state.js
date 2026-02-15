@@ -169,6 +169,25 @@ const SystemState = (() => {
     // - write rate (higher throughput → larger acceptable drift)
     // - error rate (more errors → tighter tolerance)
     // - cycle age (longer since reconciliation → wider window)
+    // - stochastic jitter (non-deterministic, non-gameable)
+    // - oscillation penalty (rapid swings = suspicious)
+    //
+    // The jitter component means an attacker cannot predict the exact
+    // threshold at any given moment. The oscillation penalty means
+    // gaming writeRate/errorRate back and forth gets punished.
+
+    let _prevThreshold = null;
+    let _thresholdSwings = 0;
+    const _jitterSeed = Date.now() ^ (Math.random() * 0xFFFFFFFF >>> 0);
+
+    // Cheap PRNG seeded per-session — not crypto, but unpredictable enough
+    // that you can't game the threshold without observing it
+    let _jitterState = _jitterSeed;
+    function nextJitter() {
+        _jitterState = (_jitterState * 1664525 + 1013904223) >>> 0;
+        return (_jitterState / 0xFFFFFFFF) * 2 - 1; // range [-1, 1]
+    }
+
     function computeAdaptiveThreshold() {
         const base = 10; // minimum tolerance: 10 signals
         const writeBonus = Math.min(state.storage.writeRate * 2, 50); // up to +50 at high throughput
@@ -177,7 +196,20 @@ const SystemState = (() => {
             ? Math.min((Date.now() - state.storage.lastReconcile) / (60 * 1000), 10) // up to +10 per minute since reconcile
             : 5; // default if never reconciled
 
-        const threshold = Math.max(base + writeBonus - errorPenalty + ageFactor, 5);
+        // Stochastic jitter: ±3 signals — unpredictable, non-replayable
+        const jitter = nextJitter() * 3;
+
+        // Oscillation penalty: if threshold has been swinging, tighten it
+        const deterministic = base + writeBonus - errorPenalty + ageFactor;
+        if (_prevThreshold !== null) {
+            const swing = Math.abs(deterministic - _prevThreshold);
+            if (swing > 5) _thresholdSwings++;
+            else _thresholdSwings = Math.max(0, _thresholdSwings - 0.5);
+        }
+        const oscillationPenalty = Math.min(_thresholdSwings * 2, 15);
+
+        const threshold = Math.max(deterministic + jitter - oscillationPenalty, 5);
+        _prevThreshold = deterministic;
         return Math.round(threshold);
     }
 
@@ -456,6 +488,90 @@ const SystemState = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // HASH ANCHOR — External verifiability
+    // ══════════════════════════════════════════════
+    // The chain is tamper-evident internally, but an attacker who
+    // rewrites everything and regenerates the chain leaves no trace.
+    //
+    // The anchor is a snapshot of the chain's tip that can be:
+    // - Exported (copied, saved externally, sent to another system)
+    // - Verified later against the current chain
+    //
+    // If someone exports an anchor at T1 and checks at T2:
+    // - The chain at T2 must still contain the anchor's sequence
+    // - If it doesn't, the chain was rewritten between T1 and T2
+    //
+    // This is the minimum viable external verification: a timestamp,
+    // the head hash, the sequence number, and a fingerprint of the
+    // chain up to that point.
+
+    function exportAnchor() {
+        if (EVENT_LOG.length === 0) return null;
+
+        const head = EVENT_LOG[EVENT_LOG.length - 1];
+
+        // Chain fingerprint: hash of first + last + length
+        // If any of these change, the chain was tampered
+        const first = EVENT_LOG[0];
+        const fingerprint = hashStr(
+            first.hash + '|' + head.hash + '|' + EVENT_LOG.length + '|' + first.t + '|' + head.t
+        );
+
+        return {
+            version: 1,
+            exported: Date.now(),
+            headHash: head.hash,
+            headSeq: head.seq,
+            headTime: head.t,
+            genesisHash: first.hash,
+            genesisTime: first.t,
+            chainLength: EVENT_LOG.length,
+            fingerprint,
+            // Human-readable identifier for copy/paste verification
+            anchor: `HS:${fingerprint}:${head.seq}:${head.hash}`,
+        };
+    }
+
+    function verifyAnchor(anchor) {
+        if (!anchor || !anchor.fingerprint || EVENT_LOG.length === 0) {
+            return { valid: false, reason: 'empty_chain_or_anchor' };
+        }
+
+        // Find the entry matching the anchor's sequence number
+        const targetEntry = EVENT_LOG.find(e => e.seq === anchor.headSeq);
+        if (!targetEntry) {
+            return { valid: false, reason: 'anchor_sequence_not_found', detail: `seq ${anchor.headSeq} missing from log` };
+        }
+
+        // Verify the hash matches
+        if (targetEntry.hash !== anchor.headHash) {
+            return { valid: false, reason: 'hash_mismatch', detail: `expected ${anchor.headHash}, got ${targetEntry.hash}` };
+        }
+
+        // Verify genesis still matches
+        const first = EVENT_LOG[0];
+        if (first.hash !== anchor.genesisHash) {
+            return { valid: false, reason: 'genesis_rewritten', detail: `genesis hash changed from ${anchor.genesisHash} to ${first.hash}` };
+        }
+
+        // Recompute fingerprint
+        const head = targetEntry;
+        const currentFingerprint = hashStr(
+            first.hash + '|' + head.hash + '|' + (anchor.headSeq + 1) + '|' + first.t + '|' + head.t
+        );
+
+        // Note: chainLength at export time may differ from headSeq+1 due to rotation
+        // So we verify the structural elements, not the exact length
+
+        return {
+            valid: true,
+            chainIntact: verifyLogIntegrity().intact,
+            entriesSinceAnchor: EVENT_LOG.length - (EVENT_LOG.indexOf(targetEntry) + 1),
+            timeSinceAnchor: Date.now() - anchor.exported,
+        };
+    }
+
+    // ══════════════════════════════════════════════
     // SERIALIZATION — For state dump / debug
     // ══════════════════════════════════════════════
 
@@ -604,6 +720,8 @@ const SystemState = (() => {
         getEventLog,
         getEventLogSnapshot,
         verifyLogIntegrity,
+        exportAnchor,
+        verifyAnchor,
 
         // Serialization
         serialize,

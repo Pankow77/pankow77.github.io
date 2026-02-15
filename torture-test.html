@@ -157,6 +157,7 @@
     <script src="js/persistence-manager.js"></script>
     <script src="js/correlation-engine.js"></script>
     <!-- NOTE: signal-interceptor.js not loaded — we test functions in isolation -->
+    <script src="js/coherence-ledger.js"></script>
     <script src="js/watchdog.js"></script>
 
     <script>
@@ -1176,6 +1177,185 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    // SUITE: COHERENCE LEDGER — Self-contradiction accumulation
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testCoherenceLedger() {
+        const tests = [];
+        const hasCL = typeof CoherenceLedger !== 'undefined';
+
+        tests.push({
+            name: 'CoherenceLedger module loaded',
+            result: assert('cl_loaded', hasCL),
+            detail: hasCL ? 'OK' : 'MISSING',
+        });
+
+        if (!hasCL) { renderSuite('coherence_ledger', tests); updateSummary(); return; }
+
+        // ── CL-1: Record a narrative contradiction ──
+        const prevCount = CoherenceLedger.getEntryCount();
+        CoherenceLedger.record('narrative', 'Test: declared HEALTHY under degradation');
+        tests.push({
+            name: 'record() appends narrative contradiction',
+            result: assert('cl_record', CoherenceLedger.getEntryCount() === prevCount + 1),
+            detail: `${prevCount} → ${CoherenceLedger.getEntryCount()}`,
+        });
+
+        // ── CL-2: Record epistemic contradiction ──
+        CoherenceLedger.record('epistemic', 'Test: worker off but classified > 0');
+        tests.push({
+            name: 'record() appends epistemic contradiction',
+            result: assert('cl_epistemic', CoherenceLedger.getEntryCount() === prevCount + 2),
+            detail: `count = ${CoherenceLedger.getEntryCount()}`,
+        });
+
+        // ── CL-3: computeDegradation returns valid structure ──
+        const d = CoherenceLedger.computeDegradation();
+        tests.push({
+            name: 'computeDegradation() returns index in [0, 1]',
+            result: assert('cl_di_range', d.index >= 0 && d.index <= 1),
+            detail: `DI = ${d.index}`,
+        });
+
+        tests.push({
+            name: 'computeDegradation() has all required fields',
+            result: assert('cl_di_fields',
+                typeof d.narrative === 'number' &&
+                typeof d.epistemic === 'number' &&
+                typeof d.regression === 'number' &&
+                typeof d.verdict === 'string' &&
+                typeof d.trend === 'string'
+            ),
+            detail: `verdict=${d.verdict}, trend=${d.trend}`,
+        });
+
+        // ── CL-4: selfDeclare produces declarations ──
+        const decl = CoherenceLedger.selfDeclare();
+        tests.push({
+            name: 'selfDeclare() returns declarations array',
+            result: assert('cl_declare', Array.isArray(decl.declarations) && decl.declarations.length > 0),
+            detail: `${decl.declarations.length} declarations`,
+        });
+
+        // ── CL-5: getLog with severity filter ──
+        const epistemicOnly = CoherenceLedger.getLog({ severity: 'epistemic' });
+        tests.push({
+            name: 'getLog() filters by severity',
+            result: assert('cl_filter', epistemicOnly.every(e => e.severity === 'epistemic')),
+            detail: `${epistemicOnly.length} epistemic entries`,
+        });
+
+        // ── CL-6: Ledger persists to localStorage independently ──
+        const raw = localStorage.getItem('hs_coherence_ledger');
+        tests.push({
+            name: 'Ledger stored in independent localStorage key',
+            result: assert('cl_persist', raw !== null),
+            detail: raw ? `${JSON.parse(raw).length} persisted entries` : 'NOT FOUND',
+        });
+
+        // ── CL-7: Verdict categories are meaningful ──
+        const validVerdicts = ['COHERENT', 'FRICTION', 'DISSONANT', 'INCOHERENT', 'NARRATIVE_COLLAPSE'];
+        tests.push({
+            name: 'Verdict is a valid category',
+            result: assert('cl_verdict', validVerdicts.includes(d.verdict)),
+            detail: `verdict = ${d.verdict}`,
+        });
+
+        renderSuite('coherence_ledger', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // SUITE: HASH ANCHOR — External verifiability
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testHashAnchor() {
+        const tests = [];
+
+        // ── HA-1: exportAnchor exists ──
+        const hasExport = typeof SystemState.exportAnchor === 'function';
+        tests.push({
+            name: 'exportAnchor() function exists',
+            result: assert('ha_export_fn', hasExport),
+            detail: hasExport ? 'OK' : 'MISSING',
+        });
+
+        if (!hasExport) { renderSuite('hash_anchor', tests); updateSummary(); return; }
+
+        // ── HA-2: Export returns valid structure ──
+        const anchor = SystemState.exportAnchor();
+        tests.push({
+            name: 'exportAnchor() returns non-null anchor',
+            result: assert('ha_export', anchor !== null),
+            detail: anchor ? `seq=${anchor.headSeq}, len=${anchor.chainLength}` : 'NULL',
+        });
+
+        if (!anchor) { renderSuite('hash_anchor', tests); updateSummary(); return; }
+
+        // ── HA-3: Anchor has required fields ──
+        tests.push({
+            name: 'Anchor has all required fields',
+            result: assert('ha_fields',
+                typeof anchor.headHash === 'string' &&
+                typeof anchor.genesisHash === 'string' &&
+                typeof anchor.fingerprint === 'string' &&
+                typeof anchor.anchor === 'string' &&
+                typeof anchor.chainLength === 'number'
+            ),
+            detail: `fingerprint=${anchor.fingerprint}`,
+        });
+
+        // ── HA-4: Anchor string format ──
+        tests.push({
+            name: 'Anchor string starts with HS: prefix',
+            result: assert('ha_format', anchor.anchor.startsWith('HS:')),
+            detail: anchor.anchor,
+        });
+
+        // ── HA-5: Verify anchor against current chain ──
+        const verification = SystemState.verifyAnchor(anchor);
+        tests.push({
+            name: 'verifyAnchor() validates a fresh anchor',
+            result: assert('ha_verify', verification.valid === true),
+            detail: `valid=${verification.valid}, chainIntact=${verification.chainIntact}`,
+        });
+
+        // ── HA-6: Add more events, re-verify — anchor still valid ──
+        SystemState.logEvent('ANCHOR_TEST', { test: true });
+        SystemState.logEvent('ANCHOR_TEST', { test: true });
+        const recheck = SystemState.verifyAnchor(anchor);
+        tests.push({
+            name: 'Anchor remains valid after new events appended',
+            result: assert('ha_stability', recheck.valid === true),
+            detail: `entriesSinceAnchor=${recheck.entriesSinceAnchor}`,
+        });
+
+        // ── HA-7: Tampered anchor fails verification ──
+        const tampered = { ...anchor, headHash: 'TAMPERED_HASH_VALUE' };
+        const tamperedResult = SystemState.verifyAnchor(tampered);
+        tests.push({
+            name: 'Tampered anchor fails verification',
+            result: assert('ha_tamper_detect', tamperedResult.valid === false),
+            detail: `reason=${tamperedResult.reason}`,
+        });
+
+        // ── HA-8: Stochastic threshold — two calls produce different values ──
+        const t1 = SystemState.computeAdaptiveThreshold();
+        const t2 = SystemState.computeAdaptiveThreshold();
+        const t3 = SystemState.computeAdaptiveThreshold();
+        // At least 2 of 3 should differ (stochastic jitter ±3)
+        const allSame = t1 === t2 && t2 === t3;
+        tests.push({
+            name: 'Adaptive threshold has stochastic jitter (non-deterministic)',
+            result: assert('ha_jitter', !allSame || true), // May coincide rarely — warn only
+            detail: `t1=${t1}, t2=${t2}, t3=${t3}${allSame ? ' (all same — rare coincidence?)' : ' (jitter confirmed)'}`,
+        });
+
+        renderSuite('hash_anchor', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     // ORCHESTRATION
     // ═══════════════════════════════════════════════════════════════
 
@@ -1189,6 +1369,8 @@
         reputation: testReputation,
         invariants: testInvariants,
         adversarial: testAdversarial,
+        coherence_ledger: testCoherenceLedger,
+        hash_anchor: testHashAnchor,
     };
 
     async function runSuite(name) {

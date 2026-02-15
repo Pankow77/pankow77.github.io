@@ -234,6 +234,11 @@ const Watchdog = (() => {
             });
             console.warn('%c[WATCHDOG] EPISTEMIC VIOLATION — operator parameters are contradictory', 'color: #ff0084;', epistemics);
         }
+
+        // Feed verdict into Coherence Ledger (if available)
+        if (typeof CoherenceLedger !== 'undefined' && result.findings.length > 0) {
+            CoherenceLedger.integrateWatchdogVerdict(result);
+        }
     }
 
     // ══════════════════════════════════════════════
