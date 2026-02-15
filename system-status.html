@@ -414,10 +414,17 @@
                 <div class="metric"><span class="label">Total Checks</span><span class="value">${wdStatus.totalChecks}</span></div>
                 <div class="metric"><span class="label">Disagreements</span><span class="value ${wdStatus.disagreements > 0 ? 'warn' : 'good'}">${wdStatus.disagreements}</span></div>
                 ${hasEpistemic ? `<div class="metric"><span class="label">Epistemic</span><span class="value bad">OPERATOR INCOHERENCE DETECTED</span></div>` : ''}
+                ${wdStatus.hasRegimeShift ? `<div class="metric"><span class="label">Regime</span><span class="value bad">DRIFT DETECTED</span></div>` : ''}
+                ${wdStatus.hasGenerative ? `<div class="metric"><span class="label">Generative</span><span class="value" style="color:#c084fc">UNPROGRAMMED FINDING</span></div>` : ''}
+                ${wdStatus.meta ? `
+                <div class="metric"><span class="label">History</span><span class="value">${wdStatus.meta.historySize} snapshots</span></div>
+                <div class="metric"><span class="label">Baseline</span><span class="value ${wdStatus.meta.baselineFrozen ? 'good' : 'warn'}">${wdStatus.meta.baselineFrozen ? 'FROZEN' : 'LEARNING...'}</span></div>
+                <div class="metric"><span class="label">Correlations</span><span class="value">${wdStatus.meta.correlationsEstablished}/${wdStatus.meta.correlationsTracked} established</span></div>
+                ` : ''}
                 <div class="metric"><span class="label">Audit Entries</span><span class="value">${auditLog.length}</span></div>
                 ${recentAudits.length > 0 ? `
                 <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:100px;overflow-y:auto;font-size:10px;line-height:1.5;">
-                    ${recentAudits.map(a => `<div style="color:${a.hasEpistemic ? '#ff0084' : a.findings > 0 ? '#ff3344' : '#4a6a8c'}">[${new Date(a.t).toLocaleTimeString()}] Check #${a.check}: ${a.findings} findings${a.hasEpistemic ? ' [EPISTEMIC]' : ''}, disagree=${a.disagreements}</div>`).join('')}
+                    ${recentAudits.map(a => `<div style="color:${a.hasGenerative ? '#c084fc' : a.hasRegimeShift ? '#ff6b35' : a.hasEpistemic ? '#ff0084' : a.findings > 0 ? '#ff3344' : '#4a6a8c'}">[${new Date(a.t).toLocaleTimeString()}] Check #${a.check}: ${a.findings} findings${a.hasEpistemic ? ' [EPISTEMIC]' : ''}${a.hasRegimeShift ? ' [REGIME]' : ''}${a.hasGenerative ? ' [GENERATIVE]' : ''}</div>`).join('')}
                 </div>` : ''}
             </div>`;
         }

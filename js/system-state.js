@@ -178,14 +178,18 @@ const SystemState = (() => {
 
     let _prevThreshold = null;
     let _thresholdSwings = 0;
-    const _jitterSeed = Date.now() ^ (Math.random() * 0xFFFFFFFF >>> 0);
 
-    // Cheap PRNG seeded per-session — not crypto, but unpredictable enough
-    // that you can't game the threshold without observing it
-    let _jitterState = _jitterSeed;
-    function nextJitter() {
-        _jitterState = (_jitterState * 1664525 + 1013904223) >>> 0;
-        return (_jitterState / 0xFFFFFFFF) * 2 - 1; // range [-1, 1]
+    // Crypto entropy: uses WebCrypto API for true randomness.
+    // Not replayable, not predictable, not interceptable via seed capture.
+    // Falls back to Math.random only if crypto is unavailable.
+    function cryptoJitter() {
+        if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+            const buf = new Uint32Array(1);
+            crypto.getRandomValues(buf);
+            return (buf[0] / 0xFFFFFFFF) * 2 - 1; // range [-1, 1]
+        }
+        // Fallback: Math.random (less secure but functional)
+        return Math.random() * 2 - 1;
     }
 
     function computeAdaptiveThreshold() {
@@ -196,8 +200,8 @@ const SystemState = (() => {
             ? Math.min((Date.now() - state.storage.lastReconcile) / (60 * 1000), 10) // up to +10 per minute since reconcile
             : 5; // default if never reconciled
 
-        // Stochastic jitter: ±3 signals — unpredictable, non-replayable
-        const jitter = nextJitter() * 3;
+        // Crypto jitter: ±3 signals — true entropy, non-replayable
+        const jitter = cryptoJitter() * 3;
 
         // Oscillation penalty: if threshold has been swinging, tighten it
         const deterministic = base + writeBonus - errorPenalty + ageFactor;

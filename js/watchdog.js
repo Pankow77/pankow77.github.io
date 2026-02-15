@@ -209,6 +209,9 @@ const Watchdog = (() => {
             disagreements: result.disagreements,
             trustworthy: result.trustworthy,
             hasEpistemic: result.hasEpistemic,
+            hasRegimeShift: result.hasRegimeShift || false,
+            hasGenerative: result.hasGenerative || false,
+            meta: result.meta || null,
         });
 
         // If alert threshold reached, ONLY log — never correct
@@ -233,6 +236,25 @@ const Watchdog = (() => {
                 violations: epistemics.map(f => f.detail),
             });
             console.warn('%c[WATCHDOG] EPISTEMIC VIOLATION — operator parameters are contradictory', 'color: #ff0084;', epistemics);
+        }
+
+        // Regime shift detected
+        if (result.hasRegimeShift && typeof SystemState !== 'undefined') {
+            const shifts = result.findings.filter(f => f.check === 'REGIME_SHIFT');
+            SystemState.logEvent('REGIME_SHIFT', {
+                fields: shifts.map(s => s.field),
+                details: shifts.map(s => s.detail),
+            });
+            console.warn('%c[WATCHDOG] REGIME SHIFT — gradual drift detected', 'color: #ff6b35;', shifts);
+        }
+
+        // Generative probe fired — the worker discovered something unprogrammed
+        if (result.hasGenerative && typeof SystemState !== 'undefined') {
+            const gen = result.findings.filter(f => f.check === 'GENERATIVE_PROBE' || f.check === 'GENERATIVE_CORRELATION_BREAK');
+            SystemState.logEvent('GENERATIVE_FINDING', {
+                probes: gen.map(g => g.detail),
+            });
+            console.warn('%c[WATCHDOG] GENERATIVE PROBE — unprogrammed contradiction discovered', 'color: #c084fc;', gen);
         }
 
         // Feed verdict into Coherence Ledger (if available)
@@ -364,6 +386,9 @@ const Watchdog = (() => {
             running: timer !== null,
             workerIsolated: workerReady,
             trustworthy: lastVerdict ? lastVerdict.trustworthy : true,
+            hasRegimeShift: lastVerdict ? lastVerdict.hasRegimeShift : false,
+            hasGenerative: lastVerdict ? lastVerdict.hasGenerative : false,
+            meta: lastVerdict ? lastVerdict.meta : null,
             lastVerdict,
         }),
         start,

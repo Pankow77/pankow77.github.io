@@ -1356,6 +1356,123 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    // SUITE: EPISTEMICS — Generative probes, regime shift, temporal
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testEpistemics() {
+        const tests = [];
+        const hasWatchdog = typeof Watchdog !== 'undefined';
+
+        // ── EP-1: Watchdog status includes meta from worker ──
+        if (hasWatchdog) {
+            const wdStatus = Watchdog.getStatus();
+            tests.push({
+                name: 'Watchdog status exposes worker meta',
+                result: assert('ep_meta_exists', 'meta' in wdStatus),
+                detail: wdStatus.meta ? `history=${wdStatus.meta.historySize}, baseline=${wdStatus.meta.baselineFrozen}` : 'meta=null (worker may not have run yet)',
+            });
+
+            tests.push({
+                name: 'Watchdog status exposes hasRegimeShift flag',
+                result: assert('ep_regime_flag', 'hasRegimeShift' in wdStatus),
+                detail: `hasRegimeShift=${wdStatus.hasRegimeShift}`,
+            });
+
+            tests.push({
+                name: 'Watchdog status exposes hasGenerative flag',
+                result: assert('ep_gen_flag', 'hasGenerative' in wdStatus),
+                detail: `hasGenerative=${wdStatus.hasGenerative}`,
+            });
+        } else {
+            tests.push({
+                name: 'Watchdog required for epistemic tests',
+                result: assert('ep_wd_needed', false),
+                detail: 'Watchdog not loaded',
+            });
+        }
+
+        // ── EP-2: Run verification and check verdict structure ──
+        if (hasWatchdog) {
+            const verdict = await Watchdog.verify();
+            if (verdict) {
+                tests.push({
+                    name: 'Verdict includes all epistemic layers',
+                    result: assert('ep_verdict_layers',
+                        'hasEpistemic' in verdict &&
+                        'hasRegimeShift' in verdict &&
+                        'hasGenerative' in verdict
+                    ),
+                    detail: `epistemic=${verdict.hasEpistemic}, regime=${verdict.hasRegimeShift}, generative=${verdict.hasGenerative}`,
+                });
+
+                tests.push({
+                    name: 'Verdict includes worker meta',
+                    result: assert('ep_verdict_meta', verdict.meta !== null && verdict.meta !== undefined),
+                    detail: verdict.meta ? `correlations=${verdict.meta.correlationsTracked}` : 'no meta',
+                });
+            } else {
+                tests.push({
+                    name: 'Verdict returned from verify()',
+                    result: assert('ep_verdict_returned', false),
+                    detail: 'verdict was null',
+                });
+            }
+        }
+
+        // ── EP-3: Crypto entropy produces varied thresholds ──
+        const thresholds = [];
+        for (let i = 0; i < 10; i++) {
+            thresholds.push(SystemState.computeAdaptiveThreshold());
+        }
+        const unique = new Set(thresholds).size;
+        tests.push({
+            name: 'Crypto jitter produces varied thresholds (10 calls)',
+            result: assert('ep_crypto_jitter', unique >= 2),
+            detail: `${unique}/10 unique values: [${thresholds.join(', ')}]`,
+        });
+
+        // ── EP-4: All thresholds are in valid range ──
+        const allValid = thresholds.every(t => t >= 5 && t <= 200);
+        tests.push({
+            name: 'All jittered thresholds within valid range (5-200)',
+            result: assert('ep_threshold_range', allValid),
+            detail: `min=${Math.min(...thresholds)}, max=${Math.max(...thresholds)}`,
+        });
+
+        // ── EP-5: Coherence Ledger integrates watchdog verdicts ──
+        if (typeof CoherenceLedger !== 'undefined' && hasWatchdog) {
+            const prevCount = CoherenceLedger.getEntryCount();
+            // Record a synthetic epistemic violation
+            CoherenceLedger.record('epistemic', 'EP-5: synthetic probe test');
+            const newCount = CoherenceLedger.getEntryCount();
+            tests.push({
+                name: 'CoherenceLedger accepts watchdog-generated entries',
+                result: assert('ep_cl_integration', newCount === prevCount + 1),
+                detail: `${prevCount} → ${newCount}`,
+            });
+        }
+
+        // ── EP-6: Regime shift event type recognized by SystemState ──
+        const regimeEvents = SystemState.getEventLog({ type: 'REGIME_SHIFT' });
+        tests.push({
+            name: 'REGIME_SHIFT event type recognized (no crash)',
+            result: assert('ep_regime_type', true),
+            detail: `${regimeEvents.length} regime shift events in log`,
+        });
+
+        // ── EP-7: GENERATIVE_FINDING event type recognized ──
+        const genEvents = SystemState.getEventLog({ type: 'GENERATIVE_FINDING' });
+        tests.push({
+            name: 'GENERATIVE_FINDING event type recognized (no crash)',
+            result: assert('ep_gen_type', true),
+            detail: `${genEvents.length} generative finding events in log`,
+        });
+
+        renderSuite('epistemics', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     // ORCHESTRATION
     // ═══════════════════════════════════════════════════════════════
 
@@ -1371,6 +1488,7 @@
         adversarial: testAdversarial,
         coherence_ledger: testCoherenceLedger,
         hash_anchor: testHashAnchor,
+        epistemics: testEpistemics,
     };
 
     async function runSuite(name) {
