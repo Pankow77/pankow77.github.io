@@ -321,6 +321,164 @@ const CorrelationEngine = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // SOURCE DIVERSITY / ENTROPY ANALYSIS
+    // ══════════════════════════════════════════════
+
+    function analyzeSourceDiversity(archive) {
+        if (!archive || archive.length < 5) return { entropy: 0, dominant: null, healthy: true };
+
+        const now = Date.now();
+        const recent = archive.filter(s => (now - s.time) < 2 * 60 * 60 * 1000); // last 2h
+        if (recent.length < 3) return { entropy: 0, dominant: null, healthy: true };
+
+        // Count signals per source
+        const sourceCounts = {};
+        recent.forEach(s => {
+            sourceCounts[s.source] = (sourceCounts[s.source] || 0) + 1;
+        });
+
+        const total = recent.length;
+        const sources = Object.entries(sourceCounts);
+
+        // Shannon entropy
+        let entropy = 0;
+        sources.forEach(([, count]) => {
+            const p = count / total;
+            if (p > 0) entropy -= p * Math.log2(p);
+        });
+
+        // Max entropy for this number of sources
+        const maxEntropy = Math.log2(sources.length) || 1;
+        const normalizedEntropy = maxEntropy > 0 ? entropy / maxEntropy : 0;
+
+        // Find dominant source
+        const sorted = sources.sort((a, b) => b[1] - a[1]);
+        const dominant = sorted[0];
+        const dominantShare = dominant ? dominant[1] / total : 0;
+
+        return {
+            entropy: Math.round(normalizedEntropy * 100),
+            sourceCount: sources.length,
+            signalCount: total,
+            dominant: dominant ? { name: dominant[0], count: dominant[1], share: Math.round(dominantShare * 100) } : null,
+            healthy: normalizedEntropy > 0.5 && dominantShare < 0.5,
+            warning: dominantShare > 0.6 ? `SOURCE SATURATION: ${dominant[0]} domina con ${Math.round(dominantShare * 100)}%` : null,
+        };
+    }
+
+    // ══════════════════════════════════════════════
+    // BURST DETECTION — Anti-manipulation
+    // ══════════════════════════════════════════════
+
+    function detectBursts(archive, windowMs = 10 * 60 * 1000) {
+        if (!archive || archive.length < 5) return [];
+
+        const now = Date.now();
+        const recent = archive.filter(s => (now - s.time) < 60 * 60 * 1000); // last 1h
+
+        // Group by source
+        const bySource = {};
+        recent.forEach(s => {
+            if (!bySource[s.source]) bySource[s.source] = [];
+            bySource[s.source].push(s);
+        });
+
+        const bursts = [];
+        Object.entries(bySource).forEach(([source, signals]) => {
+            if (signals.length < 5) return;
+
+            // Check if signals are concentrated in any windowMs window
+            const sorted = signals.sort((a, b) => a.time - b.time);
+            for (let i = 0; i < sorted.length; i++) {
+                const windowEnd = sorted[i].time + windowMs;
+                const inWindow = sorted.filter(s => s.time >= sorted[i].time && s.time <= windowEnd);
+                if (inWindow.length >= 5) {
+                    const domains = [...new Set(inWindow.map(s => s.domain))];
+                    const avgSev = Math.round(inWindow.reduce((sum, s) => sum + (s.severity || 0), 0) / inWindow.length);
+
+                    bursts.push({
+                        type: 'SOURCE_BURST',
+                        source: source,
+                        count: inWindow.length,
+                        windowMs: windowMs,
+                        domains: domains,
+                        avgSeverity: avgSev,
+                        suspicious: domains.length <= 2 && avgSev > 50,
+                        detectedAt: now,
+                    });
+                    break; // One burst per source
+                }
+            }
+        });
+
+        return bursts.sort((a, b) => b.count - a.count);
+    }
+
+    // ══════════════════════════════════════════════
+    // NARRATIVE MANIPULATION DETECTION
+    // ══════════════════════════════════════════════
+
+    function detectManipulation(archive) {
+        const warnings = [];
+        const now = Date.now();
+        const recent = archive.filter(s => (now - s.time) < 2 * 60 * 60 * 1000);
+
+        if (recent.length < 10) return warnings;
+
+        // 1. Check source diversity
+        const diversity = analyzeSourceDiversity(archive);
+        if (!diversity.healthy && diversity.warning) {
+            warnings.push({
+                type: 'LOW_ENTROPY',
+                severity: 'HIGH',
+                message: diversity.warning,
+                detail: `Entropy: ${diversity.entropy}%, Sources: ${diversity.sourceCount}`,
+            });
+        }
+
+        // 2. Check for coordinated domain saturation
+        const domainCounts = {};
+        recent.forEach(s => {
+            domainCounts[s.domain] = (domainCounts[s.domain] || 0) + 1;
+        });
+        const totalRecent = recent.length;
+        Object.entries(domainCounts).forEach(([domain, count]) => {
+            const share = count / totalRecent;
+            if (share > 0.6 && count > 8) {
+                warnings.push({
+                    type: 'DOMAIN_SATURATION',
+                    severity: 'ELEVATED',
+                    message: `${domain} domina ${Math.round(share * 100)}% dei segnali recenti (${count}/${totalRecent})`,
+                    domain: domain,
+                });
+            }
+        });
+
+        // 3. Check for burst patterns
+        const bursts = detectBursts(archive);
+        bursts.filter(b => b.suspicious).forEach(burst => {
+            warnings.push({
+                type: 'SUSPICIOUS_BURST',
+                severity: 'CRITICAL',
+                message: `Burst sospetto da ${burst.source}: ${burst.count} segnali in ${Math.round(burst.windowMs / 60000)}min, domini: ${burst.domains.join(',')}`,
+                source: burst.source,
+            });
+        });
+
+        // 4. Check for severity inflation (recent avg much higher than baseline)
+        const spike = detectSeveritySpikes(archive);
+        if (spike && spike.type === 'SEVERITY_SPIKE' && spike.delta > 20) {
+            warnings.push({
+                type: 'SEVERITY_INFLATION',
+                severity: 'ELEVATED',
+                message: `Severity anomala: media recente ${spike.recentAvg}% vs baseline ${spike.baselineAvg}% (+${spike.delta}%)`,
+            });
+        }
+
+        return warnings;
+    }
+
+    // ══════════════════════════════════════════════
     // FULL ANALYSIS
     // ══════════════════════════════════════════════
 
@@ -341,6 +499,10 @@ const CorrelationEngine = (() => {
             clusters: detectClusters(archive),
             severitySpike: detectSeveritySpikes(archive),
             matrix: buildCorrelationMatrix(archive),
+            sourceDiversity: analyzeSourceDiversity(archive),
+            bursts: detectBursts(archive),
+            manipulationWarnings: detectManipulation(archive),
+            storageReport: typeof PersistenceManager !== 'undefined' ? PersistenceManager.getStorageReport() : null,
             watchlistHits: archive.slice(0, 50).map(s => ({
                 signal: s,
                 hits: checkWatchlist(s),
@@ -359,6 +521,9 @@ const CorrelationEngine = (() => {
         detectClusters,
         detectSeveritySpikes,
         buildCorrelationMatrix,
+        analyzeSourceDiversity,
+        detectBursts,
+        detectManipulation,
         checkWatchlist,
         getWatchlist,
         addToWatchlist,

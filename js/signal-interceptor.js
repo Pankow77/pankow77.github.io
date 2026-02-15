@@ -26,7 +26,50 @@ const SignalInterceptor = (() => {
         maxAge: 24 * 60 * 60 * 1000,     // ignora notizie più vecchie di 24h
         proxyUrl: 'https://api.allorigins.win/get?url=',
         proxyFallback: 'https://api.rss2json.com/v1/api.json?rss_url=',
+        chunkSize: 20,                   // articles per processing chunk
+        chunkDelay: 50,                  // ms between chunks
+        feedBatchSize: 5,                // feeds fetched in parallel per batch
+        feedBatchDelay: 2000,            // ms between feed batches
     };
+
+    // ══════════════════════════════════════════════
+    // CIRCUIT BREAKER — Per-proxy failure tracking
+    // ══════════════════════════════════════════════
+
+    const circuitBreaker = {
+        primary: { failures: 0, lastFailure: 0, open: false },
+        fallback: { failures: 0, lastFailure: 0, open: false },
+        threshold: 3,         // failures before opening circuit
+        resetTime: 5 * 60 * 1000,  // 5 min before retry
+    };
+
+    function isCircuitOpen(proxy) {
+        const cb = circuitBreaker[proxy];
+        if (!cb.open) return false;
+        // Auto-reset after resetTime (half-open)
+        if (Date.now() - cb.lastFailure > circuitBreaker.resetTime) {
+            cb.open = false;
+            cb.failures = 0;
+            return false;
+        }
+        return true;
+    }
+
+    function recordProxyFailure(proxy) {
+        const cb = circuitBreaker[proxy];
+        cb.failures++;
+        cb.lastFailure = Date.now();
+        if (cb.failures >= circuitBreaker.threshold) {
+            cb.open = true;
+            console.warn(`[SIGNAL_INTERCEPTOR] Circuit OPEN for ${proxy} proxy after ${cb.failures} failures`);
+        }
+    }
+
+    function recordProxySuccess(proxy) {
+        const cb = circuitBreaker[proxy];
+        cb.failures = 0;
+        cb.open = false;
+    }
 
     // ══════════════════════════════════════════════
     // LAYER 0: FEED SOURCES
@@ -309,45 +352,82 @@ const SignalInterceptor = (() => {
     async function fetchFeed(feed) {
         const encodedUrl = encodeURIComponent(feed.url);
 
-        // Try primary proxy
-        try {
-            const resp = await fetch(CONFIG.proxyUrl + encodedUrl, {
-                signal: createTimeoutSignal(15000)
-            });
-            const data = await resp.json();
-            if (data && data.contents) {
-                stats.feedStatus[feed.id] = { status: 'OK', time: Date.now() };
-                return parseRSS(data.contents, feed);
+        // Try primary proxy (if circuit not open)
+        if (!isCircuitOpen('primary')) {
+            try {
+                const resp = await fetch(CONFIG.proxyUrl + encodedUrl, {
+                    signal: createTimeoutSignal(15000)
+                });
+                const data = await resp.json();
+                if (data && data.contents) {
+                    stats.feedStatus[feed.id] = { status: 'OK', time: Date.now(), proxy: 'primary' };
+                    recordProxySuccess('primary');
+                    return parseRSS(data.contents, feed);
+                }
+            } catch (e) {
+                recordProxyFailure('primary');
             }
-        } catch (e) {
-            // Primary proxy failed, try fallback
         }
 
-        // Fallback proxy (rss2json)
-        try {
-            const resp = await fetch(CONFIG.proxyFallback + encodedUrl, {
-                signal: createTimeoutSignal(15000)
-            });
-            const data = await resp.json();
-            if (data && data.items) {
-                stats.feedStatus[feed.id] = { status: 'OK', time: Date.now() };
-                return data.items.map(item => ({
-                    id: item.guid || item.link || item.title,
-                    title: stripHTML(item.title || ''),
-                    description: stripHTML(item.description || ''),
-                    link: item.link || '',
-                    pubDate: new Date(item.pubDate),
-                    source: feed.name,
-                    feedId: feed.id,
-                    lang: feed.lang
-                }));
+        // Fallback proxy (if circuit not open)
+        if (!isCircuitOpen('fallback')) {
+            try {
+                const resp = await fetch(CONFIG.proxyFallback + encodedUrl, {
+                    signal: createTimeoutSignal(15000)
+                });
+                const data = await resp.json();
+                if (data && data.items) {
+                    stats.feedStatus[feed.id] = { status: 'OK', time: Date.now(), proxy: 'fallback' };
+                    recordProxySuccess('fallback');
+                    return data.items.map(item => ({
+                        id: item.guid || item.link || item.title,
+                        title: stripHTML(item.title || ''),
+                        description: stripHTML(item.description || ''),
+                        link: item.link || '',
+                        pubDate: new Date(item.pubDate),
+                        source: feed.name,
+                        feedId: feed.id,
+                        lang: feed.lang
+                    }));
+                }
+            } catch (e) {
+                recordProxyFailure('fallback');
             }
-        } catch (e) {
-            stats.feedStatus[feed.id] = { status: 'ERROR', time: Date.now(), error: e.message };
-            stats.errors++;
         }
 
+        // Both proxies failed or circuit open
+        stats.feedStatus[feed.id] = {
+            status: isCircuitOpen('primary') && isCircuitOpen('fallback') ? 'CIRCUIT_OPEN' : 'ERROR',
+            time: Date.now()
+        };
+        stats.errors++;
         return [];
+    }
+
+    // Fetch feeds in staggered batches to avoid proxy rate limits
+    async function fetchFeedsBatched(feeds) {
+        const allArticles = [];
+        for (let i = 0; i < feeds.length; i += CONFIG.feedBatchSize) {
+            const batch = feeds.slice(i, i + CONFIG.feedBatchSize);
+            const promises = batch.map(feed => fetchFeed(feed).catch(() => []));
+
+            const settleAll = typeof Promise.allSettled === 'function'
+                ? (p) => Promise.allSettled(p)
+                : (p) => Promise.all(p.map(pr => pr.then(v => ({ status: 'fulfilled', value: v }), e => ({ status: 'rejected', reason: e }))));
+
+            const results = await settleAll(promises);
+            results.forEach(result => {
+                if (result.status === 'fulfilled' && result.value) {
+                    allArticles.push(...result.value);
+                }
+            });
+
+            // Delay between batches (not after last batch)
+            if (i + CONFIG.feedBatchSize < feeds.length) {
+                await new Promise(r => setTimeout(r, CONFIG.feedBatchDelay));
+            }
+        }
+        return allArticles;
     }
 
     function parseRSS(xmlString, feed) {
@@ -482,22 +562,33 @@ const SignalInterceptor = (() => {
     // ══════════════════════════════════════════════
 
     function classifyArticle(article) {
-        const text = (article.title + ' ' + article.description).toLowerCase();
+        const titleLower = article.title.toLowerCase();
+        const descLower = (article.description || '').toLowerCase();
+        const text = titleLower + ' ' + descLower;
+
+        // Multi-domain weighted scoring
+        const domainScores = {};
         let bestDomain = null;
         let bestScore = 0;
 
         Object.keys(DOMAINS).forEach(domain => {
             let score = 0;
             DOMAINS[domain].keywords.forEach(kw => {
-                if (text.includes(kw.toLowerCase())) {
-                    score++;
-                    // Bonus for title match (more relevant)
-                    if (article.title.toLowerCase().includes(kw.toLowerCase())) {
-                        score += 0.5;
+                const kwLower = kw.toLowerCase();
+                if (text.includes(kwLower)) {
+                    // Weight by keyword specificity (longer = more specific = higher weight)
+                    const weight = kwLower.length > 12 ? 2.0 : kwLower.length > 6 ? 1.5 : 1.0;
+                    score += weight;
+                    // Title match bonus (2x relevance)
+                    if (titleLower.includes(kwLower)) {
+                        score += weight;
                     }
                 }
             });
 
+            if (score > 0) {
+                domainScores[domain] = score;
+            }
             if (score > bestScore) {
                 bestScore = score;
                 bestDomain = domain;
@@ -507,29 +598,91 @@ const SignalInterceptor = (() => {
         // Minimum threshold — at least 1 keyword match
         if (bestScore < 1) return null;
 
+        // Detect secondary domains (score > 40% of primary)
+        const secondaryDomains = Object.entries(domainScores)
+            .filter(([d, s]) => d !== bestDomain && s >= bestScore * 0.4)
+            .sort((a, b) => b[1] - a[1])
+            .map(([d]) => d);
+
+        // Multi-domain bonus for severity
+        const multiDomainBonus = secondaryDomains.length > 0 ? secondaryDomains.length * 5 : 0;
+
         return {
             ...article,
             domain: bestDomain,
             domainColor: DOMAINS[bestDomain].color,
             domainIcon: DOMAINS[bestDomain].icon,
-            severity: calculateSeverity(text, bestScore),
+            severity: calculateSeverity(text, bestScore, article.source, multiDomainBonus),
             matchScore: bestScore,
+            secondaryDomains: secondaryDomains,
+            domainScores: domainScores,
             classifiedAt: Date.now()
         };
     }
 
-    function calculateSeverity(text, keywordScore) {
-        let severity = Math.min(keywordScore * 12, 60); // Base: 0-60 from keywords
+    // ══════════════════════════════════════════════
+    // SOURCE TRUST REGISTRY
+    // ══════════════════════════════════════════════
+
+    const SOURCE_TRUST = {};  // Runtime cache: source -> { signals, avgSeverity, lastBurst }
+
+    function getSourceTrust(sourceName) {
+        if (!SOURCE_TRUST[sourceName]) {
+            SOURCE_TRUST[sourceName] = { signals: 0, totalSeverity: 0, lastBurst: 0, burstCount: 0 };
+        }
+        return SOURCE_TRUST[sourceName];
+    }
+
+    function updateSourceTrust(sourceName, severity) {
+        const trust = getSourceTrust(sourceName);
+        trust.signals++;
+        trust.totalSeverity += severity;
+
+        // Burst detection: >5 signals from same source in 10 min
+        const now = Date.now();
+        if (now - trust.lastBurst < 10 * 60 * 1000) {
+            trust.burstCount++;
+        } else {
+            trust.burstCount = 1;
+            trust.lastBurst = now;
+        }
+    }
+
+    function calculateSeverity(text, keywordScore, sourceName, multiDomainBonus) {
+        let severity = Math.min(keywordScore * 10, 55); // Base: 0-55 from weighted keywords
 
         // Urgency multiplier
+        let urgencyHits = 0;
         URGENCY_WORDS.high.forEach(w => {
-            if (text.includes(w)) severity += 15;
+            if (text.includes(w)) { severity += 12; urgencyHits++; }
         });
         URGENCY_WORDS.medium.forEach(w => {
-            if (text.includes(w)) severity += 7;
+            if (text.includes(w)) { severity += 5; urgencyHits++; }
         });
 
-        return Math.min(Math.round(severity), 98); // Cap at 98%
+        // Diminishing returns on urgency words (prevent gaming)
+        if (urgencyHits > 3) {
+            severity -= (urgencyHits - 3) * 3;
+        }
+
+        // Multi-domain bonus (cross-cutting stories are more significant)
+        severity += multiDomainBonus || 0;
+
+        // Source trust factor: dampen severity from sources in burst mode
+        if (sourceName) {
+            const trust = getSourceTrust(sourceName);
+            if (trust.burstCount > 5) {
+                // Source is flooding — reduce severity to prevent manipulation
+                severity *= 0.7;
+            }
+        }
+
+        // Normalize: sigmoid-like capping to prevent runaway values
+        if (severity > 75) {
+            severity = 75 + (severity - 75) * 0.3; // Diminishing returns above 75
+        }
+
+        return Math.min(Math.max(Math.round(severity), 5), 98); // Floor 5, cap 98
     }
 
     // ══════════════════════════════════════════════
@@ -802,85 +955,87 @@ const SignalInterceptor = (() => {
     // MAIN POLL CYCLE
     // ══════════════════════════════════════════════
 
+    // Chunked processing: classify articles in batches to avoid UI freeze
+    function processChunk(articles, index, signalQueue, callback) {
+        const end = Math.min(index + CONFIG.chunkSize, articles.length);
+        for (let i = index; i < end; i++) {
+            const article = articles[i];
+            const signal = classifyArticle(article);
+            if (signal) {
+                markAsSeen(article.id);
+                updateSourceTrust(signal.source, signal.severity);
+                signalQueue.push(signal);
+            } else {
+                markAsSeen(article.id);
+            }
+        }
+
+        if (end < articles.length) {
+            // Yield to browser using requestIdleCallback or setTimeout fallback
+            const schedule = typeof requestIdleCallback === 'function'
+                ? (fn) => requestIdleCallback(fn, { timeout: CONFIG.chunkDelay * 2 })
+                : (fn) => setTimeout(fn, CONFIG.chunkDelay);
+            schedule(() => processChunk(articles, end, signalQueue, callback));
+        } else {
+            callback(signalQueue);
+        }
+    }
+
     async function pollCycle() {
         if (isRunning) return;
         isRunning = true;
         setFetching(true);
 
+        const cycleStart = performance.now();
         console.log('%c[SIGNAL_INTERCEPTOR] Polling cycle ' + stats.cycleCount + ' started', 'color: #00d4ff;');
 
-        let allArticles = [];
-
-        // Fetch all feeds in parallel
-        const promises = FEEDS.map(feed => fetchFeed(feed).catch(() => []));
-
-        // Promise.allSettled fallback for older browsers
-        const settleAll = typeof Promise.allSettled === 'function'
-            ? (p) => Promise.allSettled(p)
-            : (p) => Promise.all(p.map(pr => pr.then(v => ({ status: 'fulfilled', value: v }), e => ({ status: 'rejected', reason: e }))));
-
-        const results = await settleAll(promises);
-
-        results.forEach((result) => {
-            if (result.status === 'fulfilled' && result.value) {
-                allArticles = allArticles.concat(result.value);
-            }
-        });
+        // Fetch feeds in staggered batches (not all 20 at once)
+        const allArticles = await fetchFeedsBatched(FEEDS);
 
         stats.totalFetched += allArticles.length;
 
         // Deduplicate
         const newArticles = deduplicate(allArticles);
 
-        // Classify each new article
-        let signalCount = 0;
-        const signalQueue = [];
+        // Classify in chunks (non-blocking) then distribute
+        processChunk(newArticles, 0, [], (signalQueue) => {
+            const signalCount = signalQueue.length;
 
-        newArticles.forEach(article => {
-            const signal = classifyArticle(article);
-            if (signal) {
-                markAsSeen(article.id);
-                signalQueue.push(signal);
-                signalCount++;
-            } else {
-                // Even unclassified articles get marked to avoid re-processing
-                markAsSeen(article.id);
+            // Distribute signals with staggered timing
+            signalQueue.forEach((signal, i) => {
+                setTimeout(() => {
+                    distributeSignal(signal);
+                    showSignalToast(signal);
+                }, i * 5000); // 5 seconds between each signal
+            });
+
+            stats.totalSignals += signalCount;
+            stats.lastPoll = Date.now();
+            stats.cycleCount++;
+
+            setFetching(false);
+            updateStatusIndicator();
+
+            const cycleTime = Math.round(performance.now() - cycleStart);
+            console.log(
+                `%c[SIGNAL_INTERCEPTOR] Cycle ${stats.cycleCount} complete: ` +
+                `${allArticles.length} fetched, ${newArticles.length} new, ${signalCount} classified (${cycleTime}ms)`,
+                'color: #39ff14;'
+            );
+
+            // Announce via CoreFeed
+            if (signalCount > 0 && typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SIGNAL_HUNTER',
+                    `Ciclo completato in ${cycleTime}ms. ${signalCount} segnali intercettati e classificati.`
+                );
+            } else if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SIGNAL_HUNTER',
+                    'Scansione completata. Nessun nuovo segnale. Il mondo è silenzioso... per ora.'
+                );
             }
+
+            isRunning = false;
         });
-
-        // Distribute signals with staggered timing
-        signalQueue.forEach((signal, i) => {
-            setTimeout(() => {
-                distributeSignal(signal);
-                showSignalToast(signal);
-            }, i * 5000); // 5 seconds between each signal
-        });
-
-        stats.totalSignals += signalCount;
-        stats.lastPoll = Date.now();
-        stats.cycleCount++;
-
-        setFetching(false);
-        updateStatusIndicator();
-
-        console.log(
-            `%c[SIGNAL_INTERCEPTOR] Cycle ${stats.cycleCount} complete: ` +
-            `${allArticles.length} fetched, ${newArticles.length} new, ${signalCount} classified`,
-            'color: #39ff14;'
-        );
-
-        // If we got signals, announce it via CoreFeed
-        if (signalCount > 0 && typeof CoreFeed !== 'undefined') {
-            CoreFeed.addMessage('SIGNAL_HUNTER',
-                `Ciclo di scansione completato. ${signalCount} nuovi segnali intercettati e classificati.`
-            );
-        } else if (typeof CoreFeed !== 'undefined') {
-            CoreFeed.addMessage('SIGNAL_HUNTER',
-                'Scansione completata. Nessun nuovo segnale. Il mondo è silenzioso... per ora.'
-            );
-        }
-
-        isRunning = false;
     }
 
     let lastManualPoll = 0;
@@ -943,8 +1098,15 @@ const SignalInterceptor = (() => {
     return {
         pollCycle,
         triggerManualPoll,
-        getStats: () => ({ ...stats }),
+        getStats: () => ({
+            ...stats,
+            circuitBreaker: {
+                primary: { ...circuitBreaker.primary },
+                fallback: { ...circuitBreaker.fallback },
+            },
+        }),
         getArchive: () => typeof PersistenceManager !== 'undefined' ? PersistenceManager.getArchive() : [],
+        getSourceTrust: () => ({ ...SOURCE_TRUST }),
         FEEDS,
         DOMAINS
     };

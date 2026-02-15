@@ -23,8 +23,78 @@ const PersistenceManager = (() => {
         statsKey: 'hs_session_stats',
         settingsKey: 'hs_settings',
         maxArchiveSize: 2000,
-        version: '1.0',
+        version: '2.0',
+        signalTTL: 30 * 24 * 60 * 60 * 1000,  // 30 days TTL
+        storageSoftLimit: 4 * 1024 * 1024,      // 4MB soft limit (warn)
+        storageHardLimit: 4.5 * 1024 * 1024,    // 4.5MB hard limit (purge)
+        cleanupInterval: 60 * 60 * 1000,        // 1h between cleanups
     };
+
+    // ══════════════════════════════════════════════
+    // STORAGE SIZE MONITORING
+    // ══════════════════════════════════════════════
+
+    let lastCleanup = 0;
+
+    function estimateStorageBytes() {
+        let total = 0;
+        try {
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key && key.startsWith('hs_')) {
+                    total += (localStorage.getItem(key) || '').length * 2; // UTF-16
+                }
+            }
+            // Also count si_seen (dedup index)
+            const seen = localStorage.getItem('si_seen');
+            if (seen) total += seen.length * 2;
+        } catch (e) { /* ignore */ }
+        return total;
+    }
+
+    function getStorageReport() {
+        const bytes = estimateStorageBytes();
+        return {
+            bytesUsed: bytes,
+            kbUsed: Math.round(bytes / 1024),
+            mbUsed: (bytes / (1024 * 1024)).toFixed(2),
+            percentFull: Math.round((bytes / CONFIG.storageHardLimit) * 100),
+            healthy: bytes < CONFIG.storageSoftLimit,
+            critical: bytes >= CONFIG.storageHardLimit,
+        };
+    }
+
+    // TTL-based cleanup: purge signals older than signalTTL
+    function cleanupExpiredSignals() {
+        const now = Date.now();
+        if (now - lastCleanup < CONFIG.cleanupInterval) return;
+        lastCleanup = now;
+
+        const archive = getArchive();
+        const cutoff = now - CONFIG.signalTTL;
+        const before = archive.length;
+        const filtered = archive.filter(s => (s.time || 0) > cutoff);
+
+        if (filtered.length < before) {
+            saveArchive(filtered);
+            console.log(`[PERSISTENCE] TTL cleanup: purged ${before - filtered.length} signals older than 30 days`);
+        }
+
+        // Size-based emergency purge
+        const storage = getStorageReport();
+        if (storage.critical) {
+            const current = getArchive();
+            const keep = Math.floor(current.length * 0.6); // Keep newest 60%
+            const trimmed = current.slice(0, keep);
+            saveArchive(trimmed);
+            console.warn(`[PERSISTENCE] Emergency purge: storage at ${storage.mbUsed}MB, trimmed to ${trimmed.length} signals`);
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SENTINEL', `Storage critico (${storage.mbUsed}MB). Archivio ridotto a ${trimmed.length} segnali.`);
+            }
+        } else if (!storage.healthy && typeof CoreFeed !== 'undefined') {
+            CoreFeed.addMessage('SENTINEL', `Storage warning: ${storage.mbUsed}MB utilizzati (${storage.percentFull}%).`);
+        }
+    }
 
     // ══════════════════════════════════════════════
     // ARCHIVE MANAGEMENT
@@ -62,6 +132,9 @@ const PersistenceManager = (() => {
     }
 
     function addSignal(signal) {
+        // Run periodic cleanup on every add
+        cleanupExpiredSignals();
+
         const archive = getArchive();
         // Avoid duplicates by link
         if (archive.some(s => s.link === signal.link)) return false;
@@ -1120,6 +1193,8 @@ const PersistenceManager = (() => {
         addSignal,
         searchArchive,
         getStats,
+        getStorageReport,
+        cleanupExpiredSignals,
         exportJSON,
         importJSON: (file) => importJSON(file),
         openPanel,
