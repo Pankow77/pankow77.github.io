@@ -131,6 +131,7 @@
         <button onclick="runSuite('consistency')">CONSISTENCY</button>
         <button onclick="runSuite('reputation')">REPUTATION</button>
         <button onclick="runSuite('invariants')">INVARIANTS</button>
+        <button onclick="runSuite('adversarial')">ADVERSARIAL</button>
         <button onclick="dumpSystemState()">DUMP STATE</button>
     </div>
 
@@ -156,6 +157,7 @@
     <script src="js/persistence-manager.js"></script>
     <script src="js/correlation-engine.js"></script>
     <!-- NOTE: signal-interceptor.js not loaded — we test functions in isolation -->
+    <script src="js/watchdog.js"></script>
 
     <script>
     // ═══════════════════════════════════════════════════════════════
@@ -988,6 +990,168 @@
     }
 
     // ═══════════════════════════════════════════════════════════════
+    // SUITE 9: ADVERSARIAL INJECTION — Deliberate state corruption
+    // Tests that MUST trigger failures. If they don't, the system
+    // is lying to itself.
+    // ═══════════════════════════════════════════════════════════════
+
+    async function testAdversarial() {
+        const tests = [];
+        log('═══ ADVERSARIAL INJECTION ═══');
+
+        const hasState = typeof SystemState !== 'undefined';
+        if (!hasState) {
+            tests.push({ name: 'SystemState required for adversarial tests', result: 'FAIL', detail: 'NOT LOADED' });
+            renderSuite('adversarial', tests);
+            updateSummary();
+            return;
+        }
+
+        // ── ADV-1: Invalid phase transition MUST be rejected ──
+        // Ensure we're in IDLE first
+        if (SystemState.getPhase() !== 'IDLE') {
+            SystemState.setPhase('IDLE'); // recovery
+        }
+        const badTransitions = [
+            ['IDLE', 'BOOT'],
+            ['IDLE', 'CLASSIFYING'],
+            ['IDLE', 'DISTRIBUTING'],
+        ];
+        badTransitions.forEach(([_, to]) => {
+            const result = SystemState.setPhase(to);
+            tests.push({
+                name: `Invalid transition IDLE→${to} rejected`,
+                result: assert(`adv_phase_${to}`, result === false),
+                detail: `setPhase("${to}") = ${result}`,
+            });
+        });
+
+        // ── ADV-2: Quarantine isolation breach ──
+        // Quarantine a feed, then check assertFeedNotQuarantined detects it
+        SystemState.quarantineFeed('adv-test-feed-999');
+        const qBreach = SystemState.assertFeedNotQuarantined('adv-test-feed-999');
+        tests.push({
+            name: 'Quarantine isolation: breach DETECTED',
+            result: assert('adv_q_breach', qBreach === false),
+            detail: `assertFeedNotQuarantined = ${qBreach} (expected false)`,
+        });
+        // Check violation was logged
+        const qViolations = SystemState.getEventLog({ type: 'INVARIANT_VIOLATION' })
+            .filter(e => e.data && e.data.type === 'QUARANTINE_ISOLATION' && e.data.feedId === 'adv-test-feed-999');
+        tests.push({
+            name: 'Quarantine violation event logged',
+            result: assert('adv_q_logged', qViolations.length > 0),
+            detail: `${qViolations.length} violation events`,
+        });
+        SystemState.releaseFeed('adv-test-feed-999'); // cleanup
+
+        // ── ADV-3: Ledger divergence exceeds adaptive threshold ──
+        // Force a massive divergence that should fail convergence
+        const prevLS = SystemState.getStorageState().lsCount;
+        const prevIDB = SystemState.getStorageState().idbCount;
+        const threshold = SystemState.computeAdaptiveThreshold();
+
+        SystemState.updateStorage({ lsCount: 1000, idbCount: 0, idbAvailable: true });
+        const divergenceBreaks = !SystemState.INVARIANTS[3].check();
+        tests.push({
+            name: 'Ledger divergence 1000:0 BREAKS convergence invariant',
+            result: assert('adv_divergence', divergenceBreaks),
+            detail: `divergence=1000, threshold=${threshold}, breaks=${divergenceBreaks}`,
+        });
+
+        // Restore
+        SystemState.updateStorage({ lsCount: prevLS, idbCount: prevIDB });
+
+        // ── ADV-4: Double graylist doesn't duplicate ──
+        SystemState.graylistSource('adv-duplicate-source');
+        SystemState.graylistSource('adv-duplicate-source');
+        const gCount = SystemState.getReputationState().graylisted.filter(s => s === 'adv-duplicate-source').length;
+        tests.push({
+            name: 'Double graylist produces exactly 1 entry (Set semantics)',
+            result: assert('adv_double_gray', gCount === 1),
+            detail: `count = ${gCount}`,
+        });
+        SystemState.ungraylistSource('adv-duplicate-source');
+
+        // ── ADV-5: Rapid phase cycling doesn't corrupt state ──
+        const startCycleId = SystemState.getCycleId();
+        for (let i = 0; i < 10; i++) {
+            SystemState.setPhase('POLLING');
+            SystemState.advanceCycle();
+            SystemState.setPhase('CLASSIFYING');
+            SystemState.setPhase('DISTRIBUTING');
+            SystemState.setPhase('IDLE');
+        }
+        const endCycleId = SystemState.getCycleId();
+        tests.push({
+            name: 'Rapid 10-cycle burst: monotonicity preserved',
+            result: assert('adv_rapid_cycle', endCycleId === startCycleId + 10),
+            detail: `${startCycleId} → ${endCycleId} (expected +10)`,
+        });
+
+        // ── ADV-6: Event log hash chain integrity after mutations ──
+        const logIntegrity = SystemState.verifyLogIntegrity();
+        tests.push({
+            name: 'Hash chain intact after adversarial mutations',
+            result: assert('adv_hash_chain', logIntegrity.intact),
+            detail: `entries=${logIntegrity.entries}, intact=${logIntegrity.intact}`,
+        });
+
+        // ── ADV-7: Phase timeout detection ──
+        // We can't actually wait 2 min, but we can verify the mechanism exists
+        const timeouts = SystemState.PHASE_TIMEOUTS;
+        tests.push({
+            name: 'Phase timeouts defined for POLLING, CLASSIFYING, DISTRIBUTING',
+            result: assert('adv_timeouts', timeouts.POLLING > 0 && timeouts.CLASSIFYING > 0 && timeouts.DISTRIBUTING > 0),
+            detail: `POLLING=${timeouts.POLLING}ms, CLASSIFYING=${timeouts.CLASSIFYING}ms, DISTRIBUTING=${timeouts.DISTRIBUTING}ms`,
+        });
+
+        // ── ADV-8: Watchdog exists and can verify ──
+        const hasWatchdog = typeof Watchdog !== 'undefined';
+        tests.push({
+            name: 'Watchdog module loaded',
+            result: assert('adv_watchdog_loaded', hasWatchdog),
+            detail: hasWatchdog ? 'OK' : 'MISSING',
+        });
+
+        if (hasWatchdog) {
+            const wdResult = await Watchdog.verify();
+            tests.push({
+                name: 'Watchdog independent verification runs',
+                result: assert('adv_watchdog_runs', wdResult !== null),
+                detail: wdResult ? `checks=${wdResult.check}, findings=${wdResult.findings.length}` : 'null',
+            });
+
+            const wdStatus = Watchdog.getStatus();
+            tests.push({
+                name: 'Watchdog tracks disagreements independently',
+                result: assert('adv_watchdog_track', typeof wdStatus.disagreements === 'number'),
+                detail: `disagreements=${wdStatus.disagreements}, totalChecks=${wdStatus.totalChecks}`,
+            });
+        }
+
+        // ── ADV-9: Adaptive threshold is > 0 and reasonable ──
+        const adaptThreshold = SystemState.computeAdaptiveThreshold();
+        tests.push({
+            name: 'Adaptive threshold in reasonable range (5-200)',
+            result: assert('adv_threshold', adaptThreshold >= 5 && adaptThreshold <= 200),
+            detail: `threshold = ${adaptThreshold}`,
+        });
+
+        // ── ADV-10: Verify invariants after all adversarial mutations ──
+        const finalInvariants = SystemState.verifyAllInvariants();
+        const finalAllPass = finalInvariants.every(r => r.pass);
+        tests.push({
+            name: 'System recovered: all invariants pass after adversarial suite',
+            result: assert('adv_recovery', finalAllPass, finalInvariants.filter(r => !r.pass).map(r => r.id).join(', ')),
+            detail: finalInvariants.map(r => `${r.id}: ${r.pass ? 'PASS' : 'FAIL'}`).join(' | '),
+        });
+
+        renderSuite('adversarial', tests);
+        updateSummary();
+    }
+
+    // ═══════════════════════════════════════════════════════════════
     // ORCHESTRATION
     // ═══════════════════════════════════════════════════════════════
 
@@ -1000,6 +1164,7 @@
         consistency: testConsistency,
         reputation: testReputation,
         invariants: testInvariants,
+        adversarial: testAdversarial,
     };
 
     async function runSuite(name) {

@@ -234,11 +234,13 @@ const PersistenceManager = (() => {
             return true;
         } catch (e) {
             console.warn('[PERSISTENCE] Storage full, trimming archive.');
+            if (typeof SystemState !== 'undefined') SystemState.recordWriteError();
             archive = archive.slice(0, Math.floor(archive.length / 2));
             try {
                 localStorage.setItem(CONFIG.archiveKey, JSON.stringify(archive));
                 return true;
             } catch (e2) {
+                if (typeof SystemState !== 'undefined') SystemState.recordWriteError();
                 return false;
             }
         }
@@ -272,6 +274,11 @@ const PersistenceManager = (() => {
         archive.unshift(entry);
         saveArchive(archive);
         updateStats('signalAdded');
+
+        // Track write rate for adaptive convergence
+        if (typeof SystemState !== 'undefined') {
+            SystemState.recordWrite();
+        }
 
         // Dual-write: IndexedDB (async, for scale)
         if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {

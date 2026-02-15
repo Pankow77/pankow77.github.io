@@ -1,15 +1,14 @@
 // ═══════════════════════════════════════════════════════════════
-// SYSTEM_STATE v1.0 — Centralized State Contract
+// SYSTEM_STATE v2.0 — Centralized State Contract
 // Hybrid Syndicate / Ethic Software Foundation
 // ═══════════════════════════════════════════════════════════════
 // "No implicit conversations between modules. One source of truth."
 //
-// This module provides:
-// - Single shared state object for all defensive systems
-// - Invariant enforcement (laws that cannot be broken)
-// - Event log for deterministic replay
-// - State machine phases (BOOT → IDLE → POLLING → CLASSIFYING → DISTRIBUTING)
-// - Read/write through typed accessors (no direct mutation)
+// v2.0: Chaos-antagonist architecture
+// - Phase timeout + rollback (compensates stuck phases)
+// - Adaptive ledger convergence (threshold = f(throughput))
+// - Hash-chained event log (tamper detection)
+// - Trend-based health (velocity of change, not snapshot)
 // ═══════════════════════════════════════════════════════════════
 
 const SystemState = (() => {
@@ -22,8 +21,10 @@ const SystemState = (() => {
         cycle: {
             id: 0,
             phase: 'BOOT',          // BOOT | IDLE | POLLING | CLASSIFYING | DISTRIBUTING | DEGRADED
+            phaseEnteredAt: Date.now(), // timestamp when current phase started
             lastCompleted: 0,        // timestamp
             lastCycleMs: 0,          // duration of last cycle
+            cycleDurations: [],      // last N cycle durations for trend analysis
         },
         worker: {
             enabled: true,
@@ -41,6 +42,10 @@ const SystemState = (() => {
             pruningActive: false,
             lastReconcile: 0,
             lastPrune: 0,
+            writeRate: 0,            // signals/min (rolling)
+            errorRate: 0,            // write errors/min (rolling)
+            recentWrites: [],        // timestamps of recent writes for rate calc
+            recentErrors: [],        // timestamps of recent errors for rate calc
         },
         feeds: {
             quarantineSet: new Set(),  // feedIds currently quarantined
@@ -58,6 +63,7 @@ const SystemState = (() => {
             status: 'BOOT',           // HEALTHY | DEGRADED | CRITICAL | BOOT
             degradedReasons: [],       // why degraded
             lastCheck: 0,
+            trend: [],                 // last N health snapshots for velocity
         },
     };
 
@@ -74,6 +80,13 @@ const SystemState = (() => {
         'DEGRADED':      ['IDLE', 'POLLING'],
     };
 
+    // Phase timeout limits (ms) — if a phase lasts longer, force rollback
+    const PHASE_TIMEOUTS = {
+        'POLLING':       120000,   // 2 min max for fetching
+        'CLASSIFYING':    60000,   // 1 min max for classification
+        'DISTRIBUTING':   30000,   // 30s max for distribution
+    };
+
     function setPhase(newPhase) {
         const current = state.cycle.phase;
         const valid = VALID_TRANSITIONS[current];
@@ -88,8 +101,36 @@ const SystemState = (() => {
         }
         const prev = current;
         state.cycle.phase = newPhase;
+        state.cycle.phaseEnteredAt = Date.now();
         logEvent('PHASE_CHANGE', { from: prev, to: newPhase });
         return true;
+    }
+
+    // Phase timeout watchdog — call periodically to detect stuck phases
+    function checkPhaseTimeout() {
+        const phase = state.cycle.phase;
+        const timeout = PHASE_TIMEOUTS[phase];
+        if (!timeout) return null; // IDLE, BOOT, DEGRADED have no timeout
+
+        const elapsed = Date.now() - state.cycle.phaseEnteredAt;
+        if (elapsed > timeout) {
+            // Force rollback to IDLE
+            logEvent('PHASE_TIMEOUT', {
+                phase,
+                elapsed,
+                timeout,
+                detail: `Stuck in ${phase} for ${Math.round(elapsed / 1000)}s — forced rollback to IDLE`,
+            });
+            console.warn(`[SystemState] PHASE TIMEOUT: ${phase} exceeded ${timeout}ms (elapsed: ${elapsed}ms) — forcing IDLE`);
+
+            // Direct mutation — bypass validation since this is a recovery path
+            state.cycle.phase = 'IDLE';
+            state.cycle.phaseEnteredAt = Date.now();
+
+            logEvent('PHASE_CHANGE', { from: phase, to: 'IDLE', reason: 'timeout_rollback' });
+            return { phase, elapsed, rolledBack: true };
+        }
+        return null;
     }
 
     // ══════════════════════════════════════════════
@@ -104,25 +145,41 @@ const SystemState = (() => {
         },
         {
             id: 'QUARANTINE_ISOLATION',
-            description: 'Quarantined feeds must not produce signals, update reputation, or shift baseline',
-            // Enforced at call sites — checked via assertFeedNotQuarantined()
+            description: 'Quarantined feeds must not produce signals',
             check: (feedId) => !state.feeds.quarantineSet.has(feedId),
         },
         {
             id: 'CIRCUIT_BREAKER_PURITY',
-            description: 'Open circuit breakers must not produce side effects beyond logging and counters',
-            // Enforced at call sites — marker for documentation
+            description: 'Open circuit breakers must not produce side effects',
             check: () => true,
         },
         {
             id: 'LEDGER_CONVERGENCE',
-            description: 'Storage counts must converge within T seconds or system reports DEGRADED',
+            description: 'Storage counts must converge within adaptive threshold',
             check: () => {
                 if (state.storage.idbCount < 0) return true; // IDB unknown, skip
-                return state.storage.divergence <= Math.max(state.storage.lsCount * 0.15, 20);
+                const threshold = computeAdaptiveThreshold();
+                return state.storage.divergence <= threshold;
             },
         },
     ];
+
+    // ── Adaptive convergence threshold ──
+    // Instead of fixed 15%, threshold scales with:
+    // - write rate (higher throughput → larger acceptable drift)
+    // - error rate (more errors → tighter tolerance)
+    // - cycle age (longer since reconciliation → wider window)
+    function computeAdaptiveThreshold() {
+        const base = 10; // minimum tolerance: 10 signals
+        const writeBonus = Math.min(state.storage.writeRate * 2, 50); // up to +50 at high throughput
+        const errorPenalty = Math.min(state.storage.errorRate * 5, 30); // tighten by up to 30 on errors
+        const ageFactor = state.storage.lastReconcile > 0
+            ? Math.min((Date.now() - state.storage.lastReconcile) / (60 * 1000), 10) // up to +10 per minute since reconcile
+            : 5; // default if never reconciled
+
+        const threshold = Math.max(base + writeBonus - errorPenalty + ageFactor, 5);
+        return Math.round(threshold);
+    }
 
     function advanceCycle() {
         const prevId = state.cycle.id;
@@ -183,6 +240,24 @@ const SystemState = (() => {
         }
     }
 
+    // Track write/error rates for adaptive threshold
+    function recordWrite() {
+        const now = Date.now();
+        state.storage.recentWrites.push(now);
+        // Keep last 5 minutes only
+        const cutoff = now - 5 * 60 * 1000;
+        state.storage.recentWrites = state.storage.recentWrites.filter(t => t > cutoff);
+        state.storage.writeRate = state.storage.recentWrites.length / 5; // per minute
+    }
+
+    function recordWriteError() {
+        const now = Date.now();
+        state.storage.recentErrors.push(now);
+        const cutoff = now - 5 * 60 * 1000;
+        state.storage.recentErrors = state.storage.recentErrors.filter(t => t > cutoff);
+        state.storage.errorRate = state.storage.recentErrors.length / 5; // per minute
+    }
+
     // Feeds
     function quarantineFeed(feedId) {
         state.feeds.quarantineSet.add(feedId);
@@ -218,15 +293,18 @@ const SystemState = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // HEALTH CHECK — Aggregate system health
+    // HEALTH CHECK — Trend-based, not snapshot
     // ══════════════════════════════════════════════
+
+    const HEALTH_TREND_SIZE = 10;
 
     function checkHealth() {
         const reasons = [];
 
-        // Check ledger convergence
-        if (!INVARIANTS[3].check()) {
-            reasons.push(`STORAGE_DIVERGENCE: LS=${state.storage.lsCount}, IDB=${state.storage.idbCount}, drift=${state.storage.divergence}`);
+        // Check ledger convergence (adaptive)
+        const adaptiveThreshold = computeAdaptiveThreshold();
+        if (state.storage.idbCount >= 0 && state.storage.divergence > adaptiveThreshold) {
+            reasons.push(`STORAGE_DIVERGENCE: drift=${state.storage.divergence}, threshold=${adaptiveThreshold} (adaptive)`);
         }
 
         // Check worker circuit
@@ -239,7 +317,7 @@ const SystemState = (() => {
             reasons.push(`FEED_SATURATION: ${state.feeds.quarantineSet.size}/${state.feeds.totalFeeds} quarantined`);
         }
 
-        // Check pruning storm (pruning happened in last 5 min = stressed)
+        // Check pruning storm
         if (state.storage.pruningActive) {
             reasons.push('PRUNING_ACTIVE');
         }
@@ -247,6 +325,27 @@ const SystemState = (() => {
         // Check graylist saturation
         if (state.reputation.graylisted.size > state.reputation.sourcesTracked * 0.4 && state.reputation.sourcesTracked > 5) {
             reasons.push(`GRAYLIST_SATURATION: ${state.reputation.graylisted.size}/${state.reputation.sourcesTracked}`);
+        }
+
+        // Check phase timeout (stuck detection)
+        const timeout = checkPhaseTimeout();
+        if (timeout) {
+            reasons.push(`PHASE_TIMEOUT: ${timeout.phase} stuck for ${Math.round(timeout.elapsed / 1000)}s`);
+        }
+
+        // ── Trend-based degradation: velocity of health change ──
+        const snapshot = { t: Date.now(), reasons: reasons.length, phase: state.cycle.phase };
+        state.health.trend.push(snapshot);
+        if (state.health.trend.length > HEALTH_TREND_SIZE) {
+            state.health.trend.shift();
+        }
+
+        // If health has been degraded 3+ of last 5 checks → escalate
+        if (state.health.trend.length >= 5) {
+            const recentDegraded = state.health.trend.slice(-5).filter(s => s.reasons > 0).length;
+            if (recentDegraded >= 3 && reasons.length > 0) {
+                reasons.push(`TREND_DEGRADATION: ${recentDegraded}/5 recent checks degraded`);
+            }
         }
 
         state.health.degradedReasons = reasons;
@@ -264,11 +363,21 @@ const SystemState = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // EVENT LOG — Deterministic replay
+    // EVENT LOG — Hash-chained, tamper-evident
     // ══════════════════════════════════════════════
 
     const EVENT_LOG = [];
     const MAX_LOG_SIZE = 1000;
+    let lastHash = '0'; // genesis hash
+
+    // djb2 hash — fast, deterministic, good enough for tamper detection
+    function hashStr(str) {
+        let hash = 5381;
+        for (let i = 0; i < str.length; i++) {
+            hash = ((hash << 5) + hash + str.charCodeAt(i)) >>> 0;
+        }
+        return hash.toString(36);
+    }
 
     function logEvent(type, data) {
         const entry = {
@@ -278,7 +387,13 @@ const SystemState = (() => {
             phase: state.cycle.phase,
             type,
             data: data || null,
+            prevHash: lastHash,
+            hash: null, // computed below
         };
+
+        // Hash chain: hash(prevHash + seq + type + timestamp)
+        entry.hash = hashStr(entry.prevHash + '|' + entry.seq + '|' + entry.type + '|' + entry.t);
+        lastHash = entry.hash;
 
         EVENT_LOG.push(entry);
 
@@ -286,6 +401,33 @@ const SystemState = (() => {
         if (EVENT_LOG.length > MAX_LOG_SIZE) {
             EVENT_LOG.splice(0, EVENT_LOG.length - MAX_LOG_SIZE);
         }
+    }
+
+    // Verify hash chain integrity — returns first broken link or null
+    function verifyLogIntegrity() {
+        if (EVENT_LOG.length === 0) return { intact: true, entries: 0 };
+
+        let broken = null;
+        for (let i = 1; i < EVENT_LOG.length; i++) {
+            const prev = EVENT_LOG[i - 1];
+            const curr = EVENT_LOG[i];
+            if (curr.prevHash !== prev.hash) {
+                broken = { index: i, expected: prev.hash, got: curr.prevHash };
+                break;
+            }
+            // Verify self-hash
+            const expectedHash = hashStr(curr.prevHash + '|' + curr.seq + '|' + curr.type + '|' + curr.t);
+            if (curr.hash !== expectedHash) {
+                broken = { index: i, selfHashMismatch: true, expected: expectedHash, got: curr.hash };
+                break;
+            }
+        }
+
+        return {
+            intact: broken === null,
+            entries: EVENT_LOG.length,
+            broken,
+        };
     }
 
     function getEventLog(options) {
@@ -309,6 +451,7 @@ const SystemState = (() => {
             lastEntry: EVENT_LOG.length > 0 ? EVENT_LOG[EVENT_LOG.length - 1].t : null,
             types: [...new Set(EVENT_LOG.map(e => e.type))],
             violations: EVENT_LOG.filter(e => e.type === 'INVARIANT_VIOLATION').length,
+            chainIntact: verifyLogIntegrity().intact,
         };
     }
 
@@ -318,11 +461,13 @@ const SystemState = (() => {
 
     function serialize() {
         return {
-            cycle: { ...state.cycle },
+            cycle: { ...state.cycle, cycleDurations: [...state.cycle.cycleDurations] },
             worker: { ...state.worker },
             storage: {
                 ...state.storage,
-                pruningActive: state.storage.pruningActive,
+                recentWrites: undefined, // don't serialize raw timestamps
+                recentErrors: undefined,
+                adaptiveThreshold: computeAdaptiveThreshold(),
             },
             feeds: {
                 quarantineSet: [...state.feeds.quarantineSet],
@@ -336,7 +481,10 @@ const SystemState = (() => {
                 baselineSnapshotId: state.reputation.baselineSnapshotId,
                 lastSnapshotTime: state.reputation.lastSnapshotTime,
             },
-            health: { ...state.health },
+            health: {
+                ...state.health,
+                trend: state.health.trend.slice(-5), // last 5 snapshots
+            },
             eventLog: getEventLogSnapshot(),
             timestamp: Date.now(),
         };
@@ -349,19 +497,20 @@ const SystemState = (() => {
     function verifyAllInvariants() {
         const results = [];
 
-        // Cycle monotonicity — checked on advance, here we just verify id > 0 after boot
+        // Cycle monotonicity
         results.push({
             id: 'CYCLE_MONOTONIC',
             pass: state.cycle.id >= 0,
             detail: `cycleId=${state.cycle.id}`,
         });
 
-        // Ledger convergence
-        const converges = INVARIANTS[3].check();
+        // Ledger convergence (adaptive)
+        const threshold = computeAdaptiveThreshold();
+        const converges = state.storage.idbCount < 0 || state.storage.divergence <= threshold;
         results.push({
             id: 'LEDGER_CONVERGENCE',
             pass: converges,
-            detail: `LS=${state.storage.lsCount}, IDB=${state.storage.idbCount}, divergence=${state.storage.divergence}`,
+            detail: `LS=${state.storage.lsCount}, IDB=${state.storage.idbCount}, divergence=${state.storage.divergence}, threshold=${threshold}`,
         });
 
         // Quarantine isolation — check no violations in log
@@ -374,7 +523,7 @@ const SystemState = (() => {
             detail: `violations=${quarantineViolations}`,
         });
 
-        // Circuit breaker purity — check no side-effect violations
+        // Circuit breaker purity
         const cbViolations = EVENT_LOG.filter(e =>
             e.type === 'INVARIANT_VIOLATION' && e.data && e.data.type === 'CIRCUIT_BREAKER_PURITY'
         ).length;
@@ -394,11 +543,26 @@ const SystemState = (() => {
             detail: `violations=${phaseViolations}, currentPhase=${state.cycle.phase}`,
         });
 
+        // Event log integrity
+        const logIntegrity = verifyLogIntegrity();
+        results.push({
+            id: 'EVENT_LOG_INTEGRITY',
+            pass: logIntegrity.intact,
+            detail: `entries=${logIntegrity.entries}, intact=${logIntegrity.intact}`,
+        });
+
         return results;
     }
 
     // Boot event
-    logEvent('SYSTEM_BOOT', { version: '1.0' });
+    logEvent('SYSTEM_BOOT', { version: '2.0' });
+
+    // Start phase timeout watchdog (check every 15 seconds)
+    setInterval(() => {
+        if (state.cycle.phase !== 'IDLE' && state.cycle.phase !== 'BOOT') {
+            checkPhaseTimeout();
+        }
+    }, 15000);
 
     // ══════════════════════════════════════════════
     // PUBLIC API
@@ -410,6 +574,7 @@ const SystemState = (() => {
         getPhase: () => state.cycle.phase,
         advanceCycle,
         getCycleId: () => state.cycle.id,
+        checkPhaseTimeout,
 
         // Typed accessors
         updateWorker,
@@ -421,9 +586,14 @@ const SystemState = (() => {
         graylistSource,
         ungraylistSource,
 
+        // Write/error rate tracking
+        recordWrite,
+        recordWriteError,
+
         // Invariant enforcement
         assertFeedNotQuarantined,
         verifyAllInvariants,
+        computeAdaptiveThreshold,
 
         // Health
         checkHealth,
@@ -433,6 +603,7 @@ const SystemState = (() => {
         logEvent,
         getEventLog,
         getEventLogSnapshot,
+        verifyLogIntegrity,
 
         // Serialization
         serialize,
@@ -442,7 +613,9 @@ const SystemState = (() => {
         getWorkerState: () => ({ ...state.worker }),
         getStorageState: () => ({
             ...state.storage,
-            pruningActive: state.storage.pruningActive,
+            recentWrites: undefined,
+            recentErrors: undefined,
+            adaptiveThreshold: computeAdaptiveThreshold(),
         }),
         getFeedState: () => ({
             quarantineSet: [...state.feeds.quarantineSet],
@@ -457,6 +630,7 @@ const SystemState = (() => {
         // Constants
         INVARIANTS,
         VALID_TRANSITIONS,
+        PHASE_TIMEOUTS,
     };
 
 })();

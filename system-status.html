@@ -175,6 +175,7 @@
     <script src="js/persistence-manager.js"></script>
     <script src="js/correlation-engine.js"></script>
     <script src="js/signal-interceptor.js"></script>
+    <script src="js/watchdog.js"></script>
 
     <script>
     function esc(s) {
@@ -390,6 +391,31 @@
                 <div class="metric"><span class="label">Last Write</span><span class="value">${ledger.timestamp ? new Date(ledger.timestamp).toLocaleTimeString() : '—'}</span></div>
                 <div class="metric"><span class="label">LS Count at Write</span><span class="value">${ledger.lsCount || 0}</span></div>
                 <div class="metric"><span class="label">Source of Truth</span><span class="value info">${ledger.sourceOfTruth || 'localStorage'}</span></div>
+            </div>`;
+        }
+
+        // ── 8. Watchdog — Independent Observer ──
+        if (typeof Watchdog !== 'undefined') {
+            const wdStatus = Watchdog.getStatus();
+            const auditLog = Watchdog.getAuditLog();
+            const recentAudits = auditLog.slice(-5);
+            const trustColor = wdStatus.trustworthy ? 'dot-green' : 'dot-red';
+
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    WATCHDOG
+                    <span class="status-dot ${trustColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Status</span><span class="value ${wdStatus.trustworthy ? 'good' : 'bad'}">${wdStatus.trustworthy ? 'SYSTEM TRUSTWORTHY' : 'DISAGREEMENT DETECTED'}</span></div>
+                <div class="metric"><span class="label">Total Checks</span><span class="value">${wdStatus.totalChecks}</span></div>
+                <div class="metric"><span class="label">Disagreements</span><span class="value ${wdStatus.disagreements > 0 ? 'warn' : 'good'}">${wdStatus.disagreements}</span></div>
+                <div class="metric"><span class="label">Running</span><span class="value ${wdStatus.running ? 'good' : 'warn'}">${wdStatus.running ? 'YES' : 'NO'}</span></div>
+                <div class="metric"><span class="label">Audit Entries</span><span class="value">${auditLog.length}</span></div>
+                ${recentAudits.length > 0 ? `
+                <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:100px;overflow-y:auto;font-size:10px;line-height:1.5;">
+                    ${recentAudits.map(a => `<div style="color:${a.findings > 0 ? '#ff3344' : '#4a6a8c'}">[${new Date(a.t).toLocaleTimeString()}] Check #${a.check}: ${a.findings} findings, disagree=${a.disagreements}</div>`).join('')}
+                </div>` : ''}
             </div>`;
         }
 
