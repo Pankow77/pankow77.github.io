@@ -246,28 +246,53 @@ const SystemState = (() => {
             logEvent('PHASE_ARTIFACT_INVALID', { phase, reason: 'missing or non-object artifact' });
             return false;
         }
+
+        // Mandatory fields for forgery detection
+        const now = Date.now();
+        const cycleId = state.cycle.id;
+        const phaseStart = state.cycle.phaseEnteredAt;
+        const duration = now - phaseStart;
+
         const proof = {
             phase,
-            completedAt: Date.now(),
+            completedAt: now,
             artifactId: (typeof crypto !== 'undefined' && crypto.randomUUID)
                 ? crypto.randomUUID()
-                : 'a-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+                : 'a-' + now + '-' + Math.random().toString(36).slice(2, 8),
+            // Mandatory provenance
+            cycleId,
+            phaseEnteredAt: phaseStart,
+            durationMs: duration,
+            // Caller-provided
             itemsProcessed: artifact.itemsProcessed || 0,
             detail: artifact.detail || null,
-            hash: hashStr(phase + '|' + Date.now() + '|' + (artifact.itemsProcessed || 0)),
+            // Counters at time of completion — used for cross-verification
+            lsCount: state.storage.lsCount,
+            idbCount: state.storage.idbCount,
+            // Hash ties artifact to specific cycle/phase/time
+            hash: hashStr(phase + '|' + cycleId + '|' + phaseStart + '|' + now + '|' + (artifact.itemsProcessed || 0)),
         };
+
+        // Local coherence check: if CLASSIFYING claims items but duration is 0, suspicious
+        if (phase === 'CLASSIFYING' && proof.itemsProcessed > 0 && proof.durationMs < 5) {
+            logEvent('PHASE_ARTIFACT_SUSPICIOUS', {
+                phase, reason: 'CLASSIFYING completed too fast',
+                durationMs: proof.durationMs, items: proof.itemsProcessed,
+            });
+        }
+
         state.phaseArtifacts.lastArtifacts[phase] = proof;
         state.phaseArtifacts.totalCompleted++;
-        logEvent('PHASE_COMPLETED', { phase, artifactId: proof.artifactId, items: proof.itemsProcessed });
+        logEvent('PHASE_COMPLETED', {
+            phase, artifactId: proof.artifactId,
+            items: proof.itemsProcessed, cycleId, durationMs: duration,
+        });
         return true;
     }
 
-    // Patch setPhase to check for ghost detection
-    const _originalSetPhase = setPhase;
-    // We need to redefine setPhase with ghost detection
-    // But since setPhase is already defined above, we wrap it:
-
-    function setPhaseWithGhostDetection(newPhase) {
+    // Ghost detection wraps the core phase transition.
+    // ONLY this wrapper is exported. The raw setPhase is never exposed.
+    function setPhaseChecked(newPhase) {
         const current = state.cycle.phase;
         // Check if the current phase required an artifact and didn't get one
         if (PHASES_REQUIRING_ARTIFACT.includes(current)) {
@@ -285,11 +310,8 @@ const SystemState = (() => {
                 });
             }
         }
-        return _originalSetPhase(newPhase);
+        return setPhase(newPhase);
     }
-
-    // Replace the original setPhase reference
-    // (we'll export setPhaseWithGhostDetection as the public setPhase)
 
     function advanceCycle() {
         const prevId = state.cycle.id;
@@ -799,6 +821,16 @@ const SystemState = (() => {
             }));
         } catch (e) { /* best effort */ }
 
+        // 3. Clipboard write (best-effort, requires focus + permissions)
+        try {
+            if (navigator.clipboard && document.hasFocus()) {
+                // Only write to clipboard on the first export (avoid overwriting user clipboard)
+                if (autoAnchorCount === 1) {
+                    navigator.clipboard.writeText(anchor.anchor).catch(() => {});
+                }
+            }
+        } catch (e) { /* best effort — clipboard access is restricted */ }
+
         logEvent('ANCHOR_AUTO_EXPORT', {
             fingerprint: anchor.fingerprint,
             seq: anchor.headSeq,
@@ -872,7 +904,7 @@ const SystemState = (() => {
 
     return {
         // Phase control
-        setPhase: setPhaseWithGhostDetection,
+        setPhase: setPhaseChecked,
         getPhase: () => state.cycle.phase,
         advanceCycle,
         getCycleId: () => state.cycle.id,

@@ -28,7 +28,12 @@ const Watchdog = (() => {
 
     let worker = null;
     let workerReady = false;
-    let hmacVerifyKey = null;  // CryptoKey for verdict verification
+    // ECDSA (preferred): asymmetric — worker signs, main verifies
+    let ecdsaVerifyKey = null;   // CryptoKey for ECDSA verify (public key only)
+    let ecdsaEnabled = false;
+    let ecdsaKeyId = null;       // pinned key ID from worker
+    // HMAC (fallback): symmetric
+    let hmacVerifyKey = null;
     let hmacEnabled = false;
     let verdictsForgeryDetected = 0;
     let timer = null;
@@ -40,6 +45,16 @@ const Watchdog = (() => {
     let previousEpoch = null;      // previous epoch (to detect restarts)
     let workerRestarts = 0;        // how many times the worker epoch changed
     let lastEpochSequence = 0;     // last seen epoch sequence
+
+    // Simple content hash for fingerprinting (same as djb2)
+    function simpleContentHash(str) {
+        let h = 5381;
+        const s = str.toLowerCase().replace(/\s+/g, ' ').trim();
+        for (let i = 0; i < s.length; i++) {
+            h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;
+        }
+        return h.toString(36);
+    }
 
     // ══════════════════════════════════════════════
     // RAW DATA COLLECTION — Read-only, no logic
@@ -131,6 +146,18 @@ const Watchdog = (() => {
                 snapshot.logChainIntact = SystemState.verifyLogIntegrity().intact;
             } catch (e) { /* leave true */ }
 
+            // ── Phase artifact data (for worker verification) ──
+            try {
+                if (SystemState.getPhaseArtifacts) {
+                    const pa = SystemState.getPhaseArtifacts();
+                    snapshot.phaseArtifacts = {
+                        ghostCount: pa.ghostCount,
+                        totalCompleted: pa.totalCompleted,
+                        lastArtifacts: pa.lastArtifacts,
+                    };
+                }
+            } catch (e) { /* leave undefined */ }
+
             // ── Operator coherence data ──
             try {
                 const ws = SystemState.getWorkerState();
@@ -150,7 +177,30 @@ const Watchdog = (() => {
                     totalSignals: stats ? stats.totalSignals : 0,
                     // Severity trend: compare recent cycle signal count to average
                     severityTrending: 'stable', // placeholder — enriched below
+                    // Domain distribution for diversity entropy check
+                    domainDistribution: null,
                 };
+
+                // Populate domain distribution from DOMAIN_GROUPS
+                if (typeof SignalInterceptor !== 'undefined' && SignalInterceptor.getDomainGroups) {
+                    const dg = SignalInterceptor.getDomainGroups();
+                    snapshot.operatorCoherence.domainDistribution = {};
+                    for (const [domain, sources] of Object.entries(dg)) {
+                        snapshot.operatorCoherence.domainDistribution[domain] = sources.length;
+                    }
+                }
+
+                // Content fingerprints from recent signals (for monoculture detection)
+                if (typeof PersistenceManager !== 'undefined') {
+                    const archive = PersistenceManager.getArchive();
+                    const recent = archive.slice(0, 20); // last 20 signals
+                    snapshot.operatorCoherence.contentFingerprints = recent.map(s => ({
+                        domain: s.domain || 'UNKNOWN',
+                        source: s.source || '',
+                        titleHash: simpleContentHash(s.title || ''),
+                        descHash: simpleContentHash((s.description || '').slice(0, 200)),
+                    }));
+                }
 
                 // Simple severity trend from archive
                 if (typeof PersistenceManager !== 'undefined') {
@@ -187,7 +237,24 @@ const Watchdog = (() => {
 
                 if (msg.type === 'ready') {
                     workerReady = true;
-                    // Import HMAC key for verdict verification
+
+                    // Import ECDSA public key (preferred — asymmetric, non-extractable private)
+                    if (msg.ecdsaEnabled && msg.ecdsaPublicJwk) {
+                        try {
+                            ecdsaVerifyKey = await crypto.subtle.importKey(
+                                'jwk', msg.ecdsaPublicJwk,
+                                { name: 'ECDSA', namedCurve: 'P-256' },
+                                false, ['verify']
+                            );
+                            ecdsaEnabled = true;
+                            ecdsaKeyId = msg.ecdsaKeyId;
+                            console.log('%c[WATCHDOG] Worker ONLINE — ECDSA verdict signing active (key: ' + ecdsaKeyId + ')', 'color: #ff6b35;');
+                        } catch (err) {
+                            console.warn('[WATCHDOG] ECDSA key import failed:', err);
+                        }
+                    }
+
+                    // Import HMAC key (fallback)
                     if (msg.hmacEnabled && msg.hmacJwk) {
                         try {
                             hmacVerifyKey = await crypto.subtle.importKey(
@@ -196,13 +263,17 @@ const Watchdog = (() => {
                                 false, ['verify']
                             );
                             hmacEnabled = true;
-                            console.log('%c[WATCHDOG] Worker ONLINE — HMAC verdict signing active', 'color: #ff6b35;');
+                            if (!ecdsaEnabled) {
+                                console.log('%c[WATCHDOG] Worker ONLINE — HMAC verdict signing active (ECDSA unavailable)', 'color: #ff6b35;');
+                            }
                         } catch (err) {
                             console.warn('[WATCHDOG] HMAC key import failed:', err);
                             hmacEnabled = false;
                         }
-                    } else {
-                        console.log('%c[WATCHDOG] Worker ONLINE — HMAC unavailable, verdicts unsigned', 'color: #ff6b35;');
+                    }
+
+                    if (!ecdsaEnabled && !hmacEnabled) {
+                        console.log('%c[WATCHDOG] Worker ONLINE — NO verdict signing available', 'color: #ff6b35;');
                     }
                 } else if (msg.type === 'verdict') {
                     // Verify signature before trusting verdict
@@ -236,21 +307,52 @@ const Watchdog = (() => {
     }
 
     async function verifyVerdictSignature(result) {
-        if (!hmacVerifyKey || !result.signature) return null; // null = can't verify
-        try {
-            const canonical = JSON.stringify({
-                check: result.check,
-                findingCount: result.findings.length,
-                findingChecks: result.findings.map(f => f.check),
-                trustworthy: result.trustworthy,
-                disagreements: result.disagreements,
-            });
-            const encoded = new TextEncoder().encode(canonical);
-            const sigBytes = new Uint8Array(result.signature.match(/.{2}/g).map(b => parseInt(b, 16)));
-            return await crypto.subtle.verify('HMAC', hmacVerifyKey, sigBytes, encoded);
-        } catch (e) {
-            return false;
+        if (!result.signature) return null;
+
+        const sig = result.signature;
+        const canonical = JSON.stringify({
+            check: result.check,
+            findingCount: result.findings.length,
+            findingChecks: result.findings.map(f => f.check),
+            trustworthy: result.trustworthy,
+            disagreements: result.disagreements,
+        });
+        const encoded = new TextEncoder().encode(canonical);
+
+        // Support both new structured signature and legacy hex string
+        const sigHex = typeof sig === 'object' ? sig.hex : sig;
+        const sigAlgorithm = typeof sig === 'object' ? sig.algorithm : 'HMAC';
+
+        if (!sigHex) return null;
+        const sigBytes = new Uint8Array(sigHex.match(/.{2}/g).map(b => parseInt(b, 16)));
+
+        // ECDSA verification (preferred)
+        if (sigAlgorithm === 'ECDSA' && ecdsaVerifyKey) {
+            try {
+                // Key ID pinning: reject if keyId doesn't match
+                if (typeof sig === 'object' && sig.keyId !== ecdsaKeyId) {
+                    console.error('[WATCHDOG] ECDSA keyId mismatch — possible key substitution');
+                    return false;
+                }
+                return await crypto.subtle.verify(
+                    { name: 'ECDSA', hash: 'SHA-256' },
+                    ecdsaVerifyKey, sigBytes, encoded
+                );
+            } catch (e) {
+                return false;
+            }
         }
+
+        // HMAC verification (fallback)
+        if (hmacVerifyKey) {
+            try {
+                return await crypto.subtle.verify('HMAC', hmacVerifyKey, sigBytes, encoded);
+            } catch (e) {
+                return false;
+            }
+        }
+
+        return null; // can't verify
     }
 
     function handleVerdict(result) {
@@ -355,6 +457,43 @@ const Watchdog = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // CANARY WITNESS — IDB independent channel
+    // ══════════════════════════════════════════════
+    // Write a canary nonce to IDB. On next check, read it back.
+    // If the value changed unexpectedly, IDB was tampered.
+
+    let canaryNonce = null;
+    let canaryWriteTime = 0;
+
+    async function checkCanary() {
+        if (typeof IndexedStore === 'undefined' || !IndexedStore.isAvailable()) return;
+
+        try {
+            if (canaryNonce !== null) {
+                // Verify previous canary
+                const stored = await IndexedStore.readCanary();
+                if (stored && stored.nonce !== canaryNonce) {
+                    console.error('[WATCHDOG] CANARY MISMATCH — IDB tampered');
+                    if (typeof SystemState !== 'undefined') {
+                        SystemState.logEvent('CANARY_TAMPERED', {
+                            expected: canaryNonce,
+                            got: stored.nonce,
+                            writtenAt: canaryWriteTime,
+                        });
+                    }
+                }
+            }
+
+            // Write new canary
+            canaryNonce = (typeof crypto !== 'undefined' && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : 'c-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+            canaryWriteTime = Date.now();
+            await IndexedStore.writeCanary(canaryNonce);
+        } catch (e) { /* best effort */ }
+    }
+
+    // ══════════════════════════════════════════════
     // MAIN LOOP — Collect and send
     // ══════════════════════════════════════════════
 
@@ -377,6 +516,9 @@ const Watchdog = (() => {
         if (jitter > 500) {
             await new Promise(r => setTimeout(r, jitter));
         }
+
+        // Canary verification (async, before snapshot)
+        await checkCanary();
 
         const snapshot = collectSnapshot();
 
@@ -495,6 +637,8 @@ const Watchdog = (() => {
             disagreements: lastVerdict ? lastVerdict.disagreements : 0,
             running: timer !== null,
             workerIsolated: workerReady,
+            ecdsaEnabled,
+            ecdsaKeyId,
             hmacEnabled,
             signatureValid: lastVerdict ? lastVerdict._signatureValid : null,
             verdictsForgeryDetected,

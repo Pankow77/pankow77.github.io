@@ -246,9 +246,53 @@ const PersistenceManager = (() => {
         }
     }
 
+    // Two-phase commit tracking
+    const TXN_KEY = 'hs_txn_marker';
+    let txnAtomicityBreaches = 0;
+
+    function writeTxnMarker(txnId, phase) {
+        try {
+            localStorage.setItem(TXN_KEY, JSON.stringify({
+                txnId, phase, // 'PREPARED' | 'COMMITTED'
+                startedAt: Date.now(),
+            }));
+        } catch (e) { /* best effort */ }
+    }
+
+    function clearTxnMarker() {
+        try { localStorage.removeItem(TXN_KEY); } catch (e) { /* ok */ }
+    }
+
+    function checkPendingTxn() {
+        try {
+            const raw = localStorage.getItem(TXN_KEY);
+            if (!raw) return null;
+            const marker = JSON.parse(raw);
+            // If PREPARED but not COMMITTED within 30s, it's a partial commit
+            if (marker.phase === 'PREPARED' && Date.now() - marker.startedAt > 30000) {
+                return marker;
+            }
+        } catch (e) { /* ok */ }
+        return null;
+    }
+
     function addSignal(signal) {
         // Run periodic cleanup on every add
         cleanupExpiredSignals();
+
+        // Check for orphaned transactions from previous failures
+        const pendingTxn = checkPendingTxn();
+        if (pendingTxn) {
+            txnAtomicityBreaches++;
+            if (typeof SystemState !== 'undefined') {
+                SystemState.logEvent('ATOMICITY_BREACH', {
+                    txnId: pendingTxn.txnId,
+                    startedAt: pendingTxn.startedAt,
+                    breachCount: txnAtomicityBreaches,
+                });
+            }
+            clearTxnMarker();
+        }
 
         const archive = getArchive();
         // Avoid duplicates by link
@@ -270,22 +314,62 @@ const PersistenceManager = (() => {
             matchScore: signal.matchScore || 0,
         };
 
-        // Primary: localStorage (sync, always available)
-        archive.unshift(entry);
-        saveArchive(archive);
-        updateStats('signalAdded');
+        // ── Two-phase commit: PREPARE → WRITE → COMMIT ──
+        const txnId = entry.id + ':' + Date.now();
+        writeTxnMarker(txnId, 'PREPARED');
+
+        // Phase 1: localStorage (sync, always available)
+        let lsOk = false;
+        try {
+            archive.unshift(entry);
+            saveArchive(archive);
+            updateStats('signalAdded');
+            lsOk = true;
+        } catch (e) {
+            // LS write failed — abort
+            clearTxnMarker();
+            if (typeof SystemState !== 'undefined') SystemState.recordWriteError();
+            return false;
+        }
 
         // Track write rate for adaptive convergence
         if (typeof SystemState !== 'undefined') {
             SystemState.recordWrite();
         }
 
-        // Dual-write: IndexedDB (async, for scale)
+        // Phase 2: IndexedDB (async, for scale)
+        let idbStarted = false;
         if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
-            IndexedStore.addSignal(entry);
+            idbStarted = true;
+            IndexedStore.addSignal(entry).then(() => {
+                // Both succeeded → COMMITTED
+                clearTxnMarker();
+            }).catch(() => {
+                // IDB failed after LS succeeded — partial commit
+                txnAtomicityBreaches++;
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.logEvent('ATOMICITY_BREACH', {
+                        txnId,
+                        phase: 'IDB_FAILED_AFTER_LS',
+                        breachCount: txnAtomicityBreaches,
+                    });
+                    SystemState.recordWriteError();
+                }
+                clearTxnMarker();
+            });
+        } else {
+            // No IDB — LS-only is fine, commit immediately
+            clearTxnMarker();
         }
 
         return true;
+    }
+
+    function getAtomicityStats() {
+        return {
+            breaches: txnAtomicityBreaches,
+            pendingTxn: checkPendingTxn(),
+        };
     }
 
     // ══════════════════════════════════════════════
@@ -1353,6 +1437,7 @@ const PersistenceManager = (() => {
         togglePanel,
         setDomainFilter,
         updateBtnCount,
+        getAtomicityStats,
     };
 
 })();

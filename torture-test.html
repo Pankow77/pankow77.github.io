@@ -1772,6 +1772,56 @@
             });
         }
 
+        // ── ATK-9: Phase artifact forgery — fake completion without real work ──
+        if (typeof SystemState !== 'undefined' && SystemState.completePhase) {
+            // Record LS count before
+            const lsBefore = SystemState.getStorageState().lsCount;
+            SystemState.setPhase('IDLE');
+            SystemState.setPhase('POLLING');
+            // Complete with suspiciously high itemsProcessed but zero duration
+            SystemState.completePhase('CLASSIFYING', { itemsProcessed: 999 });
+            const pa = SystemState.getPhaseArtifacts();
+            const art = pa.lastArtifacts['CLASSIFYING'];
+            tests.push({
+                name: 'ATK-9: Phase artifact includes provenance (cycleId, durationMs)',
+                result: assert('atk_art_provenance', art && art.cycleId !== undefined && art.durationMs !== undefined),
+                detail: art ? `cycleId=${art.cycleId}, duration=${art.durationMs}ms, items=${art.itemsProcessed}` : 'NO ARTIFACT',
+            });
+            SystemState.setPhase('IDLE');
+        }
+
+        // ── ATK-10: ECDSA key info available ──
+        if (typeof Watchdog !== 'undefined') {
+            const wdStatus = Watchdog.getStatus();
+            tests.push({
+                name: 'ATK-10: ECDSA signing exposed in status',
+                result: assert('atk_ecdsa', wdStatus.ecdsaEnabled !== undefined),
+                detail: `ecdsa=${wdStatus.ecdsaEnabled}, keyId=${wdStatus.ecdsaKeyId || 'none'}`,
+            });
+        }
+
+        // ── ATK-11: Two-phase commit atomicity stats ──
+        if (typeof PersistenceManager !== 'undefined' && PersistenceManager.getAtomicityStats) {
+            const atomicity = PersistenceManager.getAtomicityStats();
+            tests.push({
+                name: 'ATK-11: Atomicity tracking active',
+                result: assert('atk_atomicity', atomicity.breaches !== undefined),
+                detail: `breaches=${atomicity.breaches}, pendingTxn=${atomicity.pendingTxn ? 'YES' : 'none'}`,
+            });
+        }
+
+        // ── ATK-12: Canary witness writable ──
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.writeCanary) {
+            const nonce = 'test-' + Date.now();
+            const writeOk = await IndexedStore.writeCanary(nonce);
+            const readBack = await IndexedStore.readCanary();
+            tests.push({
+                name: 'ATK-12: IDB canary witness write/read',
+                result: assert('atk_canary', writeOk && readBack && readBack.nonce === nonce),
+                detail: `write=${writeOk}, readNonce=${readBack ? readBack.nonce.slice(0, 12) : 'null'}`,
+            });
+        }
+
         renderSuite('adversary_harness', tests);
         updateSummary();
     }

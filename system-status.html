@@ -180,6 +180,42 @@
     <script src="js/watchdog.js"></script>
 
     <script>
+    // ══════════════════════════════════════════════
+    // CONFIDENCE MASKING — Anti-oracle rendering
+    // ══════════════════════════════════════════════
+    // An attacker can infer internal thresholds by observing:
+    //   - When dot colors change
+    //   - Which panels update
+    //   - Timing of status transitions
+    //
+    // Defenses:
+    //   1. Batched rendering: all panels update at once, not incrementally
+    //   2. Hysteresis: status dot requires N consecutive verdicts to change
+    //   3. Jittered refresh: rendering interval is randomized ±3s
+    //   4. Coarse categories: expose bands (HEALTHY/DEGRADED/CRITICAL), not exact values
+
+    const _statusHysteresis = {};  // key -> { state, counter }
+    const HYSTERESIS_THRESHOLD = 3; // need 3 consecutive same-state to flip
+
+    function hysteresisStatus(key, currentState) {
+        if (!_statusHysteresis[key]) {
+            _statusHysteresis[key] = { state: currentState, counter: 1 };
+            return currentState;
+        }
+        const h = _statusHysteresis[key];
+        if (currentState === h.state) {
+            h.counter = Math.min(h.counter + 1, HYSTERESIS_THRESHOLD + 1);
+            return h.state;
+        }
+        // State changed — increment counter toward flip
+        h.counter--;
+        if (h.counter <= 0) {
+            h.state = currentState;
+            h.counter = 1;
+        }
+        return h.state; // return old state until counter flips
+    }
+
     function esc(s) {
         if (s === null || s === undefined) return '—';
         const d = document.createElement('div');
@@ -212,7 +248,9 @@
             const snapshot = SystemState.getEventLogSnapshot();
             const recentEvents = SystemState.getEventLog({ limit: 8 });
 
-            const healthColor = health.status === 'HEALTHY' ? 'dot-green' : health.status === 'DEGRADED' ? 'dot-yellow' : 'dot-red';
+            // Apply hysteresis: don't flip dot color on transient changes
+            const stableHealth = hysteresisStatus('health', health.status);
+            const healthColor = stableHealth === 'HEALTHY' ? 'dot-green' : stableHealth === 'DEGRADED' ? 'dot-yellow' : 'dot-red';
             const phaseColor = state.cycle.phase === 'IDLE' ? '#00d4aa' : state.cycle.phase === 'DEGRADED' ? '#ff3344' : '#ffbf00';
 
             html += `
@@ -515,20 +553,23 @@
             </div>`;
         }
 
-        // ── 12. HMAC Verdict Auth ──
+        // ── 12. Verdict Auth (ECDSA + HMAC) ──
         if (typeof Watchdog !== 'undefined') {
             const wdStatus = Watchdog.getStatus();
+            const authColor = wdStatus.ecdsaEnabled ? 'dot-green' : wdStatus.hmacEnabled ? 'dot-yellow' : 'dot-red';
             html += `
             <div class="panel">
                 <div class="panel-title">
                     VERDICT AUTH
-                    <span class="status-dot ${wdStatus.hmacEnabled ? 'dot-green' : 'dot-yellow'}"></span>
+                    <span class="status-dot ${authColor}"></span>
                 </div>
-                <div class="metric"><span class="label">HMAC</span><span class="value ${wdStatus.hmacEnabled ? 'good' : 'warn'}">${wdStatus.hmacEnabled ? 'ACTIVE' : 'UNAVAILABLE'}</span></div>
+                <div class="metric"><span class="label">ECDSA</span><span class="value ${wdStatus.ecdsaEnabled ? 'good' : 'warn'}">${wdStatus.ecdsaEnabled ? 'ACTIVE' : 'UNAVAILABLE'}</span></div>
+                <div class="metric"><span class="label">ECDSA Key</span><span class="value" style="font-size:9px">${wdStatus.ecdsaKeyId ? wdStatus.ecdsaKeyId.slice(0, 12) : 'N/A'}</span></div>
+                <div class="metric"><span class="label">HMAC</span><span class="value ${wdStatus.hmacEnabled ? 'good' : 'warn'}">${wdStatus.hmacEnabled ? 'FALLBACK' : 'OFF'}</span></div>
                 <div class="metric"><span class="label">Last Signature</span><span class="value ${wdStatus.signatureValid === true ? 'good' : wdStatus.signatureValid === false ? 'bad' : 'warn'}">${wdStatus.signatureValid === true ? 'VALID' : wdStatus.signatureValid === false ? 'INVALID' : 'PENDING'}</span></div>
-                <div class="metric"><span class="label">Forgeries Detected</span><span class="value ${wdStatus.verdictsForgeryDetected > 0 ? 'bad' : 'good'}">${wdStatus.verdictsForgeryDetected}</span></div>
+                <div class="metric"><span class="label">Forgeries</span><span class="value ${wdStatus.verdictsForgeryDetected > 0 ? 'bad' : 'good'}">${wdStatus.verdictsForgeryDetected}</span></div>
                 <div class="metric"><span class="label">Worker Epoch</span><span class="value" style="font-size:9px">${wdStatus.workerEpoch ? wdStatus.workerEpoch.slice(0, 12) + '...' : 'N/A'}</span></div>
-                <div class="metric"><span class="label">Worker Restarts</span><span class="value ${wdStatus.workerRestarts > 0 ? 'warn' : 'good'}">${wdStatus.workerRestarts}</span></div>
+                <div class="metric"><span class="label">Restarts</span><span class="value ${wdStatus.workerRestarts > 0 ? 'warn' : 'good'}">${wdStatus.workerRestarts}</span></div>
             </div>`;
         }
 
@@ -588,13 +629,32 @@
             </div>`;
         }
 
+        // ── 16. Atomicity ──
+        if (typeof PersistenceManager !== 'undefined' && PersistenceManager.getAtomicityStats) {
+            const atomicity = PersistenceManager.getAtomicityStats();
+            const atomColor = atomicity.breaches > 0 ? 'dot-red' : 'dot-green';
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    ATOMICITY
+                    <span class="status-dot ${atomColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Breaches</span><span class="value ${atomicity.breaches > 0 ? 'bad' : 'good'}">${atomicity.breaches}</span></div>
+                <div class="metric"><span class="label">Pending Txn</span><span class="value ${atomicity.pendingTxn ? 'warn' : 'good'}">${atomicity.pendingTxn ? 'YES' : 'NONE'}</span></div>
+            </div>`;
+        }
+
         grid.innerHTML = html;
         document.getElementById('lastRefresh').textContent = 'Last: ' + new Date().toLocaleTimeString();
     }
 
-    // Auto-refresh every 10 seconds
+    // Anti-oracle: jittered refresh interval (7-13 seconds)
     refreshAll();
-    setInterval(refreshAll, 10000);
+    function scheduleNext() {
+        const jitter = 7000 + Math.floor(Math.random() * 6000);
+        setTimeout(() => { refreshAll(); scheduleNext(); }, jitter);
+    }
+    scheduleNext();
     </script>
 </body>
 </html>

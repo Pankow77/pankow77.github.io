@@ -255,6 +255,49 @@ function runGenerativeProbes(snapshot) {
         }
     }
 
+    // ── CONTENT MONOCULTURE — Detect duplicate content across different domains ──
+    // Attack: 10 domains serving the same content (mirrors/redirects).
+    // Shannon entropy is high (many domains) but content is identical.
+    // SimHash-style: if >60% of recent signal titles have matching hashes
+    // across different domains → CONTENT_MONOCULTURE
+
+    if (snapshot.operatorCoherence && snapshot.operatorCoherence.contentFingerprints) {
+        const fps = snapshot.operatorCoherence.contentFingerprints;
+        if (fps.length >= 8) {
+            // Group title hashes by domain
+            const hashDomains = {};  // titleHash -> Set(domains)
+            for (const fp of fps) {
+                if (!hashDomains[fp.titleHash]) hashDomains[fp.titleHash] = new Set();
+                hashDomains[fp.titleHash].add(fp.domain);
+            }
+
+            // Count content appearing in multiple domains
+            let crossDomainDuplicates = 0;
+            let totalUnique = Object.keys(hashDomains).length;
+            for (const [hash, domains] of Object.entries(hashDomains)) {
+                if (domains.size > 1) crossDomainDuplicates++;
+            }
+
+            // Also check raw duplicate rate (same titleHash, any domain)
+            const hashCounts = {};
+            for (const fp of fps) {
+                hashCounts[fp.titleHash] = (hashCounts[fp.titleHash] || 0) + 1;
+            }
+            const duplicateCount = Object.values(hashCounts).filter(c => c > 1).length;
+            const duplicateRate = duplicateCount / Math.max(totalUnique, 1);
+
+            if (crossDomainDuplicates > 2 || duplicateRate > 0.5) {
+                findings.push({
+                    check: 'CONTENT_MONOCULTURE',
+                    detail: `${crossDomainDuplicates} cross-domain duplicates, ${duplicateCount}/${totalUnique} unique titles duplicated (${(duplicateRate * 100).toFixed(0)}%)`,
+                    severity: crossDomainDuplicates > 3 || duplicateRate > 0.7 ? 'ERROR' : 'WARN',
+                    crossDomainDuplicates,
+                    duplicateRate: Math.round(duplicateRate * 100) / 100,
+                });
+            }
+        }
+    }
+
     return findings;
 }
 
@@ -473,6 +516,65 @@ function verifyCoded(snapshot) {
 // MAIN VERIFICATION — Combines all layers
 // ══════════════════════════════════════════════
 
+// ══════════════════════════════════════════════
+// PHASE ARTIFACT VERIFICATION — Worker-side
+// ══════════════════════════════════════════════
+// The main thread creates artifacts. The worker verifies them
+// against snapshot data. If CLASSIFYING claims items but
+// storage counters didn't change, it's a forgery.
+
+let lastKnownLSCount = -1;
+let lastKnownIDBCount = -1;
+
+function verifyPhaseArtifacts(snapshot) {
+    const findings = [];
+    if (!snapshot.phaseArtifacts) return findings;
+
+    const pa = snapshot.phaseArtifacts;
+
+    // Check each recent artifact for coherence
+    for (const [phase, art] of Object.entries(pa.lastArtifacts || {})) {
+        // CLASSIFYING: if itemsProcessed > 0, storage should have changed
+        if (phase === 'CLASSIFYING' && art.itemsProcessed > 0) {
+            // Duration check: classifying N items takes time
+            if (art.durationMs < 10 && art.itemsProcessed > 5) {
+                findings.push({
+                    check: 'PHASE_ARTIFACT_FORGERY',
+                    detail: `CLASSIFYING: ${art.itemsProcessed} items in ${art.durationMs}ms — physically impossible`,
+                    severity: 'CRITICAL',
+                    phase, items: art.itemsProcessed, durationMs: art.durationMs,
+                });
+            }
+            // Storage delta check: if we classified items, LS/IDB should grow
+            if (lastKnownLSCount >= 0 && art.lsCount <= lastKnownLSCount && art.itemsProcessed > 3) {
+                findings.push({
+                    check: 'PHASE_ARTIFACT_FORGERY',
+                    detail: `CLASSIFYING claims ${art.itemsProcessed} items but LS count didn't grow (${lastKnownLSCount} → ${art.lsCount})`,
+                    severity: 'ERROR',
+                    phase, items: art.itemsProcessed,
+                    prevLS: lastKnownLSCount, artLS: art.lsCount,
+                });
+            }
+        }
+
+        // POLLING: if itemsProcessed > 0, should have taken >100ms
+        if (phase === 'POLLING' && art.itemsProcessed > 0 && art.durationMs < 50) {
+            findings.push({
+                check: 'PHASE_ARTIFACT_SUSPICIOUS',
+                detail: `POLLING: fetched ${art.itemsProcessed} items in ${art.durationMs}ms — suspiciously fast`,
+                severity: 'WARN',
+                phase, items: art.itemsProcessed, durationMs: art.durationMs,
+            });
+        }
+    }
+
+    // Track storage counters for next round
+    if (snapshot.rawLSCount >= 0) lastKnownLSCount = snapshot.rawLSCount;
+    if (snapshot.rawIDBCount >= 0) lastKnownIDBCount = snapshot.rawIDBCount;
+
+    return findings;
+}
+
 function verifySnapshot(snapshot) {
     checkCount++;
 
@@ -482,6 +584,9 @@ function verifySnapshot(snapshot) {
 
     // Try to freeze baseline
     freezeBaseline();
+
+    // Layer 0: Phase artifact verification
+    const artifactFindings = verifyPhaseArtifacts(snapshot);
 
     // Layer 1: Pre-coded rules
     const codedFindings = verifyCoded(snapshot);
@@ -497,6 +602,7 @@ function verifySnapshot(snapshot) {
 
     // Combine all findings
     const findings = [
+        ...artifactFindings,
         ...codedFindings,
         ...generativeFindings,
         ...regimeFindings,
@@ -553,15 +659,39 @@ function verifySnapshot(snapshot) {
 // The key never leaves the worker in raw form. Only the JWK
 // export (for verification) and the signatures are sent out.
 
+// ── ECDSA key pair: private stays in worker (non-extractable), public goes to main ──
+let ecdsaPrivateKey = null;   // non-extractable — never leaves worker
+let ecdsaPublicJwk = null;    // exported for main thread verification
+let ecdsaKeyId = null;        // fingerprint of the public key
+
+// Legacy HMAC (kept for fallback if ECDSA unsupported)
 let hmacKey = null;
-let hmacJwk = null; // exported for main thread verification
+let hmacJwk = null;
+
+async function initECDSA() {
+    if (typeof crypto === 'undefined' || !crypto.subtle) return false;
+    try {
+        const keyPair = await crypto.subtle.generateKey(
+            { name: 'ECDSA', namedCurve: 'P-256' },
+            false, // NOT extractable — private key is trapped in worker
+            ['sign', 'verify']
+        );
+        ecdsaPrivateKey = keyPair.privateKey;
+        ecdsaPublicJwk = await crypto.subtle.exportKey('jwk', keyPair.publicKey);
+        // Key ID: hash of the public key for pinning
+        ecdsaKeyId = simpleHash(JSON.stringify(ecdsaPublicJwk));
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 
 async function initHMAC() {
     if (typeof crypto === 'undefined' || !crypto.subtle) return false;
     try {
         hmacKey = await crypto.subtle.generateKey(
             { name: 'HMAC', hash: 'SHA-256' },
-            true, // extractable — needed for JWK export
+            true, // extractable — needed for JWK export (HMAC is symmetric)
             ['sign', 'verify']
         );
         hmacJwk = await crypto.subtle.exportKey('jwk', hmacKey);
@@ -572,9 +702,60 @@ async function initHMAC() {
 }
 
 async function signVerdict(result) {
+    const canonical = JSON.stringify({
+        check: result.check,
+        findingCount: result.findings.length,
+        findingChecks: result.findings.map(f => f.check),
+        trustworthy: result.trustworthy,
+        disagreements: result.disagreements,
+    });
+    const encoded = new TextEncoder().encode(canonical);
+
+    // Prefer ECDSA if available
+    if (ecdsaPrivateKey) {
+        try {
+            const sig = await crypto.subtle.sign(
+                { name: 'ECDSA', hash: 'SHA-256' },
+                ecdsaPrivateKey,
+                encoded
+            );
+            return {
+                algorithm: 'ECDSA',
+                keyId: ecdsaKeyId,
+                hex: Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join(''),
+            };
+        } catch (e) { /* fall through to HMAC */ }
+    }
+
+    // Fallback: HMAC
+    if (hmacKey) {
+        try {
+            const sig = await crypto.subtle.sign('HMAC', hmacKey, encoded);
+            return {
+                algorithm: 'HMAC',
+                keyId: null,
+                hex: Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join(''),
+            };
+        } catch (e) { /* fall through */ }
+    }
+
+    return null;
+}
+
+// Expose whether private key is extractable (should always be false for ECDSA)
+function getKeyInfo() {
+    return {
+        ecdsaAvailable: ecdsaPrivateKey !== null,
+        ecdsaKeyId,
+        ecdsaExtractable: ecdsaPrivateKey ? ecdsaPrivateKey.extractable : null,
+        hmacAvailable: hmacKey !== null,
+    };
+}
+
+// Legacy signVerdict compatibility shim — returns hex string
+async function signVerdictLegacy(result) {
     if (!hmacKey) return null;
     try {
-        // Canonical: JSON.stringify of the findings array + check number
         const canonical = JSON.stringify({
             check: result.check,
             findingCount: result.findings.length,
@@ -584,7 +765,6 @@ async function signVerdict(result) {
         });
         const encoded = new TextEncoder().encode(canonical);
         const sig = await crypto.subtle.sign('HMAC', hmacKey, encoded);
-        // Convert to hex string for portability
         return Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
     } catch (e) {
         return null;
@@ -638,12 +818,18 @@ self.onmessage = async function(e) {
     }
 };
 
-// Boot sequence: init HMAC, then announce readiness
+// Boot sequence: init ECDSA (preferred) + HMAC (fallback), then announce readiness
 (async () => {
+    const ecdsaOk = await initECDSA();
     const hmacOk = await initHMAC();
     self.postMessage({
         type: 'ready',
+        // ECDSA: asymmetric — private key non-extractable, never leaves worker
+        ecdsaEnabled: ecdsaOk,
+        ecdsaPublicJwk: ecdsaPublicJwk,  // main thread uses this for verify-only
+        ecdsaKeyId: ecdsaKeyId,
+        // HMAC: legacy fallback
         hmacEnabled: hmacOk,
-        hmacJwk: hmacJwk, // main thread uses this for verification
+        hmacJwk: hmacJwk,
     });
 })();

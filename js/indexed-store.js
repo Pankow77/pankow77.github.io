@@ -385,6 +385,47 @@ const IndexedStore = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // CANARY WITNESS — Independent verification channel
+    // ══════════════════════════════════════════════
+    // The canary is a value in the meta store that only the
+    // watchdog writes and reads. If the canary changes when
+    // the watchdog didn't write it → the IDB was tampered.
+    //
+    // Uses meta store (no version bump needed).
+    // Key prefix: '_canary_' to separate from application data.
+
+    const CANARY_KEY = '_canary_witness';
+
+    async function writeCanary(nonce) {
+        try {
+            await open();
+            const canary = {
+                key: CANARY_KEY,
+                value: {
+                    nonce,
+                    writtenAt: Date.now(),
+                    signalCountAtWrite: await getSignalCount(),
+                },
+                updatedAt: Date.now(),
+            };
+            await req(tx(STORES.meta, 'readwrite').put(canary));
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    async function readCanary() {
+        try {
+            await open();
+            const result = await req(tx(STORES.meta, 'readonly').get(CANARY_KEY));
+            return result ? result.value : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    // ══════════════════════════════════════════════
     // STORAGE ESTIMATE
     // ══════════════════════════════════════════════
 
@@ -440,6 +481,9 @@ const IndexedStore = (() => {
         // Migration
         migrateFromLocalStorage,
         getStorageEstimate,
+        // Canary witness
+        writeCanary,
+        readCanary,
     };
 
 })();
