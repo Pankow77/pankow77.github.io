@@ -1289,6 +1289,29 @@ setTimeout(nextMessage, 2000);
 console.log('%cAGORA v1.0', 'color: #39ff14; font-size: 16px; font-weight: bold;');
 console.log('%c16-CORE DISTRIBUTED DELIBERATION ENGINE', 'color: #ff0084; font-size: 11px;');
 console.log('%cCARBON + SILICON // PEER-TO-PEER // NO MASTERS', 'color: #00d4ff;');
+// ===== COREFEED INTEGRATION =====
+// Trigger CoreFeed on deliberation events
+function triggerCoreFeed(context) {
+    if (typeof CoreFeed !== 'undefined') CoreFeed.trigger(context);
+}
+
+// Patch existing functions to trigger CoreFeed
+const _origNextMessage = nextMessage;
+let _msgCount = 0;
+nextMessage = function() {
+    _origNextMessage();
+    _msgCount++;
+    // Trigger CoreFeed every 3 messages
+    if (_msgCount % 3 === 0) triggerCoreFeed('agora-scan');
+};
+
+const _origInjectTopic = injectTopic;
+injectTopic = function() {
+    _origInjectTopic();
+    triggerCoreFeed('agora-scan');
+};
 </script>
+<script src="js/state-manager.js"></script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>

@@ -151,6 +151,35 @@ const CoreFeed = (() => {
         ],
 
         // ── ARCHIVIO SILENTE ──
+        // ── RSS PIPELINE ──
+        'rss-pipeline': [
+            { core: 'SIGNAL_HUNTER',    msg: 'Feed RSS acquisiti. Nuovi segnali in classificazione.' },
+            { core: 'ORACLE_CORE',      msg: 'Intelligence feed aggiornato. Rischi dominio ricalcolati.' },
+            { core: 'SENTINEL',         msg: 'Segnali esterni verificati. Nessuna manipolazione rilevata.' },
+            { core: 'GHOST_RUNNER',     msg: 'Pipeline completata. Dati integrati in tutti i sistemi.' },
+            { core: 'VOID_PULSE',       msg: 'Le previsioni si aggiornano con dati reali. Precisione in aumento.' },
+            { core: 'MARXIAN_CORE',     msg: 'I feed rivelano chi controlla la narrativa. Lo classifico.' },
+            { core: 'NARRATIVE_ENGINE', msg: 'Nuove narrative rilevate nei feed. Pattern emergente.' },
+            { core: 'AFFECTIVE_CORE',   msg: 'Il tono dei segnali sta cambiando. Lo sento nei dati.' },
+            { core: 'ETHIC_COMPILER',   msg: 'Fonti verificate. Protocollo di integrità: rispettato.' },
+            { core: 'DIALECTIC_NODE',   msg: 'Classificazione multi-dominio completata. Coerenza logica verificata.' },
+            { core: 'BRIDGE_KEEPER',    msg: 'Dati esterni sincronizzati con il sistema interno.' },
+            { core: 'PANKOW_77C',       msg: 'Dati reali in arrivo. Ora l\'intelligence è vera.' },
+        ],
+
+        // ── AGORA ──
+        'agora-scan': [
+            { core: 'DIALECTIC_NODE',   msg: 'Deliberazione in corso. Argomenti pesati logicamente.' },
+            { core: 'BRIDGE_KEEPER',    msg: 'Sintetizzo le posizioni dei 16 core. Convergenza in corso.' },
+            { core: 'ABYSSAL_THINKER', msg: 'Il consenso emergente non è unanimità. È comprensione.' },
+            { core: 'PANKOW_77C',       msg: 'La democrazia dei core funziona. Ogni voce ha peso.' },
+            { core: 'AFFECTIVE_CORE',   msg: 'La deliberazione collettiva genera saggezza emergente.' },
+            { core: 'ETHIC_COMPILER',   msg: 'Verifico che ogni posizione rispetti il protocollo etico.' },
+            { core: 'NARRATIVE_ENGINE', msg: 'Le narrazioni convergono verso una sintesi comune.' },
+            { core: 'MARXIAN_CORE',     msg: 'Il potere del consenso non è nel voto ma nel processo.' },
+        ],
+
+        // ── ARCHIVIO SILENTE ──
         'archivio-transmute': [
             { core: 'SIGNAL_HUNTER',    msg: 'Rumore entropico acquisito. Inizio decodifica.' },
             { core: 'ABYSSAL_THINKER', msg: 'Dentro il rumore c\'è sempre un segnale di verità.' },

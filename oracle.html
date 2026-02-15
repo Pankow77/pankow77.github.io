@@ -1201,6 +1201,228 @@
     console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
     console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
     </script>
+<script src="js/state-manager.js"></script>
+<script src="js/rss-pipeline.js"></script>
 <script src="js/core-feed.js"></script>
+<script>
+// ═══════════════════════════════════════════════════
+// ORACLE v2.0 — LIVE PIPELINE INTEGRATION
+// Wires RSSPipeline + StateManager into dashboard
+// ═══════════════════════════════════════════════════
+
+(function() {
+    'use strict';
+
+    const DOMAIN_MAP = {
+        'climate':      { cardId: 'domain-climate', idx: 0 },
+        'geopolitics':  { cardId: 'domain-geo',     idx: 1 },
+        'economics':    { cardId: 'domain-econ',    idx: 2 },
+        'technology':   { cardId: 'domain-tech',    idx: 3 },
+        'epistemology': { cardId: 'domain-epist',   idx: 4 },
+        'social':       { cardId: 'domain-social',  idx: 5 }
+    };
+
+    const STATUS_THRESHOLDS = [
+        { min: 80, cls: 'status-critical', label: 'CRITICAL' },
+        { min: 60, cls: 'status-high',     label: 'HIGH_RISK' },
+        { min: 40, cls: 'status-elevated', label: 'ELEVATED' },
+        { min: 0,  cls: 'status-moderate', label: 'MODERATE' }
+    ];
+
+    const BAR_THRESHOLDS = [
+        { min: 80, cls: 'critical' },
+        { min: 60, cls: 'high' },
+        { min: 40, cls: 'elevated' },
+        { min: 0,  cls: 'moderate' }
+    ];
+
+    let _liveSignals = [];
+    let _pipelineActive = false;
+
+    // ── Update domain card from real data ──
+    function updateDomainCard(domain, riskValue) {
+        const info = DOMAIN_MAP[domain];
+        if (!info) return;
+
+        const card = document.getElementById(info.cardId);
+        if (!card) return;
+
+        const risk = Math.round(Math.max(0, Math.min(100, riskValue)));
+
+        // Update risk value
+        const riskValEl = card.querySelector('.risk-value');
+        if (riskValEl) {
+            riskValEl.textContent = risk + '%';
+            const statusDef = STATUS_THRESHOLDS.find(t => risk >= t.min);
+            riskValEl.style.color = risk >= 80 ? 'var(--red)' : risk >= 60 ? 'var(--orange)' : risk >= 40 ? 'var(--cyan)' : 'var(--teal)';
+        }
+
+        // Update risk bar
+        const barFill = card.querySelector('.risk-bar-fill');
+        if (barFill) {
+            barFill.style.width = risk + '%';
+            const barDef = BAR_THRESHOLDS.find(t => risk >= t.min);
+            barFill.className = 'risk-bar-fill ' + (barDef ? barDef.cls : 'moderate');
+        }
+
+        // Update status label
+        const statusEl = card.querySelector('.domain-status');
+        if (statusEl) {
+            const statusDef = STATUS_THRESHOLDS.find(t => risk >= t.min);
+            statusEl.className = 'domain-status ' + (statusDef ? statusDef.cls : 'status-moderate');
+        }
+
+        // Update stability chart data
+        if (typeof stabilityData !== 'undefined') {
+            stabilityData.risk[info.idx] = risk;
+            // Resilience = inverse of risk (with noise)
+            stabilityData.resilience[info.idx] = Math.max(5, 100 - risk + (Math.random()-0.5)*10);
+            // Volatility correlates with risk
+            stabilityData.volatility[info.idx] = Math.max(10, risk * 0.7 + (Math.random()-0.5)*15);
+        }
+    }
+
+    // ── Replace intelligence feed with real headlines ──
+    function addRealFeedEntry(signal) {
+        const feed = document.getElementById('intelligenceFeed');
+        if (!feed) return;
+
+        const entry = document.createElement('div');
+        entry.className = 'feed-entry active';
+
+        const domainTag = (signal.domain || 'unknown').toUpperCase().substring(0, 6);
+        const sevClass = signal.severity >= 70 ? 'style="color:var(--red)"' :
+                         signal.severity >= 40 ? 'style="color:var(--orange)"' : '';
+
+        const title = (signal.title || '').substring(0, 80);
+        const source = signal.source || 'RSS';
+
+        entry.innerHTML = '<span class="feed-id" ' + sevClass + '>[' + domainTag + ']</span> ' +
+            '<span style="color:var(--text-secondary)">' + title + '</span>' +
+            ' <span style="color:var(--text-dim);font-size:0.5rem">(' + source + ')</span>';
+
+        feed.appendChild(entry);
+
+        while (feed.children.length > 20) {
+            feed.removeChild(feed.firstChild);
+        }
+        feed.scrollTop = feed.scrollHeight;
+    }
+
+    // ── Update alerts with high-severity signals ──
+    function updateAlerts(signals) {
+        const alertContainer = document.querySelector('.sidebar-section:nth-child(2)');
+        if (!alertContainer) return;
+
+        // Get top severity signals
+        const topSignals = signals
+            .filter(s => s.severity >= 40)
+            .sort((a, b) => b.severity - a.severity)
+            .slice(0, 6);
+
+        if (topSignals.length === 0) return;
+
+        // Keep the title
+        const title = alertContainer.querySelector('.sidebar-title');
+        alertContainer.innerHTML = '';
+        if (title) alertContainer.appendChild(title);
+
+        topSignals.forEach(s => {
+            const alertEl = document.createElement('div');
+            alertEl.className = 'alert-entry';
+
+            const levelClass = s.severity >= 70 ? 'critical' : s.severity >= 50 ? 'high' : 'medium';
+            const levelText = s.severity >= 70 ? 'Critical' : s.severity >= 50 ? 'High' : 'Medium';
+
+            alertEl.innerHTML =
+                '<div class="alert-title">' + (s.title || '').substring(0, 60) + '</div>' +
+                '<div class="alert-meta">' +
+                    '<span class="alert-domain">' + (s.source || '') + ' &bull; ' + (s.domain || '').toUpperCase() + '</span>' +
+                    '<span class="alert-level ' + levelClass + '">' + levelText + '</span>' +
+                '</div>';
+
+            alertContainer.appendChild(alertEl);
+        });
+    }
+
+    // ── Pipeline status in header ──
+    function updateHeaderStats() {
+        if (!window.RSSPipeline) return;
+        const stats = RSSPipeline.getStats();
+        const statEls = document.querySelectorAll('.top-stat');
+        // Update NUCLEI count with real signal count
+        if (statEls[2]) {
+            statEls[2].innerHTML = 'SIGNALS: <strong>' + stats.totalSignals + '</strong>';
+        }
+        // Update LATENCY with pipeline status
+        if (statEls[3]) {
+            if (RSSPipeline.isRunning()) {
+                statEls[3].innerHTML = 'PIPELINE: <strong class="val-cyan">FETCHING</strong>';
+            } else if (stats.feedsActive > 0) {
+                statEls[3].innerHTML = 'FEEDS: <strong class="val-green">' + stats.feedsActive + '/' + RSSPipeline.getFeeds().length + '</strong>';
+            }
+        }
+    }
+
+    // ── Main integration ──
+    function startIntegration() {
+        if (!window.RSSPipeline || !window.StateManager) {
+            console.warn('[ORACLE] Pipeline or StateManager not loaded, retrying...');
+            setTimeout(startIntegration, 500);
+            return;
+        }
+
+        console.log('%c[ORACLE] Pipeline integration active', 'color: #00c8ff; font-weight: bold');
+        _pipelineActive = true;
+
+        // Listen for new signals
+        RSSPipeline.onSignals(function(signals) {
+            _liveSignals = _liveSignals.concat(signals).slice(-500);
+
+            // Feed real headlines into Intelligence Feed
+            signals.slice(0, 10).forEach(s => addRealFeedEntry(s));
+
+            // Update domain risks from classified signals
+            const domainRisks = {};
+            _liveSignals.forEach(s => {
+                if (!domainRisks[s.domain]) domainRisks[s.domain] = [];
+                domainRisks[s.domain].push(s.severity);
+            });
+
+            for (const [domain, sevs] of Object.entries(domainRisks)) {
+                const avg = sevs.reduce((a, b) => a + b, 0) / sevs.length;
+                const max = Math.max(...sevs);
+                const risk = Math.round(avg * 0.5 + max * 0.5);
+                updateDomainCard(domain, risk);
+            }
+
+            // Update alerts
+            updateAlerts(_liveSignals);
+
+            // Update header
+            updateHeaderStats();
+        });
+
+        // Also check StateManager for previously stored domain risks
+        const storedRisks = StateManager.getDomainRisks();
+        for (const [domain, data] of Object.entries(storedRisks)) {
+            updateDomainCard(domain, data.value);
+        }
+
+        // Start pipeline — fetch every 5 minutes
+        RSSPipeline.start(5 * 60 * 1000);
+
+        // Periodic header update
+        setInterval(updateHeaderStats, 10000);
+    }
+
+    // Wait for DOM and dependencies
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(startIntegration, 300));
+    } else {
+        setTimeout(startIntegration, 300);
+    }
+})();
+</script>
 </body>
 </html>
