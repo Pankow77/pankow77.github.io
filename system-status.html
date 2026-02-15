@@ -527,6 +527,64 @@
                 <div class="metric"><span class="label">HMAC</span><span class="value ${wdStatus.hmacEnabled ? 'good' : 'warn'}">${wdStatus.hmacEnabled ? 'ACTIVE' : 'UNAVAILABLE'}</span></div>
                 <div class="metric"><span class="label">Last Signature</span><span class="value ${wdStatus.signatureValid === true ? 'good' : wdStatus.signatureValid === false ? 'bad' : 'warn'}">${wdStatus.signatureValid === true ? 'VALID' : wdStatus.signatureValid === false ? 'INVALID' : 'PENDING'}</span></div>
                 <div class="metric"><span class="label">Forgeries Detected</span><span class="value ${wdStatus.verdictsForgeryDetected > 0 ? 'bad' : 'good'}">${wdStatus.verdictsForgeryDetected}</span></div>
+                <div class="metric"><span class="label">Worker Epoch</span><span class="value" style="font-size:9px">${wdStatus.workerEpoch ? wdStatus.workerEpoch.slice(0, 12) + '...' : 'N/A'}</span></div>
+                <div class="metric"><span class="label">Worker Restarts</span><span class="value ${wdStatus.workerRestarts > 0 ? 'warn' : 'good'}">${wdStatus.workerRestarts}</span></div>
+            </div>`;
+        }
+
+        // ── 13. Phase Artifacts ──
+        if (typeof SystemState !== 'undefined' && SystemState.getPhaseArtifacts) {
+            const pa = SystemState.getPhaseArtifacts();
+            const paColor = pa.ghostCount > 0 ? 'dot-red' : 'dot-green';
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    PHASE ARTIFACTS
+                    <span class="status-dot ${paColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Completed</span><span class="value good">${pa.totalCompleted}</span></div>
+                <div class="metric"><span class="label">Ghosts</span><span class="value ${pa.ghostCount > 0 ? 'bad' : 'good'}">${pa.ghostCount}</span></div>
+                ${Object.entries(pa.lastArtifacts).map(([phase, art]) => `
+                <div class="metric"><span class="label">${phase}</span><span class="value" style="font-size:9px">${art.artifactId.slice(0, 8)} (${art.itemsProcessed} items)</span></div>
+                `).join('')}
+            </div>`;
+        }
+
+        // ── 14. CUSUM / Hysteresis ──
+        if (typeof CoherenceLedger !== 'undefined' && CoherenceLedger.getCUSUM) {
+            const cusum = CoherenceLedger.getCUSUM();
+            const hyst = CoherenceLedger.getHysteresis();
+            const cusumColor = cusum.alarm ? 'dot-red' : cusum.high > 1.0 ? 'dot-yellow' : 'dot-green';
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    CUSUM DETECTOR
+                    <span class="status-dot ${cusumColor}"></span>
+                </div>
+                <div class="metric"><span class="label">CUSUM High</span><span class="value ${cusum.high > 1.5 ? 'warn' : 'good'}">${cusum.high.toFixed(3)}</span></div>
+                <div class="metric"><span class="label">Alarm</span><span class="value ${cusum.alarm ? 'bad' : 'good'}">${cusum.alarm ? 'TRIGGERED' : 'CLEAR'}</span></div>
+                <div class="metric"><span class="label">Samples</span><span class="value">${cusum.samples}</span></div>
+                <div class="metric"><span class="label">DI Floor</span><span class="value">${hyst.floor.toFixed(3)}</span></div>
+            </div>`;
+        }
+
+        // ── 15. Anchor Witness ──
+        if (typeof SystemState !== 'undefined' && SystemState.getAutoAnchorStatus) {
+            const anchorStatus = SystemState.getAutoAnchorStatus();
+            const extVerify = SystemState.verifyExternalAnchor();
+            const witnessColor = extVerify.valid ? 'dot-green' : anchorStatus.count > 0 ? 'dot-yellow' : 'dot-red';
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    ANCHOR WITNESS
+                    <span class="status-dot ${witnessColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Auto-exports</span><span class="value">${anchorStatus.count}</span></div>
+                <div class="metric"><span class="label">Last Export</span><span class="value">${anchorStatus.lastExport ? new Date(anchorStatus.lastExport).toLocaleTimeString() : 'NEVER'}</span></div>
+                <div class="metric"><span class="label">Session Witness</span><span class="value ${extVerify.valid ? 'good' : 'warn'}">${extVerify.valid ? 'VERIFIED' : extVerify.reason || 'PENDING'}</span></div>
+                <div style="margin-top:8px;text-align:center;">
+                    <button onclick="SystemState.downloadAnchor()" style="background:#1a3624;color:#4ade80;border:1px solid #2d5a3a;padding:4px 12px;cursor:pointer;font-family:monospace;font-size:10px;">DOWNLOAD ANCHOR</button>
+                </div>
             </div>`;
         }
 

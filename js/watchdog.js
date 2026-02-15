@@ -35,6 +35,12 @@ const Watchdog = (() => {
     let totalChecks = 0;
     let lastVerdict = null;
 
+    // Worker continuity tracking
+    let workerEpoch = null;        // current worker epoch
+    let previousEpoch = null;      // previous epoch (to detect restarts)
+    let workerRestarts = 0;        // how many times the worker epoch changed
+    let lastEpochSequence = 0;     // last seen epoch sequence
+
     // ══════════════════════════════════════════════
     // RAW DATA COLLECTION — Read-only, no logic
     // ══════════════════════════════════════════════
@@ -251,6 +257,41 @@ const Watchdog = (() => {
         lastVerdict = result;
         totalChecks = result.check;
 
+        // ── Worker continuity check ──
+        if (result.continuity) {
+            const c = result.continuity;
+            if (workerEpoch === null) {
+                // First verdict — record epoch
+                workerEpoch = c.epoch;
+            } else if (c.epoch !== workerEpoch) {
+                // EPOCH CHANGED — worker was killed and recreated
+                previousEpoch = workerEpoch;
+                workerEpoch = c.epoch;
+                workerRestarts++;
+                console.warn(`[WATCHDOG] WORKER RESTART DETECTED — epoch changed (restart #${workerRestarts})`);
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.logEvent('WORKER_EPOCH_CHANGE', {
+                        previousEpoch,
+                        newEpoch: c.epoch,
+                        restarts: workerRestarts,
+                        previousSequence: lastEpochSequence,
+                    });
+                }
+            }
+
+            // Sequence monotonicity check
+            if (c.epochSequence <= lastEpochSequence && c.epoch === workerEpoch && lastEpochSequence > 0) {
+                console.error('[WATCHDOG] EPOCH SEQUENCE REGRESSION — possible replay');
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.logEvent('WORKER_SEQUENCE_REGRESSION', {
+                        expected: lastEpochSequence + 1,
+                        got: c.epochSequence,
+                    });
+                }
+            }
+            lastEpochSequence = c.epochSequence;
+        }
+
         // Log to INDEPENDENT audit trail (NOT SystemState)
         auditLog({
             check: result.check,
@@ -317,7 +358,26 @@ const Watchdog = (() => {
     // MAIN LOOP — Collect and send
     // ══════════════════════════════════════════════
 
+    // ── Anti-oracle: randomize timing to prevent side-channel ──
+    // An attacker can infer thresholds and state by measuring
+    // response latency. Jittering the check interval defeats
+    // differential timing attacks.
+    function randomJitterMs() {
+        if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+            const buf = new Uint8Array(1);
+            crypto.getRandomValues(buf);
+            return buf[0] * 20; // 0-5100ms jitter
+        }
+        return Math.random() * 5000;
+    }
+
     async function runCheck() {
+        // Anti-oracle delay: randomize timing
+        const jitter = randomJitterMs();
+        if (jitter > 500) {
+            await new Promise(r => setTimeout(r, jitter));
+        }
+
         const snapshot = collectSnapshot();
 
         // Async: get IDB count
@@ -443,6 +503,11 @@ const Watchdog = (() => {
             hasGenerative: lastVerdict ? lastVerdict.hasGenerative : false,
             meta: lastVerdict ? lastVerdict.meta : null,
             lastVerdict,
+            // Worker continuity
+            workerEpoch,
+            workerRestarts,
+            lastEpochSequence,
+            continuity: lastVerdict ? lastVerdict.continuity : null,
         }),
         start,
         stop,

@@ -24,6 +24,25 @@ let disagreementScore = 0;
 const MAX_DISAGREEMENTS = 3;
 
 // ══════════════════════════════════════════════
+// SESSION CONTINUITY — Hash-linked worker identity
+// ══════════════════════════════════════════════
+// The worker generates a session epoch at boot.
+// Every baseline is signed with this epoch.
+// If the worker is killed and recreated, the new epoch
+// won't match the old one — the main thread can detect this.
+//
+// The worker also tracks its own baseline hash. If the baseline
+// changes unexpectedly (reset attack), it flags CRITICAL.
+
+const workerEpoch = (typeof crypto !== 'undefined' && crypto.randomUUID)
+    ? crypto.randomUUID()
+    : 'w-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+
+let baselineHash = null;     // hash of the frozen baseline
+let baselineEpoch = null;    // epoch when baseline was frozen
+let epochSequence = 0;       // monotonic counter per epoch
+
+// ══════════════════════════════════════════════
 // SNAPSHOT HISTORY — Worker's own memory
 // ══════════════════════════════════════════════
 // The main thread sends snapshots. The worker remembers them.
@@ -183,6 +202,59 @@ function runGenerativeProbes(snapshot) {
         }
     }
 
+    // ── DIVERSITY ENTROPY — Detect feed bias drift (attack #6) ──
+    // Shannon entropy of domain distribution across recent snapshots.
+    // If entropy drops below threshold, signals are becoming
+    // ideologically monochrome — either natural or attacker-induced.
+    //
+    // H = -Σ p(d) * log2(p(d))
+    // Max entropy for 6 domains = log2(6) ≈ 2.585
+    // Below 1.0 = heavily skewed (suspicious)
+
+    if (snapshotHistory.length >= 10 && snapshot.operatorCoherence) {
+        // Collect domain distribution from recent snapshots
+        const recentOC = snapshotHistory.slice(-20)
+            .filter(s => s.operatorCoherence)
+            .map(s => s.operatorCoherence);
+
+        if (recentOC.length >= 5) {
+            // Count domain mentions across snapshots
+            const domainCounts = {};
+            let totalDomainSignals = 0;
+            for (const oc of recentOC) {
+                if (oc.domainDistribution) {
+                    for (const [domain, count] of Object.entries(oc.domainDistribution)) {
+                        domainCounts[domain] = (domainCounts[domain] || 0) + count;
+                        totalDomainSignals += count;
+                    }
+                }
+            }
+
+            if (totalDomainSignals > 10) {
+                // Shannon entropy
+                let entropy = 0;
+                const domains = Object.keys(domainCounts);
+                for (const d of domains) {
+                    const p = domainCounts[d] / totalDomainSignals;
+                    if (p > 0) entropy -= p * Math.log2(p);
+                }
+                const maxEntropy = Math.log2(Math.max(domains.length, 2));
+                const normalizedEntropy = entropy / maxEntropy; // 0..1
+
+                if (normalizedEntropy < 0.4 && domains.length >= 3) {
+                    findings.push({
+                        check: 'DIVERSITY_ENTROPY_LOW',
+                        detail: `Feed diversity entropy=${entropy.toFixed(2)} (${(normalizedEntropy * 100).toFixed(0)}% of max) — possible bias drift or narrative capture`,
+                        entropy: Math.round(entropy * 100) / 100,
+                        normalized: Math.round(normalizedEntropy * 100) / 100,
+                        dominantDomain: Object.entries(domainCounts).sort((a, b) => b[1] - a[1])[0][0],
+                        severity: normalizedEntropy < 0.2 ? 'ERROR' : 'WARN',
+                    });
+                }
+            }
+        }
+    }
+
     return findings;
 }
 
@@ -226,6 +298,21 @@ function freezeBaseline() {
         baseline.means[field] = mean;
         baseline.stddevs[field] = Math.sqrt(variance);
     }
+
+    // Sign the baseline with the worker epoch
+    baselineEpoch = workerEpoch;
+    const baselineCanonical = JSON.stringify(baseline.means) + '|' + baseline.frozenAt + '|' + workerEpoch;
+    baselineHash = simpleHash(baselineCanonical);
+    baseline.epochSignature = { epoch: workerEpoch, hash: baselineHash };
+}
+
+// Simple hash for worker-internal use (no crypto dependency needed)
+function simpleHash(str) {
+    let h = 5381;
+    for (let i = 0; i < str.length; i++) {
+        h = ((h << 5) + h + str.charCodeAt(i)) >>> 0;
+    }
+    return h.toString(36);
 }
 
 function detectRegimeShift() {
@@ -423,6 +510,8 @@ function verifySnapshot(snapshot) {
         disagreementScore = Math.max(0, disagreementScore - 0.5);
     }
 
+    epochSequence++;
+
     return {
         check: checkCount,
         findings,
@@ -439,6 +528,13 @@ function verifySnapshot(snapshot) {
             baselineFrozen: baseline !== null,
             correlationsTracked: Object.keys(correlationMemory).length,
             correlationsEstablished: Object.values(correlationMemory).filter(m => m.correlation !== null).length,
+        },
+        // Session continuity — main thread can detect worker kill/recreate
+        continuity: {
+            epoch: workerEpoch,
+            epochSequence,
+            baselineHash,
+            baselineEpoch,
         },
     };
 }
@@ -516,6 +612,8 @@ self.onmessage = async function(e) {
             historySize: snapshotHistory.length,
             baselineFrozen: baseline !== null,
             hmacReady: hmacKey !== null,
+            epoch: workerEpoch,
+            epochSequence,
         });
     } else if (msg.type === 'get_baseline') {
         self.postMessage({

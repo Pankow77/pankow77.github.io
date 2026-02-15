@@ -26,6 +26,17 @@ const SystemState = (() => {
             lastCycleMs: 0,          // duration of last cycle
             cycleDurations: [],      // last N cycle durations for trend analysis
         },
+        // ── Phase Completion Artifacts ──
+        // Each non-IDLE phase must produce a completion proof.
+        // Heartbeat alone does NOT count as progress.
+        // If a phase transitions out without a completion artifact → ghost detected.
+        phaseArtifacts: {
+            // Maps phase name → last completion artifact
+            // { phase, completedAt, artifactId, itemsProcessed, hash }
+            lastArtifacts: {},
+            ghostCount: 0,         // phases that exited without completion proof
+            totalCompleted: 0,     // phases with valid completion proof
+        },
         worker: {
             enabled: true,
             ready: false,
@@ -216,6 +227,69 @@ const SystemState = (() => {
         _prevThreshold = deterministic;
         return Math.round(threshold);
     }
+
+    // ══════════════════════════════════════════════
+    // PHASE COMPLETION ARTIFACTS — Proof of work
+    // ══════════════════════════════════════════════
+    // A phase must produce a completion artifact before transitioning.
+    // If setPhase() is called without a prior completePhase() for the
+    // current phase, it's a GHOST: the phase ran but produced nothing.
+    //
+    // This catches attack #1: phase ghosting where an attacker keeps
+    // a phase alive with heartbeats but never actually processes.
+
+    // Phases that REQUIRE completion artifacts (IDLE, BOOT, DEGRADED don't)
+    const PHASES_REQUIRING_ARTIFACT = ['POLLING', 'CLASSIFYING', 'DISTRIBUTING'];
+
+    function completePhase(phase, artifact) {
+        if (!artifact || typeof artifact !== 'object') {
+            logEvent('PHASE_ARTIFACT_INVALID', { phase, reason: 'missing or non-object artifact' });
+            return false;
+        }
+        const proof = {
+            phase,
+            completedAt: Date.now(),
+            artifactId: (typeof crypto !== 'undefined' && crypto.randomUUID)
+                ? crypto.randomUUID()
+                : 'a-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+            itemsProcessed: artifact.itemsProcessed || 0,
+            detail: artifact.detail || null,
+            hash: hashStr(phase + '|' + Date.now() + '|' + (artifact.itemsProcessed || 0)),
+        };
+        state.phaseArtifacts.lastArtifacts[phase] = proof;
+        state.phaseArtifacts.totalCompleted++;
+        logEvent('PHASE_COMPLETED', { phase, artifactId: proof.artifactId, items: proof.itemsProcessed });
+        return true;
+    }
+
+    // Patch setPhase to check for ghost detection
+    const _originalSetPhase = setPhase;
+    // We need to redefine setPhase with ghost detection
+    // But since setPhase is already defined above, we wrap it:
+
+    function setPhaseWithGhostDetection(newPhase) {
+        const current = state.cycle.phase;
+        // Check if the current phase required an artifact and didn't get one
+        if (PHASES_REQUIRING_ARTIFACT.includes(current)) {
+            const artifact = state.phaseArtifacts.lastArtifacts[current];
+            const phaseStart = state.cycle.phaseEnteredAt;
+            // Artifact must exist AND be from AFTER the phase started
+            const hasValidArtifact = artifact && artifact.completedAt >= phaseStart;
+            if (!hasValidArtifact) {
+                state.phaseArtifacts.ghostCount++;
+                logEvent('PHASE_GHOST_DETECTED', {
+                    phase: current,
+                    duration: Date.now() - phaseStart,
+                    ghostCount: state.phaseArtifacts.ghostCount,
+                    detail: `Phase ${current} exited without completion artifact`,
+                });
+            }
+        }
+        return _originalSetPhase(newPhase);
+    }
+
+    // Replace the original setPhase reference
+    // (we'll export setPhaseWithGhostDetection as the public setPhase)
 
     function advanceCycle() {
         const prevId = state.cycle.id;
@@ -671,11 +745,107 @@ const SystemState = (() => {
             detail: `entries=${logIntegrity.entries}, intact=${logIntegrity.intact}`,
         });
 
+        // Phase ghost detection
+        const ghostEvents = EVENT_LOG.filter(e => e.type === 'PHASE_GHOST_DETECTED').length;
+        results.push({
+            id: 'PHASE_GHOST_FREE',
+            pass: ghostEvents === 0,
+            detail: `ghosts=${state.phaseArtifacts.ghostCount}, total_completed=${state.phaseArtifacts.totalCompleted}`,
+        });
+
         return results;
     }
 
+    // ══════════════════════════════════════════════
+    // ANCHOR AUTO-EXPORT — Automatic witness
+    // ══════════════════════════════════════════════
+    // "Finché è manuale → è teatro."
+    //
+    // Auto-export anchor to:
+    //   1. sessionStorage (survives tab refresh, not tab close)
+    //   2. A downloadable blob (prompted periodically)
+    //   3. Custom event (external systems can listen)
+    //
+    // This doesn't solve the "same origin" problem, but it
+    // increases the attrito of rewriting the chain:
+    //   - sessionStorage is a separate API from localStorage
+    //   - The download creates an external witness file
+    //   - The custom event lets other tabs/systems capture it
+
+    const ANCHOR_AUTO_INTERVAL = 5 * 60 * 1000; // every 5 minutes
+    let lastAutoAnchorTime = 0;
+    let autoAnchorCount = 0;
+
+    function autoExportAnchor() {
+        const anchor = exportAnchor();
+        if (!anchor) return null;
+
+        autoAnchorCount++;
+        lastAutoAnchorTime = Date.now();
+
+        // 1. sessionStorage — separate from localStorage, different attack surface
+        try {
+            sessionStorage.setItem('hs_anchor_witness', JSON.stringify({
+                anchor,
+                exportedAt: Date.now(),
+                count: autoAnchorCount,
+            }));
+        } catch (e) { /* best effort */ }
+
+        // 2. Dispatch custom event for external listeners
+        try {
+            window.dispatchEvent(new CustomEvent('hs-anchor-export', {
+                detail: { anchor, count: autoAnchorCount },
+            }));
+        } catch (e) { /* best effort */ }
+
+        logEvent('ANCHOR_AUTO_EXPORT', {
+            fingerprint: anchor.fingerprint,
+            seq: anchor.headSeq,
+            count: autoAnchorCount,
+        });
+
+        return anchor;
+    }
+
+    // Download anchor as .json file (called from UI or periodically)
+    function downloadAnchor() {
+        const anchor = exportAnchor();
+        if (!anchor) return false;
+        try {
+            const blob = new Blob(
+                [JSON.stringify(anchor, null, 2)],
+                { type: 'application/json' }
+            );
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `hs-anchor-${anchor.fingerprint.slice(0, 8)}-${new Date().toISOString().slice(0, 10)}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            logEvent('ANCHOR_DOWNLOADED', { fingerprint: anchor.fingerprint });
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    // Verify a previously exported anchor (from file or sessionStorage)
+    function verifyExternalAnchor() {
+        try {
+            const raw = sessionStorage.getItem('hs_anchor_witness');
+            if (!raw) return { valid: false, reason: 'no_witness_in_session' };
+            const witness = JSON.parse(raw);
+            return verifyAnchor(witness.anchor);
+        } catch (e) {
+            return { valid: false, reason: 'parse_error' };
+        }
+    }
+
     // Boot event
-    logEvent('SYSTEM_BOOT', { version: '2.0' });
+    logEvent('SYSTEM_BOOT', { version: '2.1' });
 
     // Start phase timeout watchdog (check every 15 seconds)
     setInterval(() => {
@@ -684,17 +854,31 @@ const SystemState = (() => {
         }
     }, 15000);
 
+    // Auto-export anchor every 5 minutes
+    setInterval(() => {
+        if (EVENT_LOG.length > 10) {
+            autoExportAnchor();
+        }
+    }, ANCHOR_AUTO_INTERVAL);
+
+    // First auto-export after 30 seconds (let system stabilize)
+    setTimeout(() => {
+        if (EVENT_LOG.length > 5) autoExportAnchor();
+    }, 30000);
+
     // ══════════════════════════════════════════════
     // PUBLIC API
     // ══════════════════════════════════════════════
 
     return {
         // Phase control
-        setPhase,
+        setPhase: setPhaseWithGhostDetection,
         getPhase: () => state.cycle.phase,
         advanceCycle,
         getCycleId: () => state.cycle.id,
         checkPhaseTimeout,
+        completePhase,
+        getPhaseArtifacts: () => ({ ...state.phaseArtifacts, lastArtifacts: { ...state.phaseArtifacts.lastArtifacts } }),
 
         // Typed accessors
         updateWorker,
@@ -748,6 +932,12 @@ const SystemState = (() => {
             ...state.reputation,
             graylisted: [...state.reputation.graylisted],
         }),
+
+        // Anchor auto-export
+        autoExportAnchor,
+        downloadAnchor,
+        verifyExternalAnchor,
+        getAutoAnchorStatus: () => ({ count: autoAnchorCount, lastExport: lastAutoAnchorTime }),
 
         // Constants
         INVARIANTS,

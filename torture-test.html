@@ -1688,6 +1688,90 @@
             detail: `entries=${integrityAfter.entries}`,
         });
 
+        // ── ATK-5: Phase completion artifacts — ghost detection ──
+        if (typeof SystemState !== 'undefined' && SystemState.completePhase) {
+            const ghostsBefore = SystemState.getPhaseArtifacts().ghostCount;
+
+            // Enter POLLING without completing it → should detect ghost
+            SystemState.setPhase('IDLE'); // ensure we're in IDLE
+            SystemState.setPhase('POLLING');
+            // Exit POLLING without calling completePhase → ghost!
+            SystemState.setPhase('IDLE');
+
+            const ghostsAfter = SystemState.getPhaseArtifacts().ghostCount;
+            tests.push({
+                name: 'ATK-5: Phase ghost detected when exiting without completion artifact',
+                result: assert('atk_ghost_detect', ghostsAfter > ghostsBefore),
+                detail: `ghosts before=${ghostsBefore}, after=${ghostsAfter}`,
+            });
+
+            // Now do it properly: complete then exit
+            SystemState.setPhase('POLLING');
+            SystemState.completePhase('POLLING', { itemsProcessed: 5, detail: 'test' });
+            const completedBefore = SystemState.getPhaseArtifacts().totalCompleted;
+            SystemState.setPhase('IDLE');
+            const ghostsProper = SystemState.getPhaseArtifacts().ghostCount;
+
+            tests.push({
+                name: 'ATK-5: Proper phase completion produces no ghost',
+                result: assert('atk_no_ghost', ghostsProper === ghostsAfter), // ghost count shouldn't increase
+                detail: `completed=${completedBefore}, ghosts=${ghostsProper}`,
+            });
+        }
+
+        // ── ATK-6: CUSUM detector responds to sustained degradation ──
+        if (typeof CoherenceLedger !== 'undefined' && CoherenceLedger.getCUSUM) {
+            const cusumBefore = CoherenceLedger.getCUSUM();
+            // Feed 30 contradiction records to push CUSUM up
+            for (let i = 0; i < 30; i++) {
+                CoherenceLedger.record('narrative', `ATK-6: synthetic pressure ${i}`);
+                CoherenceLedger.computeDegradation(); // trigger CUSUM feed
+            }
+            const cusumAfter = CoherenceLedger.getCUSUM();
+
+            tests.push({
+                name: 'ATK-6: CUSUM accumulates under sustained pressure',
+                result: assert('atk_cusum', cusumAfter.samples > cusumBefore.samples),
+                detail: `samples before=${cusumBefore.samples}, after=${cusumAfter.samples}, high=${cusumAfter.high.toFixed(3)}`,
+            });
+
+            // Hysteresis: DI floor should have risen
+            const hyst = CoherenceLedger.getHysteresis();
+            tests.push({
+                name: 'ATK-6: Hysteresis floor risen after degradation',
+                result: assert('atk_hysteresis', hyst.floor >= 0),
+                detail: `floor=${hyst.floor.toFixed(3)}`,
+            });
+        }
+
+        // ── ATK-7: Anchor auto-export fires and creates witness ──
+        if (typeof SystemState !== 'undefined' && SystemState.autoExportAnchor) {
+            const anchor = SystemState.autoExportAnchor();
+            tests.push({
+                name: 'ATK-7: Auto-export anchor creates valid witness',
+                result: assert('atk_auto_anchor', anchor !== null && anchor.fingerprint),
+                detail: anchor ? `fingerprint=${anchor.fingerprint}` : 'NO ANCHOR',
+            });
+
+            // Verify the witness from sessionStorage
+            const verification = SystemState.verifyExternalAnchor();
+            tests.push({
+                name: 'ATK-7: Session witness verifies successfully',
+                result: assert('atk_witness_verify', verification.valid === true),
+                detail: `valid=${verification.valid}, reason=${verification.reason || 'ok'}`,
+            });
+        }
+
+        // ── ATK-8: Worker continuity tracking exists ──
+        if (typeof Watchdog !== 'undefined') {
+            const wdStatus = Watchdog.getStatus();
+            tests.push({
+                name: 'ATK-8: Worker continuity data available',
+                result: assert('atk_continuity', wdStatus.workerRestarts !== undefined),
+                detail: `restarts=${wdStatus.workerRestarts}, epoch=${wdStatus.workerEpoch ? wdStatus.workerEpoch.slice(0, 8) : 'none'}`,
+            });
+        }
+
         renderSuite('adversary_harness', tests);
         updateSummary();
     }

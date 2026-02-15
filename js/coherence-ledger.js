@@ -33,6 +33,12 @@ const CoherenceLedger = (() => {
         maxEntries: 500,
         windowSize: 20,      // rolling window for regression analysis
         decayRate: 0.02,     // how fast old contradictions lose weight
+        // CUSUM parameters — long-memory regime shift detection
+        cusumTarget: 0.1,    // expected DI under normal operation
+        cusumSlack: 0.03,    // allowable slack before accumulation starts
+        cusumThreshold: 2.0, // CUSUM alarm threshold
+        // Hysteresis — once you cross, you don't come back easy
+        hysteresisDecay: 0.005,  // DI floor decays at this rate per minute
     };
 
     // ══════════════════════════════════════════════
@@ -41,6 +47,75 @@ const CoherenceLedger = (() => {
 
     let ledger = [];
     let sessionStart = Date.now();
+
+    // ══════════════════════════════════════════════
+    // CUSUM — Cumulative Sum detector for regime shifts
+    // ══════════════════════════════════════════════
+    // Rolling window is TikTok: lives of last 15 seconds.
+    // CUSUM has infinite memory. It detects slow drift that
+    // a windowed approach misses entirely.
+    //
+    // S(n) = max(0, S(n-1) + (x(n) - target - slack))
+    // When S(n) > threshold → REGIME SHIFT detected
+    //
+    // This catches attack #2: ledger gaming where the attacker
+    // oscillates DI around 0.09 forever, never triggering the
+    // rolling-window detector.
+
+    let cusumHigh = 0;        // accumulates positive deviations
+    let cusumLow = 0;         // accumulates negative deviations (recovery)
+    let cusumAlarm = false;   // true when regime shift detected
+    let cusumAlarmAt = 0;     // timestamp of last alarm
+    let cusumSamples = 0;     // total samples fed into CUSUM
+    let cusumHistory = [];    // last 50 CUSUM values for trend display
+
+    function feedCUSUM(diValue) {
+        cusumSamples++;
+        const deviation = diValue - CONFIG.cusumTarget - CONFIG.cusumSlack;
+        cusumHigh = Math.max(0, cusumHigh + deviation);
+        cusumLow = Math.max(0, cusumLow - deviation); // inverse — detects sudden improvement (suspicious?)
+
+        cusumHistory.push({ t: Date.now(), high: cusumHigh, low: cusumLow, di: diValue });
+        if (cusumHistory.length > 50) cusumHistory.shift();
+
+        if (cusumHigh > CONFIG.cusumThreshold && !cusumAlarm) {
+            cusumAlarm = true;
+            cusumAlarmAt = Date.now();
+            record('regression', `CUSUM regime shift: S=${cusumHigh.toFixed(3)}, threshold=${CONFIG.cusumThreshold}`, {
+                cusumHigh,
+                cusumSamples,
+            });
+        }
+        // CUSUM resets after alarm (but alarm flag stays — hysteresis)
+        if (cusumHigh > CONFIG.cusumThreshold) {
+            cusumHigh = 0; // reset accumulator but NOT the alarm
+        }
+    }
+
+    // ══════════════════════════════════════════════
+    // HYSTERESIS — Once degraded, recovery is slow
+    // ══════════════════════════════════════════════
+    // Prevents gaming: "go to 0.29, come back to 0, repeat"
+    // DI floor rises on each degradation event and decays slowly.
+
+    let diFloor = 0;          // minimum DI value (rises on degradation)
+    let diFloorSetAt = 0;     // when floor was last raised
+
+    function updateHysteresis(rawDI) {
+        const now = Date.now();
+        // Decay the floor slowly over time
+        if (diFloor > 0 && diFloorSetAt > 0) {
+            const minutesSinceSet = (now - diFloorSetAt) / 60000;
+            diFloor = Math.max(0, diFloor - minutesSinceSet * CONFIG.hysteresisDecay);
+        }
+        // If raw DI exceeds current floor significantly, raise floor
+        if (rawDI > diFloor + 0.05) {
+            diFloor = rawDI * 0.6; // floor rises to 60% of peak
+            diFloorSetAt = now;
+        }
+        // Effective DI is max(raw, floor)
+        return Math.max(rawDI, diFloor);
+    }
 
     function loadLedger() {
         try {
@@ -150,7 +225,13 @@ const CoherenceLedger = (() => {
 
         // ── Combined degradation index ──
         // Weighted: epistemic is 2x more severe than narrative, regression is 1.5x
-        const DI = Math.min((NI * 0.3 + ED * 0.5 + CR * 0.2), 1.0);
+        let rawDI = Math.min((NI * 0.3 + ED * 0.5 + CR * 0.2), 1.0);
+
+        // ── CUSUM: feed current DI into regime shift detector ──
+        feedCUSUM(rawDI);
+
+        // ── Hysteresis: once degraded, recovery is slow ──
+        const DI = Math.min(updateHysteresis(rawDI), 1.0);
 
         // ── Trend: compare last N to previous N ──
         let trend = 'stable';
@@ -175,12 +256,27 @@ const CoherenceLedger = (() => {
 
         return {
             index: Math.round(DI * 1000) / 1000,
+            rawIndex: Math.round(rawDI * 1000) / 1000,
             narrative: Math.round(NI * 1000) / 1000,
             epistemic: Math.round(ED * 1000) / 1000,
             regression: Math.round(CR * 1000) / 1000,
             verdict,
             contradictions: ledger.length,
             trend,
+            // CUSUM regime shift
+            cusum: {
+                high: Math.round(cusumHigh * 1000) / 1000,
+                alarm: cusumAlarm,
+                alarmAt: cusumAlarmAt,
+                samples: cusumSamples,
+            },
+            // Hysteresis
+            hysteresis: {
+                floor: Math.round(diFloor * 1000) / 1000,
+                floorSetAt: diFloorSetAt,
+                rawDI: Math.round(rawDI * 1000) / 1000,
+                effectiveDI: Math.round(DI * 1000) / 1000,
+            },
         };
     }
 
@@ -319,6 +415,20 @@ const CoherenceLedger = (() => {
         getLog,
         clear,
         getEntryCount: () => ledger.length,
+        // CUSUM
+        getCUSUM: () => ({
+            high: cusumHigh,
+            low: cusumLow,
+            alarm: cusumAlarm,
+            alarmAt: cusumAlarmAt,
+            samples: cusumSamples,
+            history: [...cusumHistory],
+        }),
+        // Hysteresis
+        getHysteresis: () => ({
+            floor: diFloor,
+            floorSetAt: diFloorSetAt,
+        }),
     };
 
 })();
