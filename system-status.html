@@ -176,6 +176,7 @@
     <script src="js/correlation-engine.js"></script>
     <script src="js/signal-interceptor.js"></script>
     <script src="js/coherence-ledger.js"></script>
+    <script src="js/signal-gate.js"></script>
     <script src="js/watchdog.js"></script>
 
     <script>
@@ -491,6 +492,41 @@
                 ` : `
                 <div class="metric"><span class="label">Status</span><span class="value warn">NO CHAIN DATA</span></div>
                 `}
+            </div>`;
+        }
+
+        // ── 11. Signal Gate — Choke Point ──
+        if (typeof SignalGate !== 'undefined') {
+            const sgStats = SignalGate.getStats();
+            const sgColor = sgStats.totalRejected > 0 ? 'dot-yellow' : 'dot-green';
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    SIGNAL GATE
+                    <span class="status-dot ${sgColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Passed</span><span class="value good">${sgStats.totalPassed}</span></div>
+                <div class="metric"><span class="label">Rejected</span><span class="value ${sgStats.totalRejected > 0 ? 'warn' : 'good'}">${sgStats.totalRejected}</span></div>
+                <div class="metric"><span class="label">Rejection Rate</span><span class="value">${sgStats.rejectionRate}%</span></div>
+                ${sgStats.recentRejections.length > 0 ? `
+                <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:80px;overflow-y:auto;font-size:10px;line-height:1.5;">
+                    ${sgStats.recentRejections.map(r => `<div style="color:#ff6b35">[${new Date(r.t).toLocaleTimeString()}] ${r.signal ? esc(r.signal.source) : '?'}: ${r.reasons.join(', ')}</div>`).join('')}
+                </div>` : ''}
+            </div>`;
+        }
+
+        // ── 12. HMAC Verdict Auth ──
+        if (typeof Watchdog !== 'undefined') {
+            const wdStatus = Watchdog.getStatus();
+            html += `
+            <div class="panel">
+                <div class="panel-title">
+                    VERDICT AUTH
+                    <span class="status-dot ${wdStatus.hmacEnabled ? 'dot-green' : 'dot-yellow'}"></span>
+                </div>
+                <div class="metric"><span class="label">HMAC</span><span class="value ${wdStatus.hmacEnabled ? 'good' : 'warn'}">${wdStatus.hmacEnabled ? 'ACTIVE' : 'UNAVAILABLE'}</span></div>
+                <div class="metric"><span class="label">Last Signature</span><span class="value ${wdStatus.signatureValid === true ? 'good' : wdStatus.signatureValid === false ? 'bad' : 'warn'}">${wdStatus.signatureValid === true ? 'VALID' : wdStatus.signatureValid === false ? 'INVALID' : 'PENDING'}</span></div>
+                <div class="metric"><span class="label">Forgeries Detected</span><span class="value ${wdStatus.verdictsForgeryDetected > 0 ? 'bad' : 'good'}">${wdStatus.verdictsForgeryDetected}</span></div>
             </div>`;
         }
 

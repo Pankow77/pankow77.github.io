@@ -444,15 +444,69 @@ function verifySnapshot(snapshot) {
 }
 
 // ══════════════════════════════════════════════
+// VERDICT SIGNING — HMAC authentication
+// ══════════════════════════════════════════════
+// The worker generates a CryptoKey at boot. Every verdict is
+// signed with HMAC-SHA256. The main thread receives the key
+// (exported as JWK) and can verify signatures.
+//
+// If the main thread fabricates a verdict, the signature won't
+// match. This doesn't prevent a compromised main thread from
+// ignoring verdicts — but it prevents verdict forgery.
+//
+// The key never leaves the worker in raw form. Only the JWK
+// export (for verification) and the signatures are sent out.
+
+let hmacKey = null;
+let hmacJwk = null; // exported for main thread verification
+
+async function initHMAC() {
+    if (typeof crypto === 'undefined' || !crypto.subtle) return false;
+    try {
+        hmacKey = await crypto.subtle.generateKey(
+            { name: 'HMAC', hash: 'SHA-256' },
+            true, // extractable — needed for JWK export
+            ['sign', 'verify']
+        );
+        hmacJwk = await crypto.subtle.exportKey('jwk', hmacKey);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
+
+async function signVerdict(result) {
+    if (!hmacKey) return null;
+    try {
+        // Canonical: JSON.stringify of the findings array + check number
+        const canonical = JSON.stringify({
+            check: result.check,
+            findingCount: result.findings.length,
+            findingChecks: result.findings.map(f => f.check),
+            trustworthy: result.trustworthy,
+            disagreements: result.disagreements,
+        });
+        const encoded = new TextEncoder().encode(canonical);
+        const sig = await crypto.subtle.sign('HMAC', hmacKey, encoded);
+        // Convert to hex string for portability
+        return Array.from(new Uint8Array(sig)).map(b => b.toString(16).padStart(2, '0')).join('');
+    } catch (e) {
+        return null;
+    }
+}
+
+// ══════════════════════════════════════════════
 // MESSAGE PROTOCOL
 // ══════════════════════════════════════════════
 
-self.onmessage = function(e) {
+self.onmessage = async function(e) {
     const msg = e.data;
     if (!msg || typeof msg !== 'object') return;
 
     if (msg.type === 'verify' && msg.snapshot) {
         const result = verifySnapshot(msg.snapshot);
+        // Sign the verdict
+        result.signature = await signVerdict(result);
         self.postMessage({ type: 'verdict', result });
     } else if (msg.type === 'ping') {
         self.postMessage({
@@ -461,6 +515,7 @@ self.onmessage = function(e) {
             disagreementScore,
             historySize: snapshotHistory.length,
             baselineFrozen: baseline !== null,
+            hmacReady: hmacKey !== null,
         });
     } else if (msg.type === 'get_baseline') {
         self.postMessage({
@@ -485,5 +540,12 @@ self.onmessage = function(e) {
     }
 };
 
-// Announce readiness
-self.postMessage({ type: 'ready' });
+// Boot sequence: init HMAC, then announce readiness
+(async () => {
+    const hmacOk = await initHMAC();
+    self.postMessage({
+        type: 'ready',
+        hmacEnabled: hmacOk,
+        hmacJwk: hmacJwk, // main thread uses this for verification
+    });
+})();

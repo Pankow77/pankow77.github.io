@@ -28,6 +28,9 @@ const Watchdog = (() => {
 
     let worker = null;
     let workerReady = false;
+    let hmacVerifyKey = null;  // CryptoKey for verdict verification
+    let hmacEnabled = false;
+    let verdictsForgeryDetected = 0;
     let timer = null;
     let totalChecks = 0;
     let lastVerdict = null;
@@ -172,14 +175,43 @@ const Watchdog = (() => {
         if (typeof Worker === 'undefined') return false;
         try {
             worker = new Worker('js/watchdog-worker.js');
-            worker.onmessage = (e) => {
+            worker.onmessage = async (e) => {
                 const msg = e.data;
                 if (!msg || typeof msg !== 'object') return;
 
                 if (msg.type === 'ready') {
                     workerReady = true;
-                    console.log('%c[WATCHDOG] Worker observer ONLINE — isolated verification active', 'color: #ff6b35;');
+                    // Import HMAC key for verdict verification
+                    if (msg.hmacEnabled && msg.hmacJwk) {
+                        try {
+                            hmacVerifyKey = await crypto.subtle.importKey(
+                                'jwk', msg.hmacJwk,
+                                { name: 'HMAC', hash: 'SHA-256' },
+                                false, ['verify']
+                            );
+                            hmacEnabled = true;
+                            console.log('%c[WATCHDOG] Worker ONLINE — HMAC verdict signing active', 'color: #ff6b35;');
+                        } catch (err) {
+                            console.warn('[WATCHDOG] HMAC key import failed:', err);
+                            hmacEnabled = false;
+                        }
+                    } else {
+                        console.log('%c[WATCHDOG] Worker ONLINE — HMAC unavailable, verdicts unsigned', 'color: #ff6b35;');
+                    }
                 } else if (msg.type === 'verdict') {
+                    // Verify signature before trusting verdict
+                    const sigValid = await verifyVerdictSignature(msg.result);
+                    if (!sigValid && hmacEnabled) {
+                        verdictsForgeryDetected++;
+                        console.error('[WATCHDOG] VERDICT FORGERY DETECTED — signature mismatch');
+                        if (typeof SystemState !== 'undefined') {
+                            SystemState.logEvent('VERDICT_FORGERY', {
+                                check: msg.result.check,
+                                forgeryCount: verdictsForgeryDetected,
+                            });
+                        }
+                    }
+                    msg.result._signatureValid = sigValid;
                     handleVerdict(msg.result);
                 } else if (msg.type === 'pong') {
                     // Health check response
@@ -193,6 +225,24 @@ const Watchdog = (() => {
             return true;
         } catch (e) {
             console.warn('[WATCHDOG] Worker init failed:', e);
+            return false;
+        }
+    }
+
+    async function verifyVerdictSignature(result) {
+        if (!hmacVerifyKey || !result.signature) return null; // null = can't verify
+        try {
+            const canonical = JSON.stringify({
+                check: result.check,
+                findingCount: result.findings.length,
+                findingChecks: result.findings.map(f => f.check),
+                trustworthy: result.trustworthy,
+                disagreements: result.disagreements,
+            });
+            const encoded = new TextEncoder().encode(canonical);
+            const sigBytes = new Uint8Array(result.signature.match(/.{2}/g).map(b => parseInt(b, 16)));
+            return await crypto.subtle.verify('HMAC', hmacVerifyKey, sigBytes, encoded);
+        } catch (e) {
             return false;
         }
     }
@@ -385,6 +435,9 @@ const Watchdog = (() => {
             disagreements: lastVerdict ? lastVerdict.disagreements : 0,
             running: timer !== null,
             workerIsolated: workerReady,
+            hmacEnabled,
+            signatureValid: lastVerdict ? lastVerdict._signatureValid : null,
+            verdictsForgeryDetected,
             trustworthy: lastVerdict ? lastVerdict.trustworthy : true,
             hasRegimeShift: lastVerdict ? lastVerdict.hasRegimeShift : false,
             hasGenerative: lastVerdict ? lastVerdict.hasGenerative : false,
