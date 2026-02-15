@@ -177,6 +177,7 @@
     <script src="js/signal-interceptor.js"></script>
     <script src="js/coherence-ledger.js"></script>
     <script src="js/signal-gate.js"></script>
+    <script src="js/runtime-integrity.js"></script>
     <script src="js/watchdog.js"></script>
 
     <script>
@@ -641,6 +642,31 @@
                 </div>
                 <div class="metric"><span class="label">Breaches</span><span class="value ${atomicity.breaches > 0 ? 'bad' : 'good'}">${atomicity.breaches}</span></div>
                 <div class="metric"><span class="label">Pending Txn</span><span class="value ${atomicity.pendingTxn ? 'warn' : 'good'}">${atomicity.pendingTxn ? 'YES' : 'NONE'}</span></div>
+            </div>`;
+        }
+
+        // ── 17. Runtime Integrity ──
+        if (typeof RuntimeIntegrity !== 'undefined') {
+            const ri = RuntimeIntegrity.getBootResult();
+            const riFindings = RuntimeIntegrity.getFindings();
+            const critCount = riFindings.filter(f => f.severity === 'CRITICAL').length;
+            const riColor = critCount > 0 ? 'dot-red' : riFindings.length > 0 ? 'dot-yellow' : 'dot-green';
+            html += `
+            <div class="panel" style="grid-column: span 2;">
+                <div class="panel-title">
+                    RUNTIME INTEGRITY
+                    <span class="status-dot ${riColor}"></span>
+                </div>
+                <div class="metric"><span class="label">Crypto</span><span class="value ${ri.cryptoIntact ? 'good' : 'bad'}">${ri.cryptoIntact ? 'NATIVE' : 'SHIMMED'}</span></div>
+                <div class="metric"><span class="label">Clock</span><span class="value ${ri.clockTamperDetected ? 'bad' : 'good'}">${ri.clockTamperDetected ? 'TAMPERED' : 'SANE'}</span></div>
+                <div class="metric"><span class="label">Leader</span><span class="value ${RuntimeIntegrity.isLeader() ? 'good' : 'warn'}">${RuntimeIntegrity.isLeader() ? 'THIS TAB' : 'OTHER TAB'}</span></div>
+                <div class="metric"><span class="label">Tab ID</span><span class="value" style="font-size:9px">${esc(RuntimeIntegrity.getLeaderId() ? RuntimeIntegrity.getLeaderId().slice(0, 12) : 'N/A')}</span></div>
+                <div class="metric"><span class="label">Scripts</span><span class="value">${ri.scriptManifest ? ri.scriptManifest.found + ' loaded' : 'N/A'}</span></div>
+                <div class="metric"><span class="label">Findings</span><span class="value ${critCount > 0 ? 'bad' : riFindings.length > 0 ? 'warn' : 'good'}">${riFindings.length} (${critCount} critical)</span></div>
+                ${riFindings.length > 0 ? `
+                <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:100px;overflow-y:auto;font-size:10px;line-height:1.5;">
+                    ${riFindings.map(f => `<div style="color:${f.severity === 'CRITICAL' ? '#ff3344' : f.severity === 'ERROR' ? '#ff6b35' : '#ffbf00'};">[${f.severity}] ${esc(f.check)}: ${esc(f.detail)}</div>`).join('')}
+                </div>` : ''}
             </div>`;
         }
 

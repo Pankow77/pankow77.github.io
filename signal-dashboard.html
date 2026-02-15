@@ -1198,7 +1198,7 @@
 
             return `
                 <div class="alert-item ${cls}">
-                    <div class="alert-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain}</div>
+                    <div class="alert-domain" style="color: ${cfg.color};">${cfg.icon} ${escapeHtml(s.domain)}</div>
                     <div class="alert-title">${titleHtml}</div>
                     <div class="alert-meta-row">
                         <span class="alert-source">${escapeHtml(s.source)}</span>
@@ -1236,7 +1236,7 @@
             return `
                 <div class="tl-entry">
                     <span class="tl-time">${dateStr} ${timeStr}</span>
-                    <span class="tl-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain || '?'}</span>
+                    <span class="tl-domain" style="color: ${cfg.color};">${cfg.icon} ${escapeHtml(s.domain || '?')}</span>
                     <span class="tl-title">${escapeHtml(s.title)}</span>
                     <span class="tl-sev" style="color: ${sevColor};">${s.severity}%</span>
                 </div>

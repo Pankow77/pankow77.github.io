@@ -1377,6 +1377,21 @@ const PersistenceManager = (() => {
 
     function init() {
         const startup = () => {
+            // Boot-time 2PC reconciliation: clean up orphaned transaction markers
+            const pendingTxn = checkPendingTxn();
+            if (pendingTxn) {
+                txnAtomicityBreaches++;
+                console.warn('[PersistenceManager] Orphaned transaction marker found at boot — previous crash/abort detected', pendingTxn);
+                if (typeof SystemState !== 'undefined') {
+                    SystemState.logEvent('ATOMICITY_BREACH_BOOT', {
+                        txnId: pendingTxn.txnId,
+                        startedAt: pendingTxn.startedAt,
+                        age: Date.now() - pendingTxn.startedAt,
+                    });
+                }
+                clearTxnMarker();
+            }
+
             migrateOldArchive();
             incrementSession();
             createUI();

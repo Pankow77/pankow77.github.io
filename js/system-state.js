@@ -298,15 +298,27 @@ const SystemState = (() => {
         if (PHASES_REQUIRING_ARTIFACT.includes(current)) {
             const artifact = state.phaseArtifacts.lastArtifacts[current];
             const phaseStart = state.cycle.phaseEnteredAt;
-            // Artifact must exist AND be from AFTER the phase started
-            const hasValidArtifact = artifact && artifact.completedAt >= phaseStart;
+            const cycleId = state.cycle.id;
+            // Artifact must:
+            //   1. Exist
+            //   2. Be from AFTER the phase started
+            //   3. Match the current cycleId (prevents replay of old artifacts)
+            //   4. Match the current phaseEnteredAt (prevents reuse across re-entries)
+            const hasValidArtifact = artifact
+                && artifact.completedAt >= phaseStart
+                && artifact.cycleId === cycleId
+                && artifact.phaseEnteredAt === phaseStart;
             if (!hasValidArtifact) {
                 state.phaseArtifacts.ghostCount++;
                 logEvent('PHASE_GHOST_DETECTED', {
                     phase: current,
                     duration: Date.now() - phaseStart,
                     ghostCount: state.phaseArtifacts.ghostCount,
-                    detail: `Phase ${current} exited without completion artifact`,
+                    detail: `Phase ${current} exited without valid completion artifact`,
+                    reason: !artifact ? 'no_artifact'
+                        : artifact.cycleId !== cycleId ? 'cycle_mismatch'
+                        : artifact.phaseEnteredAt !== phaseStart ? 'phase_reuse'
+                        : 'stale_artifact',
                 });
             }
         }

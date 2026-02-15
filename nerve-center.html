@@ -735,8 +735,8 @@
 
             return `
                 <div class="nc-corr-card" style="border-left-color: ${c.color};">
-                    <div class="nc-corr-name" style="color: ${c.color};">${c.icon} ${c.name}</div>
-                    <div class="nc-corr-desc">${c.description}</div>
+                    <div class="nc-corr-name" style="color: ${c.color};">${c.icon} ${escHtml(c.name)}</div>
+                    <div class="nc-corr-desc">${escHtml(c.description)}</div>
                     <div class="nc-corr-meta">
                         <span class="nc-corr-threat" style="color: ${tc}; background: ${tb}; border: 1px solid ${tc}33;">${c.threat}</span>
                         <span class="nc-corr-strength">STR: <strong>${c.strength}%</strong> // ${c.signalCount} signals</span>
@@ -820,7 +820,7 @@
             return `
                 <div class="nc-signal ${isWatchlist ? 'nc-sig-watchlist' : ''}">
                     <div class="nc-sig-dot" style="background: ${cfg.color}; box-shadow: 0 0 6px ${cfg.color}44;"></div>
-                    <div class="nc-sig-domain" style="color: ${cfg.color};">${cfg.icon} ${s.domain || '?'}</div>
+                    <div class="nc-sig-domain" style="color: ${cfg.color};">${cfg.icon} ${escHtml(s.domain || '?')}</div>
                     <div class="nc-sig-title">${titleHtml}</div>
                     <div class="nc-sig-source">${escHtml(s.source)}</div>
                     <div class="nc-sig-sev" style="color: ${sevColor};">${s.severity}%</div>
