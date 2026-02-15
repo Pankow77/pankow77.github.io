@@ -39,9 +39,34 @@ const SignalInterceptor = (() => {
         { id: 'ansa-tecnologia',name: 'ANSA Tecnologia',lang: 'it', url: 'https://www.ansa.it/sito/notizie/tecnologia/tecnologia_rss.xml' },
         { id: 'ansa-cronaca',   name: 'ANSA Cronaca',   lang: 'it', url: 'https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml' },
 
-        // ── International ──
+        // ── Italian Media ──
+        { id: 'repubblica',     name: 'La Repubblica',   lang: 'it', url: 'https://www.repubblica.it/rss/homepage/rss2.0.xml' },
+        { id: 'ilsole24ore',    name: 'Il Sole 24 Ore',  lang: 'it', url: 'https://www.ilsole24ore.com/rss/mondo.xml' },
+
+        // ── UK / US ──
         { id: 'guardian-world', name: 'The Guardian',    lang: 'en', url: 'https://www.theguardian.com/world/rss' },
+        { id: 'bbc-world',     name: 'BBC World',       lang: 'en', url: 'https://feeds.bbci.co.uk/news/world/rss.xml' },
+        { id: 'bbc-tech',      name: 'BBC Technology',  lang: 'en', url: 'https://feeds.bbci.co.uk/news/technology/rss.xml' },
+        { id: 'reuters-world', name: 'Reuters World',   lang: 'en', url: 'https://www.reutersagency.com/feed/?best-topics=world&post_type=best' },
+
+        // ── Middle East / Asia ──
         { id: 'aljazeera',     name: 'Al Jazeera',      lang: 'en', url: 'https://www.aljazeera.com/xml/rss/all.xml' },
+
+        // ── European ──
+        { id: 'dw-world',      name: 'DW World',        lang: 'en', url: 'https://rss.dw.com/rss/en/top' },
+        { id: 'france24',      name: 'France 24',       lang: 'en', url: 'https://www.france24.com/en/rss' },
+        { id: 'euronews',      name: 'Euronews',        lang: 'en', url: 'https://www.euronews.com/rss' },
+
+        // ── Science & Climate ──
+        { id: 'nasa-breaking', name: 'NASA Breaking',   lang: 'en', url: 'https://www.nasa.gov/rss/dyn/breaking_news.rss' },
+        { id: 'phys-tech',     name: 'Phys.org Tech',   lang: 'en', url: 'https://phys.org/rss-feed/technology-news/' },
+
+        // ── Economy & Energy ──
+        { id: 'ft-world',      name: 'Financial Times',  lang: 'en', url: 'https://www.ft.com/world?format=rss' },
+
+        // ── Defense & Security ──
+        { id: 'defense-one',   name: 'Defense One',     lang: 'en', url: 'https://www.defenseone.com/rss/' },
+        { id: 'theintercept',  name: 'The Intercept',   lang: 'en', url: 'https://theintercept.com/feed/?rss' },
     ];
 
     // ══════════════════════════════════════════════
@@ -502,12 +527,25 @@ const SignalInterceptor = (() => {
         // 2. Generate core reactions via CoreFeed
         generateCoreReactions(signal);
 
-        // 3. Dispatch custom event for any page-specific listeners
+        // 3. OSINT auto-processing: entity extraction + watchlist check
+        if (typeof OsintEngine !== 'undefined') {
+            // Auto-check watchlist patterns against new signal
+            const watchMatches = OsintEngine.checkWatchlist(signal);
+            if (watchMatches.length > 0 && typeof CoreFeed !== 'undefined') {
+                watchMatches.forEach(match => {
+                    CoreFeed.addMessage('SIGNAL_HUNTER',
+                        `⚠ WATCHLIST HIT: "${match.label}" [${match.priority}] su segnale ${signal.domain}. Pattern: ${match.pattern}`
+                    );
+                });
+            }
+        }
+
+        // 4. Dispatch custom event for any page-specific listeners
         window.dispatchEvent(new CustomEvent('signal-intercepted', {
             detail: signal
         }));
 
-        // 4. Update interceptor status indicator
+        // 5. Update interceptor status indicator
         updateStatusIndicator();
     }
 

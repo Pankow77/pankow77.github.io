@@ -978,8 +978,92 @@
             drawCoherenceChart();
         });
 
+        // ── LOAD REAL SIGNALS FROM ARCHIVE ──
+        function loadArchivedSignals() {
+            if (typeof PersistenceManager === 'undefined') return;
+            const archive = PersistenceManager.getArchive();
+            if (archive.length === 0) return;
+
+            const container = document.getElementById('signalsContainer');
+            const empty = document.getElementById('signalEmpty');
+            if (empty) empty.remove();
+
+            // Domain-to-type mapping for visual consistency
+            const domainToType = {
+                CLIMATE: 'coherent',
+                GEOPOLITICS: 'critical',
+                ECONOMY: 'fragment',
+                TECHNOLOGY: 'coherent',
+                SOCIAL: 'prophecy',
+                ENERGY: 'fragment',
+            };
+
+            // Load last 50 signals
+            const signals = archive.slice(0, 50);
+            signalCount = archive.length;
+
+            signals.forEach(signal => {
+                const time = new Date(signal.time);
+                const timeStr = time.getUTCHours().toString().padStart(2,'0') + ':' +
+                               time.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                               time.getUTCSeconds().toString().padStart(2,'0');
+                const signalId = 'SIG_' + time.getFullYear() + '_' +
+                                signal.domain + '_' + String(signal.severity).padStart(2,'0');
+                const type = domainToType[signal.domain] || 'fragment';
+                const nodes = Math.floor(256 + signal.severity * 7.5);
+                const integrity = (95 + (signal.severity / 20)).toFixed(1);
+
+                addSignal(signalId, timeStr, type, signal.title, nodes, integrity);
+            });
+
+            // Update stats
+            document.getElementById('signalsTotal').textContent = archive.length;
+            document.getElementById('archivioCount').textContent = archive.length + ' SIGNALS_FOUND';
+
+            const truthPct = Math.min(99.8, 88.2 + Math.min(archive.length * 0.1, 10));
+            document.getElementById('truthPct').textContent = truthPct.toFixed(1) + '%';
+            document.getElementById('truthBarFill').style.width = truthPct.toFixed(1) + '%';
+        }
+
+        // ── LISTEN FOR NEW LIVE SIGNALS ──
+        window.addEventListener('signal-intercepted', (e) => {
+            const signal = e.detail;
+            if (!signal) return;
+
+            signalCount++;
+            const now = new Date(signal.classifiedAt || Date.now());
+            const timeStr = now.getUTCHours().toString().padStart(2,'0') + ':' +
+                           now.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                           now.getUTCSeconds().toString().padStart(2,'0');
+            const signalId = 'LIVE_' + signal.domain + '_' + String(signalCount).padStart(4,'0');
+
+            const domainToType = {
+                CLIMATE: 'coherent', GEOPOLITICS: 'critical', ECONOMY: 'fragment',
+                TECHNOLOGY: 'coherent', SOCIAL: 'prophecy', ENERGY: 'fragment',
+            };
+            const type = domainToType[signal.domain] || 'fragment';
+            const nodes = Math.floor(256 + signal.severity * 7.5);
+            const integrity = (95 + (signal.severity / 20)).toFixed(1);
+
+            addSignal(signalId, timeStr, type,
+                '⚡ LIVE INTERCEPT — [' + signal.domain + '] ' + signal.title,
+                nodes, integrity);
+
+            document.getElementById('signalsTotal').textContent = signalCount;
+            document.getElementById('archivioCount').textContent = signalCount + ' SIGNALS_FOUND';
+        });
+
+        // ── RESIZE ──
+        window.addEventListener('resize', () => {
+            drawCoherenceChart();
+        });
+
         // ── INIT ──
-        window.addEventListener('DOMContentLoaded', init);
+        window.addEventListener('DOMContentLoaded', () => {
+            init();
+            // Load real archived signals after modules are ready
+            setTimeout(loadArchivedSignals, 500);
+        });
     </script>
 <script src="js/core-feed.js"></script>
 <script src="js/persistence-manager.js"></script>
