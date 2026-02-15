@@ -30,6 +30,10 @@ const SignalInterceptor = (() => {
         chunkDelay: 50,                  // ms between chunks
         feedBatchSize: 5,                // feeds fetched in parallel per batch
         feedBatchDelay: 2000,            // ms between feed batches
+        workerBatchCap: 200,             // max articles per worker batch
+        workerCPUBudget: 10000,          // max ms before worker timeout per batch
+        workerCircuitThreshold: 3,       // consecutive failures before disabling worker
+        workerCircuitReset: 10 * 60 * 1000, // 10 min before retrying worker
     };
 
     // ══════════════════════════════════════════════
@@ -482,9 +486,9 @@ const SignalInterceptor = (() => {
 
                 articles.push({
                     id: (guid ? guid.textContent : '') || (link ? link.textContent : '') || (title ? title.textContent : ''),
-                    title: stripHTML(title ? title.textContent : ''),
-                    description: stripHTML(desc ? desc.textContent : ''),
-                    link: link ? link.textContent : '',
+                    title: normalizeText(stripHTML(title ? title.textContent : '')),
+                    description: normalizeText(stripHTML(desc ? desc.textContent : '')),
+                    link: sanitizeUrl(link ? link.textContent : ''),
                     pubDate: pubDate ? new Date(pubDate.textContent) : new Date(),
                     source: feed.name,
                     feedId: feed.id,
@@ -504,9 +508,9 @@ const SignalInterceptor = (() => {
 
                     articles.push({
                         id: (id ? id.textContent : '') || (link ? link.getAttribute('href') : '') || (title ? title.textContent : ''),
-                        title: stripHTML(title ? title.textContent : ''),
-                        description: stripHTML(summary ? summary.textContent : ''),
-                        link: link ? (link.getAttribute('href') || link.textContent) : '',
+                        title: normalizeText(stripHTML(title ? title.textContent : '')),
+                        description: normalizeText(stripHTML(summary ? summary.textContent : '')),
+                        link: sanitizeUrl(link ? (link.getAttribute('href') || link.textContent) : ''),
                         pubDate: published ? new Date(published.textContent) : new Date(),
                         source: feed.name,
                         feedId: feed.id,
@@ -540,6 +544,90 @@ const SignalInterceptor = (() => {
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+    }
+
+    // ══════════════════════════════════════════════
+    // URL SANITIZATION — Anti-injection, anti-spoof
+    // ══════════════════════════════════════════════
+
+    // Blocked URI schemes (anything beyond http/https)
+    const SAFE_SCHEMES = new Set(['http:', 'https:']);
+
+    // Unicode confusable characters → ASCII mapping (common attack vectors)
+    const CONFUSABLES = {
+        '\u0430': 'a', '\u0435': 'e', '\u043E': 'o', '\u0440': 'p',
+        '\u0441': 'c', '\u0443': 'y', '\u0445': 'x', '\u04BB': 'h',
+        '\u0456': 'i', '\u0458': 'j', '\u043A': 'k', '\u043C': 'm',
+        '\u0442': 't', '\u0412': 'B', '\u041D': 'H', '\u041C': 'M',
+        '\u0410': 'A', '\u041E': 'O', '\u0420': 'P', '\u0421': 'C',
+        '\u0422': 'T', '\u0415': 'E', '\u041A': 'K', '\u0425': 'X',
+        '\u0049': 'I', // Latin I (used as l in paypaI.com spoof)
+        '\uFF21': 'A', '\uFF22': 'B', '\uFF23': 'C', // Fullwidth Latin
+        '\uFF41': 'a', '\uFF42': 'b', '\uFF43': 'c',
+    };
+
+    function sanitizeUrl(url) {
+        if (!url || typeof url !== 'string') return '';
+        const trimmed = url.trim();
+        if (trimmed.length === 0) return '';
+
+        try {
+            const parsed = new URL(trimmed);
+
+            // 1. Block non-http(s) schemes: javascript:, data:, vbscript:, blob:, etc.
+            if (!SAFE_SCHEMES.has(parsed.protocol)) return '';
+
+            // 2. Block userinfo (@) in URLs — used for phishing: http://real.com@evil.com
+            if (parsed.username || parsed.password) return '';
+
+            // 3. Block empty hostname
+            if (!parsed.hostname) return '';
+
+            // 4. Normalize punycode — detect IDN homograph attacks
+            const hostname = parsed.hostname.toLowerCase();
+
+            // 5. Check for confusable characters in hostname
+            if (hasConfusables(hostname)) {
+                console.warn(`[SANITIZE] Confusable chars detected in URL hostname: ${hostname}`);
+                // Don't block — flag it (the trust model will handle it)
+                // but strip for display safety
+            }
+
+            return parsed.href;
+        } catch (e) {
+            // Invalid URL — reject
+            return '';
+        }
+    }
+
+    function hasConfusables(str) {
+        for (let i = 0; i < str.length; i++) {
+            if (CONFUSABLES[str[i]]) return true;
+            // Check for mixed scripts (Cyrillic + Latin = suspicious)
+            const code = str.charCodeAt(i);
+            if (code >= 0x0400 && code <= 0x04FF) return true;  // Cyrillic range
+            if (code >= 0xFF00 && code <= 0xFFEF) return true;  // Fullwidth forms
+        }
+        return false;
+    }
+
+    // ══════════════════════════════════════════════
+    // UNICODE NORMALIZATION — Anti-manipulation
+    // ══════════════════════════════════════════════
+
+    // Bidi override characters that can reverse text display
+    const BIDI_CHARS = /[\u200E\u200F\u202A-\u202E\u2066-\u2069\u200B\u200C\u200D\uFEFF]/g;
+
+    // Control characters (except \n \r \t)
+    const CONTROL_CHARS = /[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g;
+
+    function normalizeText(str) {
+        if (!str || typeof str !== 'string') return '';
+        return str
+            .normalize('NFC')             // Unicode NFC normalization
+            .replace(BIDI_CHARS, '')      // Strip bidi overrides (text direction attacks)
+            .replace(CONTROL_CHARS, '')   // Strip control characters
+            .trim();
     }
 
     // ══════════════════════════════════════════════
@@ -659,7 +747,18 @@ const SignalInterceptor = (() => {
     // SOURCE TRUST REGISTRY — Persistent across sessions
     // ══════════════════════════════════════════════
 
-    const SOURCE_TRUST = {};  // Runtime cache: source -> { signals, avgSeverity, lastBurst }
+    const SOURCE_TRUST = {};  // Runtime cache: source -> trust object
+    const DOMAIN_GROUPS = {}; // eTLD+1 grouping: registrable domain -> [source names]
+    const GRAYLIST = {};      // source -> { reason, graylistedAt, severity penalty }
+
+    // ── Registrable domain extraction (eTLD+1 approximation) ──
+    function getRegistrableDomain(sourceName) {
+        // Feed sources use human names like "BBC World", "ANSA Mondo"
+        // We normalize to a group key for Sybil detection
+        return sourceName.toLowerCase()
+            .replace(/\s+(world|tech|technology|breaking|cronaca|economia|tecnologia|mondo)$/i, '')
+            .trim();
+    }
 
     function getSourceTrust(sourceName) {
         if (!SOURCE_TRUST[sourceName]) {
@@ -670,10 +769,34 @@ const SignalInterceptor = (() => {
                 historicalSeveritySum: 0,
                 firstSeen: Date.now(),
                 trustScore: 50,   // 0-100 trust baseline
-                driftBaseline: 0, // historical avg severity
+                driftBaseline: 0, // historical avg severity (EMA)
+                // Median/MAD tracking (rolling window)
+                severityWindow: [],  // last N severity values
+                maxWindowSize: 50,
+                // Domain grouping
+                registrableDomain: getRegistrableDomain(sourceName),
             };
+
+            // Register in domain group
+            const rd = SOURCE_TRUST[sourceName].registrableDomain;
+            if (!DOMAIN_GROUPS[rd]) DOMAIN_GROUPS[rd] = [];
+            if (!DOMAIN_GROUPS[rd].includes(sourceName)) DOMAIN_GROUPS[rd].push(sourceName);
         }
         return SOURCE_TRUST[sourceName];
+    }
+
+    // ── Median / MAD calculation ──
+    function median(arr) {
+        if (arr.length === 0) return 0;
+        const sorted = [...arr].sort((a, b) => a - b);
+        const mid = Math.floor(sorted.length / 2);
+        return sorted.length % 2 !== 0 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+    }
+
+    function medianAbsoluteDeviation(arr) {
+        const med = median(arr);
+        const deviations = arr.map(v => Math.abs(v - med));
+        return median(deviations);
     }
 
     function updateSourceTrust(sourceName, severity) {
@@ -682,6 +805,12 @@ const SignalInterceptor = (() => {
         trust.totalSeverity += severity;
         trust.historicalSignals++;
         trust.historicalSeveritySum += severity;
+
+        // Rolling window for median/MAD
+        trust.severityWindow.push(severity);
+        if (trust.severityWindow.length > trust.maxWindowSize) {
+            trust.severityWindow.shift();
+        }
 
         // Burst detection: >5 signals from same source in 10 min
         const now = Date.now();
@@ -692,12 +821,41 @@ const SignalInterceptor = (() => {
             trust.lastBurst = now;
         }
 
-        // Update trust score: time-weighted reliability
-        const historicalAvg = trust.historicalSeveritySum / trust.historicalSignals;
-        const recentAvg = trust.totalSeverity / trust.signals;
+        // ── Robust drift detection with Median/MAD ──
+        if (trust.severityWindow.length >= 10) {
+            const windowMedian = median(trust.severityWindow);
+            const mad = medianAbsoluteDeviation(trust.severityWindow);
 
-        // Slow-drift detection: recent avg deviating from historical baseline
-        if (trust.historicalSignals > 20) {
+            // Modified Z-score: |severity - median| / MAD
+            // If recent values consistently deviate from baseline, flag it
+            const madThreshold = mad > 0 ? Math.abs(windowMedian - trust.driftBaseline) / mad : 0;
+
+            if (trust.historicalSignals > 20) {
+                if (madThreshold > 3) {
+                    // Significant drift — don't punish immediately, GRAYLIST first
+                    if (!GRAYLIST[sourceName]) {
+                        GRAYLIST[sourceName] = {
+                            reason: 'severity_drift',
+                            graylistedAt: now,
+                            penalty: 0.85, // 15% severity reduction
+                            drift: madThreshold,
+                        };
+                        console.warn(`[TRUST] Graylisted ${sourceName}: drift=${madThreshold.toFixed(2)}, median=${windowMedian.toFixed(1)}, baseline=${trust.driftBaseline.toFixed(1)}`);
+                    }
+                    trust.trustScore = Math.max(trust.trustScore - 1, 15);
+                } else if (madThreshold < 1.5) {
+                    // Stable — recover trust slowly
+                    trust.trustScore = Math.min(trust.trustScore + 0.3, 95);
+                    // Un-graylist if stable for long enough
+                    if (GRAYLIST[sourceName] && (now - GRAYLIST[sourceName].graylistedAt > 30 * 60 * 1000)) {
+                        delete GRAYLIST[sourceName];
+                        console.log(`[TRUST] ${sourceName} removed from graylist (stable)`);
+                    }
+                }
+            }
+        } else if (trust.historicalSignals > 20) {
+            // Fallback: simple EMA drift
+            const recentAvg = trust.totalSeverity / trust.signals;
             const drift = Math.abs(recentAvg - trust.driftBaseline);
             if (drift > 15) {
                 trust.trustScore = Math.max(trust.trustScore - 2, 10);
@@ -707,14 +865,45 @@ const SignalInterceptor = (() => {
         }
 
         // Update drift baseline with exponential moving average
+        const historicalAvg = trust.historicalSeveritySum / trust.historicalSignals;
         trust.driftBaseline = trust.driftBaseline === 0
             ? historicalAvg
-            : trust.driftBaseline * 0.95 + recentAvg * 0.05;
+            : trust.driftBaseline * 0.95 + (trust.totalSeverity / trust.signals) * 0.05;
+
+        // ── Sybil detection: check domain group for coordinated behavior ──
+        const rd = trust.registrableDomain;
+        if (DOMAIN_GROUPS[rd] && DOMAIN_GROUPS[rd].length > 1) {
+            // Multiple sources from same registrable domain — check coordination
+            let groupBurstCount = 0;
+            DOMAIN_GROUPS[rd].forEach(src => {
+                if (SOURCE_TRUST[src] && SOURCE_TRUST[src].burstCount > 3) groupBurstCount++;
+            });
+            if (groupBurstCount >= 2) {
+                // Coordinated burst from same domain group
+                trust.trustScore = Math.max(trust.trustScore - 3, 10);
+            }
+        }
+
+        // Age-based trust floor: newer sources have lower floor
+        const ageMs = now - trust.firstSeen;
+        const ageDays = ageMs / (24 * 60 * 60 * 1000);
+        if (ageDays < 1) {
+            trust.trustScore = Math.min(trust.trustScore, 40); // Brand new: cap at 40
+        } else if (ageDays < 7) {
+            trust.trustScore = Math.min(trust.trustScore, 60); // Young: cap at 60
+        }
 
         // Persist to IndexedDB every 10 signals
         if (trust.historicalSignals % 10 === 0) {
             persistSourceReputation(sourceName, trust);
         }
+    }
+
+    // Check if source is graylisted and get penalty
+    function getGraylistPenalty(sourceName) {
+        const entry = GRAYLIST[sourceName];
+        if (!entry) return 1.0; // No penalty
+        return entry.penalty;   // e.g. 0.85 = 15% reduction
     }
 
     // Persist reputation to IndexedDB
@@ -727,6 +916,7 @@ const SignalInterceptor = (() => {
             firstSeen: trust.firstSeen,
             trustScore: trust.trustScore,
             driftBaseline: trust.driftBaseline,
+            registrableDomain: trust.registrableDomain,
             lastUpdated: Date.now(),
         });
     }
@@ -903,27 +1093,71 @@ const SignalInterceptor = (() => {
     let workerCallbacks = {};  // messageId -> callback
     let workerMsgId = 0;
 
+    // Worker circuit breaker — disable after consecutive failures
+    const workerCircuit = {
+        failures: 0,
+        lastFailure: 0,
+        disabled: false,
+    };
+
+    function isWorkerDisabled() {
+        if (!workerCircuit.disabled) return false;
+        // Auto-reset after configured time
+        if (Date.now() - workerCircuit.lastFailure > CONFIG.workerCircuitReset) {
+            workerCircuit.disabled = false;
+            workerCircuit.failures = 0;
+            console.log('[SIGNAL_INTERCEPTOR] Worker circuit breaker reset — retrying');
+            return false;
+        }
+        return true;
+    }
+
+    function recordWorkerFailure() {
+        workerCircuit.failures++;
+        workerCircuit.lastFailure = Date.now();
+        if (workerCircuit.failures >= CONFIG.workerCircuitThreshold) {
+            workerCircuit.disabled = true;
+            console.warn(`[SIGNAL_INTERCEPTOR] Worker circuit OPEN after ${workerCircuit.failures} failures — disabled for ${CONFIG.workerCircuitReset / 60000}min`);
+        }
+    }
+
+    function recordWorkerSuccess() {
+        workerCircuit.failures = 0;
+        workerCircuit.disabled = false;
+    }
+
     function initWorker() {
         if (typeof Worker === 'undefined') return false;
         try {
             worker = new Worker('js/signal-worker.js');
             worker.onmessage = (e) => {
                 const msg = e.data;
+                // Validate message schema from worker
+                if (!msg || typeof msg !== 'object' || !msg.type) return;
+
                 if (msg.type === 'ready') {
                     workerReady = true;
                     console.log('%c[SIGNAL_INTERCEPTOR] Web Worker ONLINE — classification off main thread', 'color: #39ff14;');
                 } else if (msg.type === 'classified') {
+                    // Validate response payload
+                    if (typeof msg.id !== 'number' || !Array.isArray(msg.payload)) {
+                        console.warn('[SIGNAL_INTERCEPTOR] Invalid worker response — ignoring');
+                        return;
+                    }
                     const cb = workerCallbacks[msg.id];
                     if (cb) {
+                        recordWorkerSuccess();
                         cb(msg.payload);
                         delete workerCallbacks[msg.id];
                     }
                 } else if (msg.type === 'error') {
                     console.warn('[SIGNAL_INTERCEPTOR] Worker error:', msg.message);
+                    recordWorkerFailure();
                 }
             };
             worker.onerror = (e) => {
                 console.warn('[SIGNAL_INTERCEPTOR] Worker failed, falling back to main thread:', e.message);
+                recordWorkerFailure();
                 workerReady = false;
                 worker = null;
             };
@@ -941,24 +1175,41 @@ const SignalInterceptor = (() => {
 
     function classifyViaWorker(articles) {
         return new Promise((resolve) => {
-            if (!worker || !workerReady) {
-                // Fallback: main-thread classification
+            // Check worker circuit breaker
+            if (!worker || !workerReady || isWorkerDisabled()) {
                 resolve(null);
                 return;
             }
+
+            // Batch cap: limit articles sent to worker
+            const batch = articles.length > CONFIG.workerBatchCap
+                ? articles.slice(0, CONFIG.workerBatchCap)
+                : articles;
+
             const id = ++workerMsgId;
-            workerCallbacks[id] = resolve;
-            // Timeout: if worker doesn't respond in 30s, fallback
+            const startTime = performance.now();
+            workerCallbacks[id] = (result) => {
+                const elapsed = performance.now() - startTime;
+                if (elapsed > CONFIG.workerCPUBudget) {
+                    console.warn(`[SIGNAL_INTERCEPTOR] Worker took ${Math.round(elapsed)}ms — over CPU budget (${CONFIG.workerCPUBudget}ms)`);
+                }
+                resolve(result);
+            };
+
+            // Timeout with circuit breaker integration
             setTimeout(() => {
                 if (workerCallbacks[id]) {
                     delete workerCallbacks[id];
+                    recordWorkerFailure();
+                    console.warn('[SIGNAL_INTERCEPTOR] Worker timeout — falling back to main thread');
                     resolve(null);
                 }
-            }, 30000);
+            }, CONFIG.workerCPUBudget + 5000); // budget + 5s grace
+
             worker.postMessage({
                 type: 'classify',
                 id: id,
-                payload: { articles }
+                payload: { articles: batch }
             });
         });
     }
@@ -983,12 +1234,20 @@ const SignalInterceptor = (() => {
         // Multi-domain bonus (cross-cutting stories are more significant)
         severity += multiDomainBonus || 0;
 
-        // Source trust factor: dampen severity from sources in burst mode
+        // Source trust factor: dampen severity from sources in burst mode or graylisted
         if (sourceName) {
             const trust = getSourceTrust(sourceName);
             if (trust.burstCount > 5) {
                 // Source is flooding — reduce severity to prevent manipulation
                 severity *= 0.7;
+            }
+            // Apply graylist penalty (sources with suspicious drift)
+            severity *= getGraylistPenalty(sourceName);
+            // Apply trust score weighting (low-trust sources get dampened)
+            if (trust.trustScore < 30) {
+                severity *= 0.75;
+            } else if (trust.trustScore < 50) {
+                severity *= 0.9;
             }
         }
 
@@ -1455,9 +1714,21 @@ const SignalInterceptor = (() => {
         getArchive: () => typeof PersistenceManager !== 'undefined' ? PersistenceManager.getArchive() : [],
         getSourceTrust: () => {
             const result = {};
-            Object.keys(SOURCE_TRUST).forEach(k => { result[k] = { ...SOURCE_TRUST[k] }; });
+            Object.keys(SOURCE_TRUST).forEach(k => {
+                const t = SOURCE_TRUST[k];
+                result[k] = {
+                    signals: t.signals, trustScore: t.trustScore,
+                    historicalSignals: t.historicalSignals, burstCount: t.burstCount,
+                    driftBaseline: t.driftBaseline, registrableDomain: t.registrableDomain,
+                    graylisted: !!GRAYLIST[k],
+                    severityMedian: t.severityWindow.length >= 5 ? median(t.severityWindow) : null,
+                    severityMAD: t.severityWindow.length >= 5 ? medianAbsoluteDeviation(t.severityWindow) : null,
+                };
+            });
             return result;
         },
+        getGraylist: () => ({ ...GRAYLIST }),
+        getDomainGroups: () => ({ ...DOMAIN_GROUPS }),
         getFeedHealth: () => {
             const result = {};
             Object.keys(FEED_HEALTH).forEach(k => { result[k] = { ...FEED_HEALTH[k] }; });

@@ -22,13 +22,87 @@ const PersistenceManager = (() => {
         archiveKey: 'hs_signal_archive',
         statsKey: 'hs_session_stats',
         settingsKey: 'hs_settings',
+        ledgerKey: 'hs_cycle_ledger',
         maxArchiveSize: 2000,
-        version: '2.0',
+        version: '2.1',
         signalTTL: 30 * 24 * 60 * 60 * 1000,  // 30 days TTL
         storageSoftLimit: 4 * 1024 * 1024,      // 4MB soft limit (warn)
         storageHardLimit: 4.5 * 1024 * 1024,    // 4.5MB hard limit (purge)
         cleanupInterval: 60 * 60 * 1000,        // 1h between cleanups
+        sourceOfTruth: 'localStorage',           // Primary read source
     };
+
+    // ══════════════════════════════════════════════
+    // CYCLE LEDGER — Dual-write consistency
+    // ══════════════════════════════════════════════
+    // Tracks the last committed write cycle to detect divergence
+
+    let cycleId = 0;
+
+    function getCycleLedger() {
+        try {
+            return JSON.parse(localStorage.getItem(CONFIG.ledgerKey) || '{}');
+        } catch (e) { return {}; }
+    }
+
+    function updateCycleLedger(signalCount) {
+        cycleId++;
+        const ledger = {
+            cycleId,
+            timestamp: Date.now(),
+            lsCount: getArchive().length,
+            signalsAdded: signalCount,
+            sourceOfTruth: CONFIG.sourceOfTruth,
+        };
+        try {
+            localStorage.setItem(CONFIG.ledgerKey, JSON.stringify(ledger));
+        } catch (e) { /* ignore */ }
+
+        // Also write to IndexedDB for cross-check
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            IndexedStore.setMeta('cycle_ledger', ledger);
+        }
+    }
+
+    // Reconciliation: check if localStorage and IDB are in sync
+    async function reconcileStores() {
+        if (typeof IndexedStore === 'undefined' || !IndexedStore.isAvailable()) return;
+
+        try {
+            const lsCount = getArchive().length;
+            const idbCount = await IndexedStore.getSignalCount();
+
+            if (idbCount < 0) return; // IDB not available
+
+            const drift = Math.abs(lsCount - idbCount);
+            const threshold = Math.max(lsCount * 0.1, 10); // 10% tolerance
+
+            if (drift > threshold) {
+                console.warn(`[PERSISTENCE] Store divergence detected: localStorage=${lsCount}, IndexedDB=${idbCount} (drift=${drift})`);
+
+                // localStorage is source of truth — sync IDB from it
+                if (CONFIG.sourceOfTruth === 'localStorage' && lsCount > idbCount) {
+                    const archive = getArchive();
+                    let synced = 0;
+                    for (const signal of archive) {
+                        if (signal.id || signal.link) {
+                            signal.id = signal.id || signal.link;
+                            const exists = await IndexedStore.signalExists(signal.id);
+                            if (!exists) {
+                                await IndexedStore.addSignal(signal);
+                                synced++;
+                            }
+                        }
+                    }
+                    if (synced > 0) {
+                        console.log(`[PERSISTENCE] Reconciled: synced ${synced} signals to IndexedDB`);
+                    }
+                }
+            }
+        } catch (e) {
+            // Reconciliation is best-effort
+        }
+    }
 
     // ══════════════════════════════════════════════
     // STORAGE SIZE MONITORING
@@ -1193,8 +1267,11 @@ const PersistenceManager = (() => {
             const idbStatus = typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()
                 ? 'IndexedDB: ON' : 'IndexedDB: OFF (localStorage only)';
 
-            console.log('%c[PERSISTENCE_MANAGER] v2.0 ONLINE', 'color: #ffbf00; font-weight: bold;');
-            console.log('%c Archive: ' + getArchive().length + ' signals | ' + idbStatus + ' | Ctrl+Shift+A to browse', 'color: #4a5a6c;');
+            console.log('%c[PERSISTENCE_MANAGER] v2.1 ONLINE', 'color: #ffbf00; font-weight: bold;');
+            console.log('%c Archive: ' + getArchive().length + ' signals | ' + idbStatus + ' | SoT: ' + CONFIG.sourceOfTruth + ' | Ctrl+Shift+A to browse', 'color: #4a5a6c;');
+
+            // Delayed reconciliation (after page load)
+            setTimeout(() => reconcileStores(), 10000);
         };
 
         if (document.readyState === 'loading') {
@@ -1217,6 +1294,9 @@ const PersistenceManager = (() => {
         getStats,
         getStorageReport,
         cleanupExpiredSignals,
+        reconcileStores,
+        getCycleLedger,
+        updateCycleLedger,
         exportJSON,
         importJSON: (file) => importJSON(file),
         openPanel,

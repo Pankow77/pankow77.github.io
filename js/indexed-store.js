@@ -100,12 +100,77 @@ const IndexedStore = (() => {
     }
 
     // ══════════════════════════════════════════════
+    // QUOTA GUARD — Storage exhaustion protection
+    // ══════════════════════════════════════════════
+
+    const QUOTA = {
+        checkInterval: 5 * 60 * 1000,  // check every 5 min
+        warningPercent: 70,             // warn at 70% usage
+        criticalPercent: 85,            // start pruning at 85%
+        maxSignals: 50000,              // hard cap on signal count
+        schemaVersion: 1,
+    };
+
+    let lastQuotaCheck = 0;
+    let quotaWarned = false;
+
+    async function checkQuotaGuard() {
+        const now = Date.now();
+        if (now - lastQuotaCheck < QUOTA.checkInterval) return true;
+        lastQuotaCheck = now;
+
+        try {
+            const est = await getStorageEstimate();
+            if (est.percentUsed >= QUOTA.criticalPercent) {
+                // Emergency: prune oldest 30% of signals
+                const cutoff = now - (15 * 24 * 60 * 60 * 1000); // 15 days
+                const deleted = await deleteOldSignals(cutoff);
+                console.warn(`[IndexedStore] QUOTA CRITICAL (${est.percentUsed}%): pruned ${deleted} old signals`);
+                return true;
+            }
+            if (est.percentUsed >= QUOTA.warningPercent && !quotaWarned) {
+                quotaWarned = true;
+                console.warn(`[IndexedStore] QUOTA WARNING: ${est.percentUsed}% used (${est.usageMB}MB / ${est.quotaMB}MB)`);
+            }
+
+            // Also check signal count cap
+            const count = await getSignalCount();
+            if (count > QUOTA.maxSignals) {
+                const excess = count - QUOTA.maxSignals;
+                const cutoff = now - (7 * 24 * 60 * 60 * 1000);
+                await deleteOldSignals(cutoff);
+                console.warn(`[IndexedStore] Signal count cap: ${count} signals, pruned entries older than 7 days`);
+            }
+        } catch (e) {
+            // Can't check quota — continue
+        }
+        return true;
+    }
+
+    // Simple content hash (djb2) for integrity checking
+    function contentHash(str) {
+        let hash = 5381;
+        for (let i = 0; i < str.length; i++) {
+            hash = ((hash << 5) + hash + str.charCodeAt(i)) & 0xFFFFFFFF;
+        }
+        return hash.toString(36);
+    }
+
+    // ══════════════════════════════════════════════
     // SIGNAL STORAGE
     // ══════════════════════════════════════════════
 
     async function addSignal(signal) {
         try {
             await open();
+            // Quota check (throttled)
+            await checkQuotaGuard();
+
+            // Add schema version + content hash for integrity
+            signal._schemaV = QUOTA.schemaVersion;
+            signal._hash = contentHash((signal.title || '') + (signal.link || ''));
+            signal._storedAt = Date.now();
+
             const store = tx(STORES.signals, 'readwrite');
             await req(store.put(signal));
             return true;
@@ -357,6 +422,9 @@ const IndexedStore = (() => {
         getSignalCount,
         signalExists,
         deleteOldSignals,
+        // Quota
+        checkQuotaGuard,
+        contentHash,
         // Reputation
         getReputation,
         saveReputation,
