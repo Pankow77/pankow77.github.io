@@ -1258,10 +1258,91 @@ drawConsensus(55);
 // Start deliberation after short delay
 setTimeout(nextMessage, 2000);
 
+// ===== DATA ENGINE INTEGRATION =====
+// Feed live intelligence signals into the deliberation
+function initDataEngineListeners() {
+    // When a high-severity signal arrives, inject it as a deliberation topic
+    window.addEventListener('hs:signal:new', (e) => {
+        const signal = e.detail;
+        if (!signal || signal.severity < 65) return;
+
+        // Map domain to a responding core
+        const domainCoreMap = {
+            climate: 1,      // ORACLE_CORE
+            geopolitics: 6,  // MARXIAN_CORE
+            economics: 7,    // CODE_ENCODER
+            technology: 2,   // GHOST_RUNNER
+            epistemology: 8, // AFFECTIVE_CORE
+            social: 5        // NARRATIVE_ENGINE
+        };
+
+        const coreIdx = domainCoreMap[signal.domain] || 13; // SIGNAL_HUNTER
+        const core = CORES[coreIdx];
+
+        addMessage({
+            core: coreIdx,
+            text: `[LIVE INTEL] ${signal.title}. Severity: ${signal.severity}%. Source: ${signal.source}.`,
+            tags: [signal.domain, signal.type]
+        });
+
+        // Add a follow-up analysis from a second core
+        setTimeout(() => {
+            const analysisCores = [3, 9, 14, 15]; // ABYSSAL, SYNTH, ETHIC, BRIDGE
+            const respCore = analysisCores[Math.floor(Math.random() * analysisCores.length)];
+            addMessage({
+                core: respCore,
+                text: `Segnale integrato nella deliberazione. ${signal.correlations && signal.correlations.length > 0 ? 'Correlazioni cross-domain rilevate: ' + signal.correlations.length + '.' : 'Analisi correlazioni in corso.'}`,
+                tags: ['synthesis']
+            });
+        }, 3000 + Math.random() * 2000);
+
+        // Add to topic queue
+        const queue = document.getElementById('topicQueue');
+        if (queue) {
+            const item = document.createElement('div');
+            item.className = 'tq-item';
+            item.innerHTML = `
+                <div class="tq-topic">${signal.title.substring(0, 60)}</div>
+                <div class="tq-meta">
+                    <span class="tq-domain">${signal.domain.toUpperCase()}</span>
+                    <span class="tq-status active">LIVE</span>
+                </div>
+            `;
+            // Insert after the first item
+            if (queue.children.length > 1) {
+                queue.insertBefore(item, queue.children[1]);
+            } else {
+                queue.appendChild(item);
+            }
+            // Trim queue
+            while (queue.children.length > 8) {
+                queue.removeChild(queue.lastChild);
+            }
+        }
+    });
+
+    // Update stats on scan complete
+    window.addEventListener('hs:scan:complete', (e) => {
+        const result = e.detail;
+        if (result && result.signalsCollected > 0) {
+            addMessage({
+                core: 9, // SYNTH_02
+                text: `DATA_ENGINE scan: ${result.signalsCollected} segnali raccolti da ${Object.keys(result.domainScores || {}).length} domini. Pipeline attiva.`,
+                tags: ['synthesis']
+            });
+        }
+    });
+}
+
+initDataEngineListeners();
+
 // Console
 console.log('%cAGORA v1.0', 'color: #39ff14; font-size: 16px; font-weight: bold;');
 console.log('%c16-CORE DISTRIBUTED DELIBERATION ENGINE', 'color: #ff0084; font-size: 11px;');
 console.log('%cCARBON + SILICON // PEER-TO-PEER // NO MASTERS', 'color: #00d4ff;');
+console.log('%cDATA_ENGINE integration: ACTIVE', 'color: #00d4aa;');
 </script>
+<script src="js/data-engine.js"></script>
+<script src="js/core-feed.js"></script>
 </body>
 </html>

@@ -676,36 +676,119 @@
     </div>
 
     <script>
-        // ═══════════════════════════════════════════════════
-        // ARCHIVIO_SILENTE — Distributed Truth Sanctuary
-        // ═══════════════════════════════════════════════════
+        // ═══════════════════════════════════════════════════════════
+        // ARCHIVIO_SILENTE — Persistent Distributed Truth Sanctuary
+        // Now powered by DATA_ENGINE IndexedDB persistence
+        // ═══════════════════════════════════════════════════════════
 
         let signalCount = 0;
         let totalNodes = 1024;
         let coherenceData = { entropy: [], coherence: [] };
 
         // ── INIT ──
-        function init() {
+        async function init() {
             generateCoherenceData();
             drawCoherenceChart();
             startNodeFlicker();
             startRealityFlux();
 
+            // Restore persisted signals from IndexedDB
+            await restoreArchivedSignals();
+
+            // Listen for new signals from Data Engine (cross-module)
+            listenForEngineSignals();
+
             console.log('%c ARCHIVIO_SILENTE ', 'background: #00d4ff; color: #060810; font-family: Orbitron; font-weight: 900; padding: 8px 16px; font-size: 14px;');
             console.log('%c CONDIZIONE_DI_RISVEGLIO_IBRIDO: ATTIVA ', 'color: #00d4ff; font-family: monospace;');
             console.log('%c La verità distribuita non può essere cancellata. ', 'color: #00d4aa; font-family: monospace; font-style: italic;');
+            console.log('%c IndexedDB persistence: ACTIVE ', 'color: #39ff14; font-family: monospace;');
+        }
+
+        // ── RESTORE ARCHIVED SIGNALS FROM IndexedDB ──
+        async function restoreArchivedSignals() {
+            if (typeof DataEngine === 'undefined') return;
+
+            try {
+                // Get all signals tagged as archivio-transmuted
+                const allSignals = await DataEngine.getSignals({ tag: 'archivio', limit: 50 });
+
+                if (allSignals.length > 0) {
+                    // Remove the empty state
+                    const empty = document.getElementById('signalEmpty');
+                    if (empty) empty.remove();
+
+                    signalCount = allSignals.length;
+
+                    // Render them (oldest first so newest is on top)
+                    const sorted = [...allSignals].sort((a, b) => a.timestamp - b.timestamp);
+                    for (const signal of sorted) {
+                        const time = new Date(signal.timestamp);
+                        const timeStr = time.getUTCHours().toString().padStart(2,'0') + ':' +
+                                       time.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                                       time.getUTCSeconds().toString().padStart(2,'0');
+
+                        const typeMap = { intel: 'coherent', alert: 'critical', anomaly: 'fragment', trend: 'prophecy' };
+                        const type = typeMap[signal.type] || 'coherent';
+                        const nodes = signal.rawData ? (signal.rawData.nodes || 512) : 512;
+                        const integrity = signal.rawData ? (signal.rawData.integrity || '98.5') : '98.5';
+
+                        renderSignalEntry(signal.id, timeStr, type, signal.body || signal.title, nodes, integrity);
+                    }
+
+                    // Update stats
+                    document.getElementById('signalsTotal').textContent = signalCount;
+                    document.getElementById('archivioCount').textContent = signalCount + ' SIGNALS_FOUND';
+
+                    const newTruth = Math.min(99.8, 88.2 + signalCount * 0.4);
+                    document.getElementById('truthPct').textContent = newTruth.toFixed(1) + '%';
+                    document.getElementById('truthBarFill').style.width = newTruth.toFixed(1) + '%';
+                }
+            } catch (e) {
+                console.warn('[ARCHIVIO] Restore failed:', e);
+            }
+        }
+
+        // ── LISTEN FOR DATA ENGINE SIGNALS ──
+        function listenForEngineSignals() {
+            // When Data Engine finds high-severity signals, auto-archive them
+            window.addEventListener('hs:signal:new', (e) => {
+                const signal = e.detail;
+                // Auto-archive signals with severity >= 75
+                if (signal.severity >= 75 && !signal.tags.includes('archivio')) {
+                    signalCount++;
+                    const time = new Date(signal.timestamp);
+                    const timeStr = time.getUTCHours().toString().padStart(2,'0') + ':' +
+                                   time.getUTCMinutes().toString().padStart(2,'0') + ':' +
+                                   time.getUTCSeconds().toString().padStart(2,'0');
+
+                    const typeMap = { intel: 'coherent', alert: 'critical', anomaly: 'fragment', trend: 'prophecy' };
+                    const type = typeMap[signal.type] || 'coherent';
+
+                    renderSignalEntry(
+                        signal.id,
+                        timeStr,
+                        type,
+                        `[AUTO-ARCHIVE] ${signal.title} — ${signal.body}`.substring(0, 300),
+                        Math.floor(256 + Math.random() * 768),
+                        (97 + Math.random() * 3).toFixed(1)
+                    );
+
+                    document.getElementById('signalsTotal').textContent = signalCount;
+                    document.getElementById('archivioCount').textContent = signalCount + ' SIGNALS_FOUND';
+                }
+            });
         }
 
         // ── COHERENCE DATA ──
         function generateCoherenceData() {
             coherenceData = { entropy: [], coherence: [] };
             for (let i = 0; i <= 24; i++) {
-                // Entropy starts high (~85), decreases with noise
                 const entropy = 85 - (i * 2.8) + (Math.sin(i * 0.5) * 8) + (Math.random() * 4 - 2);
-                // Coherence starts low (~8), increases — crosses entropy around 14:00-15:00
                 const coherence = 8 + (i * 3.2) + (Math.cos(i * 0.4) * 6) + (Math.random() * 3 - 1.5);
+                // Boost coherence based on archived signal count
+                const archiveBoost = Math.min(15, signalCount * 0.5);
                 coherenceData.entropy.push(Math.max(5, Math.min(98, entropy)));
-                coherenceData.coherence.push(Math.max(3, Math.min(96, coherence)));
+                coherenceData.coherence.push(Math.max(3, Math.min(96, coherence + archiveBoost)));
             }
         }
 
@@ -726,12 +809,9 @@
             const chartH = h - padTop - padBottom;
 
             ctx.clearRect(0, 0, w, h);
-
-            // Background
             ctx.fillStyle = '#080c14';
             ctx.fillRect(0, 0, w, h);
 
-            // Grid lines
             ctx.strokeStyle = 'rgba(21,29,46,0.8)';
             ctx.lineWidth = 1;
             for (let i = 0; i <= 4; i++) {
@@ -740,15 +820,12 @@
                 ctx.moveTo(padLeft, y);
                 ctx.lineTo(w - padRight, y);
                 ctx.stroke();
-
-                // Y labels
                 ctx.fillStyle = '#3a4a5c';
                 ctx.font = '9px Share Tech Mono';
                 ctx.textAlign = 'right';
                 ctx.fillText((100 - i * 25).toString(), padLeft - 6, y + 3);
             }
 
-            // X axis labels (hours)
             ctx.textAlign = 'center';
             ctx.fillStyle = '#3a4a5c';
             ctx.font = '9px Share Tech Mono';
@@ -757,7 +834,6 @@
                 ctx.fillText(i.toString().padStart(2, '0') + ':00', x, h - 8);
             }
 
-            // Coherence area fill
             ctx.beginPath();
             ctx.moveTo(padLeft, padTop + chartH);
             coherenceData.coherence.forEach((v, i) => {
@@ -773,7 +849,6 @@
             ctx.fillStyle = gradient;
             ctx.fill();
 
-            // Entropy line (white/gray — consensus reality)
             ctx.beginPath();
             ctx.strokeStyle = 'rgba(180,190,200,0.6)';
             ctx.lineWidth = 2;
@@ -784,7 +859,6 @@
             });
             ctx.stroke();
 
-            // Coherence line (cyan — truth signal)
             ctx.beginPath();
             ctx.strokeStyle = '#00d4ff';
             ctx.lineWidth = 2.5;
@@ -798,13 +872,10 @@
             ctx.stroke();
             ctx.shadowBlur = 0;
 
-            // Find crossover point
             for (let i = 0; i < 24; i++) {
                 if (coherenceData.coherence[i] >= coherenceData.entropy[i]) {
                     const x = padLeft + (chartW / 24) * i;
                     const y = padTop + chartH - (coherenceData.coherence[i] / 100 * chartH);
-
-                    // Crossover marker
                     ctx.beginPath();
                     ctx.arc(x, y, 5, 0, Math.PI * 2);
                     ctx.fillStyle = '#00d4aa';
@@ -814,25 +885,21 @@
                     ctx.strokeStyle = 'rgba(0,212,170,0.4)';
                     ctx.lineWidth = 1;
                     ctx.stroke();
-
                     document.getElementById('crossoverPoint').textContent = '~' + i.toString().padStart(2,'0') + ':30 UTC';
                     break;
                 }
             }
 
-            // Legend
             ctx.font = '9px Share Tech Mono';
-
             ctx.fillStyle = 'rgba(180,190,200,0.6)';
             ctx.fillRect(w - padRight - 140, padTop + 5, 10, 2);
             ctx.fillText('ENTROPY (CONSENSUS)', w - padRight - 125, padTop + 10);
-
             ctx.fillStyle = '#00d4ff';
             ctx.fillRect(w - padRight - 140, padTop + 20, 10, 2);
             ctx.fillText('COHERENCE (TRUTH)', w - padRight - 125, padTop + 25);
         }
 
-        // ── EXECUTE TRANSMUTATION ──
+        // ── EXECUTE TRANSMUTATION (now with IndexedDB persistence) ──
         function executeTransmutation() {
             const input = document.getElementById('filtroInput').value.trim();
             if (!input) return;
@@ -841,11 +908,10 @@
             const meta = document.getElementById('filtroMeta');
             btn.classList.add('processing');
             btn.textContent = 'PROCESSING...';
-            meta.textContent = 'TRANSMUTING // ENTROPIC NOISE → COHERENT SIGNAL';
+            meta.textContent = 'TRANSMUTING // ENTROPIC NOISE \u2192 COHERENT SIGNAL';
             if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('archivio-transmute');
 
-            setTimeout(() => {
-                // Generate signal
+            setTimeout(async () => {
                 signalCount++;
                 const types = ['coherent', 'fragment', 'critical', 'prophecy'];
                 const typeWeights = [0.45, 0.25, 0.15, 0.15];
@@ -863,51 +929,65 @@
                 const signalId = 'SIG_' + now.getFullYear() + '_' +
                                 String(signalCount).padStart(4, '0');
 
-                // Extract a meaningful fragment from input
                 const sentences = input.split(/[.!?\n]/).filter(s => s.trim().length > 10);
                 const fragment = sentences.length > 0
                     ? sentences[Math.floor(Math.random() * sentences.length)].trim()
                     : input.substring(0, 120);
 
-                // Transmute: reframe the fragment as truth signal
                 const transmutations = [
-                    'ANALISI COMPLETATA — Segnale di verità estratto dal rumore entropico: ',
-                    'DECODIFICA COMPLETATA — Frammento di realtà non consensuale isolato: ',
-                    'TRASMUTAZIONE RIUSCITA — Pattern nascosto rivelato: ',
-                    'COERENZA NUCLEARE RAGGIUNTA — Verità immutabile archiviata: ',
-                    'FILTRO COSTRUTTIVO — Dato grezzo convertito in segnale: '
+                    'ANALISI COMPLETATA \u2014 Segnale di verit\u00e0 estratto dal rumore entropico: ',
+                    'DECODIFICA COMPLETATA \u2014 Frammento di realt\u00e0 non consensuale isolato: ',
+                    'TRASMUTAZIONE RIUSCITA \u2014 Pattern nascosto rivelato: ',
+                    'COERENZA NUCLEARE RAGGIUNTA \u2014 Verit\u00e0 immutabile archiviata: ',
+                    'FILTRO COSTRUTTIVO \u2014 Dato grezzo convertito in segnale: '
                 ];
                 const prefix = transmutations[Math.floor(Math.random() * transmutations.length)];
+                const fullBody = prefix + '"' + fragment + '"';
 
                 const nodesDistributed = Math.floor(256 + Math.random() * 768);
                 const integrity = (97 + Math.random() * 3).toFixed(1);
 
-                addSignal(signalId, timeStr, type, prefix + '"' + fragment + '"', nodesDistributed, integrity);
+                // Render in UI
+                renderSignalEntry(signalId, timeStr, type, fullBody, nodesDistributed, integrity);
+
+                // PERSIST to IndexedDB via Data Engine
+                if (typeof DataEngine !== 'undefined') {
+                    const typeToEngine = { coherent: 'intel', fragment: 'anomaly', critical: 'alert', prophecy: 'trend' };
+                    const signal = DataEngine.createSignal({
+                        id: 'archivio_' + signalId,
+                        domain: 'epistemology',
+                        source: 'archivio-transmute',
+                        title: 'Transmuted: ' + fragment.substring(0, 60),
+                        body: fullBody,
+                        severity: type === 'critical' ? 80 : type === 'prophecy' ? 70 : type === 'fragment' ? 50 : 40,
+                        type: typeToEngine[type] || 'intel',
+                        tags: ['archivio', 'transmuted', type],
+                        rawData: { nodes: nodesDistributed, integrity: integrity, originalInput: input.substring(0, 500) }
+                    });
+                    await DataEngine.storeSignal(signal);
+                }
 
                 // Update stats
                 document.getElementById('signalsTotal').textContent = signalCount;
                 document.getElementById('archivioCount').textContent = signalCount + ' SIGNALS_FOUND';
 
-                // Update truth distribution
                 const newTruth = Math.min(99.8, 88.2 + signalCount * 0.4 + Math.random() * 0.5);
                 document.getElementById('truthPct').textContent = newTruth.toFixed(1) + '%';
                 document.getElementById('truthBarFill').style.width = newTruth.toFixed(1) + '%';
 
-                // Refresh chart slightly
                 generateCoherenceData();
                 drawCoherenceChart();
 
-                // Reset
                 btn.classList.remove('processing');
                 btn.textContent = 'EXECUTE_TRANSMUTATION';
-                meta.textContent = 'TRANSMUTATION COMPLETE // ' + signalId + ' ARCHIVED';
+                meta.textContent = 'TRANSMUTATION COMPLETE // ' + signalId + ' ARCHIVED (PERSISTENT)';
                 document.getElementById('filtroInput').value = '';
 
             }, 1800);
         }
 
-        // ── ADD SIGNAL TO ARCHIVE ──
-        function addSignal(id, time, type, body, nodes, integrity) {
+        // ── RENDER SIGNAL ENTRY (separated from storage for restore) ──
+        function renderSignalEntry(id, time, type, body, nodes, integrity) {
             const container = document.getElementById('signalsContainer');
             const empty = document.getElementById('signalEmpty');
             if (empty) empty.remove();
@@ -928,12 +1008,12 @@
             entry.innerHTML = `
                 <div class="signal-header">
                     <span class="signal-id">${id}</span>
-                    <span class="signal-type type-${type}">${typeLabels[type]}</span>
+                    <span class="signal-type type-${type}">${typeLabels[type] || type.toUpperCase()}</span>
                     <span class="signal-time">${time} UTC</span>
                 </div>
                 <div class="signal-body">${body}</div>
                 <div class="signal-meta">
-                    <div>NODES: <span>${nodes.toLocaleString()}</span></div>
+                    <div>NODES: <span>${Number(nodes).toLocaleString()}</span></div>
                     <div>INTEGRITY: <span>${integrity}%</span></div>
                     <div class="signal-nodes">${nodeDots}</div>
                     <div>STATUS: <span style="color: var(--teal);">IMMUTABLE</span></div>
@@ -977,6 +1057,7 @@
         // ── INIT ──
         window.addEventListener('DOMContentLoaded', init);
     </script>
+<script src="js/data-engine.js"></script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>

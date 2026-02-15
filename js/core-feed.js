@@ -447,19 +447,96 @@ const CoreFeed = (() => {
         feedEl.classList.toggle('minimized', isMinimized);
     }
 
+    // ── DATA ENGINE INTEGRATION ──
+    // Translates live signals into contextual core commentary
+    const DOMAIN_TO_CORE = {
+        climate: 'ORACLE_CORE',
+        geopolitics: 'MARXIAN_CORE',
+        economics: 'CODE_ENCODER',
+        technology: 'GHOST_RUNNER',
+        epistemology: 'AFFECTIVE_CORE',
+        social: 'NARRATIVE_ENGINE'
+    };
+
+    function handleLiveSignal(signal) {
+        if (!signal || messageQueue.length > 5) return;
+
+        const coreId = DOMAIN_TO_CORE[signal.domain] || 'SIGNAL_HUNTER';
+        const shortTitle = (signal.title || '').substring(0, 60);
+
+        if (signal.severity >= 80) {
+            // High severity: alert style
+            messageQueue.push({ coreId: 'SENTINEL', text: '\u26A0 ALERT: ' + shortTitle });
+            messageQueue.push({ coreId: coreId, text: 'Segnale critico confermato. Severity: ' + signal.severity + '%.' });
+        } else if (signal.severity >= 60) {
+            // Medium severity
+            messageQueue.push({ coreId: coreId, text: shortTitle + ' — analisi in corso.' });
+        } else if (Math.random() < 0.3) {
+            // Low severity: only show 30% to avoid noise
+            messageQueue.push({ coreId: coreId, text: 'Intel: ' + shortTitle });
+        }
+
+        processQueue();
+    }
+
+    function handleScanComplete(result) {
+        if (!result) return;
+        messageQueue.push({
+            coreId: 'SYNTH_02',
+            text: `Scansione completata: ${result.signalsCollected} segnali in ${result.duration}ms.`
+        });
+
+        if (result.errors && result.errors.length > 0) {
+            messageQueue.push({
+                coreId: 'GHOST_RUNNER',
+                text: `Attenzione: ${result.errors.length} connettori hanno restituito errori.`
+            });
+        }
+
+        // Report highest risk domain
+        if (result.domainScores) {
+            let maxDomain = null, maxRisk = 0;
+            for (const [domain, score] of Object.entries(result.domainScores)) {
+                if (score.risk > maxRisk) {
+                    maxRisk = score.risk;
+                    maxDomain = domain;
+                }
+            }
+            if (maxDomain && maxRisk > 60) {
+                const core = DOMAIN_TO_CORE[maxDomain] || 'ORACLE_CORE';
+                messageQueue.push({
+                    coreId: core,
+                    text: `Dominio ${maxDomain.toUpperCase()}: rischio al ${maxRisk}%. Monitoraggio attivo.`
+                });
+            }
+        }
+
+        processQueue();
+    }
+
+    function initDataEngineListeners() {
+        window.addEventListener('hs:signal:new', (e) => handleLiveSignal(e.detail));
+        window.addEventListener('hs:scan:complete', (e) => handleScanComplete(e.detail));
+        window.addEventListener('hs:engine:ready', () => {
+            messageQueue.push({ coreId: 'BRIDGE_KEEPER', text: 'DATA_ENGINE connesso. Intelligence pipeline attiva.' });
+            processQueue();
+        });
+    }
+
     // ── INIT ──
     function init() {
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', () => {
                 createFeedPanel();
                 startAmbient();
-                // Initial boot message
+                initDataEngineListeners();
                 addMessage('SYNTH_02', 'CORE_FEED online. 16 nuclei attivi.');
                 addMessage('PANKOW_77C', 'Operatore connesso. Inizio sessione.');
             });
         } else {
             createFeedPanel();
             startAmbient();
+            initDataEngineListeners();
             addMessage('SYNTH_02', 'CORE_FEED online. 16 nuclei attivi.');
             addMessage('PANKOW_77C', 'Operatore connesso. Inizio sessione.');
         }
@@ -472,6 +549,7 @@ const CoreFeed = (() => {
         trigger,
         toggleMinimize,
         addMessage,
+        handleLiveSignal,
         CORES
     };
 

@@ -943,6 +943,10 @@
     </div>
 
     <script>
+    // ═══════════════════════════════════════════════════════════
+    // ORACLE v2.0 — Now powered by DATA_ENGINE live intelligence
+    // ═══════════════════════════════════════════════════════════
+
     // ===== TAB SWITCHING =====
     function switchTab(el) {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -963,7 +967,6 @@
             const ctx = canvas.getContext('2d');
             ctx.scale(dpr, dpr);
 
-            // Generate trend points
             let points = [];
             const steps = 8;
             for (let i = 0; i <= steps; i++) {
@@ -972,26 +975,13 @@
                 const t = i / steps;
                 const noise = (Math.random() - 0.5) * 3;
                 switch(trend) {
-                    case 'up-steep':
-                        y = h - 2 - (t * t * (h - 4)) + noise;
-                        break;
-                    case 'up':
-                        y = h - 2 - (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'up-slight':
-                        y = h - 2 - (t * (h - 4) * 0.4) + noise;
-                        break;
-                    case 'down-steep':
-                        y = 2 + (t * t * (h - 4)) + noise;
-                        break;
-                    case 'down':
-                        y = 2 + (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'down-slight':
-                        y = 2 + (t * (h - 4) * 0.3) + noise;
-                        break;
-                    default:
-                        y = h / 2 + noise;
+                    case 'up-steep':  y = h - 2 - (t * t * (h - 4)) + noise; break;
+                    case 'up':        y = h - 2 - (t * (h - 4) * 0.7) + noise; break;
+                    case 'up-slight': y = h - 2 - (t * (h - 4) * 0.4) + noise; break;
+                    case 'down-steep':y = 2 + (t * t * (h - 4)) + noise; break;
+                    case 'down':      y = 2 + (t * (h - 4) * 0.7) + noise; break;
+                    case 'down-slight': y = 2 + (t * (h - 4) * 0.3) + noise; break;
+                    default:          y = h / 2 + noise;
                 }
                 y = Math.max(1, Math.min(h - 1, y));
                 points.push({ x, y });
@@ -1013,13 +1003,15 @@
     const stabCanvas = document.getElementById('stabilityChart');
     const stabCtx = stabCanvas.getContext('2d');
 
-    const domains = ['CLI/ECO', 'GEO', 'ECON', 'TECH', 'EPIST', 'SOCIAL'];
+    const domainKeys = ['climate', 'geopolitics', 'economics', 'technology', 'epistemology', 'social'];
+    const domainLabels = ['CLI/ECO', 'GEO', 'ECON', 'TECH', 'EPIST', 'SOCIAL'];
     const domainColors = {
         risk: '#ff3344',
         resilience: '#00d4aa',
         volatility: '#00c8ff'
     };
 
+    // Live stability data — updated by Data Engine
     let stabilityData = {
         risk: [78, 85, 71, 62, 94, 68],
         resilience: [35, 22, 48, 55, 12, 40],
@@ -1035,16 +1027,12 @@
 
         const W = rect.width;
         const H = rect.height;
-        const padLeft = 50;
-        const padRight = 20;
-        const padTop = 10;
-        const padBottom = 30;
+        const padLeft = 50, padRight = 20, padTop = 10, padBottom = 30;
         const chartW = W - padLeft - padRight;
         const chartH = H - padTop - padBottom;
 
         stabCtx.clearRect(0, 0, W, H);
 
-        // Grid lines
         stabCtx.strokeStyle = 'rgba(255,255,255,0.04)';
         stabCtx.lineWidth = 1;
         for (let i = 0; i <= 5; i++) {
@@ -1055,7 +1043,6 @@
             stabCtx.stroke();
         }
 
-        // Y labels
         stabCtx.fillStyle = '#3a4f6f';
         stabCtx.font = '10px Share Tech Mono';
         stabCtx.textAlign = 'right';
@@ -1065,30 +1052,26 @@
             stabCtx.fillText(val + '%', padLeft - 8, y + 4);
         }
 
-        // Draw grouped bars
-        const groupCount = domains.length;
+        const groupCount = domainLabels.length;
         const barTypes = ['risk', 'resilience', 'volatility'];
         const groupWidth = chartW / groupCount;
         const barWidth = groupWidth * 0.2;
         const barGap = 4;
 
-        domains.forEach((domain, gi) => {
+        domainLabels.forEach((domain, gi) => {
             const groupX = padLeft + groupWidth * gi + groupWidth * 0.15;
-
             barTypes.forEach((type, bi) => {
-                const val = stabilityData[type][gi] + (Math.random() - 0.5) * 4;
+                const val = stabilityData[type][gi] + (Math.random() - 0.5) * 2;
                 const clampVal = Math.max(0, Math.min(100, val));
                 const barH = (clampVal / 100) * chartH;
                 const x = groupX + (barWidth + barGap) * bi;
                 const y = padTop + chartH - barH;
-
                 stabCtx.fillStyle = domainColors[type];
                 stabCtx.globalAlpha = 0.8;
                 stabCtx.fillRect(x, y, barWidth, barH);
                 stabCtx.globalAlpha = 1;
             });
 
-            // Domain label
             stabCtx.fillStyle = '#3a4f6f';
             stabCtx.font = '9px Share Tech Mono';
             stabCtx.textAlign = 'center';
@@ -1096,7 +1079,6 @@
             stabCtx.fillText(domain, labelX, H - 8);
         });
 
-        // Legend
         const legendX = W - padRight - 200;
         const legendY = padTop + 5;
         barTypes.forEach((type, i) => {
@@ -1110,70 +1092,200 @@
     }
 
     drawStabilityChart();
-
-    // Refresh chart periodically with slight variations
-    setInterval(() => {
-        drawStabilityChart();
-    }, 800);
+    setInterval(drawStabilityChart, 2000);
 
     window.addEventListener('resize', () => {
         drawTrendLines();
         drawStabilityChart();
     });
 
-    // ===== INTELLIGENCE FEED - LIVE UPDATES =====
-    const feedMessages = [
-        'SCANNING GEOPOLITICAL VECTORS...',
-        'EPISTEMIC DRIFT DETECTED IN SECTOR_7',
-        'AMOC DATA REFRESH COMPLETE',
-        'NARRATIVE_ENGINE: SYNTHESIS_CYCLE_42',
-        'RISK MATRIX RECALIBRATED',
-        'GHOST_RUNNER: ALIGNMENT CHECK PASSED',
-        'DERIVATIVE EXPOSURE INDEX UPDATED',
-        'VOID_PULSE: TEMPORAL WINDOW NARROWING',
-        'ABYSSAL_THINKER: RECURSION DEPTH OK',
-        'CLIMATE MODEL v4.2 LOADED',
-        'KINETIC ESCALATION PROBABILITY +0.3%',
-        'INSTITUTIONAL TRUST INDEX: -1.2',
-        'SYNTHETIC CONTENT SATURATION: 67.4%',
-        'MARX_CORE: CLASS DYNAMICS SHIFT DETECTED',
-        'ORACLE_CORE: OVERSHOOT THRESHOLD BREACHED',
-        'SUPPLY CHAIN NODE FAILURE: SECTOR_12',
-        'BIO-VULNERABILITY SCAN COMPLETE',
-        'QUANTUM INFRA: MONITORING ACTIVE',
-    ];
+    // ═══════════════════════════════════════════════════════════
+    // DATA ENGINE INTEGRATION — Live Intelligence Pipeline
+    // ═══════════════════════════════════════════════════════════
 
     let feedCounter = 3;
-    function addFeedEntry() {
+
+    function addFeedEntry(msg, isSystem) {
         const feed = document.getElementById('intelligenceFeed');
-        const msg = feedMessages[Math.floor(Math.random() * feedMessages.length)];
         const entry = document.createElement('div');
-        entry.className = 'feed-entry active';
+        entry.className = 'feed-entry' + (isSystem ? ' system' : ' active');
         entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${msg}`;
         feed.appendChild(entry);
         feedCounter++;
-
-        // Keep only last 12 entries
-        while (feed.children.length > 12) {
+        while (feed.children.length > 15) {
             feed.removeChild(feed.firstChild);
         }
-
-        // Auto-scroll
         feed.scrollTop = feed.scrollHeight;
     }
 
-    setInterval(addFeedEntry, 3000 + Math.random() * 2000);
+    // Update a domain card's risk value and status from live data
+    function updateDomainCard(domain, score) {
+        const domainMap = {
+            climate: 'domain-climate',
+            geopolitics: 'domain-geo',
+            economics: 'domain-econ',
+            technology: 'domain-tech',
+            epistemology: 'domain-epist',
+            social: 'domain-social'
+        };
 
-    // Core feed integration - trigger on chart refresh cycles
-    setInterval(() => {
+        const cardId = domainMap[domain];
+        const card = document.getElementById(cardId);
+        if (!card) return;
+
+        const risk = score.risk;
+
+        // Update risk value
+        const riskVal = card.querySelector('.risk-value');
+        if (riskVal) {
+            riskVal.textContent = risk + '%';
+            if (risk >= 80) riskVal.style.color = 'var(--red)';
+            else if (risk >= 60) riskVal.style.color = 'var(--orange)';
+            else if (risk >= 40) riskVal.style.color = 'var(--cyan)';
+            else riskVal.style.color = 'var(--teal)';
+        }
+
+        // Update risk bar
+        const riskBarFill = card.querySelector('.risk-bar-fill');
+        if (riskBarFill) {
+            riskBarFill.style.width = risk + '%';
+            riskBarFill.className = 'risk-bar-fill';
+            if (risk >= 80) riskBarFill.classList.add('critical');
+            else if (risk >= 65) riskBarFill.classList.add('high');
+            else if (risk >= 45) riskBarFill.classList.add('elevated');
+            else riskBarFill.classList.add('moderate');
+        }
+
+        // Update status text
+        const statusEl = card.querySelector('.domain-status');
+        if (statusEl && score.topSignal) {
+            const shortTitle = score.topSignal.title.substring(0, 40);
+            statusEl.textContent = shortTitle.toUpperCase().replace(/[^A-Z0-9_\s]/g, '').replace(/\s+/g, '_');
+            statusEl.className = 'domain-status';
+            if (risk >= 80) statusEl.classList.add('status-critical');
+            else if (risk >= 65) statusEl.classList.add('status-high');
+            else if (risk >= 45) statusEl.classList.add('status-elevated');
+            else statusEl.classList.add('status-moderate');
+        }
+
+        // Update trend arrows based on live trend
+        const arrows = card.querySelectorAll('.trend-arrow');
+        if (arrows.length > 0 && score.trend) {
+            const trendMap = { rising: 'up', falling: 'down', stable: 'stable' };
+            const arrowMap = { rising: '\u25B2', falling: '\u25BC', stable: '\u25C6' };
+            arrows.forEach(arrow => {
+                arrow.className = 'trend-arrow ' + trendMap[score.trend];
+                arrow.innerHTML = arrowMap[score.trend];
+            });
+        }
+
+        // Update lead status to show signal count
+        const leadStatus = card.querySelector('.lead-status');
+        if (leadStatus) {
+            leadStatus.textContent = score.signals > 0 ? `${score.signals} SIGNALS` : 'SCANNING';
+        }
+    }
+
+    // Update alerts sidebar with real alerts
+    async function updateAlerts() {
+        if (typeof DataEngine === 'undefined') return;
+
+        const alerts = await DataEngine.getAlerts();
+        const alertContainer = document.querySelector('.sidebar-section:last-child');
+        if (!alertContainer) return;
+
+        // Keep the title
+        const title = alertContainer.querySelector('.sidebar-title');
+
+        // Clear old alerts (keep title)
+        const oldAlerts = alertContainer.querySelectorAll('.alert-entry');
+        oldAlerts.forEach(a => a.remove());
+
+        // Add real alerts
+        const displayAlerts = alerts.slice(0, 6);
+        for (const alert of displayAlerts) {
+            const entry = document.createElement('div');
+            entry.className = 'alert-entry';
+
+            let levelClass = 'medium';
+            if (alert.severity >= 80) levelClass = 'critical';
+            else if (alert.severity >= 60) levelClass = 'high';
+
+            entry.innerHTML = `
+                <div class="alert-title">${alert.title.substring(0, 60)}</div>
+                <div class="alert-meta">
+                    <span class="alert-domain">${alert.domain.toUpperCase()} &bull; ${alert.source.toUpperCase()}</span>
+                    <span class="alert-level ${levelClass}">${levelClass}</span>
+                </div>
+            `;
+            alertContainer.appendChild(entry);
+        }
+
+        if (displayAlerts.length === 0) {
+            const empty = document.createElement('div');
+            empty.className = 'alert-entry';
+            empty.innerHTML = '<div class="alert-title" style="color: var(--text-dim);">Scanning for alerts...</div>';
+            alertContainer.appendChild(empty);
+        }
+    }
+
+    // ── Listen for Data Engine events ──
+    window.addEventListener('hs:scan:start', () => {
+        addFeedEntry('DATA_ENGINE: SCAN_CYCLE_INITIATED', true);
+    });
+
+    window.addEventListener('hs:scan:complete', async (e) => {
+        const result = e.detail;
+        addFeedEntry(`SCAN COMPLETE: ${result.signalsCollected} signals in ${result.duration}ms`, true);
+
+        if (result.domainScores) {
+            // Update all domain cards
+            for (const [domain, score] of Object.entries(result.domainScores)) {
+                updateDomainCard(domain, score);
+            }
+
+            // Update stability chart data from real scores
+            const keys = domainKeys;
+            stabilityData.risk = keys.map(k => result.domainScores[k] ? result.domainScores[k].risk : 50);
+            stabilityData.volatility = keys.map(k => result.domainScores[k] ? result.domainScores[k].volatility : 30);
+            stabilityData.resilience = keys.map(k => {
+                const risk = result.domainScores[k] ? result.domainScores[k].risk : 50;
+                return Math.max(5, 100 - risk - Math.round(Math.random() * 10));
+            });
+
+            drawStabilityChart();
+        }
+
+        // Update alerts
+        await updateAlerts();
+
+        // Trigger CoreFeed
         if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('oracle-scan');
-    }, 15000);
+    });
+
+    // Feed real signals into the intelligence feed
+    window.addEventListener('hs:signal:new', (e) => {
+        const signal = e.detail;
+        const severityTag = signal.severity >= 80 ? '\u26A0' : signal.severity >= 60 ? '\u25B2' : '\u25CF';
+        addFeedEntry(`${severityTag} [${signal.domain.toUpperCase()}] ${signal.title.substring(0, 50)}`);
+    });
+
+    // Update top stats bar
+    window.addEventListener('hs:scores:updated', (e) => {
+        const scores = e.detail;
+        const totalSignals = Object.values(scores).reduce((sum, s) => sum + (s.signals || 0), 0);
+        const nucleiEl = document.querySelector('.top-stat strong:not([class])');
+        if (nucleiEl && totalSignals > 0) {
+            nucleiEl.textContent = totalSignals.toLocaleString();
+        }
+    });
 
     // ===== CONSOLE SIGNATURE =====
     console.log('%cORACLE v2.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
     console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
-    console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
+    console.log('%cNow powered by DATA_ENGINE — live intelligence', 'color: #00d4aa;');
     </script>
+<script src="js/data-engine.js"></script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>
