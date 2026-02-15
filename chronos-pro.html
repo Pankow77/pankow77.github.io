@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONOS PRO — Analisi Evoluzione Urbana</title>
+    <meta name="description" content="CHRONOS PRO - Strumento professionale per l'analisi predittiva del degrado urbano. Per architetti, ingegneri e urbanisti.">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0f1117;
+            --surface: #1a1d27;
+            --surface2: #242836;
+            --surface3: #2e3348;
+            --border: #333850;
+            --border-light: #3d4460;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --primary-dim: rgba(59,130,246,0.12);
+            --success: #10b981;
+            --success-dim: rgba(16,185,129,0.12);
+            --warning: #f59e0b;
+            --warning-dim: rgba(245,158,11,0.12);
+            --danger: #ef4444;
+            --danger-dim: rgba(239,68,68,0.12);
+            --orange: #f97316;
+            --text: #e2e8f0;
+            --text2: #94a3b8;
+            --text3: #64748b;
+            --text4: #475569;
+            --radius: 6px;
+            --radius-sm: 4px;
+            --radius-lg: 8px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow: hidden;
+            height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* ═══ TOOLBAR ═══ */
+        .toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 48px;
+            padding: 0 16px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            gap: 12px;
+            z-index: 500;
+        }
+        .toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .brand {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            color: var(--primary);
+        }
+        .brand-sub {
+            font-size: 0.6rem;
+            font-weight: 400;
+            color: var(--text3);
+            letter-spacing: 0.02em;
+        }
+        .toolbar-actions {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        .tb-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            color: var(--text2);
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: all 0.15s;
+            white-space: nowrap;
+        }
+        .tb-btn:hover { border-color: var(--primary); color: var(--text); background: var(--primary-dim); }
+        .tb-btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .tb-btn.primary:hover { background: var(--primary-hover); }
+        .tb-btn.success { background: var(--success); border-color: var(--success); color: #fff; }
+        .tb-btn.success:hover { background: #059669; }
+        .tb-divider { width: 1px; height: 24px; background: var(--border); }
+        .toolbar-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .data-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text3);
+        }
+        .data-count strong { color: var(--primary); }
+
+        /* ═══ WORKSPACE ═══ */
+        .workspace {
+            display: flex;
+            height: calc(100vh - 48px);
+            overflow: hidden;
+        }
+
+        /* ═══ SIDEBAR ═══ */
+        .sidebar {
+            width: 280px;
+            min-width: 280px;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            transition: margin-left 0.25s;
+        }
+        .sidebar.collapsed { margin-left: -280px; }
+        .sidebar-section {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sidebar-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        /* Controls */
+        .ctrl-group { margin-bottom: 12px; }
+        .ctrl-group:last-child { margin-bottom: 0; }
+        .ctrl-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: var(--text2);
+            margin-bottom: 6px;
+        }
+        .ctrl-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: var(--surface3);
+            border-radius: 2px;
+            outline: none;
+            cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 14px; height: 14px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            border: none;
+        }
+        select {
+            width: 100%;
+            padding: 6px 10px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            border-radius: var(--radius-sm);
+            outline: none;
+            cursor: pointer;
+        }
+        select:focus { border-color: var(--primary); }
+
+        /* Data summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .summary-card {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 10px;
+        }
+        .summary-label {
+            font-size: 0.6rem;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .summary-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* Legend */
+        .legend-list { display: flex; flex-direction: column; gap: 4px; }
+        .legend-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            color: var(--text2);
+        }
+        .legend-dot {
+            width: 12px; height: 12px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+        .legend-count {
+            margin-left: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text3);
+        }
+
+        /* ═══ MAP ═══ */
+        .map-wrap {
+            flex: 1;
+            position: relative;
+            background: var(--bg);
+        }
+        #map { width: 100%; height: 100%; z-index: 1; }
+
+        .map-mode-indicator {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 450;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 6px 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text2);
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .mode-label { color: var(--text3); }
+        .mode-value { font-weight: 600; }
+        .mode-current .mode-value { color: var(--success); }
+        .mode-prediction .mode-value { color: var(--warning); }
+
+        /* ═══ RESULTS PANEL ═══ */
+        .results {
+            width: 320px;
+            min-width: 320px;
+            background: var(--surface);
+            border-left: 1px solid var(--border);
+            overflow-y: auto;
+            transition: margin-right 0.25s;
+        }
+        .results.collapsed { margin-right: -320px; }
+        .results-header {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .results-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .results-section {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .results-section-title {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+
+        /* Health distribution bars */
+        .dist-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 0.7rem;
+        }
+        .dist-bar-label {
+            width: 70px;
+            color: var(--text2);
+            flex-shrink: 0;
+            font-size: 0.65rem;
+        }
+        .dist-bar-track {
+            flex: 1;
+            height: 8px;
+            background: var(--surface2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .dist-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.4s ease;
+        }
+        .dist-bar-count {
+            width: 28px;
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text3);
+        }
+
+        /* Building list */
+        .building-list { display: flex; flex-direction: column; gap: 4px; max-height: 300px; overflow-y: auto; }
+        .building-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.15s;
+            font-size: 0.7rem;
+        }
+        .building-item:hover { border-color: var(--primary); background: var(--primary-dim); }
+        .bi-health {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 0.75rem;
+            width: 36px;
+            text-align: center;
+        }
+        .bi-info { flex: 1; min-width: 0; }
+        .bi-name { color: var(--text); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .bi-meta { color: var(--text3); font-size: 0.6rem; }
+        .bi-risk {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Cost summary */
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.7rem;
+        }
+        .cost-row:last-child { border-bottom: none; }
+        .cost-label { color: var(--text2); }
+        .cost-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        /* ═══ NOTIFICATIONS ═══ */
+        .toast-container {
+            position: fixed;
+            top: 60px;
+            right: 16px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .toast {
+            background: var(--surface2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 10px 16px;
+            font-size: 0.75rem;
+            color: var(--text);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            animation: toastIn 0.3s ease;
+            max-width: 340px;
+        }
+        .toast.success { border-left: 3px solid var(--success); }
+        .toast.error { border-left: 3px solid var(--danger); }
+        .toast.info { border-left: 3px solid var(--primary); }
+        .toast.warning { border-left: 3px solid var(--warning); }
+        @keyframes toastIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* ═══ MODAL ═══ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.open { display: flex; }
+        .modal {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            max-width: 520px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+        .modal p { font-size: 0.8rem; color: var(--text2); margin-bottom: 12px; line-height: 1.6; }
+        .modal pre {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text2);
+            border-radius: var(--radius-sm);
+            overflow-x: auto;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .modal-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+            margin-top: 16px;
+        }
+
+        /* ═══ STATUS BAR ═══ */
+        .statusbar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 24px;
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            font-size: 0.6rem;
+            color: var(--text4);
+            z-index: 500;
+        }
+        .statusbar-left, .statusbar-right { display: flex; gap: 16px; align-items: center; }
+        .status-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--success);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+
+        /* Leaflet overrides */
+        .leaflet-control-zoom a {
+            background: var(--surface) !important;
+            color: var(--text) !important;
+            border-color: var(--border) !important;
+        }
+        .leaflet-control-zoom a:hover { background: var(--surface2) !important; }
+        .leaflet-bar { border: 1px solid var(--border) !important; border-radius: var(--radius-sm) !important; }
+        .leaflet-popup-content-wrapper {
+            background: var(--surface) !important;
+            color: var(--text) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: var(--radius) !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+        }
+        .leaflet-popup-tip { background: var(--surface) !important; }
+        .leaflet-popup-content { font-family: 'Inter', sans-serif; font-size: 0.8rem; }
+        .popup-title { font-family: 'JetBrains Mono', monospace; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+        .popup-row { display: flex; justify-content: space-between; padding: 2px 0; font-size: 0.75rem; }
+        .popup-val { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+
+        @media (max-width: 1024px) {
+            .sidebar { width: 240px; min-width: 240px; }
+            .results { width: 280px; min-width: 280px; }
+        }
+        @media (max-width: 768px) {
+            .sidebar { position: absolute; z-index: 600; height: calc(100vh - 48px); }
+            .results { position: absolute; right: 0; z-index: 600; height: calc(100vh - 48px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOOLBAR -->
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <div>
+                <div class="brand">CHRONOS PRO</div>
+                <div class="brand-sub">Analisi Evoluzione Urbana</div>
+            </div>
+        </div>
+        <div class="toolbar-actions">
+            <button class="tb-btn" onclick="toggleSidebar()" title="Parametri">&#9776; Parametri</button>
+            <div class="tb-divider"></div>
+            <button class="tb-btn" onclick="document.getElementById('csvInput').click()">&#8679; Importa CSV</button>
+            <button class="tb-btn" onclick="document.getElementById('geojsonInput').click()">&#8679; GeoJSON</button>
+            <button class="tb-btn" onclick="loadDemoData()">Demo</button>
+            <div class="tb-divider"></div>
+            <button class="tb-btn primary" onclick="runAnalysis()">&#9654; Analizza</button>
+            <div class="tb-divider"></div>
+            <button class="tb-btn" onclick="exportPDF()">PDF</button>
+            <button class="tb-btn" onclick="exportJSON()">JSON</button>
+            <div class="tb-divider"></div>
+            <button class="tb-btn" onclick="clearAll()">Pulisci</button>
+            <button class="tb-btn" onclick="openModal('helpModal')">?</button>
+        </div>
+        <div class="toolbar-right">
+            <div class="data-count">Edifici: <strong id="buildingCount">0</strong></div>
+        </div>
+    </div>
+
+    <!-- HIDDEN FILE INPUTS -->
+    <input type="file" id="csvInput" accept=".csv,.txt" style="display:none" onchange="handleCSV(event)">
+    <input type="file" id="geojsonInput" accept=".geojson,.json" style="display:none" onchange="handleGeoJSON(event)">
+
+    <!-- WORKSPACE -->
+    <div class="workspace">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Parametri Analisi</div>
+                <div class="ctrl-group">
+                    <div class="ctrl-label">
+                        Orizzonte temporale
+                        <span class="ctrl-val" id="horizonVal">10 anni</span>
+                    </div>
+                    <input type="range" id="horizonSlider" min="1" max="50" value="10" oninput="updateHorizonLabel()">
+                </div>
+                <div class="ctrl-group">
+                    <div class="ctrl-label">Scenario</div>
+                    <select id="scenarioSelect">
+                        <option value="baseline">Baseline — tendenza attuale</option>
+                        <option value="optimistic">Ottimistico — manutenzione regolare</option>
+                        <option value="pessimistic">Pessimistico — manutenzione differita</option>
+                        <option value="critical">Critico — abbandono progressivo</option>
+                    </select>
+                </div>
+                <div class="ctrl-group">
+                    <div class="ctrl-label">Visualizzazione</div>
+                    <select id="viewMode" onchange="updateVisualization()">
+                        <option value="current">Stato attuale</option>
+                        <option value="projected">Proiezione futura</option>
+                        <option value="risk">Mappa rischio</option>
+                        <option value="cost">Stima costi intervento</option>
+                    </select>
+                </div>
+                <div class="ctrl-group">
+                    <div class="ctrl-label">
+                        Heatmap
+                        <label style="cursor:pointer"><input type="checkbox" id="heatmapToggle" onchange="toggleHeatmap()"> Mostra</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Riepilogo Dati</div>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-label">Edifici</div>
+                        <div class="summary-value" style="color:var(--primary)" id="sumBuildings">0</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Salute media</div>
+                        <div class="summary-value" style="color:var(--success)" id="sumHealth">—</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Zona critica</div>
+                        <div class="summary-value" style="color:var(--danger)" id="sumCritical">0</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-label">Costo stimato</div>
+                        <div class="summary-value" style="color:var(--warning)" id="sumCost">—</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Legenda Salute</div>
+                <div class="legend-list">
+                    <div class="legend-row"><div class="legend-dot" style="background:#10b981"></div>Buono (80-100)<span class="legend-count" id="legGood">0</span></div>
+                    <div class="legend-row"><div class="legend-dot" style="background:#3b82f6"></div>Discreto (60-79)<span class="legend-count" id="legFair">0</span></div>
+                    <div class="legend-row"><div class="legend-dot" style="background:#f59e0b"></div>Mediocre (40-59)<span class="legend-count" id="legPoor">0</span></div>
+                    <div class="legend-row"><div class="legend-dot" style="background:#f97316"></div>Degradato (20-39)<span class="legend-count" id="legBad">0</span></div>
+                    <div class="legend-row"><div class="legend-dot" style="background:#ef4444"></div>Critico (0-19)<span class="legend-count" id="legCrit">0</span></div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Modello Matematico</div>
+                <div style="font-size:0.7rem; color:var(--text3); line-height:1.7;">
+                    <strong style="color:var(--text2)">Decadimento esponenziale:</strong><br>
+                    <code style="color:var(--primary); font-family:'JetBrains Mono',monospace; font-size:0.7rem;">H(t) = H₀ × e<sup>-λt</sup></code><br><br>
+                    <strong style="color:var(--text2)">λ</strong> calibrato per:<br>
+                    — Epoca costruttiva<br>
+                    — Stato di conservazione<br>
+                    — Scenario macro<br><br>
+                    <strong style="color:var(--text2)">Costi</strong> basati su prezziari<br>
+                    edilizia italiana (€/mq)
+                </div>
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-wrap">
+            <div id="map"></div>
+            <div class="map-mode-indicator" id="modeIndicator">
+                <span class="mode-label">Vista:</span>
+                <span class="mode-current"><span class="mode-value" id="modeText">Stato attuale</span></span>
+                <span class="mode-label" id="modeYear" style="display:none">→ <span class="mode-value" style="color:var(--warning)" id="modeYearVal">2036</span></span>
+            </div>
+        </div>
+
+        <!-- RESULTS PANEL -->
+        <div class="results collapsed" id="resultsPanel">
+            <div class="results-header">
+                <div class="results-title">Risultati Analisi</div>
+                <button class="tb-btn" onclick="toggleResults()" style="padding:4px 8px">✕</button>
+            </div>
+
+            <div class="results-section">
+                <div class="results-section-title">Distribuzione Salute</div>
+                <div id="distBars"></div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-section-title">Metriche Aggregate</div>
+                <div id="metricsArea"></div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-section-title">Stima Costi Intervento</div>
+                <div id="costArea"></div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-section-title">Edifici Critici (top 20)</div>
+                <div class="building-list" id="criticalList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HELP MODAL -->
+    <div class="modal-overlay" id="helpModal">
+        <div class="modal">
+            <h2>CHRONOS PRO — Guida Rapida</h2>
+            <p><strong>1. Importa dati</strong> — CSV con colonne lat, lng, e attributi edificio. Oppure GeoJSON con proprietà.</p>
+            <p><strong>Formato CSV accettato:</strong></p>
+            <pre>lat,lng,anno,condizione,piani,superficie_mq,tipo,indirizzo
+41.8892,12.4701,1952,discreto,4,1200,residenziale,Via Trastevere 15
+41.8901,12.4685,1889,buono,3,800,misto,Piazza S.Maria 8</pre>
+            <p><strong>Colonne riconosciute:</strong><br>
+            Coordinate: lat/latitude/latitudine, lng/lon/longitude/longitudine<br>
+            Anno: anno/year/year_built/anno_costruzione<br>
+            Condizione: condizione/condition/stato (ottimo/buono/discreto/mediocre/pessimo/abbandonato)<br>
+            Piani: piani/floors/piano<br>
+            Superficie: superficie_mq/area_sqm/area/mq<br>
+            Tipo: tipo/type/tipologia/destinazione<br>
+            Indirizzo: indirizzo/address/via</p>
+            <p><strong>2. Imposta parametri</strong> — Orizzonte temporale e scenario nel pannello laterale.</p>
+            <p><strong>3. Analizza</strong> — Clicca "Analizza" per calcolare proiezioni e costi.</p>
+            <p><strong>4. Esporta</strong> — PDF per presentazioni, JSON per dati grezzi.</p>
+            <p><strong>5. Disegna aree</strong> — Usa gli strumenti di disegno sulla mappa per delimitare zone di analisi.</p>
+            <div class="modal-actions">
+                <button class="tb-btn primary" onclick="closeModal('helpModal')">Chiudi</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toasts"></div>
+
+    <!-- STATUS BAR -->
+    <div class="statusbar">
+        <div class="statusbar-left">
+            <span class="status-dot"></span>
+            <span>CHRONOS PRO v1.0</span>
+            <span id="statusMsg">Pronto</span>
+        </div>
+        <div class="statusbar-right">
+            <span id="statusCoords">—</span>
+            <span id="statusZoom">Zoom: 13</span>
+        </div>
+    </div>
+
+    <!-- CDN SCRIPTS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+    // ═══════════════════════════════════════════════════
+    // CHRONOS PRO v1.0 — Analisi Evoluzione Urbana
+    // Strumento professionale per architetti e urbanisti
+    // ═══════════════════════════════════════════════════
+
+    // ═══ CONFIGURATION ═══
+    const CONFIG = {
+        // Decay rates per epoca costruttiva (λ annuale base)
+        ERA_LAMBDA: {
+            'pre-1919':   0.025,
+            '1919-1945':  0.032,
+            '1945-1970':  0.045,
+            '1970-1990':  0.030,
+            '1990-2010':  0.018,
+            '2010+':      0.008
+        },
+        // Salute iniziale H0 per condizione
+        CONDITION_H0: {
+            'ottimo':      95,
+            'buono':       80,
+            'discreto':    62,
+            'mediocre':    40,
+            'pessimo':     20,
+            'abbandonato': 8
+        },
+        // Moltiplicatore λ per condizione
+        CONDITION_MOD: {
+            'ottimo':      0.4,
+            'buono':       0.7,
+            'discreto':    1.0,
+            'mediocre':    1.6,
+            'pessimo':     2.8,
+            'abbandonato': 4.0
+        },
+        // Moltiplicatore λ per scenario
+        SCENARIO_MOD: {
+            'optimistic':  0.6,
+            'baseline':    1.0,
+            'pessimistic': 1.5,
+            'critical':    2.2
+        },
+        // Costo intervento €/mq per fascia salute
+        COST_PER_SQM: [
+            { min: 80, max: 100, cost: 0, label: 'Nessun intervento' },
+            { min: 60, max: 79, cost: 220, label: 'Manutenzione leggera' },
+            { min: 40, max: 59, cost: 450, label: 'Ristrutturazione' },
+            { min: 20, max: 39, cost: 850, label: 'Ristrutturazione pesante' },
+            { min: 0, max: 19, cost: 1800, label: 'Intervento strutturale' }
+        ],
+        // Colori per fascia salute
+        HEALTH_COLORS: {
+            good:     '#10b981',
+            fair:     '#3b82f6',
+            poor:     '#f59e0b',
+            bad:      '#f97316',
+            critical: '#ef4444'
+        },
+        // Mappatura colonne CSV flessibile
+        COL_MAP: {
+            lat:       ['lat','latitude','latitudine','y'],
+            lng:       ['lng','lon','longitude','longitudine','x'],
+            year:      ['anno','year','year_built','anno_costruzione','anno_edificazione'],
+            condition: ['condizione','condition','stato','stato_conservazione'],
+            floors:    ['piani','floors','piano','n_piani'],
+            area:      ['superficie_mq','area_sqm','area','mq','sqm','superficie'],
+            type:      ['tipo','type','tipologia','categoria','destinazione','destinazione_uso'],
+            address:   ['indirizzo','address','via','ubicazione'],
+            population:['popolazione','population','abitanti','residenti'],
+            id:        ['id','codice','cod','identificativo']
+        },
+        // Mappatura condizione da italiano a chiave interna
+        CONDITION_ALIASES: {
+            'ottimo':'ottimo', 'excellent':'ottimo', 'molto buono':'ottimo',
+            'buono':'buono', 'good':'buono',
+            'discreto':'discreto', 'fair':'discreto', 'sufficiente':'discreto', 'medio':'discreto',
+            'mediocre':'mediocre', 'poor':'mediocre', 'scarso':'mediocre',
+            'pessimo':'pessimo', 'critical':'pessimo', 'critico':'pessimo', 'very poor':'pessimo',
+            'abbandonato':'abbandonato', 'abandoned':'abbandonato', 'ruins':'abbandonato', 'rudere':'abbandonato'
+        }
+    };
+
+    // ═══ STATE ═══
+    let map, markersLayer, heatLayer, drawLayer, drawnItems;
+    let buildings = [];       // raw imported data
+    let analysisResults = []; // computed results
+    let analysisArea = null;  // drawn polygon for filtering
+
+    // ═══ MAP INITIALIZATION ═══
+    function initMap() {
+        map = L.map('map', {
+            center: [41.8932, 12.4830],
+            zoom: 13,
+            zoomControl: true,
+            attributionControl: true
+        });
+
+        // Dark tile layer - professional look
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // Markers layer
+        markersLayer = L.layerGroup().addTo(map);
+
+        // Draw control
+        drawnItems = new L.FeatureGroup();
+        map.addLayer(drawnItems);
+
+        const drawControl = new L.Control.Draw({
+            position: 'topleft',
+            draw: {
+                polygon: { shapeOptions: { color: '#3b82f6', fillOpacity: 0.1, weight: 2 } },
+                rectangle: { shapeOptions: { color: '#3b82f6', fillOpacity: 0.1, weight: 2 } },
+                circle: false,
+                circlemarker: false,
+                marker: false,
+                polyline: false
+            },
+            edit: { featureGroup: drawnItems, remove: true }
+        });
+        map.addControl(drawControl);
+
+        map.on(L.Draw.Event.CREATED, function(e) {
+            drawnItems.clearLayers();
+            drawnItems.addLayer(e.layer);
+            analysisArea = e.layer;
+            toast('Area di analisi definita', 'success');
+        });
+
+        map.on(L.Draw.Event.DELETED, function() {
+            analysisArea = null;
+            toast('Area di analisi rimossa', 'info');
+        });
+
+        // Track cursor position
+        map.on('mousemove', function(e) {
+            document.getElementById('statusCoords').textContent =
+                e.latlng.lat.toFixed(5) + ', ' + e.latlng.lng.toFixed(5);
+        });
+        map.on('zoomend', function() {
+            document.getElementById('statusZoom').textContent = 'Zoom: ' + map.getZoom();
+        });
+    }
+
+    // ═══ DATA IMPORT — CSV ═══
+    function handleCSV(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        setStatus('Importazione CSV...');
+
+        Papa.parse(file, {
+            header: true,
+            skipEmptyLines: true,
+            dynamicTyping: true,
+            complete: function(results) {
+                if (results.errors.length > 0) {
+                    toast('Errori nel CSV: ' + results.errors[0].message, 'error');
+                }
+                const mapped = mapCSVColumns(results.data, results.meta.fields);
+                if (mapped.length === 0) {
+                    toast('Nessun edificio valido trovato. Verifica colonne lat/lng.', 'error');
+                    setStatus('Errore importazione');
+                    return;
+                }
+                buildings = mapped;
+                renderBuildings();
+                toast(mapped.length + ' edifici importati da ' + file.name, 'success');
+                setStatus('Pronto — ' + mapped.length + ' edifici');
+            },
+            error: function(err) {
+                toast('Errore lettura file: ' + err.message, 'error');
+                setStatus('Errore');
+            }
+        });
+        event.target.value = '';
+    }
+
+    function mapCSVColumns(rows, fields) {
+        const fieldMap = {};
+        const fieldsLower = fields.map(f => f.toLowerCase().trim());
+
+        for (const [key, aliases] of Object.entries(CONFIG.COL_MAP)) {
+            for (const alias of aliases) {
+                const idx = fieldsLower.indexOf(alias);
+                if (idx >= 0) {
+                    fieldMap[key] = fields[idx];
+                    break;
+                }
+            }
+        }
+
+        if (!fieldMap.lat || !fieldMap.lng) {
+            toast('Colonne coordinate (lat/lng) non trovate nel CSV.', 'error');
+            return [];
+        }
+
+        const mapped = [];
+        rows.forEach((row, i) => {
+            const lat = parseFloat(row[fieldMap.lat]);
+            const lng = parseFloat(row[fieldMap.lng]);
+            if (isNaN(lat) || isNaN(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
+
+            const condRaw = fieldMap.condition ? String(row[fieldMap.condition] || '').toLowerCase().trim() : '';
+            const condition = CONFIG.CONDITION_ALIASES[condRaw] || 'discreto';
+            const year = fieldMap.year ? parseInt(row[fieldMap.year]) || 1970 : 1970;
+            const floors = fieldMap.floors ? parseInt(row[fieldMap.floors]) || 2 : 2;
+            const area = fieldMap.area ? parseFloat(row[fieldMap.area]) || 100 : 100;
+            const type = fieldMap.type ? String(row[fieldMap.type] || 'residenziale') : 'residenziale';
+            const address = fieldMap.address ? String(row[fieldMap.address] || '') : '';
+            const pop = fieldMap.population ? parseInt(row[fieldMap.population]) || 0 : 0;
+            const id = fieldMap.id ? String(row[fieldMap.id]) : 'ED-' + (i + 1);
+
+            mapped.push({ id, lat, lng, year, condition, floors, area, type, address, population: pop });
+        });
+        return mapped;
+    }
+
+    // ═══ DATA IMPORT — GeoJSON ═══
+    function handleGeoJSON(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        setStatus('Importazione GeoJSON...');
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const geojson = JSON.parse(e.target.result);
+                const features = geojson.features || [];
+                if (features.length === 0) {
+                    toast('Nessuna feature trovata nel GeoJSON.', 'error');
+                    return;
+                }
+
+                const mapped = [];
+                features.forEach((f, i) => {
+                    let lat, lng;
+                    if (f.geometry && f.geometry.type === 'Point') {
+                        lng = f.geometry.coordinates[0];
+                        lat = f.geometry.coordinates[1];
+                    } else if (f.geometry && (f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon')) {
+                        const coords = f.geometry.type === 'Polygon' ? f.geometry.coordinates[0] : f.geometry.coordinates[0][0];
+                        let sumLat = 0, sumLng = 0;
+                        coords.forEach(c => { sumLng += c[0]; sumLat += c[1]; });
+                        lat = sumLat / coords.length;
+                        lng = sumLng / coords.length;
+                    }
+                    if (!lat || !lng) return;
+
+                    const p = f.properties || {};
+                    const condRaw = (p.condizione || p.condition || p.stato || '').toLowerCase().trim();
+                    const condition = CONFIG.CONDITION_ALIASES[condRaw] || 'discreto';
+
+                    mapped.push({
+                        id: p.id || p.codice || 'GJ-' + (i + 1),
+                        lat, lng,
+                        year: parseInt(p.anno || p.year || p.year_built) || 1970,
+                        condition,
+                        floors: parseInt(p.piani || p.floors) || 2,
+                        area: parseFloat(p.superficie_mq || p.area_sqm || p.area) || 100,
+                        type: p.tipo || p.type || 'residenziale',
+                        address: p.indirizzo || p.address || '',
+                        population: parseInt(p.popolazione || p.population) || 0
+                    });
+                });
+
+                if (mapped.length === 0) {
+                    toast('Nessun edificio valido nel GeoJSON.', 'error');
+                    return;
+                }
+                buildings = mapped;
+                renderBuildings();
+                toast(mapped.length + ' edifici importati da GeoJSON', 'success');
+                setStatus('Pronto — ' + mapped.length + ' edifici');
+            } catch (err) {
+                toast('GeoJSON non valido: ' + err.message, 'error');
+            }
+        };
+        reader.readAsText(file);
+        event.target.value = '';
+    }
+
+    // ═══ DEMO DATA ═══
+    function loadDemoData() {
+        const center = map.getCenter();
+        const lat0 = center.lat;
+        const lng0 = center.lng;
+        const demoBuildings = [];
+
+        const types = ['residenziale','commerciale','misto','uffici','industriale','storico','religioso'];
+        const conditions = ['ottimo','buono','buono','discreto','discreto','discreto','mediocre','mediocre','pessimo','abbandonato'];
+        const eras = [1890,1905,1920,1935,1948,1955,1962,1968,1975,1982,1988,1995,2001,2008,2012,2018,2022];
+
+        for (let i = 0; i < 50; i++) {
+            const angle = Math.random() * Math.PI * 2;
+            const dist = Math.random() * 0.012 + 0.001;
+            const lat = lat0 + Math.cos(angle) * dist;
+            const lng = lng0 + Math.sin(angle) * dist * 1.3;
+
+            demoBuildings.push({
+                id: 'DEMO-' + (i + 1).toString().padStart(3, '0'),
+                lat, lng,
+                year: eras[Math.floor(Math.random() * eras.length)],
+                condition: conditions[Math.floor(Math.random() * conditions.length)],
+                floors: Math.floor(Math.random() * 8) + 1,
+                area: Math.floor(Math.random() * 2000) + 80,
+                type: types[Math.floor(Math.random() * types.length)],
+                address: 'Demo ' + (i + 1),
+                population: Math.floor(Math.random() * 60)
+            });
+        }
+
+        buildings = demoBuildings;
+        renderBuildings();
+        toast('50 edifici demo generati intorno alla posizione corrente', 'info');
+        setStatus('Demo — 50 edifici');
+    }
+
+    // ═══ ANALYSIS ENGINE ═══
+    function getEra(year) {
+        if (year < 1919) return 'pre-1919';
+        if (year < 1945) return '1919-1945';
+        if (year < 1970) return '1945-1970';
+        if (year < 1990) return '1970-1990';
+        if (year < 2010) return '1990-2010';
+        return '2010+';
+    }
+
+    function analyzeBuilding(b, horizon, scenario) {
+        const era = getEra(b.year);
+        const baseLambda = CONFIG.ERA_LAMBDA[era];
+        const condMod = CONFIG.CONDITION_MOD[b.condition] || 1.0;
+        const scenMod = CONFIG.SCENARIO_MOD[scenario] || 1.0;
+        const lambdaEff = baseLambda * condMod * scenMod;
+
+        const H0 = CONFIG.CONDITION_H0[b.condition] || 62;
+        const healthAtT = Math.max(0, H0 * Math.exp(-lambdaEff * horizon));
+        const halfLife = lambdaEff > 0.001 ? Math.LN2 / lambdaEff : 999;
+        const timeToCritical = H0 > 20 ? Math.max(0, -Math.log(20 / H0) / lambdaEff) : 0;
+
+        let costPerSqm = 0, costLabel = 'Nessun intervento';
+        for (const tier of CONFIG.COST_PER_SQM) {
+            if (healthAtT >= tier.min && healthAtT <= tier.max) {
+                costPerSqm = tier.cost;
+                costLabel = tier.label;
+                break;
+            }
+        }
+        const totalCost = costPerSqm * b.area;
+
+        const risk = healthAtT >= 80 ? 'basso' : healthAtT >= 60 ? 'moderato' :
+                     healthAtT >= 40 ? 'elevato' : healthAtT >= 20 ? 'alto' : 'critico';
+        const riskColor = healthAtT >= 80 ? 'var(--success)' : healthAtT >= 60 ? 'var(--primary)' :
+                          healthAtT >= 40 ? 'var(--warning)' : healthAtT >= 20 ? 'var(--orange)' : 'var(--danger)';
+
+        return {
+            ...b, era, lambdaEff, H0,
+            currentHealth: H0,
+            projectedHealth: Math.round(healthAtT * 10) / 10,
+            halfLife: Math.round(halfLife * 10) / 10,
+            timeToCritical: Math.round(timeToCritical * 10) / 10,
+            costPerSqm, totalCost, costLabel,
+            risk, riskColor
+        };
+    }
+
+    function runAnalysis() {
+        if (buildings.length === 0) {
+            toast('Nessun dato. Importa un CSV o carica i dati demo.', 'warning');
+            return;
+        }
+
+        const horizon = parseInt(document.getElementById('horizonSlider').value);
+        const scenario = document.getElementById('scenarioSelect').value;
+        setStatus('Analisi in corso...');
+
+        // Filter by drawn area if exists
+        let toAnalyze = buildings;
+        if (analysisArea) {
+            const bounds = analysisArea.getBounds ? analysisArea.getBounds() : null;
+            if (bounds) {
+                toAnalyze = buildings.filter(b => bounds.contains(L.latLng(b.lat, b.lng)));
+                if (toAnalyze.length === 0) {
+                    toast('Nessun edificio nell\'area selezionata.', 'warning');
+                    setStatus('Pronto');
+                    return;
+                }
+            }
+        }
+
+        analysisResults = toAnalyze.map(b => analyzeBuilding(b, horizon, scenario));
+
+        updateVisualization();
+        renderResults();
+
+        // Open results panel
+        document.getElementById('resultsPanel').classList.remove('collapsed');
+
+        const targetYear = new Date().getFullYear() + horizon;
+        document.getElementById('modeYear').style.display = 'inline';
+        document.getElementById('modeYearVal').textContent = targetYear;
+
+        toast('Analisi completata: ' + analysisResults.length + ' edifici analizzati', 'success');
+        setStatus('Analisi completata — ' + analysisResults.length + ' edifici');
+    }
+
+    // ═══ VISUALIZATION ═══
+    function getHealthColor(health) {
+        if (health >= 80) return CONFIG.HEALTH_COLORS.good;
+        if (health >= 60) return CONFIG.HEALTH_COLORS.fair;
+        if (health >= 40) return CONFIG.HEALTH_COLORS.poor;
+        if (health >= 20) return CONFIG.HEALTH_COLORS.bad;
+        return CONFIG.HEALTH_COLORS.critical;
+    }
+
+    function renderBuildings() {
+        markersLayer.clearLayers();
+        if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+
+        buildings.forEach(b => {
+            const h = CONFIG.CONDITION_H0[b.condition] || 62;
+            const color = getHealthColor(h);
+            const circle = L.circleMarker([b.lat, b.lng], {
+                radius: Math.min(12, Math.max(5, b.area / 200)),
+                fillColor: color,
+                fillOpacity: 0.75,
+                weight: 1.5,
+                color: color,
+                opacity: 0.9
+            });
+
+            circle.bindPopup(buildPopup(b, h, null));
+            circle.on('mouseover', function() { this.setStyle({ weight: 3, fillOpacity: 1 }); });
+            circle.on('mouseout', function() { this.setStyle({ weight: 1.5, fillOpacity: 0.75 }); });
+            markersLayer.addLayer(circle);
+        });
+
+        // Fit map to markers
+        if (buildings.length > 0) {
+            const group = L.featureGroup(markersLayer.getLayers());
+            map.fitBounds(group.getBounds().pad(0.1));
+        }
+
+        updateSidebar();
+        document.getElementById('buildingCount').textContent = buildings.length;
+    }
+
+    function updateVisualization() {
+        const mode = document.getElementById('viewMode').value;
+        markersLayer.clearLayers();
+        if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+
+        const data = analysisResults.length > 0 ? analysisResults : buildings;
+        const modeLabels = { current: 'Stato attuale', projected: 'Proiezione futura', risk: 'Mappa rischio', cost: 'Stima costi' };
+        document.getElementById('modeText').textContent = modeLabels[mode] || 'Stato attuale';
+
+        data.forEach(b => {
+            let health, color, popupExtra = null;
+
+            if (mode === 'projected' && b.projectedHealth !== undefined) {
+                health = b.projectedHealth;
+                color = getHealthColor(health);
+                popupExtra = b;
+            } else if (mode === 'risk' && b.risk) {
+                health = b.projectedHealth || b.currentHealth || CONFIG.CONDITION_H0[b.condition] || 62;
+                color = b.riskColor || getHealthColor(health);
+                popupExtra = b;
+            } else if (mode === 'cost' && b.totalCost !== undefined) {
+                health = b.projectedHealth || CONFIG.CONDITION_H0[b.condition] || 62;
+                color = b.totalCost > 100000 ? '#ef4444' : b.totalCost > 40000 ? '#f97316' :
+                        b.totalCost > 10000 ? '#f59e0b' : b.totalCost > 0 ? '#3b82f6' : '#10b981';
+                popupExtra = b;
+            } else {
+                health = CONFIG.CONDITION_H0[b.condition] || 62;
+                color = getHealthColor(health);
+            }
+
+            const radius = mode === 'cost' && b.totalCost !== undefined ?
+                Math.min(16, Math.max(4, Math.sqrt(b.totalCost / 1000))) :
+                Math.min(12, Math.max(5, (b.area || 100) / 200));
+
+            const circle = L.circleMarker([b.lat, b.lng], {
+                radius,
+                fillColor: color,
+                fillOpacity: 0.75,
+                weight: 1.5,
+                color: color,
+                opacity: 0.9
+            });
+
+            circle.bindPopup(buildPopup(b, health, popupExtra));
+            circle.on('mouseover', function() { this.setStyle({ weight: 3, fillOpacity: 1 }); });
+            circle.on('mouseout', function() { this.setStyle({ weight: 1.5, fillOpacity: 0.75 }); });
+            markersLayer.addLayer(circle);
+        });
+
+        // Heatmap
+        if (document.getElementById('heatmapToggle').checked && data.length > 0) {
+            const heatData = data.map(b => {
+                const h = b.projectedHealth !== undefined ? b.projectedHealth : CONFIG.CONDITION_H0[b.condition] || 62;
+                return [b.lat, b.lng, Math.max(0.1, (100 - h) / 100)];
+            });
+            heatLayer = L.heatLayer(heatData, {
+                radius: 35, blur: 25, maxZoom: 17,
+                gradient: { 0.2: '#3b82f6', 0.4: '#f59e0b', 0.6: '#f97316', 0.8: '#ef4444', 1.0: '#dc2626' }
+            }).addTo(map);
+        }
+
+        updateSidebar();
+    }
+
+    function buildPopup(b, health, extra) {
+        let html = '<div class="popup-title">' + (b.id || 'Edificio') + '</div>';
+        if (b.address) html += '<div style="font-size:0.7rem;color:#94a3b8;margin-bottom:6px">' + b.address + '</div>';
+        html += '<div class="popup-row"><span>Anno</span><span class="popup-val">' + b.year + '</span></div>';
+        html += '<div class="popup-row"><span>Condizione</span><span class="popup-val">' + (b.condition || '—') + '</span></div>';
+        html += '<div class="popup-row"><span>Piani</span><span class="popup-val">' + (b.floors || '—') + '</span></div>';
+        html += '<div class="popup-row"><span>Superficie</span><span class="popup-val">' + (b.area || '—') + ' mq</span></div>';
+        html += '<div class="popup-row"><span>Tipo</span><span class="popup-val">' + (b.type || '—') + '</span></div>';
+
+        html += '<div style="border-top:1px solid #333850;margin-top:6px;padding-top:6px">';
+        html += '<div class="popup-row"><span>Salute attuale</span><span class="popup-val" style="color:' + getHealthColor(b.currentHealth || health) + '">' + Math.round(b.currentHealth || health) + '%</span></div>';
+
+        if (extra && extra.projectedHealth !== undefined) {
+            html += '<div class="popup-row"><span>Salute proiettata</span><span class="popup-val" style="color:' + getHealthColor(extra.projectedHealth) + '">' + Math.round(extra.projectedHealth) + '%</span></div>';
+            html += '<div class="popup-row"><span>λ effettivo</span><span class="popup-val">' + extra.lambdaEff.toFixed(4) + '</span></div>';
+            html += '<div class="popup-row"><span>Emivita</span><span class="popup-val">' + (extra.halfLife > 500 ? '∞' : extra.halfLife + ' anni') + '</span></div>';
+            html += '<div class="popup-row"><span>Tempo a critico</span><span class="popup-val">' + (extra.timeToCritical > 500 ? '>500' : extra.timeToCritical + ' anni') + '</span></div>';
+            html += '<div class="popup-row"><span>Rischio</span><span class="popup-val" style="color:' + extra.riskColor + '">' + extra.risk.toUpperCase() + '</span></div>';
+            if (extra.totalCost > 0) {
+                html += '<div class="popup-row"><span>Costo stimato</span><span class="popup-val" style="color:var(--warning)">€ ' + extra.totalCost.toLocaleString('it-IT') + '</span></div>';
+            }
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function toggleHeatmap() {
+        updateVisualization();
+    }
+
+    // ═══ SIDEBAR UPDATE ═══
+    function updateSidebar() {
+        const data = analysisResults.length > 0 ? analysisResults : buildings;
+        const counts = { good: 0, fair: 0, poor: 0, bad: 0, crit: 0 };
+        let totalHealth = 0, totalCost = 0;
+
+        data.forEach(b => {
+            const h = b.projectedHealth !== undefined ? b.projectedHealth : CONFIG.CONDITION_H0[b.condition] || 62;
+            totalHealth += h;
+            if (b.totalCost) totalCost += b.totalCost;
+            if (h >= 80) counts.good++;
+            else if (h >= 60) counts.fair++;
+            else if (h >= 40) counts.poor++;
+            else if (h >= 20) counts.bad++;
+            else counts.crit++;
+        });
+
+        const avgHealth = data.length > 0 ? Math.round(totalHealth / data.length) : 0;
+        document.getElementById('sumBuildings').textContent = data.length;
+        document.getElementById('sumHealth').textContent = data.length > 0 ? avgHealth + '%' : '—';
+        document.getElementById('sumHealth').style.color = getHealthColor(avgHealth);
+        document.getElementById('sumCritical').textContent = counts.crit + counts.bad;
+        document.getElementById('sumCost').textContent = totalCost > 0 ? '€' + formatK(totalCost) : '—';
+
+        document.getElementById('legGood').textContent = counts.good;
+        document.getElementById('legFair').textContent = counts.fair;
+        document.getElementById('legPoor').textContent = counts.poor;
+        document.getElementById('legBad').textContent = counts.bad;
+        document.getElementById('legCrit').textContent = counts.crit;
+    }
+
+    // ═══ RESULTS PANEL ═══
+    function renderResults() {
+        if (analysisResults.length === 0) return;
+
+        const counts = { good: 0, fair: 0, poor: 0, bad: 0, crit: 0 };
+        let totalHealth = 0, totalCost = 0, totalArea = 0, totalPop = 0;
+
+        analysisResults.forEach(b => {
+            totalHealth += b.projectedHealth;
+            totalCost += b.totalCost;
+            totalArea += b.area;
+            totalPop += b.population;
+            if (b.projectedHealth >= 80) counts.good++;
+            else if (b.projectedHealth >= 60) counts.fair++;
+            else if (b.projectedHealth >= 40) counts.poor++;
+            else if (b.projectedHealth >= 20) counts.bad++;
+            else counts.crit++;
+        });
+
+        const n = analysisResults.length;
+        const avgHealth = Math.round(totalHealth / n);
+
+        // Distribution bars
+        const distHTML = [
+            { label: 'Buono', count: counts.good, color: '#10b981' },
+            { label: 'Discreto', count: counts.fair, color: '#3b82f6' },
+            { label: 'Mediocre', count: counts.poor, color: '#f59e0b' },
+            { label: 'Degradato', count: counts.bad, color: '#f97316' },
+            { label: 'Critico', count: counts.crit, color: '#ef4444' }
+        ].map(d => {
+            const pct = n > 0 ? (d.count / n * 100) : 0;
+            return `<div class="dist-bar-row">
+                <span class="dist-bar-label">${d.label}</span>
+                <div class="dist-bar-track"><div class="dist-bar-fill" style="width:${pct}%;background:${d.color}"></div></div>
+                <span class="dist-bar-count">${d.count}</span>
+            </div>`;
+        }).join('');
+        document.getElementById('distBars').innerHTML = distHTML;
+
+        // Metrics
+        const horizon = parseInt(document.getElementById('horizonSlider').value);
+        const metricsHTML = `
+            <div class="cost-row"><span class="cost-label">Edifici analizzati</span><span class="cost-value" style="color:var(--primary)">${n}</span></div>
+            <div class="cost-row"><span class="cost-label">Salute media proiettata</span><span class="cost-value" style="color:${getHealthColor(avgHealth)}">${avgHealth}%</span></div>
+            <div class="cost-row"><span class="cost-label">Orizzonte</span><span class="cost-value">${horizon} anni</span></div>
+            <div class="cost-row"><span class="cost-label">Superficie totale</span><span class="cost-value">${totalArea.toLocaleString('it-IT')} mq</span></div>
+            <div class="cost-row"><span class="cost-label">Popolazione stimata</span><span class="cost-value">${totalPop.toLocaleString('it-IT')}</span></div>
+            <div class="cost-row"><span class="cost-label">Edifici a rischio</span><span class="cost-value" style="color:var(--danger)">${counts.crit + counts.bad}</span></div>
+        `;
+        document.getElementById('metricsArea').innerHTML = metricsHTML;
+
+        // Cost breakdown
+        const costTiers = {};
+        analysisResults.forEach(b => {
+            if (!costTiers[b.costLabel]) costTiers[b.costLabel] = { count: 0, total: 0 };
+            costTiers[b.costLabel].count++;
+            costTiers[b.costLabel].total += b.totalCost;
+        });
+        let costHTML = '';
+        for (const [label, data] of Object.entries(costTiers)) {
+            costHTML += `<div class="cost-row"><span class="cost-label">${label} (${data.count})</span><span class="cost-value" style="color:var(--warning)">€ ${data.total.toLocaleString('it-IT')}</span></div>`;
+        }
+        costHTML += `<div class="cost-row" style="border-top:2px solid var(--border);margin-top:4px;padding-top:8px"><span class="cost-label" style="font-weight:700;color:var(--text)">TOTALE STIMATO</span><span class="cost-value" style="color:var(--warning);font-size:0.85rem">€ ${totalCost.toLocaleString('it-IT')}</span></div>`;
+        document.getElementById('costArea').innerHTML = costHTML;
+
+        // Critical buildings list (sorted by projected health ascending)
+        const sorted = [...analysisResults].sort((a, b) => a.projectedHealth - b.projectedHealth).slice(0, 20);
+        const listHTML = sorted.map(b => {
+            const bgColor = b.projectedHealth >= 80 ? 'var(--success-dim)' : b.projectedHealth >= 60 ? 'var(--primary-dim)' :
+                            b.projectedHealth >= 40 ? 'var(--warning-dim)' : 'var(--danger-dim)';
+            return `<div class="building-item" onclick="map.setView([${b.lat},${b.lng}],17)">
+                <span class="bi-health" style="color:${getHealthColor(b.projectedHealth)}">${Math.round(b.projectedHealth)}</span>
+                <div class="bi-info">
+                    <div class="bi-name">${b.id}${b.address ? ' — ' + b.address : ''}</div>
+                    <div class="bi-meta">${b.year} · ${b.era} · ${b.area}mq · λ=${b.lambdaEff.toFixed(3)}</div>
+                </div>
+                <span class="bi-risk" style="background:${bgColor};color:${b.riskColor}">${b.risk}</span>
+            </div>`;
+        }).join('');
+        document.getElementById('criticalList').innerHTML = listHTML;
+    }
+
+    // ═══ EXPORT — JSON ═══
+    function exportJSON() {
+        const data = analysisResults.length > 0 ? analysisResults : buildings;
+        if (data.length === 0) {
+            toast('Nessun dato da esportare.', 'warning');
+            return;
+        }
+
+        const horizon = parseInt(document.getElementById('horizonSlider').value);
+        const scenario = document.getElementById('scenarioSelect').value;
+
+        const exportData = {
+            tool: 'CHRONOS PRO v1.0',
+            timestamp: new Date().toISOString(),
+            parameters: { horizon, scenario, buildingCount: data.length },
+            buildings: data.map(b => ({
+                id: b.id, lat: b.lat, lng: b.lng, year: b.year,
+                condition: b.condition, floors: b.floors, area: b.area,
+                type: b.type, address: b.address,
+                currentHealth: b.currentHealth || CONFIG.CONDITION_H0[b.condition] || 62,
+                projectedHealth: b.projectedHealth, lambdaEff: b.lambdaEff,
+                halfLife: b.halfLife, timeToCritical: b.timeToCritical,
+                costPerSqm: b.costPerSqm, totalCost: b.totalCost,
+                risk: b.risk
+            })),
+            model: 'H(t) = H0 * exp(-lambda_eff * t)',
+            disclaimer: 'Stime indicative basate su modello di decadimento esponenziale. Verificare con sopralluogo.'
+        };
+
+        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'chronos-pro-' + new Date().toISOString().slice(0, 10) + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        toast('Export JSON completato', 'success');
+    }
+
+    // ═══ EXPORT — PDF ═══
+    function exportPDF() {
+        const data = analysisResults.length > 0 ? analysisResults : buildings;
+        if (data.length === 0) {
+            toast('Nessun dato da esportare.', 'warning');
+            return;
+        }
+
+        setStatus('Generazione PDF...');
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF('p', 'mm', 'a4');
+        const W = 210, M = 15;
+        let y = M;
+
+        // Header
+        doc.setFillColor(15, 17, 23);
+        doc.rect(0, 0, W, 40, 'F');
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(18);
+        doc.setTextColor(59, 130, 246);
+        doc.text('CHRONOS PRO', M, 18);
+        doc.setFontSize(10);
+        doc.setTextColor(148, 163, 184);
+        doc.text('Analisi Evoluzione Urbana', M, 26);
+        doc.setFontSize(8);
+        doc.text('Report generato: ' + new Date().toLocaleString('it-IT'), M, 34);
+        y = 50;
+
+        // Parameters
+        const horizon = parseInt(document.getElementById('horizonSlider').value);
+        const scenario = document.getElementById('scenarioSelect').value;
+        const scenarioLabels = { baseline: 'Baseline', optimistic: 'Ottimistico', pessimistic: 'Pessimistico', critical: 'Critico' };
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.setTextColor(226, 232, 240);
+        doc.text('Parametri', M, y);
+        y += 7;
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(9);
+        doc.setTextColor(148, 163, 184);
+        doc.text('Orizzonte temporale: ' + horizon + ' anni', M, y); y += 5;
+        doc.text('Scenario: ' + (scenarioLabels[scenario] || scenario), M, y); y += 5;
+        doc.text('Edifici analizzati: ' + data.length, M, y); y += 5;
+        const targetYear = new Date().getFullYear() + horizon;
+        doc.text('Anno proiezione: ' + targetYear, M, y); y += 10;
+
+        // Aggregate metrics
+        let totalHealth = 0, totalCost = 0, critCount = 0, totalArea = 0;
+        data.forEach(b => {
+            const h = b.projectedHealth !== undefined ? b.projectedHealth : CONFIG.CONDITION_H0[b.condition] || 62;
+            totalHealth += h;
+            if (b.totalCost) totalCost += b.totalCost;
+            if (h < 40) critCount++;
+            totalArea += b.area || 100;
+        });
+        const avgH = Math.round(totalHealth / data.length);
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.setTextColor(226, 232, 240);
+        doc.text('Metriche Aggregate', M, y); y += 7;
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(9);
+        doc.setTextColor(148, 163, 184);
+        doc.text('Salute media proiettata: ' + avgH + '%', M, y); y += 5;
+        doc.text('Edifici a rischio (salute < 40%): ' + critCount, M, y); y += 5;
+        doc.text('Superficie totale: ' + totalArea.toLocaleString('it-IT') + ' mq', M, y); y += 5;
+        doc.text('Costo intervento stimato: EUR ' + totalCost.toLocaleString('it-IT'), M, y); y += 12;
+
+        // Building table
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        doc.setTextColor(226, 232, 240);
+        doc.text('Dettaglio Edifici (ordinati per rischio)', M, y); y += 7;
+
+        const sorted = [...data].sort((a, b) =>
+            (a.projectedHealth || CONFIG.CONDITION_H0[a.condition] || 62) -
+            (b.projectedHealth || CONFIG.CONDITION_H0[b.condition] || 62)
+        );
+
+        // Table header
+        doc.setFillColor(36, 40, 54);
+        doc.rect(M, y - 1, W - M * 2, 6, 'F');
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(7);
+        doc.setTextColor(148, 163, 184);
+        const cols = [M, M + 22, M + 50, M + 70, M + 90, M + 110, M + 138, M + 162];
+        const headers = ['ID', 'Indirizzo', 'Anno', 'Condiz.', 'Salute %', 'Rischio', 'Costo EUR', 'λ eff.'];
+        headers.forEach((h, i) => doc.text(h, cols[i], y + 3));
+        y += 8;
+
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(7);
+        const maxRows = Math.min(sorted.length, 40);
+        for (let i = 0; i < maxRows; i++) {
+            if (y > 275) {
+                doc.addPage();
+                y = M;
+            }
+            const b = sorted[i];
+            const h = b.projectedHealth !== undefined ? Math.round(b.projectedHealth) : Math.round(CONFIG.CONDITION_H0[b.condition] || 62);
+            doc.setTextColor(148, 163, 184);
+            doc.text(String(b.id || '').substring(0, 12), cols[0], y);
+            doc.text(String(b.address || '—').substring(0, 16), cols[1], y);
+            doc.text(String(b.year || '—'), cols[2], y);
+            doc.text(String(b.condition || '—'), cols[3], y);
+
+            if (h < 40) doc.setTextColor(239, 68, 68);
+            else if (h < 60) doc.setTextColor(245, 158, 11);
+            else doc.setTextColor(16, 185, 129);
+            doc.text(String(h), cols[4], y);
+
+            doc.setTextColor(148, 163, 184);
+            doc.text(String(b.risk || '—'), cols[5], y);
+            doc.text(b.totalCost ? b.totalCost.toLocaleString('it-IT') : '0', cols[6], y);
+            doc.text(b.lambdaEff ? b.lambdaEff.toFixed(4) : '—', cols[7], y);
+            y += 5;
+        }
+
+        if (sorted.length > maxRows) {
+            y += 3;
+            doc.setTextColor(100, 116, 139);
+            doc.text('... e altri ' + (sorted.length - maxRows) + ' edifici', M, y);
+            y += 5;
+        }
+
+        // Footer
+        y = Math.max(y + 10, 260);
+        if (y > 275) { doc.addPage(); y = M; }
+        doc.setDrawColor(51, 56, 80);
+        doc.line(M, y, W - M, y);
+        y += 6;
+        doc.setFontSize(7);
+        doc.setTextColor(100, 116, 139);
+        doc.text('CHRONOS PRO v1.0 — Analisi Evoluzione Urbana', M, y);
+        y += 4;
+        doc.text('Modello: H(t) = H0 * exp(-lambda * t) | Stime indicative, verificare con sopralluogo tecnico.', M, y);
+
+        doc.save('chronos-pro-report-' + new Date().toISOString().slice(0, 10) + '.pdf');
+        toast('PDF generato', 'success');
+        setStatus('Pronto');
+    }
+
+    // ═══ UI HELPERS ═══
+    function updateHorizonLabel() {
+        const v = document.getElementById('horizonSlider').value;
+        document.getElementById('horizonVal').textContent = v + ' anni';
+    }
+
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('collapsed');
+    }
+
+    function toggleResults() {
+        document.getElementById('resultsPanel').classList.toggle('collapsed');
+    }
+
+    function clearAll() {
+        buildings = [];
+        analysisResults = [];
+        analysisArea = null;
+        markersLayer.clearLayers();
+        if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+        drawnItems.clearLayers();
+        document.getElementById('resultsPanel').classList.add('collapsed');
+        document.getElementById('modeYear').style.display = 'none';
+        updateSidebar();
+        document.getElementById('buildingCount').textContent = '0';
+        toast('Dati cancellati', 'info');
+        setStatus('Pronto');
+    }
+
+    function openModal(id) { document.getElementById(id).classList.add('open'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+    function toast(msg, type) {
+        const container = document.getElementById('toasts');
+        const el = document.createElement('div');
+        el.className = 'toast ' + (type || 'info');
+        el.textContent = msg;
+        container.appendChild(el);
+        setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 300); }, 3500);
+    }
+
+    function setStatus(msg) {
+        document.getElementById('statusMsg').textContent = msg;
+    }
+
+    function formatK(n) {
+        if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+        if (n >= 1000) return (n / 1000).toFixed(0) + 'K';
+        return n.toLocaleString('it-IT');
+    }
+
+    // Close modals on overlay click
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal-overlay')) {
+            e.target.classList.remove('open');
+        }
+    });
+
+    // ═══ INIT ═══
+    document.addEventListener('DOMContentLoaded', function() {
+        initMap();
+        setStatus('Pronto — importa dati o carica demo');
+    });
+    </script>
+</body>
+</html>
