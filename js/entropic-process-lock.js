@@ -281,7 +281,7 @@ const EntropicProcessLock = (() => {
         // Persist signature
         try {
             localStorage.setItem(CONFIG.SIGNATURE_STORAGE_KEY, JSON.stringify(signature));
-        } catch (_) { /* storage may be unavailable */ }
+        } catch (e) { console.warn('EPL: Signature storage unavailable', e); }
 
         return signature;
     }
@@ -310,7 +310,7 @@ const EntropicProcessLock = (() => {
                 lastUpdate: Date.now(),
                 version: CONFIG.VERSION
             }));
-        } catch (_) { /* storage may be unavailable */ }
+        } catch (e) { console.warn('EPL: Chain persistence unavailable', e); }
     }
 
     /**
@@ -348,7 +348,8 @@ const EntropicProcessLock = (() => {
             }
 
             return true;
-        } catch (_) {
+        } catch (e) {
+            console.warn('EPL: Chain restoration failed', e);
             chain = [];
             return false;
         }
@@ -400,7 +401,7 @@ const EntropicProcessLock = (() => {
                         notifyCoreFeed('ETHIC_COMPILER', 'EPL: Verifica integrità superata. ' + result.totalLinks + ' link coerenti. Traiettoria temporale intatta.');
                     }
                 }
-            } catch (_) { /* cycle error, will retry */ }
+            } catch (e) { console.warn('EPL: Cycle error', e); }
         }, CONFIG.CYCLE_INTERVAL_MS);
 
         return { restored, chainLength: chain.length };
