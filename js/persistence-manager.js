@@ -54,14 +54,26 @@ const PersistenceManager = (() => {
 
     function getStorageReport() {
         const bytes = estimateStorageBytes();
-        return {
+        const report = {
             bytesUsed: bytes,
             kbUsed: Math.round(bytes / 1024),
             mbUsed: (bytes / (1024 * 1024)).toFixed(2),
             percentFull: Math.round((bytes / CONFIG.storageHardLimit) * 100),
             healthy: bytes < CONFIG.storageSoftLimit,
             critical: bytes >= CONFIG.storageHardLimit,
+            indexedDB: typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable(),
         };
+
+        // Async: attach IndexedDB estimate if available
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            IndexedStore.getStorageEstimate().then(est => {
+                report.idbUsageMB = est.usageMB;
+                report.idbQuotaMB = est.quotaMB;
+                report.idbPercent = est.percentUsed;
+            }).catch(() => {});
+        }
+
+        return report;
     }
 
     // TTL-based cleanup: purge signals older than signalTTL
@@ -155,9 +167,16 @@ const PersistenceManager = (() => {
             matchScore: signal.matchScore || 0,
         };
 
+        // Primary: localStorage (sync, always available)
         archive.unshift(entry);
         saveArchive(archive);
         updateStats('signalAdded');
+
+        // Dual-write: IndexedDB (async, for scale)
+        if (typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()) {
+            IndexedStore.addSignal(entry);
+        }
+
         return true;
     }
 
@@ -1171,8 +1190,11 @@ const PersistenceManager = (() => {
             createUI();
             setupKeyboard();
 
-            console.log('%c[PERSISTENCE_MANAGER] v1.0 ONLINE', 'color: #ffbf00; font-weight: bold;');
-            console.log('%c Archive: ' + getArchive().length + ' signals | Ctrl+Shift+A to browse', 'color: #4a5a6c;');
+            const idbStatus = typeof IndexedStore !== 'undefined' && IndexedStore.isAvailable()
+                ? 'IndexedDB: ON' : 'IndexedDB: OFF (localStorage only)';
+
+            console.log('%c[PERSISTENCE_MANAGER] v2.0 ONLINE', 'color: #ffbf00; font-weight: bold;');
+            console.log('%c Archive: ' + getArchive().length + ' signals | ' + idbStatus + ' | Ctrl+Shift+A to browse', 'color: #4a5a6c;');
         };
 
         if (document.readyState === 'loading') {

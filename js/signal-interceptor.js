@@ -405,25 +405,60 @@ const SignalInterceptor = (() => {
     }
 
     // Fetch feeds in staggered batches to avoid proxy rate limits
+    // Skips quarantined feeds, validates articles, tracks feed health
     async function fetchFeedsBatched(feeds) {
         const allArticles = [];
-        for (let i = 0; i < feeds.length; i += CONFIG.feedBatchSize) {
-            const batch = feeds.slice(i, i + CONFIG.feedBatchSize);
-            const promises = batch.map(feed => fetchFeed(feed).catch(() => []));
+        // Filter out quarantined feeds
+        const activeFeeds = feeds.filter(feed => {
+            if (isFeedQuarantined(feed.id)) {
+                console.log(`[SIGNAL_INTERCEPTOR] Skipping quarantined feed: ${feed.id}`);
+                return false;
+            }
+            return true;
+        });
+
+        for (let i = 0; i < activeFeeds.length; i += CONFIG.feedBatchSize) {
+            const batch = activeFeeds.slice(i, i + CONFIG.feedBatchSize);
+            const promises = batch.map(feed => fetchFeed(feed).catch((err) => {
+                recordFeedFailure(feed.id, err.message || 'fetch_error');
+                return [];
+            }));
 
             const settleAll = typeof Promise.allSettled === 'function'
                 ? (p) => Promise.allSettled(p)
                 : (p) => Promise.all(p.map(pr => pr.then(v => ({ status: 'fulfilled', value: v }), e => ({ status: 'rejected', reason: e }))));
 
             const results = await settleAll(promises);
-            results.forEach(result => {
+            results.forEach((result, idx) => {
                 if (result.status === 'fulfilled' && result.value) {
-                    allArticles.push(...result.value);
+                    const feed = batch[idx];
+                    const articles = result.value;
+
+                    // Validate each article against schema
+                    let invalidCount = 0;
+                    const validArticles = [];
+                    articles.forEach(article => {
+                        const validation = validateArticle(article);
+                        if (validation.valid) {
+                            validArticles.push(article);
+                        } else {
+                            invalidCount++;
+                        }
+                    });
+
+                    // Track feed health
+                    if (articles.length > 0) {
+                        recordFeedSuccess(feed.id, articles.length, invalidCount);
+                    }
+
+                    allArticles.push(...validArticles);
+                } else if (result.status === 'rejected') {
+                    recordFeedFailure(batch[idx].id, 'promise_rejected');
                 }
             });
 
             // Delay between batches (not after last batch)
-            if (i + CONFIG.feedBatchSize < feeds.length) {
+            if (i + CONFIG.feedBatchSize < activeFeeds.length) {
                 await new Promise(r => setTimeout(r, CONFIG.feedBatchDelay));
             }
         }
@@ -621,14 +656,22 @@ const SignalInterceptor = (() => {
     }
 
     // ══════════════════════════════════════════════
-    // SOURCE TRUST REGISTRY
+    // SOURCE TRUST REGISTRY — Persistent across sessions
     // ══════════════════════════════════════════════
 
     const SOURCE_TRUST = {};  // Runtime cache: source -> { signals, avgSeverity, lastBurst }
 
     function getSourceTrust(sourceName) {
         if (!SOURCE_TRUST[sourceName]) {
-            SOURCE_TRUST[sourceName] = { signals: 0, totalSeverity: 0, lastBurst: 0, burstCount: 0 };
+            SOURCE_TRUST[sourceName] = {
+                signals: 0, totalSeverity: 0, lastBurst: 0, burstCount: 0,
+                // Historical fields (persisted via IndexedDB)
+                historicalSignals: 0,
+                historicalSeveritySum: 0,
+                firstSeen: Date.now(),
+                trustScore: 50,   // 0-100 trust baseline
+                driftBaseline: 0, // historical avg severity
+            };
         }
         return SOURCE_TRUST[sourceName];
     }
@@ -637,6 +680,8 @@ const SignalInterceptor = (() => {
         const trust = getSourceTrust(sourceName);
         trust.signals++;
         trust.totalSeverity += severity;
+        trust.historicalSignals++;
+        trust.historicalSeveritySum += severity;
 
         // Burst detection: >5 signals from same source in 10 min
         const now = Date.now();
@@ -646,6 +691,276 @@ const SignalInterceptor = (() => {
             trust.burstCount = 1;
             trust.lastBurst = now;
         }
+
+        // Update trust score: time-weighted reliability
+        const historicalAvg = trust.historicalSeveritySum / trust.historicalSignals;
+        const recentAvg = trust.totalSeverity / trust.signals;
+
+        // Slow-drift detection: recent avg deviating from historical baseline
+        if (trust.historicalSignals > 20) {
+            const drift = Math.abs(recentAvg - trust.driftBaseline);
+            if (drift > 15) {
+                trust.trustScore = Math.max(trust.trustScore - 2, 10);
+            } else {
+                trust.trustScore = Math.min(trust.trustScore + 0.5, 95);
+            }
+        }
+
+        // Update drift baseline with exponential moving average
+        trust.driftBaseline = trust.driftBaseline === 0
+            ? historicalAvg
+            : trust.driftBaseline * 0.95 + recentAvg * 0.05;
+
+        // Persist to IndexedDB every 10 signals
+        if (trust.historicalSignals % 10 === 0) {
+            persistSourceReputation(sourceName, trust);
+        }
+    }
+
+    // Persist reputation to IndexedDB
+    function persistSourceReputation(sourceName, trust) {
+        if (typeof IndexedStore === 'undefined' || !IndexedStore.isAvailable()) return;
+        IndexedStore.saveReputation({
+            source: sourceName,
+            historicalSignals: trust.historicalSignals,
+            historicalSeveritySum: trust.historicalSeveritySum,
+            firstSeen: trust.firstSeen,
+            trustScore: trust.trustScore,
+            driftBaseline: trust.driftBaseline,
+            lastUpdated: Date.now(),
+        });
+    }
+
+    // Load persisted reputations on startup
+    async function loadSourceReputations() {
+        if (typeof IndexedStore === 'undefined' || !IndexedStore.isAvailable()) return;
+        try {
+            const reps = await IndexedStore.getAllReputations();
+            reps.forEach(rep => {
+                if (!SOURCE_TRUST[rep.source]) {
+                    SOURCE_TRUST[rep.source] = {
+                        signals: 0, totalSeverity: 0, lastBurst: 0, burstCount: 0,
+                        historicalSignals: rep.historicalSignals || 0,
+                        historicalSeveritySum: rep.historicalSeveritySum || 0,
+                        firstSeen: rep.firstSeen || Date.now(),
+                        trustScore: rep.trustScore || 50,
+                        driftBaseline: rep.driftBaseline || 0,
+                    };
+                } else {
+                    // Merge persisted data with runtime
+                    const t = SOURCE_TRUST[rep.source];
+                    t.historicalSignals = rep.historicalSignals || t.historicalSignals;
+                    t.historicalSeveritySum = rep.historicalSeveritySum || t.historicalSeveritySum;
+                    t.firstSeen = rep.firstSeen || t.firstSeen;
+                    t.trustScore = rep.trustScore || t.trustScore;
+                    t.driftBaseline = rep.driftBaseline || t.driftBaseline;
+                }
+            });
+            if (reps.length > 0) {
+                console.log(`[SIGNAL_INTERCEPTOR] Loaded ${reps.length} source reputations from IndexedDB`);
+            }
+        } catch (e) {
+            // Silently continue without historical data
+        }
+    }
+
+    // ══════════════════════════════════════════════
+    // FEED VALIDATION — Schema enforcement
+    // ══════════════════════════════════════════════
+
+    const FEED_SCHEMA = {
+        required: ['id', 'title', 'source'],
+        titleMaxLen: 500,
+        descMaxLen: 5000,
+        linkPattern: /^https?:\/\//,
+    };
+
+    function validateArticle(article) {
+        if (!article || typeof article !== 'object') return { valid: false, reason: 'not_object' };
+        if (!article.title || typeof article.title !== 'string' || article.title.trim().length === 0) {
+            return { valid: false, reason: 'missing_title' };
+        }
+        if (!article.id) return { valid: false, reason: 'missing_id' };
+        if (!article.source || typeof article.source !== 'string') {
+            return { valid: false, reason: 'missing_source' };
+        }
+        // Truncate oversized fields
+        if (article.title.length > FEED_SCHEMA.titleMaxLen) {
+            article.title = article.title.substring(0, FEED_SCHEMA.titleMaxLen);
+        }
+        if (article.description && article.description.length > FEED_SCHEMA.descMaxLen) {
+            article.description = article.description.substring(0, FEED_SCHEMA.descMaxLen);
+        }
+        // Validate link format if present
+        if (article.link && !FEED_SCHEMA.linkPattern.test(article.link)) {
+            article.link = '';
+        }
+        return { valid: true };
+    }
+
+    // ══════════════════════════════════════════════
+    // FEED QUARANTINE — Malformed feed isolation
+    // ══════════════════════════════════════════════
+
+    const FEED_HEALTH = {};  // feedId -> { successes, failures, lastFailure, quarantined }
+
+    function getFeedHealth(feedId) {
+        if (!FEED_HEALTH[feedId]) {
+            FEED_HEALTH[feedId] = {
+                successes: 0, failures: 0,
+                totalArticles: 0, invalidArticles: 0,
+                lastFailure: 0, quarantined: false, quarantinedAt: 0,
+            };
+        }
+        return FEED_HEALTH[feedId];
+    }
+
+    function recordFeedSuccess(feedId, articleCount, invalidCount) {
+        const health = getFeedHealth(feedId);
+        health.successes++;
+        health.totalArticles += articleCount;
+        health.invalidArticles += invalidCount;
+
+        // Auto-unquarantine if 3 consecutive successes with low invalid rate
+        if (health.quarantined && health.successes >= 3) {
+            const invalidRate = health.totalArticles > 0
+                ? health.invalidArticles / health.totalArticles : 0;
+            if (invalidRate < 0.3) {
+                health.quarantined = false;
+                health.failures = 0;
+                console.log(`[SIGNAL_INTERCEPTOR] Feed ${feedId} released from quarantine`);
+                if (typeof IndexedStore !== 'undefined') {
+                    IndexedStore.removeFromQuarantine(feedId);
+                }
+            }
+        }
+    }
+
+    function recordFeedFailure(feedId, reason) {
+        const health = getFeedHealth(feedId);
+        health.failures++;
+        health.lastFailure = Date.now();
+        health.successes = 0; // Reset consecutive successes
+
+        // Quarantine after 5 consecutive failures
+        if (health.failures >= 5 && !health.quarantined) {
+            health.quarantined = true;
+            health.quarantinedAt = Date.now();
+            console.warn(`[SIGNAL_INTERCEPTOR] Feed ${feedId} QUARANTINED after ${health.failures} failures: ${reason}`);
+
+            if (typeof IndexedStore !== 'undefined') {
+                IndexedStore.saveQuarantineEntry({
+                    feedId, reason,
+                    quarantinedAt: health.quarantinedAt,
+                    failures: health.failures,
+                });
+            }
+
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SENTINEL',
+                    `Feed quarantined: ${feedId} (${reason}). Troppi errori consecutivi.`
+                );
+            }
+        }
+    }
+
+    function isFeedQuarantined(feedId) {
+        const health = getFeedHealth(feedId);
+        if (!health.quarantined) return false;
+
+        // Auto-release after 1 hour (retry)
+        if (Date.now() - health.quarantinedAt > 60 * 60 * 1000) {
+            health.quarantined = false;
+            health.failures = 0;
+            return false;
+        }
+        return true;
+    }
+
+    // Load quarantine state from IndexedDB on startup
+    async function loadQuarantineState() {
+        if (typeof IndexedStore === 'undefined' || !IndexedStore.isAvailable()) return;
+        try {
+            const entries = await IndexedStore.getAllQuarantined();
+            entries.forEach(entry => {
+                const health = getFeedHealth(entry.feedId);
+                health.quarantined = true;
+                health.quarantinedAt = entry.quarantinedAt || Date.now();
+                health.failures = entry.failures || 5;
+            });
+            if (entries.length > 0) {
+                console.log(`[SIGNAL_INTERCEPTOR] Loaded ${entries.length} quarantined feeds from IndexedDB`);
+            }
+        } catch (e) { /* continue */ }
+    }
+
+    // ══════════════════════════════════════════════
+    // WEB WORKER INTEGRATION
+    // ══════════════════════════════════════════════
+
+    let worker = null;
+    let workerReady = false;
+    let workerCallbacks = {};  // messageId -> callback
+    let workerMsgId = 0;
+
+    function initWorker() {
+        if (typeof Worker === 'undefined') return false;
+        try {
+            worker = new Worker('js/signal-worker.js');
+            worker.onmessage = (e) => {
+                const msg = e.data;
+                if (msg.type === 'ready') {
+                    workerReady = true;
+                    console.log('%c[SIGNAL_INTERCEPTOR] Web Worker ONLINE — classification off main thread', 'color: #39ff14;');
+                } else if (msg.type === 'classified') {
+                    const cb = workerCallbacks[msg.id];
+                    if (cb) {
+                        cb(msg.payload);
+                        delete workerCallbacks[msg.id];
+                    }
+                } else if (msg.type === 'error') {
+                    console.warn('[SIGNAL_INTERCEPTOR] Worker error:', msg.message);
+                }
+            };
+            worker.onerror = (e) => {
+                console.warn('[SIGNAL_INTERCEPTOR] Worker failed, falling back to main thread:', e.message);
+                workerReady = false;
+                worker = null;
+            };
+            // Initialize worker with domain/urgency config
+            worker.postMessage({
+                type: 'init',
+                payload: { domains: DOMAINS, urgencyWords: URGENCY_WORDS }
+            });
+            return true;
+        } catch (e) {
+            console.warn('[SIGNAL_INTERCEPTOR] Worker init failed:', e);
+            return false;
+        }
+    }
+
+    function classifyViaWorker(articles) {
+        return new Promise((resolve) => {
+            if (!worker || !workerReady) {
+                // Fallback: main-thread classification
+                resolve(null);
+                return;
+            }
+            const id = ++workerMsgId;
+            workerCallbacks[id] = resolve;
+            // Timeout: if worker doesn't respond in 30s, fallback
+            setTimeout(() => {
+                if (workerCallbacks[id]) {
+                    delete workerCallbacks[id];
+                    resolve(null);
+                }
+            }, 30000);
+            worker.postMessage({
+                type: 'classify',
+                id: id,
+                payload: { articles }
+            });
+        });
     }
 
     function calculateSeverity(text, keywordScore, sourceName, multiDomainBonus) {
@@ -997,45 +1312,59 @@ const SignalInterceptor = (() => {
         // Deduplicate
         const newArticles = deduplicate(allArticles);
 
-        // Classify in chunks (non-blocking) then distribute
-        processChunk(newArticles, 0, [], (signalQueue) => {
-            const signalCount = signalQueue.length;
+        // Try Web Worker classification first, fallback to main-thread chunked processing
+        const workerResult = await classifyViaWorker(newArticles);
 
-            // Distribute signals with staggered timing
-            signalQueue.forEach((signal, i) => {
-                setTimeout(() => {
-                    distributeSignal(signal);
-                    showSignalToast(signal);
-                }, i * 5000); // 5 seconds between each signal
+        if (workerResult !== null) {
+            // Worker succeeded — mark all articles as seen (worker can't access localStorage)
+            newArticles.forEach(a => markAsSeen(a.id));
+            finalizeCycle(workerResult, allArticles.length, newArticles.length, cycleStart);
+        } else {
+            // Fallback: main-thread chunked classification
+            processChunk(newArticles, 0, [], (signalQueue) => {
+                finalizeCycle(signalQueue, allArticles.length, newArticles.length, cycleStart);
             });
+        }
+    }
 
-            stats.totalSignals += signalCount;
-            stats.lastPoll = Date.now();
-            stats.cycleCount++;
+    function finalizeCycle(signalQueue, fetchedCount, newCount, cycleStart) {
+        const signalCount = signalQueue.length;
 
-            setFetching(false);
-            updateStatusIndicator();
-
-            const cycleTime = Math.round(performance.now() - cycleStart);
-            console.log(
-                `%c[SIGNAL_INTERCEPTOR] Cycle ${stats.cycleCount} complete: ` +
-                `${allArticles.length} fetched, ${newArticles.length} new, ${signalCount} classified (${cycleTime}ms)`,
-                'color: #39ff14;'
-            );
-
-            // Announce via CoreFeed
-            if (signalCount > 0 && typeof CoreFeed !== 'undefined') {
-                CoreFeed.addMessage('SIGNAL_HUNTER',
-                    `Ciclo completato in ${cycleTime}ms. ${signalCount} segnali intercettati e classificati.`
-                );
-            } else if (typeof CoreFeed !== 'undefined') {
-                CoreFeed.addMessage('SIGNAL_HUNTER',
-                    'Scansione completata. Nessun nuovo segnale. Il mondo è silenzioso... per ora.'
-                );
-            }
-
-            isRunning = false;
+        // Distribute signals with staggered timing
+        signalQueue.forEach((signal, i) => {
+            setTimeout(() => {
+                distributeSignal(signal);
+                showSignalToast(signal);
+            }, i * 5000); // 5 seconds between each signal
         });
+
+        stats.totalSignals += signalCount;
+        stats.lastPoll = Date.now();
+        stats.cycleCount++;
+
+        setFetching(false);
+        updateStatusIndicator();
+
+        const cycleTime = Math.round(performance.now() - cycleStart);
+        const workerTag = workerReady ? ' [WORKER]' : ' [MAIN]';
+        console.log(
+            `%c[SIGNAL_INTERCEPTOR] Cycle ${stats.cycleCount} complete${workerTag}: ` +
+            `${fetchedCount} fetched, ${newCount} new, ${signalCount} classified (${cycleTime}ms)`,
+            'color: #39ff14;'
+        );
+
+        // Announce via CoreFeed
+        if (signalCount > 0 && typeof CoreFeed !== 'undefined') {
+            CoreFeed.addMessage('SIGNAL_HUNTER',
+                `Ciclo completato in ${cycleTime}ms. ${signalCount} segnali intercettati e classificati.`
+            );
+        } else if (typeof CoreFeed !== 'undefined') {
+            CoreFeed.addMessage('SIGNAL_HUNTER',
+                'Scansione completata. Nessun nuovo segnale. Il mondo è silenzioso... per ora.'
+            );
+        }
+
+        isRunning = false;
     }
 
     let lastManualPoll = 0;
@@ -1061,14 +1390,26 @@ const SignalInterceptor = (() => {
     // ══════════════════════════════════════════════
 
     function init() {
-        const startup = () => {
+        const startup = async () => {
             createStatusIndicator();
 
+            // Initialize Web Worker for off-main-thread classification
+            initWorker();
+
+            // Load persisted state from IndexedDB
+            await loadSourceReputations();
+            await loadQuarantineState();
+
+            // Trigger IndexedDB migration from localStorage
+            if (typeof IndexedStore !== 'undefined') {
+                IndexedStore.migrateFromLocalStorage();
+            }
+
             console.log('%c╔══════════════════════════════════════════╗', 'color: #ff0084;');
-            console.log('%c║     SIGNAL_INTERCEPTOR v1.0 ONLINE      ║', 'color: #ff0084;');
+            console.log('%c║     SIGNAL_INTERCEPTOR v2.0 ONLINE      ║', 'color: #ff0084;');
             console.log('%c║     "The Doomsday Machine is running"    ║', 'color: #ff0084;');
             console.log('%c╚══════════════════════════════════════════╝', 'color: #ff0084;');
-            console.log('%c Feeds: ' + FEEDS.length + ' | Poll interval: ' + (CONFIG.pollInterval / 60000) + 'min', 'color: #00d4ff;');
+            console.log('%c Feeds: ' + FEEDS.length + ' | Poll interval: ' + (CONFIG.pollInterval / 60000) + 'min | Worker: ' + (workerReady ? 'ON' : 'OFF'), 'color: #00d4ff;');
 
             // First poll after 5 seconds (let CoreFeed initialize first)
             setTimeout(pollCycle, 5000);
@@ -1076,9 +1417,14 @@ const SignalInterceptor = (() => {
             // Then poll every 10 minutes
             pollTimer = setInterval(pollCycle, CONFIG.pollInterval);
 
-            // Cleanup on page unload to prevent memory leaks
+            // Cleanup on page unload — persist all reputations
             window.addEventListener('beforeunload', () => {
                 if (pollTimer) clearInterval(pollTimer);
+                if (worker) worker.terminate();
+                // Persist all source reputations on exit
+                Object.keys(SOURCE_TRUST).forEach(source => {
+                    persistSourceReputation(source, SOURCE_TRUST[source]);
+                });
             });
         };
 
@@ -1100,15 +1446,26 @@ const SignalInterceptor = (() => {
         triggerManualPoll,
         getStats: () => ({
             ...stats,
+            workerActive: workerReady,
             circuitBreaker: {
                 primary: { ...circuitBreaker.primary },
                 fallback: { ...circuitBreaker.fallback },
             },
         }),
         getArchive: () => typeof PersistenceManager !== 'undefined' ? PersistenceManager.getArchive() : [],
-        getSourceTrust: () => ({ ...SOURCE_TRUST }),
+        getSourceTrust: () => {
+            const result = {};
+            Object.keys(SOURCE_TRUST).forEach(k => { result[k] = { ...SOURCE_TRUST[k] }; });
+            return result;
+        },
+        getFeedHealth: () => {
+            const result = {};
+            Object.keys(FEED_HEALTH).forEach(k => { result[k] = { ...FEED_HEALTH[k] }; });
+            return result;
+        },
         FEEDS,
-        DOMAINS
+        DOMAINS,
+        URGENCY_WORDS,
     };
 
 })();
