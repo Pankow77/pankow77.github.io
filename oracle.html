@@ -900,6 +900,17 @@
                 </div>
                 <canvas id="stabilityChart"></canvas>
             </div>
+
+            <!-- INTELLIGENCE BRIEFING PANEL -->
+            <div class="stability-section" id="briefingPanel" style="display:none;">
+                <div class="stability-header">
+                    <div class="stability-title">INTELLIGENCE BRIEFING</div>
+                    <div class="refresh-rate" id="briefingStatus">AWAITING CASCADE DATA</div>
+                </div>
+                <div id="briefingContent" style="font-family:'Share Tech Mono',monospace; font-size:0.65rem; color:var(--text-secondary); letter-spacing:0.03em;">
+                    <div style="color:var(--text-dim); padding:12px 0;">Monitoring for cross-domain cascades...</div>
+                </div>
+            </div>
         </div>
 
         <!-- RIGHT: SIDEBAR -->
@@ -1203,6 +1214,8 @@
     </script>
 <script src="js/state-manager.js"></script>
 <script src="js/rss-pipeline.js"></script>
+<script src="js/cascade-detector.js"></script>
+<script src="js/briefing-engine.js"></script>
 <script src="js/core-feed.js"></script>
 <script>
 // ═══════════════════════════════════════════════════
@@ -1364,6 +1377,62 @@
         }
     }
 
+    // ── Render briefings panel ──
+    function renderBriefings(briefings) {
+        var panel = document.getElementById('briefingPanel');
+        var content = document.getElementById('briefingContent');
+        var status = document.getElementById('briefingStatus');
+        if (!panel || !content) return;
+
+        panel.style.display = '';
+
+        var html = '';
+        briefings.forEach(function(b) {
+            var sevColor = b.severityColor || 'var(--text-dim)';
+            html += '<div style="padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.04);">';
+            html += '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">';
+            html += '<span style="color:' + sevColor + '; font-weight:bold; font-size:0.7rem;">' + (b.title || 'CASCADE ALERT') + '</span>';
+            html += '<span style="color:' + sevColor + '; font-size:0.55rem; padding:2px 8px; border:1px solid ' + sevColor + '; border-radius:2px;">' + b.severity + '</span>';
+            html += '</div>';
+
+            // Probability bars
+            html += '<div style="display:flex; gap:12px; margin-bottom:8px; font-size:0.55rem;">';
+            html += '<span style="color:var(--text-dim)">P(7d): <span style="color:var(--cyan)">' + b.probability.shortTerm + '%</span></span>';
+            html += '<span style="color:var(--text-dim)">P(30d): <span style="color:var(--text-secondary)">' + b.probability.mediumTerm + '%</span></span>';
+            html += '<span style="color:var(--text-dim)">P(90d): <span style="color:var(--text-dim)">' + b.probability.longTerm + '%</span></span>';
+            html += '<span style="color:var(--text-dim)">CONF: <span style="color:var(--green)">' + b.confidence + '%</span></span>';
+            html += '</div>';
+
+            // Findings
+            html += '<div style="margin-bottom:6px;">';
+            b.findings.forEach(function(f) {
+                html += '<div style="padding:2px 0; color:var(--text-secondary); font-size:0.6rem;">&#9656; ' + f + '</div>';
+            });
+            html += '</div>';
+
+            // Recommendations
+            html += '<div style="margin-bottom:4px;">';
+            b.recommendations.forEach(function(r) {
+                html += '<div style="padding:2px 0; color:var(--teal); font-size:0.58rem;">&#10003; ' + r + '</div>';
+            });
+            html += '</div>';
+
+            // Domains
+            html += '<div style="font-size:0.5rem; color:var(--text-dim);">DOMAINS: ' + b.domains.map(function(d){ return d.toUpperCase(); }).join(' + ') + ' | SIGNALS: ' + b.signalCount + '</div>';
+            html += '</div>';
+        });
+
+        content.innerHTML = html || '<div style="color:var(--text-dim); padding:12px 0;">No active briefings.</div>';
+
+        // Update status
+        var sitRep = window.BriefingEngine ? BriefingEngine.getSitRep() : null;
+        if (sitRep && status) {
+            var statusColor = sitRep.status === 'CRITICAL' ? 'var(--red)' :
+                              sitRep.status === 'ELEVATED' ? 'var(--orange)' : 'var(--green)';
+            status.innerHTML = 'STATUS: <span style="color:' + statusColor + '">' + sitRep.status + '</span> | CASCADES: ' + sitRep.activeCascades;
+        }
+    }
+
     // ── Main integration ──
     function startIntegration() {
         if (!window.RSSPipeline || !window.StateManager) {
@@ -1401,12 +1470,27 @@
 
             // Update header
             updateHeaderStats();
+
+            // CASCADE DETECTION + BRIEFING
+            if (window.CascadeDetector) {
+                var cascades = CascadeDetector.process(signals);
+                if (cascades.length > 0 && window.BriefingEngine) {
+                    var briefings = BriefingEngine.process(cascades);
+                    renderBriefings(briefings);
+                }
+            }
         });
 
         // Also check StateManager for previously stored domain risks
         const storedRisks = StateManager.getDomainRisks();
         for (const [domain, data] of Object.entries(storedRisks)) {
             updateDomainCard(domain, data.value);
+        }
+
+        // Restore existing briefings
+        if (window.BriefingEngine) {
+            var existing = BriefingEngine.getBriefings();
+            if (existing.length > 0) renderBriefings(existing.slice(-3));
         }
 
         // Start pipeline — fetch every 5 minutes
