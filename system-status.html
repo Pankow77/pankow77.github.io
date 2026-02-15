@@ -394,12 +394,13 @@
             </div>`;
         }
 
-        // ── 8. Watchdog — Independent Observer ──
+        // ── 8. Watchdog — Constitutional Observer ──
         if (typeof Watchdog !== 'undefined') {
             const wdStatus = Watchdog.getStatus();
             const auditLog = Watchdog.getAuditLog();
             const recentAudits = auditLog.slice(-5);
             const trustColor = wdStatus.trustworthy ? 'dot-green' : 'dot-red';
+            const hasEpistemic = recentAudits.some(a => a.hasEpistemic);
 
             html += `
             <div class="panel">
@@ -408,15 +409,17 @@
                     <span class="status-dot ${trustColor}"></span>
                 </div>
                 <div class="metric"><span class="label">Status</span><span class="value ${wdStatus.trustworthy ? 'good' : 'bad'}">${wdStatus.trustworthy ? 'SYSTEM TRUSTWORTHY' : 'DISAGREEMENT DETECTED'}</span></div>
+                <div class="metric"><span class="label">Isolation</span><span class="value ${wdStatus.workerIsolated ? 'good' : 'warn'}">${wdStatus.workerIsolated ? 'WORKER ISOLATED' : 'MAIN THREAD (degraded)'}</span></div>
                 <div class="metric"><span class="label">Total Checks</span><span class="value">${wdStatus.totalChecks}</span></div>
                 <div class="metric"><span class="label">Disagreements</span><span class="value ${wdStatus.disagreements > 0 ? 'warn' : 'good'}">${wdStatus.disagreements}</span></div>
-                <div class="metric"><span class="label">Running</span><span class="value ${wdStatus.running ? 'good' : 'warn'}">${wdStatus.running ? 'YES' : 'NO'}</span></div>
+                ${hasEpistemic ? `<div class="metric"><span class="label">Epistemic</span><span class="value bad">OPERATOR INCOHERENCE DETECTED</span></div>` : ''}
                 <div class="metric"><span class="label">Audit Entries</span><span class="value">${auditLog.length}</span></div>
                 ${recentAudits.length > 0 ? `
                 <div style="margin-top:8px;padding:8px;background:#060a12;border:1px solid #1a2436;max-height:100px;overflow-y:auto;font-size:10px;line-height:1.5;">
-                    ${recentAudits.map(a => `<div style="color:${a.findings > 0 ? '#ff3344' : '#4a6a8c'}">[${new Date(a.t).toLocaleTimeString()}] Check #${a.check}: ${a.findings} findings, disagree=${a.disagreements}</div>`).join('')}
+                    ${recentAudits.map(a => `<div style="color:${a.hasEpistemic ? '#ff0084' : a.findings > 0 ? '#ff3344' : '#4a6a8c'}">[${new Date(a.t).toLocaleTimeString()}] Check #${a.check}: ${a.findings} findings${a.hasEpistemic ? ' [EPISTEMIC]' : ''}, disagree=${a.disagreements}</div>`).join('')}
                 </div>` : ''}
             </div>`;
+        }
         }
 
         grid.innerHTML = html;
