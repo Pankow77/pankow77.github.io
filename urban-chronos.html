@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
     <title>URBAN_CHRONOS v2.0 | Predictive Sovereignty Engine</title>
     <meta name="description" content="URBAN_CHRONOS v2.0 - Predictive Sovereignty Engine. Urban evolution modeling in seconds, not years. Hybrid Syndicate / Ethic Software Foundation.">
     <style>
@@ -990,6 +991,17 @@
         // URBAN_CHRONOS v2.0 — Predictive Sovereignty Engine
         // ═══════════════════════════════════════════════
 
+        // ── SECURITY: HTML ESCAPE ──
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
         // ── SECTOR NAMES ──
         const sectorNames = [
             'CENTRO_STORICO','PORTO_ANTICO','QUARTIERE_NORD','ZONA_INDUSTRIALE','PARCO_URBANO',
@@ -1423,7 +1435,7 @@
             const time = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0') + ':' + now.getSeconds().toString().padStart(2,'0');
             const entry = document.createElement('div');
             entry.className = 'log-entry log-' + type;
-            entry.innerHTML = '<span class="log-time">[' + time + ']</span><span class="log-msg">' + msg + '</span>';
+            entry.innerHTML = '<span class="log-time">[' + time + ']</span><span class="log-msg">' + escapeHtml(msg) + '</span>';
             feed.insertBefore(entry, feed.firstChild);
             if (feed.children.length > 30) feed.removeChild(feed.lastChild);
         }

@@ -406,9 +406,25 @@ const SignalInterceptor = (() => {
     }
 
     function stripHTML(str) {
-        const tmp = document.createElement('div');
-        tmp.innerHTML = str;
-        return tmp.textContent || tmp.innerText || '';
+        if (!str) return '';
+        // Use DOMParser to safely extract text without executing scripts
+        try {
+            const doc = new DOMParser().parseFromString(str, 'text/html');
+            return doc.body.textContent || '';
+        } catch (e) {
+            // Fallback: regex strip (safe, no DOM execution)
+            return String(str).replace(/<[^>]*>/g, '');
+        }
+    }
+
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
     }
 
     // ══════════════════════════════════════════════
@@ -534,7 +550,7 @@ const SignalInterceptor = (() => {
             if (watchMatches.length > 0 && typeof CoreFeed !== 'undefined') {
                 watchMatches.forEach(match => {
                     CoreFeed.addMessage('SIGNAL_HUNTER',
-                        `⚠ WATCHLIST HIT: "${match.label}" [${match.priority}] su segnale ${signal.domain}. Pattern: ${match.pattern}`
+                        `⚠ WATCHLIST HIT: "${stripHTML(match.label)}" [${stripHTML(match.priority)}] su segnale ${stripHTML(signal.domain)}. Pattern: ${stripHTML(match.pattern)}`
                     );
                 });
             }
@@ -774,9 +790,9 @@ const SignalInterceptor = (() => {
             : signal.title;
 
         toast.innerHTML = `
-            <span class="si-toast-domain" style="color: ${signal.domainColor};">${signal.domainIcon} ${signal.domain}</span>
-            <span class="si-toast-title">${shortTitle}</span>
-            <span class="si-toast-severity">SEV:${signal.severity}%</span>
+            <span class="si-toast-domain" style="color: ${escapeHtml(signal.domainColor)};">${escapeHtml(signal.domainIcon)} ${escapeHtml(signal.domain)}</span>
+            <span class="si-toast-title">${escapeHtml(shortTitle)}</span>
+            <span class="si-toast-severity">SEV:${parseInt(signal.severity) || 0}%</span>
         `;
         document.body.appendChild(toast);
         setTimeout(() => toast.remove(), 4500);
@@ -867,8 +883,18 @@ const SignalInterceptor = (() => {
         isRunning = false;
     }
 
+    let lastManualPoll = 0;
     function triggerManualPoll() {
         if (isRunning) return;
+        // Rate limit: minimum 30 seconds between manual polls
+        const now = Date.now();
+        if (now - lastManualPoll < 30000) {
+            if (typeof CoreFeed !== 'undefined') {
+                CoreFeed.addMessage('SENTINEL', 'Cooldown attivo. Attendi prima della prossima scansione manuale.');
+            }
+            return;
+        }
+        lastManualPoll = now;
         if (typeof CoreFeed !== 'undefined') {
             CoreFeed.addMessage('PANKOW_77C', 'Scansione manuale attivata dall\'operatore.');
         }

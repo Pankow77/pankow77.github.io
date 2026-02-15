@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
     <title>PNEUMA | Local Operational Sanctuary</title>
     <meta name="description" content="PNEUMA - Local Operational Sanctuary. DEMETER / URBANIX / NEXUS. Hybrid Syndicate Ethic Software Foundation.">
     <style>
@@ -1045,6 +1046,17 @@
 </div>
 
 <script>
+// ===== SECURITY: HTML ESCAPE =====
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // ===== BOOT SEQUENCE =====
 const BOOT_LINES = [
     { text: 'CORE DIRECTIVE: INITIALIZE PROJECT PNEUMA', cls: 'bold' },
@@ -1239,8 +1251,8 @@ function renderArchive(filter) {
         const tagCls = d.tag === 'MEDICAL' ? 'tag-medical' : d.tag === 'TECHNICAL' ? 'tag-technical' : 'tag-survival';
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td>${d.name}</td>
-            <td><span class="${tagCls}">${d.tag}</span></td>
+            <td>${escapeHtml(d.name)}</td>
+            <td><span class="${tagCls}">${escapeHtml(d.tag)}</span></td>
             <td><button class="view-btn" title="Preview">&#x1F441;</button></td>
         `;
         body.appendChild(tr);

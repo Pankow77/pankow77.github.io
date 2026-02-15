@@ -343,6 +343,17 @@ const CoreFeed = (() => {
         feedList = document.getElementById('cfList');
     }
 
+    // ── ESCAPE HTML ──
+    function escapeHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
     // ── ADD MESSAGE ──
     function addMessage(coreId, text) {
         const core = CORES.find(c => c.id === coreId);
@@ -355,8 +366,8 @@ const CoreFeed = (() => {
         const entry = document.createElement('div');
         entry.className = 'cf-entry';
         entry.innerHTML = `
-            <span class="cf-core" style="color: ${core.color};">${core.id}</span>
-            <span class="cf-msg">${text}</span>
+            <span class="cf-core" style="color: ${escapeHtml(core.color)};">${escapeHtml(core.id)}</span>
+            <span class="cf-msg">${escapeHtml(text)}</span>
             <span class="cf-time">${time}</span>
         `;
 

@@ -322,14 +322,29 @@ const PersistenceManager = (() => {
                     const currentArchive = getArchive();
                     const existingLinks = new Set(currentArchive.map(s => s.link).filter(Boolean));
 
+                    // Allowed signal properties (whitelist)
+                    const ALLOWED_KEYS = ['id', 'title', 'description', 'link', 'source', 'domain', 'severity', 'time', 'classifiedAt', 'domainColor', 'domainIcon'];
+
                     let imported = 0;
                     data.archive.forEach(signal => {
-                        if (signal.link && !existingLinks.has(signal.link)) {
-                            currentArchive.push(signal);
-                            existingLinks.add(signal.link);
+                        // Validate: must be a plain object with expected fields
+                        if (!signal || typeof signal !== 'object' || Array.isArray(signal)) return;
+                        if (typeof signal.title !== 'string' || typeof signal.domain !== 'string') return;
+
+                        // Sanitize: strip any unexpected keys
+                        const clean = {};
+                        ALLOWED_KEYS.forEach(key => {
+                            if (signal[key] !== undefined) {
+                                clean[key] = typeof signal[key] === 'string' ? signal[key].substring(0, 2000) : signal[key];
+                            }
+                        });
+
+                        if (clean.link && !existingLinks.has(clean.link)) {
+                            currentArchive.push(clean);
+                            existingLinks.add(clean.link);
                             imported++;
-                        } else if (!signal.link) {
-                            currentArchive.push(signal);
+                        } else if (!clean.link) {
+                            currentArchive.push(clean);
                             imported++;
                         }
                     });

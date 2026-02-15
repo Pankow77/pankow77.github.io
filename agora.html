@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
     <title>AGORA | 16-Core Deliberation Engine</title>
     <meta name="description" content="AGORA - 16-Core Distributed Deliberation Engine. Hybrid Syndicate Research Division.">
     <style>
@@ -977,6 +978,17 @@
     </div>
 
 <script>
+// ===== SECURITY: HTML ESCAPE =====
+function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // ===== 16 CORE DEFINITIONS =====
 const CORES = [
     { id: 'PANKOW_77C',      color: '#ff0084', spec: 'Strategic Vision',       domain: 'COMMAND',       type: 'carbon',     dotClass: 'carbon' },
@@ -1115,10 +1127,10 @@ function addMessage(data) {
 
     msg.innerHTML = `
         <div class="msg-header">
-            <span class="msg-sender" style="color: ${core.color};">${core.id}</span>
+            <span class="msg-sender" style="color: ${escapeHtml(core.color)};">${escapeHtml(core.id)}</span>
             <span class="msg-time">${getTimestamp()}</span>
         </div>
-        <div class="msg-body">${data.text}</div>
+        <div class="msg-body">${escapeHtml(data.text)}</div>
         <div class="msg-tags">${tagsHtml}</div>
     `;
 
@@ -1199,7 +1211,7 @@ function injectTopic() {
     const item = document.createElement('div');
     item.className = 'tq-item active';
     item.innerHTML = `
-        <div class="tq-topic">${topic}</div>
+        <div class="tq-topic">${escapeHtml(topic)}</div>
         <div class="tq-meta">
             <span class="tq-domain">OPERATOR</span>
             <span class="tq-status active">ACTIVE</span>
@@ -1213,7 +1225,7 @@ function injectTopic() {
     setTimeout(() => {
         addMessage({
             core: respCore,
-            text: `Topic ricevuto dall\'Operatore. Inizializzo analisi su: "${topic}". Richiedo contributi dai core con domain expertise rilevante.`,
+            text: `Topic ricevuto dall\'Operatore. Inizializzo analisi su: "${escapeHtml(topic)}". Richiedo contributi dai core con domain expertise rilevante.`,
             tags: ['synthesis']
         });
         clearTyping();

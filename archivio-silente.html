@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
     <title>ARCHIVIO_SILENTE | Risveglio Ibrido</title>
     <meta name="description" content="ARCHIVIO_SILENTE - Condizione di Risveglio Ibrido. Distributed truth sanctuary. Hybrid Syndicate / Ethic Software Foundation.">
     <style>
@@ -688,6 +689,17 @@
         let totalNodes = 1024;
         let coherenceData = { entropy: [], coherence: [] };
 
+        // ── SECURITY: HTML ESCAPE ──
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
         // ── INIT ──
         function init() {
             generateCoherenceData();
@@ -931,14 +943,14 @@
             entry.className = 'signal-entry';
             entry.innerHTML = `
                 <div class="signal-header">
-                    <span class="signal-id">${id}</span>
-                    <span class="signal-type type-${type}">${typeLabels[type]}</span>
-                    <span class="signal-time">${time} UTC</span>
+                    <span class="signal-id">${escapeHtml(id)}</span>
+                    <span class="signal-type type-${escapeHtml(type)}">${escapeHtml(typeLabels[type] || type)}</span>
+                    <span class="signal-time">${escapeHtml(time)} UTC</span>
                 </div>
-                <div class="signal-body">${body}</div>
+                <div class="signal-body">${escapeHtml(body)}</div>
                 <div class="signal-meta">
-                    <div>NODES: <span>${nodes.toLocaleString()}</span></div>
-                    <div>INTEGRITY: <span>${integrity}%</span></div>
+                    <div>NODES: <span>${parseInt(nodes).toLocaleString()}</span></div>
+                    <div>INTEGRITY: <span>${escapeHtml(integrity)}%</span></div>
                     <div class="signal-nodes">${nodeDots}</div>
                     <div>STATUS: <span style="color: var(--teal);">IMMUTABLE</span></div>
                 </div>
@@ -1046,7 +1058,7 @@
             const integrity = (95 + (signal.severity / 20)).toFixed(1);
 
             addSignal(signalId, timeStr, type,
-                '⚡ LIVE INTERCEPT — [' + signal.domain + '] ' + signal.title,
+                '⚡ LIVE INTERCEPT — [' + (signal.domain || '') + '] ' + (signal.title || ''),
                 nodes, integrity);
 
             document.getElementById('signalsTotal').textContent = signalCount;

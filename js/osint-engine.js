@@ -520,11 +520,17 @@ const OsintEngine = (() => {
             // Severity filter
             if (signal.severity < item.minSeverity) return;
 
-            // Pattern match
+            // Pattern match (with ReDoS protection)
             let matched = false;
             if (item.isRegex) {
                 try {
-                    matched = new RegExp(item.pattern, 'i').test(text);
+                    // ReDoS guard: reject overly complex or long patterns
+                    if (item.pattern.length > 200 || /(\.\*){3,}|(\+\+)|(\*\*)/.test(item.pattern)) {
+                        matched = false;
+                    } else {
+                        const regex = new RegExp(item.pattern, 'i');
+                        matched = regex.test(text.substring(0, 5000));
+                    }
                 } catch (e) {
                     matched = false;
                 }

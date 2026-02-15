@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://api.allorigins.win https://api.rss2json.com;">
     <title>SIGINT_CONSOLE | OSINT Workbench</title>
     <meta name="description" content="SIGINT Console - Professional OSINT Intelligence Workbench. Hybrid Syndicate.">
     <style>
@@ -1216,6 +1217,20 @@
         'use strict';
 
         // ══════════════════════════════════════════════
+        // SECURITY: HTML ESCAPE
+        // ══════════════════════════════════════════════
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        // ══════════════════════════════════════════════
         // STATE
         // ══════════════════════════════════════════════
 
@@ -1331,26 +1346,26 @@
             grid.innerHTML = filtered.slice(0, 50).map(entity => {
                 const domains = Object.entries(entity.domains)
                     .sort((a, b) => b[1] - a[1])
-                    .map(([d, count]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${d} (${count})</span>`)
+                    .map(([d, count]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${escapeHtml(d)} (${parseInt(count) || 0})</span>`)
                     .join('');
 
                 const sevColor = entity.severity.avg > 60 ? 'var(--red)' : entity.severity.avg > 35 ? 'var(--orange)' : 'var(--cyan)';
 
                 return `
-                    <div class="entity-card" data-entity="${entity.name}" data-type="${entity.type}">
+                    <div class="entity-card" data-entity="${escapeHtml(entity.name)}" data-type="${escapeHtml(entity.type)}">
                         <div class="entity-card-header">
-                            <span class="entity-icon">${entity.icon}</span>
-                            <span class="entity-name" style="color: ${entity.color};">${entity.name}</span>
-                            <span class="entity-type" style="color: ${entity.color}; background: ${entity.color}15; border: 1px solid ${entity.color}30;">${entity.type}</span>
+                            <span class="entity-icon">${escapeHtml(entity.icon)}</span>
+                            <span class="entity-name" style="color: ${escapeHtml(entity.color)};">${escapeHtml(entity.name)}</span>
+                            <span class="entity-type" style="color: ${escapeHtml(entity.color)}; background: ${escapeHtml(entity.color)}15; border: 1px solid ${escapeHtml(entity.color)}30;">${escapeHtml(entity.type)}</span>
                         </div>
                         <div class="entity-meta">
-                            <span>Mentions: <strong>${entity.mentions}</strong></span>
-                            <span>Avg Severity: <strong style="color: ${sevColor};">${entity.severity.avg.toFixed(0)}%</strong></span>
-                            <span>Max: <strong>${entity.severity.max}%</strong></span>
+                            <span>Mentions: <strong>${parseInt(entity.mentions) || 0}</strong></span>
+                            <span>Avg Severity: <strong style="color: ${sevColor};">${parseFloat(entity.severity.avg).toFixed(0)}%</strong></span>
+                            <span>Max: <strong>${parseInt(entity.severity.max) || 0}%</strong></span>
                         </div>
                         <div class="entity-domains">${domains}</div>
                         <div class="entity-severity-bar">
-                            <div class="entity-severity-fill" style="width: ${entity.severity.avg}%; background: ${sevColor};"></div>
+                            <div class="entity-severity-fill" style="width: ${parseFloat(entity.severity.avg) || 0}%; background: ${sevColor};"></div>
                         </div>
                     </div>
                 `;
@@ -1384,7 +1399,7 @@
 
             const domainItems = Object.entries(pol.domainAffinity)
                 .sort((a, b) => b[1] - a[1])
-                .map(([d, c]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${d}: ${c}</span>`)
+                .map(([d, c]) => `<span class="entity-domain-pill" style="color: ${DOMAIN_COLORS[d] || '#666'}; border-color: ${DOMAIN_COLORS[d] || '#666'}30;">${escapeHtml(d)}: ${parseInt(c) || 0}</span>`)
                 .join(' ');
 
             document.getElementById('entity-detail-content').innerHTML = `
@@ -1422,9 +1437,9 @@
                 </div>
 
                 <div style="display: flex; gap: 20px; font-family: 'Share Tech Mono', monospace; font-size: 0.48rem; color: var(--text-dim); margin-top: 16px;">
-                    <span>First Seen: <strong style="color: var(--text-secondary);">${pol.firstSeen}</strong></span>
-                    <span>Last Seen: <strong style="color: var(--text-secondary);">${pol.lastSeen}</strong></span>
-                    <span>Peak Day: <strong style="color: var(--text-secondary);">${pol.peakDay}</strong></span>
+                    <span>First Seen: <strong style="color: var(--text-secondary);">${escapeHtml(pol.firstSeen)}</strong></span>
+                    <span>Last Seen: <strong style="color: var(--text-secondary);">${escapeHtml(pol.lastSeen)}</strong></span>
+                    <span>Peak Day: <strong style="color: var(--text-secondary);">${escapeHtml(pol.peakDay)}</strong></span>
                 </div>
             `;
 
@@ -1466,21 +1481,21 @@
             }
 
             list.innerHTML = cases.map(c => `
-                <div class="case-card" data-case-id="${c.id}">
+                <div class="case-card" data-case-id="${escapeHtml(c.id)}">
                     <div class="case-card-header">
                         <div style="display: flex; align-items: center; gap: 8px;">
-                            <span class="case-id">${c.id}</span>
-                            <span class="priority-badge priority-${c.priority}">${c.priority}</span>
+                            <span class="case-id">${escapeHtml(c.id)}</span>
+                            <span class="priority-badge priority-${escapeHtml(c.priority)}">${escapeHtml(c.priority)}</span>
                         </div>
-                        <span class="case-status ${c.status}">${c.status}</span>
+                        <span class="case-status ${escapeHtml(c.status)}">${escapeHtml(c.status)}</span>
                     </div>
-                    <div class="case-title">${c.title}</div>
-                    <div class="case-desc">${c.description || 'No description'}</div>
+                    <div class="case-title">${escapeHtml(c.title)}</div>
+                    <div class="case-desc">${escapeHtml(c.description || 'No description')}</div>
                     <div class="case-meta">
-                        <span>Signals: <strong>${c.signals.length}</strong></span>
-                        <span>Notes: <strong>${c.notes.length}</strong></span>
+                        <span>Signals: <strong>${parseInt(c.signals.length) || 0}</strong></span>
+                        <span>Notes: <strong>${parseInt(c.notes.length) || 0}</strong></span>
                         <span>Created: <strong>${new Date(c.created).toLocaleDateString('it-IT')}</strong></span>
-                        <span>Classification: <strong>${c.classification}</strong></span>
+                        <span>Classification: <strong>${escapeHtml(c.classification)}</strong></span>
                     </div>
                 </div>
             `).join('');
@@ -1513,9 +1528,9 @@
                     const sevColor = s.severity > 60 ? 'var(--red)' : s.severity > 35 ? 'var(--orange)' : 'var(--cyan)';
                     return `
                         <div class="case-signal-item">
-                            <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${s.domain}</span>
-                            <span class="case-signal-title">${s.title}</span>
-                            <span class="case-signal-severity" style="color: ${sevColor};">${s.severity}%</span>
+                            <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${escapeHtml(s.domain)}</span>
+                            <span class="case-signal-title">${escapeHtml(s.title)}</span>
+                            <span class="case-signal-severity" style="color: ${sevColor};">${parseInt(s.severity) || 0}%</span>
                         </div>
                     `;
                 }).join('');
@@ -1528,8 +1543,8 @@
             } else {
                 notesDiv.innerHTML = theCase.notes.map(n => `
                     <div class="case-note-item">
-                        <div class="case-note-meta">${new Date(n.timestamp).toLocaleString('it-IT')} — ${n.analyst}</div>
-                        ${n.text}
+                        <div class="case-note-meta">${new Date(n.timestamp).toLocaleString('it-IT')} — ${escapeHtml(n.analyst)}</div>
+                        ${escapeHtml(n.text)}
                     </div>
                 `).join('');
             }
@@ -1599,10 +1614,10 @@
             document.getElementById('signal-search-results').innerHTML = results.map(s => {
                 const domColor = DOMAIN_COLORS[s.domain] || '#666';
                 return `
-                    <div class="case-signal-item" style="cursor: pointer;" data-signal-id="${s.id}" data-signal-title="${s.title}" data-signal-domain="${s.domain}" data-signal-severity="${s.severity}" data-signal-time="${s.time}" data-signal-source="${s.source}" data-signal-link="${s.link || ''}">
-                        <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${s.domain}</span>
-                        <span class="case-signal-title">${s.title}</span>
-                        <span class="case-signal-severity" style="color: ${s.severity > 60 ? 'var(--red)' : 'var(--cyan)'};">${s.severity}%</span>
+                    <div class="case-signal-item" style="cursor: pointer;" data-signal-id="${escapeHtml(s.id)}" data-signal-title="${escapeHtml(s.title)}" data-signal-domain="${escapeHtml(s.domain)}" data-signal-severity="${parseInt(s.severity) || 0}" data-signal-time="${parseInt(s.time) || 0}" data-signal-source="${escapeHtml(s.source)}" data-signal-link="${escapeHtml(s.link || '')}">
+                        <span class="case-signal-domain" style="color: ${domColor}; background: ${domColor}15; border: 1px solid ${domColor}30;">${escapeHtml(s.domain)}</span>
+                        <span class="case-signal-title">${escapeHtml(s.title)}</span>
+                        <span class="case-signal-severity" style="color: ${s.severity > 60 ? 'var(--red)' : 'var(--cyan)'};">${parseInt(s.severity) || 0}%</span>
                     </div>
                 `;
             }).join('');
@@ -1678,17 +1693,17 @@
             grid.innerHTML = links.slice(0, 30).map(link => `
                 <div class="link-card">
                     <div class="link-card-header">
-                        <span style="color: ${link.entityA.color};">${link.entityA.name.toUpperCase()}</span>
+                        <span style="color: ${escapeHtml(link.entityA.color)};">${escapeHtml(link.entityA.name.toUpperCase())}</span>
                         <span class="link-arrow">↔</span>
-                        <span style="color: ${link.entityB.color};">${link.entityB.name.toUpperCase()}</span>
-                        <span class="link-strength" style="color: ${link.strength > 70 ? 'var(--red)' : link.strength > 40 ? 'var(--orange)' : 'var(--cyan)'};">${link.strength}%</span>
+                        <span style="color: ${escapeHtml(link.entityB.color)};">${escapeHtml(link.entityB.name.toUpperCase())}</span>
+                        <span class="link-strength" style="color: ${link.strength > 70 ? 'var(--red)' : link.strength > 40 ? 'var(--orange)' : 'var(--cyan)'};">${parseInt(link.strength) || 0}%</span>
                     </div>
                     <div class="link-bar">
-                        <div class="link-bar-fill" style="width: ${link.strength}%;"></div>
+                        <div class="link-bar-fill" style="width: ${parseFloat(link.strength) || 0}%;"></div>
                     </div>
                     <div class="link-co">
-                        ${link.coOccurrences} co-occurrence${link.coOccurrences !== 1 ? 's' : ''} •
-                        ${link.entityA.type} ↔ ${link.entityB.type}
+                        ${parseInt(link.coOccurrences) || 0} co-occurrence${link.coOccurrences !== 1 ? 's' : ''} •
+                        ${escapeHtml(link.entityA.type)} ↔ ${escapeHtml(link.entityB.type)}
                     </div>
                 </div>
             `).join('');
@@ -1727,18 +1742,18 @@
                     const domColor = DOMAIN_COLORS[event.domain] || '#666';
                     const sevColor = event.severity > 60 ? 'var(--red)' : event.severity > 35 ? 'var(--orange)' : 'var(--cyan)';
                     const entityTags = event.entities.map(e =>
-                        `<span class="timeline-entity-tag" style="color: ${e.color}; border-color: ${e.color}40;">${e.icon} ${e.name}</span>`
+                        `<span class="timeline-entity-tag" style="color: ${escapeHtml(e.color)}; border-color: ${escapeHtml(e.color)}40;">${escapeHtml(e.icon)} ${escapeHtml(e.name)}</span>`
                     ).join('');
 
                     html += `
                         <div class="timeline-event">
                             <div class="timeline-dot" style="border-color: ${domColor};"></div>
-                            <div class="timeline-time">${event.timeFormatted}</div>
-                            <div class="timeline-title">${event.title}</div>
+                            <div class="timeline-time">${escapeHtml(event.timeFormatted)}</div>
+                            <div class="timeline-title">${escapeHtml(event.title)}</div>
                             <div class="timeline-meta">
-                                <span style="color: ${domColor};">● ${event.domain}</span>
-                                <span>SEV: <strong style="color: ${sevColor};">${event.severity}%</strong></span>
-                                <span>Source: ${event.source}</span>
+                                <span style="color: ${domColor};">● ${escapeHtml(event.domain)}</span>
+                                <span>SEV: <strong style="color: ${sevColor};">${parseInt(event.severity) || 0}%</strong></span>
+                                <span>Source: ${escapeHtml(event.source)}</span>
                             </div>
                             ${entityTags ? `<div class="timeline-entities">${entityTags}</div>` : ''}
                         </div>
@@ -1778,20 +1793,20 @@
 
                 return `
                     <div class="source-card">
-                        <div class="source-name" style="color: var(--text-primary);">${src.name}</div>
+                        <div class="source-name" style="color: var(--text-primary);">${escapeHtml(src.name)}</div>
                         <div class="source-matrix">
                             <div class="source-rating-box">
-                                <div class="source-rating-code" style="color: ${rel.color};">${src.latest.reliability}</div>
-                                <div class="source-rating-label">${rel.label.toUpperCase()}</div>
+                                <div class="source-rating-code" style="color: ${escapeHtml(rel.color)};">${escapeHtml(src.latest.reliability)}</div>
+                                <div class="source-rating-label">${escapeHtml(rel.label.toUpperCase())}</div>
                             </div>
                             <div class="source-rating-box">
-                                <div class="source-rating-code" style="color: ${cred.color};">${src.latest.credibility}</div>
-                                <div class="source-rating-label">${cred.label.toUpperCase()}</div>
+                                <div class="source-rating-code" style="color: ${escapeHtml(cred.color)};">${escapeHtml(src.latest.credibility)}</div>
+                                <div class="source-rating-label">${escapeHtml(cred.label.toUpperCase())}</div>
                             </div>
                         </div>
                         <div class="source-composite">
-                            <div class="source-composite-value" style="color: ${compColor};">${src.compositeScore}%</div>
-                            <div class="source-composite-label">COMPOSITE SCORE — ${src.latest.code}</div>
+                            <div class="source-composite-value" style="color: ${compColor};">${parseInt(src.compositeScore) || 0}%</div>
+                            <div class="source-composite-label">COMPOSITE SCORE — ${escapeHtml(src.latest.code)}</div>
                         </div>
                     </div>
                 `;
@@ -1843,12 +1858,12 @@
                 const priorityColor = { CRITICAL: 'var(--red)', HIGH: 'var(--orange)', MEDIUM: 'var(--yellow)', LOW: 'var(--cyan)' }[item.priority] || 'var(--cyan)';
                 return `
                     <div class="watch-item">
-                        <span class="priority-badge priority-${item.priority}" style="flex-shrink: 0;">${item.priority}</span>
-                        <span class="watch-pattern">${item.isRegex ? '/' : ''}${item.pattern}${item.isRegex ? '/' : ''}</span>
-                        <span style="font-size: 0.42rem; color: var(--text-dim);">${item.label}</span>
-                        <span class="watch-matches" style="color: ${item.matches > 0 ? priorityColor : 'var(--text-dim)'};">${item.matches} matches</span>
+                        <span class="priority-badge priority-${escapeHtml(item.priority)}" style="flex-shrink: 0;">${escapeHtml(item.priority)}</span>
+                        <span class="watch-pattern">${item.isRegex ? '/' : ''}${escapeHtml(item.pattern)}${item.isRegex ? '/' : ''}</span>
+                        <span style="font-size: 0.42rem; color: var(--text-dim);">${escapeHtml(item.label)}</span>
+                        <span class="watch-matches" style="color: ${item.matches > 0 ? priorityColor : 'var(--text-dim)'};">${parseInt(item.matches) || 0} matches</span>
                         <span style="font-size: 0.42rem; color: var(--text-dim);">${item.lastMatch ? new Date(item.lastMatch).toLocaleDateString('it-IT') : 'never'}</span>
-                        <button class="watch-remove" data-watch-id="${item.id}">✕</button>
+                        <button class="watch-remove" data-watch-id="${escapeHtml(item.id)}">✕</button>
                     </div>
                 `;
             }).join('');
@@ -1893,7 +1908,7 @@
             const select = document.getElementById('report-case-select');
             const cases = OsintEngine.getCases();
             select.innerHTML = '<option value="">Select Case...</option>' +
-                cases.map(c => `<option value="${c.id}">${c.id} — ${c.title}</option>`).join('');
+                cases.map(c => `<option value="${escapeHtml(c.id)}">${escapeHtml(c.id)} — ${escapeHtml(c.title)}</option>`).join('');
         }
 
         function generateReport(caseId) {
