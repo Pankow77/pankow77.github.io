@@ -129,6 +129,18 @@ const CascadeDetector = (() => {
 
         // 2. Check for cascade threshold
         if (elevatedCount < CONFIG.MIN_DOMAINS_FOR_CASCADE) {
+            // BAYESIAN UPDATE — Record negative observation (no cascade)
+            if (typeof BayesianEngine !== 'undefined') {
+                try {
+                    BayesianEngine.recordCascadeScan({
+                        status: 'nominal',
+                        elevatedDomains,
+                        cascades: [],
+                    });
+                } catch (e) {
+                    console.warn('[CASCADE] Bayesian negative update failed:', e.message);
+                }
+            }
             return {
                 status: 'nominal',
                 elevatedDomains,
@@ -225,6 +237,32 @@ const CascadeDetector = (() => {
 
         // 5. Sort by severity
         detectedCascades.sort((a, b) => b.severity - a.severity);
+
+        // 5.5. BAYESIAN UPDATE — Feed observation to BayesianEngine
+        if (typeof BayesianEngine !== 'undefined') {
+            const scanResult = {
+                status: detectedCascades.length > 0 ? 'cascade' : 'elevated',
+                elevatedDomains,
+                cascades: detectedCascades,
+            };
+            try {
+                const bayesResults = BayesianEngine.recordCascadeScan(scanResult);
+                // Enrich cascades with Bayesian probability
+                detectedCascades.forEach(c => {
+                    const prob = BayesianEngine.getCascadeProbability(c.patternId);
+                    if (prob) {
+                        c.bayesian = {
+                            probability: prob.probability,
+                            credible_interval: prob.credible_interval,
+                            effective_n: prob.effective_n,
+                            data_driven: prob.data_driven,
+                        };
+                    }
+                });
+            } catch (e) {
+                console.warn('[CASCADE] Bayesian update failed:', e.message);
+            }
+        }
 
         // 6. Store and broadcast
         if (detectedCascades.length > 0) {
@@ -330,6 +368,22 @@ const CascadeDetector = (() => {
         return cascadeHistory.slice(-limit).reverse();
     }
 
+    // ── BAYESIAN QUERY ──
+    function getBayesianStatus() {
+        if (typeof BayesianEngine === 'undefined') return null;
+        return BayesianEngine.getStatus();
+    }
+
+    function getCascadeProbabilities() {
+        if (typeof BayesianEngine === 'undefined') return null;
+        const results = {};
+        CASCADE_PATTERNS.forEach(p => {
+            results[p.id] = BayesianEngine.getCascadeProbability(p.id);
+        });
+        results['global'] = BayesianEngine.getCascadeProbability('global_cascade');
+        return results;
+    }
+
     // ── PUBLIC API ──
     return {
         start,
@@ -337,6 +391,8 @@ const CascadeDetector = (() => {
         scan,
         getActive,
         getHistory,
+        getBayesianStatus,
+        getCascadeProbabilities,
         CASCADE_PATTERNS,
         CONFIG,
     };
