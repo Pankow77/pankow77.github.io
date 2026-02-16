@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>URBAN_CHRONOS v2.0 | Predictive Sovereignty Engine</title>
+  <meta name="description" content="URBAN_CHRONOS v2.0 — Predictive urban planning engine. Where data meets sovereignty. HYBRID SYNDICATE // 2025">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     SPLASH / BOOT SEQUENCE
+     ═══════════════════════════════════════════════════════ -->
+<div id="splash-page">
+  <div class="splash-title" id="splash-title">URBAN_CHRONOS v2.0</div>
+  <div class="splash-separator" id="splash-sep"></div>
+  <div class="boot-terminal" id="boot-terminal">
+    <div class="boot-line" id="boot-0">&gt; Initializing core systems...</div>
+    <div class="boot-line" id="boot-1">&gt; Connecting Census Bureau API... <span class="check">✓</span></div>
+    <div class="boot-line" id="boot-2">&gt; Loading sector database... <span class="check">✓</span></div>
+    <div class="boot-line" id="boot-3">&gt; Calibrating prediction engine...</div>
+    <div class="boot-line" id="boot-4">&gt; Entropy seed: <span class="warn">5%</span></div>
+    <div class="boot-line" id="boot-5">&gt; Reality buffer: <span class="warn">12 months</span></div>
+    <div class="boot-line" id="boot-6">&gt; System ready. <span class="check">✓</span></div>
+  </div>
+  <div class="boot-progress" id="boot-progress">
+    <div class="boot-progress-bar" id="boot-progress-bar"></div>
+  </div>
+  <div class="splash-footer" id="splash-footer">HYBRID SYNDICATE // 2025</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     APP SHELL
+     ═══════════════════════════════════════════════════════ -->
+<div id="app" class="hidden">
+
+  <!-- Header -->
+  <header class="app-header">
+    <button class="header-menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+    <div class="header-title" id="header-title">URBAN_CHRONOS v2.0</div>
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span>ONLINE</span>
+    </div>
+  </header>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Drawer -->
+  <nav class="drawer" id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">URBAN_CHRONOS</div>
+      <div class="drawer-subtitle">v2.0 // PREDICTIVE ENGINE</div>
+    </div>
+    <div class="drawer-nav">
+      <button class="drawer-item active" data-page="dashboard">
+        <span class="drawer-item-icon">◫</span> DASHBOARD
+      </button>
+      <button class="drawer-item" data-page="map">
+        <span class="drawer-item-icon">◉</span> SECTOR MAP
+      </button>
+      <button class="drawer-item" data-page="predict">
+        <span class="drawer-item-icon">△</span> PREDICTION ENGINE
+      </button>
+      <button class="drawer-item" data-page="intervention">
+        <span class="drawer-item-icon">◈</span> INTERVENTION LAYER
+      </button>
+      <button class="drawer-item" data-page="datasources">
+        <span class="drawer-item-icon">⚡</span> DATA SOURCES
+      </button>
+      <button class="drawer-item" data-page="log">
+        <span class="drawer-item-icon">≡</span> SYSTEM LOG
+      </button>
+      <div class="drawer-divider"></div>
+      <button class="drawer-item" data-page="dashboard">
+        <span class="drawer-item-icon">⚙</span> SETTINGS
+      </button>
+    </div>
+    <div class="drawer-footer">v2.0.0 // HYBRID SYNDICATE</div>
+  </nav>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: DASHBOARD
+       ═════════════════════════════════════════════════════ -->
+  <main class="page active" id="page-dashboard" data-title="URBAN_CHRONOS v2.0">
+    <div class="page-content">
+
+      <!-- City Selector -->
+      <div class="city-selector" id="city-selector">
+        <span class="city-selector-icon">📍</span>
+        <span class="city-selector-name">New York, NY</span>
+        <span class="city-selector-arrow">▾</span>
+      </div>
+
+      <!-- System Vitality Radar -->
+      <div class="card">
+        <div class="card-header">SYSTEM VITALITY <span class="accent">// LIVE</span></div>
+        <div class="radar-container">
+          <canvas id="radar-chart"></canvas>
+        </div>
+        <div class="metrics-row">
+          <div class="metric-badge">
+            <span class="metric-badge-label">EFFICIENCY</span>
+            <span class="metric-badge-value nominal" id="dash-efficiency">89%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">SOVEREIGNTY</span>
+            <span class="metric-badge-value warning" id="dash-sovereignty">31%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">RESILIENCE</span>
+            <span class="metric-badge-value nominal" id="dash-resilience">72%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">PREDICT.</span>
+            <span class="metric-badge-value nominal" id="dash-predictability">85%</span>
+          </div>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span class="legend-swatch filled"></span> OPTIMIZED PATH</div>
+          <div class="legend-item"><span class="legend-swatch warning"></span> DIVERGENT PATH</div>
+          <div class="legend-item"><span class="legend-swatch critical"></span> NULL ZONE</div>
+        </div>
+      </div>
+
+      <!-- Sector Overview -->
+      <div class="card">
+        <div class="card-header">SECTOR OVERVIEW <span class="accent" id="sector-count">// 24 SECTORS</span></div>
+        <div class="sector-list" id="sector-list">
+          <!-- Populated by JS -->
+        </div>
+        <button class="view-all-btn" data-navigate="map">VIEW ALL SECTORS →</button>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="card mb-0">
+        <div class="card-header">QUICK STATS <span class="accent">// 2024</span></div>
+      </div>
+      <div class="stats-grid mb-12">
+        <div class="stat-cell">
+          <div class="stat-label">TOTAL POP</div>
+          <div class="stat-value">1.2M</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-label">MEDIAN INC</div>
+          <div class="stat-value">$58.4K</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-label">GROWTH</div>
+          <div class="stat-value">+2.3%</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-label">UNEMPLOY</div>
+          <div class="stat-value amber">4.8%</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-label">VACANCY</div>
+          <div class="stat-value">6.2%</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-label">AQI</div>
+          <div class="stat-value cyan">42</div>
+        </div>
+      </div>
+
+      <!-- System Status -->
+      <div class="system-bar">
+        <span class="sys-item">CORE: <span class="val">ONLINE</span></span>
+        <span class="sys-item">LATENCY: <span class="val">12ms</span></span>
+        <span class="api-chip">CENSUS ✓</span>
+        <span class="api-chip">BLS ✓</span>
+        <span class="api-chip">EPA ✓</span>
+      </div>
+
+      <!-- Latest Alert -->
+      <div class="alert-card" id="dash-alert">
+        <div>
+          <span class="alert-icon">⚠</span>
+          <span class="alert-title">LOSSY URBANISM</span>
+        </div>
+        <div class="alert-msg">Sovereignty index at 31%. Deterministic pathways dominate 69% of urban decisions. Increase entropy recommended.</div>
+        <button class="alert-btn" data-navigate="intervention">INVESTIGATE →</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: SECTOR MAP
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-map" data-title="SECTOR MAP">
+    <div class="page-content">
+
+      <!-- Layer Selection -->
+      <div class="card">
+        <div class="card-header">OVERLAY LAYER</div>
+        <div class="chip-row" id="map-layers">
+          <button class="chip active" data-layer="sovereignty">SOVEREIGNTY</button>
+          <button class="chip" data-layer="population">POPULATION</button>
+          <button class="chip" data-layer="income">INCOME</button>
+          <button class="chip" data-layer="homevalue">HOME VALUE</button>
+          <button class="chip" data-layer="unemployment">UNEMPLOYMENT</button>
+        </div>
+      </div>
+
+      <!-- SVG Map -->
+      <div class="map-container" id="map-container">
+        <svg class="map-svg" id="sector-map-svg" viewBox="0 0 600 500"></svg>
+      </div>
+
+      <!-- Map Legend -->
+      <div class="card">
+        <div class="map-legend-label" id="map-overlay-label">SOVEREIGNTY INDEX</div>
+        <div class="map-gradient mt-8"></div>
+        <div class="map-legend-values mt-8">
+          <span>LOW (0%)</span>
+          <span>50%</span>
+          <span>HIGH (100%)</span>
+        </div>
+      </div>
+
+      <!-- Sector Detail Panel -->
+      <div class="sector-detail-panel" id="map-sector-panel">
+        <div class="sector-detail-header">
+          <div>
+            <div class="sector-detail-name" id="map-panel-name">SECTOR_7G</div>
+            <div class="sector-detail-class" id="map-panel-class">MIXED USE</div>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">SOVEREIGNTY</span>
+            <span class="metric-badge-value warning" id="map-panel-sov">31%</span>
+          </div>
+        </div>
+        <div class="sector-detail-stats" id="map-panel-stats">
+          <!-- Populated by JS -->
+        </div>
+        <div class="sector-detail-actions">
+          <button class="btn-outline" id="map-btn-analysis">FULL ANALYSIS</button>
+          <button class="btn-outline cyan" id="map-btn-predict">PREDICT</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: NEIGHBORHOOD ANALYSIS
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-neighborhood" data-title="NEIGHBORHOOD ANALYSIS">
+    <div class="page-content">
+
+      <!-- Sector Header -->
+      <div class="sector-header-card" id="nbh-header">
+        <div class="sector-header-title" id="nbh-title">SECTOR_7G // WEST DISTRICT</div>
+        <div class="sector-header-sub">
+          <span id="nbh-tracts">12 Census Tracts</span>
+          <span id="nbh-area">4.2 km²</span>
+        </div>
+        <span class="classification-chip" id="nbh-class">MIXED USE</span>
+      </div>
+
+      <!-- Current Metrics -->
+      <div class="card mb-0">
+        <div class="card-header">CURRENT METRICS <span class="accent">// 2024</span></div>
+      </div>
+      <div class="metrics-grid-4x2" id="nbh-metrics">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Historical Trends -->
+      <div class="card">
+        <div class="card-header">HISTORICAL TRENDS</div>
+        <div class="chip-row mb-12" id="nbh-trend-chips">
+          <button class="chip active" data-metric="population">POP</button>
+          <button class="chip" data-metric="income">INCOME</button>
+          <button class="chip" data-metric="homevalue">HOME</button>
+          <button class="chip" data-metric="unemployment">UNEMP</button>
+        </div>
+        <div class="chart-container">
+          <canvas id="nbh-trend-chart"></canvas>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--neon-green);vertical-align:middle"></span> Sector</div>
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--text-secondary);vertical-align:middle;border-top:1px dashed var(--text-secondary)"></span> City Avg</div>
+        </div>
+      </div>
+
+      <!-- VS City Average -->
+      <div class="card">
+        <div class="card-header">VS CITY AVERAGE</div>
+        <div class="comparison-bars" id="nbh-comparison">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Risk Assessment -->
+      <div class="card">
+        <div class="card-header">RISK ASSESSMENT</div>
+        <div class="risk-bars" id="nbh-risks">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Sovereignty Analysis -->
+      <div class="sovereignty-card" id="nbh-sovereignty">
+        <div class="sovereignty-header">
+          <span class="sovereignty-label">SOVEREIGNTY INDEX:</span>
+          <span class="sovereignty-value warning" id="nbh-sov-value">31%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar-fill warning" id="nbh-sov-bar" style="width:31%"></div>
+        </div>
+        <div class="sovereignty-analysis" id="nbh-sov-analysis">
+          System too efficient. Freedom at risk. Deterministic pathways dominate 69% of urban decisions.
+        </div>
+        <div class="sovereignty-recommendation" id="nbh-sov-rec">
+          RECOMMENDED: Increase entropy to 15% and reality buffer to 18 months.
+        </div>
+        <button class="btn-outline mt-12" data-navigate="intervention" style="width:100%">ADJUST INTERVENTION ◈</button>
+      </div>
+
+      <!-- CTA -->
+      <button class="btn-outline cyan" id="nbh-predict-btn" style="width:100%;padding:14px">
+        ▲ RUN PREDICTION FOR THIS SECTOR
+      </button>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: PREDICTION ENGINE
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-predict" data-title="PREDICTION ENGINE">
+    <div class="page-content">
+
+      <!-- Target -->
+      <div class="card">
+        <div class="card-header">TARGET</div>
+        <div style="font-family:var(--font-display);font-size:13px;color:var(--text-primary);letter-spacing:1px" id="predict-target">SECTOR_7G // WEST DISTRICT</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:4px">Baseline year: 2024</div>
+      </div>
+
+      <!-- Model Selection -->
+      <div class="card">
+        <div class="card-header">MODEL SELECTION</div>
+        <div class="chip-row" id="model-chips">
+          <button class="chip" data-model="linear">LINEAR</button>
+          <button class="chip" data-model="exponential">EXPONENTIAL</button>
+          <button class="chip" data-model="entropy">ENTROPY</button>
+          <button class="chip active" data-model="composite">■ COMPOSITE</button>
+        </div>
+      </div>
+
+      <!-- Projection Range -->
+      <div class="card">
+        <div class="card-header">PROJECTION RANGE</div>
+        <div class="projection-slider-container">
+          <div class="slider-track">
+            <input type="range" class="slider-input" id="year-slider" min="2025" max="2050" value="2035" step="1">
+          </div>
+          <div class="slider-labels">
+            <span class="slider-min">2024</span>
+            <span class="slider-current" id="year-display">2035</span>
+            <span class="slider-max">2050</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prediction Timeline Chart -->
+      <div class="card">
+        <div class="card-header">PREDICTION TIMELINE</div>
+        <div class="chip-row mb-12" id="predict-metric-chips">
+          <button class="chip active" data-pmetric="population">POP</button>
+          <button class="chip" data-pmetric="income">INCOME</button>
+          <button class="chip" data-pmetric="homevalue">HOME</button>
+          <button class="chip" data-pmetric="sovereignty">SOVEREIGNTY</button>
+        </div>
+        <div class="chart-container chart-container-tall">
+          <canvas id="prediction-chart"></canvas>
+        </div>
+        <div class="legend">
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--neon-green);vertical-align:middle"></span> Composite</div>
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--neon-green);vertical-align:middle;border-top:1px dashed var(--neon-green)"></span> Linear</div>
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--neon-cyan);vertical-align:middle;border-top:1px dashed var(--neon-cyan)"></span> Exponential</div>
+          <div class="legend-item"><span style="display:inline-block;width:20px;height:2px;background:var(--warning-amber);vertical-align:middle;border-top:1px dotted var(--warning-amber)"></span> Entropy</div>
+        </div>
+      </div>
+
+      <!-- Projected Metrics -->
+      <div class="card mb-0">
+        <div class="card-header">PROJECTED METRICS <span class="accent" id="projected-year-label">// 2035</span></div>
+      </div>
+      <div class="projected-grid" id="projected-metrics">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Future System Metrics Radar -->
+      <div class="card">
+        <div class="card-header">FUTURE SYSTEM METRICS</div>
+        <div class="radar-container">
+          <canvas id="future-radar-chart"></canvas>
+        </div>
+        <div class="metrics-row">
+          <div class="metric-badge">
+            <span class="metric-badge-label">EFFICIENCY</span>
+            <span class="metric-badge-value nominal" id="fut-efficiency">94%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">SOVEREIGNTY</span>
+            <span class="metric-badge-value critical" id="fut-sovereignty">18%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">RESILIENCE</span>
+            <span class="metric-badge-value nominal" id="fut-resilience">65%</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-badge-label">PREDICT.</span>
+            <span class="metric-badge-value nominal" id="fut-predictability">91%</span>
+          </div>
+        </div>
+        <div class="alert-card critical mt-12" id="sovereignty-alert">
+          <span class="alert-icon">⛔</span>
+          <span class="alert-title" style="color:var(--critical-red)">SOVEREIGNTY CRITICAL</span>
+          <div class="alert-msg">Sovereignty projected to drop below 20% by 2033. Algorithmic lock-in imminent.</div>
+        </div>
+      </div>
+
+      <!-- Alerts Timeline -->
+      <div class="card">
+        <div class="card-header">ALERTS TIMELINE</div>
+        <div class="alerts-timeline" id="alerts-timeline">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <button class="btn-outline" data-navigate="intervention" style="width:100%;padding:14px">
+        ◈ ADJUST INTERVENTION PARAMETERS
+      </button>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: INTERVENTION LAYER
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-intervention" data-title="INTERVENTION LAYER">
+    <div class="page-content">
+
+      <!-- Philosophy Quote -->
+      <div class="quote-card" id="quote-card">
+        <div class="quote-text">"The null pointer is not absence — it is an excess of unmappable meaning."</div>
+        <div class="quote-author">— MARXIAN_CORE</div>
+      </div>
+
+      <!-- Entropy Seed -->
+      <div class="control-card">
+        <div class="card-header">ENTROPY SEED</div>
+        <div class="control-description">
+          Injects quantum decay noise into pathfinding algorithms to prevent deterministic lock-in.
+        </div>
+        <div class="control-value-display">CURRENT: <span id="entropy-value">5</span>%</div>
+        <input type="range" class="slider-input" id="entropy-slider" min="0" max="100" value="5" step="1">
+        <div class="effect-rows" id="entropy-effects">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Reality Buffer -->
+      <div class="control-card">
+        <div class="card-header">REALITY BUFFER</div>
+        <div class="control-description">
+          Temporal gap between prediction and execution. Allows for democratic veto.
+        </div>
+        <div class="control-value-display">CURRENT: <span id="buffer-value">12</span> MONTHS</div>
+        <input type="range" class="slider-input" id="buffer-slider" min="0" max="60" value="12" step="1">
+        <div class="effect-rows" id="buffer-effects">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Null Zone Designator -->
+      <div class="control-card">
+        <div class="card-header">NULL ZONE DESIGNATOR</div>
+        <div class="control-description">
+          Areas intentionally excluded from algorithmic tracking. Preserves spaces for organic urban evolution.
+        </div>
+        <div class="toggle-container">
+          <span class="toggle-label">STATUS:</span>
+          <label class="toggle-switch">
+            <input type="checkbox" id="nullzone-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+          <span class="toggle-status off" id="nullzone-status">DISABLED</span>
+        </div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:8px" id="nullzone-info">
+          Null zones: 0 / 24 sectors<br>
+          Population in null zones: 0
+        </div>
+        <div class="alert-card critical mt-12" id="panopticon-warning">
+          <div class="alert-msg" style="color:var(--critical-red)">⚠ Panopticon active. No safe harbor.</div>
+        </div>
+      </div>
+
+      <!-- Impact Preview -->
+      <div class="impact-preview" id="impact-preview">
+        <div class="card-header">IMPACT PREVIEW</div>
+        <div class="impact-grid" id="impact-grid">
+          <!-- Populated by JS -->
+        </div>
+        <div class="verdict-section">
+          <div class="verdict-label">VERDICT:</div>
+          <div class="verdict-text" id="verdict-text">Democracy fragile. Increase entropy recommended.</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <button class="btn-primary" id="apply-intervention">✓ APPLY INTERVENTION</button>
+      <button class="btn-ghost" id="reset-intervention">↺ RESET TO DEFAULTS</button>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: DATA SOURCES
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-datasources" data-title="DATA SOURCES">
+    <div class="page-content">
+
+      <!-- Active City -->
+      <div class="card">
+        <div class="card-header">ACTIVE CITY</div>
+        <div style="font-family:var(--font-display);font-size:14px;color:var(--text-primary);letter-spacing:1px">📍 New York, NY</div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:6px">
+          State FIPS: 36 &nbsp;|&nbsp; County FIPS: 061<br>
+          Sectors: 24 &nbsp;|&nbsp; Tracts: 287<br>
+          Last refresh: 2h ago
+        </div>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn-outline" style="flex:1">CHANGE CITY</button>
+          <button class="btn-outline" style="flex:1">↻ REFRESH</button>
+        </div>
+      </div>
+
+      <!-- API Status -->
+      <div class="card">
+        <div class="card-header">API STATUS</div>
+        <div id="api-status-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Cached Data -->
+      <div class="card">
+        <div class="card-header">CACHED DATA</div>
+        <div id="cache-list">
+          <!-- Populated by JS -->
+        </div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-top:12px;text-align:right">
+          Total cache: 2.4 MB
+        </div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button class="btn-outline" style="flex:1;border-color:var(--critical-red);color:var(--critical-red)">CLEAR CACHE</button>
+          <button class="btn-outline" style="flex:1">EXPORT JSON</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═════════════════════════════════════════════════════
+       PAGE: SYSTEM LOG
+       ═════════════════════════════════════════════════════ -->
+  <main class="page" id="page-log" data-title="SYSTEM LOG // LIVE FEED">
+    <div class="page-content">
+
+      <!-- Filter Chips -->
+      <div class="card">
+        <div class="chip-row" id="log-filter-chips">
+          <button class="chip active" data-filter="all">ALL</button>
+          <button class="chip" data-filter="info">INFO</button>
+          <button class="chip" data-filter="warn">WARN</button>
+          <button class="chip" data-filter="error">ERROR</button>
+          <button class="chip" data-filter="system">SYSTEM</button>
+        </div>
+      </div>
+
+      <!-- System Stats -->
+      <div class="log-stats">
+        <span class="log-stat">CORE: <span class="val">ONLINE</span></span>
+        <span class="log-stat">LATENCY: <span class="val">12ms</span></span>
+        <span class="log-stat">UPTIME: <span class="val" id="log-uptime">00:00:00</span></span>
+        <span class="log-stat">EVENTS: <span class="val" id="log-event-count">0</span></span>
+        <span class="log-stat">ERRORS: <span class="val error" id="log-error-count">0</span></span>
+        <span class="log-stat">WARNINGS: <span class="val warn" id="log-warn-count">0</span></span>
+      </div>
+
+      <!-- Log Container -->
+      <div class="log-container" id="log-container">
+        <!-- Populated by JS -->
+        <div class="log-cursor" id="log-cursor">&gt; _</div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <button class="nav-tab active" data-page="dashboard">
+      <span class="nav-tab-icon">◫</span>
+      <span class="nav-tab-label">HOME</span>
+    </button>
+    <button class="nav-tab" data-page="map">
+      <span class="nav-tab-icon">◉</span>
+      <span class="nav-tab-label">MAP</span>
+    </button>
+    <button class="nav-tab" data-page="predict">
+      <span class="nav-tab-icon">△</span>
+      <span class="nav-tab-label">PREDICT</span>
+    </button>
+    <button class="nav-tab" data-page="log">
+      <span class="nav-tab-icon">≡</span>
+      <span class="nav-tab-label">SYSTEM</span>
+    </button>
+  </nav>
+
+</div>
+
+<!-- Calculating Overlay -->
+<div class="calculating-overlay" id="calc-overlay">
+  <div class="calculating-text">CALCULATING...</div>
+  <div class="calculating-bar">
+    <div class="calculating-bar-fill"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
