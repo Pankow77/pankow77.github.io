@@ -2029,6 +2029,27 @@ body::before {
   margin-top: 4px;
 }
 
+.bayes-floor-note {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.bayes-surprise {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  padding: 1px 3px;
+  border-radius: 2px;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.bayes-surprise.low { color: var(--neon-green); background: var(--neon-green-glow); }
+.bayes-surprise.mid { color: var(--warning-amber); background: var(--warning-amber-dim); }
+.bayes-surprise.high { color: var(--critical-red); background: var(--critical-red-dim); }
+
 .bayes-limitations {
   margin-top: 16px;
   padding-top: 12px;

@@ -148,41 +148,56 @@ function reseedRNG(entropySeed) {
   RNG = new SeededRNG(entropySeed * 7919 + 31); // prime-based dispersion
 }
 
-// ── BAYESIAN UPDATE ENGINE v2 ─────────────────────────────
-// Addresses:
-// #1 Fat tails: Student-t via ν (degrees of freedom). Low ν = heavy tails.
-// #2 Calibrated noise: Likelihood σ² derived from BacktestEngine RMSE, not guessed.
-// #3 Shock correlation: Off-diagonal correlation matrix, decorrelation penalty.
-// #4 Calibrated priors: Mean and variance from HISTORICAL data, not hardcoded.
-// #5 Regime shifts: Acknowledged — stationarity assumed. Flagged when detected.
-// #6 Endogeneity: Structural limitation. Cannot model within this framework.
-// #7 Variance floor: MIN_VARIANCE prevents precision collapse.
+// ── BAYESIAN UPDATE ENGINE v3 ─────────────────────────────
+// Round 2 red team response:
+// R2.1: ν no longer increments blindly. Weighted by surprise distance.
+// R2.2: RMSE segmented — exponential recency weighting for structural breaks.
+// R2.3: Full 3×3 covariance matrix, not average ρ.
+// R2.4: Regime shift now CORRECTS prior (uses post-break data), not just warns.
+// R2.5: MIN_VARIANCE derived from empirical data floor, not arbitrary.
 const BayesianEngine = {
-  // ── Configuration ──
-  MIN_VARIANCE: 2.0,   // #7: Floor. No metric can be "more certain" than ±√2 ≈ ±1.4
-  DEFAULT_NU: 5,        // #1: Student-t degrees of freedom. 5 = fat tails. 30+ ≈ Normal.
+  DEFAULT_NU: 5,
 
-  // Shock correlation matrix (#3):
-  // Entropy↔Buffer = 0.35 (both are policy interventions, correlated adoption)
-  // Entropy↔NullZone = 0.45 (both reduce algorithmic control, high correlation)
-  // Buffer↔NullZone = 0.25 (moderate — different mechanisms)
-  SHOCK_CORRELATION: {
-    entropy_buffer: 0.35,
-    entropy_nullzone: 0.45,
-    buffer_nullzone: 0.25
+  // ── R2.3: Full correlation matrix (not scalar average) ──
+  // 3×3 symmetric. Indexed [shock_i][shock_j].
+  // Used to compute effective variance inflation via det(R).
+  CORR_MATRIX: {
+    entropy:  { entropy: 1.00, buffer: 0.35, nullzone: 0.45 },
+    buffer:   { entropy: 0.35, buffer: 1.00, nullzone: 0.25 },
+    nullzone: { entropy: 0.45, nullzone: 0.25, nullzone: 1.00 }
+  },
+
+  // ── R2.5: Derive MIN_VARIANCE from data ──
+  // Floor = minimum observed CoV² across metrics, scaled to system range.
+  // Not arbitrary. Anchored to: "the system can't be more certain than
+  // the most stable metric in the historical record."
+  deriveMinVariance() {
+    const systemMetrics = { population: 89, income: 31, homevalue: 72, unemployment: 85 };
+    let minCoVSq = Infinity;
+    for (const [key, data] of Object.entries(HISTORICAL.S07)) {
+      if (!data || data.length < 3) continue;
+      const mean = data.reduce((s, v) => s + v, 0) / data.length;
+      const variance = data.reduce((s, v) => s + (v - mean) ** 2, 0) / (data.length - 1);
+      const covSq = variance / (mean * mean || 1);
+      if (covSq < minCoVSq) minCoVSq = covSq;
+    }
+    // Scale to system metric range (0-100), with absolute floor of 0.5
+    const derived = Math.max(0.5, minCoVSq * 100 * 100);
+    return derived;
+  },
+
+  get MIN_VARIANCE() {
+    if (!this._minVar) this._minVar = this.deriveMinVariance();
+    return this._minVar;
   },
 
   // ── Core math ──
   belief(mean, variance, nu) {
-    return { mean, variance: Math.max(variance, this.MIN_VARIANCE), precision: 1 / Math.max(variance, this.MIN_VARIANCE), nu: nu || this.DEFAULT_NU };
+    const mv = this.MIN_VARIANCE;
+    return { mean, variance: Math.max(variance, mv), precision: 1 / Math.max(variance, mv), nu: nu || this.DEFAULT_NU };
   },
 
-  // Student-t credible interval (#1):
-  // Wider tails than Normal. For ν=5, 95% CI uses t=2.571 instead of z=1.96
-  // As ν→∞, converges to Normal.
-  tQuantile(nu, p) {
-    // Approximation of Student-t quantile for p=0.975 (two-sided 95%)
-    // Uses Abramowitz & Stegun approximation for common ν values
+  tQuantile(nu) {
     if (nu >= 120) return 1.96;
     const table = { 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 10: 2.228, 12: 2.179, 15: 2.131, 20: 2.086, 30: 2.042, 60: 2.000 };
     const keys = Object.keys(table).map(Number).sort((a, b) => a - b);
@@ -196,214 +211,264 @@ const BayesianEngine = {
     return 1.96;
   },
 
-  // Conjugate update with variance floor (#7) and ν tracking (#1)
+  // ── R2.1: Update with surprise-weighted ν ──
+  // ν increments by 1 ONLY if evidence is "coherent" with prior.
+  // Surprise = |obs - prior.mean| / prior.σ  (Mahalanobis-like)
+  // If surprise > 2: evidence is heterogeneous, ν increment = 0 (don't thin tails)
+  // If surprise > 1: partial increment (0.5)
+  // If surprise ≤ 1: full increment (1.0) — evidence confirms prior structure
   update(prior, observation, observationVariance) {
-    const obsVar = Math.max(observationVariance, this.MIN_VARIANCE);
+    const mv = this.MIN_VARIANCE;
+    const obsVar = Math.max(observationVariance, mv);
     const priorPrec = 1 / prior.variance;
     const obsPrec = 1 / obsVar;
     const postPrec = priorPrec + obsPrec;
     const postMean = (prior.mean * priorPrec + observation * obsPrec) / postPrec;
-    const rawPostVar = 1 / postPrec;
-    const postVar = Math.max(rawPostVar, this.MIN_VARIANCE); // #7: FLOOR
+    const postVar = Math.max(1 / postPrec, mv);
 
-    // #1: Update degrees of freedom — each observation adds 1 df
-    const postNu = (prior.nu || this.DEFAULT_NU) + 1;
+    // R2.1: Surprise-gated ν
+    const priorSd = Math.sqrt(prior.variance);
+    const surprise = priorSd > 0 ? Math.abs(observation - prior.mean) / priorSd : 0;
+    let nuIncrement;
+    if (surprise <= 1.0) nuIncrement = 1.0;       // coherent evidence
+    else if (surprise <= 2.0) nuIncrement = 0.5;   // mild surprise
+    else nuIncrement = 0;                           // heterogeneous — don't thin tails
+    const postNu = (prior.nu || this.DEFAULT_NU) + nuIncrement;
 
-    return { mean: postMean, variance: postVar, precision: 1 / postVar, nu: postNu };
+    return { mean: postMean, variance: postVar, precision: 1 / postVar, nu: postNu, surprise };
   },
 
-  // Credible interval using Student-t, not Normal (#1)
   credibleInterval(posterior) {
     const nu = posterior.nu || this.DEFAULT_NU;
-    const t = this.tQuantile(nu, 0.975);
+    const t = this.tQuantile(nu);
     const sd = Math.sqrt(posterior.variance);
     return { lower: posterior.mean - t * sd, upper: posterior.mean + t * sd, t, nu };
   },
 
-  // ── Empirical calibration (#2 + #4) ──
-  // Derive priors from HISTORICAL data (not guesses)
-  // Derive likelihood noise from BacktestEngine RMSE (not arbitrary)
+  // ── R2.4: Regime-shift-aware calibration ──
+  // If structural break detected, recalculate prior from POST-BREAK data only.
+  // Not just a warning anymore — active correction.
+  detectRegimeShift(data, years) {
+    if (!data || data.length < 6) return { detected: false, breakIdx: -1 };
+    // Scan all possible break points, find the one with maximum mean shift
+    let maxShift = 0, bestIdx = -1;
+    for (let k = 2; k < data.length - 2; k++) {
+      const left = data.slice(0, k);
+      const right = data.slice(k);
+      const mL = left.reduce((s, v) => s + v, 0) / left.length;
+      const mR = right.reduce((s, v) => s + v, 0) / right.length;
+      const varL = left.reduce((s, v) => s + (v - mL) ** 2, 0) / left.length;
+      const varR = right.reduce((s, v) => s + (v - mR) ** 2, 0) / right.length;
+      const pooledSd = Math.sqrt((varL + varR) / 2) || 1;
+      const shift = Math.abs(mR - mL) / pooledSd;
+      if (shift > maxShift) { maxShift = shift; bestIdx = k; }
+    }
+    const fRatio = bestIdx >= 0 ? (() => {
+      const l = data.slice(0, bestIdx), r = data.slice(bestIdx);
+      const ml = l.reduce((s,v)=>s+v,0)/l.length, mr = r.reduce((s,v)=>s+v,0)/r.length;
+      const vl = l.reduce((s,v)=>s+(v-ml)**2,0)/l.length;
+      const vr = r.reduce((s,v)=>s+(v-mr)**2,0)/r.length;
+      return Math.max(vl,vr) / (Math.min(vl,vr) || 1);
+    })() : 1;
+    const detected = maxShift > 1.5 || fRatio > 2.5;
+    return {
+      detected,
+      breakIdx: detected ? bestIdx : -1,
+      breakYear: detected && years ? years[bestIdx] : null,
+      meanShift: maxShift,
+      fRatio,
+      warning: detected ? `Structural break at ${years ? years[bestIdx] : 'idx:'+bestIdx}. Prior recalculated from post-break data.` : null
+    };
+  },
+
+  // ── R2.2: Recency-weighted RMSE ──
+  // Recent residuals weighted exponentially higher.
+  // Half-life = 2 data points. So 2022-2024 matter more than 2020.
+  // Addresses: "RMSE on 2010-2024 is average of different worlds."
+  weightedRMSE(predictions, actuals, halfLife) {
+    const hl = halfLife || 2;
+    const lambda = Math.log(2) / hl;
+    let sumWtSqErr = 0, sumWt = 0;
+    const n = Math.min(predictions.length, actuals.length);
+    for (let i = 0; i < n; i++) {
+      const recency = n - 1 - i; // 0 = most recent
+      const wt = Math.exp(-lambda * recency);
+      const err = predictions[i] - actuals[i];
+      sumWtSqErr += wt * err * err;
+      sumWt += wt;
+    }
+    return sumWt > 0 ? Math.sqrt(sumWtSqErr / sumWt) : 0;
+  },
+
+  // ── Calibration (all R2 fixes integrated) ──
   calibrateFromData() {
-    const metrics = ['population', 'income', 'homevalue', 'unemployment'];
+    const dataKeys = ['population', 'income', 'homevalue', 'unemployment'];
     const metricMap = { population: 'efficiency', income: 'sovereignty', homevalue: 'resilience', unemployment: 'predictability' };
     const systemMetrics = { efficiency: 89, sovereignty: 31, resilience: 72, predictability: 85 };
 
-    const calibration = { priors: {}, noise: {} };
+    const calibration = { priors: {}, noise: {}, regimes: {} };
 
-    for (const metric of metrics) {
-      const data = HISTORICAL.S07[metric];
+    for (const dataKey of dataKeys) {
+      const data = HISTORICAL.S07[dataKey];
       if (!data || data.length < 3) continue;
+      const years = HISTORICAL.years;
+      const systemKey = metricMap[dataKey];
+      const sysBase = systemMetrics[systemKey];
 
-      const systemKey = metricMap[metric];
+      // R2.4: Detect regime shift and use post-break segment for prior
+      const regime = this.detectRegimeShift(data, years);
+      calibration.regimes[systemKey] = regime;
 
-      // #4: Prior from system baseline + empirical variance scaled to system metric range
-      const dataMean = data.reduce((s, v) => s + v, 0) / data.length;
-      const dataVar = data.reduce((s, v) => s + (v - dataMean) ** 2, 0) / (data.length - 1);
-      const coeffOfVar = Math.sqrt(dataVar) / Math.abs(dataMean || 1);
-      // Scale CoV to system metric range (0-100)
-      const priorVar = Math.max(this.MIN_VARIANCE, (coeffOfVar * systemMetrics[systemKey]) ** 2);
-      calibration.priors[systemKey] = { mean: systemMetrics[systemKey], variance: priorVar };
-
-      // #2: Noise from backtest RMSE (if available)
-      const btResult = BacktestEngine.run(data, HISTORICAL.years, 2020, 'composite', STATE.entropySeed);
-      if (btResult && btResult.rmse > 0) {
-        // Normalize RMSE to system metric scale
-        const scaledRMSE = (btResult.rmse / Math.abs(dataMean || 1)) * systemMetrics[systemKey];
-        calibration.noise[systemKey] = Math.max(this.MIN_VARIANCE, scaledRMSE * scaledRMSE);
+      let priorData, priorYears;
+      if (regime.detected && regime.breakIdx >= 0 && regime.breakIdx < data.length - 1) {
+        // Use ONLY post-break data for prior — prior is no longer stale
+        priorData = data.slice(regime.breakIdx);
+        priorYears = years.slice(regime.breakIdx);
       } else {
-        calibration.noise[systemKey] = priorVar * 1.5; // fallback: 1.5× prior variance
+        priorData = data;
+        priorYears = years;
+      }
+
+      const priorMean = priorData.reduce((s, v) => s + v, 0) / priorData.length;
+      const priorVar = priorData.length > 1
+        ? priorData.reduce((s, v) => s + (v - priorMean) ** 2, 0) / (priorData.length - 1)
+        : (priorMean * 0.1) ** 2;
+      const coeffOfVar = Math.sqrt(priorVar) / Math.abs(priorMean || 1);
+      const scaledVar = Math.max(this.MIN_VARIANCE, (coeffOfVar * sysBase) ** 2);
+      calibration.priors[systemKey] = { mean: sysBase, variance: scaledVar };
+
+      // R2.2: Recency-weighted RMSE for noise
+      const btResult = BacktestEngine.run(data, years, 2020, 'composite', STATE.entropySeed);
+      if (btResult && btResult.predictions.length > 0 && btResult.actuals.length > 0) {
+        const predVals = btResult.predictions.map(p => p.value);
+        const actVals = btResult.actuals.map(a => a.value);
+        const wRMSE = this.weightedRMSE(predVals, actVals, 2);
+        const scaledNoise = (wRMSE / Math.abs(priorMean || 1)) * sysBase;
+        calibration.noise[systemKey] = Math.max(this.MIN_VARIANCE, scaledNoise * scaledNoise);
+      } else {
+        calibration.noise[systemKey] = scaledVar * 1.5;
       }
     }
 
     return calibration;
   },
 
-  // ── Shock evidence with calibrated noise (#2) ──
+  // ── Shock evidence (calibrated) ──
   shockEvidence: {
     entropy(seed, metric, calibratedNoise) {
-      const baseNoise = calibratedNoise || 16;
+      const bn = calibratedNoise || 16;
       const effects = {
-        efficiency:     { target: 89 - seed * 0.15, noise: baseNoise * (1 + seed / 50) },
-        sovereignty:    { target: 31 + seed * 0.6,  noise: baseNoise * (1.2 + seed / 40) },
-        resilience:     { target: 72 - seed * 0.1,  noise: baseNoise * (1.1 + seed / 60) },
-        predictability: { target: 85 - seed * 0.2,  noise: baseNoise * (0.8 + seed / 70) }
+        efficiency:     { target: 89 - seed * 0.15, noise: bn * (1 + seed / 50) },
+        sovereignty:    { target: 31 + seed * 0.6,  noise: bn * (1.2 + seed / 40) },
+        resilience:     { target: 72 - seed * 0.1,  noise: bn * (1.1 + seed / 60) },
+        predictability: { target: 85 - seed * 0.2,  noise: bn * (0.8 + seed / 70) }
       };
       return effects[metric];
     },
     buffer(months, metric, calibratedNoise) {
-      const baseNoise = calibratedNoise || 16;
+      const bn = calibratedNoise || 16;
       const effects = {
-        efficiency:     { target: 89 - months * 0.05, noise: baseNoise * (0.6 + months / 100) },
-        sovereignty:    { target: 31 + months * 0.7,  noise: baseNoise * (0.8 + months / 80) },
-        resilience:     { target: 72 + months * 0.15, noise: baseNoise * (0.5 + months / 120) },
-        predictability: { target: 85 - months * 0.08, noise: baseNoise * (0.6 + months / 90) }
+        efficiency:     { target: 89 - months * 0.05, noise: bn * (0.6 + months / 100) },
+        sovereignty:    { target: 31 + months * 0.7,  noise: bn * (0.8 + months / 80) },
+        resilience:     { target: 72 + months * 0.15, noise: bn * (0.5 + months / 120) },
+        predictability: { target: 85 - months * 0.08, noise: bn * (0.6 + months / 90) }
       };
       return effects[metric];
     },
     nullZone(active, metric, calibratedNoise) {
       if (!active) return null;
-      const baseNoise = calibratedNoise || 16;
+      const bn = calibratedNoise || 16;
       const effects = {
-        efficiency:     { target: 74, noise: baseNoise * 1.5 },
-        sovereignty:    { target: 68, noise: baseNoise * 1.8 },
-        resilience:     { target: 72, noise: baseNoise * 2.0 },
-        predictability: { target: 78, noise: baseNoise * 1.2 }
+        efficiency:     { target: 74, noise: bn * 1.5 },
+        sovereignty:    { target: 68, noise: bn * 1.8 },
+        resilience:     { target: 72, noise: bn * 2.0 },
+        predictability: { target: 78, noise: bn * 1.2 }
       };
       return effects[metric];
     }
   },
 
-  // ── Correlation penalty (#3) ──
-  // When multiple correlated shocks are active, inflate posterior variance
-  // to avoid overconfidence from non-independent evidence.
-  correlationPenalty(activeShocks) {
-    if (activeShocks.length < 2) return 1.0; // no penalty for single shock
-    let totalCorr = 0;
-    let pairs = 0;
-    const corr = this.SHOCK_CORRELATION;
-    for (let i = 0; i < activeShocks.length; i++) {
-      for (let j = i + 1; j < activeShocks.length; j++) {
-        const key = [activeShocks[i], activeShocks[j]].sort().join('_');
-        totalCorr += corr[key] || 0;
-        pairs++;
-      }
+  // ── R2.3: Full covariance-based variance inflation ──
+  // Computes effective inflation from the correlation submatrix of active shocks.
+  // For n active shocks, builds the n×n correlation submatrix and computes
+  // the generalized variance inflation factor: 1 / det(R_sub).
+  // det(R) = 1 when independent. det(R) < 1 when correlated → inflation > 1.
+  covarianceInflation(activeShocks) {
+    const n = activeShocks.length;
+    if (n < 2) return 1.0;
+
+    const C = this.CORR_MATRIX;
+    if (n === 2) {
+      const a = activeShocks[0], b = activeShocks[1];
+      const rho = (C[a] && C[a][b]) || 0;
+      // det of 2×2 correlation matrix = 1 - ρ²
+      const det = 1 - rho * rho;
+      return det > 0.01 ? 1 / det : 100; // cap at 100× inflation
     }
-    const avgCorr = pairs > 0 ? totalCorr / pairs : 0;
-    // Penalty: inflate variance by (1 + avgCorrelation)
-    // Perfect independence (corr=0): penalty=1 (no change)
-    // High correlation (corr=0.5): penalty=1.5 (50% wider intervals)
-    return 1 + avgCorr;
+    if (n === 3) {
+      // 3×3: det = 1 + 2*r12*r13*r23 - r12² - r13² - r23²
+      const r = (a, b) => (C[a] && C[a][b]) || 0;
+      const r12 = r(activeShocks[0], activeShocks[1]);
+      const r13 = r(activeShocks[0], activeShocks[2]);
+      const r23 = r(activeShocks[1], activeShocks[2]);
+      const det = 1 + 2 * r12 * r13 * r23 - r12 * r12 - r13 * r13 - r23 * r23;
+      return det > 0.01 ? 1 / det : 100;
+    }
+    return 1.0;
   },
 
-  // ── Regime shift detector (#5) ──
-  // Simple structural break test: compare variance of first half vs second half
-  // Returns a warning flag, not a correction (honest about limitations)
-  detectRegimeShift(data) {
-    if (data.length < 6) return { detected: false };
-    const mid = Math.floor(data.length / 2);
-    const first = data.slice(0, mid);
-    const second = data.slice(mid);
-    const mean1 = first.reduce((s, v) => s + v, 0) / first.length;
-    const mean2 = second.reduce((s, v) => s + v, 0) / second.length;
-    const var1 = first.reduce((s, v) => s + (v - mean1) ** 2, 0) / first.length;
-    const var2 = second.reduce((s, v) => s + (v - mean2) ** 2, 0) / second.length;
-    // F-ratio for variance shift
-    const fRatio = Math.max(var1, var2) / (Math.min(var1, var2) || 1);
-    // Mean shift relative to pooled std
-    const pooledStd = Math.sqrt((var1 + var2) / 2) || 1;
-    const meanShift = Math.abs(mean2 - mean1) / pooledStd;
-
-    return {
-      detected: fRatio > 2.5 || meanShift > 1.5,
-      fRatio: fRatio,
-      meanShift: meanShift,
-      warning: fRatio > 2.5 ? 'Variance regime shift detected. Stationarity assumption violated.' :
-               meanShift > 1.5 ? 'Mean regime shift detected. Prior may be stale.' : null
-    };
-  },
-
-  // ── Main computation — all fixes integrated ──
+  // ── Main computation ──
   computePosteriors(entropySeed, bufferMonths, nullZoneOn) {
     const metrics = ['efficiency', 'sovereignty', 'resilience', 'predictability'];
-
-    // #2 + #4: Calibrate from data
     const cal = this.calibrateFromData();
 
-    // #3: Determine active shocks for correlation penalty
+    // R2.3: Active shocks + full covariance inflation
     const activeShocks = [];
     if (entropySeed > 0) activeShocks.push('entropy');
     if (bufferMonths !== 12) activeShocks.push('buffer');
     if (nullZoneOn) activeShocks.push('nullzone');
-    const corrPenalty = this.correlationPenalty(activeShocks);
-
-    // #5: Regime shift check
-    const regimeWarnings = {};
-    for (const [dataKey, sysKey] of [['population','efficiency'],['income','sovereignty'],['homevalue','resilience'],['unemployment','predictability']]) {
-      const data = HISTORICAL.S07[dataKey];
-      if (data) regimeWarnings[sysKey] = this.detectRegimeShift(data);
-    }
+    const covInflation = this.covarianceInflation(activeShocks);
 
     const chain = {};
 
     for (const metric of metrics) {
-      // #4: Use calibrated priors (from data variance, not guesses)
       const calPrior = cal.priors[metric] || { mean: 50, variance: 25 };
       const calNoise = cal.noise[metric] || 16;
+      const regime = cal.regimes[metric] || { detected: false };
       let current = this.belief(calPrior.mean, calPrior.variance, this.DEFAULT_NU);
 
       const steps = [];
-      steps.push({ label: 'PRIOR', dist: { ...current }, evidence: null, source: 'calibrated from historical CoV' });
+      const priorSource = regime.detected
+        ? `post-break prior (${regime.breakYear}+)`
+        : 'full historical CoV';
+      steps.push({ label: 'PRIOR', dist: { ...current }, evidence: null, source: priorSource });
 
-      // Step 1: Entropy
       if (entropySeed > 0) {
         const ev = this.shockEvidence.entropy(entropySeed, metric, calNoise);
-        ev.noise *= corrPenalty; // #3: inflate noise for correlated shocks
+        ev.noise *= covInflation; // R2.3: matrix-based inflation
         const post = this.update(current, ev.target, ev.noise);
         steps.push({ label: `ENTROPY [${entropySeed}%]`, dist: { ...post }, evidence: ev });
         current = post;
       }
 
-      // Step 2: Buffer
       if (bufferMonths !== 12) {
         const ev = this.shockEvidence.buffer(bufferMonths, metric, calNoise);
-        ev.noise *= corrPenalty; // #3
+        ev.noise *= covInflation;
         const post = this.update(current, ev.target, ev.noise);
         steps.push({ label: `BUFFER [${bufferMonths}mo]`, dist: { ...post }, evidence: ev });
         current = post;
       }
 
-      // Step 3: Null zone
       if (nullZoneOn) {
         const ev = this.shockEvidence.nullZone(true, metric, calNoise);
         if (ev) {
-          ev.noise *= corrPenalty; // #3
+          ev.noise *= covInflation;
           const post = this.update(current, ev.target, ev.noise);
           steps.push({ label: 'NULL ZONE [ON]', dist: { ...post }, evidence: ev });
           current = post;
         }
       }
 
-      // #1: Student-t credible intervals (fat tails)
       const ci95 = this.credibleInterval(current);
 
       chain[metric] = {
@@ -413,21 +478,22 @@ const BayesianEngine = {
         steps,
         varianceReduction: 1 - (current.variance / calPrior.variance),
         shift: current.mean - calPrior.mean,
-        regime: regimeWarnings[metric] || { detected: false },
-        corrPenalty,
-        nu: current.nu, // #1: degrees of freedom (increases with evidence)
-        calibratedNoise: calNoise // #2: transparency — show the noise source
+        regime,
+        covInflation,
+        nu: current.nu,
+        calibratedNoise: calNoise,
+        minVariance: this.MIN_VARIANCE
       };
     }
 
     return chain;
   },
 
-  // ── Structural limitations (honest) ──
   LIMITATIONS: {
-    regimeShifts: 'Model assumes stationarity. Regime changes (regulatory shifts, crises) are detected but not corrected. The posterior is valid conditional on the current regime continuing.',
+    regimeShifts: 'Regime shifts detected and prior recalculated from post-break data. However, the break detection is a simple max-shift scan, not a formal Chow test or Bai-Perron procedure.',
     endogeneity: 'Predictions may influence policy decisions which influence outcomes. This reflexivity loop is not modeled. The posterior assumes the system being observed is independent of the observation.',
-    priorSensitivity: 'Priors are calibrated from historical coefficient of variation, not from domain expert elicitation or MCMC sampling. With strong evidence, the prior washes out. With weak evidence, it dominates.'
+    priorSensitivity: 'Priors are calibrated from historical coefficient of variation (post-break if regime shift detected). Not from domain expert elicitation or MCMC. With strong evidence the prior washes out. With weak evidence it dominates.',
+    covarianceModel: 'Shock correlations are fixed parameters, not estimated from data. The 3×3 matrix is assumed, not learned. With real policy outcome data, these could be calibrated empirically.'
   }
 };
 
@@ -1446,15 +1512,20 @@ function renderBayesianChain(chain) {
   const labels = { efficiency: 'EFF', sovereignty: 'SOV', resilience: 'RES', predictability: 'PRE' };
   const clamp = v => Math.max(0, Math.min(100, v));
 
-  // Global metadata
   const firstMetric = chain[metrics[0]];
-  const corrPenalty = firstMetric.corrPenalty || 1;
+  const covInflation = firstMetric.covInflation || 1;
+  const minVar = firstMetric.minVariance;
 
   let html = '';
 
-  // #3: Correlation warning
-  if (corrPenalty > 1.01) {
-    html += `<div class="bayes-corr-warning">CORRELATION PENALTY: ×${corrPenalty.toFixed(2)} — shocks are not independent. Noise inflated to prevent overconfidence.</div>`;
+  // R2.3: Covariance inflation (full matrix, not average ρ)
+  if (covInflation > 1.01) {
+    html += `<div class="bayes-corr-warning">COVARIANCE INFLATION: ×${covInflation.toFixed(2)} — from det(R) of active shock correlation submatrix. Not average ρ.</div>`;
+  }
+
+  // R2.5: MIN_VARIANCE derivation
+  if (minVar) {
+    html += `<div class="bayes-floor-note">VARIANCE FLOOR: ${minVar.toFixed(2)} — derived from min historical CoV² across metrics. Not arbitrary.</div>`;
   }
 
   for (const metric of metrics) {
@@ -1463,18 +1534,18 @@ function renderBayesianChain(chain) {
     const varRedPct = Math.round(c.varianceReduction * 100);
     const shiftDir = c.shift > 0 ? '+' : '';
     const shiftVal = c.shift.toFixed(1);
-    const nuLabel = c.nu ? `ν=${c.nu}` : '';
+    const nuVal = c.nu ? c.nu.toFixed(1) : '5';
     const noiseLabel = c.calibratedNoise ? `σ²_obs=${c.calibratedNoise.toFixed(1)}` : '';
 
     html += `<div class="bayes-metric-block">
       <div class="bayes-metric-header">
         <span class="bayes-metric-name">${labels[metric]}</span>
         <span class="bayes-metric-shift ${c.shift > 0 ? 'positive' : 'negative'}">${shiftDir}${shiftVal}</span>
-        <span class="bayes-variance-reduction" title="Uncertainty reduced by evidence">σ² ${varRedPct > 0 ? '−' : '+'}${Math.abs(varRedPct)}%</span>
-        <span class="bayes-nu-label" title="Student-t degrees of freedom">${nuLabel}</span>
+        <span class="bayes-variance-reduction">σ² ${varRedPct > 0 ? '−' : '+'}${Math.abs(varRedPct)}%</span>
+        <span class="bayes-nu-label">ν=${nuVal}</span>
       </div>`;
 
-    // #5: Regime shift warning
+    // R2.4: Regime shift — now shows correction, not just warning
     if (c.regime && c.regime.detected) {
       html += `<div class="bayes-regime-warning">${c.regime.warning}</div>`;
     }
@@ -1488,8 +1559,13 @@ function renderBayesianChain(chain) {
       const isPrior = i === 0;
       const isFinal = i === steps.length - 1;
 
+      // R2.1: Show surprise level on non-prior steps
+      const surpriseTag = (!isPrior && s.dist.surprise !== undefined)
+        ? ` <span class="bayes-surprise ${s.dist.surprise > 2 ? 'high' : s.dist.surprise > 1 ? 'mid' : 'low'}">S=${s.dist.surprise.toFixed(1)}</span>`
+        : '';
+
       html += `<div class="bayes-step ${isPrior ? 'prior' : ''} ${isFinal && !isPrior ? 'posterior' : ''}">
-        <span class="bayes-step-label">${s.label}</span>
+        <span class="bayes-step-label">${s.label}${surpriseTag}</span>
         <span class="bayes-step-mean">${mean}%</span>
         <span class="bayes-step-sd">±${sd}</span>
       </div>`;
@@ -1498,18 +1574,17 @@ function renderBayesianChain(chain) {
       }
     }
 
-    // Noise source transparency (#2)
     html += `</div>
-      <div class="bayes-noise-source">${noiseLabel} (from backtest RMSE)</div>
+      <div class="bayes-noise-source">${noiseLabel} (recency-weighted backtest RMSE, half-life=2)</div>
     </div>`;
   }
 
-  // Structural limitations (#5 + #6)
   html += `<div class="bayes-limitations">
     <div class="bayes-limitations-title">STRUCTURAL LIMITATIONS</div>
     <div class="bayes-limitation">#5 STATIONARITY: ${BayesianEngine.LIMITATIONS.regimeShifts}</div>
     <div class="bayes-limitation">#6 ENDOGENEITY: ${BayesianEngine.LIMITATIONS.endogeneity}</div>
-    <div class="bayes-limitation">#4 PRIOR SENSITIVITY: ${BayesianEngine.LIMITATIONS.priorSensitivity}</div>
+    <div class="bayes-limitation">#4 PRIOR: ${BayesianEngine.LIMITATIONS.priorSensitivity}</div>
+    <div class="bayes-limitation">#3 CORRELATION: ${BayesianEngine.LIMITATIONS.covarianceModel}</div>
   </div>`;
 
   container.innerHTML = html;
