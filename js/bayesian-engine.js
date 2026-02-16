@@ -1434,6 +1434,471 @@ const BayesianEngine = (() => {
     }
 
     // ══════════════════════════════════════════════════════
+    // SEED DATASET — Offline Historical Data Loader
+    // ══════════════════════════════════════════════════════
+    // Load a pre-built JSON dataset to bootstrap the engine
+    // with n=30+ observations WITHOUT waiting for live scans.
+    //
+    // Expected JSON schema per record:
+    // {
+    //   date:        "2022-02-24",           // ISO date string
+    //   timestamp:   1645660800000,           // ms epoch (auto-computed from date if missing)
+    //   event:       "Russia invades Ukraine",// Human-readable event description
+    //   return_pct:  8.7,                     // Brent abs % change (or metric value)
+    //   label:       1,                       // 1 = cascade, 0 = no cascade
+    //   source:      "ICE Brent",             // Data source
+    //   pattern_id:  "economic-geopolitical-shock",
+    //   notes:       "Crude spiked on invasion" // Optional context
+    // }
+    //
+    // The loader validates every record against LABEL_DEFINITIONS,
+    // applies the cutoff, and flags any label/metric inconsistencies.
+
+    const SEED_KEY = 'bayesian_seed_loaded';
+
+    const SeedDataset = {
+        // Validate a single seed record
+        validateRecord(record, index) {
+            const errors = [];
+            if (!record.date && !record.timestamp) {
+                errors.push(`Record ${index}: needs date or timestamp`);
+            }
+            if (typeof record.return_pct !== 'number') {
+                errors.push(`Record ${index}: return_pct must be a number`);
+            }
+            if (record.label !== 0 && record.label !== 1) {
+                errors.push(`Record ${index}: label must be 0 or 1`);
+            }
+            if (!record.pattern_id) {
+                errors.push(`Record ${index}: pattern_id is required`);
+            }
+            return errors;
+        },
+
+        // Cross-check label against metric and cutoff
+        checkLabelConsistency(record) {
+            const labelDef = LABEL_DEFINITIONS[record.pattern_id];
+            if (!labelDef) return { consistent: true, note: 'no label definition for pattern' };
+
+            const computedLabel = applyLabel(labelDef, record.return_pct) ? 1 : 0;
+            return {
+                consistent: computedLabel === record.label,
+                computed: computedLabel,
+                provided: record.label,
+                metric_value: record.return_pct,
+                cutoff: labelDef.cutoff,
+                note: computedLabel !== record.label
+                    ? `MISMATCH: metric ${record.return_pct} vs cutoff ${labelDef.cutoff} → computed ${computedLabel}, provided ${record.label}`
+                    : 'ok',
+            };
+        },
+
+        // Load a seed dataset JSON array and convert to observations
+        // Returns: { loaded, skipped, errors, inconsistencies, threshold_analysis }
+        load(seedRecords, options = {}) {
+            const {
+                patternId = 'economic-geopolitical-shock',
+                clearExisting = false,
+                dryRun = false,
+            } = options;
+
+            if (!Array.isArray(seedRecords) || seedRecords.length === 0) {
+                return { loaded: 0, error: 'seedRecords must be a non-empty array' };
+            }
+
+            const allErrors = [];
+            const inconsistencies = [];
+            const valid = [];
+
+            // Validate all records first
+            for (let i = 0; i < seedRecords.length; i++) {
+                const record = seedRecords[i];
+                const errs = this.validateRecord(record, i);
+                if (errs.length > 0) {
+                    allErrors.push(...errs);
+                    continue;
+                }
+
+                // Check label consistency
+                const consistency = this.checkLabelConsistency(record);
+                if (!consistency.consistent) {
+                    inconsistencies.push({ index: i, record, ...consistency });
+                }
+
+                valid.push(record);
+            }
+
+            // Threshold analysis: count events above/below cutoff
+            const labelDef = LABEL_DEFINITIONS[patternId];
+            const thresholdAnalysis = this._analyzeThreshold(valid, labelDef);
+
+            if (dryRun) {
+                return {
+                    loaded: 0,
+                    would_load: valid.length,
+                    skipped: seedRecords.length - valid.length,
+                    errors: allErrors,
+                    inconsistencies,
+                    threshold_analysis: thresholdAnalysis,
+                    dry_run: true,
+                };
+            }
+
+            // Clear existing if requested
+            if (clearExisting) {
+                saveObservations([]);
+                savePosteriors({});
+            }
+
+            // Convert to observations and load sequentially (temporal order)
+            const sorted = valid.slice().sort((a, b) => {
+                const tA = a.timestamp || new Date(a.date).getTime();
+                const tB = b.timestamp || new Date(b.date).getTime();
+                return tA - tB;
+            });
+
+            let loaded = 0;
+            for (const record of sorted) {
+                const ts = record.timestamp || new Date(record.date).getTime();
+                if (isNaN(ts)) continue;
+
+                const result = recordObservation({
+                    observation_type: 'cascade_window',
+                    intervention_type: record.event || null,
+                    magnitude: Math.abs(record.return_pct),
+                    timestamp: ts,
+                    observed_outcome: record.label === 1,
+                    noise_context: `seed|source:${record.source || 'unknown'}|notes:${record.notes || ''}`,
+                    domain: 'economy',
+                    pattern_id: record.pattern_id || patternId,
+                    window_start: ts - FEATURE_WINDOW_MS,
+                    window_end: ts,
+                    predicted_probability: null, // No prediction for seed data — this is training
+                });
+
+                if (result.success) loaded++;
+            }
+
+            // Mark seed as loaded
+            if (typeof StateManager !== 'undefined') {
+                StateManager.set(SEED_KEY, {
+                    loaded_at: Date.now(),
+                    n_records: loaded,
+                    pattern_id: patternId,
+                    source: 'seed_dataset',
+                });
+            }
+
+            console.log(
+                `%c[BayesianEngine] Seed dataset loaded: ${loaded}/${seedRecords.length} records. ` +
+                `${inconsistencies.length} label inconsistencies. ` +
+                `Threshold analysis: ${thresholdAnalysis.events_above_cutoff} events above cutoff.`,
+                'color: #00ff88; font-weight: bold; font-size: 11px;'
+            );
+
+            return {
+                loaded,
+                skipped: seedRecords.length - loaded,
+                errors: allErrors,
+                inconsistencies,
+                threshold_analysis: thresholdAnalysis,
+            };
+        },
+
+        // Analyze threshold distribution
+        _analyzeThreshold(records, labelDef) {
+            if (!labelDef || records.length === 0) {
+                return { status: 'no_label_definition' };
+            }
+
+            const values = records
+                .map(r => Math.abs(r.return_pct))
+                .sort((a, b) => a - b);
+
+            const n = values.length;
+            const aboveCutoff = values.filter(v => v >= labelDef.cutoff).length;
+            const belowCutoff = n - aboveCutoff;
+            const rate = aboveCutoff / n;
+
+            // Percentiles
+            const p25 = values[Math.floor(n * 0.25)];
+            const p50 = values[Math.floor(n * 0.50)];
+            const p75 = values[Math.floor(n * 0.75)];
+            const p90 = values[Math.floor(n * 0.90)];
+            const p95 = values[Math.floor(n * 0.95)];
+            const p99 = values[Math.floor(n * 0.99)];
+            const max = values[n - 1];
+            const mean = values.reduce((s, v) => s + v, 0) / n;
+
+            // Verdict on cutoff
+            let verdict;
+            if (rate < 0.02) verdict = 'TOO_RARE — cutoff too high, <2% of data. Lower it.';
+            else if (rate < 0.05) verdict = 'RARE — works for tail-event detection, small n per year.';
+            else if (rate <= 0.15) verdict = 'GOOD — 5-15% base rate. Enough events to learn from.';
+            else if (rate <= 0.30) verdict = 'MODERATE — 15-30% base rate. Decent signal.';
+            else verdict = 'TOO_COMMON — cutoff too low, >30% of data. Raise it.';
+
+            return {
+                metric: labelDef.metric,
+                cutoff: labelDef.cutoff,
+                n_total: n,
+                events_above_cutoff: aboveCutoff,
+                events_below_cutoff: belowCutoff,
+                base_rate: Math.round(rate * 10000) / 10000,
+                percentiles: { p25, p50, p75, p90, p95, p99, max },
+                mean: Math.round(mean * 1000) / 1000,
+                verdict,
+            };
+        },
+
+        // Check if seed data has been loaded
+        isLoaded() {
+            if (typeof StateManager === 'undefined') return false;
+            return !!StateManager.get(SEED_KEY, null);
+        },
+    };
+
+    // ══════════════════════════════════════════════════════
+    // WALK-FORWARD VALIDATION — No Retrospective Illusion
+    // ══════════════════════════════════════════════════════
+    // Simulates expanding-window temporal validation:
+    //   1. Start with initial training set (e.g., 2010-2015)
+    //   2. Train model (update posteriors)
+    //   3. Predict next period (e.g., 2016)
+    //   4. Score predictions against actual outcomes
+    //   5. Expand window, repeat
+    //
+    // This is the ONLY honest way to evaluate the model.
+    // Full-sample Brier scores are self-deception.
+
+    const WalkForward = {
+        // Run walk-forward validation on a seed dataset
+        // splitYear: first test year (e.g., 2016)
+        // stepYears: how many years per test fold (e.g., 1)
+        run(observations, options = {}) {
+            const {
+                splitYear = 2016,
+                stepMonths = 12,
+                patternId = 'economic-geopolitical-shock',
+            } = options;
+
+            // Sort by timestamp
+            const sorted = observations
+                .filter(o => o.observation_type === 'cascade_window')
+                .slice()
+                .sort((a, b) => a.timestamp - b.timestamp);
+
+            if (sorted.length < 10) {
+                return { error: 'Need at least 10 observations for walk-forward', n: sorted.length };
+            }
+
+            const splitTs = new Date(`${splitYear}-01-01`).getTime();
+            const stepMs = stepMonths * 30.44 * 24 * 60 * 60 * 1000;
+
+            const folds = [];
+            let currentSplit = splitTs;
+
+            while (true) {
+                const train = sorted.filter(o => o.timestamp < currentSplit);
+                const test = sorted.filter(o =>
+                    o.timestamp >= currentSplit && o.timestamp < currentSplit + stepMs
+                );
+
+                if (train.length < 5 || test.length === 0) {
+                    if (folds.length === 0) {
+                        currentSplit += stepMs;
+                        if (currentSplit > sorted[sorted.length - 1].timestamp) break;
+                        continue;
+                    }
+                    break;
+                }
+
+                // Train: compute posterior from training data
+                const prior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
+                const trainK = train.filter(o => o.observed_outcome === true).length;
+                const trainN = train.length;
+                const posterior = BetaBinomial.updateBatch(
+                    { ...prior },
+                    train.map(o => o.observed_outcome === true)
+                );
+                const predictedProb = BetaBinomial.mean(posterior);
+
+                // Test: evaluate on test data
+                const testK = test.filter(o => o.observed_outcome === true).length;
+                const testN = test.length;
+                const actualRate = testK / testN;
+
+                // Brier score for this fold
+                let brierSum = 0;
+                for (const obs of test) {
+                    const actual = obs.observed_outcome === true ? 1 : 0;
+                    brierSum += (predictedProb - actual) ** 2;
+                }
+                const foldBrier = brierSum / testN;
+
+                // Baseline: predict historical rate (frequency-based)
+                const baselineProb = trainK / trainN;
+                let baselineBrierSum = 0;
+                for (const obs of test) {
+                    const actual = obs.observed_outcome === true ? 1 : 0;
+                    baselineBrierSum += (baselineProb - actual) ** 2;
+                }
+                const baselineBrier = baselineBrierSum / testN;
+
+                const foldDate = new Date(currentSplit);
+                folds.push({
+                    fold: folds.length + 1,
+                    period: `${foldDate.getFullYear()}-${String(foldDate.getMonth() + 1).padStart(2, '0')}`,
+                    train_n: trainN,
+                    train_k: trainK,
+                    train_rate: Math.round(trainK / trainN * 10000) / 10000,
+                    test_n: testN,
+                    test_k: testK,
+                    test_rate: Math.round(actualRate * 10000) / 10000,
+                    predicted_prob: Math.round(predictedProb * 10000) / 10000,
+                    posterior: { alpha: posterior.alpha, beta: posterior.beta },
+                    brier_bayesian: Math.round(foldBrier * 10000) / 10000,
+                    brier_baseline: Math.round(baselineBrier * 10000) / 10000,
+                    lift: baselineBrier > 0
+                        ? Math.round((1 - foldBrier / baselineBrier) * 10000) / 10000
+                        : 0,
+                });
+
+                currentSplit += stepMs;
+            }
+
+            if (folds.length === 0) {
+                return { error: 'No valid folds generated. Check splitYear and data range.' };
+            }
+
+            // Aggregate metrics across folds
+            const avgBayesian = folds.reduce((s, f) => s + f.brier_bayesian, 0) / folds.length;
+            const avgBaseline = folds.reduce((s, f) => s + f.brier_baseline, 0) / folds.length;
+            const avgLift = avgBaseline > 0 ? (1 - avgBayesian / avgBaseline) : 0;
+
+            // Weighted by test set size
+            const totalTestN = folds.reduce((s, f) => s + f.test_n, 0);
+            const wBayesian = folds.reduce((s, f) => s + f.brier_bayesian * f.test_n, 0) / totalTestN;
+            const wBaseline = folds.reduce((s, f) => s + f.brier_baseline * f.test_n, 0) / totalTestN;
+            const wLift = wBaseline > 0 ? (1 - wBayesian / wBaseline) : 0;
+
+            return {
+                n_folds: folds.length,
+                total_train: sorted.filter(o => o.timestamp < folds[folds.length - 1].period).length,
+                total_test: totalTestN,
+                folds,
+                aggregate: {
+                    mean_brier_bayesian: Math.round(avgBayesian * 10000) / 10000,
+                    mean_brier_baseline: Math.round(avgBaseline * 10000) / 10000,
+                    mean_lift: Math.round(avgLift * 10000) / 10000,
+                    weighted_brier_bayesian: Math.round(wBayesian * 10000) / 10000,
+                    weighted_brier_baseline: Math.round(wBaseline * 10000) / 10000,
+                    weighted_lift: Math.round(wLift * 10000) / 10000,
+                },
+                verdict: this._verdict(avgLift, folds.length),
+            };
+        },
+
+        _verdict(avgLift, nFolds) {
+            if (nFolds < 3) return 'INSUFFICIENT_FOLDS — need at least 3 folds for meaningful evaluation.';
+            if (avgLift > 0.15) return 'STRONG_IMPROVEMENT — Bayesian model materially outperforms baseline.';
+            if (avgLift > 0.05) return 'MODEST_IMPROVEMENT — Bayesian model slightly better than baseline.';
+            if (avgLift > -0.05) return 'NO_DIFFERENCE — Bayesian model performs similarly to baseline.';
+            return 'WORSE — Bayesian model underperforms baseline. Check priors and data quality.';
+        },
+    };
+
+    // ══════════════════════════════════════════════════════
+    // BASELINE COMPARISON — Heuristic vs Bayesian
+    // ══════════════════════════════════════════════════════
+    // The baseline is the current CascadeDetector heuristic:
+    //   - Fixed severity thresholds (keyword-based)
+    //   - Fixed pattern weights (baseWeight)
+    //   - No posterior updating
+    //
+    // To prove the BayesianEngine adds value, it must beat
+    // this baseline on out-of-sample Brier score.
+
+    const BaselineComparison = {
+        // Compute baseline predictions from cascade pattern weights
+        // The heuristic "probability" is: baseWeight-derived fixed estimate
+        baselinePrediction(patternId) {
+            const weights = {
+                'economic-geopolitical-shock': 1.4,
+                'climate-economic-cascade': 1.3,
+                'tech-epistemic-erosion': 1.2,
+                'social-geopolitical-instability': 1.3,
+                'full-spectrum-crisis': 2.0,
+                'climate-social-displacement': 1.2,
+                'tech-economic-disruption': 1.1,
+                'epistemic-geopolitical-warfare': 1.5,
+                'equity-geopolitical-shock': 1.3,
+                'novel-cascade': 1.5,
+                'global_cascade': 1.3,
+            };
+            // Normalize baseWeight to [0, 1] range
+            // baseWeight range is [1.0, 2.0], map to probability [0.05, 0.50]
+            const w = weights[patternId] || 1.3;
+            return 0.05 + (w - 1.0) * 0.45; // Linear map: 1.0→0.05, 2.0→0.50
+        },
+
+        // Full comparison: baseline vs Bayesian on all observations
+        compare(patternId) {
+            const observations = loadObservations().filter(o =>
+                o.observation_type === 'cascade_window' &&
+                (o.pattern_id === patternId || patternId === 'global')
+            );
+
+            if (observations.length < 5) {
+                return { error: 'Need at least 5 observations', n: observations.length };
+            }
+
+            const baselineProb = this.baselinePrediction(patternId || 'global_cascade');
+            const bayesianProb = getCascadeProbability(patternId || 'global_cascade');
+
+            let brierBaseline = 0;
+            let brierBayesian = 0;
+            const n = observations.length;
+
+            for (const obs of observations) {
+                const actual = obs.observed_outcome === true ? 1 : 0;
+                brierBaseline += (baselineProb - actual) ** 2;
+                const predP = obs.predicted_probability !== null
+                    ? obs.predicted_probability
+                    : (bayesianProb ? bayesianProb.probability : baselineProb);
+                brierBayesian += (predP - actual) ** 2;
+            }
+
+            brierBaseline /= n;
+            brierBayesian /= n;
+
+            const lift = brierBaseline > 0 ? (1 - brierBayesian / brierBaseline) : 0;
+
+            return {
+                pattern_id: patternId,
+                n_observations: n,
+                baseline: {
+                    method: 'fixed_weight_heuristic',
+                    probability: baselineProb,
+                    brier: Math.round(brierBaseline * 10000) / 10000,
+                },
+                bayesian: {
+                    method: 'beta_binomial_conjugate',
+                    probability: bayesianProb ? bayesianProb.probability : null,
+                    brier: Math.round(brierBayesian * 10000) / 10000,
+                    effective_n: bayesianProb ? bayesianProb.effective_n : 0,
+                },
+                lift: Math.round(lift * 10000) / 10000,
+                lift_pct: Math.round(lift * 100 * 100) / 100,
+                verdict: lift > 0.15 ? 'BAYESIAN_WINS'
+                       : lift > 0.05 ? 'BAYESIAN_SLIGHT_EDGE'
+                       : lift > -0.05 ? 'TIE'
+                       : 'BASELINE_WINS',
+            };
+        },
+    };
+
+    // ══════════════════════════════════════════════════════
     // INIT
     // ══════════════════════════════════════════════════════
 
@@ -1475,6 +1940,18 @@ const BayesianEngine = (() => {
         // Empirical Bayes
         recalibratePrior: (patternId) => EmpiricalBayes.forceRecalibrate(patternId),
 
+        // Seed dataset
+        loadSeedDataset: (records, opts) => SeedDataset.load(records, opts),
+        validateSeedRecord: (record, i) => SeedDataset.validateRecord(record, i),
+        isSeedLoaded: () => SeedDataset.isLoaded(),
+
+        // Walk-forward validation
+        walkForward: (opts) => WalkForward.run(loadObservations(), opts),
+
+        // Baseline comparison
+        compareBaseline: (patternId) => BaselineComparison.compare(patternId),
+        baselinePrediction: (patternId) => BaselineComparison.baselinePrediction(patternId),
+
         // Status & audit
         getStatus,
         getPosterior,
@@ -1492,6 +1969,9 @@ const BayesianEngine = (() => {
             PosteriorPredictiveCheck,
             CalibrationMetrics,
             EmpiricalBayes,
+            SeedDataset,
+            WalkForward,
+            BaselineComparison,
         },
 
         // Math utilities (exposed for testing)
