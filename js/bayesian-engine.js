@@ -1846,6 +1846,296 @@ const BayesianEngine = (() => {
     };
 
     // ══════════════════════════════════════════════════════
+    // FAILURE DIAGNOSTICS — Classify WHY the model fails
+    // ══════════════════════════════════════════════════════
+    // Three diagnostics that don't add model complexity.
+    // They read the walk-forward folds and tell you WHICH
+    // dimension to add next — if any.
+    //
+    // 1. Stationarity stress → does error spike with regime shifts?
+    // 2. Regime segmentation → does lift concentrate in one bucket?
+    // 3. Pattern co-occurrence → are "independent" patterns correlated?
+
+    const FailureDiagnostics = {
+
+        // ── DIAGNOSTIC 1: Non-stationarity stress test ──
+        // Correlate |base_rate_delta| with (brier_bayesian - brier_baseline)
+        // If positive correlation: Bayesian fails BECAUSE of regime shifts → time decay needed
+        stationarityStress(options = {}) {
+            const {
+                patternId = 'economic-geopolitical-shock',
+                splitYear = 2016,
+                stepMonths = 12,
+            } = options;
+
+            const wf = WalkForward.run(loadObservations(), { patternId, splitYear, stepMonths });
+            if (wf.error) return { error: wf.error };
+            if (wf.n_folds < 3) return { error: 'Need at least 3 folds', n_folds: wf.n_folds };
+
+            const points = wf.folds.map(f => ({
+                period: f.period,
+                delta: Math.abs(f.test_rate - f.train_rate),
+                diff_error: f.brier_bayesian - f.brier_baseline,
+                train_rate: f.train_rate,
+                test_rate: f.test_rate,
+            }));
+
+            // Pearson correlation between |delta| and diff_error
+            const n = points.length;
+            const meanDelta = points.reduce((s, p) => s + p.delta, 0) / n;
+            const meanDiff = points.reduce((s, p) => s + p.diff_error, 0) / n;
+
+            let covSum = 0, varDelta = 0, varDiff = 0;
+            for (const p of points) {
+                const dD = p.delta - meanDelta;
+                const dE = p.diff_error - meanDiff;
+                covSum += dD * dE;
+                varDelta += dD * dD;
+                varDiff += dE * dE;
+            }
+
+            const denom = Math.sqrt(varDelta * varDiff);
+            const r = denom > 0 ? covSum / denom : 0;
+
+            let verdict;
+            if (r > 0.5) verdict = 'TIME_DECAY_NEEDED — error explodes with regime shifts. Add exponential decay or rolling prior.';
+            else if (r > 0.2) verdict = 'MILD_SIGNAL — some sensitivity to regime shifts. Monitor with more data.';
+            else if (r > -0.2) verdict = 'NO_SIGNAL — regime shifts don\'t explain Bayesian errors. Time decay won\'t help.';
+            else verdict = 'INVERSE — Bayesian actually handles regime shifts BETTER than baseline. No time decay needed.';
+
+            return {
+                diagnostic: 'stationarity_stress',
+                n_folds: n,
+                correlation: Math.round(r * 10000) / 10000,
+                points,
+                verdict,
+                next_step: r > 0.5
+                    ? 'Implement exponential time decay on observations or periodic prior recalibration.'
+                    : null,
+            };
+        },
+
+        // ── DIAGNOSTIC 2: Regime segmentation (poor man's covariates) ──
+        // Bucket observations by magnitude as proxy for volatility regime.
+        // Measure lift per bucket. If concentrated → conditioning needed.
+        regimeSegmentation(options = {}) {
+            const {
+                patternId = 'economic-geopolitical-shock',
+                nBuckets = 3,
+            } = options;
+
+            const observations = loadObservations()
+                .filter(o =>
+                    o.observation_type === 'cascade_window' &&
+                    (o.pattern_id === patternId || patternId === 'global')
+                )
+                .slice()
+                .sort((a, b) => a.timestamp - b.timestamp);
+
+            if (observations.length < 15) {
+                return { error: 'Need at least 15 observations for segmentation', n: observations.length };
+            }
+
+            // Compute magnitude percentile boundaries
+            const mags = observations.map(o => o.magnitude || 0).sort((a, b) => a - b);
+            const boundaries = [];
+            for (let i = 1; i < nBuckets; i++) {
+                boundaries.push(mags[Math.floor(mags.length * i / nBuckets)]);
+            }
+
+            const bucketLabels = nBuckets === 3
+                ? ['low_regime', 'mid_regime', 'high_regime']
+                : Array.from({ length: nBuckets }, (_, i) => `bucket_${i + 1}`);
+
+            // Assign each observation to a bucket
+            function getBucket(mag) {
+                for (let i = 0; i < boundaries.length; i++) {
+                    if (mag < boundaries[i]) return i;
+                }
+                return boundaries.length;
+            }
+
+            // Sequential evaluation per bucket
+            const prior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
+            const buckets = bucketLabels.map(() => ({
+                observations: [],
+                brierBayesian: 0,
+                brierBaseline: 0,
+                scored: 0,
+            }));
+
+            // Single pass: maintain one global posterior (sequential),
+            // but score per bucket
+            let runningPosterior = { ...prior };
+            const baselineProb = BaselineComparison.baselinePrediction(patternId || 'global_cascade');
+
+            for (let i = 0; i < observations.length; i++) {
+                const obs = observations[i];
+                const bucket = getBucket(obs.magnitude || 0);
+                const actual = obs.observed_outcome === true ? 1 : 0;
+
+                if (i >= 3) {
+                    const predP = BetaBinomial.mean(runningPosterior);
+                    buckets[bucket].brierBayesian += (predP - actual) ** 2;
+                    buckets[bucket].brierBaseline += (baselineProb - actual) ** 2;
+                    buckets[bucket].scored++;
+                }
+
+                runningPosterior = BetaBinomial.update(runningPosterior, obs.observed_outcome === true);
+            }
+
+            const results = bucketLabels.map((label, i) => {
+                const b = buckets[i];
+                if (b.scored === 0) return { bucket: label, n: 0, lift: null };
+                const brierB = b.brierBayesian / b.scored;
+                const brierBase = b.brierBaseline / b.scored;
+                const lift = brierBase > 0 ? (1 - brierB / brierBase) : 0;
+                return {
+                    bucket: label,
+                    n: b.scored,
+                    brier_bayesian: Math.round(brierB * 10000) / 10000,
+                    brier_baseline: Math.round(brierBase * 10000) / 10000,
+                    lift: Math.round(lift * 10000) / 10000,
+                };
+            });
+
+            // Check if lift is concentrated in one bucket
+            const lifts = results.filter(r => r.n > 0).map(r => r.lift);
+            const maxLift = Math.max(...lifts);
+            const minLift = Math.min(...lifts);
+            const liftSpread = maxLift - minLift;
+
+            let verdict;
+            if (liftSpread > 0.15 && maxLift > 0.05) {
+                const bestBucket = results.find(r => r.lift === maxLift)?.bucket;
+                verdict = `CONDITIONING_NEEDED — lift concentrated in ${bestBucket} (${Math.round(maxLift * 100)}%). Global model averages away regime-specific signal.`;
+            } else if (liftSpread > 0.10) {
+                verdict = 'MILD_HETEROGENEITY — some variation across regimes. May benefit from conditioning with more data.';
+            } else {
+                verdict = 'HOMOGENEOUS — lift is similar across regimes. A global model is sufficient.';
+            }
+
+            return {
+                diagnostic: 'regime_segmentation',
+                n_total: observations.length,
+                boundaries: boundaries.map(b => Math.round(b * 1000) / 1000),
+                buckets: results,
+                lift_spread: Math.round(liftSpread * 10000) / 10000,
+                verdict,
+                next_step: liftSpread > 0.15
+                    ? 'Add magnitude/volatility as a conditioning variable. Separate priors per regime, or logistic regression on magnitude.'
+                    : null,
+            };
+        },
+
+        // ── DIAGNOSTIC 3: Pattern co-occurrence ──
+        // Measure temporal proximity between pattern triggers.
+        // If patterns cluster but are modeled independently → partial pooling needed.
+        patternCooccurrence(options = {}) {
+            const {
+                windowDays = 30,
+            } = options;
+
+            const observations = loadObservations()
+                .filter(o => o.observation_type === 'cascade_window')
+                .slice()
+                .sort((a, b) => a.timestamp - b.timestamp);
+
+            if (observations.length < 10) {
+                return { error: 'Need at least 10 observations', n: observations.length };
+            }
+
+            // Collect unique pattern_ids
+            const patternIds = [...new Set(observations.map(o => o.pattern_id).filter(Boolean))];
+
+            if (patternIds.length < 2) {
+                return {
+                    diagnostic: 'pattern_cooccurrence',
+                    n_patterns: patternIds.length,
+                    verdict: 'SINGLE_PATTERN — only one pattern in data. Co-occurrence analysis requires multiple patterns.',
+                };
+            }
+
+            const windowMs = windowDays * 24 * 60 * 60 * 1000;
+
+            // Build co-occurrence matrix
+            const cooccur = {};
+            const counts = {};
+            for (const pid of patternIds) {
+                counts[pid] = observations.filter(o => o.pattern_id === pid).length;
+                cooccur[pid] = {};
+                for (const pid2 of patternIds) {
+                    cooccur[pid][pid2] = 0;
+                }
+            }
+
+            // For each observation, count other patterns within the window
+            for (let i = 0; i < observations.length; i++) {
+                const obs = observations[i];
+                if (!obs.pattern_id) continue;
+                for (let j = i + 1; j < observations.length; j++) {
+                    const other = observations[j];
+                    if (!other.pattern_id) continue;
+                    if (other.timestamp - obs.timestamp > windowMs) break;
+                    if (obs.pattern_id !== other.pattern_id) {
+                        cooccur[obs.pattern_id][other.pattern_id]++;
+                        cooccur[other.pattern_id][obs.pattern_id]++;
+                    }
+                }
+            }
+
+            // Find strongest co-occurring pairs
+            const pairs = [];
+            for (let i = 0; i < patternIds.length; i++) {
+                for (let j = i + 1; j < patternIds.length; j++) {
+                    const a = patternIds[i];
+                    const b = patternIds[j];
+                    const raw = cooccur[a][b];
+                    // Jaccard-like: co-occurrences / min(count_a, count_b)
+                    const minCount = Math.min(counts[a], counts[b]);
+                    const overlap = minCount > 0 ? raw / minCount : 0;
+                    pairs.push({
+                        pattern_a: a,
+                        pattern_b: b,
+                        co_occurrences: raw,
+                        count_a: counts[a],
+                        count_b: counts[b],
+                        overlap_ratio: Math.round(overlap * 10000) / 10000,
+                    });
+                }
+            }
+
+            pairs.sort((a, b) => b.overlap_ratio - a.overlap_ratio);
+
+            const maxOverlap = pairs.length > 0 ? pairs[0].overlap_ratio : 0;
+            const highPairs = pairs.filter(p => p.overlap_ratio > 0.3);
+
+            let verdict;
+            if (highPairs.length > 0 && maxOverlap > 0.5) {
+                verdict = `HIERARCHY_NEEDED — ${highPairs.length} pattern pair(s) co-occur >30% of the time. Independent posteriors waste shared signal. Partial pooling recommended.`;
+            } else if (maxOverlap > 0.3) {
+                verdict = 'MILD_CORRELATION — some pattern pairs co-occur. Monitor; hierarchy may help at higher n.';
+            } else {
+                verdict = 'INDEPENDENT — patterns fire independently. No hierarchical structure needed.';
+            }
+
+            return {
+                diagnostic: 'pattern_cooccurrence',
+                n_patterns: patternIds.length,
+                n_observations: observations.length,
+                window_days: windowDays,
+                pattern_counts: counts,
+                top_pairs: pairs.slice(0, 10),
+                max_overlap: maxOverlap,
+                verdict,
+                next_step: maxOverlap > 0.5
+                    ? 'Implement hierarchical Beta-Binomial with partial pooling across correlated patterns.'
+                    : null,
+            };
+        },
+    };
+
+    // ══════════════════════════════════════════════════════
     // BASELINE COMPARISON — Heuristic vs Bayesian
     // ══════════════════════════════════════════════════════
     // The baseline is the current CascadeDetector heuristic:
@@ -2016,6 +2306,11 @@ const BayesianEngine = (() => {
         compareBaseline: (patternId) => BaselineComparison.compare(patternId),
         baselinePrediction: (patternId) => BaselineComparison.baselinePrediction(patternId),
 
+        // Failure diagnostics — classify WHY the model fails
+        diagnoseStationarity: (opts) => FailureDiagnostics.stationarityStress(opts),
+        diagnoseRegimes: (opts) => FailureDiagnostics.regimeSegmentation(opts),
+        diagnoseCooccurrence: (opts) => FailureDiagnostics.patternCooccurrence(opts),
+
         // Status & audit
         getStatus,
         getPosterior,
@@ -2035,6 +2330,7 @@ const BayesianEngine = (() => {
             EmpiricalBayes,
             SeedDataset,
             WalkForward,
+            FailureDiagnostics,
             BaselineComparison,
         },
 
