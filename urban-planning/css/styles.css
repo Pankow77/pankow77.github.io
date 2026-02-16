@@ -1888,6 +1888,79 @@ body::before {
   }
 }
 
+/* ── Backtest Results Table ─────────────────────────────── */
+.backtest-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.backtest-table th {
+  font-family: var(--font-display);
+  font-size: 8px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--border-default);
+  white-space: nowrap;
+}
+
+.backtest-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.backtest-table tr:last-child td {
+  border-bottom: none;
+}
+
+.backtest-table .metric-col {
+  color: var(--neon-cyan);
+  font-weight: 700;
+}
+
+.backtest-table .model-col {
+  color: var(--text-secondary);
+}
+
+.backtest-table .mape-good { color: var(--neon-green); }
+.backtest-table .mape-ok { color: var(--warning-amber); }
+.backtest-table .mape-bad { color: var(--critical-red); }
+
+.backtest-grade {
+  display: inline-block;
+  padding: 2px 6px;
+  font-family: var(--font-display);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 1px solid;
+  margin-left: 4px;
+}
+
+.backtest-grade.good {
+  color: var(--neon-green);
+  border-color: var(--neon-green);
+  background: var(--neon-green-glow);
+}
+
+.backtest-grade.ok {
+  color: var(--warning-amber);
+  border-color: var(--warning-amber);
+  background: var(--warning-amber-dim);
+}
+
+.backtest-grade.bad {
+  color: var(--critical-red);
+  border-color: var(--critical-red);
+  background: var(--critical-red-dim);
+}
+
 /* ── Utility ───────────────────────────────────────────── */
 .mb-0 { margin-bottom: 0; }
 .mb-8 { margin-bottom: 8px; }

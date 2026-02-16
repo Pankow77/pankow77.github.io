@@ -116,6 +116,38 @@ const INITIAL_LOGS = [
   { time: '00:00:09', level: 'system', msg: 'PANKOW_77C> Optimization is death. Proceed with caution.' },
 ];
 
+// ── SEEDED PRNG (Mulberry32) ──────────────────────────────
+// Deterministic. Same seed = same output. Always.
+// No Math.random(). No aesthetic noise. Replicable science.
+class SeededRNG {
+  constructor(seed) {
+    this._seed = seed | 0;
+    this._state = seed | 0;
+  }
+  // Mulberry32 — 32-bit, period 2^32, passes BigCrush
+  next() {
+    let t = this._state += 0x6D2B79F5;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  }
+  // Box-Muller with seeded input
+  gaussian() {
+    const u1 = this.next();
+    const u2 = this.next();
+    return Math.sqrt(-2 * Math.log(u1 || 1e-10)) * Math.cos(2 * Math.PI * u2);
+  }
+  get seed() { return this._seed; }
+}
+
+// Global seeded RNG — seed derived from entropy slider value
+// Same entropy seed = same future. Change seed = different future. Transparent.
+let RNG = new SeededRNG(42);
+
+function reseedRNG(entropySeed) {
+  RNG = new SeededRNG(entropySeed * 7919 + 31); // prime-based dispersion
+}
+
 // ── ENTROPY ENGINE ────────────────────────────────────────
 const EntropyEngine = {
   calculateSovereignty(efficiency, entropySeed, bufferMonths, nullZoneRatio) {
@@ -136,13 +168,11 @@ const EntropyEngine = {
   },
 
   generateNoise(count, amplitude, seed) {
+    // Deterministic noise via seeded PRNG — same seed, same noise, every reload
+    reseedRNG(seed);
     const noise = [];
     for (let i = 0; i < count; i++) {
-      // Box-Muller transform
-      const u1 = Math.random();
-      const u2 = Math.random();
-      const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
-      noise.push(z * amplitude * (seed / 100));
+      noise.push(RNG.gaussian() * amplitude * (seed / 100));
     }
     return noise;
   },
@@ -158,6 +188,124 @@ const EntropyEngine = {
       before: { eff: 89, sov: 31, res: 72, pre: 85 },
       after: { eff: Math.round(newEff), sov: newSov, res: Math.round(newRes), pre: Math.round(newPre) }
     };
+  }
+};
+
+// ── BACKTESTING ENGINE ────────────────────────────────────
+// The engine that turns narrative into science.
+// Train on 2010-2020, predict 2020-2024, measure error against known truth.
+// No hiding. The error is shown.
+const BacktestEngine = {
+  // Split historical data: training window → holdout window
+  // trainEnd: last year to include in training
+  // Returns: { mae, rmse, mape, predictions[], actuals[], errors[] }
+  run(data, years, trainEndYear, model, entropySeed) {
+    const trainIdx = years.findIndex(y => y > trainEndYear);
+    if (trainIdx <= 2 || trainIdx >= years.length) return null; // need ≥3 train + ≥1 test
+
+    const trainData = data.slice(0, trainIdx);
+    const trainYears = years.slice(0, trainIdx);
+    const testData = data.slice(trainIdx);
+    const testYears = years.slice(trainIdx);
+    const lastTestYear = testYears[testYears.length - 1];
+
+    // Run model on training data only
+    let result;
+    switch (model) {
+      case 'linear':
+        result = PredictionEngine.linearRegression(trainData, trainYears, lastTestYear);
+        break;
+      case 'exponential':
+        result = PredictionEngine.exponentialGrowth(trainData, trainYears, lastTestYear);
+        break;
+      case 'entropy':
+        result = PredictionEngine.entropyModel(trainData, trainYears, lastTestYear, entropySeed);
+        break;
+      default:
+        result = PredictionEngine.composite(trainData, trainYears, lastTestYear, entropySeed);
+    }
+
+    // Match predictions to actual test years
+    const predictions = [];
+    const actuals = [];
+    const errors = [];
+    let sumAbsErr = 0, sumSqErr = 0, sumAbsPctErr = 0;
+
+    for (let i = 0; i < testYears.length; i++) {
+      const pred = result.predictions.find(p => p.year === testYears[i]);
+      if (!pred) continue;
+      const actual = testData[i];
+      const err = pred.value - actual;
+      const absErr = Math.abs(err);
+      const pctErr = actual !== 0 ? absErr / Math.abs(actual) : 0;
+
+      predictions.push({ year: testYears[i], value: pred.value, confidence: pred.confidence });
+      actuals.push({ year: testYears[i], value: actual });
+      errors.push({ year: testYears[i], error: err, absError: absErr, pctError: pctErr });
+
+      sumAbsErr += absErr;
+      sumSqErr += err * err;
+      sumAbsPctErr += pctErr;
+    }
+
+    const n = errors.length;
+    if (n === 0) return null;
+
+    return {
+      model,
+      trainWindow: `${trainYears[0]}-${trainYears[trainYears.length - 1]}`,
+      testWindow: `${testYears[0]}-${testYears[testYears.length - 1]}`,
+      mae: sumAbsErr / n,               // Mean Absolute Error
+      rmse: Math.sqrt(sumSqErr / n),     // Root Mean Square Error
+      mape: (sumAbsPctErr / n) * 100,    // Mean Absolute Percentage Error
+      predictions,
+      actuals,
+      errors,
+      n
+    };
+  },
+
+  // Run all 4 models, return comparative results
+  runAll(data, years, trainEndYear, entropySeed) {
+    const models = ['linear', 'exponential', 'entropy', 'composite'];
+    const results = {};
+    for (const model of models) {
+      results[model] = this.run(data, years, trainEndYear, model, entropySeed);
+    }
+    return results;
+  },
+
+  // Run across all metrics, return aggregate error surface
+  runFullSuite(entropySeed) {
+    const metrics = ['population', 'income', 'homevalue', 'unemployment'];
+    const suite = {};
+    for (const metric of metrics) {
+      const data = HISTORICAL.S07[metric];
+      if (!data) continue;
+      suite[metric] = this.runAll(data, HISTORICAL.years, 2020, entropySeed);
+    }
+    return suite;
+  },
+
+  // Format results for display — no hiding, full transparency
+  formatResults(suite) {
+    const rows = [];
+    for (const [metric, models] of Object.entries(suite)) {
+      for (const [model, result] of Object.entries(models)) {
+        if (!result) continue;
+        rows.push({
+          metric: metric.toUpperCase(),
+          model: model.toUpperCase(),
+          mae: result.mae,
+          rmse: result.rmse,
+          mape: result.mape,
+          train: result.trainWindow,
+          test: result.testWindow,
+          n: result.n
+        });
+      }
+    }
+    return rows;
   }
 };
 
@@ -686,6 +834,7 @@ function renderPrediction() {
     renderProjectedMetrics();
     renderFutureRadar();
     renderAlertsTimeline();
+    renderBacktest();
     addLog('info', `Prediction engine: ${STATE.selectedModel} model → ${STATE.projectionYear}. Sector ${sector.code}.`);
   });
 }
@@ -892,6 +1041,46 @@ function renderAlertsTimeline() {
       </div>
     </div>
   `).join('');
+}
+
+// ── RENDER: BACKTEST ──────────────────────────────────────
+function renderBacktest() {
+  const suite = BacktestEngine.runFullSuite(STATE.entropySeed);
+  const rows = BacktestEngine.formatResults(suite);
+  const container = document.getElementById('backtest-results');
+
+  // MAPE grading: <5% = good, <15% = ok, >15% = bad
+  function mapeGrade(mape) {
+    if (mape < 5) return { cls: 'good', label: 'A' };
+    if (mape < 10) return { cls: 'ok', label: 'B' };
+    if (mape < 15) return { cls: 'ok', label: 'C' };
+    return { cls: 'bad', label: 'F' };
+  }
+
+  let html = `<table class="backtest-table">
+    <thead><tr>
+      <th>METRIC</th><th>MODEL</th><th>MAE</th><th>RMSE</th><th>MAPE</th><th></th>
+    </tr></thead><tbody>`;
+
+  for (const row of rows) {
+    const grade = mapeGrade(row.mape);
+    html += `<tr>
+      <td class="metric-col">${row.metric}</td>
+      <td class="model-col">${row.model}</td>
+      <td>${typeof row.mae === 'number' ? (row.mae > 1000 ? fmt(Math.round(row.mae)) : row.mae.toFixed(2)) : '—'}</td>
+      <td>${typeof row.rmse === 'number' ? (row.rmse > 1000 ? fmt(Math.round(row.rmse)) : row.rmse.toFixed(2)) : '—'}</td>
+      <td class="mape-${grade.cls}">${row.mape.toFixed(1)}%</td>
+      <td><span class="backtest-grade ${grade.cls}">${grade.label}</span></td>
+    </tr>`;
+  }
+
+  html += '</tbody></table>';
+  container.innerHTML = html;
+
+  // Show seed for replicability
+  document.getElementById('backtest-seed').textContent = STATE.entropySeed * 7919 + 31;
+
+  addLog('system', `Backtest complete. ${rows.length} model-metric pairs evaluated. Train: 2010-2020, Test: 2020-2024.`);
 }
 
 // ── RENDER: INTERVENTION LAYER ────────────────────────────

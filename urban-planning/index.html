@@ -436,6 +436,21 @@
         </div>
       </div>
 
+      <!-- BACKTEST: The Error Surface — no hiding -->
+      <div class="card" id="backtest-card">
+        <div class="card-header">BACKTEST <span class="accent">// TRAIN 2010-2020 → TEST 2020-2024</span></div>
+        <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6">
+          Models trained on 2010-2020 only. Predictions compared against known 2020-2024 actuals. The error is not hidden.
+        </div>
+        <div id="backtest-results">
+          <!-- Populated by JS -->
+        </div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);margin-top:12px;line-height:1.5" id="backtest-footer">
+          MAE = Mean Absolute Error &nbsp;|&nbsp; RMSE = Root Mean Square Error &nbsp;|&nbsp; MAPE = Mean Absolute % Error<br>
+          RNG Seed: <span id="backtest-seed">—</span> (deterministic — same seed, same output, every reload)
+        </div>
+      </div>
+
       <!-- CTA -->
       <button class="btn-outline" data-navigate="intervention" style="width:100%;padding:14px">
         ◈ ADJUST INTERVENTION PARAMETERS
