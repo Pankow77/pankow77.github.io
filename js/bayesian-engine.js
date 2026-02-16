@@ -1782,6 +1782,34 @@ const BayesianEngine = (() => {
             const wBaseline = folds.reduce((s, f) => s + f.brier_baseline * f.test_n, 0) / totalTestN;
             const wLift = wBaseline > 0 ? (1 - wBayesian / wBaseline) : 0;
 
+            // ── BASE RATE STABILITY ──
+            // Detect regime shifts between folds
+            const testRates = folds.map(f => f.test_rate);
+            const trainRates = folds.map(f => f.train_rate);
+            const meanTestRate = testRates.reduce((s, r) => s + r, 0) / testRates.length;
+            const meanTrainRate = trainRates.reduce((s, r) => s + r, 0) / trainRates.length;
+
+            // Coefficient of variation (std / mean) for test rates
+            const testRateVar = testRates.reduce((s, r) => s + (r - meanTestRate) ** 2, 0) / testRates.length;
+            const testRateStd = Math.sqrt(testRateVar);
+            const testRateCV = meanTestRate > 0 ? testRateStd / meanTestRate : 0;
+
+            // Max absolute shift between consecutive fold test rates
+            let maxRateShift = 0;
+            let shiftPeriods = '';
+            for (let i = 1; i < folds.length; i++) {
+                const shift = Math.abs(folds[i].test_rate - folds[i - 1].test_rate);
+                if (shift > maxRateShift) {
+                    maxRateShift = shift;
+                    shiftPeriods = `${folds[i - 1].period} → ${folds[i].period}`;
+                }
+            }
+
+            let stabilityVerdict;
+            if (testRateCV < 0.3) stabilityVerdict = 'STABLE — base rate consistent across folds. Lift is generalizable.';
+            else if (testRateCV < 0.6) stabilityVerdict = 'MODERATE_SHIFT — some regime variation. Lift may be period-specific.';
+            else stabilityVerdict = 'REGIME_CHANGE — base rate varies dramatically. Lift is regime-specific. Interpret with caution.';
+
             return {
                 n_folds: folds.length,
                 total_train: sorted.filter(o => o.timestamp < folds[folds.length - 1].period).length,
@@ -1794,6 +1822,15 @@ const BayesianEngine = (() => {
                     weighted_brier_bayesian: Math.round(wBayesian * 10000) / 10000,
                     weighted_brier_baseline: Math.round(wBaseline * 10000) / 10000,
                     weighted_lift: Math.round(wLift * 10000) / 10000,
+                },
+                base_rate_stability: {
+                    mean_test_rate: Math.round(meanTestRate * 10000) / 10000,
+                    test_rate_std: Math.round(testRateStd * 10000) / 10000,
+                    coefficient_of_variation: Math.round(testRateCV * 10000) / 10000,
+                    max_consecutive_shift: Math.round(maxRateShift * 10000) / 10000,
+                    max_shift_between: shiftPeriods,
+                    per_fold_rates: folds.map(f => ({ period: f.period, train: f.train_rate, test: f.test_rate })),
+                    verdict: stabilityVerdict,
                 },
                 verdict: this._verdict(avgLift, folds.length),
             };
@@ -1843,50 +1880,77 @@ const BayesianEngine = (() => {
         },
 
         // Full comparison: baseline vs Bayesian on all observations
+        // IMPORTANT: Uses sequential (online) Bayesian predictions to avoid in-sample bias.
+        // Each observation is scored against the posterior computed ONLY from prior observations.
         compare(patternId) {
-            const observations = loadObservations().filter(o =>
-                o.observation_type === 'cascade_window' &&
-                (o.pattern_id === patternId || patternId === 'global')
-            );
+            const observations = loadObservations()
+                .filter(o =>
+                    o.observation_type === 'cascade_window' &&
+                    (o.pattern_id === patternId || patternId === 'global')
+                )
+                .slice()
+                .sort((a, b) => a.timestamp - b.timestamp);
 
             if (observations.length < 5) {
                 return { error: 'Need at least 5 observations', n: observations.length };
             }
 
-            const baselineProb = this.baselinePrediction(patternId || 'global_cascade');
-            const bayesianProb = getCascadeProbability(patternId || 'global_cascade');
+            const pid = patternId || 'global_cascade';
+            const baselineProb = this.baselinePrediction(pid);
+            const prior = DEFAULT_PRIORS[pid] || DEFAULT_PRIORS.global_cascade;
 
             let brierBaseline = 0;
             let brierBayesian = 0;
             const n = observations.length;
 
-            for (const obs of observations) {
+            // Sequential evaluation: predict BEFORE updating
+            let runningPosterior = { ...prior };
+            let scored = 0;
+
+            for (let i = 0; i < n; i++) {
+                const obs = observations[i];
                 const actual = obs.observed_outcome === true ? 1 : 0;
-                brierBaseline += (baselineProb - actual) ** 2;
-                const predP = obs.predicted_probability !== null
-                    ? obs.predicted_probability
-                    : (bayesianProb ? bayesianProb.probability : baselineProb);
-                brierBayesian += (predP - actual) ** 2;
+
+                // Skip first few — need minimum training before scoring
+                if (i >= 3) {
+                    // Bayesian prediction from posterior trained on obs[0..i-1] ONLY
+                    const predP = BetaBinomial.mean(runningPosterior);
+                    brierBayesian += (predP - actual) ** 2;
+                    brierBaseline += (baselineProb - actual) ** 2;
+                    scored++;
+                }
+
+                // NOW update posterior with this observation (for next iteration)
+                runningPosterior = BetaBinomial.update(
+                    runningPosterior,
+                    obs.observed_outcome === true
+                );
             }
 
-            brierBaseline /= n;
-            brierBayesian /= n;
+            if (scored === 0) {
+                return { error: 'Not enough observations to score (need >3)', n };
+            }
+
+            brierBaseline /= scored;
+            brierBayesian /= scored;
 
             const lift = brierBaseline > 0 ? (1 - brierBayesian / brierBaseline) : 0;
 
             return {
                 pattern_id: patternId,
                 n_observations: n,
+                n_scored: scored,
+                evaluation_method: 'sequential_online',
                 baseline: {
                     method: 'fixed_weight_heuristic',
                     probability: baselineProb,
                     brier: Math.round(brierBaseline * 10000) / 10000,
                 },
                 bayesian: {
-                    method: 'beta_binomial_conjugate',
-                    probability: bayesianProb ? bayesianProb.probability : null,
+                    method: 'beta_binomial_conjugate_sequential',
+                    final_posterior: { alpha: runningPosterior.alpha, beta: runningPosterior.beta },
                     brier: Math.round(brierBayesian * 10000) / 10000,
-                    effective_n: bayesianProb ? bayesianProb.effective_n : 0,
+                    effective_n: scored,
                 },
                 lift: Math.round(lift * 10000) / 10000,
                 lift_pct: Math.round(lift * 100 * 100) / 100,
