@@ -1995,6 +1995,63 @@ body::before {
   color: var(--text-muted);
 }
 
+.bayes-corr-warning {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--warning-amber);
+  padding: 6px 8px;
+  border: 1px solid var(--warning-amber);
+  background: var(--warning-amber-dim);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.bayes-regime-warning {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--critical-red);
+  padding: 4px 0;
+  line-height: 1.4;
+}
+
+.bayes-nu-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.bayes-noise-source {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.5;
+  margin-top: 4px;
+}
+
+.bayes-limitations {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.bayes-limitations-title {
+  font-family: var(--font-display);
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.bayes-limitation {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
 /* ── Backtest Results Table ─────────────────────────────── */
 .backtest-table {
   width: 100%;
