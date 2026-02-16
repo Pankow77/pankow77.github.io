@@ -69,6 +69,7 @@ const BayesianEngine = (() => {
         'climate-social-displacement':   { alpha: 2, beta: 8 },
         'tech-economic-disruption':      { alpha: 2, beta: 8 },
         'epistemic-geopolitical-warfare': { alpha: 2, beta: 8 },
+        'equity-geopolitical-shock':      { alpha: 2, beta: 8 },  // Separate from energy
         'novel-cascade':                 { alpha: 1, beta: 12 }, // Unknown patterns, conservative
 
         // Normal prior for domain severity — N(mu, sigma^2)
@@ -109,6 +110,8 @@ const BayesianEngine = (() => {
     // If you can't look it up in public data with a timestamp, it's not ground truth.
 
     const LABEL_DEFINITIONS = {
+        // ── ENERGY VERTICAL ──
+        // One instrument. One cutoff. No fallback.
         'economic-geopolitical-shock': {
             metric: 'brent_crude_pct_move_6h',
             description: 'Brent Crude Oil absolute % change within 6h window',
@@ -117,15 +120,27 @@ const BayesianEngine = (() => {
             direction: 'absolute', // Both up and down count
             source: 'ICE Brent Crude front-month contract',
             source_url: 'https://www.theice.com/products/219/Brent-Crude-Futures',
-            fallback_metric: 'eurostoxx50_pct_move_6h',
-            fallback_cutoff: 3.0, // >= 3% absolute move on EuroStoxx 50
-            fallback_source: 'STOXX Ltd / Eurex',
+            // NOTE: cutoff 5.0% is PROVISIONAL — must be validated against
+            // historical 6h return distribution before building training set.
+            // If empirical analysis shows 5% happens <5 times in 5 years → too rare.
+            // If >50 times per year → too noisy. Adjust cutoff to target ~15-25 events/year.
             // Ground truth protocol:
             // 1. At window close (t + 6h), check Brent Crude front-month
             // 2. Compute abs(price_at_t+6h - price_at_t) / price_at_t * 100
-            // 3. If >= 5.0 → observed_outcome = true
-            // 4. If Brent unavailable, use EuroStoxx 50 with 3.0% cutoff
-            // 5. Log which metric was used in noise_context
+            // 3. If >= cutoff → observed_outcome = true
+            // 4. Log price_start, price_end, pct_change in noise_context
+        },
+
+        // ── EQUITY VERTICAL ── (separate process, separate posterior)
+        'equity-geopolitical-shock': {
+            metric: 'eurostoxx50_pct_move_6h',
+            description: 'EuroStoxx 50 absolute % change within 6h window',
+            cutoff: 3.0,          // >= 3% absolute move
+            unit: 'percent',
+            direction: 'absolute',
+            source: 'STOXX Ltd / Eurex',
+            // Different instrument = different distribution = different vertical.
+            // Never mix with Brent under same posterior.
         },
 
         'climate-economic-cascade': {
@@ -774,8 +789,10 @@ const BayesianEngine = (() => {
                 blocks.push(blockRate);
             }
 
-            if (blocks.length < 2) {
-                // Not enough blocks — use original prior concentration
+            if (blocks.length < 4) {
+                // Not enough blocks for reliable variance estimate.
+                // With 2-3 blocks, inter-block variance is noise, not signal.
+                // Fall back to original prior concentration — don't pretend to know.
                 return 10;
             }
 
