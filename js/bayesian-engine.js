@@ -1,5 +1,5 @@
 // ═══════════════════════════════════════════════════════════
-// BAYESIAN-ENGINE v1.0 — Conjugate Inference Core
+// BAYESIAN-ENGINE v2.0 — Conjugate Inference Core
 // Hybrid Syndicate / Ethic Software Foundation
 // ═══════════════════════════════════════════════════════════
 // Replaces heuristic severity scoring with proper Bayesian
@@ -41,7 +41,8 @@ const BayesianEngine = (() => {
     const SCHEMA_FIELDS = [
         'observation_type', 'intervention_type', 'magnitude',
         'timestamp', 'observed_outcome', 'noise_context',
-        'domain', 'pattern_id', 'window_start', 'window_end'
+        'domain', 'pattern_id', 'window_start', 'window_end',
+        'predicted_probability' // What the model predicted at time of observation (for Brier score)
     ];
 
     const VALID_OBSERVATION_TYPES = ['cascade_window', 'intervention', 'severity_reading'];
@@ -84,7 +85,21 @@ const BayesianEngine = (() => {
     // ══════════════════════════════════════════════════════
     const STORAGE_KEY = 'bayesian_observations';
     const POSTERIOR_KEY = 'bayesian_posteriors';
+    const PENDING_KEY = 'bayesian_pending';
+    const CALIBRATION_KEY = 'bayesian_calibration';
     const MAX_OBSERVATIONS = 500;
+
+    // ══════════════════════════════════════════════════════
+    // TEMPORAL DISCIPLINE — Anti-leakage, anti-autocorrelation
+    // ══════════════════════════════════════════════════════
+    // Feature window: [t - FEATURE_WINDOW_MS, t]
+    // Target window:  [t, t + PREDICTION_HORIZON_MS]
+    // No overlap. No leakage.
+    // Minimum gap between independent observations: PREDICTION_HORIZON_MS
+    const FEATURE_WINDOW_MS = 6 * 60 * 60 * 1000;     // 6 hours
+    const PREDICTION_HORIZON_MS = 6 * 60 * 60 * 1000;  // 6 hours forward
+    const MIN_OBSERVATION_GAP_MS = PREDICTION_HORIZON_MS; // Non-overlapping → independent
+    const EMPIRICAL_BAYES_THRESHOLD = 20; // Recalibrate priors at n≥20
 
     // ══════════════════════════════════════════════════════
     // MATH UTILITIES — No external dependencies
@@ -547,6 +562,324 @@ const BayesianEngine = (() => {
     };
 
     // ══════════════════════════════════════════════════════
+    // CALIBRATION METRICS — Brier Score + Calibration Curve
+    // ══════════════════════════════════════════════════════
+    // These tell you if your probabilities MEAN something.
+    // If you predict 30% and cascades happen 30% of the time → calibrated.
+    // If your calibration curve deviates from diagonal → fix priors.
+
+    const CalibrationMetrics = {
+        // Brier score: (1/n) Σ (p_i - o_i)²
+        // Perfect = 0, worst = 1
+        // Decomposition: Brier = Reliability - Resolution + Uncertainty
+        brierScore(predictions) {
+            // predictions: [{ predicted: 0.3, actual: 0 or 1 }, ...]
+            if (predictions.length === 0) return { score: null, n: 0 };
+            let sum = 0;
+            for (const p of predictions) {
+                const diff = p.predicted - p.actual;
+                sum += diff * diff;
+            }
+            const score = sum / predictions.length;
+
+            // Decompose: reliability (calibration error), resolution, uncertainty
+            const bins = this.calibrationBins(predictions);
+            let reliability = 0;
+            let resolution = 0;
+            const baseRate = predictions.reduce((s, p) => s + p.actual, 0) / predictions.length;
+            const uncertainty = baseRate * (1 - baseRate);
+
+            for (const bin of bins) {
+                if (bin.count === 0) continue;
+                const weight = bin.count / predictions.length;
+                reliability += weight * Math.pow(bin.mean_predicted - bin.observed_rate, 2);
+                resolution += weight * Math.pow(bin.observed_rate - baseRate, 2);
+            }
+
+            return {
+                score: Math.round(score * 10000) / 10000,
+                reliability: Math.round(reliability * 10000) / 10000,
+                resolution: Math.round(resolution * 10000) / 10000,
+                uncertainty: Math.round(uncertainty * 10000) / 10000,
+                n: predictions.length,
+                interpretation: score < 0.1 ? 'EXCELLENT' :
+                                score < 0.2 ? 'GOOD' :
+                                score < 0.3 ? 'FAIR' :
+                                'POOR',
+            };
+        },
+
+        // Calibration bins: group predictions by probability range
+        // Returns: [{ bin: '0.0-0.2', mean_predicted, observed_rate, count, deviation }]
+        calibrationBins(predictions, nBins = 5) {
+            const edges = [];
+            for (let i = 0; i <= nBins; i++) edges.push(i / nBins);
+
+            const bins = [];
+            for (let i = 0; i < nBins; i++) {
+                const lo = edges[i];
+                const hi = edges[i + 1];
+                const inBin = predictions.filter(p => p.predicted >= lo && (i === nBins - 1 ? p.predicted <= hi : p.predicted < hi));
+                const count = inBin.length;
+                const meanPred = count > 0 ? inBin.reduce((s, p) => s + p.predicted, 0) / count : (lo + hi) / 2;
+                const obsRate = count > 0 ? inBin.reduce((s, p) => s + p.actual, 0) / count : 0;
+
+                bins.push({
+                    bin: `${lo.toFixed(1)}-${hi.toFixed(1)}`,
+                    lower: lo,
+                    upper: hi,
+                    mean_predicted: Math.round(meanPred * 1000) / 1000,
+                    observed_rate: Math.round(obsRate * 1000) / 1000,
+                    count,
+                    deviation: Math.round(Math.abs(meanPred - obsRate) * 1000) / 1000,
+                    calibrated: count >= 3 && Math.abs(meanPred - obsRate) < 0.15,
+                });
+            }
+            return bins;
+        },
+
+        // Full calibration report from observations
+        fromObservations(observations) {
+            const predictions = observations
+                .filter(o => o.predicted_probability !== undefined && o.predicted_probability !== null)
+                .map(o => ({
+                    predicted: o.predicted_probability,
+                    actual: o.observed_outcome === true ? 1 : 0,
+                }));
+
+            if (predictions.length < 5) {
+                return {
+                    status: 'INSUFFICIENT_DATA',
+                    n: predictions.length,
+                    minimum_needed: 5,
+                };
+            }
+
+            return {
+                status: 'COMPLETE',
+                brier: this.brierScore(predictions),
+                calibration_curve: this.calibrationBins(predictions),
+                n: predictions.length,
+            };
+        },
+    };
+
+    // ══════════════════════════════════════════════════════
+    // EMPIRICAL BAYES — Prior Recalibration at n≥20
+    // ══════════════════════════════════════════════════════
+    // Method of moments: estimate α, β from observed cascade rate
+    // Preserves prior strength (α+β) but shifts location to match data.
+    // Only recalibrates when crossing threshold (20, 50, 100).
+
+    const EmpiricalBayes = {
+        // Check if recalibration is needed and apply if so
+        maybeRecalibrate(patternId, observations, currentPosterior) {
+            const n = observations.length;
+            const thresholds = [20, 50, 100, 200];
+            const calibrated = loadCalibrationState();
+            const lastN = calibrated[patternId] || 0;
+
+            // Only recalibrate at threshold crossings
+            const crossed = thresholds.find(t => n >= t && lastN < t);
+            if (!crossed) return null;
+
+            // Method of moments
+            const k = observations.filter(o => o.observed_outcome === true).length;
+            const observedRate = k / n;
+
+            // Keep the original prior concentration (strength of belief)
+            // but shift to match observed rate
+            const originalPrior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
+            const concentration = originalPrior.alpha + originalPrior.beta;
+
+            // New prior: keep concentration, shift to observed rate
+            // But blend with original to avoid overreaction: 70% data, 30% original
+            const blendedRate = 0.7 * observedRate + 0.3 * (originalPrior.alpha / concentration);
+            const newAlpha = Math.max(0.5, blendedRate * concentration);
+            const newBeta = Math.max(0.5, (1 - blendedRate) * concentration);
+
+            // Record recalibration
+            calibrated[patternId] = n;
+            saveCalibrationState(calibrated);
+
+            console.log(
+                `%c[BayesianEngine] Empirical Bayes recalibration at n=${n} for ${patternId}: ` +
+                `Beta(${newAlpha.toFixed(2)}, ${newBeta.toFixed(2)}) | observed rate: ${observedRate.toFixed(3)}`,
+                'color: #ff9500; font-size: 10px;'
+            );
+
+            return {
+                pattern_id: patternId,
+                n_at_recalibration: n,
+                observed_rate: observedRate,
+                old_prior: originalPrior,
+                new_prior: { alpha: newAlpha, beta: newBeta },
+                concentration,
+                blend_ratio: '70% data / 30% original',
+            };
+        },
+
+        // Force recalibration (manual trigger)
+        forceRecalibrate(patternId) {
+            const observations = loadObservations().filter(o =>
+                o.observation_type === 'cascade_window' &&
+                (o.pattern_id === patternId || patternId === 'global_cascade')
+            );
+            if (observations.length < 5) return null;
+
+            const k = observations.filter(o => o.observed_outcome === true).length;
+            const observedRate = k / observations.length;
+            const originalPrior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
+            const concentration = originalPrior.alpha + originalPrior.beta;
+
+            return {
+                alpha: Math.max(0.5, observedRate * concentration),
+                beta: Math.max(0.5, (1 - observedRate) * concentration),
+                observed_rate: observedRate,
+                n: observations.length,
+            };
+        },
+    };
+
+    function loadCalibrationState() {
+        if (typeof StateManager === 'undefined') return {};
+        return StateManager.get(CALIBRATION_KEY, {});
+    }
+
+    function saveCalibrationState(state) {
+        if (typeof StateManager === 'undefined') return;
+        StateManager.set(CALIBRATION_KEY, state);
+    }
+
+    // ══════════════════════════════════════════════════════
+    // PENDING PREDICTIONS — Deferred Evaluation (Anti-Leakage)
+    // ══════════════════════════════════════════════════════
+    // At scan time t:
+    //   1. Record feature snapshot from [t - 6h, t]
+    //   2. Record predicted probability (from current posterior)
+    //   3. Set target window: [t, t + 6h]
+    //   4. Do NOT record outcome yet
+    //
+    // At scan time t + 6h+:
+    //   1. Resolve: did cascade occur in [t, t + 6h]?
+    //   2. NOW record the finalized observation
+    //   3. Update posterior with true outcome
+    //
+    // This ensures: features from X never overlap with target Y.
+
+    function buildWindow(t) {
+        return {
+            feature: { start: t - FEATURE_WINDOW_MS, end: t },
+            target: { start: t, end: t + PREDICTION_HORIZON_MS },
+        };
+    }
+
+    function loadPending() {
+        if (typeof StateManager === 'undefined') return [];
+        return StateManager.get(PENDING_KEY, []);
+    }
+
+    function savePending(pending) {
+        if (typeof StateManager === 'undefined') return;
+        StateManager.set(PENDING_KEY, pending);
+    }
+
+    // Check if we can create a new pending prediction (anti-autocorrelation)
+    function canCreatePending(pending, now) {
+        if (pending.length === 0) return true;
+        // Sort by creation time, get most recent
+        const sorted = pending.slice().sort((a, b) => b.created_at - a.created_at);
+        const last = sorted[0];
+        // Minimum gap: 6h between pending predictions → non-overlapping → independent
+        return (now - last.created_at) >= MIN_OBSERVATION_GAP_MS;
+    }
+
+    // Resolve pending predictions whose target window has elapsed
+    function resolvePendingPredictions() {
+        const pending = loadPending();
+        if (pending.length === 0) return [];
+
+        const now = Date.now();
+        const resolved = [];
+        const stillPending = [];
+
+        for (const pred of pending) {
+            if (now >= pred.target_window_end) {
+                // Target window has elapsed — check if cascade occurred
+                const cascadeOccurred = didCascadeOccurInWindow(
+                    pred.target_window_start,
+                    pred.target_window_end
+                );
+
+                // Record finalized observation with TRUE outcome
+                const result = recordObservation({
+                    observation_type: 'cascade_window',
+                    intervention_type: pred.intervention_type,
+                    magnitude: pred.magnitude,
+                    timestamp: pred.created_at,
+                    observed_outcome: cascadeOccurred,
+                    noise_context: pred.noise_context + `|resolved_at:${now}|deferred:true`,
+                    domain: pred.domain,
+                    pattern_id: pred.pattern_id,
+                    window_start: pred.feature_window_start,
+                    window_end: pred.feature_window_end,
+                    predicted_probability: pred.predicted_probability,
+                });
+
+                // Empirical Bayes check after recording
+                if (result.success) {
+                    const patternObs = loadObservations().filter(o =>
+                        o.observation_type === 'cascade_window' &&
+                        o.pattern_id === pred.pattern_id
+                    );
+                    const recal = EmpiricalBayes.maybeRecalibrate(
+                        pred.pattern_id,
+                        patternObs,
+                        result.posteriors[pred.pattern_id]
+                    );
+                    if (recal) {
+                        // Update the stored prior with recalibrated values
+                        const posteriors = loadPosteriors();
+                        posteriors[pred.pattern_id + '_recalibrated_prior'] = recal.new_prior;
+                        savePosteriors(posteriors);
+                    }
+                }
+
+                resolved.push({ prediction: pred, outcome: cascadeOccurred, result });
+            } else {
+                stillPending.push(pred);
+            }
+        }
+
+        savePending(stillPending);
+
+        if (resolved.length > 0) {
+            console.log(
+                `%c[BayesianEngine] Resolved ${resolved.length} pending prediction(s). ` +
+                `${resolved.filter(r => r.outcome).length} cascades confirmed. ` +
+                `${stillPending.length} still pending.`,
+                'color: #00ff88; font-size: 10px;'
+            );
+        }
+
+        return resolved;
+    }
+
+    // Check if any cascade was detected in a specific time window
+    function didCascadeOccurInWindow(windowStart, windowEnd) {
+        // Check cascade history stored in StateManager
+        if (typeof StateManager === 'undefined') return false;
+
+        const history = StateManager.get('cascades_history', []);
+        const active = StateManager.get('cascades_active', []);
+        const allCascades = [...history, ...active];
+
+        return allCascades.some(c =>
+            c.timestamp >= windowStart && c.timestamp <= windowEnd
+        );
+    }
+
+    // ══════════════════════════════════════════════════════
     // OBSERVATION MANAGEMENT — Schema Enforcement
     // ══════════════════════════════════════════════════════
 
@@ -593,6 +926,8 @@ const BayesianEngine = (() => {
             pattern_id: data.pattern_id || null,
             window_start: data.window_start,
             window_end: data.window_end,
+            predicted_probability: typeof data.predicted_probability === 'number'
+                ? data.predicted_probability : null,
         };
 
         const validation = validateObservation(obs);
@@ -677,46 +1012,108 @@ const BayesianEngine = (() => {
         return { success: true, observation, posteriors };
     }
 
-    // Auto-record a cascade window observation from CascadeDetector results
-    function recordCascadeScan(scanResult) {
-        if (!scanResult) return [];
-        const results = [];
-        const now = Date.now();
-        const windowMs = 6 * 60 * 60 * 1000;
+    // ══════════════════════════════════════════════════════
+    // recordCascadeScan — DEFERRED EVALUATION
+    // ══════════════════════════════════════════════════════
+    // Does NOT immediately record outcome. Instead:
+    //   1. Resolves any expired pending predictions (real outcomes)
+    //   2. Creates a NEW pending prediction for the current window
+    //   3. Returns resolved results (if any)
+    //
+    // This eliminates temporal leakage:
+    //   Features from [t-6h, t] → Predict → Wait → Outcome in [t, t+6h]
+    //   Feature window and target window NEVER overlap.
 
-        if (scanResult.cascades && scanResult.cascades.length > 0) {
-            // Cascades detected — record positive observations
-            for (const cascade of scanResult.cascades) {
-                results.push(recordObservation({
-                    observation_type: 'cascade_window',
-                    intervention_type: null,
-                    magnitude: cascade.severity,
-                    timestamp: now,
-                    observed_outcome: true,
-                    noise_context: `auto_scan|confidence:${cascade.confidence}|signals:${cascade.signalCount}`,
-                    domain: cascade.matchedDomains[0],
-                    pattern_id: cascade.patternId,
-                    window_start: now - windowMs,
-                    window_end: now,
-                }));
-            }
-        } else {
-            // No cascades — record negative observation for global
-            results.push(recordObservation({
-                observation_type: 'cascade_window',
-                intervention_type: null,
-                magnitude: 0,
-                timestamp: now,
-                observed_outcome: false,
-                noise_context: `auto_scan|status:${scanResult.status}|elevated_domains:${Object.keys(scanResult.elevatedDomains || {}).length}`,
-                domain: null,
-                pattern_id: 'global_cascade',
-                window_start: now - windowMs,
-                window_end: now,
-            }));
+    function recordCascadeScan(scanResult) {
+        if (!scanResult) return { resolved: [], pending_created: false };
+
+        const now = Date.now();
+        const windows = buildWindow(now);
+
+        // STEP 1: Resolve any pending predictions whose target window has elapsed
+        const resolved = resolvePendingPredictions();
+
+        // STEP 2: Check anti-autocorrelation — minimum 6h between predictions
+        const pending = loadPending();
+        if (!canCreatePending(pending, now)) {
+            return {
+                resolved,
+                pending_created: false,
+                reason: 'anti_autocorrelation',
+                next_eligible_at: pending.length > 0
+                    ? pending.slice().sort((a, b) => b.created_at - a.created_at)[0].created_at + MIN_OBSERVATION_GAP_MS
+                    : now,
+            };
         }
 
-        return results;
+        // STEP 3: Snapshot current signal state and create pending prediction
+        const elevatedDomains = Object.keys(scanResult.elevatedDomains || {});
+        let totalSeverity = 0;
+        let totalSignals = 0;
+        elevatedDomains.forEach(d => {
+            const data = (scanResult.elevatedDomains || {})[d];
+            if (data) {
+                totalSeverity += data.avgSeverity || 0;
+                totalSignals += data.count || 0;
+            }
+        });
+        const avgSeverity = elevatedDomains.length > 0
+            ? totalSeverity / elevatedDomains.length : 0;
+
+        // Determine which pattern to track for this prediction
+        const hasCascadesNow = (scanResult.cascades || []).length > 0;
+        const patternId = hasCascadesNow
+            ? scanResult.cascades[0].patternId
+            : 'global_cascade';
+
+        // Get current model prediction BEFORE seeing future outcome
+        const currentProb = getCascadeProbability(patternId);
+        const predictedProbability = currentProb ? currentProb.probability : null;
+
+        // Create pending prediction
+        const newPending = {
+            id: now.toString(36) + '-' + Math.random().toString(36).slice(2, 8),
+            created_at: now,
+            pattern_id: patternId,
+            intervention_type: null,
+            magnitude: avgSeverity,
+            domain: elevatedDomains[0] || null,
+            feature_window_start: windows.feature.start,
+            feature_window_end: windows.feature.end,
+            target_window_start: windows.target.start,
+            target_window_end: windows.target.end,
+            predicted_probability: predictedProbability,
+            noise_context: `auto_scan|status:${scanResult.status}|elevated:${elevatedDomains.length}|signals:${totalSignals}`,
+            feature_snapshot: {
+                elevated_domains: elevatedDomains,
+                avg_severity: avgSeverity,
+                signal_count: totalSignals,
+                cascades_detected_now: hasCascadesNow,
+                cascade_count: (scanResult.cascades || []).length,
+            },
+        };
+
+        pending.push(newPending);
+        savePending(pending);
+
+        console.log(
+            `%c[BayesianEngine] Pending prediction created. ` +
+            `Pattern: ${patternId} | P(cascade): ${predictedProbability !== null ? predictedProbability.toFixed(3) : 'prior'} | ` +
+            `Target window closes: ${new Date(windows.target.end).toISOString().slice(11, 16)} | ` +
+            `Queue: ${pending.length} pending`,
+            'color: #00d4ff; font-size: 10px;'
+        );
+
+        return {
+            resolved,
+            pending_created: true,
+            prediction: {
+                id: newPending.id,
+                pattern_id: patternId,
+                predicted_probability: predictedProbability,
+                target_closes_at: windows.target.end,
+            },
+        };
     }
 
     // Get current posterior for a pattern or domain
@@ -809,6 +1206,7 @@ const BayesianEngine = (() => {
     function getStatus() {
         const observations = loadObservations();
         const posteriors = loadPosteriors();
+        const pending = loadPending();
 
         const cascadeObs = observations.filter(o => o.observation_type === 'cascade_window');
         const severityObs = observations.filter(o => o.observation_type === 'severity_reading');
@@ -829,20 +1227,39 @@ const BayesianEngine = (() => {
             .map(o => o.intervention_type)
         )];
 
+        // Calibration metrics (Brier score + calibration curve)
+        const calibration = CalibrationMetrics.fromObservations(cascadeObs);
+
+        // Effective n (independent observations only — not autocorrelated)
+        const effectiveN = cascadeObs.length; // Already enforced by MIN_OBSERVATION_GAP_MS
+
         return {
-            engine_version: '1.0',
+            engine_version: '2.0',
             total_observations: observations.length,
+            effective_n: effectiveN,
+            pending_predictions: pending.length,
             breakdown: {
                 cascade_windows: cascadeObs.length,
                 severity_readings: severityObs.length,
                 interventions: interventionObs.length,
             },
             cascade_estimates: cascadeEstimates,
+            calibration,
             intervention_types_observed: interventionTypes,
             posteriors_stored: Object.keys(posteriors).length,
             priors: DEFAULT_PRIORS,
+            temporal_discipline: {
+                feature_window_hours: FEATURE_WINDOW_MS / 3600000,
+                prediction_horizon_hours: PREDICTION_HORIZON_MS / 3600000,
+                min_observation_gap_hours: MIN_OBSERVATION_GAP_MS / 3600000,
+                deferred_evaluation: true,
+                anti_autocorrelation: true,
+                empirical_bayes_threshold: EMPIRICAL_BAYES_THRESHOLD,
+            },
             data_sufficient_for: {
+                brier_score: cascadeObs.length >= 5,
                 posterior_predictive_check: cascadeObs.length >= 5,
+                empirical_bayes: cascadeObs.length >= EMPIRICAL_BAYES_THRESHOLD,
                 hierarchical_model: cascadeObs.length >= 30,
                 bayes_factor: interventionTypes.length > 0 && cascadeObs.length >= 10,
                 matrix_R_estimation: cascadeObs.length >= 40,
@@ -876,17 +1293,31 @@ const BayesianEngine = (() => {
     return {
         // Core operations
         recordObservation,
-        recordCascadeScan,
+        recordCascadeScan,         // Deferred evaluation — no temporal leakage
+        resolvePendingPredictions, // Manual trigger for pending resolution
         getCascadeProbability,
         getSeverityEstimate,
 
-        // Model checking
+        // Model checking & calibration
         checkCalibration,
         testIntervention,
+        getCalibrationReport: () => CalibrationMetrics.fromObservations(loadObservations()),
+        getBrierScore: () => {
+            const obs = loadObservations().filter(o => o.observation_type === 'cascade_window');
+            return CalibrationMetrics.fromObservations(obs);
+        },
+
+        // Empirical Bayes
+        recalibratePrior: (patternId) => EmpiricalBayes.forceRecalibrate(patternId),
 
         // Status & audit
         getStatus,
         getPosterior,
+        getPendingCount: () => loadPending().length,
+        getPending: () => loadPending(),
+
+        // Window construction (exposed for testing/debugging)
+        buildWindow,
 
         // Direct model access (for advanced use)
         models: {
@@ -894,6 +1325,8 @@ const BayesianEngine = (() => {
             NormalNormal,
             BayesFactor,
             PosteriorPredictiveCheck,
+            CalibrationMetrics,
+            EmpiricalBayes,
         },
 
         // Math utilities (exposed for testing)
