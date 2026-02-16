@@ -522,13 +522,28 @@
 
       <!-- Impact Preview -->
       <div class="impact-preview" id="impact-preview">
-        <div class="card-header">IMPACT PREVIEW</div>
+        <div class="card-header">IMPACT PREVIEW <span class="accent">// BAYESIAN POSTERIOR</span></div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);margin-bottom:8px">
+          95% credible intervals shown in brackets. Not confidence intervals — actual posterior probability.
+        </div>
         <div class="impact-grid" id="impact-grid">
           <!-- Populated by JS -->
         </div>
         <div class="verdict-section">
           <div class="verdict-label">VERDICT:</div>
           <div class="verdict-text" id="verdict-text">Democracy fragile. Increase entropy recommended.</div>
+        </div>
+      </div>
+
+      <!-- Bayesian Update Chain -->
+      <div class="card" id="bayesian-card">
+        <div class="card-header">BAYESIAN UPDATE CHAIN <span class="accent">// PRIOR → EVIDENCE → POSTERIOR</span></div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--text-muted);margin-bottom:12px;line-height:1.5">
+          Each intervention is evidence. The posterior of one shock becomes the prior for the next.<br>
+          Order matters. Variance shrinks with evidence. This is not additive — it's conjugate updating.
+        </div>
+        <div id="bayesian-chain">
+          <!-- Populated by JS -->
         </div>
       </div>
 

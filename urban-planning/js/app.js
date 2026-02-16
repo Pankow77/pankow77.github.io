@@ -148,6 +148,136 @@ function reseedRNG(entropySeed) {
   RNG = new SeededRNG(entropySeed * 7919 + 31); // prime-based dispersion
 }
 
+// ── BAYESIAN UPDATE ENGINE ────────────────────────────────
+// Normal-Normal conjugate. Prior × Likelihood = Posterior.
+// Each intervention is evidence. Order matters. Variance shrinks.
+// This is what turns a visual novel into a policy engine.
+const BayesianEngine = {
+  // Create a belief distribution: N(mean, variance)
+  belief(mean, variance) {
+    return { mean, variance, precision: 1 / variance };
+  },
+
+  // Conjugate Normal-Normal update:
+  // prior N(μ₀, σ₀²) + observation x with noise σ_obs² → posterior N(μ₁, σ₁²)
+  // μ₁ = (μ₀/σ₀² + x/σ_obs²) / (1/σ₀² + 1/σ_obs²)
+  // σ₁² = 1 / (1/σ₀² + 1/σ_obs²)
+  update(prior, observation, observationVariance) {
+    const priorPrec = 1 / prior.variance;
+    const obsPrec = 1 / observationVariance;
+    const postPrec = priorPrec + obsPrec;
+    const postMean = (prior.mean * priorPrec + observation * obsPrec) / postPrec;
+    const postVar = 1 / postPrec;
+    return { mean: postMean, variance: postVar, precision: postPrec };
+  },
+
+  // 95% credible interval from posterior
+  credibleInterval(posterior, level) {
+    const z = level === 0.99 ? 2.576 : level === 0.90 ? 1.645 : 1.96;
+    const sd = Math.sqrt(posterior.variance);
+    return { lower: posterior.mean - z * sd, upper: posterior.mean + z * sd };
+  },
+
+  // Shock evidence models — what each intervention "observes" about the system.
+  // Returns { target: observed value, noise: observation variance }
+  // Higher noise = weaker evidence (system is less sure about this shock's effect)
+  shockEvidence: {
+    entropy(seed, metric) {
+      // More entropy → system observes lower efficiency, higher sovereignty
+      // But the observation is noisy — high entropy means uncertain effects
+      const effects = {
+        efficiency: { target: 89 - seed * 0.15, noise: 4 + seed * 0.8 },      // strong signal
+        sovereignty: { target: 31 + seed * 0.6, noise: 8 + seed * 0.4 },       // moderate signal
+        resilience: { target: 72 - seed * 0.1, noise: 6 + seed * 0.5 },        // weak signal
+        predictability: { target: 85 - seed * 0.2, noise: 3 + seed * 0.3 }     // strong signal
+      };
+      return effects[metric];
+    },
+    buffer(months, metric) {
+      // More buffer → system observes higher sovereignty, slightly lower predictability
+      // Buffer evidence is precise — temporal gaps have well-understood effects
+      const effects = {
+        efficiency: { target: 89 - months * 0.05, noise: 2 + months * 0.1 },
+        sovereignty: { target: 31 + months * 0.7, noise: 5 + months * 0.2 },
+        resilience: { target: 72 + months * 0.15, noise: 3 + months * 0.1 },
+        predictability: { target: 85 - months * 0.08, noise: 2 + months * 0.15 }
+      };
+      return effects[metric];
+    },
+    nullZone(active, metric) {
+      // Null zones are binary — strong evidence but limited scope
+      if (!active) return null;
+      const effects = {
+        efficiency: { target: 74, noise: 10 },
+        sovereignty: { target: 68, noise: 12 },
+        resilience: { target: 72, noise: 15 },
+        predictability: { target: 78, noise: 8 }
+      };
+      return effects[metric];
+    }
+  },
+
+  // Run the full Bayesian update chain for all 4 metrics.
+  // Interventions are applied sequentially: prior → entropy → buffer → nullZone
+  // Each posterior becomes the next prior. ORDER MATTERS.
+  computePosteriors(entropySeed, bufferMonths, nullZoneOn) {
+    const metrics = ['efficiency', 'sovereignty', 'resilience', 'predictability'];
+    const priors = {
+      efficiency: this.belief(89, 16),       // σ=4: fairly certain about baseline
+      sovereignty: this.belief(31, 36),       // σ=6: uncertain about sovereignty
+      resilience: this.belief(72, 25),        // σ=5: moderate certainty
+      predictability: this.belief(85, 9)      // σ=3: high certainty
+    };
+
+    const chain = {};
+
+    for (const metric of metrics) {
+      const steps = [];
+      let current = { ...priors[metric] };
+      steps.push({ label: 'PRIOR', dist: { ...current }, evidence: null });
+
+      // Step 1: Entropy shock
+      if (entropySeed > 0) {
+        const ev = this.shockEvidence.entropy(entropySeed, metric);
+        const post = this.update(current, ev.target, ev.noise);
+        steps.push({ label: `ENTROPY [${entropySeed}%]`, dist: { ...post }, evidence: ev });
+        current = post;
+      }
+
+      // Step 2: Buffer shock
+      if (bufferMonths !== 12) { // 12 is default — no new evidence
+        const ev = this.shockEvidence.buffer(bufferMonths, metric);
+        const post = this.update(current, ev.target, ev.noise);
+        steps.push({ label: `BUFFER [${bufferMonths}mo]`, dist: { ...post }, evidence: ev });
+        current = post;
+      }
+
+      // Step 3: Null zone shock
+      if (nullZoneOn) {
+        const ev = this.shockEvidence.nullZone(true, metric);
+        if (ev) {
+          const post = this.update(current, ev.target, ev.noise);
+          steps.push({ label: 'NULL ZONE [ON]', dist: { ...post }, evidence: ev });
+          current = post;
+        }
+      }
+
+      // Final posterior
+      const ci95 = this.credibleInterval(current, 0.95);
+      chain[metric] = {
+        prior: priors[metric],
+        posterior: current,
+        ci95,
+        steps,
+        varianceReduction: 1 - (current.variance / priors[metric].variance),
+        shift: current.mean - priors[metric].mean
+      };
+    }
+
+    return chain;
+  }
+};
+
 // ── ENTROPY ENGINE ────────────────────────────────────────
 const EntropyEngine = {
   calculateSovereignty(efficiency, entropySeed, bufferMonths, nullZoneRatio) {
@@ -1102,37 +1232,104 @@ function renderIntervention() {
 }
 
 function updateInterventionEffects() {
-  const impact = EntropyEngine.calculateInterventionImpact(STATE.entropySeed, STATE.realityBufferMonths, STATE.nullZoneOn);
-  const b = impact.before;
-  const a = impact.after;
+  // ── BAYESIAN POSTERIORS ──
+  const chain = BayesianEngine.computePosteriors(STATE.entropySeed, STATE.realityBufferMonths, STATE.nullZoneOn);
 
-  // Entropy effects
+  // Extract posterior means (clamped to [0,100])
+  const clamp = v => Math.max(0, Math.min(100, Math.round(v)));
+  const a = {
+    eff: clamp(chain.efficiency.posterior.mean),
+    sov: clamp(chain.sovereignty.posterior.mean),
+    res: clamp(chain.resilience.posterior.mean),
+    pre: clamp(chain.predictability.posterior.mean)
+  };
+  const b = { eff: 89, sov: 31, res: 72, pre: 85 };
+
+  // Per-slider effect summaries (from Bayesian posteriors, not fixed multipliers)
   document.getElementById('entropy-effects').innerHTML = `
     <div class="effect-row"><span class="effect-label">Sovereignty:</span><span class="effect-values">${b.sov}% → ${a.sov}%</span><span class="effect-delta ${a.sov > b.sov ? 'positive' : 'negative'}">(${a.sov > b.sov ? '+' : ''}${a.sov - b.sov})</span></div>
     <div class="effect-row"><span class="effect-label">Efficiency:</span><span class="effect-values">${b.eff}% → ${a.eff}%</span><span class="effect-delta ${a.eff < b.eff ? 'negative' : 'positive'}">(${a.eff > b.eff ? '+' : ''}${a.eff - b.eff})</span></div>
   `;
 
-  // Buffer effects
   document.getElementById('buffer-effects').innerHTML = `
     <div class="effect-row"><span class="effect-label">Sovereignty:</span><span class="effect-values">${b.sov}% → ${a.sov}%</span><span class="effect-delta ${a.sov > b.sov ? 'positive' : 'negative'}">(${a.sov > b.sov ? '+' : ''}${a.sov - b.sov})</span></div>
     <div class="effect-row"><span class="effect-label">Resilience:</span><span class="effect-values">${b.res}% → ${a.res}%</span><span class="effect-delta ${a.res > b.res ? 'positive' : 'negative'}">(${a.res > b.res ? '+' : ''}${a.res - b.res})</span></div>
   `;
 
-  // Impact preview
+  // Impact preview — now with credible intervals
+  const ciEff = chain.efficiency.ci95;
+  const ciSov = chain.sovereignty.ci95;
+  const ciRes = chain.resilience.ci95;
+  const ciPre = chain.predictability.ci95;
+
   document.getElementById('impact-grid').innerHTML = `
     <span class="impact-metric-label">EFF</span>
     <span class="impact-before">${b.eff}%</span><span class="impact-arrow">→</span><span class="impact-after">${a.eff}%</span>
+    <span class="impact-ci">[${clamp(ciEff.lower)}-${clamp(ciEff.upper)}]</span>
     <span class="impact-metric-label">SOV</span>
     <span class="impact-before">${b.sov}%</span><span class="impact-arrow">→</span><span class="impact-after" style="color:${sovColor(a.sov)}">${a.sov}%</span>
+    <span class="impact-ci">[${clamp(ciSov.lower)}-${clamp(ciSov.upper)}]</span>
     <span class="impact-metric-label">RES</span>
     <span class="impact-before">${b.res}%</span><span class="impact-arrow">→</span><span class="impact-after">${a.res}%</span>
+    <span class="impact-ci">[${clamp(ciRes.lower)}-${clamp(ciRes.upper)}]</span>
     <span class="impact-metric-label">PRE</span>
     <span class="impact-before">${b.pre}%</span><span class="impact-arrow">→</span><span class="impact-after">${a.pre}%</span>
+    <span class="impact-ci">[${clamp(ciPre.lower)}-${clamp(ciPre.upper)}]</span>
   `;
 
-  // Verdict
+  // Verdict — from Bayesian posterior
   const risk = EntropyEngine.checkFreedomRisk(a.sov);
   document.getElementById('verdict-text').textContent = risk.msg;
+
+  // ── RENDER BAYESIAN CHAIN ──
+  renderBayesianChain(chain);
+}
+
+function renderBayesianChain(chain) {
+  const container = document.getElementById('bayesian-chain');
+  if (!container) return;
+
+  const metrics = ['efficiency', 'sovereignty', 'resilience', 'predictability'];
+  const labels = { efficiency: 'EFF', sovereignty: 'SOV', resilience: 'RES', predictability: 'PRE' };
+  const clamp = v => Math.max(0, Math.min(100, v));
+
+  let html = '';
+  for (const metric of metrics) {
+    const c = chain[metric];
+    const steps = c.steps;
+    const varRedPct = Math.round(c.varianceReduction * 100);
+    const shiftDir = c.shift > 0 ? '+' : '';
+    const shiftVal = c.shift.toFixed(1);
+
+    html += `<div class="bayes-metric-block">
+      <div class="bayes-metric-header">
+        <span class="bayes-metric-name">${labels[metric]}</span>
+        <span class="bayes-metric-shift ${c.shift > 0 ? 'positive' : 'negative'}">${shiftDir}${shiftVal}</span>
+        <span class="bayes-variance-reduction" title="Uncertainty reduced by evidence">σ² −${varRedPct}%</span>
+      </div>
+      <div class="bayes-chain-steps">`;
+
+    for (let i = 0; i < steps.length; i++) {
+      const s = steps[i];
+      const sd = Math.sqrt(s.dist.variance).toFixed(1);
+      const mean = clamp(s.dist.mean).toFixed(1);
+      const isPrior = i === 0;
+      const isFinal = i === steps.length - 1;
+
+      html += `<div class="bayes-step ${isPrior ? 'prior' : ''} ${isFinal && !isPrior ? 'posterior' : ''}">
+        <span class="bayes-step-label">${s.label}</span>
+        <span class="bayes-step-mean">${mean}%</span>
+        <span class="bayes-step-sd">±${sd}</span>
+      </div>`;
+      if (i < steps.length - 1) {
+        html += '<div class="bayes-step-arrow">→</div>';
+      }
+    }
+
+    html += `</div></div>`;
+  }
+
+  container.innerHTML = html;
 }
 
 function updateNullZoneStatus() {
