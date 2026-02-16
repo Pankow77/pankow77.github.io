@@ -102,6 +102,88 @@ const BayesianEngine = (() => {
     const EMPIRICAL_BAYES_THRESHOLD = 20; // Recalibrate priors at n≥20
 
     // ══════════════════════════════════════════════════════
+    // GROUND TRUTH LABELS — Quantitative. No ambiguity.
+    // ══════════════════════════════════════════════════════
+    // "Disruption" is not a feeling. It's a number crossing a threshold.
+    // Each vertical has ONE metric and ONE cutoff.
+    // If you can't look it up in public data with a timestamp, it's not ground truth.
+
+    const LABEL_DEFINITIONS = {
+        'economic-geopolitical-shock': {
+            metric: 'brent_crude_pct_move_6h',
+            description: 'Brent Crude Oil absolute % change within 6h window',
+            cutoff: 5.0,          // >= 5% absolute move = disruption = true
+            unit: 'percent',
+            direction: 'absolute', // Both up and down count
+            source: 'ICE Brent Crude front-month contract',
+            source_url: 'https://www.theice.com/products/219/Brent-Crude-Futures',
+            fallback_metric: 'eurostoxx50_pct_move_6h',
+            fallback_cutoff: 3.0, // >= 3% absolute move on EuroStoxx 50
+            fallback_source: 'STOXX Ltd / Eurex',
+            // Ground truth protocol:
+            // 1. At window close (t + 6h), check Brent Crude front-month
+            // 2. Compute abs(price_at_t+6h - price_at_t) / price_at_t * 100
+            // 3. If >= 5.0 → observed_outcome = true
+            // 4. If Brent unavailable, use EuroStoxx 50 with 3.0% cutoff
+            // 5. Log which metric was used in noise_context
+        },
+
+        'climate-economic-cascade': {
+            metric: 'commodity_basket_pct_move_24h',
+            description: 'Agricultural commodity basket (wheat+corn+soy) avg absolute % change',
+            cutoff: 4.0,
+            unit: 'percent',
+            direction: 'absolute',
+            source: 'CME Group agricultural futures',
+        },
+
+        'tech-epistemic-erosion': {
+            metric: 'disinfo_signal_density_per_6h',
+            description: 'Cross-domain disinformation signal count exceeding severity 70',
+            cutoff: 5,            // >= 5 high-severity disinfo signals in 6h
+            unit: 'count',
+            direction: 'above',
+            source: 'Internal RSS pipeline + severity scoring',
+        },
+
+        'social-geopolitical-instability': {
+            metric: 'unhcr_displacement_event',
+            description: 'UNHCR registered displacement event affecting >10k people',
+            cutoff: 10000,
+            unit: 'persons',
+            direction: 'above',
+            source: 'UNHCR Operational Data Portal',
+        },
+
+        'full-spectrum-crisis': {
+            metric: 'domains_above_severity_60',
+            description: 'Number of domains simultaneously above avg severity 60',
+            cutoff: 4,            // >= 4 out of 6 domains critical
+            unit: 'count',
+            direction: 'above',
+            source: 'Internal domain severity calculation',
+        },
+
+        'global_cascade': {
+            metric: 'vix_level',
+            description: 'CBOE VIX index level at window close',
+            cutoff: 30,           // VIX >= 30 = market stress = cascade confirmed
+            unit: 'index_points',
+            direction: 'above',
+            source: 'CBOE VIX Index',
+            // VIX < 20 = calm, 20-30 = elevated, >= 30 = stress/fear
+        },
+    };
+
+    // Apply a label definition to determine ground truth
+    function applyLabel(labelDef, metricValue) {
+        if (labelDef.direction === 'absolute') {
+            return Math.abs(metricValue) >= labelDef.cutoff;
+        }
+        return metricValue >= labelDef.cutoff;
+    }
+
+    // ══════════════════════════════════════════════════════
     // MATH UTILITIES — No external dependencies
     // ══════════════════════════════════════════════════════
 
@@ -672,6 +754,53 @@ const BayesianEngine = (() => {
     // Only recalibrates when crossing threshold (20, 50, 100).
 
     const EmpiricalBayes = {
+        // Compute data-driven concentration from observed variance.
+        // NOT a magic number. Derived from: Var(θ) = μ(1-μ)/(α+β+1)
+        // So: concentration = α+β = μ(1-μ)/Var(θ) - 1
+        // If observed variance is tiny → high concentration (data is consistent)
+        // If observed variance is large → low concentration (data is noisy)
+        // Floor: original prior concentration. Ceiling: n (can't be more confident than data allows).
+        _computeConcentration(observations, observedRate) {
+            const n = observations.length;
+            if (n < 5) return 10; // Fallback for tiny samples
+
+            // Compute observed variance using sliding windows
+            // Split observations into blocks of 5 to estimate rate variance
+            const blockSize = Math.max(3, Math.floor(n / 5));
+            const blocks = [];
+            for (let i = 0; i <= n - blockSize; i += blockSize) {
+                const block = observations.slice(i, i + blockSize);
+                const blockRate = block.filter(o => o.observed_outcome === true).length / block.length;
+                blocks.push(blockRate);
+            }
+
+            if (blocks.length < 2) {
+                // Not enough blocks — use original prior concentration
+                return 10;
+            }
+
+            const blockMean = blocks.reduce((s, b) => s + b, 0) / blocks.length;
+            const blockVar = blocks.reduce((s, b) => s + (b - blockMean) ** 2, 0) / (blocks.length - 1);
+
+            // From Var(θ) = μ(1-μ)/(c+1), solve for c:
+            // c = μ(1-μ)/Var(θ) - 1
+            const mu = Math.max(0.01, Math.min(0.99, observedRate)); // Clamp to avoid 0/0
+            const theoreticalMax = mu * (1 - mu);
+
+            if (blockVar <= 0 || blockVar >= theoreticalMax) {
+                // Variance is 0 (all same) or exceeds Bernoulli variance (impossible under model)
+                // Use conservative concentration
+                return Math.min(n, 10);
+            }
+
+            const rawConcentration = theoreticalMax / blockVar - 1;
+
+            // Floor: 2 (very weak). Ceiling: n (can't exceed data).
+            const concentration = Math.max(2, Math.min(n, rawConcentration));
+
+            return concentration;
+        },
+
         // Check if recalibration is needed and apply if so
         maybeRecalibrate(patternId, observations, currentPosterior) {
             const n = observations.length;
@@ -683,18 +812,16 @@ const BayesianEngine = (() => {
             const crossed = thresholds.find(t => n >= t && lastN < t);
             if (!crossed) return null;
 
-            // Method of moments
+            // Method of moments with DATA-DRIVEN concentration
             const k = observations.filter(o => o.observed_outcome === true).length;
             const observedRate = k / n;
+            const concentration = this._computeConcentration(observations, observedRate);
 
-            // Keep the original prior concentration (strength of belief)
-            // but shift to match observed rate
             const originalPrior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
-            const concentration = originalPrior.alpha + originalPrior.beta;
+            const originalConcentration = originalPrior.alpha + originalPrior.beta;
 
-            // New prior: keep concentration, shift to observed rate
-            // But blend with original to avoid overreaction: 70% data, 30% original
-            const blendedRate = 0.7 * observedRate + 0.3 * (originalPrior.alpha / concentration);
+            // Blend: 70% data, 30% original (shrinkage toward prior)
+            const blendedRate = 0.7 * observedRate + 0.3 * (originalPrior.alpha / originalConcentration);
             const newAlpha = Math.max(0.5, blendedRate * concentration);
             const newBeta = Math.max(0.5, (1 - blendedRate) * concentration);
 
@@ -702,9 +829,14 @@ const BayesianEngine = (() => {
             calibrated[patternId] = n;
             saveCalibrationState(calibrated);
 
+            // Full audit log — no hidden magic
             console.log(
-                `%c[BayesianEngine] Empirical Bayes recalibration at n=${n} for ${patternId}: ` +
-                `Beta(${newAlpha.toFixed(2)}, ${newBeta.toFixed(2)}) | observed rate: ${observedRate.toFixed(3)}`,
+                `%c[BayesianEngine] Empirical Bayes recalibration at n=${n} for ${patternId}:\n` +
+                `  Prior:         Beta(${originalPrior.alpha}, ${originalPrior.beta}) | concentration=${originalConcentration}\n` +
+                `  Observed:      rate=${observedRate.toFixed(4)} (${k}/${n})\n` +
+                `  Data concentration: ${concentration.toFixed(2)} (from block variance)\n` +
+                `  Blended rate:  ${blendedRate.toFixed(4)} (70% data / 30% prior)\n` +
+                `  New prior:     Beta(${newAlpha.toFixed(2)}, ${newBeta.toFixed(2)})`,
                 'color: #ff9500; font-size: 10px;'
             );
 
@@ -713,8 +845,10 @@ const BayesianEngine = (() => {
                 n_at_recalibration: n,
                 observed_rate: observedRate,
                 old_prior: originalPrior,
+                old_concentration: originalConcentration,
                 new_prior: { alpha: newAlpha, beta: newBeta },
-                concentration,
+                new_concentration: concentration,
+                concentration_source: 'block_variance',
                 blend_ratio: '70% data / 30% original',
             };
         },
@@ -729,13 +863,14 @@ const BayesianEngine = (() => {
 
             const k = observations.filter(o => o.observed_outcome === true).length;
             const observedRate = k / observations.length;
-            const originalPrior = DEFAULT_PRIORS[patternId] || DEFAULT_PRIORS.global_cascade;
-            const concentration = originalPrior.alpha + originalPrior.beta;
+            const concentration = this._computeConcentration(observations, observedRate);
 
             return {
                 alpha: Math.max(0.5, observedRate * concentration),
                 beta: Math.max(0.5, (1 - observedRate) * concentration),
                 observed_rate: observedRate,
+                concentration,
+                concentration_source: 'block_variance',
                 n: observations.length,
             };
         },
@@ -865,18 +1000,31 @@ const BayesianEngine = (() => {
         return resolved;
     }
 
-    // Check if any cascade was detected in a specific time window
+    // Check if any cascade was detected in a specific HISTORICAL time window.
+    // CRITICAL: Only queries cascades whose timestamp falls WITHIN [windowStart, windowEnd].
+    // Does NOT use current state or "last 6h from now".
+    // This is what prevents temporal leakage on deferred resolution.
     function didCascadeOccurInWindow(windowStart, windowEnd) {
-        // Check cascade history stored in StateManager
         if (typeof StateManager === 'undefined') return false;
 
+        // Use ONLY history — active cascades are current state, not historical fact.
+        // History is the permanent record. Active is the live feed.
         const history = StateManager.get('cascades_history', []);
-        const active = StateManager.get('cascades_active', []);
-        const allCascades = [...history, ...active];
 
-        return allCascades.some(c =>
+        // Strict boundary: cascade.timestamp must be INSIDE [windowStart, windowEnd]
+        const matches = history.filter(c =>
             c.timestamp >= windowStart && c.timestamp <= windowEnd
         );
+
+        if (matches.length > 0) {
+            console.log(
+                `%c[BayesianEngine] Outcome resolved: ${matches.length} cascade(s) found in ` +
+                `[${new Date(windowStart).toISOString().slice(0, 16)}, ${new Date(windowEnd).toISOString().slice(0, 16)}]`,
+                'color: #ff6600; font-size: 10px;'
+            );
+        }
+
+        return matches.length > 0;
     }
 
     // ══════════════════════════════════════════════════════
@@ -1332,10 +1480,12 @@ const BayesianEngine = (() => {
         // Math utilities (exposed for testing)
         math: Math2,
 
-        // Schema
+        // Schema & Labels
         SCHEMA_FIELDS,
         VALID_OBSERVATION_TYPES,
         DEFAULT_PRIORS,
+        LABEL_DEFINITIONS,
+        applyLabel,
 
         // Re-init (e.g., after StateManager loads)
         init,
