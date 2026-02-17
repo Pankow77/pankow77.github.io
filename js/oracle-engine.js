@@ -40,7 +40,232 @@ const ORACLE_CONFIG = {
     DARWIN_TRUST_THRESHOLD: 0.4,  // TrustWeight below this = underperforming
     DARWIN_COMPETITION_EPOCHS: 8, // Epochs to run before judging mutant
     DARWIN_MAX_ACTIVE_MUTANTS: 2, // Max simultaneous competing branches
-    DARWIN_MUTATION_RANGE: 0.30   // Max % deviation for parametric mutations
+    DARWIN_MUTATION_RANGE: 0.30,  // Max % deviation for parametric mutations
+
+    // Speciation — branch memory divergence
+    DARWIN_HYSTERESIS_HIGH_EPOCHS: 3,     // Sustained recovery epochs to disarm trigger
+    DARWIN_STAGNATION_THRESHOLD: 0.001,   // Fitness variance below this = stagnating
+    DARWIN_STRUCTURAL_TOURNAMENT: 4,      // Short tournament epochs for structural mutations
+    DARWIN_OVERSHOOT_PENALTY_WEIGHT: 0.15 // Weight of overshoot in recovery fitness
+};
+
+// ============================================================
+// SECTION 1b: SPECIATION PROFILES & BRANCH MEMORY
+// ============================================================
+// Each branch is a species with its own cognitive architecture.
+// Different memory depths, decay rates, and time scales
+// generate ecological niches, not just parametric variants.
+//
+// Isolation is absolute: no memory leaks between branches.
+// If you want another branch's knowledge, win the competition.
+// ============================================================
+
+// Cognitive architecture profiles — each creates a different species
+const SPECIATION_PROFILES = [
+    {
+        name: 'sprinter',
+        description: 'Short memory, fast adaptation, high decay',
+        memoryDepth: 20,
+        signalRetention: 40,
+        decayRate: 0.05,
+        tickRate: 1.5
+    },
+    {
+        name: 'elephant',
+        description: 'Deep memory, slow adaptation, no decay',
+        memoryDepth: 100,
+        signalRetention: 200,
+        decayRate: 0.0,
+        tickRate: 0.7
+    },
+    {
+        name: 'aggressive',
+        description: 'Medium memory, fast coupling, moderate decay',
+        memoryDepth: 30,
+        signalRetention: 60,
+        decayRate: 0.02,
+        tickRate: 1.2
+    },
+    {
+        name: 'conservative',
+        description: 'Balanced memory, slow response, minimal decay',
+        memoryDepth: 50,
+        signalRetention: 100,
+        decayRate: 0.01,
+        tickRate: 0.9
+    }
+];
+
+// Branch Memory Context — isolates each branch's cognitive state
+// Each branch has its own perception of reality, its own skill memory,
+// its own clock, and its own resource constraints.
+// NO telepathy. NO shared memory. Pure isolation → true speciation.
+const BranchMemoryContext = {
+
+    // Create a fresh memory context for a new branch
+    create(branchId, options = {}) {
+        const profile = options.profile || SPECIATION_PROFILES[3]; // default: conservative
+        return {
+            branchId,
+
+            // Branch-local skill memory (TrustEngine clone)
+            skills: {
+                direction: 0.5,
+                catastrophic: 0.5,
+                volatility: 0.5,
+                overall: 0.5
+            },
+            trustWeight: 1.0,
+            evaluationCount: 0,
+
+            // Branch-local credibility (CalibrationEngine clone)
+            credibility: 0.5,
+            calibrationCount: 0,
+
+            // Branch clock — decoupled from global time
+            clock: {
+                epoch: 0,
+                birthScan: options.forkScanIndex || 0,
+                tickRate: profile.tickRate
+            },
+
+            // Resource constraints — cognitive limits per branch
+            resources: {
+                memoryDepth: profile.memoryDepth,
+                signalRetention: profile.signalRetention,
+                decayRate: profile.decayRate,
+                profileName: profile.name
+            },
+
+            // Branch-local compressed signal history
+            signalHistory: [],
+
+            // Recovery tracking — for recovery-based fitness
+            recovery: {
+                regimeTransitions: [],
+                lastStableEpoch: null,
+                recoveryTimes: [],
+                performanceBaseline: null
+            }
+        };
+    },
+
+    // Fork from an existing context (inherits state at fork point)
+    fork(parentContext, branchId, options = {}) {
+        const ctx = this.create(branchId, options);
+
+        // Inherit parent's skill state at fork point
+        ctx.skills = Object.assign({}, parentContext.skills);
+        ctx.trustWeight = parentContext.trustWeight;
+        ctx.credibility = parentContext.credibility;
+        ctx.evaluationCount = parentContext.evaluationCount;
+        ctx.calibrationCount = parentContext.calibrationCount;
+
+        // BUT NOT the history — isolation means isolation
+        // signalHistory starts empty (branch builds its own)
+        // recovery tracking starts fresh (branch earns its own resilience)
+
+        return ctx;
+    },
+
+    // Record a regime transition for recovery tracking
+    recordRegimeTransition(ctx, transition, currentEpoch) {
+        if (!ctx || !transition) return;
+
+        ctx.recovery.regimeTransitions.push({
+            epoch: currentEpoch,
+            from: transition.from,
+            to: transition.to,
+            timestamp: Date.now()
+        });
+
+        // If transitioning INTO chaos/transitional, mark as perturbation start
+        if (transition.to === 'chaotic' || transition.to === 'transitional') {
+            ctx.recovery.performanceBaseline = ctx.credibility;
+        }
+
+        // If transitioning OUT of chaos back to stable, measure recovery
+        if (transition.from === 'chaotic' && transition.to !== 'chaotic') {
+            const lastChaosEntry = ctx.recovery.regimeTransitions
+                .filter(t => t.to === 'chaotic')
+                .slice(-1)[0];
+
+            if (lastChaosEntry) {
+                const recoveryTime = currentEpoch - lastChaosEntry.epoch;
+                const performanceDrop = ctx.recovery.performanceBaseline !== null
+                    ? Math.max(0, ctx.recovery.performanceBaseline - ctx.credibility)
+                    : 0;
+
+                // Overshoot: did credibility bounce above baseline?
+                const overshoot = ctx.credibility > (ctx.recovery.performanceBaseline || 0.5)
+                    ? ctx.credibility - (ctx.recovery.performanceBaseline || 0.5)
+                    : 0;
+
+                ctx.recovery.recoveryTimes.push({
+                    time: recoveryTime,
+                    performanceDrop,
+                    overshoot,
+                    epoch: currentEpoch
+                });
+
+                // Keep only last 10 recoveries
+                if (ctx.recovery.recoveryTimes.length > 10) {
+                    ctx.recovery.recoveryTimes = ctx.recovery.recoveryTimes.slice(-10);
+                }
+            }
+        }
+
+        // Keep only last 20 transitions
+        if (ctx.recovery.regimeTransitions.length > 20) {
+            ctx.recovery.regimeTransitions = ctx.recovery.regimeTransitions.slice(-20);
+        }
+    },
+
+    // Apply memory decay — older signals lose weight
+    applyDecay(ctx) {
+        if (!ctx || ctx.resources.decayRate === 0) return;
+
+        const decay = ctx.resources.decayRate;
+        ctx.signalHistory = ctx.signalHistory.map(s => {
+            s.weight = (s.weight || 1.0) * (1 - decay);
+            return s;
+        }).filter(s => s.weight > 0.01); // Remove decayed-to-nothing signals
+    },
+
+    // Enforce resource constraints
+    enforceConstraints(ctx) {
+        if (!ctx) return;
+
+        // Trim signal history to retention limit
+        if (ctx.signalHistory.length > ctx.resources.signalRetention) {
+            ctx.signalHistory = ctx.signalHistory.slice(-ctx.resources.signalRetention);
+        }
+    },
+
+    // Compute recovery-based fitness for a branch
+    // fitness = adaptiveRecovery × robustness × (1 - overshootFactor)
+    computeRecoveryFitness(ctx) {
+        if (!ctx) return null;
+
+        const recoveries = ctx.recovery.recoveryTimes;
+        if (recoveries.length === 0) return null; // No transitions → use classic
+
+        // adaptiveRecovery: inverse of mean recovery time (faster = better)
+        const meanRecovery = recoveries.reduce((s, r) => s + r.time, 0) / recoveries.length;
+        const adaptiveRecovery = 1 / (1 + meanRecovery);
+
+        // robustness: inverse variance of performance drop during perturbation
+        const drops = recoveries.map(r => r.performanceDrop);
+        const meanDrop = drops.reduce((s, v) => s + v, 0) / drops.length;
+        const variance = drops.reduce((s, v) => s + (v - meanDrop) ** 2, 0) / drops.length;
+        const robustness = 1 / (1 + variance * 10); // Scale factor for sensitivity
+
+        // overshootFactor: mean overshoot after recovery
+        const overshoots = recoveries.map(r => r.overshoot || 0);
+        const overshootFactor = overshoots.reduce((s, v) => s + v, 0) / overshoots.length;
+
+        return adaptiveRecovery * robustness * (1 - Math.min(overshootFactor, 0.99));
+    }
 };
 
 // Lexicon for urgency scoring
@@ -1585,6 +1810,9 @@ const Kronos = {
     lastEpoch: null,
     branchCache: {},
 
+    // Branch memory isolation — each branch has its own cognitive state
+    memoryContexts: {},
+
     async init() {
         // Ensure trunk exists
         let trunk = await OracleMemory.getScenario('trunk');
@@ -1603,6 +1831,11 @@ const Kronos = {
             await OracleMemory.saveScenario(trunk);
         }
         this.branchCache['trunk'] = trunk;
+
+        // Initialize trunk memory context
+        this.memoryContexts['trunk'] = BranchMemoryContext.create('trunk', {
+            profile: SPECIATION_PROFILES[3] // conservative default
+        });
 
         // Load last epoch for edge computation
         const recent = await OracleMemory.getRecentStateNodes(1);
@@ -1699,6 +1932,44 @@ const Kronos = {
             await OracleMemory.saveScenario(branch);
         }
 
+        // Branch memory management — isolation and decay
+        const branchCtx = this.memoryContexts[this.currentBranch];
+        if (branchCtx) {
+            // Advance branch clock
+            branchCtx.clock.epoch++;
+
+            // Save engine state into context
+            this._saveContextFromEngines(this.currentBranch);
+
+            // Track regime transitions for recovery fitness
+            if (edge && edge.regimeTransition) {
+                BranchMemoryContext.recordRegimeTransition(
+                    branchCtx, edge.regimeTransition, branchCtx.clock.epoch
+                );
+            }
+
+            // Store compressed signal summary in branch-local history
+            if (signals && signals.length > 0) {
+                const successSignals = signals.filter(s => s.meta && s.meta.success);
+                if (successSignals.length > 0) {
+                    branchCtx.signalHistory.push({
+                        epoch: branchCtx.clock.epoch,
+                        timestamp: Date.now(),
+                        weight: 1.0,
+                        stability,
+                        regime: epoch.regime,
+                        domainUrgency: epoch.state.domains
+                    });
+                }
+            }
+
+            // Apply memory decay
+            BranchMemoryContext.applyDecay(branchCtx);
+
+            // Enforce resource constraints
+            BranchMemoryContext.enforceConstraints(branchCtx);
+        }
+
         return epoch;
     },
 
@@ -1784,8 +2055,14 @@ const Kronos = {
 
     // ---- BRANCHING ----
 
-    async createBranch(label, reason) {
+    async createBranch(label, reason, speciationOptions) {
         const branchId = 'branch-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6);
+
+        // Select speciation profile (random if not specified)
+        const profileIdx = speciationOptions && speciationOptions.profileIndex !== undefined
+            ? speciationOptions.profileIndex
+            : Math.floor(Math.random() * SPECIATION_PROFILES.length);
+        const profile = SPECIATION_PROFILES[profileIdx];
 
         const branch = {
             scenarioId: branchId,
@@ -1796,13 +2073,36 @@ const Kronos = {
             label: label || 'Unnamed branch',
             active: 0,  // Not active until switched to
             epochCount: 0,
-            metrics: {}
+            metrics: {},
+            speciationProfile: profile.name
         };
 
         await OracleMemory.saveScenario(branch);
         this.branchCache[branchId] = branch;
-        console.log('[Kronos] Branch created: ' + branchId + ' ("' + label + '") from ' +
-            this.currentBranch + ' at scanIndex=' + (this.lastEpoch ? this.lastEpoch.scanIndex : '?'));
+
+        // Initialize branch memory — fork from parent's current context
+        const parentContext = this.memoryContexts[this.currentBranch];
+        if (parentContext) {
+            this.memoryContexts[branchId] = BranchMemoryContext.fork(
+                parentContext, branchId, {
+                    profile,
+                    forkScanIndex: this.lastEpoch ? this.lastEpoch.scanIndex : 0
+                }
+            );
+        } else {
+            this.memoryContexts[branchId] = BranchMemoryContext.create(branchId, {
+                profile,
+                forkScanIndex: this.lastEpoch ? this.lastEpoch.scanIndex : 0
+            });
+        }
+
+        console.log('[Kronos] Branch created: ' + branchId + ' ("' + label + '")');
+        console.log('[Kronos]   Species: ' + profile.name +
+            ' (depth=' + profile.memoryDepth +
+            ' decay=' + profile.decayRate +
+            ' tick=' + profile.tickRate + ')');
+        console.log('[Kronos]   Parent: ' + this.currentBranch +
+            ' at scanIndex=' + (this.lastEpoch ? this.lastEpoch.scanIndex : '?'));
 
         return branchId;
     },
@@ -1813,6 +2113,9 @@ const Kronos = {
             console.error('[Kronos] Branch not found: ' + branchId);
             return false;
         }
+
+        // Save current branch's memory context from live engines
+        this._saveContextFromEngines(this.currentBranch);
 
         // Deactivate current
         const current = this.branchCache[this.currentBranch];
@@ -1832,8 +2135,51 @@ const Kronos = {
         const branchNodes = nodes.filter(n => n.branchId === branchId);
         this.lastEpoch = branchNodes.length > 0 ? branchNodes[branchNodes.length - 1] : null;
 
-        console.log('[Kronos] Switched to branch: ' + branchId);
+        // Restore target branch's memory context into live engines
+        this._loadContextIntoEngines(branchId);
+
+        console.log('[Kronos] Switched to branch: ' + branchId +
+            ' (species: ' + (branch.speciationProfile || 'legacy') + ')');
         return true;
+    },
+
+    // Save live engine state into the branch's memory context
+    _saveContextFromEngines(branchId) {
+        const ctx = this.memoryContexts[branchId];
+        if (!ctx) return;
+
+        // Snapshot TrustEngine state
+        ctx.skills = Object.assign({}, TrustEngine.skills);
+        ctx.trustWeight = TrustEngine.trustWeight;
+        ctx.evaluationCount = TrustEngine.evaluationCount;
+
+        // Snapshot CalibrationEngine state
+        ctx.credibility = CalibrationEngine.credibility;
+        ctx.calibrationCount = CalibrationEngine.evaluatedCount;
+    },
+
+    // Load a branch's memory context into the live engines
+    _loadContextIntoEngines(branchId) {
+        const ctx = this.memoryContexts[branchId];
+        if (!ctx) return;
+
+        // Restore TrustEngine state from branch context
+        TrustEngine.skills = Object.assign({}, ctx.skills);
+        TrustEngine.trustWeight = ctx.trustWeight;
+        TrustEngine.evaluationCount = ctx.evaluationCount;
+
+        // Restore CalibrationEngine state from branch context
+        CalibrationEngine.credibility = ctx.credibility;
+        CalibrationEngine.evaluatedCount = ctx.calibrationCount;
+
+        console.log('[Kronos] Context loaded for branch: ' + branchId +
+            ' (trust=' + ctx.trustWeight.toFixed(3) +
+            ' cred=' + ctx.credibility.toFixed(3) + ')');
+    },
+
+    // Get current branch's memory context
+    getBranchMemory(branchId) {
+        return this.memoryContexts[branchId || this.currentBranch] || null;
     },
 
     async getBranches() {
@@ -1913,6 +2259,7 @@ const Kronos = {
 
     // ---- STATE ----
     getState() {
+        const branchCtx = this.memoryContexts[this.currentBranch];
         return {
             currentBranch: this.currentBranch,
             lastEpoch: this.lastEpoch ? {
@@ -1920,7 +2267,25 @@ const Kronos = {
                 regime: this.lastEpoch.regime,
                 stability: this.lastEpoch.state ? this.lastEpoch.state.stability : null,
                 edge: this.lastEpoch.edge
-            } : null
+            } : null,
+            // Branch memory state
+            branchMemory: branchCtx ? {
+                species: branchCtx.resources.profileName,
+                branchEpoch: branchCtx.clock.epoch,
+                memoryDepth: branchCtx.resources.memoryDepth,
+                decayRate: branchCtx.resources.decayRate,
+                tickRate: branchCtx.clock.tickRate,
+                signalCount: branchCtx.signalHistory.length,
+                recoveries: branchCtx.recovery.recoveryTimes.length,
+                recoveryFitness: BranchMemoryContext.computeRecoveryFitness(branchCtx)
+            } : null,
+            // All active branch species
+            activeBranches: Object.keys(this.memoryContexts).map(id => ({
+                branchId: id,
+                species: (this.memoryContexts[id].resources || {}).profileName || 'unknown',
+                epoch: (this.memoryContexts[id].clock || {}).epoch || 0,
+                trustWeight: this.memoryContexts[id].trustWeight || 0
+            }))
         };
     }
 };
@@ -2210,8 +2575,14 @@ const DarwinEngine = {
         simNoiseScale: 0.015             // Monte Carlo noise
     },
 
+    // Hysteresis — replaces simple lowTrustStreak
+    hysteresis: {
+        lowStreak: 0,        // Consecutive low-trust epochs
+        highStreak: 0,       // Consecutive recovery epochs
+        armed: false          // Only trigger when armed AND sustained
+    },
+
     // Tracking
-    lowTrustStreak: 0,                   // Consecutive epochs below threshold
     activeMutants: [],                   // Currently competing branches
     history: [],                         // Completed competitions (win/loss)
     generation: 0,                       // Evolution counter
@@ -2226,58 +2597,99 @@ const DarwinEngine = {
             trustAttenuationMid: ORACLE_CONFIG.TRUST_ATTENUATION_MID,
             simNoiseScale: 0.015
         };
+        this.hysteresis = { lowStreak: 0, highStreak: 0, armed: false };
         console.log('[Darwin] Initialized. Genome:', JSON.stringify(this.genome));
     },
 
-    // ---- MUTATION TRIGGER ----
-    // Called after every Kronos epoch. Checks if the organism is failing.
+    // ---- MUTATION TRIGGER (with Hysteresis) ----
+    // Hysteresis window prevents oscillation around the threshold.
+    // Must STAY below threshold for N epochs to arm.
+    // Must STAY above threshold for M epochs to disarm.
     async checkTrigger(trustState, epoch) {
         if (!trustState || !epoch) return null;
 
         const threshold = ORACLE_CONFIG.DARWIN_TRUST_THRESHOLD;
-        const required = ORACLE_CONFIG.DARWIN_TRIGGER_EPOCHS;
+        const requiredLow = ORACLE_CONFIG.DARWIN_TRIGGER_EPOCHS;
+        const requiredHigh = ORACLE_CONFIG.DARWIN_HYSTERESIS_HIGH_EPOCHS;
         const maxMutants = ORACLE_CONFIG.DARWIN_MAX_ACTIVE_MUTANTS;
 
-        // Track consecutive low-trust epochs
+        // Hysteresis tracking
         if (trustState.trustWeight < threshold) {
-            this.lowTrustStreak++;
+            this.hysteresis.lowStreak++;
+            this.hysteresis.highStreak = 0;
         } else {
-            this.lowTrustStreak = 0;
+            this.hysteresis.highStreak++;
+            // Only disarm after sustained recovery
+            if (this.hysteresis.highStreak >= requiredHigh) {
+                this.hysteresis.lowStreak = 0;
+                this.hysteresis.armed = false;
+            }
         }
 
-        // Not enough failure yet
-        if (this.lowTrustStreak < required) return null;
+        // Arm when sustained low trust
+        if (this.hysteresis.lowStreak >= requiredLow) {
+            this.hysteresis.armed = true;
+        }
+
+        // Not armed yet — wait
+        if (!this.hysteresis.armed) return null;
 
         // Already at max mutants
         if (this.activeMutants.length >= maxMutants) {
-            console.log('[Darwin] Low trust streak=' + this.lowTrustStreak +
-                ' but max mutants reached (' + maxMutants + ')');
+            console.log('[Darwin] Armed but max mutants reached (' + maxMutants + ')');
             return null;
         }
 
         // TRIGGER: spawn a mutant
-        console.log('[Darwin] === MUTATION TRIGGERED ===');
-        console.log('[Darwin] Low trust streak: ' + this.lowTrustStreak +
-            ' (threshold: ' + required + ')');
-        console.log('[Darwin] Trust weight: ' + trustState.trustWeight +
+        const mutationType = this._selectMutationType();
+        console.log('[Darwin] === MUTATION TRIGGERED (' + mutationType.toUpperCase() + ') ===');
+        console.log('[Darwin] Hysteresis: low=' + this.hysteresis.lowStreak +
+            ' armed=' + this.hysteresis.armed);
+        console.log('[Darwin] Trust weight: ' + trustState.trustWeight.toFixed(3) +
             ' (threshold: ' + threshold + ')');
 
-        const mutant = await this._spawnMutant(epoch);
-        this.lowTrustStreak = 0;  // Reset streak after spawn
+        const mutant = await this._spawnMutant(epoch, mutationType);
+        this.hysteresis.armed = false; // Disarm after spawn
+        this.hysteresis.lowStreak = 0;
         return mutant;
     },
 
+    // ---- MUTATION TYPE SELECTION ----
+    // Parametric: small changes to existing genes. Default.
+    // Structural: wild mutation. Triggered by population stagnation.
+    _selectMutationType() {
+        const recent = this.history.slice(-5);
+        if (recent.length < 5) return 'parametric';
+
+        // Check for stagnation: low variance in recent fitness
+        const fitnesses = recent.map(h => h.mutantAvgFitness || 0);
+        const mean = fitnesses.reduce((s, v) => s + v, 0) / fitnesses.length;
+        const variance = fitnesses.reduce((s, v) => s + (v - mean) ** 2, 0) / fitnesses.length;
+
+        if (variance < ORACLE_CONFIG.DARWIN_STAGNATION_THRESHOLD) {
+            console.log('[Darwin] Stagnation detected (variance=' + variance.toFixed(6) +
+                '). Triggering STRUCTURAL mutation.');
+            return 'structural';
+        }
+        return 'parametric';
+    },
+
     // ---- MUTATION: SPAWN MUTANT ----
-    async _spawnMutant(epoch) {
+    async _spawnMutant(epoch, mutationType) {
+        mutationType = mutationType || 'parametric';
+
         // Select ONE parameter to mutate
         const geneKeys = Object.keys(this.genome);
         const targetGene = geneKeys[Math.floor(Math.random() * geneKeys.length)];
         const currentValue = this.genome[targetGene];
 
-        // Mutate: random direction, bounded by DARWIN_MUTATION_RANGE
-        const range = ORACLE_CONFIG.DARWIN_MUTATION_RANGE;
+        // Mutation magnitude depends on type
+        const range = mutationType === 'structural'
+            ? ORACLE_CONFIG.DARWIN_MUTATION_RANGE * 2  // Wild: up to 60% change
+            : ORACLE_CONFIG.DARWIN_MUTATION_RANGE;      // Normal: up to 30%
+
         const direction = Math.random() > 0.5 ? 1 : -1;
-        const magnitude = 0.05 + Math.random() * (range - 0.05); // At least 5% change
+        const magnitude = 0.05 + Math.random() * (range - 0.05);
         const mutatedValue = currentValue * (1 + direction * magnitude);
 
         // Clamp to sensible bounds
@@ -2297,14 +2709,20 @@ const DarwinEngine = {
         const mutantGenome = Object.assign({}, this.genome);
         mutantGenome[targetGene] = roundedValue;
 
-        // Create Kronos branch
-        const label = 'Darwin G' + this.generation + ': ' +
+        // Create Kronos branch with speciation profile
+        const label = 'Darwin G' + this.generation + ' [' + mutationType + ']: ' +
             targetGene + ' ' + currentValue + ' → ' + roundedValue;
         const branchId = await Kronos.createBranch(label, 'darwin-mutation');
+
+        // Determine tournament length: short for structural, normal for parametric
+        const tournamentEpochs = mutationType === 'structural'
+            ? ORACLE_CONFIG.DARWIN_STRUCTURAL_TOURNAMENT
+            : ORACLE_CONFIG.DARWIN_COMPETITION_EPOCHS;
 
         const mutant = {
             branchId,
             generation: this.generation,
+            mutationType,
             targetGene,
             originalValue: currentValue,
             mutatedValue: roundedValue,
@@ -2312,6 +2730,11 @@ const DarwinEngine = {
             forkScanIndex: epoch.scanIndex,
             forkTimestamp: Date.now(),
             competitionEpochs: 0,
+            tournamentEpochs,  // How long this mutant competes
+            // Species info from branch memory
+            species: (Kronos.memoryContexts[branchId] || {}).resources
+                ? Kronos.memoryContexts[branchId].resources.profileName
+                : 'unknown',
             // Scoring: accumulated during competition
             trunkScore: 0,
             mutantScore: 0,
@@ -2324,25 +2747,41 @@ const DarwinEngine = {
         this.generation++;
 
         console.log('[Darwin] Mutant spawned: ' + label);
-        console.log('[Darwin] Branch: ' + branchId);
+        console.log('[Darwin] Branch: ' + branchId + ' | Species: ' + mutant.species);
+        console.log('[Darwin] Tournament: ' + tournamentEpochs + ' epochs (' + mutationType + ')');
         console.log('[Darwin] Genome: ' + JSON.stringify(mutantGenome));
 
         return mutant;
     },
 
     // ---- COMPETITION: SCORE EPOCH ----
-    // Called after each Kronos epoch. Scores trunk vs mutant performance.
-    // Scoring: how well does the simulation predict reality?
-    // Uses calibration accuracy as the fitness metric.
+    // Dual fitness: classic (credibility × trust) + recovery-based
+    // Recovery fitness is impossible to fake — either you recover from chaos or you don't.
     scoreEpoch(epoch, calibrationState) {
         if (this.activeMutants.length === 0) return;
         if (!calibrationState) return;
 
         const accuracy = calibrationState.credibility || 0.5;
         const trustWeight = TrustEngine.trustWeight || 1.0;
-        // Fitness = credibility * trustWeight
-        // High credibility + high trust = good model
-        const fitness = accuracy * trustWeight;
+
+        // Classic fitness: credibility × trust
+        const classicFitness = accuracy * trustWeight;
+
+        // Recovery fitness from branch memory (if available)
+        const branchCtx = Kronos.getBranchMemory(Kronos.currentBranch);
+        const recoveryFitness = branchCtx
+            ? BranchMemoryContext.computeRecoveryFitness(branchCtx)
+            : null;
+
+        // Composite fitness: blend classic + recovery when recovery data exists
+        // Recovery weight grows as more regime transitions are observed
+        let fitness;
+        if (recoveryFitness !== null && branchCtx.recovery.recoveryTimes.length >= 2) {
+            // Blend: 60% classic + 40% recovery (recovery can't be faked)
+            fitness = classicFitness * 0.6 + recoveryFitness * 0.4;
+        } else {
+            fitness = classicFitness;
+        }
 
         for (const mutant of this.activeMutants) {
             if (mutant.status !== 'competing') continue;
@@ -2353,6 +2792,8 @@ const DarwinEngine = {
                 mutant.mutantEpochs.push({
                     scanIndex: epoch.scanIndex,
                     fitness,
+                    classicFitness,
+                    recoveryFitness,
                     accuracy,
                     trustWeight
                 });
@@ -2361,6 +2802,8 @@ const DarwinEngine = {
                 mutant.trunkEpochs.push({
                     scanIndex: epoch.scanIndex,
                     fitness,
+                    classicFitness,
+                    recoveryFitness,
                     accuracy,
                     trustWeight
                 });
@@ -2371,14 +2814,16 @@ const DarwinEngine = {
     },
 
     // ---- SELECTION: CHECK COMPETITION RESULTS ----
-    // Called after each epoch. Checks if any competition has enough data.
+    // Uses per-mutant tournament length (short for structural, normal for parametric)
     async checkCompetitions() {
-        const requiredEpochs = ORACLE_CONFIG.DARWIN_COMPETITION_EPOCHS;
         const results = [];
 
         for (let i = this.activeMutants.length - 1; i >= 0; i--) {
             const mutant = this.activeMutants[i];
             if (mutant.status !== 'competing') continue;
+
+            const requiredEpochs = mutant.tournamentEpochs ||
+                ORACLE_CONFIG.DARWIN_COMPETITION_EPOCHS;
 
             // Need epochs from BOTH trunk and mutant branch
             const trunkN = mutant.trunkEpochs.length;
@@ -2400,9 +2845,14 @@ const DarwinEngine = {
             const winner = mutantAvg > trunkAvg ? 'mutant' : 'trunk';
             const margin = Math.abs(mutantAvg - trunkAvg);
 
+            // Get species info
+            const branchCtx = Kronos.getBranchMemory(mutant.branchId);
+
             const result = {
                 branchId: mutant.branchId,
                 generation: mutant.generation,
+                mutationType: mutant.mutationType || 'parametric',
+                species: mutant.species || 'unknown',
                 targetGene: mutant.targetGene,
                 originalValue: mutant.originalValue,
                 mutatedValue: mutant.mutatedValue,
@@ -2412,6 +2862,11 @@ const DarwinEngine = {
                 winner,
                 trunkEpochs: trunkN,
                 mutantEpochs: mutantN,
+                tournamentEpochs: mutant.tournamentEpochs,
+                // Recovery data if available
+                recoveryFitness: branchCtx
+                    ? BranchMemoryContext.computeRecoveryFitness(branchCtx)
+                    : null,
                 timestamp: Date.now()
             };
 
@@ -2429,6 +2884,14 @@ const DarwinEngine = {
             this.activeMutants.splice(i, 1);
             this.history.push(result);
             results.push(result);
+
+            // Clean up branch memory (speciation leak prevention)
+            // Pruned branches lose their memory completely.
+            // No telepathy. No inheritance without victory.
+            if (result.action === 'pruned' && Kronos.memoryContexts[mutant.branchId]) {
+                delete Kronos.memoryContexts[mutant.branchId];
+                console.log('[Darwin] Memory purged for pruned branch: ' + mutant.branchId);
+            }
         }
 
         return results;
@@ -2437,11 +2900,16 @@ const DarwinEngine = {
     // ---- GRAFT: Mutant wins, absorb its gene ----
     async _graft(mutant, result) {
         console.log('[Darwin] === GRAFT ===');
-        console.log('[Darwin] Mutant WINS: ' + mutant.targetGene +
+        console.log('[Darwin] Mutant WINS (' + (mutant.mutationType || 'parametric') +
+            ', species: ' + (mutant.species || '?') + ')');
+        console.log('[Darwin] Gene: ' + mutant.targetGene +
             ' ' + mutant.originalValue + ' → ' + mutant.mutatedValue);
         console.log('[Darwin] Fitness: trunk=' + result.trunkAvgFitness +
             ' mutant=' + result.mutantAvgFitness +
             ' margin=' + result.margin);
+        if (result.recoveryFitness !== null) {
+            console.log('[Darwin] Recovery fitness: ' + result.recoveryFitness.toFixed(4));
+        }
 
         // Absorb the mutated parameter
         this.genome[mutant.targetGene] = mutant.mutatedValue;
@@ -2456,6 +2924,13 @@ const DarwinEngine = {
             await Kronos.switchBranch('trunk');
         }
 
+        // Grafted branch memory is cleaned up — trunk doesn't absorb branch memory
+        // Only the gene survives. The experience dies. This is speciation, not teleportation.
+        if (Kronos.memoryContexts[mutant.branchId]) {
+            delete Kronos.memoryContexts[mutant.branchId];
+            console.log('[Darwin] Branch memory released after graft: ' + mutant.branchId);
+        }
+
         console.log('[Darwin] New genome applied: ' + JSON.stringify(this.genome));
     },
 
@@ -2464,6 +2939,8 @@ const DarwinEngine = {
         console.log('[Darwin] === PRUNE ===');
         console.log('[Darwin] Trunk WINS. Discarding: ' + mutant.targetGene +
             ' mutation ' + mutant.originalValue + ' → ' + mutant.mutatedValue);
+        console.log('[Darwin] Species: ' + (mutant.species || '?') +
+            ' | Type: ' + (mutant.mutationType || 'parametric'));
         console.log('[Darwin] Fitness: trunk=' + result.trunkAvgFitness +
             ' mutant=' + result.mutantAvgFitness);
 
@@ -2496,15 +2973,18 @@ const DarwinEngine = {
         return {
             generation: this.generation,
             genome: Object.assign({}, this.genome),
-            lowTrustStreak: this.lowTrustStreak,
+            hysteresis: Object.assign({}, this.hysteresis),
             activeMutants: this.activeMutants.map(m => ({
                 branchId: m.branchId,
                 generation: m.generation,
+                mutationType: m.mutationType || 'parametric',
+                species: m.species || 'unknown',
                 targetGene: m.targetGene,
                 originalValue: m.originalValue,
                 mutatedValue: m.mutatedValue,
                 status: m.status,
                 competitionEpochs: m.competitionEpochs,
+                tournamentEpochs: m.tournamentEpochs,
                 trunkAvg: m.trunkEpochs.length > 0
                     ? Math.round(m.trunkScore / m.trunkEpochs.length * 10000) / 10000
                     : null,
@@ -2514,7 +2994,8 @@ const DarwinEngine = {
             })),
             recentHistory: this.history.slice(-10),
             grafted: this.history.filter(h => h.action === 'grafted').length,
-            pruned: this.history.filter(h => h.action === 'pruned').length
+            pruned: this.history.filter(h => h.action === 'pruned').length,
+            structuralMutations: this.history.filter(h => h.mutationType === 'structural').length
         };
     }
 };
@@ -2577,6 +3058,10 @@ const OracleEngine = {
             // Initialize Darwin Engine (evolutionary pressure)
             DarwinEngine.init();
             this.state.darwin = DarwinEngine.getState();
+
+            // Sync trunk memory context with restored engine states
+            // After all engines are loaded, save their state into trunk's context
+            Kronos._saveContextFromEngines('trunk');
 
             // Register neuron sources on Signal Bus
             for (const neuron of SensoryMesh.neurons) {
