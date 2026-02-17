@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ORACLE VR | Layer 0 — Il Campo</title>
+    <meta name="description" content="ORACLE VR Layer 0. Non dashboard. Topologia. Geografia della fragilità. WebXR. Browser-native. Zero cloud.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            color: #6b7fa3;
+        }
+        #info {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 100;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        #status {
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            z-index: 100;
+            font-size: 10px;
+            letter-spacing: 1px;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+
+<div id="info">ORACLE VR &mdash; LAYER 0</div>
+<div id="status">Initializing engine...</div>
+
+<!-- Same engine as oracle.html — same memory, same worker -->
+<script src="js/oracle-engine.js"></script>
+
+<script type="importmap">
+{
+    "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+}
+</script>
+
+<script type="module">
+// ================================================================
+// ORACLE VR — Layer 0: Il Campo
+// ================================================================
+// Non dashboard. Topologia.
+// Non previsione. Geografia della fragilità.
+//
+// Il pavimento sotto i piedi è S(t).
+// L'atmosfera sopra la testa è il DSI.
+// I nervi luminosi sono il coupling.
+// Il tremore dell'aria è λ Lyapunov.
+// Lo spazio reagisce alla tua presenza.
+//
+// Performance budget: Quest 2, 72fps, zero compromessi.
+// ~2100 vertices totali. ~31 draw calls. Nessuna ombra.
+// Nessuna particella. Nessun post-processing.
+// Simulazione decoupled via Web Worker.
+// ================================================================
+
+import * as THREE from 'three';
+import { VRButton } from 'three/addons/webxr/VRButton.js';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ---- CONSTANTS ----
+const DOMAIN_CONFIG = [
+    { key: 'geopolitics',  color: 0xff4444, angle: 0 },
+    { key: 'economics',    color: 0xffaa00, angle: Math.PI / 3 },
+    { key: 'social',       color: 0x00ccff, angle: 2 * Math.PI / 3 },
+    { key: 'technology',   color: 0x8855ff, angle: Math.PI },
+    { key: 'climate',      color: 0x00d4aa, angle: 4 * Math.PI / 3 },
+    { key: 'epistemology',  color: 0xff0084, angle: 5 * Math.PI / 3 }
+];
+
+const PILLAR_RADIUS = 5;       // meters from center
+const GROUND_SIZE = 24;         // meters
+const GROUND_SEGMENTS = 32;     // subdivisions (1089 vertices)
+const SKY_RADIUS = 50;          // sky sphere radius
+const STATE_POLL_MS = 300;      // engine state read interval
+
+// ---- PRE-ALLOCATED TEMPORARIES (zero GC in render loop) ----
+const _headPos = new THREE.Vector3();
+const _gazeDir = new THREE.Vector3(0, 0, -1);
+const _toPillar = new THREE.Vector3();
+const _gazeFlat = new THREE.Vector3();
+const _baseColor = new THREE.Color();
+const _colorStable = new THREE.Color(0x00d4aa);
+const _colorWarning = new THREE.Color(0xffaa00);
+const _colorCritical = new THREE.Color(0xff2244);
+const _colorPresence = new THREE.Color(0x00c8ff);
+const _clearSky = new THREE.Color(0x040810);
+const _murkySky = new THREE.Color(0x1a0808);
+
+// ---- FIELD STATE (read from engine, written by pollState) ----
+const fieldState = {
+    stability: 0.75,
+    delta: 0,
+    dsi: 0.5,
+    catastrophicFraction: 0,
+    lyapunovLambda: 0,
+    lyapunovRegime: 'stable',
+    credibility: 0.5,
+    domains: {},
+    couplingAdapted: false
+};
+
+// ---- STABILITY → COLOR (pre-allocated, no new objects) ----
+function stabilityToColor(s, target) {
+    if (s > 0.6) {
+        const t = (1.0 - s) / 0.4;
+        target.copy(_colorStable).lerp(_colorWarning, Math.max(0, Math.min(1, t)));
+    } else if (s > 0.35) {
+        const t = (0.6 - s) / 0.25;
+        target.copy(_colorWarning).lerp(_colorCritical, Math.max(0, Math.min(1, t)));
+    } else {
+        target.copy(_colorCritical);
+    }
+}
+
+// ================================================================
+// THREE.JS SCENE SETUP
+// ================================================================
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x020408);
+scene.fog = new THREE.FogExp2(0x020408, 0.012);
+
+const camera = new THREE.PerspectiveCamera(
+    70, window.innerWidth / window.innerHeight, 0.1, 100
+);
+camera.position.set(0, 3, 8); // Pre-VR: elevated overview
+
+const renderer = new THREE.WebGLRenderer({
+    antialias: true,
+    powerPreference: 'high-performance'
+});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+renderer.xr.enabled = true;
+renderer.xr.setReferenceSpaceType('local-floor');
+renderer.shadowMap.enabled = false;
+document.body.appendChild(renderer.domElement);
+
+// VR button
+const vrButton = VRButton.createButton(renderer);
+document.body.appendChild(vrButton);
+
+// Desktop fallback
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0.8, -2);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.maxPolarAngle = Math.PI * 0.85;
+controls.update();
+
+// ================================================================
+// GROUND PLANE — Il pavimento respira con S(t)
+// ================================================================
+// Grid wireframe + solid glow underneath.
+// Color = stability. Displacement = delta + presence.
+// Emissive intensity = credibility.
+// ================================================================
+
+const groundGeo = new THREE.PlaneGeometry(
+    GROUND_SIZE, GROUND_SIZE, GROUND_SEGMENTS, GROUND_SEGMENTS
+);
+groundGeo.rotateX(-Math.PI / 2);
+
+const groundVertexCount = groundGeo.attributes.position.count;
+const groundColors = new Float32Array(groundVertexCount * 3);
+groundGeo.setAttribute('color', new THREE.BufferAttribute(groundColors, 3));
+
+// Store original Y positions (all zero after rotation, but explicit)
+const groundOrigY = new Float32Array(groundVertexCount);
+const groundPos = groundGeo.attributes.position;
+for (let i = 0; i < groundVertexCount; i++) {
+    groundOrigY[i] = groundPos.getY(i);
+}
+
+// Wireframe mesh (the visible grid)
+const groundWire = new THREE.Mesh(groundGeo, new THREE.MeshBasicMaterial({
+    vertexColors: true,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.35,
+    depthWrite: false
+}));
+scene.add(groundWire);
+
+// Solid glow (emissive floor underneath)
+const groundGlow = new THREE.Mesh(groundGeo, new THREE.MeshBasicMaterial({
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.06,
+    side: THREE.DoubleSide,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending
+}));
+groundGlow.position.y = -0.01;
+scene.add(groundGlow);
+
+// ================================================================
+// SKY SPHERE — L'atmosfera è il DSI
+// ================================================================
+// Clear = high DSI (stable futures). Murky = low DSI (fragile).
+// Lyapunov shimmer = geometric vertex displacement, not particles.
+// ================================================================
+
+const skyGeo = new THREE.IcosahedronGeometry(SKY_RADIUS, 3);
+const skyOrigPos = skyGeo.attributes.position.array.slice();
+const skyMat = new THREE.MeshBasicMaterial({
+    color: 0x040810,
+    side: THREE.BackSide,
+    transparent: true,
+    opacity: 0.9
+});
+const skyMesh = new THREE.Mesh(skyGeo, skyMat);
+scene.add(skyMesh);
+
+// ================================================================
+// DOMAIN PILLARS — Sei colonne viventi
+// ================================================================
+// Height = domain urgency. Gaze = highlight. Proximity = luminance.
+// ================================================================
+
+const pillars = [];
+const pillarGroup = new THREE.Group();
+
+for (const domain of DOMAIN_CONFIG) {
+    const x = Math.cos(domain.angle) * PILLAR_RADIUS;
+    const z = Math.sin(domain.angle) * PILLAR_RADIUS;
+
+    // Pillar body
+    const pillarGeo = new THREE.CylinderGeometry(0.03, 0.06, 1, 8, 1);
+    const pillarMat = new THREE.MeshBasicMaterial({
+        color: domain.color,
+        transparent: true,
+        opacity: 0.6
+    });
+    const mesh = new THREE.Mesh(pillarGeo, pillarMat);
+    mesh.position.set(x, 0.5, z);
+    pillarGroup.add(mesh);
+
+    // Base ring
+    const ringGeo = new THREE.RingGeometry(0.12, 0.28, 16);
+    ringGeo.rotateX(-Math.PI / 2);
+    const ringMat = new THREE.MeshBasicMaterial({
+        color: domain.color,
+        transparent: true,
+        opacity: 0.1,
+        side: THREE.DoubleSide,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false
+    });
+    const ring = new THREE.Mesh(ringGeo, ringMat);
+    ring.position.set(x, 0.02, z);
+    pillarGroup.add(ring);
+
+    pillars.push({
+        mesh, ring, config: domain,
+        baseX: x, baseZ: z,
+        targetHeight: 1, currentHeight: 1,
+        gazeIntensity: 0
+    });
+}
+scene.add(pillarGroup);
+
+// ================================================================
+// COUPLING LINES — Nervi luminosi tra domini
+// ================================================================
+// Thin additive lines. Opacity = coupling state.
+// Pulse when adapted. Brighten on gaze.
+// ================================================================
+
+const couplingLines = [];
+const couplingGroup = new THREE.Group();
+
+for (let i = 0; i < DOMAIN_CONFIG.length; i++) {
+    for (let j = i + 1; j < DOMAIN_CONFIG.length; j++) {
+        const lineGeo = new THREE.BufferGeometry();
+        const linePositions = new Float32Array(6);
+        lineGeo.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+
+        const lineMat = new THREE.LineBasicMaterial({
+            color: 0x334466,
+            transparent: true,
+            opacity: 0.05,
+            blending: THREE.AdditiveBlending,
+            depthWrite: false
+        });
+        const line = new THREE.Line(lineGeo, lineMat);
+        couplingGroup.add(line);
+
+        couplingLines.push({
+            line, from: i, to: j,
+            targetOpacity: 0.05, currentOpacity: 0.05
+        });
+    }
+}
+scene.add(couplingGroup);
+
+// ================================================================
+// PRESENCE INDICATOR — Lo spazio sa che ci sei
+// ================================================================
+
+const presenceGeo = new THREE.RingGeometry(0.15, 0.3, 24);
+presenceGeo.rotateX(-Math.PI / 2);
+const presenceMat = new THREE.MeshBasicMaterial({
+    color: 0x00c8ff,
+    transparent: true,
+    opacity: 0.04,
+    side: THREE.DoubleSide,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+});
+const presenceRing = new THREE.Mesh(presenceGeo, presenceMat);
+presenceRing.position.y = 0.03;
+scene.add(presenceRing);
+
+// ================================================================
+// STATE POLLING — Decoupled read from engine
+// ================================================================
+
+let engineReady = false;
+
+async function initEngine() {
+    const statusEl = document.getElementById('status');
+    try {
+        statusEl.textContent = 'Initializing memory...';
+        const ok = await OracleEngine.init();
+        if (!ok) {
+            statusEl.textContent = 'Engine init failed.';
+            return;
+        }
+        engineReady = true;
+        statusEl.textContent = 'First scan...';
+        await OracleEngine.scan();
+        statusEl.textContent = 'ORACLE active. Enter VR.';
+
+        // Auto-scan on interval
+        setInterval(() => {
+            if (!OracleEngine.state.scanning) OracleEngine.scan();
+        }, ORACLE_CONFIG.SCAN_INTERVAL);
+
+    } catch (err) {
+        statusEl.textContent = 'Error: ' + err.message;
+        console.error('[ORACLE VR] Init error:', err);
+    }
+}
+
+function pollState() {
+    if (!engineReady) return;
+    const s = OracleEngine.state;
+
+    fieldState.stability = s.stability;
+    fieldState.delta = s.delta;
+
+    // Domain urgencies from signals
+    if (s.signals) {
+        for (const sig of s.signals) {
+            if (sig.meta && sig.meta.success) {
+                fieldState.domains[sig.domain] = sig.aggregate.urgency;
+            }
+        }
+    }
+
+    // Calibration
+    if (s.calibration) {
+        fieldState.credibility = s.calibration.credibility;
+    }
+
+    // Synthetic field results
+    const sim = SyntheticField.getResult();
+    if (sim && sim.dsi) {
+        fieldState.dsi = sim.dsi.dsi;
+        fieldState.catastrophicFraction = sim.dsi.catastrophicFraction;
+        if (sim.dsi.lyapunov) {
+            fieldState.lyapunovLambda = sim.dsi.lyapunov.lambda;
+            fieldState.lyapunovRegime = sim.dsi.lyapunov.regime;
+        }
+        if (sim.couplingMeta) {
+            fieldState.couplingAdapted = sim.couplingMeta.adapted;
+        }
+    }
+}
+
+setInterval(pollState, STATE_POLL_MS);
+
+// ================================================================
+// RENDER LOOP — 72fps or death
+// ================================================================
+
+const clock = new THREE.Clock();
+
+function animate() {
+    const dt = Math.min(clock.getDelta(), 0.05); // Cap for stability
+    const t = clock.getElapsedTime();
+
+    // Camera world position = head position (VR or desktop)
+    camera.getWorldPosition(_headPos);
+    camera.getWorldDirection(_gazeDir);
+
+    // Presence ring follows head projection
+    presenceRing.position.x = _headPos.x;
+    presenceRing.position.z = _headPos.z;
+    presenceMat.opacity = 0.03 + 0.015 * Math.sin(t * 1.5);
+
+    updateGround(t, dt);
+    updateSky(t);
+    updatePillars(t, dt);
+    updateCouplingLines(t, dt);
+    updateFog();
+
+    // Desktop controls (disabled in VR)
+    if (!renderer.xr.isPresenting) {
+        controls.update();
+    }
+
+    renderer.render(scene, camera);
+}
+
+// ---- GROUND UPDATE ----
+function updateGround(t, dt) {
+    const S = fieldState.stability;
+    const cred = fieldState.credibility;
+
+    // Base color from stability
+    stabilityToColor(S, _baseColor);
+    // Modulate by credibility (brighter = more credible)
+    const intensity = 0.25 + cred * 0.75;
+    _baseColor.multiplyScalar(intensity);
+
+    // Breathing params (more agitated with larger delta)
+    const breathFreq = 0.8 + Math.abs(fieldState.delta) * 5;
+    const breathAmp = 0.015 + Math.abs(fieldState.delta) * 0.12;
+
+    const pos = groundGeo.attributes.position;
+    const col = groundGeo.attributes.color;
+
+    for (let i = 0; i < groundVertexCount; i++) {
+        const x = pos.getX(i);
+        const z = pos.getZ(i);
+
+        // Spatial noise for organic breathing
+        const spatialPhase = Math.sin(x * 2.7 + z * 3.1) * 0.3
+                           + Math.sin(x * 1.1 - z * 2.3) * 0.2;
+
+        // Distance from center
+        const distCenter = Math.sqrt(x * x + z * z);
+
+        // Breathing wave (radial, with spatial noise)
+        const wave = Math.sin(t * breathFreq + distCenter * 0.5 + spatialPhase) * breathAmp;
+
+        // Presence ripple (Gaussian lift near head)
+        const dx = x - _headPos.x;
+        const dz = z - _headPos.z;
+        const distHead2 = dx * dx + dz * dz;
+        const presenceY = 0.05 * Math.exp(-distHead2 / 2.0);
+
+        // Set Y
+        pos.setY(i, groundOrigY[i] + wave + presenceY);
+
+        // Color: base + presence glow
+        const presenceGlow = Math.exp(-distHead2 / 3.0) * 0.35;
+        col.setXYZ(i,
+            Math.min(1, _baseColor.r + _colorPresence.r * presenceGlow),
+            Math.min(1, _baseColor.g + _colorPresence.g * presenceGlow),
+            Math.min(1, _baseColor.b + _colorPresence.b * presenceGlow)
+        );
+    }
+
+    pos.needsUpdate = true;
+    col.needsUpdate = true;
+}
+
+// ---- SKY UPDATE ----
+function updateSky(t) {
+    const dsi = fieldState.dsi;
+    const lambda = fieldState.lyapunovLambda;
+
+    // Sky color: lerp between clear and murky based on DSI
+    skyMat.color.copy(_clearSky).lerp(_murkySky, Math.max(0, Math.min(1, 1 - dsi)));
+
+    // Lyapunov shimmer: subtle vertex displacement
+    if (lambda > 0.001) {
+        const skyPos = skyGeo.attributes.position;
+        const shimmerAmp = Math.min(lambda * 25, 1.5);
+
+        for (let i = 0; i < skyPos.count; i++) {
+            const ox = skyOrigPos[i * 3];
+            const oy = skyOrigPos[i * 3 + 1];
+            const oz = skyOrigPos[i * 3 + 2];
+            const phase = ox * 0.3 + oy * 0.5 + oz * 0.2 + t * 0.6;
+            const displacement = Math.sin(phase) * shimmerAmp;
+            const len = Math.sqrt(ox * ox + oy * oy + oz * oz);
+            const scale = (len + displacement) / len;
+            skyPos.setXYZ(i, ox * scale, oy * scale, oz * scale);
+        }
+        skyPos.needsUpdate = true;
+    }
+}
+
+// ---- PILLARS UPDATE ----
+function updatePillars(t, dt) {
+    for (let p = 0; p < pillars.length; p++) {
+        const pillar = pillars[p];
+        const urgency = fieldState.domains[pillar.config.key] || 0.3;
+
+        // Target height from urgency (0.5m to 4m)
+        pillar.targetHeight = 0.5 + urgency * 3.5;
+        pillar.currentHeight += (pillar.targetHeight - pillar.currentHeight) * dt * 2;
+
+        // Apply height
+        pillar.mesh.scale.y = pillar.currentHeight;
+        pillar.mesh.position.y = pillar.currentHeight / 2;
+
+        // Gaze detection (flat direction comparison)
+        _toPillar.set(
+            pillar.baseX - _headPos.x, 0, pillar.baseZ - _headPos.z
+        ).normalize();
+        _gazeFlat.set(_gazeDir.x, 0, _gazeDir.z).normalize();
+        const gazeDot = _gazeFlat.dot(_toPillar);
+        const gazeTarget = gazeDot > 0.92 ? 1 : 0; // ~23° cone
+
+        // Smooth gaze intensity
+        pillar.gazeIntensity += (gazeTarget - pillar.gazeIntensity) * dt * 4;
+
+        // Proximity effect
+        const distToPillar = Math.sqrt(
+            (_headPos.x - pillar.baseX) ** 2 +
+            (_headPos.z - pillar.baseZ) ** 2
+        );
+        const proximity = Math.max(0, 1 - distToPillar / PILLAR_RADIUS);
+
+        // Apply visual effects
+        pillar.mesh.material.opacity = 0.45 + proximity * 0.3 + pillar.gazeIntensity * 0.25;
+
+        // Ring: pulse when gazed
+        pillar.ring.material.opacity = 0.06 + pillar.gazeIntensity * 0.25
+            + Math.sin(t * 2) * 0.03 * pillar.gazeIntensity;
+        pillar.ring.scale.setScalar(
+            1 + pillar.gazeIntensity * 0.3 + Math.sin(t * 1.5) * 0.04 * pillar.gazeIntensity
+        );
+    }
+}
+
+// ---- COUPLING LINES UPDATE ----
+function updateCouplingLines(t, dt) {
+    const adapted = fieldState.couplingAdapted;
+    const baseOp = adapted ? 0.12 : 0.04;
+
+    for (let c = 0; c < couplingLines.length; c++) {
+        const cl = couplingLines[c];
+        const pFrom = pillars[cl.from];
+        const pTo = pillars[cl.to];
+
+        // Update positions (tops of pillars)
+        const lp = cl.line.geometry.attributes.position.array;
+        lp[0] = pFrom.baseX; lp[1] = pFrom.currentHeight; lp[2] = pFrom.baseZ;
+        lp[3] = pTo.baseX;   lp[4] = pTo.currentHeight;   lp[5] = pTo.baseZ;
+        cl.line.geometry.attributes.position.needsUpdate = true;
+
+        // Opacity: base + gaze boost
+        const gazeBoost = Math.max(pFrom.gazeIntensity, pTo.gazeIntensity) * 0.2;
+        cl.targetOpacity = baseOp + gazeBoost;
+
+        // Adaptive coupling pulse
+        if (adapted) {
+            cl.targetOpacity += 0.04 * Math.sin(t * 1.2 + cl.from * 0.7);
+        }
+
+        // Smooth
+        cl.currentOpacity += (cl.targetOpacity - cl.currentOpacity) * dt * 3;
+        cl.line.material.opacity = cl.currentOpacity;
+        cl.line.material.color.setHex(adapted ? 0x4488aa : 0x334466);
+    }
+}
+
+// ---- FOG UPDATE ----
+function updateFog() {
+    // Lower DSI = denser fog (more uncertainty, less visibility)
+    const dsi = fieldState.dsi;
+    scene.fog.density = 0.008 + (1 - dsi) * 0.02;
+}
+
+// ================================================================
+// WINDOW RESIZE
+// ================================================================
+
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// ================================================================
+// BOOT
+// ================================================================
+
+console.log('%cORACLE VR — Layer 0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+console.log('%cIl Campo', 'color: #ff0084; font-size: 11px;');
+console.log('%cNon dashboard. Topologia.', 'color: #00d4aa;');
+console.log('%cBrowser-Native · WebXR · Zero Cloud', 'color: #6b7fa3;');
+
+renderer.setAnimationLoop(animate);
+initEngine();
+
+</script>
+</body>
+</html>
