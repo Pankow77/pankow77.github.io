@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORACLE v2.0 | Planetary Intelligence Distributed System</title>
-    <meta name="description" content="ORACLE v2.0 - Planetary Intelligence Distributed System. Hybrid Syndicate Research Division.">
+    <title>ORACLE v3.0 | Ecosystem — Distributed Nervous System</title>
+    <meta name="description" content="ORACLE v3.0 - Distributed Nervous System. Three-level intelligence: Sensory, Synaptic, Cortical. Browser-native. Local memory. Zero cloud.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -40,7 +40,6 @@
             line-height: 1.5;
         }
 
-        /* Subtle scanline */
         body::before {
             content: '';
             position: fixed;
@@ -54,7 +53,7 @@
             z-index: 999;
         }
 
-        /* ===== TOP HEADER BAR ===== */
+        /* ===== HEADER ===== */
         .top-header {
             display: flex;
             align-items: center;
@@ -82,7 +81,6 @@
         .pulse-icon {
             width: 28px;
             height: 28px;
-            position: relative;
         }
 
         .pulse-icon svg {
@@ -90,7 +88,7 @@
             height: 28px;
         }
 
-        .pulse-icon .pulse-line {
+        .pulse-line {
             stroke: var(--cyan);
             stroke-width: 2;
             fill: none;
@@ -113,26 +111,67 @@
             margin-top: 1px;
         }
 
-        .top-stats {
+        .header-controls {
             display: flex;
-            gap: 20px;
             align-items: center;
+            gap: 12px;
         }
 
-        .top-stat {
+        .btn-scan {
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.65rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            background: rgba(0, 200, 255, 0.1);
+            border: 1px solid var(--cyan-dim);
+            color: var(--cyan);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-scan:hover {
+            background: rgba(0, 200, 255, 0.2);
+            box-shadow: 0 0 12px rgba(0, 200, 255, 0.2);
+        }
+
+        .btn-scan:disabled {
+            opacity: 0.4;
+            cursor: wait;
+        }
+
+        .btn-scan.scanning {
+            animation: pulse-btn 1s infinite;
+        }
+
+        @keyframes pulse-btn {
+            0%, 100% { border-color: var(--cyan-dim); }
+            50% { border-color: var(--cyan); box-shadow: 0 0 16px rgba(0, 200, 255, 0.3); }
+        }
+
+        .auto-toggle {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
             color: var(--text-dim);
             letter-spacing: 0.06em;
-            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
         }
 
-        .top-stat strong {
-            color: var(--text-secondary);
+        .auto-toggle .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--text-dim);
+            transition: all 0.3s;
         }
 
-        .top-stat .val-green { color: var(--green); }
-        .top-stat .val-cyan { color: var(--cyan); }
+        .auto-toggle.active .dot {
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
 
         .back-link {
             font-family: 'Share Tech Mono', monospace;
@@ -145,297 +184,455 @@
 
         .back-link:hover { color: var(--cyan); }
 
-        /* ===== TABS ===== */
-        .tab-bar {
-            display: flex;
-            padding: 0 24px;
-            background: #060c18;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .tab {
-            padding: 12px 24px;
-            font-family: 'Orbitron', monospace;
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: var(--text-dim);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .tab:hover {
-            color: var(--text-secondary);
-        }
-
-        .tab.active {
-            color: var(--cyan);
-            border-bottom-color: var(--cyan);
-        }
-
-        /* ===== MAIN LAYOUT ===== */
-        .main-layout {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 0;
-            min-height: calc(100vh - 100px);
-        }
-
-        .main-content {
+        /* ===== MAIN CONTAINER ===== */
+        .main-container {
             padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .sidebar {
-            background: #060c18;
-            border-left: 1px solid var(--border);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* ===== SECTION HEADERS ===== */
-        .section-header {
+        /* ===== SECTION LABEL ===== */
+        .section-label {
             font-family: 'Orbitron', monospace;
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             font-weight: 600;
-            color: var(--text-secondary);
-            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            letter-spacing: 0.18em;
             text-transform: uppercase;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .section-header .focus-tag {
+        .section-label .level-num {
             color: var(--cyan);
-            margin-left: 10px;
-            font-weight: 400;
+            font-size: 0.7rem;
+            font-weight: 700;
         }
 
-        /* ===== DOMAIN CARDS GRID ===== */
-        .domains-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-bottom: 24px;
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
         }
 
-        .domain-card {
+        /* ===== STABILITY FIELD (HERO) ===== */
+        .stability-hero {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 20px;
-            transition: all 0.3s;
+            padding: 28px 32px;
+            margin-bottom: 24px;
             position: relative;
             overflow: hidden;
         }
 
-        .domain-card:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--border-light);
+        .stability-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, var(--cyan), var(--teal), var(--cyan));
+            opacity: 0.5;
         }
 
-        .domain-card-header {
+        .stability-top {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 6px;
+            margin-bottom: 20px;
         }
 
-        .domain-name {
-            font-family: 'Orbitron', monospace;
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .domain-icon {
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-        }
-
-        .domain-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.6rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .status-critical { color: var(--red); }
-        .status-high { color: var(--orange); }
-        .status-elevated { color: var(--yellow); }
-        .status-moderate { color: var(--cyan); }
-
-        /* Risk bar */
-        .risk-section {
-            margin-bottom: 16px;
-        }
-
-        .risk-label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 6px;
-        }
-
-        .risk-label span {
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .risk-value {
+        .stability-title-area h2 {
             font-family: 'Orbitron', monospace;
             font-size: 0.75rem;
             font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
         }
 
-        .risk-bar {
+        .stability-title-area .subtitle {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+        }
+
+        .stability-value-box {
+            text-align: right;
+        }
+
+        .stability-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+
+        .stability-delta {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            margin-top: 4px;
+        }
+
+        .delta-neg { color: var(--red); }
+        .delta-pos { color: var(--green); }
+        .delta-neutral { color: var(--yellow); }
+
+        /* Stability bar */
+        .stability-bar-container {
+            margin-bottom: 16px;
+        }
+
+        .stability-bar {
             width: 100%;
-            height: 4px;
-            background: rgba(255,255,255,0.05);
+            height: 12px;
+            background: rgba(255,255,255,0.03);
             border-radius: 2px;
             overflow: hidden;
+            position: relative;
         }
 
-        .risk-bar-fill {
+        .stability-bar-fill {
             height: 100%;
             border-radius: 2px;
-            transition: width 1.5s ease-out;
+            transition: width 1.5s ease-out, background 1.5s ease-out;
         }
 
-        .risk-bar-fill.critical { background: linear-gradient(90deg, var(--red-dim), var(--red)); box-shadow: 0 0 8px rgba(255, 51, 68, 0.3); }
-        .risk-bar-fill.high { background: linear-gradient(90deg, var(--orange), var(--red)); box-shadow: 0 0 8px rgba(255, 136, 51, 0.3); }
-        .risk-bar-fill.elevated { background: linear-gradient(90deg, var(--cyan-dim), var(--cyan)); box-shadow: 0 0 8px rgba(0, 200, 255, 0.2); }
-        .risk-bar-fill.moderate { background: linear-gradient(90deg, var(--teal), var(--cyan)); box-shadow: 0 0 8px rgba(0, 212, 170, 0.2); }
+        .stability-bar-threshold {
+            position: absolute;
+            top: -4px;
+            width: 2px;
+            height: 20px;
+            background: var(--red);
+            opacity: 0.6;
+        }
 
-        /* Trend indicators */
-        .trend-indicators {
+        .stability-bar-threshold::after {
+            content: 'CRITICAL';
+            position: absolute;
+            top: -14px;
+            left: 4px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.45rem;
+            color: var(--red);
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+
+        .stability-meta {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .stability-meta-item {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+        }
+
+        .stability-meta-item strong {
+            color: var(--text-secondary);
+        }
+
+        /* Mini stability history line */
+        #miniStabilityChart {
+            width: 100%;
+            height: 50px;
+            margin-top: 16px;
+            display: block;
+        }
+
+        /* ===== LEVEL 1: SENSORY MESH ===== */
+        .sensory-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .neuron-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
             margin-bottom: 14px;
         }
 
-        .trend-row {
+        .neuron-card {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 3px;
+            transition: all 0.3s;
         }
 
-        .trend-name {
-            font-size: 0.65rem;
-            color: var(--text-secondary);
+        .neuron-card:hover {
+            border-color: var(--border-light);
+            background: rgba(255,255,255,0.03);
+        }
+
+        .neuron-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            transition: all 0.5s;
+        }
+
+        .neuron-dot.active {
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        .neuron-dot.firing {
+            background: var(--cyan);
+            box-shadow: 0 0 8px var(--cyan);
+            animation: neuron-fire 0.6s infinite;
+        }
+
+        .neuron-dot.error {
+            background: var(--red);
+            box-shadow: 0 0 6px var(--red);
+        }
+
+        .neuron-dot.idle {
+            background: var(--text-dim);
+        }
+
+        @keyframes neuron-fire {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .neuron-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .neuron-name {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.62rem;
+            color: var(--text-primary);
             letter-spacing: 0.03em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .trend-visual {
+        .neuron-meta {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.52rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
             display: flex;
-            align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        .trend-line {
-            width: 50px;
-            height: 16px;
+        .neuron-weight {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            flex-shrink: 0;
         }
 
-        .trend-arrow {
-            font-size: 0.7rem;
-            font-weight: 700;
-        }
-
-        .trend-arrow.up { color: var(--red); }
-        .trend-arrow.down { color: var(--green); }
-        .trend-arrow.stable { color: var(--yellow); }
-
-        /* Core lead */
-        .domain-lead {
+        .sensory-stats {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 20px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
             padding-top: 12px;
             border-top: 1px solid var(--border);
         }
 
-        .lead-name {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.6rem;
-            color: var(--text-dim);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+        .sensory-stats strong {
+            color: var(--text-secondary);
         }
 
-        .lead-status {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.55rem;
-            color: var(--cyan);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        /* ===== SYSTEMIC STABILITY MATRIX ===== */
-        .stability-section {
+        /* ===== LEVEL 2: SYNAPTIC ENGINE ===== */
+        .synaptic-section {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 20px;
+            padding: 20px 24px;
             margin-bottom: 24px;
         }
 
-        .stability-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
-        .stability-title {
+        .pattern-card {
+            padding: 16px;
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        .pattern-label {
             font-family: 'Orbitron', monospace;
-            font-size: 0.7rem;
+            font-size: 0.55rem;
             font-weight: 600;
-            color: var(--text-secondary);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .refresh-rate {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.6rem;
             color: var(--text-dim);
-            letter-spacing: 0.06em;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
-        #stabilityChart {
-            width: 100%;
-            height: 180px;
-            display: block;
+        .pattern-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1;
         }
 
-        /* ===== SIDEBAR: INTELLIGENCE FEED ===== */
-        .sidebar-section {
+        .pattern-detail {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+        }
+
+        .pattern-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 8px;
+        }
+
+        .pattern-pip {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .pattern-pip.lit {
+            background: var(--cyan);
+            box-shadow: 0 0 4px var(--cyan);
+        }
+
+        .pattern-pip.warn {
+            background: var(--orange);
+            box-shadow: 0 0 4px var(--orange);
+        }
+
+        .pattern-pip.crit {
+            background: var(--red);
+            box-shadow: 0 0 4px var(--red);
+        }
+
+        /* ===== LEVEL 3: CORTICAL FIELD ===== */
+        .cortical-section {
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 16px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
         }
 
-        .sidebar-title {
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .scenario-card {
+            padding: 18px 16px;
+            background: rgba(255,255,255,0.015);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 3px;
+            text-align: center;
+            position: relative;
+        }
+
+        .scenario-card.dominant {
+            border-color: var(--cyan-dim);
+            background: rgba(0, 200, 255, 0.03);
+        }
+
+        .scenario-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .scenario-prob {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .scenario-metrics {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .scenario-drivers {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .scenario-driver-tag {
+            display: inline-block;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+            background: rgba(255,255,255,0.03);
+            padding: 2px 6px;
+            border-radius: 2px;
+            margin: 2px;
+            letter-spacing: 0.03em;
+        }
+
+        /* ===== BOTTOM ROW: HISTORY + DIAGNOSIS ===== */
+        .bottom-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .history-section, .diagnosis-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px 24px;
+        }
+
+        .panel-title {
             font-family: 'Orbitron', monospace;
             font-size: 0.6rem;
             font-weight: 600;
-            color: var(--cyan);
+            color: var(--text-secondary);
             letter-spacing: 0.12em;
             text-transform: uppercase;
             margin-bottom: 14px;
@@ -443,82 +640,89 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .feed-entry {
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.02);
+        #stabilityHistoryChart {
+            width: 100%;
+            height: 160px;
+            display: block;
+        }
+
+        .diagnosis-content {
             font-family: 'Share Tech Mono', monospace;
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             color: var(--text-dim);
             letter-spacing: 0.03em;
         }
 
-        .feed-entry:last-child { border-bottom: none; }
-
-        .feed-id {
-            color: var(--cyan-dim);
-            margin-right: 6px;
-        }
-
-        .feed-entry.active { color: var(--text-secondary); }
-        .feed-entry.system { color: var(--green); }
-
-        /* ===== SIDEBAR: ALERTS ===== */
-        .alert-entry {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-        }
-
-        .alert-entry:last-child { border-bottom: none; }
-
-        .alert-title {
-            font-size: 0.68rem;
-            color: var(--text-primary);
-            margin-bottom: 3px;
-            font-weight: 500;
-        }
-
-        .alert-meta {
+        .diag-row {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
         }
 
-        .alert-domain {
+        .diag-label {
+            color: var(--text-dim);
+            min-width: 90px;
+            text-transform: uppercase;
+            font-size: 0.55rem;
+            letter-spacing: 0.06em;
+            padding-top: 2px;
+        }
+
+        .diag-value {
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .diag-tag {
+            display: inline-block;
+            font-size: 0.5rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            margin: 1px 2px;
+            letter-spacing: 0.03em;
+        }
+
+        .diag-tag.driver { background: rgba(0, 200, 255, 0.1); color: var(--cyan); border: 1px solid rgba(0, 200, 255, 0.2); }
+        .diag-tag.ignored { background: rgba(255, 136, 51, 0.1); color: var(--orange); border: 1px solid rgba(255, 136, 51, 0.2); }
+        .diag-tag.overest { background: rgba(136, 85, 255, 0.1); color: var(--purple); border: 1px solid rgba(136, 85, 255, 0.2); }
+        .diag-tag.keyword { background: rgba(255,255,255,0.04); color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.06); }
+
+        /* ===== SIGNAL LOG ===== */
+        .signal-log-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .signal-log {
+            max-height: 200px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .signal-entry {
             font-family: 'Share Tech Mono', monospace;
             font-size: 0.58rem;
             color: var(--text-dim);
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.015);
+            display: flex;
+            gap: 8px;
         }
 
-        .alert-level {
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.55rem;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            padding: 2px 8px;
-            border-radius: 2px;
-        }
+        .signal-entry:last-child { border-bottom: none; }
 
-        .alert-level.critical {
-            color: var(--red);
-            background: rgba(255, 51, 68, 0.1);
-            border: 1px solid rgba(255, 51, 68, 0.2);
-        }
+        .signal-time { color: var(--text-dim); min-width: 60px; }
+        .signal-source { color: var(--cyan-dim); min-width: 100px; }
+        .signal-domain { color: var(--text-dim); min-width: 80px; text-transform: uppercase; }
+        .signal-data { color: var(--text-secondary); flex: 1; }
 
-        .alert-level.high {
-            color: var(--orange);
-            background: rgba(255, 136, 51, 0.1);
-            border: 1px solid rgba(255, 136, 51, 0.2);
-        }
-
-        .alert-level.medium {
-            color: var(--yellow);
-            background: rgba(255, 204, 0, 0.08);
-            border: 1px solid rgba(255, 204, 0, 0.15);
-        }
-
-        /* ===== STATUS BAR (FOOTER) ===== */
+        /* ===== STATUS FOOTER ===== */
         .status-footer {
             display: flex;
             align-items: center;
@@ -530,8 +734,7 @@
             gap: 8px;
         }
 
-        .status-footer-left,
-        .status-footer-right {
+        .status-footer-left, .status-footer-right {
             display: flex;
             align-items: center;
             gap: 20px;
@@ -566,40 +769,97 @@
             text-transform: uppercase;
         }
 
+        /* ===== BOOT OVERLAY ===== */
+        .boot-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--bg-deep);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease-out;
+        }
+
+        .boot-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .boot-text {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--cyan);
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+
+        .boot-line {
+            opacity: 0;
+            transform: translateY(5px);
+            animation: boot-appear 0.3s forwards;
+            margin-bottom: 6px;
+        }
+
+        @keyframes boot-appear {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .boot-bar {
+            width: 200px;
+            height: 2px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 1px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .boot-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: var(--cyan);
+            transition: width 0.3s;
+        }
+
         /* ===== RESPONSIVE ===== */
-        @media (max-width: 1000px) {
-            .main-layout {
+        @media (max-width: 1100px) {
+            .pattern-grid, .scenario-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bottom-row {
                 grid-template-columns: 1fr;
-            }
-            .sidebar {
-                border-left: none;
-                border-top: 1px solid var(--border);
-            }
-            .domains-grid {
-                grid-template-columns: 1fr;
-            }
-            .top-stats {
-                display: none;
             }
         }
 
-        @media (max-width: 600px) {
-            .top-header {
-                padding: 10px 16px;
+        @media (max-width: 700px) {
+            .main-container { padding: 16px; }
+            .pattern-grid, .scenario-grid {
+                grid-template-columns: 1fr;
             }
-            .main-content {
-                padding: 16px;
+            .neuron-grid {
+                grid-template-columns: 1fr;
             }
-            .status-footer {
+            .stability-top {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 12px;
             }
+            .stability-value-box { text-align: left; }
+            .stability-value { font-size: 1.6rem; }
+            .header-controls { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP HEADER -->
+    <!-- BOOT OVERLAY -->
+    <div class="boot-overlay" id="bootOverlay">
+        <div class="boot-text" id="bootText"></div>
+        <div class="boot-bar"><div class="boot-bar-fill" id="bootBar"></div></div>
+    </div>
+
+    <!-- HEADER -->
     <div class="top-header">
         <div class="top-header-left">
             <div class="oracle-logo">
@@ -609,16 +869,17 @@
                     </svg>
                 </div>
                 <div>
-                    <div class="oracle-title">ORACLE v2.0</div>
-                    <div class="oracle-subtitle">Planetary Intelligence Distributed System</div>
+                    <div class="oracle-title">ORACLE v3.0</div>
+                    <div class="oracle-subtitle">Ecosystem — Distributed Nervous System</div>
                 </div>
             </div>
         </div>
-        <div class="top-stats">
-            <div class="top-stat">ANALYSIS_FOCAL_POINT: <strong class="val-cyan">GLOBAL</strong></div>
-            <div class="top-stat">CORES: <strong class="val-green">16/16</strong></div>
-            <div class="top-stat">NUCLEI: <strong>10.4K</strong></div>
-            <div class="top-stat">LATENCY: <strong class="val-green">STABLE</strong></div>
+        <div class="header-controls">
+            <button class="btn-scan" id="btnScan" onclick="manualScan()">SCAN NOW</button>
+            <div class="auto-toggle active" id="autoToggle" onclick="toggleAutoScan()">
+                <span class="dot"></span> AUTO: <span id="autoLabel">ON</span>
+            </div>
+            <span class="sf-item" id="scanCounter">SCANS: <span class="val">0</span></span>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
             <a href="index.html" class="back-link">&larr; HQ</a>
@@ -629,551 +890,844 @@
         </div>
     </div>
 
-    <!-- TABS -->
-    <div class="tab-bar">
-        <div class="tab active" onclick="switchTab(this)">DASHBOARD</div>
-        <div class="tab" onclick="switchTab(this)">SCENARIOS</div>
-        <div class="tab" onclick="switchTab(this)">PROTOCOLS</div>
-    </div>
+    <!-- MAIN -->
+    <div class="main-container">
 
-    <!-- MAIN LAYOUT -->
-    <div class="main-layout">
-
-        <!-- LEFT: MAIN CONTENT -->
-        <div class="main-content">
-            <div class="section-header">
-                CORE FUNCTIONAL DOMAINS<span class="focus-tag">// FOCUS: GLOBAL</span>
+        <!-- ===== STABILITY FIELD (HERO) ===== -->
+        <div class="stability-hero" id="stabilityHero">
+            <div class="stability-top">
+                <div class="stability-title-area">
+                    <h2>CAMPO DI STABILIT&Agrave;</h2>
+                    <div class="subtitle">Tensione strutturale del sistema globale — non eventi, variazione</div>
+                </div>
+                <div class="stability-value-box">
+                    <div class="stability-value" id="stabilityValue" style="color: var(--yellow);">0.75</div>
+                    <div class="stability-delta delta-neutral" id="stabilityDelta">&Delta;: 0.0000/scan</div>
+                </div>
             </div>
 
-            <div class="domains-grid">
-
-                <!-- CLIMATE/ECOLOGY -->
-                <div class="domain-card" id="domain-climate">
-                    <div class="domain-card-header">
-                        <div class="domain-name">CLIMATE / ECOLOGY</div>
-                        <div class="domain-icon">🌍</div>
-                    </div>
-                    <div class="domain-status status-critical">CRITICAL_OVERSHOOT_LIKELY</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--red);">78%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill high" style="width: 78%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Arctic Albedo</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">AMOC Stability</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="down" data-color="#00dd66"></canvas>
-                                <span class="trend-arrow down">&#9660;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: ORACLE_CORE</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
+            <div class="stability-bar-container">
+                <div class="stability-bar">
+                    <div class="stability-bar-fill" id="stabilityBarFill" style="width: 75%; background: linear-gradient(90deg, var(--teal), var(--cyan));"></div>
+                    <div class="stability-bar-threshold" id="stabilityThreshold" style="left: 35%;"></div>
                 </div>
-
-                <!-- GEOPOLITICS -->
-                <div class="domain-card" id="domain-geo">
-                    <div class="domain-card-header">
-                        <div class="domain-name">GEOPOLITICS</div>
-                        <div class="domain-icon">&#9878;</div>
-                    </div>
-                    <div class="domain-status status-critical">MULTI_POLAR_FRICTION_HIGH</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--red);">85%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill critical" style="width: 85%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Resource Chokepoints</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up" data-color="#ff3344"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">Kinetic Escalation</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: MARXIAN_CORE</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
-                </div>
-
-                <!-- ECONOMICS -->
-                <div class="domain-card" id="domain-econ">
-                    <div class="domain-card-header">
-                        <div class="domain-name">ECONOMICS</div>
-                        <div class="domain-icon">&#9879;</div>
-                    </div>
-                    <div class="domain-status status-high">LIQUIDITY_FRAGILITY_DETECTED</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--cyan);">71%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill elevated" style="width: 71%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Derivative Exposure</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">Supply Chain Cohesion</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="down-slight" data-color="#00dd66"></canvas>
-                                <span class="trend-arrow down">&#9660;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: CODE_ENCODER</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
-                </div>
-
-                <!-- TECHNOLOGY -->
-                <div class="domain-card" id="domain-tech">
-                    <div class="domain-card-header">
-                        <div class="domain-name">TECHNOLOGY</div>
-                        <div class="domain-icon">&#9881;</div>
-                    </div>
-                    <div class="domain-status status-moderate">ALIGNMENT_DRIFT_OBSERVED</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--teal);">62%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill moderate" style="width: 62%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Compute Concentration</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">Bio-Vulnerability</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up-slight" data-color="#ff8833"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: GHOST_RUNNER</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
-                </div>
-
-                <!-- EPISTEMOLOGY -->
-                <div class="domain-card" id="domain-epist">
-                    <div class="domain-card-header">
-                        <div class="domain-name">EPISTEMOLOGY</div>
-                        <div class="domain-icon">&#128065;</div>
-                    </div>
-                    <div class="domain-status status-critical">CONSENSUS_REALITY_COLLAPSE</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--red);">94%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill critical" style="width: 94%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Synthetic Content Saturation</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up-steep" data-color="#ff3344"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">Institutional Trust</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="down-steep" data-color="#00dd66"></canvas>
-                                <span class="trend-arrow down">&#9660;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: AFFECTIVE_CORE</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
-                </div>
-
-                <!-- SOCIAL -->
-                <div class="domain-card" id="domain-social">
-                    <div class="domain-card-header">
-                        <div class="domain-name">SOCIAL</div>
-                        <div class="domain-icon">&#9734;</div>
-                    </div>
-                    <div class="domain-status status-high">COHESION_DEGRADATION</div>
-                    <div class="risk-section">
-                        <div class="risk-label">
-                            <span>Aggregate Risk</span>
-                            <span class="risk-value" style="color: var(--orange);">68%</span>
-                        </div>
-                        <div class="risk-bar"><div class="risk-bar-fill elevated" style="width: 68%;"></div></div>
-                    </div>
-                    <div class="trend-indicators">
-                        <div class="trend-row">
-                            <span class="trend-name">Inequality Gap</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up" data-color="#ff8833"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                        <div class="trend-row">
-                            <span class="trend-name">Mobilization Potential</span>
-                            <div class="trend-visual">
-                                <canvas class="trend-line" data-trend="up-slight" data-color="#ff8833"></canvas>
-                                <span class="trend-arrow up">&#9650;</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-lead">
-                        <span class="lead-name">LEAD: NARRATIVE_ENGINE</span>
-                        <span class="lead-status">ACTIVE_LINK</span>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- SYSTEMIC STABILITY MATRIX -->
-            <div class="stability-section">
-                <div class="stability-header">
-                    <div class="stability-title">SYSTEMIC STABILITY MATRIX</div>
-                    <div class="refresh-rate">REFRESH_RATE: 0.8s</div>
-                </div>
-                <canvas id="stabilityChart"></canvas>
+            <div class="stability-meta" id="stabilityMeta">
+                <div class="stability-meta-item">TREND: <strong id="metaTrend">INITIALIZING</strong></div>
+                <div class="stability-meta-item">THRESHOLD: <strong>0.35</strong></div>
+                <div class="stability-meta-item">DISTANCE: <strong id="metaDistance">0.40</strong></div>
+                <div class="stability-meta-item">NEURONS: <strong id="metaNeurons">0/0</strong></div>
+                <div class="stability-meta-item">LAST SCAN: <strong id="metaLastScan">NEVER</strong></div>
+            </div>
+
+            <canvas id="miniStabilityChart"></canvas>
+        </div>
+
+        <!-- ===== LEVEL 1: SENSORY MESH ===== -->
+        <div class="section-label"><span class="level-num">01</span> RETE SENSORIALE — Raw Intelligence Mesh</div>
+        <div class="sensory-section" id="sensorySection">
+            <div class="neuron-grid" id="neuronGrid">
+                <!-- Populated by JS -->
+            </div>
+            <div class="sensory-stats" id="sensoryStats">
+                <div>ACTIVE: <strong id="statActive">0/0</strong></div>
+                <div>SIGNALS: <strong id="statSignals">0</strong></div>
+                <div>AVG LATENCY: <strong id="statLatency">0ms</strong></div>
+                <div>MEMORY: <strong id="statMemory">0 records</strong></div>
             </div>
         </div>
 
-        <!-- RIGHT: SIDEBAR -->
-        <div class="sidebar">
-
-            <!-- INTELLIGENCE FEED -->
-            <div class="sidebar-section">
-                <div class="sidebar-title">INTELLIGENCE_FEED</div>
-                <div id="intelligenceFeed">
-                    <div class="feed-entry"><span class="feed-id">[0]</span> WAITING FOR INPUT...</div>
-                    <div class="feed-entry system"><span class="feed-id">[1]</span> HYMPA INITIALIZED</div>
-                    <div class="feed-entry system"><span class="feed-id">[2]</span> SYSTEM READY</div>
+        <!-- ===== LEVEL 2: SYNAPTIC ENGINE ===== -->
+        <div class="section-label"><span class="level-num">02</span> MOTORE SINAPTICO — Signal Compression Engine</div>
+        <div class="synaptic-section" id="synapticSection">
+            <div class="pattern-grid">
+                <!-- Simultaneous Shocks -->
+                <div class="pattern-card" id="patShocks">
+                    <div class="pattern-label">SHOCK SIMULTANEI</div>
+                    <div class="pattern-value" style="color: var(--text-dim);">0</div>
+                    <div class="pattern-detail">domini elevati</div>
+                    <div class="pattern-indicator">
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                    </div>
+                </div>
+                <!-- Rhythm Acceleration -->
+                <div class="pattern-card" id="patAcceleration">
+                    <div class="pattern-label">ACCELERAZIONE</div>
+                    <div class="pattern-value" style="color: var(--text-dim);">0.00</div>
+                    <div class="pattern-detail">rate of change</div>
+                    <div class="pattern-indicator">
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                    </div>
+                </div>
+                <!-- Polarization -->
+                <div class="pattern-card" id="patPolarization">
+                    <div class="pattern-label">POLARIZZAZIONE</div>
+                    <div class="pattern-value" style="color: var(--text-dim);">0.00</div>
+                    <div class="pattern-detail">sentiment variance</div>
+                    <div class="pattern-indicator">
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                    </div>
+                </div>
+                <!-- Cross-Domain Correlation -->
+                <div class="pattern-card" id="patCorrelation">
+                    <div class="pattern-label">CROSS-DOMINIO</div>
+                    <div class="pattern-value" style="color: var(--text-dim);">0.00</div>
+                    <div class="pattern-detail">correlation factor</div>
+                    <div class="pattern-indicator">
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                        <div class="pattern-pip"></div>
+                    </div>
                 </div>
             </div>
-
-            <!-- ACTIVE ALERT PROTOCOL -->
-            <div class="sidebar-section">
-                <div class="sidebar-title">ACTIVE_ALERT_PROTOCOL</div>
-
-                <div class="alert-entry">
-                    <div class="alert-title">Regional Decay</div>
-                    <div class="alert-meta">
-                        <span class="alert-domain">GLOBAL &bull; SYNTHESIS</span>
-                        <span class="alert-level high">High</span>
-                    </div>
-                </div>
-
-                <div class="alert-entry">
-                    <div class="alert-title">Epistemic Decoupling</div>
-                    <div class="alert-meta">
-                        <span class="alert-domain">SOCIAL</span>
-                        <span class="alert-level high">High</span>
-                    </div>
-                </div>
-
-                <div class="alert-entry">
-                    <div class="alert-title">Thermal Inversion</div>
-                    <div class="alert-meta">
-                        <span class="alert-domain">NORTH ATLANTIC &bull; CLIMATE</span>
-                        <span class="alert-level critical">Critical</span>
-                    </div>
-                </div>
-
-                <div class="alert-entry">
-                    <div class="alert-title">Quantum Infra Breach</div>
-                    <div class="alert-meta">
-                        <span class="alert-domain">TECH</span>
-                        <span class="alert-level medium">Medium</span>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <!-- ===== LEVEL 3: CORTICAL FIELD ===== -->
+        <div class="section-label"><span class="level-num">03</span> CAMPO CORTICALE — Scenario Probability Field</div>
+        <div class="cortical-section" id="corticalSection">
+            <div class="scenario-grid" id="scenarioGrid">
+                <div class="scenario-card" id="scenSoft">
+                    <div class="scenario-name">ESCALAZIONE SOFT</div>
+                    <div class="scenario-prob" style="color: var(--orange);">—</div>
+                    <div class="scenario-metrics">
+                        <span>H: — | C: —</span>
+                    </div>
+                    <div class="scenario-drivers" id="driversSoft"></div>
+                </div>
+                <div class="scenario-card" id="scenCascade">
+                    <div class="scenario-name">CASCATA REGIONALE</div>
+                    <div class="scenario-prob" style="color: var(--red);">—</div>
+                    <div class="scenario-metrics">
+                        <span>H: — | C: —</span>
+                    </div>
+                    <div class="scenario-drivers" id="driversCascade"></div>
+                </div>
+                <div class="scenario-card" id="scenAbsorb">
+                    <div class="scenario-name">ASSORBIMENTO</div>
+                    <div class="scenario-prob" style="color: var(--teal);">—</div>
+                    <div class="scenario-metrics">
+                        <span>H: — | C: —</span>
+                    </div>
+                    <div class="scenario-drivers" id="driversAbsorb"></div>
+                </div>
+                <div class="scenario-card" id="scenFalse">
+                    <div class="scenario-name">FALSO ALLARME</div>
+                    <div class="scenario-prob" style="color: var(--text-dim);">—</div>
+                    <div class="scenario-metrics">
+                        <span>H: — | C: —</span>
+                    </div>
+                    <div class="scenario-drivers" id="driversFalse"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== BOTTOM ROW ===== -->
+        <div class="bottom-row">
+            <!-- Stability History -->
+            <div class="history-section">
+                <div class="panel-title">STORIA CAMPO DI STABILIT&Agrave;</div>
+                <canvas id="stabilityHistoryChart"></canvas>
+            </div>
+
+            <!-- Auto-Diagnosis -->
+            <div class="diagnosis-section">
+                <div class="panel-title">AUTO-DIAGNOSI</div>
+                <div class="diagnosis-content" id="diagnosisContent">
+                    <div class="diag-row">
+                        <span class="diag-label">Status</span>
+                        <span class="diag-value">Waiting for first scan...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SIGNAL LOG ===== -->
+        <div class="signal-log-section">
+            <div class="panel-title">LOG SEGNALI — Raw Neuron Output</div>
+            <div class="signal-log" id="signalLog">
+                <div class="signal-entry">
+                    <span class="signal-time">--:--:--</span>
+                    <span class="signal-source">SYSTEM</span>
+                    <span class="signal-domain">INIT</span>
+                    <span class="signal-data">Waiting for first scan...</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- STATUS FOOTER -->
     <div class="status-footer">
         <div class="status-footer-left">
-            <div class="sf-item"><span class="sf-dot"></span> SINGAPORE_NODE: <span class="val">ONLINE</span></div>
-            <div class="sf-item">LATENCY: <span class="val">42ms</span></div>
-            <div class="sf-item">VERSION: <span class="val">2.0.1-STABLE</span></div>
-            <div class="sf-item">TARGET: <span class="val">GLOBAL</span></div>
+            <div class="sf-item"><span class="sf-dot"></span> ENGINE: <span class="val" id="footerEngine">INIT</span></div>
+            <div class="sf-item">MEMORY: <span class="val" id="footerMemory">IndexedDB</span></div>
+            <div class="sf-item">VERSION: <span class="val">3.0.0-ECOSYSTEM</span></div>
         </div>
         <div class="status-footer-right">
-            <div class="sf-motto">TRUTH WITHOUT COMPROMISE</div>
-            <div class="sf-item">USER: <span class="val">ANONYMOUS_OPERATOR</span></div>
+            <div class="sf-motto">TENSIONE, NON EVENTI</div>
+            <div class="sf-item">PARADIGM: <span class="val">BROWSER-NATIVE</span></div>
         </div>
     </div>
 
+    <!-- ENGINE -->
+    <script src="js/oracle-engine.js"></script>
+
+    <!-- UI LOGIC -->
     <script>
-    // ===== TAB SWITCHING =====
-    function switchTab(el) {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        el.classList.add('active');
+    // =========================================================
+    // ORACLE UI v3.0 — Interface for the Nervous System
+    // =========================================================
+
+    let autoScanEnabled = true;
+    let bootComplete = false;
+
+    // ===== BOOT SEQUENCE =====
+    async function bootSequence() {
+        const overlay = document.getElementById('bootOverlay');
+        const textEl = document.getElementById('bootText');
+        const barEl = document.getElementById('bootBar');
+
+        const lines = [
+            'ORACLE ECOSYSTEM v3.0',
+            'Initializing IndexedDB memory layer...',
+            'Loading neuron definitions...',
+            'Calibrating sensory mesh...',
+            'Synaptic engine: STANDBY',
+            'Cortical field: STANDBY',
+            'Auto-diagnosis: ARMED',
+            'Connecting to distributed intelligence...',
+            'First scan initiating...'
+        ];
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = document.createElement('div');
+            line.className = 'boot-line';
+            line.style.animationDelay = '0s';
+            line.textContent = (i === 0 ? '' : '> ') + lines[i];
+            if (i === 0) line.style.marginBottom = '14px';
+            textEl.appendChild(line);
+            barEl.style.width = ((i + 1) / lines.length * 100) + '%';
+            await sleep(250 + Math.random() * 150);
+        }
+
+        // Initialize engine
+        const success = await OracleEngine.init();
+
+        if (success) {
+            const done = document.createElement('div');
+            done.className = 'boot-line';
+            done.textContent = '> ECOSYSTEM ONLINE';
+            done.style.color = '#00dd66';
+            textEl.appendChild(done);
+        } else {
+            const fail = document.createElement('div');
+            fail.className = 'boot-line';
+            fail.textContent = '> ENGINE INIT FAILED — Running in degraded mode';
+            fail.style.color = '#ff3344';
+            textEl.appendChild(fail);
+        }
+
+        barEl.style.width = '100%';
+        await sleep(600);
+
+        overlay.classList.add('fade-out');
+        setTimeout(() => overlay.remove(), 800);
+
+        bootComplete = true;
+        renderNeuronGrid();
+        document.getElementById('footerEngine').textContent = success ? 'ONLINE' : 'DEGRADED';
+
+        // Register update listener
+        OracleEngine.onUpdate(handleEngineUpdate);
+
+        // First scan
+        await OracleEngine.scan();
+
+        // Start auto-scan
+        if (autoScanEnabled) {
+            OracleEngine.startAutoScan();
+        }
     }
 
-    // ===== MINI TREND LINES =====
-    function drawTrendLines() {
-        document.querySelectorAll('.trend-line').forEach(canvas => {
-            const trend = canvas.dataset.trend;
-            const color = canvas.dataset.color || '#ff3344';
-            const dpr = window.devicePixelRatio || 1;
-            const w = 50, h = 16;
-            canvas.width = w * dpr;
-            canvas.height = h * dpr;
-            canvas.style.width = w + 'px';
-            canvas.style.height = h + 'px';
-            const ctx = canvas.getContext('2d');
-            ctx.scale(dpr, dpr);
+    function sleep(ms) {
+        return new Promise(r => setTimeout(r, ms));
+    }
 
-            // Generate trend points
-            let points = [];
-            const steps = 8;
-            for (let i = 0; i <= steps; i++) {
-                const x = (w / steps) * i;
-                let y;
-                const t = i / steps;
-                const noise = (Math.random() - 0.5) * 3;
-                switch(trend) {
-                    case 'up-steep':
-                        y = h - 2 - (t * t * (h - 4)) + noise;
-                        break;
-                    case 'up':
-                        y = h - 2 - (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'up-slight':
-                        y = h - 2 - (t * (h - 4) * 0.4) + noise;
-                        break;
-                    case 'down-steep':
-                        y = 2 + (t * t * (h - 4)) + noise;
-                        break;
-                    case 'down':
-                        y = 2 + (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'down-slight':
-                        y = 2 + (t * (h - 4) * 0.3) + noise;
-                        break;
-                    default:
-                        y = h / 2 + noise;
-                }
-                y = Math.max(1, Math.min(h - 1, y));
-                points.push({ x, y });
-            }
+    // ===== ENGINE UPDATE HANDLER =====
+    function handleEngineUpdate(event, state, data) {
+        if (event === 'scan-start') {
+            document.getElementById('btnScan').classList.add('scanning');
+            document.getElementById('btnScan').disabled = true;
+            document.getElementById('btnScan').textContent = 'SCANNING...';
+            updateNeuronStatus();
+        }
 
-            ctx.beginPath();
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 1.5;
-            ctx.moveTo(points[0].x, points[0].y);
-            for (let i = 1; i < points.length; i++) {
-                ctx.lineTo(points[i].x, points[i].y);
+        if (event === 'scan-complete') {
+            document.getElementById('btnScan').classList.remove('scanning');
+            document.getElementById('btnScan').disabled = false;
+            document.getElementById('btnScan').textContent = 'SCAN NOW';
+
+            updateStabilityField(state);
+            updateNeuronGrid(state);
+            updateSynapticDisplay(state);
+            updateCorticalField(state);
+            updateDiagnosis(state);
+            updateSignalLog(state);
+            updateMiniChart();
+            updateHistoryChart();
+            updateFooter(state);
+        }
+
+        if (event === 'scan-error') {
+            document.getElementById('btnScan').classList.remove('scanning');
+            document.getElementById('btnScan').disabled = false;
+            document.getElementById('btnScan').textContent = 'SCAN NOW';
+            addSignalLogEntry('ERROR', 'ENGINE', 'SYSTEM', 'Scan failed: ' + (data || 'Unknown error'));
+        }
+    }
+
+    // ===== STABILITY FIELD DISPLAY =====
+    function updateStabilityField(state) {
+        const s = state.stability;
+        const d = state.delta;
+
+        // Color based on stability
+        let color;
+        if (s > 0.7) color = 'var(--green)';
+        else if (s > 0.5) color = 'var(--cyan)';
+        else if (s > 0.35) color = 'var(--yellow)';
+        else color = 'var(--red)';
+
+        const valEl = document.getElementById('stabilityValue');
+        valEl.textContent = s.toFixed(2);
+        valEl.style.color = color;
+
+        // Delta
+        const deltaEl = document.getElementById('stabilityDelta');
+        const deltaSign = d >= 0 ? '+' : '';
+        deltaEl.textContent = '\u0394: ' + deltaSign + d.toFixed(4) + '/scan';
+        deltaEl.className = 'stability-delta ' + (d < -0.01 ? 'delta-neg' : d > 0.01 ? 'delta-pos' : 'delta-neutral');
+
+        // Bar
+        const barFill = document.getElementById('stabilityBarFill');
+        barFill.style.width = (s * 100) + '%';
+        if (s > 0.7) barFill.style.background = 'linear-gradient(90deg, var(--green), var(--teal))';
+        else if (s > 0.5) barFill.style.background = 'linear-gradient(90deg, var(--teal), var(--cyan))';
+        else if (s > 0.35) barFill.style.background = 'linear-gradient(90deg, var(--yellow), var(--orange))';
+        else barFill.style.background = 'linear-gradient(90deg, var(--orange), var(--red))';
+
+        // Meta
+        const trend = d < -0.02 ? 'DECLINING' : d > 0.02 ? 'IMPROVING' : 'STABLE';
+        document.getElementById('metaTrend').textContent = trend;
+        document.getElementById('metaTrend').style.color = d < -0.02 ? 'var(--red)' : d > 0.02 ? 'var(--green)' : 'var(--yellow)';
+        document.getElementById('metaDistance').textContent = (s - 0.35).toFixed(2);
+        document.getElementById('metaLastScan').textContent = formatTime(state.lastScan);
+        document.getElementById('scanCounter').querySelector('.val').textContent = state.scanCount;
+
+        const activeNeurons = state.signals ? state.signals.filter(s2 => s2.meta.success).length : 0;
+        const totalNeurons = state.signals ? state.signals.length : 0;
+        document.getElementById('metaNeurons').textContent = activeNeurons + '/' + totalNeurons;
+    }
+
+    // ===== NEURON GRID =====
+    function renderNeuronGrid() {
+        const grid = document.getElementById('neuronGrid');
+        grid.innerHTML = '';
+        for (const neuron of SensoryMesh.neurons) {
+            const card = document.createElement('div');
+            card.className = 'neuron-card';
+            card.id = 'neuron-' + neuron.id;
+            card.innerHTML = `
+                <div class="neuron-dot idle"></div>
+                <div class="neuron-info">
+                    <div class="neuron-name">${neuron.name}</div>
+                    <div class="neuron-meta">
+                        <span>${neuron.domain}</span>
+                        <span>r:${neuron.reliability.toFixed(2)}</span>
+                    </div>
+                </div>
+                <div class="neuron-weight" style="color: var(--text-dim);">${neuron.weight.toFixed(2)}</div>
+            `;
+            grid.appendChild(card);
+        }
+    }
+
+    function updateNeuronStatus() {
+        for (const neuron of SensoryMesh.neurons) {
+            const card = document.getElementById('neuron-' + neuron.id);
+            if (card) {
+                const dot = card.querySelector('.neuron-dot');
+                dot.className = 'neuron-dot firing';
             }
-            ctx.stroke();
+        }
+    }
+
+    function updateNeuronGrid(state) {
+        let active = 0;
+        let totalLatency = 0;
+        let latencyCount = 0;
+
+        for (const neuron of SensoryMesh.neurons) {
+            const card = document.getElementById('neuron-' + neuron.id);
+            if (!card) continue;
+
+            const dot = card.querySelector('.neuron-dot');
+            dot.className = 'neuron-dot ' + neuron.status;
+
+            const meta = card.querySelector('.neuron-meta');
+            meta.innerHTML = `<span>${neuron.domain}</span><span>r:${neuron.reliability.toFixed(2)}</span>`;
+
+            const weightEl = card.querySelector('.neuron-weight');
+            weightEl.textContent = neuron.weight.toFixed(2);
+            if (neuron.weight > 0.7) weightEl.style.color = 'var(--green)';
+            else if (neuron.weight > 0.4) weightEl.style.color = 'var(--cyan)';
+            else weightEl.style.color = 'var(--orange)';
+
+            if (neuron.status === 'active') active++;
+            if (neuron.latency > 0) {
+                totalLatency += neuron.latency;
+                latencyCount++;
+            }
+        }
+
+        document.getElementById('statActive').textContent = active + '/' + SensoryMesh.neurons.length;
+        document.getElementById('statLatency').textContent = latencyCount > 0 ? Math.round(totalLatency / latencyCount) + 'ms' : '—';
+
+        const totalSignals = state.signals ? state.signals.reduce((s, sig) => s + sig.itemCount, 0) : 0;
+        document.getElementById('statSignals').textContent = totalSignals;
+    }
+
+    // ===== SYNAPTIC DISPLAY =====
+    function updateSynapticDisplay(state) {
+        if (!state.patterns) return;
+        const p = state.patterns;
+
+        // Shocks
+        updatePatternCard('patShocks', p.shocks.count, p.shocks.count + ' domini', p.shocks.factor);
+        // Acceleration
+        const accSign = p.acceleration.rate >= 0 ? '+' : '';
+        updatePatternCard('patAcceleration', accSign + p.acceleration.rate.toFixed(2), p.acceleration.accelerating ? 'ACCELERATING' : 'STABLE', Math.abs(p.acceleration.rate) * 3);
+        // Polarization
+        updatePatternCard('patPolarization', p.polarization.variance.toFixed(3), p.polarization.polarized ? 'POLARIZED' : 'CONVERGENT', p.polarization.variance * 4);
+        // Cross-correlation
+        updatePatternCard('patCorrelation', p.crossCorrelation.correlation.toFixed(2), p.crossCorrelation.pairs.length + ' pairs', p.crossCorrelation.correlation);
+    }
+
+    function updatePatternCard(id, value, detail, intensity) {
+        const card = document.getElementById(id);
+        if (!card) return;
+
+        const valEl = card.querySelector('.pattern-value');
+        valEl.textContent = value;
+        if (intensity > 0.7) valEl.style.color = 'var(--red)';
+        else if (intensity > 0.4) valEl.style.color = 'var(--orange)';
+        else if (intensity > 0.15) valEl.style.color = 'var(--cyan)';
+        else valEl.style.color = 'var(--text-dim)';
+
+        card.querySelector('.pattern-detail').textContent = detail;
+
+        // Update pips
+        const pips = card.querySelectorAll('.pattern-pip');
+        const litCount = Math.min(5, Math.ceil(intensity * 5));
+        pips.forEach((pip, i) => {
+            if (i < litCount) {
+                if (intensity > 0.7) pip.className = 'pattern-pip crit';
+                else if (intensity > 0.4) pip.className = 'pattern-pip warn';
+                else pip.className = 'pattern-pip lit';
+            } else {
+                pip.className = 'pattern-pip';
+            }
         });
     }
-    drawTrendLines();
 
-    // ===== SYSTEMIC STABILITY MATRIX CHART =====
-    const stabCanvas = document.getElementById('stabilityChart');
-    const stabCtx = stabCanvas.getContext('2d');
+    // ===== CORTICAL FIELD =====
+    function updateCorticalField(state) {
+        if (!state.scenarios) return;
+        const sc = state.scenarios;
 
-    const domains = ['CLI/ECO', 'GEO', 'ECON', 'TECH', 'EPIST', 'SOCIAL'];
-    const domainColors = {
-        risk: '#ff3344',
-        resilience: '#00d4aa',
-        volatility: '#00c8ff'
-    };
+        updateScenarioCard('scenSoft', sc.softEscalation, 'var(--orange)', 'driversSoft');
+        updateScenarioCard('scenCascade', sc.regionalCascade, 'var(--red)', 'driversCascade');
+        updateScenarioCard('scenAbsorb', sc.absorption, 'var(--teal)', 'driversAbsorb');
+        updateScenarioCard('scenFalse', sc.falseAlarm, 'var(--text-dim)', 'driversFalse');
 
-    let stabilityData = {
-        risk: [78, 85, 71, 62, 94, 68],
-        resilience: [35, 22, 48, 55, 12, 40],
-        volatility: [60, 72, 55, 45, 88, 52]
-    };
+        // Mark dominant scenario
+        const scenarios = [
+            { id: 'scenSoft', p: sc.softEscalation.probability },
+            { id: 'scenCascade', p: sc.regionalCascade.probability },
+            { id: 'scenAbsorb', p: sc.absorption.probability },
+            { id: 'scenFalse', p: sc.falseAlarm.probability }
+        ];
+        const max = scenarios.reduce((a, b) => a.p > b.p ? a : b);
+        scenarios.forEach(s => {
+            document.getElementById(s.id).classList.toggle('dominant', s.id === max.id);
+        });
+    }
 
-    function drawStabilityChart() {
+    function updateScenarioCard(cardId, scenario, color, driversId) {
+        const card = document.getElementById(cardId);
+        if (!card) return;
+
+        const prob = card.querySelector('.scenario-prob');
+        prob.textContent = Math.round(scenario.probability * 100) + '%';
+        prob.style.color = color;
+
+        const metrics = card.querySelector('.scenario-metrics span');
+        metrics.textContent = 'H: ' + scenario.entropy.toFixed(2) + ' | C: ' + scenario.confidence.toFixed(2);
+
+        const driversEl = document.getElementById(driversId);
+        if (driversEl) {
+            driversEl.innerHTML = scenario.drivers
+                .map(d => '<span class="scenario-driver-tag">' + d + '</span>')
+                .join('');
+        }
+    }
+
+    // ===== DIAGNOSIS =====
+    function updateDiagnosis(state) {
+        if (!state.diagnosis) return;
+        const d = state.diagnosis;
+        const el = document.getElementById('diagnosisContent');
+
+        let html = '';
+
+        // Direction
+        const dirColor = d.direction === 'deteriorating' ? 'var(--red)' : d.direction === 'improving' ? 'var(--green)' : 'var(--yellow)';
+        html += `<div class="diag-row"><span class="diag-label">Direction</span><span class="diag-value" style="color:${dirColor}">${d.direction.toUpperCase()} (\u0394${d.delta >= 0 ? '+' : ''}${d.delta.toFixed(4)})</span></div>`;
+
+        // Neurons
+        html += `<div class="diag-row"><span class="diag-label">Neurons</span><span class="diag-value">${d.activeNeurons}/${d.totalNeurons} active</span></div>`;
+
+        // Drivers
+        if (d.drivers.length > 0) {
+            html += '<div class="diag-row"><span class="diag-label">Drivers</span><span class="diag-value">';
+            for (const dr of d.drivers) {
+                html += `<span class="diag-tag driver">${dr.type} (${typeof dr.impact === 'number' ? dr.impact.toFixed(2) : dr.impact})</span>`;
+            }
+            html += '</span></div>';
+        }
+
+        // Ignored signals
+        if (d.ignored.length > 0) {
+            html += '<div class="diag-row"><span class="diag-label">Ignored</span><span class="diag-value">';
+            for (const ig of d.ignored) {
+                html += `<span class="diag-tag ignored">${ig.neuronId} (u:${ig.urgency.toFixed(2)})</span>`;
+            }
+            html += '</span></div>';
+        }
+
+        // Overestimated
+        if (d.overestimated.length > 0) {
+            html += '<div class="diag-row"><span class="diag-label">Overest.</span><span class="diag-value">';
+            for (const ov of d.overestimated) {
+                html += `<span class="diag-tag overest">${ov.neuronId} (u:${ov.urgency.toFixed(2)})</span>`;
+            }
+            html += '</span></div>';
+        }
+
+        // Top Keywords
+        if (d.topKeywords.length > 0) {
+            html += '<div class="diag-row"><span class="diag-label">Keywords</span><span class="diag-value">';
+            for (const kw of d.topKeywords) {
+                html += `<span class="diag-tag keyword">${kw.keyword} (${kw.count})</span>`;
+            }
+            html += '</span></div>';
+        }
+
+        el.innerHTML = html;
+    }
+
+    // ===== SIGNAL LOG =====
+    function updateSignalLog(state) {
+        if (!state.signals) return;
+        for (const sig of state.signals) {
+            const urgStr = 'u:' + sig.aggregate.urgency.toFixed(2);
+            const sentStr = 's:' + sig.aggregate.sentiment.toFixed(2);
+            const kws = sig.aggregate.dominantKeywords.slice(0, 3).join(', ');
+            const status = sig.meta.success ? `${urgStr} ${sentStr} [${kws || 'no keywords'}]` : 'FETCH FAILED: ' + (sig.meta.error || 'timeout');
+            addSignalLogEntry(formatTime(sig.timestamp), sig.neuronId, sig.domain, status);
+        }
+    }
+
+    function addSignalLogEntry(time, source, domain, data) {
+        const log = document.getElementById('signalLog');
+        const entry = document.createElement('div');
+        entry.className = 'signal-entry';
+        entry.innerHTML = `
+            <span class="signal-time">${time}</span>
+            <span class="signal-source">${source}</span>
+            <span class="signal-domain">${domain}</span>
+            <span class="signal-data">${data}</span>
+        `;
+        log.appendChild(entry);
+
+        // Keep max 50 entries
+        while (log.children.length > 50) {
+            log.removeChild(log.firstChild);
+        }
+
+        log.scrollTop = log.scrollHeight;
+    }
+
+    // ===== MINI STABILITY CHART (in hero) =====
+    async function updateMiniChart() {
+        const canvas = document.getElementById('miniStabilityChart');
+        const ctx = canvas.getContext('2d');
         const dpr = window.devicePixelRatio || 1;
-        const rect = stabCanvas.getBoundingClientRect();
-        stabCanvas.width = rect.width * dpr;
-        stabCanvas.height = rect.height * dpr;
-        stabCtx.scale(dpr, dpr);
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
 
         const W = rect.width;
         const H = rect.height;
-        const padLeft = 50;
-        const padRight = 20;
+
+        ctx.clearRect(0, 0, W, H);
+
+        const history = await OracleEngine.getStabilityHistory(50);
+        if (history.length < 2) return;
+
+        const padX = 4;
+        const padY = 4;
+        const chartW = W - padX * 2;
+        const chartH = H - padY * 2;
+
+        // Threshold line
+        const threshY = padY + chartH * (1 - ORACLE_CONFIG.CRITICAL_THRESHOLD);
+        ctx.strokeStyle = 'rgba(255, 51, 68, 0.2)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 4]);
+        ctx.beginPath();
+        ctx.moveTo(padX, threshY);
+        ctx.lineTo(W - padX, threshY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Stability line
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(0, 200, 255, 0.6)';
+        ctx.lineWidth = 1.5;
+
+        const step = chartW / (history.length - 1);
+        for (let i = 0; i < history.length; i++) {
+            const x = padX + step * i;
+            const y = padY + chartH * (1 - history[i].stability);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+
+        // Area fill
+        ctx.lineTo(padX + step * (history.length - 1), padY + chartH);
+        ctx.lineTo(padX, padY + chartH);
+        ctx.closePath();
+        const grad = ctx.createLinearGradient(0, 0, 0, H);
+        grad.addColorStop(0, 'rgba(0, 200, 255, 0.08)');
+        grad.addColorStop(1, 'rgba(0, 200, 255, 0)');
+        ctx.fillStyle = grad;
+        ctx.fill();
+    }
+
+    // ===== STABILITY HISTORY CHART =====
+    async function updateHistoryChart() {
+        const canvas = document.getElementById('stabilityHistoryChart');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = rect.height;
+        const padLeft = 40;
+        const padRight = 10;
         const padTop = 10;
-        const padBottom = 30;
+        const padBottom = 20;
         const chartW = W - padLeft - padRight;
         const chartH = H - padTop - padBottom;
 
-        stabCtx.clearRect(0, 0, W, H);
+        ctx.clearRect(0, 0, W, H);
 
-        // Grid lines
-        stabCtx.strokeStyle = 'rgba(255,255,255,0.04)';
-        stabCtx.lineWidth = 1;
+        // Grid
+        ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+        ctx.lineWidth = 1;
         for (let i = 0; i <= 5; i++) {
             const y = padTop + (chartH / 5) * i;
-            stabCtx.beginPath();
-            stabCtx.moveTo(padLeft, y);
-            stabCtx.lineTo(W - padRight, y);
-            stabCtx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(padLeft, y);
+            ctx.lineTo(W - padRight, y);
+            ctx.stroke();
         }
 
         // Y labels
-        stabCtx.fillStyle = '#3a4f6f';
-        stabCtx.font = '10px Share Tech Mono';
-        stabCtx.textAlign = 'right';
+        ctx.fillStyle = '#3a4f6f';
+        ctx.font = '9px Share Tech Mono';
+        ctx.textAlign = 'right';
         for (let i = 0; i <= 5; i++) {
-            const val = 100 - i * 20;
+            const val = (1.0 - i * 0.2).toFixed(1);
             const y = padTop + (chartH / 5) * i;
-            stabCtx.fillText(val + '%', padLeft - 8, y + 4);
+            ctx.fillText(val, padLeft - 6, y + 3);
         }
 
-        // Draw grouped bars
-        const groupCount = domains.length;
-        const barTypes = ['risk', 'resilience', 'volatility'];
-        const groupWidth = chartW / groupCount;
-        const barWidth = groupWidth * 0.2;
-        const barGap = 4;
+        // Threshold line
+        const threshY = padTop + chartH * (1 - ORACLE_CONFIG.CRITICAL_THRESHOLD);
+        ctx.strokeStyle = 'rgba(255, 51, 68, 0.3)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(padLeft, threshY);
+        ctx.lineTo(W - padRight, threshY);
+        ctx.stroke();
+        ctx.setLineDash([]);
 
-        domains.forEach((domain, gi) => {
-            const groupX = padLeft + groupWidth * gi + groupWidth * 0.15;
+        ctx.fillStyle = 'rgba(255, 51, 68, 0.4)';
+        ctx.font = '8px Share Tech Mono';
+        ctx.textAlign = 'left';
+        ctx.fillText('CRITICAL', padLeft + 4, threshY - 4);
 
-            barTypes.forEach((type, bi) => {
-                const val = stabilityData[type][gi] + (Math.random() - 0.5) * 4;
-                const clampVal = Math.max(0, Math.min(100, val));
-                const barH = (clampVal / 100) * chartH;
-                const x = groupX + (barWidth + barGap) * bi;
-                const y = padTop + chartH - barH;
+        const history = await OracleEngine.getStabilityHistory(100);
+        if (history.length < 2) {
+            ctx.fillStyle = '#3a4f6f';
+            ctx.font = '11px Share Tech Mono';
+            ctx.textAlign = 'center';
+            ctx.fillText('Accumulating data...', W / 2, H / 2);
+            return;
+        }
 
-                stabCtx.fillStyle = domainColors[type];
-                stabCtx.globalAlpha = 0.8;
-                stabCtx.fillRect(x, y, barWidth, barH);
-                stabCtx.globalAlpha = 1;
-            });
+        // Draw stability line
+        ctx.beginPath();
+        ctx.lineWidth = 2;
 
-            // Domain label
-            stabCtx.fillStyle = '#3a4f6f';
-            stabCtx.font = '9px Share Tech Mono';
-            stabCtx.textAlign = 'center';
-            const labelX = groupX + ((barWidth + barGap) * barTypes.length) / 2;
-            stabCtx.fillText(domain, labelX, H - 8);
-        });
+        const step = chartW / (history.length - 1);
+        for (let i = 0; i < history.length; i++) {
+            const x = padLeft + step * i;
+            const y = padTop + chartH * (1 - history[i].stability);
 
-        // Legend
-        const legendX = W - padRight - 200;
-        const legendY = padTop + 5;
-        barTypes.forEach((type, i) => {
-            stabCtx.fillStyle = domainColors[type];
-            stabCtx.fillRect(legendX + i * 70, legendY, 12, 3);
-            stabCtx.fillStyle = '#3a4f6f';
-            stabCtx.font = '9px Share Tech Mono';
-            stabCtx.textAlign = 'left';
-            stabCtx.fillText(type.toUpperCase(), legendX + i * 70 + 16, legendY + 4);
-        });
+            // Color segments
+            const s = history[i].stability;
+            if (s > 0.7) ctx.strokeStyle = '#00dd66';
+            else if (s > 0.5) ctx.strokeStyle = '#00c8ff';
+            else if (s > 0.35) ctx.strokeStyle = '#ffcc00';
+            else ctx.strokeStyle = '#ff3344';
+
+            if (i === 0) ctx.moveTo(x, y);
+            else {
+                ctx.lineTo(x, y);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            }
+        }
+        ctx.stroke();
+
+        // Current value dot
+        if (history.length > 0) {
+            const last = history[history.length - 1];
+            const lx = padLeft + step * (history.length - 1);
+            const ly = padTop + chartH * (1 - last.stability);
+            ctx.beginPath();
+            ctx.arc(lx, ly, 3, 0, Math.PI * 2);
+            ctx.fillStyle = last.stability > 0.5 ? '#00c8ff' : '#ff3344';
+            ctx.fill();
+            ctx.strokeStyle = last.stability > 0.5 ? 'rgba(0, 200, 255, 0.3)' : 'rgba(255, 51, 68, 0.3)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.arc(lx, ly, 6, 0, Math.PI * 2);
+            ctx.stroke();
+        }
+
+        // Time labels
+        if (history.length > 1) {
+            ctx.fillStyle = '#3a4f6f';
+            ctx.font = '8px Share Tech Mono';
+            ctx.textAlign = 'center';
+            const first = history[0];
+            const last = history[history.length - 1];
+            ctx.fillText(formatTime(first.timestamp), padLeft, H - 4);
+            ctx.fillText(formatTime(last.timestamp), W - padRight, H - 4);
+        }
     }
 
-    drawStabilityChart();
+    // ===== FOOTER UPDATE =====
+    function updateFooter(state) {
+        // Update memory count via IndexedDB
+        if (OracleMemory.db) {
+            const tx = OracleMemory.db.transaction('signals', 'readonly');
+            const store = tx.objectStore('signals');
+            const countReq = store.count();
+            countReq.onsuccess = () => {
+                document.getElementById('statMemory').textContent = countReq.result + ' records';
+            };
+        }
+    }
 
-    // Refresh chart periodically with slight variations
-    setInterval(() => {
-        drawStabilityChart();
-    }, 800);
+    // ===== CONTROLS =====
+    function manualScan() {
+        if (!bootComplete) return;
+        OracleEngine.scan();
+    }
 
+    function toggleAutoScan() {
+        autoScanEnabled = !autoScanEnabled;
+        const toggle = document.getElementById('autoToggle');
+        const label = document.getElementById('autoLabel');
+        if (autoScanEnabled) {
+            toggle.classList.add('active');
+            label.textContent = 'ON';
+            OracleEngine.startAutoScan();
+        } else {
+            toggle.classList.remove('active');
+            label.textContent = 'OFF';
+            OracleEngine.stopAutoScan();
+        }
+    }
+
+    // ===== UTILS =====
+    function formatTime(ts) {
+        if (!ts) return '--:--:--';
+        const d = new Date(ts);
+        return d.toTimeString().slice(0, 8);
+    }
+
+    function getStabilityColor(s) {
+        if (s > 0.7) return '#00dd66';
+        if (s > 0.5) return '#00c8ff';
+        if (s > 0.35) return '#ffcc00';
+        return '#ff3344';
+    }
+
+    // ===== RESIZE HANDLER =====
     window.addEventListener('resize', () => {
-        drawTrendLines();
-        drawStabilityChart();
+        if (bootComplete) {
+            updateMiniChart();
+            updateHistoryChart();
+        }
     });
 
-    // ===== INTELLIGENCE FEED - LIVE UPDATES =====
-    const feedMessages = [
-        'SCANNING GEOPOLITICAL VECTORS...',
-        'EPISTEMIC DRIFT DETECTED IN SECTOR_7',
-        'AMOC DATA REFRESH COMPLETE',
-        'NARRATIVE_ENGINE: SYNTHESIS_CYCLE_42',
-        'RISK MATRIX RECALIBRATED',
-        'GHOST_RUNNER: ALIGNMENT CHECK PASSED',
-        'DERIVATIVE EXPOSURE INDEX UPDATED',
-        'VOID_PULSE: TEMPORAL WINDOW NARROWING',
-        'ABYSSAL_THINKER: RECURSION DEPTH OK',
-        'CLIMATE MODEL v4.2 LOADED',
-        'KINETIC ESCALATION PROBABILITY +0.3%',
-        'INSTITUTIONAL TRUST INDEX: -1.2',
-        'SYNTHETIC CONTENT SATURATION: 67.4%',
-        'MARX_CORE: CLASS DYNAMICS SHIFT DETECTED',
-        'ORACLE_CORE: OVERSHOOT THRESHOLD BREACHED',
-        'SUPPLY CHAIN NODE FAILURE: SECTOR_12',
-        'BIO-VULNERABILITY SCAN COMPLETE',
-        'QUANTUM INFRA: MONITORING ACTIVE',
-    ];
-
-    let feedCounter = 3;
-    function addFeedEntry() {
-        const feed = document.getElementById('intelligenceFeed');
-        const msg = feedMessages[Math.floor(Math.random() * feedMessages.length)];
-        const entry = document.createElement('div');
-        entry.className = 'feed-entry active';
-        entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${msg}`;
-        feed.appendChild(entry);
-        feedCounter++;
-
-        // Keep only last 12 entries
-        while (feed.children.length > 12) {
-            feed.removeChild(feed.firstChild);
-        }
-
-        // Auto-scroll
-        feed.scrollTop = feed.scrollHeight;
-    }
-
-    setInterval(addFeedEntry, 3000 + Math.random() * 2000);
-
-    // Core feed integration - trigger on chart refresh cycles
-    setInterval(() => {
-        if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('oracle-scan');
-    }, 15000);
-
     // ===== CONSOLE SIGNATURE =====
-    console.log('%cORACLE v2.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
-    console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
-    console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
+    console.log('%cORACLE v3.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+    console.log('%cECOSYSTEM — DISTRIBUTED NERVOUS SYSTEM', 'color: #ff0084; font-size: 11px;');
+    console.log('%cTENSIONE, NON EVENTI', 'color: #00d4aa;');
+    console.log('%cBrowser-Native \u00B7 Local Memory \u00B7 Zero Cloud', 'color: #6b7fa3; font-size: 10px;');
+
+    // ===== START =====
+    bootSequence();
     </script>
-<script src="js/core-feed.js"></script>
+    <script src="js/core-feed.js"></script>
 </body>
 </html>
