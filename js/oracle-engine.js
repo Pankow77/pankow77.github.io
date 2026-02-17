@@ -784,7 +784,122 @@ const AutoDiagnosis = {
 
 
 // ============================================================
-// SECTION 8: ORCHESTRATOR
+// SECTION 8: SYNTHETIC FIELD (Strato 2 — Synthetic Earth)
+// ============================================================
+// Monte Carlo perturbation engine: takes current state,
+// simulates 1000+ futures, calculates Distance to Structural
+// Instability (DSI). Runs in a Web Worker for zero UI blocking.
+// ============================================================
+
+const PERTURBATION_PRESETS = {
+    montecarlo:        { name: 'MONTE CARLO',          icon: 'dice',      perturbation: null,                                                      sustained: null, description: 'Random multi-domain perturbation' },
+    polarization:      { name: '+12% POLARIZZAZIONE',   icon: 'bolt',      perturbation: { social: 0.12, epistemology: 0.08 },                      sustained: null, description: 'Linguistic polarization spike' },
+    economic_shock:    { name: '-8% ECONOMIA',          icon: 'chart-down', perturbation: { economics: 0.08, social: 0.04 },                        sustained: null, description: 'Economic activity contraction' },
+    cross_correlation: { name: '+0.2 CROSS-DOMINIO',    icon: 'link',      perturbation: { geopolitics: 0.05, economics: 0.05, social: 0.05, technology: 0.05 }, sustained: null, description: 'Systemic cross-domain elevation' },
+    media_silence:     { name: 'SILENZIO MEDIATICO',    icon: 'eye-slash', perturbation: { epistemology: 0.15, social: 0.06 },                      sustained: { epistemology: 0.005 }, description: 'Sudden information void' },
+    dual_shock:        { name: 'TERREMOTO + ENERGIA',   icon: 'explosion', perturbation: { climate: 0.15, economics: 0.10, social: 0.05 },          sustained: null, description: 'Simultaneous climate-economic shock' }
+};
+
+const SyntheticField = {
+    worker: null,
+    simulating: false,
+    lastResult: null,
+    activePreset: 'montecarlo',
+
+    init() {
+        try {
+            this.worker = new Worker('js/oracle-simulator.js');
+            this.worker.onmessage = (event) => this._handleWorkerMessage(event);
+            this.worker.onerror = (err) => {
+                console.error('[SyntheticField] Worker error:', err);
+                this.simulating = false;
+            };
+            return true;
+        } catch (err) {
+            console.error('[SyntheticField] Worker init failed:', err);
+            return false;
+        }
+    },
+
+    // Convert real-field state to domain instability vector for simulation
+    _buildDomainState(signals, stability) {
+        const domainMap = {};
+        const DOMAINS = ['geopolitics', 'economics', 'technology', 'climate', 'social', 'epistemology'];
+
+        // Map signal urgency to domain instability
+        for (const sig of signals) {
+            if (sig.meta.success && sig.aggregate.volume > 0) {
+                if (!domainMap[sig.domain]) domainMap[sig.domain] = [];
+                domainMap[sig.domain].push(sig.aggregate.urgency);
+            }
+        }
+
+        const state = {};
+        for (const d of DOMAINS) {
+            if (domainMap[d] && domainMap[d].length > 0) {
+                state[d] = domainMap[d].reduce((s, v) => s + v, 0) / domainMap[d].length;
+            } else {
+                // Default: derive from overall stability
+                state[d] = 1 - stability;
+            }
+        }
+
+        return state;
+    },
+
+    simulate(signals, stability, presetKey) {
+        if (this.simulating || !this.worker) return;
+        this.simulating = true;
+        this.activePreset = presetKey || 'montecarlo';
+
+        const currentState = this._buildDomainState(signals, stability);
+        const preset = PERTURBATION_PRESETS[this.activePreset] || PERTURBATION_PRESETS.montecarlo;
+
+        this.worker.postMessage({
+            type: 'simulate',
+            payload: {
+                currentState,
+                config: {
+                    nSims: 1000,
+                    steps: 72,
+                    noiseScale: 0.015,
+                    perturbation: preset.perturbation,
+                    sustainedPerturbation: preset.sustained,
+                    sampleCount: 30
+                }
+            }
+        });
+    },
+
+    _handleWorkerMessage(event) {
+        const { type, payload } = event.data;
+
+        if (type === 'simulation-complete') {
+            this.simulating = false;
+            this.lastResult = payload;
+            // Notify engine listeners
+            if (OracleEngine && OracleEngine._notify) {
+                OracleEngine._notify('simulation-complete', payload);
+            }
+        }
+
+        if (type === 'pong') {
+            console.log('[SyntheticField] Worker alive');
+        }
+    },
+
+    getResult() {
+        return this.lastResult;
+    },
+
+    getPresets() {
+        return PERTURBATION_PRESETS;
+    }
+};
+
+
+// ============================================================
+// SECTION 9: ORCHESTRATOR
 // ============================================================
 
 const OracleEngine = {
@@ -798,7 +913,11 @@ const OracleEngine = {
         lastScan: null,
         scanCount: 0,
         initialized: false,
-        scanning: false
+        scanning: false,
+        // Synthetic Earth state
+        syntheticField: null,
+        dsi: null,
+        simulationActive: false
     },
 
     listeners: [],
@@ -807,6 +926,9 @@ const OracleEngine = {
         try {
             await OracleMemory.init();
             await SensoryMesh.init();
+
+            // Initialize Synthetic Earth worker
+            SyntheticField.init();
 
             // Restore last stability from history
             const history = await OracleMemory.getStabilityHistory(1);
@@ -887,6 +1009,10 @@ const OracleEngine = {
             this.state.scanning = false;
 
             this._notify('scan-complete');
+
+            // Trigger Synthetic Earth simulation after scan completes
+            this.runSimulation();
+
             return this.state;
 
         } catch (err) {
@@ -895,6 +1021,14 @@ const OracleEngine = {
             this._notify('scan-error', err.message);
             return this.state;
         }
+    },
+
+    // Run Synthetic Earth simulation with current state
+    runSimulation(presetKey) {
+        if (!this.state.signals || this.state.signals.length === 0) return;
+        this.state.simulationActive = true;
+        this._notify('simulation-start');
+        SyntheticField.simulate(this.state.signals, this.state.stability, presetKey);
     },
 
     async getStabilityHistory(limit = 50) {

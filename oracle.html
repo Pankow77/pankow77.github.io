@@ -613,6 +613,213 @@
             letter-spacing: 0.03em;
         }
 
+        /* ===== STRATO 2: SYNTHETIC EARTH ===== */
+        .synthetic-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 24px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .synthetic-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 2px;
+            background: linear-gradient(90deg, var(--pink), var(--purple), var(--pink));
+            opacity: 0.5;
+        }
+
+        .synthetic-top {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .dsi-display {
+            text-align: center;
+            padding: 16px;
+            background: rgba(255, 0, 132, 0.03);
+            border: 1px solid rgba(255, 0, 132, 0.15);
+            border-radius: 4px;
+        }
+
+        .dsi-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .dsi-subtitle {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+
+        .dsi-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 10px;
+            color: var(--text-dim);
+        }
+
+        .dsi-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .dsi-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1.5s ease-out, background 1.5s ease-out;
+            width: 0%;
+        }
+
+        .dsi-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.52rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+        }
+
+        .perturbation-area {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preset-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .preset-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            flex: 1;
+        }
+
+        .preset-btn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.03em;
+            padding: 8px 10px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .preset-btn:hover {
+            border-color: var(--purple);
+            background: rgba(136, 85, 255, 0.06);
+            color: var(--purple);
+        }
+
+        .preset-btn.active {
+            border-color: var(--pink);
+            background: rgba(255, 0, 132, 0.08);
+            color: var(--pink);
+        }
+
+        .preset-btn.simulating {
+            animation: pulse-btn 1s infinite;
+            border-color: var(--purple);
+        }
+
+        .preset-btn .preset-name {
+            display: block;
+            font-size: 0.52rem;
+            font-weight: 600;
+        }
+
+        .preset-btn .preset-desc {
+            display: block;
+            font-size: 0.45rem;
+            color: var(--text-dim);
+            margin-top: 3px;
+        }
+
+        .cloud-container {
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        #futuresCloud {
+            width: 100%;
+            height: 280px;
+            display: block;
+        }
+
+        .cloud-overlay-label {
+            position: absolute;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+
+        .cloud-label-real {
+            top: 8px;
+            left: 60px;
+            color: var(--cyan-dim);
+        }
+
+        .cloud-label-sim {
+            top: 8px;
+            right: 20px;
+            color: var(--purple);
+            opacity: 0.6;
+        }
+
+        .sim-stats {
+            display: flex;
+            gap: 20px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+            padding-top: 10px;
+            border-top: 1px solid var(--border);
+        }
+
+        .sim-stats strong { color: var(--text-secondary); }
+
+        @media (max-width: 900px) {
+            .synthetic-top { grid-template-columns: 1fr; }
+            .preset-grid { grid-template-columns: repeat(2, 1fr); }
+            #futuresCloud { height: 200px; }
+        }
+
         /* ===== BOTTOM ROW: HISTORY + DIAGNOSIS ===== */
         .bottom-row {
             display: grid;
@@ -1036,6 +1243,70 @@
             </div>
         </div>
 
+        <!-- ===== STRATO 2: SYNTHETIC EARTH ===== -->
+        <div class="section-label" style="margin-top: 8px;"><span class="level-num" style="color: var(--pink);">S2</span> SYNTHETIC EARTH — Monte Carlo Perturbation Field</div>
+        <div class="synthetic-section" id="syntheticSection">
+            <div class="synthetic-top">
+                <!-- DSI Display -->
+                <div class="dsi-display" id="dsiDisplay">
+                    <div class="dsi-label">DSI</div>
+                    <div class="dsi-subtitle">Distance to Structural Instability</div>
+                    <div class="dsi-value" id="dsiValue">&mdash;</div>
+                    <div class="dsi-bar"><div class="dsi-bar-fill" id="dsiBarFill"></div></div>
+                    <div class="dsi-meta">
+                        <span>Catastrophic: <strong id="dsiCatastrophic">&mdash;</strong></span>
+                        <span>Bimodality: <strong id="dsiBimodality">&mdash;</strong></span>
+                    </div>
+                </div>
+
+                <!-- Perturbation Presets -->
+                <div class="perturbation-area">
+                    <div class="preset-title">PERTURBAZIONI &mdash; Seleziona scenario di stress</div>
+                    <div class="preset-grid" id="presetGrid">
+                        <button class="preset-btn active" data-preset="montecarlo" onclick="runPreset('montecarlo')">
+                            <span class="preset-name">MONTE CARLO</span>
+                            <span class="preset-desc">Random multi-domain</span>
+                        </button>
+                        <button class="preset-btn" data-preset="polarization" onclick="runPreset('polarization')">
+                            <span class="preset-name">+12% POLARIZZ.</span>
+                            <span class="preset-desc">Linguistic spike</span>
+                        </button>
+                        <button class="preset-btn" data-preset="economic_shock" onclick="runPreset('economic_shock')">
+                            <span class="preset-name">-8% ECONOMIA</span>
+                            <span class="preset-desc">Contraction</span>
+                        </button>
+                        <button class="preset-btn" data-preset="cross_correlation" onclick="runPreset('cross_correlation')">
+                            <span class="preset-name">+0.2 CROSS-DOM</span>
+                            <span class="preset-desc">Systemic elevation</span>
+                        </button>
+                        <button class="preset-btn" data-preset="media_silence" onclick="runPreset('media_silence')">
+                            <span class="preset-name">SILENZIO MEDIA</span>
+                            <span class="preset-desc">Information void</span>
+                        </button>
+                        <button class="preset-btn" data-preset="dual_shock" onclick="runPreset('dual_shock')">
+                            <span class="preset-name">TERR. + ENERGIA</span>
+                            <span class="preset-desc">Climate-econ shock</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud of Futures -->
+            <div class="cloud-container">
+                <canvas id="futuresCloud"></canvas>
+                <div class="cloud-overlay-label cloud-label-real">CAMPO REALE</div>
+                <div class="cloud-overlay-label cloud-label-sim">FUTURI SIMULATI</div>
+            </div>
+
+            <div class="sim-stats" id="simStats">
+                <div>SIMULATIONS: <strong id="simCount">&mdash;</strong></div>
+                <div>STEPS: <strong id="simSteps">&mdash;</strong></div>
+                <div>PRESET: <strong id="simPreset">MONTE CARLO</strong></div>
+                <div>MEAN: <strong id="simMean">&mdash;</strong></div>
+                <div>STD: <strong id="simStd">&mdash;</strong></div>
+            </div>
+        </div>
+
         <!-- ===== BOTTOM ROW ===== -->
         <div class="bottom-row">
             <!-- Stability History -->
@@ -1198,6 +1469,15 @@
             document.getElementById('btnScan').disabled = false;
             document.getElementById('btnScan').textContent = 'SCAN NOW';
             addSignalLogEntry('ERROR', 'ENGINE', 'SYSTEM', 'Scan failed: ' + (data || 'Unknown error'));
+        }
+
+        if (event === 'simulation-start') {
+            addSignalLogEntry(formatTime(Date.now()), 'SYNTHETIC', 'SIM', 'Monte Carlo simulation started (1000 trajectories)...');
+        }
+
+        if (event === 'simulation-complete') {
+            handleSimulationComplete(data);
+            addSignalLogEntry(formatTime(Date.now()), 'SYNTHETIC', 'SIM', 'DSI: ' + data.dsi.dsi.toFixed(3) + ' | Catastrophic: ' + Math.round(data.dsi.catastrophicFraction * 100) + '% | Bimodality: ' + data.dsi.bimodality.toFixed(3));
         }
     }
 
@@ -1711,11 +1991,273 @@
         return '#ff3344';
     }
 
+    // ===== STRATO 2: SYNTHETIC EARTH =====
+
+    function runPreset(presetKey) {
+        if (!bootComplete) return;
+        // Update UI
+        document.querySelectorAll('.preset-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.preset === presetKey) {
+                btn.classList.add('active', 'simulating');
+            }
+        });
+        document.getElementById('simPreset').textContent = (PERTURBATION_PRESETS[presetKey] || {}).name || presetKey;
+        OracleEngine.runSimulation(presetKey);
+    }
+
+    function handleSimulationComplete(payload) {
+        // Stop simulating animation
+        document.querySelectorAll('.preset-btn.simulating').forEach(btn => btn.classList.remove('simulating'));
+
+        // Update DSI
+        updateDSI(payload.dsi);
+
+        // Update sim stats
+        document.getElementById('simCount').textContent = payload.nSims;
+        document.getElementById('simSteps').textContent = payload.steps;
+        document.getElementById('simMean').textContent = payload.dsi.mean.toFixed(3);
+        document.getElementById('simStd').textContent = payload.dsi.std.toFixed(3);
+
+        // Render cloud of futures
+        renderFuturesCloud(payload);
+    }
+
+    function updateDSI(dsiData) {
+        const val = dsiData.dsi;
+        const el = document.getElementById('dsiValue');
+        el.textContent = val.toFixed(3);
+
+        // Color based on DSI
+        if (val > 0.7) el.style.color = 'var(--green)';
+        else if (val > 0.5) el.style.color = 'var(--cyan)';
+        else if (val > 0.3) el.style.color = 'var(--orange)';
+        else el.style.color = 'var(--red)';
+
+        // DSI bar
+        const bar = document.getElementById('dsiBarFill');
+        bar.style.width = (val * 100) + '%';
+        if (val > 0.7) bar.style.background = 'linear-gradient(90deg, var(--green), var(--teal))';
+        else if (val > 0.5) bar.style.background = 'linear-gradient(90deg, var(--teal), var(--cyan))';
+        else if (val > 0.3) bar.style.background = 'linear-gradient(90deg, var(--orange), var(--yellow))';
+        else bar.style.background = 'linear-gradient(90deg, var(--red), var(--orange))';
+
+        // Meta
+        document.getElementById('dsiCatastrophic').textContent = Math.round(dsiData.catastrophicFraction * 100) + '%';
+        document.getElementById('dsiBimodality').textContent = dsiData.bimodality.toFixed(3);
+    }
+
+    async function renderFuturesCloud(payload) {
+        const canvas = document.getElementById('futuresCloud');
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+
+        const W = rect.width;
+        const H = rect.height;
+        const padLeft = 50;
+        const padRight = 20;
+        const padTop = 28;
+        const padBottom = 24;
+        const chartW = W - padLeft - padRight;
+        const chartH = H - padTop - padBottom;
+
+        ctx.clearRect(0, 0, W, H);
+
+        // Get real stability history
+        const history = await OracleEngine.getStabilityHistory(30);
+        const stats = payload.stats;
+        const samples = payload.samples;
+
+        if (!stats || stats.length === 0) return;
+
+        // Total time points: history (real) + simulation steps (future)
+        const realCount = history.length;
+        const simCount = stats.length;
+        const totalPoints = realCount + simCount;
+        const stepX = chartW / Math.max(totalPoints - 1, 1);
+        const nowX = padLeft + (realCount > 0 ? (realCount - 1) * stepX : 0);
+
+        // Y scale: 0 to 1
+        const yScale = (v) => padTop + chartH * (1 - v);
+
+        // ---- BACKGROUND GRID ----
+        ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+        ctx.lineWidth = 1;
+        for (let i = 0; i <= 5; i++) {
+            const y = padTop + (chartH / 5) * i;
+            ctx.beginPath();
+            ctx.moveTo(padLeft, y);
+            ctx.lineTo(W - padRight, y);
+            ctx.stroke();
+        }
+
+        // Y labels
+        ctx.fillStyle = '#3a4f6f';
+        ctx.font = '9px Share Tech Mono';
+        ctx.textAlign = 'right';
+        for (let i = 0; i <= 5; i++) {
+            ctx.fillText((1.0 - i * 0.2).toFixed(1), padLeft - 6, padTop + (chartH / 5) * i + 3);
+        }
+
+        // ---- CRITICAL THRESHOLD ----
+        const threshY = yScale(0.35);
+        ctx.strokeStyle = 'rgba(255, 51, 68, 0.25)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([6, 4]);
+        ctx.beginPath();
+        ctx.moveTo(padLeft, threshY);
+        ctx.lineTo(W - padRight, threshY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // ---- NOW LINE ----
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([3, 3]);
+        ctx.beginPath();
+        ctx.moveTo(nowX, padTop);
+        ctx.lineTo(nowX, padTop + chartH);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = 'rgba(255,255,255,0.25)';
+        ctx.font = '8px Orbitron';
+        ctx.textAlign = 'center';
+        ctx.fillText('NOW', nowX, padTop - 6);
+
+        // ---- P10-P90 BAND (outer cloud) ----
+        ctx.beginPath();
+        for (let i = 0; i < simCount; i++) {
+            const x = nowX + i * stepX;
+            const y = yScale(stats[i].p90);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        for (let i = simCount - 1; i >= 0; i--) {
+            const x = nowX + i * stepX;
+            const y = yScale(stats[i].p10);
+            ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(136, 85, 255, 0.06)';
+        ctx.fill();
+
+        // ---- P25-P75 BAND (inner cloud) ----
+        ctx.beginPath();
+        for (let i = 0; i < simCount; i++) {
+            const x = nowX + i * stepX;
+            const y = yScale(stats[i].p75);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        for (let i = simCount - 1; i >= 0; i--) {
+            const x = nowX + i * stepX;
+            const y = yScale(stats[i].p25);
+            ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(136, 85, 255, 0.1)';
+        ctx.fill();
+
+        // ---- SAMPLE TRAJECTORIES (thin lines) ----
+        for (const traj of samples) {
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(136, 85, 255, 0.12)';
+            ctx.lineWidth = 0.8;
+            for (let i = 0; i < traj.length; i++) {
+                const x = nowX + i * stepX;
+                const y = yScale(traj[i]);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+        }
+
+        // ---- SIMULATED MEAN (dashed) ----
+        ctx.beginPath();
+        ctx.strokeStyle = 'rgba(255, 0, 132, 0.5)';
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 3]);
+        for (let i = 0; i < simCount; i++) {
+            const x = nowX + i * stepX;
+            const y = yScale(stats[i].mean);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // ---- REAL HISTORY (solid cyan) ----
+        if (history.length > 1) {
+            ctx.beginPath();
+            ctx.strokeStyle = 'rgba(0, 200, 255, 0.7)';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < history.length; i++) {
+                const x = padLeft + i * stepX;
+                const y = yScale(history[i].stability);
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+
+            // Area under real
+            ctx.lineTo(padLeft + (history.length - 1) * stepX, padTop + chartH);
+            ctx.lineTo(padLeft, padTop + chartH);
+            ctx.closePath();
+            const realGrad = ctx.createLinearGradient(0, 0, 0, H);
+            realGrad.addColorStop(0, 'rgba(0, 200, 255, 0.06)');
+            realGrad.addColorStop(1, 'rgba(0, 200, 255, 0)');
+            ctx.fillStyle = realGrad;
+            ctx.fill();
+        }
+
+        // ---- CURRENT POINT ----
+        if (history.length > 0) {
+            const lastStab = history[history.length - 1].stability;
+            ctx.beginPath();
+            ctx.arc(nowX, yScale(lastStab), 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(nowX, yScale(lastStab), 7, 0, Math.PI * 2);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+        }
+
+        // ---- LABELS ----
+        ctx.fillStyle = '#3a4f6f';
+        ctx.font = '8px Share Tech Mono';
+        ctx.textAlign = 'left';
+        ctx.fillText('CRITICAL 0.35', padLeft + 4, threshY - 4);
+
+        // Time axis labels
+        ctx.textAlign = 'center';
+        if (history.length > 0) {
+            ctx.fillText('PAST', padLeft + 30, padTop + chartH + 16);
+        }
+        ctx.fillText('t+72', padLeft + chartW - 20, padTop + chartH + 16);
+
+        // DSI annotation in top-right
+        const dsi = payload.dsi;
+        ctx.font = '10px Orbitron';
+        ctx.fillStyle = dsi.dsi > 0.5 ? 'rgba(0, 200, 255, 0.4)' : 'rgba(255, 51, 68, 0.4)';
+        ctx.textAlign = 'right';
+        ctx.fillText('DSI: ' + dsi.dsi.toFixed(3), W - padRight, padTop + 14);
+    }
+
     // ===== RESIZE HANDLER =====
     window.addEventListener('resize', () => {
         if (bootComplete) {
             updateMiniChart();
             updateHistoryChart();
+            // Re-render cloud if available
+            const simResult = SyntheticField.getResult();
+            if (simResult) renderFuturesCloud(simResult);
         }
     });
 
