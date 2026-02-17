@@ -26,10 +26,14 @@ const ORACLE_CONFIG = {
     CRITICAL_THRESHOLD: 0.35,
     NEURON_ALPHA: 0.12,                   // EMA learning rate
     DB_NAME: 'oracle-ecosystem-v3',
-    DB_VERSION: 2,
+    DB_VERSION: 3,
     CALIBRATION_EVAL_WINDOW: 6,   // Scans before evaluating a prediction
     CALIBRATION_ALPHA: 0.15,      // EMA learning rate for credibility
-    MAX_CALIBRATIONS: 500
+    MAX_CALIBRATIONS: 500,
+    MAX_STATEGRAPH_NODES: 2000,
+    MAX_SCENARIOS: 500,
+    TRUST_SKILL_ALPHA: 0.15,      // EMA for skill score
+    TRUST_ATTENUATION_MID: 0.4    // Sigmoid midpoint for auto-attenuation
 };
 
 // Lexicon for urgency scoring
@@ -107,6 +111,18 @@ const OracleMemory = {
                     const cs = db.createObjectStore('calibration', { keyPath: 'id', autoIncrement: true });
                     cs.createIndex('timestamp', 'timestamp', { unique: false });
                     cs.createIndex('scanIndex', 'scanIndex', { unique: false });
+                }
+                // v3: Memory Graph + Scenario Registry
+                if (!db.objectStoreNames.contains('stategraph')) {
+                    const sg = db.createObjectStore('stategraph', { keyPath: 'id', autoIncrement: true });
+                    sg.createIndex('timestamp', 'timestamp', { unique: false });
+                    sg.createIndex('scanIndex', 'scanIndex', { unique: false });
+                    sg.createIndex('regime', 'regime', { unique: false });
+                }
+                if (!db.objectStoreNames.contains('scenarios')) {
+                    const sc = db.createObjectStore('scenarios', { keyPath: 'scenarioId' });
+                    sc.createIndex('timestamp', 'timestamp', { unique: false });
+                    sc.createIndex('active', 'active', { unique: false });
                 }
             };
 
@@ -310,6 +326,85 @@ const OracleMemory = {
         });
     },
 
+    // State Graph
+    async saveStateNode(node) {
+        const store = this._tx('stategraph', 'readwrite');
+        const result = await this._promisify(store.add(node));
+        // Trim
+        const count = await this._promisify(this._tx('stategraph', 'readonly').count());
+        if (count > ORACLE_CONFIG.MAX_STATEGRAPH_NODES) {
+            const trimStore = this._tx('stategraph', 'readwrite');
+            const cursor = trimStore.index('timestamp').openCursor();
+            let toDelete = count - ORACLE_CONFIG.MAX_STATEGRAPH_NODES;
+            cursor.onsuccess = (e) => {
+                const c = e.target.result;
+                if (c && toDelete > 0) { c.delete(); toDelete--; c.continue(); }
+            };
+        }
+        return result;
+    },
+
+    async getRecentStateNodes(limit = 50) {
+        return new Promise((resolve, reject) => {
+            const results = [];
+            const store = this._tx('stategraph', 'readonly');
+            const request = store.index('timestamp').openCursor(null, 'prev');
+            request.onsuccess = (e) => {
+                const cursor = e.target.result;
+                if (cursor && results.length < limit) {
+                    results.push(cursor.value);
+                    cursor.continue();
+                } else {
+                    resolve(results.reverse());
+                }
+            };
+            request.onerror = () => reject(request.error);
+        });
+    },
+
+    async getStateNodesByRegime(regime, limit = 50) {
+        return new Promise((resolve, reject) => {
+            const results = [];
+            const store = this._tx('stategraph', 'readonly');
+            const request = store.index('regime').openCursor(IDBKeyRange.only(regime), 'prev');
+            request.onsuccess = (e) => {
+                const cursor = e.target.result;
+                if (cursor && results.length < limit) {
+                    results.push(cursor.value);
+                    cursor.continue();
+                } else {
+                    resolve(results.reverse());
+                }
+            };
+            request.onerror = () => reject(request.error);
+        });
+    },
+
+    // Scenario Registry
+    async saveScenario(scenario) {
+        return this._promisify(this._tx('scenarios', 'readwrite').put(scenario));
+    },
+
+    async getScenario(scenarioId) {
+        return this._promisify(this._tx('scenarios', 'readonly').get(scenarioId));
+    },
+
+    async getAllScenarios() {
+        return this._promisify(this._tx('scenarios', 'readonly').getAll());
+    },
+
+    async getActiveScenario() {
+        return new Promise((resolve, reject) => {
+            const store = this._tx('scenarios', 'readonly');
+            const request = store.index('active').openCursor(IDBKeyRange.only(1));
+            request.onsuccess = (e) => {
+                const cursor = e.target.result;
+                resolve(cursor ? cursor.value : null);
+            };
+            request.onerror = () => reject(request.error);
+        });
+    },
+
     // ============================================================
     // STORAGE COMPACTION — Quest 2 IndexedDB survival
     // ============================================================
@@ -323,7 +418,9 @@ const OracleMemory = {
             { name: 'signals',     max: limits.signals     || ORACLE_CONFIG.MAX_SIGNALS_STORED },
             { name: 'stability',   max: limits.stability   || ORACLE_CONFIG.MAX_STABILITY_POINTS },
             { name: 'calibration', max: limits.calibration || ORACLE_CONFIG.MAX_CALIBRATIONS },
-            { name: 'diagnoses',   max: limits.diagnoses   || ORACLE_CONFIG.MAX_DIAGNOSES }
+            { name: 'diagnoses',   max: limits.diagnoses   || ORACLE_CONFIG.MAX_DIAGNOSES },
+            { name: 'stategraph', max: limits.stategraph  || ORACLE_CONFIG.MAX_STATEGRAPH_NODES },
+            { name: 'scenarios',  max: limits.scenarios   || ORACLE_CONFIG.MAX_SCENARIOS }
         ];
 
         const results = {};
@@ -1083,6 +1180,9 @@ const CalibrationEngine = {
             this.lastEvaluation = record;
             anyEvaluated = true;
 
+            // Feed Trust Engine per-evaluation
+            TrustEngine.updateSkills(record.outcome);
+
             console.log('[CalibrationEngine] Evaluated prediction #' + record.id +
                 ': accuracy=' + accuracy.toFixed(3) +
                 ' (dir=' + directionCorrect + ' cat=' + catScore.toFixed(2) +
@@ -1450,7 +1550,628 @@ const SyntheticField = {
 
 
 // ============================================================
-// SECTION 9: ORCHESTRATOR
+// SECTION 10: KRONOS — Cuore Temporale dell'Ecosistema
+// ============================================================
+// Il tempo non è lineare. È un albero.
+// Il tronco è la timeline reale: scan dopo scan.
+// I rami sono esplorazioni: versioni del modello, what-if,
+// coupling diversi, red team. Ogni ramo accumula la propria
+// storia e la propria credibilità.
+//
+// Ogni nodo è un'EPOCA: snapshot completo dello stato.
+// Ogni arco è una TRANSIZIONE: delta strutturale misurato.
+// Regime = classificazione automatica (stable/transitional/chaotic).
+//
+// KRONOS non archivia. Stratifica.
+// Non registra. Evolve.
+//
+// In VR: cammini nel Campo del 12 ottobre,
+// poi in quello del 3 novembre,
+// poi in quello "versione 4.1-REDTEAM".
+// ============================================================
+
+const Kronos = {
+    DOMAIN_KEYS: ['geopolitics', 'economics', 'social', 'technology', 'climate', 'epistemology'],
+    currentBranch: 'trunk',
+    lastEpoch: null,
+    branchCache: {},
+
+    async init() {
+        // Ensure trunk exists
+        let trunk = await OracleMemory.getScenario('trunk');
+        if (!trunk) {
+            trunk = {
+                scenarioId: 'trunk',
+                timestamp: Date.now(),
+                parentBranchId: null,
+                forkEpochScanIndex: null,
+                reason: 'genesis',
+                label: 'Main Timeline',
+                active: 1,
+                epochCount: 0,
+                metrics: {}
+            };
+            await OracleMemory.saveScenario(trunk);
+        }
+        this.branchCache['trunk'] = trunk;
+
+        // Load last epoch for edge computation
+        const recent = await OracleMemory.getRecentStateNodes(1);
+        if (recent.length > 0) {
+            this.lastEpoch = recent[0];
+            console.log('[Kronos] Restored: last epoch scanIndex=' +
+                this.lastEpoch.scanIndex + ' regime=' + this.lastEpoch.regime);
+        } else {
+            console.log('[Kronos] No prior epochs. Genesis.');
+        }
+    },
+
+    // ---- RECORD EPOCH ----
+    // Called after every scan. Creates a full snapshot of the ecosystem.
+    async recordEpoch(scanData) {
+        const {
+            scanIndex, signals, stability, delta, patterns,
+            couplingMeta, dsi, lyapunov, tether, trust
+        } = scanData;
+
+        // Domain urgency vector
+        const domains = this._extractDomainVector(signals);
+
+        // Regime classification
+        const regime = this._classifyRegime(stability, delta, lyapunov);
+
+        // Edge from previous epoch
+        let edge = null;
+        if (this.lastEpoch) {
+            edge = this._computeEdge(this.lastEpoch, { domains, stability, regime });
+        }
+
+        const epoch = {
+            timestamp: Date.now(),
+            scanIndex,
+            branchId: this.currentBranch,
+
+            // Real field state
+            state: {
+                stability,
+                delta,
+                domains
+            },
+
+            // Pattern tensor
+            patterns: patterns ? {
+                shockFactor: patterns.shocks ? patterns.shocks.factor : 0,
+                acceleration: patterns.acceleration ? patterns.acceleration.rate : 0,
+                polarization: patterns.polarization ? patterns.polarization.variance : 0,
+                correlation: patterns.crossCorrelation ? patterns.crossCorrelation.correlation : 0
+            } : null,
+
+            // Synthetic field
+            synthetic: {
+                dsi: dsi || null,
+                catastrophicFraction: scanData.catastrophicFraction || null,
+                lyapunov: lyapunov || null
+            },
+
+            // Coupling snapshot
+            coupling: couplingMeta || null,
+
+            // Reality tether
+            tether: {
+                credibility: tether || 0.5,
+                trust: trust || null
+            },
+
+            // Computed
+            regime,
+            edge
+        };
+
+        try {
+            await OracleMemory.saveStateNode(epoch);
+        } catch (err) {
+            console.warn('[Kronos] Failed to save epoch:', err);
+            return null;
+        }
+
+        // Log regime transitions
+        if (edge && edge.regimeTransition) {
+            console.log('[Kronos] REGIME TRANSITION: ' +
+                edge.regimeTransition.from + ' → ' + edge.regimeTransition.to +
+                ' at scanIndex=' + scanIndex);
+        }
+
+        this.lastEpoch = epoch;
+
+        // Update branch epoch count
+        const branch = this.branchCache[this.currentBranch];
+        if (branch) {
+            branch.epochCount = (branch.epochCount || 0) + 1;
+            await OracleMemory.saveScenario(branch);
+        }
+
+        return epoch;
+    },
+
+    // ---- REGIME CLASSIFICATION ----
+    _classifyRegime(stability, delta, lyapunov) {
+        const lambda = lyapunov ? lyapunov.lambda : 0;
+        const lyapRegime = lyapunov ? lyapunov.regime : 'unknown';
+
+        // Chaotic: Lyapunov says chaotic, OR stability critically low,
+        // OR catastrophic fraction dominant
+        if (lyapRegime === 'chaotic' || stability < 0.25) {
+            return 'chaotic';
+        }
+
+        // Transitional: moving between states, OR borderline stability,
+        // OR Lyapunov transitional, OR large delta
+        if (lyapRegime === 'transitional' ||
+            (stability >= 0.25 && stability < 0.5) ||
+            Math.abs(delta) > 0.06 ||
+            lambda > 0.02) {
+            return 'transitional';
+        }
+
+        // Stable: everything calm
+        return 'stable';
+    },
+
+    // ---- EDGE COMPUTATION ----
+    // Structural delta = L2 norm of domain vector change.
+    // Not scalar stability difference — multidimensional movement.
+    _computeEdge(prevEpoch, current) {
+        const prevDomains = prevEpoch.state ? prevEpoch.state.domains : {};
+        const currDomains = current.domains || {};
+
+        // L2 norm of domain vector delta
+        let sumSq = 0;
+        for (const d of this.DOMAIN_KEYS) {
+            const diff = (currDomains[d] || 0) - (prevDomains[d] || 0);
+            sumSq += diff * diff;
+        }
+        const structuralDelta = Math.sqrt(sumSq);
+
+        // Regime transition detection
+        let regimeTransition = null;
+        if (prevEpoch.regime && current.regime && prevEpoch.regime !== current.regime) {
+            regimeTransition = {
+                from: prevEpoch.regime,
+                to: current.regime
+            };
+        }
+
+        return {
+            fromScanIndex: prevEpoch.scanIndex,
+            structuralDelta: Math.round(structuralDelta * 10000) / 10000,
+            stabilityDelta: Math.round((current.stability - (prevEpoch.state ? prevEpoch.state.stability : 0.75)) * 10000) / 10000,
+            regimeTransition
+        };
+    },
+
+    // ---- DOMAIN VECTOR EXTRACTION ----
+    _extractDomainVector(signals) {
+        const domainMap = {};
+        if (signals) {
+            for (const sig of signals) {
+                if (sig.meta && sig.meta.success && sig.aggregate) {
+                    if (!domainMap[sig.domain]) domainMap[sig.domain] = [];
+                    domainMap[sig.domain].push(sig.aggregate.urgency);
+                }
+            }
+        }
+        const vector = {};
+        for (const d of this.DOMAIN_KEYS) {
+            if (domainMap[d] && domainMap[d].length > 0) {
+                vector[d] = Math.round(
+                    (domainMap[d].reduce((s, v) => s + v, 0) / domainMap[d].length) * 1000
+                ) / 1000;
+            } else {
+                vector[d] = 0;
+            }
+        }
+        return vector;
+    },
+
+    // ---- BRANCHING ----
+
+    async createBranch(label, reason) {
+        const branchId = 'branch-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6);
+
+        const branch = {
+            scenarioId: branchId,
+            timestamp: Date.now(),
+            parentBranchId: this.currentBranch,
+            forkEpochScanIndex: this.lastEpoch ? this.lastEpoch.scanIndex : null,
+            reason: reason || 'exploration',
+            label: label || 'Unnamed branch',
+            active: 0,  // Not active until switched to
+            epochCount: 0,
+            metrics: {}
+        };
+
+        await OracleMemory.saveScenario(branch);
+        this.branchCache[branchId] = branch;
+        console.log('[Kronos] Branch created: ' + branchId + ' ("' + label + '") from ' +
+            this.currentBranch + ' at scanIndex=' + (this.lastEpoch ? this.lastEpoch.scanIndex : '?'));
+
+        return branchId;
+    },
+
+    async switchBranch(branchId) {
+        const branch = await OracleMemory.getScenario(branchId);
+        if (!branch) {
+            console.error('[Kronos] Branch not found: ' + branchId);
+            return false;
+        }
+
+        // Deactivate current
+        const current = this.branchCache[this.currentBranch];
+        if (current) {
+            current.active = 0;
+            await OracleMemory.saveScenario(current);
+        }
+
+        // Activate target
+        branch.active = 1;
+        await OracleMemory.saveScenario(branch);
+        this.branchCache[branchId] = branch;
+        this.currentBranch = branchId;
+
+        // Load last epoch of this branch
+        const nodes = await OracleMemory.getRecentStateNodes(200);
+        const branchNodes = nodes.filter(n => n.branchId === branchId);
+        this.lastEpoch = branchNodes.length > 0 ? branchNodes[branchNodes.length - 1] : null;
+
+        console.log('[Kronos] Switched to branch: ' + branchId);
+        return true;
+    },
+
+    async getBranches() {
+        return OracleMemory.getAllScenarios();
+    },
+
+    // ---- COMPARISON & QUERY ----
+
+    // Diff two epochs — structural distance
+    diffEpochs(epochA, epochB) {
+        if (!epochA || !epochB) return null;
+
+        const domainsA = epochA.state ? epochA.state.domains : {};
+        const domainsB = epochB.state ? epochB.state.domains : {};
+
+        // Per-domain deltas
+        const domainDeltas = {};
+        let sumSq = 0;
+        for (const d of this.DOMAIN_KEYS) {
+            const diff = (domainsB[d] || 0) - (domainsA[d] || 0);
+            domainDeltas[d] = Math.round(diff * 1000) / 1000;
+            sumSq += diff * diff;
+        }
+
+        const stabA = epochA.state ? epochA.state.stability : 0;
+        const stabB = epochB.state ? epochB.state.stability : 0;
+        const dsiA = epochA.synthetic ? epochA.synthetic.dsi : null;
+        const dsiB = epochB.synthetic ? epochB.synthetic.dsi : null;
+        const tetherA = epochA.tether ? epochA.tether.credibility : 0.5;
+        const tetherB = epochB.tether ? epochB.tether.credibility : 0.5;
+
+        return {
+            structuralDistance: Math.round(Math.sqrt(sumSq) * 10000) / 10000,
+            domainDeltas,
+            stabilityDelta: Math.round((stabB - stabA) * 10000) / 10000,
+            dsiDelta: (dsiA !== null && dsiB !== null)
+                ? Math.round((dsiB - dsiA) * 10000) / 10000
+                : null,
+            tetherDelta: Math.round((tetherB - tetherA) * 10000) / 10000,
+            regimeA: epochA.regime,
+            regimeB: epochB.regime,
+            regimeChanged: epochA.regime !== epochB.regime,
+            timeDelta: epochB.timestamp - epochA.timestamp,
+            scanDelta: epochB.scanIndex - epochA.scanIndex
+        };
+    },
+
+    // Find all regime transitions in history
+    async getRegimeTransitions(limit = 50) {
+        const nodes = await OracleMemory.getRecentStateNodes(500);
+        const transitions = [];
+
+        for (const node of nodes) {
+            if (node.edge && node.edge.regimeTransition) {
+                transitions.push({
+                    scanIndex: node.scanIndex,
+                    timestamp: node.timestamp,
+                    from: node.edge.regimeTransition.from,
+                    to: node.edge.regimeTransition.to,
+                    structuralDelta: node.edge.structuralDelta,
+                    branchId: node.branchId
+                });
+            }
+        }
+
+        return transitions.slice(-limit);
+    },
+
+    // Get trajectory for a branch (or current branch)
+    async getTrajectory(branchId, limit = 100) {
+        const targetBranch = branchId || this.currentBranch;
+        const nodes = await OracleMemory.getRecentStateNodes(500);
+        return nodes
+            .filter(n => n.branchId === targetBranch)
+            .slice(-limit);
+    },
+
+    // ---- STATE ----
+    getState() {
+        return {
+            currentBranch: this.currentBranch,
+            lastEpoch: this.lastEpoch ? {
+                scanIndex: this.lastEpoch.scanIndex,
+                regime: this.lastEpoch.regime,
+                stability: this.lastEpoch.state ? this.lastEpoch.state.stability : null,
+                edge: this.lastEpoch.edge
+            } : null
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 11: SIGNAL BUS — Sistema Nervoso Afferente
+// ============================================================
+// Non "BBC feed". Non "USGS API".
+// Signal(domain, intensity, confidence, latency, source).
+//
+// Qualsiasi sorgente — RSS, dataset offline, iniezione manuale,
+// simulazioni esterne, input umano — entra come Signal.
+// Il bus normalizza, instrada, registra.
+//
+// ORACLE riceve segnali come un sistema nervoso,
+// non come un lettore di feed.
+// ============================================================
+
+const SignalBus = {
+    sources: new Map(),
+    listeners: [],
+    injectionQueue: [],
+
+    // Register a signal source (informational)
+    register(sourceId, sourceType, config) {
+        this.sources.set(sourceId, {
+            id: sourceId,
+            type: sourceType,
+            config: config || {},
+            signalCount: 0,
+            lastSignal: null
+        });
+    },
+
+    // Normalize ANY input to canonical Signal format
+    normalize(raw) {
+        // From SensoryMesh (existing neuron signals)
+        if (raw.neuronId && raw.aggregate) {
+            const neuron = SensoryMesh.neurons.find(n => n.id === raw.neuronId);
+            return {
+                domain: raw.domain,
+                intensity: raw.aggregate.urgency,
+                sentiment: raw.aggregate.sentiment,
+                confidence: neuron ? neuron.reliability : 0.5,
+                latency: raw.meta ? raw.meta.fetchTime : 0,
+                volume: raw.aggregate.volume,
+                keywords: raw.aggregate.dominantKeywords || [],
+                source: raw.neuronId,
+                sourceType: 'neuron',
+                timestamp: raw.timestamp,
+                success: raw.meta ? raw.meta.success : false,
+                raw: raw
+            };
+        }
+
+        // From manual injection or external source
+        return {
+            domain: raw.domain || 'unknown',
+            intensity: raw.intensity || 0,
+            sentiment: raw.sentiment || 0,
+            confidence: raw.confidence || 0.5,
+            latency: raw.latency || 0,
+            volume: raw.volume || 1,
+            keywords: raw.keywords || [],
+            source: raw.source || 'external',
+            sourceType: raw.sourceType || 'manual',
+            timestamp: raw.timestamp || Date.now(),
+            success: true,
+            raw: raw
+        };
+    },
+
+    // Emit a signal through the bus
+    emit(signal) {
+        const normalized = this.normalize(signal);
+
+        // Update source tracking
+        const source = this.sources.get(normalized.source);
+        if (source) {
+            source.signalCount++;
+            source.lastSignal = normalized.timestamp;
+        }
+
+        // Notify listeners
+        for (const listener of this.listeners) {
+            try { listener(normalized); } catch (e) { /* listener error */ }
+        }
+
+        return normalized;
+    },
+
+    // Manual injection — human input as formal signal
+    // This is PNEUMA's entry point into the system.
+    inject(domain, intensity, confidence, keywords) {
+        const signal = {
+            domain,
+            intensity: Math.max(0, Math.min(1, intensity)),
+            sentiment: 0,
+            confidence: Math.max(0, Math.min(1, confidence || 0.5)),
+            latency: 0,
+            volume: 1,
+            keywords: keywords || [],
+            source: 'manual:inject',
+            sourceType: 'manual',
+            timestamp: Date.now()
+        };
+
+        // Queue for next scan cycle
+        this.injectionQueue.push(signal);
+
+        // Emit immediately for listeners
+        return this.emit(signal);
+    },
+
+    // Drain injection queue (called during scan)
+    drainInjections() {
+        const queue = this.injectionQueue.slice();
+        this.injectionQueue = [];
+        return queue;
+    },
+
+    // Subscribe to all signals
+    onSignal(callback) {
+        this.listeners.push(callback);
+    },
+
+    getState() {
+        return {
+            sourceCount: this.sources.size,
+            sources: Array.from(this.sources.values()).map(s => ({
+                id: s.id, type: s.type,
+                signalCount: s.signalCount,
+                lastSignal: s.lastSignal
+            })),
+            pendingInjections: this.injectionQueue.length
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 12: TRUST ENGINE — Auto-Umiltà Algoritmica
+// ============================================================
+// Non solo credibility score.
+// Rolling skill score per componente:
+//   direction skill, catastrophic skill, volatility skill.
+//
+// Auto-attenuation: quando la skill cala,
+// il peso del simulatore si riduce automaticamente.
+// Il modello che ha sbagliato non grida più "catastrofe"
+// — la sua voce viene smorzata.
+//
+// Sigmoid: skill=0.3 → trustWeight≈0.27
+//          skill=0.5 → trustWeight≈0.73
+//          skill=0.7 → trustWeight≈0.95
+//
+// Questo è auto-sospetto algoritmico.
+// È raro. È potente.
+// ============================================================
+
+const TrustEngine = {
+    skills: {
+        direction: 0.5,     // Can it predict the direction?
+        catastrophic: 0.5,  // Can it predict catastrophic fractions?
+        volatility: 0.5,    // Can it predict volatility?
+        overall: 0.5        // Weighted composite
+    },
+    trustWeight: 1.0,       // [0, 1] — auto-attenuates simulation impact
+    evaluationCount: 0,
+
+    // Rebuild from calibration history
+    async loadState() {
+        try {
+            const calibrations = await OracleMemory.getAllCalibrations();
+            const evaluated = calibrations.filter(r => r.evaluated && r.outcome);
+
+            if (evaluated.length === 0) {
+                console.log('[TrustEngine] No evaluations. Full trust (agnostic).');
+                return;
+            }
+
+            // Rebuild skills from chronological evaluations
+            const alpha = ORACLE_CONFIG.TRUST_SKILL_ALPHA;
+            this.skills = { direction: 0.5, catastrophic: 0.5, volatility: 0.5, overall: 0.5 };
+
+            for (const record of evaluated) {
+                const o = record.outcome;
+                this.skills.direction = this.skills.direction * (1 - alpha) + o.directionCorrect * alpha;
+                this.skills.catastrophic = this.skills.catastrophic * (1 - alpha) + o.catScore * alpha;
+                this.skills.volatility = this.skills.volatility * (1 - alpha) + o.volScore * alpha;
+            }
+
+            this.skills.overall = this.skills.direction * 0.40 +
+                                  this.skills.catastrophic * 0.35 +
+                                  this.skills.volatility * 0.25;
+
+            this._computeTrustWeight();
+            this.evaluationCount = evaluated.length;
+
+            console.log('[TrustEngine] Restored: ' + evaluated.length + ' evaluations, ' +
+                'skill=' + this.skills.overall.toFixed(3) +
+                ' trustWeight=' + this.trustWeight.toFixed(3));
+        } catch (err) {
+            console.warn('[TrustEngine] Load failed:', err);
+        }
+    },
+
+    // Called after each calibration evaluation
+    updateSkills(outcome) {
+        if (!outcome) return;
+        const alpha = ORACLE_CONFIG.TRUST_SKILL_ALPHA;
+
+        this.skills.direction = this.skills.direction * (1 - alpha) + outcome.directionCorrect * alpha;
+        this.skills.catastrophic = this.skills.catastrophic * (1 - alpha) + outcome.catScore * alpha;
+        this.skills.volatility = this.skills.volatility * (1 - alpha) + outcome.volScore * alpha;
+        this.skills.overall = this.skills.direction * 0.40 +
+                              this.skills.catastrophic * 0.35 +
+                              this.skills.volatility * 0.25;
+
+        this._computeTrustWeight();
+        this.evaluationCount++;
+    },
+
+    // Sigmoid auto-attenuation
+    _computeTrustWeight() {
+        const mid = ORACLE_CONFIG.TRUST_ATTENUATION_MID;
+        // Sigmoid: smooth transition from distrust to trust
+        // At skill=mid → weight=0.5
+        // At skill=mid+0.2 → weight≈0.88
+        // At skill=mid-0.2 → weight≈0.12
+        this.trustWeight = 1 / (1 + Math.exp(-10 * (this.skills.overall - mid)));
+        this.trustWeight = Math.round(this.trustWeight * 1000) / 1000;
+    },
+
+    // Attenuate a value toward neutral based on trust
+    // When trust is low, the value is pulled toward the neutral point.
+    // When trust is high, the value passes through unchanged.
+    attenuate(value, neutral) {
+        return value * this.trustWeight + neutral * (1 - this.trustWeight);
+    },
+
+    getState() {
+        return {
+            skills: {
+                direction: Math.round(this.skills.direction * 1000) / 1000,
+                catastrophic: Math.round(this.skills.catastrophic * 1000) / 1000,
+                volatility: Math.round(this.skills.volatility * 1000) / 1000,
+                overall: Math.round(this.skills.overall * 1000) / 1000
+            },
+            trustWeight: this.trustWeight,
+            attenuated: this.trustWeight < 0.8,
+            evaluations: this.evaluationCount
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 13: ORCHESTRATOR
 // ============================================================
 
 const OracleEngine = {
@@ -1470,7 +2191,13 @@ const OracleEngine = {
         dsi: null,
         simulationActive: false,
         // Calibration state
-        calibration: null
+        calibration: null,
+        // Kronos temporal state
+        kronos: null,
+        // Trust Engine state
+        trust: null,
+        // Signal Bus state
+        signalBus: null
     },
 
     listeners: [],
@@ -1486,6 +2213,20 @@ const OracleEngine = {
             // Initialize Calibration Engine (reality tether)
             await CalibrationEngine.loadState();
             this.state.calibration = CalibrationEngine.getState();
+
+            // Initialize Kronos (temporal heart)
+            await Kronos.init();
+            this.state.kronos = Kronos.getState();
+
+            // Initialize Trust Engine (algorithmic self-humility)
+            await TrustEngine.loadState();
+            this.state.trust = TrustEngine.getState();
+
+            // Register neuron sources on Signal Bus
+            for (const neuron of SensoryMesh.neurons) {
+                SignalBus.register(neuron.id, neuron.type, { domain: neuron.domain });
+            }
+            this.state.signalBus = SignalBus.getState();
 
             // Request persistent storage (prevents Quest 2 eviction)
             OracleMemory.requestPersistence();
@@ -1521,6 +2262,11 @@ const OracleEngine = {
             // Level 1: Fire all neurons (Sensory Mesh)
             const signals = await SensoryMesh.fireAll();
             this.state.signals = signals;
+
+            // Emit through Signal Bus (normalizes + notifies listeners)
+            for (const sig of signals) {
+                SignalBus.emit(sig);
+            }
 
             // Save signals to memory
             for (const sig of signals) {
@@ -1573,6 +2319,36 @@ const OracleEngine = {
             // Reality Tether: evaluate past predictions against observed reality
             await CalibrationEngine.evaluatePendingPredictions();
             this.state.calibration = CalibrationEngine.getState();
+
+            // Trust Engine: update skills from latest evaluation
+            if (CalibrationEngine.lastEvaluation && CalibrationEngine.lastEvaluation.outcome) {
+                TrustEngine.updateSkills(CalibrationEngine.lastEvaluation.outcome);
+                this.state.trust = TrustEngine.getState();
+            }
+
+            // KRONOS: record epoch — full ecosystem snapshot
+            const lastSim = SyntheticField.getResult();
+            try {
+                await Kronos.recordEpoch({
+                    scanIndex: this.state.scanCount,
+                    signals,
+                    stability,
+                    delta,
+                    patterns,
+                    couplingMeta: SyntheticField.couplingMeta,
+                    dsi: lastSim && lastSim.dsi ? lastSim.dsi.dsi : null,
+                    catastrophicFraction: lastSim && lastSim.dsi ? lastSim.dsi.catastrophicFraction : null,
+                    lyapunov: lastSim && lastSim.dsi ? lastSim.dsi.lyapunov : null,
+                    tether: CalibrationEngine.credibility,
+                    trust: TrustEngine.getState()
+                });
+                this.state.kronos = Kronos.getState();
+            } catch (err) {
+                console.warn('[OracleEngine] Kronos epoch failed:', err);
+            }
+
+            // Signal Bus state update
+            this.state.signalBus = SignalBus.getState();
 
             // Auto-compact if storage pressure is high
             try {
