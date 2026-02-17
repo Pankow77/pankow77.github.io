@@ -1,13 +1,14 @@
 // ====================================================================
-// ORACLE ENGINE v4.1 — Sistema Nervoso Distribuito + Synthetic Earth
+// ORACLE ENGINE v4.2 — Synthetic Earth + Reality Tether
 // Intelligenza a Tre Livelli: Sensoriale → Sinaptico → Corticale
 // + Strato 2: Monte Carlo · Lyapunov · Adaptive Coupling
+// + Metabolismo della Credibilità: Calibration Engine
 // Browser-Nativo · Memoria Locale · Zero Cloud
 // ====================================================================
 // La rivoluzione è il browser e la memoria locale.
 // Questo motore sviluppa memoria, sensibilità e istinto.
 // Non predice eventi. Misura tensione strutturale.
-// Red Team v4.1: coupling adattivo dalla covarianza osservata.
+// E ora: misura SE STESSO. Auto-sospetto empirico.
 // ====================================================================
 
 'use strict';
@@ -25,7 +26,10 @@ const ORACLE_CONFIG = {
     CRITICAL_THRESHOLD: 0.35,
     NEURON_ALPHA: 0.12,                   // EMA learning rate
     DB_NAME: 'oracle-ecosystem-v3',
-    DB_VERSION: 1
+    DB_VERSION: 2,
+    CALIBRATION_EVAL_WINDOW: 6,   // Scans before evaluating a prediction
+    CALIBRATION_ALPHA: 0.15,      // EMA learning rate for credibility
+    MAX_CALIBRATIONS: 500
 };
 
 // Lexicon for urgency scoring
@@ -97,6 +101,12 @@ const OracleMemory = {
                 if (!db.objectStoreNames.contains('diagnoses')) {
                     const dg = db.createObjectStore('diagnoses', { keyPath: 'id', autoIncrement: true });
                     dg.createIndex('timestamp', 'timestamp', { unique: false });
+                }
+                // v2: Calibration store for reality tether
+                if (!db.objectStoreNames.contains('calibration')) {
+                    const cs = db.createObjectStore('calibration', { keyPath: 'id', autoIncrement: true });
+                    cs.createIndex('timestamp', 'timestamp', { unique: false });
+                    cs.createIndex('scanIndex', 'scanIndex', { unique: false });
                 }
             };
 
@@ -238,6 +248,54 @@ const OracleMemory = {
         return new Promise((resolve, reject) => {
             const results = [];
             const store = this._tx('diagnoses', 'readonly');
+            const request = store.index('timestamp').openCursor(null, 'prev');
+            request.onsuccess = (e) => {
+                const cursor = e.target.result;
+                if (cursor && results.length < limit) {
+                    results.push(cursor.value);
+                    cursor.continue();
+                } else {
+                    resolve(results.reverse());
+                }
+            };
+            request.onerror = () => reject(request.error);
+        });
+    },
+
+    // Calibration (Reality Tether)
+    async saveCalibration(record) {
+        const store = this._tx('calibration', 'readwrite');
+        const result = await this._promisify(store.add(record));
+        // Trim old calibrations
+        const count = await this._promisify(this._tx('calibration', 'readonly').count());
+        if (count > ORACLE_CONFIG.MAX_CALIBRATIONS) {
+            const trimStore = this._tx('calibration', 'readwrite');
+            const cursor = trimStore.index('timestamp').openCursor();
+            let toDelete = count - ORACLE_CONFIG.MAX_CALIBRATIONS;
+            cursor.onsuccess = (e) => {
+                const c = e.target.result;
+                if (c && toDelete > 0) {
+                    c.delete();
+                    toDelete--;
+                    c.continue();
+                }
+            };
+        }
+        return result;
+    },
+
+    async updateCalibration(record) {
+        return this._promisify(this._tx('calibration', 'readwrite').put(record));
+    },
+
+    async getAllCalibrations() {
+        return this._promisify(this._tx('calibration', 'readonly').getAll());
+    },
+
+    async getRecentCalibrations(limit = 20) {
+        return new Promise((resolve, reject) => {
+            const results = [];
+            const store = this._tx('calibration', 'readonly');
             const request = store.index('timestamp').openCursor(null, 'prev');
             request.onsuccess = (e) => {
                 const cursor = e.target.result;
@@ -786,7 +844,229 @@ const AutoDiagnosis = {
 
 
 // ============================================================
-// SECTION 8: SYNTHETIC FIELD (Strato 2 — Synthetic Earth)
+// SECTION 8: CALIBRATION ENGINE (Reality Tether)
+// ============================================================
+// Il metabolismo della credibilità.
+//
+// ORACLE non può fidarsi di sé stesso.
+// Tre indicatori (Sarle, catastrophic, Lyapunov) guardano la
+// stessa macchina simulata. Servono TRE COSE DIVERSE:
+//
+// 1. Prediction Storage: ogni simulazione viene registrata
+// 2. Retrospective Evaluation: dopo N scan, confrontiamo
+//    la previsione con ciò che è accaduto nel Campo Reale
+// 3. Credibility Score: rolling EMA della precisione storica
+//
+// Quando il modello grida "instabilità", il mondo reale
+// mostra davvero aumento di volatilità cross-domain?
+//
+// Questo non è validazione. È auto-sospetto.
+// La differenza tra un oracolo e un ciarlatano è il track record.
+// ============================================================
+
+const CalibrationEngine = {
+    credibility: 0.5,    // [0, 1] — starts at 0.5 (unknown, agnostic)
+    evaluatedCount: 0,
+    hitCount: 0,
+    lastEvaluation: null,
+
+    // Store a prediction after each simulation completes
+    async storePrediction(dsi, realStability, preset, couplingMeta) {
+        const record = {
+            timestamp: Date.now(),
+            scanIndex: OracleEngine.state.scanCount,
+            prediction: {
+                dsi: dsi.dsi,
+                catastrophicFraction: dsi.catastrophicFraction,
+                bimodality: dsi.bimodality,
+                lyapunovLambda: dsi.lyapunov ? dsi.lyapunov.lambda : 0,
+                lyapunovRegime: dsi.lyapunov ? dsi.lyapunov.regime : 'unknown',
+                mean: dsi.mean,
+                std: dsi.std
+            },
+            realState: {
+                stability: realStability
+            },
+            preset: preset || 'montecarlo',
+            couplingAdapted: couplingMeta ? couplingMeta.adapted : false,
+            evaluated: false,
+            outcome: null
+        };
+
+        try {
+            await OracleMemory.saveCalibration(record);
+        } catch (err) {
+            console.warn('[CalibrationEngine] Failed to store prediction:', err);
+        }
+    },
+
+    // Evaluate predictions that have aged past the evaluation window
+    async evaluatePendingPredictions() {
+        const EVAL_WINDOW = ORACLE_CONFIG.CALIBRATION_EVAL_WINDOW;
+        const currentScanCount = OracleEngine.state.scanCount;
+
+        let allRecords;
+        try {
+            allRecords = await OracleMemory.getAllCalibrations();
+        } catch (err) {
+            console.warn('[CalibrationEngine] Failed to load calibrations:', err);
+            return;
+        }
+
+        const pending = allRecords.filter(r => !r.evaluated);
+        if (pending.length === 0) return;
+
+        const stabilityHistory = await OracleMemory.getStabilityHistory(200);
+        if (stabilityHistory.length < EVAL_WINDOW) return;
+
+        let anyEvaluated = false;
+
+        for (const record of pending) {
+            const scansElapsed = currentScanCount - record.scanIndex;
+            if (scansElapsed < EVAL_WINDOW) continue;
+
+            // Find stability points recorded AFTER this prediction
+            const afterPoints = stabilityHistory.filter(p => p.timestamp > record.timestamp);
+            if (afterPoints.length < 3) continue;
+
+            // Take up to EVAL_WINDOW points for evaluation
+            const evalPoints = afterPoints.slice(0, EVAL_WINDOW);
+            const observedStabilities = evalPoints.map(p => p.stability);
+
+            // Compute observed metrics
+            const n = observedStabilities.length;
+            const observedMean = observedStabilities.reduce((s, v) => s + v, 0) / n;
+            const observedMin = Math.min(...observedStabilities);
+            const observedMax = Math.max(...observedStabilities);
+            const observedStd = Math.sqrt(
+                observedStabilities.reduce((s, v) => s + (v - observedMean) ** 2, 0) / n
+            );
+            const observedDelta = observedStabilities[n - 1] - record.realState.stability;
+            const observedBelowCritical = observedStabilities.filter(
+                s => s < ORACLE_CONFIG.CRITICAL_THRESHOLD
+            ).length / n;
+
+            // ---- SCORE COMPONENTS ----
+
+            // 1. Directional accuracy (40%)
+            // Low DSI predicts decline or high vulnerability.
+            // Did stability actually decline?
+            const predictedDecline = record.prediction.dsi < 0.5;
+            const actualDecline = observedDelta < -0.02;
+            const predictedStable = record.prediction.dsi >= 0.5;
+            const actualStable = observedDelta >= -0.02;
+            const directionCorrect = (predictedDecline && actualDecline) ||
+                                     (predictedStable && actualStable) ? 1 : 0;
+
+            // 2. Catastrophic calibration (35%)
+            // Predicted catastrophic fraction vs observed fraction below critical
+            const catError = Math.abs(record.prediction.catastrophicFraction - observedBelowCritical);
+            const catScore = Math.max(0, 1 - catError * 2); // 0 error → 1.0
+
+            // 3. Volatility calibration (25%)
+            // Predicted std vs observed std — measures volatility prediction
+            let volScore;
+            if (record.prediction.std > 0.001) {
+                const volRatio = observedStd / record.prediction.std;
+                volScore = Math.max(0, 1 - Math.abs(1 - volRatio));
+            } else {
+                volScore = observedStd < 0.05 ? 1.0 : 0.0;
+            }
+
+            // Composite accuracy
+            const accuracy = directionCorrect * 0.40 + catScore * 0.35 + volScore * 0.25;
+
+            // Update record
+            record.evaluated = true;
+            record.outcome = {
+                observedMean: Math.round(observedMean * 1000) / 1000,
+                observedMin: Math.round(observedMin * 1000) / 1000,
+                observedMax: Math.round(observedMax * 1000) / 1000,
+                observedStd: Math.round(observedStd * 1000) / 1000,
+                observedDelta: Math.round(observedDelta * 10000) / 10000,
+                observedBelowCritical: Math.round(observedBelowCritical * 1000) / 1000,
+                directionCorrect,
+                catScore: Math.round(catScore * 1000) / 1000,
+                volScore: Math.round(volScore * 1000) / 1000,
+                accuracy: Math.round(accuracy * 1000) / 1000,
+                evaluatedAt: Date.now()
+            };
+
+            try {
+                await OracleMemory.updateCalibration(record);
+            } catch (err) {
+                console.warn('[CalibrationEngine] Failed to update calibration:', err);
+                continue;
+            }
+
+            // Update rolling credibility
+            const alpha = ORACLE_CONFIG.CALIBRATION_ALPHA;
+            this.credibility = this.credibility * (1 - alpha) + accuracy * alpha;
+            this.evaluatedCount++;
+            if (accuracy > 0.5) this.hitCount++;
+            this.lastEvaluation = record;
+            anyEvaluated = true;
+
+            console.log('[CalibrationEngine] Evaluated prediction #' + record.id +
+                ': accuracy=' + accuracy.toFixed(3) +
+                ' (dir=' + directionCorrect + ' cat=' + catScore.toFixed(2) +
+                ' vol=' + volScore.toFixed(2) + ')' +
+                ' → credibility=' + this.credibility.toFixed(3));
+        }
+
+        if (anyEvaluated) {
+            OracleEngine._notify('calibration-update', this.getState());
+        }
+    },
+
+    // Rebuild state from stored history on init
+    async loadState() {
+        try {
+            const allRecords = await OracleMemory.getAllCalibrations();
+            const evaluated = allRecords.filter(r => r.evaluated && r.outcome);
+            this.evaluatedCount = evaluated.length;
+            this.hitCount = evaluated.filter(r => r.outcome.accuracy > 0.5).length;
+
+            if (evaluated.length > 0) {
+                // Rebuild credibility from full history (chronological order)
+                this.credibility = 0.5;
+                const alpha = ORACLE_CONFIG.CALIBRATION_ALPHA;
+                for (const record of evaluated) {
+                    this.credibility = this.credibility * (1 - alpha) + record.outcome.accuracy * alpha;
+                }
+                this.lastEvaluation = evaluated[evaluated.length - 1];
+                console.log('[CalibrationEngine] Restored: ' + evaluated.length +
+                    ' evaluations, credibility=' + this.credibility.toFixed(3));
+            } else {
+                console.log('[CalibrationEngine] No prior evaluations. Starting agnostic (0.500).');
+            }
+        } catch (err) {
+            console.warn('[CalibrationEngine] Failed to load state:', err);
+        }
+    },
+
+    getState() {
+        return {
+            credibility: Math.round(this.credibility * 1000) / 1000,
+            evaluated: this.evaluatedCount,
+            hits: this.hitCount,
+            hitRate: this.evaluatedCount > 0
+                ? Math.round((this.hitCount / this.evaluatedCount) * 100)
+                : null,
+            lastEvaluation: this.lastEvaluation ? {
+                accuracy: this.lastEvaluation.outcome.accuracy,
+                dsi: this.lastEvaluation.prediction.dsi,
+                observedDelta: this.lastEvaluation.outcome.observedDelta,
+                directionCorrect: this.lastEvaluation.outcome.directionCorrect,
+                timestamp: this.lastEvaluation.outcome.evaluatedAt
+            } : null
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 9: SYNTHETIC FIELD (Strato 2 — Synthetic Earth)
 // ============================================================
 // Monte Carlo perturbation engine: takes current state,
 // simulates 1000+ futures, calculates Distance to Structural
@@ -1061,6 +1341,17 @@ const SyntheticField = {
             // Attach coupling metadata to result
             payload.couplingMeta = this.couplingMeta;
             this.lastResult = payload;
+
+            // Reality Tether: store prediction for future evaluation
+            CalibrationEngine.storePrediction(
+                payload.dsi,
+                OracleEngine.state.stability,
+                this.activePreset,
+                this.couplingMeta
+            );
+            // Attach current calibration state
+            payload.calibration = CalibrationEngine.getState();
+
             // Notify engine listeners
             if (OracleEngine && OracleEngine._notify) {
                 OracleEngine._notify('simulation-complete', payload);
@@ -1101,7 +1392,9 @@ const OracleEngine = {
         // Synthetic Earth state
         syntheticField: null,
         dsi: null,
-        simulationActive: false
+        simulationActive: false,
+        // Calibration state
+        calibration: null
     },
 
     listeners: [],
@@ -1113,6 +1406,10 @@ const OracleEngine = {
 
             // Initialize Synthetic Earth worker
             SyntheticField.init();
+
+            // Initialize Calibration Engine (reality tether)
+            await CalibrationEngine.loadState();
+            this.state.calibration = CalibrationEngine.getState();
 
             // Restore last stability from history
             const history = await OracleMemory.getStabilityHistory(1);
@@ -1193,6 +1490,10 @@ const OracleEngine = {
             this.state.scanning = false;
 
             this._notify('scan-complete');
+
+            // Reality Tether: evaluate past predictions against observed reality
+            await CalibrationEngine.evaluatePendingPredictions();
+            this.state.calibration = CalibrationEngine.getState();
 
             // Trigger Synthetic Earth simulation after scan completes
             this.runSimulation();

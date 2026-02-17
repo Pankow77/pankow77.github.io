@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORACLE v4.1 | Synthetic Earth — Red Team Response</title>
-    <meta name="description" content="ORACLE v4.1 - Synthetic Earth. Monte Carlo + Lyapunov Proxy + Adaptive Coupling. Browser-native. Local memory. Zero cloud.">
+    <title>ORACLE v4.2 | Synthetic Earth + Reality Tether</title>
+    <meta name="description" content="ORACLE v4.2 - Synthetic Earth + Reality Tether. Monte Carlo, Lyapunov, Adaptive Coupling, Calibration Engine. Browser-native. Zero cloud.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -765,6 +765,117 @@
         .coupling-dot.adapted { background: var(--teal); box-shadow: 0 0 4px var(--teal); }
         .coupling-dot.declared { background: var(--text-dim); }
 
+        /* ===== CALIBRATION / REALITY TETHER ===== */
+        .calibration-section {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 16px;
+            align-items: start;
+        }
+
+        .credibility-gauge {
+            text-align: center;
+            padding: 12px;
+            background: rgba(0, 212, 170, 0.03);
+            border: 1px solid rgba(0, 212, 170, 0.12);
+            border-radius: 4px;
+        }
+
+        .credibility-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .credibility-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.42rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+
+        .credibility-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .credibility-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+
+        .credibility-bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 1.5s ease-out, background 1.5s ease-out;
+            width: 50%;
+            background: var(--text-dim);
+        }
+
+        .credibility-status {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .track-record {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.03em;
+        }
+
+        .track-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 5px;
+            align-items: center;
+        }
+
+        .track-label {
+            color: var(--text-dim);
+            min-width: 80px;
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .track-value {
+            color: var(--text-secondary);
+        }
+
+        .eval-entry {
+            font-size: 0.48rem;
+            padding: 3px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .eval-check { color: var(--green); }
+        .eval-miss { color: var(--red); }
+
+        @media (max-width: 900px) {
+            .calibration-section { grid-template-columns: 1fr; }
+        }
+
         .perturbation-area {
             display: flex;
             flex-direction: column;
@@ -1140,8 +1251,8 @@
                     </svg>
                 </div>
                 <div>
-                    <div class="oracle-title">ORACLE v4.1</div>
-                    <div class="oracle-subtitle">Synthetic Earth — Red Team Response</div>
+                    <div class="oracle-title">ORACLE v4.2</div>
+                    <div class="oracle-subtitle">Synthetic Earth + Reality Tether</div>
                 </div>
             </div>
         </div>
@@ -1382,6 +1493,32 @@
                 <div>MEAN: <strong id="simMean">&mdash;</strong></div>
                 <div>STD: <strong id="simStd">&mdash;</strong></div>
             </div>
+
+            <!-- ===== REALITY TETHER: Calibration Engine ===== -->
+            <div class="calibration-section" id="calibrationSection">
+                <div class="credibility-gauge" id="credibilityGauge">
+                    <div class="credibility-label">CREDIBILITY</div>
+                    <div class="credibility-sub">Metabolismo della Credibilit&agrave;</div>
+                    <div class="credibility-value" id="credibilityValue" style="color: var(--text-dim);">0.500</div>
+                    <div class="credibility-bar"><div class="credibility-bar-fill" id="credibilityBarFill"></div></div>
+                    <div class="credibility-status" id="credibilityStatus" style="color: var(--text-dim);">AGNOSTIC</div>
+                </div>
+                <div class="track-record" id="trackRecord">
+                    <div class="track-row">
+                        <span class="track-label">Track Record</span>
+                        <span class="track-value" id="trackEvaluated">No predictions evaluated yet</span>
+                    </div>
+                    <div class="track-row">
+                        <span class="track-label">Hit Rate</span>
+                        <span class="track-value" id="trackHitRate">&mdash;</span>
+                    </div>
+                    <div class="track-row">
+                        <span class="track-label">Last Eval</span>
+                        <span class="track-value" id="trackLastEval">&mdash;</span>
+                    </div>
+                    <div id="evalHistory" style="margin-top: 6px; max-height: 80px; overflow-y: auto;"></div>
+                </div>
+            </div>
         </div>
 
         <!-- ===== BOTTOM ROW ===== -->
@@ -1424,7 +1561,7 @@
         <div class="status-footer-left">
             <div class="sf-item"><span class="sf-dot"></span> ENGINE: <span class="val" id="footerEngine">INIT</span></div>
             <div class="sf-item">MEMORY: <span class="val" id="footerMemory">IndexedDB</span></div>
-            <div class="sf-item">VERSION: <span class="val">4.1.0-REDTEAM</span></div>
+            <div class="sf-item">VERSION: <span class="val">4.2.0-TETHER</span></div>
         </div>
         <div class="status-footer-right">
             <div class="sf-motto">TENSIONE, NON EVENTI</div>
@@ -1438,7 +1575,7 @@
     <!-- UI LOGIC -->
     <script>
     // =========================================================
-    // ORACLE UI v4.1 — Synthetic Earth + Lyapunov + Coupling
+    // ORACLE UI v4.2 — Synthetic Earth + Reality Tether
     // =========================================================
 
     let autoScanEnabled = true;
@@ -1451,14 +1588,15 @@
         const barEl = document.getElementById('bootBar');
 
         const lines = [
-            'ORACLE v4.1 — SYNTHETIC EARTH (RED TEAM)',
-            'Initializing IndexedDB memory layer...',
+            'ORACLE v4.2 — SYNTHETIC EARTH + REALITY TETHER',
+            'Initializing IndexedDB v2 memory layer...',
             'Loading neuron definitions...',
             'Calibrating sensory mesh...',
             'Synaptic engine: STANDBY',
             'Cortical field: STANDBY',
             'Synthetic Earth: Monte Carlo + Lyapunov proxy',
             'Adaptive coupling: covariance learning ARMED',
+            'Calibration engine: reality tether ARMED',
             'Auto-diagnosis: ARMED',
             'First scan initiating...'
         ];
@@ -1503,6 +1641,11 @@
 
         // Register update listener
         OracleEngine.onUpdate(handleEngineUpdate);
+
+        // Render initial calibration state (restored from IndexedDB)
+        if (OracleEngine.state.calibration) {
+            updateCalibrationDisplay(OracleEngine.state.calibration);
+        }
 
         // First scan
         await OracleEngine.scan();
@@ -1558,6 +1701,22 @@
             const lyaInfo = data.dsi.lyapunov ? ' | \u03BB:' + data.dsi.lyapunov.lambda + ' [' + data.dsi.lyapunov.regime + ']' : '';
             const cplInfo = data.couplingMeta && data.couplingMeta.adapted ? ' | Coupling: ADAPTED \u03B1=' + data.couplingMeta.alpha : ' | Coupling: DECLARED';
             addSignalLogEntry(formatTime(Date.now()), 'SYNTHETIC', 'SIM', 'DSI: ' + data.dsi.dsi.toFixed(3) + ' | Cat: ' + Math.round(data.dsi.catastrophicFraction * 100) + '%' + lyaInfo + cplInfo);
+            // Update calibration display with current state
+            if (data.calibration) {
+                updateCalibrationDisplay(data.calibration);
+            }
+        }
+
+        if (event === 'calibration-update') {
+            updateCalibrationDisplay(data);
+            if (data.lastEvaluation) {
+                addSignalLogEntry(formatTime(Date.now()), 'CALIBRATE', 'TETHER',
+                    'Prediction evaluated: acc=' + data.lastEvaluation.accuracy.toFixed(3) +
+                    ' | DSI was ' + data.lastEvaluation.dsi.toFixed(3) +
+                    ' \u2192 real \u0394=' + data.lastEvaluation.observedDelta.toFixed(4) +
+                    (data.lastEvaluation.directionCorrect ? ' \u2713' : ' \u2717') +
+                    ' | Credibility: ' + data.credibility.toFixed(3));
+            }
         }
     }
 
@@ -2158,6 +2317,73 @@
         }
     }
 
+    // ===== CALIBRATION / REALITY TETHER DISPLAY =====
+    function updateCalibrationDisplay(cal) {
+        if (!cal) return;
+
+        const c = cal.credibility;
+        const valEl = document.getElementById('credibilityValue');
+        valEl.textContent = c.toFixed(3);
+
+        // Color by credibility level
+        if (c > 0.7) valEl.style.color = 'var(--green)';
+        else if (c > 0.55) valEl.style.color = 'var(--cyan)';
+        else if (c > 0.45) valEl.style.color = 'var(--yellow)';
+        else if (c > 0.3) valEl.style.color = 'var(--orange)';
+        else valEl.style.color = 'var(--red)';
+
+        // Bar
+        const bar = document.getElementById('credibilityBarFill');
+        bar.style.width = (c * 100) + '%';
+        if (c > 0.7) bar.style.background = 'linear-gradient(90deg, var(--green), var(--teal))';
+        else if (c > 0.55) bar.style.background = 'linear-gradient(90deg, var(--teal), var(--cyan))';
+        else if (c > 0.45) bar.style.background = 'var(--yellow)';
+        else if (c > 0.3) bar.style.background = 'var(--orange)';
+        else bar.style.background = 'var(--red)';
+
+        // Status text
+        const statusEl = document.getElementById('credibilityStatus');
+        let statusText, statusColor;
+        if (cal.evaluated === 0) {
+            statusText = 'AGNOSTIC'; statusColor = 'var(--text-dim)';
+        } else if (cal.evaluated < 5) {
+            statusText = 'LEARNING (' + cal.evaluated + ' eval)'; statusColor = 'var(--yellow)';
+        } else if (c > 0.65) {
+            statusText = 'RELIABLE'; statusColor = 'var(--green)';
+        } else if (c > 0.45) {
+            statusText = 'CALIBRATING'; statusColor = 'var(--cyan)';
+        } else if (c > 0.3) {
+            statusText = 'UNRELIABLE'; statusColor = 'var(--orange)';
+        } else {
+            statusText = 'SUSPECT'; statusColor = 'var(--red)';
+        }
+        statusEl.textContent = statusText;
+        statusEl.style.color = statusColor;
+
+        // Track record
+        if (cal.evaluated > 0) {
+            document.getElementById('trackEvaluated').textContent =
+                cal.evaluated + ' predictions evaluated';
+            document.getElementById('trackHitRate').textContent =
+                cal.hitRate !== null ? cal.hitRate + '% accuracy > 0.5' : '\u2014';
+        } else {
+            document.getElementById('trackEvaluated').textContent =
+                'Accumulating... (need ' + 6 + ' scans)';
+        }
+
+        // Last evaluation
+        if (cal.lastEvaluation) {
+            const le = cal.lastEvaluation;
+            const checkMark = le.directionCorrect ? '\u2713' : '\u2717';
+            const checkColor = le.directionCorrect ? 'var(--green)' : 'var(--red)';
+            document.getElementById('trackLastEval').innerHTML =
+                'DSI=' + le.dsi.toFixed(3) +
+                ' \u2192 \u0394=' + le.observedDelta.toFixed(4) +
+                ' <span style="color:' + checkColor + '">' + checkMark + '</span>' +
+                ' (acc: ' + le.accuracy.toFixed(3) + ')';
+        }
+    }
+
     async function renderFuturesCloud(payload) {
         const canvas = document.getElementById('futuresCloud');
         const ctx = canvas.getContext('2d');
@@ -2373,10 +2599,10 @@
     });
 
     // ===== CONSOLE SIGNATURE =====
-    console.log('%cORACLE v4.1', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
-    console.log('%cSYNTHETIC EARTH — RED TEAM RESPONSE', 'color: #ff0084; font-size: 11px;');
-    console.log('%cMonte Carlo \u00B7 Lyapunov \u00B7 Adaptive Coupling', 'color: #8855ff;');
-    console.log('%cTENSIONE, NON EVENTI', 'color: #00d4aa;');
+    console.log('%cORACLE v4.2', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+    console.log('%cSYNTHETIC EARTH + REALITY TETHER', 'color: #ff0084; font-size: 11px;');
+    console.log('%cMonte Carlo \u00B7 Lyapunov \u00B7 Adaptive Coupling \u00B7 Calibration', 'color: #8855ff;');
+    console.log('%cTENSIONE, NON EVENTI \u00B7 AUTO-SOSPETTO EMPIRICO', 'color: #00d4aa;');
     console.log('%cBrowser-Native \u00B7 Local Memory \u00B7 Zero Cloud', 'color: #6b7fa3; font-size: 10px;');
 
     // ===== START =====
