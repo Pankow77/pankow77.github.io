@@ -308,6 +308,82 @@ const OracleMemory = {
             };
             request.onerror = () => reject(request.error);
         });
+    },
+
+    // ============================================================
+    // STORAGE COMPACTION — Quest 2 IndexedDB survival
+    // ============================================================
+    // Quest 2 has unpredictable eviction. This compactor enforces
+    // hard limits per store by deleting oldest records first.
+    // Called automatically after each scan if storage pressure high.
+    // ============================================================
+
+    async compact(limits) {
+        const stores = [
+            { name: 'signals',     max: limits.signals     || ORACLE_CONFIG.MAX_SIGNALS_STORED },
+            { name: 'stability',   max: limits.stability   || ORACLE_CONFIG.MAX_STABILITY_POINTS },
+            { name: 'calibration', max: limits.calibration || ORACLE_CONFIG.MAX_CALIBRATIONS },
+            { name: 'diagnoses',   max: limits.diagnoses   || ORACLE_CONFIG.MAX_DIAGNOSES }
+        ];
+
+        const results = {};
+
+        for (const { name, max } of stores) {
+            try {
+                const count = await this._promisify(this._tx(name, 'readonly').count());
+                if (count <= max) {
+                    results[name] = { before: count, deleted: 0 };
+                    continue;
+                }
+
+                const toDelete = count - max;
+                let deleted = 0;
+
+                await new Promise((resolve, reject) => {
+                    const store = this._tx(name, 'readwrite');
+                    const cursor = store.index('timestamp').openCursor();
+                    cursor.onsuccess = (e) => {
+                        const c = e.target.result;
+                        if (c && deleted < toDelete) {
+                            c.delete();
+                            deleted++;
+                            c.continue();
+                        } else {
+                            resolve();
+                        }
+                    };
+                    cursor.onerror = () => reject(cursor.error);
+                });
+
+                results[name] = { before: count, deleted };
+                console.log('[OracleMemory] Compacted ' + name + ': deleted ' + deleted + ' of ' + count);
+            } catch (err) {
+                results[name] = { error: err.message };
+            }
+        }
+
+        return results;
+    },
+
+    async estimateStorage() {
+        if (navigator.storage && navigator.storage.estimate) {
+            const est = await navigator.storage.estimate();
+            return {
+                usageMB: Math.round(est.usage / 1024 / 1024 * 10) / 10,
+                quotaMB: Math.round(est.quota / 1024 / 1024),
+                percent: Math.round(est.usage / est.quota * 100)
+            };
+        }
+        return null;
+    },
+
+    async requestPersistence() {
+        if (navigator.storage && navigator.storage.persist) {
+            const granted = await navigator.storage.persist();
+            console.log('[OracleMemory] Persistent storage: ' + (granted ? 'granted' : 'denied'));
+            return granted;
+        }
+        return false;
     }
 };
 
@@ -1411,6 +1487,9 @@ const OracleEngine = {
             await CalibrationEngine.loadState();
             this.state.calibration = CalibrationEngine.getState();
 
+            // Request persistent storage (prevents Quest 2 eviction)
+            OracleMemory.requestPersistence();
+
             // Restore last stability from history
             const history = await OracleMemory.getStabilityHistory(1);
             if (history.length > 0) {
@@ -1494,6 +1573,22 @@ const OracleEngine = {
             // Reality Tether: evaluate past predictions against observed reality
             await CalibrationEngine.evaluatePendingPredictions();
             this.state.calibration = CalibrationEngine.getState();
+
+            // Auto-compact if storage pressure is high
+            try {
+                const storage = await OracleMemory.estimateStorage();
+                if (storage && storage.percent > 70) {
+                    console.log('[OracleEngine] Storage at ' + storage.percent + '%, compacting...');
+                    await OracleMemory.compact({
+                        signals: Math.floor(ORACLE_CONFIG.MAX_SIGNALS_STORED * 0.5),
+                        stability: Math.floor(ORACLE_CONFIG.MAX_STABILITY_POINTS * 0.5),
+                        calibration: Math.floor(ORACLE_CONFIG.MAX_CALIBRATIONS * 0.5),
+                        diagnoses: Math.floor(ORACLE_CONFIG.MAX_DIAGNOSES * 0.5)
+                    });
+                }
+            } catch (err) {
+                console.warn('[OracleEngine] Storage check failed:', err);
+            }
 
             // Trigger Synthetic Earth simulation after scan completes
             this.runSimulation();

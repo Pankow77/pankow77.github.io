@@ -46,6 +46,13 @@
 <div id="info">ORACLE VR &mdash; LAYER 0</div>
 <div id="status">Initializing engine...</div>
 
+<!-- Offline resilience: cache Three.js + local assets on first load -->
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('oracle-vr-sw.js').catch(() => {});
+}
+</script>
+
 <!-- Same engine as oracle.html — same memory, same worker -->
 <script src="js/oracle-engine.js"></script>
 
@@ -69,10 +76,18 @@
 // L'atmosfera sopra la testa è il DSI.
 // I nervi luminosi sono il coupling.
 // Il tremore dell'aria è λ Lyapunov.
+// La cicatrice nel cielo è il track record.
 // Lo spazio reagisce alla tua presenza.
 //
+// RED TEAM HARDENED:
+// - Velocity gate: ground lift only when still (anti-nausea)
+// - Horizon line: stable spatial anchor
+// - Metabolic credibility: Brier/log-loss EMA drives scar
+// - Service worker: offline after first load
+// - Storage compaction: Quest 2 IndexedDB safe
+//
 // Performance budget: Quest 2, 72fps, zero compromessi.
-// ~2100 vertices totali. ~31 draw calls. Nessuna ombra.
+// ~2200 vertices totali. ~34 draw calls. Nessuna ombra.
 // Nessuna particella. Nessun post-processing.
 // Simulazione decoupled via Web Worker.
 // ================================================================
@@ -96,6 +111,7 @@ const GROUND_SIZE = 24;         // meters
 const GROUND_SEGMENTS = 32;     // subdivisions (1089 vertices)
 const SKY_RADIUS = 50;          // sky sphere radius
 const STATE_POLL_MS = 300;      // engine state read interval
+const VELOCITY_GATE = 0.3;      // m/s — presence effect fades above this
 
 // ---- PRE-ALLOCATED TEMPORARIES (zero GC in render loop) ----
 const _headPos = new THREE.Vector3();
@@ -110,6 +126,11 @@ const _colorPresence = new THREE.Color(0x00c8ff);
 const _clearSky = new THREE.Color(0x040810);
 const _murkySky = new THREE.Color(0x1a0808);
 
+// Velocity tracking (cyber-sickness prevention)
+let _prevHeadX = 0, _prevHeadZ = 0;
+let _headVelocity = 0;
+let _velocityGate = 1; // 1 = still, 0 = moving fast
+
 // ---- FIELD STATE (read from engine, written by pollState) ----
 const fieldState = {
     stability: 0.75,
@@ -119,6 +140,8 @@ const fieldState = {
     lyapunovLambda: 0,
     lyapunovRegime: 'stable',
     credibility: 0.5,
+    credibilityPrev: 0.5,
+    credibilityTrend: 0,
     domains: {},
     couplingAdapted: false
 };
@@ -178,6 +201,7 @@ controls.update();
 // Grid wireframe + solid glow underneath.
 // Color = stability. Displacement = delta + presence.
 // Emissive intensity = credibility.
+// VELOCITY GATED: presence ripple only when still.
 // ================================================================
 
 const groundGeo = new THREE.PlaneGeometry(
@@ -189,7 +213,7 @@ const groundVertexCount = groundGeo.attributes.position.count;
 const groundColors = new Float32Array(groundVertexCount * 3);
 groundGeo.setAttribute('color', new THREE.BufferAttribute(groundColors, 3));
 
-// Store original Y positions (all zero after rotation, but explicit)
+// Store original Y positions (all zero after rotation)
 const groundOrigY = new Float32Array(groundVertexCount);
 const groundPos = groundGeo.attributes.position;
 for (let i = 0; i < groundVertexCount; i++) {
@@ -235,6 +259,34 @@ const skyMat = new THREE.MeshBasicMaterial({
 });
 const skyMesh = new THREE.Mesh(skyGeo, skyMat);
 scene.add(skyMesh);
+
+// ================================================================
+// HORIZON LINE — Ancora spaziale stabile
+// ================================================================
+// A stable, unmoving ring between you and the pillars.
+// Zero animation. Pure spatial anchor. Anti-nausea reference.
+// ================================================================
+
+const HORIZON_RADIUS = PILLAR_RADIUS * 0.6;
+const HORIZON_HEIGHT = 1.2;
+const HORIZON_SEGMENTS = 64;
+
+const horizonPoints = [];
+for (let i = 0; i <= HORIZON_SEGMENTS; i++) {
+    const angle = (i / HORIZON_SEGMENTS) * Math.PI * 2;
+    horizonPoints.push(new THREE.Vector3(
+        Math.cos(angle) * HORIZON_RADIUS,
+        HORIZON_HEIGHT,
+        Math.sin(angle) * HORIZON_RADIUS
+    ));
+}
+const horizonGeo = new THREE.BufferGeometry().setFromPoints(horizonPoints);
+const horizonLine = new THREE.Line(horizonGeo, new THREE.LineBasicMaterial({
+    color: 0x1a2533,
+    transparent: true,
+    opacity: 0.25
+}));
+scene.add(horizonLine);
 
 // ================================================================
 // DOMAIN PILLARS — Sei colonne viventi
@@ -337,6 +389,63 @@ presenceRing.position.y = 0.03;
 scene.add(presenceRing);
 
 // ================================================================
+// REALITY TETHER SCAR — Cicatrice metabolica nel cielo
+// ================================================================
+// Non un grafico. Un organismo.
+// Cresce quando il modello sbaglia (Brier loss).
+// Si rimargina quando ci prende.
+// Colore: rosso = perdita di credibilità. Cyan = recupero.
+// Dimensione: proporzionale a (1 - credibilità).
+// L'unico elemento che non mente.
+// ================================================================
+
+const SCAR_SEGMENTS = 14;
+const SCAR_LENGTH = 3.5;
+
+// Generate jagged wound geometry (deterministic pseudo-random)
+const scarMainPoints = [];
+const scarGlowPoints = [];
+for (let i = 0; i <= SCAR_SEGMENTS; i++) {
+    const t = (i / SCAR_SEGMENTS) - 0.5;
+    const x = t * SCAR_LENGTH;
+    // Jagged displacement — deterministic, organic
+    const jag = Math.sin(i * 2.7) * 0.18
+              + Math.sin(i * 4.3) * 0.09
+              + Math.cos(i * 1.1) * 0.06;
+    const z = Math.sin(i * 1.7) * 0.12 + Math.cos(i * 3.2) * 0.05;
+    scarMainPoints.push(new THREE.Vector3(x, jag, z));
+    scarGlowPoints.push(new THREE.Vector3(x, jag * 1.4, z * 1.4));
+}
+
+const scarMainGeo = new THREE.BufferGeometry().setFromPoints(scarMainPoints);
+const scarMainMat = new THREE.LineBasicMaterial({
+    color: 0x334455,
+    transparent: true,
+    opacity: 0.1,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+});
+const scarMain = new THREE.Line(scarMainGeo, scarMainMat);
+
+const scarGlowGeo = new THREE.BufferGeometry().setFromPoints(scarGlowPoints);
+const scarGlowMat = new THREE.LineBasicMaterial({
+    color: 0x223344,
+    transparent: true,
+    opacity: 0.04,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+});
+const scarGlow = new THREE.Line(scarGlowGeo, scarGlowMat);
+
+const scarGroup = new THREE.Group();
+scarGroup.add(scarMain);
+scarGroup.add(scarGlow);
+scarGroup.position.set(0.5, 14, -1.5);
+// Slight tilt so it reads as a wound, not a line
+scarGroup.rotation.set(0.1, 0.3, 0.15);
+scene.add(scarGroup);
+
+// ================================================================
 // STATE POLLING — Decoupled read from engine
 // ================================================================
 
@@ -383,9 +492,11 @@ function pollState() {
         }
     }
 
-    // Calibration
+    // Calibration — track trend for scar metabolism
     if (s.calibration) {
+        fieldState.credibilityPrev = fieldState.credibility;
         fieldState.credibility = s.calibration.credibility;
+        fieldState.credibilityTrend = fieldState.credibility - fieldState.credibilityPrev;
     }
 
     // Synthetic field results
@@ -419,15 +530,27 @@ function animate() {
     camera.getWorldPosition(_headPos);
     camera.getWorldDirection(_gazeDir);
 
-    // Presence ring follows head projection
+    // ---- VELOCITY GATE (cyber-sickness prevention) ----
+    // Ground lift ONLY when nearly still. Moving = flat floor.
+    const vdx = _headPos.x - _prevHeadX;
+    const vdz = _headPos.z - _prevHeadZ;
+    _headVelocity = Math.sqrt(vdx * vdx + vdz * vdz) / Math.max(dt, 0.001);
+    _prevHeadX = _headPos.x;
+    _prevHeadZ = _headPos.z;
+    // Smooth gate: 1.0 at rest, fades to 0 at VELOCITY_GATE m/s
+    const gateTarget = Math.max(0, Math.min(1, 1 - _headVelocity / VELOCITY_GATE));
+    _velocityGate += (gateTarget - _velocityGate) * dt * 5; // Smooth transition
+
+    // Presence ring follows head projection (also gated)
     presenceRing.position.x = _headPos.x;
     presenceRing.position.z = _headPos.z;
-    presenceMat.opacity = 0.03 + 0.015 * Math.sin(t * 1.5);
+    presenceMat.opacity = (0.03 + 0.015 * Math.sin(t * 1.5)) * _velocityGate;
 
     updateGround(t, dt);
     updateSky(t);
     updatePillars(t, dt);
     updateCouplingLines(t, dt);
+    updateScar(t);
     updateFog();
 
     // Desktop controls (disabled in VR)
@@ -470,17 +593,18 @@ function updateGround(t, dt) {
         // Breathing wave (radial, with spatial noise)
         const wave = Math.sin(t * breathFreq + distCenter * 0.5 + spatialPhase) * breathAmp;
 
-        // Presence ripple (Gaussian lift near head)
+        // Presence ripple — VELOCITY GATED
+        // Only lifts when you are still. Moving = flat. No nausea.
         const dx = x - _headPos.x;
         const dz = z - _headPos.z;
         const distHead2 = dx * dx + dz * dz;
-        const presenceY = 0.05 * Math.exp(-distHead2 / 2.0);
+        const presenceY = 0.05 * Math.exp(-distHead2 / 2.0) * _velocityGate;
 
         // Set Y
         pos.setY(i, groundOrigY[i] + wave + presenceY);
 
-        // Color: base + presence glow
-        const presenceGlow = Math.exp(-distHead2 / 3.0) * 0.35;
+        // Color: base + presence glow (also gated)
+        const presenceGlow = Math.exp(-distHead2 / 3.0) * 0.35 * _velocityGate;
         col.setXYZ(i,
             Math.min(1, _baseColor.r + _colorPresence.r * presenceGlow),
             Math.min(1, _baseColor.g + _colorPresence.g * presenceGlow),
@@ -595,6 +719,44 @@ function updateCouplingLines(t, dt) {
     }
 }
 
+// ---- REALITY TETHER SCAR UPDATE ----
+function updateScar(t) {
+    const cred = fieldState.credibility;
+    const trend = fieldState.credibilityTrend;
+
+    // Scale: scar grows as credibility drops
+    // At cred=1.0 → scale 0.3 (barely visible scar tissue)
+    // At cred=0.0 → scale 3.3 (massive wound)
+    const scarScale = 0.3 + (1 - cred) * 3;
+    scarGroup.scale.set(scarScale, scarScale, scarScale);
+
+    // Color: metabolic — reflects the DIRECTION of credibility change
+    if (trend < -0.005) {
+        // Losing credibility — wound opens, angry red
+        scarMainMat.color.setHex(0xff2244);
+        scarGlowMat.color.setHex(0xff4466);
+    } else if (trend > 0.005) {
+        // Recovering — wound healing, cool cyan
+        scarMainMat.color.setHex(0x00d4aa);
+        scarGlowMat.color.setHex(0x00aa88);
+    } else {
+        // Stable — scar tissue, neutral gray
+        scarMainMat.color.setHex(0x334455);
+        scarGlowMat.color.setHex(0x223344);
+    }
+
+    // Opacity: more visible when less credible
+    const scarOpacity = 0.05 + (1 - cred) * 0.4;
+    scarMainMat.opacity = scarOpacity;
+    scarGlowMat.opacity = scarOpacity * 0.3;
+
+    // Subtle wound pulse — the scar breathes with its own rhythm
+    // Faster pulse when credibility is low (the wound throbs)
+    const pulseFreq = 0.6 + (1 - cred) * 1.5;
+    const pulseAmp = 0.02 + (1 - cred) * 0.06;
+    scarGroup.scale.y = scarScale * (1 + Math.sin(t * pulseFreq) * pulseAmp);
+}
+
 // ---- FOG UPDATE ----
 function updateFog() {
     // Lower DSI = denser fog (more uncertainty, less visibility)
@@ -619,6 +781,7 @@ window.addEventListener('resize', () => {
 console.log('%cORACLE VR — Layer 0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
 console.log('%cIl Campo', 'color: #ff0084; font-size: 11px;');
 console.log('%cNon dashboard. Topologia.', 'color: #00d4aa;');
+console.log('%cRed Team Hardened · Velocity Gated · Metabolic Scar', 'color: #ff2244;');
 console.log('%cBrowser-Native · WebXR · Zero Cloud', 'color: #6b7fa3;');
 
 renderer.setAnimationLoop(animate);
