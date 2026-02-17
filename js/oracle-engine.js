@@ -33,7 +33,14 @@ const ORACLE_CONFIG = {
     MAX_STATEGRAPH_NODES: 2000,
     MAX_SCENARIOS: 500,
     TRUST_SKILL_ALPHA: 0.15,      // EMA for skill score
-    TRUST_ATTENUATION_MID: 0.4    // Sigmoid midpoint for auto-attenuation
+    TRUST_ATTENUATION_MID: 0.4,   // Sigmoid midpoint for auto-attenuation
+
+    // Darwin Engine — evolutionary parameters
+    DARWIN_TRIGGER_EPOCHS: 5,     // Consecutive low-trust epochs before mutation
+    DARWIN_TRUST_THRESHOLD: 0.4,  // TrustWeight below this = underperforming
+    DARWIN_COMPETITION_EPOCHS: 8, // Epochs to run before judging mutant
+    DARWIN_MAX_ACTIVE_MUTANTS: 2, // Max simultaneous competing branches
+    DARWIN_MUTATION_RANGE: 0.30   // Max % deviation for parametric mutations
 };
 
 // Lexicon for urgency scoring
@@ -1430,9 +1437,11 @@ const SyntheticField = {
         };
 
         // Blend weight: conservative. Grows with coverage.
-        // At full coverage (30 pairs), α ≈ 0.35
+        // At full coverage (30 pairs), α ≈ baseBeta
         // At sparse coverage, α stays low → declared matrix dominates
-        const baseBeta = 0.35;
+        // NOTE: baseBeta is mutable via DarwinEngine genome
+        const baseBeta = (typeof DarwinEngine !== 'undefined' && DarwinEngine.getParam('couplingBaseBeta'))
+            || 0.35;
         const alpha = baseBeta * observed.coverage;
 
         const blended = {};
@@ -2171,7 +2180,348 @@ const TrustEngine = {
 
 
 // ============================================================
-// SECTION 13: ORCHESTRATOR
+// SECTION 13: DARWIN ENGINE — Auto-Evoluzione Guidata dall'Errore
+// ============================================================
+// Quando il modello sbaglia abbastanza a lungo,
+// non aspetta la mano umana.
+// Si forka. Muta UN parametro. Compete.
+// Se il mutante batte il tronco → innesto.
+// Se perde → potatura.
+//
+// Non ottimizzazione. Selezione naturale.
+// Non hyperparameter tuning. Evoluzione darwiniana.
+//
+// Il selezionatore supremo sei tu (Marsèlia / Red Team).
+// Il Darwin Engine propone candidati.
+// Tu scegli chi vive.
+//
+// Fase A: mutazioni parametriche (α, decay, coupling weights).
+// Fase B (futuro): mutazioni strutturali (nuovi detector, nuove dinamiche).
+// ============================================================
+
+const DarwinEngine = {
+    // Current mutable genome — the parameters that can evolve
+    genome: {
+        couplingBaseBeta: 0.35,          // Blend weight for adaptive coupling
+        neuronAlpha: 0.12,               // EMA learning rate for signal history
+        calibrationAlpha: 0.15,          // EMA for credibility
+        trustSkillAlpha: 0.15,           // EMA for skill score
+        trustAttenuationMid: 0.4,        // Sigmoid midpoint
+        simNoiseScale: 0.015             // Monte Carlo noise
+    },
+
+    // Tracking
+    lowTrustStreak: 0,                   // Consecutive epochs below threshold
+    activeMutants: [],                   // Currently competing branches
+    history: [],                         // Completed competitions (win/loss)
+    generation: 0,                       // Evolution counter
+
+    init() {
+        // Load genome from active ORACLE_CONFIG values
+        this.genome = {
+            couplingBaseBeta: 0.35,
+            neuronAlpha: ORACLE_CONFIG.NEURON_ALPHA,
+            calibrationAlpha: ORACLE_CONFIG.CALIBRATION_ALPHA,
+            trustSkillAlpha: ORACLE_CONFIG.TRUST_SKILL_ALPHA,
+            trustAttenuationMid: ORACLE_CONFIG.TRUST_ATTENUATION_MID,
+            simNoiseScale: 0.015
+        };
+        console.log('[Darwin] Initialized. Genome:', JSON.stringify(this.genome));
+    },
+
+    // ---- MUTATION TRIGGER ----
+    // Called after every Kronos epoch. Checks if the organism is failing.
+    async checkTrigger(trustState, epoch) {
+        if (!trustState || !epoch) return null;
+
+        const threshold = ORACLE_CONFIG.DARWIN_TRUST_THRESHOLD;
+        const required = ORACLE_CONFIG.DARWIN_TRIGGER_EPOCHS;
+        const maxMutants = ORACLE_CONFIG.DARWIN_MAX_ACTIVE_MUTANTS;
+
+        // Track consecutive low-trust epochs
+        if (trustState.trustWeight < threshold) {
+            this.lowTrustStreak++;
+        } else {
+            this.lowTrustStreak = 0;
+        }
+
+        // Not enough failure yet
+        if (this.lowTrustStreak < required) return null;
+
+        // Already at max mutants
+        if (this.activeMutants.length >= maxMutants) {
+            console.log('[Darwin] Low trust streak=' + this.lowTrustStreak +
+                ' but max mutants reached (' + maxMutants + ')');
+            return null;
+        }
+
+        // TRIGGER: spawn a mutant
+        console.log('[Darwin] === MUTATION TRIGGERED ===');
+        console.log('[Darwin] Low trust streak: ' + this.lowTrustStreak +
+            ' (threshold: ' + required + ')');
+        console.log('[Darwin] Trust weight: ' + trustState.trustWeight +
+            ' (threshold: ' + threshold + ')');
+
+        const mutant = await this._spawnMutant(epoch);
+        this.lowTrustStreak = 0;  // Reset streak after spawn
+        return mutant;
+    },
+
+    // ---- MUTATION: SPAWN MUTANT ----
+    async _spawnMutant(epoch) {
+        // Select ONE parameter to mutate
+        const geneKeys = Object.keys(this.genome);
+        const targetGene = geneKeys[Math.floor(Math.random() * geneKeys.length)];
+        const currentValue = this.genome[targetGene];
+
+        // Mutate: random direction, bounded by DARWIN_MUTATION_RANGE
+        const range = ORACLE_CONFIG.DARWIN_MUTATION_RANGE;
+        const direction = Math.random() > 0.5 ? 1 : -1;
+        const magnitude = 0.05 + Math.random() * (range - 0.05); // At least 5% change
+        const mutatedValue = currentValue * (1 + direction * magnitude);
+
+        // Clamp to sensible bounds
+        const bounds = {
+            couplingBaseBeta:    { min: 0.05, max: 0.80 },
+            neuronAlpha:         { min: 0.02, max: 0.40 },
+            calibrationAlpha:    { min: 0.05, max: 0.40 },
+            trustSkillAlpha:     { min: 0.05, max: 0.40 },
+            trustAttenuationMid: { min: 0.20, max: 0.60 },
+            simNoiseScale:       { min: 0.005, max: 0.05 }
+        };
+        const b = bounds[targetGene] || { min: 0.01, max: 1.0 };
+        const clampedValue = Math.max(b.min, Math.min(b.max, mutatedValue));
+        const roundedValue = Math.round(clampedValue * 10000) / 10000;
+
+        // Build mutant genome
+        const mutantGenome = Object.assign({}, this.genome);
+        mutantGenome[targetGene] = roundedValue;
+
+        // Create Kronos branch
+        const label = 'Darwin G' + this.generation + ': ' +
+            targetGene + ' ' + currentValue + ' → ' + roundedValue;
+        const branchId = await Kronos.createBranch(label, 'darwin-mutation');
+
+        const mutant = {
+            branchId,
+            generation: this.generation,
+            targetGene,
+            originalValue: currentValue,
+            mutatedValue: roundedValue,
+            genome: mutantGenome,
+            forkScanIndex: epoch.scanIndex,
+            forkTimestamp: Date.now(),
+            competitionEpochs: 0,
+            // Scoring: accumulated during competition
+            trunkScore: 0,
+            mutantScore: 0,
+            trunkEpochs: [],
+            mutantEpochs: [],
+            status: 'competing'  // competing → grafted | pruned
+        };
+
+        this.activeMutants.push(mutant);
+        this.generation++;
+
+        console.log('[Darwin] Mutant spawned: ' + label);
+        console.log('[Darwin] Branch: ' + branchId);
+        console.log('[Darwin] Genome: ' + JSON.stringify(mutantGenome));
+
+        return mutant;
+    },
+
+    // ---- COMPETITION: SCORE EPOCH ----
+    // Called after each Kronos epoch. Scores trunk vs mutant performance.
+    // Scoring: how well does the simulation predict reality?
+    // Uses calibration accuracy as the fitness metric.
+    scoreEpoch(epoch, calibrationState) {
+        if (this.activeMutants.length === 0) return;
+        if (!calibrationState) return;
+
+        const accuracy = calibrationState.credibility || 0.5;
+        const trustWeight = TrustEngine.trustWeight || 1.0;
+        // Fitness = credibility * trustWeight
+        // High credibility + high trust = good model
+        const fitness = accuracy * trustWeight;
+
+        for (const mutant of this.activeMutants) {
+            if (mutant.status !== 'competing') continue;
+
+            // Score this epoch for the active branch
+            if (Kronos.currentBranch === mutant.branchId) {
+                mutant.mutantScore += fitness;
+                mutant.mutantEpochs.push({
+                    scanIndex: epoch.scanIndex,
+                    fitness,
+                    accuracy,
+                    trustWeight
+                });
+            } else if (Kronos.currentBranch === 'trunk') {
+                mutant.trunkScore += fitness;
+                mutant.trunkEpochs.push({
+                    scanIndex: epoch.scanIndex,
+                    fitness,
+                    accuracy,
+                    trustWeight
+                });
+            }
+
+            mutant.competitionEpochs++;
+        }
+    },
+
+    // ---- SELECTION: CHECK COMPETITION RESULTS ----
+    // Called after each epoch. Checks if any competition has enough data.
+    async checkCompetitions() {
+        const requiredEpochs = ORACLE_CONFIG.DARWIN_COMPETITION_EPOCHS;
+        const results = [];
+
+        for (let i = this.activeMutants.length - 1; i >= 0; i--) {
+            const mutant = this.activeMutants[i];
+            if (mutant.status !== 'competing') continue;
+
+            // Need epochs from BOTH trunk and mutant branch
+            const trunkN = mutant.trunkEpochs.length;
+            const mutantN = mutant.mutantEpochs.length;
+
+            // Not enough data yet
+            if (trunkN < Math.floor(requiredEpochs / 2) ||
+                mutantN < Math.floor(requiredEpochs / 2)) {
+                continue;
+            }
+
+            // Total epochs must reach threshold
+            if (mutant.competitionEpochs < requiredEpochs) continue;
+
+            // JUDGE: compare average fitness
+            const trunkAvg = trunkN > 0 ? mutant.trunkScore / trunkN : 0;
+            const mutantAvg = mutantN > 0 ? mutant.mutantScore / mutantN : 0;
+
+            const winner = mutantAvg > trunkAvg ? 'mutant' : 'trunk';
+            const margin = Math.abs(mutantAvg - trunkAvg);
+
+            const result = {
+                branchId: mutant.branchId,
+                generation: mutant.generation,
+                targetGene: mutant.targetGene,
+                originalValue: mutant.originalValue,
+                mutatedValue: mutant.mutatedValue,
+                trunkAvgFitness: Math.round(trunkAvg * 10000) / 10000,
+                mutantAvgFitness: Math.round(mutantAvg * 10000) / 10000,
+                margin: Math.round(margin * 10000) / 10000,
+                winner,
+                trunkEpochs: trunkN,
+                mutantEpochs: mutantN,
+                timestamp: Date.now()
+            };
+
+            if (winner === 'mutant') {
+                // GRAFT: mutant wins → absorb its parameter into trunk
+                await this._graft(mutant, result);
+                result.action = 'grafted';
+            } else {
+                // PRUNE: trunk wins → discard mutant
+                await this._prune(mutant, result);
+                result.action = 'pruned';
+            }
+
+            // Remove from active, add to history
+            this.activeMutants.splice(i, 1);
+            this.history.push(result);
+            results.push(result);
+        }
+
+        return results;
+    },
+
+    // ---- GRAFT: Mutant wins, absorb its gene ----
+    async _graft(mutant, result) {
+        console.log('[Darwin] === GRAFT ===');
+        console.log('[Darwin] Mutant WINS: ' + mutant.targetGene +
+            ' ' + mutant.originalValue + ' → ' + mutant.mutatedValue);
+        console.log('[Darwin] Fitness: trunk=' + result.trunkAvgFitness +
+            ' mutant=' + result.mutantAvgFitness +
+            ' margin=' + result.margin);
+
+        // Absorb the mutated parameter
+        this.genome[mutant.targetGene] = mutant.mutatedValue;
+
+        // Apply to live config
+        this._applyGenome();
+
+        mutant.status = 'grafted';
+
+        // Switch back to trunk with new genome
+        if (Kronos.currentBranch !== 'trunk') {
+            await Kronos.switchBranch('trunk');
+        }
+
+        console.log('[Darwin] New genome applied: ' + JSON.stringify(this.genome));
+    },
+
+    // ---- PRUNE: Trunk wins, discard mutant ----
+    async _prune(mutant, result) {
+        console.log('[Darwin] === PRUNE ===');
+        console.log('[Darwin] Trunk WINS. Discarding: ' + mutant.targetGene +
+            ' mutation ' + mutant.originalValue + ' → ' + mutant.mutatedValue);
+        console.log('[Darwin] Fitness: trunk=' + result.trunkAvgFitness +
+            ' mutant=' + result.mutantAvgFitness);
+
+        mutant.status = 'pruned';
+
+        // Ensure we're back on trunk
+        if (Kronos.currentBranch !== 'trunk') {
+            await Kronos.switchBranch('trunk');
+        }
+    },
+
+    // ---- APPLY GENOME TO LIVE CONFIG ----
+    _applyGenome() {
+        ORACLE_CONFIG.NEURON_ALPHA = this.genome.neuronAlpha;
+        ORACLE_CONFIG.CALIBRATION_ALPHA = this.genome.calibrationAlpha;
+        ORACLE_CONFIG.TRUST_SKILL_ALPHA = this.genome.trustSkillAlpha;
+        ORACLE_CONFIG.TRUST_ATTENUATION_MID = this.genome.trustAttenuationMid;
+        // couplingBaseBeta and simNoiseScale are read directly
+        // from genome during simulation calls
+    },
+
+    // ---- GET CURRENT MUTABLE PARAMS ----
+    // For SyntheticField to read during simulation
+    getParam(key) {
+        return this.genome[key] !== undefined ? this.genome[key] : null;
+    },
+
+    // ---- STATE ----
+    getState() {
+        return {
+            generation: this.generation,
+            genome: Object.assign({}, this.genome),
+            lowTrustStreak: this.lowTrustStreak,
+            activeMutants: this.activeMutants.map(m => ({
+                branchId: m.branchId,
+                generation: m.generation,
+                targetGene: m.targetGene,
+                originalValue: m.originalValue,
+                mutatedValue: m.mutatedValue,
+                status: m.status,
+                competitionEpochs: m.competitionEpochs,
+                trunkAvg: m.trunkEpochs.length > 0
+                    ? Math.round(m.trunkScore / m.trunkEpochs.length * 10000) / 10000
+                    : null,
+                mutantAvg: m.mutantEpochs.length > 0
+                    ? Math.round(m.mutantScore / m.mutantEpochs.length * 10000) / 10000
+                    : null
+            })),
+            recentHistory: this.history.slice(-10),
+            grafted: this.history.filter(h => h.action === 'grafted').length,
+            pruned: this.history.filter(h => h.action === 'pruned').length
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 14: ORCHESTRATOR
 // ============================================================
 
 const OracleEngine = {
@@ -2197,7 +2547,9 @@ const OracleEngine = {
         // Trust Engine state
         trust: null,
         // Signal Bus state
-        signalBus: null
+        signalBus: null,
+        // Darwin Engine state
+        darwin: null
     },
 
     listeners: [],
@@ -2221,6 +2573,10 @@ const OracleEngine = {
             // Initialize Trust Engine (algorithmic self-humility)
             await TrustEngine.loadState();
             this.state.trust = TrustEngine.getState();
+
+            // Initialize Darwin Engine (evolutionary pressure)
+            DarwinEngine.init();
+            this.state.darwin = DarwinEngine.getState();
 
             // Register neuron sources on Signal Bus
             for (const neuron of SensoryMesh.neurons) {
@@ -2343,6 +2699,29 @@ const OracleEngine = {
                     trust: TrustEngine.getState()
                 });
                 this.state.kronos = Kronos.getState();
+
+                // Darwin Engine: score this epoch for active competitions
+                DarwinEngine.scoreEpoch(
+                    Kronos.lastEpoch,
+                    CalibrationEngine.getState()
+                );
+
+                // Darwin Engine: check if trust has been low long enough to trigger mutation
+                await DarwinEngine.checkTrigger(
+                    TrustEngine.getState(),
+                    Kronos.lastEpoch
+                );
+
+                // Darwin Engine: check if any competition has concluded
+                const darwinResults = await DarwinEngine.checkCompetitions();
+                if (darwinResults.length > 0) {
+                    for (const r of darwinResults) {
+                        console.log('[OracleEngine] Darwin ' + r.action + ': ' +
+                            r.targetGene + ' (margin=' + r.margin + ')');
+                    }
+                }
+
+                this.state.darwin = DarwinEngine.getState();
             } catch (err) {
                 console.warn('[OracleEngine] Kronos epoch failed:', err);
             }
