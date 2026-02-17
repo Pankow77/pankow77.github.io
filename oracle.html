@@ -995,6 +995,130 @@
             #futuresCloud { height: 200px; }
         }
 
+        /* ===== SPECIATION & RT0 DASHBOARD ===== */
+        .speciation-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid #ff44cc;
+            border-radius: 4px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .speciation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .species-card {
+            background: rgba(0, 200, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px 16px;
+        }
+
+        .species-card.active { border-color: var(--cyan); }
+        .species-card.trunk { border-color: var(--teal); }
+        .species-card.competing { border-color: var(--orange); }
+        .species-card.pruned { border-color: var(--red-dim); opacity: 0.5; }
+
+        .species-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .species-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
+        }
+
+        .species-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.65rem;
+        }
+
+        .species-metric-label {
+            color: var(--text-secondary);
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .species-metric-value {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+
+        .rt0-panel {
+            background: rgba(255, 68, 204, 0.04);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px 16px;
+        }
+
+        .rt0-anchors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .rt0-anchor {
+            text-align: center;
+            padding: 8px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .rt0-anchor-label {
+            font-size: 0.5rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 4px;
+        }
+
+        .rt0-anchor-value {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .blind-scoring-bar {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .blind-scoring-bar .bar-track {
+            flex: 1;
+            height: 4px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .blind-scoring-bar .bar-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+
+        @media (max-width: 900px) {
+            .speciation-grid { grid-template-columns: 1fr; }
+            .rt0-anchors { grid-template-columns: 1fr; }
+        }
+
         /* ===== BOTTOM ROW: HISTORY + DIAGNOSIS ===== */
         .bottom-row {
             display: grid;
@@ -1522,6 +1646,89 @@
             </div>
         </div>
 
+        <!-- ===== SPECIATION & RT0 ===== -->
+        <div class="speciation-section" id="speciationSection">
+            <div class="panel-title" style="border-bottom-color: #ff44cc;">
+                <span style="color: #ff44cc;">S3</span> &mdash;
+                SPECIAZIONE &amp; REALITY TETHER ZERO
+            </div>
+
+            <!-- RT0 Panel -->
+            <div class="rt0-panel">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <span class="species-metric-label">RT0 CONSISTENCY</span>
+                        <div id="rt0ConsistencyValue" class="species-metric-value" style="font-size: 1.1rem; color: var(--text-dim);">&mdash;</div>
+                    </div>
+                    <div>
+                        <span class="species-metric-label">WORLD DISTRESS</span>
+                        <div id="rt0DistressValue" class="species-metric-value" style="font-size: 1.1rem; color: var(--text-dim);">&mdash;</div>
+                    </div>
+                    <div>
+                        <span class="species-metric-label">BLIND SCORE</span>
+                        <div id="blindScoreValue" class="species-metric-value" style="font-size: 1.1rem; color: var(--text-dim);">&mdash;</div>
+                    </div>
+                </div>
+
+                <div class="rt0-anchors">
+                    <div class="rt0-anchor">
+                        <div class="rt0-anchor-label">Kp (Space)</div>
+                        <div class="rt0-anchor-value" id="rt0Kp">&mdash;</div>
+                    </div>
+                    <div class="rt0-anchor">
+                        <div class="rt0-anchor-label">Severe Wx</div>
+                        <div class="rt0-anchor-value" id="rt0Alerts">&mdash;</div>
+                    </div>
+                    <div class="rt0-anchor">
+                        <div class="rt0-anchor-label">Fear &amp; Greed</div>
+                        <div class="rt0-anchor-value" id="rt0FnG">&mdash;</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Species Grid -->
+            <div class="speciation-grid" id="speciationGrid">
+                <!-- Trunk (always shown) -->
+                <div class="species-card trunk" id="speciesTrunk">
+                    <div class="species-name" style="color: var(--teal);">TRUNK</div>
+                    <div class="species-metrics">
+                        <div class="species-metric">
+                            <span class="species-metric-label">Fitness</span>
+                            <span class="species-metric-value" id="trunkFitness">&mdash;</span>
+                        </div>
+                        <div class="species-metric">
+                            <span class="species-metric-label">Recovery</span>
+                            <span class="species-metric-value" id="trunkRecovery">&mdash;</span>
+                        </div>
+                        <div class="species-metric">
+                            <span class="species-metric-label">Overshoot</span>
+                            <span class="species-metric-value" id="trunkOvershoot">&mdash;</span>
+                        </div>
+                        <div class="species-metric">
+                            <span class="species-metric-label">RT0</span>
+                            <span class="species-metric-value" id="trunkRT0">&mdash;</span>
+                        </div>
+                    </div>
+                    <div class="blind-scoring-bar">
+                        <span class="species-metric-label" style="white-space: nowrap;">Blind</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" id="trunkBlindBar" style="width: 0%; background: var(--teal);"></div>
+                        </div>
+                        <span class="species-metric-value" id="trunkBlindScore" style="font-size: 0.6rem;">&mdash;</span>
+                    </div>
+                </div>
+
+                <!-- Dynamic mutant cards will be injected here by JS -->
+            </div>
+
+            <!-- Darwin Status -->
+            <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 0.6rem; color: var(--text-secondary);">
+                <span>GEN <strong id="darwinGen" style="color: var(--cyan);">0</strong></span>
+                <span>GRAFTED <strong id="darwinGrafted" style="color: var(--green);">0</strong> &middot; PRUNED <strong id="darwinPruned" style="color: var(--red);">0</strong> &middot; STRUCTURAL <strong id="darwinStructural" style="color: #ff44cc;">0</strong></span>
+                <span id="darwinHysteresis" style="color: var(--text-dim);">HYSTERESIS: idle</span>
+            </div>
+        </div>
+
         <!-- ===== BOTTOM ROW ===== -->
         <div class="bottom-row">
             <!-- Stability History -->
@@ -1679,6 +1886,7 @@
             updateNeuronGrid(state);
             updateSynapticDisplay(state);
             updateCorticalField(state);
+            updateSpeciationDisplay(state);
             updateDiagnosis(state);
             updateSignalLog(state);
             updateMiniChart();
@@ -2184,6 +2392,167 @@
     }
 
     // ===== FOOTER UPDATE =====
+    // ===== SPECIATION & RT0 DISPLAY =====
+    function updateSpeciationDisplay(state) {
+        // RT0 panel
+        if (state.rt0) {
+            const rt0 = state.rt0;
+            const consEl = document.getElementById('rt0ConsistencyValue');
+            const distEl = document.getElementById('rt0DistressValue');
+
+            if (rt0.consistency !== null && rt0.consistency !== undefined) {
+                consEl.textContent = rt0.consistency.toFixed(3);
+                consEl.style.color = rt0.consistency > 0.7 ? 'var(--green)'
+                    : rt0.consistency > 0.4 ? 'var(--orange)' : 'var(--red)';
+            }
+            if (rt0.worldDistress !== null && rt0.worldDistress !== undefined) {
+                distEl.textContent = rt0.worldDistress.toFixed(3);
+                distEl.style.color = rt0.worldDistress < 0.3 ? 'var(--green)'
+                    : rt0.worldDistress < 0.6 ? 'var(--orange)' : 'var(--red)';
+            }
+
+            // Anchor values
+            if (rt0.anchors) {
+                const kpEl = document.getElementById('rt0Kp');
+                const alertEl = document.getElementById('rt0Alerts');
+                const fngEl = document.getElementById('rt0FnG');
+
+                if (rt0.anchors.spaceWeather && rt0.anchors.spaceWeather.kp !== null) {
+                    const kp = rt0.anchors.spaceWeather.kp;
+                    kpEl.textContent = kp.toFixed(1);
+                    kpEl.style.color = kp < 4 ? 'var(--green)' : kp < 6 ? 'var(--orange)' : 'var(--red)';
+                }
+                if (rt0.anchors.severeWeather && rt0.anchors.severeWeather.alerts !== null) {
+                    const alerts = rt0.anchors.severeWeather.alerts;
+                    alertEl.textContent = alerts;
+                    alertEl.style.color = alerts < 5 ? 'var(--green)' : alerts < 15 ? 'var(--orange)' : 'var(--red)';
+                }
+                if (rt0.anchors.marketFear && rt0.anchors.marketFear.fng !== null) {
+                    const fng = rt0.anchors.marketFear.fng;
+                    fngEl.textContent = fng;
+                    fngEl.style.color = fng > 50 ? 'var(--green)' : fng > 25 ? 'var(--orange)' : 'var(--red)';
+                }
+            }
+        }
+
+        // Blind scoring
+        if (state.blindScoring) {
+            const bsEl = document.getElementById('blindScoreValue');
+            const branchScore = state.blindScoring.byBranch;
+            if (branchScore) {
+                // Show trunk's blind score
+                const trunkBS = branchScore['trunk'];
+                if (trunkBS && trunkBS.avgScore !== null) {
+                    bsEl.textContent = trunkBS.avgScore.toFixed(3);
+                    bsEl.style.color = trunkBS.avgScore > 0.6 ? 'var(--green)'
+                        : trunkBS.avgScore > 0.3 ? 'var(--orange)' : 'var(--red)';
+
+                    // Trunk blind bar
+                    const trunkBar = document.getElementById('trunkBlindBar');
+                    const trunkBVal = document.getElementById('trunkBlindScore');
+                    if (trunkBar) trunkBar.style.width = (trunkBS.avgScore * 100) + '%';
+                    if (trunkBVal) trunkBVal.textContent = trunkBS.avgScore.toFixed(3);
+                }
+            }
+        }
+
+        // Darwin state
+        if (state.darwin) {
+            const d = state.darwin;
+            const genEl = document.getElementById('darwinGen');
+            const graftEl = document.getElementById('darwinGrafted');
+            const pruneEl = document.getElementById('darwinPruned');
+            const structEl = document.getElementById('darwinStructural');
+            const hystEl = document.getElementById('darwinHysteresis');
+
+            if (genEl) genEl.textContent = d.generation || 0;
+            if (graftEl) graftEl.textContent = d.grafted || 0;
+            if (pruneEl) pruneEl.textContent = d.pruned || 0;
+            if (structEl) structEl.textContent = d.structuralMutations || 0;
+
+            if (hystEl && d.hysteresis) {
+                const h = d.hysteresis;
+                if (h.armed) {
+                    hystEl.textContent = 'HYSTERESIS: ARMED (low=' + h.lowStreak + ')';
+                    hystEl.style.color = 'var(--red)';
+                } else if (h.lowStreak > 0) {
+                    hystEl.textContent = 'HYSTERESIS: tracking (low=' + h.lowStreak + ')';
+                    hystEl.style.color = 'var(--orange)';
+                } else {
+                    hystEl.textContent = 'HYSTERESIS: idle';
+                    hystEl.style.color = 'var(--text-dim)';
+                }
+            }
+
+            // Trunk fitness metrics
+            if (state.kronos && state.kronos.branchMemory) {
+                const bm = state.kronos.branchMemory;
+                const fEl = document.getElementById('trunkFitness');
+                const rEl = document.getElementById('trunkRecovery');
+                const oEl = document.getElementById('trunkOvershoot');
+                const rtEl = document.getElementById('trunkRT0');
+
+                if (fEl && bm.recoveryFitness !== null && bm.recoveryFitness !== undefined) {
+                    fEl.textContent = bm.recoveryFitness.toFixed(4);
+                    fEl.style.color = bm.recoveryFitness > 0.5 ? 'var(--green)' : 'var(--orange)';
+                }
+                if (rEl) rEl.textContent = bm.recoveries + ' events';
+                if (oEl) oEl.textContent = bm.decayRate.toFixed(2);
+                if (rtEl && state.rt0) {
+                    rtEl.textContent = (state.rt0.consistency || 0).toFixed(3);
+                }
+            }
+
+            // Dynamic mutant cards
+            const grid = document.getElementById('speciationGrid');
+            if (grid && d.activeMutants) {
+                // Remove old mutant cards (keep trunk card)
+                const oldMutants = grid.querySelectorAll('.species-card.competing, .species-card.mutant-card');
+                oldMutants.forEach(el => el.remove());
+
+                // Add active mutant cards
+                for (const m of d.activeMutants) {
+                    const card = document.createElement('div');
+                    card.className = 'species-card competing mutant-card';
+                    const mColor = m.mutationType === 'structural' ? '#ff44cc' : 'var(--orange)';
+
+                    const blindBranchScore = state.blindScoring && state.blindScoring.byBranch
+                        && state.blindScoring.byBranch[m.branchId]
+                        ? state.blindScoring.byBranch[m.branchId].avgScore : null;
+
+                    card.innerHTML = '<div class="species-name" style="color: ' + mColor + ';">'
+                        + (m.species || '?').toUpperCase() + ' G' + m.generation
+                        + ' <span style="color: var(--text-dim); font-size: 0.45rem;">'
+                        + (m.mutationType || 'parametric') + '</span></div>'
+                        + '<div class="species-metrics">'
+                        + '<div class="species-metric"><span class="species-metric-label">Gene</span>'
+                        + '<span class="species-metric-value" style="color: ' + mColor + '; font-size: 0.55rem;">'
+                        + m.targetGene + '</span></div>'
+                        + '<div class="species-metric"><span class="species-metric-label">Mut</span>'
+                        + '<span class="species-metric-value">'
+                        + m.originalValue + ' &rarr; ' + m.mutatedValue + '</span></div>'
+                        + '<div class="species-metric"><span class="species-metric-label">Fitness</span>'
+                        + '<span class="species-metric-value" style="color: var(--cyan);">'
+                        + (m.mutantAvg !== null ? m.mutantAvg.toFixed(4) : '...') + '</span></div>'
+                        + '<div class="species-metric"><span class="species-metric-label">Epochs</span>'
+                        + '<span class="species-metric-value">'
+                        + m.competitionEpochs + '/' + m.tournamentEpochs + '</span></div>'
+                        + '</div>'
+                        + '<div class="blind-scoring-bar">'
+                        + '<span class="species-metric-label" style="white-space: nowrap;">Blind</span>'
+                        + '<div class="bar-track"><div class="bar-fill" style="width: '
+                        + (blindBranchScore !== null ? (blindBranchScore * 100) : 0)
+                        + '%; background: ' + mColor + ';"></div></div>'
+                        + '<span class="species-metric-value" style="font-size: 0.6rem;">'
+                        + (blindBranchScore !== null ? blindBranchScore.toFixed(3) : '...') + '</span>'
+                        + '</div>';
+
+                    grid.appendChild(card);
+                }
+            }
+        }
+    }
+
     function updateFooter(state) {
         // Update memory count via IndexedDB
         if (OracleMemory.db) {

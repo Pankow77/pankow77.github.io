@@ -2545,6 +2545,424 @@ const TrustEngine = {
 
 
 // ============================================================
+// SECTION 12b: RT0 — Reality Tether Zero (Ancora Esterna)
+// ============================================================
+// Il sistema NON controlla queste fonti.
+// NON può ottimizzarle. NON può corromperle.
+// Sono ancoramenti ortogonali alla realtà fisica:
+//   - Geomagnetismo (spazio)
+//   - Meteo estremo (NOAA)
+//   - Paura di mercato (Fear & Greed)
+//
+// Se il sistema urla "crisi!" e il mondo fisico tace,
+// il ramo si becca sfiducia. E viceversa.
+//
+// RT0 non alimenta le predizioni. Le giudica.
+// ============================================================
+
+const RealityTetherZero = {
+    anchors: {
+        // Kp Index — geomagnetismo planetario
+        // Kp 0-3: quiet, 4: active, 5-6: storm, 7+: severe storm
+        spaceWeather: {
+            name: 'NOAA Kp Index',
+            url: 'https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json',
+            lastValue: null,
+            lastRaw: null,
+            lastFetch: null,
+            reliability: 1.0
+        },
+        // Active severe/extreme weather alerts — US-centric but objective
+        severeWeather: {
+            name: 'NOAA Severe Weather',
+            url: 'https://api.weather.gov/alerts/active?status=actual&severity=extreme,severe',
+            lastValue: null,
+            lastRaw: null,
+            lastFetch: null,
+            reliability: 1.0
+        },
+        // Market Fear & Greed — 0=Extreme Fear, 100=Extreme Greed
+        marketFear: {
+            name: 'Market Fear & Greed',
+            url: 'https://api.alternative.me/fng/?limit=1',
+            lastValue: null,
+            lastRaw: null,
+            lastFetch: null,
+            reliability: 1.0
+        }
+    },
+
+    consistency: 0.5,   // [0,1] — system-world coherence
+    worldDistress: null, // [0,1] — objective physical distress
+    history: [],         // Rolling consistency history
+
+    // Fetch all anchors — called AFTER system makes predictions
+    async fetch() {
+        const results = {};
+
+        // 1. Space Weather Kp Index
+        try {
+            const kpData = await this._fetchAnchor(this.anchors.spaceWeather.url);
+            if (kpData && Array.isArray(kpData) && kpData.length > 1) {
+                // Last entry: [timestamp, Kp, Kp_fraction, a_running, station_count]
+                const lastEntry = kpData[kpData.length - 1];
+                const kp = parseFloat(lastEntry[1]);
+                if (!isNaN(kp)) {
+                    this.anchors.spaceWeather.lastValue = kp;
+                    this.anchors.spaceWeather.lastRaw = lastEntry;
+                    this.anchors.spaceWeather.lastFetch = Date.now();
+                    results.spaceWeather = kp;
+                }
+            }
+        } catch (err) {
+            console.warn('[RT0] Space weather fetch failed:', err.message);
+            this.anchors.spaceWeather.reliability *= 0.95;
+        }
+
+        // 2. Severe Weather Alerts
+        try {
+            const alertData = await this._fetchAnchor(this.anchors.severeWeather.url);
+            if (alertData && alertData.features) {
+                const alertCount = alertData.features.length;
+                this.anchors.severeWeather.lastValue = alertCount;
+                this.anchors.severeWeather.lastRaw = {
+                    count: alertCount,
+                    types: alertData.features.slice(0, 5).map(f =>
+                        f.properties ? f.properties.event : 'unknown'
+                    )
+                };
+                this.anchors.severeWeather.lastFetch = Date.now();
+                results.severeWeather = alertCount;
+            }
+        } catch (err) {
+            console.warn('[RT0] Severe weather fetch failed:', err.message);
+            this.anchors.severeWeather.reliability *= 0.95;
+        }
+
+        // 3. Market Fear & Greed
+        try {
+            const fngData = await this._fetchAnchor(this.anchors.marketFear.url);
+            if (fngData && fngData.data && fngData.data.length > 0) {
+                const fng = parseInt(fngData.data[0].value);
+                if (!isNaN(fng)) {
+                    this.anchors.marketFear.lastValue = fng;
+                    this.anchors.marketFear.lastRaw = fngData.data[0];
+                    this.anchors.marketFear.lastFetch = Date.now();
+                    results.marketFear = fng;
+                }
+            }
+        } catch (err) {
+            console.warn('[RT0] Market fear fetch failed:', err.message);
+            this.anchors.marketFear.reliability *= 0.95;
+        }
+
+        const fetched = Object.keys(results).length;
+        console.log('[RT0] Fetched ' + fetched + '/3 anchors: ' + JSON.stringify(results));
+        return results;
+    },
+
+    // Fetch helper — try direct, fallback to CORS proxy
+    async _fetchAnchor(url) {
+        // Try direct fetch first
+        try {
+            const resp = await fetch(url, { signal: AbortSignal.timeout(8000) });
+            if (resp.ok) return await resp.json();
+        } catch (e) {
+            // Direct failed, try CORS proxy
+        }
+
+        // Fallback: CORS proxy
+        try {
+            const proxyUrl = ORACLE_CONFIG.CORS_PROXY + encodeURIComponent(url);
+            const resp = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
+            if (resp.ok) {
+                const data = await resp.json();
+                // allorigins wraps content in { contents: "..." }
+                if (data.contents) {
+                    return JSON.parse(data.contents);
+                }
+                return data;
+            }
+        } catch (e) {
+            // Both failed
+        }
+
+        return null;
+    },
+
+    // Compute objective world distress from hard anchors [0, 1]
+    computeWorldDistress() {
+        let distress = 0;
+        let weight = 0;
+
+        // Space weather: Kp 0-3 quiet, 4 active, 5-6 storm, 7+ severe
+        if (this.anchors.spaceWeather.lastValue !== null) {
+            const kp = this.anchors.spaceWeather.lastValue;
+            const kpDistress = Math.min(1, Math.max(0, (kp - 2) / 5)); // 2→0, 7→1
+            distress += kpDistress * this.anchors.spaceWeather.reliability;
+            weight += this.anchors.spaceWeather.reliability;
+        }
+
+        // Severe weather: count of active severe/extreme alerts
+        if (this.anchors.severeWeather.lastValue !== null) {
+            const alertCount = this.anchors.severeWeather.lastValue;
+            const wxDistress = Math.min(1, alertCount / 20); // 20+ alerts = max distress
+            distress += wxDistress * this.anchors.severeWeather.reliability;
+            weight += this.anchors.severeWeather.reliability;
+        }
+
+        // Market fear: 0=Extreme Fear, 100=Extreme Greed → invert
+        if (this.anchors.marketFear.lastValue !== null) {
+            const fng = this.anchors.marketFear.lastValue;
+            const mktDistress = 1 - (fng / 100); // 0→1, 100→0
+            distress += mktDistress * this.anchors.marketFear.reliability;
+            weight += this.anchors.marketFear.reliability;
+        }
+
+        if (weight === 0) return null;
+
+        this.worldDistress = Math.round((distress / weight) * 1000) / 1000;
+        return this.worldDistress;
+    },
+
+    // Compare system stability to objective world distress
+    // Returns consistency score [0,1]
+    // High = system and world agree. Low = system is hallucinating.
+    computeConsistency(systemStability) {
+        const worldDistress = this.computeWorldDistress();
+        if (worldDistress === null) return null;
+
+        // System distress = 1 - stability
+        const systemDistress = 1 - systemStability;
+
+        // Consistency = 1 - |systemDistress - worldDistress|
+        // Perfect consistency = system's alarm matches real-world tremor
+        const divergence = Math.abs(systemDistress - worldDistress);
+        this.consistency = Math.round(Math.max(0, 1 - divergence) * 1000) / 1000;
+
+        // Record history
+        this.history.push({
+            timestamp: Date.now(),
+            consistency: this.consistency,
+            worldDistress,
+            systemDistress: Math.round(systemDistress * 1000) / 1000,
+            anchors: {
+                kp: this.anchors.spaceWeather.lastValue,
+                alerts: this.anchors.severeWeather.lastValue,
+                fng: this.anchors.marketFear.lastValue
+            }
+        });
+
+        // Keep last 100 entries
+        if (this.history.length > 100) {
+            this.history = this.history.slice(-100);
+        }
+
+        return this.consistency;
+    },
+
+    getState() {
+        return {
+            consistency: this.consistency,
+            worldDistress: this.worldDistress,
+            anchors: {
+                spaceWeather: {
+                    kp: this.anchors.spaceWeather.lastValue,
+                    lastFetch: this.anchors.spaceWeather.lastFetch,
+                    reliability: Math.round(this.anchors.spaceWeather.reliability * 100) / 100
+                },
+                severeWeather: {
+                    alerts: this.anchors.severeWeather.lastValue,
+                    lastFetch: this.anchors.severeWeather.lastFetch,
+                    reliability: Math.round(this.anchors.severeWeather.reliability * 100) / 100
+                },
+                marketFear: {
+                    fng: this.anchors.marketFear.lastValue,
+                    lastFetch: this.anchors.marketFear.lastFetch,
+                    reliability: Math.round(this.anchors.marketFear.reliability * 100) / 100
+                }
+            },
+            recentHistory: this.history.slice(-10)
+        };
+    }
+};
+
+
+// ============================================================
+// SECTION 12c: BLIND SCORING — Anti-Auto-Referenza
+// ============================================================
+// Ogni ramo fa una scommessa timestampata.
+// La scommessa è write-once. Non può essere modificata.
+// La valutazione avviene DOPO, senza possibilità di edit.
+//
+// Questo è il coltello che taglia l'auto-referenza.
+// Non puoi barare se la risposta è già sigillata.
+// ============================================================
+
+const BlindScoring = {
+    predictions: [],
+    EVAL_WINDOW: 4,     // Evaluate after 4 epochs
+    MAX_PREDICTIONS: 200,
+
+    // Write-once micro-prediction — sealed at creation
+    recordPrediction(branchId, scanIndex, currentStability, currentRegime, currentDelta) {
+        // Extrapolate trend: predict delta over EVAL_WINDOW epochs
+        // The system bets its current reading will hold
+        const predictedDeltaS = currentDelta * this.EVAL_WINDOW * 0.8;
+
+        // Regime persistence: bet the current regime continues
+        const predictedRegime = currentRegime;
+
+        const prediction = {
+            id: 'bp-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6),
+            branchId,
+            scanIndex,
+            timestamp: Date.now(),
+            // Sealed predictions — cannot be modified
+            predictedDeltaS: Math.round(predictedDeltaS * 10000) / 10000,
+            predictedRegime,
+            currentStability: Math.round(currentStability * 1000) / 1000,
+            // Evaluation (filled later)
+            evaluated: false,
+            score: null,
+            evaluatedAt: null,
+            actual: null
+        };
+
+        // Seal: freeze the prediction object
+        Object.freeze(prediction);
+
+        this.predictions.push(prediction);
+
+        // Compact if needed
+        if (this.predictions.length > this.MAX_PREDICTIONS) {
+            const evaluated = this.predictions.filter(p => p.evaluated);
+            const pending = this.predictions.filter(p => !p.evaluated);
+            this.predictions = evaluated.slice(-100).concat(pending);
+        }
+
+        console.log('[BlindScoring] Prediction sealed: ' + prediction.id +
+            ' branch=' + branchId +
+            ' ΔS=' + prediction.predictedDeltaS +
+            ' regime=' + predictedRegime);
+
+        return prediction;
+    },
+
+    // Evaluate predictions that have aged past EVAL_WINDOW
+    evaluatePending(currentScanIndex, currentStability, currentRegime) {
+        const results = [];
+
+        for (let i = 0; i < this.predictions.length; i++) {
+            const pred = this.predictions[i];
+            if (pred.evaluated) continue;
+            if (currentScanIndex - pred.scanIndex < this.EVAL_WINDOW) continue;
+
+            // Compute actual outcome
+            const actualDelta = currentStability - pred.currentStability;
+            const predictedDir = pred.predictedDeltaS >= 0 ? 1 : -1;
+            const actualDir = actualDelta >= -0.005 ? 1 : -1; // Small deadband
+
+            // Direction accuracy (40%)
+            const directionScore = predictedDir === actualDir ? 1 : 0;
+
+            // Magnitude accuracy (30%) — how close was the magnitude prediction?
+            const magError = Math.abs(pred.predictedDeltaS - actualDelta);
+            const magnitudeScore = Math.max(0, 1 - magError * 5);
+
+            // Regime accuracy (30%) — did the predicted regime match?
+            const regimeScore = pred.predictedRegime === currentRegime ? 1 : 0;
+
+            const score = Math.round(
+                (directionScore * 0.4 + magnitudeScore * 0.3 + regimeScore * 0.3) * 1000
+            ) / 1000;
+
+            // Create evaluated version (original is frozen)
+            const evaluated = {
+                id: pred.id,
+                branchId: pred.branchId,
+                scanIndex: pred.scanIndex,
+                timestamp: pred.timestamp,
+                predictedDeltaS: pred.predictedDeltaS,
+                predictedRegime: pred.predictedRegime,
+                currentStability: pred.currentStability,
+                evaluated: true,
+                score,
+                evaluatedAt: Date.now(),
+                actual: {
+                    stability: Math.round(currentStability * 1000) / 1000,
+                    regime: currentRegime,
+                    delta: Math.round(actualDelta * 10000) / 10000
+                }
+            };
+
+            this.predictions[i] = evaluated;
+            results.push(evaluated);
+
+            console.log('[BlindScoring] Evaluated: ' + pred.id +
+                ' score=' + score +
+                ' (dir=' + directionScore +
+                ' mag=' + magnitudeScore.toFixed(2) +
+                ' reg=' + regimeScore + ')');
+        }
+
+        return results;
+    },
+
+    // Get blind score for a specific branch
+    getBranchScore(branchId) {
+        const evaluated = this.predictions.filter(
+            p => p.evaluated && p.branchId === branchId
+        );
+        if (evaluated.length === 0) return null;
+        return Math.round(
+            (evaluated.reduce((s, p) => s + p.score, 0) / evaluated.length) * 1000
+        ) / 1000;
+    },
+
+    getState() {
+        const byBranch = {};
+        for (const p of this.predictions) {
+            if (!byBranch[p.branchId]) {
+                byBranch[p.branchId] = { pending: 0, evaluated: 0, avgScore: null, scores: [] };
+            }
+            if (p.evaluated) {
+                byBranch[p.branchId].evaluated++;
+                byBranch[p.branchId].scores.push(p.score);
+            } else {
+                byBranch[p.branchId].pending++;
+            }
+        }
+
+        for (const b of Object.keys(byBranch)) {
+            const scores = byBranch[b].scores;
+            byBranch[b].avgScore = scores.length > 0
+                ? Math.round((scores.reduce((s, v) => s + v, 0) / scores.length) * 1000) / 1000
+                : null;
+            delete byBranch[b].scores;
+        }
+
+        return {
+            totalPredictions: this.predictions.length,
+            pending: this.predictions.filter(p => !p.evaluated).length,
+            evaluated: this.predictions.filter(p => p.evaluated).length,
+            byBranch,
+            recentEvaluations: this.predictions
+                .filter(p => p.evaluated)
+                .slice(-5)
+                .map(p => ({
+                    id: p.id,
+                    branchId: p.branchId,
+                    score: p.score,
+                    predictedDeltaS: p.predictedDeltaS,
+                    actualDelta: p.actual ? p.actual.delta : null
+                }))
+        };
+    }
+};
+
+
+// ============================================================
 // SECTION 13: DARWIN ENGINE — Auto-Evoluzione Guidata dall'Errore
 // ============================================================
 // Quando il modello sbaglia abbastanza a lungo,
@@ -2755,8 +3173,8 @@ const DarwinEngine = {
     },
 
     // ---- COMPETITION: SCORE EPOCH ----
-    // Dual fitness: classic (credibility × trust) + recovery-based
-    // Recovery fitness is impossible to fake — either you recover from chaos or you don't.
+    // Quad fitness: classic + recovery + RT0 + blind scoring
+    // Four signals that cannot all be gamed simultaneously.
     scoreEpoch(epoch, calibrationState) {
         if (this.activeMutants.length === 0) return;
         if (!calibrationState) return;
@@ -2764,49 +3182,78 @@ const DarwinEngine = {
         const accuracy = calibrationState.credibility || 0.5;
         const trustWeight = TrustEngine.trustWeight || 1.0;
 
-        // Classic fitness: credibility × trust
+        // 1. Classic fitness: credibility × trust
         const classicFitness = accuracy * trustWeight;
 
-        // Recovery fitness from branch memory (if available)
+        // 2. Recovery fitness from branch memory
         const branchCtx = Kronos.getBranchMemory(Kronos.currentBranch);
         const recoveryFitness = branchCtx
             ? BranchMemoryContext.computeRecoveryFitness(branchCtx)
             : null;
 
-        // Composite fitness: blend classic + recovery when recovery data exists
-        // Recovery weight grows as more regime transitions are observed
+        // 3. RT0 consistency — external reality tether (system can't control this)
+        const rt0Consistency = RealityTetherZero.consistency;
+        const rt0Available = RealityTetherZero.worldDistress !== null;
+
+        // 4. Blind scoring — sealed predictions scored after the fact
+        const blindScore = BlindScoring.getBranchScore(Kronos.currentBranch);
+        const blindAvailable = blindScore !== null;
+
+        // Composite fitness — weight depends on data availability
+        // Base: 50% classic
+        // + 20% recovery (if available, else redistributed to classic)
+        // + 15% RT0 (if available, else redistributed)
+        // + 15% blind (if available, else redistributed)
         let fitness;
+        let weights = { classic: 0.50, recovery: 0, rt0: 0, blind: 0 };
+        let totalWeight = 0.50;
+
         if (recoveryFitness !== null && branchCtx.recovery.recoveryTimes.length >= 2) {
-            // Blend: 60% classic + 40% recovery (recovery can't be faked)
-            fitness = classicFitness * 0.6 + recoveryFitness * 0.4;
-        } else {
-            fitness = classicFitness;
+            weights.recovery = 0.20;
+            totalWeight += 0.20;
         }
+        if (rt0Available) {
+            weights.rt0 = 0.15;
+            totalWeight += 0.15;
+        }
+        if (blindAvailable) {
+            weights.blind = 0.15;
+            totalWeight += 0.15;
+        }
+
+        // Normalize weights
+        for (const k of Object.keys(weights)) {
+            weights[k] = weights[k] / totalWeight;
+        }
+
+        fitness = classicFitness * weights.classic;
+        if (weights.recovery > 0) fitness += recoveryFitness * weights.recovery;
+        if (weights.rt0 > 0) fitness += rt0Consistency * weights.rt0;
+        if (weights.blind > 0) fitness += blindScore * weights.blind;
+
+        fitness = Math.round(fitness * 10000) / 10000;
 
         for (const mutant of this.activeMutants) {
             if (mutant.status !== 'competing') continue;
 
+            const epochRecord = {
+                scanIndex: epoch.scanIndex,
+                fitness,
+                classicFitness,
+                recoveryFitness,
+                rt0Consistency: rt0Available ? rt0Consistency : null,
+                blindScore: blindAvailable ? blindScore : null,
+                accuracy,
+                trustWeight
+            };
+
             // Score this epoch for the active branch
             if (Kronos.currentBranch === mutant.branchId) {
                 mutant.mutantScore += fitness;
-                mutant.mutantEpochs.push({
-                    scanIndex: epoch.scanIndex,
-                    fitness,
-                    classicFitness,
-                    recoveryFitness,
-                    accuracy,
-                    trustWeight
-                });
+                mutant.mutantEpochs.push(epochRecord);
             } else if (Kronos.currentBranch === 'trunk') {
                 mutant.trunkScore += fitness;
-                mutant.trunkEpochs.push({
-                    scanIndex: epoch.scanIndex,
-                    fitness,
-                    classicFitness,
-                    recoveryFitness,
-                    accuracy,
-                    trustWeight
-                });
+                mutant.trunkEpochs.push(epochRecord);
             }
 
             mutant.competitionEpochs++;
@@ -3030,7 +3477,11 @@ const OracleEngine = {
         // Signal Bus state
         signalBus: null,
         // Darwin Engine state
-        darwin: null
+        darwin: null,
+        // RT0 — external reality tether
+        rt0: null,
+        // Blind Scoring — anti-auto-reference
+        blindScoring: null
     },
 
     listeners: [],
@@ -3062,6 +3513,19 @@ const OracleEngine = {
             // Sync trunk memory context with restored engine states
             // After all engines are loaded, save their state into trunk's context
             Kronos._saveContextFromEngines('trunk');
+
+            // Initialize RT0 (external reality tether)
+            // First fetch is fire-and-forget — don't block init
+            RealityTetherZero.fetch().then(() => {
+                this.state.rt0 = RealityTetherZero.getState();
+                console.log('[OracleEngine] RT0 ready: consistency=' +
+                    RealityTetherZero.consistency);
+            }).catch(err => {
+                console.warn('[OracleEngine] RT0 init fetch failed:', err.message);
+            });
+
+            // BlindScoring needs no init — it builds state from scan cycle
+            this.state.blindScoring = BlindScoring.getState();
 
             // Register neuron sources on Signal Bus
             for (const neuron of SensoryMesh.neurons) {
@@ -3185,6 +3649,40 @@ const OracleEngine = {
                 });
                 this.state.kronos = Kronos.getState();
 
+                // RT0: Fetch external reality anchors (AFTER predictions, never before)
+                try {
+                    await RealityTetherZero.fetch();
+                    const rt0Consistency = RealityTetherZero.computeConsistency(stability);
+                    this.state.rt0 = RealityTetherZero.getState();
+                    if (rt0Consistency !== null) {
+                        console.log('[OracleEngine] RT0 consistency: ' + rt0Consistency +
+                            ' | World distress: ' + RealityTetherZero.worldDistress);
+                    }
+                } catch (err) {
+                    console.warn('[OracleEngine] RT0 fetch failed:', err.message);
+                }
+
+                // Blind Scoring: record sealed prediction for this epoch
+                const regime = Kronos.lastEpoch ? Kronos.lastEpoch.regime : 'stable';
+                BlindScoring.recordPrediction(
+                    Kronos.currentBranch,
+                    this.state.scanCount,
+                    stability,
+                    regime,
+                    delta
+                );
+
+                // Blind Scoring: evaluate old predictions
+                const blindResults = BlindScoring.evaluatePending(
+                    this.state.scanCount, stability, regime
+                );
+                if (blindResults.length > 0) {
+                    console.log('[OracleEngine] Blind evaluations: ' + blindResults.length +
+                        ' avg=' + (blindResults.reduce((s, r) => s + r.score, 0) /
+                            blindResults.length).toFixed(3));
+                }
+                this.state.blindScoring = BlindScoring.getState();
+
                 // Darwin Engine: score this epoch for active competitions
                 DarwinEngine.scoreEpoch(
                     Kronos.lastEpoch,
@@ -3202,7 +3700,9 @@ const OracleEngine = {
                 if (darwinResults.length > 0) {
                     for (const r of darwinResults) {
                         console.log('[OracleEngine] Darwin ' + r.action + ': ' +
-                            r.targetGene + ' (margin=' + r.margin + ')');
+                            r.targetGene + ' (' + (r.mutationType || 'parametric') +
+                            ' species=' + (r.species || '?') +
+                            ' margin=' + r.margin + ')');
                     }
                 }
 
