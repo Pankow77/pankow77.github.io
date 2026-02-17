@@ -468,11 +468,53 @@ const CoreFeed = (() => {
     init();
 
     // ── PUBLIC API ──
-    return {
+    const publicAPI = {
         trigger,
         toggleMinimize,
         addMessage,
-        CORES
+        CORES,
+
+        // ECOSYSTEM module interface
+        name: 'core-feed',
+        version: '1.0.0',
+        init(ecosystem, bus) {
+            // Bridge CoreFeed triggers to Bus events
+            const originalTrigger = trigger;
+            publicAPI._originalTrigger = originalTrigger;
+
+            // Listen for Bus events and trigger CoreFeed
+            bus.on('oracle:scan-complete', () => originalTrigger('oracle-scan'));
+            bus.on('eei:slider-changed', () => originalTrigger('eei-slider'));
+            bus.on('eei:shock-activated', () => originalTrigger('eei-shock'));
+            bus.on('pneuma:module-switched', (e) => {
+                const mod = e.payload && e.payload.module;
+                if (mod) originalTrigger('pneuma-' + mod);
+            });
+            bus.on('chronos:parameter-changed', () => originalTrigger('chronos-parameter'));
+            bus.on('chronos:preset-loaded', () => originalTrigger('chronos-preset'));
+            bus.on('chronos:playback-started', () => originalTrigger('chronos-play'));
+            bus.on('archivio:transmute', () => originalTrigger('archivio-transmute'));
+
+            // Emit CoreFeed events onto the Bus
+            const wrappedTrigger = (context) => {
+                originalTrigger(context);
+                bus.emit('core-feed:triggered', { context }, 'core-feed');
+            };
+            publicAPI.trigger = wrappedTrigger;
+
+            ecosystem.setState('core-feed.status', 'active', { source: 'core-feed' });
+            bus.emit('core-feed:ready', { cores: CORES.length }, 'core-feed');
+        },
+        destroy() {
+            if (ambientInterval) clearInterval(ambientInterval);
+        }
     };
+
+    // Auto-register with ECOSYSTEM if available
+    if (window.ECOSYSTEM && typeof window.ECOSYSTEM.register === 'function') {
+        window.ECOSYSTEM.register('core-feed', publicAPI);
+    }
+
+    return publicAPI;
 
 })();
