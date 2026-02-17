@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORACLE v3.0 | Ecosystem — Distributed Nervous System</title>
-    <meta name="description" content="ORACLE v3.0 - Distributed Nervous System. Three-level intelligence: Sensory, Synaptic, Cortical. Browser-native. Local memory. Zero cloud.">
+    <title>ORACLE v4.1 | Synthetic Earth — Red Team Response</title>
+    <meta name="description" content="ORACLE v4.1 - Synthetic Earth. Monte Carlo + Lyapunov Proxy + Adaptive Coupling. Browser-native. Local memory. Zero cloud.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
 
@@ -699,7 +699,71 @@
             font-size: 0.52rem;
             color: var(--text-dim);
             letter-spacing: 0.03em;
+            flex-wrap: wrap;
         }
+
+        .lyapunov-display {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 0, 132, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .lyapunov-lambda {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .lyapunov-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .regime-badge {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            border: 1px solid;
+        }
+
+        .regime-badge.stable { color: var(--green); border-color: rgba(0, 221, 102, 0.3); background: rgba(0, 221, 102, 0.06); }
+        .regime-badge.marginal { color: var(--yellow); border-color: rgba(255, 204, 0, 0.3); background: rgba(255, 204, 0, 0.06); }
+        .regime-badge.sensitive { color: var(--orange); border-color: rgba(255, 136, 51, 0.3); background: rgba(255, 136, 51, 0.06); }
+        .regime-badge.chaotic { color: var(--red); border-color: rgba(255, 51, 68, 0.3); background: rgba(255, 51, 68, 0.06); }
+        .regime-badge.unknown { color: var(--text-dim); border-color: rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.02); }
+
+        .coupling-indicator {
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.48rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+        }
+
+        .coupling-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            transition: all 0.5s;
+        }
+
+        .coupling-dot.adapted { background: var(--teal); box-shadow: 0 0 4px var(--teal); }
+        .coupling-dot.declared { background: var(--text-dim); }
 
         .perturbation-area {
             display: flex;
@@ -1076,8 +1140,8 @@
                     </svg>
                 </div>
                 <div>
-                    <div class="oracle-title">ORACLE v3.0</div>
-                    <div class="oracle-subtitle">Ecosystem — Distributed Nervous System</div>
+                    <div class="oracle-title">ORACLE v4.1</div>
+                    <div class="oracle-subtitle">Synthetic Earth — Red Team Response</div>
                 </div>
             </div>
         </div>
@@ -1257,6 +1321,19 @@
                         <span>Catastrophic: <strong id="dsiCatastrophic">&mdash;</strong></span>
                         <span>Bimodality: <strong id="dsiBimodality">&mdash;</strong></span>
                     </div>
+                    <!-- Lyapunov Proxy Display -->
+                    <div class="lyapunov-display" id="lyapunovDisplay">
+                        <div>
+                            <div class="lyapunov-label">&lambda; Lyapunov</div>
+                            <div class="lyapunov-lambda" id="lyapunovLambda" style="color: var(--text-dim);">&mdash;</div>
+                        </div>
+                        <span class="regime-badge unknown" id="regimeBadge">WAITING</span>
+                    </div>
+                    <!-- Coupling Adaptation Indicator -->
+                    <div class="coupling-indicator" id="couplingIndicator">
+                        <span class="coupling-dot declared" id="couplingDot"></span>
+                        <span id="couplingStatus">COUPLING: DECLARED</span>
+                    </div>
                 </div>
 
                 <!-- Perturbation Presets -->
@@ -1347,7 +1424,7 @@
         <div class="status-footer-left">
             <div class="sf-item"><span class="sf-dot"></span> ENGINE: <span class="val" id="footerEngine">INIT</span></div>
             <div class="sf-item">MEMORY: <span class="val" id="footerMemory">IndexedDB</span></div>
-            <div class="sf-item">VERSION: <span class="val">3.0.0-ECOSYSTEM</span></div>
+            <div class="sf-item">VERSION: <span class="val">4.1.0-REDTEAM</span></div>
         </div>
         <div class="status-footer-right">
             <div class="sf-motto">TENSIONE, NON EVENTI</div>
@@ -1361,7 +1438,7 @@
     <!-- UI LOGIC -->
     <script>
     // =========================================================
-    // ORACLE UI v3.0 — Interface for the Nervous System
+    // ORACLE UI v4.1 — Synthetic Earth + Lyapunov + Coupling
     // =========================================================
 
     let autoScanEnabled = true;
@@ -1374,14 +1451,15 @@
         const barEl = document.getElementById('bootBar');
 
         const lines = [
-            'ORACLE ECOSYSTEM v3.0',
+            'ORACLE v4.1 — SYNTHETIC EARTH (RED TEAM)',
             'Initializing IndexedDB memory layer...',
             'Loading neuron definitions...',
             'Calibrating sensory mesh...',
             'Synaptic engine: STANDBY',
             'Cortical field: STANDBY',
+            'Synthetic Earth: Monte Carlo + Lyapunov proxy',
+            'Adaptive coupling: covariance learning ARMED',
             'Auto-diagnosis: ARMED',
-            'Connecting to distributed intelligence...',
             'First scan initiating...'
         ];
 
@@ -1477,7 +1555,9 @@
 
         if (event === 'simulation-complete') {
             handleSimulationComplete(data);
-            addSignalLogEntry(formatTime(Date.now()), 'SYNTHETIC', 'SIM', 'DSI: ' + data.dsi.dsi.toFixed(3) + ' | Catastrophic: ' + Math.round(data.dsi.catastrophicFraction * 100) + '% | Bimodality: ' + data.dsi.bimodality.toFixed(3));
+            const lyaInfo = data.dsi.lyapunov ? ' | \u03BB:' + data.dsi.lyapunov.lambda + ' [' + data.dsi.lyapunov.regime + ']' : '';
+            const cplInfo = data.couplingMeta && data.couplingMeta.adapted ? ' | Coupling: ADAPTED \u03B1=' + data.couplingMeta.alpha : ' | Coupling: DECLARED';
+            addSignalLogEntry(formatTime(Date.now()), 'SYNTHETIC', 'SIM', 'DSI: ' + data.dsi.dsi.toFixed(3) + ' | Cat: ' + Math.round(data.dsi.catastrophicFraction * 100) + '%' + lyaInfo + cplInfo);
         }
     }
 
@@ -2010,8 +2090,8 @@
         // Stop simulating animation
         document.querySelectorAll('.preset-btn.simulating').forEach(btn => btn.classList.remove('simulating'));
 
-        // Update DSI
-        updateDSI(payload.dsi);
+        // Update DSI (with Lyapunov + coupling meta)
+        updateDSI(payload.dsi, payload.couplingMeta);
 
         // Update sim stats
         document.getElementById('simCount').textContent = payload.nSims;
@@ -2023,7 +2103,7 @@
         renderFuturesCloud(payload);
     }
 
-    function updateDSI(dsiData) {
+    function updateDSI(dsiData, couplingMeta) {
         const val = dsiData.dsi;
         const el = document.getElementById('dsiValue');
         el.textContent = val.toFixed(3);
@@ -2045,6 +2125,37 @@
         // Meta
         document.getElementById('dsiCatastrophic').textContent = Math.round(dsiData.catastrophicFraction * 100) + '%';
         document.getElementById('dsiBimodality').textContent = dsiData.bimodality.toFixed(3);
+
+        // Lyapunov proxy display
+        if (dsiData.lyapunov) {
+            const lya = dsiData.lyapunov;
+            const lambdaEl = document.getElementById('lyapunovLambda');
+            lambdaEl.textContent = lya.lambda.toFixed(4);
+
+            // Color by lambda sign
+            if (lya.lambda > 0.05) lambdaEl.style.color = 'var(--red)';
+            else if (lya.lambda > 0.01) lambdaEl.style.color = 'var(--orange)';
+            else if (lya.lambda > -0.01) lambdaEl.style.color = 'var(--yellow)';
+            else lambdaEl.style.color = 'var(--green)';
+
+            // Regime badge
+            const badge = document.getElementById('regimeBadge');
+            badge.textContent = lya.regime.toUpperCase();
+            badge.className = 'regime-badge ' + lya.regime;
+        }
+
+        // Coupling adaptation indicator
+        if (couplingMeta) {
+            const dot = document.getElementById('couplingDot');
+            const status = document.getElementById('couplingStatus');
+            if (couplingMeta.adapted) {
+                dot.className = 'coupling-dot adapted';
+                status.textContent = 'COUPLING: ADAPTED \u03B1=' + couplingMeta.alpha + ' cov=' + couplingMeta.coverage + '% \u0394max=' + couplingMeta.maxDeviation;
+            } else {
+                dot.className = 'coupling-dot declared';
+                status.textContent = 'COUPLING: DECLARED (' + (couplingMeta.reason || 'default') + ')';
+            }
+        }
     }
 
     async function renderFuturesCloud(payload) {
@@ -2262,8 +2373,9 @@
     });
 
     // ===== CONSOLE SIGNATURE =====
-    console.log('%cORACLE v3.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
-    console.log('%cECOSYSTEM — DISTRIBUTED NERVOUS SYSTEM', 'color: #ff0084; font-size: 11px;');
+    console.log('%cORACLE v4.1', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
+    console.log('%cSYNTHETIC EARTH — RED TEAM RESPONSE', 'color: #ff0084; font-size: 11px;');
+    console.log('%cMonte Carlo \u00B7 Lyapunov \u00B7 Adaptive Coupling', 'color: #8855ff;');
     console.log('%cTENSIONE, NON EVENTI', 'color: #00d4aa;');
     console.log('%cBrowser-Native \u00B7 Local Memory \u00B7 Zero Cloud', 'color: #6b7fa3; font-size: 10px;');
 

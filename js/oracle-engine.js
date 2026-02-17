@@ -1,11 +1,13 @@
 // ====================================================================
-// ORACLE ENGINE v3.0 — Sistema Nervoso Distribuito
+// ORACLE ENGINE v4.1 — Sistema Nervoso Distribuito + Synthetic Earth
 // Intelligenza a Tre Livelli: Sensoriale → Sinaptico → Corticale
+// + Strato 2: Monte Carlo · Lyapunov · Adaptive Coupling
 // Browser-Nativo · Memoria Locale · Zero Cloud
 // ====================================================================
 // La rivoluzione è il browser e la memoria locale.
 // Questo motore sviluppa memoria, sensibilità e istinto.
 // Non predice eventi. Misura tensione strutturale.
+// Red Team v4.1: coupling adattivo dalla covarianza osservata.
 // ====================================================================
 
 'use strict';
@@ -805,6 +807,8 @@ const SyntheticField = {
     simulating: false,
     lastResult: null,
     activePreset: 'montecarlo',
+    adaptiveCoupling: null,       // Last computed adaptive coupling
+    couplingMeta: null,           // Metadata about coupling adaptation
 
     init() {
         try {
@@ -847,13 +851,190 @@ const SyntheticField = {
         return state;
     },
 
-    simulate(signals, stability, presetKey) {
+    // ============================================================
+    // ADAPTIVE COUPLING — Derived from real signal covariance
+    // ============================================================
+    // The coupling matrix is NOT declared from intuition alone.
+    // It ADAPTS over time based on observed cross-domain co-variation
+    // in the Real Field. The declared matrix provides the prior;
+    // observed correlation provides the likelihood.
+    // Blend: coupling = (1-α)*declared + α*observed
+    // α grows with data availability (conservative learning).
+    // ============================================================
+
+    async _computeAdaptiveCoupling() {
+        const DOMAINS = ['geopolitics', 'economics', 'technology', 'climate', 'social', 'epistemology'];
+
+        // Fetch recent signal history from IndexedDB
+        const signals = await OracleMemory.getRecentSignals(500);
+        if (signals.length < 20) return null; // Not enough data
+
+        // Group signals into scan windows (temporal clustering)
+        // Each scan fires all neurons near-simultaneously,
+        // so signals within a short gap belong to the same window.
+        const windows = [];
+        let currentWindow = {};
+        let windowStart = 0;
+        const WINDOW_GAP = 60000; // 1 minute gap = new window
+
+        for (const sig of signals) {
+            if (sig.timestamp - windowStart > WINDOW_GAP && Object.keys(currentWindow).length > 0) {
+                windows.push(currentWindow);
+                currentWindow = {};
+            }
+            if (Object.keys(currentWindow).length === 0) windowStart = sig.timestamp;
+
+            if (!currentWindow[sig.domain]) currentWindow[sig.domain] = [];
+            currentWindow[sig.domain].push(sig.aggregate.urgency);
+        }
+        if (Object.keys(currentWindow).length > 0) windows.push(currentWindow);
+
+        if (windows.length < 5) return null; // Need temporal depth
+
+        // Build time series: mean urgency per domain per window
+        const series = {};
+        for (const d of DOMAINS) series[d] = [];
+
+        for (const win of windows) {
+            for (const d of DOMAINS) {
+                if (win[d] && win[d].length > 0) {
+                    series[d].push(win[d].reduce((s, v) => s + v, 0) / win[d].length);
+                } else {
+                    series[d].push(null); // Missing observation
+                }
+            }
+        }
+
+        // Compute pairwise Pearson correlation → coupling strength
+        const observed = {};
+        let totalPairs = 0;
+        let coveredPairs = 0;
+
+        for (const d1 of DOMAINS) {
+            observed[d1] = {};
+            for (const d2 of DOMAINS) {
+                if (d1 === d2) continue;
+                totalPairs++;
+
+                // Get paired observations (both domains have data)
+                const paired = [];
+                for (let i = 0; i < windows.length; i++) {
+                    if (series[d1][i] !== null && series[d2][i] !== null) {
+                        paired.push([series[d1][i], series[d2][i]]);
+                    }
+                }
+
+                if (paired.length < 3) {
+                    observed[d1][d2] = null; // Insufficient data
+                    continue;
+                }
+
+                coveredPairs++;
+                const n = paired.length;
+                const meanX = paired.reduce((s, p) => s + p[0], 0) / n;
+                const meanY = paired.reduce((s, p) => s + p[1], 0) / n;
+
+                let cov = 0, varX = 0, varY = 0;
+                for (const [x, y] of paired) {
+                    cov += (x - meanX) * (y - meanY);
+                    varX += (x - meanX) ** 2;
+                    varY += (y - meanY) ** 2;
+                }
+
+                const denom = Math.sqrt(varX * varY);
+                const r = denom > 1e-10 ? cov / denom : 0;
+
+                // Map correlation [-1, 1] to coupling [0, 1]
+                // r = +1 → coupling = 1.0 (perfect co-movement)
+                // r =  0 → coupling = 0.5 (neutral)
+                // r = -1 → coupling = 0.0 (anti-correlated, no coupling)
+                observed[d1][d2] = Math.max(0, Math.min(1, (r + 1) / 2));
+            }
+        }
+
+        return {
+            coupling: observed,
+            windowCount: windows.length,
+            coverage: totalPairs > 0 ? coveredPairs / totalPairs : 0,
+            signalCount: signals.length
+        };
+    },
+
+    _blendCoupling(observed) {
+        const DOMAINS = ['geopolitics', 'economics', 'technology', 'climate', 'social', 'epistemology'];
+
+        // Default coupling from oracle-simulator.js (duplicated here as prior)
+        const DEFAULT = {
+            geopolitics: { economics: 0.55, technology: 0.20, climate: 0.10, social: 0.50, epistemology: 0.35 },
+            economics:   { geopolitics: 0.40, technology: 0.30, climate: 0.15, social: 0.65, epistemology: 0.20 },
+            technology:  { geopolitics: 0.30, economics: 0.45, climate: 0.10, social: 0.40, epistemology: 0.55 },
+            climate:     { geopolitics: 0.45, economics: 0.55, technology: 0.10, social: 0.50, epistemology: 0.25 },
+            social:      { geopolitics: 0.35, economics: 0.30, technology: 0.10, climate: 0.05, epistemology: 0.45 },
+            epistemology:{ geopolitics: 0.40, economics: 0.25, technology: 0.30, climate: 0.30, social: 0.50 }
+        };
+
+        // Blend weight: conservative. Grows with coverage.
+        // At full coverage (30 pairs), α ≈ 0.35
+        // At sparse coverage, α stays low → declared matrix dominates
+        const baseBeta = 0.35;
+        const alpha = baseBeta * observed.coverage;
+
+        const blended = {};
+        let maxDeviation = 0;
+
+        for (const d1 of DOMAINS) {
+            blended[d1] = {};
+            for (const d2 of DOMAINS) {
+                if (d1 === d2) continue;
+                const declared = (DEFAULT[d1] && DEFAULT[d1][d2]) || 0;
+                const obs = observed.coupling[d1] && observed.coupling[d1][d2];
+
+                if (obs !== null && obs !== undefined) {
+                    blended[d1][d2] = declared * (1 - alpha) + obs * alpha;
+                    maxDeviation = Math.max(maxDeviation, Math.abs(blended[d1][d2] - declared));
+                } else {
+                    blended[d1][d2] = declared;
+                }
+            }
+        }
+
+        this.couplingMeta = {
+            adapted: true,
+            alpha: Math.round(alpha * 1000) / 1000,
+            coverage: Math.round(observed.coverage * 100),
+            windows: observed.windowCount,
+            maxDeviation: Math.round(maxDeviation * 1000) / 1000,
+            timestamp: Date.now()
+        };
+
+        return blended;
+    },
+
+    async simulate(signals, stability, presetKey) {
         if (this.simulating || !this.worker) return;
         this.simulating = true;
         this.activePreset = presetKey || 'montecarlo';
 
         const currentState = this._buildDomainState(signals, stability);
         const preset = PERTURBATION_PRESETS[this.activePreset] || PERTURBATION_PRESETS.montecarlo;
+
+        // Compute adaptive coupling from real signal history
+        let coupling = null;
+        try {
+            const observed = await this._computeAdaptiveCoupling();
+            if (observed) {
+                coupling = this._blendCoupling(observed);
+                console.log('[SyntheticField] Adaptive coupling: α=' + this.couplingMeta.alpha +
+                    ' coverage=' + this.couplingMeta.coverage + '% windows=' + this.couplingMeta.windows +
+                    ' maxDev=' + this.couplingMeta.maxDeviation);
+            } else {
+                console.log('[SyntheticField] Insufficient data for adaptive coupling, using declared matrix');
+                this.couplingMeta = { adapted: false, reason: 'insufficient_data' };
+            }
+        } catch (err) {
+            console.warn('[SyntheticField] Coupling adaptation failed:', err);
+            this.couplingMeta = { adapted: false, reason: 'error' };
+        }
 
         this.worker.postMessage({
             type: 'simulate',
@@ -865,7 +1046,8 @@ const SyntheticField = {
                     noiseScale: 0.015,
                     perturbation: preset.perturbation,
                     sustainedPerturbation: preset.sustained,
-                    sampleCount: 30
+                    sampleCount: 30,
+                    coupling: coupling // null → worker uses DEFAULT_COUPLING
                 }
             }
         });
@@ -876,6 +1058,8 @@ const SyntheticField = {
 
         if (type === 'simulation-complete') {
             this.simulating = false;
+            // Attach coupling metadata to result
+            payload.couplingMeta = this.couplingMeta;
             this.lastResult = payload;
             // Notify engine listeners
             if (OracleEngine && OracleEngine._notify) {
