@@ -34,6 +34,13 @@ const ACTORS = Object.freeze({
     TAIWAN:         'taiwan',
     // ── Latin America ──
     VENEZUELA:      'venezuela',
+    // ── US Domestic / Enforcement ──
+    ICE:            'ice',
+    TRUMP_WH:       'trump-wh',
+    // ── Europe / NATO ──
+    NATO:           'nato',
+    ITALY:          'italy',
+    MELONI_GOV:     'meloni-gov',
     // ── Regional ──
     SAUDI:          'saudi',
     EGYPT:          'egypt',
@@ -41,7 +48,8 @@ const ACTORS = Object.freeze({
     INDIA_NAVY:     'india-navy',
     DJIBOUTI:       'djibouti',
     YEMEN_GOV:      'yemen-gov',
-    // ── Non-state ──
+    // ── Non-state / Civil society ──
+    CIVIL_SOCIETY:  'civil-society',
     SHIPPING:       'shipping',
     OTHER:          'other'
 });
@@ -67,7 +75,14 @@ const ACTION_TYPES = Object.freeze({
     // ── Influence ──
     INFLUENCE_OP:   'influence-op',
     PROXY_ACTION:   'proxy-action',
-    HUMANITARIAN:   'humanitarian'
+    HUMANITARIAN:   'humanitarian',
+    // ── Enforcement / Civil rights ──
+    ARREST:             'arrest',
+    RENDITION:          'rendition',
+    DEPORTATION:        'deportation',
+    EXTRATERRITORIAL_OP:'extraterritorial-op',
+    PROTEST:            'protest',
+    CENSORSHIP:         'censorship'
 });
 
 const TAG_OPTIONS = Object.freeze([
@@ -90,6 +105,14 @@ const TAG_OPTIONS = Object.freeze([
     // ── Maritime / Economic ──
     'shipping', 'tanker', 'cargo', 'LNG', 'insurance', 'oil-price',
     'blockade', 'piracy',
+    // ── Europe / Sovereignty ──
+    'olimpiadi-2026', 'milano-cortina', 'sovranita-nazionale',
+    'ice-international', 'extraterritorial', 'satellite-state',
+    'nato-framework', 'meloni', 'italia',
+    // ── Civil rights / Enforcement ──
+    'palestina', 'israele', 'free-palestine', 'civil-rights',
+    'protest-suppression', 'deportation', 'rendition',
+    'police-brutality', 'immunity', 'gestapo-tactics',
     // ── Dynamics ──
     'escalation', 'de-escalation', 'asymmetric', 'ceasefire',
     'civilian', 'military', 'coalition', 'unilateral', 'proxy',
