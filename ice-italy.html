@@ -411,6 +411,12 @@
         });
         Bus.on('ice-italy:epoch-ingested', () => refresh());
 
+        // ── CONSOLE ACCESS (operator testing) ──
+        window.ICE = IceItalyModule;
+        window.CORR = CorrelationEngine;
+        window.BUS = Bus;
+        window.ECO = ECOSYSTEM;
+
         // ── INIT ──
         refresh();
         setInterval(refresh, 30000);
