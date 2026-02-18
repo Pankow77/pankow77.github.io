@@ -14,6 +14,7 @@
  */
 
 import { Bus } from './bus.js';
+import { createEnvelope, validateEnvelope, isEnvelope, DOMAINS, PRIORITY } from './envelope.js';
 
 const modules = new Map();
 const state = new Map();
@@ -223,6 +224,42 @@ export const ECOSYSTEM = {
     once: (...args) => Bus.once(...args),
 
     // ═══════════════════════════════════════
+    // DATA CONTRACT (Envelope)
+    // ═══════════════════════════════════════
+
+    /** Valid envelope domains */
+    DOMAINS,
+
+    /** Valid envelope priorities */
+    PRIORITY,
+
+    /**
+     * Create and emit a validated Envelope into the ecosystem bloodstream.
+     * This is the sanctioned way for modules to produce structured data.
+     *
+     * The envelope is emitted as a Bus event with type "envelope:{domain}"
+     * so circulation/normalizer can listen to "envelope:*" and catch everything.
+     *
+     * @param {object} spec - Envelope specification (see createEnvelope)
+     * @returns {object} The frozen Envelope
+     * @throws {Error} If the spec is invalid
+     */
+    emitEnvelope(spec) {
+        const envelope = createEnvelope(spec);
+        Bus.emit(`envelope:${envelope.domain}`, envelope, envelope.source);
+        return envelope;
+    },
+
+    /** Validate an object against the Envelope schema */
+    validateEnvelope,
+
+    /** Quick check — is this shaped like an Envelope? */
+    isEnvelope,
+
+    /** Create an Envelope without emitting it */
+    createEnvelope,
+
+    // ═══════════════════════════════════════
     // SYSTEM INFO
     // ═══════════════════════════════════════
 
@@ -322,4 +359,4 @@ console.log(
     'color: #6b7fa3;'
 );
 
-export { Bus };
+export { Bus, createEnvelope, validateEnvelope, isEnvelope, DOMAINS, PRIORITY };
