@@ -16,6 +16,13 @@
  * ═══════════════════════════════════════════════════════════
  */
 
+// ── Sanitization ──
+function escapeHTML(str) {
+    const d = document.createElement('div');
+    d.appendChild(document.createTextNode(str));
+    return d.innerHTML;
+}
+
 // ── Domain data ──
 const DOMAINS = [
     { id: 'climate',  label: 'CLI/ECO',  name: 'CLIMATE / ECOLOGY',  risk: 78, resilience: 35, volatility: 60 },
@@ -210,7 +217,7 @@ function addFeedEntry() {
     const msg = FEED_MESSAGES[Math.floor(Math.random() * FEED_MESSAGES.length)];
     const entry = document.createElement('div');
     entry.className = 'feed-entry active';
-    entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${msg}`;
+    entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${escapeHTML(msg)}`;
     feed.appendChild(entry);
     feedCounter++;
 
@@ -345,7 +352,7 @@ const OracleModule = {
             if (feed) {
                 const entry = document.createElement('div');
                 entry.className = 'feed-entry system';
-                entry.innerHTML = `<span class="feed-id">[${feedCounter++}]</span> ${msg}`;
+                entry.innerHTML = `<span class="feed-id">[${feedCounter++}]</span> ${escapeHTML(msg)}`;
                 feed.appendChild(entry);
                 while (feed.children.length > 12) feed.removeChild(feed.firstChild);
             }

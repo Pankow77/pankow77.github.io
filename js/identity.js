@@ -22,6 +22,10 @@ import { Bus } from './bus.js';
 const DB_NAME = 'hybrid-syndicate';
 const DB_VERSION = 1;
 
+// Maximum records per store before auto-pruning
+const MAX_EPOCHS = 5000;
+const MAX_MUTATIONS = 10000;
+
 const STORES = {
     TIMELINE: 'timeline',
     STATE: 'state',
@@ -124,6 +128,34 @@ async function countStore(storeName) {
     });
 }
 
+// ── Auto-prune oldest records when store exceeds max ──
+async function pruneStore(storeName, maxRecords) {
+    const count = await countStore(storeName);
+    if (count <= maxRecords) return;
+
+    const excess = count - maxRecords;
+    const database = await openDB();
+    return new Promise((resolve, reject) => {
+        const transaction = database.transaction(storeName, 'readwrite');
+        const store = transaction.objectStore(storeName);
+        const index = store.index('timestamp');
+        const request = index.openCursor();
+        let deleted = 0;
+
+        request.onsuccess = (event) => {
+            const cursor = event.target.result;
+            if (cursor && deleted < excess) {
+                cursor.delete();
+                deleted++;
+                cursor.continue();
+            }
+        };
+
+        transaction.oncomplete = () => resolve(deleted);
+        transaction.onerror = () => reject(transaction.error);
+    });
+}
+
 // ═══════════════════════════════════════════════════════════
 // PUBLIC API
 // ═══════════════════════════════════════════════════════════
@@ -186,6 +218,7 @@ export const Identity = {
 
         await tx(STORES.TIMELINE, 'readwrite', store => store.add(epoch));
         Bus.emit('identity:epoch-created', epoch, data.source || 'identity');
+        await pruneStore(STORES.TIMELINE, MAX_EPOCHS);
         return epoch;
     },
 
@@ -289,6 +322,7 @@ export const Identity = {
 
         await tx(STORES.MUTATIONS, 'readwrite', store => store.add(mutation));
         Bus.emit('identity:mutation', mutation, 'identity');
+        await pruneStore(STORES.MUTATIONS, MAX_MUTATIONS);
         return mutation;
     },
 

@@ -171,6 +171,13 @@ const CoreFeed = (() => {
         ],
     };
 
+    // ── SANITIZATION ──
+    function escapeHTML(str) {
+        const d = document.createElement('div');
+        d.appendChild(document.createTextNode(str));
+        return d.innerHTML;
+    }
+
     // ── STATE ──
     let feedEl = null;
     let feedList = null;
@@ -355,9 +362,9 @@ const CoreFeed = (() => {
         const entry = document.createElement('div');
         entry.className = 'cf-entry';
         entry.innerHTML = `
-            <span class="cf-core" style="color: ${core.color};">${core.id}</span>
-            <span class="cf-msg">${text}</span>
-            <span class="cf-time">${time}</span>
+            <span class="cf-core" style="color: ${escapeHTML(core.color)};">${escapeHTML(core.id)}</span>
+            <span class="cf-msg">${escapeHTML(text)}</span>
+            <span class="cf-time">${escapeHTML(time)}</span>
         `;
 
         // Insert at top
@@ -378,7 +385,7 @@ const CoreFeed = (() => {
         typing.className = 'cf-typing';
         typing.id = 'cf-typing-indicator';
         typing.innerHTML = `
-            <span class="cf-core" style="color: ${core.color};">${core.id}</span>
+            <span class="cf-core" style="color: ${escapeHTML(core.color)};">${escapeHTML(core.id)}</span>
             <div class="cf-typing-dots"><span></span><span></span><span></span></div>
         `;
 

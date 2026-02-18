@@ -813,10 +813,16 @@
     }
 
     // ===== PROBABILITY ENGINE =====
+    function clampSlider(val, min, max) {
+        const n = Number(val);
+        if (isNaN(n)) return min;
+        return Math.max(min, Math.min(max, n));
+    }
+
     function recalculate() {
-        const legal = sliders.legal.value / 100;
-        const geo = sliders.geo.value / 100;
-        const ai = sliders.ai.value / 100;
+        const legal = clampSlider(sliders.legal.value, 0, 100) / 100;
+        const geo = clampSlider(sliders.geo.value, 0, 100) / 100;
+        const ai = clampSlider(sliders.ai.value, 0, 100) / 100;
 
         // Shock modifiers
         let shockFrag = 0, shockEEI = 0, shockSoft = 0, shockSelf = 0;
