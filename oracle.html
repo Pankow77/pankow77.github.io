@@ -622,10 +622,12 @@
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
             <a href="index.html" class="back-link">&larr; HQ</a>
+            <a href="eei-predictor.html" class="back-link" style="color: #ff0040;">EEI</a>
             <a href="agora.html" class="back-link" style="color: #39ff14;">AGORA</a>
             <a href="pneuma.html" class="back-link" style="color: #ff6600;">PNEUMA</a>
             <a href="urban-chronos.html" class="back-link" style="color: #00d4aa;">CHRONOS</a>
-            <a href="archivio-silente.html" class="back-link" style="color: #00d4ff;">ARCHIVIO &rarr;</a>
+            <a href="archivio-silente.html" class="back-link" style="color: #00d4ff;">ARCHIVIO</a>
+            <a href="bab-el-mandeb.html" class="back-link" style="color: #ff8833;">MANDEB &rarr;</a>
         </div>
     </div>
 
@@ -942,238 +944,17 @@
         </div>
     </div>
 
-    <script>
-    // ===== TAB SWITCHING =====
-    function switchTab(el) {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        el.classList.add('active');
-    }
+    <!-- ECOSYSTEM: Nervous System -->
+    <script src="js/core-feed.js"></script>
+    <script type="module">
+        import { ECOSYSTEM, Bus } from './js/core.js';
+        import { Identity } from './js/identity.js';
+        import OracleModule from './js/modules/oracle.js';
 
-    // ===== MINI TREND LINES =====
-    function drawTrendLines() {
-        document.querySelectorAll('.trend-line').forEach(canvas => {
-            const trend = canvas.dataset.trend;
-            const color = canvas.dataset.color || '#ff3344';
-            const dpr = window.devicePixelRatio || 1;
-            const w = 50, h = 16;
-            canvas.width = w * dpr;
-            canvas.height = h * dpr;
-            canvas.style.width = w + 'px';
-            canvas.style.height = h + 'px';
-            const ctx = canvas.getContext('2d');
-            ctx.scale(dpr, dpr);
-
-            // Generate trend points
-            let points = [];
-            const steps = 8;
-            for (let i = 0; i <= steps; i++) {
-                const x = (w / steps) * i;
-                let y;
-                const t = i / steps;
-                const noise = (Math.random() - 0.5) * 3;
-                switch(trend) {
-                    case 'up-steep':
-                        y = h - 2 - (t * t * (h - 4)) + noise;
-                        break;
-                    case 'up':
-                        y = h - 2 - (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'up-slight':
-                        y = h - 2 - (t * (h - 4) * 0.4) + noise;
-                        break;
-                    case 'down-steep':
-                        y = 2 + (t * t * (h - 4)) + noise;
-                        break;
-                    case 'down':
-                        y = 2 + (t * (h - 4) * 0.7) + noise;
-                        break;
-                    case 'down-slight':
-                        y = 2 + (t * (h - 4) * 0.3) + noise;
-                        break;
-                    default:
-                        y = h / 2 + noise;
-                }
-                y = Math.max(1, Math.min(h - 1, y));
-                points.push({ x, y });
-            }
-
-            ctx.beginPath();
-            ctx.strokeStyle = color;
-            ctx.lineWidth = 1.5;
-            ctx.moveTo(points[0].x, points[0].y);
-            for (let i = 1; i < points.length; i++) {
-                ctx.lineTo(points[i].x, points[i].y);
-            }
-            ctx.stroke();
-        });
-    }
-    drawTrendLines();
-
-    // ===== SYSTEMIC STABILITY MATRIX CHART =====
-    const stabCanvas = document.getElementById('stabilityChart');
-    const stabCtx = stabCanvas.getContext('2d');
-
-    const domains = ['CLI/ECO', 'GEO', 'ECON', 'TECH', 'EPIST', 'SOCIAL'];
-    const domainColors = {
-        risk: '#ff3344',
-        resilience: '#00d4aa',
-        volatility: '#00c8ff'
-    };
-
-    let stabilityData = {
-        risk: [78, 85, 71, 62, 94, 68],
-        resilience: [35, 22, 48, 55, 12, 40],
-        volatility: [60, 72, 55, 45, 88, 52]
-    };
-
-    function drawStabilityChart() {
-        const dpr = window.devicePixelRatio || 1;
-        const rect = stabCanvas.getBoundingClientRect();
-        stabCanvas.width = rect.width * dpr;
-        stabCanvas.height = rect.height * dpr;
-        stabCtx.scale(dpr, dpr);
-
-        const W = rect.width;
-        const H = rect.height;
-        const padLeft = 50;
-        const padRight = 20;
-        const padTop = 10;
-        const padBottom = 30;
-        const chartW = W - padLeft - padRight;
-        const chartH = H - padTop - padBottom;
-
-        stabCtx.clearRect(0, 0, W, H);
-
-        // Grid lines
-        stabCtx.strokeStyle = 'rgba(255,255,255,0.04)';
-        stabCtx.lineWidth = 1;
-        for (let i = 0; i <= 5; i++) {
-            const y = padTop + (chartH / 5) * i;
-            stabCtx.beginPath();
-            stabCtx.moveTo(padLeft, y);
-            stabCtx.lineTo(W - padRight, y);
-            stabCtx.stroke();
-        }
-
-        // Y labels
-        stabCtx.fillStyle = '#3a4f6f';
-        stabCtx.font = '10px Share Tech Mono';
-        stabCtx.textAlign = 'right';
-        for (let i = 0; i <= 5; i++) {
-            const val = 100 - i * 20;
-            const y = padTop + (chartH / 5) * i;
-            stabCtx.fillText(val + '%', padLeft - 8, y + 4);
-        }
-
-        // Draw grouped bars
-        const groupCount = domains.length;
-        const barTypes = ['risk', 'resilience', 'volatility'];
-        const groupWidth = chartW / groupCount;
-        const barWidth = groupWidth * 0.2;
-        const barGap = 4;
-
-        domains.forEach((domain, gi) => {
-            const groupX = padLeft + groupWidth * gi + groupWidth * 0.15;
-
-            barTypes.forEach((type, bi) => {
-                const val = stabilityData[type][gi] + (Math.random() - 0.5) * 4;
-                const clampVal = Math.max(0, Math.min(100, val));
-                const barH = (clampVal / 100) * chartH;
-                const x = groupX + (barWidth + barGap) * bi;
-                const y = padTop + chartH - barH;
-
-                stabCtx.fillStyle = domainColors[type];
-                stabCtx.globalAlpha = 0.8;
-                stabCtx.fillRect(x, y, barWidth, barH);
-                stabCtx.globalAlpha = 1;
-            });
-
-            // Domain label
-            stabCtx.fillStyle = '#3a4f6f';
-            stabCtx.font = '9px Share Tech Mono';
-            stabCtx.textAlign = 'center';
-            const labelX = groupX + ((barWidth + barGap) * barTypes.length) / 2;
-            stabCtx.fillText(domain, labelX, H - 8);
-        });
-
-        // Legend
-        const legendX = W - padRight - 200;
-        const legendY = padTop + 5;
-        barTypes.forEach((type, i) => {
-            stabCtx.fillStyle = domainColors[type];
-            stabCtx.fillRect(legendX + i * 70, legendY, 12, 3);
-            stabCtx.fillStyle = '#3a4f6f';
-            stabCtx.font = '9px Share Tech Mono';
-            stabCtx.textAlign = 'left';
-            stabCtx.fillText(type.toUpperCase(), legendX + i * 70 + 16, legendY + 4);
-        });
-    }
-
-    drawStabilityChart();
-
-    // Refresh chart periodically with slight variations
-    setInterval(() => {
-        drawStabilityChart();
-    }, 800);
-
-    window.addEventListener('resize', () => {
-        drawTrendLines();
-        drawStabilityChart();
-    });
-
-    // ===== INTELLIGENCE FEED - LIVE UPDATES =====
-    const feedMessages = [
-        'SCANNING GEOPOLITICAL VECTORS...',
-        'EPISTEMIC DRIFT DETECTED IN SECTOR_7',
-        'AMOC DATA REFRESH COMPLETE',
-        'NARRATIVE_ENGINE: SYNTHESIS_CYCLE_42',
-        'RISK MATRIX RECALIBRATED',
-        'GHOST_RUNNER: ALIGNMENT CHECK PASSED',
-        'DERIVATIVE EXPOSURE INDEX UPDATED',
-        'VOID_PULSE: TEMPORAL WINDOW NARROWING',
-        'ABYSSAL_THINKER: RECURSION DEPTH OK',
-        'CLIMATE MODEL v4.2 LOADED',
-        'KINETIC ESCALATION PROBABILITY +0.3%',
-        'INSTITUTIONAL TRUST INDEX: -1.2',
-        'SYNTHETIC CONTENT SATURATION: 67.4%',
-        'MARX_CORE: CLASS DYNAMICS SHIFT DETECTED',
-        'ORACLE_CORE: OVERSHOOT THRESHOLD BREACHED',
-        'SUPPLY CHAIN NODE FAILURE: SECTOR_12',
-        'BIO-VULNERABILITY SCAN COMPLETE',
-        'QUANTUM INFRA: MONITORING ACTIVE',
-    ];
-
-    let feedCounter = 3;
-    function addFeedEntry() {
-        const feed = document.getElementById('intelligenceFeed');
-        const msg = feedMessages[Math.floor(Math.random() * feedMessages.length)];
-        const entry = document.createElement('div');
-        entry.className = 'feed-entry active';
-        entry.innerHTML = `<span class="feed-id">[${feedCounter}]</span> ${msg}`;
-        feed.appendChild(entry);
-        feedCounter++;
-
-        // Keep only last 12 entries
-        while (feed.children.length > 12) {
-            feed.removeChild(feed.firstChild);
-        }
-
-        // Auto-scroll
-        feed.scrollTop = feed.scrollHeight;
-    }
-
-    setInterval(addFeedEntry, 3000 + Math.random() * 2000);
-
-    // Core feed integration - trigger on chart refresh cycles
-    setInterval(() => {
-        if (typeof CoreFeed !== 'undefined') CoreFeed.trigger('oracle-scan');
-    }, 15000);
-
-    // ===== CONSOLE SIGNATURE =====
-    console.log('%cORACLE v2.0', 'color: #00c8ff; font-size: 16px; font-weight: bold;');
-    console.log('%cPLANETARY INTELLIGENCE DISTRIBUTED SYSTEM', 'color: #ff0084; font-size: 11px;');
-    console.log('%cTRUTH WITHOUT COMPROMISE', 'color: #00d4aa;');
+        // Boot sequence: Identity first, then Oracle
+        await Identity.init();
+        ECOSYSTEM.register('identity', Identity);
+        ECOSYSTEM.register('oracle', OracleModule);
     </script>
-<script src="js/core-feed.js"></script>
 </body>
 </html>

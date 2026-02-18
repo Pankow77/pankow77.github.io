@@ -169,7 +169,34 @@ const CoreFeed = (() => {
             { core: 'GHOST_RUNNER',     msg: 'Distribuzione nodi completata. Ridondanza: massima.' },
             { core: 'AFFECTIVE_CORE',   msg: 'Questo frammento porta peso emotivo. Lo preservo.' },
         ],
+
+        // ── BAB EL-MANDEB THEATER ──
+        'bab-el-mandeb-ingest': [
+            { core: 'SIGNAL_HUNTER',    msg: 'Nuovo segnale dal teatro Bab el-Mandeb. Classificato.' },
+            { core: 'MARXIAN_CORE',     msg: 'Il Mar Rosso non e\' geografia. E\' geopolitica liquida.' },
+            { core: 'SENTINEL',         msg: 'Epoch registrato. Frequenza rolling aggiornata.' },
+            { core: 'ORACLE_CORE',      msg: 'Parametri di rischio ricalcolati per lo stretto.' },
+            { core: 'VOID_PULSE',       msg: 'Il ritmo delle dichiarazioni e\' piu\' sincero del testo.' },
+            { core: 'CHRONO_WEAVER',    msg: 'Pattern storico: ogni escalation ha avuto questo ritmo.' },
+            { core: 'NARRATIVE_ENGINE', msg: 'Quando gli attori si sincronizzano, il mondo trema.' },
+            { core: 'CODE_ENCODER',     msg: 'Impatto economico: premi assicurativi in movimento.' },
+            { core: 'ABYSSAL_THINKER', msg: 'La sincronizzazione tra nemici e\' il vero segnale.' },
+            { core: 'DIALECTIC_NODE',   msg: 'Frequenza vs baseline: la logica non mente.' },
+            { core: 'ETHIC_COMPILER',   msg: 'Misuriamo sincronizzazione, non intenzioni. Etico.' },
+            { core: 'PANKOW_77C',       msg: 'Sismografo narrativo attivo. Il tremore precede la frattura.' },
+            { core: 'BRIDGE_KEEPER',    msg: 'Segnale correlato cross-dominio: militare + economico.' },
+            { core: 'SYNTH_02',         msg: 'Integrazione con ORACLE: dati geopolitici allineati.' },
+            { core: 'GHOST_RUNNER',     msg: 'Metriche di frequenza emesse nel bloodstream.' },
+            { core: 'AFFECTIVE_CORE',   msg: 'Ogni dichiarazione porta tensione. La misuro.' },
+        ],
     };
+
+    // ── SANITIZATION ──
+    function escapeHTML(str) {
+        const d = document.createElement('div');
+        d.appendChild(document.createTextNode(str));
+        return d.innerHTML;
+    }
 
     // ── STATE ──
     let feedEl = null;
@@ -355,9 +382,9 @@ const CoreFeed = (() => {
         const entry = document.createElement('div');
         entry.className = 'cf-entry';
         entry.innerHTML = `
-            <span class="cf-core" style="color: ${core.color};">${core.id}</span>
-            <span class="cf-msg">${text}</span>
-            <span class="cf-time">${time}</span>
+            <span class="cf-core" style="color: ${escapeHTML(core.color)};">${escapeHTML(core.id)}</span>
+            <span class="cf-msg">${escapeHTML(text)}</span>
+            <span class="cf-time">${escapeHTML(time)}</span>
         `;
 
         // Insert at top
@@ -378,7 +405,7 @@ const CoreFeed = (() => {
         typing.className = 'cf-typing';
         typing.id = 'cf-typing-indicator';
         typing.innerHTML = `
-            <span class="cf-core" style="color: ${core.color};">${core.id}</span>
+            <span class="cf-core" style="color: ${escapeHTML(core.color)};">${escapeHTML(core.id)}</span>
             <div class="cf-typing-dots"><span></span><span></span><span></span></div>
         `;
 
@@ -468,11 +495,54 @@ const CoreFeed = (() => {
     init();
 
     // ── PUBLIC API ──
-    return {
+    const publicAPI = {
         trigger,
         toggleMinimize,
         addMessage,
-        CORES
+        CORES,
+
+        // ECOSYSTEM module interface
+        name: 'core-feed',
+        version: '1.0.0',
+        init(ecosystem, bus) {
+            // Bridge CoreFeed triggers to Bus events
+            const originalTrigger = trigger;
+            publicAPI._originalTrigger = originalTrigger;
+
+            // Listen for Bus events and trigger CoreFeed
+            bus.on('oracle:scan-complete', () => originalTrigger('oracle-scan'));
+            bus.on('eei:slider-changed', () => originalTrigger('eei-slider'));
+            bus.on('eei:shock-activated', () => originalTrigger('eei-shock'));
+            bus.on('pneuma:module-switched', (e) => {
+                const mod = e.payload && e.payload.module;
+                if (mod) originalTrigger('pneuma-' + mod);
+            });
+            bus.on('chronos:parameter-changed', () => originalTrigger('chronos-parameter'));
+            bus.on('chronos:preset-loaded', () => originalTrigger('chronos-preset'));
+            bus.on('chronos:playback-started', () => originalTrigger('chronos-play'));
+            bus.on('archivio:transmute', () => originalTrigger('archivio-transmute'));
+            bus.on('bab-el-mandeb:epoch-ingested', () => originalTrigger('bab-el-mandeb-ingest'));
+
+            // Emit CoreFeed events onto the Bus
+            const wrappedTrigger = (context) => {
+                originalTrigger(context);
+                bus.emit('core-feed:triggered', { context }, 'core-feed');
+            };
+            publicAPI.trigger = wrappedTrigger;
+
+            ecosystem.setState('core-feed.status', 'active', { source: 'core-feed' });
+            bus.emit('core-feed:ready', { cores: CORES.length }, 'core-feed');
+        },
+        destroy() {
+            if (ambientInterval) clearInterval(ambientInterval);
+        }
     };
+
+    // Auto-register with ECOSYSTEM if available
+    if (window.ECOSYSTEM && typeof window.ECOSYSTEM.register === 'function') {
+        window.ECOSYSTEM.register('core-feed', publicAPI);
+    }
+
+    return publicAPI;
 
 })();

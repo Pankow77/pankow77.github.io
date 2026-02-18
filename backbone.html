@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKBONE | System Metabolic Console</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #050a12;
+            --bg-panel: #0a1020;
+            --bg-hover: #0e1530;
+            --border: #152240;
+            --cyan: #00c8ff;
+            --green: #39ff14;
+            --red: #ff3344;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --purple: #8855ff;
+            --pink: #ff0084;
+            --text: #c8d6e5;
+            --text-dim: #3a4f6f;
+            --text-secondary: #6b7fa3;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        .backbone-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 16px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .backbone-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--pink);
+            letter-spacing: 0.15em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .backbone-title .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 8px var(--green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 16px;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+        }
+
+        .header-stats .val { color: var(--cyan); }
+        .header-stats .val-green { color: var(--green); }
+
+        .header-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-links a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.06em;
+        }
+        .header-links a:hover { color: var(--cyan); }
+
+        /* ===== TAB BAR ===== */
+        .tab-bar {
+            display: flex;
+            padding: 0 16px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 8px 16px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab:hover { color: var(--text-secondary); }
+        .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+        /* ===== PANELS ===== */
+        .panel-container {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .panel {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            overflow-y: auto;
+            padding: 16px;
+            display: none;
+        }
+
+        .panel.active { display: block; }
+
+        .panel::-webkit-scrollbar { width: 4px; }
+        .panel::-webkit-scrollbar-track { background: transparent; }
+        .panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.12em;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* ===== EVENT STREAM ===== */
+        .event-entry {
+            padding: 4px 0;
+            display: grid;
+            grid-template-columns: 70px 180px 1fr 80px;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            font-size: 0.6rem;
+            animation: slideIn 0.2s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-8px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .event-time { color: var(--text-dim); }
+        .event-type { color: var(--cyan); font-weight: 600; }
+        .event-source { color: var(--purple); }
+        .event-payload { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+        .event-entry[data-ns="ecosystem"] .event-type { color: var(--green); }
+        .event-entry[data-ns="state"] .event-type { color: var(--yellow); }
+        .event-entry[data-ns="identity"] .event-type { color: var(--pink); }
+        .event-entry[data-ns="oracle"] .event-type { color: var(--cyan); }
+        .event-entry[data-ns="core-feed"] .event-type { color: var(--orange); }
+
+        .stream-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+
+        .stream-controls button {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            padding: 4px 10px;
+            background: var(--bg-panel);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            cursor: pointer;
+            letter-spacing: 0.06em;
+        }
+        .stream-controls button:hover { color: var(--cyan); border-color: var(--cyan); }
+        .stream-controls button.active { color: var(--green); border-color: var(--green); }
+
+        .stream-filter {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            padding: 4px 8px;
+            background: var(--bg-panel);
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            outline: none;
+            flex: 1;
+            max-width: 200px;
+        }
+        .stream-filter:focus { border-color: var(--cyan); }
+
+        .event-count {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            margin-left: auto;
+        }
+
+        /* ===== MODULE CARDS ===== */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .module-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 14px;
+        }
+
+        .module-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .module-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--cyan);
+            letter-spacing: 0.08em;
+        }
+
+        .module-status {
+            font-size: 0.5rem;
+            padding: 2px 6px;
+            border-radius: 2px;
+            letter-spacing: 0.06em;
+        }
+
+        .module-status.active { color: var(--green); background: rgba(57,255,20,0.1); border: 1px solid rgba(57,255,20,0.2); }
+        .module-status.error { color: var(--red); background: rgba(255,51,68,0.1); border: 1px solid rgba(255,51,68,0.2); }
+
+        .module-detail {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            margin-top: 4px;
+        }
+
+        /* ===== STATE TABLE ===== */
+        .state-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .state-table th {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            letter-spacing: 0.1em;
+            text-align: left;
+            padding: 6px 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .state-table td {
+            font-size: 0.55rem;
+            padding: 5px 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+            vertical-align: top;
+        }
+
+        .state-key { color: var(--yellow); font-weight: 600; }
+        .state-value { color: var(--text); max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .state-source { color: var(--purple); }
+        .state-time { color: var(--text-dim); }
+
+        /* ===== IDENTITY ===== */
+        .identity-section {
+            margin-bottom: 20px;
+        }
+
+        .identity-section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--pink);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .epoch-entry {
+            padding: 6px 10px;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            margin-bottom: 4px;
+        }
+
+        .epoch-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .epoch-title { color: var(--text); font-weight: 600; font-size: 0.6rem; }
+        .epoch-type { color: var(--cyan); font-size: 0.5rem; letter-spacing: 0.06em; }
+        .epoch-meta { color: var(--text-dim); font-size: 0.5rem; margin-top: 2px; }
+
+        .branch-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            font-size: 0.45rem;
+            border-radius: 2px;
+            margin-right: 4px;
+        }
+
+        .branch-tag.active { color: var(--green); background: rgba(57,255,20,0.1); border: 1px solid rgba(57,255,20,0.2); }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .stat-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .stat-card .stat-value {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.5rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            margin-top: 4px;
+        }
+
+        /* ===== COMMAND LINE ===== */
+        .command-bar {
+            display: flex;
+            padding: 8px 16px;
+            background: #040810;
+            border-top: 1px solid var(--border);
+            gap: 8px;
+            align-items: center;
+        }
+
+        .command-prompt {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--green);
+            letter-spacing: 0.1em;
+            flex-shrink: 0;
+        }
+
+        .command-input {
+            flex: 1;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            background: transparent;
+            border: none;
+            color: var(--text);
+            outline: none;
+            letter-spacing: 0.03em;
+        }
+
+        .command-input::placeholder { color: var(--text-dim); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .event-entry {
+                grid-template-columns: 60px 1fr;
+            }
+            .event-source, .event-payload { display: none; }
+            .stat-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-stats { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="backbone-header">
+        <div class="backbone-title">
+            <div class="dot"></div>
+            BACKBONE
+            <span style="font-weight: 400; color: var(--text-dim); font-size: 0.5rem; letter-spacing: 0.06em;">SYSTEM METABOLIC CONSOLE</span>
+        </div>
+        <div class="header-stats">
+            <span>UPTIME: <span class="val-green" id="uptime">0s</span></span>
+            <span>MODULES: <span class="val" id="moduleCount">0</span></span>
+            <span>EVENTS: <span class="val" id="eventCount">0</span></span>
+            <span>STATE: <span class="val" id="stateCount">0</span></span>
+        </div>
+        <div class="header-links">
+            <a href="index.html">&larr; HQ</a>
+            <a href="oracle.html" style="color: #00c8ff;">ORACLE</a>
+            <a href="eei-predictor.html" style="color: #ff0040;">EEI</a>
+            <a href="agora.html" style="color: #39ff14;">AGORA</a>
+            <a href="bab-el-mandeb.html" style="color: #ff8833;">MANDEB</a>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tab-bar">
+        <div class="tab active" data-panel="events">EVENTS</div>
+        <div class="tab" data-panel="modules">MODULES</div>
+        <div class="tab" data-panel="state">STATE</div>
+        <div class="tab" data-panel="identity">IDENTITY</div>
+    </div>
+
+    <!-- PANELS -->
+    <div class="panel-container">
+
+        <!-- EVENT STREAM -->
+        <div class="panel active" id="panel-events">
+            <div class="stream-controls">
+                <button id="btnPause">PAUSE</button>
+                <button id="btnClear">CLEAR</button>
+                <input type="text" class="stream-filter" id="streamFilter" placeholder="filter events (e.g. oracle:*)">
+                <span class="event-count" id="streamCount">0 events</span>
+            </div>
+            <div id="eventStream"></div>
+        </div>
+
+        <!-- MODULES -->
+        <div class="panel" id="panel-modules">
+            <div class="panel-title">REGISTERED MODULES</div>
+            <div class="module-grid" id="moduleGrid"></div>
+        </div>
+
+        <!-- STATE -->
+        <div class="panel" id="panel-state">
+            <div class="panel-title">ECOSYSTEM STATE (WITH PROVENANCE)</div>
+            <table class="state-table">
+                <thead>
+                    <tr>
+                        <th>KEY</th>
+                        <th>VALUE</th>
+                        <th>SOURCE</th>
+                        <th>TIMESTAMP</th>
+                    </tr>
+                </thead>
+                <tbody id="stateBody"></tbody>
+            </table>
+        </div>
+
+        <!-- IDENTITY -->
+        <div class="panel" id="panel-identity">
+            <div class="stat-grid" id="identityStats"></div>
+
+            <div class="identity-section">
+                <div class="identity-section-title">BRANCHES</div>
+                <div id="branchList"></div>
+            </div>
+
+            <div class="identity-section">
+                <div class="identity-section-title">RECENT EPOCHS</div>
+                <div id="epochList"></div>
+            </div>
+
+            <div class="identity-section">
+                <div class="identity-section-title">RECENT MUTATIONS</div>
+                <div id="mutationList"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- COMMAND BAR -->
+    <div class="command-bar">
+        <span class="command-prompt">BACKBONE&gt;</span>
+        <input type="text" class="command-input" id="commandInput" placeholder="Type a command... (help, info, replay, export, clear-identity)" autocomplete="off">
+    </div>
+
+    <!-- ECOSYSTEM BOOT -->
+    <script type="module">
+        import { ECOSYSTEM, Bus } from './js/core.js';
+        import { Identity } from './js/identity.js';
+
+        // ── Boot Identity ──
+        await Identity.init();
+        ECOSYSTEM.register('identity', Identity);
+
+        // ═══════════════════════════════════════
+        // TAB SWITCHING
+        // ═══════════════════════════════════════
+        const tabs = document.querySelectorAll('.tab');
+        const panels = document.querySelectorAll('.panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                panels.forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                const panelId = 'panel-' + tab.dataset.panel;
+                document.getElementById(panelId).classList.add('active');
+
+                // Refresh panel data
+                if (tab.dataset.panel === 'modules') refreshModules();
+                if (tab.dataset.panel === 'state') refreshState();
+                if (tab.dataset.panel === 'identity') refreshIdentity();
+            });
+        });
+
+        // ═══════════════════════════════════════
+        // EVENT STREAM
+        // ═══════════════════════════════════════
+        const eventStream = document.getElementById('eventStream');
+        const streamFilter = document.getElementById('streamFilter');
+        const streamCountEl = document.getElementById('streamCount');
+        let paused = false;
+        let eventDisplayCount = 0;
+        const MAX_DISPLAYED = 500;
+
+        function formatTime(ts) {
+            const d = new Date(ts);
+            return d.getHours().toString().padStart(2, '0') + ':' +
+                   d.getMinutes().toString().padStart(2, '0') + ':' +
+                   d.getSeconds().toString().padStart(2, '0') + '.' +
+                   d.getMilliseconds().toString().padStart(3, '0');
+        }
+
+        function addEventEntry(event) {
+            if (paused) return;
+
+            const filter = streamFilter.value.trim().toLowerCase();
+            if (filter) {
+                if (filter.endsWith('*')) {
+                    if (!event.type.toLowerCase().startsWith(filter.slice(0, -1))) return;
+                } else {
+                    if (!event.type.toLowerCase().includes(filter)) return;
+                }
+            }
+
+            const ns = event.type.split(':')[0] || '';
+            const entry = document.createElement('div');
+            entry.className = 'event-entry';
+            entry.dataset.ns = ns;
+
+            const payloadStr = JSON.stringify(event.payload);
+            const shortPayload = payloadStr.length > 80 ? payloadStr.substring(0, 80) + '...' : payloadStr;
+
+            entry.innerHTML = `
+                <span class="event-time">${formatTime(event.timestamp)}</span>
+                <span class="event-type">${event.type}</span>
+                <span class="event-source">${event.source}</span>
+                <span class="event-payload" title="${payloadStr.replace(/"/g, '&quot;')}">${shortPayload}</span>
+            `;
+
+            // Click to expand
+            entry.addEventListener('click', () => {
+                const existing = entry.querySelector('.event-expanded');
+                if (existing) { existing.remove(); return; }
+                const expanded = document.createElement('div');
+                expanded.className = 'event-expanded';
+                expanded.style.cssText = 'grid-column: 1/-1; padding: 6px; background: rgba(0,200,255,0.03); border-radius: 2px; margin-top: 4px; white-space: pre-wrap; word-break: break-all; color: var(--text-secondary);';
+                expanded.textContent = JSON.stringify(event, null, 2);
+                entry.appendChild(expanded);
+            });
+
+            eventStream.insertBefore(entry, eventStream.firstChild);
+            eventDisplayCount++;
+
+            while (eventStream.children.length > MAX_DISPLAYED) {
+                eventStream.removeChild(eventStream.lastChild);
+            }
+
+            streamCountEl.textContent = eventDisplayCount + ' events';
+        }
+
+        // Subscribe to ALL events
+        Bus.on('*', addEventEntry);
+
+        // Pause/Clear
+        document.getElementById('btnPause').addEventListener('click', function () {
+            paused = !paused;
+            this.textContent = paused ? 'RESUME' : 'PAUSE';
+            this.classList.toggle('active', paused);
+        });
+
+        document.getElementById('btnClear').addEventListener('click', () => {
+            eventStream.innerHTML = '';
+            eventDisplayCount = 0;
+            streamCountEl.textContent = '0 events';
+        });
+
+        // ═══════════════════════════════════════
+        // MODULES PANEL
+        // ═══════════════════════════════════════
+        function refreshModules() {
+            const grid = document.getElementById('moduleGrid');
+            const mods = ECOSYSTEM.getModules();
+            grid.innerHTML = '';
+
+            mods.forEach(mod => {
+                const card = document.createElement('div');
+                card.className = 'module-card';
+                const age = Math.round((Date.now() - mod.registeredAt) / 1000);
+                card.innerHTML = `
+                    <div class="module-card-header">
+                        <span class="module-name">${mod.name.toUpperCase()}</span>
+                        <span class="module-status ${mod.status}">${mod.status.toUpperCase()}</span>
+                    </div>
+                    <div class="module-detail">Registered: ${age}s ago</div>
+                    <div class="module-detail">Init: ${mod.hasInit ? 'YES' : 'NO'} | Destroy: ${mod.hasDestroy ? 'YES' : 'NO'}</div>
+                `;
+                grid.appendChild(card);
+            });
+
+            if (mods.length === 0) {
+                grid.innerHTML = '<div style="color: var(--text-dim);">No modules registered. Open ORACLE or another page to see modules appear.</div>';
+            }
+        }
+
+        // ═══════════════════════════════════════
+        // STATE PANEL
+        // ═══════════════════════════════════════
+        function refreshState() {
+            const tbody = document.getElementById('stateBody');
+            const fullState = ECOSYSTEM.getFullState();
+            tbody.innerHTML = '';
+
+            Object.entries(fullState).forEach(([key, entry]) => {
+                const tr = document.createElement('tr');
+                const valueStr = typeof entry.value === 'object'
+                    ? JSON.stringify(entry.value).substring(0, 100)
+                    : String(entry.value);
+
+                tr.innerHTML = `
+                    <td class="state-key">${key}</td>
+                    <td class="state-value" title="${String(entry.value).replace(/"/g, '&quot;')}">${valueStr}</td>
+                    <td class="state-source">${entry.source}</td>
+                    <td class="state-time">${formatTime(entry.timestamp)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Auto-refresh state on updates
+        Bus.on('state:update', () => {
+            if (document.querySelector('.tab[data-panel="state"]').classList.contains('active')) {
+                refreshState();
+            }
+        });
+
+        // ═══════════════════════════════════════
+        // IDENTITY PANEL
+        // ═══════════════════════════════════════
+        async function refreshIdentity() {
+            const identity = ECOSYSTEM.getModule('identity');
+            if (!identity) {
+                document.getElementById('identityStats').innerHTML = '<div style="color: var(--text-dim);">Identity module not loaded.</div>';
+                return;
+            }
+
+            // Stats
+            const stats = await identity.getStats();
+            document.getElementById('identityStats').innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-value">${stats.epochs}</div>
+                    <div class="stat-label">EPOCHS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.mutations}</div>
+                    <div class="stat-label">MUTATIONS</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.branches}</div>
+                    <div class="stat-label">BRANCHES</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">${stats.stateKeys}</div>
+                    <div class="stat-label">PERSISTED KEYS</div>
+                </div>
+            `;
+
+            // Branches
+            const branches = await identity.getBranches();
+            const branchList = document.getElementById('branchList');
+            branchList.innerHTML = '';
+            branches.forEach(b => {
+                const tag = document.createElement('span');
+                tag.className = 'branch-tag ' + b.status;
+                tag.textContent = b.name;
+                tag.title = b.description + ' | Created: ' + new Date(b.createdAt).toLocaleString();
+                branchList.appendChild(tag);
+            });
+
+            // Recent epochs
+            const epochs = await identity.getRecentEpochs(20);
+            const epochList = document.getElementById('epochList');
+            epochList.innerHTML = '';
+            epochs.reverse().forEach(ep => {
+                const div = document.createElement('div');
+                div.className = 'epoch-entry';
+                div.innerHTML = `
+                    <div class="epoch-header">
+                        <span class="epoch-title">${ep.title || '(untitled)'}</span>
+                        <span class="epoch-type">${ep.type.toUpperCase()}</span>
+                    </div>
+                    <div class="epoch-meta">
+                        ${formatTime(ep.timestamp)} | Source: ${ep.source} | Branch: ${ep.branch}
+                        ${ep.tags.length ? ' | Tags: ' + ep.tags.join(', ') : ''}
+                    </div>
+                `;
+                epochList.appendChild(div);
+            });
+
+            if (epochs.length === 0) {
+                epochList.innerHTML = '<div style="color: var(--text-dim);">No epochs recorded yet.</div>';
+            }
+
+            // Recent mutations
+            const mutations = await identity.getMutations();
+            const mutationList = document.getElementById('mutationList');
+            mutationList.innerHTML = '';
+            mutations.slice(-10).reverse().forEach(m => {
+                const div = document.createElement('div');
+                div.className = 'epoch-entry';
+                const deltaStr = JSON.stringify(m.delta).substring(0, 100);
+                div.innerHTML = `
+                    <div class="epoch-header">
+                        <span class="epoch-title" style="color: var(--yellow);">${m.id.substring(0, 8)}</span>
+                        <span class="epoch-type">${m.branch}</span>
+                    </div>
+                    <div class="epoch-meta">
+                        ${formatTime(m.timestamp)} | Parent: ${m.parent ? m.parent.substring(0, 8) : 'ROOT'} | ${deltaStr}
+                    </div>
+                `;
+                mutationList.appendChild(div);
+            });
+
+            if (mutations.length === 0) {
+                mutationList.innerHTML = '<div style="color: var(--text-dim);">No mutations recorded yet.</div>';
+            }
+        }
+
+        // ═══════════════════════════════════════
+        // HEADER STATS UPDATE
+        // ═══════════════════════════════════════
+        setInterval(() => {
+            document.getElementById('uptime').textContent = ECOSYSTEM.getUptime();
+            document.getElementById('moduleCount').textContent = ECOSYSTEM.getModules().length;
+            document.getElementById('eventCount').textContent = Bus.getHistory().length;
+            document.getElementById('stateCount').textContent = ECOSYSTEM.getStateKeys().length;
+        }, 1000);
+
+        // ═══════════════════════════════════════
+        // COMMAND LINE
+        // ═══════════════════════════════════════
+        const commandInput = document.getElementById('commandInput');
+        const commandOutput = (text, color = 'var(--text)') => {
+            const entry = document.createElement('div');
+            entry.style.cssText = `padding: 4px 0; color: ${color}; font-size: 0.6rem; white-space: pre-wrap;`;
+            entry.textContent = text;
+            eventStream.insertBefore(entry, eventStream.firstChild);
+        };
+
+        commandInput.addEventListener('keydown', async (e) => {
+            if (e.key !== 'Enter') return;
+            const cmd = commandInput.value.trim().toLowerCase();
+            commandInput.value = '';
+
+            if (!cmd) return;
+
+            switch (cmd) {
+                case 'help':
+                    commandOutput([
+                        'BACKBONE COMMANDS:',
+                        '  info          - System info snapshot',
+                        '  modules       - List registered modules',
+                        '  state         - Dump current state',
+                        '  replay [n]    - Replay last n events',
+                        '  export        - Export identity to console',
+                        '  stats         - Identity statistics',
+                        '  clear         - Clear event stream',
+                        '  clear-identity- Wipe identity database',
+                        '  emit <type>   - Emit a test event',
+                        '  help          - This message',
+                    ].join('\n'), 'var(--green)');
+                    break;
+
+                case 'info':
+                    commandOutput(JSON.stringify(ECOSYSTEM.getInfo(), null, 2), 'var(--cyan)');
+                    break;
+
+                case 'modules':
+                    commandOutput(JSON.stringify(ECOSYSTEM.getModules(), null, 2), 'var(--cyan)');
+                    break;
+
+                case 'state':
+                    commandOutput(JSON.stringify(ECOSYSTEM.getFullState(), null, 2), 'var(--yellow)');
+                    break;
+
+                case 'stats': {
+                    const identity = ECOSYSTEM.getModule('identity');
+                    if (identity) {
+                        const s = await identity.getStats();
+                        commandOutput(JSON.stringify(s, null, 2), 'var(--pink)');
+                    } else {
+                        commandOutput('Identity module not loaded.', 'var(--red)');
+                    }
+                    break;
+                }
+
+                case 'export': {
+                    const identity = ECOSYSTEM.getModule('identity');
+                    if (identity) {
+                        const data = await identity.export();
+                        console.log('[BACKBONE] Identity Export:', data);
+                        commandOutput('Identity exported to browser console. ' + JSON.stringify({
+                            epochs: data.timeline.length,
+                            mutations: data.mutations.length,
+                            branches: data.branches.length,
+                            states: data.state.length
+                        }), 'var(--pink)');
+                    } else {
+                        commandOutput('Identity module not loaded.', 'var(--red)');
+                    }
+                    break;
+                }
+
+                case 'clear':
+                    eventStream.innerHTML = '';
+                    eventDisplayCount = 0;
+                    streamCountEl.textContent = '0 events';
+                    break;
+
+                case 'clear-identity': {
+                    const identity = ECOSYSTEM.getModule('identity');
+                    if (identity) {
+                        await identity.clear();
+                        await identity.init();
+                        commandOutput('Identity database cleared and reinitialized.', 'var(--red)');
+                    }
+                    break;
+                }
+
+                default:
+                    if (cmd.startsWith('replay')) {
+                        const n = parseInt(cmd.split(' ')[1]) || 20;
+                        const events = Bus.getHistory().slice(-n);
+                        commandOutput(`Replaying last ${events.length} events:`, 'var(--purple)');
+                        events.forEach(e => addEventEntry(e));
+                    } else if (cmd.startsWith('emit ')) {
+                        const type = cmd.substring(5).trim();
+                        Bus.emit(type, { manual: true }, 'backbone');
+                        commandOutput(`Emitted: ${type}`, 'var(--green)');
+                    } else {
+                        commandOutput(`Unknown command: ${cmd}. Type "help" for available commands.`, 'var(--red)');
+                    }
+            }
+        });
+
+        // Focus command input on key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== commandInput) {
+                e.preventDefault();
+                commandInput.focus();
+            }
+        });
+
+        // ═══════════════════════════════════════
+        // BOOT COMPLETE
+        // ═══════════════════════════════════════
+        Bus.emit('backbone:ready', { timestamp: Date.now() }, 'backbone');
+        ECOSYSTEM.register('backbone', {
+            name: 'backbone',
+            version: '1.0.0'
+        });
+
+        // Console signature
+        console.log('%c[BACKBONE] %cSystem Metabolic Console online.', 'color: #ff0084; font-weight: bold;', 'color: #6b7fa3;');
+        console.log('%c[BACKBONE] %cPress "/" to focus command input.', 'color: #ff0084; font-weight: bold;', 'color: #3a4f6f;');
+    </script>
+</body>
+</html>

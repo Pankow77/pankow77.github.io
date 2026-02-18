@@ -576,7 +576,9 @@
                 <span style="color: #333; margin: 0 8px;">|</span>
                 <a href="urban-chronos.html" style="color: #00d4aa; text-decoration: none; font-family: Orbitron, monospace; font-size: 0.7rem; letter-spacing: 0.15em;">CHRONOS</a>
                 <span style="color: #333; margin: 0 8px;">|</span>
-                <a href="archivio-silente.html" style="color: #00d4ff; text-decoration: none; font-family: Orbitron, monospace; font-size: 0.7rem; letter-spacing: 0.15em;">ARCHIVIO &rarr;</a>
+                <a href="archivio-silente.html" style="color: #00d4ff; text-decoration: none; font-family: Orbitron, monospace; font-size: 0.7rem; letter-spacing: 0.15em;">ARCHIVIO</a>
+                <span style="color: #333; margin: 0 8px;">|</span>
+                <a href="bab-el-mandeb.html" style="color: #ff8833; text-decoration: none; font-family: Orbitron, monospace; font-size: 0.7rem; letter-spacing: 0.15em;">MANDEB &rarr;</a>
             </div>
         </div>
 
@@ -813,10 +815,16 @@
     }
 
     // ===== PROBABILITY ENGINE =====
+    function clampSlider(val, min, max) {
+        const n = Number(val);
+        if (isNaN(n)) return min;
+        return Math.max(min, Math.min(max, n));
+    }
+
     function recalculate() {
-        const legal = sliders.legal.value / 100;
-        const geo = sliders.geo.value / 100;
-        const ai = sliders.ai.value / 100;
+        const legal = clampSlider(sliders.legal.value, 0, 100) / 100;
+        const geo = clampSlider(sliders.geo.value, 0, 100) / 100;
+        const ai = clampSlider(sliders.ai.value, 0, 100) / 100;
 
         // Shock modifiers
         let shockFrag = 0, shockEEI = 0, shockSoft = 0, shockSelf = 0;

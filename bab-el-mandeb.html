@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAB EL-MANDEB v0.1 | Theater Monitor</title>
+    <meta name="description" content="Bab el-Mandeb Theater Monitor - Narrative Seismograph. Hybrid Syndicate Research Division.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #070d1a;
+            --bg-card: #0b1526;
+            --bg-card-hover: #0e1a30;
+            --border: #152240;
+            --border-light: #1a2d50;
+            --cyan: #00c8ff;
+            --cyan-dim: #0088aa;
+            --teal: #00d4aa;
+            --red: #ff3344;
+            --red-dim: #cc2233;
+            --orange: #ff8833;
+            --yellow: #ffcc00;
+            --green: #00dd66;
+            --purple: #8855ff;
+            --pink: #ff0084;
+            --text-primary: #c8d6e5;
+            --text-secondary: #6b7fa3;
+            --text-dim: #3a4f6f;
+        }
+
+        body {
+            font-family: 'Inter', 'Share Tech Mono', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 3px,
+                rgba(255, 100, 50, 0.006) 3px, rgba(255, 100, 50, 0.006) 6px
+            );
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* ===== TOP HEADER ===== */
+        .top-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: #060c18;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .theater-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .theater-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .theater-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .theater-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--orange);
+            letter-spacing: 0.12em;
+        }
+
+        .theater-subtitle {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 1px;
+        }
+
+        .top-stats {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .top-stat {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .top-stat strong { color: var(--text-secondary); }
+        .top-stat .val-green { color: var(--green); }
+        .top-stat .val-orange { color: var(--orange); }
+        .top-stat .val-red { color: var(--red); }
+
+        .back-link {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover { color: var(--cyan); }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 0;
+            min-height: calc(100vh - 60px);
+        }
+
+        .main-content {
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .sidebar {
+            background: #060c18;
+            border-left: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow-y: auto;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header .focus-tag {
+            color: var(--orange);
+            margin-left: 10px;
+            font-weight: 400;
+        }
+
+        /* ===== FREQUENCY DASHBOARD ===== */
+        .freq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .freq-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+            transition: all 0.3s;
+        }
+
+        .freq-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-light);
+        }
+
+        .freq-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .freq-actor {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .freq-actor.centcom { color: #4488ff; }
+        .freq-actor.houthi { color: var(--red); }
+        .freq-actor.eunavfor { color: var(--teal); }
+        .freq-actor.iran { color: var(--purple); }
+        .freq-actor.other { color: var(--text-secondary); }
+
+        .freq-count {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .freq-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .freq-ratio {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.65rem;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+
+        .freq-ratio.normal { color: var(--green); }
+        .freq-ratio.elevated { color: var(--yellow); }
+        .freq-ratio.high { color: var(--orange); }
+        .freq-ratio.critical { color: var(--red); }
+
+        /* ===== FREQUENCY CHART ===== */
+        .chart-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chart-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .chart-refresh {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+        }
+
+        #frequencyChart {
+            width: 100%;
+            height: 200px;
+            display: block;
+        }
+
+        .chart-legend {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 3px;
+            border-radius: 1px;
+        }
+
+        /* ===== TIMELINE ===== */
+        .timeline-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .timeline-entry {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .timeline-entry:last-child { border-bottom: none; }
+
+        .timeline-time {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+        }
+
+        .timeline-content {
+            font-size: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-actor-tag {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .timeline-actor-tag.centcom {
+            color: #4488ff;
+            background: rgba(68, 136, 255, 0.1);
+            border: 1px solid rgba(68, 136, 255, 0.2);
+        }
+        .timeline-actor-tag.houthi {
+            color: var(--red);
+            background: rgba(255, 51, 68, 0.1);
+            border: 1px solid rgba(255, 51, 68, 0.2);
+        }
+        .timeline-actor-tag.eunavfor {
+            color: var(--teal);
+            background: rgba(0, 212, 170, 0.1);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+        }
+        .timeline-actor-tag.iran {
+            color: var(--purple);
+            background: rgba(136, 85, 255, 0.1);
+            border: 1px solid rgba(136, 85, 255, 0.2);
+        }
+        .timeline-actor-tag.other {
+            color: var(--text-secondary);
+            background: rgba(107, 127, 163, 0.1);
+            border: 1px solid rgba(107, 127, 163, 0.2);
+        }
+
+        .timeline-action {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .timeline-intensity {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
+
+        .intensity-1 { color: var(--text-dim); }
+        .intensity-2 { color: var(--cyan); }
+        .intensity-3 { color: var(--yellow); }
+        .intensity-4 { color: var(--orange); }
+        .intensity-5 { color: var(--red); }
+
+        .timeline-empty {
+            text-align: center;
+            padding: 40px 0;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+        }
+
+        /* ===== SIDEBAR: INGESTION FORM ===== */
+        .sidebar-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 16px;
+        }
+
+        .sidebar-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--orange);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .form-select,
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 8px 10px;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            color: var(--text-primary);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.04em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-select:focus,
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: var(--orange);
+        }
+
+        .form-select option {
+            background: var(--bg-deep);
+            color: var(--text-primary);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .form-intensity {
+            display: flex;
+            gap: 4px;
+        }
+
+        .intensity-btn {
+            flex: 1;
+            padding: 6px 0;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            color: var(--text-dim);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .intensity-btn:hover {
+            border-color: var(--border-light);
+        }
+
+        .intensity-btn.selected {
+            color: var(--bg-deep);
+            font-weight: 700;
+        }
+
+        .intensity-btn.selected[data-val="1"] { background: var(--text-dim); border-color: var(--text-dim); }
+        .intensity-btn.selected[data-val="2"] { background: var(--cyan); border-color: var(--cyan); }
+        .intensity-btn.selected[data-val="3"] { background: var(--yellow); border-color: var(--yellow); }
+        .intensity-btn.selected[data-val="4"] { background: var(--orange); border-color: var(--orange); }
+        .intensity-btn.selected[data-val="5"] { background: var(--red); border-color: var(--red); }
+
+        .tag-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .tag-btn {
+            padding: 3px 8px;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            color: var(--text-dim);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tag-btn:hover {
+            border-color: var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        .tag-btn.selected {
+            background: rgba(255, 136, 51, 0.15);
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+
+        .ingest-btn {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255, 136, 51, 0.15);
+            border: 1px solid var(--orange);
+            border-radius: 3px;
+            color: var(--orange);
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 16px;
+        }
+
+        .ingest-btn:hover {
+            background: rgba(255, 136, 51, 0.25);
+            box-shadow: 0 0 12px rgba(255, 136, 51, 0.2);
+        }
+
+        .ingest-btn:active {
+            transform: scale(0.98);
+        }
+
+        .ingest-btn.success {
+            background: rgba(0, 221, 102, 0.2);
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+        /* ===== SIDEBAR: SYSTEM STATUS ===== */
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .status-row:last-child { border-bottom: none; }
+
+        .status-key {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .status-val {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.04em;
+        }
+
+        .status-val.online { color: var(--green); }
+
+        /* ===== STATUS FOOTER ===== */
+        .status-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            background: #050a14;
+            border-top: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .status-footer-left,
+        .status-footer-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sf-item {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .sf-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+        }
+
+        .sf-item .val { color: var(--text-secondary); }
+
+        .sf-motto {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1000px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-left: none;
+                border-top: 1px solid var(--border);
+            }
+            .freq-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .top-stats {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .top-header {
+                padding: 10px 16px;
+            }
+            .main-content {
+                padding: 16px;
+            }
+            .freq-grid {
+                grid-template-columns: 1fr;
+            }
+            .timeline-entry {
+                grid-template-columns: 1fr;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="top-header-left">
+            <div class="theater-logo">
+                <div class="theater-icon">
+                    <svg viewBox="0 0 28 28">
+                        <circle cx="14" cy="14" r="10" fill="none" stroke="#ff8833" stroke-width="1.5" opacity="0.4"/>
+                        <circle cx="14" cy="14" r="3" fill="#ff8833" opacity="0.8"/>
+                        <line x1="4" y1="14" x2="24" y2="14" stroke="#ff8833" stroke-width="1" opacity="0.3"/>
+                        <line x1="14" y1="4" x2="14" y2="24" stroke="#ff8833" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="theater-title">BAB EL-MANDEB v0.1</div>
+                    <div class="theater-subtitle">Theater Monitor // Narrative Seismograph</div>
+                </div>
+            </div>
+        </div>
+        <div class="top-stats">
+            <div class="top-stat">THEATER: <strong class="val-orange">RED_SEA</strong></div>
+            <div class="top-stat">EPOCHS: <strong id="statEpochCount">0</strong></div>
+            <div class="top-stat">STATUS: <strong class="val-green" id="statStatus">ACTIVE</strong></div>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <a href="index.html" class="back-link">&larr; HQ</a>
+            <a href="oracle.html" class="back-link" style="color: #00c8ff;">ORACLE</a>
+            <a href="eei-predictor.html" class="back-link" style="color: #ff0040;">EEI</a>
+            <a href="agora.html" class="back-link" style="color: #39ff14;">AGORA</a>
+            <a href="pneuma.html" class="back-link" style="color: #ff6600;">PNEUMA</a>
+        </div>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="main-layout">
+
+        <!-- LEFT: MAIN CONTENT -->
+        <div class="main-content">
+            <div class="section-header">
+                ROLLING FREQUENCY // 24H<span class="focus-tag">// ACTORS</span>
+            </div>
+
+            <!-- FREQUENCY CARDS -->
+            <div class="freq-grid" id="freqGrid">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- FREQUENCY CHART -->
+            <div class="chart-section">
+                <div class="chart-header">
+                    <div class="chart-title">FREQUENCY TIMELINE // 72H</div>
+                    <div class="chart-refresh">AUTO_REFRESH: 30s</div>
+                </div>
+                <canvas id="frequencyChart"></canvas>
+                <div class="chart-legend">
+                    <div class="legend-item"><span class="legend-dot" style="background: #4488ff;"></span> CENTCOM</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #ff3344;"></span> HOUTHI</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #00d4aa;"></span> EUNAVFOR</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #8855ff;"></span> IRAN</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #6b7fa3;"></span> OTHER</div>
+                </div>
+            </div>
+
+            <!-- EPOCH TIMELINE -->
+            <div class="timeline-section">
+                <div class="section-header" style="margin-bottom: 0; padding-bottom: 10px;">
+                    EPOCH TIMELINE<span class="focus-tag">// RECENT</span>
+                </div>
+                <div id="epochTimeline">
+                    <div class="timeline-empty">NO EPOCHS INGESTED YET. USE THE FORM TO CLASSIFY A DECLARATION.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <div class="sidebar">
+
+            <!-- INGESTION FORM -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">INGEST EPOCH</div>
+
+                <div class="form-group">
+                    <label class="form-label">SOURCE</label>
+                    <select class="form-select" id="formSource">
+                        <option value="CENTCOM">CENTCOM</option>
+                        <option value="HOUTHI">HOUTHI (claim)</option>
+                        <option value="EUNAVFOR">EU NAVFOR ASPIDES</option>
+                        <option value="IRAN">IRAN (official)</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">ACTOR</label>
+                    <select class="form-select" id="formActor">
+                        <option value="centcom">CENTCOM / US</option>
+                        <option value="houthi">HOUTHI</option>
+                        <option value="eunavfor">EUNAVFOR</option>
+                        <option value="iran">IRAN</option>
+                        <option value="other">OTHER</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">ACTION TYPE</label>
+                    <select class="form-select" id="formAction">
+                        <option value="strike">STRIKE</option>
+                        <option value="claim">CLAIM</option>
+                        <option value="warning">WARNING</option>
+                        <option value="defensive">DEFENSIVE</option>
+                        <option value="statement">STATEMENT</option>
+                        <option value="deployment">DEPLOYMENT</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">INTENSITY (1-5)</label>
+                    <div class="form-intensity" id="formIntensity">
+                        <button class="intensity-btn" data-val="1">1</button>
+                        <button class="intensity-btn" data-val="2">2</button>
+                        <button class="intensity-btn selected" data-val="3">3</button>
+                        <button class="intensity-btn" data-val="4">4</button>
+                        <button class="intensity-btn" data-val="5">5</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">SUMMARY (optional)</label>
+                    <textarea class="form-textarea" id="formSummary" placeholder="Brief description of the declaration..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">TAGS</label>
+                    <div class="tag-grid" id="formTags">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <button class="ingest-btn" id="btnIngest">INGEST EPOCH</button>
+            </div>
+
+            <!-- SYSTEM STATUS -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">SYSTEM STATUS</div>
+                <div class="status-row">
+                    <span class="status-key">MODULE</span>
+                    <span class="status-val online" id="sysModule">ACTIVE</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-key">EPOCHS</span>
+                    <span class="status-val" id="sysEpochs">0</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-key">CIRCULATION</span>
+                    <span class="status-val" id="sysCirculation">--</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-key">IDENTITY</span>
+                    <span class="status-val" id="sysIdentity">--</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-key">BUS</span>
+                    <span class="status-val" id="sysBus">--</span>
+                </div>
+                <div class="status-row">
+                    <span class="status-key">UPTIME</span>
+                    <span class="status-val" id="sysUptime">0s</span>
+                </div>
+            </div>
+
+            <!-- QUICK GUIDE -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">OPERATOR GUIDE</div>
+                <div style="font-size: 0.65rem; color: var(--text-dim); line-height: 1.6;">
+                    <strong style="color: var(--text-secondary);">1.</strong> Read the declaration<br>
+                    <strong style="color: var(--text-secondary);">2.</strong> Select source + actor<br>
+                    <strong style="color: var(--text-secondary);">3.</strong> Classify action type<br>
+                    <strong style="color: var(--text-secondary);">4.</strong> Set intensity (1-5)<br>
+                    <strong style="color: var(--text-secondary);">5.</strong> Add tags if relevant<br>
+                    <strong style="color: var(--text-secondary);">6.</strong> Click INGEST<br>
+                    <br>
+                    <span style="color: var(--orange);">The system tracks frequency.</span><br>
+                    <span style="color: var(--text-dim);">You provide meaning.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATUS FOOTER -->
+    <div class="status-footer">
+        <div class="status-footer-left">
+            <div class="sf-item"><span class="sf-dot"></span> SEISMOGRAPH: <span class="val">ONLINE</span></div>
+            <div class="sf-item">VERSION: <span class="val">0.1.0</span></div>
+            <div class="sf-item">THEATER: <span class="val">BAB_EL_MANDEB</span></div>
+        </div>
+        <div class="status-footer-right">
+            <div class="sf-motto">SYNCHRONIZATION IS THE SIGNAL</div>
+            <div class="sf-item">OPERATOR: <span class="val">PANKOW_77C</span></div>
+        </div>
+    </div>
+
+    <!-- ECOSYSTEM: Nervous System -->
+    <script src="js/core-feed.js"></script>
+    <script type="module">
+        import { ECOSYSTEM, Bus } from './js/core.js';
+        import { Identity } from './js/identity.js';
+        import Circulation from './js/circulation.js';
+        import EvaluationEngine from './js/evaluation-engine.js';
+        import BabElMandebModule from './js/modules/bab-el-mandeb.js';
+
+        // ── Boot sequence ──
+        await Identity.init();
+        ECOSYSTEM.register('identity', Identity);
+        ECOSYSTEM.register('circulation', Circulation);
+        ECOSYSTEM.register('evaluation-engine', EvaluationEngine);
+        ECOSYSTEM.register('bab-el-mandeb', BabElMandebModule);
+
+        // ── Actor colors ──
+        const ACTOR_COLORS = {
+            centcom:  '#4488ff',
+            houthi:   '#ff3344',
+            eunavfor: '#00d4aa',
+            iran:     '#8855ff',
+            other:    '#6b7fa3'
+        };
+
+        // ── Initialize UI ──
+
+        // Frequency cards
+        function renderFreqCards() {
+            const grid = document.getElementById('freqGrid');
+            const freqs = BabElMandebModule.getFrequencies();
+            const baselines = BabElMandebModule.getBaselines();
+
+            grid.innerHTML = '';
+            for (const [actor, count] of Object.entries(freqs)) {
+                const baseline = baselines[actor];
+                const ratio = baseline > 0 ? (count / baseline) : (count > 0 ? Infinity : 0);
+                let ratioClass = 'normal';
+                let ratioText = 'BASELINE';
+                if (ratio === Infinity) {
+                    ratioClass = 'elevated';
+                    ratioText = 'NEW ACTIVITY';
+                } else if (ratio > 2.5) {
+                    ratioClass = 'critical';
+                    ratioText = `${ratio.toFixed(1)}x BASELINE`;
+                } else if (ratio > 1.8) {
+                    ratioClass = 'high';
+                    ratioText = `${ratio.toFixed(1)}x BASELINE`;
+                } else if (ratio > 1.2) {
+                    ratioClass = 'elevated';
+                    ratioText = `${ratio.toFixed(1)}x BASELINE`;
+                } else if (count > 0) {
+                    ratioText = `${ratio.toFixed(1)}x BASELINE`;
+                }
+
+                const card = document.createElement('div');
+                card.className = 'freq-card';
+                card.innerHTML = `
+                    <div class="freq-card-header">
+                        <span class="freq-actor ${actor}">${actor.toUpperCase()}</span>
+                    </div>
+                    <div class="freq-count">${count}</div>
+                    <div class="freq-label">STATEMENTS / 24H</div>
+                    <div class="freq-ratio ${ratioClass}">${ratioText}</div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        // Frequency chart
+        function drawFrequencyChart() {
+            const canvas = document.getElementById('frequencyChart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+
+            const W = rect.width;
+            const H = rect.height;
+            const padLeft = 40, padRight = 10, padTop = 10, padBottom = 30;
+            const chartW = W - padLeft - padRight;
+            const chartH = H - padTop - padBottom;
+
+            ctx.clearRect(0, 0, W, H);
+
+            // Grid lines
+            ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) {
+                const y = padTop + (chartH / 4) * i;
+                ctx.beginPath();
+                ctx.moveTo(padLeft, y);
+                ctx.lineTo(W - padRight, y);
+                ctx.stroke();
+            }
+
+            const timeline = BabElMandebModule.getTimeline();
+            if (!timeline.hours || timeline.hours.length === 0) {
+                // No data — draw empty state
+                ctx.fillStyle = '#3a4f6f';
+                ctx.font = '11px Share Tech Mono';
+                ctx.textAlign = 'center';
+                ctx.fillText('AWAITING DATA...', W / 2, H / 2);
+                return;
+            }
+
+            // Find max for scaling
+            let maxVal = 1;
+            for (const actor of Object.keys(timeline.actors)) {
+                for (const v of timeline.actors[actor]) {
+                    if (v > maxVal) maxVal = v;
+                }
+            }
+
+            // Y labels
+            ctx.fillStyle = '#3a4f6f';
+            ctx.font = '10px Share Tech Mono';
+            ctx.textAlign = 'right';
+            for (let i = 0; i <= 4; i++) {
+                const val = Math.round(maxVal * (1 - i / 4));
+                const y = padTop + (chartH / 4) * i;
+                ctx.fillText(val, padLeft - 6, y + 4);
+            }
+
+            // X labels (every 12 hours)
+            ctx.textAlign = 'center';
+            for (let i = 0; i < timeline.hours.length; i += 12) {
+                const x = padLeft + (chartW / (timeline.hours.length - 1)) * i;
+                ctx.fillText(timeline.hours[i], x, H - 8);
+            }
+
+            // Draw lines per actor
+            const actors = Object.keys(timeline.actors);
+            for (const actor of actors) {
+                const data = timeline.actors[actor];
+                const color = ACTOR_COLORS[actor] || '#6b7fa3';
+
+                ctx.beginPath();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 1.5;
+                ctx.globalAlpha = 0.8;
+
+                for (let i = 0; i < data.length; i++) {
+                    const x = padLeft + (chartW / (data.length - 1)) * i;
+                    const y = padTop + chartH - (data[i] / maxVal) * chartH;
+                    if (i === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+                ctx.globalAlpha = 1;
+            }
+        }
+
+        // Epoch timeline
+        function renderTimeline() {
+            const container = document.getElementById('epochTimeline');
+            const recent = BabElMandebModule.getRecent(30);
+
+            if (recent.length === 0) {
+                container.innerHTML = '<div class="timeline-empty">NO EPOCHS INGESTED YET. USE THE FORM TO CLASSIFY A DECLARATION.</div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            for (const epoch of recent) {
+                const time = new Date(epoch.timestamp);
+                const timeStr = time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+                const dateStr = time.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit' });
+
+                const entry = document.createElement('div');
+                entry.className = 'timeline-entry';
+                entry.innerHTML = `
+                    <div class="timeline-time">${dateStr}<br>${timeStr}</div>
+                    <div class="timeline-content">
+                        <span class="timeline-actor-tag ${epoch.actor}">${epoch.actor.toUpperCase()}</span>
+                        <span class="timeline-action">${epoch.action_type}</span>
+                        ${epoch.text_summary ? `<div style="margin-top:4px;font-size:0.65rem;color:var(--text-dim)">${escapeHTML(epoch.text_summary)}</div>` : ''}
+                    </div>
+                    <div class="timeline-intensity intensity-${epoch.intensity}">${epoch.intensity}/5</div>
+                `;
+                container.appendChild(entry);
+            }
+        }
+
+        // Sanitize
+        function escapeHTML(str) {
+            const d = document.createElement('div');
+            d.appendChild(document.createTextNode(str));
+            return d.innerHTML;
+        }
+
+        // System status
+        function updateSystemStatus() {
+            document.getElementById('sysEpochs').textContent = BabElMandebModule.getEpochCount();
+            document.getElementById('statEpochCount').textContent = BabElMandebModule.getEpochCount();
+            document.getElementById('sysUptime').textContent = ECOSYSTEM.getUptime();
+
+            const circMod = ECOSYSTEM.getModule('circulation');
+            document.getElementById('sysCirculation').textContent = circMod ? 'ACTIVE' : 'OFFLINE';
+            document.getElementById('sysCirculation').className = 'status-val' + (circMod ? ' online' : '');
+
+            const idMod = ECOSYSTEM.getModule('identity');
+            document.getElementById('sysIdentity').textContent = idMod ? 'ACTIVE' : 'OFFLINE';
+            document.getElementById('sysIdentity').className = 'status-val' + (idMod ? ' online' : '');
+
+            document.getElementById('sysBus').textContent = `${Bus.getListenerCount()} LISTENERS`;
+        }
+
+        // ── Form setup ──
+
+        // Tags
+        const tagGrid = document.getElementById('formTags');
+        const selectedTags = new Set();
+        for (const tag of BabElMandebModule.TAG_OPTIONS) {
+            const btn = document.createElement('button');
+            btn.className = 'tag-btn';
+            btn.textContent = tag;
+            btn.addEventListener('click', () => {
+                if (selectedTags.has(tag)) {
+                    selectedTags.delete(tag);
+                    btn.classList.remove('selected');
+                } else {
+                    selectedTags.add(tag);
+                    btn.classList.add('selected');
+                }
+            });
+            tagGrid.appendChild(btn);
+        }
+
+        // Intensity buttons
+        let selectedIntensity = 3;
+        document.querySelectorAll('.intensity-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.intensity-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                selectedIntensity = parseInt(btn.dataset.val);
+            });
+        });
+
+        // Auto-link source to actor
+        document.getElementById('formSource').addEventListener('change', (e) => {
+            const sourceToActor = {
+                'CENTCOM': 'centcom',
+                'HOUTHI': 'houthi',
+                'EUNAVFOR': 'eunavfor',
+                'IRAN': 'iran',
+                'OTHER': 'other'
+            };
+            document.getElementById('formActor').value = sourceToActor[e.target.value] || 'other';
+        });
+
+        // Ingest button
+        const ingestBtn = document.getElementById('btnIngest');
+        ingestBtn.addEventListener('click', async () => {
+            const source = document.getElementById('formSource').value;
+            const actor = document.getElementById('formActor').value;
+            const action_type = document.getElementById('formAction').value;
+            const text_summary = document.getElementById('formSummary').value.trim();
+
+            try {
+                await BabElMandebModule.ingest({
+                    source,
+                    actor,
+                    action_type,
+                    intensity: selectedIntensity,
+                    text_summary,
+                    tags: [...selectedTags],
+                    domains: ['military', 'geo']
+                });
+
+                // Visual feedback
+                ingestBtn.classList.add('success');
+                ingestBtn.textContent = 'EPOCH INGESTED';
+                setTimeout(() => {
+                    ingestBtn.classList.remove('success');
+                    ingestBtn.textContent = 'INGEST EPOCH';
+                }, 1500);
+
+                // Clear form
+                document.getElementById('formSummary').value = '';
+                selectedTags.clear();
+                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('selected'));
+
+                // Refresh UI
+                refreshUI();
+            } catch (err) {
+                console.error('[BAB-EL-MANDEB] Ingestion error:', err);
+                ingestBtn.textContent = 'ERROR';
+                setTimeout(() => { ingestBtn.textContent = 'INGEST EPOCH'; }, 2000);
+            }
+        });
+
+        // ── Refresh loop ──
+        function refreshUI() {
+            renderFreqCards();
+            drawFrequencyChart();
+            renderTimeline();
+            updateSystemStatus();
+        }
+
+        // Initial render
+        refreshUI();
+
+        // Auto-refresh every 30 seconds
+        setInterval(refreshUI, 30000);
+
+        // Resize handler
+        window.addEventListener('resize', () => {
+            drawFrequencyChart();
+        });
+
+        // Listen for ingestion events from other tabs
+        Bus.on('bab-el-mandeb:epoch-ingested', () => {
+            refreshUI();
+        });
+
+        console.log(
+            '%c[BAB-EL-MANDEB] %cInterface ready. %cOperator: PANKOW_77C',
+            'color: #ff6633; font-weight: bold;',
+            'color: #39ff14;',
+            'color: #ffd700;'
+        );
+    </script>
+</body>
+</html>
