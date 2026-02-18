@@ -237,15 +237,38 @@ window.Bus = Bus;
 Bus.on('identity:epoch-created', (event) => {
     heartbeat++;
     lastEpochSource = event.payload.source || 'unknown';
+    const now = Date.now();
 
     ECOSYSTEM.setState('ecosystem.heartbeat', heartbeat, { source: 'core' });
     ECOSYSTEM.setState('ecosystem.lastEpochSource', lastEpochSource, { source: 'core' });
+
+    // Point zero — the first heartbeat carries the full birth record
+    if (heartbeat === 1) {
+        ECOSYSTEM.setState('ecosystem.firstBeat', {
+            version: ECOSYSTEM.version,
+            codename: ECOSYSTEM.codename,
+            timestamp: now,
+            bootDelta: now - ECOSYSTEM.bootTime,
+            source: lastEpochSource,
+            epochId: event.payload.id
+        }, { source: 'core' });
+
+        console.log(
+            '%c[ECOSYSTEM] %c♥ FIRST HEARTBEAT %c— beat #1 from %c' + lastEpochSource +
+            '%c after ' + (now - ECOSYSTEM.bootTime) + 'ms. The ecosystem is alive.',
+            'color: #00d4ff; font-weight: bold;',
+            'color: #ff0084; font-weight: bold;',
+            'color: #6b7fa3;',
+            'color: #39ff14; font-weight: bold;',
+            'color: #6b7fa3;'
+        );
+    }
 
     Bus.emit('ecosystem:heartbeat', {
         beat: heartbeat,
         source: lastEpochSource,
         epochId: event.payload.id,
-        timestamp: Date.now()
+        timestamp: now
     }, 'core');
 });
 

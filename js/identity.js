@@ -40,9 +40,22 @@ const STORES = {
 
 let db = null;
 let bus = null;  // Injected via init() — never imported statically
+let busWarned = false;
 
 function emit(type, payload, source) {
-    if (bus) bus.emit(type, payload, source);
+    if (bus) return bus.emit(type, payload, source);
+    // Guard: data was persisted but nobody heard it.
+    // This means boot order is wrong — Identity is writing before
+    // ECOSYSTEM.register() injected the Bus.
+    if (!busWarned && (type === 'identity:epoch-created' || type === 'identity:mutation')) {
+        console.warn(
+            '%c[IDENTITY] %cWRITE WITHOUT BUS — epoch/mutation persisted but event lost. ' +
+            'Check boot order: ECOSYSTEM.register("identity") must run before any module writes.',
+            'color: #ff0084; font-weight: bold;',
+            'color: #ff6633;'
+        );
+        busWarned = true;
+    }
 }
 
 // ── IndexedDB connection ──
