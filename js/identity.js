@@ -13,16 +13,21 @@
  * Oracle writes. EEI reads. Predictor mutates. Chronos projects.
  * Same database. Same blood.
  *
- * Browser-native ES Module. Zero dependencies beyond bus.js.
+ * Browser-native ES Module. Zero hard dependencies.
+ * Bus is injected at runtime via init() — Identity works
+ * silently without it (pure blood, no nerve required).
  * ═══════════════════════════════════════════════════════════
  */
-
-import { Bus } from './bus.js';
 
 const DB_NAME = 'hybrid-syndicate';
 const DB_VERSION = 1;
 
-// Maximum records per store before auto-pruning
+// ── Auto-prune thresholds ──
+// Derivation: avg epoch ~500B, avg mutation ~300B.
+// 5K epochs ≈ 2.5MB, 10K mutations ≈ 3MB → ~5.5MB total.
+// Browser IndexedDB quota is typically 50MB+ (origin-based).
+// At 1 scan/min (future autonomous Oracle), 5K epochs ≈ 3.5 days
+// before pruning kicks in. Conservative ceiling with 9x headroom.
 const MAX_EPOCHS = 5000;
 const MAX_MUTATIONS = 10000;
 
@@ -34,6 +39,11 @@ const STORES = {
 };
 
 let db = null;
+let bus = null;  // Injected via init() — never imported statically
+
+function emit(type, payload, source) {
+    if (bus) bus.emit(type, payload, source);
+}
 
 // ── IndexedDB connection ──
 function openDB() {
@@ -166,7 +176,13 @@ export const Identity = {
      * Initialize the Identity layer.
      * Creates the 'main' branch if no branches exist.
      */
-    async init() {
+    /**
+     * @param {object} [eco]  - ECOSYSTEM instance (when called via register)
+     * @param {object} [b]    - Bus instance to inject
+     */
+    async init(eco, b) {
+        if (b) bus = b;
+
         await openDB();
 
         const branches = await this.getBranches();
@@ -174,14 +190,15 @@ export const Identity = {
             await this.createBranch('main', 'Primary cognitive timeline');
         }
 
-        Bus.emit('identity:ready', {
+        emit('identity:ready', {
             stores: Object.values(STORES),
             dbName: DB_NAME,
             dbVersion: DB_VERSION
         }, 'identity');
 
         console.log(
-            '%c[IDENTITY] %cPersistent layer ready. %c' + Object.values(STORES).length + ' stores.',
+            '%c[IDENTITY] %cPersistent layer ready. %c' + Object.values(STORES).length + ' stores.' +
+            (bus ? ' Bus: connected.' : ' Bus: none (silent mode).'),
             'color: #ff0084; font-weight: bold;',
             'color: #6b7fa3;',
             'color: #39ff14;'
@@ -217,7 +234,7 @@ export const Identity = {
         };
 
         await tx(STORES.TIMELINE, 'readwrite', store => store.add(epoch));
-        Bus.emit('identity:epoch-created', epoch, data.source || 'identity');
+        emit('identity:epoch-created', epoch, data.source || 'identity');
         await pruneStore(STORES.TIMELINE, MAX_EPOCHS);
         return epoch;
     },
@@ -270,7 +287,7 @@ export const Identity = {
         };
 
         await tx(STORES.STATE, 'readwrite', store => store.put(entry));
-        Bus.emit('identity:state-saved', { key, source }, 'identity');
+        emit('identity:state-saved', { key, source }, 'identity');
         return entry;
     },
 
@@ -294,7 +311,7 @@ export const Identity = {
      */
     async deleteState(key) {
         await tx(STORES.STATE, 'readwrite', store => store.delete(key));
-        Bus.emit('identity:state-deleted', { key }, 'identity');
+        emit('identity:state-deleted', { key }, 'identity');
     },
 
     // ═══════════════════════════════════════
@@ -321,7 +338,7 @@ export const Identity = {
         };
 
         await tx(STORES.MUTATIONS, 'readwrite', store => store.add(mutation));
-        Bus.emit('identity:mutation', mutation, 'identity');
+        emit('identity:mutation', mutation, 'identity');
         await pruneStore(STORES.MUTATIONS, MAX_MUTATIONS);
         return mutation;
     },
@@ -377,7 +394,7 @@ export const Identity = {
         };
 
         await tx(STORES.BRANCHES, 'readwrite', store => store.put(branch));
-        Bus.emit('identity:branch-created', branch, 'identity');
+        emit('identity:branch-created', branch, 'identity');
         return branch;
     },
 
@@ -404,7 +421,7 @@ export const Identity = {
 
         const updated = { ...branch, ...updates };
         await tx(STORES.BRANCHES, 'readwrite', store => store.put(updated));
-        Bus.emit('identity:branch-updated', updated, 'identity');
+        emit('identity:branch-updated', updated, 'identity');
         return updated;
     },
 
@@ -493,7 +510,7 @@ export const Identity = {
             }
         }
 
-        Bus.emit('identity:imported', {
+        emit('identity:imported', {
             epochs: (data.timeline || []).length,
             mutations: (data.mutations || []).length,
             branches: (data.branches || []).length,
@@ -512,7 +529,7 @@ export const Identity = {
             const transaction = database.transaction(storeNames, 'readwrite');
             storeNames.forEach(name => transaction.objectStore(name).clear());
             transaction.oncomplete = () => {
-                Bus.emit('identity:cleared', {}, 'identity');
+                emit('identity:cleared', {}, 'identity');
                 resolve();
             };
             transaction.onerror = () => reject(transaction.error);

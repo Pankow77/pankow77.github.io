@@ -18,6 +18,10 @@ import { Bus } from './bus.js';
 const modules = new Map();
 const state = new Map();
 
+// ── Heartbeat — proof of life ──
+let heartbeat = 0;
+let lastEpochSource = null;
+
 export const ECOSYSTEM = {
     version: '0.1.0',
     codename: 'GENESIS',
@@ -198,6 +202,8 @@ export const ECOSYSTEM = {
             codename: ECOSYSTEM.codename,
             bootTime: ECOSYSTEM.bootTime,
             uptime: Date.now() - ECOSYSTEM.bootTime,
+            heartbeat,
+            lastEpochSource,
             modules: ECOSYSTEM.getModules(),
             stateKeys: Array.from(state.keys()),
             stateEntries: state.size,
@@ -224,6 +230,24 @@ export const ECOSYSTEM = {
 // ── Make globally accessible for console debugging and non-module scripts ──
 window.ECOSYSTEM = ECOSYSTEM;
 window.Bus = Bus;
+
+// ── Heartbeat observer ──
+// When Identity persists an epoch, the ecosystem is alive.
+// This is the proof: observation → persistence → pulse.
+Bus.on('identity:epoch-created', (event) => {
+    heartbeat++;
+    lastEpochSource = event.payload.source || 'unknown';
+
+    ECOSYSTEM.setState('ecosystem.heartbeat', heartbeat, { source: 'core' });
+    ECOSYSTEM.setState('ecosystem.lastEpochSource', lastEpochSource, { source: 'core' });
+
+    Bus.emit('ecosystem:heartbeat', {
+        beat: heartbeat,
+        source: lastEpochSource,
+        epochId: event.payload.id,
+        timestamp: Date.now()
+    }, 'core');
+});
 
 // ── Boot event ──
 Bus.emit('ecosystem:boot', {
