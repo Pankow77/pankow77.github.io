@@ -25,6 +25,13 @@ const BASELINE_RATIO_THRESHOLD = 1.8;           // Above this = elevated
 const MIN_ACTORS_FOR_REGIME = 3;                // Minimum actors for regime alert
 const MAX_EVENTS = 5000;                         // Rolling event buffer
 
+// ── Warmup Guard ──
+// No correlation analysis fires until sufficient baseline exists.
+// Spietato si'. Nevrotico no.
+const MIN_BASELINE_EPOCHS = 12;                  // Minimum total events before analysis
+const MIN_BASELINE_SPAN_MS = 24 * 60 * 60 * 1000; // Minimum time span of collected data (24h minimum, 72h ideal)
+const IDEAL_BASELINE_SPAN_MS = 72 * 60 * 60 * 1000; // 72h — full confidence baseline
+
 // ── State ──
 const events = [];            // { theater, actor, action_type, intensity, timestamp }
 const regimeAlerts = [];      // History of regime detections
@@ -55,6 +62,162 @@ function recordEvent(theater, data) {
     while (events.length > MAX_EVENTS) {
         events.shift();
     }
+}
+
+// ═══════════════════════════════════════════════════════════
+// WARMUP GUARD — the system must breathe before it speaks
+// ═══════════════════════════════════════════════════════════
+
+/**
+ * Check if sufficient baseline data exists for correlation analysis.
+ * @param {string} [theater] - Optional theater filter
+ * @returns {object} { ready, maturity, epochs, spanMs, reason }
+ *   maturity: 0.0 = no data, 1.0 = fully warmed up
+ */
+function getWarmupStatus(theater = null) {
+    const pool = theater ? events.filter(e => e.theater === theater) : events;
+    const epochCount = pool.length;
+
+    if (epochCount === 0) {
+        return { ready: false, maturity: 0, epochs: 0, spanMs: 0, reason: 'no-data' };
+    }
+
+    const timestamps = pool.map(e => e.timestamp);
+    const oldest = Math.min(...timestamps);
+    const newest = Math.max(...timestamps);
+    const spanMs = newest - oldest;
+
+    // Both conditions must be met for ready=true
+    const epochsOk = epochCount >= MIN_BASELINE_EPOCHS;
+    const spanOk = spanMs >= MIN_BASELINE_SPAN_MS;
+
+    // Maturity: 0.0 → 1.0 based on how close we are to ideal baseline
+    const epochMaturity = Math.min(1, epochCount / (MIN_BASELINE_EPOCHS * 2));
+    const spanMaturity = Math.min(1, spanMs / IDEAL_BASELINE_SPAN_MS);
+    const maturity = +(epochMaturity * 0.4 + spanMaturity * 0.6).toFixed(3);
+
+    let reason = null;
+    if (!epochsOk && !spanOk) reason = `need ${MIN_BASELINE_EPOCHS - epochCount} more epochs + ${Math.round((MIN_BASELINE_SPAN_MS - spanMs) / 3600000)}h more span`;
+    else if (!epochsOk) reason = `need ${MIN_BASELINE_EPOCHS - epochCount} more epochs`;
+    else if (!spanOk) reason = `need ${Math.round((MIN_BASELINE_SPAN_MS - spanMs) / 3600000)}h more time span`;
+
+    return {
+        ready: epochsOk && spanOk,
+        maturity,
+        epochs: epochCount,
+        spanMs,
+        spanHours: +(spanMs / 3600000).toFixed(1),
+        reason
+    };
+}
+
+// ═══════════════════════════════════════════════════════════
+// ACTOR COUPLING MATRIX — temporal sync + acceleration + slope
+// Not just volume. The real signal is: who accelerates together.
+// ═══════════════════════════════════════════════════════════
+
+/**
+ * Compute linear regression slope on hourly bins.
+ * Returns events/hour trend direction.
+ * @param {number[]} bins - Hourly event counts
+ * @returns {number} slope (positive = accelerating, negative = decelerating)
+ */
+function linearSlope(bins) {
+    const n = bins.length;
+    if (n < 2) return 0;
+    let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0;
+    for (let i = 0; i < n; i++) {
+        sumX += i; sumY += bins[i];
+        sumXY += i * bins[i]; sumX2 += i * i;
+    }
+    const denom = n * sumX2 - sumX * sumX;
+    return denom === 0 ? 0 : (n * sumXY - sumX * sumY) / denom;
+}
+
+/**
+ * Compute actor coupling between two actors.
+ * Measures: temporal proximity, trend coherence, acceleration coherence.
+ * If ICE rises but GOV_IT doesn't accelerate, it's noise.
+ *
+ * @param {string} actorA
+ * @param {string} actorB
+ * @param {string} [theater]
+ * @returns {object} Full coupling analysis
+ */
+function computeActorCoupling(actorA, actorB, theater = null) {
+    const now = Date.now();
+    const windowMs = 48 * 3600000;
+    const binSize = 3600000; // 1h bins
+    const binCount = 48;
+
+    const pool = theater ? events.filter(e => e.theater === theater) : events;
+
+    // ── Temporal proximity (Δt between last events) ──
+    const lastA = pool.filter(e => e.actor === actorA).sort((a, b) => b.timestamp - a.timestamp)[0];
+    const lastB = pool.filter(e => e.actor === actorB).sort((a, b) => b.timestamp - a.timestamp)[0];
+    const timeDeltaMs = (lastA && lastB) ? Math.abs(lastA.timestamp - lastB.timestamp) : Infinity;
+
+    // ── Hourly bins for both actors (48h) ──
+    const binsA = new Array(binCount).fill(0);
+    const binsB = new Array(binCount).fill(0);
+    for (const e of pool) {
+        const age = now - e.timestamp;
+        if (age > windowMs || age < 0) continue;
+        const bin = Math.min(binCount - 1, Math.floor(age / binSize));
+        if (e.actor === actorA) binsA[bin]++;
+        if (e.actor === actorB) binsB[bin]++;
+    }
+
+    // ── Trend slope (linear regression over full 48h) ──
+    // Bins are reverse-chronological (0 = most recent), reverse for slope calc
+    const binsAchron = [...binsA].reverse();
+    const binsBchron = [...binsB].reverse();
+    const slopeA = +linearSlope(binsAchron).toFixed(4);
+    const slopeB = +linearSlope(binsBchron).toFixed(4);
+
+    // ── Slope coherence: are they trending in the same direction? ──
+    const slopeCoherence = (slopeA > 0 && slopeB > 0) || (slopeA < 0 && slopeB < 0);
+    const slopeProduct = +(slopeA * slopeB).toFixed(6); // Positive = same direction
+
+    // ── Acceleration: slope of last 12h vs previous 12h ──
+    const recent12A = binsAchron.slice(-12);
+    const prev12A = binsAchron.slice(-24, -12);
+    const recent12B = binsBchron.slice(-12);
+    const prev12B = binsBchron.slice(-24, -12);
+    const accelA = +(linearSlope(recent12A) - linearSlope(prev12A)).toFixed(4);
+    const accelB = +(linearSlope(recent12B) - linearSlope(prev12B)).toFixed(4);
+    const accelCoherence = (accelA > 0 && accelB > 0) || (accelA < 0 && accelB < 0);
+
+    // ── Composite coupling score (0.0 → 1.0) ──
+    // Weights: temporal proximity (0.3) + slope coherence (0.35) + acceleration coherence (0.35)
+    const proximityScore = timeDeltaMs === Infinity ? 0 :
+        Math.max(0, 1 - timeDeltaMs / (6 * 3600000)); // 1.0 at 0h, 0.0 at 6h+
+
+    const slopeScore = slopeCoherence
+        ? Math.min(1, Math.abs(slopeProduct) * 50) // Scale up small products
+        : 0;
+
+    const accelScore = accelCoherence
+        ? Math.min(1, (Math.abs(accelA) + Math.abs(accelB)) * 20)
+        : 0;
+
+    const couplingScore = +(proximityScore * 0.3 + slopeScore * 0.35 + accelScore * 0.35).toFixed(3);
+
+    return {
+        actorA,
+        actorB,
+        timeDeltaMs: timeDeltaMs === Infinity ? null : timeDeltaMs,
+        timeDeltaHours: timeDeltaMs === Infinity ? null : +(timeDeltaMs / 3600000).toFixed(2),
+        slopeA,
+        slopeB,
+        slopeCoherence,
+        slopeProduct,
+        accelerationA: accelA,
+        accelerationB: accelB,
+        accelerationCoherence: accelCoherence,
+        couplingScore,
+        components: { proximity: +proximityScore.toFixed(3), slope: +slopeScore.toFixed(3), acceleration: +accelScore.toFixed(3) }
+    };
 }
 
 // ── Co-occurrence matrix ──
@@ -217,23 +380,24 @@ function getLagCorrelation(actorA, actorB, theater = null) {
 /**
  * Pattern 1 — Influence Synchronization
  * Two or more actors simultaneously above baseline within temporal proximity.
- * rolling(actor_A, 24h) / baseline_A > thresholdA
- * AND rolling(actor_B, 24h) / baseline_B > thresholdB
- * AND time_delta(last_A, last_B) < 6h
+ * Enhanced with coupling matrix and confidence scoring.
+ *
+ * No booleans. Only probability.
  *
  * @param {string} actorA
  * @param {string} actorB
  * @param {string} [theater]
- * @param {number} [thresholdA=1.6]
- * @param {number} [thresholdB=1.4]
- * @param {number} [maxDeltaMs=6h]
- * @returns {object} { detected, ratioA, ratioB, timeDeltaMs, lastA, lastB }
+ * @returns {object} { pattern, confidence, actors, window, ... }
  */
-function queryInfluenceSync(actorA, actorB, theater = null, thresholdA = 1.6, thresholdB = 1.4, maxDeltaMs = 6 * 3600000) {
+function queryInfluenceSync(actorA, actorB, theater = null) {
+    const warmup = getWarmupStatus(theater);
+    if (!warmup.ready) {
+        return { pattern: 'influence-sync', confidence: 0, actors: [actorA, actorB], window: '24h', warmup: false, reason: warmup.reason };
+    }
+
     const now = Date.now();
     const windowMs = 24 * 3600000;
     const baselineMs = 72 * 3600000;
-
     const pool = theater ? events.filter(e => e.theater === theater) : events;
 
     const countA24 = pool.filter(e => e.actor === actorA && e.timestamp >= now - windowMs).length;
@@ -241,50 +405,84 @@ function queryInfluenceSync(actorA, actorB, theater = null, thresholdA = 1.6, th
     const baseA = pool.filter(e => e.actor === actorA && e.timestamp >= now - baselineMs).length / 3;
     const baseB = pool.filter(e => e.actor === actorB && e.timestamp >= now - baselineMs).length / 3;
 
-    const ratioA = baseA > 0 ? countA24 / baseA : (countA24 > 0 ? Infinity : 0);
-    const ratioB = baseB > 0 ? countB24 / baseB : (countB24 > 0 ? Infinity : 0);
+    const ratioA = baseA > 0 ? countA24 / baseA : (countA24 > 0 ? 3.0 : 0);
+    const ratioB = baseB > 0 ? countB24 / baseB : (countB24 > 0 ? 3.0 : 0);
 
-    const lastA = pool.filter(e => e.actor === actorA).sort((a, b) => b.timestamp - a.timestamp)[0];
-    const lastB = pool.filter(e => e.actor === actorB).sort((a, b) => b.timestamp - a.timestamp)[0];
+    // Coupling matrix enrichment
+    const coupling = computeActorCoupling(actorA, actorB, theater);
 
-    const timeDelta = (lastA && lastB) ? Math.abs(lastA.timestamp - lastB.timestamp) : Infinity;
+    // ── Confidence computation (multi-factor, no threshold) ──
+    // Factor 1: Ratio elevation (0.25 weight) — how far above baseline
+    const ratioScore = Math.min(1, ((Math.min(ratioA, 5) - 1) / 3 + (Math.min(ratioB, 5) - 1) / 3) / 2);
 
-    const elevatedA = ratioA > thresholdA || ratioA === Infinity;
-    const elevatedB = ratioB > thresholdB || ratioB === Infinity;
-    const proximate = timeDelta <= maxDeltaMs;
+    // Factor 2: Temporal proximity (0.20 weight) — from coupling matrix
+    const proximityScore = coupling.components.proximity;
+
+    // Factor 3: Slope coherence (0.25 weight) — trending together
+    const slopeScore = coupling.components.slope;
+
+    // Factor 4: Acceleration coherence (0.20 weight) — accelerating together
+    const accelScore = coupling.components.acceleration;
+
+    // Factor 5: Data maturity penalty (0.10 weight) — less confidence with less data
+    const maturityScore = warmup.maturity;
+
+    const confidence = +(
+        ratioScore * 0.25 +
+        proximityScore * 0.20 +
+        slopeScore * 0.25 +
+        accelScore * 0.20 +
+        maturityScore * 0.10
+    ).toFixed(3);
 
     return {
-        detected: elevatedA && elevatedB && proximate,
-        ratioA: ratioA === Infinity ? 'NEW' : +ratioA.toFixed(2),
-        ratioB: ratioB === Infinity ? 'NEW' : +ratioB.toFixed(2),
-        timeDeltaMs: timeDelta === Infinity ? null : timeDelta,
-        lastA: lastA ? lastA.timestamp : null,
-        lastB: lastB ? lastB.timestamp : null,
-        actorA,
-        actorB
+        pattern: 'influence-sync',
+        confidence,
+        actors: [actorA, actorB],
+        window: '24h',
+        warmup: true,
+        ratioA: +ratioA.toFixed(2),
+        ratioB: +ratioB.toFixed(2),
+        coupling: coupling.couplingScore,
+        components: {
+            ratio: +ratioScore.toFixed(3),
+            proximity: proximityScore,
+            slope: slopeScore,
+            acceleration: accelScore,
+            maturity: +maturityScore.toFixed(3)
+        },
+        meta: {
+            slopeA: coupling.slopeA,
+            slopeB: coupling.slopeB,
+            slopeCoherence: coupling.slopeCoherence,
+            accelA: coupling.accelerationA,
+            accelB: coupling.accelerationB,
+            timeDeltaHours: coupling.timeDeltaHours
+        }
     };
 }
 
 /**
  * Pattern 2 — Narrative Shielding
- * Law enforcement action frequency spikes while public dissent also spikes.
- * Indicates: repression responds to (or preempts) dissent.
+ * Enforcement spikes alongside dissent. Repression responds to (or preempts) protest.
+ * Enhanced with temporal lag analysis and confidence scoring.
  *
- * frequency(enforcement_actions, 24h) > baseline * thresholdEnf
- * AND frequency(dissent_events, 24h) > baseline * thresholdDissent
+ * No booleans. Only probability.
  *
- * @param {string[]} enforcementActors - Actors representing enforcement (e.g., ['ice', 'police_it'])
- * @param {string[]} dissentActors - Actors representing dissent (e.g., ['civil_society', 'media'])
+ * @param {string[]} enforcementActors - e.g., ['ice', 'police_it']
+ * @param {string[]} dissentActors - e.g., ['civil_society', 'media']
  * @param {string} [theater]
- * @param {number} [thresholdEnf=1.8]
- * @param {number} [thresholdDissent=1.3]
- * @returns {object} { detected, enforcementRatio, dissentRatio, enforcementCount, dissentCount }
+ * @returns {object} { pattern, confidence, ... }
  */
-function queryNarrativeShielding(enforcementActors, dissentActors, theater = null, thresholdEnf = 1.8, thresholdDissent = 1.3) {
+function queryNarrativeShielding(enforcementActors, dissentActors, theater = null) {
+    const warmup = getWarmupStatus(theater);
+    if (!warmup.ready) {
+        return { pattern: 'narrative-shielding', confidence: 0, actors: { enforcement: enforcementActors, dissent: dissentActors }, window: '24h', warmup: false, reason: warmup.reason };
+    }
+
     const now = Date.now();
     const windowMs = 24 * 3600000;
     const baselineMs = 72 * 3600000;
-
     const pool = theater ? events.filter(e => e.theater === theater) : events;
 
     const enfSet = new Set(enforcementActors);
@@ -295,43 +493,97 @@ function queryNarrativeShielding(enforcementActors, dissentActors, theater = nul
     const enfBase = pool.filter(e => enfSet.has(e.actor) && e.timestamp >= now - baselineMs).length / 3;
     const disBase = pool.filter(e => disSet.has(e.actor) && e.timestamp >= now - baselineMs).length / 3;
 
-    const enfRatio = enfBase > 0 ? enf24 / enfBase : (enf24 > 0 ? Infinity : 0);
-    const disRatio = disBase > 0 ? dis24 / disBase : (dis24 > 0 ? Infinity : 0);
+    const enfRatio = enfBase > 0 ? enf24 / enfBase : (enf24 > 0 ? 3.0 : 0);
+    const disRatio = disBase > 0 ? dis24 / disBase : (dis24 > 0 ? 3.0 : 0);
 
-    const enfElevated = enfRatio > thresholdEnf || enfRatio === Infinity;
-    const disElevated = disRatio > thresholdDissent || disRatio === Infinity;
+    // ── Temporal lag: does enforcement follow dissent or precede it? ──
+    const enfEvents = pool.filter(e => enfSet.has(e.actor) && e.timestamp >= now - windowMs).sort((a, b) => a.timestamp - b.timestamp);
+    const disEvents = pool.filter(e => disSet.has(e.actor) && e.timestamp >= now - windowMs).sort((a, b) => a.timestamp - b.timestamp);
+
+    let lagDirection = 'no-data';
+    let avgLagMs = 0;
+    const lags = [];
+    for (const d of disEvents) {
+        const following = enfEvents.find(e => e.timestamp > d.timestamp);
+        if (following) lags.push(following.timestamp - d.timestamp);
+    }
+    for (const e of enfEvents) {
+        const following = disEvents.find(d => d.timestamp > e.timestamp);
+        if (following) lags.push(-(following.timestamp - e.timestamp));
+    }
+    if (lags.length > 0) {
+        avgLagMs = lags.reduce((s, v) => s + v, 0) / lags.length;
+        lagDirection = avgLagMs > 0 ? 'enforcement-follows-dissent' : 'enforcement-preempts-dissent';
+    }
+
+    // ── Confidence computation ──
+    // Factor 1: Enforcement elevation (0.25)
+    const enfScore = Math.min(1, (Math.min(enfRatio, 5) - 1) / 2.5);
+
+    // Factor 2: Dissent elevation (0.25)
+    const disScore = Math.min(1, (Math.min(disRatio, 5) - 1) / 2.5);
+
+    // Factor 3: Co-occurrence — both groups active simultaneously (0.25)
+    const coActive = (enf24 > 0 && dis24 > 0) ? Math.min(1, Math.min(enf24, dis24) / Math.max(enf24, dis24)) : 0;
+
+    // Factor 4: Temporal responsiveness — enforcement reacts within 6h of dissent (0.15)
+    const lagScore = lags.length > 0 ? Math.max(0, 1 - Math.abs(avgLagMs) / (6 * 3600000)) : 0;
+
+    // Factor 5: Data maturity (0.10)
+    const maturityScore = warmup.maturity;
+
+    const confidence = +(
+        enfScore * 0.25 +
+        disScore * 0.25 +
+        coActive * 0.25 +
+        lagScore * 0.15 +
+        maturityScore * 0.10
+    ).toFixed(3);
 
     return {
-        detected: enfElevated && disElevated,
-        enforcementRatio: enfRatio === Infinity ? 'NEW' : +enfRatio.toFixed(2),
-        dissentRatio: disRatio === Infinity ? 'NEW' : +disRatio.toFixed(2),
+        pattern: 'narrative-shielding',
+        confidence,
+        actors: { enforcement: enforcementActors, dissent: dissentActors },
+        window: '24h',
+        warmup: true,
+        enforcementRatio: +enfRatio.toFixed(2),
+        dissentRatio: +disRatio.toFixed(2),
         enforcementCount: enf24,
         dissentCount: dis24,
-        enforcementActors,
-        dissentActors
+        lagDirection,
+        avgLagHours: lags.length > 0 ? +(avgLagMs / 3600000).toFixed(2) : null,
+        components: {
+            enforcement: +enfScore.toFixed(3),
+            dissent: +disScore.toFixed(3),
+            coActivity: +coActive.toFixed(3),
+            temporalLag: +lagScore.toFixed(3),
+            maturity: +maturityScore.toFixed(3)
+        }
     };
 }
 
 /**
  * Pattern 3 — Institutional Alignment
- * Rolling frequency of government statements correlates with foreign actor presence.
- * Uses Pearson-like correlation on hourly bins over 48h.
+ * Rolling frequency correlation via Pearson + coupling matrix.
+ * Enhanced with slope coherence and confidence scoring.
  *
- * rolling(government_statement, 48h) correlates_with rolling(foreign_actor_presence, 48h)
- * correlation_coefficient > threshold
+ * No booleans. Only probability.
  *
  * @param {string} actorA - e.g., 'gov_it'
  * @param {string} actorB - e.g., 'ice'
  * @param {string} [theater]
- * @param {number} [threshold=0.7]
- * @returns {object} { detected, coefficient, binsA, binsB }
+ * @returns {object} { pattern, confidence, coefficient, ... }
  */
-function queryInstitutionalAlignment(actorA, actorB, theater = null, threshold = 0.7) {
+function queryInstitutionalAlignment(actorA, actorB, theater = null) {
+    const warmup = getWarmupStatus(theater);
+    if (!warmup.ready) {
+        return { pattern: 'institutional-alignment', confidence: 0, actors: [actorA, actorB], window: '48h', warmup: false, reason: warmup.reason };
+    }
+
     const now = Date.now();
     const windowMs = 48 * 3600000;
-    const binSize = 3600000; // 1 hour
+    const binSize = 3600000;
     const binCount = 48;
-
     const pool = theater ? events.filter(e => e.theater === theater) : events;
 
     const binsA = new Array(binCount).fill(0);
@@ -357,17 +609,60 @@ function queryInstitutionalAlignment(actorA, actorB, theater = null, threshold =
 
     const numerator = n * sumAB - sumA * sumB;
     const denominator = Math.sqrt((n * sumA2 - sumA * sumA) * (n * sumB2 - sumB * sumB));
-
     const coefficient = denominator === 0 ? 0 : numerator / denominator;
 
+    // Coupling matrix enrichment
+    const coupling = computeActorCoupling(actorA, actorB, theater);
+
+    // ── Confidence computation ──
+    // Factor 1: Pearson |r| strength (0.35) — the core statistical signal
+    const pearsonScore = Math.min(1, Math.abs(coefficient) / 0.9);
+
+    // Factor 2: Slope coherence from coupling (0.25) — trending together
+    const slopeScore = coupling.components.slope;
+
+    // Factor 3: Data density — enough bins have data (0.15)
+    const activeBinsA = binsA.filter(v => v > 0).length;
+    const activeBinsB = binsB.filter(v => v > 0).length;
+    const densityScore = Math.min(1, (activeBinsA + activeBinsB) / (binCount * 0.5));
+
+    // Factor 4: Coupling score composite (0.15)
+    const couplingScore = coupling.couplingScore;
+
+    // Factor 5: Data maturity (0.10)
+    const maturityScore = warmup.maturity;
+
+    const confidence = +(
+        pearsonScore * 0.35 +
+        slopeScore * 0.25 +
+        densityScore * 0.15 +
+        couplingScore * 0.15 +
+        maturityScore * 0.10
+    ).toFixed(3);
+
     return {
-        detected: Math.abs(coefficient) >= threshold,
+        pattern: 'institutional-alignment',
+        confidence,
+        actors: [actorA, actorB],
+        window: '48h',
+        warmup: true,
         coefficient: +coefficient.toFixed(4),
-        binsA,
-        binsB,
-        actorA,
-        actorB,
-        threshold
+        coupling: coupling.couplingScore,
+        components: {
+            pearson: +pearsonScore.toFixed(3),
+            slope: slopeScore,
+            density: +densityScore.toFixed(3),
+            coupling: couplingScore,
+            maturity: +maturityScore.toFixed(3)
+        },
+        meta: {
+            slopeA: coupling.slopeA,
+            slopeB: coupling.slopeB,
+            slopeCoherence: coupling.slopeCoherence,
+            activeBinsA,
+            activeBinsB,
+            timeDeltaHours: coupling.timeDeltaHours
+        }
     };
 }
 
@@ -378,6 +673,20 @@ function queryInstitutionalAlignment(actorA, actorB, theater = null, threshold =
  * Called periodically and after each ingestion.
  */
 function checkRegimeShift() {
+    // ── WARMUP GUARD: no correlation until baseline exists ──
+    const globalWarmup = getWarmupStatus();
+    if (!globalWarmup.ready) {
+        if (bus && events.length > 0 && events.length % 3 === 0) {
+            bus.emit('correlation:warmup-progress', {
+                maturity: globalWarmup.maturity,
+                epochs: globalWarmup.epochs,
+                spanHours: globalWarmup.spanHours,
+                reason: globalWarmup.reason
+            }, 'correlation-engine');
+        }
+        return; // Silence. Not yet.
+    }
+
     // Check each known theater
     const theaters = new Set(events.map(e => e.theater));
 
@@ -469,7 +778,7 @@ function checkRegimeShift() {
 
 const CorrelationEngine = {
     name: 'correlation-engine',
-    version: '1.0.0',
+    version: '2.0.0',
 
     init(eco, b) {
         ecosystem = eco;
@@ -581,6 +890,12 @@ const CorrelationEngine = {
 
     /** Pattern 3: Institutional Alignment — Pearson correlation on hourly bins */
     queryInstitutionalAlignment,
+
+    /** Actor Coupling Matrix — temporal sync, slope, acceleration */
+    getCoupling: computeActorCoupling,
+
+    /** Warmup status — is the system ready to speak? */
+    getWarmupStatus,
 
     /** Get regime alerts history */
     getAlerts(count = 20) {
