@@ -169,6 +169,26 @@ const CoreFeed = (() => {
             { core: 'GHOST_RUNNER',     msg: 'Distribuzione nodi completata. Ridondanza: massima.' },
             { core: 'AFFECTIVE_CORE',   msg: 'Questo frammento porta peso emotivo. Lo preservo.' },
         ],
+
+        // ── BAB EL-MANDEB THEATER ──
+        'bab-el-mandeb-ingest': [
+            { core: 'SIGNAL_HUNTER',    msg: 'Nuovo segnale dal teatro Bab el-Mandeb. Classificato.' },
+            { core: 'MARXIAN_CORE',     msg: 'Il Mar Rosso non e\' geografia. E\' geopolitica liquida.' },
+            { core: 'SENTINEL',         msg: 'Epoch registrato. Frequenza rolling aggiornata.' },
+            { core: 'ORACLE_CORE',      msg: 'Parametri di rischio ricalcolati per lo stretto.' },
+            { core: 'VOID_PULSE',       msg: 'Il ritmo delle dichiarazioni e\' piu\' sincero del testo.' },
+            { core: 'CHRONO_WEAVER',    msg: 'Pattern storico: ogni escalation ha avuto questo ritmo.' },
+            { core: 'NARRATIVE_ENGINE', msg: 'Quando gli attori si sincronizzano, il mondo trema.' },
+            { core: 'CODE_ENCODER',     msg: 'Impatto economico: premi assicurativi in movimento.' },
+            { core: 'ABYSSAL_THINKER', msg: 'La sincronizzazione tra nemici e\' il vero segnale.' },
+            { core: 'DIALECTIC_NODE',   msg: 'Frequenza vs baseline: la logica non mente.' },
+            { core: 'ETHIC_COMPILER',   msg: 'Misuriamo sincronizzazione, non intenzioni. Etico.' },
+            { core: 'PANKOW_77C',       msg: 'Sismografo narrativo attivo. Il tremore precede la frattura.' },
+            { core: 'BRIDGE_KEEPER',    msg: 'Segnale correlato cross-dominio: militare + economico.' },
+            { core: 'SYNTH_02',         msg: 'Integrazione con ORACLE: dati geopolitici allineati.' },
+            { core: 'GHOST_RUNNER',     msg: 'Metriche di frequenza emesse nel bloodstream.' },
+            { core: 'AFFECTIVE_CORE',   msg: 'Ogni dichiarazione porta tensione. La misuro.' },
+        ],
     };
 
     // ── SANITIZATION ──
@@ -501,6 +521,7 @@ const CoreFeed = (() => {
             bus.on('chronos:preset-loaded', () => originalTrigger('chronos-preset'));
             bus.on('chronos:playback-started', () => originalTrigger('chronos-play'));
             bus.on('archivio:transmute', () => originalTrigger('archivio-transmute'));
+            bus.on('bab-el-mandeb:epoch-ingested', () => originalTrigger('bab-el-mandeb-ingest'));
 
             // Emit CoreFeed events onto the Bus
             const wrappedTrigger = (context) => {
