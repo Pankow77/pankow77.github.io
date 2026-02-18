@@ -26,7 +26,7 @@ const MAX_EVALUATIONS = 200;
 
 // ── Pending predictions awaiting reality ──
 const pendingPredictions = new Map();  // id → { envelope, registeredAt }
-const PREDICTION_TTL = 5 * 60 * 1000; // 5 minutes max before expiry
+const PREDICTION_TTL = 4 * 60 * 60 * 1000; // 4 hours — geopolitical signals need time to confirm
 
 let bus = null;
 let circulation = null;

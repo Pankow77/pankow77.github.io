@@ -189,6 +189,26 @@ const CoreFeed = (() => {
             { core: 'GHOST_RUNNER',     msg: 'Metriche di frequenza emesse nel bloodstream.' },
             { core: 'AFFECTIVE_CORE',   msg: 'Ogni dichiarazione porta tensione. La misuro.' },
         ],
+
+        // ── ICE-ITALY THEATER ──
+        'ice-italy-ingest': [
+            { core: 'SIGNAL_HUNTER',    msg: 'Nuovo segnale dal teatro ICE-Italy. Classificato.' },
+            { core: 'MARXIAN_CORE',     msg: 'L\'extraterritorialita\' e\' imperialismo con badge.' },
+            { core: 'SENTINEL',         msg: 'Epoch registrato. Frequenza sovranita\' aggiornata.' },
+            { core: 'ORACLE_CORE',      msg: 'Parametri di rischio ricalcolati per il teatro italiano.' },
+            { core: 'VOID_PULSE',       msg: 'Il pretesto olimpico nasconde la normalizzazione.' },
+            { core: 'CHRONO_WEAVER',    msg: 'Pattern storico: ogni occupazione inizia con la sicurezza.' },
+            { core: 'NARRATIVE_ENGINE', msg: 'Doppio standard: Russia esclusa, Israele presente.' },
+            { core: 'CODE_ENCODER',     msg: 'Costi operativi ICE su territorio estero: anomali.' },
+            { core: 'ABYSSAL_THINKER', msg: 'Sovranita\' ceduta in silenzio e\' sovranita\' persa.' },
+            { core: 'DIALECTIC_NODE',   msg: 'Se protesti ti arrestano. Se bombardi ti invitano.' },
+            { core: 'ETHIC_COMPILER',   msg: 'Monitorare il potere non e\' un reato. E\' un dovere.' },
+            { core: 'PANKOW_77C',       msg: 'La sovranita\' si difende con i dati. Non con le parole.' },
+            { core: 'BRIDGE_KEEPER',    msg: 'Correlazione cross-teatro: ICE + Meloni + Trump.' },
+            { core: 'SYNTH_02',         msg: 'Integrazione con Correlation Engine: pattern compositi.' },
+            { core: 'GHOST_RUNNER',     msg: 'Metriche di frequenza emesse. 8 attori monitorati.' },
+            { core: 'AFFECTIVE_CORE',   msg: 'Free Palestine. Arrestato. Il dato pesa.' },
+        ],
     };
 
     // ── SANITIZATION ──
@@ -522,6 +542,7 @@ const CoreFeed = (() => {
             bus.on('chronos:playback-started', () => originalTrigger('chronos-play'));
             bus.on('archivio:transmute', () => originalTrigger('archivio-transmute'));
             bus.on('bab-el-mandeb:epoch-ingested', () => originalTrigger('bab-el-mandeb-ingest'));
+            bus.on('ice-italy:epoch-ingested', () => originalTrigger('ice-italy-ingest'));
 
             // Emit CoreFeed events onto the Bus
             const wrappedTrigger = (context) => {

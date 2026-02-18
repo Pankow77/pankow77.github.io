@@ -1,15 +1,25 @@
 /**
- * bab-el-mandeb.js — BAB EL-MANDEB Theater Monitor v0.1.0
+ * ice-italy.js — ICE/Italy Theater Monitor v0.1.0
  * ═══════════════════════════════════════════════════════════
- * Narrative seismograph for the Red Sea chokepoint.
+ * Monitors US influence operations on Italian territory.
  *
- * Measures synchronization between actors, not intentions.
- * Ingests official declarations (CENTCOM, Houthi, EUNAVFOR).
- * Tracks statement frequency per actor over rolling windows.
- * Detects cross-actor synchronization anomalies.
+ * Context: ICE deployment in Italy under Olympic security
+ * pretext. Tracks the intersection of law enforcement
+ * extraterritoriality, sovereignty erosion, and the use
+ * of international events as normalization vectors.
+ *
+ * Actors:
+ *   - ICE (U.S. Immigration and Customs Enforcement)
+ *   - GOV_IT (Italian Government / Palazzo Chigi)
+ *   - POLICE_IT (Polizia di Stato / Carabinieri / DIGOS)
+ *   - CIVIL_SOCIETY (NGOs, activists, legal observers)
+ *   - MEDIA (journalists, press)
+ *   - US_EMBASSY (U.S. Embassy / State Department)
+ *   - EU_INST (EU institutions, European Parliament)
+ *   - OLYMPICS (IOC, CONI, Olympic Security Committee)
  *
  * Operator-driven classification. Zero NLP. Zero AI.
- * The operator IS the semantic classifier.
+ * The operator IS the intelligence.
  *
  * Browser-native ES Module. Depends on core.js ecosystem.
  * ═══════════════════════════════════════════════════════════
@@ -17,37 +27,47 @@
 
 // ── Constants ──
 const ACTORS = Object.freeze({
-    CENTCOM:   'centcom',
-    HOUTHI:    'houthi',
-    EUNAVFOR:  'eunavfor',
-    IRAN:      'iran',
-    OTHER:     'other'
+    ICE:            'ice',
+    GOV_IT:         'gov_it',
+    POLICE_IT:      'police_it',
+    CIVIL_SOCIETY:  'civil_society',
+    MEDIA:          'media',
+    US_EMBASSY:     'us_embassy',
+    EU_INST:        'eu_inst',
+    OLYMPICS:       'olympics'
 });
 
 const ACTION_TYPES = Object.freeze({
-    STRIKE:     'strike',
-    CLAIM:      'claim',
-    WARNING:    'warning',
-    DEFENSIVE:  'defensive',
-    STATEMENT:  'statement',
-    DEPLOYMENT: 'deployment'
+    DEPLOYMENT:     'deployment',
+    OPERATION:      'operation',
+    AGREEMENT:      'agreement',
+    STATEMENT:      'statement',
+    PROTEST:        'protest',
+    LEGAL_ACTION:   'legal_action',
+    ARREST:         'arrest',
+    POLICY:         'policy',
+    MEDIA_REPORT:   'media_report',
+    SURVEILLANCE:   'surveillance'
 });
 
 const TAG_OPTIONS = Object.freeze([
-    'iran-proxy', 'shipping', 'drone', 'missile', 'naval',
-    'suez', 'cape-route', 'insurance', 'escalation', 'de-escalation',
-    'civilian', 'military', 'coalition', 'unilateral'
+    'olympics-2026', 'sovereignty', 'extraterritorial', 'immigration',
+    'free-palestine', 'double-standard', 'israel-flag', 'russia-ban',
+    'meloni-trump', 'satellite-gov', 'nato', 'bilateral',
+    'civil-rights', 'press-freedom', 'digos', 'ngo',
+    'amnesty', 'emergency-ong', 'legal-observer',
+    'greenland', 'finland', 'venezuela', 'taiwan',
+    'sphere-influence', 'monroe-doctrine',
+    'milano-cortina', 'security-pretext', 'normalization'
 ]);
 
 // ── Rolling frequency state ──
-const ROLLING_WINDOW_MS = 24 * 60 * 60 * 1000; // 24 hours
-const BASELINE_WINDOW_MS = 72 * 60 * 60 * 1000; // 72 hours for baseline
+const ROLLING_WINDOW_MS = 24 * 60 * 60 * 1000;
+const BASELINE_WINDOW_MS = 72 * 60 * 60 * 1000;
 
-// All ingested epochs (in-memory for frequency counting)
 const epochs = [];
 const MAX_EPOCHS_MEMORY = 2000;
 
-// Module references
 let ecosystem = null;
 let bus = null;
 let identity = null;
@@ -55,14 +75,9 @@ let intervals = [];
 
 // ── Epoch creation ──
 
-/**
- * Create a structured epoch from operator input.
- * @param {object} input - Operator classification
- * @returns {object} Structured epoch ready for ingestion
- */
 function createTheaterEpoch(input) {
     if (!input.source || !input.actor || !input.action_type) {
-        throw new Error('[BAB-EL-MANDEB] Missing required fields: source, actor, action_type');
+        throw new Error('[ICE-ITALY] Missing required fields: source, actor, action_type');
     }
 
     // Build mutable — freeze happens AFTER text_hash is computed in ingestEpoch()
@@ -72,33 +87,23 @@ function createTheaterEpoch(input) {
         actor: input.actor,
         action_type: input.action_type,
         intensity: Math.max(1, Math.min(5, input.intensity || 1)),
-        domains: input.domains || ['military'],
+        domains: input.domains || ['sovereignty'],
         text_summary: input.text_summary || '',
         text_hash: null,
         tags: input.tags || [],
+        location: input.location || '',
         operator: 'PANKOW_77C'
     };
 }
 
 // ── Frequency counter ──
 
-/**
- * Get epoch count for an actor within a time window.
- * @param {string} actor - Actor ID
- * @param {number} windowMs - Time window in milliseconds
- * @param {number} [now] - Reference timestamp
- * @returns {number} Count of epochs in window
- */
 function getActorFrequency(actor, windowMs, now) {
     now = now || Date.now();
     const cutoff = now - windowMs;
     return epochs.filter(e => e.actor === actor && e.timestamp >= cutoff).length;
 }
 
-/**
- * Get rolling frequency for all actors in 24h window.
- * @returns {object} { actor: count }
- */
 function getRollingFrequencies() {
     const now = Date.now();
     const result = {};
@@ -108,21 +113,12 @@ function getRollingFrequencies() {
     return result;
 }
 
-/**
- * Get baseline frequency (average per 24h over 72h window).
- * @param {string} actor
- * @returns {number} Average daily frequency
- */
 function getBaseline(actor) {
     const now = Date.now();
     const count72h = getActorFrequency(actor, BASELINE_WINDOW_MS, now);
-    return count72h / 3; // average per 24h over 3 days
+    return count72h / 3;
 }
 
-/**
- * Get all baselines.
- * @returns {object} { actor: baseline }
- */
 function getAllBaselines() {
     const result = {};
     for (const actor of Object.values(ACTORS)) {
@@ -131,12 +127,6 @@ function getAllBaselines() {
     return result;
 }
 
-/**
- * Get frequency ratio (current 24h / baseline).
- * Values > 1.8 indicate elevated activity.
- * @param {string} actor
- * @returns {number|null} Ratio or null if no baseline
- */
 function getFrequencyRatio(actor) {
     const current = getActorFrequency(actor, ROLLING_WINDOW_MS);
     const baseline = getBaseline(actor);
@@ -146,21 +136,10 @@ function getFrequencyRatio(actor) {
 
 // ── Timeline queries ──
 
-/**
- * Get recent epochs, newest first.
- * @param {number} count
- * @returns {object[]}
- */
 function getRecentEpochs(count = 20) {
     return [...epochs].sort((a, b) => b.timestamp - a.timestamp).slice(0, count);
 }
 
-/**
- * Get epochs by actor.
- * @param {string} actor
- * @param {number} count
- * @returns {object[]}
- */
 function getEpochsByActor(actor, count = 50) {
     return epochs
         .filter(e => e.actor === actor)
@@ -168,11 +147,6 @@ function getEpochsByActor(actor, count = 50) {
         .slice(0, count);
 }
 
-/**
- * Get frequency timeline for chart rendering.
- * Returns hourly bins for the last 72h.
- * @returns {object} { hours: string[], actors: { actor: number[] } }
- */
 function getFrequencyTimeline() {
     const now = Date.now();
     const hours = [];
@@ -182,7 +156,6 @@ function getFrequencyTimeline() {
         actorBins[actor] = [];
     }
 
-    // 72 hourly bins
     for (let i = 71; i >= 0; i--) {
         const binStart = now - (i + 1) * 3600000;
         const binEnd = now - i * 3600000;
@@ -202,12 +175,6 @@ function getFrequencyTimeline() {
 
 // ── Core ingestion ──
 
-/**
- * Ingest a new epoch into the theater monitor.
- * This is the main entry point for operator data.
- * @param {object} input - Operator classification
- * @returns {object} The ingested epoch
- */
 async function ingestEpoch(input) {
     const epoch = createTheaterEpoch(input);
 
@@ -221,7 +188,7 @@ async function ingestEpoch(input) {
             epoch.text_hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         } catch (err) {
             // crypto.subtle requires HTTPS — fallback for HTTP/localhost
-            console.warn('[BAB-EL-MANDEB] crypto.subtle unavailable (HTTP?). Using fallback hash.');
+            console.warn('[ICE-ITALY] crypto.subtle unavailable (HTTP?). Using fallback hash.');
             let hash = 0;
             for (let i = 0; i < epoch.text_summary.length; i++) {
                 const char = epoch.text_summary.charCodeAt(i);
@@ -244,7 +211,7 @@ async function ingestEpoch(input) {
     // Emit envelope into ecosystem bloodstream
     if (ecosystem) {
         ecosystem.emitEnvelope({
-            source: 'bab-el-mandeb',
+            source: 'ice-italy',
             domain: 'signal',
             type: epoch.action_type,
             payload: {
@@ -252,11 +219,12 @@ async function ingestEpoch(input) {
                 intensity: epoch.intensity,
                 source_org: epoch.source,
                 text_summary: epoch.text_summary,
-                domains: epoch.domains
+                domains: epoch.domains,
+                location: epoch.location
             },
             meta: {
-                confidence: 0.9, // operator-classified = high confidence
-                tags: ['bab-el-mandeb', epoch.actor, ...epoch.tags]
+                confidence: 0.9,
+                tags: ['ice-italy', epoch.actor, ...epoch.tags]
             },
             priority: epoch.intensity >= 4 ? 'high' : epoch.intensity >= 3 ? 'normal' : 'low'
         });
@@ -268,34 +236,33 @@ async function ingestEpoch(input) {
             type: 'theater-event',
             title: `[${epoch.source}] ${epoch.actor.toUpperCase()} — ${epoch.action_type}`,
             content: epoch,
-            source: 'bab-el-mandeb',
-            tags: ['bab-el-mandeb', epoch.actor, epoch.action_type, ...epoch.tags]
+            source: 'ice-italy',
+            tags: ['ice-italy', epoch.actor, epoch.action_type, ...epoch.tags]
         });
     }
 
     // Emit theater-specific events
     if (bus) {
-        bus.emit('bab-el-mandeb:epoch-ingested', {
+        bus.emit('ice-italy:epoch-ingested', {
             actor: epoch.actor,
             action_type: epoch.action_type,
             intensity: epoch.intensity,
             timestamp: epoch.timestamp
-        }, 'bab-el-mandeb');
+        }, 'ice-italy');
 
         // Check frequency ratios and emit alerts
         const ratio = getFrequencyRatio(epoch.actor);
         if (ratio !== null && ratio > 1.8) {
-            bus.emit('bab-el-mandeb:elevated-frequency', {
+            bus.emit('ice-italy:elevated-frequency', {
                 actor: epoch.actor,
                 ratio: ratio,
                 current_24h: getActorFrequency(epoch.actor, ROLLING_WINDOW_MS),
                 baseline: getBaseline(epoch.actor)
-            }, 'bab-el-mandeb');
+            }, 'ice-italy');
 
-            // Emit as high-priority envelope
             if (ecosystem) {
                 ecosystem.emitEnvelope({
-                    source: 'bab-el-mandeb',
+                    source: 'ice-italy',
                     domain: 'metric',
                     type: 'frequency-alert',
                     payload: {
@@ -305,7 +272,7 @@ async function ingestEpoch(input) {
                     },
                     meta: {
                         confidence: 1.0,
-                        tags: ['bab-el-mandeb', 'frequency-alert', epoch.actor]
+                        tags: ['ice-italy', 'frequency-alert', epoch.actor]
                     },
                     priority: 'high'
                 });
@@ -315,12 +282,10 @@ async function ingestEpoch(input) {
 
     // Trigger CoreFeed if available
     if (typeof CoreFeed !== 'undefined') {
-        CoreFeed.trigger('bab-el-mandeb-ingest');
+        CoreFeed.trigger('ice-italy-ingest');
     }
 
-    // Update ecosystem state
     updateState();
-
     return epoch;
 }
 
@@ -332,27 +297,23 @@ function updateState() {
     const frequencies = getRollingFrequencies();
     const baselines = getAllBaselines();
 
-    ecosystem.setState('bab-el-mandeb.frequencies', frequencies, { source: 'bab-el-mandeb' });
-    ecosystem.setState('bab-el-mandeb.baselines', baselines, { source: 'bab-el-mandeb' });
-    ecosystem.setState('bab-el-mandeb.epochCount', epochs.length, { source: 'bab-el-mandeb' });
-    ecosystem.setState('bab-el-mandeb.lastUpdate', Date.now(), { source: 'bab-el-mandeb' });
+    ecosystem.setState('ice-italy.frequencies', frequencies, { source: 'ice-italy' });
+    ecosystem.setState('ice-italy.baselines', baselines, { source: 'ice-italy' });
+    ecosystem.setState('ice-italy.epochCount', epochs.length, { source: 'ice-italy' });
+    ecosystem.setState('ice-italy.lastUpdate', Date.now(), { source: 'ice-italy' });
 }
-
-// ── Periodic frequency emission ──
 
 function emitFrequencyMetric() {
     if (!ecosystem) return;
 
-    const frequencies = getRollingFrequencies();
-
     ecosystem.emitEnvelope({
-        source: 'bab-el-mandeb',
+        source: 'ice-italy',
         domain: 'metric',
         type: 'rolling-frequency',
-        payload: frequencies,
+        payload: getRollingFrequencies(),
         meta: {
             confidence: 1.0,
-            tags: ['bab-el-mandeb', 'frequency', 'periodic']
+            tags: ['ice-italy', 'frequency', 'periodic']
         },
         priority: 'normal'
     });
@@ -362,18 +323,14 @@ function emitFrequencyMetric() {
 // MODULE INTERFACE
 // ═══════════════════════════════════════════════════════════
 
-const BabElMandebModule = {
-    name: 'bab-el-mandeb',
+const IceItalyModule = {
+    name: 'ice-italy',
     version: '0.1.0',
 
-    /**
-     * Initialize — called by ECOSYSTEM.register()
-     */
     init(eco, b) {
         ecosystem = eco;
         bus = b;
 
-        // Get Identity
         identity = eco.getModule('identity');
         if (!identity) {
             bus.once('ecosystem:module-registered', (event) => {
@@ -383,94 +340,67 @@ const BabElMandebModule = {
             });
         }
 
-        // Set initial state
-        ecosystem.setState('bab-el-mandeb.status', 'active', { source: 'bab-el-mandeb' });
-        ecosystem.setState('bab-el-mandeb.theater', 'Bab el-Mandeb Strait / Red Sea', { source: 'bab-el-mandeb' });
-        ecosystem.setState('bab-el-mandeb.actors', Object.values(ACTORS), { source: 'bab-el-mandeb' });
+        ecosystem.setState('ice-italy.status', 'active', { source: 'ice-italy' });
+        ecosystem.setState('ice-italy.theater', 'Italy / Milano-Cortina 2026 / US Influence Ops', { source: 'ice-italy' });
+        ecosystem.setState('ice-italy.actors', Object.values(ACTORS), { source: 'ice-italy' });
 
-        // Emit frequency metrics every 60 seconds
         intervals.push(setInterval(emitFrequencyMetric, 60000));
-
-        // Update state every 30 seconds
         intervals.push(setInterval(updateState, 30000));
 
-        // Write boot epoch
         if (identity) {
             identity.addEpoch({
                 type: 'boot',
-                title: 'Bab el-Mandeb Theater Monitor Initialized',
+                title: 'ICE-Italy Theater Monitor Initialized',
                 content: {
-                    version: BabElMandebModule.version,
+                    version: IceItalyModule.version,
                     actors: Object.values(ACTORS),
-                    action_types: Object.values(ACTION_TYPES)
+                    action_types: Object.values(ACTION_TYPES),
+                    context: 'US influence operations monitoring — Italy 2026'
                 },
-                source: 'bab-el-mandeb',
-                tags: ['boot', 'bab-el-mandeb']
+                source: 'ice-italy',
+                tags: ['boot', 'ice-italy']
             });
         }
 
-        // Emit ready
-        bus.emit('bab-el-mandeb:ready', {
-            version: BabElMandebModule.version,
+        bus.emit('ice-italy:ready', {
+            version: IceItalyModule.version,
             actors: Object.values(ACTORS)
-        }, 'bab-el-mandeb');
+        }, 'ice-italy');
 
         console.log(
-            '%c[BAB-EL-MANDEB] %cv' + BabElMandebModule.version +
-            ' %c— Theater monitor online. Narrative seismograph active.',
-            'color: #ff6633; font-weight: bold;',
+            '%c[ICE-ITALY] %cv' + IceItalyModule.version +
+            ' %c— Theater monitor online. Sovereignty watch active.',
+            'color: #ff3344; font-weight: bold;',
             'color: #39ff14;',
             'color: #6b7fa3;'
         );
     },
 
-    /**
-     * Destroy — cleanup
-     */
     destroy() {
         intervals.forEach(id => clearInterval(id));
         intervals = [];
 
         if (ecosystem) {
-            ecosystem.setState('bab-el-mandeb.status', 'offline', { source: 'bab-el-mandeb' });
+            ecosystem.setState('ice-italy.status', 'offline', { source: 'ice-italy' });
         }
         if (bus) {
-            bus.emit('bab-el-mandeb:shutdown', { epochCount: epochs.length }, 'bab-el-mandeb');
+            bus.emit('ice-italy:shutdown', { epochCount: epochs.length }, 'ice-italy');
         }
     },
 
-    // ═══════════════════════════════════════
     // PUBLIC API
-    // ═══════════════════════════════════════
-
-    /** Ingest a new operator-classified epoch */
     ingest: ingestEpoch,
-
-    /** Get rolling 24h frequencies per actor */
     getFrequencies: getRollingFrequencies,
-
-    /** Get baselines (avg 24h over 72h) */
     getBaselines: getAllBaselines,
-
-    /** Get frequency ratio for an actor */
     getFrequencyRatio,
-
-    /** Get recent epochs */
     getRecent: getRecentEpochs,
-
-    /** Get epochs by actor */
     getByActor: getEpochsByActor,
-
-    /** Get frequency timeline for charts */
     getTimeline: getFrequencyTimeline,
-
-    /** Get all epochs count */
     getEpochCount() { return epochs.length; },
 
-    /** Available constants for UI */
     ACTORS,
     ACTION_TYPES,
     TAG_OPTIONS
 };
 
-export default BabElMandebModule;
+export default IceItalyModule;

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICE-ITALY v0.1 | Sovereignty Watch</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        @import url('https://fonts.bunny.net/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0a0610; --bg-card: #120b1e; --bg-hover: #180f28;
+            --border: #2a1540; --border-light: #3a1d55;
+            --red: #ff3344; --gold: #ffd700; --green: #00dd66;
+            --cyan: #00c8ff; --orange: #ff8833; --purple: #8855ff;
+            --teal: #00d4aa; --yellow: #ffcc00;
+            --text: #c8d6e5; --text2: #6b7fa3; --dim: #3a4f6f;
+        }
+        body { font-family: 'Inter','Share Tech Mono',sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+        /* HEADER */
+        .header { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; background: #080410; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+        .header-left { display: flex; align-items: center; gap: 12px; }
+        .h-title { font-family: 'Orbitron',monospace; font-size: .85rem; font-weight: 700; color: var(--red); letter-spacing: .12em; }
+        .h-sub { font-size: .55rem; color: var(--dim); letter-spacing: .08em; text-transform: uppercase; }
+        .h-stats { display: flex; gap: 18px; font-family: 'Share Tech Mono',monospace; font-size: .6rem; color: var(--dim); letter-spacing: .06em; text-transform: uppercase; }
+        .h-stats strong { color: var(--text2); }
+        .nav-link { font-family: 'Share Tech Mono',monospace; font-size: .6rem; color: var(--dim); text-decoration: none; letter-spacing: .08em; transition: color .3s; }
+        .nav-link:hover { color: var(--cyan); }
+
+        /* LAYOUT */
+        .layout { display: grid; grid-template-columns: 1fr 360px; min-height: calc(100vh - 55px); }
+        .main { padding: 20px; overflow-y: auto; }
+        .side { background: #080410; border-left: 1px solid var(--border); padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
+
+        /* SECTIONS */
+        .sec-title { font-family: 'Orbitron',monospace; font-size: .65rem; font-weight: 600; color: var(--text2); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+        .sec-title .tag { color: var(--red); margin-left: 8px; font-weight: 400; }
+
+        /* ALERT */
+        .alert { display: none; padding: 10px 16px; background: rgba(255,51,68,.08); border: 1px solid rgba(255,51,68,.25); border-radius: 4px; margin-bottom: 16px; font-family: 'Share Tech Mono',monospace; font-size: .65rem; color: var(--red); }
+        .alert.on { display: block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100% { border-color: rgba(255,51,68,.25); } 50% { border-color: rgba(255,51,68,.6); } }
+        .alert-head { font-family: 'Orbitron',monospace; font-weight: 700; font-size: .7rem; margin-bottom: 3px; }
+
+        /* FREQ GRID */
+        .freq-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(130px,1fr)); gap: 8px; margin-bottom: 20px; }
+        .freq-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 12px; }
+        .freq-actor { font-family: 'Orbitron',monospace; font-size: .55rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; }
+        .freq-actor.ice { color: #4488ff; } .freq-actor.gov_it { color: var(--gold); } .freq-actor.police_it { color: var(--orange); }
+        .freq-actor.civil_society { color: var(--green); } .freq-actor.media { color: var(--cyan); } .freq-actor.us_embassy { color: var(--purple); }
+        .freq-actor.eu_inst { color: var(--teal); } .freq-actor.olympics { color: #ff88cc; }
+        .freq-num { font-family: 'Orbitron',monospace; font-size: 1.2rem; font-weight: 700; }
+        .freq-label { font-family: 'Share Tech Mono',monospace; font-size: .5rem; color: var(--dim); text-transform: uppercase; }
+        .freq-ratio { font-family: 'Share Tech Mono',monospace; font-size: .55rem; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); }
+        .ratio-normal { color: var(--green); } .ratio-elevated { color: var(--yellow); } .ratio-high { color: var(--orange); } .ratio-critical { color: var(--red); }
+
+        /* CHART */
+        .chart-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 16px; margin-bottom: 20px; }
+        #freqChart { width: 100%; height: 180px; display: block; }
+        .legend { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+        .leg-item { display: flex; align-items: center; gap: 4px; font-family: 'Share Tech Mono',monospace; font-size: .5rem; color: var(--dim); text-transform: uppercase; }
+        .leg-dot { width: 8px; height: 3px; border-radius: 1px; }
+
+        /* TIMELINE */
+        .tl-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 16px; }
+        .tl-entry { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.02); display: grid; grid-template-columns: 70px 1fr auto; gap: 10px; }
+        .tl-entry:last-child { border-bottom: none; }
+        .tl-time { font-family: 'Share Tech Mono',monospace; font-size: .55rem; color: var(--dim); }
+        .tl-content { font-size: .7rem; }
+        .tl-tag { font-family: 'Orbitron',monospace; font-size: .45rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; display: inline-block; margin-right: 4px; }
+        .tl-tag.ice { color: #4488ff; background: rgba(68,136,255,.1); border: 1px solid rgba(68,136,255,.2); }
+        .tl-tag.gov_it { color: var(--gold); background: rgba(255,215,0,.08); border: 1px solid rgba(255,215,0,.15); }
+        .tl-tag.police_it { color: var(--orange); background: rgba(255,136,51,.08); border: 1px solid rgba(255,136,51,.15); }
+        .tl-tag.civil_society { color: var(--green); background: rgba(0,221,102,.08); border: 1px solid rgba(0,221,102,.15); }
+        .tl-tag.media { color: var(--cyan); background: rgba(0,200,255,.08); border: 1px solid rgba(0,200,255,.15); }
+        .tl-tag.us_embassy { color: var(--purple); background: rgba(136,85,255,.08); border: 1px solid rgba(136,85,255,.15); }
+        .tl-tag.eu_inst { color: var(--teal); background: rgba(0,212,170,.08); border: 1px solid rgba(0,212,170,.15); }
+        .tl-tag.olympics { color: #ff88cc; background: rgba(255,136,204,.08); border: 1px solid rgba(255,136,204,.15); }
+        .tl-action { font-family: 'Share Tech Mono',monospace; font-size: .55rem; color: var(--dim); text-transform: uppercase; }
+        .tl-intensity { font-family: 'Orbitron',monospace; font-size: .6rem; font-weight: 700; }
+        .i1 { color: var(--dim); } .i2 { color: var(--cyan); } .i3 { color: var(--yellow); } .i4 { color: var(--orange); } .i5 { color: var(--red); }
+        .tl-empty { text-align: center; padding: 30px 0; font-family: 'Share Tech Mono',monospace; font-size: .65rem; color: var(--dim); }
+
+        /* SIDEBAR FORM */
+        .side-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 14px; }
+        .side-title { font-family: 'Orbitron',monospace; font-size: .55rem; font-weight: 600; color: var(--red); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+        .fg { margin-bottom: 10px; }
+        .fl { display: block; font-family: 'Share Tech Mono',monospace; font-size: .55rem; color: var(--dim); letter-spacing: .08em; text-transform: uppercase; margin-bottom: 3px; }
+        .fi, .fs, .ft { width: 100%; padding: 7px 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; color: var(--text); font-family: 'Share Tech Mono',monospace; font-size: .65rem; outline: none; }
+        .fi:focus, .fs:focus, .ft:focus { border-color: var(--red); }
+        .fs option { background: var(--bg); }
+        .ft { resize: vertical; min-height: 50px; }
+        .int-row { display: flex; gap: 3px; }
+        .int-btn { flex: 1; padding: 5px 0; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; color: var(--dim); font-family: 'Orbitron',monospace; font-size: .6rem; font-weight: 600; cursor: pointer; text-align: center; }
+        .int-btn.sel { color: var(--bg); font-weight: 700; }
+        .int-btn.sel[data-v="1"] { background: var(--dim); } .int-btn.sel[data-v="2"] { background: var(--cyan); }
+        .int-btn.sel[data-v="3"] { background: var(--yellow); } .int-btn.sel[data-v="4"] { background: var(--orange); }
+        .int-btn.sel[data-v="5"] { background: var(--red); }
+        .tag-grid { display: flex; flex-wrap: wrap; gap: 3px; }
+        .tag-btn { padding: 2px 6px; background: var(--bg); border: 1px solid var(--border); border-radius: 2px; color: var(--dim); font-family: 'Share Tech Mono',monospace; font-size: .45rem; cursor: pointer; }
+        .tag-btn.sel { background: rgba(255,51,68,.12); border-color: var(--red); color: var(--red); }
+        .btn-ingest { width: 100%; padding: 9px; background: rgba(255,51,68,.12); border: 1px solid var(--red); border-radius: 3px; color: var(--red); font-family: 'Orbitron',monospace; font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; margin-top: 14px; }
+        .btn-ingest:hover { background: rgba(255,51,68,.2); }
+        .btn-ingest.ok { background: rgba(0,221,102,.15); border-color: var(--green); color: var(--green); }
+
+        .st-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.02); font-family: 'Share Tech Mono',monospace; font-size: .55rem; }
+        .st-row:last-child { border-bottom: none; }
+        .st-k { color: var(--dim); text-transform: uppercase; letter-spacing: .06em; }
+        .st-v { color: var(--text2); }
+        .st-v.on { color: var(--green); }
+
+        /* FOOTER */
+        .footer { display: flex; align-items: center; justify-content: space-between; padding: 8px 24px; background: #060310; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 6px; }
+        .footer-l, .footer-r { display: flex; align-items: center; gap: 16px; }
+        .sf { font-family: 'Share Tech Mono',monospace; font-size: .55rem; color: var(--dim); text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+        .sf-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); box-shadow: 0 0 5px var(--green); }
+        .sf .v { color: var(--text2); }
+        .motto { font-family: 'Orbitron',monospace; font-size: .5rem; color: var(--gold); letter-spacing: .14em; text-transform: uppercase; }
+
+        @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; } .side { border-left: none; border-top: 1px solid var(--border); } .h-stats { display: none; } }
+        @media (max-width: 600px) { .header { padding: 8px 14px; } .main { padding: 14px; } .freq-grid { grid-template-columns: 1fr 1fr; } .tl-entry { grid-template-columns: 1fr; gap: 3px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <svg viewBox="0 0 28 28" width="26" height="26"><rect x="6" y="4" width="16" height="20" rx="2" fill="none" stroke="#ff3344" stroke-width="1.5" opacity=".5"/><circle cx="14" cy="11" r="3.5" fill="none" stroke="#ff3344" stroke-width="1.2" opacity=".8"/><line x1="14" y1="15" x2="14" y2="22" stroke="#ff3344" stroke-width="1.2" opacity=".6"/></svg>
+            <div>
+                <div class="h-title">ICE-ITALY v0.1</div>
+                <div class="h-sub">Sovereignty Watch // US Influence Ops Monitor</div>
+            </div>
+        </div>
+        <div class="h-stats">
+            <span>THEATER: <strong style="color:var(--red)">ITALY_2026</strong></span>
+            <span>EPOCHS: <strong id="hEpochs">0</strong></span>
+            <span>STATUS: <strong style="color:var(--green)">ACTIVE</strong></span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;">
+            <a href="index.html" class="nav-link">&larr; HQ</a>
+            <a href="oracle.html" class="nav-link" style="color:#00c8ff">ORACLE</a>
+            <a href="bab-el-mandeb.html" class="nav-link" style="color:#ff8833">BAB-EL-MANDEB</a>
+            <a href="agora.html" class="nav-link" style="color:#39ff14">AGORA</a>
+        </div>
+    </div>
+
+    <div class="layout">
+        <div class="main">
+            <div class="alert" id="alertBox"><div class="alert-head">REGIME ALERT</div><div id="alertMsg"></div></div>
+            <div class="sec-title">ROLLING FREQUENCY // 24H<span class="tag">// ACTORS</span></div>
+            <div class="freq-grid" id="freqGrid"></div>
+            <div class="chart-box">
+                <div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+                    <span class="sec-title" style="margin:0;padding:0;border:0">FREQUENCY TIMELINE // 72H</span>
+                    <span style="font-family:'Share Tech Mono',monospace;font-size:.55rem;color:var(--dim)">AUTO 30s</span>
+                </div>
+                <canvas id="freqChart"></canvas>
+                <div class="legend">
+                    <div class="leg-item"><span class="leg-dot" style="background:#4488ff"></span>ICE</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#ffd700"></span>GOV_IT</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#ff8833"></span>POLICE</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#00dd66"></span>CIVIL</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#00c8ff"></span>MEDIA</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#8855ff"></span>US_EMB</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#00d4aa"></span>EU</div>
+                    <div class="leg-item"><span class="leg-dot" style="background:#ff88cc"></span>OLYMPICS</div>
+                </div>
+            </div>
+            <div class="tl-box">
+                <div class="sec-title" style="margin-bottom:0">EPOCH TIMELINE<span class="tag">// RECENT</span></div>
+                <div id="timeline"><div class="tl-empty">NESSUN EPOCH REGISTRATO. USA IL FORM PER CLASSIFICARE UN EVENTO.</div></div>
+            </div>
+        </div>
+
+        <div class="side">
+            <div class="side-box">
+                <div class="side-title">INGEST EPOCH</div>
+                <div class="fg"><label class="fl">FONTE</label><select class="fs" id="fSrc"><option value="ICE">ICE</option><option value="GOV_IT">Governo Italiano</option><option value="POLICE_IT">Polizia / Carabinieri / DIGOS</option><option value="CIVIL_SOCIETY">Societa' Civile / ONG</option><option value="MEDIA">Media / Stampa</option><option value="US_EMBASSY">Ambasciata USA</option><option value="EU_INST">Istituzioni UE</option><option value="OLYMPICS">IOC / CONI</option></select></div>
+                <div class="fg"><label class="fl">ATTORE</label><select class="fs" id="fActor"><option value="ice">ICE</option><option value="gov_it">GOV_IT</option><option value="police_it">POLICE_IT</option><option value="civil_society">CIVIL_SOCIETY</option><option value="media">MEDIA</option><option value="us_embassy">US_EMBASSY</option><option value="eu_inst">EU_INST</option><option value="olympics">OLYMPICS</option></select></div>
+                <div class="fg"><label class="fl">TIPO AZIONE</label><select class="fs" id="fAction"><option value="deployment">DEPLOYMENT</option><option value="operation">OPERATION</option><option value="agreement">AGREEMENT</option><option value="statement">STATEMENT</option><option value="protest">PROTEST</option><option value="legal_action">LEGAL_ACTION</option><option value="arrest">ARREST</option><option value="policy">POLICY</option><option value="media_report">MEDIA_REPORT</option><option value="surveillance">SURVEILLANCE</option></select></div>
+                <div class="fg"><label class="fl">LOCATION</label><input class="fi" id="fLoc" placeholder="Milano, Roma, Cortina..."></div>
+                <div class="fg"><label class="fl">INTENSITA'</label><div class="int-row" id="fInt"><button class="int-btn" data-v="1">1</button><button class="int-btn" data-v="2">2</button><button class="int-btn sel" data-v="3">3</button><button class="int-btn" data-v="4">4</button><button class="int-btn" data-v="5">5</button></div></div>
+                <div class="fg"><label class="fl">SINTESI</label><textarea class="ft" id="fSum" placeholder="Descrizione breve..."></textarea></div>
+                <div class="fg"><label class="fl">TAGS</label><div class="tag-grid" id="fTags"></div></div>
+                <button class="btn-ingest" id="btnGo">INGEST EPOCH</button>
+            </div>
+            <div class="side-box">
+                <div class="side-title">SYSTEM STATUS</div>
+                <div class="st-row"><span class="st-k">MODULE</span><span class="st-v on" id="sysMod">ACTIVE</span></div>
+                <div class="st-row"><span class="st-k">EPOCHS</span><span class="st-v" id="sysEp">0</span></div>
+                <div class="st-row"><span class="st-k">CORRELATION</span><span class="st-v" id="sysCorr">--</span></div>
+                <div class="st-row"><span class="st-k">IDENTITY</span><span class="st-v" id="sysId">--</span></div>
+                <div class="st-row"><span class="st-k">BUS</span><span class="st-v" id="sysBus">--</span></div>
+                <div class="st-row"><span class="st-k">UPTIME</span><span class="st-v" id="sysUp">0s</span></div>
+            </div>
+            <div class="side-box">
+                <div class="side-title">GUIDA OPERATORE</div>
+                <div style="font-size:.6rem;color:var(--dim);line-height:1.6;">
+                    <strong style="color:var(--text2)">1.</strong> Leggi la notizia / il report<br>
+                    <strong style="color:var(--text2)">2.</strong> Seleziona fonte + attore<br>
+                    <strong style="color:var(--text2)">3.</strong> Classifica il tipo di azione<br>
+                    <strong style="color:var(--text2)">4.</strong> Imposta l'intensita'<br>
+                    <strong style="color:var(--text2)">5.</strong> Aggiungi i tag rilevanti<br>
+                    <strong style="color:var(--text2)">6.</strong> Clicca INGEST<br><br>
+                    <span style="color:var(--red)">Il sistema traccia la frequenza.</span><br>
+                    <span style="color:var(--gold)">Tu fornisci il significato.</span><br>
+                    <span style="color:var(--dim)">La sovranita' si difende con i dati.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-l">
+            <div class="sf"><span class="sf-dot"></span> MONITOR: <span class="v">ONLINE</span></div>
+            <div class="sf">VERSION: <span class="v">0.1.0</span></div>
+            <div class="sf">THEATER: <span class="v">ICE_ITALY</span></div>
+        </div>
+        <div class="footer-r">
+            <div class="motto">LA SOVRANITA' SI DIFENDE CON I DATI</div>
+            <div class="sf">OPERATOR: <span class="v">PANKOW_77C</span></div>
+        </div>
+    </div>
+
+    <script src="js/core-feed.js"></script>
+    <script type="module">
+        import { ECOSYSTEM, Bus } from './js/core.js';
+        import { Identity } from './js/identity.js';
+        import Circulation from './js/circulation.js';
+        import EvaluationEngine from './js/evaluation-engine.js';
+        import CorrelationEngine from './js/correlation-engine.js';
+        import IceItalyModule from './js/modules/ice-italy.js';
+
+        await Identity.init();
+        ECOSYSTEM.register('identity', Identity);
+        ECOSYSTEM.register('circulation', Circulation);
+        ECOSYSTEM.register('evaluation-engine', EvaluationEngine);
+        ECOSYSTEM.register('correlation-engine', CorrelationEngine);
+        ECOSYSTEM.register('ice-italy', IceItalyModule);
+
+        const COLORS = { ice:'#4488ff', gov_it:'#ffd700', police_it:'#ff8833', civil_society:'#00dd66', media:'#00c8ff', us_embassy:'#8855ff', eu_inst:'#00d4aa', olympics:'#ff88cc' };
+        const LABELS = { ice:'ICE', gov_it:'GOV_IT', police_it:'POLICE_IT', civil_society:'CIVIL_SOC', media:'MEDIA', us_embassy:'US_EMBASSY', eu_inst:'EU_INST', olympics:'OLYMPICS' };
+
+        function esc(s) { const d = document.createElement('div'); d.appendChild(document.createTextNode(s)); return d.innerHTML; }
+
+        // ── VIEW ONLY — zero business logic ──
+
+        function renderFreq() {
+            const g = document.getElementById('freqGrid'), f = IceItalyModule.getFrequencies(), b = IceItalyModule.getBaselines();
+            g.innerHTML = '';
+            for (const [a, c] of Object.entries(f)) {
+                const bl = b[a], r = bl > 0 ? c / bl : (c > 0 ? Infinity : 0);
+                let rc = 'ratio-normal', rt = 'BASELINE';
+                if (r === Infinity) { rc = 'ratio-elevated'; rt = 'NEW'; }
+                else if (r > 2.5) { rc = 'ratio-critical'; rt = r.toFixed(1) + 'x'; }
+                else if (r > 1.8) { rc = 'ratio-high'; rt = r.toFixed(1) + 'x'; }
+                else if (r > 1.2) { rc = 'ratio-elevated'; rt = r.toFixed(1) + 'x'; }
+                else if (c > 0) { rt = r.toFixed(1) + 'x'; }
+                g.innerHTML += `<div class="freq-card"><div class="freq-actor ${a}">${LABELS[a]||a}</div><div class="freq-num">${c}</div><div class="freq-label">24H</div><div class="freq-ratio ${rc}">${rt}</div></div>`;
+            }
+        }
+
+        function drawChart() {
+            const cv = document.getElementById('freqChart'); if (!cv) return;
+            const ctx = cv.getContext('2d'), dpr = devicePixelRatio || 1, rect = cv.getBoundingClientRect();
+            cv.width = rect.width * dpr; cv.height = rect.height * dpr; ctx.scale(dpr, dpr);
+            const W = rect.width, H = rect.height, pL = 35, pR = 8, pT = 8, pB = 25, cW = W-pL-pR, cH = H-pT-pB;
+            ctx.clearRect(0, 0, W, H);
+            ctx.strokeStyle = 'rgba(255,255,255,.04)'; ctx.lineWidth = 1;
+            for (let i = 0; i <= 4; i++) { const y = pT + (cH/4)*i; ctx.beginPath(); ctx.moveTo(pL, y); ctx.lineTo(W-pR, y); ctx.stroke(); }
+            const tl = IceItalyModule.getTimeline();
+            if (!tl.hours || !tl.hours.length) { ctx.fillStyle = '#3a4f6f'; ctx.font = '11px Share Tech Mono'; ctx.textAlign = 'center'; ctx.fillText('IN ATTESA DI DATI...', W/2, H/2); return; }
+            let mx = 1; for (const a of Object.keys(tl.actors)) for (const v of tl.actors[a]) if (v > mx) mx = v;
+            ctx.fillStyle = '#3a4f6f'; ctx.font = '9px Share Tech Mono'; ctx.textAlign = 'right';
+            for (let i = 0; i <= 4; i++) ctx.fillText(Math.round(mx*(1-i/4)), pL-5, pT+(cH/4)*i+4);
+            ctx.textAlign = 'center';
+            for (let i = 0; i < tl.hours.length; i += 12) ctx.fillText(tl.hours[i], pL+(cW/(tl.hours.length-1))*i, H-6);
+            for (const a of Object.keys(tl.actors)) {
+                const d = tl.actors[a], col = COLORS[a] || '#6b7fa3';
+                ctx.beginPath(); ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.globalAlpha = .8;
+                for (let i = 0; i < d.length; i++) { const x = pL+(cW/(d.length-1))*i, y = pT+cH-(d[i]/mx)*cH; i === 0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y); }
+                ctx.stroke(); ctx.globalAlpha = 1;
+            }
+        }
+
+        function renderTimeline() {
+            const c = document.getElementById('timeline'), recent = IceItalyModule.getRecent(30);
+            if (!recent.length) { c.innerHTML = '<div class="tl-empty">NESSUN EPOCH REGISTRATO. USA IL FORM PER CLASSIFICARE UN EVENTO.</div>'; return; }
+            c.innerHTML = '';
+            for (const e of recent) {
+                const t = new Date(e.timestamp);
+                c.innerHTML += `<div class="tl-entry"><div class="tl-time">${t.toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit'})}<br>${t.toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}</div><div class="tl-content"><span class="tl-tag ${e.actor}">${LABELS[e.actor]||e.actor}</span><span class="tl-action">${e.action_type}</span>${e.location?` <span style="font-size:.5rem;color:var(--dim)">${esc(e.location)}</span>`:''}${e.text_summary?`<div style="margin-top:3px;font-size:.6rem;color:var(--dim)">${esc(e.text_summary)}</div>`:''}</div><div class="tl-intensity i${e.intensity}">${e.intensity}/5</div></div>`;
+            }
+        }
+
+        function updateStatus() {
+            document.getElementById('sysEp').textContent = IceItalyModule.getEpochCount();
+            document.getElementById('hEpochs').textContent = IceItalyModule.getEpochCount();
+            document.getElementById('sysUp').textContent = ECOSYSTEM.getUptime();
+            const cr = ECOSYSTEM.getModule('correlation-engine');
+            document.getElementById('sysCorr').textContent = cr ? 'ACTIVE' : '--';
+            document.getElementById('sysCorr').className = 'st-v' + (cr ? ' on' : '');
+            const id = ECOSYSTEM.getModule('identity');
+            document.getElementById('sysId').textContent = id ? 'ACTIVE' : '--';
+            document.getElementById('sysId').className = 'st-v' + (id ? ' on' : '');
+            document.getElementById('sysBus').textContent = Bus.getListenerCount() + ' L';
+        }
+
+        function refresh() { renderFreq(); drawChart(); renderTimeline(); updateStatus(); }
+
+        // ── FORM WIRING (no logic — delegates to module) ──
+
+        const tags = new Set();
+        const tg = document.getElementById('fTags');
+        for (const t of IceItalyModule.TAG_OPTIONS) {
+            const b = document.createElement('button'); b.className = 'tag-btn'; b.textContent = t;
+            b.onclick = () => { tags.has(t) ? (tags.delete(t), b.classList.remove('sel')) : (tags.add(t), b.classList.add('sel')); };
+            tg.appendChild(b);
+        }
+
+        let intensity = 3;
+        document.querySelectorAll('.int-btn').forEach(b => b.onclick = () => {
+            document.querySelectorAll('.int-btn').forEach(x => x.classList.remove('sel'));
+            b.classList.add('sel'); intensity = +b.dataset.v;
+        });
+
+        const srcMap = { ICE:'ice', GOV_IT:'gov_it', POLICE_IT:'police_it', CIVIL_SOCIETY:'civil_society', MEDIA:'media', US_EMBASSY:'us_embassy', EU_INST:'eu_inst', OLYMPICS:'olympics' };
+        document.getElementById('fSrc').onchange = e => { document.getElementById('fActor').value = srcMap[e.target.value] || 'ice'; };
+
+        document.getElementById('btnGo').onclick = async () => {
+            const btn = document.getElementById('btnGo');
+            try {
+                await IceItalyModule.ingest({
+                    source: document.getElementById('fSrc').value,
+                    actor: document.getElementById('fActor').value,
+                    action_type: document.getElementById('fAction').value,
+                    intensity,
+                    text_summary: document.getElementById('fSum').value.trim(),
+                    location: document.getElementById('fLoc').value.trim(),
+                    tags: [...tags],
+                    domains: ['sovereignty', 'civil_rights']
+                });
+                btn.classList.add('ok'); btn.textContent = 'REGISTRATO';
+                setTimeout(() => { btn.classList.remove('ok'); btn.textContent = 'INGEST EPOCH'; }, 1500);
+                document.getElementById('fSum').value = ''; document.getElementById('fLoc').value = '';
+                tags.clear(); document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('sel'));
+                refresh();
+            } catch (err) {
+                console.error('[ICE-ITALY] Ingest error:', err);
+                btn.textContent = 'ERRORE'; setTimeout(() => { btn.textContent = 'INGEST EPOCH'; }, 2000);
+            }
+        };
+
+        // ── BUS LISTENERS ──
+
+        Bus.on('correlation:regime-alert', e => {
+            if (e.payload.theater === 'ice-italy') {
+                document.getElementById('alertBox').classList.add('on');
+                document.getElementById('alertMsg').textContent = `${e.payload.count} ATTORI ELEVATI: ${e.payload.actors.join(', ').toUpperCase()} — ${e.payload.severity.toUpperCase()}`;
+            }
+        });
+        Bus.on('ice-italy:epoch-ingested', () => refresh());
+
+        // ── INIT ──
+        refresh();
+        setInterval(refresh, 30000);
+        window.addEventListener('resize', drawChart);
+    </script>
+</body>
+</html>
