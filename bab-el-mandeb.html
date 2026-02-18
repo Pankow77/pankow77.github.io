@@ -212,10 +212,31 @@
             text-transform: uppercase;
         }
 
+        /* ── US / Western bloc ── */
         .freq-actor.centcom { color: #4488ff; }
-        .freq-actor.houthi { color: var(--red); }
+        .freq-actor.us-state { color: #6699ff; }
+        .freq-actor.uk-navy { color: #3377cc; }
         .freq-actor.eunavfor { color: var(--teal); }
+        /* ── Iran axis ── */
         .freq-actor.iran { color: var(--purple); }
+        .freq-actor.irgc { color: #bb44ff; }
+        .freq-actor.houthi { color: var(--red); }
+        .freq-actor.hezbollah { color: #cc5500; }
+        /* ── China / Pacific ── */
+        .freq-actor.china { color: #ff2222; }
+        .freq-actor.china-navy { color: #dd4444; }
+        .freq-actor.taiwan { color: #22cc88; }
+        /* ── Latin America ── */
+        .freq-actor.venezuela { color: #ffcc00; }
+        /* ── Regional ── */
+        .freq-actor.saudi { color: #33aa55; }
+        .freq-actor.egypt { color: #ddaa33; }
+        .freq-actor.russia { color: #ee6633; }
+        .freq-actor.india-navy { color: #ff9933; }
+        .freq-actor.djibouti { color: #55bbdd; }
+        .freq-actor.yemen-gov { color: #88aa66; }
+        /* ── Non-state ── */
+        .freq-actor.shipping { color: #88aacc; }
         .freq-actor.other { color: var(--text-secondary); }
 
         .freq-count {
@@ -351,25 +372,106 @@
             margin-right: 6px;
         }
 
+        /* ── US / Western bloc ── */
         .timeline-actor-tag.centcom {
             color: #4488ff;
             background: rgba(68, 136, 255, 0.1);
             border: 1px solid rgba(68, 136, 255, 0.2);
         }
-        .timeline-actor-tag.houthi {
-            color: var(--red);
-            background: rgba(255, 51, 68, 0.1);
-            border: 1px solid rgba(255, 51, 68, 0.2);
+        .timeline-actor-tag.us-state {
+            color: #6699ff;
+            background: rgba(102, 153, 255, 0.1);
+            border: 1px solid rgba(102, 153, 255, 0.2);
+        }
+        .timeline-actor-tag.uk-navy {
+            color: #3377cc;
+            background: rgba(51, 119, 204, 0.1);
+            border: 1px solid rgba(51, 119, 204, 0.2);
         }
         .timeline-actor-tag.eunavfor {
             color: var(--teal);
             background: rgba(0, 212, 170, 0.1);
             border: 1px solid rgba(0, 212, 170, 0.2);
         }
+        /* ── Iran axis ── */
         .timeline-actor-tag.iran {
             color: var(--purple);
             background: rgba(136, 85, 255, 0.1);
             border: 1px solid rgba(136, 85, 255, 0.2);
+        }
+        .timeline-actor-tag.irgc {
+            color: #bb44ff;
+            background: rgba(187, 68, 255, 0.1);
+            border: 1px solid rgba(187, 68, 255, 0.2);
+        }
+        .timeline-actor-tag.houthi {
+            color: var(--red);
+            background: rgba(255, 51, 68, 0.1);
+            border: 1px solid rgba(255, 51, 68, 0.2);
+        }
+        .timeline-actor-tag.hezbollah {
+            color: #cc5500;
+            background: rgba(204, 85, 0, 0.1);
+            border: 1px solid rgba(204, 85, 0, 0.2);
+        }
+        /* ── China / Pacific ── */
+        .timeline-actor-tag.china {
+            color: #ff2222;
+            background: rgba(255, 34, 34, 0.1);
+            border: 1px solid rgba(255, 34, 34, 0.2);
+        }
+        .timeline-actor-tag.china-navy {
+            color: #dd4444;
+            background: rgba(221, 68, 68, 0.1);
+            border: 1px solid rgba(221, 68, 68, 0.2);
+        }
+        .timeline-actor-tag.taiwan {
+            color: #22cc88;
+            background: rgba(34, 204, 136, 0.1);
+            border: 1px solid rgba(34, 204, 136, 0.2);
+        }
+        /* ── Latin America ── */
+        .timeline-actor-tag.venezuela {
+            color: #ffcc00;
+            background: rgba(255, 204, 0, 0.1);
+            border: 1px solid rgba(255, 204, 0, 0.2);
+        }
+        /* ── Regional ── */
+        .timeline-actor-tag.saudi {
+            color: #33aa55;
+            background: rgba(51, 170, 85, 0.1);
+            border: 1px solid rgba(51, 170, 85, 0.2);
+        }
+        .timeline-actor-tag.egypt {
+            color: #ddaa33;
+            background: rgba(221, 170, 51, 0.1);
+            border: 1px solid rgba(221, 170, 51, 0.2);
+        }
+        .timeline-actor-tag.russia {
+            color: #ee6633;
+            background: rgba(238, 102, 51, 0.1);
+            border: 1px solid rgba(238, 102, 51, 0.2);
+        }
+        .timeline-actor-tag.india-navy {
+            color: #ff9933;
+            background: rgba(255, 153, 51, 0.1);
+            border: 1px solid rgba(255, 153, 51, 0.2);
+        }
+        .timeline-actor-tag.djibouti {
+            color: #55bbdd;
+            background: rgba(85, 187, 221, 0.1);
+            border: 1px solid rgba(85, 187, 221, 0.2);
+        }
+        .timeline-actor-tag.yemen-gov {
+            color: #88aa66;
+            background: rgba(136, 170, 102, 0.1);
+            border: 1px solid rgba(136, 170, 102, 0.2);
+        }
+        /* ── Non-state ── */
+        .timeline-actor-tag.shipping {
+            color: #88aacc;
+            background: rgba(136, 170, 204, 0.1);
+            border: 1px solid rgba(136, 170, 204, 0.2);
         }
         .timeline-actor-tag.other {
             color: var(--text-secondary);
@@ -465,6 +567,14 @@
         .form-select option {
             background: var(--bg-deep);
             color: var(--text-primary);
+        }
+
+        .form-select optgroup {
+            background: #0a1020;
+            color: var(--orange);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.06em;
         }
 
         .form-textarea {
@@ -735,10 +845,20 @@
                 </div>
                 <canvas id="frequencyChart"></canvas>
                 <div class="chart-legend">
+                    <!-- US / Western -->
                     <div class="legend-item"><span class="legend-dot" style="background: #4488ff;"></span> CENTCOM</div>
-                    <div class="legend-item"><span class="legend-dot" style="background: #ff3344;"></span> HOUTHI</div>
                     <div class="legend-item"><span class="legend-dot" style="background: #00d4aa;"></span> EUNAVFOR</div>
+                    <!-- Iran axis -->
                     <div class="legend-item"><span class="legend-dot" style="background: #8855ff;"></span> IRAN</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #bb44ff;"></span> IRGC</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #ff3344;"></span> HOUTHI</div>
+                    <!-- China / Pacific -->
+                    <div class="legend-item"><span class="legend-dot" style="background: #ff2222;"></span> CHINA</div>
+                    <div class="legend-item"><span class="legend-dot" style="background: #22cc88;"></span> TAIWAN</div>
+                    <!-- Latin America -->
+                    <div class="legend-item"><span class="legend-dot" style="background: #ffcc00;"></span> VENEZUELA</div>
+                    <!-- Regional -->
+                    <div class="legend-item"><span class="legend-dot" style="background: #ee6633;"></span> RUSSIA</div>
                     <div class="legend-item"><span class="legend-dot" style="background: #6b7fa3;"></span> OTHER</div>
                 </div>
             </div>
@@ -762,36 +882,110 @@
                 <div class="sidebar-title">INGEST EPOCH</div>
 
                 <div class="form-group">
-                    <label class="form-label">SOURCE</label>
+                    <label class="form-label">FONTE (SOURCE)</label>
                     <select class="form-select" id="formSource">
-                        <option value="CENTCOM">CENTCOM</option>
-                        <option value="HOUTHI">HOUTHI (claim)</option>
-                        <option value="EUNAVFOR">EU NAVFOR ASPIDES</option>
-                        <option value="IRAN">IRAN (official)</option>
-                        <option value="OTHER">OTHER</option>
+                        <optgroup label="── US / WESTERN BLOC ──">
+                            <option value="CENTCOM">CENTCOM</option>
+                            <option value="US_STATE">US STATE DEPT / WHITE HOUSE</option>
+                            <option value="UK_MOD">UK MOD / UKMTO</option>
+                            <option value="EUNAVFOR">EU NAVFOR ASPIDES</option>
+                        </optgroup>
+                        <optgroup label="── IRAN AXIS ──">
+                            <option value="IRAN">IRAN (official)</option>
+                            <option value="IRGC">IRGC (Pasdaran)</option>
+                            <option value="HOUTHI">HOUTHI / Ansar Allah</option>
+                            <option value="HEZBOLLAH">HEZBOLLAH</option>
+                        </optgroup>
+                        <optgroup label="── CHINA / PACIFIC ──">
+                            <option value="CHINA">CHINA / PRC</option>
+                            <option value="TAIWAN">TAIWAN / ROC</option>
+                        </optgroup>
+                        <optgroup label="── LATIN AMERICA ──">
+                            <option value="VENEZUELA">VENEZUELA / MADURO</option>
+                        </optgroup>
+                        <optgroup label="── REGIONAL ──">
+                            <option value="SAUDI">SAUDI ARABIA</option>
+                            <option value="EGYPT">EGYPT</option>
+                            <option value="RUSSIA">RUSSIA</option>
+                            <option value="INDIA">INDIA</option>
+                            <option value="DJIBOUTI">DJIBOUTI</option>
+                            <option value="YEMEN_GOV">YEMEN (gov.)</option>
+                        </optgroup>
+                        <optgroup label="── OTHER ──">
+                            <option value="MEDIA">MEDIA / OSINT</option>
+                            <option value="UN_IMO">UN / IMO / IAEA</option>
+                            <option value="SHIPPING_CO">SHIPPING COMPANY</option>
+                            <option value="OTHER">OTHER</option>
+                        </optgroup>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">ACTOR</label>
+                    <label class="form-label">ATTORE (ACTOR)</label>
                     <select class="form-select" id="formActor">
-                        <option value="centcom">CENTCOM / US</option>
-                        <option value="houthi">HOUTHI</option>
-                        <option value="eunavfor">EUNAVFOR</option>
-                        <option value="iran">IRAN</option>
-                        <option value="other">OTHER</option>
+                        <optgroup label="── US / WESTERN BLOC ──">
+                            <option value="centcom">CENTCOM / US</option>
+                            <option value="us-state">US STATE DEPT</option>
+                            <option value="uk-navy">UK / ROYAL NAVY</option>
+                            <option value="eunavfor">EUNAVFOR</option>
+                        </optgroup>
+                        <optgroup label="── IRAN AXIS ──">
+                            <option value="iran">IRAN (governo)</option>
+                            <option value="irgc">IRGC (Pasdaran)</option>
+                            <option value="houthi">HOUTHI / Ansar Allah</option>
+                            <option value="hezbollah">HEZBOLLAH</option>
+                        </optgroup>
+                        <optgroup label="── CHINA / PACIFIC ──">
+                            <option value="china">CHINA / PRC</option>
+                            <option value="china-navy">CHINA PLA-N</option>
+                            <option value="taiwan">TAIWAN / ROC</option>
+                        </optgroup>
+                        <optgroup label="── LATIN AMERICA ──">
+                            <option value="venezuela">VENEZUELA</option>
+                        </optgroup>
+                        <optgroup label="── REGIONAL ──">
+                            <option value="saudi">SAUDI ARABIA</option>
+                            <option value="egypt">EGYPT</option>
+                            <option value="russia">RUSSIA</option>
+                            <option value="india-navy">INDIA NAVY</option>
+                            <option value="djibouti">DJIBOUTI</option>
+                            <option value="yemen-gov">YEMEN (gov.)</option>
+                        </optgroup>
+                        <optgroup label="── NON-STATE ──">
+                            <option value="shipping">SHIPPING (industry)</option>
+                            <option value="other">OTHER</option>
+                        </optgroup>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">ACTION TYPE</label>
+                    <label class="form-label">TIPO DI AZIONE (ACTION TYPE)</label>
                     <select class="form-select" id="formAction">
-                        <option value="strike">STRIKE</option>
-                        <option value="claim">CLAIM</option>
-                        <option value="warning">WARNING</option>
-                        <option value="defensive">DEFENSIVE</option>
-                        <option value="statement">STATEMENT</option>
-                        <option value="deployment">DEPLOYMENT</option>
+                        <optgroup label="── MILITARY ──">
+                            <option value="strike">STRIKE</option>
+                            <option value="defensive">DEFENSIVE</option>
+                            <option value="deployment">DEPLOYMENT</option>
+                            <option value="seizure">SEIZURE (sequestro)</option>
+                            <option value="interdiction">INTERDICTION (abbordaggio)</option>
+                            <option value="escort">ESCORT (scorta navale)</option>
+                        </optgroup>
+                        <optgroup label="── DIPLOMATIC ──">
+                            <option value="statement">STATEMENT</option>
+                            <option value="claim">CLAIM</option>
+                            <option value="warning">WARNING</option>
+                            <option value="negotiation">NEGOTIATION</option>
+                            <option value="sanction">SANCTION</option>
+                        </optgroup>
+                        <optgroup label="── ECONOMIC / STRATEGIC ──">
+                            <option value="investment">INVESTMENT</option>
+                            <option value="divestment">DIVESTMENT (ritiro)</option>
+                            <option value="reroute">REROUTE (deviazione)</option>
+                        </optgroup>
+                        <optgroup label="── INFLUENCE ──">
+                            <option value="influence-op">INFLUENCE OP</option>
+                            <option value="proxy-action">PROXY ACTION</option>
+                            <option value="humanitarian">HUMANITARIAN</option>
+                        </optgroup>
                     </select>
                 </div>
 
@@ -899,11 +1093,32 @@
 
         // ── Actor colors ──
         const ACTOR_COLORS = {
-            centcom:  '#4488ff',
-            houthi:   '#ff3344',
-            eunavfor: '#00d4aa',
-            iran:     '#8855ff',
-            other:    '#6b7fa3'
+            // US / Western bloc
+            'centcom':    '#4488ff',
+            'us-state':   '#6699ff',
+            'uk-navy':    '#3377cc',
+            'eunavfor':   '#00d4aa',
+            // Iran axis
+            'iran':       '#8855ff',
+            'irgc':       '#bb44ff',
+            'houthi':     '#ff3344',
+            'hezbollah':  '#cc5500',
+            // China / Pacific
+            'china':      '#ff2222',
+            'china-navy': '#dd4444',
+            'taiwan':     '#22cc88',
+            // Latin America
+            'venezuela':  '#ffcc00',
+            // Regional
+            'saudi':      '#33aa55',
+            'egypt':      '#ddaa33',
+            'russia':     '#ee6633',
+            'india-navy': '#ff9933',
+            'djibouti':   '#55bbdd',
+            'yemen-gov':  '#88aa66',
+            // Non-state
+            'shipping':   '#88aacc',
+            'other':      '#6b7fa3'
         };
 
         // ── Initialize UI ──
@@ -1127,11 +1342,25 @@
         // Auto-link source to actor
         document.getElementById('formSource').addEventListener('change', (e) => {
             const sourceToActor = {
-                'CENTCOM': 'centcom',
-                'HOUTHI': 'houthi',
-                'EUNAVFOR': 'eunavfor',
-                'IRAN': 'iran',
-                'OTHER': 'other'
+                'CENTCOM':     'centcom',
+                'US_STATE':    'us-state',
+                'UK_MOD':      'uk-navy',
+                'EUNAVFOR':    'eunavfor',
+                'IRAN':        'iran',
+                'IRGC':        'irgc',
+                'HOUTHI':      'houthi',
+                'HEZBOLLAH':   'hezbollah',
+                'CHINA':       'china',
+                'TAIWAN':      'taiwan',
+                'VENEZUELA':   'venezuela',
+                'SAUDI':       'saudi',
+                'EGYPT':       'egypt',
+                'RUSSIA':      'russia',
+                'INDIA':       'india-navy',
+                'DJIBOUTI':    'djibouti',
+                'YEMEN_GOV':   'yemen-gov',
+                'SHIPPING_CO': 'shipping',
+                'OTHER':       'other'
             };
             document.getElementById('formActor').value = sourceToActor[e.target.value] || 'other';
         });

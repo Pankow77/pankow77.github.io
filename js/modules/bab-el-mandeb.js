@@ -16,27 +16,84 @@
  */
 
 // ── Constants ──
+// Actors: organized by geopolitical relevance (2026 theater)
 const ACTORS = Object.freeze({
-    CENTCOM:   'centcom',
-    HOUTHI:    'houthi',
-    EUNAVFOR:  'eunavfor',
-    IRAN:      'iran',
-    OTHER:     'other'
+    // ── US / Western bloc ──
+    CENTCOM:        'centcom',
+    US_STATE:       'us-state',
+    UK_NAVY:        'uk-navy',
+    EUNAVFOR:       'eunavfor',
+    // ── Iran axis ──
+    IRAN:           'iran',
+    IRGC:           'irgc',
+    HOUTHI:         'houthi',
+    HEZBOLLAH:      'hezbollah',
+    // ── China / Pacific ──
+    CHINA:          'china',
+    CHINA_NAVY:     'china-navy',
+    TAIWAN:         'taiwan',
+    // ── Latin America ──
+    VENEZUELA:      'venezuela',
+    // ── Regional ──
+    SAUDI:          'saudi',
+    EGYPT:          'egypt',
+    RUSSIA:         'russia',
+    INDIA_NAVY:     'india-navy',
+    DJIBOUTI:       'djibouti',
+    YEMEN_GOV:      'yemen-gov',
+    // ── Non-state ──
+    SHIPPING:       'shipping',
+    OTHER:          'other'
 });
 
 const ACTION_TYPES = Object.freeze({
-    STRIKE:     'strike',
-    CLAIM:      'claim',
-    WARNING:    'warning',
-    DEFENSIVE:  'defensive',
-    STATEMENT:  'statement',
-    DEPLOYMENT: 'deployment'
+    // ── Military ──
+    STRIKE:         'strike',
+    DEFENSIVE:      'defensive',
+    DEPLOYMENT:     'deployment',
+    SEIZURE:        'seizure',
+    INTERDICTION:   'interdiction',
+    ESCORT:         'escort',
+    // ── Diplomatic / Political ──
+    STATEMENT:      'statement',
+    CLAIM:          'claim',
+    WARNING:        'warning',
+    NEGOTIATION:    'negotiation',
+    SANCTION:       'sanction',
+    // ── Economic / Strategic ──
+    INVESTMENT:     'investment',
+    DIVESTMENT:     'divestment',
+    REROUTE:        'reroute',
+    // ── Influence ──
+    INFLUENCE_OP:   'influence-op',
+    PROXY_ACTION:   'proxy-action',
+    HUMANITARIAN:   'humanitarian'
 });
 
 const TAG_OPTIONS = Object.freeze([
-    'iran-proxy', 'shipping', 'drone', 'missile', 'naval',
-    'suez', 'cape-route', 'insurance', 'escalation', 'de-escalation',
-    'civilian', 'military', 'coalition', 'unilateral'
+    // ── Iran theater ──
+    'iran-nuclear', 'irgc', 'iran-proxy', 'strait-hormuz', 'jcpoa',
+    'hezbollah', 'ansar-allah',
+    // ── China theater ──
+    'belt-and-road', 'china-investment', 'china-navy', 'south-china-sea',
+    'china-latam', 'semiconductor',
+    // ── Taiwan theater ──
+    'taiwan-strait', 'cross-strait',
+    // ── Venezuela / Latin America ──
+    'venezuela', 'south-america', 'oil-sanctions', 'baptist-influence',
+    'trump-seizure',
+    // ── Bab el-Mandeb / Red Sea ──
+    'red-sea', 'bab-el-mandeb', 'gulf-of-aden', 'suez', 'cape-route',
+    'strait',
+    // ── Military hardware ──
+    'drone', 'missile', 'ballistic', 'anti-ship', 'USV', 'UAV',
+    // ── Maritime / Economic ──
+    'shipping', 'tanker', 'cargo', 'LNG', 'insurance', 'oil-price',
+    'blockade', 'piracy',
+    // ── Dynamics ──
+    'escalation', 'de-escalation', 'asymmetric', 'ceasefire',
+    'civilian', 'military', 'coalition', 'unilateral', 'proxy',
+    'humanitarian'
 ]);
 
 // ── Rolling frequency state ──
