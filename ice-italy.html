@@ -188,10 +188,13 @@
                 <div class="side-title">SYSTEM STATUS</div>
                 <div class="st-row"><span class="st-k">MODULE</span><span class="st-v on" id="sysMod">ACTIVE</span></div>
                 <div class="st-row"><span class="st-k">EPOCHS</span><span class="st-v" id="sysEp">0</span></div>
+                <div class="st-row"><span class="st-k">WARMUP</span><span class="st-v" id="sysWarm">--</span></div>
+                <div class="st-row"><span class="st-k">MATURITY</span><span class="st-v" id="sysMat">0%</span></div>
                 <div class="st-row"><span class="st-k">CORRELATION</span><span class="st-v" id="sysCorr">--</span></div>
                 <div class="st-row"><span class="st-k">IDENTITY</span><span class="st-v" id="sysId">--</span></div>
                 <div class="st-row"><span class="st-k">BUS</span><span class="st-v" id="sysBus">--</span></div>
                 <div class="st-row"><span class="st-k">UPTIME</span><span class="st-v" id="sysUp">0s</span></div>
+                <button class="btn-ingest" id="btnSeed" style="margin-top:10px;background:rgba(255,215,0,.1);border-color:var(--gold);color:var(--gold);font-size:.5rem;">LOAD BASELINE SEED (72H)</button>
             </div>
             <div class="side-box">
                 <div class="side-title">GUIDA OPERATORE</div>
@@ -227,6 +230,7 @@
         import { ECOSYSTEM, Bus } from './js/core.js';
         import { Identity } from './js/identity.js';
         import Circulation from './js/circulation.js';
+        import loadSeed from './js/seed/ice-italy-seed.js';
         import EvaluationEngine from './js/evaluation-engine.js';
         import CorrelationEngine from './js/correlation-engine.js';
         import IceItalyModule from './js/modules/ice-italy.js';
@@ -304,6 +308,24 @@
             document.getElementById('sysId').textContent = id ? 'ACTIVE' : '--';
             document.getElementById('sysId').className = 'st-v' + (id ? ' on' : '');
             document.getElementById('sysBus').textContent = Bus.getListenerCount() + ' L';
+
+            // ── Warmup status ──
+            if (cr && cr.getWarmupStatus) {
+                const w = cr.getWarmupStatus('ice-italy');
+                const warmEl = document.getElementById('sysWarm');
+                const matEl = document.getElementById('sysMat');
+                warmEl.textContent = w.ready ? 'READY' : 'WARMING';
+                warmEl.className = 'st-v' + (w.ready ? ' on' : '');
+                warmEl.style.color = w.ready ? '' : 'var(--gold)';
+                matEl.textContent = Math.round(w.maturity * 100) + '%';
+                matEl.style.color = w.maturity >= 0.8 ? 'var(--green)' : w.maturity >= 0.4 ? 'var(--gold)' : 'var(--dim)';
+            }
+
+            // ── Hide seed button if already seeded ──
+            const seedBtn = document.getElementById('btnSeed');
+            if (seedBtn && IceItalyModule.getEpochCount() >= 15) {
+                seedBtn.style.display = 'none';
+            }
         }
 
         function refresh() { renderFreq(); drawChart(); renderTimeline(); updateStatus(); }
@@ -351,7 +373,35 @@
             }
         };
 
+        // ── SEED LOADER ──
+
+        document.getElementById('btnSeed').onclick = async () => {
+            const btn = document.getElementById('btnSeed');
+            btn.textContent = 'CARICAMENTO...'; btn.style.pointerEvents = 'none';
+            try {
+                const count = await loadSeed(IceItalyModule);
+                if (count > 0) {
+                    btn.textContent = `${count} EPOCHS CARICATI`;
+                    btn.style.background = 'rgba(0,221,102,.15)'; btn.style.borderColor = 'var(--green)'; btn.style.color = 'var(--green)';
+                    setTimeout(() => { btn.style.display = 'none'; }, 3000);
+                    refresh();
+                } else {
+                    btn.textContent = 'GIA\' CARICATO';
+                    setTimeout(() => { btn.style.display = 'none'; }, 2000);
+                }
+            } catch (err) {
+                console.error('[SEED] Error:', err);
+                btn.textContent = 'ERRORE SEED';
+                btn.style.pointerEvents = '';
+                setTimeout(() => { btn.textContent = 'LOAD BASELINE SEED (72H)'; }, 2000);
+            }
+        };
+
         // ── BUS LISTENERS ──
+
+        Bus.on('correlation:warmup-progress', e => {
+            console.log(`%c[WARMUP] %cMaturity: ${(e.payload.maturity * 100).toFixed(0)}% — ${e.payload.reason || 'progressing'}`, 'color: #ffd700; font-weight: bold;', 'color: #6b7fa3;');
+        });
 
         Bus.on('correlation:regime-alert', e => {
             if (e.payload.theater === 'ice-italy') {
