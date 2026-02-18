@@ -17,6 +17,7 @@ import { Bus } from './bus.js';
 
 const modules = new Map();
 const state = new Map();
+const sealed = new Set();  // Keys that can never be overwritten
 
 // ── Heartbeat — proof of life ──
 let heartbeat = 0;
@@ -126,6 +127,18 @@ export const ECOSYSTEM = {
      * @returns {object} The provenance payload
      */
     setState(key, value, meta = {}) {
+        if (sealed.has(key)) {
+            console.warn(
+                '%c[ECOSYSTEM] %cREJECTED write to sealed key "%c' + key +
+                '%c" — this value is immutable.',
+                'color: #00d4ff; font-weight: bold;',
+                'color: #ff6633;',
+                'color: #ff0084; font-weight: bold;',
+                'color: #ff6633;'
+            );
+            return state.get(key);
+        }
+
         const previous = state.has(key) ? state.get(key) : null;
 
         const payload = {
@@ -147,6 +160,26 @@ export const ECOSYSTEM = {
         }, meta.source || 'core');
 
         return payload;
+    },
+
+    /**
+     * Seal a state key — once sealed, it can never be overwritten.
+     * Used for birth certificates and other immutable records.
+     */
+    sealState(key) {
+        if (!state.has(key)) {
+            console.warn(`[ECOSYSTEM] Cannot seal "${key}" — key does not exist.`);
+            return false;
+        }
+        sealed.add(key);
+        return true;
+    },
+
+    /**
+     * Check if a state key is sealed.
+     */
+    isSealed(key) {
+        return sealed.has(key);
     },
 
     /**
@@ -244,14 +277,15 @@ Bus.on('identity:epoch-created', (event) => {
 
     // Point zero — the first heartbeat carries the full birth record
     if (heartbeat === 1) {
-        ECOSYSTEM.setState('ecosystem.firstBeat', {
+        ECOSYSTEM.setState('ecosystem.firstBeat', Object.freeze({
             version: ECOSYSTEM.version,
             codename: ECOSYSTEM.codename,
             timestamp: now,
             bootDelta: now - ECOSYSTEM.bootTime,
             source: lastEpochSource,
             epochId: event.payload.id
-        }, { source: 'core' });
+        }), { source: 'core' });
+        ECOSYSTEM.sealState('ecosystem.firstBeat');
 
         console.log(
             '%c[ECOSYSTEM] %c♥ FIRST HEARTBEAT %c— beat #1 from %c' + lastEpochSource +
