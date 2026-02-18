@@ -65,7 +65,8 @@ function createTheaterEpoch(input) {
         throw new Error('[BAB-EL-MANDEB] Missing required fields: source, actor, action_type');
     }
 
-    return Object.freeze({
+    // Build mutable — freeze happens AFTER text_hash is computed in ingestEpoch()
+    return {
         source: input.source,
         timestamp: input.timestamp || Date.now(),
         actor: input.actor,
@@ -73,10 +74,10 @@ function createTheaterEpoch(input) {
         intensity: Math.max(1, Math.min(5, input.intensity || 1)),
         domains: input.domains || ['military'],
         text_summary: input.text_summary || '',
-        text_hash: null, // computed on ingest
+        text_hash: null,
         tags: input.tags || [],
         operator: 'PANKOW_77C'
-    });
+    };
 }
 
 // ── Frequency counter ──
@@ -210,19 +211,34 @@ function getFrequencyTimeline() {
 async function ingestEpoch(input) {
     const epoch = createTheaterEpoch(input);
 
+    // Compute text hash BEFORE freeze
+    if (epoch.text_summary) {
+        try {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(epoch.text_summary);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            epoch.text_hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        } catch (err) {
+            // crypto.subtle requires HTTPS — fallback for HTTP/localhost
+            console.warn('[BAB-EL-MANDEB] crypto.subtle unavailable (HTTP?). Using fallback hash.');
+            let hash = 0;
+            for (let i = 0; i < epoch.text_summary.length; i++) {
+                const char = epoch.text_summary.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash |= 0;
+            }
+            epoch.text_hash = 'fallback-' + Math.abs(hash).toString(16);
+        }
+    }
+
+    // Freeze AFTER all mutations are complete
+    Object.freeze(epoch);
+
     // Store in memory
     epochs.push(epoch);
     while (epochs.length > MAX_EPOCHS_MEMORY) {
         epochs.shift();
-    }
-
-    // Compute text hash
-    if (epoch.text_summary) {
-        const encoder = new TextEncoder();
-        const data = encoder.encode(epoch.text_summary);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        epoch.text_hash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
     // Emit envelope into ecosystem bloodstream

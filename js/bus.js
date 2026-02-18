@@ -17,6 +17,10 @@ const listeners = new Map();
 const history = [];
 const MAX_HISTORY = 1000;
 
+// ── Cascade guard — prevents infinite event loops ──
+const MAX_DISPATCH_DEPTH = 16;
+let dispatchDepth = 0;
+
 // ── Cross-tab communication ──
 let channel = null;
 try {
@@ -45,6 +49,17 @@ function createEvent(type, payload = {}, source = 'unknown') {
 
 // ── Core dispatch ──
 function dispatch(event, broadcast = true) {
+    // Cascade guard — kill infinite loops before they eat the stack
+    dispatchDepth++;
+    if (dispatchDepth > MAX_DISPATCH_DEPTH) {
+        console.error(
+            `[BUS] CASCADE BLOCKED — depth ${dispatchDepth} on "${event.type}" from "${event.source}". ` +
+            `Probable infinite loop. Max depth: ${MAX_DISPATCH_DEPTH}.`
+        );
+        dispatchDepth--;
+        return;
+    }
+
     // Store in history
     history.push(Object.freeze(event));
     if (history.length > MAX_HISTORY) history.shift();
@@ -88,6 +103,8 @@ function dispatch(event, broadcast = true) {
             // Serialization error — skip cross-tab
         }
     }
+
+    dispatchDepth--;
 }
 
 // ── Public API ──
