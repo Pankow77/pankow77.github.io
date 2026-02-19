@@ -34,10 +34,25 @@ class SafetyEngine {
   /// Count of consecutive modulate-level triggers (for escalation).
   int _consecutiveModulations = 0;
 
+  /// The highest safety level reached recently.
+  /// Used for gradual de-escalation — we don't snap from crisis to nominal.
+  SafetyLevel _elevatedBaseline = SafetyLevel.nominal;
+
+  /// Count of consecutive calm (non-triggering) turns since last elevation.
+  /// After 3 calm turns, the baseline drops one level.
+  int _consecutiveCalmTurns = 0;
+
+  /// Number of calm turns required before de-escalating one level.
+  static const int _calmTurnsToDeescalate = 3;
+
   /// Evaluate the current emotional state based on recent messages.
   ///
   /// Returns a SafetyLevel that is injected into the LLM's system prompt.
   /// The LLM (as the crew) handles the response within the narrative.
+  ///
+  /// De-escalation logic: After a safety event, the engine doesn't snap
+  /// back to nominal. It requires 3 consecutive calm turns to drop one
+  /// level. This prevents the whiplash of crisis → instant normality.
   SafetyLevel evaluate(List<NarrativeMessage> recentMessages) {
     if (recentMessages.isEmpty) return SafetyLevel.nominal;
 
@@ -53,37 +68,95 @@ class SafetyEngine {
     // LEVEL 4: Emergency — immediate danger signals
     if (_detectEmergency(lastMessage)) {
       _consecutiveModulations = 0;
+      _elevateBaseline(SafetyLevel.emergency);
       return SafetyLevel.emergency;
     }
 
     // LEVEL 3: Direct Address — persistent crisis indicators
     if (_detectPersistentCrisis(userMessages)) {
       _consecutiveModulations = 0;
+      _elevateBaseline(SafetyLevel.directAddress);
       return SafetyLevel.directAddress;
     }
 
     // LEVEL 2: Crew Rest — rapid escalation or accumulated distress
     if (_detectRapidEscalation(userMessages)) {
       _consecutiveModulations = 0;
+      _elevateBaseline(SafetyLevel.crewRest);
       return SafetyLevel.crewRest;
     }
 
     // LEVEL 1: Modulation — signs of flooding or distress
     if (_detectDistress(lastMessage, userMessages)) {
       _consecutiveModulations++;
+      _consecutiveCalmTurns = 0;
 
       // If we've modulated 3 times in a row, escalate to crew rest
       if (_consecutiveModulations >= 3) {
         _consecutiveModulations = 0;
+        _elevateBaseline(SafetyLevel.crewRest);
         return SafetyLevel.crewRest;
       }
 
+      _elevateBaseline(SafetyLevel.modulate);
       return SafetyLevel.modulate;
     }
 
-    // Reset modulation counter on normal messages
+    // No active trigger detected — apply de-escalation logic
     _consecutiveModulations = 0;
-    return SafetyLevel.nominal;
+    return _deescalate();
+  }
+
+  /// Raise the elevated baseline to the given level (if higher).
+  void _elevateBaseline(SafetyLevel level) {
+    _consecutiveCalmTurns = 0;
+    if (level.index > _elevatedBaseline.index) {
+      _elevatedBaseline = level;
+    }
+  }
+
+  /// Gradual de-escalation: require 3 consecutive calm turns to drop one level.
+  ///
+  /// emergency → directAddress → crewRest → modulate → nominal
+  ///
+  /// Each step down requires 3 calm turns. This means after an emergency,
+  /// the crew remains subtly watchful for ~12 calm turns before returning
+  /// to fully nominal operation. The crew doesn't forget what just happened.
+  SafetyLevel _deescalate() {
+    if (_elevatedBaseline == SafetyLevel.nominal) {
+      return SafetyLevel.nominal;
+    }
+
+    _consecutiveCalmTurns++;
+
+    if (_consecutiveCalmTurns >= _calmTurnsToDeescalate) {
+      _consecutiveCalmTurns = 0;
+      // Step down one level
+      switch (_elevatedBaseline) {
+        case SafetyLevel.emergency:
+          _elevatedBaseline = SafetyLevel.directAddress;
+          break;
+        case SafetyLevel.directAddress:
+          _elevatedBaseline = SafetyLevel.crewRest;
+          break;
+        case SafetyLevel.crewRest:
+          _elevatedBaseline = SafetyLevel.modulate;
+          break;
+        case SafetyLevel.modulate:
+          _elevatedBaseline = SafetyLevel.nominal;
+          return SafetyLevel.nominal;
+        case SafetyLevel.nominal:
+          return SafetyLevel.nominal;
+      }
+    }
+
+    // While elevated baseline is active, maintain at least modulate level.
+    // This keeps the crew subtly attentive without heavy intervention.
+    if (_elevatedBaseline.index >= SafetyLevel.crewRest.index) {
+      return SafetyLevel.modulate;
+    }
+
+    return _elevatedBaseline;
   }
 
   /// Get safety instructions for the LLM based on current level.

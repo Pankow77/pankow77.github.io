@@ -22,6 +22,11 @@ class NarrativeEngine {
   final PromptLoader promptLoader;
   final _random = Random();
 
+  /// Recent speaker suggestions for anti-repeat rotation.
+  /// Tracks the last 2 suggested speakers to prevent the same character
+  /// being suggested 3 times in a row (MINOR-1 fix).
+  final List<String> _recentSpeakers = [];
+
   /// Maximum words allowed in a Ghost message. Hard code-level constraint.
   /// The prompt tells the LLM to keep it short, but we enforce it here.
   static const int _ghostMaxWords = 5;
@@ -128,28 +133,24 @@ class NarrativeEngine {
 
     // Very short input (1-3 words): user might be defensive or disengaged
     if (wordCount <= 3 && lower.length < 15) {
-      return 'SPEAKER SUGGESTION: Veteran (the user is being brief — '
-          'the Veteran can call this out gently or match the energy).';
+      return _applySpeakerRotation('Veteran');
     }
 
     // Long, confessional input (30+ words): Medic should listen and remember
     if (wordCount >= 30) {
-      return 'SPEAKER SUGGESTION: Medic (the user is disclosing at length — '
-          'the Medic should listen, reference past details, go one layer deeper).';
+      return _applySpeakerRotation('Medic');
     }
 
     // Questions from the user: Captain should answer with authority
     if (lower.endsWith('?')) {
-      return 'SPEAKER SUGGESTION: Captain (the user asked a question — '
-          'the Captain should answer with calm authority).';
+      return _applySpeakerRotation('Captain');
     }
 
     // User expresses helplessness: Engineer should give a task
     if (lower.contains('non so') || lower.contains('don\'t know') ||
         lower.contains('non posso') || lower.contains('can\'t') ||
         lower.contains('cosa faccio') || lower.contains('what do i do')) {
-      return 'SPEAKER SUGGESTION: Engineer (the user feels helpless — '
-          'give them a task. "Hold this. Focus on this. Use your hands.").';
+      return _applySpeakerRotation('Engineer');
     }
 
     // User references past trauma or loss: Medic + Veteran
@@ -157,13 +158,79 @@ class NarrativeEngine {
         lower.contains('padre') || lower.contains('father') ||
         lower.contains('morto') || lower.contains('morta') ||
         lower.contains('died') || lower.contains('lost')) {
-      return 'SPEAKER SUGGESTION: Medic (disclosure about loss — '
-          'the Medic remembers and goes deeper). '
-          'Veteran may also respond with parallel recognition.';
+      return _applySpeakerRotation('Medic');
     }
 
     // No strong signal: let the LLM choose based on narrative flow
-    return '';
+    return _applySpeakerRotation('');
+  }
+
+  /// Apply speaker rotation to prevent the same character 3x in a row.
+  ///
+  /// If [preferred] is empty, no suggestion is made (LLM chooses freely).
+  /// If [preferred] has been suggested for the last 2 turns, rotate to
+  /// a different character that fits as secondary support.
+  String _applySpeakerRotation(String preferred) {
+    if (preferred.isEmpty) {
+      _recentSpeakers.add('');
+      if (_recentSpeakers.length > 2) _recentSpeakers.removeAt(0);
+      return '';
+    }
+
+    // Check if this speaker was suggested for the last 2 turns
+    final isTripleRepeat = _recentSpeakers.length >= 2 &&
+        _recentSpeakers.every((s) => s == preferred);
+
+    String chosen;
+    if (isTripleRepeat) {
+      // Rotate to secondary support based on the character
+      chosen = _getRotationAlternate(preferred);
+    } else {
+      chosen = preferred;
+    }
+
+    // Track the choice
+    _recentSpeakers.add(chosen);
+    if (_recentSpeakers.length > 2) _recentSpeakers.removeAt(0);
+
+    return _buildSuggestionString(chosen, preferred, isTripleRepeat);
+  }
+
+  /// Get a rotation alternate when a speaker has been suggested too many times.
+  ///
+  /// Uses the therapeutic support pairing from the Character Selection Logic
+  /// table in the system prompt.
+  String _getRotationAlternate(String overusedSpeaker) {
+    switch (overusedSpeaker) {
+      case 'Captain': return 'Engineer'; // Both ground through authority/action
+      case 'Medic': return 'Veteran';    // Both hold emotional material
+      case 'Engineer': return 'Captain'; // Both provide structure
+      case 'Veteran': return 'Captain';  // Veteran rotates to steady authority
+      default: return 'Captain';
+    }
+  }
+
+  /// Build the speaker suggestion string for the LLM context.
+  String _buildSuggestionString(String chosen, String original, bool wasRotated) {
+    final rotationNote = wasRotated
+        ? ' (Rotated from $original — give other voices a turn.)'
+        : '';
+    switch (chosen) {
+      case 'Veteran':
+        return 'SPEAKER SUGGESTION: Veteran (the user is being brief — '
+            'the Veteran can call this out gently or match the energy).$rotationNote';
+      case 'Medic':
+        return 'SPEAKER SUGGESTION: Medic (the Medic should listen, '
+            'reference past details, go one layer deeper).$rotationNote';
+      case 'Captain':
+        return 'SPEAKER SUGGESTION: Captain (the Captain should respond '
+            'with calm authority and operational framing).$rotationNote';
+      case 'Engineer':
+        return 'SPEAKER SUGGESTION: Engineer (the user needs grounding — '
+            'give them a task. "Hold this. Focus on this.").$rotationNote';
+      default:
+        return '';
+    }
   }
 
   /// Build the full system prompt with all context layers.
