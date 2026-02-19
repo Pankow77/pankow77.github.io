@@ -1,0 +1,29 @@
+name: viaggio_al_centro_del_cuore
+description: >
+  Journey to the Center of the Heart — An interactive narrative experience
+  aboard the dying starship TERMINUS. Built by Ethic Software Foundation.
+
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.4.9
+  shared_preferences: ^2.2.2
+  http: ^1.2.0
+  google_fonts: ^6.1.0
+  path_provider: ^2.1.2
+  uuid: ^4.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true

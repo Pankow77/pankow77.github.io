@@ -156,6 +156,11 @@ This achieves:
 - `docs/PRODUCT.md` — Business model, ethics, distribution
 - `prompts/terminus-omni.md` — The original engineering prompt (40 hours of development)
 - `prompts/characters/` — Individual character prompts for each crew member
+- `app/` — Flutter application (Dart codebase)
+- `app/lib/engine/` — Narrative, Lumen-Count, and Safety engines
+- `app/lib/services/llm/` — BYOK LLM abstraction (OpenAI, Anthropic, Google AI)
+- `app/lib/screens/` — Boot, Settings, Terminal screens
+- `app/lib/models/` — CrewMember, LumenState, NarrativeMessage, SessionData
 
 ## Development Status
 
@@ -166,14 +171,25 @@ This achieves:
 - [x] Safety system designed (crew goes to sleep)
 - [x] Documentation foundation created
 - [x] Official name established: Viaggio al Centro del Cuore (Luna 49, 19 Feb 2026)
-- [ ] Flutter app scaffold
+- [x] Flutter app scaffold (26 files, complete architecture)
+- [x] BYOK LLM integration layer (OpenAI, Anthropic, Google AI)
+- [x] Terminal UI theme (green phosphor on black, CRT aesthetic)
+- [x] Lumen-Count engine (10→0, pacing acceleration, system failures)
+- [x] Safety engine (crew goes to sleep, modulation, 5-level escalation)
+- [x] Narrative engine (LLM orchestration, character voice parsing)
+- [x] Boot screen (animated ship computer boot sequence)
+- [x] Settings screen (BYOK API key configuration)
+- [x] Terminal screen (main interaction, message history, crew colors)
 - [ ] Character prompt engineering (individual crew members)
-- [ ] LLM integration layer (BYOK architecture)
-- [ ] Terminal UI (green text on black, ship systems aesthetic)
-- [ ] Lumen-Count engine
+- [ ] Full TERMINUS-OMNI prompt integration (load from assets)
 - [ ] Ship's Log recording/playback system
 - [ ] Onboarding flow (character creation disguised as crew intake)
+- [ ] Session persistence (save/resume across app restarts)
+- [ ] Ghost appearance system (Lumen ≤5, calibrated introduction)
+- [ ] Act III escape pod reveal sequence
+- [ ] Decompression sequence (blinking cursor, sacred silence)
 - [ ] Testing with diverse user profiles
+- [ ] Localization (IT/EN)
 
 ## Key References
 
