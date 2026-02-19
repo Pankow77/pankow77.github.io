@@ -27,3 +27,16 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  # Assets: prompts are loaded from ../prompts/ via PromptLoader.
+  # For production builds, copy prompts/ into app/assets/prompts/
+  # and uncomment:
+  # assets:
+  #   - assets/prompts/system-prompt.md
+  #   - assets/prompts/characters/captain.md
+  #   - assets/prompts/characters/medic.md
+  #   - assets/prompts/characters/engineer.md
+  #   - assets/prompts/characters/veteran.md
+  #   - assets/prompts/characters/ghost.md
+  #
+  # Until then, PromptLoader uses the embedded fallback prompt.

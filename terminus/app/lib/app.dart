@@ -6,6 +6,7 @@ import 'models/session_data.dart';
 import 'providers/game_provider.dart';
 import 'providers/settings_provider.dart';
 import 'services/storage_service.dart';
+import 'services/prompt_loader.dart';
 import 'services/llm/llm_service.dart';
 import 'services/llm/openai_compatible_service.dart';
 import 'services/llm/anthropic_service.dart';
@@ -126,9 +127,14 @@ class _AppShellState extends ConsumerState<_AppShell> {
     setState(() => _currentScreen = _AppScreen.terminal);
   }
 
-  void _initializeAndStartGame() {
+  /// Load prompts and initialize the game engine.
+  Future<void> _initializeAndStartGame() async {
     final settings = ref.read(settingsProvider);
     if (settings.apiKey == null || settings.provider == null) return;
+
+    // Load the TERMINUS-OMNI prompts (the soul of the system)
+    final promptLoader = PromptLoader();
+    await promptLoader.loadAll();
 
     // Create the appropriate LLM service
     final llmService = _createLlmService(
@@ -137,9 +143,9 @@ class _AppShellState extends ConsumerState<_AppShell> {
       settings.model ?? settings.provider!.defaultModel,
     );
 
-    // Initialize the game engine
+    // Initialize the game engine with prompts
     final game = ref.read(gameProvider.notifier);
-    game.initializeEngine(llmService);
+    game.initializeEngine(llmService, promptLoader);
     game.startNewSession();
     game.setPhase(SessionPhase.playing);
 

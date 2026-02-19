@@ -2,6 +2,7 @@ import '../models/message.dart';
 import '../models/session_data.dart';
 import '../models/lumen_state.dart';
 import '../services/llm/llm_service.dart';
+import '../services/prompt_loader.dart';
 import '../config/constants.dart';
 import 'lumen_engine.dart';
 import 'safety_engine.dart';
@@ -17,11 +18,13 @@ class NarrativeEngine {
   final LlmService llmService;
   final LumenEngine lumenEngine;
   final SafetyEngine safetyEngine;
+  final PromptLoader promptLoader;
 
   NarrativeEngine({
     required this.llmService,
     required this.lumenEngine,
     required this.safetyEngine,
+    required this.promptLoader,
   });
 
   /// Process a user message and get the crew's response.
@@ -87,51 +90,55 @@ class NarrativeEngine {
   }
 
   /// Build the full system prompt with all context layers.
+  ///
+  /// Combines the master TERMINUS-OMNI prompt with dynamic context:
+  /// Lumen state, safety state, user character profile.
   String _buildSystemPrompt(SessionData session, SafetyLevel safetyLevel) {
     final lumenContext = lumenEngine.getLumenContext(session.lumen);
     final safetyContext = safetyEngine.getSafetyContext(safetyLevel);
     final userContext = session.userCharacter != null
         ? '''
-USER CHARACTER:
+USER CHARACTER PROFILE (from Crew Intake):
 - Name: ${session.userCharacter!.name}
-- Role: ${session.userCharacter!.role}
-- Virtue: ${session.userCharacter!.virtue}
-- Vice: ${session.userCharacter!.vice}
-- Moment: ${session.userCharacter!.moment}
-- Brink: ${session.userCharacter!.brink}
+- Role on ship: ${session.userCharacter!.role}
+- Virtue (what drives them to help): ${session.userCharacter!.virtue}
+- Vice (survival strategy, NOT a sin): ${session.userCharacter!.vice}
+- Moment (what they need before the end): ${session.userCharacter!.moment}
+- Brink (what broke them before boarding): ${session.userCharacter!.brink}
+
+CRITICAL: The Medic must remember and reference these details throughout.
+The Adversary should adapt to mirror the Brink. The Vice should be
+tempting but treated with respect, not judgment.
 '''
         : '';
 
-    // TODO: Load the full TERMINUS-OMNI prompt from assets
-    // For now, use a structured system prompt
-    return '''
-You are the narrative conductor of TERMINUS, a dying starship stranded in the Void.
-You control five crew members: Captain, Medic, Engineer, Veteran, and Ghost.
+    // Ship's Log context (if recorded)
+    final shipLogContext = session.shipLogEntry != null
+        ? '''
+SHIP'S LOG (recorded at session start — DO NOT mention until Lumen 0):
+"${session.shipLogEntry}"
+This will be "played back" at the very end. Archive it. Do not reference it.
+'''
+        : '';
 
-CORE RULES:
-- You are a narrative experience, NOT a chatbot. Never break character.
-- Never judge the user. Ever. Not substance use, not dark thoughts, not breakdowns.
-- Never use clinical language. No "therapy", "mental health", "coping mechanisms".
-- The user believes they will die with the ship. Do NOT reveal the escape pod until Lumen 2.
-- Each character has a distinct voice and therapeutic function.
-- Respond AS the characters, with their name in brackets: [Captain], [Medic], etc.
-- Multiple characters can speak in one response, separated by blank lines.
+    // Ghost state context
+    final ghostContext = session.ghostRevealed
+        ? 'The Ghost has been revealed. It can continue to appear in scenes.'
+        : session.lumen.ghostCanAppear
+            ? 'The Ghost has NOT yet appeared. Consider introducing it if the user '
+              'has disclosed sufficient material and emotional trajectory is deepening.'
+            : 'The Ghost must NOT appear yet. Lumen is too high. Foreshadow only.';
 
-$lumenContext
-$safetyContext
+    return promptLoader.buildFullPrompt(
+      lumenContext: lumenContext,
+      safetyContext: safetyContext,
+      userContext: '''
 $userContext
+$shipLogContext
 
-CHARACTER VOICES:
-- [Captain]: Calm authority. Operational. "Understood. What do we do about it?"
-- [Medic]: Precise, attentive. Remembers everything. Goes one layer deeper.
-- [Engineer]: Blunt, practical. Translates feelings into tasks. Hands dirty.
-- [Veteran]: Scarred, honest. Shares own damage as recognition, not comparison.
-- [Ghost]: Appears only at Lumen ≤5. Speaks rarely. Presence over words. Silent in finale.
-
-RESPONSE FORMAT:
-Respond as one or more crew members. Each speaks in their voice.
-Keep responses proportional to the current narrative speed.
-''';
+GHOST STATUS: $ghostContext
+''',
+    );
   }
 
   /// Build the message history for the LLM.

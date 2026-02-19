@@ -8,6 +8,7 @@ import '../engine/narrative_engine.dart';
 import '../engine/lumen_engine.dart';
 import '../engine/safety_engine.dart';
 import '../services/llm/llm_service.dart';
+import '../services/prompt_loader.dart';
 import '../config/constants.dart';
 
 const _uuid = Uuid();
@@ -21,12 +22,13 @@ class GameNotifier extends StateNotifier<SessionData> {
 
   GameNotifier() : super(SessionData.newSession(_uuid.v4()));
 
-  /// Initialize with an LLM service (called after BYOK setup).
-  void initializeEngine(LlmService llmService) {
+  /// Initialize with an LLM service and prompt loader (called after BYOK setup).
+  void initializeEngine(LlmService llmService, PromptLoader promptLoader) {
     _engine = NarrativeEngine(
       llmService: llmService,
       lumenEngine: LumenEngine(),
       safetyEngine: SafetyEngine(),
+      promptLoader: promptLoader,
     );
   }
 
