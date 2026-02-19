@@ -32,7 +32,142 @@ const MAX_EPOCHS_PER_THEATER = config.max_epochs_per_theater || 500;
 const DEDUP_WINDOW_MS = (config.dedup_window_hours || 168) * 3600000;
 
 // ── Stats ──
-const stats = { feeds_fetched: 0, feeds_failed: 0, items_parsed: 0, items_classified: 0, items_deduped: 0, epochs_written: 0 };
+const stats = { feeds_fetched: 0, feeds_failed: 0, items_parsed: 0, items_classified: 0, items_deduped: 0, items_clustered: 0, epochs_written: 0 };
+
+// ═══════════════════════════════════════════════════════════════
+// SOURCE WEIGHTING — not all sources carry equal authority
+// ═══════════════════════════════════════════════════════════════
+
+const SOURCE_WEIGHTS = {
+    // Official statements — primary sources, maximum weight
+    'CENTCOM':            1.0,
+    'ICE.gov':            1.0,
+    'Governo IT':         1.0,
+    // Major wire services — fact-checked, rapid, professional
+    'Reuters':            0.85,
+    'AP News':            0.85,
+    'BBC':                0.80,
+    'Al Jazeera':         0.80,
+    // Established media — editorial quality, some framing bias
+    'ANSA':               0.70,
+    'NY Times':           0.70,
+    'Washington Post':    0.70,
+    'The Guardian':       0.65,
+    'France 24':          0.65,
+    'Middle East Eye':    0.60,
+    'Maritime Executive':  0.70,
+    // Italian press — regional relevance, variable quality
+    'La Repubblica':      0.60,
+    'Corriere della Sera': 0.60,
+    'Il Manifesto':       0.55,
+    // Unknown / aggregator — baseline
+    'OSINT':              0.50,
+};
+
+function getSourceWeight(sourceName) {
+    return SOURCE_WEIGHTS[sourceName] || 0.50;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TEMPORAL CLUSTERING — deduplicate semantic echoes
+// ═══════════════════════════════════════════════════════════════
+
+const STOPWORDS = new Set([
+    // English
+    'the','a','an','is','are','was','were','in','on','at','to','for','of',
+    'with','by','from','as','it','that','this','and','or','but','not','its',
+    'has','have','had','be','been','will','would','could','should','may',
+    'might','shall','after','before','about','into','over','than','says',
+    'said','new','also','more','been','just','out','who','what','when',
+    // Italian
+    'il','lo','la','le','gli','un','una','di','del','della','dei','degli',
+    'delle','da','dal','dalla','nel','nella','su','sul','sulla','per','con',
+    'tra','fra','ed','ma','non','che','si','sono','ha','essere','stato',
+    'anche','piu','come','dopo','prima','ogni','loro','suo','sua'
+]);
+
+const CLUSTER_WINDOW_MS = 2 * 3600000; // 2 hours
+const JACCARD_THRESHOLD = 0.45;
+
+function textToWordSet(text) {
+    return new Set(
+        text.toLowerCase()
+            .replace(/[^\w\s]/g, ' ')
+            .split(/\s+/)
+            .filter(w => w.length > 2 && !STOPWORDS.has(w))
+    );
+}
+
+function jaccardSimilarity(setA, setB) {
+    if (setA.size === 0 && setB.size === 0) return 1;
+    if (setA.size === 0 || setB.size === 0) return 0;
+    let intersection = 0;
+    for (const w of setA) {
+        if (setB.has(w)) intersection++;
+    }
+    const union = setA.size + setB.size - intersection;
+    return union > 0 ? intersection / union : 0;
+}
+
+/**
+ * Filter out semantic echoes from new epochs.
+ * Within a 2-hour window, if Jaccard similarity > threshold,
+ * keep only the epoch with highest intensity (the primary report).
+ */
+function clusterEpochs(epochs, existingEpochs) {
+    const allExistingWordSets = existingEpochs.map(e => ({
+        words: textToWordSet(e.text_summary || ''),
+        timestamp: e.timestamp,
+        intensity: e.intensity
+    }));
+
+    const accepted = [];
+    const acceptedWordSets = [];
+
+    for (const epoch of epochs) {
+        const words = textToWordSet(epoch.text_summary || '');
+        let isEcho = false;
+
+        // Check against existing epochs within time window
+        for (const existing of allExistingWordSets) {
+            if (Math.abs(epoch.timestamp - existing.timestamp) > CLUSTER_WINDOW_MS) continue;
+            if (jaccardSimilarity(words, existing.words) > JACCARD_THRESHOLD) {
+                isEcho = true;
+                break;
+            }
+        }
+
+        // Check against already-accepted new epochs within time window
+        if (!isEcho) {
+            for (const acc of acceptedWordSets) {
+                if (Math.abs(epoch.timestamp - acc.timestamp) > CLUSTER_WINDOW_MS) continue;
+                if (jaccardSimilarity(words, acc.words) > JACCARD_THRESHOLD) {
+                    // Keep the one with higher intensity
+                    if (epoch.intensity > acc.intensity) {
+                        // Replace the weaker one
+                        const idx = accepted.findIndex(e => e.timestamp === acc.timestamp && e.text_summary === acc.summary);
+                        if (idx >= 0) {
+                            accepted.splice(idx, 1);
+                            acceptedWordSets.splice(acceptedWordSets.indexOf(acc), 1);
+                        }
+                    } else {
+                        isEcho = true;
+                    }
+                    break;
+                }
+            }
+        }
+
+        if (isEcho) {
+            stats.items_clustered++;
+        } else {
+            accepted.push(epoch);
+            acceptedWordSets.push({ words, timestamp: epoch.timestamp, intensity: epoch.intensity, summary: epoch.text_summary });
+        }
+    }
+
+    return accepted;
+}
 
 // ═══════════════════════════════════════════════════════════════
 // RSS PARSER — handles RSS 2.0 and Atom feeds
@@ -184,6 +319,11 @@ function classifyItem(item, feedConfig) {
         }
     }
 
+    // ── INTENSITY DAMPING ──
+    // RSS-sourced epochs max out at 4. Intensity 5 is operator-reserved.
+    // This prevents media clickbait from generating false critical alerts.
+    if (intensity > 4) intensity = 4;
+
     // ── Build epoch ──
     const timestamp = item.pubDate ? new Date(item.pubDate).getTime() : Date.now();
 
@@ -199,10 +339,16 @@ function classifyItem(item, feedConfig) {
         .digest('hex')
         .substring(0, 16);
 
+    // ── SOURCE WEIGHTING ──
+    // Final confidence = base (0.6) × source authority weight
+    const source = detectSource(item);
+    const sourceWeight = getSourceWeight(source);
+    const confidence = Math.round(0.6 * sourceWeight * 100) / 100;
+
     return {
         id: `rss_${hash}`,
         timestamp,
-        source: detectSource(item),
+        source,
         actor: bestActor,
         action_type: bestAction,
         intensity,
@@ -213,7 +359,8 @@ function classifyItem(item, feedConfig) {
         article_url: item.link,
         feed_id: feedConfig.id,
         origin: 'rss',
-        confidence: 0.6,
+        confidence,
+        source_weight: sourceWeight,
         fetched_at: new Date().toISOString()
     };
 }
@@ -361,7 +508,7 @@ function writeTheaterData(theater, epochs) {
 
 async function main() {
     console.log('═══════════════════════════════════════════════════');
-    console.log(' HYBRID SYNDICATE — OSINT FEED FETCHER v1.0');
+    console.log(' HYBRID SYNDICATE — OSINT FEED FETCHER v2.0');
     console.log(' ' + new Date().toISOString());
     console.log('═══════════════════════════════════════════════════');
     console.log(`  Configured feeds: ${config.feeds.length}`);
@@ -393,8 +540,15 @@ async function main() {
             allNewEpochs.push(...epochs);
         }
 
+        // Temporal clustering — collapse semantic echoes
+        const clusteredBefore = allNewEpochs.length;
+        const clusteredEpochs = clusterEpochs(allNewEpochs, existingData.epochs);
+        if (clusteredBefore > clusteredEpochs.length) {
+            console.log(`  Clustered: ${clusteredBefore} → ${clusteredEpochs.length} (${clusteredBefore - clusteredEpochs.length} echoes removed)`);
+        }
+
         // Merge and deduplicate
-        const merged = mergeEpochs(existingData.epochs, allNewEpochs);
+        const merged = mergeEpochs(existingData.epochs, clusteredEpochs);
         const newCount = merged.length - existingData.epochs.length;
         console.log(`  New epochs: ${Math.max(0, newCount)} | Total: ${merged.length}`);
 
@@ -413,6 +567,7 @@ async function main() {
     console.log(`  Items parsed:     ${stats.items_parsed}`);
     console.log(`  Items classified: ${stats.items_classified}`);
     console.log(`  Items deduped:    ${stats.items_deduped}`);
+    console.log(`  Items clustered:  ${stats.items_clustered} (echo removal)`);
     console.log(`  Epochs in store:  ${stats.epochs_written}`);
     console.log('═══════════════════════════════════════════════════');
 

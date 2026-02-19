@@ -890,6 +890,7 @@
         import EvaluationEngine from './js/evaluation-engine.js';
         import BabElMandebModule from './js/modules/bab-el-mandeb.js';
         import FeedIngestorModule from './js/feed-ingestor.js';
+        import DeliberationEngine from './js/deliberation-engine.js';
 
         // ── Boot sequence ──
         await Identity.init();
@@ -898,6 +899,7 @@
         ECOSYSTEM.register('evaluation-engine', EvaluationEngine);
         ECOSYSTEM.register('bab-el-mandeb', BabElMandebModule);
         ECOSYSTEM.register('feed-ingestor', FeedIngestorModule);
+        ECOSYSTEM.register('deliberation-engine', DeliberationEngine);
 
         // ── Actor colors ──
         const ACTOR_COLORS = {
@@ -1210,6 +1212,7 @@
         window.BAB = BabElMandebModule;
         window.BUS = Bus;
         window.ECO = ECOSYSTEM;
+        window.DELIB = DeliberationEngine;
         window.FEEDS = FeedIngestorModule;
 
         console.log(

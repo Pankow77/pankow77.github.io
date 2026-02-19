@@ -235,6 +235,7 @@
         import CorrelationEngine from './js/correlation-engine.js';
         import IceItalyModule from './js/modules/ice-italy.js';
         import FeedIngestorModule from './js/feed-ingestor.js';
+        import DeliberationEngine from './js/deliberation-engine.js';
 
         await Identity.init();
         ECOSYSTEM.register('identity', Identity);
@@ -243,6 +244,7 @@
         ECOSYSTEM.register('correlation-engine', CorrelationEngine);
         ECOSYSTEM.register('ice-italy', IceItalyModule);
         ECOSYSTEM.register('feed-ingestor', FeedIngestorModule);
+        ECOSYSTEM.register('deliberation-engine', DeliberationEngine);
 
         const COLORS = { ice:'#4488ff', gov_it:'#ffd700', police_it:'#ff8833', civil_society:'#00dd66', media:'#00c8ff', us_embassy:'#8855ff', eu_inst:'#00d4aa', olympics:'#ff88cc' };
         const LABELS = { ice:'ICE', gov_it:'GOV_IT', police_it:'POLICE_IT', civil_society:'CIVIL_SOC', media:'MEDIA', us_embassy:'US_EMBASSY', eu_inst:'EU_INST', olympics:'OLYMPICS' };
@@ -420,6 +422,7 @@
         window.BUS = Bus;
         window.ECO = ECOSYSTEM;
         window.FEEDS = FeedIngestorModule;
+        window.DELIB = DeliberationEngine;
 
         // ── INIT ──
         refresh();
