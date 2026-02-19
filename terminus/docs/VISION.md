@@ -1,4 +1,5 @@
-# TERMINUS — Vision Document
+# Viaggio al Centro del Cuore — Vision Document
+## Journey to the Center of the Heart
 
 ## The Problem
 
@@ -94,9 +95,9 @@ The original TERMINUS-OMNI protocol requires a specific setup: text session, ext
 context window LLM, and a subject willing to accept narrative death. This limits the
 audience to people who already understand RPGs and are psychologically ready to die in fiction.
 
-The TERMINUS app inverts the polaruty while preserving every mechanism:
+Viaggio al Centro del Cuore inverts the polarity while preserving every mechanism:
 
-| Original Protocol | TERMINUS App |
+| Original Protocol | Viaggio al Centro del Cuore |
 |---|---|
 | You die on a train | The ship dies, you survive |
 | You know you die | You DON'T know you survive |
@@ -118,8 +119,12 @@ the user thought they were playing a life simulation game and emerged having und
 something about themselves they didn't know. The psychological profiling was embedded
 in the game mechanics, invisible to the player.
 
-TERMINUS follows the same lineage: the therapeutic architecture is the game. The game
-is the therapeutic architecture. There is no separation.
+Viaggio al Centro del Cuore follows the same lineage: the therapeutic architecture
+is the game. The game is the therapeutic architecture. There is no separation.
+
+The name itself embodies this principle: "Journey to the Center of the Heart" sounds
+like a Verne adventure — not therapy. The descent into the ship is the descent into
+the self. The user discovers this only by making the journey.
 
 ## Theoretical Foundations (Summary)
 

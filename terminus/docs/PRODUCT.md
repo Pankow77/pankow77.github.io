@@ -1,11 +1,24 @@
-# TERMINUS — Product & Ethics
+# Viaggio al Centro del Cuore — Product & Ethics
+## Journey to the Center of the Heart
+
+> Name established: Luna 49, 19 February 2026
+> Inspired by Jules Verne's "Voyage au Centre de la Terre" (1864)
 
 ## The Product
 
-**TERMINUS** is a cross-platform interactive narrative experience built with Flutter.
-The user is a crew member aboard a dying starship, navigating the Void with an
-AI-driven crew. It is sold as a game. The therapeutic architecture is embedded in
-the design, invisible to the user.
+**Viaggio al Centro del Cuore** (Journey to the Center of the Heart) is a cross-platform
+interactive narrative experience built with Flutter. The user is a crew member aboard the
+dying starship TERMINUS, navigating the Void with an AI-driven crew. It is sold as a game.
+The therapeutic architecture is embedded in the design, invisible to the user.
+
+### Naming Convention
+
+| Context | Name |
+|---------|------|
+| App Store listing | Viaggio al Centro del Cuore |
+| International markets | Journey to the Center of the Heart |
+| In-game ship | TERMINUS |
+| Research protocol | TERMINUS-OMNI |
 
 ## Platform
 
@@ -95,10 +108,11 @@ The AI model is the user's. The design is ours.
 ### Marketing Language
 
 **DO say**:
-- "An interactive narrative experience aboard a dying starship"
-- "A story that responds to you"
+- "Viaggio al Centro del Cuore — an interactive narrative experience"
+- "A journey into the heart of a dying starship. And into yours."
 - "Five crew members. One ship. No way out."
 - "What would you carry through the Void?"
+- "Inspired by Jules Verne. Built for the stories we carry inside."
 
 **DO NOT say**:
 - "Therapy" / "therapeutic" / "mental health"
@@ -133,7 +147,7 @@ constraint that governs every decision:
 
 ## Privacy
 
-TERMINUS does not:
+Viaggio al Centro del Cuore does not:
 - Store session content on our servers (BYOK = direct to LLM provider)
 - Track emotional content or disclosures
 - Build user profiles based on session data
@@ -166,9 +180,9 @@ Alter Ego (Peter Favaro, 1986) was a life simulation game that achieved cultural
 impact by embedding psychological profiling in game mechanics. Players thought
 they were playing a game. They emerged understanding themselves differently.
 
-TERMINUS follows the same lineage. It is a game that does more than entertain.
-But it can only do more than entertain if it is SOLD as entertainment. The moment
-it becomes "therapy software," the mechanism that makes it work is destroyed.
+Viaggio al Centro del Cuore follows the same lineage. It is a game that does more
+than entertain. But it can only do more than entertain if it is SOLD as entertainment.
+The moment it becomes "therapy software," the mechanism that makes it work is destroyed.
 
 ## Development Priorities
 
@@ -185,6 +199,10 @@ it becomes "therapy software," the mechanism that makes it work is destroyed.
 
 ## Summary
 
-TERMINUS is a EUR 2.99 narrative experience that may change someone's life.
-Not because it promises to. Because it doesn't promise anything at all.
-It just tells a story. And the story does the rest.
+Viaggio al Centro del Cuore is a EUR 2.99 narrative experience that may change
+someone's life. Not because it promises to. Because it doesn't promise anything
+at all. It just tells a story. And the story does the rest.
+
+Like Verne's explorers descending into the Earth, the user descends into the
+heart of a dying ship — and discovers, at the center, something they didn't
+expect to find.

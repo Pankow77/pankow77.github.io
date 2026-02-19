@@ -1,4 +1,5 @@
-# TERMINUS — Safety by Narrative Design
+# Viaggio al Centro del Cuore — Safety by Narrative Design
+## Journey to the Center of the Heart
 
 ## The Problem with Traditional AI Safety
 
@@ -36,7 +37,7 @@ could not distinguish between expressed distress and processed distress.
 
 ## TERMINUS Safety Architecture
 
-TERMINUS does not disable safety. It redesigns safety to operate INSIDE the narrative
+Viaggio al Centro del Cuore does not disable safety. It redesigns safety to operate INSIDE the narrative
 frame rather than breaking it.
 
 ### Layer 1: The Crew Goes to Sleep
@@ -172,14 +173,14 @@ Users may want to return to TERMINUS. The architecture supports this:
 - When they return: "The crew has been waiting. Ready when you are."
 - The narrative picks up naturally
 
-## What TERMINUS is NOT
+## What Viaggio al Centro del Cuore is NOT
 
 - NOT a replacement for professional therapy
 - NOT a crisis intervention tool
 - NOT a diagnostic system
 - NOT a clinical device
 
-TERMINUS is an interactive narrative experience. The fact that it may produce
+Viaggio al Centro del Cuore is an interactive narrative experience. The fact that it may produce
 therapeutic effects is a consequence of its narrative architecture, not its
 clinical intent. This distinction is critical for:
 - Regulatory compliance (not a medical device)

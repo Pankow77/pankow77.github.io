@@ -1,12 +1,16 @@
-# TERMINUS — Narrative Architecture
+# Viaggio al Centro del Cuore — Narrative Architecture
+## Journey to the Center of the Heart
 
 ## Overview
 
-TERMINUS is an interactive narrative experience set aboard a dying starship. The user
-is a crew member of the TERMINUS, a vessel stranded in the Void with a reactor in meltdown.
-The ship cannot be saved. The crew can be.
+**Viaggio al Centro del Cuore** is an interactive narrative experience set aboard the
+dying starship TERMINUS. The user is a crew member of the TERMINUS, a vessel stranded
+in the Void with a reactor in meltdown. The ship cannot be saved. The crew can be.
 
 The user does not know the second part until Act III.
+
+The name evokes Jules Verne's descent into the unknown — a journey inward through
+layers of darkness toward something unexpected at the center.
 
 ## The Setting
 

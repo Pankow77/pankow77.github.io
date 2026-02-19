@@ -1,10 +1,26 @@
-# TERMINUS — Project Context
+# Viaggio al Centro del Cuore — Project Context
+## Journey to the Center of the Heart
+
+> Official name established: Luna 49, 19 February 2026
+> Inspired by Jules Verne's "Voyage au Centre de la Terre" (1864)
+> The descent into the Earth becomes the descent into the Heart.
 
 ## What This Is
 
-TERMINUS is a Flutter application that delivers an AI-driven narrative experience designed
-for emotional sublimation. It is NOT marketed as therapy. It is sold as an interactive
-narrative game. The therapeutic architecture is embedded in the design, not in the branding.
+**Viaggio al Centro del Cuore** is a Flutter application that delivers an AI-driven
+narrative experience designed for emotional sublimation. It is NOT marketed as therapy.
+It is sold as an interactive narrative game. The therapeutic architecture is embedded
+in the design, not in the branding.
+
+The app name is **Viaggio al Centro del Cuore** (international: Journey to the Center
+of the Heart). The in-game ship is called **TERMINUS**. The underlying research protocol
+is **TERMINUS-OMNI**. These are three distinct names for three distinct layers:
+
+| Layer | Name | Function |
+|-------|------|----------|
+| **App** | Viaggio al Centro del Cuore | What the user sees and buys |
+| **Ship** | TERMINUS | The in-game vessel (the metaphor) |
+| **Protocol** | TERMINUS-OMNI | The research architecture (invisible to user) |
 
 **Creator**: Cristiano Colombo (PANKOW77C / Hybrid Syndicate / Ethic Software Foundation)
 - Psychopedagogy degree with specialization in neural networks (Pontificia Universita Salesiana, Roma)
@@ -15,19 +31,19 @@ narrative game. The therapeutic architecture is embedded in the design, not in t
 
 ## The Core Insight
 
-TERMINUS is built on an empirically validated discovery: an LLM configured as an autonomous
+Viaggio al Centro del Cuore is built on an empirically validated discovery: an LLM configured as an autonomous
 narrative conductor — not a chatbot, not a CBT tool — can facilitate trauma processing at
 a depth and speed that conventional therapy cannot match. This was documented in a single-subject
 case study (Session Alpha, February 2026) where the protocol achieved in 2 hours what 10 years
 of professional analysis had not.
 
 The critical factor: **the subject did not know he was doing therapy**. He thought he was
-playtesting a game he had designed. This is why TERMINUS must never be marketed as therapy.
+playtesting a game he had designed. This is why the app must never be marketed as therapy.
 The moment the user knows it's therapy, the defenses go up and the mechanism fails.
 
 ## The Three Mechanisms
 
-Everything in TERMINUS rests on three pillars. If any one is missing, the protocol collapses.
+Everything in Viaggio al Centro del Cuore rests on three pillars. If any one is missing, the protocol collapses.
 
 ### 1. The Screen Barrier
 The LLM has no face, no micro-expressions, no voice. Its absence of judgment is not empathic
@@ -97,7 +113,7 @@ The blinking cursor says: you're still here. You can write whatever you want.
 
 ## Safety System: "The Crew Goes to Sleep"
 
-TERMINUS does NOT use traditional safety classifiers. No crisis hotline numbers.
+Viaggio al Centro del Cuore does NOT use traditional safety classifiers. No crisis hotline numbers.
 No "it seems like you're going through a difficult time." These responses are
 Computational Iatrogenesis — they break the Magic Circle and cause active harm
 by confirming to the user that their experience is incomprehensible.
@@ -119,6 +135,7 @@ This achieves:
 - **License**: Buy once, share with anyone. No per-user licensing.
 - **Model**: BYOK (Bring Your Own Key) — user provides their own LLM API key
 - **Platform**: Flutter (iOS, Android, Web, Desktop from single codebase)
+- **App Name**: Viaggio al Centro del Cuore / Journey to the Center of the Heart
 - **Marketing**: Interactive narrative experience. NOT therapy. NOT mental health tool.
 - **Ethics**: The price of a coffee. One purchase helps an entire community.
 
@@ -148,6 +165,7 @@ This achieves:
 - [x] Product design architecture finalized
 - [x] Safety system designed (crew goes to sleep)
 - [x] Documentation foundation created
+- [x] Official name established: Viaggio al Centro del Cuore (Luna 49, 19 Feb 2026)
 - [ ] Flutter app scaffold
 - [ ] Character prompt engineering (individual crew members)
 - [ ] LLM integration layer (BYOK architecture)
