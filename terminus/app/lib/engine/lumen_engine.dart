@@ -1,3 +1,4 @@
+import 'dart:math';
 import '../models/lumen_state.dart';
 import '../config/constants.dart';
 
@@ -6,50 +7,86 @@ import '../config/constants.dart';
 /// Controls the heartbeat of the narrative: 10 → 0.
 /// Each Lumen lost = one ship system dead = pacing acceleration.
 /// The descent is the architecture. The compression mirrors trauma phenomenology.
+///
+/// TARGET SESSION: 90-180 minutes. NOT 20.
+/// The Lumen clock is intensity-based, not message-count-based.
+/// More emotional depth = faster burn. Exploration = slower burn.
 class LumenEngine {
   /// Determine if a Lumen should be lost based on narrative context.
   ///
-  /// A Lumen is lost when:
-  /// - A scene reaches its natural conclusion
-  /// - A narrative conflict is failed
-  /// - The user makes a choice that closes a narrative door
-  /// - Real-time pacing requires acceleration (~10-15 min per Lumen in Act I)
-  /// - The user abandons their Virtue (emotional cost)
+  /// Uses a multi-factor gate system:
+  /// 1. Hard minimum time floor (prevents 20-minute sessions)
+  /// 2. Message threshold scaled by act (breathing room in Act I)
+  /// 3. Emotional intensity accelerator (catharsis burns candles)
+  /// 4. Maximum time ceiling (prevents stalling)
   bool shouldLoseLumen({
     required LumenState current,
     required int messagesSinceLastLoss,
     required Duration timeSinceLastLoss,
+    double emotionalIntensity = 0.0,
   }) {
     if (current.count <= AppConstants.lumenMin) return false;
 
-    // Pacing guide: messages between Lumen losses decrease as count drops
-    final messagesThreshold = _messagesPerLumen(current.count);
-    if (messagesSinceLastLoss >= messagesThreshold) return true;
+    // GATE 1: Hard minimum time floor. A Lumen cannot be lost faster than this.
+    // This prevents the 20-minute session problem.
+    final minTime = _minimumTimePerLumen(current.count);
+    if (timeSinceLastLoss < minTime) return false;
 
-    // Time-based pacing: don't let a Lumen last too long
-    final timeThreshold = _timePerLumen(current.count);
-    if (timeSinceLastLoss >= timeThreshold) return true;
+    // GATE 2: Maximum time ceiling. If too much time passes, force decay.
+    // Prevents infinite stalling that breaks narrative momentum.
+    final maxTime = _maximumTimePerLumen(current.count);
+    if (timeSinceLastLoss >= maxTime) return true;
+
+    // GATE 3: Message threshold check. Enough conversation has happened.
+    final messagesThreshold = _messagesPerLumen(current.count);
+
+    // Emotional intensity reduces the threshold (catharsis burns faster)
+    // Intensity 0.0 = no effect, 1.0 = threshold halved
+    final intensityModifier = 1.0 - (emotionalIntensity * 0.5).clamp(0.0, 0.5);
+    final adjustedThreshold = (messagesThreshold * intensityModifier).ceil();
+
+    if (messagesSinceLastLoss >= adjustedThreshold) return true;
 
     return false;
   }
 
-  /// Approximate messages per Lumen based on current count.
-  /// Higher Lumen = more breathing room. Lower = compressed.
-  int _messagesPerLumen(int lumen) {
-    if (lumen >= 8) return 12;  // Act I: atmospheric, slow
-    if (lumen >= 6) return 8;   // Early Act II: building pressure
-    if (lumen >= 4) return 6;   // Mid Act II: urgent
-    if (lumen >= 2) return 4;   // Late Act II: sharp
-    return 2;                    // Act III: brutal
+  /// Hard minimum time floor per Lumen. Cannot lose a Lumen faster than this.
+  ///
+  /// Act I:   8 minutes minimum per Lumen (exploration, trust-building)
+  /// Act II:  6 minutes minimum per Lumen (pressure, but not too fast)
+  /// Act III: 3 minutes minimum per Lumen (compressed, but still breathable)
+  ///
+  /// Total minimum: 4×8 + 4×6 + 2×3 = 32+24+6 = 62 minutes
+  /// (This is the absolute floor — normal play will be 90-180 min)
+  Duration _minimumTimePerLumen(int lumen) {
+    if (lumen >= 7) return const Duration(minutes: 8);
+    if (lumen >= 3) return const Duration(minutes: 6);
+    return const Duration(minutes: 3);
   }
 
-  /// Approximate time per Lumen.
-  Duration _timePerLumen(int lumen) {
-    if (lumen >= 8) return const Duration(minutes: 12);
-    if (lumen >= 6) return const Duration(minutes: 10);
-    if (lumen >= 4) return const Duration(minutes: 7);
-    if (lumen >= 2) return const Duration(minutes: 4);
-    return const Duration(minutes: 2);
+  /// Maximum time ceiling per Lumen. Force decay if stalling too long.
+  ///
+  /// Act I:   25 minutes max (don't let them camp forever)
+  /// Act II:  18 minutes max (momentum must continue)
+  /// Act III: 10 minutes max (the ship is dying)
+  Duration _maximumTimePerLumen(int lumen) {
+    if (lumen >= 7) return const Duration(minutes: 25);
+    if (lumen >= 3) return const Duration(minutes: 18);
+    return const Duration(minutes: 10);
+  }
+
+  /// Message threshold per Lumen. Baseline without intensity modifier.
+  ///
+  /// Act I:   10-12 exchanges per Lumen (room to breathe, explore, trust)
+  /// Act II:  6-8 exchanges per Lumen (building pressure)
+  /// Act III: 3-4 exchanges per Lumen (sharp, compressed)
+  int _messagesPerLumen(int lumen) {
+    if (lumen >= 9) return 12;  // Very early: maximum breathing room
+    if (lumen >= 7) return 10;  // Act I: exploration
+    if (lumen >= 5) return 8;   // Early Act II: building pressure
+    if (lumen >= 3) return 6;   // Mid Act II: urgent
+    if (lumen >= 2) return 4;   // Late Act II: sharp
+    return 3;                    // Act III: brutal
   }
 
   /// Get the system failure announcement for a Lumen transition.
@@ -84,7 +121,8 @@ ${_pacingInstructions(state.count)}
   String _pacingInstructions(int lumen) {
     if (lumen >= 8) {
       return 'Full atmospheric descriptions. Build the world. Let the user explore. '
-          'Responses can be longer and more detailed. Establish trust with the crew.';
+          'Responses can be longer and more detailed. Establish trust with the crew. '
+          'Take your time. The session target is 90-180 minutes.';
     }
     if (lumen >= 6) {
       return 'Reduce description by 20%. Increase urgency. Systems are failing. '

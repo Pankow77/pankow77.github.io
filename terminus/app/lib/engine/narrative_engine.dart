@@ -1,3 +1,4 @@
+import 'dart:math';
 import '../models/message.dart';
 import '../models/session_data.dart';
 import '../models/lumen_state.dart';
@@ -19,6 +20,14 @@ class NarrativeEngine {
   final LumenEngine lumenEngine;
   final SafetyEngine safetyEngine;
   final PromptLoader promptLoader;
+  final _random = Random();
+
+  /// Maximum words allowed in a Ghost message. Hard code-level constraint.
+  /// The prompt tells the LLM to keep it short, but we enforce it here.
+  static const int _ghostMaxWords = 5;
+
+  /// Characters used to corrupt Ghost text at the code level.
+  static const String _glitchChars = '░▒▓█▄▀║═┃━';
 
   NarrativeEngine({
     required this.llmService,
@@ -71,15 +80,19 @@ class NarrativeEngine {
     );
 
     // 5. Parse the response into narrative messages
-    final messages = _parseResponse(response, session.lumen.count);
+    var messages = _parseResponse(response, session.lumen.count);
 
-    // 6. Check if a Lumen should be lost
+    // 6. ENFORCE GHOST CONSTRAINTS — code-level, not prompt-level
+    messages = _enforceGhostConstraints(messages, session);
+
+    // 7. Check if a Lumen should be lost (intensity-aware)
     final userMessagesSinceLastLoss = _countMessagesSinceLastLumenLoss(session);
     final timeSinceLastLoss = _timeSinceLastLumenLoss(session);
     final shouldLoseLumen = lumenEngine.shouldLoseLumen(
       current: session.lumen,
       messagesSinceLastLoss: userMessagesSinceLastLoss,
       timeSinceLastLoss: timeSinceLastLoss,
+      emotionalIntensity: session.emotionalIntensity,
     );
 
     return NarrativeResponse(
@@ -121,13 +134,16 @@ This will be "played back" at the very end. Archive it. Do not reference it.
 '''
         : '';
 
-    // Ghost state context
+    // Ghost state context — uses the multi-factor gate
     final ghostContext = session.ghostRevealed
         ? 'The Ghost has been revealed. It can continue to appear in scenes.'
-        : session.lumen.ghostCanAppear
-            ? 'The Ghost has NOT yet appeared. Consider introducing it if the user '
-              'has disclosed sufficient material and emotional trajectory is deepening.'
-            : 'The Ghost must NOT appear yet. Lumen is too high. Foreshadow only.';
+        : session.ghostIsReady
+            ? 'The Ghost has NOT yet appeared. The user is emotionally ready. '
+              'Consider introducing it when the narrative moment is right.'
+            : session.lumen.ghostCanAppear
+                ? 'The Ghost must NOT appear yet. Lumen is low enough but the user '
+                  'has not established sufficient emotional depth. Foreshadow only.'
+                : 'The Ghost must NOT appear yet. Lumen is too high. Foreshadow only.';
 
     return promptLoader.buildFullPrompt(
       lumenContext: lumenContext,
@@ -139,6 +155,103 @@ $shipLogContext
 GHOST STATUS: $ghostContext
 ''',
     );
+  }
+
+  /// GHOST ENFORCER — Hard code-level constraints on Ghost output.
+  ///
+  /// No matter what the LLM generates, the Ghost is limited to:
+  /// 1. Maximum 5 words (truncated with "...")
+  /// 2. Text corruption added (glitch characters)
+  /// 3. Completely REMOVED if the Ghost is not ready (multi-factor gate)
+  /// 4. Completely SILENT (removed) if Lumen == 0 or 1 and it's the finale
+  List<NarrativeMessage> _enforceGhostConstraints(
+    List<NarrativeMessage> messages,
+    SessionData session,
+  ) {
+    return messages.map((msg) {
+      if (msg.source != MessageSource.ghost) return msg;
+
+      // GATE: Ghost not ready? Strip it entirely.
+      if (!session.ghostRevealed && !session.ghostIsReady) {
+        return null;
+      }
+
+      // FINALE: Ghost is SILENT at Lumen 1 or 0. ALWAYS.
+      if (session.lumen.count <= 1) {
+        return null;
+      }
+
+      // TRUNCATION: Max 5 words
+      final truncated = _truncateGhostOutput(msg.content);
+
+      // CORRUPTION: Add glitch characters
+      final corrupted = _corruptGhostOutput(truncated);
+
+      return NarrativeMessage(
+        id: msg.id,
+        source: msg.source,
+        content: corrupted,
+        timestamp: msg.timestamp,
+        lumenAtTime: msg.lumenAtTime,
+      );
+    }).whereType<NarrativeMessage>().toList();
+  }
+
+  /// Truncate Ghost output to maximum word count.
+  /// "I understand your pain and suffering" → "I understand your pain..."
+  String _truncateGhostOutput(String content) {
+    final words = content.split(RegExp(r'\s+'))
+        .where((w) => w.isNotEmpty)
+        .toList();
+
+    if (words.length <= _ghostMaxWords) return content;
+
+    return '${words.take(_ghostMaxWords).join(' ')}...';
+  }
+
+  /// Add corruption to Ghost output.
+  /// "Madre" → "░░M a d r e░░"
+  String _corruptGhostOutput(String content) {
+    if (content.isEmpty) return '...';
+
+    final buffer = StringBuffer();
+
+    // Leading corruption (40% chance)
+    if (_random.nextDouble() < 0.4) {
+      buffer.write(_randomGlitch(1 + _random.nextInt(3)));
+      buffer.write(' ');
+    }
+
+    // Process each character: 8% chance of spacing, 5% chance of corruption
+    for (var i = 0; i < content.length; i++) {
+      final char = content[i];
+
+      // 5% chance: replace with glitch character
+      if (_random.nextDouble() < 0.05 && char != ' ') {
+        buffer.write(_glitchChars[_random.nextInt(_glitchChars.length)]);
+      } else {
+        buffer.write(char);
+      }
+
+      // 8% chance: add space between characters (fragmentation)
+      if (_random.nextDouble() < 0.08 && char != ' ' && i < content.length - 1) {
+        buffer.write(' ');
+      }
+    }
+
+    // Trailing corruption (40% chance)
+    if (_random.nextDouble() < 0.4) {
+      buffer.write(' ');
+      buffer.write(_randomGlitch(1 + _random.nextInt(3)));
+    }
+
+    return buffer.toString();
+  }
+
+  /// Generate a random glitch string of given length.
+  String _randomGlitch(int length) {
+    return List.generate(length,
+        (_) => _glitchChars[_random.nextInt(_glitchChars.length)]).join();
   }
 
   /// Build the message history for the LLM.

@@ -76,6 +76,17 @@ class SessionData {
   final DateTime startedAt;
   final String? shipLogEntry;
 
+  /// Emotional intensity estimate (0.0 = neutral, 1.0 = deep catharsis).
+  /// Updated by the narrative engine based on user input analysis.
+  final double emotionalIntensity;
+
+  /// Whether the user has shared personal/trauma material.
+  /// Set when the narrative engine detects disclosure content.
+  final bool hasSharedPersonalMaterial;
+
+  /// Count of substantive user messages (not single words or commands).
+  final int substantiveMessageCount;
+
   const SessionData({
     required this.sessionId,
     this.phase = SessionPhase.idle,
@@ -87,7 +98,23 @@ class SessionData {
     this.isProcessing = false,
     required this.startedAt,
     this.shipLogEntry,
+    this.emotionalIntensity = 0.0,
+    this.hasSharedPersonalMaterial = false,
+    this.substantiveMessageCount = 0,
   });
+
+  /// Can the Ghost appear? Multi-factor gate, not just Lumen.
+  ///
+  /// Requirements (ALL must be true):
+  /// 1. Lumen ≤ 5 (mid-game or later)
+  /// 2. User has shared personal material (emotional readiness)
+  /// 3. Emotional intensity > 0.4 (trajectory is deepening)
+  /// 4. At least 15 substantive messages (trust established with crew)
+  bool get ghostIsReady =>
+      lumen.ghostCanAppear &&
+      hasSharedPersonalMaterial &&
+      emotionalIntensity > 0.4 &&
+      substantiveMessageCount >= 15;
 
   SessionData copyWith({
     SessionPhase? phase,
@@ -98,6 +125,9 @@ class SessionData {
     bool? ghostRevealed,
     bool? isProcessing,
     String? shipLogEntry,
+    double? emotionalIntensity,
+    bool? hasSharedPersonalMaterial,
+    int? substantiveMessageCount,
   }) {
     return SessionData(
       sessionId: sessionId,
@@ -110,6 +140,9 @@ class SessionData {
       isProcessing: isProcessing ?? this.isProcessing,
       startedAt: startedAt,
       shipLogEntry: shipLogEntry ?? this.shipLogEntry,
+      emotionalIntensity: emotionalIntensity ?? this.emotionalIntensity,
+      hasSharedPersonalMaterial: hasSharedPersonalMaterial ?? this.hasSharedPersonalMaterial,
+      substantiveMessageCount: substantiveMessageCount ?? this.substantiveMessageCount,
     );
   }
 
