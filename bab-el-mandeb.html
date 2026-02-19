@@ -891,6 +891,7 @@
         import BabElMandebModule from './js/modules/bab-el-mandeb.js';
         import FeedIngestorModule from './js/feed-ingestor.js';
         import DeliberationEngine from './js/deliberation-engine.js';
+        import ArchivioSilente from './js/archivio-silente.js';
 
         // ── Boot sequence ──
         await Identity.init();
@@ -900,6 +901,7 @@
         ECOSYSTEM.register('bab-el-mandeb', BabElMandebModule);
         ECOSYSTEM.register('feed-ingestor', FeedIngestorModule);
         ECOSYSTEM.register('deliberation-engine', DeliberationEngine);
+        ECOSYSTEM.register('archivio-silente', ArchivioSilente);
 
         // ── Actor colors ──
         const ACTOR_COLORS = {
@@ -1214,6 +1216,7 @@
         window.ECO = ECOSYSTEM;
         window.DELIB = DeliberationEngine;
         window.FEEDS = FeedIngestorModule;
+        window.ARCHIVE = ArchivioSilente;
 
         console.log(
             '%c[BAB-EL-MANDEB] %cInterface ready. %cOperator: PANKOW_77C',
