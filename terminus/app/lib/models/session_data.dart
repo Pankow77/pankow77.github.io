@@ -103,18 +103,56 @@ class SessionData {
     this.substantiveMessageCount = 0,
   });
 
-  /// Can the Ghost appear? Multi-factor gate, not just Lumen.
+  /// Can the Ghost appear? Weighted point system, not hard AND gate.
   ///
-  /// Requirements (ALL must be true):
-  /// 1. Lumen ≤ 5 (mid-game or later)
-  /// 2. User has shared personal material (emotional readiness)
-  /// 3. Emotional intensity > 0.4 (trajectory is deepening)
-  /// 4. At least 15 substantive messages (trust established with crew)
-  bool get ghostIsReady =>
-      lumen.ghostCanAppear &&
-      hasSharedPersonalMaterial &&
-      emotionalIntensity > 0.4 &&
-      substantiveMessageCount >= 15;
+  /// Lumen ≤ 5 is MANDATORY (the only hard requirement).
+  /// Everything else contributes points. Threshold: 6 points.
+  ///
+  /// This prevents the Ghost from never appearing because ONE factor
+  /// is slightly below threshold while everything else is ready.
+  bool get ghostIsReady {
+    if (!lumen.ghostCanAppear) return false; // Hard requirement
+
+    return ghostReadinessScore >= 6;
+  }
+
+  /// Ghost readiness score (0-10+). Threshold for appearance: 6.
+  ///
+  /// Point system allows multiple paths to Ghost readiness:
+  /// - Reserved user with high intensity + low lumen → Ghost unlocked
+  /// - Verbose user with shared material + many messages → Ghost unlocked
+  /// - Both compensate for each other
+  int get ghostReadinessScore {
+    var points = 0;
+
+    // Lumen depth: lower = more points (the ship is dying)
+    if (lumen.count <= 3) {
+      points += 3;
+    } else if (lumen.count <= 5) {
+      points += 2;
+    }
+
+    // Shared personal material (strong signal)
+    if (hasSharedPersonalMaterial) points += 2;
+
+    // Emotional intensity (gradient, not binary)
+    if (emotionalIntensity > 0.6) {
+      points += 3;
+    } else if (emotionalIntensity > 0.4) {
+      points += 2;
+    } else if (emotionalIntensity > 0.2) {
+      points += 1;
+    }
+
+    // Trust established (message count as proxy)
+    if (substantiveMessageCount >= 20) {
+      points += 2;
+    } else if (substantiveMessageCount >= 15) {
+      points += 1;
+    }
+
+    return points;
+  }
 
   SessionData copyWith({
     SessionPhase? phase,

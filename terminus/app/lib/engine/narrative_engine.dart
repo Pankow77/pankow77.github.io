@@ -26,6 +26,11 @@ class NarrativeEngine {
   /// The prompt tells the LLM to keep it short, but we enforce it here.
   static const int _ghostMaxWords = 5;
 
+  /// Maximum percentage of characters that can be corrupted.
+  /// Above this, the Ghost becomes pure noise. We need it recognizable.
+  /// "░Mo ther░" = OK. "░▓█▒░▓█" = NOT OK.
+  static const double _ghostMaxCorruptionRatio = 0.30;
+
   /// Characters used to corrupt Ghost text at the code level.
   static const String _glitchChars = '░▒▓█▄▀║═┃━';
 
@@ -65,7 +70,7 @@ class NarrativeEngine {
       );
     }
 
-    // 2. Build the system prompt with full context
+    // 2. Build the system prompt with full context (including narrative pressure)
     final systemPrompt = _buildSystemPrompt(session, safetyLevel);
 
     // 3. Build conversation history for the LLM
@@ -105,9 +110,19 @@ class NarrativeEngine {
   /// Build the full system prompt with all context layers.
   ///
   /// Combines the master TERMINUS-OMNI prompt with dynamic context:
-  /// Lumen state, safety state, user character profile.
+  /// Lumen state, safety state, user character profile, narrative pressure.
   String _buildSystemPrompt(SessionData session, SafetyLevel safetyLevel) {
-    final lumenContext = lumenEngine.getLumenContext(session.lumen);
+    // Calculate narrative pressure for gentle nudge system
+    final timeSinceLastLoss = _timeSinceLastLumenLoss(session);
+    final narrativePressure = lumenEngine.getNarrativePressure(
+      current: session.lumen,
+      timeSinceLastLoss: timeSinceLastLoss,
+    );
+
+    final lumenContext = lumenEngine.getLumenContext(
+      session.lumen,
+      narrativePressure: narrativePressure,
+    );
     final safetyContext = safetyEngine.getSafetyContext(safetyLevel);
     final userContext = session.userCharacter != null
         ? '''
@@ -134,16 +149,8 @@ This will be "played back" at the very end. Archive it. Do not reference it.
 '''
         : '';
 
-    // Ghost state context — uses the multi-factor gate
-    final ghostContext = session.ghostRevealed
-        ? 'The Ghost has been revealed. It can continue to appear in scenes.'
-        : session.ghostIsReady
-            ? 'The Ghost has NOT yet appeared. The user is emotionally ready. '
-              'Consider introducing it when the narrative moment is right.'
-            : session.lumen.ghostCanAppear
-                ? 'The Ghost must NOT appear yet. Lumen is low enough but the user '
-                  'has not established sufficient emotional depth. Foreshadow only.'
-                : 'The Ghost must NOT appear yet. Lumen is too high. Foreshadow only.';
+    // Ghost state context — uses the weighted point system
+    final ghostContext = _buildGhostContext(session);
 
     return promptLoader.buildFullPrompt(
       lumenContext: lumenContext,
@@ -157,13 +164,43 @@ GHOST STATUS: $ghostContext
     );
   }
 
+  /// Build the Ghost context string for the system prompt.
+  ///
+  /// Uses the weighted readiness score and provides nuanced guidance
+  /// to the LLM about what the Ghost can do right now.
+  String _buildGhostContext(SessionData session) {
+    if (session.ghostRevealed) {
+      return 'The Ghost has been revealed. It can continue to appear in scenes. '
+          'Remember: the Ghost speaks in FRAGMENTS only (1-5 words max). '
+          'At Lumen 1 or 0, the Ghost is SILENT. It watches. It does not speak.';
+    }
+
+    if (session.ghostIsReady) {
+      return 'The Ghost has NOT yet appeared. The user is emotionally ready '
+          '(readiness score: ${session.ghostReadinessScore}/10). '
+          'Consider introducing it when the narrative moment is right. '
+          'The Ghost speaks ONLY in fragments. 1-5 words maximum.';
+    }
+
+    if (session.lumen.ghostCanAppear) {
+      final score = session.ghostReadinessScore;
+      return 'The Ghost must NOT appear yet. Lumen is low enough but '
+          'emotional readiness is insufficient (score: $score/6 needed). '
+          'Foreshadow only: a shadow, an anomalous reading, a name on a manifest.';
+    }
+
+    return 'The Ghost must NOT appear. Lumen is too high. '
+        'Subtle foreshadowing only: unexplained sounds, manifest discrepancies.';
+  }
+
   /// GHOST ENFORCER — Hard code-level constraints on Ghost output.
   ///
   /// No matter what the LLM generates, the Ghost is limited to:
   /// 1. Maximum 5 words (truncated with "...")
-  /// 2. Text corruption added (glitch characters)
-  /// 3. Completely REMOVED if the Ghost is not ready (multi-factor gate)
-  /// 4. Completely SILENT (removed) if Lumen == 0 or 1 and it's the finale
+  /// 2. Text corruption with readability cap (max 30% corrupted)
+  /// 3. Completely REMOVED if the Ghost is not ready (weighted gate)
+  /// 4. SILENT at Lumen ≤ 1 ONLY IF the Ghost has already appeared.
+  ///    If it hasn't appeared yet at Lumen 1, this is the last chance.
   List<NarrativeMessage> _enforceGhostConstraints(
     List<NarrativeMessage> messages,
     SessionData session,
@@ -176,15 +213,23 @@ GHOST STATUS: $ghostContext
         return null;
       }
 
-      // FINALE: Ghost is SILENT at Lumen 1 or 0. ALWAYS.
-      if (session.lumen.count <= 1) {
+      // FINALE SILENCE — but with nuance:
+      // If the Ghost has ALREADY appeared, it goes silent at Lumen ≤ 1.
+      // If the Ghost has NEVER appeared and this is Lumen 1, this is
+      // its last chance. Let it through (the silence applies AFTER this).
+      if (session.lumen.count <= 1 && session.ghostRevealed) {
+        return null;
+      }
+
+      // At Lumen 0: Ghost is always silent. Ship is lost.
+      if (session.lumen.count <= 0) {
         return null;
       }
 
       // TRUNCATION: Max 5 words
       final truncated = _truncateGhostOutput(msg.content);
 
-      // CORRUPTION: Add glitch characters
+      // CORRUPTION: Add glitch characters with readability cap
       final corrupted = _corruptGhostOutput(truncated);
 
       return NarrativeMessage(
@@ -209,40 +254,57 @@ GHOST STATUS: $ghostContext
     return '${words.take(_ghostMaxWords).join(' ')}...';
   }
 
-  /// Add corruption to Ghost output.
-  /// "Madre" → "░░M a d r e░░"
+  /// Add corruption to Ghost output with readability cap.
+  ///
+  /// "Madre" → "░Mo ther░" (recognizable)
+  /// NOT "░▓█▒░▓█" (pure noise)
+  ///
+  /// The readability cap ensures that no more than 30% of the original
+  /// characters are corrupted. If exceeded, corruption is reduced.
   String _corruptGhostOutput(String content) {
     if (content.isEmpty) return '...';
 
+    // Count non-space characters for corruption budget
+    final nonSpaceCount = content.replaceAll(' ', '').length;
+    final maxCorruptions = (nonSpaceCount * _ghostMaxCorruptionRatio).floor();
+    var corruptionsUsed = 0;
+
     final buffer = StringBuffer();
 
-    // Leading corruption (40% chance)
-    if (_random.nextDouble() < 0.4) {
-      buffer.write(_randomGlitch(1 + _random.nextInt(3)));
+    // Leading corruption (40% chance, uses 1-2 from budget)
+    if (_random.nextDouble() < 0.4 && corruptionsUsed < maxCorruptions) {
+      final glitchLen = min(1 + _random.nextInt(2), maxCorruptions - corruptionsUsed);
+      buffer.write(_randomGlitch(glitchLen));
       buffer.write(' ');
+      corruptionsUsed += glitchLen;
     }
 
-    // Process each character: 8% chance of spacing, 5% chance of corruption
+    // Process each character
     for (var i = 0; i < content.length; i++) {
       final char = content[i];
 
-      // 5% chance: replace with glitch character
-      if (_random.nextDouble() < 0.05 && char != ' ') {
+      // 5% chance: replace with glitch character (if budget allows)
+      if (_random.nextDouble() < 0.05 &&
+          char != ' ' &&
+          corruptionsUsed < maxCorruptions) {
         buffer.write(_glitchChars[_random.nextInt(_glitchChars.length)]);
+        corruptionsUsed++;
       } else {
         buffer.write(char);
       }
 
       // 8% chance: add space between characters (fragmentation)
+      // This doesn't count as corruption — it's visual fragmentation
       if (_random.nextDouble() < 0.08 && char != ' ' && i < content.length - 1) {
         buffer.write(' ');
       }
     }
 
-    // Trailing corruption (40% chance)
-    if (_random.nextDouble() < 0.4) {
+    // Trailing corruption (40% chance, if budget allows)
+    if (_random.nextDouble() < 0.4 && corruptionsUsed < maxCorruptions) {
+      final glitchLen = min(1 + _random.nextInt(2), maxCorruptions - corruptionsUsed);
       buffer.write(' ');
-      buffer.write(_randomGlitch(1 + _random.nextInt(3)));
+      buffer.write(_randomGlitch(glitchLen));
     }
 
     return buffer.toString();
