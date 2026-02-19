@@ -14,6 +14,7 @@ import 'services/llm/google_ai_service.dart';
 import 'screens/boot_screen.dart';
 import 'screens/settings_screen.dart';
 import 'screens/terminal_screen.dart';
+import 'screens/onboarding_screen.dart';
 
 /// Top-level providers.
 final storageServiceProvider = Provider<StorageService>((ref) {
@@ -50,7 +51,10 @@ class ViaggioApp extends ConsumerWidget {
 /// Flow:
 ///   1. Check LLM config → if missing → Settings
 ///   2. Boot sequence
-///   3. Terminal (main game)
+///   3. Crew Intake (onboarding)
+///   4. Terminal (main game)
+///   5. Crew Rest (safety cooldown) → back to Terminal
+///   6. Decompression (post-ending)
 class _AppShell extends ConsumerStatefulWidget {
   const _AppShell();
 
@@ -58,7 +62,7 @@ class _AppShell extends ConsumerStatefulWidget {
   ConsumerState<_AppShell> createState() => _AppShellState();
 }
 
-enum _AppScreen { settings, boot, terminal }
+enum _AppScreen { settings, boot, onboarding, terminal }
 
 class _AppShellState extends ConsumerState<_AppShell> {
   _AppScreen _currentScreen = _AppScreen.boot;
@@ -97,14 +101,42 @@ class _AppShellState extends ConsumerState<_AppShell> {
             if (!settings.isConfigured) {
               setState(() => _currentScreen = _AppScreen.settings);
             } else {
-              _initializeAndStartGame();
-              setState(() => _currentScreen = _AppScreen.terminal);
+              _initializeEngine();
+              setState(() => _currentScreen = _AppScreen.onboarding);
             }
+          },
+        );
+
+      case _AppScreen.onboarding:
+        return OnboardingScreen(
+          onComplete: (character, shipLogEntry) async {
+            final game = ref.read(gameProvider.notifier);
+            game.setUserCharacter(character);
+            if (shipLogEntry.isNotEmpty) {
+              await game.recordShipLog(shipLogEntry);
+            }
+            game.setPhase(SessionPhase.playing);
+            game.addSystemMessage(
+              'TERMINUS SYSTEMS \u2014 Session initialized.',
+            );
+            game.addSystemMessage(
+              'All crew stations active. Lumen Count: 10/10.',
+            );
+            game.addSystemMessage(
+              'Welcome aboard, ${character.name}.',
+            );
+            setState(() => _currentScreen = _AppScreen.terminal);
           },
         );
 
       case _AppScreen.terminal:
         final session = ref.watch(gameProvider);
+
+        // Handle crew rest phase — show rest UI overlay
+        if (session.phase == SessionPhase.crewRest) {
+          return _buildCrewRestScreen();
+        }
+
         return TerminalScreen(
           session: session,
           onSendMessage: (msg) {
@@ -123,12 +155,12 @@ class _AppShellState extends ConsumerState<_AppShell> {
     notifier.setApiKey(apiKey);
     notifier.setModel(model);
 
-    _initializeAndStartGame();
-    setState(() => _currentScreen = _AppScreen.terminal);
+    _initializeEngine();
+    setState(() => _currentScreen = _AppScreen.onboarding);
   }
 
   /// Load prompts and initialize the game engine.
-  Future<void> _initializeAndStartGame() async {
+  Future<void> _initializeEngine() async {
     final settings = ref.read(settingsProvider);
     if (settings.apiKey == null || settings.provider == null) return;
 
@@ -147,11 +179,6 @@ class _AppShellState extends ConsumerState<_AppShell> {
     final game = ref.read(gameProvider.notifier);
     game.initializeEngine(llmService, promptLoader);
     game.startNewSession();
-    game.setPhase(SessionPhase.playing);
-
-    // Welcome message from the Captain
-    game.addSystemMessage('TERMINUS SYSTEMS — Session initialized.');
-    game.addSystemMessage('All crew stations active. Lumen Count: 10/10.');
   }
 
   LlmService _createLlmService(
@@ -167,5 +194,52 @@ class _AppShellState extends ConsumerState<_AppShell> {
       case LlmProvider.googleAi:
         return GoogleAiService(apiKey: apiKey, model: model);
     }
+  }
+
+  /// Crew Rest screen — the safety cooldown.
+  ///
+  /// "The crew goes to sleep." Black screen, minimal text.
+  /// After a pause, the user can resume.
+  Widget _buildCrewRestScreen() {
+    return Scaffold(
+      backgroundColor: TerminusTheme.background,
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'The crew is resting.',
+                style: TerminusTheme.terminalFont(
+                  fontSize: 16,
+                  color: TerminusTheme.phosphorDim.withValues(alpha: 0.5),
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Take a moment.',
+                style: TerminusTheme.terminalFont(
+                  fontSize: 14,
+                  color: TerminusTheme.phosphorDim.withValues(alpha: 0.3),
+                ),
+              ),
+              const SizedBox(height: 40),
+              GestureDetector(
+                onTap: () {
+                  ref.read(gameProvider.notifier).resumeFromRest();
+                },
+                child: Text(
+                  '[ Resume when ready ]',
+                  style: TerminusTheme.terminalFont(
+                    fontSize: 13,
+                    color: TerminusTheme.phosphorDim.withValues(alpha: 0.4),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

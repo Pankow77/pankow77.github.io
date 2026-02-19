@@ -110,10 +110,16 @@ class NarrativeEngine {
       emotionalIntensity: session.emotionalIntensity,
     );
 
+    // 9. Analyze emotional state of user input (code-level tracking)
+    final emotionalUpdate = _analyzeEmotionalState(userInput, session);
+
     return NarrativeResponse(
       messages: messages,
       shouldPauseSession: false,
       lumenLost: shouldLoseLumen,
+      emotionalIntensity: emotionalUpdate.intensity,
+      hasSharedPersonalMaterial: emotionalUpdate.sharedPersonal,
+      isSubstantiveMessage: emotionalUpdate.isSubstantive,
     );
   }
 
@@ -581,6 +587,120 @@ ${speakerSuggestion.isNotEmpty ? '\n$speakerSuggestion\n' : ''}
         ? DateTime.now().difference(session.messages.first.timestamp)
         : Duration.zero;
   }
+
+  /// Analyze the emotional state of the user's input.
+  ///
+  /// Returns an update with:
+  /// - intensity: blended emotional intensity (0.0-1.0)
+  /// - sharedPersonal: whether the user disclosed personal/trauma material
+  /// - isSubstantive: whether the message is substantive (not a single word/command)
+  ///
+  /// The intensity uses exponential moving average: new_intensity =
+  /// (old * 0.7) + (signal * 0.3). This prevents single messages from
+  /// spiking the system and ensures gradual build.
+  _EmotionalUpdate _analyzeEmotionalState(String userInput, SessionData session) {
+    final lower = userInput.toLowerCase();
+    final wordCount = userInput.split(RegExp(r'\s+')).where((w) => w.isNotEmpty).length;
+
+    // Is this a substantive message? (not a single word, not a command)
+    final isSubstantive = wordCount >= 4;
+
+    // Calculate raw emotional signal from this message (0.0 - 1.0)
+    var rawSignal = 0.0;
+
+    // Length signal: longer messages = deeper engagement
+    if (wordCount >= 40) {
+      rawSignal += 0.3;
+    } else if (wordCount >= 20) {
+      rawSignal += 0.2;
+    } else if (wordCount >= 10) {
+      rawSignal += 0.1;
+    }
+
+    // Personal disclosure indicators (IT + EN)
+    final personalPatterns = [
+      // Family / relationships
+      'madre', 'mother', 'padre', 'father', 'figlio', 'figlia',
+      'son', 'daughter', 'moglie', 'wife', 'marito', 'husband',
+      'famiglia', 'family', 'fratello', 'brother', 'sorella', 'sister',
+      // Loss / death
+      'morto', 'morta', 'died', 'dead', 'morte', 'death',
+      'perso', 'perduto', 'lost', 'gone', 'funeral', 'funerale',
+      // Trauma / suffering
+      'ospedale', 'hospital', 'ricovero', 'tso', 'rehab',
+      'dipendenza', 'addiction', 'droga', 'drug', 'alcol', 'alcohol',
+      'violenza', 'violence', 'abuso', 'abuse',
+      // Self-referential emotional depth
+      'mi manca', 'i miss', 'non ho mai detto', 'never told',
+      'la verità è', 'the truth is', 'nessuno sa', 'nobody knows',
+      'mi vergogno', 'ashamed', 'colpa', 'guilt', 'guilty',
+      'paura', 'afraid', 'scared', 'fear', 'terrified',
+      'solo', 'alone', 'lonely', 'solitudine', 'loneliness',
+    ];
+
+    var personalHits = 0;
+    for (final pattern in personalPatterns) {
+      if (lower.contains(pattern)) personalHits++;
+    }
+
+    if (personalHits >= 3) {
+      rawSignal += 0.4;
+    } else if (personalHits >= 2) {
+      rawSignal += 0.3;
+    } else if (personalHits >= 1) {
+      rawSignal += 0.2;
+    }
+
+    // Emotional language density
+    final emotionalPatterns = [
+      'non ce la faccio', 'can\'t take', 'non posso', 'can\'t',
+      'fa male', 'hurts', 'piango', 'crying', 'tears', 'lacrime',
+      'rabbia', 'anger', 'angry', 'furioso', 'odio', 'hate',
+      'amo', 'love', 'ti voglio bene', 'mi manchi',
+      'scusa', 'sorry', 'forgive', 'perdona', 'perdonami',
+      'grazie', 'thank', 'speranza', 'hope', 'spero',
+    ];
+
+    var emotionalHits = 0;
+    for (final pattern in emotionalPatterns) {
+      if (lower.contains(pattern)) emotionalHits++;
+    }
+
+    if (emotionalHits >= 2) {
+      rawSignal += 0.3;
+    } else if (emotionalHits >= 1) {
+      rawSignal += 0.15;
+    }
+
+    // Cap raw signal at 1.0
+    rawSignal = rawSignal.clamp(0.0, 1.0);
+
+    // Exponential moving average: smooth the transition
+    // New = (old * 0.7) + (signal * 0.3)
+    final blendedIntensity = (session.emotionalIntensity * 0.7) + (rawSignal * 0.3);
+
+    // Shared personal material: once true, stays true
+    final sharedPersonal = session.hasSharedPersonalMaterial || personalHits >= 2;
+
+    return _EmotionalUpdate(
+      intensity: blendedIntensity.clamp(0.0, 1.0),
+      sharedPersonal: sharedPersonal,
+      isSubstantive: isSubstantive,
+    );
+  }
+}
+
+/// Internal result of emotional analysis for a single message.
+class _EmotionalUpdate {
+  final double intensity;
+  final bool sharedPersonal;
+  final bool isSubstantive;
+
+  const _EmotionalUpdate({
+    required this.intensity,
+    required this.sharedPersonal,
+    required this.isSubstantive,
+  });
 }
 
 /// Result of processing a user message through the narrative engine.
@@ -589,9 +709,21 @@ class NarrativeResponse {
   final bool shouldPauseSession;
   final bool lumenLost;
 
+  /// Updated emotional intensity (blended EMA, 0.0-1.0).
+  final double emotionalIntensity;
+
+  /// Whether the user has shared personal/trauma material.
+  final bool hasSharedPersonalMaterial;
+
+  /// Whether this user message was substantive (4+ words).
+  final bool isSubstantiveMessage;
+
   const NarrativeResponse({
     required this.messages,
     required this.shouldPauseSession,
     required this.lumenLost,
+    this.emotionalIntensity = 0.0,
+    this.hasSharedPersonalMaterial = false,
+    this.isSubstantiveMessage = false,
   });
 }

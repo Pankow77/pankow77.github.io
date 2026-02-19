@@ -47,7 +47,7 @@ $userContext
 
   Future<String> _loadAsset(String path) async {
     try {
-      return await rootBundle.loadString(path);
+      return await rootBundle.loadString('assets/$path');
     } catch (_) {
       // If assets aren't bundled yet, return empty string
       return '';

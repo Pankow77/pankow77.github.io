@@ -180,14 +180,17 @@ This achieves:
 - [x] Boot screen (animated ship computer boot sequence)
 - [x] Settings screen (BYOK API key configuration)
 - [x] Terminal screen (main interaction, message history, crew colors)
-- [ ] Character prompt engineering (individual crew members)
-- [ ] Full TERMINUS-OMNI prompt integration (load from assets)
-- [ ] Ship's Log recording/playback system
-- [ ] Onboarding flow (character creation disguised as crew intake)
+- [x] Character prompt engineering (individual crew members — all 5 complete)
+- [x] Full TERMINUS-OMNI prompt integration (assets bundled, PromptLoader updated)
+- [x] Ship's Log recording/playback system (web-compatible via SharedPreferences)
+- [x] Onboarding flow (crew intake — Captain-led terminal conversation)
+- [x] Ghost appearance system (weighted readiness scoring + code-level enforcement)
+- [x] Act III escape pod reveal sequence (FinalSequenceEngine integrated in GameProvider)
+- [x] Decompression sequence (Ship's Log playback → blinking cursor)
+- [x] Emotional intensity tracking (EMA-based, feeds Lumen engine + Ghost readiness)
+- [x] Crew Rest screen (safety cooldown UI)
+- [x] Web compatibility (removed dart:io dependency)
 - [ ] Session persistence (save/resume across app restarts)
-- [ ] Ghost appearance system (Lumen ≤5, calibrated introduction)
-- [ ] Act III escape pod reveal sequence
-- [ ] Decompression sequence (blinking cursor, sacred silence)
 - [ ] Testing with diverse user profiles
 - [ ] Localization (IT/EN)
 
