@@ -190,4 +190,51 @@ class SessionData {
     crew: CrewMember.initialCrew,
     startedAt: DateTime.now(),
   );
+
+  /// Serialize to JSON for session persistence.
+  ///
+  /// Saves everything needed to restore the session exactly:
+  /// messages, lumen, crew, character, emotional state, phase.
+  /// Does NOT save isProcessing (always false on restore).
+  Map<String, dynamic> toJson() => {
+    'sessionId': sessionId,
+    'phase': phase.name,
+    'lumen': lumen.toJson(),
+    'messages': messages.map((m) => m.toJson()).toList(),
+    'crew': crew.map((c) => c.toJson()).toList(),
+    'userCharacter': userCharacter?.toJson(),
+    'ghostRevealed': ghostRevealed,
+    'startedAt': startedAt.toIso8601String(),
+    'shipLogEntry': shipLogEntry,
+    'emotionalIntensity': emotionalIntensity,
+    'hasSharedPersonalMaterial': hasSharedPersonalMaterial,
+    'substantiveMessageCount': substantiveMessageCount,
+  };
+
+  /// Deserialize from JSON.
+  factory SessionData.fromJson(Map<String, dynamic> json) {
+    return SessionData(
+      sessionId: json['sessionId'] as String,
+      phase: SessionPhase.values.firstWhere(
+        (p) => p.name == json['phase'],
+        orElse: () => SessionPhase.playing,
+      ),
+      lumen: LumenState.fromJson(json['lumen'] as Map<String, dynamic>),
+      messages: (json['messages'] as List<dynamic>)
+          .map((m) => NarrativeMessage.fromJson(m as Map<String, dynamic>))
+          .toList(),
+      crew: (json['crew'] as List<dynamic>)
+          .map((c) => CrewMember.fromJson(c as Map<String, dynamic>))
+          .toList(),
+      userCharacter: json['userCharacter'] != null
+          ? UserCharacter.fromJson(json['userCharacter'] as Map<String, dynamic>)
+          : null,
+      ghostRevealed: json['ghostRevealed'] as bool? ?? false,
+      startedAt: DateTime.parse(json['startedAt'] as String),
+      shipLogEntry: json['shipLogEntry'] as String?,
+      emotionalIntensity: (json['emotionalIntensity'] as num?)?.toDouble() ?? 0.0,
+      hasSharedPersonalMaterial: json['hasSharedPersonalMaterial'] as bool? ?? false,
+      substantiveMessageCount: json['substantiveMessageCount'] as int? ?? 0,
+    );
+  }
 }

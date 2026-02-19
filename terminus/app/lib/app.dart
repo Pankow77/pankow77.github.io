@@ -49,12 +49,13 @@ class ViaggioApp extends ConsumerWidget {
 /// The app shell — manages navigation between screens.
 ///
 /// Flow:
-///   1. Check LLM config → if missing → Settings
-///   2. Boot sequence
-///   3. Crew Intake (onboarding)
-///   4. Terminal (main game)
-///   5. Crew Rest (safety cooldown) → back to Terminal
-///   6. Decompression (post-ending)
+///   1. Check for saved session → if found → offer resume
+///   2. Check LLM config → if missing → Settings
+///   3. Boot sequence
+///   4. Crew Intake (onboarding)
+///   5. Terminal (main game)
+///   6. Crew Rest (safety cooldown) → back to Terminal
+///   7. Decompression (post-ending)
 class _AppShell extends ConsumerStatefulWidget {
   const _AppShell();
 
@@ -66,17 +67,31 @@ enum _AppScreen { settings, boot, onboarding, terminal }
 
 class _AppShellState extends ConsumerState<_AppShell> {
   _AppScreen _currentScreen = _AppScreen.boot;
+  bool _storageConnected = false;
 
   @override
   void initState() {
     super.initState();
-    // Check if LLM is configured on launch
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      _connectStorage();
+
       final settings = ref.read(settingsProvider);
       if (!settings.isConfigured) {
         setState(() => _currentScreen = _AppScreen.settings);
       }
     });
+  }
+
+  /// Connect storage to GameProvider for session persistence.
+  void _connectStorage() {
+    if (_storageConnected) return;
+    try {
+      final storage = ref.read(storageServiceProvider);
+      ref.read(gameProvider.notifier).setStorage(storage);
+      _storageConnected = true;
+    } catch (_) {
+      // Storage not available yet — will connect later
+    }
   }
 
   @override
@@ -97,13 +112,28 @@ class _AppShellState extends ConsumerState<_AppShell> {
       case _AppScreen.boot:
         return BootScreen(
           onBootComplete: () {
+            _connectStorage();
+
             final settings = ref.read(settingsProvider);
             if (!settings.isConfigured) {
               setState(() => _currentScreen = _AppScreen.settings);
-            } else {
-              _initializeEngine();
-              setState(() => _currentScreen = _AppScreen.onboarding);
+              return;
             }
+
+            // Check for saved session — if found, restore and skip onboarding
+            final game = ref.read(gameProvider.notifier);
+            if (game.hasSavedSession()) {
+              _initializeEngine(skipNewSession: true);
+              final restored = game.restoreSession();
+              if (restored) {
+                setState(() => _currentScreen = _AppScreen.terminal);
+                return;
+              }
+            }
+
+            // No saved session — fresh start
+            _initializeEngine();
+            setState(() => _currentScreen = _AppScreen.onboarding);
           },
         );
 
@@ -160,7 +190,7 @@ class _AppShellState extends ConsumerState<_AppShell> {
   }
 
   /// Load prompts and initialize the game engine.
-  Future<void> _initializeEngine() async {
+  Future<void> _initializeEngine({bool skipNewSession = false}) async {
     final settings = ref.read(settingsProvider);
     if (settings.apiKey == null || settings.provider == null) return;
 
@@ -178,7 +208,10 @@ class _AppShellState extends ConsumerState<_AppShell> {
     // Initialize the game engine with prompts
     final game = ref.read(gameProvider.notifier);
     game.initializeEngine(llmService, promptLoader);
-    game.startNewSession();
+
+    if (!skipNewSession) {
+      game.startNewSession();
+    }
   }
 
   LlmService _createLlmService(

@@ -190,7 +190,7 @@ This achieves:
 - [x] Emotional intensity tracking (EMA-based, feeds Lumen engine + Ghost readiness)
 - [x] Crew Rest screen (safety cooldown UI)
 - [x] Web compatibility (removed dart:io dependency)
-- [ ] Session persistence (save/resume across app restarts)
+- [x] Session persistence (auto-save after every exchange, restore on app launch)
 - [ ] Testing with diverse user profiles
 - [ ] Localization (IT/EN)
 

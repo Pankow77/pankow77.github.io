@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 import '../models/message.dart';
@@ -11,6 +12,7 @@ import '../engine/final_sequence_engine.dart';
 import '../services/llm/llm_service.dart';
 import '../services/prompt_loader.dart';
 import '../services/ship_log_service.dart';
+import '../services/storage_service.dart';
 import '../config/constants.dart';
 
 const _uuid = Uuid();
@@ -20,10 +22,14 @@ const _uuid = Uuid();
 /// Manages the entire session: messages, lumen count, crew status,
 /// emotional tracking, final sequence, and ship's log.
 /// Coordinates all engines into one living system.
+///
+/// Auto-saves after every state change that matters (messages, lumen,
+/// phase transitions). A 90-minute session cannot be lost to a crash.
 class GameNotifier extends StateNotifier<SessionData> {
   NarrativeEngine? _engine;
   final FinalSequenceEngine _finalSequence = FinalSequenceEngine();
   final ShipLogService _shipLog = ShipLogService();
+  StorageService? _storage;
 
   /// Whether we are currently in Act III's pod sequence.
   bool _inFinalSequence = false;
@@ -35,6 +41,11 @@ class GameNotifier extends StateNotifier<SessionData> {
 
   /// Whether the final sequence (pod) is active.
   bool get inFinalSequence => _inFinalSequence;
+
+  /// Connect to storage for session persistence.
+  void setStorage(StorageService storage) {
+    _storage = storage;
+  }
 
   /// Initialize with an LLM service and prompt loader (called after BYOK setup).
   void initializeEngine(LlmService llmService, PromptLoader promptLoader) {
@@ -52,22 +63,87 @@ class GameNotifier extends StateNotifier<SessionData> {
       phase: SessionPhase.booting,
     );
     _inFinalSequence = false;
+    _clearSavedSession();
+  }
+
+  /// Restore a session from storage.
+  ///
+  /// Returns true if a session was restored, false if not.
+  /// On restore, the ship's log is also reloaded.
+  bool restoreSession() {
+    if (_storage == null) return false;
+
+    final json = _storage!.sessionData;
+    if (json == null || json.isEmpty) return false;
+
+    try {
+      final data = jsonDecode(json) as Map<String, dynamic>;
+      final restored = SessionData.fromJson(data);
+
+      // Don't restore completed or decompression sessions — start fresh
+      if (restored.phase == SessionPhase.complete ||
+          restored.phase == SessionPhase.decompression ||
+          restored.phase == SessionPhase.idle ||
+          restored.phase == SessionPhase.booting) {
+        return false;
+      }
+
+      state = restored;
+
+      // Restore ship's log in memory
+      if (restored.shipLogEntry != null) {
+        _shipLog.recordTextLog(restored.shipLogEntry!);
+      }
+
+      // Restore final sequence state if we were in Act III
+      if (restored.lumen.count <= 2) {
+        _inFinalSequence = true;
+      }
+
+      // Add a system message so the user knows the session was restored
+      addSystemMessage('Session restored. Systems recovering...');
+
+      return true;
+    } catch (_) {
+      // Corrupted save — start fresh
+      _clearSavedSession();
+      return false;
+    }
+  }
+
+  /// Check if there's a saved session to restore.
+  bool hasSavedSession() {
+    if (_storage == null) return false;
+    final json = _storage!.sessionData;
+    if (json == null || json.isEmpty) return false;
+
+    try {
+      final data = jsonDecode(json) as Map<String, dynamic>;
+      final phase = data['phase'] as String?;
+      // Only restore playing or crewRest sessions
+      return phase == 'playing' || phase == 'crewRest';
+    } catch (_) {
+      return false;
+    }
   }
 
   /// Transition to the next phase.
   void setPhase(SessionPhase phase) {
     state = state.copyWith(phase: phase);
+    _autoSave();
   }
 
   /// Set the user's character (from crew intake / onboarding).
   void setUserCharacter(UserCharacter character) {
     state = state.copyWith(userCharacter: character);
+    _autoSave();
   }
 
   /// Record the Ship's Log entry (from onboarding).
   Future<void> recordShipLog(String entry) async {
     await _shipLog.recordTextLog(entry);
     state = state.copyWith(shipLogEntry: entry);
+    _autoSave();
   }
 
   /// Add a system message (ship computer announcements).
@@ -82,6 +158,7 @@ class GameNotifier extends StateNotifier<SessionData> {
     state = state.copyWith(
       messages: [...state.messages, message],
     );
+    // Don't auto-save on every system message (too frequent)
   }
 
   /// Send a user message and get the crew's response.
@@ -125,6 +202,7 @@ class GameNotifier extends StateNotifier<SessionData> {
             phase: SessionPhase.decompression,
             isProcessing: false,
           );
+          _clearSavedSession(); // Session complete — don't restore
           return;
         }
 
@@ -133,6 +211,7 @@ class GameNotifier extends StateNotifier<SessionData> {
           messages: newMessages,
           isProcessing: false,
         );
+        _autoSave();
         return;
       }
 
@@ -195,11 +274,11 @@ class GameNotifier extends StateNotifier<SessionData> {
           substantiveMessageCount: newSubstantiveCount,
           isProcessing: false,
         );
+        _autoSave();
         return;
       }
 
-      // Check for ship lost (Lumen 0 — should not normally reach here
-      // because Act III handles it, but safety net)
+      // Check for ship lost (Lumen 0 — safety net)
       final phase = newLumen.isShipLost ? SessionPhase.decompression : newPhase;
 
       state = state.copyWith(
@@ -212,6 +291,7 @@ class GameNotifier extends StateNotifier<SessionData> {
         hasSharedPersonalMaterial: response.hasSharedPersonalMaterial,
         substantiveMessageCount: newSubstantiveCount,
       );
+      _autoSave();
     } catch (e) {
       // LLM error — don't break the experience
       addSystemMessage(
@@ -227,6 +307,7 @@ class GameNotifier extends StateNotifier<SessionData> {
     final newLumen = state.lumen.loseLumen();
     addSystemMessage('\u26A0 SYSTEM FAILURE: ${newLumen.currentSystemStatus}');
     state = state.copyWith(lumen: newLumen);
+    _autoSave();
   }
 
   /// Resume from crew rest.
@@ -235,5 +316,26 @@ class GameNotifier extends StateNotifier<SessionData> {
     addSystemMessage(
       'Systems stabilizing. The crew is rested.',
     );
+    _autoSave();
+  }
+
+  /// Auto-save the current session to storage.
+  /// Called after every meaningful state change.
+  void _autoSave() {
+    if (_storage == null) return;
+    if (state.phase == SessionPhase.idle ||
+        state.phase == SessionPhase.booting) return;
+
+    try {
+      final json = jsonEncode(state.toJson());
+      _storage!.sessionData = json;
+    } catch (_) {
+      // Non-critical: session continues in memory
+    }
+  }
+
+  /// Clear saved session from storage.
+  void _clearSavedSession() {
+    _storage?.clearSession();
   }
 }

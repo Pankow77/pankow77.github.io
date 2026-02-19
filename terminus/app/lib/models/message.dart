@@ -100,4 +100,27 @@ class NarrativeMessage {
         : '$prefix $content';
     return {'role': role, 'content': text};
   }
+
+  /// Serialize to JSON for session persistence.
+  Map<String, dynamic> toJson() => {
+    'id': id,
+    'source': source.name,
+    'content': content,
+    'timestamp': timestamp.toIso8601String(),
+    'lumenAtTime': lumenAtTime,
+  };
+
+  /// Deserialize from JSON.
+  factory NarrativeMessage.fromJson(Map<String, dynamic> json) {
+    return NarrativeMessage(
+      id: json['id'] as String,
+      source: MessageSource.values.firstWhere(
+        (s) => s.name == json['source'],
+        orElse: () => MessageSource.system,
+      ),
+      content: json['content'] as String,
+      timestamp: DateTime.parse(json['timestamp'] as String),
+      lumenAtTime: json['lumenAtTime'] as int,
+    );
+  }
 }

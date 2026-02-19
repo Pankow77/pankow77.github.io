@@ -80,4 +80,18 @@ class LumenState {
 
   /// Factory: fresh start. All systems nominal.
   static const LumenState initial = LumenState();
+
+  /// Serialize to JSON for session persistence.
+  Map<String, dynamic> toJson() => {
+    'count': count,
+    'failedSystems': failedSystems,
+  };
+
+  /// Deserialize from JSON.
+  factory LumenState.fromJson(Map<String, dynamic> json) => LumenState(
+    count: json['count'] as int,
+    failedSystems: (json['failedSystems'] as List<dynamic>)
+        .map((e) => e as String)
+        .toList(),
+  );
 }

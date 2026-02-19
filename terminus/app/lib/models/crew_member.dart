@@ -104,4 +104,22 @@ class CrewMember {
     CrewMember(role: CrewRole.veteran),
     CrewMember(role: CrewRole.ghost, status: CrewStatus.unknown),
   ];
+
+  /// Serialize to JSON for session persistence.
+  Map<String, dynamic> toJson() => {
+    'role': role.name,
+    'status': status.name,
+  };
+
+  /// Deserialize from JSON.
+  factory CrewMember.fromJson(Map<String, dynamic> json) => CrewMember(
+    role: CrewRole.values.firstWhere(
+      (r) => r.name == json['role'],
+      orElse: () => CrewRole.captain,
+    ),
+    status: CrewStatus.values.firstWhere(
+      (s) => s.name == json['status'],
+      orElse: () => CrewStatus.online,
+    ),
+  );
 }
