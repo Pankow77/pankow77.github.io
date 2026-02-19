@@ -1,0 +1,198 @@
+{
+  "version": "1.0.0",
+  "description": "OSINT RSS feed sources — Hybrid Syndicate autonomous ingestion pipeline",
+  "max_items_per_feed": 25,
+  "max_epochs_per_theater": 500,
+  "dedup_window_hours": 168,
+
+  "feeds": [
+    {
+      "id": "gn-redsea-houthi",
+      "url": "https://news.google.com/rss/search?q=%22red+sea%22+OR+houthi+attack+OR+%22bab+el-mandeb%22&hl=en&gl=US&ceid=US:en",
+      "theater": "bab-el-mandeb",
+      "lang": "en",
+      "priority": "high"
+    },
+    {
+      "id": "gn-centcom-yemen",
+      "url": "https://news.google.com/rss/search?q=CENTCOM+yemen+OR+%22red+sea%22+strike&hl=en&gl=US&ceid=US:en",
+      "theater": "bab-el-mandeb",
+      "lang": "en",
+      "priority": "high"
+    },
+    {
+      "id": "gn-eunavfor-aspides",
+      "url": "https://news.google.com/rss/search?q=EUNAVFOR+OR+Aspides+%22red+sea%22+OR+%22gulf+of+aden%22&hl=en&gl=US&ceid=US:en",
+      "theater": "bab-el-mandeb",
+      "lang": "en",
+      "priority": "normal"
+    },
+    {
+      "id": "gn-shipping-redsea",
+      "url": "https://news.google.com/rss/search?q=%22gulf+of+aden%22+OR+%22red+sea%22+shipping+attack+OR+missile&hl=en&gl=US&ceid=US:en",
+      "theater": "bab-el-mandeb",
+      "lang": "en",
+      "priority": "normal"
+    },
+    {
+      "id": "gn-ice-italy-en",
+      "url": "https://news.google.com/rss/search?q=%22ICE+agents%22+italy+OR+%22immigration+enforcement%22+italy+OR+%22deportation%22+italy&hl=en&gl=US&ceid=US:en",
+      "theater": "ice-italy",
+      "lang": "en",
+      "priority": "high"
+    },
+    {
+      "id": "gn-ice-italy-it",
+      "url": "https://news.google.com/rss/search?q=ICE+agenti+Italia+OR+%22polizia+immigrazione%22+OR+deportazione+Italia&hl=it&gl=IT&ceid=IT:it",
+      "theater": "ice-italy",
+      "lang": "it",
+      "priority": "high"
+    },
+    {
+      "id": "gn-olympics-security",
+      "url": "https://news.google.com/rss/search?q=%22Milano+Cortina+2026%22+sicurezza+OR+security+OR+police&hl=en&gl=US&ceid=US:en",
+      "theater": "ice-italy",
+      "lang": "en",
+      "priority": "normal"
+    },
+    {
+      "id": "gn-sovranita-italia",
+      "url": "https://news.google.com/rss/search?q=%22sovranit%C3%A0%22+Italia+immigrazione+OR+ICE+OR+extraterritoriale&hl=it&gl=IT&ceid=IT:it",
+      "theater": "ice-italy",
+      "lang": "it",
+      "priority": "normal"
+    }
+  ],
+
+  "classifiers": {
+    "bab-el-mandeb": {
+      "actors": {
+        "centcom": {
+          "keywords": ["centcom", "central command", "us military", "pentagon", "us navy", "fifth fleet", "us forces", "american forces", "us strike", "us airstrikes", "uss ", "destroyer"],
+          "weight": 2
+        },
+        "houthi": {
+          "keywords": ["houthi", "ansar allah", "ansarallah", "yemen rebel", "yemeni rebel", "yemeni forces", "sanaa"],
+          "weight": 2
+        },
+        "eunavfor": {
+          "keywords": ["eunavfor", "aspides", "eu naval", "european naval", "eu forces", "atalanta", "european union naval"],
+          "weight": 2
+        },
+        "iran": {
+          "keywords": ["iran", "irgc", "iranian", "tehran", "revolutionary guard", "quds force"],
+          "weight": 1.5
+        },
+        "other": {
+          "keywords": [],
+          "weight": 0
+        }
+      },
+      "action_types": {
+        "strike": ["strike", "struck", "bomb", "bombed", "airstrike", "air strike", "missile launch", "fired missile", "drone attack", "targeted"],
+        "claim": ["claim", "claimed", "says it hit", "announced attack", "took credit"],
+        "warning": ["warning", "warned", "advisory", "caution", "alert issued", "threat"],
+        "defensive": ["intercept", "intercepted", "shot down", "destroyed drone", "defended", "repelled"],
+        "statement": ["statement", "said", "declared", "announced", "confirmed", "denied", "urged", "called for", "condemned"],
+        "deployment": ["deploy", "deployed", "sent", "dispatched", "reinforcement", "arrived", "positioned", "warship"]
+      },
+      "intensity_keywords": {
+        "5": ["mass casualty", "sunk", "catastrophic", "war declaration", "invasion"],
+        "4": ["breaking", "critical", "unprecedented", "major strike", "multiple missiles", "ship hit", "crew killed"],
+        "3": ["significant", "escalation", "multiple", "attack on", "hit by", "damaged"],
+        "2": ["new", "report", "update", "response", "patrol"],
+        "1": ["routine", "standard", "minor", "monitoring"]
+      },
+      "default_domains": ["military", "geo"],
+      "tag_map": {
+        "iran": ["iran-proxy"],
+        "missile": ["missile"],
+        "drone": ["drone"],
+        "ship": ["shipping"],
+        "vessel": ["shipping"],
+        "tanker": ["shipping"],
+        "cargo": ["shipping"],
+        "suez": ["suez", "cape-route"],
+        "insurance": ["insurance"],
+        "navy": ["naval"],
+        "warship": ["naval"],
+        "coalition": ["coalition"]
+      }
+    },
+
+    "ice-italy": {
+      "actors": {
+        "ice": {
+          "keywords": ["ice agent", "ice agents", "immigration and customs", "immigration enforcement", "ice officer", "ice official", "ice operation", "deportation force", "ice raid", "ice arrest"],
+          "weight": 2
+        },
+        "gov_it": {
+          "keywords": ["meloni", "palazzo chigi", "governo italiano", "italian government", "ministero", "ministry of interior", "salvini", "piantedosi", "interior minister"],
+          "weight": 2
+        },
+        "police_it": {
+          "keywords": ["questura", "digos", "polizia", "carabinieri", "italian police", "police arrest", "law enforcement italy"],
+          "weight": 2
+        },
+        "civil_society": {
+          "keywords": ["protest", "activist", "attivisti", "ngo", "ong", "asgi", "amnesty", "human rights", "civil society", "demonstrat", "rally", "march against"],
+          "weight": 1.5
+        },
+        "media": {
+          "keywords": ["reporter", "journalist", "press", "investigation", "coverage", "editorial", "corriere", "repubblica", "manifesto", "ansa"],
+          "weight": 1
+        },
+        "us_embassy": {
+          "keywords": ["us embassy", "american embassy", "ambassador", "state department", "bilateral", "washington"],
+          "weight": 1.5
+        },
+        "eu_inst": {
+          "keywords": ["european parliament", "eu commission", "brussels", "eurodeput", "european union", "eu institution"],
+          "weight": 1.5
+        },
+        "olympics": {
+          "keywords": ["olympics", "olimpiad", "olympic", "coni", "ioc", "milano-cortina", "cortina", "olympic security", "giochi olimpici", "winter games"],
+          "weight": 1.5
+        }
+      },
+      "action_types": {
+        "deployment": ["deploy", "deployed", "arrived", "contingent", "stationed", "presence", "sent agents"],
+        "operation": ["operation", "raid", "checkpoint", "patrol", "stopped", "checked documents", "identificat"],
+        "agreement": ["agreement", "accord", "treaty", "cooperat", "bilateral deal", "signed"],
+        "statement": ["statement", "said", "declared", "confirmed", "denied", "announced", "comment"],
+        "protest": ["protest", "rally", "march", "demonstrat", "sit-in", "blocked", "occupied"],
+        "legal_action": ["legal", "lawsuit", "court", "esposto", "denuncia", "sued", "appeal", "tribunal"],
+        "arrest": ["arrest", "detained", "seized", "taken into custody", "fermato", "fermati"],
+        "policy": ["policy", "directive", "regulation", "order", "decree", "law", "legislation"],
+        "media_report": ["report", "investigation", "expose", "revealed", "uncovered", "published"],
+        "surveillance": ["surveillance", "monitoring", "tracking", "wiretap", "intelligence gathering"]
+      },
+      "intensity_keywords": {
+        "5": ["mass deportation", "constitutional crisis", "martial law", "sovereignty violation"],
+        "4": ["breaking", "unprecedented", "critical", "mass arrest", "violent", "crackdown", "emergency"],
+        "3": ["significant", "escalation", "multiple arrest", "major", "widespread"],
+        "2": ["new", "update", "report", "announced", "confirmed"],
+        "1": ["routine", "standard", "minor", "scheduled"]
+      },
+      "default_domains": ["sovereignty", "civil_rights"],
+      "tag_map": {
+        "olympic": ["olympics-2026", "milano-cortina"],
+        "olimpic": ["olympics-2026", "milano-cortina"],
+        "cortina": ["olympics-2026", "milano-cortina"],
+        "sovranit": ["sovereignty"],
+        "sovereignty": ["sovereignty"],
+        "extraterritorial": ["extraterritorial"],
+        "deportat": ["immigration"],
+        "immigra": ["immigration"],
+        "palestine": ["free-palestine"],
+        "meloni": ["meloni-trump"],
+        "trump": ["meloni-trump"],
+        "nato": ["nato"],
+        "bilateral": ["bilateral"],
+        "human rights": ["civil-rights"],
+        "diritti": ["civil-rights"],
+        "press freedom": ["press-freedom"]
+      }
+    }
+  }
+}

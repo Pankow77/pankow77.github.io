@@ -889,6 +889,7 @@
         import Circulation from './js/circulation.js';
         import EvaluationEngine from './js/evaluation-engine.js';
         import BabElMandebModule from './js/modules/bab-el-mandeb.js';
+        import FeedIngestorModule from './js/feed-ingestor.js';
 
         // ── Boot sequence ──
         await Identity.init();
@@ -896,6 +897,7 @@
         ECOSYSTEM.register('circulation', Circulation);
         ECOSYSTEM.register('evaluation-engine', EvaluationEngine);
         ECOSYSTEM.register('bab-el-mandeb', BabElMandebModule);
+        ECOSYSTEM.register('feed-ingestor', FeedIngestorModule);
 
         // ── Actor colors ──
         const ACTOR_COLORS = {
@@ -1196,10 +1198,19 @@
             drawFrequencyChart();
         });
 
-        // Listen for ingestion events from other tabs
+        // Listen for ingestion events from other tabs and autonomous feeds
         Bus.on('bab-el-mandeb:epoch-ingested', () => {
             refreshUI();
         });
+        Bus.on('feed-ingestor:poll-complete', () => {
+            refreshUI();
+        });
+
+        // ── CONSOLE ACCESS ──
+        window.BAB = BabElMandebModule;
+        window.BUS = Bus;
+        window.ECO = ECOSYSTEM;
+        window.FEEDS = FeedIngestorModule;
 
         console.log(
             '%c[BAB-EL-MANDEB] %cInterface ready. %cOperator: PANKOW_77C',
