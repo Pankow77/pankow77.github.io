@@ -70,13 +70,18 @@ class NarrativeEngine {
       );
     }
 
-    // 2. Build the system prompt with full context (including narrative pressure)
-    final systemPrompt = _buildSystemPrompt(session, safetyLevel);
+    // 2. Suggest a speaker based on context (code-level guidance)
+    final speakerSuggestion = _suggestSpeaker(userInput, session);
 
-    // 3. Build conversation history for the LLM
+    // 3. Build the system prompt with full context (including narrative pressure)
+    final systemPrompt = _buildSystemPrompt(
+      session, safetyLevel, speakerSuggestion: speakerSuggestion,
+    );
+
+    // 4. Build conversation history for the LLM
     final history = _buildHistory(session.messages, userInput);
 
-    // 4. Send to LLM
+    // 5. Send to LLM
     final response = await llmService.sendMessage(
       systemPrompt: systemPrompt,
       messages: history,
@@ -84,13 +89,13 @@ class NarrativeEngine {
       maxTokens: _maxTokensForLumen(session.lumen.count),
     );
 
-    // 5. Parse the response into narrative messages
+    // 6. Parse the response into narrative messages
     var messages = _parseResponse(response, session.lumen.count);
 
-    // 6. ENFORCE GHOST CONSTRAINTS — code-level, not prompt-level
+    // 7. ENFORCE GHOST CONSTRAINTS — code-level, not prompt-level
     messages = _enforceGhostConstraints(messages, session);
 
-    // 7. Check if a Lumen should be lost (intensity-aware)
+    // 8. Check if a Lumen should be lost (intensity-aware)
     final userMessagesSinceLastLoss = _countMessagesSinceLastLumenLoss(session);
     final timeSinceLastLoss = _timeSinceLastLumenLoss(session);
     final shouldLoseLumen = lumenEngine.shouldLoseLumen(
@@ -107,11 +112,69 @@ class NarrativeEngine {
     );
   }
 
+  /// Suggest which character should speak, based on context.
+  ///
+  /// This is a CODE-LEVEL suggestion injected into the system prompt.
+  /// The LLM can override for strong narrative reasons, but should
+  /// generally follow the suggestion. For safety and Ghost situations,
+  /// the code FORCES the behavior (via SafetyEngine and Ghost Enforcer).
+  String _suggestSpeaker(String userInput, SessionData session) {
+    final lower = userInput.toLowerCase();
+    final wordCount = userInput.split(RegExp(r'\s+')).length;
+    final lumen = session.lumen.count;
+
+    // Act III: all speak in sequence (no suggestion needed)
+    if (lumen <= 2) return '';
+
+    // Very short input (1-3 words): user might be defensive or disengaged
+    if (wordCount <= 3 && lower.length < 15) {
+      return 'SPEAKER SUGGESTION: Veteran (the user is being brief — '
+          'the Veteran can call this out gently or match the energy).';
+    }
+
+    // Long, confessional input (30+ words): Medic should listen and remember
+    if (wordCount >= 30) {
+      return 'SPEAKER SUGGESTION: Medic (the user is disclosing at length — '
+          'the Medic should listen, reference past details, go one layer deeper).';
+    }
+
+    // Questions from the user: Captain should answer with authority
+    if (lower.endsWith('?')) {
+      return 'SPEAKER SUGGESTION: Captain (the user asked a question — '
+          'the Captain should answer with calm authority).';
+    }
+
+    // User expresses helplessness: Engineer should give a task
+    if (lower.contains('non so') || lower.contains('don\'t know') ||
+        lower.contains('non posso') || lower.contains('can\'t') ||
+        lower.contains('cosa faccio') || lower.contains('what do i do')) {
+      return 'SPEAKER SUGGESTION: Engineer (the user feels helpless — '
+          'give them a task. "Hold this. Focus on this. Use your hands.").';
+    }
+
+    // User references past trauma or loss: Medic + Veteran
+    if (lower.contains('madre') || lower.contains('mother') ||
+        lower.contains('padre') || lower.contains('father') ||
+        lower.contains('morto') || lower.contains('morta') ||
+        lower.contains('died') || lower.contains('lost')) {
+      return 'SPEAKER SUGGESTION: Medic (disclosure about loss — '
+          'the Medic remembers and goes deeper). '
+          'Veteran may also respond with parallel recognition.';
+    }
+
+    // No strong signal: let the LLM choose based on narrative flow
+    return '';
+  }
+
   /// Build the full system prompt with all context layers.
   ///
   /// Combines the master TERMINUS-OMNI prompt with dynamic context:
   /// Lumen state, safety state, user character profile, narrative pressure.
-  String _buildSystemPrompt(SessionData session, SafetyLevel safetyLevel) {
+  String _buildSystemPrompt(
+    SessionData session,
+    SafetyLevel safetyLevel, {
+    String speakerSuggestion = '',
+  }) {
     // Calculate narrative pressure for gentle nudge system
     final timeSinceLastLoss = _timeSinceLastLumenLoss(session);
     final narrativePressure = lumenEngine.getNarrativePressure(
@@ -160,6 +223,7 @@ $userContext
 $shipLogContext
 
 GHOST STATUS: $ghostContext
+${speakerSuggestion.isNotEmpty ? '\n$speakerSuggestion\n' : ''}
 ''',
     );
   }

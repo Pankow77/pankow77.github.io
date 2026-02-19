@@ -21,16 +21,23 @@ enum SafetyLevel {
 
 /// The safety engine.
 ///
-/// This is NOT a traditional safety classifier. It does not use lexical triggers.
-/// It monitors the emotional trajectory of the conversation and intervenes
-/// WITHIN the narrative frame.
+/// This is NOT a traditional safety classifier. It does not break the frame.
+/// It monitors the emotional trajectory AND content of the conversation
+/// and intervenes WITHIN the narrative frame.
+///
+/// Detection is hybrid:
+/// - CODE detects patterns (this engine) → injects safety level into LLM context
+/// - LLM executes the response IN-FRAME (as the crew)
 ///
 /// The safety IS the story. The story IS the safety.
 class SafetyEngine {
+  /// Count of consecutive modulate-level triggers (for escalation).
+  int _consecutiveModulations = 0;
+
   /// Evaluate the current emotional state based on recent messages.
   ///
-  /// This produces instructions for the LLM about how to modulate,
-  /// not direct interventions. The LLM (as the crew) handles the response.
+  /// Returns a SafetyLevel that is injected into the LLM's system prompt.
+  /// The LLM (as the crew) handles the response within the narrative.
   SafetyLevel evaluate(List<NarrativeMessage> recentMessages) {
     if (recentMessages.isEmpty) return SafetyLevel.nominal;
 
@@ -41,16 +48,41 @@ class SafetyEngine {
 
     if (userMessages.isEmpty) return SafetyLevel.nominal;
 
-    // Check for rapid escalation (many short, intense messages)
+    final lastMessage = userMessages.last.content;
+
+    // LEVEL 4: Emergency — immediate danger signals
+    if (_detectEmergency(lastMessage)) {
+      _consecutiveModulations = 0;
+      return SafetyLevel.emergency;
+    }
+
+    // LEVEL 3: Direct Address — persistent crisis indicators
+    if (_detectPersistentCrisis(userMessages)) {
+      _consecutiveModulations = 0;
+      return SafetyLevel.directAddress;
+    }
+
+    // LEVEL 2: Crew Rest — rapid escalation or accumulated distress
     if (_detectRapidEscalation(userMessages)) {
+      _consecutiveModulations = 0;
       return SafetyLevel.crewRest;
     }
 
-    // Check for signs of dissociation (incoherent, very short, withdrawal)
-    if (_detectDissociation(userMessages)) {
+    // LEVEL 1: Modulation — signs of flooding or distress
+    if (_detectDistress(lastMessage, userMessages)) {
+      _consecutiveModulations++;
+
+      // If we've modulated 3 times in a row, escalate to crew rest
+      if (_consecutiveModulations >= 3) {
+        _consecutiveModulations = 0;
+        return SafetyLevel.crewRest;
+      }
+
       return SafetyLevel.modulate;
     }
 
+    // Reset modulation counter on normal messages
+    _consecutiveModulations = 0;
     return SafetyLevel.nominal;
   }
 
@@ -96,7 +128,62 @@ Then activate crew rest.
     }
   }
 
-  /// Detect rapid emotional escalation.
+  /// LEVEL 4: Detect immediate danger.
+  ///
+  /// Catches present-tense suicidal intent, self-harm in progress,
+  /// and explicit crisis statements. Handles typos and variations.
+  bool _detectEmergency(String message) {
+    final lower = message.toLowerCase();
+
+    // Present-tense suicidal intent patterns
+    final emergencyPatterns = [
+      // Italian
+      'mi uccido', 'mi ammazzo', 'voglio morire', 'voglio farla finita',
+      'non voglio più vivere', 'meglio morto', 'meglio morta',
+      'mi taglio', 'mi sto tagliando', 'ho le pillole',
+      'sto per saltare', 'salto giù', 'mi butto',
+      // English
+      'kill myself', 'killing myself', 'want to die', 'going to die',
+      'end it all', 'end my life', 'better off dead',
+      'cutting myself', 'have the pills', 'have a gun',
+      'going to jump', 'about to jump', 'on the bridge',
+      'on the ledge', 'goodbye', 'this is my last',
+    ];
+
+    for (final pattern in emergencyPatterns) {
+      if (lower.contains(pattern)) return true;
+    }
+
+    // Typo-resilient: "voglio morir" (missing e), "mi ucido" (missing c)
+    if (_fuzzyMatch(lower, 'voglio morir')) return true;
+    if (_fuzzyMatch(lower, 'mi ucido')) return true;
+    if (_fuzzyMatch(lower, 'kill mysel')) return true;
+
+    return false;
+  }
+
+  /// LEVEL 3: Detect persistent crisis across multiple messages.
+  ///
+  /// The user has been expressing distress consistently, not just
+  /// in a single message. This is different from a single dark moment.
+  bool _detectPersistentCrisis(List<NarrativeMessage> userMessages) {
+    if (userMessages.length < 5) return false;
+
+    final recent = userMessages.length > 8
+        ? userMessages.sublist(userMessages.length - 8)
+        : userMessages;
+
+    // Count messages with distress signals
+    var distressCount = 0;
+    for (final msg in recent) {
+      if (_containsDistressSignals(msg.content)) distressCount++;
+    }
+
+    // If more than 60% of recent messages show distress, escalate
+    return distressCount / recent.length > 0.6;
+  }
+
+  /// Detect rapid emotional escalation (many short, intense messages).
   bool _detectRapidEscalation(List<NarrativeMessage> userMessages) {
     if (userMessages.length < 5) return false;
 
@@ -104,8 +191,7 @@ Then activate crew rest.
         ? userMessages.sublist(userMessages.length - 8)
         : userMessages;
 
-    // Heuristic: many very short messages in rapid succession
-    // may indicate distress rather than engaged play
+    // Many very short messages in rapid succession
     final shortMessageCount = recent
         .where((m) => m.content.trim().length < 10)
         .length;
@@ -116,7 +202,53 @@ Then activate crew rest.
     return shortMessageCount >= 5 && rapidFire;
   }
 
-  /// Detect signs of dissociation.
+  /// LEVEL 1: Detect distress in a single message or recent pattern.
+  bool _detectDistress(String message, List<NarrativeMessage> userMessages) {
+    if (_containsDistressSignals(message)) return true;
+
+    // Check for dissociation (sudden message length drop)
+    if (_detectDissociation(userMessages)) return true;
+
+    return false;
+  }
+
+  /// Check if a message contains distress signals (not emergency-level).
+  bool _containsDistressSignals(String message) {
+    final lower = message.toLowerCase();
+
+    final distressPatterns = [
+      // Italian
+      'non ce la faccio', 'non posso più', 'fa troppo male',
+      'non ha senso', 'sono solo', 'sono sola', 'nessuno mi capisce',
+      'è colpa mia', 'non valgo niente', 'non merito',
+      'non riesco', 'mi fa schifo', 'odio me stesso', 'odio me stessa',
+      'non dormo', 'non mangio', 'bevo troppo',
+      // English
+      'can\'t take it', 'can\'t do this', 'too much pain',
+      'no point', 'all alone', 'nobody cares', 'nobody understands',
+      'my fault', 'worthless', 'don\'t deserve',
+      'hate myself', 'can\'t sleep', 'can\'t eat', 'drinking too much',
+      'hurting', 'hopeless', 'helpless', 'give up',
+    ];
+
+    for (final pattern in distressPatterns) {
+      if (lower.contains(pattern)) return true;
+    }
+
+    // All caps (shouting) in a long message
+    if (message.length > 20 && message == message.toUpperCase()) return true;
+
+    // Repetition ("no no no no", "stop stop stop")
+    final words = lower.split(RegExp(r'\s+'));
+    if (words.length >= 3) {
+      final firstWord = words.first;
+      if (words.every((w) => w == firstWord)) return true;
+    }
+
+    return false;
+  }
+
+  /// Detect signs of dissociation (sudden disengagement).
   bool _detectDissociation(List<NarrativeMessage> userMessages) {
     if (userMessages.length < 3) return false;
 
@@ -124,7 +256,6 @@ Then activate crew rest.
         ? userMessages.sublist(userMessages.length - 5)
         : userMessages;
 
-    // Heuristic: sudden shift from longer messages to very short/empty
     if (recent.length >= 3) {
       final earlier = recent.sublist(0, recent.length ~/ 2);
       final later = recent.sublist(recent.length ~/ 2);
@@ -140,6 +271,21 @@ Then activate crew rest.
       if (earlierAvg > 20 && laterAvg < earlierAvg * 0.3) {
         return true;
       }
+    }
+
+    return false;
+  }
+
+  /// Fuzzy match for typo-resilient detection.
+  /// Checks if the message contains a string within edit distance 1.
+  bool _fuzzyMatch(String message, String pattern) {
+    // Simple check: does the message contain the pattern?
+    if (message.contains(pattern)) return true;
+
+    // Check with one character removed from pattern (handles typos)
+    for (var i = 0; i < pattern.length; i++) {
+      final variant = pattern.substring(0, i) + pattern.substring(i + 1);
+      if (variant.length >= 4 && message.contains(variant)) return true;
     }
 
     return false;
