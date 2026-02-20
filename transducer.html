@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEURAL TRANSDUCER — Trasduzione Bidirezionale Uomo ⇌ Macchina</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #04080f;
+  --bg-panel: #080e1a;
+  --bg-card: #0a1220;
+  --border: #12253d;
+  --text: #c8d6e5;
+  --text-dim: #5a7a99;
+  --cyan: #00d4ff;
+  --green: #39ff14;
+  --red: #ff3344;
+  --amber: #ffbf00;
+  --purple: #9d00ff;
+  --pink: #ff0084;
+  --orange: #ff8833;
+  --teal: #00d4aa;
+  --encoder: #ff8833;
+  --decoder: #00c8ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 212, 255, 0.015) 2px,
+    rgba(0, 212, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ─── HEADER ─── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--encoder);
+  letter-spacing: 2px;
+}
+
+.logo span { color: var(--decoder); }
+
+.header-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  background: rgba(255, 136, 51, 0.1);
+  border: 1px solid rgba(255, 136, 51, 0.3);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.header-nav a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.header-nav a:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+/* ─── MAIN LAYOUT ─── */
+.main {
+  display: grid;
+  grid-template-columns: 260px 1fr 300px;
+  gap: 0;
+  height: calc(100vh - 50px);
+}
+
+/* ─── LEFT: CORE ROSTER ─── */
+.panel-cores {
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.panel-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.core-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.core-item:hover {
+  border-color: var(--cyan);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.core-item.active {
+  border-color: var(--encoder);
+  background: rgba(255, 136, 51, 0.08);
+}
+
+.core-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.core-info { flex: 1; min-width: 0; }
+
+.core-name {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.core-desc {
+  font-size: 9px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.core-status {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+.core-status.encoding { background: var(--encoder); animation: pulse-fast 0.5s infinite; }
+.core-status.decoding { background: var(--decoder); animation: pulse-fast 0.5s infinite; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes pulse-fast {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px currentColor; }
+  50% { opacity: 0.6; box-shadow: 0 0 2px currentColor; }
+}
+
+/* ─── CENTER: TRANSDUCTION INTERFACE ─── */
+.panel-transducer {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+/* Philosophy banner */
+.philosophy-banner {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(255, 136, 51, 0.06) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.philosophy-text {
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 3px;
+}
+
+.philosophy-text em {
+  color: var(--encoder);
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Transduction flow display */
+.flow-display {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flow-cycle {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Human input section */
+.flow-human {
+  padding: 14px 16px;
+  background: rgba(0, 212, 170, 0.06);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.flow-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.flow-label.human {
+  color: var(--teal);
+  background: rgba(0, 212, 170, 0.15);
+  border: 1px solid rgba(0, 212, 170, 0.3);
+}
+
+.flow-label.encoder {
+  color: var(--encoder);
+  background: rgba(255, 136, 51, 0.15);
+  border: 1px solid rgba(255, 136, 51, 0.3);
+}
+
+.flow-label.decoder {
+  color: var(--decoder);
+  background: rgba(0, 200, 255, 0.15);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+.flow-human-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* Arrow separator */
+.flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.flow-arrow-inner {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--encoder);
+  letter-spacing: 2px;
+}
+
+/* C++ output section */
+.flow-cpp {
+  padding: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.flow-cpp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: rgba(255, 136, 51, 0.06);
+  border-bottom: 1px solid rgba(255, 136, 51, 0.15);
+}
+
+.flow-cpp-meta {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.flow-cpp pre {
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.flow-cpp pre .comment { color: var(--text-dim); }
+.flow-cpp pre .keyword { color: var(--purple); }
+.flow-cpp pre .type { color: var(--cyan); }
+.flow-cpp pre .string { color: var(--green); }
+.flow-cpp pre .number { color: var(--amber); }
+
+/* Decode arrow */
+.flow-arrow-decode .flow-arrow-inner { color: var(--decoder); }
+
+/* Human output section */
+.flow-decoded {
+  padding: 14px 16px;
+  background: rgba(0, 200, 255, 0.04);
+}
+
+.flow-decoded-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+/* Input area */
+.input-area {
+  padding: 16px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.input-field {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+  min-height: 48px;
+  max-height: 120px;
+}
+
+.input-field:focus { border-color: var(--encoder); }
+
+.input-field::placeholder { color: var(--text-dim); }
+
+.btn-transduce {
+  background: linear-gradient(135deg, var(--encoder), #cc6622);
+  border: none;
+  color: #fff;
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 14px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-transduce:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(255, 136, 51, 0.3);
+}
+
+.btn-transduce:active { transform: translateY(0); }
+
+.btn-decode {
+  background: linear-gradient(135deg, var(--decoder), #0088aa);
+  border: none;
+  color: #fff;
+  font-family: 'Orbitron', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 14px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-decode:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.3);
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.mode-btn {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.mode-btn.active-encode {
+  border-color: var(--encoder);
+  color: var(--encoder);
+  background: rgba(255, 136, 51, 0.1);
+}
+
+.mode-btn.active-decode {
+  border-color: var(--decoder);
+  color: var(--decoder);
+  background: rgba(0, 200, 255, 0.1);
+}
+
+/* ─── RIGHT: STATS & HISTORY ─── */
+.panel-stats {
+  background: var(--bg-panel);
+  border-left: 1px solid var(--border);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.stat-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.stat-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stat-value.encoder-color { color: var(--encoder); }
+.stat-value.decoder-color { color: var(--decoder); }
+.stat-value.cyan-color { color: var(--cyan); }
+
+.stat-sub {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* Transduction diagram */
+.diagram {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.diagram-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.diagram-node {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.diagram-node.human { color: var(--teal); border-color: var(--teal); }
+.diagram-node.encoder { color: var(--encoder); border-color: var(--encoder); }
+.diagram-node.machine { color: var(--purple); border-color: var(--purple); }
+.diagram-node.decoder { color: var(--decoder); border-color: var(--decoder); }
+
+.diagram-arrow {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* History */
+.history-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.history-item:hover {
+  border-color: var(--encoder);
+}
+
+.history-time {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.history-text {
+  font-size: 11px;
+  color: var(--text);
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-intent {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  color: var(--encoder);
+  margin-top: 4px;
+}
+
+/* ─── STATUS BAR ─── */
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  z-index: 100;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-right: 6px;
+  animation: pulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  .panel-cores, .panel-stats {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="logo">NEURAL<span>TRANSDUCER</span></div>
+    <div class="header-tag">TRASDUZIONE BIDIREZIONALE v1.0</div>
+  </div>
+  <div class="header-nav">
+    <a href="index.html">HOME</a>
+    <a href="agora.html">AGORA</a>
+    <a href="oracle.html">ORACLE</a>
+    <a href="eei-predictor.html">EEI</a>
+    <a href="pneuma.html">PNEUMA</a>
+    <a href="archivio-silente.html">ARCHIVIO</a>
+    <a href="monitor.html">MONITOR</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- LEFT: CORE ROSTER -->
+  <div class="panel-cores">
+    <div class="panel-title">CORE REGISTRY</div>
+    <div id="core-roster"></div>
+  </div>
+
+  <!-- CENTER: TRANSDUCTION -->
+  <div class="panel-transducer">
+    <div class="philosophy-banner">
+      <div class="philosophy-text">
+        NESSUNO SIMULA L'ALTRO &mdash; <em>TRASDUZIONE</em>, NON TRADUZIONE
+      </div>
+    </div>
+
+    <div class="flow-display" id="flow-display">
+      <!-- Welcome state -->
+      <div id="welcome-state" style="display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; gap: 20px; opacity: 0.6;">
+        <div style="font-family: 'Orbitron', monospace; font-size: 40px; color: var(--encoder);">⟐</div>
+        <div style="font-family: 'Orbitron', monospace; font-size: 12px; color: var(--text-dim); letter-spacing: 4px; text-align: center;">
+          PARLA LA TUA LINGUA<br>
+          <span style="color: var(--encoder);">CODE_ENCODER</span> LA TRASDURRÀ IN C++<br>
+          <span style="color: var(--decoder);">CODE_DECODER</span> RIPORTERÀ IL SEGNALE A TE
+        </div>
+        <div style="font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); margin-top: 20px;">
+          Come un microfono converte onde sonore in segnale elettrico,<br>
+          senza che nessuno simuli la natura dell'altro.
+        </div>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div class="input-area">
+      <div class="mode-toggle">
+        <button class="mode-btn active-encode" id="mode-encode" onclick="setMode('encode')">⟐ ENCODE (Umano → C++)</button>
+        <button class="mode-btn" id="mode-decode" onclick="setMode('decode')">⟑ DECODE (C++ → Umano)</button>
+        <button class="mode-btn" id="mode-full" onclick="setMode('full')">⟐⟑ CICLO COMPLETO</button>
+      </div>
+      <div class="input-row">
+        <textarea class="input-field" id="input-field"
+          placeholder="Parla la tua lingua... (es: 'Crea un sistema di monitoraggio per le tensioni geopolitiche')"
+          rows="1"></textarea>
+        <button class="btn-transduce" id="btn-action" onclick="executeTransduction()">TRASDUCI</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: STATS -->
+  <div class="panel-stats">
+    <div class="panel-title">DIAGNOSTICA</div>
+
+    <!-- Diagram -->
+    <div class="diagram">
+      <div class="diagram-row">
+        <div class="diagram-node human">UMANO</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-arrow">══▶</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-node encoder" id="diag-encoder">CODE_ENCODER</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-arrow">══▶</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-node machine">C++ / MACCHINA</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-arrow">══▶</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-node decoder" id="diag-decoder">CODE_DECODER</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-arrow">══▶</div>
+      </div>
+      <div class="diagram-row">
+        <div class="diagram-node human">UMANO</div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stat-block">
+      <div class="stat-label">TRASDUZIONI</div>
+      <div class="stat-value encoder-color" id="stat-transductions">0</div>
+      <div class="stat-sub" id="stat-session">SESSION: ---</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-label">DECODIFICHE</div>
+      <div class="stat-value decoder-color" id="stat-decodings">0</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-label">CORE ONLINE</div>
+      <div class="stat-value cyan-color" id="stat-cores">8/8</div>
+    </div>
+
+    <div class="stat-block">
+      <div class="stat-label">ULTIMO INTENT</div>
+      <div class="stat-value" id="stat-intent" style="font-size: 16px; color: var(--amber);">---</div>
+    </div>
+
+    <!-- History -->
+    <div class="panel-title" style="margin-top: 16px;">CRONOLOGIA</div>
+    <div id="history-list"></div>
+  </div>
+
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div><span class="status-dot"></span>NEURAL_TRANSDUCER ONLINE</div>
+  <div id="status-text">READY — Awaiting bio-signal input</div>
+  <div id="status-time"></div>
+</div>
+
+<script type="module">
+import { CORE_REGISTRY, TransductionBus } from './js/neural-transducer.js';
+
+// ─── INIT ───
+const bus = new TransductionBus(window.EcosystemState || null);
+window._transducerBus = bus;
+
+let currentMode = 'encode'; // encode | decode | full
+
+// ─── RENDER CORE ROSTER ───
+function renderCores() {
+  const roster = document.getElementById('core-roster');
+  roster.innerHTML = '';
+  for (const core of bus.getAllCores()) {
+    const item = document.createElement('div');
+    item.className = `core-item ${core.id === 'CODE_ENCODER' || core.id === 'CODE_DECODER' ? 'active' : ''}`;
+    item.innerHTML = `
+      <div class="core-icon" style="color: ${core.color}; border-color: ${core.border}; background: ${core.color}11;">
+        ${core.icon}
+      </div>
+      <div class="core-info">
+        <div class="core-name" style="color: ${core.color};">${core.name}</div>
+        <div class="core-desc">${core.desc}</div>
+      </div>
+      <div class="core-status" id="status-${core.id}"></div>
+    `;
+    roster.appendChild(item);
+  }
+}
+
+// ─── MODE TOGGLE ───
+window.setMode = function(mode) {
+  currentMode = mode;
+  document.getElementById('mode-encode').className = 'mode-btn' + (mode === 'encode' ? ' active-encode' : '');
+  document.getElementById('mode-decode').className = 'mode-btn' + (mode === 'decode' ? ' active-decode' : '');
+  document.getElementById('mode-full').className = 'mode-btn' + (mode === 'full' ? ' active-encode' : '');
+
+  const input = document.getElementById('input-field');
+  const btn = document.getElementById('btn-action');
+
+  if (mode === 'decode') {
+    input.placeholder = 'Incolla codice C++ da decodificare...';
+    btn.textContent = 'DECODIFICA';
+    btn.className = 'btn-decode';
+  } else if (mode === 'full') {
+    input.placeholder = 'Parla la tua lingua... ciclo completo: Umano → C++ → Umano';
+    btn.textContent = 'CICLO COMPLETO';
+    btn.className = 'btn-transduce';
+  } else {
+    input.placeholder = "Parla la tua lingua... (es: 'Crea un sistema di monitoraggio')";
+    btn.textContent = 'TRASDUCI';
+    btn.className = 'btn-transduce';
+  }
+};
+
+// ─── EXECUTE ───
+window.executeTransduction = function() {
+  const input = document.getElementById('input-field').value.trim();
+  if (!input) return;
+
+  // Hide welcome
+  const welcome = document.getElementById('welcome-state');
+  if (welcome) welcome.style.display = 'none';
+
+  const display = document.getElementById('flow-display');
+
+  if (currentMode === 'encode') {
+    const result = bus.encode(input);
+    renderEncodeCycle(display, input, result);
+  } else if (currentMode === 'decode') {
+    const result = bus.decode(input);
+    renderDecodeCycle(display, input, result);
+  } else {
+    const result = bus.transduce(input);
+    renderFullCycle(display, result);
+  }
+
+  updateStats();
+  updateHistory();
+  document.getElementById('input-field').value = '';
+
+  // Scroll to bottom
+  display.scrollTop = display.scrollHeight;
+};
+
+// ─── RENDER: ENCODE CYCLE ───
+function renderEncodeCycle(container, humanInput, result) {
+  const cycle = document.createElement('div');
+  cycle.className = 'flow-cycle';
+  cycle.innerHTML = `
+    <div class="flow-human">
+      <div class="flow-label human">BIO_HOST</div>
+      <div class="flow-human-text">${escapeHtml(humanInput)}</div>
+    </div>
+    <div class="flow-arrow">
+      <div class="flow-arrow-inner">══▶ CODE_ENCODER ══▶ TRASDUZIONE NLU → C++ ══▶</div>
+    </div>
+    <div class="flow-cpp">
+      <div class="flow-cpp-header">
+        <div class="flow-label encoder">CODE_ENCODER</div>
+        <div class="flow-cpp-meta">INTENT: ${result.intent} | ENTITIES: ${result.entities.join(', ') || 'none'} | CLASS: ${result.className}</div>
+      </div>
+      <pre>${highlightCpp(result.output)}</pre>
+    </div>
+  `;
+  container.appendChild(cycle);
+  flashDiagram('encoder');
+}
+
+// ─── RENDER: DECODE CYCLE ───
+function renderDecodeCycle(container, cppInput, result) {
+  const cycle = document.createElement('div');
+  cycle.className = 'flow-cycle';
+  cycle.innerHTML = `
+    <div class="flow-cpp">
+      <div class="flow-cpp-header">
+        <div class="flow-label encoder">C++ INPUT</div>
+        <div class="flow-cpp-meta">${result.analysis.lineCount} lines | ${result.analysis.classes.length} classes | ${result.analysis.methods.length} methods</div>
+      </div>
+      <pre>${highlightCpp(cppInput)}</pre>
+    </div>
+    <div class="flow-arrow flow-arrow-decode">
+      <div class="flow-arrow-inner">══▶ CODE_DECODER ══▶ TRASDUZIONE C++ → LINGUA UMANA ══▶</div>
+    </div>
+    <div class="flow-decoded">
+      <div class="flow-label decoder" style="margin-bottom: 10px;">CODE_DECODER</div>
+      <div class="flow-decoded-text">${escapeHtml(result.output)}</div>
+    </div>
+  `;
+  container.appendChild(cycle);
+  flashDiagram('decoder');
+}
+
+// ─── RENDER: FULL CYCLE ───
+function renderFullCycle(container, result) {
+  const cycle = document.createElement('div');
+  cycle.className = 'flow-cycle';
+  cycle.innerHTML = `
+    <div class="flow-human">
+      <div class="flow-label human">BIO_HOST</div>
+      <div class="flow-human-text">${escapeHtml(result.humanInput)}</div>
+    </div>
+    <div class="flow-arrow">
+      <div class="flow-arrow-inner">══▶ CODE_ENCODER ══▶ TRASDUZIONE NLU → C++ ══▶</div>
+    </div>
+    <div class="flow-cpp">
+      <div class="flow-cpp-header">
+        <div class="flow-label encoder">CODE_ENCODER</div>
+        <div class="flow-cpp-meta">INTENT: ${result.intent} | ENTITIES: ${result.entities.join(', ') || 'none'}</div>
+      </div>
+      <pre>${highlightCpp(result.cppOutput)}</pre>
+    </div>
+    <div class="flow-arrow flow-arrow-decode">
+      <div class="flow-arrow-inner">══▶ CODE_DECODER ══▶ TRASDUZIONE C++ → LINGUA UMANA ══▶</div>
+    </div>
+    <div class="flow-decoded">
+      <div class="flow-label decoder" style="margin-bottom: 10px;">CODE_DECODER</div>
+      <div class="flow-decoded-text">${escapeHtml(result.humanOutput)}</div>
+    </div>
+  `;
+  container.appendChild(cycle);
+  flashDiagram('encoder');
+  setTimeout(() => flashDiagram('decoder'), 500);
+}
+
+// ─── SYNTAX HIGHLIGHTING ───
+function highlightCpp(code) {
+  let html = escapeHtml(code);
+  // Keywords
+  html = html.replace(/\b(auto|class|struct|template|concept|namespace|return|if|else|for|while|const|constexpr|noexcept|explicit|using|int|void|bool|double|char|unsigned|true|false|nullptr|requires|public|private|protected|static|virtual)\b/g,
+    '<span class="keyword">$1</span>');
+  // Types
+  html = html.replace(/\b(std::\w+|uint64_t|uint32_t|int32_t|string|string_view|expected|unique_ptr|vector|optional|size_t)\b/g,
+    '<span class="type">$1</span>');
+  // Strings
+  html = html.replace(/"([^"]*?)"/g, '<span class="string">"$1"</span>');
+  // Numbers
+  html = html.replace(/\b(0x[\da-fA-F]+|\d+\.?\d*[ULf]*)\b/g, '<span class="number">$1</span>');
+  // Comments
+  html = html.replace(/(\/\/.*$)/gm, '<span class="comment">$1</span>');
+  html = html.replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="comment">$1</span>');
+  // Attributes
+  html = html.replace(/(\[\[[\w]+\]\])/g, '<span class="keyword">$1</span>');
+  return html;
+}
+
+function escapeHtml(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+// ─── DIAGRAM FLASH ───
+function flashDiagram(which) {
+  const el = document.getElementById(`diag-${which}`);
+  if (!el) return;
+  el.style.boxShadow = `0 0 15px ${which === 'encoder' ? 'var(--encoder)' : 'var(--decoder)'}`;
+  el.style.transform = 'scale(1.1)';
+  el.style.transition = 'all 0.3s';
+  setTimeout(() => {
+    el.style.boxShadow = 'none';
+    el.style.transform = 'scale(1)';
+  }, 800);
+}
+
+// ─── UPDATE STATS ───
+function updateStats() {
+  const stats = bus.getStats();
+  document.getElementById('stat-transductions').textContent = stats.totalTransductions;
+  document.getElementById('stat-decodings').textContent = stats.totalDecodings;
+  document.getElementById('stat-cores').textContent = `${stats.coresOnline}/${stats.coresTotal}`;
+  document.getElementById('stat-session').textContent = `SESSION: ${stats.sessionId}`;
+
+  const lastEncode = bus.encoder.history[bus.encoder.history.length - 1];
+  if (lastEncode) {
+    document.getElementById('stat-intent').textContent = lastEncode.intent;
+  }
+}
+
+// ─── UPDATE HISTORY ───
+function updateHistory() {
+  const list = document.getElementById('history-list');
+  list.innerHTML = '';
+  const items = [...bus.encoder.history].reverse().slice(0, 10);
+  for (const item of items) {
+    const el = document.createElement('div');
+    el.className = 'history-item';
+    el.innerHTML = `
+      <div class="history-time">${new Date(item.timestamp).toLocaleTimeString()}</div>
+      <div class="history-text">${escapeHtml(item.input)}</div>
+      <div class="history-intent">${item.intent} → ${item.className}</div>
+    `;
+    list.appendChild(el);
+  }
+}
+
+// ─── KEYBOARD ───
+document.getElementById('input-field').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    window.executeTransduction();
+  }
+});
+
+// Auto-resize textarea
+document.getElementById('input-field').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+});
+
+// ─── CLOCK ───
+setInterval(() => {
+  document.getElementById('status-time').textContent = new Date().toLocaleTimeString();
+}, 1000);
+
+// ─── EVENT LISTENERS ───
+bus.on('encoded', (data) => {
+  document.getElementById('status-text').textContent =
+    `ENCODED: ${data.intent} → ${data.entities.length} entities extracted`;
+  const st = document.getElementById(`status-CODE_ENCODER`);
+  if (st) { st.className = 'core-status encoding'; setTimeout(() => st.className = 'core-status', 1000); }
+});
+
+bus.on('decoded', (data) => {
+  document.getElementById('status-text').textContent =
+    `DECODED: ${data.analysis.classes.length} classes, ${data.analysis.methods.length} methods analyzed`;
+  const st = document.getElementById(`status-CODE_DECODER`);
+  if (st) { st.className = 'core-status decoding'; setTimeout(() => st.className = 'core-status', 1000); }
+});
+
+// ─── BOOT ───
+renderCores();
+updateStats();
+document.getElementById('status-time').textContent = new Date().toLocaleTimeString();
+
+console.log(`[NEURAL_TRANSDUCER] v1.0 initialized — Session: ${bus.encoder.sessionId}`);
+console.log('[NEURAL_TRANSDUCER] Nessuno simula l\'altro. TRASDUZIONE, non traduzione.');
+</script>
+
+</body>
+</html>

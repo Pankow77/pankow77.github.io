@@ -1,0 +1,36 @@
+name: Archive Integrity CI
+
+on:
+  push:
+    paths:
+      - 'js/archivio-silente.js'
+      - 'tests/test-archivio.mjs'
+      - 'specs/ecosystem-schemas.js'
+      - 'js/schema-validator.js'
+  pull_request:
+    paths:
+      - 'js/archivio-silente.js'
+      - 'tests/test-archivio.mjs'
+      - 'specs/ecosystem-schemas.js'
+      - 'js/schema-validator.js'
+  workflow_dispatch:
+
+jobs:
+  archive-integrity:
+    name: Archivio Silente — Integrity Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run Archive Synthetic Test
+        run: node tests/test-archivio.mjs
+
+      - name: Verify JS syntax
+        run: node -c js/archivio-silente.js

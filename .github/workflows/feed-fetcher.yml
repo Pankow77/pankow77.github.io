@@ -1,0 +1,42 @@
+name: OSINT Feed Fetcher
+
+on:
+  schedule:
+    # Every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+    # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-feeds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch and classify RSS feeds
+        run: node scripts/fetch-feeds.mjs
+
+      - name: Check for changes
+        id: check
+        run: |
+          git diff --quiet data/feeds/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push feed data
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "Hybrid Syndicate Bot"
+          git config user.email "bot@hybridsyndicate.dev"
+          git add data/feeds/
+          git commit -m "feed: autonomous OSINT ingestion $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <title>MONITOR | 24H Observation</title>
+    <style>
+        @import url('https://fonts.bunny.net/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #020408;
+            --border: #0e1a30;
+            --cyan: #00c8ff;
+            --green: #39ff14;
+            --red: #ff3344;
+            --pink: #ff0084;
+            --text: #c8d6e5;
+            --text-dim: #2a3a55;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: var(--bg);
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--text);
+        }
+
+        /* ═══ STATUS BAR ═══ */
+        .status-bar {
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 12px;
+            background: #040810;
+            border-bottom: 1px solid var(--border);
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            z-index: 100;
+        }
+
+        .status-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-title {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 9px;
+            color: var(--pink);
+            letter-spacing: 0.2em;
+        }
+
+        .pulse-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .status-right {
+            display: flex;
+            gap: 14px;
+            color: var(--text-dim);
+        }
+
+        .status-right .val { color: var(--cyan); }
+
+        /* ═══ NAVIGATION TABS ═══ */
+        .nav-tabs {
+            height: 26px;
+            display: flex;
+            align-items: center;
+            background: #030610;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            gap: 0;
+        }
+
+        .nav-tab {
+            padding: 0 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            cursor: pointer;
+            border-right: 1px solid var(--border);
+            white-space: nowrap;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .nav-tab:hover { color: var(--cyan); background: rgba(0,200,255,0.03); }
+
+        .nav-tab.active {
+            color: var(--cyan);
+            background: rgba(0,200,255,0.06);
+            border-bottom: 2px solid var(--cyan);
+        }
+
+        .nav-tab.all-view {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        .nav-tab.all-view.active {
+            color: var(--green);
+            border-bottom-color: var(--green);
+        }
+
+        /* ═══ IFRAME CONTAINER (single view) ═══ */
+        .frame-container {
+            width: 100%;
+            height: calc(100vh - 54px);
+            position: relative;
+        }
+
+        .frame-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0; left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .frame-container iframe.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* ═══ GRID VIEW (all pages) ═══ */
+        .grid-container {
+            width: 100%;
+            height: calc(100vh - 54px);
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+        }
+
+        .grid-container.active {
+            display: grid;
+        }
+
+        .grid-cell {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg);
+        }
+
+        .grid-cell iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform-origin: 0 0;
+        }
+
+        .grid-label {
+            position: absolute;
+            top: 2px; left: 4px;
+            font-size: 7px;
+            font-family: 'Orbitron', monospace;
+            color: var(--cyan);
+            background: rgba(0,0,0,0.8);
+            padding: 1px 5px;
+            border-radius: 2px;
+            z-index: 10;
+            letter-spacing: 0.12em;
+            pointer-events: none;
+        }
+
+        /* ═══ AUTO-ROTATE INDICATOR ═══ */
+        .rotate-indicator {
+            display: none;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .rotate-indicator.active { display: flex; }
+
+        .rotate-bar {
+            width: 60px; height: 3px;
+            background: var(--border);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .rotate-fill {
+            height: 100%;
+            background: var(--cyan);
+            width: 0%;
+            transition: width 0.5s linear;
+        }
+
+        /* ═══ KEEP-ALIVE INDICATOR ═══ */
+        .keepalive-dot {
+            width: 4px; height: 4px;
+            border-radius: 50%;
+            background: var(--green);
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+        <div class="status-left">
+            <div class="pulse-dot"></div>
+            <span class="status-title">24H OBSERVATION</span>
+            <span id="clock" style="color: var(--cyan);">--:--:--</span>
+        </div>
+        <div class="status-right">
+            <span>UP <span class="val" id="uptime">0s</span></span>
+            <span>PAGES <span class="val" id="pageCount">0</span>/10</span>
+            <div class="rotate-indicator" id="rotateIndicator">
+                <span>ROTATE</span>
+                <div class="rotate-bar"><div class="rotate-fill" id="rotateFill"></div></div>
+            </div>
+            <div class="keepalive-dot" id="keepaliveDot"></div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav-tabs" id="navTabs">
+        <div class="nav-tab all-view active" data-view="grid">GRID</div>
+        <div class="nav-tab" data-view="rotate">AUTO</div>
+        <div class="nav-tab" data-page="0">ICE-ITALY</div>
+        <div class="nav-tab" data-page="1">BAB-EL-MANDEB</div>
+        <div class="nav-tab" data-page="2">ORACLE</div>
+        <div class="nav-tab" data-page="3">AGORA</div>
+        <div class="nav-tab" data-page="4">EEI</div>
+        <div class="nav-tab" data-page="5">ARCHIVIO</div>
+        <div class="nav-tab" data-page="6">BACKBONE</div>
+        <div class="nav-tab" data-page="7">PNEUMA</div>
+        <div class="nav-tab" data-page="8">CHRONOS</div>
+        <div class="nav-tab" data-page="9">TRANSDUCER</div>
+    </div>
+
+    <!-- SINGLE PAGE VIEW -->
+    <div class="frame-container" id="frameContainer"></div>
+
+    <!-- GRID VIEW -->
+    <div class="grid-container" id="gridContainer"></div>
+
+    <script>
+        // ═══════════════════════════════════════
+        // PAGES
+        // ═══════════════════════════════════════
+        const PAGES = [
+            { name: 'ICE-ITALY',     url: 'ice-italy.html' },
+            { name: 'BAB-EL-MANDEB', url: 'bab-el-mandeb.html' },
+            { name: 'ORACLE',        url: 'oracle.html' },
+            { name: 'AGORA',         url: 'agora.html' },
+            { name: 'EEI',           url: 'eei-predictor.html' },
+            { name: 'ARCHIVIO',      url: 'archivio-silente.html' },
+            { name: 'BACKBONE',      url: 'backbone.html' },
+            { name: 'PNEUMA',        url: 'pneuma.html' },
+            { name: 'CHRONOS',       url: 'urban-chronos.html' },
+            { name: 'TRANSDUCER',   url: 'transducer.html' },
+        ];
+
+        const startTime = Date.now();
+        let currentView = 'grid';    // 'grid' | 'single' | 'rotate'
+        let currentPage = 0;
+        let rotateInterval = null;
+        const ROTATE_SECONDS = 30;   // seconds per page in auto-rotate
+        let rotateElapsed = 0;
+        let loadedPages = 0;
+
+        const frameContainer = document.getElementById('frameContainer');
+        const gridContainer = document.getElementById('gridContainer');
+
+        // ═══════════════════════════════════════
+        // BUILD SINGLE-VIEW IFRAMES
+        // ═══════════════════════════════════════
+        const singleFrames = [];
+        PAGES.forEach((page, i) => {
+            const iframe = document.createElement('iframe');
+            iframe.dataset.index = i;
+            iframe.title = page.name;
+            // Lazy load — only load when viewed (except grid)
+            singleFrames.push(iframe);
+            frameContainer.appendChild(iframe);
+        });
+
+        // ═══════════════════════════════════════
+        // BUILD GRID VIEW
+        // ═══════════════════════════════════════
+        const gridFrames = [];
+        PAGES.forEach((page, i) => {
+            const cell = document.createElement('div');
+            cell.className = 'grid-cell';
+
+            const label = document.createElement('div');
+            label.className = 'grid-label';
+            label.textContent = page.name;
+
+            const iframe = document.createElement('iframe');
+            iframe.src = page.url;
+            iframe.title = page.name;
+            iframe.loading = 'lazy';
+            iframe.addEventListener('load', () => {
+                loadedPages++;
+                document.getElementById('pageCount').textContent = loadedPages;
+            });
+
+            cell.appendChild(label);
+            cell.appendChild(iframe);
+            gridContainer.appendChild(cell);
+            gridFrames.push(iframe);
+        });
+
+        // ═══════════════════════════════════════
+        // VIEW SWITCHING
+        // ═══════════════════════════════════════
+        function showView(view, pageIndex = 0) {
+            currentView = view;
+            stopRotate();
+
+            // Update tabs
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+
+            if (view === 'grid') {
+                gridContainer.classList.add('active');
+                frameContainer.style.display = 'none';
+                document.querySelector('[data-view="grid"]').classList.add('active');
+            } else if (view === 'rotate') {
+                gridContainer.classList.remove('active');
+                frameContainer.style.display = 'block';
+                document.querySelector('[data-view="rotate"]').classList.add('active');
+                showSinglePage(0);
+                startRotate();
+            } else {
+                // single page
+                gridContainer.classList.remove('active');
+                frameContainer.style.display = 'block';
+                showSinglePage(pageIndex);
+                document.querySelector(`[data-page="${pageIndex}"]`)?.classList.add('active');
+            }
+        }
+
+        function showSinglePage(index) {
+            currentPage = index;
+            singleFrames.forEach((f, i) => {
+                if (i === index) {
+                    if (!f.src) f.src = PAGES[i].url;
+                    f.classList.add('active');
+                } else {
+                    f.classList.remove('active');
+                }
+            });
+        }
+
+        // ═══════════════════════════════════════
+        // AUTO-ROTATE
+        // ═══════════════════════════════════════
+        function startRotate() {
+            rotateElapsed = 0;
+            document.getElementById('rotateIndicator').classList.add('active');
+            updateRotateBar();
+
+            rotateInterval = setInterval(() => {
+                rotateElapsed += 0.5;
+                if (rotateElapsed >= ROTATE_SECONDS) {
+                    rotateElapsed = 0;
+                    const next = (currentPage + 1) % PAGES.length;
+                    showSinglePage(next);
+                    // Update tab highlight
+                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelector('[data-view="rotate"]').classList.add('active');
+                    document.querySelector(`[data-page="${next}"]`)?.classList.add('active');
+                }
+                updateRotateBar();
+            }, 500);
+        }
+
+        function stopRotate() {
+            if (rotateInterval) clearInterval(rotateInterval);
+            rotateInterval = null;
+            document.getElementById('rotateIndicator').classList.remove('active');
+        }
+
+        function updateRotateBar() {
+            const pct = (rotateElapsed / ROTATE_SECONDS) * 100;
+            document.getElementById('rotateFill').style.width = pct + '%';
+        }
+
+        // ═══════════════════════════════════════
+        // TAB CLICKS
+        // ═══════════════════════════════════════
+        document.getElementById('navTabs').addEventListener('click', (e) => {
+            const tab = e.target.closest('.nav-tab');
+            if (!tab) return;
+
+            if (tab.dataset.view === 'grid') {
+                showView('grid');
+            } else if (tab.dataset.view === 'rotate') {
+                showView('rotate');
+            } else if (tab.dataset.page !== undefined) {
+                showView('single', parseInt(tab.dataset.page));
+            }
+        });
+
+        // ═══════════════════════════════════════
+        // CLOCK & UPTIME
+        // ═══════════════════════════════════════
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent =
+                now.getHours().toString().padStart(2, '0') + ':' +
+                now.getMinutes().toString().padStart(2, '0') + ':' +
+                now.getSeconds().toString().padStart(2, '0');
+
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const h = Math.floor(elapsed / 3600);
+            const m = Math.floor((elapsed % 3600) / 60);
+            const s = elapsed % 60;
+            document.getElementById('uptime').textContent =
+                (h > 0 ? h + 'h ' : '') +
+                (m > 0 ? m + 'm ' : '') +
+                s + 's';
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // ═══════════════════════════════════════
+        // KEEP-ALIVE — prevents tablet sleep/tab kill
+        // ═══════════════════════════════════════
+        // 1. Wake Lock API (keeps screen on)
+        let wakeLock = null;
+        async function requestWakeLock() {
+            try {
+                if ('wakeLock' in navigator) {
+                    wakeLock = await navigator.wakeLock.request('screen');
+                    wakeLock.addEventListener('release', () => {
+                        // Re-acquire on release (e.g. tab switch)
+                        setTimeout(requestWakeLock, 1000);
+                    });
+                }
+            } catch (e) { /* silent */ }
+        }
+        requestWakeLock();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') requestWakeLock();
+        });
+
+        // 2. Periodic activity (prevents background tab throttling)
+        setInterval(() => {
+            const dot = document.getElementById('keepaliveDot');
+            dot.style.opacity = '1';
+            setTimeout(() => { dot.style.opacity = '0.4'; }, 200);
+        }, 15000);
+
+        // 3. Prevent screen dimming via invisible video trick (fallback)
+        try {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1; canvas.height = 1;
+            const stream = canvas.captureStream(1);
+            const video = document.createElement('video');
+            video.srcObject = stream;
+            video.muted = true;
+            video.setAttribute('playsinline', '');
+            video.play().catch(() => {});
+        } catch (e) { /* silent */ }
+
+        // ═══════════════════════════════════════
+        // BOOT — start in grid view
+        // ═══════════════════════════════════════
+        showView('grid');
+
+        console.log(
+            '%c[MONITOR] %c24H Observation — ' + PAGES.length + ' pages loaded. Do not touch.',
+            'color: #ff0084; font-weight: bold;', 'color: #6b7fa3;'
+        );
+    </script>
+</body>
+</html>
