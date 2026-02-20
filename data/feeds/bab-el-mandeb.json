@@ -1,6 +1,95 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-19T06:18:31.489Z",
-  "epoch_count": 0,
-  "epochs": []
+  "last_fetch": "2026-02-20T07:29:28.860Z",
+  "epoch_count": 4,
+  "epochs": [
+    {
+      "id": "rss_55bae90ef6de986a",
+      "timestamp": 1771506405000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "LNG shipping tentatively returns to Red Sea, despite risks - Montel News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQblpRQlBZbGFzQzNYcUlrWFF0VDFTV1JCbkwyZlR6Skl3cFBFc2NTY2lyUklMT0RpQ2VGaFYtTU9KcTdyZ0JoLW1HVUs4MHlZSkRzekxMWGF4eV93endlOFRWY1Noci14ODlHUTB5a2ZYZ3llYVVTcHh2TjVWMFI4d19UbFlGQkl5NEt5U3dnY04wN0pKN2dYNmNqaXNMRWwxaGpOei0zMm5uVkpseU5WbnM4LTdaZ2FjeHJCODVOZw?oc=5\" target=\"_blank\">LNG shipping tentatively returns to Red Sea, despite risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Montel News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQblpRQlBZbGFzQzNYcUlrWFF0VDFTV1JCbkwyZlR6Skl3cFBFc2NTY2lyUklMT0RpQ2VGaFYtTU9KcTdyZ0JoLW1HVUs4MHlZSkRzekxMWGF4eV93endlOFRWY1Noci14ODlHUTB5a2ZYZ3llYVVTcHh2TjVWMFI4d19UbFlGQkl5NEt5U3dnY04wN0pKN2dYNmNqaXNMRWwxaGpOei0zMm5uVkpseU5WbnM4LTdaZ2FjeHJCODVOZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-20T07:29:27.580Z"
+    },
+    {
+      "id": "rss_a2845a9d2b46cab0",
+      "timestamp": 1771479065000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi threats and US-Iran conflict escalate Ramadan fears in Yemen - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjRpY3JKRXVuYmtBTHVMQnFVUElZTTVGeGhNMUQtYmxGSVBQRG1OazZKRFVtX0hWSWVlVHlYMUJUSUlQZTZ4VTlTZnFwUnZFY2dHQ0liZTRSVk00T2t6THg5dzZiaTBjSE1zQWotc25uWF9qdUFNbWZVb3VMQ2pOS0ZWNDhEMWFtazVxRXlBWFl0TGo0ZVVWOHpOeGNLOVYxd0dWZ1VkUVdhdng10gGyAUFVX3lxTE1jQXpBWFhtdDNTRjIxT3BCMHRVWmhGSVFRMmhqLWt3RzdfbDlYS3J1WElZX2RjT1QtaXV3cFAzeDRmY3M3bXZuUlhRMFp4d05DZk9jVElMbUl4cTcwOTZvLXhxOXllWllaT05nTVhkbnJVd3lSUUwwZlZ0ZmFxWVBMWFpFdldWTzJQUHFxZkdGZW5rVWxjMVdzSzBPM0wwZD",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjRpY3JKRXVuYmtBTHVMQnFVUElZTTVGeGhNMUQtYmxGSVBQRG1OazZKRFVtX0hWSWVlVHlYMUJUSUlQZTZ4VTlTZnFwUnZFY2dHQ0liZTRSVk00T2t6THg5dzZiaTBjSE1zQWotc25uWF9qdUFNbWZVb3VMQ2pOS0ZWNDhEMWFtazVxRXlBWFl0TGo0ZVVWOHpOeGNLOVYxd0dWZ1VkUVdhdng10gGyAUFVX3lxTE1jQXpBWFhtdDNTRjIxT3BCMHRVWmhGSVFRMmhqLWt3RzdfbDlYS3J1WElZX2RjT1QtaXV3cFAzeDRmY3M3bXZuUlhRMFp4d05DZk9jVElMbUl4cTcwOTZvLXhxOXllWllaT05nTVhkbnJVd3lSUUwwZlZ0ZmFxWVBMWFpFdldWTzJQUHFxZkdGZW5rVWxjMVdzSzBPM0wwZDA2dTYxQ1BScWhrZG14SGthN1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-02-20T07:29:27.579Z"
+    },
+    {
+      "id": "rss_477dc85c14028511",
+      "timestamp": 1771346684000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea dark transits at two-year high - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOaWJmRkMwelQ2TlEyWXZNOTNId1RrVzJoZTl2elZwVVF3QWxqWHMxQTFiNVNwdlVFejI4WXFSbDgwWHY1eFVldXExVnNxSUdaZkJXWEZDMEZMcXBycHJOX1VHTktoUkxkOEVzTDgteENFVk9RR2NMSmZzYnE4X3dhVw?oc=5\" target=\"_blank\">Red Sea dark transits at two-year high</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaWJmRkMwelQ2TlEyWXZNOTNId1RrVzJoZTl2elZwVVF3QWxqWHMxQTFiNVNwdlVFejI4WXFSbDgwWHY1eFVldXExVnNxSUdaZkJXWEZDMEZMcXBycHJOX1VHTktoUkxkOEVzTDgteENFVk9RR2NMSmZzYnE4X3dhVw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-20T07:29:27.580Z"
+    },
+    {
+      "id": "rss_49e28ae7efac87e8",
+      "timestamp": 1771346562000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Warning Shots Off Yemen Underscore Ongoing Gulf of Aden Security Risks - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPSGg4N3dmM2xOMTRhN1gwN0VLOEs0VmZXUlhUWkRnRGJmUkpxeEZIcGcxU3JNWkZOR0ZjdnRIbU40dENXeHo5N0Z0cDJVa2xmNnVaY19FeFdvWWd5ZVVIWFB5TkQ4Ulhna3dQZ3BTRVk3bm1kM2hSU3J5Z3NjODNHczBPN2taQ2VCTGtXXzBFQ01kQnZoQXg0?oc=5\" target=\"_blank\">Warning Shots Off Yemen Underscore Ongoing Gulf of Aden Security Risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPSGg4N3dmM2xOMTRhN1gwN0VLOEs0VmZXUlhUWkRnRGJmUkpxeEZIcGcxU3JNWkZOR0ZjdnRIbU40dENXeHo5N0Z0cDJVa2xmNnVaY19FeFdvWWd5ZVVIWFB5TkQ4Ulhna3dQZ3BTRVk3bm1kM2hSU3J5Z3NjODNHczBPN2taQ2VCTGtXXzBFQ01kQnZoQXg0?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-20T07:29:28.410Z"
+    }
+  ]
 }
