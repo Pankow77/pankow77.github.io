@@ -202,6 +202,12 @@ export class GameLoop {
         // Resolve scenario (filter by state conditions)
         const resolved = this.loader.resolve(scenario, this.state);
 
+        // ── THEATER: set audio timbral signature ──
+        const theater = resolved.theater || null;
+        if (theater && this.audio) {
+            this.audio.setTheater(theater);
+        }
+
         // Step 1: Process delayed consequences from previous turns
         const delayedFeedbacks = this.consequences.processDue(entry.turn);
         if (delayedFeedbacks.length > 0) {
@@ -252,17 +258,22 @@ export class GameLoop {
             causalArcs = causalResult.arcs;
         }
 
-        // Step 5c: SUB-BASS HIT — context-sensitive, never the same twice
+        // Step 5c: PRE-ECHO CLICK — subcortical anticipation before the freeze
         if (this.audio) {
-            this.audio.subBassHit(this.state);
+            this.audio.preEchoClick();
         }
 
-        // Step 5d: CINEMATIC SEQUENCE — freeze → stamp → propagation wave
+        // Step 5d: SUB-BASS HIT — context-sensitive, theater-tinted, never the same twice
+        if (this.audio) {
+            this.audio.subBassHit(this.state, theater);
+        }
+
+        // Step 5e: CINEMATIC SEQUENCE — freeze → stamp → propagation wave
         if (this.vfx) {
             await this.vfx.cinematicChoice(optionId, causalArcs);
         }
 
-        // Step 5e: NOW apply state changes (numbers arrive AFTER perception)
+        // Step 5f: NOW apply state changes (numbers arrive AFTER perception)
         if (this.graph && causalResult) {
             this.graph.apply(this.state, causalResult);
 
@@ -294,23 +305,23 @@ export class GameLoop {
             }
         }
 
-        // Step 5f: POST-CONSEQUENCE COMPRESSION — the world contracts
+        // Step 5g: POST-CONSEQUENCE COMPRESSION — the world contracts
         if (this.audio) {
             this.audio.postConsequenceCompress();
         }
 
-        // Step 5g: UPDATE METRIC HUD — numbers arrive after world reacted
+        // Step 5h: UPDATE METRIC HUD — numbers arrive after world reacted
         if (this.vfx) {
             this.vfx.updateMetrics(this.state);
             this.vfx.updateScars(this.graph ? this.graph.getScars() : null);
         }
 
-        // Step 5h: Update audio soundscape for new state
+        // Step 5i: Update audio soundscape for new state
         if (this.audio) {
             this.audio.update(this.state);
         }
 
-        // Step 5h: Log event (append-only)
+        // Step 5j: Log event (append-only)
         this.state.logEvent({
             turn: entry.turn,
             theater: resolved.theater || null,
@@ -322,7 +333,7 @@ export class GameLoop {
             timestamp: Date.now()
         });
 
-        // Step 5i: Telemetry snapshot
+        // Step 5k: Telemetry snapshot
         if (this.telemetry) {
             this.telemetry.snapshot(
                 entry.turn, this.state, causalArcs, optionId, frameAction,

@@ -268,7 +268,8 @@ export class VFX {
     }
 
     /**
-     * Sequential arc propagation — each arc lights up 100ms apart.
+     * Sequential arc propagation with MICRO-JITTER.
+     * Each arc appears 70–130ms apart (organic, never mechanical).
      * Shows hidden arc count — the player feels there's more underneath.
      *
      * @param {Array} arcs — filtered significant arcs
@@ -278,7 +279,8 @@ export class VFX {
         this._propagationLayer.innerHTML = '';
         this._propagationLayer.classList.add('active');
 
-        for (const arc of arcs) {
+        for (let i = 0; i < arcs.length; i++) {
+            const arc = arcs[i];
             const arcEl = document.createElement('div');
             arcEl.className = 'arc-flash';
 
@@ -299,10 +301,14 @@ export class VFX {
 
             this._propagationLayer.appendChild(arcEl);
 
-            // Sequential reveal
-            await this._delay(30);
+            // Micro-jitter: 20–40ms reveal onset (organic variation)
+            const revealJitter = 20 + Math.floor(Math.random() * 20);
+            await this._delay(revealJitter);
             arcEl.classList.add('visible');
-            await this._delay(100);
+
+            // Micro-jitter: 70–130ms between arcs (never mechanical)
+            const gapJitter = 70 + Math.floor(Math.random() * 60);
+            await this._delay(gapJitter);
         }
 
         // Show hidden arc count — tension from the invisible
@@ -444,15 +450,34 @@ export class VFX {
 
     /**
      * Set visual rhythm mode for current turn.
-     * If rhythm changed: micro-glitch transition (150ms).
+     * If rhythm changed: PROCEDURAL micro-glitch (never identical twice).
+     *
+     * Glitch anatomy:
+     *   - Duration: 130–170ms (±12ms jitter)
+     *   - Brightness: random spike 1.2–1.8 or dip 0.4–0.7
+     *   - Hue: random rotation 30–180deg
+     *   - 1-frame desync: translateX micro-offset
      */
     async setRhythm(rhythm) {
         const changed = this._previousRhythm && this._previousRhythm !== rhythm;
 
-        // Rhythm transition glitch — subliminal anomaly
+        // Procedural rhythm transition glitch — never the same twice
         if (changed) {
+            const duration = 138 + Math.floor(Math.random() * 24); // 138–162ms
+            const bright = Math.random() > 0.5
+                ? (1.2 + Math.random() * 0.6)   // spike
+                : (0.4 + Math.random() * 0.3);   // dip
+            const hue = 30 + Math.floor(Math.random() * 150); // 30–180deg
+            const offsetX = (Math.random() - 0.5) * 4; // ±2px desync
+
+            document.body.style.filter = `brightness(${bright}) hue-rotate(${hue}deg)`;
+            document.body.style.transform = `translateX(${offsetX}px)`;
             document.body.classList.add('vfx-glitch');
-            await this._delay(150);
+
+            await this._delay(duration);
+
+            document.body.style.filter = '';
+            document.body.style.transform = '';
             document.body.classList.remove('vfx-glitch');
         }
 
