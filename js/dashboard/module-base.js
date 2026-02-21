@@ -105,6 +105,30 @@ export class ModuleBase {
   }
 
   /**
+   * Watch a selector. Calls callback only when the selector's
+   * output changes (reference equality). Tracked for cleanup.
+   *
+   * Usage:
+   *   this.watchSelector(selectAgora, (vm) => this._patch(vm));
+   *
+   * @param {Function} selectorFn — created by createSelector()
+   * @param {Function} callback   — (viewModel) => void
+   * @returns {Function} unsubscribe
+   */
+  watchSelector(selectorFn, callback) {
+    let lastRef = selectorFn();
+    const unsub = Bus.on('state:changed', () => {
+      const next = selectorFn();
+      if (next !== lastRef) {
+        lastRef = next;
+        callback(next);
+      }
+    });
+    this.subscriptions.push(unsub);
+    return unsub;
+  }
+
+  /**
    * Read state.
    */
   getState(key) {
