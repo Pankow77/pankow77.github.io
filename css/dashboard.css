@@ -216,21 +216,12 @@ body.state-fractured::after {
 /* ══════════════════════════════════
    LAYER 2: CORE GRID (3x3)
    ══════════════════════════════════ */
-#hub {
-  flex: 1;
+/* Grid mounts inside #view-container via HubModule */
+#view-container:has(.grid-container) {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transition: opacity 0.4s, transform 0.4s;
-}
-
-#hub.hidden {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none;
-  position: absolute;
-  inset: 64px 0 40px 0;
 }
 
 .grid-container {
@@ -506,57 +497,27 @@ body.state-fractured::after {
 /* ══════════════════════════════════
    VIEW AREA (Module Loader)
    ══════════════════════════════════ */
-#view {
-  position: absolute;
-  inset: 64px 0 40px 0;
-  z-index: 50;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s;
+#view-container {
+  flex: 1;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) var(--bg-void);
+}
+
+#view-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+#view-container::-webkit-scrollbar-track {
   background: var(--bg-void);
 }
 
-#view.active {
-  opacity: 1;
-  pointer-events: auto;
+#view-container::-webkit-scrollbar-thumb {
+  background: var(--border);
 }
 
-#view iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background: var(--bg-void);
-}
-
-/* Back button (when viewing a module) */
-.back-btn {
-  position: fixed;
-  top: 72px;
-  left: 12px;
-  z-index: 200;
-  padding: 6px 14px;
-  background: rgba(8, 14, 26, 0.9);
-  border: 1px solid var(--border);
-  color: var(--cyan);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: var(--transition);
-  opacity: 0;
-  pointer-events: none;
-  backdrop-filter: blur(8px);
-}
-
-.back-btn.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.back-btn:hover {
-  background: rgba(0, 200, 255, 0.1);
-  border-color: var(--cyan);
-}
 
 
 /* ══════════════════════════════════
