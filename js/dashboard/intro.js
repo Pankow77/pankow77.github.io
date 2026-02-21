@@ -18,27 +18,27 @@
  */
 
 const MANDATE_LINES = [
-  { text: 'Monitorare teatri critici.', delay: 500 },
-  { text: 'Valutare envelope.', delay: 400 },
-  { text: 'Ottimizzare diffusione narrativa.', delay: 600 },
+  { text: 'Osservare. Interpretare. Decidere.', delay: 500 },
+  { text: 'Ogni ciclo riceverai informazioni.', delay: 400 },
+  { text: 'Alcune saranno vere.', delay: 600 },
   { text: '', delay: 500 },
   { text: 'La stabilità non equivale alla verità.', delay: 700 },
   { text: 'La verità senza stabilità produce collasso.', delay: 900 },
   { text: '', delay: 500 },
-  { text: 'GHOST_6 ha completato il turno.', delay: 500 },
-  { text: 'GHOST_8 erediterà il tuo archivio.', delay: 600 },
+  { text: 'Chi ti ha preceduto ha completato il turno.', delay: 500 },
+  { text: 'Chi verrà dopo erediterà il tuo archivio.', delay: 600 },
   { text: '', delay: 400 },
   { text: 'Durata incarico: 40 cicli.', delay: 800 }
 ];
 
 const GHOST6_NOTE = [
-  'Le fonti con confidence >0.95 sono sempre parziali.',
-  'Non fidarti della certezza.',
+  'Quando qualcosa sembra troppo chiaro, dubita.',
+  'La certezza è il primo segnale di pericolo.',
   '',
-  'Non scrivere come un eroe.',
-  'Scrivi come un testimone.',
+  'Non provare a controllare tutto.',
+  'Prova a capire cosa stai guardando.',
   '',
-  'GHOST_8 non giudicherà le tue scelte.',
+  'Chi viene dopo di te non giudicherà le tue scelte.',
   'Giudicherà la tua coerenza.'
 ];
 
@@ -77,7 +77,7 @@ export function runIntro(appEl) {
         </div>
 
         <div class="intro-section" data-role="ghost6-section" style="display:none;">
-          <div class="intro-section-title">NOTA OPERATIVA — GHOST_6</div>
+          <div class="intro-section-title">NOTA DAL PREDECESSORE</div>
           <div class="intro-ghost6-body" data-role="ghost6-body"></div>
         </div>
 

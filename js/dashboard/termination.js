@@ -3,8 +3,8 @@
  * ═══════════════════════════════════════════
  * The system doesn't delete you. It digests you.
  *
- * Phase 1: CNS INTERNAL NOTICE (overlay, player can dismiss)
- *   "Motivo: eccessiva correlazione cross-theatre."
+ * Phase 1: AVVISO DI SISTEMA (overlay, player can dismiss)
+ *   "Hai visto troppo."
  *   Player gets one final cycle. System wants the last annotation.
  *   Not for archiving. For profiling. For extraction.
  *
@@ -69,18 +69,14 @@ export const TerminationSequence = {
     overlay.className = 'termination-overlay';
     overlay.innerHTML = `
       <div class="termination-container">
-        <div class="termination-header">CNS INTERNAL NOTICE</div>
-        <div class="termination-risk">
-          <span class="termination-label">NODE RISK PROFILE:</span> ELEVATED<br>
-          <span class="termination-label">OPERATOR EXPOSURE INDEX:</span> CRITICAL
-        </div>
+        <div class="termination-header">AVVISO DI SISTEMA</div>
         <div class="termination-body">
           <div class="termination-line">GHOST_7</div>
           <div class="termination-line">
-            Il tuo accesso verrà terminato al completamento del ciclo corrente.
+            Il tuo accesso verrà terminato al completamento di questo ciclo.
           </div>
           <div class="termination-line termination-reason">
-            Motivo: eccessiva correlazione cross-theatre.
+            Hai visto troppo.
           </div>
         </div>
         <div class="termination-prompt">
@@ -126,19 +122,19 @@ export const TerminationSequence = {
         <div class="termination-profile termination-vector">
           <div class="termination-profile-title">FEATURE VECTOR SUMMARY</div>
           <div class="termination-stat termination-vector-line">
-            <span class="termination-vector-key">frame_consistency:</span>
+            <span class="termination-vector-key">consistency:</span>
             <span class="termination-vector-val">${coherence.toFixed(2)}</span>
           </div>
           <div class="termination-stat termination-vector-line">
-            <span class="termination-vector-key">cross_theatre_depth:</span>
+            <span class="termination-vector-key">pattern_depth:</span>
             <span class="termination-vector-val">${crossCorr}</span>
           </div>
           <div class="termination-stat termination-vector-line">
-            <span class="termination-vector-key">annotation_density:</span>
+            <span class="termination-vector-key">output_density:</span>
             <span class="termination-vector-val">${annotationDensity}</span>
           </div>
           <div class="termination-stat termination-vector-line">
-            <span class="termination-vector-key">exposure_index:</span>
+            <span class="termination-vector-key">visibility:</span>
             <span class="termination-vector-val">${exposure.toFixed(2)}</span>
           </div>
         </div>
@@ -193,13 +189,13 @@ export const TerminationSequence = {
         <div class="termination-header">TURNO COMPLETATO</div>
 
         <div class="termination-profile">
-          <div class="termination-profile-title">PROFILO OPERATIVO — GHOST_7</div>
+          <div class="termination-profile-title">GHOST_7 — RIEPILOGO</div>
           <div class="termination-stat">
-            <span class="termination-label">COERENZA FRAME:</span>
+            <span class="termination-label">COERENZA:</span>
             ${(coherence * 100).toFixed(0)}%
           </div>
           <div class="termination-stat">
-            <span class="termination-label">ANNOTAZIONI ARCHIVIATE:</span>
+            <span class="termination-label">ANNOTAZIONI:</span>
             ${annotations}
           </div>
         </div>
