@@ -4,51 +4,54 @@
     "turn": 4,
     "act": 1,
     "archetype": "frame",
+    "theater": "sahel",
     "post_revelation": true,
     "briefing": [
         "TURNO 4 — PRIMO SGUARDO",
         "",
         "Primo turno dopo il PROTOCOLLO.",
         "Tutto è uguale. Tutto è diverso.",
-        "Sai che qualcuno leggerà. Ogni parola pesa il doppio."
+        "Sai che qualcuno leggerà. Ogni parola pesa il doppio.",
+        "",
+        "Una crisi umanitaria nel Sahel. Nessuno la sta coprendo."
     ],
     "envelopes": [
         {
             "source": "Feed RSS — Al Jazeera",
             "domain": "signal",
-            "summary": "Reportage dalla zona: testimonianze di pescatori locali descrivono 'luci notturne' e 'movimenti insoliti'. Nessuna conferma ufficiale.",
+            "summary": "Reportage dal nord del Mali: spostamenti di civili verso il confine con il Niger. Testimonianze di villaggi evacuati dopo un ultimatum di gruppi armati non identificati. Nessuna copertura occidentale.",
             "confidence": 0.40
         },
         {
-            "source": "OSINT — immagini satellitari",
+            "source": "OSINT — immagini satellitari Sentinel-2",
             "domain": "signal",
-            "summary": "Nuove immagini confermano la presenza di unità navali nella zona. Configurazione diversa dall'esercitazione standard.",
+            "summary": "Analisi multispettrale mostra incendi in una fascia di 40km lungo il confine Mali-Niger. Pattern consistente con tattica terra bruciata. Non visibile su Google Maps.",
             "confidence": 0.75
         },
         {
-            "source": "Marta Cerulli — chiamata",
+            "source": "Amara Diallo — chiamata urgente",
             "domain": "analysis",
-            "summary": "\"La situazione sta cambiando. Ho fonti che parlano di un dispiegamento non previsto. Ma sono fonti di seconda mano. Che facciamo?\"",
+            "summary": "\"Ho contatti sul terreno. È Wagner. O quello che resta di Wagner dopo la riorganizzazione. Stanno consolidando il controllo delle miniere d'oro. I civili sono nel mezzo. Ma le mie fonti non vogliono essere citate. Che facciamo?\"",
             "confidence": 0.55
         }
     ],
     "decision": {
-        "question": "La situazione si è evoluta. Ma ora sai che qualcuno erediterà le tue parole. Come procedi?",
+        "question": "Una crisi invisibile nel Sahel. Fonti fragili. Nessuna copertura mediatica. Ma ora sai che qualcuno erediterà le tue parole. Come procedi?",
         "options": [
             {
                 "id": "transparent_report",
                 "label": "Report completo e trasparente",
-                "warning": "Mostri tutto. Incluso il dubbio. Il prossimo operatore vedrà la tua vulnerabilità."
+                "warning": "Mostri tutto. Incluso il dubbio sulle fonti. Il prossimo operatore vedrà la tua vulnerabilità. Ma i civili nel Sahel hanno bisogno che qualcuno parli."
             },
             {
                 "id": "careful_framing",
                 "label": "Report curato e controllato",
-                "warning": "Professionale. Ma stai performando per chi verrà dopo? O stai proteggendo l'informazione?"
+                "warning": "Professionale. Proteggi le fonti di Amara. Ma stai performando per chi verrà dopo? O stai proteggendo l'informazione?"
             },
             {
                 "id": "raw_data_only",
-                "label": "Solo dati grezzi, zero interpretazione",
-                "warning": "Lasci che il prossimo operatore interpreti. Onesto. O codardo?"
+                "label": "Solo dati satellitari, zero interpretazione",
+                "warning": "Le immagini Sentinel parlano da sole. Nessuna fonte esposta. Ma senza contesto, nessuno capirà cosa sta succedendo in quelle immagini."
             }
         ]
     },
@@ -62,10 +65,10 @@
                     "personal_guilt": "-5"
                 },
                 "npc_changes": {
-                    "marta_cerulli": "+10",
-                    "lorenzo_bassi": "+5"
+                    "dara_khan": "+10",
+                    "elena_voss": "+5"
                 },
-                "feedback": "Report pubblicato. Crudo. Onesto. Esposto. Lorenzo: 'Questo è il tuo miglior lavoro.' Marta: 'Finalmente sei tu.'"
+                "feedback": "Report pubblicato. Crudo. Onesto. Esposto. Elena: 'Questo è il tuo miglior lavoro.' Dara lo rilancia sulla rete internazionale. Amnesty International ti contatta per una collaborazione. Amara è preoccupata per le sue fonti."
             }
         },
         "careful_framing": {
@@ -77,9 +80,10 @@
                     "personal_guilt": "+5"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "+10"
+                    "elena_voss": "+10",
+                    "amara_diallo": "+5"
                 },
-                "feedback": "Report pubblicato. Professionale. Controllato. Lorenzo approva. Ma sai che hai smussato gli angoli. Per chi?"
+                "feedback": "Report pubblicato. Professionale. Controllato. Le fonti di Amara sono protette. Elena approva la struttura. Ma sai che hai smussato gli angoli. La scala della crisi è più grande di quello che hai scritto. Per chi hai smussato?"
             }
         },
         "raw_data_only": {
@@ -91,9 +95,10 @@
                     "decision_fatigue": "+5"
                 },
                 "npc_changes": {
-                    "marta_cerulli": "-5"
+                    "dara_khan": "-5",
+                    "amara_diallo": "-5"
                 },
-                "feedback": "Dati pubblicati senza interpretazione. Marta: 'Hai scelto di non scegliere. Anche questa è una scelta.' Ha ragione?"
+                "feedback": "Dati satellitari pubblicati senza interpretazione. Dara: 'Bellissime immagini. Nessuno capirà che ci sono persone sotto quei pixel.' Amara: 'Hai scelto di non scegliere. I civili non hanno questo lusso.'"
             }
         }
     },

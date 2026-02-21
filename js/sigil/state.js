@@ -34,10 +34,10 @@ export class GameState {
         };
 
         this.npcs = {
-            lorenzo_bassi: { trust: 50, status: 'active' },
-            marta_cerulli: { trust: 50, status: 'active' },
-            marco_tedesco: { trust: 0, status: 'unknown', active: false },
-            valeria_conti: { trust: 30, status: 'background' }
+            elena_voss: { trust: 50, status: 'active' },       // German — senior OSINT analyst, methodological rigor
+            dara_khan: { trust: 50, status: 'active' },         // Pakistani-British — investigative journalist, field contacts
+            james_whitfield: { trust: 0, status: 'unknown', active: false },  // American — ex-intelligence, unclear loyalties
+            amara_diallo: { trust: 30, status: 'background' }   // Senegalese — civil society coordinator, ground truth
         };
 
         this.flags = {

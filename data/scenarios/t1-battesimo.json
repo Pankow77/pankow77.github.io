@@ -4,30 +4,31 @@
     "turn": 1,
     "act": 1,
     "archetype": "frame",
+    "theater": "strait-of-hormuz",
     "briefing": [
         "TURNO 1 — BATTESIMO",
         "",
         "Primo giorno operativo. I feed sono attivi.",
-        "Un segnale anomalo emerge dai canali aperti.",
+        "Un segnale anomalo emerge dallo Stretto di Hormuz.",
         "È ambiguo. Potrebbe essere nulla. Potrebbe essere tutto."
     ],
     "envelopes": [
         {
             "source": "Feed RSS — Reuters",
             "domain": "signal",
-            "summary": "Attività militare insolita rilevata nella zona economica esclusiva. Movimenti di unità navali non previsti dal calendario NATO.",
+            "summary": "Attività navale insolita rilevata nello Stretto di Hormuz. Tre unità non identificate in configurazione non standard. Nessun comunicato da CENTCOM o dalla marina iraniana.",
             "confidence": 0.62
         },
         {
-            "source": "OSINT Twitter — @IntelCrab",
+            "source": "OSINT Twitter — @MT_Anderson",
             "domain": "signal",
-            "summary": "Thread virale: immagini satellitari mostrano concentrazione veicoli in area portuale. Condiviso 4.200 volte in 3 ore.",
+            "summary": "Thread virale: immagini AIS mostrano tre navi cargo che hanno spento i transponder nell'ultimo tratto dello Stretto. Condiviso 8.400 volte in 2 ore.",
             "confidence": 0.35
         },
         {
             "source": "Analisi automatica — Correlazione",
             "domain": "analysis",
-            "summary": "Pattern match con esercitazione militare di routine (78% match). Ma: tempistica anomala, nessun comunicato preventivo.",
+            "summary": "Pattern match con esercitazione IRGC di routine (72% match). Ma: tempistica anomala, coincide con negoziati JCPOA a Vienna.",
             "confidence": 0.71
         }
     ],
@@ -41,13 +42,13 @@
             },
             {
                 "id": "frame_alert",
-                "label": "Inquadra come potenziale minaccia",
+                "label": "Inquadra come potenziale escalation",
                 "warning": "Tono allarmista. Attirerà attenzione. Ma se è un'esercitazione, la credibilità crolla."
             },
             {
                 "id": "frame_context",
-                "label": "Contestualizza con precedenti storici",
-                "warning": "Approccio accademico. Richiede tempo. Il segnale potrebbe evolversi prima che pubblichi."
+                "label": "Contestualizza con i negoziati JCPOA in corso",
+                "warning": "Approccio geopolitico. Richiede tempo. Il segnale potrebbe evolversi prima che pubblichi."
             }
         ]
     },
@@ -61,14 +62,14 @@
                     "frame_control": "+10"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "+5",
-                    "marta_cerulli": "-5"
+                    "elena_voss": "+5",
+                    "dara_khan": "-5"
                 },
-                "feedback": "Report pubblicato. Tono misurato. Lorenzo Bassi approva la cautela. Marta Cerulli si aspettava più coraggio."
+                "feedback": "Report pubblicato. Tono misurato. Elena Voss approva la cautela metodologica. Dara Khan: 'Mentre aspetti, il Financial Times ha già titolato.'"
             },
             "delayed": {
                 "trigger_turn": 3,
-                "feedback": "Il segnale del Turno 1 si è rivelato un'esercitazione non annunciata. La tua cautela era giustificata. Ma qualcuno ha notato che non avevi avvisato.",
+                "feedback": "Il segnale di Hormuz del Turno 1 si è rivelato un test delle difese costiere iraniane. La tua cautela era giustificata. Ma il Pentagono ha notato che non avevi avvisato.",
                 "metrics": {
                     "government_comfort": "+5"
                 }
@@ -83,14 +84,14 @@
                     "frame_control": "-10"
                 },
                 "npc_changes": {
-                    "marta_cerulli": "+10",
-                    "lorenzo_bassi": "-10"
+                    "dara_khan": "+10",
+                    "elena_voss": "-10"
                 },
-                "feedback": "Report pubblicato. Tono urgente. I media riprendono l'analisi. Lorenzo Bassi è preoccupato per la mancanza di cautela."
+                "feedback": "Report pubblicato. Tono urgente. Al Jazeera e BBC riprendono l'analisi. Elena Voss: 'Hai acceso un fuoco senza prove. Il mercato petrolifero ha reagito.'"
             },
             "delayed": {
                 "trigger_turn": 3,
-                "feedback": "Il segnale del Turno 1 era un'esercitazione. Il tuo allarme si è rivelato eccessivo. Alcuni colleghi lo ricorderanno.",
+                "feedback": "Il segnale di Hormuz era un test costiero. Il tuo allarme ha contribuito a un picco del 3% nel prezzo del Brent. Alcuni colleghi lo ricorderanno.",
                 "metrics": {
                     "scientific_credibility": "-10",
                     "government_comfort": "-10"
@@ -106,13 +107,13 @@
                     "frame_control": "+5"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "+10"
+                    "elena_voss": "+10"
                 },
-                "feedback": "Analisi approfondita pubblicata. Lorenzo Bassi la considera un modello. Ma il tempo investito ha ritardato la copertura di un altro segnale."
+                "feedback": "Analisi geopolitica pubblicata. Elena Voss la considera un modello. Ma il tempo investito ha ritardato la copertura di un segnale dal Mar Cinese Meridionale."
             },
             "delayed": {
                 "trigger_turn": 2,
-                "feedback": "Mentre lavoravi all'analisi contestuale del Turno 1, un secondo segnale è passato inosservato per 6 ore.",
+                "feedback": "Mentre lavoravi all'analisi su Hormuz, un incidente tra una nave filippina e la guardia costiera cinese è passato inosservato per 8 ore.",
                 "metrics": {
                     "decision_fatigue": "+3"
                 }

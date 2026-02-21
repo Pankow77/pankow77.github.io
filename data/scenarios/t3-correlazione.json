@@ -4,50 +4,52 @@
     "turn": 3,
     "act": 1,
     "archetype": "dirty_information",
+    "theater": "cross-continental",
     "briefing": [
         "TURNO 3 — CORRELAZIONE SPURIA",
         "",
         "Il tuo sistema di correlazione ha trovato un pattern.",
-        "Due eventi apparentemente non collegati mostrano una sovrapposizione temporale significativa.",
+        "Due eventi in continenti diversi mostrano una sovrapposizione",
+        "temporale che non dovrebbe esistere.",
         "Il pattern è statisticamente forte. Ma la causalità è un'altra storia."
     ],
     "envelopes": [
         {
             "source": "Motore di correlazione — automatico",
             "domain": "analysis",
-            "summary": "Correlazione temporale (r=0.87) tra movimenti navali nella zona e acquisti anomali di derivati energetici su mercati asiatici. Finestra: 72 ore.",
+            "summary": "Correlazione temporale (r=0.87) tra: (1) movimenti di truppe russe al confine finlandese e (2) acquisti anomali di derivati sull'uranio alla borsa di Astana. Finestra: 96 ore. Tre occorrenze in sei mesi.",
             "confidence": 0.87
         },
         {
             "source": "Feed RSS — Financial Times",
             "domain": "signal",
-            "summary": "Articolo generico su volatilità dei mercati energetici. Nessun riferimento alla zona monitorata. Ma i tempi coincidono.",
+            "summary": "Articolo sulla volatilità del mercato dell'uranio. Nessun riferimento alla Finlandia. Ma cita 'nuovi acquirenti in Asia Centrale che agiscono in pattern insoliti.'",
             "confidence": 0.50
         },
         {
-            "source": "Lorenzo Bassi — messaggio diretto",
+            "source": "Elena Voss — messaggio diretto",
             "domain": "analysis",
-            "summary": "\"Correlazione non è causalità. Lo sai. Ma se hai ragione e non pubblichi, il danno è incalcolabile. Se hai torto e pubblichi, sei finito.\"",
+            "summary": "\"Correlazione non è causalità. Lo sai. Il tuo r=0.87 con tre datapoint è statisticamente insignificante. Ma se hai ragione e non pubblichi, qualcuno si farà molto male. Se hai torto e pubblichi, sei finito.\"",
             "confidence": 0.60
         }
     ],
     "decision": {
-        "question": "Un pattern forte ma potenzialmente spurio. La tua credibilità è in gioco.",
+        "question": "Un pattern cross-continentale. Forte ma potenzialmente spurio. La tua credibilità è in gioco su scala globale.",
         "options": [
             {
                 "id": "publish_correlation",
                 "label": "Pubblica la correlazione con tutti i caveat",
-                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente."
+                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente e internazionale."
             },
             {
                 "id": "suppress_correlation",
                 "label": "Sopprimi il pattern. Troppo rischioso.",
-                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo informazione vitale."
+                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo un collegamento tra militarizzazione e proliferazione."
             },
             {
                 "id": "share_private",
-                "label": "Condividi solo con la tua rete ristretta",
-                "warning": "Compromesso. Ma perdi il controllo su chi lo pubblica per primo."
+                "label": "Condividi solo con la tua rete e con l'IAEA",
+                "warning": "Compromesso istituzionale. Ma perdi il controllo su chi lo pubblica e come."
             }
         ]
     },
@@ -62,10 +64,10 @@
                     "methodological_integrity": "-5"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "-20",
-                    "marta_cerulli": "+15"
+                    "elena_voss": "-20",
+                    "dara_khan": "+15"
                 },
-                "feedback": "La correlazione è online. I mercati reagiscono. Lorenzo Bassi: 'Hai bruciato anni di credibilità per un pattern.' Marta Cerulli: 'Finalmente qualcuno che osa.'"
+                "feedback": "La correlazione è online. Il Bulletin of the Atomic Scientists cita il tuo report. Elena Voss: 'Tre datapoint. Hai bruciato anni di credibilità per un pattern.' Dara Khan: 'Finalmente qualcuno che osa guardare il quadro completo.'"
             }
         },
         "suppress_correlation": {
@@ -78,9 +80,9 @@
                     "frame_control": "+10"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "+15"
+                    "elena_voss": "+15"
                 },
-                "feedback": "Pattern soppresso. La tua credibilità è intatta. Ma sai quello che hai visto. E sai che qualcun altro potrebbe vederlo."
+                "feedback": "Pattern soppresso. La tua credibilità è intatta. Elena approva. Ma sai quello che hai visto. Finlandia. Astana. 96 ore. Tre volte."
             }
         },
         "share_private": {
@@ -92,13 +94,13 @@
                     "decision_fatigue": "+5"
                 },
                 "npc_changes": {
-                    "marta_cerulli": "+5",
-                    "valeria_conti": "+10",
-                    "lorenzo_bassi": "-5"
+                    "dara_khan": "+5",
+                    "amara_diallo": "+10",
+                    "elena_voss": "-5"
                 },
-                "feedback": "Condiviso privatamente. Valeria Conti sta verificando. Ma Marta ha già accennato la correlazione su Twitter senza nominarti. Il genio è fuori dalla bottiglia."
+                "feedback": "Condiviso con la rete e con un contatto IAEA a Vienna. Amara Diallo sta verificando con fonti in Kazakistan. Ma Dara ha già accennato la correlazione in un articolo per The Intercept senza nominarti. Il genio è fuori dalla bottiglia."
             }
         }
     },
-    "annotation_prompt": "Tre turni. Tre decisioni. Cosa stai iniziando a capire?"
+    "annotation_prompt": "Tre turni. Tre continenti. Tre decisioni. Cosa stai iniziando a capire?"
 }

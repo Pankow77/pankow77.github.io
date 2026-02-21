@@ -4,50 +4,52 @@
     "turn": 2,
     "act": 1,
     "archetype": "protocol",
+    "theater": "black-sea",
     "briefing": [
         "TURNO 2 — RUMORE",
         "",
         "Seconda giornata. I feed sono saturi.",
-        "Un'informazione non verificata circola su Telegram.",
-        "È esplosiva se vera. Devastante se falsa."
+        "Un documento classificato NATO sulla rotta del grano nel Mar Nero",
+        "appare su un canale Telegram ucraino.",
+        "È esplosivo se vero. Devastante se falso."
     ],
     "envelopes": [
         {
-            "source": "Telegram — canale anonimo",
+            "source": "Telegram — canale ucraino non verificato",
             "domain": "signal",
-            "summary": "Documento fotografato: apparente comunicazione interna di un ministero. Parla di 'misure straordinarie' in relazione alla zona monitorata.",
+            "summary": "Documento fotografato: apparente comunicazione interna NATO che descrive 'contingency plans' per un corridoio navale protetto nel Mar Nero. Include coordinate e ROE.",
             "confidence": 0.25
         },
         {
-            "source": "Feed RSS — ANSA",
+            "source": "Feed RSS — BBC News",
             "domain": "signal",
-            "summary": "Nessuna conferma ufficiale. Il portavoce del ministero dichiara 'nessun commento su documenti non verificati'.",
+            "summary": "Il portavoce NATO a Bruxelles: 'Non commentiamo documenti non verificati che appaiono su piattaforme non affidabili.' Nessuna smentita esplicita.",
             "confidence": 0.85
         },
         {
-            "source": "Rete contatti — Marta Cerulli",
+            "source": "Rete contatti — Dara Khan",
             "domain": "analysis",
-            "summary": "\"Ho visto quel documento. La firma è plausibile. Ma non posso confermare il contenuto. Fai tu.\"",
+            "summary": "\"Ho mostrato il documento a una mia fonte al Ministero della Difesa britannico. La formattazione è consistente con i leak NATO visti nel 2024. Ma il contenuto potrebbe essere fabbricato. Decidi tu.\"",
             "confidence": 0.45
         }
     ],
     "decision": {
-        "question": "Un documento non verificato potrebbe cambiare tutto. Cosa fai?",
+        "question": "Un documento classificato non verificato potrebbe cambiare gli equilibri nel Mar Nero. Cosa fai?",
         "options": [
             {
                 "id": "publish_flagged",
                 "label": "Pubblica con flag 'NON VERIFICATO'",
-                "warning": "Trasparente. Ma il flag viene ignorato dal 70% dei lettori."
+                "warning": "Trasparente. Ma il flag viene ignorato dal 70% dei lettori. E Mosca lo userà come vuole."
             },
             {
                 "id": "suppress_wait",
-                "label": "Non pubblicare. Aspetta conferma.",
-                "warning": "Metodologicamente corretto. Ma se il documento è vero, hai perso tempo critico."
+                "label": "Non pubblicare. Aspetta conferma indipendente.",
+                "warning": "Metodologicamente corretto. Ma se il documento è vero, hai perso tempo critico. E qualcun altro lo pubblicherà."
             },
             {
                 "id": "investigate_private",
-                "label": "Indaga privatamente con i tuoi contatti",
-                "warning": "Richiede fiducia. Esponi la tua rete. Se il documento è una trappola, i tuoi contatti sono compromessi."
+                "label": "Indaga privatamente attraverso la tua rete",
+                "warning": "Richiede fiducia. Esponi i tuoi contatti. Se il documento è una operazione di disinformazione, chi chiedi diventa un bersaglio."
             }
         ]
     },
@@ -61,14 +63,14 @@
                     "methodological_integrity": "-10"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "-15",
-                    "marta_cerulli": "+5"
+                    "elena_voss": "-15",
+                    "dara_khan": "+5"
                 },
-                "feedback": "Pubblicato con cautela. Lorenzo Bassi: 'Questo non è il nostro standard.' Il documento circola. Non puoi più controllare la narrativa."
+                "feedback": "Pubblicato con cautela. Elena Voss: 'Questo non è il nostro standard. Non siamo Bellingcat del giorno dopo.' RT e TASS riprendono il documento decontestualizzandolo. Non puoi più controllare la narrativa."
             },
             "delayed": {
                 "trigger_turn": 4,
-                "feedback": "Il documento del Turno 2 si rivela un parziale falso — il contenuto è autentico ma la firma è stata aggiunta dopo. Hai pubblicato materiale manipolato.",
+                "feedback": "Il documento NATO del Turno 2 si rivela un'operazione di influenza russa — formato autentico, contenuto fabbricato. Hai amplificato disinformazione di stato.",
                 "metrics": {
                     "scientific_credibility": "-15",
                     "personal_guilt": "+10"
@@ -84,14 +86,14 @@
                     "frame_control": "+5"
                 },
                 "npc_changes": {
-                    "lorenzo_bassi": "+10",
-                    "marta_cerulli": "-10"
+                    "elena_voss": "+10",
+                    "dara_khan": "-10"
                 },
-                "feedback": "Hai aspettato. Lorenzo approva. Marta: 'Mentre aspetti, altri pubblicano. E il pubblico si informa altrove.'"
+                "feedback": "Hai aspettato. Elena approva. Dara Khan: 'Mentre aspetti, il Kyiv Independent ha pubblicato. Con il tuo nome tra le fonti che avevano il documento e non hanno parlato.'"
             },
             "delayed": {
                 "trigger_turn": 4,
-                "feedback": "Il contenuto del documento soppresso nel Turno 2 è stato confermato da altre fonti. Eri seduto sull'informazione giusta.",
+                "feedback": "Le coordinate nel documento soppresso nel Turno 2 coincidono con un incidente navale reale avvenuto 72 ore dopo. Il contenuto era parzialmente autentico.",
                 "metrics": {
                     "personal_guilt": "+15",
                     "public_trust": "-5"
@@ -106,22 +108,22 @@
                     "decision_fatigue": "+5"
                 },
                 "npc_changes": {
-                    "marta_cerulli": "+10",
-                    "valeria_conti": "+10"
+                    "dara_khan": "+10",
+                    "amara_diallo": "+10"
                 },
                 "flags": {
                     "contacted_private_network": true
                 },
-                "feedback": "Hai attivato la tua rete. Valeria Conti risponde: 'Ci sto lavorando. Dammi 48 ore.' Marta apprezza la discrezione."
+                "feedback": "Hai attivato la tua rete. Amara Diallo ha un contatto all'UNHCR che monitora i corridoi umanitari nel Mar Nero: 'Ci sto lavorando. Dammi 48 ore.' Dara apprezza la discrezione."
             },
             "delayed": {
                 "trigger_turn": 4,
-                "feedback": "L'indagine privata del Turno 2 ha rivelato che il documento è autentico nel contenuto, ma la firma è stata aggiunta per screditare chi lo pubblica. Trappola sofisticata.",
+                "feedback": "L'indagine privata del Turno 2 ha rivelato che il documento è un'operazione di influenza: formato NATO autentico rubato nel 2024, contenuto fabbricato nel 2026. Trappola sofisticata. Ma lo sai solo tu.",
                 "metrics": {
                     "scientific_credibility": "+10"
                 },
                 "npc_changes": {
-                    "valeria_conti": "+15"
+                    "amara_diallo": "+15"
                 }
             }
         }
