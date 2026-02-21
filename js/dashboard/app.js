@@ -47,7 +47,7 @@ export function boot() {
   // ── Open hub (or restore from URL) ──
   const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
   const target = (path && Router.has(path)) ? path : 'hub';
-  Router.open(target, false); // false = don't push, we're restoring
+  Router.open(target, { push: false }); // Restoring from URL, don't push again
 
   // ── Console signature ──
   console.log(

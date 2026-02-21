@@ -7,10 +7,13 @@
  * The router never knows what's inside a module.
  * It only calls mount() and unmount().
  *
- * FIX 1: open() is async. Awaits unmount() so async teardown
- *        (audio fade, animation) completes before new mount.
- * FIX 2: ESC is negotiated. If activeModule.canEscape() returns false,
- *        ESC is blocked. Modules control their own lock.
+ * Guarantees:
+ *   - open() is async. Awaits both unmount() and mount().
+ *   - try/finally on transition flag. If anything explodes,
+ *     router stays alive. Never stuck in transitioning=true.
+ *   - canEscape() is checked inside open(), not just ESC handler.
+ *     No programmatic bypass.
+ *   - Re-entrancy guard. Double-click = no-op.
  */
 
 import { Bus } from '../bus.js';
@@ -20,7 +23,7 @@ const registry = new Map();
 let viewContainer = null;
 let activeModule = null;
 let activeName = null;
-let transitioning = false; // Guard against concurrent open() calls
+let transitioning = false;
 
 export const Router = {
 
@@ -30,17 +33,10 @@ export const Router = {
   init(container) {
     viewContainer = container;
 
-    // ESC key → return to hub (negotiated)
+    // ESC key → return to hub
+    // canEscape() negotiation happens inside open(), not here.
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && activeName && activeName !== 'hub') {
-        // Ask the active module if ESC is allowed
-        if (activeModule && typeof activeModule.canEscape === 'function') {
-          if (!activeModule.canEscape()) {
-            // Module blocks ESC. Emit event so module can react.
-            Bus.emit('router:escape-blocked', { module: activeName }, 'router');
-            return;
-          }
-        }
         Router.open('hub');
       }
     });
@@ -48,12 +44,12 @@ export const Router = {
     // Browser back/forward
     window.addEventListener('popstate', (e) => {
       const target = (e.state && e.state.module) ? e.state.module : 'hub';
-      Router.open(target, false); // false = don't pushState again
+      Router.open(target, { push: false });
     });
   },
 
   /**
-   * Register a module class instance.
+   * Register a module instance.
    * @param {string}     name   — unique identifier
    * @param {ModuleBase} module — instance with mount/unmount
    */
@@ -63,65 +59,81 @@ export const Router = {
 
   /**
    * Open a module by name.
-   * Async: awaits unmount() so teardown (audio, animation) completes.
-   * Unmounts current → clears container → mounts new.
    *
-   * @param {string}  name        — module to open
-   * @param {boolean} pushHistory — whether to update browser history
+   * Signature: open(name, { push = true } = {})
+   *
+   * Guarantees:
+   *   1. Re-entrancy blocked (transitioning flag)
+   *   2. canEscape() respected (sync, before anything happens)
+   *   3. unmount() awaited (async teardown safe)
+   *   4. mount() awaited (async init safe)
+   *   5. try/finally — flag resets even if mount/unmount explodes
+   *
+   * @param {string} name           — module to open
+   * @param {Object} opts
+   * @param {boolean} opts.push     — update browser history (default true)
    * @returns {Promise<void>}
    */
-  async open(name, pushHistory = true) {
-    const target = registry.get(name);
-    if (!target) {
+  async open(name, { push = true } = {}) {
+    if (!registry.has(name)) {
       console.error(`[ROUTER] Module "${name}" not registered.`);
       return;
     }
 
-    // Same module? No-op.
+    // Same module = no-op
     if (activeName === name) return;
 
-    // Guard: if already transitioning, queue is dropped.
-    // Prevents double-click race.
+    // Re-entrancy guard
     if (transitioning) return;
-    transitioning = true;
 
-    const previousName = activeName;
-
-    // ── Unmount current (await if async) ──
-    if (activeModule) {
-      try {
-        await activeModule.unmount();
-      } catch (err) {
-        console.error(`[ROUTER] Error during unmount of "${activeName}":`, err);
+    // canEscape() — negotiated. Checked here, not just ESC handler.
+    // Programmatic open() also respects module lock.
+    if (activeModule && typeof activeModule.canEscape === 'function') {
+      if (!activeModule.canEscape()) {
+        Bus.emit('router:escape-blocked', { module: activeName, target: name }, 'router');
+        return;
       }
-      activeModule = null;
     }
 
-    // ── Clear container ──
-    viewContainer.innerHTML = '';
+    transitioning = true;
+    const previousName = activeName;
+    const target = registry.get(name);
 
-    // ── Mount new ──
-    activeModule = target;
-    activeName = name;
-    target.mount(viewContainer);
+    try {
+      // ── Unmount current ──
+      if (activeModule) {
+        await activeModule.unmount();
+        activeModule = null;
+      }
 
-    // ── State update ──
-    State.set('router.active', name);
-    State.set('router.previous', previousName);
+      // ── Clear container ──
+      viewContainer.innerHTML = '';
 
-    // ── Bus event ──
-    Bus.emit('router:changed', {
-      from: previousName,
-      to: name
-    }, 'router');
+      // ── Mount new (await if async) ──
+      activeModule = target;
+      activeName = name;
+      await target.mount(viewContainer);
 
-    // ── URL ──
-    if (pushHistory) {
-      const url = name === 'hub' ? '/' : `/${name}`;
-      history.pushState({ module: name }, '', url);
+      // ── State + Bus ──
+      State.set('router.active', name);
+      State.set('router.previous', previousName);
+
+      Bus.emit('router:changed', {
+        from: previousName,
+        to: name
+      }, 'router');
+
+      // ── URL ──
+      if (push) {
+        const url = name === 'hub' ? '/' : `/${name}`;
+        history.pushState({ module: name }, '', url);
+      }
+
+    } catch (err) {
+      console.error(`[ROUTER] Transition to "${name}" failed:`, err);
+    } finally {
+      transitioning = false;
     }
-
-    transitioning = false;
   },
 
   /**
