@@ -96,20 +96,36 @@ export const State = {
 };
 
 // ── Initial state ──
+// 40-cycle system. Phases: ELASTICITY (1-10), ACCUMULATION (11-20),
+// RIGIDITY (21-30), FRACTURE RISK (31-40).
 State.batch({
+  // System
   'system.state': 'ELASTIC',       // ELASTIC | RIGID | FRACTURED
   'system.fragility': 0.12,
-  'system.phase': 'STANDBY',
+  'system.phase': 'ELASTICITY',    // ELASTICITY | ACCUMULATION | RIGIDITY | FRACTURE_RISK
   'system.clock': Date.now(),
+
+  // Cycle tracking
+  'cycle.current': 1,              // 1–40
+  'cycle.total': 40,
+  'cycle.phase': 'ELASTICITY',     // Mirrors system.phase, derived from cycle.current
+
+  // Router
   'router.active': 'hub',
   'router.previous': null,
+
+  // Operator profile (CNS measures you)
+  'operator.node': 'GHOST_7',
+  'operator.weight': 1.0,          // Operational weight. Erodes with bad framing.
+  'operator.coherence': 1.0,       // Frame consistency over time
+  'operator.annotations': 0,       // Written this session
 
   // Module statuses (tiles read these)
   'agora.intensity': 72,
   'agora.polarization': [30, 45, 60, 72, 55, 40, 68],
   'oracle.confidence': 0.81,
   'oracle.stable': true,
-  'archivio.annotations': 12,
+  'archivio.annotations': 0,
   'archivio.succession': false,
   'teatri.theaters': { hormuz: 'active', blacksea: 'active', sahel: 'alert', cross: 'active' },
   'pneuma.tone': 'analytical',

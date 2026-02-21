@@ -1,53 +1,51 @@
 /**
- * IntroSequence — Succession Protocol boot screen.
- * ═══════════════════════════════════════════════════
+ * IntroSequence — CNS Node Assignment.
+ * ═══════════════════════════════════════
  * Overlay that runs ONCE before the dashboard activates.
  * Not a Router module. Sits above the shell.
  *
  * Flow:
- *   1. Black screen → ARCHIVIO SILENTE title fades in
- *   2. Protocol text types in, line by line
- *   3. Player sees [ ACCETTA TURNO ] / [ RIFIUTA ]
- *   4. RIFIUTA → farewell message, closes
- *   5. ACCETTA → GHOST_6 note types in → fade out → dashboard activates
+ *   1. Black screen → CNS designation fades in
+ *   2. Mandate text types in, line by line
+ *   3. Operational note from GHOST_6
+ *   4. [ ACCETTA MANDATO ] / [ RIFIUTA ]
+ *   5. RIFIUTA → reassignment message, app does not boot
+ *   6. ACCETTA → fade out → dashboard activates at cycle 1
  *
  * Persistence: sessionStorage tracks acceptance.
  *   Refresh within same session = skip intro.
  *   New session = intro plays again.
  */
 
-const GHOST6_NOTE = [
-  'Non fidarti delle fonti con confidence >0.95.',
-  'Sono sempre parziali.',
-  '',
-  'Scrivi ai tuoi successori non come se fossi un eroe.',
-  'Scrivi come se fossi un testimone.',
-  '',
-  'E ricorda: GHOST_8 ti giudicherà.',
-  'Non per le tue scelte.',
-  'Ma per la tua onestà.'
+const MANDATE_LINES = [
+  { text: 'Monitorare teatri critici.', delay: 500 },
+  { text: 'Valutare envelope.', delay: 400 },
+  { text: 'Ottimizzare diffusione narrativa.', delay: 600 },
+  { text: '', delay: 500 },
+  { text: 'La stabilità non equivale alla verità.', delay: 700 },
+  { text: 'La verità senza stabilità produce collasso.', delay: 900 },
+  { text: '', delay: 500 },
+  { text: 'GHOST_6 ha completato il turno.', delay: 500 },
+  { text: 'GHOST_8 erediterà il tuo archivio.', delay: 600 },
+  { text: '', delay: 400 },
+  { text: 'Durata incarico: 40 cicli.', delay: 800 }
 ];
 
-const PROTOCOL_LINES = [
-  { text: 'Sei GHOST_7.', delay: 600 },
-  { text: '', delay: 300 },
-  { text: 'Il tuo predecessore, GHOST_6, ha completato il suo turno.', delay: 500 },
-  { text: 'Ora tocca a te.', delay: 800 },
-  { text: '', delay: 400 },
-  { text: 'Il tuo compito: monitorare 4 teatri geopolitici.', delay: 400 },
-  { text: 'Riceverai envelope da fonti multiple.', delay: 300 },
-  { text: 'Dovrai decidere quali narrative amplificare.', delay: 300 },
-  { text: 'Le tue scelte avranno conseguenze.', delay: 600 },
-  { text: '', delay: 300 },
-  { text: 'Ogni turno, scriverai un\'annotazione privata.', delay: 400 },
-  { text: 'Alla fine del tuo turno, GHOST_8 erediterà il tuo lavoro.', delay: 500 },
-  { text: 'E leggerà tutte le tue annotazioni.', delay: 800 }
+const GHOST6_NOTE = [
+  'Le fonti con confidence >0.95 sono sempre parziali.',
+  'Non fidarti della certezza.',
+  '',
+  'Non scrivere come un eroe.',
+  'Scrivi come un testimone.',
+  '',
+  'GHOST_8 non giudicherà le tue scelte.',
+  'Giudicherà la tua coerenza.'
 ];
 
 /**
  * Run the intro sequence.
- * Returns a Promise that resolves when the player accepts,
- * or rejects if the player refuses.
+ * Resolves when player accepts mandate.
+ * Rejects if player refuses (app will not boot).
  *
  * @param {HTMLElement} appEl — the #app container
  * @returns {Promise<void>}
@@ -59,37 +57,42 @@ export function runIntro(appEl) {
   }
 
   return new Promise((resolve, reject) => {
-    // ── Create overlay ──
     const overlay = document.createElement('div');
     overlay.className = 'intro-overlay';
     overlay.innerHTML = `
       <div class="intro-container">
         <div class="intro-header">
-          <div class="intro-title">ARCHIVIO SILENTE</div>
-          <div class="intro-subtitle">HYBRID SYNDICATE NETWORK</div>
-          <div class="intro-protocol">PROTOCOLLO DI SUCCESSIONE</div>
+          <div class="intro-org">CONSORTIUM FOR NARRATIVE STABILITY</div>
+          <div class="intro-designation">
+            <span class="intro-label">NODE:</span> GHOST_7
+          </div>
+          <div class="intro-designation">
+            <span class="intro-label">CYCLE WINDOW:</span> 40
+          </div>
         </div>
 
-        <div class="intro-body" data-role="body"></div>
-
-        <div class="intro-actions" data-role="actions" style="display:none;">
-          <button class="intro-btn intro-btn-accept" data-action="accept">ACCETTA TURNO</button>
-          <button class="intro-btn intro-btn-refuse" data-action="refuse">RIFIUTA</button>
+        <div class="intro-section" data-role="mandate">
+          <div class="intro-section-title">MANDATO</div>
+          <div class="intro-body" data-role="body"></div>
         </div>
 
-        <div class="intro-ghost6" data-role="ghost6" style="display:none;">
-          <div class="intro-ghost6-header">GHOST_6 ha lasciato una nota per te:</div>
+        <div class="intro-section" data-role="ghost6-section" style="display:none;">
+          <div class="intro-section-title">NOTA OPERATIVA — GHOST_6</div>
           <div class="intro-ghost6-body" data-role="ghost6-body"></div>
-          <div class="intro-ghost6-start" data-role="start" style="display:none;">
-            <button class="intro-btn intro-btn-accept" data-action="start">AVVIA TURNO 1</button>
+        </div>
+
+        <div class="intro-prompt" data-role="prompt" style="display:none;">
+          <div class="intro-prompt-text">Accetti il mandato?</div>
+          <div class="intro-actions">
+            <button class="intro-btn intro-btn-accept" data-action="accept">ACCETTA MANDATO</button>
+            <button class="intro-btn intro-btn-refuse" data-action="refuse">RIFIUTA</button>
           </div>
         </div>
 
         <div class="intro-farewell" data-role="farewell" style="display:none;">
           <div class="intro-farewell-text">
-            Comprendiamo.<br><br>
-            Non tutti sono pronti per questo lavoro.<br><br>
-            GHOST_8 prenderà il tuo posto.
+            Nodo assegnato a operatore alternativo.<br>
+            Sessione terminata.
           </div>
         </div>
       </div>
@@ -102,24 +105,23 @@ export function runIntro(appEl) {
     overlay.classList.add('visible');
 
     const body = overlay.querySelector('[data-role="body"]');
-    const actions = overlay.querySelector('[data-role="actions"]');
-    const ghost6 = overlay.querySelector('[data-role="ghost6"]');
+    const ghost6Section = overlay.querySelector('[data-role="ghost6-section"]');
     const ghost6Body = overlay.querySelector('[data-role="ghost6-body"]');
-    const startBtn = overlay.querySelector('[data-role="start"]');
+    const prompt = overlay.querySelector('[data-role="prompt"]');
     const farewell = overlay.querySelector('[data-role="farewell"]');
+    const mandateSection = overlay.querySelector('[data-role="mandate"]');
 
-    // ── Type protocol lines ──
+    // ── Phase 1: Type mandate lines ──
     let lineIndex = 0;
 
     function typeLine() {
-      if (lineIndex >= PROTOCOL_LINES.length) {
-        // Show action buttons
-        actions.style.display = '';
-        actions.classList.add('visible');
+      if (lineIndex >= MANDATE_LINES.length) {
+        // Phase 2: GHOST_6 note
+        setTimeout(showGhost6Note, 600);
         return;
       }
 
-      const line = PROTOCOL_LINES[lineIndex];
+      const line = MANDATE_LINES[lineIndex];
       const el = document.createElement('div');
       el.className = 'intro-line';
 
@@ -130,60 +132,26 @@ export function runIntro(appEl) {
       }
 
       body.appendChild(el);
-
-      // Trigger fade-in
       requestAnimationFrame(() => el.classList.add('visible'));
 
       lineIndex++;
       setTimeout(typeLine, line.delay);
     }
 
-    // Start typing after header fade-in
-    setTimeout(typeLine, 1200);
+    // Start after header fade-in
+    setTimeout(typeLine, 1400);
 
-    // ── Button handlers ──
-    overlay.addEventListener('click', (e) => {
-      const action = e.target.dataset.action;
-      if (!action) return;
+    // ── Phase 2: GHOST_6 note ──
+    function showGhost6Note() {
+      ghost6Section.style.display = '';
+      ghost6Section.classList.add('visible');
 
-      if (action === 'refuse') {
-        handleRefuse();
-      } else if (action === 'accept') {
-        handleAccept();
-      } else if (action === 'start') {
-        handleStart();
-      }
-    });
-
-    function handleRefuse() {
-      actions.style.display = 'none';
-      body.style.display = 'none';
-      farewell.style.display = '';
-      farewell.classList.add('visible');
-
-      // Close after reading
-      setTimeout(() => {
-        overlay.classList.remove('visible');
-        setTimeout(() => {
-          overlay.remove();
-          reject(new Error('Player refused'));
-        }, 800);
-      }, 4000);
-    }
-
-    function handleAccept() {
-      actions.style.display = 'none';
-      body.style.display = 'none';
-      ghost6.style.display = '';
-      ghost6.classList.add('visible');
-
-      // Type GHOST_6 note
       let noteIndex = 0;
 
       function typeNote() {
         if (noteIndex >= GHOST6_NOTE.length) {
-          startBtn.style.display = '';
-          startBtn.classList.add('visible');
+          // Phase 3: prompt
+          setTimeout(showPrompt, 800);
           return;
         }
 
@@ -204,10 +172,44 @@ export function runIntro(appEl) {
         setTimeout(typeNote, 400);
       }
 
-      setTimeout(typeNote, 600);
+      setTimeout(typeNote, 400);
     }
 
-    function handleStart() {
+    // ── Phase 3: Prompt ──
+    function showPrompt() {
+      prompt.style.display = '';
+      requestAnimationFrame(() => prompt.classList.add('visible'));
+    }
+
+    // ── Button handlers ──
+    overlay.addEventListener('click', (e) => {
+      const action = e.target.dataset.action;
+      if (!action) return;
+
+      if (action === 'refuse') {
+        handleRefuse();
+      } else if (action === 'accept') {
+        handleAccept();
+      }
+    });
+
+    function handleRefuse() {
+      prompt.style.display = 'none';
+      mandateSection.style.display = 'none';
+      ghost6Section.style.display = 'none';
+      farewell.style.display = '';
+      farewell.classList.add('visible');
+
+      setTimeout(() => {
+        overlay.classList.remove('visible');
+        setTimeout(() => {
+          overlay.remove();
+          reject(new Error('Operator refused mandate'));
+        }, 800);
+      }, 3500);
+    }
+
+    function handleAccept() {
       sessionStorage.setItem('sigil_accepted', '1');
 
       overlay.classList.add('fade-out');
