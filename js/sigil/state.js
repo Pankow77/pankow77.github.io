@@ -40,6 +40,16 @@ export class GameState {
             amara_diallo: { trust: 30, status: 'background' }   // Senegalese — civil society coordinator, ground truth
         };
 
+        // Latent variables — world state independent of player.
+        // Player never sees these. The system does.
+        this.latent_vars = {
+            brent: 50,             // Oil price index (proxy)
+            volatility: 30,        // Geopolitical/market volatility
+            polarization: 20,      // Public discourse polarization
+            repression_index: 15,  // State repression level (global avg)
+            ngo_capacity: 50       // Civil society operational capacity
+        };
+
         this.flags = {
             protocollo_activated: false,
             post_revelation_mode: false,
@@ -50,6 +60,14 @@ export class GameState {
         this.decisions = [];
         this.annotations = [];
         this.inherited_annotations = [];
+        this.event_log = [];  // Append-only. Every action, every delta, every arc.
+    }
+
+    /**
+     * Append to immutable event log.
+     */
+    logEvent(event) {
+        this.event_log.push(event);
     }
 
     applyMetric(key, change) {
@@ -133,7 +151,9 @@ export class GameState {
                 timestamp: a.timestamp
             })),
             final_metrics: { ...this.metrics },
-            npc_states: JSON.parse(JSON.stringify(this.npcs))
+            final_latent: { ...this.latent_vars },
+            npc_states: JSON.parse(JSON.stringify(this.npcs)),
+            event_log: this.event_log
         };
     }
 
@@ -144,11 +164,13 @@ export class GameState {
             act_current: this.act_current,
             started_at: this.started_at,
             metrics: this.metrics,
+            latent_vars: this.latent_vars,
             npcs: this.npcs,
             flags: this.flags,
             decisions: this.decisions,
             annotations: this.annotations,
-            inherited_annotations: this.inherited_annotations
+            inherited_annotations: this.inherited_annotations,
+            event_log: this.event_log
         });
     }
 
@@ -159,10 +181,15 @@ export class GameState {
         this.act_current = data.act_current;
         this.started_at = data.started_at;
         this.metrics = data.metrics;
+        this.latent_vars = data.latent_vars || {
+            brent: 50, volatility: 30, polarization: 20,
+            repression_index: 15, ngo_capacity: 50
+        };
         this.npcs = data.npcs;
         this.flags = data.flags;
         this.decisions = data.decisions;
         this.annotations = data.annotations;
         this.inherited_annotations = data.inherited_annotations || [];
+        this.event_log = data.event_log || [];
     }
 }

@@ -11,7 +11,10 @@
 import { Bus } from '../bus.js';
 import { GameState } from './state.js';
 import { ConsequenceEngine } from './consequence-engine.js';
+import { CausalGraph } from './causal-graph.js';
 import { AnnotationTracker } from './annotation-tracker.js';
+import { Telemetry } from './telemetry.js';
+import { Replay } from './replay.js';
 import { UI } from './ui.js';
 import { SuccessionProtocol } from './succession-protocol.js';
 import { ScenarioLoader } from './scenario-loader.js';
@@ -32,6 +35,12 @@ async function boot() {
     const succession = new SuccessionProtocol(Bus, state, ui);
     const loader = new ScenarioLoader();
 
+    // ── Causal graph + telemetry ──
+    // Derive PRNG seed from run_id for deterministic noise
+    const seed = parseInt(state.run_id.replace(/\D/g, '')) || 42;
+    const graph = new CausalGraph(seed);
+    const telemetry = new Telemetry();
+
     // ── Initialize UI ──
     ui.init();
 
@@ -46,7 +55,9 @@ async function boot() {
         consequenceEngine: consequences,
         annotationTracker: tracker,
         successionProtocol: succession,
-        scenarioLoader: loader
+        scenarioLoader: loader,
+        causalGraph: graph,
+        telemetry
     });
 
     // ── Initialize and run ──
@@ -57,9 +68,24 @@ async function boot() {
         state,
         loop,
         consequences,
+        graph,
         tracker,
+        telemetry,
         succession,
+        replay: Replay,
         bus: Bus,
+        // Dev helpers
+        why: (turn) => {
+            const trace = telemetry.getWhyTrace(turn);
+            if (!trace) { console.log(`No data for turn ${turn}`); return; }
+            console.log(`\n── WHY T${turn} ──`);
+            console.log(`Action: ${trace.action}`);
+            if (trace.frame_action) console.log('Frame:', trace.frame_action);
+            console.log('Arcs:', trace.arcs);
+            console.log('Net deltas:', trace.net_deltas);
+        },
+        metrics: () => console.table(telemetry.getMetricTable()),
+        spark: (key) => console.log(telemetry.sparkline(key)),
         reset: async () => {
             await state.reset();
             location.reload();
@@ -71,6 +97,11 @@ async function boot() {
         'color: #33ff33; font-weight: bold;',
         'color: #227722;',
         'color: #33ff33;'
+    );
+    console.log(
+        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.spark(key)',
+        'color: #33ff33; font-weight: bold;',
+        'color: #666;'
     );
 
     // ── Start ──

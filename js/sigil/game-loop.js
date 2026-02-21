@@ -21,7 +21,7 @@
  */
 
 export class GameLoop {
-    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader }) {
+    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry }) {
         this.bus = bus;
         this.state = state;
         this.ui = ui;
@@ -29,6 +29,8 @@ export class GameLoop {
         this.tracker = annotationTracker;
         this.succession = successionProtocol;
         this.loader = scenarioLoader;
+        this.graph = causalGraph || null;
+        this.telemetry = telemetry || null;
 
         this.sequence = [];
         this.sequenceIndex = 0;
@@ -204,6 +206,32 @@ export class GameLoop {
 
         // Step 5: Apply immediate consequences
         this.consequences.apply(resolved, optionId);
+
+        // Step 5b: Propagate causal graph (latent vars → metric cascades)
+        const option = resolved.decision?.options?.find(o => o.id === optionId);
+        const frameAction = option?.frame_action || null;
+        let causalArcs = [];
+
+        if (this.graph) {
+            const result = this.graph.propagate(optionId, frameAction, this.state);
+            this.graph.apply(this.state, result);
+            causalArcs = result.arcs;
+        }
+
+        // Step 5c: Log event (append-only)
+        this.state.logEvent({
+            turn: entry.turn,
+            theater: resolved.theater || null,
+            action_id: optionId,
+            frame_action: frameAction,
+            causal_arcs: causalArcs,
+            timestamp: Date.now()
+        });
+
+        // Step 5d: Telemetry snapshot
+        if (this.telemetry) {
+            this.telemetry.snapshot(entry.turn, this.state, causalArcs, optionId, frameAction);
+        }
 
         // Step 6: Show feedback
         const feedback = this.consequences.getLastFeedback();

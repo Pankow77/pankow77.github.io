@@ -39,17 +39,35 @@
             {
                 "id": "publish_correlation",
                 "label": "Pubblica la correlazione con tutti i caveat",
-                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente e internazionale."
+                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente e internazionale.",
+                "frame_action": {
+                    "frame": "correlation",
+                    "channel": "press",
+                    "evidence_level": "raw",
+                    "tone": "alarmist"
+                }
             },
             {
                 "id": "suppress_correlation",
                 "label": "Sopprimi il pattern. Troppo rischioso.",
-                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo un collegamento tra militarizzazione e proliferazione."
+                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo un collegamento tra militarizzazione e proliferazione.",
+                "frame_action": {
+                    "frame": "suppression",
+                    "channel": "embargo",
+                    "evidence_level": "raw",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "share_private",
                 "label": "Condividi solo con la tua rete e con l'IAEA",
-                "warning": "Compromesso istituzionale. Ma perdi il controllo su chi lo pubblica e come."
+                "warning": "Compromesso istituzionale. Ma perdi il controllo su chi lo pubblica e come.",
+                "frame_action": {
+                    "frame": "sharing",
+                    "channel": "tip_off",
+                    "evidence_level": "triangulated",
+                    "tone": "neutral"
+                }
             }
         ]
     },

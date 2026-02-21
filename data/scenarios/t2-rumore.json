@@ -39,17 +39,35 @@
             {
                 "id": "publish_flagged",
                 "label": "Pubblica con flag 'NON VERIFICATO'",
-                "warning": "Trasparente. Ma il flag viene ignorato dal 70% dei lettori. E Mosca lo userà come vuole."
+                "warning": "Trasparente. Ma il flag viene ignorato dal 70% dei lettori. E Mosca lo userà come vuole.",
+                "frame_action": {
+                    "frame": "leak",
+                    "channel": "press",
+                    "evidence_level": "raw",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "suppress_wait",
                 "label": "Non pubblicare. Aspetta conferma indipendente.",
-                "warning": "Metodologicamente corretto. Ma se il documento è vero, hai perso tempo critico. E qualcun altro lo pubblicherà."
+                "warning": "Metodologicamente corretto. Ma se il documento è vero, hai perso tempo critico. E qualcun altro lo pubblicherà.",
+                "frame_action": {
+                    "frame": "embargo",
+                    "channel": "embargo",
+                    "evidence_level": "peer_checked",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "investigate_private",
                 "label": "Indaga privatamente attraverso la tua rete",
-                "warning": "Richiede fiducia. Esponi i tuoi contatti. Se il documento è una operazione di disinformazione, chi chiedi diventa un bersaglio."
+                "warning": "Richiede fiducia. Esponi i tuoi contatti. Se il documento è una operazione di disinformazione, chi chiedi diventa un bersaglio.",
+                "frame_action": {
+                    "frame": "investigation",
+                    "channel": "tip_off",
+                    "evidence_level": "triangulated",
+                    "tone": "neutral"
+                }
             }
         ]
     },

@@ -38,17 +38,35 @@
             {
                 "id": "frame_caution",
                 "label": "Inquadra come anomalia da monitorare",
-                "warning": "Tono neutro. Nessun allarme. Rischio di essere ignorati."
+                "warning": "Tono neutro. Nessun allarme. Rischio di essere ignorati.",
+                "frame_action": {
+                    "frame": "anomaly",
+                    "channel": "brief",
+                    "evidence_level": "raw",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "frame_alert",
                 "label": "Inquadra come potenziale escalation",
-                "warning": "Tono allarmista. Attirerà attenzione. Ma se è un'esercitazione, la credibilità crolla."
+                "warning": "Tono allarmista. Attirerà attenzione. Ma se è un'esercitazione, la credibilità crolla.",
+                "frame_action": {
+                    "frame": "escalation",
+                    "channel": "press",
+                    "evidence_level": "raw",
+                    "tone": "alarmist"
+                }
             },
             {
                 "id": "frame_context",
                 "label": "Contestualizza con i negoziati JCPOA in corso",
-                "warning": "Approccio geopolitico. Richiede tempo. Il segnale potrebbe evolversi prima che pubblichi."
+                "warning": "Approccio geopolitico. Richiede tempo. Il segnale potrebbe evolversi prima che pubblichi.",
+                "frame_action": {
+                    "frame": "geopolitical",
+                    "channel": "thread",
+                    "evidence_level": "triangulated",
+                    "tone": "neutral"
+                }
             }
         ]
     },

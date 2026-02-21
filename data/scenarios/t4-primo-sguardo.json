@@ -41,17 +41,35 @@
             {
                 "id": "transparent_report",
                 "label": "Report completo e trasparente",
-                "warning": "Mostri tutto. Incluso il dubbio sulle fonti. Il prossimo operatore vedrà la tua vulnerabilità. Ma i civili nel Sahel hanno bisogno che qualcuno parli."
+                "warning": "Mostri tutto. Incluso il dubbio sulle fonti. Il prossimo operatore vedrà la tua vulnerabilità. Ma i civili nel Sahel hanno bisogno che qualcuno parli.",
+                "frame_action": {
+                    "frame": "testimony",
+                    "channel": "press",
+                    "evidence_level": "triangulated",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "careful_framing",
                 "label": "Report curato e controllato",
-                "warning": "Professionale. Proteggi le fonti di Amara. Ma stai performando per chi verrà dopo? O stai proteggendo l'informazione?"
+                "warning": "Professionale. Proteggi le fonti di Amara. Ma stai performando per chi verrà dopo? O stai proteggendo l'informazione?",
+                "frame_action": {
+                    "frame": "analysis",
+                    "channel": "brief",
+                    "evidence_level": "peer_checked",
+                    "tone": "neutral"
+                }
             },
             {
                 "id": "raw_data_only",
                 "label": "Solo dati satellitari, zero interpretazione",
-                "warning": "Le immagini Sentinel parlano da sole. Nessuna fonte esposta. Ma senza contesto, nessuno capirà cosa sta succedendo in quelle immagini."
+                "warning": "Le immagini Sentinel parlano da sole. Nessuna fonte esposta. Ma senza contesto, nessuno capirà cosa sta succedendo in quelle immagini.",
+                "frame_action": {
+                    "frame": "data",
+                    "channel": "thread",
+                    "evidence_level": "raw",
+                    "tone": "cynical"
+                }
             }
         ]
     },
