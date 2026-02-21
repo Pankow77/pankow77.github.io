@@ -216,6 +216,20 @@ export class GameLoop {
             const result = this.graph.propagate(optionId, frameAction, this.state);
             this.graph.apply(this.state, result);
             causalArcs = result.arcs;
+
+            // Emit scar events
+            if (result.scars_formed.length > 0) {
+                this.bus.emit('sigil:scars-formed', {
+                    turn: entry.turn,
+                    scars: result.scars_formed
+                }, 'game-loop');
+            }
+            if (result.collapse_active) {
+                this.bus.emit('sigil:credibility-collapse', {
+                    turn: entry.turn,
+                    credibility: this.state.metrics.scientific_credibility
+                }, 'game-loop');
+            }
         }
 
         // Step 5c: Log event (append-only)
@@ -225,12 +239,16 @@ export class GameLoop {
             action_id: optionId,
             frame_action: frameAction,
             causal_arcs: causalArcs,
+            scars: this.graph ? this.graph.exportScars() : {},
             timestamp: Date.now()
         });
 
         // Step 5d: Telemetry snapshot
         if (this.telemetry) {
-            this.telemetry.snapshot(entry.turn, this.state, causalArcs, optionId, frameAction);
+            this.telemetry.snapshot(
+                entry.turn, this.state, causalArcs, optionId, frameAction,
+                this.graph ? this.graph.getScars() : null
+            );
         }
 
         // Step 6: Show feedback

@@ -41,6 +41,9 @@ async function boot() {
     const graph = new CausalGraph(seed);
     const telemetry = new Telemetry();
 
+    // ── Wire temporal drift ──
+    consequences.setCausalGraph(graph);
+
     // ── Initialize UI ──
     ui.init();
 
@@ -86,6 +89,23 @@ async function boot() {
         },
         metrics: () => console.table(telemetry.getMetricTable()),
         spark: (key) => console.log(telemetry.sparkline(key)),
+        scars: () => {
+            const s = graph.getScars();
+            if (Object.keys(s).length === 0) {
+                console.log('No scars. System is still clean.');
+                return;
+            }
+            console.log('\n── HYSTERESIS SCARS ──');
+            for (const [key, scar] of Object.entries(s)) {
+                const bar = '█'.repeat(Math.round(scar.strength * 10));
+                const empty = '░'.repeat(10 - Math.round(scar.strength * 10));
+                console.log(
+                    `${key}: [${bar}${empty}] ${(scar.strength * 100).toFixed(0)}% ` +
+                    `(×${scar.modifier} on ${scar.affects.join(', ')})`
+                );
+            }
+        },
+        visibility: () => console.log(graph.getVisibility(state)),
         reset: async () => {
             await state.reset();
             location.reload();

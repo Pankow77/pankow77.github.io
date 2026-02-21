@@ -1,8 +1,11 @@
 /**
- * consequence-engine.js — SIGIL Causal Graph
+ * consequence-engine.js — SIGIL Consequence Engine
  * ═══════════════════════════════════════════════════════════
  * Handles immediate and delayed consequences.
  * Delayed events are consumed when triggered — no ghosts.
+ *
+ * Temporal drift: polarization stretches delays.
+ * High polarization = effects arrive slower, less predictably.
  *
  * Browser-native ES Module. Zero dependencies.
  * ═══════════════════════════════════════════════════════════
@@ -13,6 +16,14 @@ export class ConsequenceEngine {
         this.state = state;
         this.delayedQueue = [];
         this.lastFeedback = null;
+        this.causalGraph = null;  // injected for temporal drift
+    }
+
+    /**
+     * Inject CausalGraph reference for temporal drift computation.
+     */
+    setCausalGraph(graph) {
+        this.causalGraph = graph;
     }
 
     /**
@@ -49,6 +60,7 @@ export class ConsequenceEngine {
 
     /**
      * Schedule delayed consequences.
+     * Applies temporal drift: polarization stretches delays.
      */
     schedule(scenario, optionId) {
         const branch = scenario.consequences?.[optionId];
@@ -59,15 +71,27 @@ export class ConsequenceEngine {
             : [branch.delayed];
 
         for (const d of delayed) {
+            // Temporal drift: the world becomes viscous under polarization
+            let triggerTurn = d.trigger_turn;
+            if (this.causalGraph && triggerTurn > this.state.turn_current) {
+                triggerTurn = this.causalGraph.computeDynamicDelay(
+                    triggerTurn,
+                    this.state.turn_current,
+                    this.state
+                );
+            }
+
             this.delayedQueue.push({
-                trigger_turn: d.trigger_turn,
+                trigger_turn: triggerTurn,
+                original_trigger_turn: d.trigger_turn,
                 scenario_id: scenario.id,
                 option_id: optionId,
                 condition: d.condition || null,
                 feedback: d.feedback || null,
                 metrics: d.metrics || null,
                 npc_changes: d.npc_changes || null,
-                flags: d.flags || null
+                flags: d.flags || null,
+                drifted: triggerTurn !== d.trigger_turn
             });
         }
     }

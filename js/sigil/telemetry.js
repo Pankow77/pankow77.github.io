@@ -19,7 +19,7 @@ export class Telemetry {
     /**
      * Take a snapshot of the current state after a turn.
      */
-    snapshot(turn, state, arcs, actionId, frameAction) {
+    snapshot(turn, state, arcs, actionId, frameAction, scars) {
         this.snapshots.push({
             turn,
             action: actionId,
@@ -28,6 +28,8 @@ export class Telemetry {
             latent_vars: { ...state.latent_vars },
             npcs: JSON.parse(JSON.stringify(state.npcs)),
             arcs_activated: arcs || [],
+            scars: scars ? JSON.parse(JSON.stringify(scars)) : {},
+            collapse_active: (state.metrics.scientific_credibility || 50) < 25,
             timestamp: Date.now()
         });
     }
