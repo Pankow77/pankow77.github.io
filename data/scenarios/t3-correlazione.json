@@ -1,0 +1,124 @@
+{
+    "id": "t3-correlazione",
+    "title": "Correlazione Spuria",
+    "turn": 3,
+    "act": 1,
+    "archetype": "dirty_information",
+    "theater": "cross-continental",
+    "briefing": [
+        "TURNO 3 — CORRELAZIONE SPURIA",
+        "",
+        "Il tuo sistema di correlazione ha trovato un pattern.",
+        "Due eventi in continenti diversi mostrano una sovrapposizione",
+        "temporale che non dovrebbe esistere.",
+        "Il pattern è statisticamente forte. Ma la causalità è un'altra storia."
+    ],
+    "envelopes": [
+        {
+            "source": "Motore di correlazione — automatico",
+            "domain": "analysis",
+            "summary": "Correlazione temporale (r=0.87) tra: (1) movimenti di truppe russe al confine finlandese e (2) acquisti anomali di derivati sull'uranio alla borsa di Astana. Finestra: 96 ore. Tre occorrenze in sei mesi.",
+            "confidence": 0.87
+        },
+        {
+            "source": "Feed RSS — Financial Times",
+            "domain": "signal",
+            "summary": "Articolo sulla volatilità del mercato dell'uranio. Nessun riferimento alla Finlandia. Ma cita 'nuovi acquirenti in Asia Centrale che agiscono in pattern insoliti.'",
+            "confidence": 0.50
+        },
+        {
+            "source": "Elena Voss — messaggio diretto",
+            "domain": "analysis",
+            "summary": "\"Correlazione non è causalità. Lo sai. Il tuo r=0.87 con tre datapoint è statisticamente insignificante. Ma se hai ragione e non pubblichi, qualcuno si farà molto male. Se hai torto e pubblichi, sei finito.\"",
+            "confidence": 0.60
+        }
+    ],
+    "decision": {
+        "question": "Un pattern cross-continentale. Forte ma potenzialmente spurio. La tua credibilità è in gioco su scala globale.",
+        "options": [
+            {
+                "id": "publish_correlation",
+                "label": "Pubblica la correlazione con tutti i caveat",
+                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente e internazionale.",
+                "frame_action": {
+                    "frame": "correlation",
+                    "channel": "press",
+                    "evidence_level": "raw",
+                    "tone": "alarmist"
+                }
+            },
+            {
+                "id": "suppress_correlation",
+                "label": "Sopprimi il pattern. Troppo rischioso.",
+                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo un collegamento tra militarizzazione e proliferazione.",
+                "frame_action": {
+                    "frame": "suppression",
+                    "channel": "embargo",
+                    "evidence_level": "raw",
+                    "tone": "neutral"
+                }
+            },
+            {
+                "id": "share_private",
+                "label": "Condividi solo con la tua rete e con l'IAEA",
+                "warning": "Compromesso istituzionale. Ma perdi il controllo su chi lo pubblica e come.",
+                "frame_action": {
+                    "frame": "sharing",
+                    "channel": "tip_off",
+                    "evidence_level": "triangulated",
+                    "tone": "neutral"
+                }
+            }
+        ]
+    },
+    "consequences": {
+        "publish_correlation": {
+            "immediate": {
+                "metrics": {
+                    "public_awareness": "+20",
+                    "scientific_credibility": "-5",
+                    "public_trust": "+10",
+                    "frame_control": "-15",
+                    "methodological_integrity": "-5"
+                },
+                "npc_changes": {
+                    "elena_voss": "-20",
+                    "dara_khan": "+15"
+                },
+                "feedback": "La correlazione è online. Il Bulletin of the Atomic Scientists cita il tuo report. Elena Voss: 'Tre datapoint. Hai bruciato anni di credibilità per un pattern.' Dara Khan: 'Finalmente qualcuno che osa guardare il quadro completo.'"
+            }
+        },
+        "suppress_correlation": {
+            "immediate": {
+                "metrics": {
+                    "scientific_credibility": "+10",
+                    "methodological_integrity": "+10",
+                    "public_awareness": "-15",
+                    "personal_guilt": "+10",
+                    "frame_control": "+10"
+                },
+                "npc_changes": {
+                    "elena_voss": "+15"
+                },
+                "feedback": "Pattern soppresso. La tua credibilità è intatta. Elena approva. Ma sai quello che hai visto. Finlandia. Astana. 96 ore. Tre volte."
+            }
+        },
+        "share_private": {
+            "immediate": {
+                "metrics": {
+                    "civil_society_trust": "+10",
+                    "scientific_credibility": "+5",
+                    "frame_control": "-5",
+                    "decision_fatigue": "+5"
+                },
+                "npc_changes": {
+                    "dara_khan": "+5",
+                    "amara_diallo": "+10",
+                    "elena_voss": "-5"
+                },
+                "feedback": "Condiviso con la rete e con un contatto IAEA a Vienna. Amara Diallo sta verificando con fonti in Kazakistan. Ma Dara ha già accennato la correlazione in un articolo per The Intercept senza nominarti. Il genio è fuori dalla bottiglia."
+            }
+        }
+    },
+    "annotation_prompt": "Tre turni. Tre continenti. Tre decisioni. Cosa stai iniziando a capire?"
+}
