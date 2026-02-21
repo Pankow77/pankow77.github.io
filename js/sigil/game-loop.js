@@ -252,9 +252,9 @@ export class GameLoop {
             causalArcs = causalResult.arcs;
         }
 
-        // Step 5c: SUB-BASS HIT — the player feels the choice
+        // Step 5c: SUB-BASS HIT — context-sensitive, never the same twice
         if (this.audio) {
-            this.audio.subBassHit();
+            this.audio.subBassHit(this.state);
         }
 
         // Step 5d: CINEMATIC SEQUENCE — freeze → stamp → propagation wave
@@ -294,13 +294,18 @@ export class GameLoop {
             }
         }
 
-        // Step 5f: UPDATE METRIC HUD — numbers arrive 400ms after world reacted
+        // Step 5f: POST-CONSEQUENCE COMPRESSION — the world contracts
+        if (this.audio) {
+            this.audio.postConsequenceCompress();
+        }
+
+        // Step 5g: UPDATE METRIC HUD — numbers arrive after world reacted
         if (this.vfx) {
             this.vfx.updateMetrics(this.state);
             this.vfx.updateScars(this.graph ? this.graph.getScars() : null);
         }
 
-        // Step 5g: Update audio soundscape for new state
+        // Step 5h: Update audio soundscape for new state
         if (this.audio) {
             this.audio.update(this.state);
         }

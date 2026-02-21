@@ -202,25 +202,77 @@ export class AudioEngine {
     // ═══════════════════════════════════════
 
     /**
-     * 40Hz sub-bass punch. Called on player choice.
-     * 120ms. Felt in the chest, not heard in the ears.
+     * Context-sensitive sub-bass hit. Called on player choice.
+     * The same action in different contexts sounds different.
+     *
+     * Base: 40Hz sine, 120ms.
+     * Modifiers:
+     *   - Scar count shifts frequency (more scars = lower, heavier)
+     *   - Volatility adds harmonic distortion
+     *   - Repression lengthens the tail
+     *
+     * The player never hears the same punch twice if the world has changed.
      */
-    subBassHit() {
+    subBassHit(state) {
         if (!this.ctx || this._muted) return;
 
+        const now = this.ctx.currentTime;
+        const scarCount = this._scarOscs.length;
+        const vol = (state?.latent_vars?.volatility || 0) / 100;
+        const rep = (state?.latent_vars?.repression_index || 0) / 100;
+
+        // Frequency: 40Hz base, drops 2Hz per scar (heavier world = deeper hit)
+        const freq = Math.max(28, 40 - scarCount * 2);
+
+        // Duration: 120ms base, +40ms per 0.5 repression
+        const duration = 0.12 + rep * 0.04;
+
+        // Main tone
         const osc = this.ctx.createOscillator();
         osc.type = 'sine';
-        osc.frequency.value = 40;
+        osc.frequency.value = freq;
 
         const gain = this.ctx.createGain();
-        const now = this.ctx.currentTime;
         gain.gain.setValueAtTime(0.4, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
 
         osc.connect(gain);
         gain.connect(this.masterGain);
         osc.start(now);
-        osc.stop(now + 0.15);
+        osc.stop(now + duration + 0.05);
+
+        // Volatility harmonic: adds grit when volatile
+        if (vol > 0.3) {
+            const harmonic = this.ctx.createOscillator();
+            harmonic.type = 'sawtooth';
+            harmonic.frequency.value = freq * 1.5; // fifth above
+
+            const hGain = this.ctx.createGain();
+            hGain.gain.setValueAtTime(vol * 0.08, now);
+            hGain.gain.exponentialRampToValueAtTime(0.001, now + duration * 0.7);
+
+            harmonic.connect(hGain);
+            hGain.connect(this.masterGain);
+            harmonic.start(now);
+            harmonic.stop(now + duration);
+        }
+    }
+
+    /**
+     * Post-consequence compression.
+     * Brief global volume dip — the world contracts after an action.
+     * 300ms. Subtle but perceptible.
+     */
+    postConsequenceCompress() {
+        if (!this.ctx || !this.started || this._muted) return;
+
+        const now = this.ctx.currentTime;
+        const current = this.masterGain.gain.value;
+
+        // Duck to 60%, recover over 300ms
+        this.masterGain.gain.setValueAtTime(current, now);
+        this.masterGain.gain.linearRampToValueAtTime(current * 0.6, now + 0.05);
+        this.masterGain.gain.linearRampToValueAtTime(current, now + 0.35);
     }
 
     // ═══════════════════════════════════════
@@ -267,6 +319,9 @@ export class AudioEngine {
     /**
      * Add a permanent dissonant partial. One per scar.
      * Very quiet. Accumulates. After 3-4 scars the drone is unsettling.
+     *
+     * Dynamic compression: older scars get quieter as new ones arrive.
+     * Not removed — compacted. The memory doesn't disappear. It recedes.
      */
     addScarTone(scarKey) {
         if (!this.ctx || this._muted) return;
@@ -286,7 +341,6 @@ export class AudioEngine {
         osc.frequency.value = freq;
 
         const gain = this.ctx.createGain();
-        // Fade in slowly over 3 seconds
         const now = this.ctx.currentTime;
         gain.gain.setValueAtTime(0, now);
         gain.gain.linearRampToValueAtTime(0.025, now + 3);
@@ -296,6 +350,45 @@ export class AudioEngine {
         osc.start();
 
         this._scarOscs.push({ osc, gain, key: scarKey });
+
+        // Compress older scar tones — they recede, not disappear
+        this._compressScarTones();
+    }
+
+    /**
+     * Dynamic compression: as scars accumulate, older ones get quieter.
+     * Total scar volume is capped. Each new scar pushes older ones down.
+     * The sonic texture stays dense but never becomes cacophonous.
+     */
+    _compressScarTones() {
+        if (!this.ctx) return;
+
+        const count = this._scarOscs.length;
+        if (count <= 2) return; // no compression needed for 1-2 scars
+
+        // Total budget: 0.05 gain shared among all scars
+        // Newest scar gets most, oldest gets least
+        const totalBudget = 0.05;
+        const now = this.ctx.currentTime;
+
+        for (let i = 0; i < count; i++) {
+            const age = count - 1 - i; // 0 = newest, count-1 = oldest
+            // Exponential decay: newest = full share, oldest = compressed
+            const share = Math.pow(0.6, age);
+            const normalizedShare = share / this._sumGeometric(count, 0.6);
+            const targetGain = totalBudget * normalizedShare;
+
+            this._scarOscs[i].gain.gain.linearRampToValueAtTime(
+                Math.max(0.003, targetGain), // never fully silent
+                now + 2
+            );
+        }
+    }
+
+    _sumGeometric(n, ratio) {
+        let sum = 0;
+        for (let i = 0; i < n; i++) sum += Math.pow(ratio, i);
+        return sum;
     }
 
     // ═══════════════════════════════════════
@@ -355,10 +448,9 @@ export class AudioEngine {
             this._tickerInterval = setInterval(() => this._fireTick(), this._tickerRate);
         }
 
-        // Scar tones: strength fades with scar decay
-        for (const scarOsc of this._scarOscs) {
-            // Scar tones persist — they don't need updating per turn
-            // Their mere presence is the point
+        // Scar tone maintenance: recompress if scars have decayed
+        if (this._scarOscs.length > 2) {
+            this._compressScarTones();
         }
     }
 

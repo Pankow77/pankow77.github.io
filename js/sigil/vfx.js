@@ -32,8 +32,11 @@ export class VFX {
         this._propagationLayer = null;
         this._frameOverlay = null;
         this._microCrisisEl = null;
+        this._preEchoEl = null;
         this._lastState = null;
         this._driftPhase = 0;
+        this._previousRhythm = null;
+        this._scarCount = 0;
     }
 
     /**
@@ -77,6 +80,12 @@ export class VFX {
         this._microCrisisEl.id = 'vfx-microcrisis';
         this._microCrisisEl.className = 'vfx-layer';
         document.body.appendChild(this._microCrisisEl);
+
+        // Pre-echo anticipation element
+        this._preEchoEl = document.createElement('div');
+        this._preEchoEl.id = 'vfx-pre-echo';
+        this._preEchoEl.className = 'vfx-layer';
+        document.body.appendChild(this._preEchoEl);
     }
 
     // ═══════════════════════════════════════
@@ -188,10 +197,16 @@ export class VFX {
     // ═══════════════════════════════════════
 
     /**
-     * Cinematic choice sequence: freeze → stamp → propagation wave.
-     * 1200ms total. Called when player selects an option.
+     * Cinematic choice sequence:
+     *   pre-echo (50ms) → freeze (120ms) → stamp → propagation → compress
+     * Called when player selects an option.
      */
     async cinematicChoice(actionId, arcs) {
+        // Phase 0: Pre-echo — a flicker of anticipation (50ms)
+        this._preEchoEl.classList.add('active');
+        await this._delay(50);
+        this._preEchoEl.classList.remove('active');
+
         // Phase 1: Freeze (120ms)
         document.body.classList.add('vfx-freeze');
         await this._delay(120);
@@ -206,10 +221,32 @@ export class VFX {
         // Phase 3: Unfreeze
         document.body.classList.remove('vfx-freeze');
 
-        // Phase 4: Propagation wave — arcs light up sequentially
+        // Phase 4: Partial propagation — only significant arcs shown
         if (arcs && arcs.length > 0) {
-            await this._propagateArcs(arcs);
+            const significant = this._filterSignificantArcs(arcs);
+            await this._propagateArcs(significant, arcs.length);
         }
+
+        // Phase 5: Post-consequence compression (world contracts)
+        document.body.classList.add('vfx-compress');
+        await this._delay(300);
+        document.body.classList.remove('vfx-compress');
+    }
+
+    /**
+     * Filter arcs to only show significant ones.
+     * The player senses there's more underneath — but doesn't see everything.
+     */
+    _filterSignificantArcs(arcs) {
+        // Always show action→latent (the player's direct effect)
+        // Show cascade/contamination only if |delta| >= 2
+        // Show hysteresis always (it's dramatic)
+        return arcs.filter(arc => {
+            if (arc.phase === 'action→latent') return true;
+            if (arc.phase === 'hysteresis') return true;
+            if (arc.phase === 'collapse') return true;
+            return Math.abs(arc.delta || 0) >= 2;
+        });
     }
 
     _actionLabel(actionId) {
@@ -232,9 +269,12 @@ export class VFX {
 
     /**
      * Sequential arc propagation — each arc lights up 100ms apart.
-     * Phase labels shown. This is the causal chain made visible.
+     * Shows hidden arc count — the player feels there's more underneath.
+     *
+     * @param {Array} arcs — filtered significant arcs
+     * @param {number} totalCount — total arcs before filtering
      */
-    async _propagateArcs(arcs) {
+    async _propagateArcs(arcs, totalCount) {
         this._propagationLayer.innerHTML = '';
         this._propagationLayer.classList.add('active');
 
@@ -263,6 +303,17 @@ export class VFX {
             await this._delay(30);
             arcEl.classList.add('visible');
             await this._delay(100);
+        }
+
+        // Show hidden arc count — tension from the invisible
+        const hidden = (totalCount || arcs.length) - arcs.length;
+        if (hidden > 0) {
+            const hiddenEl = document.createElement('div');
+            hiddenEl.className = 'arc-flash arc-hidden';
+            hiddenEl.innerHTML = `<span class="arc-from">+ ${hidden} latenti</span>`;
+            this._propagationLayer.appendChild(hiddenEl);
+            await this._delay(30);
+            hiddenEl.classList.add('visible');
         }
 
         // Hold visible
@@ -306,27 +357,51 @@ export class VFX {
     // ═══════════════════════════════════════
 
     /**
-     * Add permanent scar mark to the visual layer.
-     * After 6-7 turns, the world should look damaged.
+     * Progressive visual degradation from scars.
+     * Each scar adds ~2-3% damage. After 4 scars the world is visibly wounded.
+     *
+     * Effects:
+     *   - Scanlines heavier (CSS var --scar-damage)
+     *   - Scar overlay gradients
+     *   - Text ghosting on old elements
+     *   - Metric aliasing (slight blur)
+     *   - Border nitidezza decay
      */
     updateScars(scars) {
         if (!scars || Object.keys(scars).length === 0) {
             this._scarOverlay.className = 'vfx-layer';
+            this._scarCount = 0;
             return;
         }
 
+        const scarEntries = Object.values(scars);
+        this._scarCount = scarEntries.length;
+
         let totalWeight = 0;
-        for (const scar of Object.values(scars)) {
+        for (const scar of scarEntries) {
             totalWeight += scar.strength * scar.modifier;
         }
 
-        // Progressive visual damage
+        // Progressive visual damage (0 → 1)
         const damage = Math.min(1, totalWeight / 5);
         this._scarOverlay.style.setProperty('--scar-intensity', damage);
         this._scarOverlay.classList.add('active');
 
-        // Affect body styling
+        // Body-level damage properties
         document.body.style.setProperty('--scar-damage', damage);
+        document.body.style.setProperty('--scar-count', this._scarCount);
+
+        // Ghosting: old text gets slight shadow (2-3% per scar)
+        const ghosting = Math.min(3, this._scarCount * 0.7);
+        document.body.style.setProperty('--ghost-blur', ghosting + 'px');
+
+        // Aliasing: metrics lose sharpness
+        const aliasing = Math.min(1.5, this._scarCount * 0.3);
+        document.body.style.setProperty('--aliasing-blur', aliasing + 'px');
+
+        // Border decay: edges lose crispness
+        const borderDecay = Math.min(0.6, this._scarCount * 0.12);
+        document.body.style.setProperty('--border-decay', borderDecay);
     }
 
     // ═══════════════════════════════════════
@@ -369,12 +444,23 @@ export class VFX {
 
     /**
      * Set visual rhythm mode for current turn.
+     * If rhythm changed: micro-glitch transition (150ms).
      */
-    setRhythm(rhythm) {
+    async setRhythm(rhythm) {
+        const changed = this._previousRhythm && this._previousRhythm !== rhythm;
+
+        // Rhythm transition glitch — subliminal anomaly
+        if (changed) {
+            document.body.classList.add('vfx-glitch');
+            await this._delay(150);
+            document.body.classList.remove('vfx-glitch');
+        }
+
         document.body.classList.remove(
             'rhythm-calm', 'rhythm-turbulent', 'rhythm-opaque', 'rhythm-inertial'
         );
         document.body.classList.add(`rhythm-${rhythm}`);
+        this._previousRhythm = rhythm;
     }
 
     // ═══════════════════════════════════════
