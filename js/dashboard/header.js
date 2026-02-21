@@ -27,7 +27,7 @@ export class HeaderStrip {
   _build() {
     this.container.innerHTML = `
       <div class="header-left">
-        <div class="header-brand" id="header-brand">HS</div>
+        <div class="header-brand" id="header-brand">SIGIL</div>
         <div class="system-state" id="system-state">
           <div class="state-dot elastic" id="state-dot"></div>
           <span class="state-label elastic" id="state-label">ELASTIC</span>
@@ -40,8 +40,9 @@ export class HeaderStrip {
         </div>
       </div>
       <div class="header-right">
+        <div class="cycle-counter" id="cycle-counter">CYCLE 1/40</div>
         <div class="sim-clock" id="sim-clock">--:--:--</div>
-        <div class="session-phase" id="session-phase">STANDBY</div>
+        <div class="session-phase" id="session-phase">ELASTICITY</div>
       </div>
     `;
 
@@ -51,7 +52,8 @@ export class HeaderStrip {
       stateLabel: this.container.querySelector('#state-label'),
       fragility: this.container.querySelector('#fragility-value'),
       clock: this.container.querySelector('#sim-clock'),
-      phase: this.container.querySelector('#session-phase')
+      phase: this.container.querySelector('#session-phase'),
+      cycle: this.container.querySelector('#cycle-counter')
     };
   }
 
@@ -71,6 +73,9 @@ export class HeaderStrip {
     );
     this.subscriptions.push(
       State.watch('system.phase', (value) => this._updatePhase(value))
+    );
+    this.subscriptions.push(
+      State.watch('cycle.current', (value) => this._updateCycle(value))
     );
   }
 
@@ -118,6 +123,11 @@ export class HeaderStrip {
 
   _updatePhase(value) {
     this.els.phase.textContent = value;
+  }
+
+  _updateCycle(value) {
+    const total = State.get('cycle.total') || 40;
+    this.els.cycle.textContent = `CYCLE ${value}/${total}`;
   }
 
   destroy() {
