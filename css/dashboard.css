@@ -613,3 +613,210 @@ body.state-fractured .tile[data-delayed] {
     padding: 0 8px;
   }
 }
+
+
+/* ══════════════════════════════════
+   INTRO SEQUENCE — Succession Protocol
+   ══════════════════════════════════ */
+
+/* Shell hidden until intro completes */
+#app:not(.shell-active) .header-strip,
+#app:not(.shell-active) #view-container,
+#app:not(.shell-active) .footer-strip {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#app.shell-active .header-strip,
+#app.shell-active #view-container,
+#app.shell-active .footer-strip {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+/* ── Overlay ── */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50000;
+  background: var(--bg-void);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.intro-overlay.visible {
+  opacity: 1;
+}
+
+.intro-overlay.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ── Container ── */
+.intro-container {
+  max-width: 560px;
+  width: 90%;
+  text-align: left;
+}
+
+/* ── Header block ── */
+.intro-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+  margin-bottom: 6px;
+}
+
+.intro-subtitle {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+
+.intro-protocol {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
+
+/* ── Body lines ── */
+.intro-body {
+  margin-bottom: 32px;
+}
+
+.intro-line {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.intro-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-spacer {
+  height: 12px;
+}
+
+/* ── Action buttons ── */
+.intro-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.intro-actions.visible {
+  opacity: 1;
+}
+
+.intro-btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 28px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.intro-btn:hover {
+  border-color: var(--border-active);
+  color: var(--text);
+}
+
+.intro-btn-accept {
+  border-color: var(--cyan-dim);
+  color: var(--cyan);
+}
+
+.intro-btn-accept:hover {
+  border-color: var(--cyan);
+  background: rgba(0, 200, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.1);
+}
+
+.intro-btn-refuse:hover {
+  border-color: var(--red-dim);
+  color: var(--red-dim);
+}
+
+/* ── GHOST_6 note ── */
+.intro-ghost6 {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.intro-ghost6.visible {
+  opacity: 1;
+}
+
+.intro-ghost6-header {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.intro-ghost6-line {
+  font-size: 13px;
+  color: var(--ice);
+  line-height: 1.8;
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.intro-ghost6-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-ghost6-start {
+  margin-top: 32px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.intro-ghost6-start.visible {
+  opacity: 1;
+}
+
+/* ── Farewell (refuse) ── */
+.intro-farewell {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.intro-farewell.visible {
+  opacity: 1;
+}
+
+.intro-farewell-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 2;
+}
