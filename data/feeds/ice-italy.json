@@ -1,8 +1,33 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-02-21T14:50:52.954Z",
-  "epoch_count": 5,
+  "last_fetch": "2026-02-21T15:20:58.124Z",
+  "epoch_count": 7,
   "epochs": [
+    {
+      "id": "rss_f6922dfb44439338",
+      "timestamp": 1771627560000,
+      "source": "OSINT",
+      "actor": "olympics",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Donald Trump Winter Olympics visit set after USA hockey win and local police warning - The Mirror",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNc3NORVFHWGlWc0xHNnBjS2RIVDFaaUlXNmZaOEdkTUh5SFBiU0xYUkJiajF6TFYzTlB5cXd5NE9HN3Rzdmx1amNqZGJVaUg2WC1FbkFMZFhXRWdRcjYyRk05bmdKV3dyZkw2dzk5LV9rcTQ4dFdFVEdYaHJQdERDNU14VHl5emItUHFJZDFn0gGTAUFVX3lxTE8wUkVqbmpYeWZfOTFSUXNab0JhWGJZaXBHVWxvY2t4YnV5TmJCQzNKeHZkUHZSMlFYT3ZHLTdYeDJObHBnLVZtelB6UE5hdVVEY21DVEk4VzI3dlR4LW8zaFhMMG5NckxROWtoQS1nVkZUMUdBbmVwUC1vSkdTbkItbllQMDhBXzM4NGdCUFZnclplTQ?oc=5\" target=\"_blank\">Donald Trump Winter Olympics visi",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina",
+        "meloni-trump"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc3NORVFHWGlWc0xHNnBjS2RIVDFaaUlXNmZaOEdkTUh5SFBiU0xYUkJiajF6TFYzTlB5cXd5NE9HN3Rzdmx1amNqZGJVaUg2WC1FbkFMZFhXRWdRcjYyRk05bmdKV3dyZkw2dzk5LV9rcTQ4dFdFVEdYaHJQdERDNU14VHl5emItUHFJZDFn0gGTAUFVX3lxTE8wUkVqbmpYeWZfOTFSUXNab0JhWGJZaXBHVWxvY2t4YnV5TmJCQzNKeHZkUHZSMlFYT3ZHLTdYeDJObHBnLVZtelB6UE5hdVVEY21DVEk4VzI3dlR4LW8zaFhMMG5NckxROWtoQS1nVkZUMUdBbmVwUC1vSkdTbkItbllQMDhBXzM4NGdCUFZnclplTQ?oc=5",
+      "feed_id": "gn-olympics-security",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-21T15:20:57.865Z"
+    },
     {
       "id": "rss_568139350d497465",
       "timestamp": 1771507328000,
@@ -71,6 +96,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-20T07:29:30.298Z"
+    },
+    {
+      "id": "rss_9034b4541c2a3a16",
+      "timestamp": 1771409907000,
+      "source": "OSINT",
+      "actor": "olympics",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Israel decries 'humiliation' of athletes at Winter Olympics - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5iNjNfdTNUUEd3N1dEUnFCVVFsNDhDTW1hTWFXaXNjWnJDQmtQRHFMQlhGZU9JVUhxTE9jLTQ5cm5ON2xTNnUxdW5QRWZ4UVp3U2FwdmlUNzNGZWZuejdYRUFPY0VWUQ?oc=5\" target=\"_blank\">Israel decries 'humiliation' of athletes at Winter Olympics</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5iNjNfdTNUUEd3N1dEUnFCVVFsNDhDTW1hTWFXaXNjWnJDQmtQRHFMQlhGZU9JVUhxTE9jLTQ5cm5ON2xTNnUxdW5QRWZ4UVp3U2FwdmlUNzNGZWZuejdYRUFPY0VWUQ?oc=5",
+      "feed_id": "gn-olympics-security",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-21T15:20:57.865Z"
     },
     {
       "id": "rss_da4e0567c68039bd",
