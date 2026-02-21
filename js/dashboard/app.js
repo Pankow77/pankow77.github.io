@@ -4,11 +4,14 @@
  * Wires everything. One file to rule them all.
  *
  * Boot sequence:
- *   1. Intro overlay (succession protocol) — runs once per session
+ *   1. Intro overlay (CNS node assignment) — runs once per session
  *   2. Shell mounts (Header, Footer, Router)
- *   3. Router opens hub (or restores from URL)
+ *   3. Hidden systems init (ExposureTracker, TerminationSequence)
+ *   4. Router opens hub (or restores from URL)
  *
  * If player refuses intro, app does not boot.
+ * ExposureTracker and TerminationSequence are never visible
+ * until the system decides the operator has seen too much.
  */
 
 import { Router } from './router.js';
@@ -19,6 +22,8 @@ import { AgoraModule } from './modules/agora.js';
 import { OracleModule } from './modules/oracle.js';
 import { ArchivioModule } from './modules/archivio.js';
 import { runIntro } from './intro.js';
+import { ExposureTracker } from './exposure.js';
+import { TerminationSequence } from './termination.js';
 
 export async function boot() {
   const appEl = document.getElementById('app');
@@ -28,13 +33,11 @@ export async function boot() {
     return;
   }
 
-  // ── Phase 1: Succession Protocol ──
-  // Shell is hidden during intro. Overlay sits on top.
+  // ── Phase 1: CNS Node Assignment ──
   try {
     await runIntro(appEl);
   } catch (e) {
-    // Player refused. App does not boot.
-    console.log('%c[APP] %cOperator refused succession.', 'color: #ff3344;', 'color: #6b7fa3;');
+    console.log('%c[APP] %cOperator refused mandate.', 'color: #ff3344;', 'color: #6b7fa3;');
     return;
   }
 
@@ -48,7 +51,6 @@ export async function boot() {
     return;
   }
 
-  // Show shell (hidden during intro)
   appEl.classList.add('shell-active');
 
   Router.init(viewEl);
@@ -61,15 +63,22 @@ export async function boot() {
   Router.register('oracle', new OracleModule());
   Router.register('archivio', new ArchivioModule());
 
-  // ── Phase 3: Open default view ──
+  // ── Phase 3: Hidden systems ──
+  // These exist in the background. No UI. No indication.
+  // They watch. They measure. They decide.
+  ExposureTracker.init();
+  TerminationSequence.init(appEl);
+
+  // ── Phase 4: Open default view ──
   const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
   const target = (path && Router.has(path)) ? path : 'hub';
   Router.open(target, { push: false });
 
   console.log(
-    '%c[APP] %cShell online. %c' + Router.getModules().length + ' modules registered.',
+    '%c[APP] %cNode active. %cCycle 1/%c40',
     'color: #00c8ff; font-weight: bold;',
     'color: #6b7fa3;',
+    'color: #39ff14;',
     'color: #39ff14;'
   );
 

@@ -120,6 +120,22 @@ State.batch({
   'operator.coherence': 1.0,       // Frame consistency over time
   'operator.annotations': 0,       // Written this session
 
+  // ── HIDDEN — not displayed anywhere ──
+  // epistemic_exposure tracks how much the operator "sees".
+  // Cross-theatre correlation, pattern identification,
+  // non-manipulable choices, sustained coherence.
+  // When it crosses threshold, CNS initiates termination.
+  // The player never sees this number.
+  '_exposure.index': 0,             // 0.0–1.0. Threshold: 0.85
+  '_exposure.crossCorrelations': 0, // How many cross-theatre links identified
+  '_exposure.patternDepth': 0,      // Consecutive correct pattern reads
+  '_exposure.autonomyScore': 0,     // Non-compliant framing choices
+  '_isolation.active': false,       // True when system begins degradation
+  '_isolation.cycle': 0,            // Cycle when isolation began
+  '_termination.triggered': false,  // True when CNS issues notice
+  '_termination.cycle': 0,          // Cycle of termination notice
+  '_termination.finalAnnotation': false, // Has player written last note
+
   // Module statuses (tiles read these)
   'agora.intensity': 72,
   'agora.polarization': [30, 45, 60, 72, 55, 40, 68],

@@ -834,3 +834,175 @@ body.state-fractured .tile[data-delayed] {
   color: var(--text-dim);
   line-height: 2;
 }
+
+
+/* ══════════════════════════════════
+   ISOLATION — Subtle degradation
+   ══════════════════════════════════ */
+
+/* When isolation is active, tiles show micro-glitches */
+body.isolation-active .tile {
+  animation: isolation-flicker 8s ease-in-out infinite;
+}
+
+body.isolation-active .tile:nth-child(odd) {
+  animation-delay: -3s;
+}
+
+@keyframes isolation-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97% { opacity: 0.85; }
+  98% { opacity: 1; }
+  99% { opacity: 0.9; }
+}
+
+/* Oracle becomes opaque during isolation */
+body.isolation-active .tile[data-module="oracle"] .micro-confidence {
+  filter: blur(0.5px);
+  transition: filter 2s ease;
+}
+
+
+/* ══════════════════════════════════
+   TERMINATION SEQUENCE
+   ══════════════════════════════════ */
+
+.termination-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60000;
+  background: rgba(4, 8, 16, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.termination-overlay.visible {
+  opacity: 1;
+}
+
+.termination-overlay.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Final termination: fully opaque, no escape */
+.termination-final {
+  background: var(--bg-void);
+}
+
+.termination-container {
+  max-width: 520px;
+  width: 90%;
+  text-align: left;
+}
+
+.termination-header {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(255, 51, 68, 0.4);
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--red-dim);
+}
+
+/* Clean succession: cyan, not red */
+.termination-clean .termination-header {
+  color: var(--cyan);
+  text-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+  border-bottom-color: var(--border);
+}
+
+.termination-risk {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 2;
+  margin-bottom: 24px;
+}
+
+.termination-label {
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.termination-body {
+  margin-bottom: 28px;
+}
+
+.termination-line {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.termination-reason {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+.termination-prompt {
+  margin-top: 24px;
+}
+
+/* ── Operator profile (end screen) ── */
+.termination-profile {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: rgba(10, 18, 32, 0.5);
+}
+
+.termination-profile-title {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.termination-stat {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 2.2;
+}
+
+/* ── Termination sequence lines ── */
+.termination-sequence {
+  margin-top: 32px;
+}
+
+.termination-seq-line {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 2;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.termination-seq-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.termination-ghost8 {
+  color: var(--cyan);
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-top: 8px;
+}
+
+.termination-reset {
+  color: var(--text-dim);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
