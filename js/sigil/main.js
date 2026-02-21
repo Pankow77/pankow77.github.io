@@ -19,6 +19,9 @@ import { UI } from './ui.js';
 import { SuccessionProtocol } from './succession-protocol.js';
 import { ScenarioLoader } from './scenario-loader.js';
 import { GameLoop } from './game-loop.js';
+import { VFX } from './vfx.js';
+import { AudioEngine } from './audio-engine.js';
+import { Rhythm } from './rhythm.js';
 
 async function boot() {
     console.log(
@@ -44,8 +47,37 @@ async function boot() {
     // ── Wire temporal drift ──
     consequences.setCausalGraph(graph);
 
+    // ── Perception layer ──
+    const vfx = new VFX(Bus);
+    const audio = new AudioEngine();
+    const rhythm = new Rhythm();
+
     // ── Initialize UI ──
     ui.init();
+
+    // ── Initialize VFX ──
+    vfx.init();
+
+    // ── Audio: init on first user interaction (browser policy) ──
+    const startAudio = () => {
+        audio.init();
+        audio.start();
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('keydown', startAudio);
+    };
+    document.addEventListener('click', startAudio, { once: false });
+    document.addEventListener('keydown', startAudio, { once: false });
+
+    // ── Audio toggle button ──
+    const audioToggle = document.getElementById('audio-toggle');
+    if (audioToggle) {
+        audioToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const active = audio.toggleMute();
+            audioToggle.textContent = active ? 'SND' : 'MUTE';
+            audioToggle.classList.toggle('muted', !active);
+        });
+    }
 
     // ── Preload scenarios ──
     await loader.preloadMVP();
@@ -60,7 +92,10 @@ async function boot() {
         successionProtocol: succession,
         scenarioLoader: loader,
         causalGraph: graph,
-        telemetry
+        telemetry,
+        vfx,
+        audio,
+        rhythm
     });
 
     // ── Initialize and run ──
@@ -77,6 +112,9 @@ async function boot() {
         succession,
         replay: Replay,
         bus: Bus,
+        vfx,
+        audio,
+        rhythm,
         // Dev helpers
         why: (turn) => {
             const trace = telemetry.getWhyTrace(turn);
@@ -119,7 +157,7 @@ async function boot() {
         'color: #33ff33;'
     );
     console.log(
-        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.spark(key)',
+        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.spark(key), __SIGIL.scars()',
         'color: #33ff33; font-weight: bold;',
         'color: #666;'
     );

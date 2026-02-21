@@ -4,24 +4,25 @@
  * The heartbeat. One turn at a time.
  *
  * Turn structure:
- *   1. Load scenario
- *   2. Show envelopes (intelligence briefing)
- *   3. Present decision
- *   4. Apply consequences (immediate)
- *   5. Show feedback
- *   6. Show inherited annotation (from previous GHOST)
- *   7. Prompt player annotation
- *   8. Check delayed consequences
- *   9. Check PROTOCOLLO trigger
- *  10. Save state
- *  11. Next turn
+ *   1. Classify rhythm (calm/turbulent/opaque/inertial)
+ *   2. Load scenario
+ *   3. Show envelopes (intelligence briefing)
+ *   4. Present decision
+ *   5. CINEMATIC CHOICE: freeze → stamp → propagation → world → numbers
+ *   6. Show feedback
+ *   7. Show inherited annotation (from previous GHOST)
+ *   8. Prompt player annotation
+ *   9. Check delayed consequences
+ *  10. Check PROTOCOLLO trigger
+ *  11. Save state
+ *  12. Next turn
  *
  * Browser-native ES Module. Zero dependencies.
  * ═══════════════════════════════════════════════════════════
  */
 
 export class GameLoop {
-    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry }) {
+    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry, vfx, audio, rhythm }) {
         this.bus = bus;
         this.state = state;
         this.ui = ui;
@@ -31,6 +32,9 @@ export class GameLoop {
         this.loader = scenarioLoader;
         this.graph = causalGraph || null;
         this.telemetry = telemetry || null;
+        this.vfx = vfx || null;
+        this.audio = audio || null;
+        this.rhythm = rhythm || null;
 
         this.sequence = [];
         this.sequenceIndex = 0;
@@ -58,6 +62,14 @@ export class GameLoop {
             } else {
                 // Completed all turns — show end screen
                 this.sequenceIndex = this.sequence.length;
+            }
+
+            // Restore scar state into CausalGraph
+            if (this.graph && this.state.event_log.length > 0) {
+                const lastEvent = this.state.event_log[this.state.event_log.length - 1];
+                if (lastEvent.scars) {
+                    this.graph.importScars(lastEvent.scars);
+                }
             }
         }
     }
@@ -158,10 +170,27 @@ export class GameLoop {
         if (entry.act) this.state.act_current = entry.act;
         this.ui.setTurn(entry.turn);
 
+        // ── RHYTHM: classify this turn ──
+        let rhythmData = null;
+        if (this.rhythm) {
+            const pendingDelayed = this.consequences.delayedQueue.length;
+            const scars = this.graph ? this.graph.getScars() : {};
+            rhythmData = this.rhythm.classify(this.state, pendingDelayed, scars);
+
+            // Apply rhythm to VFX and audio
+            if (this.vfx) this.vfx.setRhythm(rhythmData.type);
+            if (this.audio) this.audio.setRhythm(rhythmData.type);
+
+            // Update rhythm indicator in header
+            const indicator = document.getElementById('rhythm-indicator');
+            if (indicator) indicator.textContent = this.rhythm.getLabel();
+        }
+
         this.bus.emit('sigil:turn-started', {
             turn: entry.turn,
             scenario_id: entry.id,
-            act: entry.act
+            act: entry.act,
+            rhythm: rhythmData?.type || 'calm'
         }, 'game-loop');
 
         // Separator between turns
@@ -183,7 +212,7 @@ export class GameLoop {
         if (resolved.briefing) {
             await this.ui.typeLines(
                 Array.isArray(resolved.briefing) ? resolved.briefing : [resolved.briefing],
-                { speed: 20, cssClass: 'briefing-text', pauseBetween: 400 }
+                { speed: rhythmData?.params?.typewriterSpeed || 20, cssClass: 'briefing-text', pauseBetween: 400 }
             );
         }
 
@@ -204,27 +233,60 @@ export class GameLoop {
             timestamp: Date.now()
         });
 
-        // Step 5: Apply immediate consequences
+        // ════════════════════════════════════
+        // CINEMATIC CHOICE SEQUENCE
+        // Emotion first. Numbers second.
+        // ════════════════════════════════════
+
+        // Step 5a: Apply immediate consequences (silent — no display yet)
         this.consequences.apply(resolved, optionId);
 
-        // Step 5b: Propagate causal graph (latent vars → metric cascades)
+        // Step 5b: Propagate causal graph (silent — calculate but don't show)
         const option = resolved.decision?.options?.find(o => o.id === optionId);
         const frameAction = option?.frame_action || null;
         let causalArcs = [];
+        let causalResult = null;
 
         if (this.graph) {
-            const result = this.graph.propagate(optionId, frameAction, this.state);
-            this.graph.apply(this.state, result);
-            causalArcs = result.arcs;
+            causalResult = this.graph.propagate(optionId, frameAction, this.state);
+            causalArcs = causalResult.arcs;
+        }
 
-            // Emit scar events
-            if (result.scars_formed.length > 0) {
+        // Step 5c: SUB-BASS HIT — the player feels the choice
+        if (this.audio) {
+            this.audio.subBassHit();
+        }
+
+        // Step 5d: CINEMATIC SEQUENCE — freeze → stamp → propagation wave
+        if (this.vfx) {
+            await this.vfx.cinematicChoice(optionId, causalArcs);
+        }
+
+        // Step 5e: NOW apply state changes (numbers arrive AFTER perception)
+        if (this.graph && causalResult) {
+            this.graph.apply(this.state, causalResult);
+
+            // Emit scar events (VFX listens to these)
+            if (causalResult.scars_formed.length > 0) {
                 this.bus.emit('sigil:scars-formed', {
                     turn: entry.turn,
-                    scars: result.scars_formed
+                    scars: causalResult.scars_formed
                 }, 'game-loop');
+
+                // Audio: add permanent scar tones
+                if (this.audio) {
+                    for (const scar of causalResult.scars_formed) {
+                        this.audio.addScarTone(scar);
+                    }
+                }
+
+                // Audio: crisis sound
+                if (this.audio) {
+                    this.audio.crisisSound();
+                }
             }
-            if (result.collapse_active) {
+
+            if (causalResult.collapse_active) {
                 this.bus.emit('sigil:credibility-collapse', {
                     turn: entry.turn,
                     credibility: this.state.metrics.scientific_credibility
@@ -232,7 +294,18 @@ export class GameLoop {
             }
         }
 
-        // Step 5c: Log event (append-only)
+        // Step 5f: UPDATE METRIC HUD — numbers arrive 400ms after world reacted
+        if (this.vfx) {
+            this.vfx.updateMetrics(this.state);
+            this.vfx.updateScars(this.graph ? this.graph.getScars() : null);
+        }
+
+        // Step 5g: Update audio soundscape for new state
+        if (this.audio) {
+            this.audio.update(this.state);
+        }
+
+        // Step 5h: Log event (append-only)
         this.state.logEvent({
             turn: entry.turn,
             theater: resolved.theater || null,
@@ -240,10 +313,11 @@ export class GameLoop {
             frame_action: frameAction,
             causal_arcs: causalArcs,
             scars: this.graph ? this.graph.exportScars() : {},
+            rhythm: rhythmData?.type || 'calm',
             timestamp: Date.now()
         });
 
-        // Step 5d: Telemetry snapshot
+        // Step 5i: Telemetry snapshot
         if (this.telemetry) {
             this.telemetry.snapshot(
                 entry.turn, this.state, causalArcs, optionId, frameAction,
@@ -303,7 +377,8 @@ export class GameLoop {
         this.bus.emit('sigil:turn-completed', {
             turn: entry.turn,
             scenario_id: entry.id,
-            option_id: optionId
+            option_id: optionId,
+            rhythm: rhythmData?.type || 'calm'
         }, 'game-loop');
     }
 
