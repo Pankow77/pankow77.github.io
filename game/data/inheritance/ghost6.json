@@ -1,0 +1,34 @@
+{
+  "ghost_id": "GHOST_6",
+  "timestamp_start": 1737100000000,
+  "timestamp_end": 1737186400000,
+  "total_turns": 3,
+  "annotations": [
+    {
+      "turn": 1,
+      "content": "Non sono sicuro di questa decisione. I dati sono chiari ma le persone dietro quei numeri no. 8400 famiglie dipendono da quello stabilimento.",
+      "sentiment": -0.2
+    },
+    {
+      "turn": 2,
+      "content": "La fonte anonima mi preoccupa. Chi manda documenti così e perché adesso? Forse qualcuno dentro l'azienda ha deciso che basta. O forse qualcuno vuole manipolarmi.",
+      "sentiment": -0.4
+    },
+    {
+      "turn": 3,
+      "content": "Ho scelto di non presentarmi alla conferenza. Non per codardia. Perché non ero sicuro che la mia voce avrebbe aiutato più del mio silenzio. Forse mi sbaglio. Chi legge questo lo saprà meglio di me.",
+      "sentiment": -0.3
+    }
+  ],
+  "protocol_choice": "transmit_all",
+  "final_metrics": {
+    "scientific_credibility": 55,
+    "methodological_integrity": 48,
+    "public_trust": 42,
+    "civil_society_trust": 38,
+    "government_comfort": 65,
+    "personal_guilt": 35,
+    "decision_fatigue": 45,
+    "public_awareness": 18
+  }
+}

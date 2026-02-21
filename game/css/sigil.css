@@ -1,0 +1,536 @@
+/**
+ * SIGIL - Visual Language
+ * Monocromo computazionale. Non cyberpunk.
+ * ZX Spectrum proiettato al 2026.
+ * Fosforo verde su nero. Diagrammi di flusso. Struttura.
+ */
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --phosphor: #33ff33;
+  --phosphor-dim: #1a9c1a;
+  --phosphor-bright: #66ff66;
+  --phosphor-faint: rgba(51, 255, 51, 0.08);
+  --phosphor-glow: rgba(51, 255, 51, 0.15);
+  --black: #0a0a0a;
+  --black-pure: #000000;
+  --dark: #111111;
+  --dark-panel: #0d0d0d;
+  --grey-dark: #1a1a1a;
+  --grey: #2a2a2a;
+  --text-dim: #555555;
+  --warning: #ffaa00;
+  --danger: #ff3333;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-display: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* ── Scanlines (subtle CRT effect) ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.08) 2px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ── Main Container ── */
+#sigil-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* ── Header Bar ── */
+.sigil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--grey);
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: var(--phosphor-dim);
+  flex-shrink: 0;
+}
+
+.sigil-header .ghost-id {
+  color: var(--phosphor);
+  font-weight: bold;
+}
+
+.sigil-header .turn-indicator {
+  color: var(--phosphor-dim);
+}
+
+.sigil-header .system-status {
+  color: var(--phosphor-dim);
+}
+
+/* ── Main Content Area ── */
+.sigil-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey) var(--black);
+}
+
+.sigil-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sigil-content::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+.sigil-content::-webkit-scrollbar-thumb {
+  background: var(--grey);
+}
+
+/* ── Envelope (Information Packets) ── */
+.envelope {
+  border: 1px solid var(--grey);
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: envelope-arrive 0.4s ease forwards;
+}
+
+.envelope-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: var(--grey-dark);
+  border-bottom: 1px solid var(--grey);
+  font-size: 11px;
+}
+
+.envelope-sender {
+  color: var(--phosphor);
+}
+
+.envelope-classification {
+  color: var(--phosphor-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.envelope-classification.riservato { color: var(--phosphor); }
+.envelope-classification.confidenziale { color: var(--warning); }
+.envelope-classification.critico { color: var(--danger); }
+.envelope-classification.urgente { color: var(--danger); }
+.envelope-classification.personale { color: var(--phosphor-dim); }
+
+.envelope-body {
+  padding: 12px;
+  white-space: pre-wrap;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--phosphor);
+}
+
+/* ── Decision Panel ── */
+.decision-panel {
+  border: 1px solid var(--phosphor-dim);
+  margin-top: 16px;
+  opacity: 0;
+  animation: panel-appear 0.5s ease 0.3s forwards;
+}
+
+.decision-panel-header {
+  padding: 8px 12px;
+  background: var(--grey-dark);
+  border-bottom: 1px solid var(--phosphor-dim);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--phosphor);
+}
+
+.decision-option {
+  padding: 12px;
+  border-bottom: 1px solid var(--grey);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.decision-option:last-child {
+  border-bottom: none;
+}
+
+.decision-option:hover {
+  background: var(--phosphor-faint);
+}
+
+.decision-option:focus {
+  background: var(--phosphor-glow);
+  outline: 1px solid var(--phosphor-dim);
+  outline-offset: -1px;
+}
+
+.option-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--phosphor);
+  margin-bottom: 4px;
+}
+
+.option-key {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid var(--phosphor-dim);
+  margin-right: 8px;
+  font-size: 11px;
+  color: var(--phosphor-dim);
+}
+
+.option-description {
+  font-size: 12px;
+  color: var(--phosphor-dim);
+  padding-left: 28px;
+}
+
+.decision-option.selected {
+  background: var(--phosphor-glow);
+  border-left: 2px solid var(--phosphor);
+}
+
+/* ── Annotation Editor ── */
+.annotation-editor {
+  border: 1px solid var(--grey);
+  margin-top: 16px;
+  opacity: 0;
+  animation: panel-appear 0.5s ease forwards;
+}
+
+.annotation-header {
+  padding: 8px 12px;
+  background: var(--grey-dark);
+  border-bottom: 1px solid var(--grey);
+  font-size: 11px;
+  color: var(--phosphor-dim);
+  letter-spacing: 1px;
+}
+
+.annotation-prompt {
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--phosphor-dim);
+  font-style: italic;
+  border-bottom: 1px solid var(--grey);
+}
+
+.annotation-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  background: var(--black-pure);
+  border: none;
+  color: var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+}
+
+.annotation-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.annotation-textarea:focus {
+  box-shadow: inset 0 0 0 1px var(--phosphor-dim);
+}
+
+.annotation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-top: 1px solid var(--grey);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.char-count {
+  color: var(--phosphor-dim);
+}
+
+/* ── Buttons ── */
+.btn {
+  padding: 6px 16px;
+  background: transparent;
+  border: 1px solid var(--phosphor-dim);
+  color: var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  background: var(--phosphor-faint);
+  border-color: var(--phosphor);
+}
+
+.btn-primary {
+  background: var(--phosphor-faint);
+  border-color: var(--phosphor);
+}
+
+.btn-ghost {
+  border-color: var(--grey);
+  color: var(--phosphor-dim);
+}
+
+.btn-ghost:hover {
+  border-color: var(--phosphor-dim);
+  color: var(--phosphor);
+}
+
+/* ── Protocol Takeover Screen ── */
+.protocol-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--black-pure);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.protocol-overlay.active {
+  opacity: 1;
+}
+
+.protocol-text {
+  max-width: 700px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--phosphor);
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.protocol-text .highlight {
+  color: var(--phosphor-bright);
+  font-weight: bold;
+}
+
+.protocol-annotations {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 24px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--grey);
+}
+
+.protocol-annotation-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--grey);
+  font-size: 12px;
+}
+
+.protocol-annotation-item .turn-label {
+  color: var(--phosphor-dim);
+  font-size: 10px;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.protocol-annotation-item .annotation-content {
+  color: var(--phosphor);
+  font-style: italic;
+}
+
+.protocol-choices {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* ── Boot Sequence ── */
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--black-pure);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.boot-text {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--phosphor);
+  white-space: pre;
+  line-height: 1.4;
+}
+
+.boot-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--phosphor);
+  animation: blink 0.8s step-end infinite;
+}
+
+/* ── Endgame / Archivio Morale ── */
+.endgame-screen {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.endgame-header {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--phosphor-dim);
+  text-transform: uppercase;
+}
+
+.endgame-metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--grey);
+  font-size: 12px;
+}
+
+.endgame-metric .metric-name {
+  color: var(--phosphor-dim);
+}
+
+.endgame-metric .metric-value {
+  color: var(--phosphor);
+  font-weight: bold;
+}
+
+.endgame-decisions {
+  margin-top: 24px;
+}
+
+.endgame-decision {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--grey);
+}
+
+.endgame-decision .decision-turn {
+  font-size: 10px;
+  color: var(--phosphor-dim);
+  letter-spacing: 1px;
+}
+
+.endgame-decision .decision-choice {
+  font-size: 13px;
+  color: var(--phosphor);
+  margin-top: 2px;
+}
+
+/* ── Typewriter Effect ── */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--phosphor);
+  animation: typewriter-cursor 0.8s step-end infinite;
+}
+
+.typewriter.done {
+  border-right: none;
+  animation: none;
+}
+
+/* ── Animations ── */
+@keyframes envelope-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panel-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typewriter-cursor {
+  0%, 100% { border-color: var(--phosphor); }
+  50% { border-color: transparent; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  #sigil-app {
+    padding: 12px;
+  }
+
+  .envelope-body {
+    font-size: 12px;
+  }
+
+  .annotation-textarea {
+    min-height: 80px;
+  }
+
+  .protocol-text {
+    font-size: 12px;
+  }
+}

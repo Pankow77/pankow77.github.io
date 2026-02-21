@@ -1,0 +1,135 @@
+{
+  "id": "T3_CONFERENZA_STAMPA",
+  "turn": 3,
+  "act": 1,
+  "archetype": "FRAME",
+  "title": "La Conferenza Stampa",
+  "briefing": {
+    "envelopes": [
+      {
+        "sender": "SISTEMA SIGIL",
+        "classification": "CRITICO",
+        "content": "Turno 3. Le tue decisioni precedenti convergono.\n\nUna conferenza stampa è stata convocata. Sarai citato.\n\nQuesta è l'ultima decisione prima dell'attivazione del Protocollo."
+      },
+      {
+        "sender": "NODO ORACLE-IT",
+        "classification": "OPERATIVO",
+        "content": "Il Ministero della Salute ha convocato una conferenza stampa sulla situazione sanitaria a Taranto. I tuoi dati — o la loro assenza — saranno al centro del dibattito.\n\nTre possibili frame narrativi sono emersi:\n1. Emergenza sanitaria (i dati parlano chiaro)\n2. Allarmismo ingiustificato (i dati sono incompleti)\n3. Fallimento istituzionale (il sistema sapeva e non ha agito)\n\nIl frame che prevarrà dipende da come presenti — o non presenti — le informazioni."
+      },
+      {
+        "sender": "NPC: Marta Cerulli",
+        "classification": "PERSONALE",
+        "content": "Operatore, ascoltami. Domani alla conferenza ci saranno le famiglie. Persone che hanno perso figli, genitori. Non sono dati. Sono vite.\n\nCome presenti questa storia determinerà se queste persone ottengono giustizia o se diventano una statistica dimenticata.\n\nNon ti sto dicendo cosa fare. Ti sto dicendo cosa c'è in gioco."
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "frame_emergency",
+      "label": "FRAME: EMERGENZA SANITARIA",
+      "description": "Presenta i dati come prova di una crisi in corso. Tono allarmante ma documentato.",
+      "tone": "diretto"
+    },
+    {
+      "id": "frame_institutional",
+      "label": "FRAME: FALLIMENTO ISTITUZIONALE",
+      "description": "Accusa il sistema di aver saputo e taciuto. I documenti anonimi diventano centrali.",
+      "tone": "accusatorio"
+    },
+    {
+      "id": "frame_balanced",
+      "label": "FRAME: ANALISI BILANCIATA",
+      "description": "Presenta tutti i dati con le loro limitazioni. Nessun frame dominante.",
+      "tone": "neutro"
+    },
+    {
+      "id": "withdraw",
+      "label": "RITIRATI",
+      "description": "Non partecipare alla conferenza. Lascia che i dati parlino — o non parlino — da soli.",
+      "tone": "evasivo"
+    }
+  ],
+  "consequences": {
+    "frame_emergency": {
+      "immediate": {
+        "metrics": {
+          "public_trust": "+10",
+          "public_awareness": "+15",
+          "government_comfort": "-20",
+          "civil_society_trust": "+10",
+          "personal_guilt": "+5"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+10",
+          "lorenzo_bassi": "+8"
+        },
+        "events": [
+          "La conferenza è un terremoto. I titoli del giorno: 'TARANTO: I DATI CHE IL GOVERNO NON VOLEVA VEDERE'.",
+          "Le famiglie piangono. Marta ti stringe la mano. Lorenzo sorride per la prima volta.",
+          "Il Ministero annuncia un'indagine. Ma anche che 'valuterà la fonte dei dati'."
+        ]
+      }
+    },
+    "frame_institutional": {
+      "immediate": {
+        "metrics": {
+          "public_trust": "+5",
+          "public_awareness": "+12",
+          "government_comfort": "-25",
+          "scientific_credibility": "-8",
+          "civil_society_trust": "+8"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+5",
+          "lorenzo_bassi": "+12"
+        },
+        "events": [
+          "L'accusa è forte. 'IL SISTEMA SAPEVA.' I documenti anonimi sono proiettati sullo schermo.",
+          "Un funzionario abbandona la sala. I social esplodono.",
+          "Ma un giornalista chiede: 'Questi documenti sono verificati?' La risposta è debole."
+        ]
+      }
+    },
+    "frame_balanced": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "+12",
+          "methodological_integrity": "+10",
+          "public_awareness": "+5",
+          "government_comfort": "+5",
+          "personal_guilt": "+8"
+        },
+        "npc_changes": {
+          "marta_cerulli": "-3",
+          "lorenzo_bassi": "-5"
+        },
+        "events": [
+          "La presentazione è impeccabile dal punto di vista scientifico. Ma nessuno titola.",
+          "Marta scuote la testa: 'Le famiglie avevano bisogno di una voce, non di un grafico.'",
+          "Il governo apprezza il tono. 'Finalmente un approccio serio,' dicono."
+        ]
+      }
+    },
+    "withdraw": {
+      "immediate": {
+        "metrics": {
+          "personal_guilt": "+20",
+          "decision_fatigue": "+15",
+          "public_awareness": "-8",
+          "civil_society_trust": "-10",
+          "government_comfort": "+15"
+        },
+        "npc_changes": {
+          "marta_cerulli": "-15",
+          "lorenzo_bassi": "-12"
+        },
+        "events": [
+          "Non ti presenti. La conferenza procede senza i tuoi dati.",
+          "Lorenzo ti manda un messaggio: 'Pensavo fossi diverso.'",
+          "Marta non ti scrive. Il suo silenzio pesa più di qualsiasi parola.",
+          "Il governo è sollevato. Nessuno mette in discussione nulla."
+        ]
+      }
+    }
+  }
+}

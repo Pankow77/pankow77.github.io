@@ -1,0 +1,130 @@
+{
+  "id": "T4_POST_REVELATION",
+  "turn": 4,
+  "act": 1,
+  "archetype": "PROTOCOL",
+  "title": "Dopo il Protocollo",
+  "post_revelation": true,
+  "briefing": {
+    "envelopes": [
+      {
+        "sender": "SISTEMA SIGIL",
+        "classification": "POST-PROTOCOLLO",
+        "content": "Turno 4. Post-Rivelazione.\n\nOra sai. Ogni annotazione che scrivi da questo momento sarà letta.\n\nIl prossimo operatore erediterà le tue parole. Le tue decisioni. Il tuo peso.\n\nQuesto è l'ultimo turno. Scegli sapendo di essere osservato."
+      },
+      {
+        "sender": "NODO ORACLE-IT",
+        "classification": "FINALE",
+        "content": "Situazione aggiornata: le conseguenze delle tue tre decisioni precedenti si sono accumulate.\n\nIl caso Taranto è diventato simbolo nazionale. Le istituzioni reagiscono. La società civile si muove.\n\nUn'ultima decisione operativa è richiesta prima della chiusura del tuo ciclo come operatore SIGIL."
+      },
+      {
+        "sender": "SISTEMA SIGIL",
+        "classification": "ARCHIVIO",
+        "content": "Nota di sistema: il tuo predecessore ha lasciato questo messaggio.\n\n[Se esistono annotazioni ereditate, vengono mostrate qui. Se l'archivio era vuoto: 'L'operatore precedente ha scelto di non lasciare nulla. Hai lavorato senza guida.']\n\nOra la stessa scelta è tua. Cosa lasci a chi viene dopo?"
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "protect_future",
+      "label": "PROTEGGI IL FUTURO",
+      "description": "Rilascia tutti i dati rimanenti. Il prossimo operatore avrà tutto. Trasparenza totale.",
+      "tone": "sacrificale"
+    },
+    {
+      "id": "strategic_silence",
+      "label": "SILENZIO STRATEGICO",
+      "description": "Trattieni alcune informazioni. Proteggi il prossimo operatore dal peso che hai portato tu.",
+      "tone": "paternalistico"
+    },
+    {
+      "id": "poison_pill",
+      "label": "TESTAMENTO OPERATIVO",
+      "description": "Lascia un'analisi dettagliata delle tue scelte e dei tuoi errori. Cruda, onesta, senza filtri.",
+      "tone": "brutale"
+    },
+    {
+      "id": "system_critique",
+      "label": "CRITICA IL SISTEMA",
+      "description": "La tua ultima azione: documenta che SIGIL stesso è parte del problema. Il protocollo di successione è manipolazione.",
+      "tone": "ribelle"
+    }
+  ],
+  "consequences": {
+    "protect_future": {
+      "immediate": {
+        "metrics": {
+          "public_trust": "+8",
+          "civil_society_trust": "+10",
+          "personal_guilt": "-10",
+          "scientific_credibility": "+5"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+8",
+          "lorenzo_bassi": "+5"
+        },
+        "events": [
+          "Tutto è nel registro. Dati, analisi, contesto. Il prossimo operatore non partirà al buio.",
+          "Marta: 'Hai fatto la cosa giusta. Non è sempre quella facile, ma è quella giusta.'"
+        ]
+      }
+    },
+    "strategic_silence": {
+      "immediate": {
+        "metrics": {
+          "government_comfort": "+10",
+          "personal_guilt": "+15",
+          "methodological_integrity": "-5",
+          "public_awareness": "-5"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "-8"
+        },
+        "events": [
+          "Trattieni i dati più pesanti. Il prossimo operatore avrà una versione più leggera.",
+          "Ti dici che è protezione. Ma sai che è anche controllo.",
+          "Lorenzo: 'Stai decidendo per qualcun altro cosa può sopportare. Chi ti ha dato il diritto?'"
+        ]
+      }
+    },
+    "poison_pill": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "+8",
+          "personal_guilt": "-15",
+          "self_awareness": "+0.2",
+          "decision_fatigue": "+10"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+5",
+          "lorenzo_bassi": "+10"
+        },
+        "events": [
+          "Scrivi tutto. Ogni dubbio, ogni errore, ogni momento in cui hai scelto il compromesso.",
+          "Non è un rapporto. È una confessione operativa.",
+          "Il prossimo operatore leggerà le cicatrici di qualcuno che ha provato a fare la cosa giusta e non sempre ci è riuscito."
+        ]
+      }
+    },
+    "system_critique": {
+      "immediate": {
+        "metrics": {
+          "government_comfort": "-20",
+          "civil_society_trust": "+15",
+          "public_awareness": "+10",
+          "scientific_credibility": "-5",
+          "personal_guilt": "-5"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+12",
+          "lorenzo_bassi": "+8"
+        },
+        "events": [
+          "Documenti che il protocollo di successione è un meccanismo di controllo. Le annotazioni 'private' non sono mai state private.",
+          "SIGIL non è uno strumento di trasparenza. È un sistema di sorveglianza travestito da protocollo etico.",
+          "La tua critica diventa parte dell'archivio. Ironia: il sistema registra fedelmente la propria denuncia."
+        ]
+      }
+    }
+  }
+}
