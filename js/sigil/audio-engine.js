@@ -6,15 +6,14 @@
  *
  * Not music. Cognitive environment.
  *
- * Layers:
- *   - Base drone: filtered noise, always present, barely audible
- *   - Tension hum: low oscillator, grows with repression_index
- *   - Static crackle: noise bursts, frequency tied to volatility
- *   - Ticker pulse: rhythmic click, rate tied to market activity
- *   - Sub-bass hit: context-sensitive 40Hz punch on choice
- *   - Scar tones: hierarchical (foreground/midlayer/cluster)
- *   - Theater signatures: each theater has a timbral fingerprint
- *   - Pre-echo click: micro-anticipation sound
+ * Spectral bands (separated to reduce cognitive fatigue):
+ *   35–45 Hz:   Sub-bass hits (choice impact)
+ *   80–120 Hz:  Base drone (filtered noise, always present)
+ *   90–140 Hz:  Scar tones (foreground/midlayer/cluster)
+ *   500–600 Hz: Tension hum (beating pair, grows with repression)
+ *   800 Hz:     Ticker pulse (market activity rate)
+ *   1200 Hz:    Pre-echo click (anticipation impulse)
+ *   3000+ Hz:   Static crackle (noise bursts, volatility)
  *
  * Scar Architecture 2.0:
  *   Scars 1-2: foreground (audible, unstable)
@@ -120,24 +119,33 @@ export class AudioEngine {
     // ═══════════════════════════════════════
 
     _startTension() {
+        // Spectral band: 500–600Hz (separated from sub-bass 35-45Hz and scars 90-140Hz)
         const osc = this.ctx.createOscillator();
         osc.type = 'sine';
-        osc.frequency.value = 42;
+        osc.frequency.value = 520;
 
         const osc2 = this.ctx.createOscillator();
         osc2.type = 'sine';
-        osc2.frequency.value = 43.5;
+        osc2.frequency.value = 523; // ~3Hz beating
+
+        // Bandpass to keep tension in its lane
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.value = 520;
+        filter.Q.value = 2.0;
 
         const gain = this.ctx.createGain();
         gain.gain.value = 0;
 
-        osc.connect(gain);
-        osc2.connect(gain);
+        osc.connect(filter);
+        osc2.connect(filter);
+        filter.connect(gain);
         gain.connect(this.masterGain);
         osc.start();
         osc2.start();
 
         this._tensionOsc = [osc, osc2];
+        this._tensionFilter = filter;
         this._tensionGain = gain;
     }
 
@@ -216,13 +224,14 @@ export class AudioEngine {
 
         const now = this.ctx.currentTime;
 
-        // Short impulse — filtered click
+        // Short impulse — filtered click (dampened by fatigue)
+        const damp = this._getDampening();
         const osc = this.ctx.createOscillator();
         osc.type = 'sine';
         osc.frequency.value = 1200;
 
         const gain = this.ctx.createGain();
-        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.setValueAtTime(0.12 * damp, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.008);
 
         osc.connect(gain);
@@ -265,8 +274,11 @@ export class AudioEngine {
         filter.frequency.value = sig.filterFreq;
         filter.Q.value = sig.filterQ;
 
+        // Apply fatigue dampening
+        const damp = this._getDampening();
+
         const gain = this.ctx.createGain();
-        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.setValueAtTime(0.4 * damp, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + duration * sig.tailMult);
 
         osc.connect(filter);
@@ -275,14 +287,14 @@ export class AudioEngine {
         osc.start(now);
         osc.stop(now + duration * sig.tailMult + 0.05);
 
-        // Volatility harmonic
+        // Volatility harmonic (dampened)
         if (vol > 0.3) {
             const harmonic = this.ctx.createOscillator();
             harmonic.type = 'sawtooth';
             harmonic.frequency.value = freq * 1.5;
 
             const hGain = this.ctx.createGain();
-            hGain.gain.setValueAtTime(vol * 0.08, now);
+            hGain.gain.setValueAtTime(vol * 0.08 * damp, now);
             hGain.gain.exponentialRampToValueAtTime(0.001, now + duration * 0.7);
 
             harmonic.connect(hGain);
@@ -433,11 +445,12 @@ export class AudioEngine {
     addScarTone(scarKey) {
         if (!this.ctx || this._muted) return;
 
+        // Spectral band: 90–140Hz (between sub-bass 35-45Hz and tension 500-600Hz)
         const scarFreqs = {
-            polarization_scar: 67,
-            repression_scar: 89,
-            volatility_scar: 113,
-            brent_scar: 157,
+            polarization_scar: 95,
+            repression_scar: 108,
+            volatility_scar: 123,
+            brent_scar: 137,
         };
 
         const freq = scarFreqs[scarKey] || 73;
@@ -538,12 +551,25 @@ export class AudioEngine {
             filter.frequency.value = 400;
             filter.Q.value = 0.3;
 
-            // Slow amplitude modulation — breathing
+            // Slow amplitude modulation — breathing with ±1.5s variation
+            // Base 20s cycle + random drift so brain doesn't classify as loop
             const amLfo = this.ctx.createOscillator();
             amLfo.type = 'sine';
-            amLfo.frequency.value = 0.05; // 20-second cycle
+            // 0.05Hz = 20s, variation ±1.5s → freq range 0.0465–0.0538Hz
+            amLfo.frequency.value = 0.05;
             const amGain = this.ctx.createGain();
             amGain.gain.value = 0.005;
+
+            // Secondary LFO modulates the breathing rate itself (meta-modulation)
+            // Creates ±1.5s cycle variation — imperceptible as pattern
+            const breathDriftLfo = this.ctx.createOscillator();
+            breathDriftLfo.type = 'sine';
+            breathDriftLfo.frequency.value = 0.007; // ~143s super-slow drift
+            const breathDriftGain = this.ctx.createGain();
+            breathDriftGain.gain.value = 0.004; // ±0.004Hz ≈ ±1.6s at 20s base
+            breathDriftLfo.connect(breathDriftGain);
+            breathDriftGain.connect(amLfo.frequency);
+            breathDriftLfo.start();
 
             const gain = this.ctx.createGain();
             gain.gain.setValueAtTime(0, now);
@@ -683,6 +709,53 @@ export class AudioEngine {
                 this.masterGain.gain.linearRampToValueAtTime(0.18, now + 0.3);
                 break;
         }
+    }
+
+    // ═══════════════════════════════════════
+    // AFTERIMAGE SILENCE
+    // ═══════════════════════════════════════
+
+    /**
+     * Afterimage silence: drop to near-silence for N ms after intense event.
+     * Not total silence — just the drone, heavily filtered.
+     * The void amplifies memory. The brain fills the gap with echo.
+     *
+     * @param {number} durationMs — 300–800ms
+     */
+    afterimageSilence(durationMs) {
+        if (!this.ctx || !this.started || this._muted || durationMs <= 0) return;
+
+        const now = this.ctx.currentTime;
+        const durationSec = durationMs / 1000;
+        const current = this.masterGain.gain.value;
+
+        // Rapid drop to 15% of current (not zero — absence, not silence)
+        this.masterGain.gain.setValueAtTime(current, now);
+        this.masterGain.gain.exponentialRampToValueAtTime(
+            Math.max(0.01, current * 0.15), now + 0.04
+        );
+
+        // Hold the void
+        this.masterGain.gain.setValueAtTime(
+            Math.max(0.01, current * 0.15), now + durationSec - 0.1
+        );
+
+        // Slow organic return (not instant — the world seeps back)
+        this.masterGain.gain.linearRampToValueAtTime(current, now + durationSec + 0.5);
+    }
+
+    /**
+     * Apply external dampening multiplier to sub-bass and effects.
+     * Used by fatigue system to reduce impact during oxygen turns.
+     *
+     * @param {number} mult — 0.0–1.0
+     */
+    setDampening(mult) {
+        this._dampeningMult = Math.max(0, Math.min(1, mult));
+    }
+
+    _getDampening() {
+        return this._dampeningMult ?? 1.0;
     }
 
     // ═══════════════════════════════════════

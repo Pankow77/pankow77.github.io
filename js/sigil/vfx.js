@@ -37,6 +37,16 @@ export class VFX {
         this._driftPhase = 0;
         this._previousRhythm = null;
         this._scarCount = 0;
+        this._dampening = 1.0;  // fatigue dampening multiplier (0.3–1.0)
+        this._lastIntensity = 0; // last turn's intensity for hue gating
+    }
+
+    /**
+     * Set external dampening from fatigue system.
+     * Applied to: stamp duration, glitch intensity, crisis flash.
+     */
+    setDampening(mult) {
+        this._dampening = Math.max(0.2, Math.min(1, mult));
     }
 
     /**
@@ -211,11 +221,11 @@ export class VFX {
         document.body.classList.add('vfx-freeze');
         await this._delay(120);
 
-        // Phase 2: Frame stamp overlay
+        // Phase 2: Frame stamp overlay (dampened by fatigue)
         const label = this._actionLabel(actionId);
         this._frameOverlay.textContent = label;
         this._frameOverlay.classList.add('active');
-        await this._delay(400);
+        await this._delay(Math.round(400 * this._dampening));
         this._frameOverlay.classList.remove('active');
 
         // Phase 3: Unfreeze
@@ -301,13 +311,14 @@ export class VFX {
 
             this._propagationLayer.appendChild(arcEl);
 
-            // Micro-jitter: 20–40ms reveal onset (organic variation)
-            const revealJitter = 20 + Math.floor(Math.random() * 20);
+            // Non-linear jitter: power curve distribution (more short gaps, rare long gaps)
+            // Math.pow(random, 2) clusters values toward 0, creating organic unpredictability
+            const revealJitter = 20 + Math.floor(Math.pow(Math.random(), 2) * 30);
             await this._delay(revealJitter);
             arcEl.classList.add('visible');
 
-            // Micro-jitter: 70–130ms between arcs (never mechanical)
-            const gapJitter = 70 + Math.floor(Math.random() * 60);
+            // Non-linear gap: 70–150ms with power-curve distribution
+            const gapJitter = 70 + Math.floor(Math.pow(Math.random(), 2) * 80);
             await this._delay(gapJitter);
         }
 
@@ -453,22 +464,31 @@ export class VFX {
      * If rhythm changed: PROCEDURAL micro-glitch (never identical twice).
      *
      * Glitch anatomy:
-     *   - Duration: 130–170ms (±12ms jitter)
-     *   - Brightness: random spike 1.2–1.8 or dip 0.4–0.7
-     *   - Hue: random rotation 30–180deg
-     *   - 1-frame desync: translateX micro-offset
+     *   - Duration: 130–170ms (dampened by fatigue)
+     *   - Brightness: random spike/dip (dampened)
+     *   - Hue: 30–90° default, 90–180° only above intensity threshold
+     *   - 1-frame desync: translateX micro-offset (dampened)
+     *
+     * @param {number} [intensity=0] — turn intensity from fatigue system (0–1)
      */
-    async setRhythm(rhythm) {
+    async setRhythm(rhythm, intensity) {
+        this._lastIntensity = intensity || 0;
         const changed = this._previousRhythm && this._previousRhythm !== rhythm;
 
-        // Procedural rhythm transition glitch — never the same twice
+        // Procedural rhythm transition glitch — dampened by fatigue
         if (changed) {
-            const duration = 138 + Math.floor(Math.random() * 24); // 138–162ms
+            const damp = this._dampening;
+
+            const duration = Math.round((138 + Math.floor(Math.random() * 24)) * damp);
             const bright = Math.random() > 0.5
-                ? (1.2 + Math.random() * 0.6)   // spike
-                : (0.4 + Math.random() * 0.3);   // dip
-            const hue = 30 + Math.floor(Math.random() * 150); // 30–180deg
-            const offsetX = (Math.random() - 0.5) * 4; // ±2px desync
+                ? (1.0 + (0.2 + Math.random() * 0.6) * damp)     // spike (dampened)
+                : (1.0 - (0.3 + Math.random() * 0.3) * damp);     // dip (dampened)
+
+            // Hue cap: 30–90° normally. Only reach 90–180° if intensity > 0.6
+            const hueMax = this._lastIntensity > 0.6 ? 150 : 60;
+            const hue = 30 + Math.floor(Math.random() * hueMax);
+
+            const offsetX = (Math.random() - 0.5) * 4 * damp; // dampened desync
 
             document.body.style.filter = `brightness(${bright}) hue-rotate(${hue}deg)`;
             document.body.style.transform = `translateX(${offsetX}px)`;

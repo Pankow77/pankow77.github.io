@@ -172,6 +172,17 @@ export class CausalGraph {
         // ── Hysteresis memory ──
         // { scar_key: { strength: 1.0, created_turn: N, modifier: 1.3, affects: [...] } }
         this.scars = {};
+
+        // ── Fatigue integration ──
+        // External fatigue module can be injected for adaptive thresholds + inertia
+        this.fatigue = null;
+    }
+
+    /**
+     * Inject fatigue module for adaptive thresholds and inertia dampening.
+     */
+    setFatigue(fatigue) {
+        this.fatigue = fatigue;
     }
 
     /**
@@ -260,9 +271,13 @@ export class CausalGraph {
         }
 
         // ── Phase 4: Cascade — Latent → Metric (with scar amplification) ──
+        // Adaptive thresholds: fatigue raises activation cost
         for (const edge of CASCADE_EDGES) {
             const sourceVal = projected[edge.source] ?? 0;
-            if (sourceVal < edge.threshold) continue;
+            const threshold = this.fatigue
+                ? this.fatigue.getAdaptiveThreshold(edge.threshold)
+                : edge.threshold;
+            if (sourceVal < threshold) continue;
 
             let weight = edge.weight;
 
@@ -350,12 +365,26 @@ export class CausalGraph {
             });
         }
 
+        // ── Inertia dampening ──
+        // Sometimes the world doesn't respond. This is realism.
+        // Fatigue system decides: 1.0 = normal, 0.2–0.5 = partial inertia.
+        const inertiaMult = this.fatigue ? this.fatigue.getInertiaDampening() : 1.0;
+        if (inertiaMult < 1.0) {
+            for (const key of Object.keys(latent_deltas)) {
+                latent_deltas[key] = Math.round(latent_deltas[key] * inertiaMult);
+            }
+            for (const key of Object.keys(metric_deltas)) {
+                metric_deltas[key] = Math.round(metric_deltas[key] * inertiaMult);
+            }
+        }
+
         return {
             latent_deltas,
             metric_deltas,
             arcs: [...this.lastArcs],
             scars_formed,
-            collapse_active
+            collapse_active,
+            inertia: inertiaMult < 1.0 ? inertiaMult : null
         };
     }
 

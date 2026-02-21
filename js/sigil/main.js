@@ -22,6 +22,7 @@ import { GameLoop } from './game-loop.js';
 import { VFX } from './vfx.js';
 import { AudioEngine } from './audio-engine.js';
 import { Rhythm } from './rhythm.js';
+import { Fatigue } from './fatigue.js';
 
 async function boot() {
     console.log(
@@ -51,6 +52,12 @@ async function boot() {
     const vfx = new VFX(Bus);
     const audio = new AudioEngine();
     const rhythm = new Rhythm();
+
+    // ── Fatigue system — cognitive load, oxygen, habituation, session arc ──
+    const fatigue = new Fatigue();
+
+    // Inject fatigue into causal graph for adaptive thresholds + inertia
+    graph.setFatigue(fatigue);
 
     // ── Initialize UI ──
     ui.init();
@@ -95,7 +102,8 @@ async function boot() {
         telemetry,
         vfx,
         audio,
-        rhythm
+        rhythm,
+        fatigue
     });
 
     // ── Initialize and run ──
@@ -115,6 +123,7 @@ async function boot() {
         vfx,
         audio,
         rhythm,
+        fatigue,
         // Dev helpers
         why: (turn) => {
             const trace = telemetry.getWhyTrace(turn);
@@ -144,6 +153,15 @@ async function boot() {
             }
         },
         visibility: () => console.log(graph.getVisibility(state)),
+        load: () => {
+            const f = fatigue;
+            console.log('\n── COGNITIVE LOAD ──');
+            console.log(`Load: ${(f.cognitiveLoad * 100).toFixed(0)}%`);
+            console.log(`Oxygen: ${(f.oxygenMultiplier * 100).toFixed(0)}%`);
+            console.log(`Session phase: ${f.getSessionPhase()}`);
+            console.log(`Inertia dampening: ${f.getInertiaDampening().toFixed(2)}`);
+            console.log(`Afterimage: ${f.getAfterImageDuration()}ms`);
+        },
         reset: async () => {
             await state.reset();
             location.reload();
@@ -157,7 +175,7 @@ async function boot() {
         'color: #33ff33;'
     );
     console.log(
-        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.spark(key), __SIGIL.scars()',
+        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.scars(), __SIGIL.load()',
         'color: #33ff33; font-weight: bold;',
         'color: #666;'
     );

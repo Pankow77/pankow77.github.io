@@ -22,7 +22,7 @@
  */
 
 export class GameLoop {
-    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry, vfx, audio, rhythm }) {
+    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry, vfx, audio, rhythm, fatigue }) {
         this.bus = bus;
         this.state = state;
         this.ui = ui;
@@ -35,6 +35,7 @@ export class GameLoop {
         this.vfx = vfx || null;
         this.audio = audio || null;
         this.rhythm = rhythm || null;
+        this.fatigue = fatigue || null;
 
         this.sequence = [];
         this.sequenceIndex = 0;
@@ -177,8 +178,11 @@ export class GameLoop {
             const scars = this.graph ? this.graph.getScars() : {};
             rhythmData = this.rhythm.classify(this.state, pendingDelayed, scars);
 
-            // Apply rhythm to VFX and audio
-            if (this.vfx) this.vfx.setRhythm(rhythmData.type);
+            // Get fatigue-aware intensity for VFX gating
+            const turnIntensity = this.fatigue ? this.fatigue.cognitiveLoad : 0;
+
+            // Apply rhythm to VFX and audio (pass intensity for hue gating)
+            if (this.vfx) this.vfx.setRhythm(rhythmData.type, turnIntensity);
             if (this.audio) this.audio.setRhythm(rhythmData.type);
 
             // Update rhythm indicator in header
@@ -243,6 +247,13 @@ export class GameLoop {
         // CINEMATIC CHOICE SEQUENCE
         // Emotion first. Numbers second.
         // ════════════════════════════════════
+
+        // ── FATIGUE: compute dampening before cinematic ──
+        if (this.fatigue) {
+            const compositeDamp = this.fatigue.getCompositeDampening(optionId, theater);
+            if (this.vfx) this.vfx.setDampening(compositeDamp);
+            if (this.audio) this.audio.setDampening(compositeDamp);
+        }
 
         // Step 5a: Apply immediate consequences (silent — no display yet)
         this.consequences.apply(resolved, optionId);
@@ -321,7 +332,28 @@ export class GameLoop {
             this.audio.update(this.state);
         }
 
-        // Step 5j: Log event (append-only)
+        // Step 5j: FATIGUE — record this turn's intensity, trigger afterimage
+        if (this.fatigue) {
+            this.fatigue.recordTurn({
+                arcCount: causalArcs.length,
+                scarsFormed: causalResult?.scars_formed?.length || 0,
+                collapseActive: causalResult?.collapse_active || false,
+                crisisTriggered: (causalResult?.scars_formed?.length || 0) > 0,
+                rhythm: rhythmData?.type || 'calm',
+                actionId: optionId,
+                theater: theater
+            });
+
+            // Afterimage silence — the void after intensity
+            const afterimageDuration = this.fatigue.getAfterImageDuration();
+            if (afterimageDuration > 0 && this.audio) {
+                this.audio.afterimageSilence(afterimageDuration);
+                // Hold the visual space too — brief pause before numbers
+                await this.ui._delay(afterimageDuration);
+            }
+        }
+
+        // Step 5k: Log event (append-only)
         this.state.logEvent({
             turn: entry.turn,
             theater: resolved.theater || null,
@@ -333,7 +365,7 @@ export class GameLoop {
             timestamp: Date.now()
         });
 
-        // Step 5k: Telemetry snapshot
+        // Step 5l: Telemetry snapshot
         if (this.telemetry) {
             this.telemetry.snapshot(
                 entry.turn, this.state, causalArcs, optionId, frameAction,
