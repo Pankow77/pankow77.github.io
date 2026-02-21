@@ -1416,3 +1416,517 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
+
+
+/* ══════════════════════════════════
+   PADC — Protocollo di Successione
+   ══════════════════════════════════ */
+
+.padc-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 57000;
+  background: rgba(4, 8, 16, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.padc-overlay.visible { opacity: 1; }
+.padc-overlay.fade-out { opacity: 0; transition: opacity 1s ease; }
+
+.padc-container {
+  max-width: 560px;
+  width: 90%;
+  text-align: left;
+}
+
+.padc-header {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(255, 191, 0, 0.3);
+  margin-bottom: 4px;
+}
+
+.padc-subheader {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.padc-revelation {
+  margin-bottom: 28px;
+}
+
+.padc-line {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 2.2;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.padc-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.padc-line-3 {
+  color: var(--amber);
+  font-style: italic;
+}
+
+.padc-stats {
+  margin-bottom: 28px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: rgba(4, 8, 16, 0.7);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.padc-stats.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.padc-stats-title {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(21, 34, 64, 0.5);
+}
+
+.padc-stat-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 2.2;
+}
+
+.padc-stat-key {
+  color: var(--text-dim);
+}
+
+.padc-stat-val {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.padc-testament-section {
+  margin-bottom: 24px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.padc-testament-section.visible { opacity: 1; }
+
+.padc-testament-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.padc-testament-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.padc-testament-input {
+  width: 100%;
+  background: var(--bg-void);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 12px;
+  resize: none;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.padc-testament-input:focus {
+  border-color: var(--amber);
+}
+
+.padc-testament-chars {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.padc-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.padc-actions.visible { opacity: 1; }
+
+.padc-btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 28px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.padc-btn-continue {
+  border-color: var(--cyan-dim);
+  color: var(--cyan);
+}
+
+.padc-btn-continue:hover {
+  border-color: var(--cyan);
+  background: rgba(0, 200, 255, 0.05);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.1);
+}
+
+.padc-btn-handoff {
+  border-color: var(--red-dim);
+  color: var(--red-dim);
+}
+
+.padc-btn-handoff:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(255, 51, 68, 0.05);
+}
+
+.padc-warning {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.padc-warning.visible {
+  opacity: 0.6;
+}
+
+
+/* ══════════════════════════════════
+   PROFILO OPERATIVO — Feature Vector
+   ══════════════════════════════════ */
+
+.profilo-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 57000;
+  background: rgba(4, 8, 16, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.profilo-overlay.visible { opacity: 1; }
+.profilo-overlay.fade-out { opacity: 0; transition: opacity 1s ease; }
+
+.profilo-container {
+  max-width: 520px;
+  width: 90%;
+  text-align: left;
+}
+
+.profilo-header {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--purple);
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(136, 85, 255, 0.3);
+  margin-bottom: 4px;
+}
+
+.profilo-subheader {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profilo-revelation {
+  margin-bottom: 32px;
+}
+
+.profilo-line {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 2.4;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.profilo-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profilo-line-2 {
+  color: var(--purple);
+  font-weight: 600;
+}
+
+.profilo-vector {
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: rgba(4, 8, 16, 0.7);
+  font-family: var(--font-mono);
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.profilo-vector.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.profilo-vector-title {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(21, 34, 64, 0.5);
+}
+
+.profilo-vector-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 2.4;
+}
+
+.profilo-vector-key {
+  color: var(--text-dim);
+}
+
+.profilo-vector-val {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.profilo-footnote {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 24px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.profilo-footnote.visible {
+  opacity: 0.7;
+}
+
+.profilo-actions {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.profilo-actions.visible { opacity: 1; }
+
+.profilo-btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 28px;
+  border: 1px solid var(--purple);
+  background: transparent;
+  color: var(--purple);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.profilo-btn:hover {
+  background: rgba(136, 85, 255, 0.05);
+  box-shadow: 0 0 20px rgba(136, 85, 255, 0.1);
+}
+
+
+/* ══════════════════════════════════
+   ISOLATION — Deep Degradation
+   ══════════════════════════════════
+   Progressive visual decay. Not broken — probed.
+   Each depth level adds another layer of wrongness.
+   The player feels it before they understand it.
+*/
+
+/* ── Depth 0: Just activated — subtle tile flicker (already exists above) ── */
+
+/* ── Shallow (depth 1-2): borders lose glow, colors desaturate ── */
+body.isolation-shallow .header-brand {
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.15);
+}
+
+body.isolation-shallow .tile::before {
+  opacity: 0 !important;
+}
+
+body.isolation-shallow .fragility-value {
+  animation: metric-drift 4s ease-in-out infinite;
+}
+
+@keyframes metric-drift {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 0.7; }
+  60% { opacity: 0.85; }
+}
+
+/* ── Deep (depth 2-3): header glitches, metrics stutter ── */
+body.isolation-deep .header-brand {
+  animation: brand-glitch 6s steps(1) infinite;
+  text-shadow: 0 0 8px rgba(0, 200, 255, 0.08);
+}
+
+@keyframes brand-glitch {
+  0%, 94%, 100% { transform: translateX(0); color: var(--cyan); }
+  95% { transform: translateX(1px); color: var(--red); }
+  96% { transform: translateX(-1px); color: var(--cyan); }
+  97% { transform: translateX(0.5px); }
+}
+
+body.isolation-deep .tile-status {
+  animation: status-jitter 3s ease-in-out infinite;
+}
+
+@keyframes status-jitter {
+  0%, 90%, 100% { transform: translateX(0); }
+  92% { transform: translateX(0.5px); }
+  94% { transform: translateX(-0.3px); }
+}
+
+body.isolation-deep .footer-strip .log-value {
+  animation: log-flicker 5s ease-in-out infinite;
+}
+
+@keyframes log-flicker {
+  0%, 88%, 100% { opacity: 1; }
+  90% { opacity: 0.3; }
+  92% { opacity: 0.8; }
+}
+
+body.isolation-deep .tile[data-module="oracle"] {
+  border-color: rgba(136, 85, 255, 0.15);
+}
+
+body.isolation-deep .tile[data-module="oracle"] .micro-confidence {
+  filter: blur(1px);
+}
+
+/* ── Critical (depth 4+): the system is staring ── */
+body.isolation-critical {
+  --border: #1a1520;
+  --border-active: #2a1530;
+}
+
+body.isolation-critical .header-brand {
+  animation: brand-glitch-hard 3s steps(1) infinite;
+}
+
+@keyframes brand-glitch-hard {
+  0%, 88%, 100% { transform: translateX(0); color: var(--cyan); filter: none; }
+  89% { transform: translateX(2px) skewX(-0.5deg); color: var(--red); }
+  90% { transform: translateX(-1px); color: var(--cyan); filter: blur(0.5px); }
+  91% { transform: translateX(1px) skewX(0.3deg); color: var(--purple); }
+  92% { transform: translateX(0); filter: none; }
+}
+
+/* Scanlines thicken during critical isolation */
+body.isolation-critical::after {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+}
+
+/* Color bleed — tiles lose their accent identity */
+body.isolation-critical .tile {
+  --tile-accent: var(--text-dim);
+  animation: isolation-flicker 4s ease-in-out infinite;
+}
+
+body.isolation-critical .tile:nth-child(3n) {
+  animation-delay: -1.5s;
+}
+
+body.isolation-critical .tile-title {
+  text-shadow: none;
+}
+
+/* Oracle becomes fully opaque */
+body.isolation-critical .tile[data-module="oracle"] .micro-confidence {
+  filter: blur(2px);
+  color: var(--text-dim);
+}
+
+body.isolation-critical .tile[data-module="oracle"] .tile-status {
+  color: var(--red-dim);
+}
+
+/* Footer corruption */
+body.isolation-critical .footer-strip {
+  border-top-color: rgba(255, 51, 68, 0.15);
+}
+
+body.isolation-critical .footer-strip .log-value {
+  animation: log-corruption 2s steps(1) infinite;
+}
+
+@keyframes log-corruption {
+  0%, 85%, 100% { opacity: 1; letter-spacing: 0; }
+  86% { opacity: 0.4; letter-spacing: 0.5px; }
+  88% { opacity: 0.9; letter-spacing: -0.2px; }
+  90% { opacity: 0.6; }
+}
+
+/* Cycle counter feels wrong */
+body.isolation-critical .cycle-counter {
+  color: var(--red-dim);
+}
+
+/* LAGO RÀ pulse becomes erratic in isolation */
+body.isolation-active .lago-ra-pulse {
+  animation: lago-pulse-erratic 2s steps(3) infinite;
+}
+
+@keyframes lago-pulse-erratic {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  33% { transform: scale(1.2); opacity: 0.8; }
+  66% { transform: scale(0.9); opacity: 0.3; }
+}

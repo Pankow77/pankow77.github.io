@@ -25,6 +25,8 @@ import { ExposureTracker } from './exposure.js';
 import { TerminationSequence } from './termination.js';
 import { CycleEngine } from './cycle.js';
 import { EnvelopeSystem } from './envelope.js';
+import { PADC } from './padc.js';
+import { ProfiloOperativo } from './profilo.js';
 
 export async function boot() {
   const appEl = document.getElementById('app');
@@ -67,6 +69,8 @@ export async function boot() {
   // ── Phase 3: Hidden systems ──
   ExposureTracker.init();
   TerminationSequence.init(appEl);
+  PADC.init(appEl);
+  ProfiloOperativo.init(appEl);
 
   // ── Phase 4: Game engine ──
   CycleEngine.init();
@@ -88,5 +92,5 @@ export async function boot() {
     'color: #39ff14;'
   );
 
-  window.__dashboard = { Router, header, footer, CycleEngine, EnvelopeSystem };
+  window.__dashboard = { Router, header, footer, CycleEngine, EnvelopeSystem, PADC, ProfiloOperativo };
 }

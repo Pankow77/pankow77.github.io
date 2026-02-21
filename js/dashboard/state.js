@@ -139,6 +139,17 @@ State.batch({
   '_termination.cycle': 0,          // Cycle of termination notice
   '_termination.finalAnnotation': false, // Has player written last note
 
+  // PADC — Protocollo di Acquisizione Dati Comportamentali
+  '_padc.revealed': false,           // True after annotation privacy reveal
+  '_padc.cycle': 0,                  // Cycle when PADC triggered
+  '_padc.decision': null,            // 'continue' or 'handoff'
+  '_padc.testament': null,           // Message for GHOST_8
+  '_padc.performativityTracking': false, // True after PADC — annotations are "performative"
+
+  // Profilo Operativo
+  '_profilo.revealed': false,        // True after feature vector reveal
+  '_profilo.cycle': 0,               // Cycle when profilo triggered
+
   // Module statuses (tiles read these)
   'agora.intensity': 72,
   'agora.polarization': [30, 45, 60, 72, 55, 40, 68],

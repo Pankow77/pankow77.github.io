@@ -118,6 +118,7 @@ export const ExposureTracker = {
       State.set('_isolation.active', true);
       State.set('_isolation.cycle', cycle);
       document.body.classList.add('isolation-active');
+      document.body.dataset.isolationDepth = '0';
       Bus.emit('exposure:isolation-begin', { cycle, exposure }, 'exposure');
     }
 
@@ -171,6 +172,14 @@ export const ExposureTracker = {
   _applyIsolationEffects(cycle) {
     const isolationCycle = State.get('_isolation.cycle') || cycle;
     const depth = cycle - isolationCycle; // How deep into isolation
+
+    // ── Visual depth for CSS ──
+    document.body.dataset.isolationDepth = String(Math.min(depth, 6));
+    // Progressive class escalation
+    document.body.classList.remove('isolation-shallow', 'isolation-deep', 'isolation-critical');
+    if (depth >= 4) document.body.classList.add('isolation-critical');
+    else if (depth >= 2) document.body.classList.add('isolation-deep');
+    else document.body.classList.add('isolation-shallow');
 
     // ── Oracle confidence erosion ──
     // Oracle becomes less trustworthy. Not broken — opaque.
