@@ -209,15 +209,23 @@ export const ExposureTracker = {
     }
 
     // ── EEI trend instability ──
-    // The index says one thing, the trend says another.
-    if (depth >= 3) {
+    // Phase 1 (depth 3-4): paradox. Index says one thing, trend says another.
+    // Phase 2 (depth 5+): trend disappears. Replaced with "STABILIZED".
+    // But the numbers keep moving. You can see it happening.
+    // You just can't read the direction anymore.
+    // You're no longer the observer. You're the observed.
+    if (depth >= 5) {
+      // Irreversible. Trend label frozen. Numbers still live.
+      State.set('eei.trend', 'STABILIZED');
+    } else if (depth >= 3) {
       const eei = State.get('eei.index') || 6.4;
       const trend = State.get('eei.trend');
-      // Contradiction: high index but falling trend, or low index but rising
-      if (eei > 6 && trend === 'rising') {
-        State.set('eei.trend', 'falling');
-      } else if (eei < 5 && trend === 'falling') {
-        State.set('eei.trend', 'rising');
+      if (trend !== 'STABILIZED') {
+        if (eei > 6 && trend === 'rising') {
+          State.set('eei.trend', 'falling');
+        } else if (eei < 5 && trend === 'falling') {
+          State.set('eei.trend', 'rising');
+        }
       }
     }
   },

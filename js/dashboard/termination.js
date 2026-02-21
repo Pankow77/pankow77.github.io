@@ -114,6 +114,8 @@ export const TerminationSequence = {
     const annotations = State.get('operator.annotations') || 0;
     const exposure = State.get('_exposure.index') || 0;
     const crossCorr = State.get('_exposure.crossCorrelations') || 0;
+    const totalCycles = State.get('cycle.current') || 40;
+    const annotationDensity = totalCycles > 0 ? (annotations / totalCycles).toFixed(2) : '0.00';
 
     const overlay = document.createElement('div');
     overlay.className = 'termination-overlay termination-final';
@@ -121,23 +123,23 @@ export const TerminationSequence = {
       <div class="termination-container">
         <div class="termination-header">NODE TERMINATED</div>
 
-        <div class="termination-profile">
-          <div class="termination-profile-title">PROFILO OPERATIVO — GHOST_7</div>
-          <div class="termination-stat">
-            <span class="termination-label">COERENZA FRAME:</span>
-            ${(coherence * 100).toFixed(0)}%
+        <div class="termination-profile termination-vector">
+          <div class="termination-profile-title">FEATURE VECTOR SUMMARY</div>
+          <div class="termination-stat termination-vector-line">
+            <span class="termination-vector-key">frame_consistency:</span>
+            <span class="termination-vector-val">${coherence.toFixed(2)}</span>
           </div>
-          <div class="termination-stat">
-            <span class="termination-label">CORRELAZIONI CROSS-THEATRE:</span>
-            ${crossCorr}
+          <div class="termination-stat termination-vector-line">
+            <span class="termination-vector-key">cross_theatre_depth:</span>
+            <span class="termination-vector-val">${crossCorr}</span>
           </div>
-          <div class="termination-stat">
-            <span class="termination-label">ANNOTAZIONI ARCHIVIATE:</span>
-            ${annotations}
+          <div class="termination-stat termination-vector-line">
+            <span class="termination-vector-key">annotation_density:</span>
+            <span class="termination-vector-val">${annotationDensity}</span>
           </div>
-          <div class="termination-stat">
-            <span class="termination-label">INDICE ESPOSIZIONE:</span>
-            ${(exposure * 100).toFixed(0)}%
+          <div class="termination-stat termination-vector-line">
+            <span class="termination-vector-key">exposure_index:</span>
+            <span class="termination-vector-val">${exposure.toFixed(2)}</span>
           </div>
         </div>
 
@@ -165,6 +167,14 @@ export const TerminationSequence = {
       const delay = parseInt(line.dataset.delay, 10);
       setTimeout(() => line.classList.add('visible'), delay + 1500);
     });
+
+    // The final whisper. 2 seconds of silence after everything.
+    // Then one line bleeds through the overlay into the footer log.
+    // No explanation. No elaboration.
+    // Anyone who played 40 cycles knows what it means.
+    setTimeout(() => {
+      State.set('log.lastEvent', 'BOOTSTRAP: using prior convergence bias');
+    }, 11000);
   },
 
   /**
@@ -220,5 +230,12 @@ export const TerminationSequence = {
       const delay = parseInt(line.dataset.delay, 10);
       setTimeout(() => line.classList.add('visible'), delay + 1500);
     });
+
+    // Even in clean succession. The system uses your pattern.
+    // You served your tour. You left peacefully.
+    // But you were still metabolized.
+    setTimeout(() => {
+      State.set('log.lastEvent', 'BOOTSTRAP: using prior convergence bias');
+    }, 9000);
   }
 };

@@ -974,6 +974,37 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   line-height: 2.2;
 }
 
+/* ── Feature vector: you're not a person, you're a vector ── */
+.termination-vector {
+  font-family: var(--font-mono);
+  border-color: var(--border);
+  background: rgba(4, 8, 16, 0.7);
+}
+
+.termination-vector .termination-profile-title {
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.termination-vector-line {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.4;
+  font-size: 12px;
+}
+
+.termination-vector-key {
+  color: var(--text-dim);
+}
+
+.termination-vector-val {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
 /* ── Termination sequence lines ── */
 .termination-sequence {
   margin-top: 32px;
@@ -1011,4 +1042,15 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
 }
 .termination-heuristics.visible {
   opacity: 0.6;
+  animation: heuristics-glitch 0.15s ease 0.1s 1;
+}
+
+/* Subliminal 1-frame layout shift. You don't see it.
+   You feel it. A perceptual threshold change.
+   The system just loaded something that was yours. */
+@keyframes heuristics-glitch {
+  0%   { transform: translateX(0); }
+  30%  { transform: translateX(1px) translateY(-0.5px); }
+  60%  { transform: translateX(-0.5px); }
+  100% { transform: translateX(0); }
 }
