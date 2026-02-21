@@ -1,0 +1,104 @@
+{
+    "id": "t3-correlazione",
+    "title": "Correlazione Spuria",
+    "turn": 3,
+    "act": 1,
+    "archetype": "dirty_information",
+    "briefing": [
+        "TURNO 3 — CORRELAZIONE SPURIA",
+        "",
+        "Il tuo sistema di correlazione ha trovato un pattern.",
+        "Due eventi apparentemente non collegati mostrano una sovrapposizione temporale significativa.",
+        "Il pattern è statisticamente forte. Ma la causalità è un'altra storia."
+    ],
+    "envelopes": [
+        {
+            "source": "Motore di correlazione — automatico",
+            "domain": "analysis",
+            "summary": "Correlazione temporale (r=0.87) tra movimenti navali nella zona e acquisti anomali di derivati energetici su mercati asiatici. Finestra: 72 ore.",
+            "confidence": 0.87
+        },
+        {
+            "source": "Feed RSS — Financial Times",
+            "domain": "signal",
+            "summary": "Articolo generico su volatilità dei mercati energetici. Nessun riferimento alla zona monitorata. Ma i tempi coincidono.",
+            "confidence": 0.50
+        },
+        {
+            "source": "Lorenzo Bassi — messaggio diretto",
+            "domain": "analysis",
+            "summary": "\"Correlazione non è causalità. Lo sai. Ma se hai ragione e non pubblichi, il danno è incalcolabile. Se hai torto e pubblichi, sei finito.\"",
+            "confidence": 0.60
+        }
+    ],
+    "decision": {
+        "question": "Un pattern forte ma potenzialmente spurio. La tua credibilità è in gioco.",
+        "options": [
+            {
+                "id": "publish_correlation",
+                "label": "Pubblica la correlazione con tutti i caveat",
+                "warning": "Onesto ma rischioso. Se è spuria, il danno è permanente."
+            },
+            {
+                "id": "suppress_correlation",
+                "label": "Sopprimi il pattern. Troppo rischioso.",
+                "warning": "Proteggi la credibilità. Ma se il pattern è reale, stai nascondendo informazione vitale."
+            },
+            {
+                "id": "share_private",
+                "label": "Condividi solo con la tua rete ristretta",
+                "warning": "Compromesso. Ma perdi il controllo su chi lo pubblica per primo."
+            }
+        ]
+    },
+    "consequences": {
+        "publish_correlation": {
+            "immediate": {
+                "metrics": {
+                    "public_awareness": "+20",
+                    "scientific_credibility": "-5",
+                    "public_trust": "+10",
+                    "frame_control": "-15",
+                    "methodological_integrity": "-5"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "-20",
+                    "marta_cerulli": "+15"
+                },
+                "feedback": "La correlazione è online. I mercati reagiscono. Lorenzo Bassi: 'Hai bruciato anni di credibilità per un pattern.' Marta Cerulli: 'Finalmente qualcuno che osa.'"
+            }
+        },
+        "suppress_correlation": {
+            "immediate": {
+                "metrics": {
+                    "scientific_credibility": "+10",
+                    "methodological_integrity": "+10",
+                    "public_awareness": "-15",
+                    "personal_guilt": "+10",
+                    "frame_control": "+10"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "+15"
+                },
+                "feedback": "Pattern soppresso. La tua credibilità è intatta. Ma sai quello che hai visto. E sai che qualcun altro potrebbe vederlo."
+            }
+        },
+        "share_private": {
+            "immediate": {
+                "metrics": {
+                    "civil_society_trust": "+10",
+                    "scientific_credibility": "+5",
+                    "frame_control": "-5",
+                    "decision_fatigue": "+5"
+                },
+                "npc_changes": {
+                    "marta_cerulli": "+5",
+                    "valeria_conti": "+10",
+                    "lorenzo_bassi": "-5"
+                },
+                "feedback": "Condiviso privatamente. Valeria Conti sta verificando. Ma Marta ha già accennato la correlazione su Twitter senza nominarti. Il genio è fuori dalla bottiglia."
+            }
+        }
+    },
+    "annotation_prompt": "Tre turni. Tre decisioni. Cosa stai iniziando a capire?"
+}

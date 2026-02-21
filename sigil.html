@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGIL</title>
+    <style>
+        /* ═══════════════════════════════════════════════════════════
+         * SIGIL — Monocromo Evolved
+         * VIC-20 → Spectrum → M19 Olivetti → 2026
+         * NOT cyberpunk. The last secular prayer.
+         * Green on black. Courier. Heavy cursor. Only text that weighs.
+         * ═══════════════════════════════════════════════════════════ */
+
+        :root {
+            --green: #33ff33;
+            --green-dim: #1a8c1a;
+            --green-glow: #33ff3340;
+            --amber: #cc8800;
+            --red: #cc3333;
+            --black: #000000;
+            --dark: #0a0a0a;
+            --gray: #1a1a1a;
+            --text: #33ff33;
+            --text-dim: #227722;
+            --font: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background: var(--black);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 15px;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── CRT scanline effect ── */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 0, 0, 0.15) 2px,
+                rgba(0, 0, 0, 0.15) 4px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ── Terminal frame ── */
+        #terminal {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+        }
+
+        /* ── Header bar ── */
+        #terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--green-dim);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        #terminal-header .sigil-title {
+            letter-spacing: 4px;
+            font-weight: bold;
+            color: var(--text);
+        }
+
+        #terminal-header .turn-display {
+            color: var(--text-dim);
+        }
+
+        /* ── Terminal content ── */
+        #terminal-content {
+            min-height: 60vh;
+        }
+
+        #terminal-content p,
+        #terminal-content div {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ── Text styles ── */
+        .system-text {
+            color: var(--text-dim);
+        }
+
+        .briefing-text {
+            color: var(--text);
+        }
+
+        .feedback-text {
+            color: var(--amber);
+            border-left: 2px solid var(--amber);
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .end-text {
+            color: var(--text);
+        }
+
+        .inherited-notice {
+            color: var(--amber);
+        }
+
+        /* ── Envelopes ── */
+        .envelope {
+            border: 1px solid var(--green-dim);
+            padding: 1rem;
+            margin: 0.8rem 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .envelope.visible {
+            opacity: 1;
+        }
+
+        .envelope-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 12px;
+        }
+
+        .envelope-source {
+            color: var(--text);
+        }
+
+        .envelope-domain {
+            color: var(--text-dim);
+        }
+
+        .envelope-body {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .envelope-meta {
+            margin-top: 0.5rem;
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        /* ── Decision panel ── */
+        .decision-panel {
+            margin: 2rem 0;
+        }
+
+        .decision-question {
+            color: var(--text);
+            font-size: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--green-dim);
+        }
+
+        .decision-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .option-btn {
+            background: transparent;
+            border: 1px solid var(--green-dim);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 14px;
+            padding: 1rem;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            border-color: var(--green);
+            background: rgba(51, 255, 51, 0.05);
+            box-shadow: 0 0 10px var(--green-glow);
+        }
+
+        .option-btn:focus {
+            outline: 1px solid var(--green);
+            outline-offset: 2px;
+        }
+
+        .option-btn.chosen {
+            border-color: var(--green);
+            background: rgba(51, 255, 51, 0.1);
+        }
+
+        .option-btn.not-chosen {
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        .option-btn:disabled {
+            cursor: default;
+        }
+
+        .option-label {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .option-warning {
+            display: block;
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        /* ── Inherited annotations ── */
+        .inherited-annotation {
+            border: 1px solid var(--amber);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .inherited-annotation.visible {
+            opacity: 1;
+        }
+
+        .inherited-header {
+            font-size: 11px;
+            color: var(--amber);
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .inherited-body {
+            color: var(--text);
+            font-style: italic;
+        }
+
+        /* ── Delayed feedback ── */
+        .delayed-feedback {
+            border-left: 2px solid var(--red);
+            padding: 0.8rem 1rem;
+            margin: 1rem 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .delayed-feedback.visible {
+            opacity: 1;
+        }
+
+        .delayed-header {
+            font-size: 11px;
+            color: var(--red);
+            letter-spacing: 2px;
+            margin-bottom: 0.3rem;
+        }
+
+        .delayed-body {
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        /* ── Annotation editor ── */
+        .annotation-editor {
+            margin: 2rem 0;
+        }
+
+        .annotation-prompt {
+            color: var(--text-dim);
+            font-size: 13px;
+            margin-bottom: 1rem;
+        }
+
+        #annotation-input {
+            width: 100%;
+            background: var(--dark);
+            border: 1px solid var(--green-dim);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 14px;
+            padding: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        #annotation-input:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 8px var(--green-glow);
+        }
+
+        #annotation-input:disabled {
+            opacity: 0.5;
+        }
+
+        .annotation-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.8rem;
+        }
+
+        .annotation-chars {
+            font-size: 11px;
+            color: var(--text-dim);
+        }
+
+        .annotation-buttons {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .btn-submit, .btn-skip {
+            background: transparent;
+            border: 1px solid var(--green-dim);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 12px;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            border-color: var(--green);
+            background: rgba(51, 255, 51, 0.1);
+        }
+
+        .btn-skip {
+            color: var(--text-dim);
+        }
+
+        .btn-skip:hover {
+            border-color: var(--text-dim);
+        }
+
+        .btn-submit:disabled, .btn-skip:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        /* Shake animation for empty submit */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-4px); }
+            75% { transform: translateX(4px); }
+        }
+
+        .shake {
+            animation: shake 0.3s ease;
+        }
+
+        /* ── Turn separator ── */
+        .turn-separator {
+            color: var(--green-dim);
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 12px;
+        }
+
+        /* ── Protocol overlay ── */
+        #protocol-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        #protocol-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #protocol-text {
+            max-width: 600px;
+            padding: 2rem;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text);
+            white-space: pre-wrap;
+            text-align: center;
+        }
+
+        /* ── Protocol choice ── */
+        .protocol-choice {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .protocol-question {
+            font-size: 16px;
+            color: var(--text);
+            margin-bottom: 2rem;
+        }
+
+        .protocol-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .proto-btn {
+            background: transparent;
+            border: 1px solid var(--green-dim);
+            color: var(--text);
+            font-family: var(--font);
+            font-size: 14px;
+            padding: 1rem 3rem;
+            cursor: pointer;
+            letter-spacing: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .proto-btn:hover {
+            border-color: var(--green);
+            background: rgba(51, 255, 51, 0.08);
+            box-shadow: 0 0 15px var(--green-glow);
+        }
+
+        /* ── Cursor blink ── */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        #terminal-content > :last-child::after {
+            content: '█';
+            animation: blink 1s step-end infinite;
+            color: var(--green);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            #terminal {
+                padding: 1rem;
+            }
+
+            #protocol-text {
+                font-size: 15px;
+                padding: 1rem;
+            }
+
+            .proto-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="terminal">
+        <div id="terminal-header">
+            <span class="sigil-title">SIGIL</span>
+            <span class="turn-display">TURNO <span id="turn-number">0</span></span>
+        </div>
+        <div id="terminal-content"></div>
+    </div>
+
+    <div id="protocol-overlay">
+        <div id="protocol-text"></div>
+    </div>
+
+    <script type="module" src="js/sigil/main.js"></script>
+
+</body>
+</html>

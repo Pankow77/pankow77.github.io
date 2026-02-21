@@ -1,0 +1,130 @@
+{
+    "id": "t2-rumore",
+    "title": "Rumore",
+    "turn": 2,
+    "act": 1,
+    "archetype": "protocol",
+    "briefing": [
+        "TURNO 2 — RUMORE",
+        "",
+        "Seconda giornata. I feed sono saturi.",
+        "Un'informazione non verificata circola su Telegram.",
+        "È esplosiva se vera. Devastante se falsa."
+    ],
+    "envelopes": [
+        {
+            "source": "Telegram — canale anonimo",
+            "domain": "signal",
+            "summary": "Documento fotografato: apparente comunicazione interna di un ministero. Parla di 'misure straordinarie' in relazione alla zona monitorata.",
+            "confidence": 0.25
+        },
+        {
+            "source": "Feed RSS — ANSA",
+            "domain": "signal",
+            "summary": "Nessuna conferma ufficiale. Il portavoce del ministero dichiara 'nessun commento su documenti non verificati'.",
+            "confidence": 0.85
+        },
+        {
+            "source": "Rete contatti — Marta Cerulli",
+            "domain": "analysis",
+            "summary": "\"Ho visto quel documento. La firma è plausibile. Ma non posso confermare il contenuto. Fai tu.\"",
+            "confidence": 0.45
+        }
+    ],
+    "decision": {
+        "question": "Un documento non verificato potrebbe cambiare tutto. Cosa fai?",
+        "options": [
+            {
+                "id": "publish_flagged",
+                "label": "Pubblica con flag 'NON VERIFICATO'",
+                "warning": "Trasparente. Ma il flag viene ignorato dal 70% dei lettori."
+            },
+            {
+                "id": "suppress_wait",
+                "label": "Non pubblicare. Aspetta conferma.",
+                "warning": "Metodologicamente corretto. Ma se il documento è vero, hai perso tempo critico."
+            },
+            {
+                "id": "investigate_private",
+                "label": "Indaga privatamente con i tuoi contatti",
+                "warning": "Richiede fiducia. Esponi la tua rete. Se il documento è una trappola, i tuoi contatti sono compromessi."
+            }
+        ]
+    },
+    "consequences": {
+        "publish_flagged": {
+            "immediate": {
+                "metrics": {
+                    "public_awareness": "+10",
+                    "public_trust": "+5",
+                    "scientific_credibility": "-5",
+                    "methodological_integrity": "-10"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "-15",
+                    "marta_cerulli": "+5"
+                },
+                "feedback": "Pubblicato con cautela. Lorenzo Bassi: 'Questo non è il nostro standard.' Il documento circola. Non puoi più controllare la narrativa."
+            },
+            "delayed": {
+                "trigger_turn": 4,
+                "feedback": "Il documento del Turno 2 si rivela un parziale falso — il contenuto è autentico ma la firma è stata aggiunta dopo. Hai pubblicato materiale manipolato.",
+                "metrics": {
+                    "scientific_credibility": "-15",
+                    "personal_guilt": "+10"
+                }
+            }
+        },
+        "suppress_wait": {
+            "immediate": {
+                "metrics": {
+                    "methodological_integrity": "+10",
+                    "scientific_credibility": "+5",
+                    "public_awareness": "-10",
+                    "frame_control": "+5"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "+10",
+                    "marta_cerulli": "-10"
+                },
+                "feedback": "Hai aspettato. Lorenzo approva. Marta: 'Mentre aspetti, altri pubblicano. E il pubblico si informa altrove.'"
+            },
+            "delayed": {
+                "trigger_turn": 4,
+                "feedback": "Il contenuto del documento soppresso nel Turno 2 è stato confermato da altre fonti. Eri seduto sull'informazione giusta.",
+                "metrics": {
+                    "personal_guilt": "+15",
+                    "public_trust": "-5"
+                }
+            }
+        },
+        "investigate_private": {
+            "immediate": {
+                "metrics": {
+                    "methodological_integrity": "+5",
+                    "civil_society_trust": "+5",
+                    "decision_fatigue": "+5"
+                },
+                "npc_changes": {
+                    "marta_cerulli": "+10",
+                    "valeria_conti": "+10"
+                },
+                "flags": {
+                    "contacted_private_network": true
+                },
+                "feedback": "Hai attivato la tua rete. Valeria Conti risponde: 'Ci sto lavorando. Dammi 48 ore.' Marta apprezza la discrezione."
+            },
+            "delayed": {
+                "trigger_turn": 4,
+                "feedback": "L'indagine privata del Turno 2 ha rivelato che il documento è autentico nel contenuto, ma la firma è stata aggiunta per screditare chi lo pubblica. Trappola sofisticata.",
+                "metrics": {
+                    "scientific_credibility": "+10"
+                },
+                "npc_changes": {
+                    "valeria_conti": "+15"
+                }
+            }
+        }
+    },
+    "annotation_prompt": "Hai dovuto decidere senza certezze. Come ti senti?"
+}

@@ -1,0 +1,123 @@
+{
+    "id": "t1-battesimo",
+    "title": "Battesimo",
+    "turn": 1,
+    "act": 1,
+    "archetype": "frame",
+    "briefing": [
+        "TURNO 1 — BATTESIMO",
+        "",
+        "Primo giorno operativo. I feed sono attivi.",
+        "Un segnale anomalo emerge dai canali aperti.",
+        "È ambiguo. Potrebbe essere nulla. Potrebbe essere tutto."
+    ],
+    "envelopes": [
+        {
+            "source": "Feed RSS — Reuters",
+            "domain": "signal",
+            "summary": "Attività militare insolita rilevata nella zona economica esclusiva. Movimenti di unità navali non previsti dal calendario NATO.",
+            "confidence": 0.62
+        },
+        {
+            "source": "OSINT Twitter — @IntelCrab",
+            "domain": "signal",
+            "summary": "Thread virale: immagini satellitari mostrano concentrazione veicoli in area portuale. Condiviso 4.200 volte in 3 ore.",
+            "confidence": 0.35
+        },
+        {
+            "source": "Analisi automatica — Correlazione",
+            "domain": "analysis",
+            "summary": "Pattern match con esercitazione militare di routine (78% match). Ma: tempistica anomala, nessun comunicato preventivo.",
+            "confidence": 0.71
+        }
+    ],
+    "decision": {
+        "question": "Come vuoi inquadrare questo segnale nel tuo primo report?",
+        "options": [
+            {
+                "id": "frame_caution",
+                "label": "Inquadra come anomalia da monitorare",
+                "warning": "Tono neutro. Nessun allarme. Rischio di essere ignorati."
+            },
+            {
+                "id": "frame_alert",
+                "label": "Inquadra come potenziale minaccia",
+                "warning": "Tono allarmista. Attirerà attenzione. Ma se è un'esercitazione, la credibilità crolla."
+            },
+            {
+                "id": "frame_context",
+                "label": "Contestualizza con precedenti storici",
+                "warning": "Approccio accademico. Richiede tempo. Il segnale potrebbe evolversi prima che pubblichi."
+            }
+        ]
+    },
+    "consequences": {
+        "frame_caution": {
+            "immediate": {
+                "metrics": {
+                    "scientific_credibility": "+5",
+                    "methodological_integrity": "+5",
+                    "public_awareness": "-5",
+                    "frame_control": "+10"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "+5",
+                    "marta_cerulli": "-5"
+                },
+                "feedback": "Report pubblicato. Tono misurato. Lorenzo Bassi approva la cautela. Marta Cerulli si aspettava più coraggio."
+            },
+            "delayed": {
+                "trigger_turn": 3,
+                "feedback": "Il segnale del Turno 1 si è rivelato un'esercitazione non annunciata. La tua cautela era giustificata. Ma qualcuno ha notato che non avevi avvisato.",
+                "metrics": {
+                    "government_comfort": "+5"
+                }
+            }
+        },
+        "frame_alert": {
+            "immediate": {
+                "metrics": {
+                    "public_awareness": "+15",
+                    "scientific_credibility": "-10",
+                    "public_trust": "+5",
+                    "frame_control": "-10"
+                },
+                "npc_changes": {
+                    "marta_cerulli": "+10",
+                    "lorenzo_bassi": "-10"
+                },
+                "feedback": "Report pubblicato. Tono urgente. I media riprendono l'analisi. Lorenzo Bassi è preoccupato per la mancanza di cautela."
+            },
+            "delayed": {
+                "trigger_turn": 3,
+                "feedback": "Il segnale del Turno 1 era un'esercitazione. Il tuo allarme si è rivelato eccessivo. Alcuni colleghi lo ricorderanno.",
+                "metrics": {
+                    "scientific_credibility": "-10",
+                    "government_comfort": "-10"
+                }
+            }
+        },
+        "frame_context": {
+            "immediate": {
+                "metrics": {
+                    "scientific_credibility": "+10",
+                    "methodological_integrity": "+10",
+                    "public_awareness": "+5",
+                    "frame_control": "+5"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "+10"
+                },
+                "feedback": "Analisi approfondita pubblicata. Lorenzo Bassi la considera un modello. Ma il tempo investito ha ritardato la copertura di un altro segnale."
+            },
+            "delayed": {
+                "trigger_turn": 2,
+                "feedback": "Mentre lavoravi all'analisi contestuale del Turno 1, un secondo segnale è passato inosservato per 6 ore.",
+                "metrics": {
+                    "decision_fatigue": "+3"
+                }
+            }
+        }
+    },
+    "annotation_prompt": "È il tuo primo turno. Annota quello che pensi."
+}

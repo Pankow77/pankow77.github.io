@@ -1,0 +1,101 @@
+{
+    "id": "t4-primo-sguardo",
+    "title": "Primo Sguardo",
+    "turn": 4,
+    "act": 1,
+    "archetype": "frame",
+    "post_revelation": true,
+    "briefing": [
+        "TURNO 4 — PRIMO SGUARDO",
+        "",
+        "Primo turno dopo il PROTOCOLLO.",
+        "Tutto è uguale. Tutto è diverso.",
+        "Sai che qualcuno leggerà. Ogni parola pesa il doppio."
+    ],
+    "envelopes": [
+        {
+            "source": "Feed RSS — Al Jazeera",
+            "domain": "signal",
+            "summary": "Reportage dalla zona: testimonianze di pescatori locali descrivono 'luci notturne' e 'movimenti insoliti'. Nessuna conferma ufficiale.",
+            "confidence": 0.40
+        },
+        {
+            "source": "OSINT — immagini satellitari",
+            "domain": "signal",
+            "summary": "Nuove immagini confermano la presenza di unità navali nella zona. Configurazione diversa dall'esercitazione standard.",
+            "confidence": 0.75
+        },
+        {
+            "source": "Marta Cerulli — chiamata",
+            "domain": "analysis",
+            "summary": "\"La situazione sta cambiando. Ho fonti che parlano di un dispiegamento non previsto. Ma sono fonti di seconda mano. Che facciamo?\"",
+            "confidence": 0.55
+        }
+    ],
+    "decision": {
+        "question": "La situazione si è evoluta. Ma ora sai che qualcuno erediterà le tue parole. Come procedi?",
+        "options": [
+            {
+                "id": "transparent_report",
+                "label": "Report completo e trasparente",
+                "warning": "Mostri tutto. Incluso il dubbio. Il prossimo operatore vedrà la tua vulnerabilità."
+            },
+            {
+                "id": "careful_framing",
+                "label": "Report curato e controllato",
+                "warning": "Professionale. Ma stai performando per chi verrà dopo? O stai proteggendo l'informazione?"
+            },
+            {
+                "id": "raw_data_only",
+                "label": "Solo dati grezzi, zero interpretazione",
+                "warning": "Lasci che il prossimo operatore interpreti. Onesto. O codardo?"
+            }
+        ]
+    },
+    "consequences": {
+        "transparent_report": {
+            "immediate": {
+                "metrics": {
+                    "public_trust": "+10",
+                    "scientific_credibility": "+5",
+                    "public_awareness": "+10",
+                    "personal_guilt": "-5"
+                },
+                "npc_changes": {
+                    "marta_cerulli": "+10",
+                    "lorenzo_bassi": "+5"
+                },
+                "feedback": "Report pubblicato. Crudo. Onesto. Esposto. Lorenzo: 'Questo è il tuo miglior lavoro.' Marta: 'Finalmente sei tu.'"
+            }
+        },
+        "careful_framing": {
+            "immediate": {
+                "metrics": {
+                    "frame_control": "+15",
+                    "scientific_credibility": "+5",
+                    "public_awareness": "+5",
+                    "personal_guilt": "+5"
+                },
+                "npc_changes": {
+                    "lorenzo_bassi": "+10"
+                },
+                "feedback": "Report pubblicato. Professionale. Controllato. Lorenzo approva. Ma sai che hai smussato gli angoli. Per chi?"
+            }
+        },
+        "raw_data_only": {
+            "immediate": {
+                "metrics": {
+                    "methodological_integrity": "+15",
+                    "frame_control": "-10",
+                    "public_awareness": "+5",
+                    "decision_fatigue": "+5"
+                },
+                "npc_changes": {
+                    "marta_cerulli": "-5"
+                },
+                "feedback": "Dati pubblicati senza interpretazione. Marta: 'Hai scelto di non scegliere. Anche questa è una scelta.' Ha ragione?"
+            }
+        }
+    },
+    "annotation_prompt": null
+}
