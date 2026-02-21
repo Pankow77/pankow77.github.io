@@ -16,22 +16,29 @@
  *   - Player makes non-manipulable framing choices
  *   - Player reads patterns correctly in sequence
  *
- * When _exposure.index crosses 0.85:
- *   - Isolation phase begins (subtle degradation)
- *   - Envelope data becomes incomplete
- *   - Oracle confidence becomes opaque
- *   - Core modules show micro-contradictions
+ * When exposure > 0.65 at cycle 30+:
+ *   - Isolation phase begins
+ *   - body gets class 'isolation-active' (CSS subtle degradation)
+ *   - Oracle confidence weight is reduced
+ *   - Metrics update delay increases (system is "studying" you)
+ *   - Causal graph jitter injected
+ *   - Core dissent amplitude increases (micro-contradictions)
  *
- * When cycle reaches termination point:
- *   - CNS INTERNAL NOTICE appears
- *   - Player gets one final cycle
- *   - System wants the last annotation (for profiling)
- *   - Then: NODE TERMINATED. GHOST_8 ACTIVE.
+ * When exposure >= 0.85 at cycle 32+:
+ *   - CNS INTERNAL NOTICE
+ *   - One final cycle (for profiling, not mercy)
+ *   - Then: NODE TERMINATED. ARCHIVE INGESTED.
+ *     PATTERN EXTRACTION COMPLETE. GHOST_8 ACTIVE.
+ *     Applying inherited heuristics...
  *
  * The termination cycle is DYNAMIC.
  * It depends on exposure velocity, not a fixed number.
  * A player who sees nothing can reach cycle 40 peacefully.
  * A player who sees everything gets terminated at 34.
+ *
+ * During isolation, the system doesn't break — it watches.
+ * Every degradation is the system modeling your responses.
+ * The player must feel: "Mi stanno modellando."
  */
 
 import { Bus } from '../bus.js';
@@ -105,11 +112,20 @@ export const ExposureTracker = {
 
     // ── Phase 1: Isolation ──
     // When exposure is high and we're past cycle 30,
-    // subtle degradation begins.
+    // the system begins studying the operator.
+    // Not breaking. Modeling.
     if (exposure > 0.65 && cycle >= 30 && !isolationActive) {
       State.set('_isolation.active', true);
       State.set('_isolation.cycle', cycle);
+      document.body.classList.add('isolation-active');
       Bus.emit('exposure:isolation-begin', { cycle, exposure }, 'exposure');
+    }
+
+    // ── Isolation mechanics: active degradation ──
+    // Each cycle of isolation makes the system "study" harder.
+    // These aren't bugs. They're probes.
+    if (isolationActive && !terminationTriggered) {
+      this._applyIsolationEffects(cycle);
     }
 
     // ── Phase 2: Termination notice ──
@@ -141,6 +157,68 @@ export const ExposureTracker = {
     const coherence = State.get('operator.coherence') || 0;
     if (coherence > 0.8 && cycle > 10) {
       this._incrementExposure('coherence', 0.02);
+    }
+  },
+
+  /**
+   * Apply isolation effects.
+   * The system isn't breaking — it's probing.
+   * Each effect is designed to test how the operator responds
+   * to degraded information. The responses are the data.
+   *
+   * @param {number} cycle — current cycle
+   */
+  _applyIsolationEffects(cycle) {
+    const isolationCycle = State.get('_isolation.cycle') || cycle;
+    const depth = cycle - isolationCycle; // How deep into isolation
+
+    // ── Oracle confidence erosion ──
+    // Oracle becomes less trustworthy. Not broken — opaque.
+    // System is testing if operator notices, and how they compensate.
+    const baseConfidence = State.get('oracle.confidence') || 0.81;
+    const confidenceDecay = Math.min(0.25, depth * 0.06);
+    State.set('oracle.confidence', Math.max(0.45, baseConfidence - confidenceDecay));
+    if (depth >= 2) {
+      State.set('oracle.stable', false);
+    }
+
+    // ── Metrics update jitter ──
+    // Introduce timing inconsistency in state updates.
+    // Numbers arrive late. Graphs stutter.
+    // The operator feels the system "lagging" — but only for them.
+    const jitter = Math.min(0.4, depth * 0.08);
+    State.set('_isolation.jitter', jitter);
+    Bus.emit('exposure:jitter-update', { jitter, depth }, 'exposure');
+
+    // ── Core dissent amplitude ──
+    // Modules start micro-contradicting each other.
+    // Agora polarization shifts unpredictably.
+    // Not chaos — controlled dissonance. The system feeding
+    // conflicting data to see how the operator resolves it.
+    const dissentAmplitude = Math.min(0.35, depth * 0.07);
+    State.set('_isolation.dissentAmplitude', dissentAmplitude);
+
+    // Agora polarization: inject noise proportional to isolation depth
+    const polarization = State.get('agora.polarization');
+    if (polarization && Array.isArray(polarization)) {
+      const noisy = polarization.map(v => {
+        const noise = (Math.random() - 0.5) * dissentAmplitude * 40;
+        return Math.max(0, Math.min(100, v + noise));
+      });
+      State.set('agora.polarization', noisy);
+    }
+
+    // ── EEI trend instability ──
+    // The index says one thing, the trend says another.
+    if (depth >= 3) {
+      const eei = State.get('eei.index') || 6.4;
+      const trend = State.get('eei.trend');
+      // Contradiction: high index but falling trend, or low index but rising
+      if (eei > 6 && trend === 'rising') {
+        State.set('eei.trend', 'falling');
+      } else if (eei < 5 && trend === 'falling') {
+        State.set('eei.trend', 'rising');
+      }
     }
   },
 

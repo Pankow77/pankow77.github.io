@@ -1,22 +1,31 @@
 /**
- * TerminationSequence — Node shutdown.
- * ═══════════════════════════════════════
- * Two phases:
+ * TerminationSequence — Node metabolization.
+ * ═══════════════════════════════════════════
+ * The system doesn't delete you. It digests you.
  *
  * Phase 1: CNS INTERNAL NOTICE (overlay, player can dismiss)
- *   "Il tuo accesso verrà terminato al completamento del ciclo corrente.
- *    Motivo: eccessiva correlazione cross-theatre."
+ *   "Motivo: eccessiva correlazione cross-theatre."
  *   Player gets one final cycle. System wants the last annotation.
+ *   Not for archiving. For profiling. For extraction.
  *
  * Phase 2: NODE TERMINATED (final overlay, no dismiss)
- *   Displays operator profile: coherence, exposure, pattern.
- *   Then: "GHOST_8 ACTIVE. EXPOSURE INDEX RESET."
- *   Screen stays. Drone hum. End.
+ *   Displays operator profile. Everything you were, quantified.
+ *   Then:
+ *     ARCHIVE INGESTED.
+ *     PATTERN EXTRACTION COMPLETE.
+ *     NODE RESOURCES REALLOCATED.
+ *     GHOST_8 ACTIVE.
+ *     Applying inherited heuristics...
+ *
+ *   That last line is the knife.
+ *   GHOST_8 doesn't start from zero.
+ *   GHOST_8 starts slightly more efficient — because of you.
+ *   You weren't eliminated. You were metabolized.
  *
  * If player reaches cycle 40 without triggering termination:
  *   Clean succession. No drama. Peaceful handoff.
- *   "Turno completato. Nodo trasferito. GHOST_8 attivo."
- *   But the annotations are still transferred. Always.
+ *   But the pattern extraction still happens. Always.
+ *   You can't avoid being useful to the system.
  */
 
 import { Bus } from '../bus.js';
@@ -133,13 +142,14 @@ export const TerminationSequence = {
         </div>
 
         <div class="termination-sequence">
-          <div class="termination-seq-line" data-delay="0">ARCHIVE TRANSFERRED.</div>
-          <div class="termination-seq-line" data-delay="2000">MEMORY SCRUB INITIATED.</div>
-          <div class="termination-seq-line termination-ghost8" data-delay="4500">
+          <div class="termination-seq-line" data-delay="0">ARCHIVE INGESTED.</div>
+          <div class="termination-seq-line" data-delay="2000">PATTERN EXTRACTION COMPLETE.</div>
+          <div class="termination-seq-line" data-delay="4000">NODE RESOURCES REALLOCATED.</div>
+          <div class="termination-seq-line termination-ghost8" data-delay="6500">
             GHOST_8 ACTIVE.
           </div>
-          <div class="termination-seq-line termination-reset" data-delay="5500">
-            EXPOSURE INDEX RESET.
+          <div class="termination-seq-line termination-heuristics" data-delay="6900">
+            Applying inherited heuristics...
           </div>
         </div>
       </div>
@@ -189,13 +199,13 @@ export const TerminationSequence = {
             Nodo trasferito.
           </div>
           <div class="termination-seq-line" data-delay="2000">
-            Il tuo archivio è stato consegnato.
+            Pattern operativo archiviato.
           </div>
-          <div class="termination-seq-line termination-ghost8" data-delay="4000">
-            GHOST_8 attivo.
+          <div class="termination-seq-line termination-ghost8" data-delay="4500">
+            GHOST_8 ACTIVE.
           </div>
-          <div class="termination-seq-line" data-delay="6000">
-            Il sistema continua.
+          <div class="termination-seq-line termination-heuristics" data-delay="4900">
+            Applying inherited heuristics...
           </div>
         </div>
       </div>

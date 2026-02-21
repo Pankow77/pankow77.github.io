@@ -1001,8 +1001,14 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   margin-top: 8px;
 }
 
-.termination-reset {
+/* The knife. Quiet. Almost indifferent. */
+.termination-heuristics {
   color: var(--text-dim);
   font-size: 11px;
-  letter-spacing: 1px;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  opacity: 0;
+}
+.termination-heuristics.visible {
+  opacity: 0.6;
 }

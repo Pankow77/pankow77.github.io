@@ -130,8 +130,10 @@ State.batch({
   '_exposure.crossCorrelations': 0, // How many cross-theatre links identified
   '_exposure.patternDepth': 0,      // Consecutive correct pattern reads
   '_exposure.autonomyScore': 0,     // Non-compliant framing choices
-  '_isolation.active': false,       // True when system begins degradation
+  '_isolation.active': false,       // True when system begins studying operator
   '_isolation.cycle': 0,            // Cycle when isolation began
+  '_isolation.jitter': 0,           // Timing inconsistency injected (0.0–0.4)
+  '_isolation.dissentAmplitude': 0, // Core contradiction intensity (0.0–0.35)
   '_termination.triggered': false,  // True when CNS issues notice
   '_termination.cycle': 0,          // Cycle of termination notice
   '_termination.finalAnnotation': false, // Has player written last note
