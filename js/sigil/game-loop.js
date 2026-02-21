@@ -22,7 +22,7 @@
  */
 
 export class GameLoop {
-    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry, vfx, audio, rhythm, fatigue }) {
+    constructor({ bus, state, ui, consequenceEngine, annotationTracker, successionProtocol, scenarioLoader, causalGraph, telemetry, vfx, audio, rhythm, fatigue, fragility, worldEvents, epistemicScars, moralArchive, npcPersonality, temporalPressure }) {
         this.bus = bus;
         this.state = state;
         this.ui = ui;
@@ -36,6 +36,14 @@ export class GameLoop {
         this.audio = audio || null;
         this.rhythm = rhythm || null;
         this.fatigue = fatigue || null;
+
+        // ── New subsystems ──
+        this.fragility = fragility || null;
+        this.worldEvents = worldEvents || null;
+        this.epistemic = epistemicScars || null;
+        this.moral = moralArchive || null;
+        this.npcPersonality = npcPersonality || null;
+        this.pressure = temporalPressure || null;
 
         this.sequence = [];
         this.sequenceIndex = 0;
@@ -197,6 +205,64 @@ export class GameLoop {
             rhythm: rhythmData?.type || 'calm'
         }, 'game-loop');
 
+        // ── TEMPORAL PRESSURE: pre-turn processing ──
+        let pressureResult = null;
+        if (this.pressure) {
+            pressureResult = this.pressure.processPreTurn(entry.turn, this.state);
+
+            // Show expired window penalties as delayed feedback
+            if (pressureResult.windowsExpired.length > 0) {
+                const expiredFeedbacks = pressureResult.windowsExpired
+                    .map(w => w.penalty?.feedback).filter(Boolean);
+                if (expiredFeedbacks.length > 0) {
+                    await this.ui.showDelayedFeedback(expiredFeedbacks);
+                }
+            }
+
+            // Escalation clock triggered — inject world event
+            if (pressureResult.escalationTriggered) {
+                const escEvent = this.pressure.getEscalationEvent();
+                if (escEvent) {
+                    await this.ui.showDelayedFeedback([escEvent.feedback]);
+                    if (escEvent.effects) {
+                        if (escEvent.effects.latent_vars) {
+                            for (const [k, v] of Object.entries(escEvent.effects.latent_vars)) {
+                                this.state.latent_vars[k] = Math.max(0, Math.min(100,
+                                    (this.state.latent_vars[k] || 0) + v));
+                            }
+                        }
+                        if (escEvent.effects.metrics) {
+                            for (const [k, v] of Object.entries(escEvent.effects.metrics)) {
+                                this.state.applyMetric(k, v);
+                            }
+                        }
+                    }
+                    if (this.vfx) await this.vfx.microCrisis('volatility_surge', {});
+                    if (this.audio) this.audio.crisisSound();
+                }
+            }
+        }
+
+        // ── WORLD EVENTS: autonomous events before player acts ──
+        if (this.worldEvents) {
+            const worldTriggered = this.worldEvents.evaluate(entry.turn, this.state);
+            if (worldTriggered.length > 0) {
+                // Show world event envelopes first (world precedes you)
+                const worldEnvelopes = worldTriggered.map(e => e.envelope);
+                await this.ui.showEnvelopes(worldEnvelopes);
+
+                // Apply world event effects
+                for (const event of worldTriggered) {
+                    this.worldEvents.applyEffects(this.state, event.effects);
+                }
+
+                this.bus.emit('sigil:world-events', {
+                    turn: entry.turn,
+                    events: worldTriggered.map(e => e.id)
+                }, 'game-loop');
+            }
+        }
+
         // Separator between turns
         if (entry.turn > 1) {
             this.ui.addSeparator();
@@ -205,6 +271,24 @@ export class GameLoop {
 
         // Resolve scenario (filter by state conditions)
         const resolved = this.loader.resolve(scenario, this.state);
+
+        // ── EPISTEMIC SCARS: modify envelopes based on player's bias ──
+        if (this.epistemic && resolved.envelopes) {
+            resolved.envelopes = this.epistemic.modifyEnvelopes(resolved.envelopes);
+        }
+
+        // ── FRAGILITY: modify envelope confidence if signal fracture active ──
+        if (this.fragility && resolved.envelopes) {
+            const confMod = this.fragility.getConfidenceModifier();
+            if (confMod < 1.0) {
+                resolved.envelopes = resolved.envelopes.map(env => ({
+                    ...env,
+                    confidence: env.confidence !== undefined
+                        ? Math.max(0.1, env.confidence * confMod)
+                        : env.confidence
+                }));
+            }
+        }
 
         // ── THEATER: set audio timbral signature ──
         const theater = resolved.theater || null;
@@ -220,9 +304,14 @@ export class GameLoop {
 
         // Step 2: Show briefing text
         if (resolved.briefing) {
+            let typeSpeed = rhythmData?.params?.typewriterSpeed || 20;
+            // Temporal pressure modifies typewriter speed (urgency = faster)
+            if (this.pressure) {
+                typeSpeed = Math.round(typeSpeed * this.pressure.getTypewriterSpeedMod());
+            }
             await this.ui.typeLines(
                 Array.isArray(resolved.briefing) ? resolved.briefing : [resolved.briefing],
-                { speed: rhythmData?.params?.typewriterSpeed || 20, cssClass: 'briefing-text', pauseBetween: 400 }
+                { speed: typeSpeed, cssClass: 'briefing-text', pauseBetween: 400 }
             );
         }
 
@@ -242,6 +331,29 @@ export class GameLoop {
             option_id: optionId,
             timestamp: Date.now()
         });
+
+        // ── POST-DECISION: record in new subsystems ──
+        if (this.epistemic) {
+            const { newMutations } = this.epistemic.recordDecision(optionId, entry.turn);
+            if (newMutations.length > 0) {
+                this.bus.emit('sigil:epistemic-mutation', {
+                    turn: entry.turn,
+                    mutations: newMutations
+                }, 'game-loop');
+            }
+        }
+        if (this.moral) {
+            this.moral.recordDecision(optionId, entry.turn);
+        }
+        if (this.pressure) {
+            const { windowUsed } = this.pressure.processAction(optionId, entry.turn, this.state);
+            if (windowUsed) {
+                this.bus.emit('sigil:window-used', {
+                    turn: entry.turn,
+                    window: windowUsed.id,
+                }, 'game-loop');
+            }
+        }
 
         // ════════════════════════════════════
         // CINEMATIC CHOICE SEQUENCE
@@ -388,7 +500,64 @@ export class GameLoop {
             }
         }
 
-        // Step 5k: Log event (append-only)
+        // Step 5k: FRAGILITY — process structural stress
+        if (this.fragility) {
+            const fragilityResult = this.fragility.processTurn(this.state, {
+                arcCount: causalArcs.length,
+                scarsFormed: causalResult?.scars_formed || [],
+                actionId: optionId
+            });
+
+            if (fragilityResult.newFractures.length > 0) {
+                this.bus.emit('sigil:fractures-formed', {
+                    turn: entry.turn,
+                    fractures: fragilityResult.newFractures
+                }, 'game-loop');
+
+                // Visual/audio signal for fracture
+                for (const frac of fragilityResult.newFractures) {
+                    if (this.vfx) await this.vfx.microCrisis('volatility_surge', {});
+                    if (this.audio) this.audio.crisisSound();
+                }
+            }
+
+            if (fragilityResult.cascadeTriggered) {
+                this.bus.emit('sigil:cascade-failure', {
+                    turn: entry.turn,
+                    fractureCount: fragilityResult.fractureCount
+                }, 'game-loop');
+
+                if (this.vfx) await this.vfx.microCrisis('volatility_surge', {});
+                if (this.audio) this.audio.crisisSound();
+            }
+        }
+
+        // Step 5k½: NPC PERSONALITY — process reactions
+        let npcReactions = [];
+        if (this.npcPersonality) {
+            const branch = resolved.consequences?.[optionId];
+            npcReactions = this.npcPersonality.processTurn(
+                entry.turn, optionId, this.state,
+                branch?.immediate || {}
+            );
+
+            // Track NPC changes for moral archive
+            if (this.moral && branch?.immediate?.npc_changes) {
+                for (const [npc, change] of Object.entries(branch.immediate.npc_changes)) {
+                    this.moral.recordNPCChange(npc, change);
+                }
+            }
+
+            // Apply epistemic NPC drift
+            if (this.epistemic) {
+                const drift = this.epistemic.getNPCDrift();
+                for (const [npc, delta] of Object.entries(drift)) {
+                    this.state.applyNPC(npc, String(delta > 0 ? `+${delta}` : delta));
+                }
+            }
+        }
+
+        // Step 5k¾: Log event (append-only)
         this.state.logEvent({
             turn: entry.turn,
             theater: resolved.theater || null,
@@ -397,6 +566,12 @@ export class GameLoop {
             causal_arcs: causalArcs,
             scars: this.graph ? this.graph.exportScars() : {},
             rhythm: rhythmData?.type || 'calm',
+            fragility: this.fragility ? this.fragility.exportState() : null,
+            epistemic_bias: this.epistemic ? this.epistemic.getBiasVector() : null,
+            urgency: this.pressure ? this.pressure.getUrgency() : 0,
+            npc_reactions: npcReactions.filter(r => r.reaction).map(r => ({
+                npc: r.npc, mood: r.mood
+            })),
             timestamp: Date.now()
         });
 
@@ -412,7 +587,33 @@ export class GameLoop {
         const feedback = this.consequences.getLastFeedback();
         await this.ui.showFeedback(feedback);
 
+        // Step 6½: Show NPC reactions (texture, not data)
+        if (npcReactions.length > 0) {
+            for (const reaction of npcReactions) {
+                if (reaction.reaction) {
+                    await this.ui.typewriter(reaction.reaction, {
+                        speed: 18, cssClass: 'npc-reaction'
+                    });
+                    await this.ui._delay(800);
+                }
+            }
+        }
+
         // Step 7: Schedule delayed consequences
+        // Fragility: INFRA fracture adds delay
+        if (this.fragility) {
+            const delayMod = this.fragility.getDelayModifier();
+            if (delayMod > 0) {
+                // Temporarily extend delayed consequence triggers
+                const branch = resolved.consequences?.[optionId];
+                if (branch?.delayed) {
+                    const delayed = Array.isArray(branch.delayed) ? branch.delayed : [branch.delayed];
+                    for (const d of delayed) {
+                        d.trigger_turn = (d.trigger_turn || 0) + delayMod;
+                    }
+                }
+            }
+        }
         this.consequences.schedule(resolved, optionId);
 
         // Step 8: Show inherited annotation (AFTER decision, not before)
@@ -439,6 +640,11 @@ export class GameLoop {
             );
             this.state.annotations.push(annotation);
             this.tracker.updateSentimentAvg(this.state);
+
+            // Moral archive: track annotation behavior
+            if (this.moral) {
+                this.moral.recordAnnotation(annotation);
+            }
 
             this.bus.emit('sigil:annotation-written', {
                 turn: entry.turn,
@@ -526,6 +732,36 @@ export class GameLoop {
 
         // Show end screen
         await this.ui.showEndScreen(this.state);
+
+        // ── MORAL ARCHIVE: accusatory autopsy ──
+        if (this.moral) {
+            const accusations = this.moral.compile(this.state);
+            await this.ui._delay(2000);
+            await this.ui.typeLines(accusations, {
+                speed: 30,
+                cssClass: 'moral-accusation',
+                pauseBetween: 1200
+            });
+        }
+
+        // ── FRAGILITY REPORT ──
+        if (this.fragility) {
+            const fractures = this.fragility.getActiveFractures();
+            if (fractures.length > 0) {
+                await this.ui._delay(1500);
+                await this.ui.typewriter('', { cssClass: 'system-text' });
+                await this.ui.typewriter(
+                    `Fratture di sistema: ${fractures.length}`,
+                    { speed: 25, cssClass: 'system-text' }
+                );
+                for (const f of fractures) {
+                    await this.ui.typewriter(
+                        `  ${f.label} — ${f.description}`,
+                        { speed: 20, cssClass: 'fracture-text' }
+                    );
+                }
+            }
+        }
 
         this.bus.emit('sigil:game-completed', {
             ghost_id: this.state.run_id,

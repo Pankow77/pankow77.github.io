@@ -23,6 +23,12 @@ import { VFX } from './vfx.js';
 import { AudioEngine } from './audio-engine.js';
 import { Rhythm } from './rhythm.js';
 import { Fatigue } from './fatigue.js';
+import { Fragility } from './fragility.js';
+import { WorldEvents } from './world-events.js';
+import { EpistemicScars } from './epistemic-scars.js';
+import { MoralArchive } from './moral-archive.js';
+import { NPCPersonality } from './npc-personality.js';
+import { TemporalPressure } from './temporal-pressure.js';
 
 async function boot() {
     console.log(
@@ -58,6 +64,14 @@ async function boot() {
 
     // Inject fatigue into causal graph for adaptive thresholds + inertia
     graph.setFatigue(fatigue);
+
+    // ── New subsystems ──
+    const fragility = new Fragility();
+    const worldEvents = new WorldEvents(seed);
+    const epistemicScars = new EpistemicScars();
+    const moralArchive = new MoralArchive();
+    const npcPersonality = new NPCPersonality();
+    const temporalPressure = new TemporalPressure();
 
     // ── Initialize UI ──
     ui.init();
@@ -103,7 +117,13 @@ async function boot() {
         vfx,
         audio,
         rhythm,
-        fatigue
+        fatigue,
+        fragility,
+        worldEvents,
+        epistemicScars,
+        moralArchive,
+        npcPersonality,
+        temporalPressure
     });
 
     // ── Initialize and run ──
@@ -124,6 +144,12 @@ async function boot() {
         audio,
         rhythm,
         fatigue,
+        fragility,
+        worldEvents,
+        epistemicScars,
+        moralArchive,
+        npcPersonality,
+        temporalPressure,
         // Dev helpers
         why: (turn) => {
             const trace = telemetry.getWhyTrace(turn);
@@ -162,6 +188,48 @@ async function boot() {
             console.log(`Inertia dampening: ${f.getInertiaDampening().toFixed(2)}`);
             console.log(`Afterimage: ${f.getAfterImageDuration()}ms`);
         },
+        stress: () => {
+            console.log('\n── SYSTEM FRAGILITY ──');
+            console.log(`Fragility index: ${(fragility.getFragilityIndex() * 100).toFixed(0)}%`);
+            for (const [k, v] of Object.entries(fragility.stress)) {
+                const bar = '█'.repeat(Math.round(v / 10));
+                const empty = '░'.repeat(10 - Math.round(v / 10));
+                const fractured = fragility.fractures[k] ? ' [FRACTURED]' : '';
+                console.log(`${k}: [${bar}${empty}] ${v.toFixed(0)}${fractured}`);
+            }
+        },
+        bias: () => {
+            console.log('\n── EPISTEMIC BIAS ──');
+            const b = epistemicScars.getBiasVector();
+            console.log(`Velocity: ${b.velocity > 0 ? '+' : ''}${b.velocity} (fast↔slow)`);
+            console.log(`Escalation: ${b.escalation > 0 ? '+' : ''}${b.escalation} (escalate↔caution)`);
+            console.log(`Publicity: ${b.publicity > 0 ? '+' : ''}${b.publicity} (public↔private)`);
+            const muts = epistemicScars.getActiveMutations();
+            if (muts.length > 0) {
+                console.log('Active mutations:', muts.map(m => m.label).join(', '));
+            }
+        },
+        npcs: () => {
+            console.log('\n── NPC STATES ──');
+            const summary = npcPersonality.getNPCSummary();
+            for (const [k, v] of Object.entries(summary)) {
+                console.log(`${v.name}: mood=${v.mood}, opinion=${v.opinion || 'none'}, silent=${v.silentTurns}`);
+            }
+        },
+        clock: () => {
+            const c = temporalPressure.getClockState();
+            console.log('\n── ESCALATION CLOCK ──');
+            console.log(`Remaining: ${c.remaining.toFixed(1)} ticks (${(c.pct * 100).toFixed(0)}%)`);
+            console.log(`Triggered: ${c.triggered}`);
+            console.log(`Urgency: ${(temporalPressure.getUrgency() * 100).toFixed(0)}%`);
+        },
+        moral: () => {
+            const pulse = moralArchive.getMoralPulse();
+            console.log('\n── MORAL PULSE ──');
+            console.log(`Speed: ${pulse.speed > 0 ? '+' : ''}${pulse.speed}`);
+            console.log(`Visibility: ${pulse.visibility > 0 ? '+' : ''}${pulse.visibility}`);
+            console.log(`People: ${pulse.people > 0 ? '+' : ''}${pulse.people}`);
+        },
         reset: async () => {
             await state.reset();
             location.reload();
@@ -175,7 +243,7 @@ async function boot() {
         'color: #33ff33;'
     );
     console.log(
-        '%c[SIGIL] %cDev: __SIGIL.why(turn), __SIGIL.metrics(), __SIGIL.scars(), __SIGIL.load()',
+        '%c[SIGIL] %cDev: why(t) metrics() scars() load() stress() bias() npcs() clock() moral()',
         'color: #33ff33; font-weight: bold;',
         'color: #666;'
     );
