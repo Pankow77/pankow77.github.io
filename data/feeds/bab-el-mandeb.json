@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-21T08:55:11.254Z",
-  "epoch_count": 4,
+  "last_fetch": "2026-02-21T09:26:16.233Z",
+  "epoch_count": 5,
   "epochs": [
+    {
+      "id": "rss_9d3c2658d6247c07",
+      "timestamp": 1771528265000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Eyal Zamir, Katz threaten Iran, Houthis should they attack - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE10djR4QlRvQkZ3eDhRZEVjYWhMMkI5clZBZVpfZTZXUzhreGRrTlVDWHQ5SDlneTFmeFlla2FEczdRMGpjeHV6aEM1cXlfV2oxOUxWR1pSZHo2Wmx4MVg3Xy1NRHV0TW52bHp6cGlB?oc=5\" target=\"_blank\">Eyal Zamir, Katz threaten Iran, Houthis should they attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE10djR4QlRvQkZ3eDhRZEVjYWhMMkI5clZBZVpfZTZXUzhreGRrTlVDWHQ5SDlneTFmeFlla2FEczdRMGpjeHV6aEM1cXlfV2oxOUxWR1pSZHo2Wmx4MVg3Xy1NRHV0TW52bHp6cGlB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-21T09:26:14.969Z"
+    },
     {
       "id": "rss_55bae90ef6de986a",
       "timestamp": 1771506405000,
