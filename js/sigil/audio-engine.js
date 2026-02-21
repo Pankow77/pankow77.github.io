@@ -216,28 +216,53 @@ export class AudioEngine {
     // ═══════════════════════════════════════
 
     /**
-     * Micro-click before the freeze. 8ms. Subcortical anticipation.
+     * Micro-click before the freeze. Subcortical anticipation.
      * The player flinches before they know why.
+     *
+     * Pattern-aware: when the system detects repeated choices,
+     * the pre-echo shifts — lower frequency, longer duration,
+     * optional double-click. Not AI. Simple pattern detection.
+     * But it creates the illusion of intelligence.
+     *
+     * @param {number} [patternDepth=0] — 0 = no repeat, 1+ = repeated choice depth
      */
-    preEchoClick() {
+    preEchoClick(patternDepth) {
         if (!this.ctx || this._muted) return;
 
         const now = this.ctx.currentTime;
-
-        // Short impulse — filtered click (dampened by fatigue)
         const damp = this._getDampening();
+        const depth = patternDepth || 0;
+
+        // Pattern shifts: frequency drops, duration stretches
+        const freq = depth > 0 ? Math.max(800, 1200 - depth * 150) : 1200;
+        const duration = depth > 0 ? 0.012 : 0.008;
+
         const osc = this.ctx.createOscillator();
         osc.type = 'sine';
-        osc.frequency.value = 1200;
+        osc.frequency.value = freq;
 
         const gain = this.ctx.createGain();
         gain.gain.setValueAtTime(0.12 * damp, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
 
         osc.connect(gain);
         gain.connect(this.masterGain);
         osc.start(now);
-        osc.stop(now + 0.01);
+        osc.stop(now + duration + 0.002);
+
+        // Double-click for deep patterns — the system "knows"
+        if (depth >= 2) {
+            const osc2 = this.ctx.createOscillator();
+            osc2.type = 'sine';
+            osc2.frequency.value = freq * 0.8;
+            const gain2 = this.ctx.createGain();
+            gain2.gain.setValueAtTime(0.06 * damp, now + 0.015);
+            gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.025);
+            osc2.connect(gain2);
+            gain2.connect(this.masterGain);
+            osc2.start(now + 0.015);
+            osc2.stop(now + 0.03);
+        }
     }
 
     // ═══════════════════════════════════════
@@ -678,10 +703,27 @@ export class AudioEngine {
         }
 
         // Scar cluster modulation: polarization affects the breathing speed
+        // Session phase modulates scar intensity (suspend → louder scars)
+        const scarMod = this._scarIntensityMod || 1.0;
         if (this._scarCluster) {
             this._scarCluster.amLfo.frequency.linearRampToValueAtTime(
                 0.05 + pol * 0.1, now + 1
             );
+            // Scar intensity rises in suspend phase — quiet world, vibrating underneath
+            const baseGain = Math.min(0.03, 0.02 + this._scarClusterCount * 0.002);
+            this._scarCluster.gain.gain.linearRampToValueAtTime(
+                Math.min(0.045, baseGain * scarMod), now + 2
+            );
+        }
+
+        // Also modulate foreground/midlayer scar volume with session phase
+        if (scarMod > 1.0) {
+            for (const scar of this._scarOscs) {
+                const base = scar.layer === 'foreground' ? 0.025 : 0.015;
+                scar.gain.gain.linearRampToValueAtTime(
+                    Math.min(0.04, base * scarMod), now + 3
+                );
+            }
         }
     }
 
@@ -756,6 +798,17 @@ export class AudioEngine {
 
     _getDampening() {
         return this._dampeningMult ?? 1.0;
+    }
+
+    /**
+     * Set scar intensity modifier from session phase.
+     * Suspend phase: scars grow louder while world goes quiet.
+     * Creates slow unease — the ground vibrates.
+     *
+     * @param {number} mod — 1.0 = normal, 1.4 = suspend phase boost
+     */
+    setScarIntensityMod(mod) {
+        this._scarIntensityMod = Math.max(0.5, Math.min(2.0, mod));
     }
 
     // ═══════════════════════════════════════

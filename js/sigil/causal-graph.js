@@ -271,11 +271,12 @@ export class CausalGraph {
         }
 
         // ── Phase 4: Cascade — Latent → Metric (with scar amplification) ──
-        // Adaptive thresholds: fatigue raises activation cost
+        // Adaptive thresholds: fatigue raises activation cost — ASYMMETRICALLY
+        // Under stress: polarization harder to escalate, credibility more fragile
         for (const edge of CASCADE_EDGES) {
             const sourceVal = projected[edge.source] ?? 0;
             const threshold = this.fatigue
-                ? this.fatigue.getAdaptiveThreshold(edge.threshold)
+                ? this.fatigue.getAdaptiveThreshold(edge.threshold, edge.source, edge.target)
                 : edge.threshold;
             if (sourceVal < threshold) continue;
 

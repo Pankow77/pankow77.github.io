@@ -39,6 +39,8 @@ export class VFX {
         this._scarCount = 0;
         this._dampening = 1.0;  // fatigue dampening multiplier (0.3–1.0)
         this._lastIntensity = 0; // last turn's intensity for hue gating
+        this._inertiaMult = 1.0; // inertia dampening (< 1.0 = world didn't respond)
+        this._glitchMod = 1.0;   // session phase glitch modifier
     }
 
     /**
@@ -47,6 +49,22 @@ export class VFX {
      */
     setDampening(mult) {
         this._dampening = Math.max(0.2, Math.min(1, mult));
+    }
+
+    /**
+     * Set inertia state for current turn.
+     * When < 1.0: the stamp doesn't fully impress, the world feels sluggish.
+     */
+    setInertia(mult) {
+        this._inertiaMult = mult;
+    }
+
+    /**
+     * Set glitch modifier from session phase.
+     * Suspend phase: glitch nearly gone. Surprise: full glitch.
+     */
+    setGlitchMod(mod) {
+        this._glitchMod = Math.max(0.1, Math.min(1, mod));
     }
 
     /**
@@ -222,11 +240,17 @@ export class VFX {
         await this._delay(120);
 
         // Phase 2: Frame stamp overlay (dampened by fatigue)
+        // Inertia: stamp doesn't fully impress — opacity reduced, duration shorter
         const label = this._actionLabel(actionId);
         this._frameOverlay.textContent = label;
+        if (this._inertiaMult < 1.0) {
+            this._frameOverlay.style.opacity = (0.3 + this._inertiaMult * 0.7).toFixed(2);
+        }
         this._frameOverlay.classList.add('active');
-        await this._delay(Math.round(400 * this._dampening));
+        const stampDuration = Math.round(400 * this._dampening * Math.max(0.5, this._inertiaMult));
+        await this._delay(stampDuration);
         this._frameOverlay.classList.remove('active');
+        this._frameOverlay.style.opacity = '';
 
         // Phase 3: Unfreeze
         document.body.classList.remove('vfx-freeze');
@@ -340,6 +364,33 @@ export class VFX {
         this._propagationLayer.classList.add('fading');
         await this._delay(600);
         this._propagationLayer.classList.remove('active', 'fading');
+        this._propagationLayer.innerHTML = '';
+    }
+
+    // ═══════════════════════════════════════
+    // INERTIA SIGNAL — "something didn't take"
+    // ═══════════════════════════════════════
+
+    /**
+     * Visual micro-signal when inertia dampens the world's response.
+     * Not text. Not explanation. Just a brief ghost that appears and dies.
+     * The player must perceive it, not understand it.
+     */
+    async inertiaSignal() {
+        const el = document.createElement('div');
+        el.className = 'arc-flash inertia-ghost';
+        el.innerHTML = '<span class="arc-from">▒▒▒</span>';
+        this._propagationLayer.appendChild(el);
+        this._propagationLayer.classList.add('active');
+
+        // Flash on (40ms) → visible briefly (80ms) → die
+        await this._delay(40);
+        el.classList.add('visible');
+        await this._delay(80);
+        el.style.opacity = '0.15';
+        await this._delay(100);
+
+        this._propagationLayer.classList.remove('active');
         this._propagationLayer.innerHTML = '';
     }
 
@@ -475,9 +526,9 @@ export class VFX {
         this._lastIntensity = intensity || 0;
         const changed = this._previousRhythm && this._previousRhythm !== rhythm;
 
-        // Procedural rhythm transition glitch — dampened by fatigue
+        // Procedural rhythm transition glitch — dampened by fatigue + session phase
         if (changed) {
-            const damp = this._dampening;
+            const damp = this._dampening * this._glitchMod;
 
             const duration = Math.round((138 + Math.floor(Math.random() * 24)) * damp);
             const bright = Math.random() > 0.5

@@ -253,6 +253,11 @@ export class GameLoop {
             const compositeDamp = this.fatigue.getCompositeDampening(optionId, theater);
             if (this.vfx) this.vfx.setDampening(compositeDamp);
             if (this.audio) this.audio.setDampening(compositeDamp);
+
+            // Session phase modifiers → glitch mod + scar intensity
+            const sessionMods = this.fatigue.getSessionModifiers();
+            if (this.vfx) this.vfx.setGlitchMod(sessionMods.glitchMod || 1.0);
+            if (this.audio) this.audio.setScarIntensityMod(sessionMods.scarIntensityMod || 1.0);
         }
 
         // Step 5a: Apply immediate consequences (silent — no display yet)
@@ -267,11 +272,19 @@ export class GameLoop {
         if (this.graph) {
             causalResult = this.graph.propagate(optionId, frameAction, this.state);
             causalArcs = causalResult.arcs;
+
+            // Pass inertia state to VFX — stamp will be imperfect, world sluggish
+            if (this.vfx && causalResult.inertia !== null) {
+                this.vfx.setInertia(causalResult.inertia);
+            } else if (this.vfx) {
+                this.vfx.setInertia(1.0);
+            }
         }
 
-        // Step 5c: PRE-ECHO CLICK — subcortical anticipation before the freeze
+        // Step 5c: PRE-ECHO CLICK — pattern-aware subcortical anticipation
         if (this.audio) {
-            this.audio.preEchoClick();
+            const patternDepth = this.fatigue ? this.fatigue.getPatternDepth() : 0;
+            this.audio.preEchoClick(patternDepth);
         }
 
         // Step 5d: SUB-BASS HIT — context-sensitive, theater-tinted, never the same twice
@@ -282,6 +295,11 @@ export class GameLoop {
         // Step 5e: CINEMATIC SEQUENCE — freeze → stamp → propagation wave
         if (this.vfx) {
             await this.vfx.cinematicChoice(optionId, causalArcs);
+        }
+
+        // Step 5e½: INERTIA SIGNAL — ghost flash when the world didn't respond
+        if (this.vfx && causalResult?.inertia !== null && causalResult?.inertia !== undefined) {
+            await this.vfx.inertiaSignal();
         }
 
         // Step 5f: NOW apply state changes (numbers arrive AFTER perception)
@@ -350,6 +368,23 @@ export class GameLoop {
                 this.audio.afterimageSilence(afterimageDuration);
                 // Hold the visual space too — brief pause before numbers
                 await this.ui._delay(afterimageDuration);
+            }
+
+            // Anti-boredom: if load has been < 0.2 for 3+ turns, inject a micro-event
+            // The system must never become boring. Low tension ≠ no tension.
+            if (this.fatigue.shouldForceEvent()) {
+                if (this.vfx) {
+                    await this.vfx.microCrisis('volatility_surge', {});
+                }
+                if (this.audio) {
+                    this.audio.crisisSound();
+                }
+                // Small nudge to a random latent var — something moved
+                const nudgeTargets = ['volatility', 'polarization', 'brent'];
+                const nudge = nudgeTargets[Math.floor(Math.random() * nudgeTargets.length)];
+                this.state.latent_vars[nudge] = Math.min(100,
+                    (this.state.latent_vars[nudge] || 0) + 5 + Math.floor(Math.random() * 8)
+                );
             }
         }
 

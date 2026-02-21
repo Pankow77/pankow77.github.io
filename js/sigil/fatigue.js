@@ -45,6 +45,12 @@ export class Fatigue {
         // ── Output multipliers (computed per turn) ──
         this.oxygenMultiplier = 1.0;  // 0.3–1.0 (dampening factor)
         this.habituationMult = 1.0;   // 0.4–1.0 (per-action dampening)
+
+        // ── Anti-boredom tracking ──
+        this._lowLoadStreak = 0;      // consecutive turns with load < 0.2
+
+        // ── Pattern detection ──
+        this._lastActions = [];       // last 5 action IDs for repetition sensing
     }
 
     // ═══════════════════════════════════════
@@ -76,8 +82,30 @@ export class Fatigue {
         const habKey = `${turnData.actionId}::${turnData.theater || 'none'}`;
         this._habituationMap[habKey] = (this._habituationMap[habKey] || 0) + 1;
 
+        // Habituation decay: unused combos lose weight (surprise can return)
+        // 3 turns of different strategy → noticeable recovery
+        for (const key of Object.keys(this._habituationMap)) {
+            if (key !== habKey) {
+                this._habituationMap[key] *= 0.9;
+                if (this._habituationMap[key] < 0.5) {
+                    delete this._habituationMap[key];
+                }
+            }
+        }
+
+        // Pattern tracking: last 5 actions for repetition sensing
+        this._lastActions.push(turnData.actionId);
+        if (this._lastActions.length > 5) this._lastActions.shift();
+
         // Recompute all multipliers
         this._recompute(turnData);
+
+        // Anti-boredom: track consecutive low-load turns
+        if (this.cognitiveLoad < 0.2) {
+            this._lowLoadStreak++;
+        } else {
+            this._lowLoadStreak = 0;
+        }
     }
 
     /**
@@ -136,13 +164,13 @@ export class Fatigue {
             this.oxygenMultiplier = 1.0;
         }
 
-        // ── Habituation for current action ──
+        // ── Habituation for current action (fractional from decay) ──
         const habKey = `${turnData?.actionId}::${turnData?.theater || 'none'}`;
         const uses = this._habituationMap[habKey] || 0;
-        // First use: 1.0, second: 0.85, third: 0.6, fourth+: 0.4
-        if (uses <= 1) this.habituationMult = 1.0;
-        else if (uses === 2) this.habituationMult = 0.85;
-        else if (uses === 3) this.habituationMult = 0.6;
+        // Thresholds handle fractional values from decay
+        if (uses < 1.5) this.habituationMult = 1.0;
+        else if (uses < 2.5) this.habituationMult = 0.85;
+        else if (uses < 3.5) this.habituationMult = 0.6;
         else this.habituationMult = 0.4;
     }
 
@@ -169,22 +197,47 @@ export class Fatigue {
     getHabituation(actionId, theater) {
         const habKey = `${actionId}::${theater || 'none'}`;
         const uses = this._habituationMap[habKey] || 0;
-        if (uses <= 1) return 1.0;
-        if (uses === 2) return 0.85;
-        if (uses === 3) return 0.6;
+        // Fractional thresholds: habituation decays when strategy changes
+        if (uses < 1.5) return 1.0;
+        if (uses < 2.5) return 0.85;
+        if (uses < 3.5) return 0.6;
         return 0.4;
     }
 
     /**
-     * Adaptive threshold: fatigue raises the bar for activation.
-     * Used by CausalGraph to make cascade edges less trigger-happy
-     * when the player is overloaded.
+     * Adaptive threshold: fatigue raises the bar — ASYMMETRICALLY.
+     *
+     * Under stress the system becomes unbalanced:
+     *   - Polarization/repression: HARDER to escalate (threshold +12)
+     *   - Trust/credibility: MORE FRAGILE (threshold +3 only)
+     *   - Default: uniform +8
+     *
+     * The world doesn't break evenly. Under pressure,
+     * defenses crack before offenses grow.
      *
      * @param {number} baseThreshold — the edge's static threshold
+     * @param {string} [source] — latent variable source
+     * @param {string} [target] — metric/latent target
      * @returns {number} adjusted threshold (always >= base)
      */
-    getAdaptiveThreshold(baseThreshold) {
-        // At max cognitive load, thresholds rise by +8
+    getAdaptiveThreshold(baseThreshold, source, target) {
+        const FRAGILE = ['public_trust', 'civil_society_trust',
+                         'scientific_credibility', 'government_comfort'];
+        const RESISTANT = ['polarization', 'repression_index'];
+
+        if (this.cognitiveLoad > 0.4) {
+            // Under stress: asymmetric response
+            if (target && FRAGILE.includes(target)) {
+                // Fragile targets: threshold barely rises → easier to break
+                return baseThreshold + Math.round(this.cognitiveLoad * 3);
+            }
+            if (source && RESISTANT.includes(source)) {
+                // Resistant sources: harder to escalate further
+                return baseThreshold + Math.round(this.cognitiveLoad * 12);
+            }
+        }
+
+        // Default: uniform rise
         return baseThreshold + Math.round(this.cognitiveLoad * 8);
     }
 
@@ -240,8 +293,9 @@ export class Fatigue {
         // Only trigger after intense turns (> 0.5)
         if (lastIntensity < 0.5) return 0;
 
-        // 300ms base + up to 500ms for maximum intensity
-        return 300 + Math.round((lastIntensity - 0.5) * 1000);
+        // Proportional to full intensity — devastating turn → almost 1s of suspension
+        // intensity 0.5 → 650ms, intensity 1.0 → 1000ms
+        return 300 + Math.round(lastIntensity * 700);
     }
 
     // ═══════════════════════════════════════
@@ -292,28 +346,36 @@ export class Fatigue {
                     audioGain: 1.0 * cycleDecay,
                     vfxIntensity: 1.0 * cycleDecay,
                     propagationSpeed: 1.0,
-                    silenceWeight: 0.1,   // minimal silence, high reactivity
+                    silenceWeight: 0.1,        // minimal silence, high reactivity
+                    scarIntensityMod: 1.0,     // scars at normal presence
+                    glitchMod: 1.0,
                 };
             case 'breathe':
                 return {
                     audioGain: 0.5,
                     vfxIntensity: 0.4,
-                    propagationSpeed: 0.6,  // slower reveals
-                    silenceWeight: 0.6,     // more space between events
+                    propagationSpeed: 0.6,     // slower reveals
+                    silenceWeight: 0.6,        // more space between events
+                    scarIntensityMod: 1.0,
+                    glitchMod: 0.7,            // glitch slightly dampened
                 };
             case 'surprise':
                 return {
                     audioGain: 0.9,
                     vfxIntensity: 0.85,
-                    propagationSpeed: 1.2,  // fast when it hits
+                    propagationSpeed: 1.2,     // fast when it hits
                     silenceWeight: 0.3,
+                    scarIntensityMod: 1.0,
+                    glitchMod: 1.0,
                 };
             case 'suspend':
                 return {
                     audioGain: 0.3,
                     vfxIntensity: 0.25,
                     propagationSpeed: 0.4,
-                    silenceWeight: 0.8,     // mostly silence, tension from absence
+                    silenceWeight: 0.8,        // mostly silence
+                    scarIntensityMod: 1.4,     // scars grow louder — quiet world, vibrating underneath
+                    glitchMod: 0.3,            // glitch nearly gone — world seems calm
                 };
             default:
                 return {
@@ -321,6 +383,8 @@ export class Fatigue {
                     vfxIntensity: 1.0,
                     propagationSpeed: 1.0,
                     silenceWeight: 0.2,
+                    scarIntensityMod: 1.0,
+                    glitchMod: 1.0,
                 };
         }
     }
@@ -338,7 +402,53 @@ export class Fatigue {
         const inertia = this.getInertiaDampening();
 
         // Geometric mean — all factors contribute, none dominates
-        return Math.pow(oxygen * session * habit * inertia, 0.5);
+        let composite = Math.pow(oxygen * session * habit * inertia, 0.5);
+
+        // Micro-chaos ±5%: brain doesn't perceive formula, perceives life
+        composite *= 0.95 + Math.random() * 0.1;
+
+        return Math.min(1, composite);
+    }
+
+    // ═══════════════════════════════════════
+    // ANTI-BOREDOM — the system doesn't let you coast
+    // ═══════════════════════════════════════
+
+    /**
+     * Should the system inject a micro-event?
+     * Fires when cognitive load stays below 0.2 for 3+ consecutive turns.
+     * The system must never become boring. Low tension ≠ no tension.
+     *
+     * Returns true once, then resets the counter.
+     */
+    shouldForceEvent() {
+        if (this._lowLoadStreak >= 3) {
+            this._lowLoadStreak = 0;
+            return true;
+        }
+        return false;
+    }
+
+    // ═══════════════════════════════════════
+    // PATTERN DETECTION — anticipazione predittiva
+    // ═══════════════════════════════════════
+
+    /**
+     * How deep is the current repetition pattern?
+     * 0 = no repeat. 1 = same as last. 2 = same as last 2. etc.
+     *
+     * The system "senses" when the player is stuck in a loop.
+     * Not AI. Pattern detection. But it creates the illusion of intelligence.
+     */
+    getPatternDepth() {
+        if (this._lastActions.length < 2) return 0;
+        const last = this._lastActions[this._lastActions.length - 1];
+        let depth = 0;
+        for (let i = this._lastActions.length - 2; i >= 0; i--) {
+            if (this._lastActions[i] === last) depth++;
+            else break;
+        }
+        return depth;
     }
 
     // ═══════════════════════════════════════
@@ -350,6 +460,8 @@ export class Fatigue {
             intensityHistory: [...this._intensityHistory],
             habituationMap: { ...this._habituationMap },
             sessionStartTime: this._sessionStartTime,
+            lowLoadStreak: this._lowLoadStreak,
+            lastActions: [...this._lastActions],
         };
     }
 
@@ -358,6 +470,8 @@ export class Fatigue {
         this._intensityHistory = data.intensityHistory || [];
         this._habituationMap = data.habituationMap || {};
         this._sessionStartTime = data.sessionStartTime || Date.now();
+        this._lowLoadStreak = data.lowLoadStreak || 0;
+        this._lastActions = data.lastActions || [];
         this._recompute(null);
     }
 }
