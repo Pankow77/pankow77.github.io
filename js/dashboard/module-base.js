@@ -4,12 +4,18 @@
  * Every module extends this. No exceptions.
  *
  * Lifecycle:
- *   mount(container, state)  → build DOM, subscribe to Bus
- *   update(state)            → react to state changes
- *   unmount()                → teardown DOM, unsubscribe everything
+ *   mount(container)   → build DOM, subscribe to Bus
+ *   update(key, v, p)  → react to state changes
+ *   unmount()          → teardown DOM, unsubscribe everything
+ *   canEscape()        → return false to block ESC (default: true)
  *
- * Rule: this.subscriptions collects every Bus.on() return value.
+ * Rule: this.subscriptions collects EVERY unsubscribe function.
+ *       Both Bus.on() and State.watch() return unsubscribe.
  *       unmount() drains them all. Zero leaks.
+ *
+ * FIX 2: canEscape() — modules can block ESC when in critical state.
+ * FIX 4: watchState() — tracked wrapper for State.watch().
+ *        Both subscribe() and watchState() push into this.subscriptions.
  */
 
 import { Bus } from '../bus.js';
@@ -31,13 +37,6 @@ export class ModuleBase {
   mount(container) {
     this.container = container;
     this.mounted = true;
-
-    // Global state watcher — routes state changes to update()
-    this.subscribe('state:changed', (event) => {
-      if (this.mounted) {
-        this.update(event.payload.key, event.payload.value, event.payload.previous);
-      }
-    });
   }
 
   /**
@@ -51,11 +50,27 @@ export class ModuleBase {
   }
 
   /**
+   * Can this module be escaped via ESC?
+   * Override to return false during critical states
+   * (confirm dialogs, protocol sequences, freezes).
+   * Default: always escapable.
+   */
+  canEscape() {
+    return true;
+  }
+
+  /**
    * Teardown. Unsubscribes everything. Clears container.
    * Subclasses SHOULD call super.unmount() last (after their own cleanup).
+   *
+   * Can return a Promise for async teardown (audio fade, animation).
+   * Router will await it.
    */
   unmount() {
-    this.subscriptions.forEach(unsub => unsub());
+    // Drain all subscriptions
+    this.subscriptions.forEach(unsub => {
+      try { unsub(); } catch (e) { /* already cleaned */ }
+    });
     this.subscriptions = [];
 
     if (this.container) {
@@ -69,11 +84,22 @@ export class ModuleBase {
   // ── Helpers ──
 
   /**
-   * Subscribe to a Bus event. Automatically tracked for cleanup.
+   * Subscribe to a Bus event. Tracked for cleanup.
    * @returns {Function} unsubscribe
    */
   subscribe(type, callback) {
     const unsub = Bus.on(type, callback);
+    this.subscriptions.push(unsub);
+    return unsub;
+  }
+
+  /**
+   * Watch a State key. Tracked for cleanup.
+   * This is the SAFE way to use State.watch() inside a module.
+   * @returns {Function} unsubscribe
+   */
+  watchState(key, callback) {
+    const unsub = State.watch(key, callback);
     this.subscriptions.push(unsub);
     return unsub;
   }

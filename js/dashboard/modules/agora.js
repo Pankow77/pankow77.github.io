@@ -26,7 +26,7 @@ export class AgoraModule extends ModuleBase {
         <div style="border: 1px solid var(--border); padding: 20px; margin-bottom: 16px;">
           <div style="font-size: 11px; color: var(--text-dim); letter-spacing: 1px;
                       margin-bottom: 8px;">INTENSITÀ DELIBERATIVA</div>
-          <div style="font-family: var(--font-display); font-size: 32px; color: var(--green);
+          <div data-live="intensity" style="font-family: var(--font-display); font-size: 32px; color: var(--green);
                       text-shadow: 0 0 15px rgba(57, 255, 20, 0.4);">
             ${intensity}%
           </div>
@@ -39,15 +39,10 @@ export class AgoraModule extends ModuleBase {
       </div>
     `;
 
-    // Example: listen for state changes
-    this.subscribe('state:changed', (event) => {
-      if (event.payload.key === 'agora.intensity') {
-        this._updateIntensity(event.payload.value);
-      }
+    // Tracked via watchState — auto-cleanup on unmount
+    this.watchState('agora.intensity', (value) => {
+      const display = container.querySelector('[data-live="intensity"]');
+      if (display) display.textContent = `${value}%`;
     });
-  }
-
-  _updateIntensity(value) {
-    // Will update live when state changes
   }
 }

@@ -5,12 +5,19 @@
  * Header reads from here. Modules read from here. Nobody else writes.
  *
  * Events emitted:
- *   state:changed  { key, value, previous }
+ *   state:changed         { key, value, previous }  — single set()
+ *   state:batch-changed   { changes: [...] }         — batch(), one emission
+ *
+ * FIX 3: batch() writes all values first, then emits a SINGLE event
+ *        via queueMicrotask. No N re-renders per tick. One snapshot.
  */
 
 import { Bus } from '../bus.js';
 
 const store = new Map();
+
+// ── Microtask batch queue ──
+let pendingBatch = null;
 
 export const State = {
 
@@ -18,9 +25,12 @@ export const State = {
     return store.get(key);
   },
 
+  /**
+   * Set a single key. Emits immediately.
+   */
   set(key, value) {
     const previous = store.get(key);
-    if (previous === value) return; // No-op on same value
+    if (previous === value) return;
     store.set(key, value);
     Bus.emit('state:changed', { key, value, previous }, 'state');
   },
@@ -32,12 +42,44 @@ export const State = {
   },
 
   /**
-   * Set multiple keys at once. Emits one event per key.
+   * Set multiple keys at once. Writes all values synchronously,
+   * then emits ONE event via microtask with the full changeset.
+   * No N re-renders. One snapshot.
    */
   batch(entries) {
+    const changes = [];
+
     for (const [key, value] of Object.entries(entries)) {
-      this.set(key, value);
+      const previous = store.get(key);
+      if (previous === value) continue;
+      store.set(key, value);
+      changes.push({ key, value, previous });
     }
+
+    if (changes.length === 0) return;
+
+    // Accumulate if already batching in this tick
+    if (pendingBatch) {
+      pendingBatch.push(...changes);
+      return;
+    }
+
+    pendingBatch = [...changes];
+
+    queueMicrotask(() => {
+      const batch = pendingBatch;
+      pendingBatch = null;
+
+      // Single emission with all changes
+      Bus.emit('state:batch-changed', { changes: batch }, 'state');
+
+      // Also emit individual state:changed for each key
+      // (so existing watch() listeners still work)
+      // but they fire in the same microtask = one render frame
+      batch.forEach(c => {
+        Bus.emit('state:changed', c, 'state');
+      });
+    });
   },
 
   /**

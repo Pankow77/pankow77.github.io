@@ -6,6 +6,11 @@
  *
  * The router never knows what's inside a module.
  * It only calls mount() and unmount().
+ *
+ * FIX 1: open() is async. Awaits unmount() so async teardown
+ *        (audio fade, animation) completes before new mount.
+ * FIX 2: ESC is negotiated. If activeModule.canEscape() returns false,
+ *        ESC is blocked. Modules control their own lock.
  */
 
 import { Bus } from '../bus.js';
@@ -15,6 +20,7 @@ const registry = new Map();
 let viewContainer = null;
 let activeModule = null;
 let activeName = null;
+let transitioning = false; // Guard against concurrent open() calls
 
 export const Router = {
 
@@ -24,9 +30,17 @@ export const Router = {
   init(container) {
     viewContainer = container;
 
-    // ESC key → return to hub
+    // ESC key → return to hub (negotiated)
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && activeName && activeName !== 'hub') {
+        // Ask the active module if ESC is allowed
+        if (activeModule && typeof activeModule.canEscape === 'function') {
+          if (!activeModule.canEscape()) {
+            // Module blocks ESC. Emit event so module can react.
+            Bus.emit('router:escape-blocked', { module: activeName }, 'router');
+            return;
+          }
+        }
         Router.open('hub');
       }
     });
@@ -49,11 +63,14 @@ export const Router = {
 
   /**
    * Open a module by name.
+   * Async: awaits unmount() so teardown (audio, animation) completes.
    * Unmounts current → clears container → mounts new.
-   * @param {string}  name      — module to open
-   * @param {boolean} pushState — whether to update browser history
+   *
+   * @param {string}  name        — module to open
+   * @param {boolean} pushHistory — whether to update browser history
+   * @returns {Promise<void>}
    */
-  open(name, pushHistory = true) {
+  async open(name, pushHistory = true) {
     const target = registry.get(name);
     if (!target) {
       console.error(`[ROUTER] Module "${name}" not registered.`);
@@ -63,11 +80,20 @@ export const Router = {
     // Same module? No-op.
     if (activeName === name) return;
 
+    // Guard: if already transitioning, queue is dropped.
+    // Prevents double-click race.
+    if (transitioning) return;
+    transitioning = true;
+
     const previousName = activeName;
 
-    // ── Unmount current ──
+    // ── Unmount current (await if async) ──
     if (activeModule) {
-      activeModule.unmount();
+      try {
+        await activeModule.unmount();
+      } catch (err) {
+        console.error(`[ROUTER] Error during unmount of "${activeName}":`, err);
+      }
       activeModule = null;
     }
 
@@ -94,6 +120,8 @@ export const Router = {
       const url = name === 'hub' ? '/' : `/${name}`;
       history.pushState({ module: name }, '', url);
     }
+
+    transitioning = false;
   },
 
   /**

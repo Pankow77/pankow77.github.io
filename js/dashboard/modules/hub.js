@@ -184,9 +184,22 @@ export class HubModule extends ModuleBase {
 
     container.appendChild(grid);
 
-    // Listen for state changes that affect tiles
+    // Listen for state changes that affect tiles.
+    // Uses subscribe (Bus.on) — tracked for cleanup. Zero leaks.
     this.subscribe('state:changed', (event) => {
       this._onStateChanged(event.payload.key);
+    });
+
+    // Also catch batch changes (single emission for N keys)
+    this.subscribe('state:batch-changed', (event) => {
+      const seen = new Set();
+      for (const change of event.payload.changes) {
+        const prefix = change.key.split('.')[0];
+        if (!seen.has(prefix)) {
+          seen.add(prefix);
+          this._onStateChanged(change.key);
+        }
+      }
     });
   }
 
