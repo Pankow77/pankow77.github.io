@@ -1054,3 +1054,365 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   60%  { transform: translateX(-0.5px); }
   100% { transform: translateX(0); }
 }
+
+
+/* ══════════════════════════════════
+   ENVELOPE — Decision Interface
+   ══════════════════════════════════ */
+
+.envelope-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 55000;
+  background: rgba(4, 8, 16, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.envelope-overlay.visible {
+  opacity: 1;
+}
+
+.envelope-overlay.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.envelope-container {
+  max-width: 580px;
+  width: 90%;
+  text-align: left;
+}
+
+.envelope-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.envelope-source {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+}
+
+.envelope-archetype {
+  font-size: 9px;
+  padding: 2px 8px;
+  border: 1px solid var(--amber);
+  color: var(--amber);
+  letter-spacing: 1px;
+}
+
+.envelope-cycle {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.envelope-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.envelope-body {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.envelope-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.envelope-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.envelope-option:hover {
+  border-color: var(--cyan-dim);
+  background: rgba(0, 200, 255, 0.03);
+}
+
+.envelope-option-label {
+  color: var(--text);
+}
+
+.envelope-option-frame {
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+/* Chosen / dismissed after decision */
+.envelope-option.chosen {
+  border-color: var(--cyan);
+  background: rgba(0, 200, 255, 0.06);
+}
+
+.envelope-option.chosen .envelope-option-label {
+  color: var(--cyan);
+}
+
+.envelope-option.dismissed {
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.envelope-consequence {
+  margin-top: 20px;
+  padding: 16px;
+  border-left: 2px solid var(--amber);
+  font-size: 12px;
+  color: var(--amber);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.envelope-consequence.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile envelope */
+@media (max-width: 480px) {
+  .envelope-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .envelope-cycle {
+    margin-left: 0;
+  }
+  .envelope-title {
+    font-size: 14px;
+  }
+  .envelope-option {
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+}
+
+
+/* ══════════════════════════════════
+   ARCHIVIO — Annotation Interface
+   ══════════════════════════════════ */
+
+.archivio-view {
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.archivio-header {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.archivio-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--ice);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.archivio-count {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.archivio-input-section {
+  margin-bottom: 32px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: rgba(10, 18, 32, 0.5);
+}
+
+.archivio-input-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.archivio-textarea {
+  width: 100%;
+  background: var(--bg-void);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  padding: 12px;
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.archivio-textarea:focus {
+  border-color: var(--ice);
+}
+
+.archivio-textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.archivio-input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.archivio-chars {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.archivio-save {
+  font-family: var(--font-display);
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 8px 20px;
+  border: 1px solid var(--ice);
+  background: transparent;
+  color: var(--ice);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.archivio-save:hover:not(:disabled) {
+  background: rgba(136, 204, 255, 0.05);
+  box-shadow: 0 0 15px rgba(136, 204, 255, 0.1);
+}
+
+.archivio-save:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.archivio-list {
+  margin-top: 8px;
+}
+
+.archivio-entry {
+  padding: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 8px;
+  background: rgba(10, 18, 32, 0.3);
+}
+
+.archivio-entry.ghost6 {
+  border-color: rgba(136, 204, 255, 0.2);
+  background: rgba(136, 204, 255, 0.03);
+}
+
+.archivio-entry-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.archivio-entry-source {
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.archivio-entry.ghost6 .archivio-entry-source {
+  color: var(--ice);
+}
+
+.archivio-entry-cycle {
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.archivio-entry-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.archivio-entry.ghost6 .archivio-entry-text {
+  color: var(--ice);
+  font-style: italic;
+}
+
+.archivio-empty {
+  font-size: 12px;
+  color: var(--text-dim);
+  padding: 20px;
+  text-align: center;
+}
+
+.archivio-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+}
+
+
+/* ══════════════════════════════════
+   LAGO RÀ — Cycle Advance State
+   ══════════════════════════════════ */
+
+.tile.lago-ra.cycle-ready {
+  cursor: pointer;
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.1);
+}
+
+.tile.lago-ra.cycle-ready:hover {
+  transform: scale(1.02);
+  background: rgba(0, 200, 255, 0.03);
+}
+
+.lago-ra-advance {
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--cyan);
+  letter-spacing: 2px;
+  text-align: center;
+  animation: advance-pulse 2s ease-in-out infinite;
+}
+
+@keyframes advance-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

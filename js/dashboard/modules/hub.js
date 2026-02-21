@@ -15,6 +15,7 @@
 
 import { ModuleBase } from '../module-base.js';
 import { State } from '../state.js';
+import { Bus } from '../../bus.js';
 
 // ── Tile definitions ──
 const TILES = [
@@ -93,9 +94,20 @@ const TILES = [
     }
   },
   {
-    id: 'lago-ra', label: 'LAGO RÀ', route: null, // Non-clickable
-    status: () => '',
-    micro: () => {
+    id: 'lago-ra', label: 'LAGO RÀ', route: null,
+    status: () => {
+      if (State.get('cycle.ready')) return 'PROSSIMO CICLO';
+      return '';
+    },
+    micro: (tile) => {
+      if (State.get('cycle.ready')) {
+        const el = document.createElement('div');
+        el.className = 'lago-ra-advance';
+        el.textContent = '▶ AVANZA';
+        tile.classList.add('cycle-ready');
+        return el;
+      }
+      tile.classList.remove('cycle-ready');
       const pulse = document.createElement('div');
       pulse.className = 'lago-ra-pulse';
       return pulse;
@@ -201,6 +213,12 @@ export class HubModule extends ModuleBase {
         }
       }
     });
+
+    // Watch cycle.ready to refresh LAGO RÀ
+    this.watchState('cycle.ready', () => {
+      const lagoData = this.tileEls.get('lago-ra');
+      if (lagoData) this._refreshTile(lagoData);
+    });
   }
 
   unmount() {
@@ -233,10 +251,19 @@ export class HubModule extends ModuleBase {
     if (microContent) microContainer.appendChild(microContent);
     tile.appendChild(microContainer);
 
-    // Click handler (not for LAGO RÀ)
+    // Click handler
     if (def.route) {
       tile.addEventListener('click', () => {
         this.router.open(def.route);
+      });
+    }
+
+    // LAGO RÀ: cycle advance trigger
+    if (def.id === 'lago-ra') {
+      tile.addEventListener('click', () => {
+        if (State.get('cycle.ready')) {
+          Bus.emit('cycle:advance-requested', {}, 'hub');
+        }
       });
     }
 

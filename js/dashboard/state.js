@@ -109,6 +109,7 @@ State.batch({
   'cycle.current': 1,              // 1–40
   'cycle.total': 40,
   'cycle.phase': 'ELASTICITY',     // Mirrors system.phase, derived from cycle.current
+  'cycle.ready': false,            // True when envelope decided, reset on advance
 
   // Router
   'router.active': 'hub',

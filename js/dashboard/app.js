@@ -7,11 +7,10 @@
  *   1. Intro overlay (CNS node assignment) — runs once per session
  *   2. Shell mounts (Header, Footer, Router)
  *   3. Hidden systems init (ExposureTracker, TerminationSequence)
- *   4. Router opens hub (or restores from URL)
+ *   4. Game engine init (CycleEngine, EnvelopeSystem)
+ *   5. Router opens hub, first envelope presented
  *
  * If player refuses intro, app does not boot.
- * ExposureTracker and TerminationSequence are never visible
- * until the system decides the operator has seen too much.
  */
 
 import { Router } from './router.js';
@@ -24,6 +23,8 @@ import { ArchivioModule } from './modules/archivio.js';
 import { runIntro } from './intro.js';
 import { ExposureTracker } from './exposure.js';
 import { TerminationSequence } from './termination.js';
+import { CycleEngine } from './cycle.js';
+import { EnvelopeSystem } from './envelope.js';
 
 export async function boot() {
   const appEl = document.getElementById('app');
@@ -64,15 +65,20 @@ export async function boot() {
   Router.register('archivio', new ArchivioModule());
 
   // ── Phase 3: Hidden systems ──
-  // These exist in the background. No UI. No indication.
-  // They watch. They measure. They decide.
   ExposureTracker.init();
   TerminationSequence.init(appEl);
 
-  // ── Phase 4: Open default view ──
+  // ── Phase 4: Game engine ──
+  CycleEngine.init();
+  EnvelopeSystem.init(appEl);
+
+  // ── Phase 5: Open hub + present first envelope ──
   const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
   const target = (path && Router.has(path)) ? path : 'hub';
   Router.open(target, { push: false });
+
+  // First envelope after hub renders
+  setTimeout(() => CycleEngine.presentEnvelope(), 600);
 
   console.log(
     '%c[APP] %cNode active. %cCycle 1/%c40',
@@ -82,5 +88,5 @@ export async function boot() {
     'color: #39ff14;'
   );
 
-  window.__dashboard = { Router, header, footer };
+  window.__dashboard = { Router, header, footer, CycleEngine, EnvelopeSystem };
 }
