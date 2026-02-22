@@ -1,222 +1,183 @@
 /**
- * IntroSequence — CNS Node Assignment.
+ * IntroSequence — Mission Control Boot.
  * ═══════════════════════════════════════
- * Overlay that runs ONCE before the dashboard activates.
- * Not a Router module. Sits above the shell.
+ * Not a menu. A portal.
  *
- * Flow:
- *   1. Black screen → CNS designation fades in
- *   2. Mandate text types in, line by line
- *   3. Operational note from GHOST_6
- *   4. [ ACCETTA MANDATO ] / [ RIFIUTA ]
- *   5. RIFIUTA → reassignment message, app does not boot
- *   6. ACCETTA → fade out → dashboard activates at cycle 1
+ * Phase 1: Black screen. Cursor blink. Authentication handshake.
+ * Phase 2: Core allocation. Each subsystem declared operative, one at a time.
+ * Phase 3: Unlock. Progress bar fills. Hub reveals.
  *
- * Persistence: sessionStorage tracks acceptance.
- *   Refresh within same session = skip intro.
- *   New session = intro plays again.
+ * Total duration: ~7 seconds.
+ * No buttons. No choice. You're already in.
+ *
+ * Persistence: sessionStorage tracks completion.
+ *   Refresh within same session = skip boot.
+ *   New session = boot replays.
  */
 
-const MANDATE_LINES = [
-  { text: 'Osservare. Interpretare. Decidere.', delay: 500 },
-  { text: 'Ogni ciclo riceverai informazioni.', delay: 400 },
-  { text: 'Alcune saranno vere.', delay: 600 },
-  { text: '', delay: 500 },
-  { text: 'La stabilità non equivale alla verità.', delay: 700 },
-  { text: 'La verità senza stabilità produce collasso.', delay: 900 },
-  { text: '', delay: 500 },
-  { text: 'Chi ti ha preceduto ha completato il turno.', delay: 500 },
-  { text: 'Chi verrà dopo erediterà il tuo archivio.', delay: 600 },
-  { text: '', delay: 400 },
-  { text: 'Durata incarico: 40 cicli.', delay: 800 }
+// ── Phase 1: Handshake ──
+const HANDSHAKE_LINES = [
+  { text: 'MISSION CONTROL // AUTHENTICATION HANDSHAKE', cls: 'cyan', delay: 600 },
+  { text: '...', cls: 'dim', delay: 400 },
+  { text: 'SIGIL KERNEL v2.7.40', cls: 'green', delay: 300 },
+  { text: 'CNS NODE DESIGNATION: GHOST_7', cls: 'green', delay: 300 },
+  { text: 'CYCLE WINDOW: 40 // MANDATO ATTIVO', cls: 'green', delay: 400 },
+  { text: '───────────────────────────────────────────', cls: 'dim', delay: 200 },
 ];
 
-const GHOST6_NOTE = [
-  'Quando qualcosa sembra troppo chiaro, dubita.',
-  'La certezza è il primo segnale di pericolo.',
-  '',
-  'Non provare a controllare tutto.',
-  'Prova a capire cosa stai guardando.',
-  '',
-  'Chi viene dopo di te non giudicherà le tue scelte.',
-  'Giudicherà la tua coerenza.'
+// ── Phase 2: Core allocation ──
+const CORE_LINES = [
+  { text: 'ALLOCATING SUBSYSTEMS...', cls: 'dim', delay: 400 },
+  { text: '', delay: 100 },
+  { text: '[TEATRI]     Bab el-Mandeb / ICE Italy          ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[AGORA]      16-Core Deliberation Engine         ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[ORACLE]     Planetary Intelligence              ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[ARCHIVIO]   Silent Archive / Ghost Memory       ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[BACKBONE]   Epoch Maturation Pipeline           ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[PNEUMA]     Local Operational Sanctuary         ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[EEI]        Ethical-Electroactive Index          ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[CHRONOS]    Urban Temporal Grid                 ■ ONLINE', cls: 'green', delay: 280 },
+  { text: '[LAGO RÀ]    Coordination Nexus                  ■ ONLINE', cls: 'cyan', delay: 400 },
+  { text: '', delay: 200 },
+  { text: '───────────────────────────────────────────', cls: 'dim', delay: 200 },
+  { text: 'RSS FEED BINDING: data/feeds/*.json', cls: 'dim', delay: 200 },
+  { text: 'EXPOSURE TRACKER: ARMED (silent)', cls: 'amber', delay: 300 },
+  { text: 'ANNOTATION LAYER: ACTIVE', cls: 'dim', delay: 200 },
+  { text: '', delay: 300 },
+];
+
+// ── Phase 2b: Predecessor note (woven into boot) ──
+const GHOST6_LINES = [
+  { text: 'INCOMING TRANSMISSION // GHOST_6 (PREDECESSORE)', cls: 'ice', delay: 500 },
+  { text: '', delay: 200 },
+  { text: '  "Quando qualcosa sembra troppo chiaro, dubita."', cls: 'ice', delay: 350 },
+  { text: '  "La certezza è il primo segnale di pericolo."', cls: 'ice', delay: 350 },
+  { text: '', delay: 200 },
+  { text: '  "Non provare a controllare tutto."', cls: 'ice', delay: 350 },
+  { text: '  "Prova a capire cosa stai guardando."', cls: 'ice', delay: 350 },
+  { text: '', delay: 200 },
+  { text: '  "Chi viene dopo di te non giudicherà le tue scelte."', cls: 'ice', delay: 350 },
+  { text: '  "Giudicherà la tua coerenza."', cls: 'ice', delay: 500 },
+  { text: '', delay: 200 },
+  { text: 'END TRANSMISSION', cls: 'dim', delay: 300 },
+];
+
+// ── Phase 3: Unlock ──
+const UNLOCK_LINES = [
+  { text: '', delay: 200 },
+  { text: '───────────────────────────────────────────', cls: 'dim', delay: 200 },
+  { text: 'ALL CORES NOMINAL', cls: 'green bold', delay: 400 },
+  { text: 'OPENING CYCLE 1 / 40...', cls: 'cyan bold', delay: 600 },
 ];
 
 /**
- * Run the intro sequence.
- * Resolves when player accepts mandate.
- * Rejects if player refuses (app will not boot).
+ * Run the boot sequence.
+ * Always resolves — no reject path. You're already in.
  *
  * @param {HTMLElement} appEl — the #app container
  * @returns {Promise<void>}
  */
 export function runIntro(appEl) {
-  // Skip if already accepted this session
+  // Skip if already booted this session
   if (sessionStorage.getItem('sigil_accepted') === '1') {
     return Promise.resolve();
   }
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const overlay = document.createElement('div');
     overlay.className = 'intro-overlay';
     overlay.innerHTML = `
-      <div class="intro-container">
-        <div class="intro-header">
-          <div class="intro-org">CONSORTIUM FOR NARRATIVE STABILITY</div>
-          <div class="intro-designation">
-            <span class="intro-label">NODE:</span> GHOST_7
-          </div>
-          <div class="intro-designation">
-            <span class="intro-label">CYCLE WINDOW:</span> 40
-          </div>
-        </div>
-
-        <div class="intro-section" data-role="mandate">
-          <div class="intro-section-title">MANDATO</div>
-          <div class="intro-body" data-role="body"></div>
-        </div>
-
-        <div class="intro-section" data-role="ghost6-section" style="display:none;">
-          <div class="intro-section-title">NOTA DAL PREDECESSORE</div>
-          <div class="intro-ghost6-body" data-role="ghost6-body"></div>
-        </div>
-
-        <div class="intro-prompt" data-role="prompt" style="display:none;">
-          <div class="intro-prompt-text">Accetti il mandato?</div>
-          <div class="intro-actions">
-            <button class="intro-btn intro-btn-accept" data-action="accept">ACCETTA MANDATO</button>
-            <button class="intro-btn intro-btn-refuse" data-action="refuse">RIFIUTA</button>
-          </div>
-        </div>
-
-        <div class="intro-farewell" data-role="farewell" style="display:none;">
-          <div class="intro-farewell-text">
-            Nodo assegnato a operatore alternativo.<br>
-            Sessione terminata.
-          </div>
+      <div class="boot-container">
+        <div class="boot-cursor" data-role="cursor">_</div>
+        <div class="boot-log" data-role="log"></div>
+        <div class="boot-progress" data-role="progress" style="display:none;">
+          <div class="boot-progress-fill" data-role="progress-fill"></div>
         </div>
       </div>
     `;
 
     appEl.appendChild(overlay);
-
-    // Force reflow, then fade in
     overlay.offsetHeight;
     overlay.classList.add('visible');
 
-    const body = overlay.querySelector('[data-role="body"]');
-    const ghost6Section = overlay.querySelector('[data-role="ghost6-section"]');
-    const ghost6Body = overlay.querySelector('[data-role="ghost6-body"]');
-    const prompt = overlay.querySelector('[data-role="prompt"]');
-    const farewell = overlay.querySelector('[data-role="farewell"]');
-    const mandateSection = overlay.querySelector('[data-role="mandate"]');
+    const cursor = overlay.querySelector('[data-role="cursor"]');
+    const log = overlay.querySelector('[data-role="log"]');
+    const progress = overlay.querySelector('[data-role="progress"]');
+    const progressFill = overlay.querySelector('[data-role="progress-fill"]');
 
-    // ── Phase 1: Type mandate lines ──
+    // All lines in sequence
+    const allLines = [
+      ...HANDSHAKE_LINES,
+      ...CORE_LINES,
+      ...GHOST6_LINES,
+      ...UNLOCK_LINES,
+    ];
+
     let lineIndex = 0;
 
-    function typeLine() {
-      if (lineIndex >= MANDATE_LINES.length) {
-        // Phase 2: GHOST_6 note
-        setTimeout(showGhost6Note, 600);
+    function emitLine() {
+      if (lineIndex >= allLines.length) {
+        // Boot complete — show progress bar, then unlock
+        finalizeBoot();
         return;
       }
 
-      const line = MANDATE_LINES[lineIndex];
-      const el = document.createElement('div');
-      el.className = 'intro-line';
+      const line = allLines[lineIndex];
 
       if (line.text === '') {
-        el.classList.add('intro-spacer');
+        // Spacer
+        const spacer = document.createElement('div');
+        spacer.className = 'boot-spacer';
+        log.appendChild(spacer);
       } else {
+        // Hide cursor while adding line
+        cursor.style.display = 'none';
+
+        const el = document.createElement('div');
+        el.className = 'boot-line';
+        if (line.cls) {
+          line.cls.split(' ').forEach(c => el.classList.add(c));
+        }
         el.textContent = line.text;
+        log.appendChild(el);
+
+        // Trigger fade-in
+        requestAnimationFrame(() => el.classList.add('visible'));
       }
 
-      body.appendChild(el);
-      requestAnimationFrame(() => el.classList.add('visible'));
+      // Auto-scroll to bottom
+      log.scrollTop = log.scrollHeight;
+
+      // Move cursor to end
+      cursor.style.display = '';
+      log.appendChild(cursor);
 
       lineIndex++;
-      setTimeout(typeLine, line.delay);
+      setTimeout(emitLine, line.delay);
     }
 
-    // Start after header fade-in
-    setTimeout(typeLine, 1400);
+    function finalizeBoot() {
+      cursor.style.display = 'none';
 
-    // ── Phase 2: GHOST_6 note ──
-    function showGhost6Note() {
-      ghost6Section.style.display = '';
-      ghost6Section.classList.add('visible');
+      // Show progress bar
+      progress.style.display = '';
+      requestAnimationFrame(() => {
+        progressFill.style.width = '100%';
+      });
 
-      let noteIndex = 0;
-
-      function typeNote() {
-        if (noteIndex >= GHOST6_NOTE.length) {
-          // Phase 3: prompt
-          setTimeout(showPrompt, 800);
-          return;
-        }
-
-        const line = GHOST6_NOTE[noteIndex];
-        const el = document.createElement('div');
-        el.className = 'intro-ghost6-line';
-
-        if (line === '') {
-          el.classList.add('intro-spacer');
-        } else {
-          el.textContent = line;
-        }
-
-        ghost6Body.appendChild(el);
-        requestAnimationFrame(() => el.classList.add('visible'));
-
-        noteIndex++;
-        setTimeout(typeNote, 400);
-      }
-
-      setTimeout(typeNote, 400);
-    }
-
-    // ── Phase 3: Prompt ──
-    function showPrompt() {
-      prompt.style.display = '';
-      requestAnimationFrame(() => prompt.classList.add('visible'));
-    }
-
-    // ── Button handlers ──
-    overlay.addEventListener('click', (e) => {
-      const action = e.target.dataset.action;
-      if (!action) return;
-
-      if (action === 'refuse') {
-        handleRefuse();
-      } else if (action === 'accept') {
-        handleAccept();
-      }
-    });
-
-    function handleRefuse() {
-      prompt.style.display = 'none';
-      mandateSection.style.display = 'none';
-      ghost6Section.style.display = 'none';
-      farewell.style.display = '';
-      farewell.classList.add('visible');
-
+      // After progress fills, fade out
       setTimeout(() => {
-        overlay.classList.remove('visible');
+        sessionStorage.setItem('sigil_accepted', '1');
+        overlay.classList.add('fade-out');
+
         setTimeout(() => {
           overlay.remove();
-          reject(new Error('Operator refused mandate'));
-        }, 800);
-      }, 3500);
+          resolve();
+        }, 1000);
+      }, 1200);
     }
 
-    function handleAccept() {
-      sessionStorage.setItem('sigil_accepted', '1');
-
-      overlay.classList.add('fade-out');
-      setTimeout(() => {
-        overlay.remove();
-        resolve();
-      }, 1000);
-    }
+    // Start after brief darkness (the black screen moment)
+    setTimeout(emitLine, 800);
   });
 }
