@@ -50,6 +50,7 @@ class _TestamentScreenState extends State<TestamentScreen> {
       silentWitnessName: widget.profile.silentWitnessName,
       silentWitnessObject: widget.profile.silentWitnessObject,
       metaphor: widget.profile.metaphor,
+      intensity: widget.profile.intensity,
     );
 
     final sm = context.read<SessionManager>();

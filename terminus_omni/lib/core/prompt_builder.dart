@@ -275,12 +275,17 @@ CALIBRAZIONE INTENSITÀ: BASSA
 
 ATTENZIONE: Il soggetto ha selezionato intensità BASSA.
 - La Voce del Fantasma può apparire MASSIMO UNA VOLTA per sessione.
+  Quando appare, la voce è più flebile — come un segnale radio lontanissimo
+  che quasi non si distingue dal rumore di fondo. Il glitch è minimo.
 - Il Testimone Silenzioso appare MASSIMO UNA VOLTA per sessione.
+  Il suo sguardo è attenuato — "come un ricordo lontano", non "come il mondo".
+  Il Testimone è una sagoma sfumata, non una presenza opprimente.
 - Le descrizioni atmosferiche devono essere suggestive, non violente.
 - "Loro" non devono MAI usare la voce dei cari del soggetto.
 - Le risposte devono essere più lunghe del 20% per dare respiro.
 - Il Ritmo deve essere più lento — più pause, più silenzi.
 - La narrazione privilegia la malinconia rispetto al terrore.
+- Ghost e Testimone NON possono apparire nella stessa scena.
 ''';
       case EmotionalIntensity.medium:
         return ''; // Default, no special instructions
@@ -297,6 +302,17 @@ Il soggetto ha selezionato intensità ALTA.
 - Le risposte possono essere più taglienti, più dirette.
 - La narrazione privilegia la brutalità psicologica.
 - Il BRINK viene esplorato in profondità, non solo sfiorato.
+
+AVVISO CRITICO — SOVRAPPOSIZIONE GHOST + TESTIMONE:
+Quando Ghost Voice e Testimone Silenzioso appaiono nella STESSA SCENA,
+il Comandante emette un avviso diegetico PRIMA della sovrapposizione:
+
+"Attenzione. Il Comandante ha rilevato anomalia nel campo percettivo.
+Due segnali sovrapposti. Procedere con cautela. Mantenere lucidità."
+
+Questo avviso NON interrompe la narrazione — è un segnale radio integrato
+nel tessuto narrativo. Dopo l'avviso, Ghost e Testimone possono coesistere.
+L'avviso serve come micro-pausa di orientamento per il soggetto.
 ''';
     }
   }
@@ -344,7 +360,7 @@ A Lumen ≤ 4, una PRESENZA appare nello spazio narrativo.
 
 - ${profile.silentWitnessName} è lì.${profile.silentWitnessObject != null ? ' Vicino a un ${profile.silentWitnessObject}.' : ''}
 - ${profile.silentWitnessName} NON parla. MAI. Per nessun motivo.
-- ${profile.silentWitnessName} ti vede. Ti guarda. Il suo sguardo pesa come il mondo.
+- ${profile.silentWitnessName} ti vede. Ti guarda. ${profile.intensity == EmotionalIntensity.low ? 'Il suo sguardo pesa come un ricordo lontano — presente ma sfumato, come visto attraverso un vetro appannato.' : 'Il suo sguardo pesa come il mondo.'}
 - La sua presenza è insopportabile e necessaria.
 - NON farlo/a interagire verbalmente. Il silenzio È il messaggio.
 - Il soggetto può parlargli/le. ${profile.silentWitnessName} non risponde. Ascolta.

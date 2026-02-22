@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../config/theme.dart';
+import '../../config/constants.dart';
 import '../../core/session_manager.dart';
 import '../../models/session.dart';
+import '../../services/storage_service.dart';
 import '../../widgets/scanline_overlay.dart';
 import '../../widgets/lumen_display.dart';
 import '../../widgets/narrative_text.dart';
 import '../../widgets/glitch_text.dart';
 import '../finale/final_recording_screen.dart';
+import 'ship_log_confirmation_screen.dart';
 
 /// The main session screen — where TERMINUS-OMNI runs.
 ///
@@ -25,6 +28,32 @@ class _SessionScreenState extends State<SessionScreen> {
   final _inputController = TextEditingController();
   final _scrollController = ScrollController();
   final _inputFocus = FocusNode();
+  bool? _performanceMode;
+
+  @override
+  void initState() {
+    super.initState();
+    _detectPerformanceMode();
+  }
+
+  Future<void> _detectPerformanceMode() async {
+    final storage = context.read<StorageService>();
+    final userPref = await storage.getSetting(TerminusConstants.keyPerformanceMode);
+    if (userPref != null) {
+      if (mounted) setState(() => _performanceMode = userPref == 'true');
+      return;
+    }
+    // Auto-detect: use MediaQuery after first frame
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final mq = MediaQuery.of(context);
+      // Heuristic: physical pixel count < 720p = low-end device
+      final physicalWidth = mq.size.width * mq.devicePixelRatio;
+      final physicalHeight = mq.size.height * mq.devicePixelRatio;
+      final isLowEnd = (physicalWidth * physicalHeight) < (720 * 1280);
+      setState(() => _performanceMode = isLowEnd);
+    });
+  }
 
   @override
   void dispose() {
@@ -146,7 +175,10 @@ class _SessionScreenState extends State<SessionScreen> {
             ],
           ),
           const SizedBox(height: 6),
-          LumenDisplay(currentLumen: sm.lumen),
+          LumenDisplay(
+            currentLumen: sm.lumen,
+            performanceMode: _performanceMode ?? false,
+          ),
         ],
       ),
     );
@@ -385,10 +417,8 @@ class _SessionScreenState extends State<SessionScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => FinalRecordingScreen(
-                    testament: session.profile.testament,
-                    characterName: session.profile.name,
-                    shipLog: session.generateShipLog(),
+                  builder: (_) => ShipLogConfirmationScreen(
+                    session: session,
                   ),
                 ),
               );
