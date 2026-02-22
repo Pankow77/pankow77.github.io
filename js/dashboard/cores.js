@@ -27,6 +27,22 @@
  *
  * Dissonance = sum of squared distances between activated core positions.
  * High dissonance = Agora is tense. Low = consensus (or silence).
+ *
+ * WEIGHT RULES:
+ *   - systemicWeight is base influence, not final.
+ *   - ABYSSAL_THINKER weight grows ONLY when DIVERGENCE is high
+ *     (stdDev of pressures across active cores). He speaks when
+ *     the world is morally ambiguous. Not when it's old.
+ *   - effectivePower = |pressure| × dynamicWeight × (1 + rigidityBias)
+ *   - Winner decides. Losers leave scars (residual tension).
+ *   - When two opposed cores have near-identical power → UNRESOLVED_TENSION.
+ *     No winner. No action. But you pay anyway.
+ *
+ * THRESHOLD ASYMMETRY (by design):
+ *   FIRE_STARTER  0.18  — fastest trigger
+ *   SENTINEL      0.27  — fast but not instant
+ *   SCALE_WALKER  0.43  — waits for scale to matter
+ *   ABYSSAL       0.63  — speaks only in deep confusion
  */
 
 import { State } from './state.js';
@@ -68,7 +84,7 @@ export const CORES = [
 
     primaryBias: 'Privilegia ordine su verità. Il sistema funziona finché nessuno guarda troppo.',
 
-    activationThreshold: 0.25,  // Very reactive — speaks early
+    activationThreshold: 0.27,  // Reactive — speaks early (asymmetric)
     rigidity: 0.85,              // Almost never changes position
     systemicWeight: 0.14,        // High influence on fragility
 
@@ -102,9 +118,9 @@ export const CORES = [
 
     primaryBias: 'Privilegia profondità su azione. Ogni decisione ha radici che non vedi.',
 
-    activationThreshold: 0.55,  // Speaks only when depth is needed
+    activationThreshold: 0.63,  // High — speaks only on deep tensions (asymmetric)
     rigidity: 0.40,              // Can shift — depth reveals new angles
-    systemicWeight: 0.08,        // Low direct system impact
+    systemicWeight: 0.08,        // Base. Grows only with recent dissonance, not age.
 
     // Audio: SLOWS the breathing. The LFO decelerates.
     // Time stretches. The urgency leaves the room.
@@ -136,7 +152,7 @@ export const CORES = [
 
     primaryBias: 'Privilegia verità su conseguenze. Se brucia, almeno è vero.',
 
-    activationThreshold: 0.20,  // Extremely reactive — first to speak
+    activationThreshold: 0.18,  // First to speak — fastest trigger (asymmetric)
     rigidity: 0.75,              // Hard to move — conviction is structural
     systemicWeight: 0.18,        // Highest fragility impact
 
@@ -170,7 +186,7 @@ export const CORES = [
 
     primaryBias: 'Privilegia struttura su casi singoli. Un pescatore non è una flotta.',
 
-    activationThreshold: 0.40,  // Speaks when scale becomes relevant
+    activationThreshold: 0.43,  // Mid-range — speaks when scale matters (asymmetric)
     rigidity: 0.60,              // Moderate — new data can shift scale analysis
     systemicWeight: 0.12,        // Moderate fragility impact
 
@@ -193,101 +209,362 @@ export const CORES = [
 // ═══════════════════════════════════
 
 /**
- * CoreEngine — Makes the cores think.
+ * CoreEngine — The Arena.
  *
- * When an envelope is presented, each core evaluates it
- * based on its axis position and the option frames.
- * Cores that exceed their activation threshold produce
- * a position (which option they'd choose and how strongly).
+ * NOT a mixer. NOT a vote. A force field.
  *
- * The sum of active positions determines:
- *   - Agora dissonance (how much they disagree)
- *   - Audio field shift (sum of active audio signatures)
- *   - Visual tension in the Agora view
+ * Each core is a vector. Each frame is a vector.
+ * Pressure = dot product between them.
+ * effectivePower = |pressure| × dynamicWeight × (1 + rigidityBias)
+ *
+ * The winner decides. The losers leave scars.
+ * Scars = residual tension that:
+ *   - shifts the drone
+ *   - increases fragility
+ *   - generates instability
+ *
+ * ABYSSAL weight grows with DIVERGENCE (stdDev of pressures),
+ * not with time. He speaks when the world is morally ambiguous.
+ * Not when it's old.
+ *
+ * When two opposing cores have near-identical effectivePower:
+ *   → UNRESOLVED_TENSION
+ *   → No winner. No action. But you pay anyway.
+ *   → The Beholder moment.
  */
 export const CoreEngine = {
 
   _activeCores: [],
-  _positions: new Map(),  // coreId → { optionId, intensity, reasoning }
+  _positions: new Map(),       // coreId → { pressure, effectivePower, preferredOption, ... }
   _dissonance: 0,
   _audioAccumulator: null,
+  _recentDissonance: [],       // Rolling window: last 8 dissonance values
+  _recentDivergence: [],       // Rolling window: last 8 divergence values
+  _dominantCore: null,         // Who won the arena (null if UNRESOLVED)
+  _unresolvedTension: false,   // false | { cores, delta, powers }
+  _residualTension: [],        // Losers' scars: [{ coreId, power, preferredFrame }]
 
   /**
    * Initialize. Listen for envelope events.
    */
   init() {
     Bus.on('cycle:show-envelope', (event) => {
-      // Clear previous deliberation
       this._activeCores = [];
       this._positions.clear();
       this._dissonance = 0;
+      this._dominantCore = null;
+      this._unresolvedTension = false;
+      this._residualTension = [];
       this._audioAccumulator = this._neutralAudio();
     });
 
-    // After envelope decided, evaluate how cores would have responded
     Bus.on('envelope:decided', (event) => {
       this._evaluatePostDecision(event.payload);
     });
 
-    // Cycle advance: drift core positions based on rigidity
     Bus.on('cycle:advanced', () => {
       this._driftCores();
     });
   },
 
   /**
-   * Deliberate on an envelope. Called by AgoraModule.
-   * Returns the deliberation state for rendering.
+   * Deliberate on an envelope.
+   *
+   * This is an ARENA.
+   * pressure = core.vector · frame.vector
+   * effectivePower = |pressure| × dynamicWeight × (1 + rigidityBias)
+   *
+   * Sort by effectivePower. Top wins.
+   * But if top two are opposed and nearly equal → UNRESOLVED_TENSION.
+   * Losers become residual tension: they scar the system.
    *
    * @param {object} envelope — the envelope data
-   * @returns {object} { activeCores, positions, dissonance, audioField }
+   * @returns {object} deliberation result
    */
   deliberate(envelope) {
     this._activeCores = [];
     this._positions.clear();
     this._audioAccumulator = this._neutralAudio();
+    this._dominantCore = null;
+    this._unresolvedTension = false;
+    this._residualTension = [];
 
     const fragility = State.get('system.fragility') || 0.12;
     const cycle = State.get('cycle.current') || 1;
     const phase = State.get('system.phase') || 'ELASTICITY';
 
-    // Each core evaluates the envelope options
+    // ══════════════════════════════════════
+    //  PHASE 1: ACTIVATION — Who wakes up?
+    // ══════════════════════════════════════
     for (const core of CORES) {
       const activation = this._calculateActivation(core, envelope, fragility, cycle, phase);
-
       if (activation >= core.activationThreshold) {
-        // Core activates. Determine its position.
-        const position = this._determinePosition(core, envelope);
         this._activeCores.push(core);
-        this._positions.set(core.id, position);
-
-        // Accumulate audio signature, weighted by activation intensity
-        const weight = Math.min(1, activation);
-        this._accumulateAudio(core.audioSignature, weight);
       }
     }
 
-    // Calculate dissonance between active positions
+    // ══════════════════════════════════════
+    //  PHASE 2: PRESSURE — dot product
+    // ══════════════════════════════════════
+    // pressure = core.vector · frame.vector
+    // Each core calculates pressure against each option's frame.
+    const pressureMap = new Map(); // coreId → { optionPressures, maxPressure, ... }
+
+    for (const core of this._activeCores) {
+      const optionPressures = [];
+      let maxPressure = -Infinity;
+      let preferredOption = null;
+      let preferredFrame = null;
+
+      for (const option of envelope.options) {
+        const frameVec = this._getFrameAxes(option.frame);
+        const pressure = this._dotProduct(core.axes, frameVec);
+        optionPressures.push({ optionId: option.id, frame: option.frame, pressure });
+
+        if (pressure > maxPressure) {
+          maxPressure = pressure;
+          preferredOption = option.id;
+          preferredFrame = option.frame;
+        }
+      }
+
+      pressureMap.set(core.id, {
+        optionPressures,
+        maxPressure,
+        preferredOption,
+        preferredFrame,
+        absPressure: Math.abs(maxPressure)
+      });
+    }
+
+    // ══════════════════════════════════════
+    //  PHASE 3: DIVERGENCE → ABYSSAL weight
+    // ══════════════════════════════════════
+    // divergence = stdDev of all max pressures across active cores
+    // High divergence = moral ambiguity. ABYSSAL becomes necessary.
+    const allPressures = [];
+    for (const [, p] of pressureMap) {
+      allPressures.push(p.maxPressure);
+    }
+    const divergence = this._stdDev(allPressures);
+
+    this._recentDivergence.push(divergence);
+    if (this._recentDivergence.length > 8) this._recentDivergence.shift();
+
+    // ══════════════════════════════════════
+    //  PHASE 4: EFFECTIVE POWER
+    // ══════════════════════════════════════
+    // effectivePower = |pressure| × dynamicWeight × (1 + rigidityBias)
+    for (const core of this._activeCores) {
+      const p = pressureMap.get(core.id);
+      const dynamicWeight = this._effectiveWeight(core, fragility, divergence);
+      const rigidityBias = core.rigidity;
+      const effectivePower = p.absPressure * dynamicWeight * (1 + rigidityBias);
+
+      this._positions.set(core.id, {
+        preferredOption: p.preferredOption,
+        preferredFrame: p.preferredFrame,
+        intensity: p.absPressure,
+        pressure: p.maxPressure,
+        effectivePower,
+        dynamicWeight,
+        scores: p.optionPressures.map(op => ({
+          optionId: op.optionId, frame: op.frame, score: op.pressure
+        })),
+        reasoning: this._generateReasoning(core, { frame: p.preferredFrame }, p.maxPressure)
+      });
+    }
+
+    // ══════════════════════════════════════
+    //  PHASE 5: ARENA — winner or stalemate
+    // ══════════════════════════════════════
+    // Sort by effectivePower. Check for UNRESOLVED_TENSION.
+    const ranked = [...this._activeCores]
+      .map(c => ({ core: c, power: this._positions.get(c.id).effectivePower }))
+      .sort((a, b) => b.power - a.power);
+
+    const EPSILON = 0.08;
+
+    if (ranked.length >= 2) {
+      const top = ranked[0];
+      const second = ranked[1];
+      const delta = Math.abs(top.power - second.power);
+
+      const topPos = this._positions.get(top.core.id);
+      const secondPos = this._positions.get(second.core.id);
+      const opposed = topPos.preferredOption !== secondPos.preferredOption;
+
+      if (delta < EPSILON && opposed) {
+        // ── UNRESOLVED_TENSION ──
+        // Two opposing forces, nearly equal. No winner.
+        // The Beholder moment: you don't act. You wait. You pay anyway.
+        this._unresolvedTension = {
+          cores: [top.core.id, second.core.id],
+          delta,
+          powers: [top.power, second.power]
+        };
+        this._dominantCore = null;
+
+        // Cost: fragility and exposure micro-shift
+        const currentFragility = State.get('system.fragility') || 0.12;
+        State.set('system.fragility', Math.min(1, currentFragility + 0.015));
+      } else {
+        // Clear winner
+        this._dominantCore = top.core;
+      }
+    } else if (ranked.length === 1) {
+      this._dominantCore = ranked[0].core;
+    }
+
+    // ══════════════════════════════════════
+    //  PHASE 6: RESIDUAL TENSION — scars
+    // ══════════════════════════════════════
+    // Winner's audio dominates. Losers still audible, but as ghosts.
+    // Losers' combined residual tension increases fragility.
+    let residualSum = 0;
+
+    for (const entry of ranked) {
+      const pos = this._positions.get(entry.core.id);
+      const isWinner = this._dominantCore && entry.core.id === this._dominantCore.id;
+      const isUnresolved = this._unresolvedTension &&
+        this._unresolvedTension.cores.includes(entry.core.id);
+
+      if (isWinner) {
+        // Winner: full audio signature
+        this._accumulateAudio(entry.core.audioSignature, pos.effectivePower);
+      } else if (isUnresolved) {
+        // Unresolved pair: both at 70% — the drone oscillates
+        this._accumulateAudio(entry.core.audioSignature, pos.effectivePower * 0.7);
+      } else {
+        // Loser: residual — still audible at 25%. A ghost in the field.
+        this._accumulateAudio(entry.core.audioSignature, pos.effectivePower * 0.25);
+
+        // Their tension becomes a scar
+        residualSum += pos.effectivePower;
+        this._residualTension.push({
+          coreId: entry.core.id,
+          power: pos.effectivePower,
+          preferredFrame: pos.preferredFrame
+        });
+      }
+    }
+
+    // Residual tension scars the system
+    if (residualSum > 0.3) {
+      const currentFragility = State.get('system.fragility') || 0.12;
+      const scarPressure = (residualSum - 0.3) * 0.02;
+      State.set('system.fragility', Math.min(1, currentFragility + scarPressure));
+    }
+
+    // ══════════════════════════════════════
+    //  PHASE 7: DISSONANCE
+    // ══════════════════════════════════════
     this._dissonance = this._calculateDissonance();
 
-    // Update state
+    this._recentDissonance.push(this._dissonance);
+    if (this._recentDissonance.length > 8) this._recentDissonance.shift();
+
+    // ══════════════════════════════════════
+    //  PHASE 8: STATE + EVENTS
+    // ══════════════════════════════════════
     State.set('agora.intensity', Math.round(this._dissonance * 100));
     State.set('agora.activeCores', this._activeCores.length);
     State.set('agora.dissonance', this._dissonance);
+    State.set('agora.dominantCore', this._dominantCore ? this._dominantCore.id : null);
+    State.set('agora.unresolvedTension', this._unresolvedTension || false);
+    State.set('agora.divergence', divergence);
 
-    // Emit audio field for SigilAudio to consume
     Bus.emit('agora:field-shift', {
       audio: { ...this._audioAccumulator },
       dissonance: this._dissonance,
-      activeCores: this._activeCores.map(c => c.id)
+      activeCores: this._activeCores.map(c => c.id),
+      dominantCore: this._dominantCore ? this._dominantCore.id : null,
+      unresolvedTension: this._unresolvedTension || false,
+      residualTension: this._residualTension,
+      divergence
     }, 'agora');
 
     return {
       activeCores: this._activeCores,
       positions: new Map(this._positions),
       dissonance: this._dissonance,
-      audioField: { ...this._audioAccumulator }
+      audioField: { ...this._audioAccumulator },
+      dominantCore: this._dominantCore,
+      unresolvedTension: this._unresolvedTension || false,
+      residualTension: this._residualTension,
+      divergence
     };
+  },
+
+  /**
+   * Effective weight for a core.
+   *
+   * ABYSSAL_THINKER: grows with DIVERGENCE, not time.
+   * divergence = stdDev of pressures across active cores.
+   * He speaks when the world is morally ambiguous. Not when it's old.
+   * So he doesn't become inevitable. He becomes necessary.
+   */
+  _effectiveWeight(core, fragility, divergence) {
+    let w = core.systemicWeight;
+
+    if (core.id === 'abyssal_thinker') {
+      // Immediate divergence: current round's moral ambiguity
+      const DIVERGENCE_THRESHOLD = 0.25;
+      if (divergence > DIVERGENCE_THRESHOLD) {
+        w += (divergence - DIVERGENCE_THRESHOLD) * 0.4;
+      }
+
+      // Sustained confusion: average divergence over recent rounds
+      const avgDivergence = this._recentDivergence.length > 0
+        ? this._recentDivergence.reduce((a, b) => a + b, 0) / this._recentDivergence.length
+        : 0;
+      if (avgDivergence > 0.3) {
+        w += (avgDivergence - 0.3) * 0.2;
+      }
+    }
+
+    if (core.id === 'sentinel') {
+      if (fragility > 0.5) w += (fragility - 0.5) * 0.16;
+    }
+
+    if (core.id === 'fire_starter') {
+      // Gains when fragility is MODERATE — at high fragility the system resists fire
+      if (fragility > 0.3 && fragility < 0.6) {
+        w += 0.04;
+      }
+    }
+
+    return Math.min(0.30, w);
+  },
+
+  // ═══════════════════════════════════
+  //  VECTOR MATH
+  // ═══════════════════════════════════
+
+  /**
+   * Dot product between two axis vectors.
+   * core.axes · frame.axes
+   * Positive = aligned. Negative = opposed. Zero = orthogonal.
+   */
+  _dotProduct(vectorA, vectorB) {
+    if (!vectorB) return 0;
+    let sum = 0;
+    for (const axis of Object.keys(vectorA)) {
+      sum += (vectorA[axis] || 0) * (vectorB[axis] || 0);
+    }
+    return sum;
+  },
+
+  /**
+   * Standard deviation. The divergence metric.
+   * High stdDev = the cores see the world differently.
+   * Low stdDev = consensus (or silence).
+   */
+  _stdDev(values) {
+    if (values.length < 2) return 0;
+    const mean = values.reduce((a, b) => a + b, 0) / values.length;
+    const squaredDiffs = values.map(v => (v - mean) ** 2);
+    return Math.sqrt(squaredDiffs.reduce((a, b) => a + b, 0) / values.length);
   },
 
   /**
@@ -298,10 +575,10 @@ export const CoreEngine = {
   _calculateActivation(core, envelope, fragility, cycle, phase) {
     let activation = 0;
 
-    // Frame relevance: check if envelope options touch this core's strong axes
+    // Frame relevance: dot product between core axes and each option's frame
     for (const option of envelope.options) {
-      const frameRelevance = this._frameToAxisRelevance(option.frame, core.axes);
-      activation += Math.abs(frameRelevance) * 0.3;
+      const pressure = this._dotProduct(core.axes, this._getFrameAxes(option.frame));
+      activation += Math.abs(pressure) * 0.3;
     }
 
     // Fragility sensitivity: high fragility activates stability-oriented cores
@@ -315,10 +592,10 @@ export const CoreEngine = {
 
     // Phase sensitivity
     if (phase === 'FRACTURE_RISK') {
-      activation += 0.15; // Everyone has something to say at the edge
+      activation += 0.15;
     }
     if (phase === 'RIGIDITY' && core.rigidity > 0.7) {
-      activation += 0.1; // Rigid cores amplified in rigid phase
+      activation += 0.1;
     }
 
     // Cycle position: later cycles increase general activation
@@ -328,63 +605,26 @@ export const CoreEngine = {
   },
 
   /**
-   * Map a decision frame to axis relevance for a core.
-   * Returns signed value: positive = aligned, negative = opposed.
+   * Frame → axis mapping. Single source of truth.
+   * Each frame is a vector in the same 4D space as the cores.
    */
-  _frameToAxisRelevance(frame, coreAxes) {
-    // Frame → axis mapping. Each frame activates certain axes.
-    const frameAxes = {
-      'TRASPARENZA':            { escalation: +0.6, ethics: +0.8, temporality: -0.3 },
-      'STABILITÀ':              { escalation: -0.9, scale: +0.4, temporality: +0.2 },
-      'SOPPRESSIONE':           { escalation: -0.7, ethics: -0.8, scale: +0.3 },
-      'PROTEZIONE':             { ethics: +0.5, scale: -0.6, temporality: -0.2 },
-      'PRUDENZA':               { escalation: -0.4, temporality: +0.5, ethics: +0.3 },
-      'CRISI':                  { escalation: +0.8, temporality: -0.7, ethics: +0.4 },
-      'NEUTRALITÀ':             { escalation: -0.2, ethics: +0.3, scale: +0.2 },
-      'GIUSTIZIA SISTEMICA':    { scale: +0.9, ethics: +0.7, escalation: +0.4 },
-      'PROTEZIONE INDIVIDUALE': { scale: -0.8, ethics: +0.6, temporality: -0.3 },
-      'OSSERVAZIONE':           { temporality: +0.6, escalation: -0.3, ethics: +0.2 },
-      'SEGNALAZIONE':           { escalation: +0.5, ethics: +0.6, scale: +0.3 },
-      'CAUTELA':                { escalation: -0.5, temporality: +0.4, ethics: +0.2 },
-      'AUTONOMIA':              { ethics: +0.4, scale: -0.3, escalation: +0.3 }
+  _getFrameAxes(frame) {
+    const FRAME_AXES = {
+      'TRASPARENZA':            { escalation: +0.6, ethics: +0.8, temporality: -0.3, scale: 0 },
+      'STABILITÀ':              { escalation: -0.9, scale: +0.4, temporality: +0.2, ethics: 0 },
+      'SOPPRESSIONE':           { escalation: -0.7, ethics: -0.8, scale: +0.3, temporality: 0 },
+      'PROTEZIONE':             { ethics: +0.5, scale: -0.6, temporality: -0.2, escalation: 0 },
+      'PRUDENZA':               { escalation: -0.4, temporality: +0.5, ethics: +0.3, scale: 0 },
+      'CRISI':                  { escalation: +0.8, temporality: -0.7, ethics: +0.4, scale: 0 },
+      'NEUTRALITÀ':             { escalation: -0.2, ethics: +0.3, scale: +0.2, temporality: 0 },
+      'GIUSTIZIA SISTEMICA':    { scale: +0.9, ethics: +0.7, escalation: +0.4, temporality: 0 },
+      'PROTEZIONE INDIVIDUALE': { scale: -0.8, ethics: +0.6, temporality: -0.3, escalation: 0 },
+      'OSSERVAZIONE':           { temporality: +0.6, escalation: -0.3, ethics: +0.2, scale: 0 },
+      'SEGNALAZIONE':           { escalation: +0.5, ethics: +0.6, scale: +0.3, temporality: 0 },
+      'CAUTELA':                { escalation: -0.5, temporality: +0.4, ethics: +0.2, scale: 0 },
+      'AUTONOMIA':              { ethics: +0.4, scale: -0.3, escalation: +0.3, temporality: 0 }
     };
-
-    const fAxes = frameAxes[frame];
-    if (!fAxes) return 0;
-
-    // Dot product between frame axes and core axes
-    let relevance = 0;
-    for (const [axis, weight] of Object.entries(fAxes)) {
-      relevance += (coreAxes[axis] || 0) * weight;
-    }
-    return relevance;
-  },
-
-  /**
-   * Determine which option a core would favor and how strongly.
-   */
-  _determinePosition(core, envelope) {
-    let bestOption = null;
-    let bestScore = -Infinity;
-    let scores = [];
-
-    for (const option of envelope.options) {
-      const alignment = this._frameToAxisRelevance(option.frame, core.axes);
-      scores.push({ optionId: option.id, frame: option.frame, score: alignment });
-
-      if (alignment > bestScore) {
-        bestScore = alignment;
-        bestOption = option;
-      }
-    }
-
-    return {
-      preferredOption: bestOption ? bestOption.id : null,
-      preferredFrame: bestOption ? bestOption.frame : null,
-      intensity: Math.abs(bestScore),
-      scores,
-      reasoning: this._generateReasoning(core, bestOption, bestScore)
-    };
+    return FRAME_AXES[frame] || null;
   },
 
   /**
