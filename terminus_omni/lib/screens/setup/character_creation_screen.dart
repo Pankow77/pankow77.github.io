@@ -30,6 +30,10 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   final _viceController = TextEditingController();
   final _momentController = TextEditingController();
   final _brinkController = TextEditingController();
+  final _ghostPhraseController = TextEditingController();
+  final _ghostIdentityController = TextEditingController();
+  final _witnessNameController = TextEditingController();
+  final _witnessObjectController = TextEditingController();
 
   String _selectedScenario = 'ricerca';
 
@@ -79,6 +83,26 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       fields: ['brink'],
     ),
     _StepInfo(
+      title: 'LA VOCE DEL FANTASMA',
+      subtitle: 'Chi parla dal buio (opzionale)',
+      prompt:
+          'C\'è una voce che senti quando sei sul punto di cedere.\n\n'
+          'Non ti salva. Non risponde alle tue domande. Dice solo una frase. '
+          'Poi silenzio.\n\n'
+          'Chi è? Cosa dice? Puoi lasciare vuoto se preferisci.',
+      fields: ['ghost'],
+    ),
+    _StepInfo(
+      title: 'IL TESTIMONE SILENZIOSO',
+      subtitle: 'La presenza muta (opzionale)',
+      prompt:
+          'C\'è qualcuno che ti guarda nel buio.\n\n'
+          'Non parla. Non parlerà mai. Ma la sua presenza pesa più di qualsiasi '
+          'parola. Forse è seduto a un pianoforte. Forse tiene una fotografia.\n\n'
+          'Chi è? Cosa ha vicino? Puoi lasciare vuoto se preferisci.',
+      fields: ['witness'],
+    ),
+    _StepInfo(
       title: 'SCENARIO',
       subtitle: 'Il luogo del tuo tramonto',
       prompt: 'Dove si consumano le tue ultime ore?',
@@ -112,6 +136,11 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   }
 
   void _proceedToTestament() {
+    final ghostPhrase = _ghostPhraseController.text.trim();
+    final ghostId = _ghostIdentityController.text.trim();
+    final witnessName = _witnessNameController.text.trim();
+    final witnessObj = _witnessObjectController.text.trim();
+
     final profile = VictimProfile(
       name: _nameController.text.trim(),
       archetype: _archetypeController.text.trim(),
@@ -120,6 +149,10 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       moment: _momentController.text.trim(),
       brink: _brinkController.text.trim(),
       testament: '', // Will be set in testament screen
+      ghostVoicePhrase: ghostPhrase.isNotEmpty ? ghostPhrase : null,
+      ghostIdentity: ghostId.isNotEmpty ? ghostId : null,
+      silentWitnessName: witnessName.isNotEmpty ? witnessName : null,
+      silentWitnessObject: witnessObj.isNotEmpty ? witnessObj : null,
     );
 
     Navigator.push(
@@ -142,6 +175,10 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
     _viceController.dispose();
     _momentController.dispose();
     _brinkController.dispose();
+    _ghostPhraseController.dispose();
+    _ghostIdentityController.dispose();
+    _witnessNameController.dispose();
+    _witnessObjectController.dispose();
     super.dispose();
   }
 
@@ -295,6 +332,68 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                   const InputDecoration(labelText: 'IL PUNTO DI ROTTURA'),
               onChanged: (_) => setState(() {}),
             ),
+          if (step.fields.contains('ghost')) ...[
+            TextField(
+              controller: _ghostPhraseController,
+              style: TerminusTheme.narrative.copyWith(
+                color: TerminusTheme.neonPurple,
+                fontStyle: FontStyle.italic,
+              ),
+              maxLines: 2,
+              decoration: InputDecoration(
+                labelText: 'LA FRASE CHE DICE',
+                hintText: 'es: "Non ero pronto… ma questa volta sono qua."',
+                hintStyle: TerminusTheme.narrativeItalic.copyWith(
+                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                  fontSize: 12,
+                ),
+              ),
+              onChanged: (_) => setState(() {}),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _ghostIdentityController,
+              style: TerminusTheme.narrative,
+              decoration: InputDecoration(
+                labelText: 'CHI È (non verrà mai nominato nel gioco)',
+                hintText: 'es: "mia madre", "il mio migliore amico"',
+                hintStyle: TerminusTheme.narrativeItalic.copyWith(
+                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                  fontSize: 12,
+                ),
+              ),
+              onChanged: (_) => setState(() {}),
+            ),
+          ],
+          if (step.fields.contains('witness')) ...[
+            TextField(
+              controller: _witnessNameController,
+              style: TerminusTheme.narrative,
+              decoration: InputDecoration(
+                labelText: 'CHI È',
+                hintText: 'es: "Papà", "Mio fratello"',
+                hintStyle: TerminusTheme.narrativeItalic.copyWith(
+                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                  fontSize: 12,
+                ),
+              ),
+              onChanged: (_) => setState(() {}),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _witnessObjectController,
+              style: TerminusTheme.narrative,
+              decoration: InputDecoration(
+                labelText: 'COSA HA VICINO',
+                hintText: 'es: "pianoforte", "sedia vuota", "fotografia"',
+                hintStyle: TerminusTheme.narrativeItalic.copyWith(
+                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                  fontSize: 12,
+                ),
+              ),
+              onChanged: (_) => setState(() {}),
+            ),
+          ],
           if (step.fields.contains('scenario')) _buildScenarioSelector(),
         ],
       ),
@@ -322,6 +421,11 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       'sacrificio': (
         'IL SACRIFICIO',
         'Una strada per salvare il mondo, ma solo uno può farlo. Vale la pena?'
+      ),
+      'tunnel': (
+        'IL TUNNEL',
+        'Un treno fermo in un tunnel infinito. Nessuna finestra. Nessuna luce avanti. '
+            'Le candele sono l\'unica prova che sei ancora vivo.'
       ),
     };
 
@@ -387,6 +491,10 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       case 4:
         return _brinkController.text.trim().isNotEmpty;
       case 5:
+        return true; // Ghost is optional
+      case 6:
+        return true; // Witness is optional
+      case 7:
         return true; // Scenario always has a default
       default:
         return false;

@@ -75,6 +75,50 @@ class TerminusSession {
   /// Whether the session is complete (Lumen 0).
   bool get isComplete => lumenCount <= 0;
 
+  /// Generate the Ship's Log — a summary of the entire journey.
+  /// At Lumen 0, this log is read back before the testament,
+  /// creating a narrative loop that forces the subject to witness
+  /// their own trajectory.
+  String generateShipLog() {
+    final buffer = StringBuffer();
+    buffer.writeln('╔═══════════════════════════════════════╗');
+    buffer.writeln('║  REGISTRO DI BORDO — FILE RECUPERATO ║');
+    buffer.writeln('╚═══════════════════════════════════════╝');
+    buffer.writeln();
+    buffer.writeln('SOGGETTO: ${profile.name}');
+    buffer.writeln('ARCHETIPO: ${profile.archetype}');
+    buffer.writeln('VIRTÙ: ${profile.virtue}');
+    buffer.writeln('VIZIO: ${profile.vice}');
+    buffer.writeln('MOMENTO DESIDERATO: ${profile.moment}');
+    buffer.writeln();
+    buffer.writeln('── VERITÀ STABILITE ──');
+    buffer.writeln();
+    if (truths.isEmpty) {
+      buffer.writeln('Nessuna verità dichiarata.');
+    } else {
+      for (int i = 0; i < truths.length; i++) {
+        final t = truths[i];
+        buffer.writeln(
+            'VERITÀ ${i + 1} [Lumen ${t.lumenAtDeclaration}] '
+            '(${t.speaker == "terminus" ? "TERMINUS" : "SOGGETTO"}):');
+        buffer.writeln('"${t.text}"');
+        buffer.writeln();
+      }
+    }
+    buffer.writeln('── DADI LANCIATI: ${rolls.length} ──');
+    final successes = rolls.where((r) => r.isSuccess).length;
+    final failures = rolls.where((r) => !r.isSuccess).length;
+    buffer.writeln('Successi: $successes | Fallimenti: $failures');
+    if (rolls.any((r) => r.hopeLost)) {
+      buffer.writeln('IL DADO SPERANZA È STATO BRUCIATO.');
+    }
+    buffer.writeln();
+    buffer.writeln('LUMEN FINALE: $lumenCount/10');
+    buffer.writeln();
+    buffer.writeln('FINE DEL REGISTRO');
+    return buffer.toString();
+  }
+
   Map<String, dynamic> toJson() => {
         'id': id,
         'startedAt': startedAt.toIso8601String(),

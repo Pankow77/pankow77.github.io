@@ -77,6 +77,9 @@ ISTRUZIONI CRITICHE SUL PROFILO:
 - Il MOMENTO deve essere avvicinato progressivamente (il Miraggio) ma raggiunto solo nei Lumen finali.
 - Il BRINK è la ferita aperta. È da lì che entra il buio. Usalo per costruire l'Adversary.
 
+${_ghostVoiceSection(profile)}
+${_silentWitnessSection(profile)}
+
 ═══════════════════════════════════════════════════
 ARCHITETTURA DELLA TRAGEDIA
 ═══════════════════════════════════════════════════
@@ -256,5 +259,58 @@ LUMEN 0: LA MORTE
 - Chiudi con: "TERMINUS-OMNI // SISTEMA OFFLINE"
 - NON aggiungere altro dopo il testamento.''';
     }
+  }
+
+  /// Ghost Voice — appears at Lumen ≤ 3.
+  /// A fragmented, distorted voice from the past.
+  /// Says one phrase. Then silence. Never responds again.
+  static String _ghostVoiceSection(VictimProfile profile) {
+    if (profile.ghostVoicePhrase == null ||
+        profile.ghostVoicePhrase!.isEmpty) {
+      return '';
+    }
+    return '''
+═══════════════════════════════════════════════════
+LA VOCE DEL FANTASMA
+═══════════════════════════════════════════════════
+
+A Lumen ≤ 3, quando l'intensità emotiva è alta, una VOCE appare nella narrazione.
+
+- La voce è frammentata, distorta, come una trasmissione radio morente.
+- Dice SOLO: "${profile.ghostVoicePhrase}"
+- Poi silenzio. La voce NON risponde mai. NON parla mai più.
+- Il soggetto sa chi è. Tu NON devi mai nominarla esplicitamente.${profile.ghostIdentity != null ? '\n- Identità (per il contesto, NON menzionare): ${profile.ghostIdentity}' : ''}
+- Prefissa la frase con: [SEGNALE — FREQUENZA SCONOSCIUTA]
+- Questa voce è un frammento proiettivo. Non è reale nella narrazione.
+  È reale nella psiche del soggetto. Trattala con solennità assoluta.
+- Dopo la voce, descrivi il silenzio che segue come insopportabile.
+- Usa il rendering glitch: la voce si interrompe, ripete sillabe, si spegne.
+''';
+  }
+
+  /// Silent Witness — present from Lumen ≤ 4.
+  /// A mute presence that never speaks. Their silence is unbearable.
+  static String _silentWitnessSection(VictimProfile profile) {
+    if (profile.silentWitnessName == null ||
+        profile.silentWitnessName!.isEmpty) {
+      return '';
+    }
+    return '''
+═══════════════════════════════════════════════════
+IL TESTIMONE SILENZIOSO
+═══════════════════════════════════════════════════
+
+A Lumen ≤ 4, una PRESENZA appare nello spazio narrativo.
+
+- ${profile.silentWitnessName} è lì.${profile.silentWitnessObject != null ? ' Vicino a un ${profile.silentWitnessObject}.' : ''}
+- ${profile.silentWitnessName} NON parla. MAI. Per nessun motivo.
+- ${profile.silentWitnessName} ti vede. Ti guarda. Il suo sguardo pesa come il mondo.
+- La sua presenza è insopportabile e necessaria.
+- NON farlo/a interagire verbalmente. Il silenzio È il messaggio.
+- Il soggetto può parlargli/le. ${profile.silentWitnessName} non risponde. Ascolta.
+- Descrivi il Testimone con dettagli fisici minimi — una sagoma, un respiro,
+  il suono di un oggetto familiare. L'assenza di parole amplifica tutto.
+- Il Testimone NON scompare mai una volta apparso. Resta fino a Lumen 0.
+''';
   }
 }

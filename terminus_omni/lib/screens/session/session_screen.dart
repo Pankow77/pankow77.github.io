@@ -7,6 +7,8 @@ import '../../models/session.dart';
 import '../../widgets/scanline_overlay.dart';
 import '../../widgets/lumen_display.dart';
 import '../../widgets/narrative_text.dart';
+import '../../widgets/glitch_text.dart';
+import '../finale/final_recording_screen.dart';
 
 /// The main session screen — where TERMINUS-OMNI runs.
 ///
@@ -166,10 +168,49 @@ class _SessionScreenState extends State<SessionScreen> {
   Widget _buildMessage(ChatMessage msg) {
     final isUser = msg.role == 'user';
     final isSystem = msg.role == 'system';
+    final isGhost = msg.role == 'ghost';
 
     Color textColor;
     Color bgColor;
     String prefix;
+
+    if (isGhost) {
+      // Ghost Voice — heavy glitch, distorted
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 16),
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: TerminusTheme.neonPurple.withValues(alpha: 0.04),
+            borderRadius: BorderRadius.circular(4),
+            border: Border.all(
+                color: TerminusTheme.neonPurple.withValues(alpha: 0.2)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '[SEGNALE — FREQUENZA SCONOSCIUTA]',
+                style: TerminusTheme.systemLog.copyWith(
+                  color: TerminusTheme.neonPurple.withValues(alpha: 0.5),
+                  fontSize: 9,
+                ),
+              ),
+              const SizedBox(height: 8),
+              GlitchText(
+                text: msg.content,
+                style: TerminusTheme.narrative.copyWith(
+                  color: TerminusTheme.neonPurple.withValues(alpha: 0.8),
+                  fontStyle: FontStyle.italic,
+                ),
+                glitchIntensity: 0.8,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
 
     if (isUser) {
       textColor = TerminusTheme.neonGreen;
@@ -321,6 +362,7 @@ class _SessionScreenState extends State<SessionScreen> {
   }
 
   Widget _buildSessionComplete() {
+    final session = context.read<SessionManager>().session!;
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(
@@ -338,6 +380,33 @@ class _SessionScreenState extends State<SessionScreen> {
             ),
           ),
           const SizedBox(height: 12),
+          OutlinedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => FinalRecordingScreen(
+                    testament: session.profile.testament,
+                    characterName: session.profile.name,
+                    shipLog: session.generateShipLog(),
+                  ),
+                ),
+              );
+            },
+            style: OutlinedButton.styleFrom(
+              side: BorderSide(
+                  color: TerminusTheme.neonRed.withValues(alpha: 0.3)),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
+            ),
+            child: Text(
+              'RIPRODUZIONE FINALE',
+              style: TerminusTheme.buttonText.copyWith(
+                color: TerminusTheme.neonRed,
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
           OutlinedButton(
             onPressed: () => Navigator.pop(context),
             style: OutlinedButton.styleFrom(

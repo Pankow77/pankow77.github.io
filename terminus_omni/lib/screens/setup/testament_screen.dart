@@ -45,6 +45,11 @@ class _TestamentScreenState extends State<TestamentScreen> {
       moment: widget.profile.moment,
       brink: widget.profile.brink,
       testament: testament,
+      ghostVoicePhrase: widget.profile.ghostVoicePhrase,
+      ghostIdentity: widget.profile.ghostIdentity,
+      silentWitnessName: widget.profile.silentWitnessName,
+      silentWitnessObject: widget.profile.silentWitnessObject,
+      metaphor: widget.profile.metaphor,
     );
 
     final sm = context.read<SessionManager>();

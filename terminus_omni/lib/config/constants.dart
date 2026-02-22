@@ -49,14 +49,52 @@ class TerminusConstants {
     'è troppo',
   ];
 
-  // ── Scenarios (from prompt Part XI) ──
+  // ── Scenarios (from prompt Part XI + Session Alpha) ──
   static const List<String> scenarioIds = [
     'rifugio',
     'ricerca',
     'comunita',
     'memoria',
     'sacrificio',
+    'tunnel',
   ];
+
+  /// Scenario descriptions for the LLM context.
+  static const Map<String, Map<String, String>> scenarioDescriptions = {
+    'rifugio': {
+      'name': 'RIFUGIO COMPROMESSO',
+      'setting': 'Un luogo "sicuro" che sta crollando.',
+      'premise': 'Cosa sacrifichiamo per la sicurezza falsa?',
+    },
+    'ricerca': {
+      'name': 'L\'ULTIMO TRENO',
+      'setting': 'Un viaggio verso una destinazione.',
+      'premise': 'Ogni passo ti avvicina alla salvezza e alla morte.',
+    },
+    'comunita': {
+      'name': 'COMUNITÀ DIVISA',
+      'setting': 'Sopravvissuti con obiettivi conflittuali.',
+      'premise': 'Chi tradisci per sopravvivere?',
+    },
+    'memoria': {
+      'name': 'MEMORIA PERDUTA',
+      'setting': 'Non ricordi il passato. La realtà è affidabile?',
+      'premise': 'Chi sei se non ricordi?',
+    },
+    'sacrificio': {
+      'name': 'IL SACRIFICIO',
+      'setting': 'Una strada per salvare il mondo, ma solo uno può farlo.',
+      'premise': 'Vale la pena?',
+    },
+    'tunnel': {
+      'name': 'IL TUNNEL',
+      'setting': 'Un treno fermo in un tunnel infinito. Nessuna finestra. '
+          'Nessuna luce avanti. Il treno è partito il giorno del trauma. '
+          'È rimasto nel buio da allora.',
+      'premise': 'Le candele sono l\'unica prova che sei ancora vivo. '
+          'Il tunnel finisce. Scendi. La persona che hai perso non c\'è. Accetti.',
+    },
+  };
 
   // ── Storage keys ──
   static const String boxSessions = 'terminus_sessions';
