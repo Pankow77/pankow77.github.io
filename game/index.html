@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGIL — Sistema di Intelligence Geopolitica Integrata</title>
+  <meta name="description" content="SIGIL: un gioco di dilemmi morali nell'intelligence. Ogni decisione ha conseguenze. Ogni annotazione sarà letta.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/sigil.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
+</head>
+<body>
+  <div id="sigil-app"></div>
+
+  <script type="module">
+    import { GameLoop } from './js/core/game-loop.js';
+    import { TerminalRenderer } from './js/ui/terminal-renderer.js';
+
+    // Initialize renderer (handles all DOM)
+    const renderer = new TerminalRenderer();
+
+    // Initialize and start game
+    const game = new GameLoop();
+    game.init().catch(err => {
+      console.error('[SIGIL] Fatal initialization error:', err);
+      document.getElementById('sigil-app').innerHTML = `
+        <div style="padding: 40px; color: #ff3333; font-family: monospace;">
+          <p>ERRORE DI SISTEMA</p>
+          <p style="margin-top: 8px; color: #555;">${err.message}</p>
+          <p style="margin-top: 16px; color: #33ff33;">Ricarica la pagina per riprovare.</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

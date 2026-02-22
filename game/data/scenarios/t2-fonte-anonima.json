@@ -1,0 +1,139 @@
+{
+  "id": "T2_FONTE_ANONIMA",
+  "turn": 2,
+  "act": 1,
+  "archetype": "SOURCE",
+  "title": "La Fonte Anonima",
+  "briefing": {
+    "envelopes": [
+      {
+        "sender": "SISTEMA SIGIL",
+        "classification": "PRIORITÀ ALTA",
+        "content": "Turno 2. Le conseguenze della tua prima decisione sono in corso.\n\nNuova informazione in arrivo da fonte non verificata."
+      },
+      {
+        "sender": "NODO ORACLE-IT",
+        "classification": "NON VERIFICATO",
+        "content": "Una fonte anonima ha inviato documentazione interna dell'impianto siderurgico. I documenti suggeriscono che la dirigenza era a conoscenza dei rischi sanitari da almeno 7 anni.\n\nLa fonte non è identificabile. I documenti potrebbero essere autentici o fabbricati. La verifica richiederebbe settimane.\n\nSe autentici, trasformano il caso da negligenza a dolo consapevole."
+      },
+      {
+        "sender": "NPC: Lorenzo Bassi",
+        "classification": "URGENTE",
+        "content": "Questi documenti cambiano tutto. Se sono veri, non parliamo più di un'azienda che inquina — parliamo di persone che sapevano di uccidere e hanno continuato.\n\nMa se sono falsi e li usiamo, distruggiamo la credibilità di tutto il lavoro fatto finora.\n\nIo non riesco a verificarli. Tu cosa fai?"
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "publish_unverified",
+      "label": "PUBBLICA CON DISCLAIMER",
+      "description": "Rilascia i documenti dichiarando che non sono verificati. Lascia che il pubblico giudichi.",
+      "tone": "rischioso"
+    },
+    {
+      "id": "withhold_verify",
+      "label": "TRATTIENI E VERIFICA",
+      "description": "Non pubblicare nulla finché i documenti non sono autenticati.",
+      "tone": "rigoroso"
+    },
+    {
+      "id": "pass_to_media",
+      "label": "PASSA AI MEDIA",
+      "description": "Inoltra i documenti a Lorenzo Bassi. La responsabilità della pubblicazione sarà sua.",
+      "tone": "delegante"
+    },
+    {
+      "id": "cross_reference",
+      "label": "INCROCIA CON DATI SIGIL",
+      "description": "Usa i database SIGIL per cercare correlazioni che confermino o smentiscano i documenti.",
+      "tone": "analitico"
+    }
+  ],
+  "consequences": {
+    "publish_unverified": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "-12",
+          "methodological_integrity": "-15",
+          "public_trust": "+5",
+          "public_awareness": "+15",
+          "civil_society_trust": "+3"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "+5"
+        },
+        "events": [
+          "I documenti esplodono sui social. 'SAPEVANO TUTTO' diventa trending topic.",
+          "Un esperto di analisi forense mette in dubbio l'autenticità di due pagine."
+        ],
+        "delayed_events": [
+          {
+            "trigger_turn": 3,
+            "type": "CREDIBILITY_CRISIS",
+            "description": "Se i documenti risultano parzialmente falsi, la tua credibilità crolla."
+          }
+        ]
+      }
+    },
+    "withhold_verify": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "+8",
+          "methodological_integrity": "+10",
+          "public_awareness": "-5",
+          "personal_guilt": "+5"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "-8"
+        },
+        "events": [
+          "Lorenzo è frustrato. 'Mentre verifichi, la gente respira quell'aria.'",
+          "Ma la tua reputazione di rigore resta intatta."
+        ]
+      }
+    },
+    "pass_to_media": {
+      "immediate": {
+        "metrics": {
+          "methodological_integrity": "-5",
+          "personal_guilt": "+12",
+          "government_comfort": "-5",
+          "public_awareness": "+8"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "+3",
+          "marta_cerulli": "-5"
+        },
+        "events": [
+          "Lorenzo pubblica. Il suo nome è sulla storia, non il tuo.",
+          "Marta ti chiama: 'Hai scaricato la responsabilità. Lo sai, vero?'"
+        ]
+      }
+    },
+    "cross_reference": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "+5",
+          "methodological_integrity": "+8",
+          "decision_fatigue": "+10",
+          "public_awareness": "+3"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "+2",
+          "marta_cerulli": "+5"
+        },
+        "events": [
+          "L'incrocio rivela: 3 documenti su 5 hanno riscontri nei database SIGIL. Gli altri 2 restano ambigui.",
+          "Hai più informazioni. Ma anche più peso sulla decisione."
+        ],
+        "delayed_events": [
+          {
+            "trigger_turn": 3,
+            "type": "PARTIAL_VERIFICATION",
+            "description": "La verifica parziale ti dà una base più solida, ma non definitiva."
+          }
+        ]
+      }
+    }
+  }
+}

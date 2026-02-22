@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HS | Dashboard</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <div id="app">
+    <!-- LAYER 1: Header Strip (always visible) -->
+    <div class="header-strip" id="header-strip"></div>
+
+    <!-- LAYER 2: View Container (modules mount here) -->
+    <div id="view-container"></div>
+
+    <!-- LAYER 3: Footer Strip (always visible) -->
+    <div class="footer-strip" id="footer-strip"></div>
+  </div>
+
+  <script type="module">
+    import { boot } from './js/dashboard/app.js';
+    boot();
+  </script>
+
+</body>
+</html>

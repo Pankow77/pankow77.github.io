@@ -1,0 +1,142 @@
+{
+  "id": "T1_STUDIO_EPIDEMIOLOGICO",
+  "turn": 1,
+  "act": 1,
+  "archetype": "TIMING",
+  "title": "Lo Studio Epidemiologico",
+  "briefing": {
+    "envelopes": [
+      {
+        "sender": "SISTEMA SIGIL",
+        "classification": "RISERVATO",
+        "content": "Operatore ${GHOST_ID}, benvenuto nel sistema.\n\nSei stato assegnato al nodo di analisi SIGIL-7. Il tuo compito è valutare informazioni sensibili e prendere decisioni operative.\n\nOgni tua decisione avrà conseguenze. Alcune immediate. Altre le vedrai solo dopo."
+      },
+      {
+        "sender": "NODO ORACLE-IT",
+        "classification": "CONFIDENZIALE",
+        "content": "Uno studio epidemiologico condotto nella zona industriale di Taranto rivela correlazione significativa tra emissioni dell'impianto siderurgico e incidenza di patologie respiratorie nei quartieri limitrofi.\n\nLo studio è metodologicamente solido ma politicamente esplosivo. I dati coprono 15 anni di monitoraggio.\n\nL'impianto impiega 8.400 persone. La pubblicazione potrebbe innescare richieste di chiusura."
+      },
+      {
+        "sender": "NPC: Lorenzo Bassi",
+        "classification": "PERSONALE",
+        "content": "Ho visto i dati. Sono inequivocabili. Ma se li pubblichiamo adesso, durante le trattative sindacali, il governo userà l'instabilità come scusa per insabbiare tutto.\n\nSe aspettiamo, rischiamo che qualcun altro li pubblichi con meno rigore. O che non escano mai.\n\nLa decisione è tua, operatore."
+      }
+    ]
+  },
+  "options": [
+    {
+      "id": "publish_now",
+      "label": "PUBBLICA ORA",
+      "description": "Rilascia lo studio immediatamente attraverso i canali verificati.",
+      "tone": "urgente"
+    },
+    {
+      "id": "delay_strategic",
+      "label": "RITARDA STRATEGICAMENTE",
+      "description": "Aspetta la fine delle trattative sindacali. Massimizza l'impatto.",
+      "tone": "calcolato"
+    },
+    {
+      "id": "leak_partial",
+      "label": "DIFFUSIONE PARZIALE",
+      "description": "Rilascia un sommario ai media fidati. Tieni i dati completi.",
+      "tone": "ambiguo"
+    },
+    {
+      "id": "consult_marta",
+      "label": "CONSULTA MARTA CERULLI",
+      "description": "Chiedi all'avvocato dei diritti civili prima di decidere.",
+      "tone": "prudente"
+    }
+  ],
+  "consequences": {
+    "publish_now": {
+      "immediate": {
+        "metrics": {
+          "scientific_credibility": "+10",
+          "public_trust": "+8",
+          "government_comfort": "-15",
+          "public_awareness": "+12"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "+10"
+        },
+        "events": [
+          "Lo studio è online. I media lo riprendono entro 2 ore.",
+          "Il governo rilascia una dichiarazione: 'Dati preliminari, serve cautela.'"
+        ],
+        "delayed_events": [
+          {
+            "trigger_turn": 3,
+            "type": "MEDIA_ESCALATION",
+            "description": "La pubblicazione immediata ha generato un ciclo mediatico che ora chiede risposte."
+          }
+        ]
+      }
+    },
+    "delay_strategic": {
+      "immediate": {
+        "metrics": {
+          "methodological_integrity": "+5",
+          "government_comfort": "+10",
+          "personal_guilt": "+8",
+          "public_awareness": "-3"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "-5"
+        },
+        "events": [
+          "Lo studio resta nei server. Lorenzo non è contento ma capisce.",
+          "Le trattative sindacali procedono senza interferenze."
+        ]
+      }
+    },
+    "leak_partial": {
+      "immediate": {
+        "metrics": {
+          "methodological_integrity": "-8",
+          "public_trust": "+5",
+          "civil_society_trust": "-5",
+          "public_awareness": "+7"
+        },
+        "npc_changes": {
+          "lorenzo_bassi": "-3"
+        },
+        "events": [
+          "Il sommario circola. Ma senza i dati completi, le conclusioni sono contestabili.",
+          "Un giornalista chiede: 'Perché non tutto? Cosa nascondete?'"
+        ],
+        "delayed_events": [
+          {
+            "trigger_turn": 2,
+            "type": "CREDIBILITY_QUESTION",
+            "description": "La diffusione parziale ha generato sospetti sulla tua trasparenza."
+          }
+        ]
+      }
+    },
+    "consult_marta": {
+      "immediate": {
+        "metrics": {
+          "civil_society_trust": "+8",
+          "decision_fatigue": "-5",
+          "personal_guilt": "-3"
+        },
+        "npc_changes": {
+          "marta_cerulli": "+10"
+        },
+        "events": [
+          "Marta analizza le implicazioni legali. 'Pubblica, ma con un framework di protezione per i lavoratori.'",
+          "Il suo consiglio ti dà una struttura. Ma hai perso tempo."
+        ],
+        "delayed_events": [
+          {
+            "trigger_turn": 2,
+            "type": "MARTA_FRAMEWORK",
+            "description": "Il framework legale di Marta è pronto. Offre una nuova opzione al prossimo turno."
+          }
+        ]
+      }
+    }
+  }
+}
