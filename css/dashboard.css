@@ -1239,6 +1239,103 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   transform: translateY(0);
 }
 
+/* ── Analysis lines (progressive reveal) ── */
+.envelope-analysis {
+  margin-top: 16px;
+}
+
+.envelope-analysis-line {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  padding: 8px 0 8px 16px;
+  border-left: 1px solid var(--border);
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.envelope-analysis-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── System effects readout ── */
+.envelope-effects {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: rgba(4, 8, 16, 0.6);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.envelope-effects.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.envelope-effects-title {
+  font-family: var(--font-display);
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(21, 34, 64, 0.5);
+}
+
+.envelope-effect-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 2.2;
+  font-family: var(--font-mono);
+}
+
+.envelope-effect-key {
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.envelope-effect-val {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* ── CONTINUA button ── */
+.envelope-continue-wrap {
+  margin-top: 24px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.envelope-continue-wrap.visible {
+  opacity: 1;
+}
+
+.envelope-continue-btn {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 14px 40px;
+  border: 1px solid var(--cyan-dim);
+  background: transparent;
+  color: var(--cyan);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.envelope-continue-btn:hover {
+  border-color: var(--cyan);
+  background: rgba(0, 200, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.1);
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
 /* Mobile envelope */
 @media (max-width: 480px) {
   .envelope-header {
