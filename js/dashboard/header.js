@@ -9,6 +9,7 @@
 
 import { Bus } from '../bus.js';
 import { State } from './state.js';
+import { SigilAudio } from './audio.js';
 
 export class HeaderStrip {
 
@@ -42,6 +43,7 @@ export class HeaderStrip {
       <div class="header-right">
         <div class="cycle-counter" id="cycle-counter">CYCLE 1/40</div>
         <div class="sim-clock" id="sim-clock">--:--:--</div>
+        <button class="audio-toggle" id="audio-toggle" title="Toggle audio">SND</button>
         <div class="session-phase" id="session-phase">ELASTICITY</div>
       </div>
     `;
@@ -53,7 +55,8 @@ export class HeaderStrip {
       fragility: this.container.querySelector('#fragility-value'),
       clock: this.container.querySelector('#sim-clock'),
       phase: this.container.querySelector('#session-phase'),
-      cycle: this.container.querySelector('#cycle-counter')
+      cycle: this.container.querySelector('#cycle-counter'),
+      audioToggle: this.container.querySelector('#audio-toggle')
     };
   }
 
@@ -63,6 +66,15 @@ export class HeaderStrip {
     this.els.brand.addEventListener('click', () => {
       this.router.open('hub');
     });
+
+    // Audio toggle
+    if (this.els.audioToggle) {
+      this.els.audioToggle.addEventListener('click', () => {
+        const muted = SigilAudio.toggleMute();
+        this.els.audioToggle.textContent = muted ? 'MUTE' : 'SND';
+        this.els.audioToggle.classList.toggle('muted', muted);
+      });
+    }
 
     // State watchers
     this.subscriptions.push(

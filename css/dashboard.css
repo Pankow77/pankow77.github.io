@@ -219,6 +219,26 @@ body.state-fractured::after {
   border: 1px solid var(--border);
 }
 
+/* ── Audio Toggle ── */
+.audio-toggle {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--green);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+.audio-toggle:hover {
+  border-color: var(--green-dim);
+}
+.audio-toggle.muted {
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
 
 /* ══════════════════════════════════
    LAYER 2: CORE GRID (3x3)

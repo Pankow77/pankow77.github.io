@@ -16,6 +16,7 @@
 
 import { ModuleBase } from '../module-base.js';
 import { State } from '../state.js';
+import { SigilAudio } from '../audio.js';
 
 const STORAGE_KEY = 'sigil_annotations';
 
@@ -99,10 +100,19 @@ export class ArchivioModule extends ModuleBase {
       const saveBtn = container.querySelector('.archivio-save');
       const charSpan = container.querySelector('.archivio-chars');
 
+      // Keystroke sounds — every character is heard
+      let _lastKeystroke = 0;
       textarea.addEventListener('input', () => {
         const len = textarea.value.trim().length;
         charSpan.textContent = `${textarea.value.length}/500`;
         saveBtn.disabled = len === 0;
+
+        // Throttle keystroke audio to ~80ms min interval
+        const now = Date.now();
+        if (now - _lastKeystroke > 80) {
+          SigilAudio.playKeystroke();
+          _lastKeystroke = now;
+        }
       });
 
       saveBtn.addEventListener('click', () => {

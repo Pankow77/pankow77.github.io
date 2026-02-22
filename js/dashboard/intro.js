@@ -17,6 +17,8 @@
  *   New session = intro plays again.
  */
 
+import { SigilAudio } from './audio.js';
+
 const MANDATE_LINES = [
   { text: 'Osservare. Interpretare. Decidere.', delay: 500 },
   { text: 'Ogni ciclo riceverai informazioni.', delay: 400 },
@@ -211,6 +213,9 @@ export function runIntro(appEl) {
 
     function handleAccept() {
       sessionStorage.setItem('sigil_accepted', '1');
+
+      // Boot beep — the system wakes up
+      SigilAudio.playBoot();
 
       overlay.classList.add('fade-out');
       setTimeout(() => {
