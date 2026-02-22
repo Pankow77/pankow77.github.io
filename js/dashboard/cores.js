@@ -383,7 +383,9 @@ export const CoreEngine = {
       .map(c => ({ core: c, power: this._positions.get(c.id).effectivePower }))
       .sort((a, b) => b.power - a.power);
 
-    const EPSILON = 0.08;
+    // Dynamic epsilon: more ambiguity = wider instability zone.
+    // Fixed epsilon trains you to avoid it. Dynamic epsilon surprises you.
+    const EPSILON = 0.05 + (divergence * 0.02);
 
     if (ranked.length >= 2) {
       const top = ranked[0];
@@ -419,9 +421,19 @@ export const CoreEngine = {
     // ══════════════════════════════════════
     //  PHASE 6: RESIDUAL TENSION — scars
     // ══════════════════════════════════════
-    // Winner's audio dominates. Losers still audible, but as ghosts.
-    // Losers' combined residual tension increases fragility.
+    // Winner's audio dominates. Losers don't get a flat 25%.
+    // Losers get: pressure × (1 - winnerPowerRatio).
+    // Stronger losers against a weak winner = deeper scars.
+    // This is physics, not theatre.
     let residualSum = 0;
+
+    // Winner's power ratio: how dominant was the victory?
+    // 1.0 = total domination (losers are silent). 0.5 = narrow win (losers are loud).
+    const totalPower = ranked.reduce((sum, e) => sum + this._positions.get(e.core.id).effectivePower, 0);
+    const winnerPower = this._dominantCore
+      ? this._positions.get(this._dominantCore.id).effectivePower
+      : 0;
+    const winnerRatio = totalPower > 0 ? winnerPower / totalPower : 0;
 
     for (const entry of ranked) {
       const pos = this._positions.get(entry.core.id);
@@ -436,14 +448,17 @@ export const CoreEngine = {
         // Unresolved pair: both at 70% — the drone oscillates
         this._accumulateAudio(entry.core.audioSignature, pos.effectivePower * 0.7);
       } else {
-        // Loser: residual — still audible at 25%. A ghost in the field.
-        this._accumulateAudio(entry.core.audioSignature, pos.effectivePower * 0.25);
+        // Loser: residual proportional to how narrow the victory was.
+        // Narrow win → losers at ~50%. Domination → losers at ~10%.
+        const residualRatio = 1 - winnerRatio;
+        const residualWeight = pos.effectivePower * Math.max(0.1, residualRatio);
+        this._accumulateAudio(entry.core.audioSignature, residualWeight);
 
         // Their tension becomes a scar
-        residualSum += pos.effectivePower;
+        residualSum += residualWeight;
         this._residualTension.push({
           coreId: entry.core.id,
-          power: pos.effectivePower,
+          power: residualWeight,
           preferredFrame: pos.preferredFrame
         });
       }
@@ -465,7 +480,26 @@ export const CoreEngine = {
     if (this._recentDissonance.length > 8) this._recentDissonance.shift();
 
     // ══════════════════════════════════════
-    //  PHASE 8: STATE + EVENTS
+    //  PHASE 8: CLIMATE — sustained divergence → global jitter
+    // ══════════════════════════════════════
+    // If average divergence over last 8 rounds exceeds threshold,
+    // the audio field gets LFO jitter. Not an event. A climate.
+    // The drone becomes subtly irregular. The world feels uncertain.
+    const CLIMATE_THRESHOLD = 0.3;
+    const avgDivergence = this._recentDivergence.length > 0
+      ? this._recentDivergence.reduce((a, b) => a + b, 0) / this._recentDivergence.length
+      : 0;
+
+    if (avgDivergence > CLIMATE_THRESHOLD) {
+      // Jitter intensity: 0 at threshold, max ~0.03 at divergence=1.0
+      const jitterIntensity = (avgDivergence - CLIMATE_THRESHOLD) * 0.04;
+      this._audioAccumulator.lfoSpeedShift += jitterIntensity * (Math.random() * 2 - 1);
+      this._audioAccumulator.droneDetune += jitterIntensity * 10 * (Math.random() * 2 - 1);
+      this._audioAccumulator.resonanceShift += jitterIntensity * 0.5 * (Math.random() * 2 - 1);
+    }
+
+    // ══════════════════════════════════════
+    //  PHASE 9: STATE + EVENTS
     // ══════════════════════════════════════
     State.set('agora.intensity', Math.round(this._dissonance * 100));
     State.set('agora.activeCores', this._activeCores.length);
@@ -473,6 +507,7 @@ export const CoreEngine = {
     State.set('agora.dominantCore', this._dominantCore ? this._dominantCore.id : null);
     State.set('agora.unresolvedTension', this._unresolvedTension || false);
     State.set('agora.divergence', divergence);
+    State.set('agora.climate', avgDivergence > CLIMATE_THRESHOLD ? avgDivergence : 0);
 
     Bus.emit('agora:field-shift', {
       audio: { ...this._audioAccumulator },
@@ -481,7 +516,8 @@ export const CoreEngine = {
       dominantCore: this._dominantCore ? this._dominantCore.id : null,
       unresolvedTension: this._unresolvedTension || false,
       residualTension: this._residualTension,
-      divergence
+      divergence,
+      climate: avgDivergence > CLIMATE_THRESHOLD ? avgDivergence : 0
     }, 'agora');
 
     return {
