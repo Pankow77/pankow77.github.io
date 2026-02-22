@@ -160,7 +160,10 @@ export const SigilAudio = {
    * Higher fragility = higher pitch, louder, wider filter, faster breathing.
    */
   _updateDrone(fragility) {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. The drone tracks state even in silence.
+    // Oscillators keep moving. Only the master gain is zero.
+    // When you unmute, the drone is exactly where it should be.
     const t = this._ctx.currentTime;
 
     // Pitch: A1 (55Hz) → E2 (82Hz) with fragility
@@ -368,7 +371,10 @@ export const SigilAudio = {
    *   5. Single clean tone (the new reality)
    */
   playPADC() {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. PADC is irreversible. The drone state must change
+    // even in silence. If you muted during the revelation, the world
+    // still changed. You just didn't hear it happen.
     const ctx = this._ctx;
     const t = ctx.currentTime;
 
@@ -437,7 +443,8 @@ export const SigilAudio = {
    * Ascending harmonics. Data being read off your soul.
    */
   playProfilo() {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. You were scanned whether you heard it or not.
     const ctx = this._ctx;
     const t = ctx.currentTime;
 
@@ -485,7 +492,8 @@ export const SigilAudio = {
    * Termination notice — single low pulse. Then silence.
    */
   playTerminationNotice() {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. Termination modifies drone state permanently.
     const ctx = this._ctx;
     const t = ctx.currentTime;
 
@@ -511,7 +519,8 @@ export const SigilAudio = {
    * Then GHOST_8 boot tone.
    */
   playTerminationFinal() {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. Death is permanent.
     const ctx = this._ctx;
     const t = ctx.currentTime;
 
@@ -553,7 +562,8 @@ export const SigilAudio = {
    * Succession (clean) — peaceful handoff tone.
    */
   playSuccession() {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. Succession modifies drone state.
     const ctx = this._ctx;
     const t = ctx.currentTime;
 
@@ -596,7 +606,9 @@ export const SigilAudio = {
    * Critical: white noise granular under everything.
    */
   setIsolation(depth) {
-    if (!this._ctx || this._muted) return;
+    if (!this._ctx) return;
+    // No mute check. Isolation state tracks even in silence.
+    // The walls close in whether you hear them or not.
     this._isolationDepth = depth;
     const ctx = this._ctx;
     const t = ctx.currentTime;
