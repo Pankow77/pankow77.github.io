@@ -13,6 +13,7 @@
 
 import { ModuleBase } from '../module-base.js';
 import { State } from '../state.js';
+import { Router } from '../router.js';
 
 // ═══════════════════════════════════════════════════
 // 16 CORES — identity, domain, color, REGISTER
@@ -22,22 +23,22 @@ import { State } from '../state.js';
 // register.css    = CSS class suffix for visual styling
 
 const CORES = [
-  { id: 'PANKOW_77C',      domain: 'STRATEGIC VISION',   role: 'COMMAND',      color: '#ff3344', register: { speak: 1.00, temp: 'command',      css: 'reg-command'     } },
-  { id: 'ORACLE_CORE',     domain: 'SYSTEMIC ANALYSIS',  role: 'CLIMATE',      color: '#39ff14', register: { speak: 0.85, temp: 'ice',          css: 'reg-ice'         } },
-  { id: 'GHOST_RUNNER',    domain: 'ALIGNMENT TRACKING',  role: 'TECHNOLOGY',  color: '#00c8ff', register: { speak: 0.80, temp: 'flat',         css: 'reg-flat'        } },
-  { id: 'ABYSSAL_THINKER', domain: 'DEEP STRUCTURE',     role: 'PHILOSOPHY',   color: '#8855ff', register: { speak: 0.18, temp: 'abyss',        css: 'reg-abyss'       } },
-  { id: 'VOID_PULSE',      domain: 'TEMPORAL FORECAST',  role: 'FORECASTING',  color: '#ffbf00', register: { speak: 0.75, temp: 'detached',     css: 'reg-detached'    } },
-  { id: 'NARRATIVE_ENGINE', domain: 'FRAME ANALYSIS',    role: 'SOCIAL',       color: '#ff0084', register: { speak: 0.85, temp: 'paranoid',     css: 'reg-paranoid'    } },
-  { id: 'MARXIAN_CORE',    domain: 'POWER MAPPING',      role: 'GEOPOLITICS',  color: '#ff6633', register: { speak: 0.92, temp: 'dogmatic',     css: 'reg-dogmatic'    } },
-  { id: 'CODE_ENCODER',    domain: 'ECONOMIC SIGNALS',   role: 'ECONOMICS',    color: '#00d4aa', register: { speak: 0.70, temp: 'zero',         css: 'reg-zero'        } },
-  { id: 'AFFECTIVE_CORE',  domain: 'EMOTIONAL TOPOLOGY', role: 'EPISTEMOLOGY', color: '#ff6633', register: { speak: 0.55, temp: 'raw',          css: 'reg-raw'         } },
-  { id: 'SYNTH_02',        domain: 'PATTERN SYNTHESIS',  role: 'INTEGRATION',  color: '#88ccff', register: { speak: 0.80, temp: 'bureaucratic', css: 'reg-bureaucratic' } },
-  { id: 'SENTINEL',        domain: 'THREAT DETECTION',   role: 'DEFENSE',      color: '#ff3344', register: { speak: 0.60, temp: 'military',     css: 'reg-military'    } },
-  { id: 'CHRONO_WEAVER',   domain: 'HISTORICAL ECHO',    role: 'HISTORY',      color: '#ffbf00', register: { speak: 0.40, temp: 'melancholic',  css: 'reg-melancholic' } },
-  { id: 'DIALECTIC_NODE',  domain: 'LOGICAL STRUCTURE',  role: 'LOGIC',        color: '#00c8ff', register: { speak: 0.85, temp: 'pedantic',     css: 'reg-pedantic'    } },
-  { id: 'SIGNAL_HUNTER',   domain: 'NOISE SEPARATION',   role: 'RECON',        color: '#39ff14', register: { speak: 0.15, temp: 'cryptic',      css: 'reg-cryptic'     } },
-  { id: 'ETHIC_COMPILER',  domain: 'MORAL CALCULUS',     role: 'ETHICS',       color: '#8855ff', register: { speak: 0.28, temp: 'heavy',        css: 'reg-heavy'       } },
-  { id: 'BRIDGE_KEEPER',   domain: 'CROSS-DOMAIN LINK',  role: 'SYNTHESIS',    color: '#00d4aa', register: { speak: 0.50, temp: 'calm',         css: 'reg-calm'        } },
+  { id: 'PANKOW_77C',      domain: 'VISIONE STRATEGICA',          role: 'COMANDO',        color: '#ff3344', register: { speak: 1.00, temp: 'command',      css: 'reg-command'     } },
+  { id: 'ORACLE_CORE',     domain: 'ANALISI SISTEMICA',           role: 'CLIMA',          color: '#39ff14', register: { speak: 0.85, temp: 'ice',          css: 'reg-ice'         } },
+  { id: 'GHOST_RUNNER',    domain: "MONITORAGGIO DELL'ALLINEAMENTO", role: 'TECNOLOGIA',  color: '#00c8ff', register: { speak: 0.80, temp: 'flat',         css: 'reg-flat'        } },
+  { id: 'ABYSSAL_THINKER', domain: 'STRUTTURA PROFONDA',          role: 'FILOSOFIA',      color: '#8855ff', register: { speak: 0.18, temp: 'abyss',        css: 'reg-abyss'       } },
+  { id: 'VOID_PULSE',      domain: 'PREVISIONE TEMPORALE',        role: 'FORECASTING',    color: '#ffbf00', register: { speak: 0.75, temp: 'detached',     css: 'reg-detached'    } },
+  { id: 'NARRATIVE_ENGINE', domain: 'ANALISI DEI FRAME',          role: 'SOCIALE',        color: '#ff0084', register: { speak: 0.85, temp: 'paranoid',     css: 'reg-paranoid'    } },
+  { id: 'MARXIAN_CORE',    domain: 'MAPPATURA DEL POTERE',        role: 'GEOPOLITICA',    color: '#ff6633', register: { speak: 0.92, temp: 'dogmatic',     css: 'reg-dogmatic'    } },
+  { id: 'CODE_ENCODER',    domain: 'SEGNALI ECONOMICI',           role: 'ECONOMIA',       color: '#00d4aa', register: { speak: 0.70, temp: 'zero',         css: 'reg-zero'        } },
+  { id: 'AFFECTIVE_CORE',  domain: 'TOPOLOGIA EMOTIVA',           role: 'EPISTEMOLOGIA',  color: '#ff6633', register: { speak: 0.55, temp: 'raw',          css: 'reg-raw'         } },
+  { id: 'SYNTH_02',        domain: 'SINTESI DEI PATTERN',         role: 'INTEGRAZIONE',   color: '#88ccff', register: { speak: 0.80, temp: 'bureaucratic', css: 'reg-bureaucratic' } },
+  { id: 'SENTINEL',        domain: 'RILEVAMENTO MINACCE',         role: 'DIFESA',         color: '#ff3344', register: { speak: 0.60, temp: 'military',     css: 'reg-military'    } },
+  { id: 'CHRONO_WEAVER',   domain: 'ECO STORICA',                 role: 'STORIA',         color: '#ffbf00', register: { speak: 0.40, temp: 'melancholic',  css: 'reg-melancholic' } },
+  { id: 'DIALECTIC_NODE',  domain: 'STRUTTURA LOGICA',            role: 'LOGICA',         color: '#00c8ff', register: { speak: 0.85, temp: 'pedantic',     css: 'reg-pedantic'    } },
+  { id: 'SIGNAL_HUNTER',   domain: 'SEPARAZIONE DEL RUMORE',      role: 'RICOGNIZIONE',  color: '#39ff14', register: { speak: 0.15, temp: 'cryptic',      css: 'reg-cryptic'     } },
+  { id: 'ETHIC_COMPILER',  domain: 'CALCOLO MORALE',              role: 'ETICA',          color: '#8855ff', register: { speak: 0.28, temp: 'heavy',        css: 'reg-heavy'       } },
+  { id: 'BRIDGE_KEEPER',   domain: 'COLLEGAMENTO CROSS-DOMINIO',  role: 'SINTESI',        color: '#00d4aa', register: { speak: 0.50, temp: 'calm',         css: 'reg-calm'        } },
 ];
 
 // ═══════════════════════════════════════════════════
@@ -546,18 +547,11 @@ export class AgoraModule extends ModuleBase {
     this.container.innerHTML = `
       <div class="agora-view">
 
-        <!-- MISSION CONTROL BAR -->
-        <div class="agora-mission-bar">
-          <div class="agora-mission-left">
-            <span class="agora-mission-label">MISSION CONTROL</span>
-            <span class="agora-mission-sub">HYBRID SYNDICATE // ALL SYSTEMS MONITORING</span>
-          </div>
-          <div class="agora-mission-right">
-            <span class="agora-status-badge">SYSTEMS ONLINE</span>
-            <span class="agora-clock" data-live="clock">${timeStr}</span>
-            <span class="agora-date">${dateStr}</span>
-            <span class="agora-cycle-badge">CYCLE: ${cycle}</span>
-          </div>
+        <!-- NAV TABS -->
+        <div class="agora-nav-tabs">
+          <button class="agora-nav-tab active" data-nav="agora">SEDE CENTRALE</button>
+          <button class="agora-nav-tab" data-nav="eei">EEI</button>
+          <button class="agora-nav-tab" data-nav="oracle">ORACOLO</button>
         </div>
 
         <!-- MAIN SPLIT -->
@@ -585,23 +579,23 @@ export class AgoraModule extends ModuleBase {
           <!-- RIGHT: DELIBERATION FEED -->
           <div class="agora-feed-panel">
 
-            <!-- TOPIC -->
+            <!-- ARGOMENTO -->
             <div class="agora-topic-bar">
-              <div class="agora-topic-label">TOPIC</div>
+              <div class="agora-topic-label">ARGOMENTO</div>
               <div class="agora-topic-text" data-live="topic">
-                ${epoch ? this._cleanTitle(epoch.text_summary) : 'Waiting for RSS signal...'}
+                ${epoch ? this._cleanTitle(epoch.text_summary) : 'In attesa del segnale RSS...'}
               </div>
               <div class="agora-topic-meta">
                 <span data-live="theater">${epoch ? epoch._theater : '\u2014'}</span>
-                <span>MSGS: <span data-live="msg-count">0</span></span>
-                <span>RUNTIME: <span data-live="runtime">00:00</span></span>
+                <span>MSG: <span data-live="msg-count">0</span></span>
+                <span>DURATA: <span data-live="runtime">00:00</span></span>
               </div>
             </div>
 
             <!-- MESSAGES -->
             <div class="agora-messages" data-live="messages">
               <div class="agora-waiting">
-                <span class="agora-cursor">\u258c</span> Initializing deliberation cores...
+                <span class="agora-cursor">\u258c</span> Inizializzazione dei core deliberativi...
               </div>
             </div>
 
@@ -611,14 +605,14 @@ export class AgoraModule extends ModuleBase {
         <!-- BOTTOM CONTROLS -->
         <div class="agora-controls">
           <button class="agora-ctrl-btn" data-action="prev">\u25c4</button>
-          <button class="agora-ctrl-btn agora-ctrl-pause" data-action="pause">PAUSE</button>
+          <button class="agora-ctrl-btn agora-ctrl-pause" data-action="pause">PAUSA</button>
           <button class="agora-ctrl-btn" data-action="next">\u25ba</button>
           <span class="agora-ctrl-label">AGORA</span>
           <div class="agora-ctrl-dots">
             ${CORES.map(c => `<span class="agora-dot" style="background: ${c.color}" title="${c.id}"></span>`).join('')}
           </div>
-          <span class="agora-ctrl-next" data-live="countdown">Next: --</span>
-          <span class="agora-ctrl-mode">AUTO-CYCLE MODE</span>
+          <span class="agora-ctrl-next" data-live="countdown">Prossimo: --</span>
+          <span class="agora-ctrl-mode">CICLO AUTOMATICO</span>
         </div>
 
       </div>
@@ -631,6 +625,16 @@ export class AgoraModule extends ModuleBase {
         if (action === 'pause') this._togglePause();
         if (action === 'next') this._advanceEpoch(1);
         if (action === 'prev') this._advanceEpoch(-1);
+      });
+    });
+
+    // Bind nav tabs
+    this.container.querySelectorAll('[data-nav]').forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        const target = e.currentTarget.dataset.nav;
+        if (target && target !== 'agora') {
+          Router.open(target);
+        }
       });
     });
 
@@ -769,11 +773,11 @@ export class AgoraModule extends ModuleBase {
     this._paused = !this._paused;
     const btn = this.container.querySelector('[data-action="pause"]');
     if (btn) {
-      btn.textContent = this._paused ? 'RESUME' : 'PAUSE';
+      btn.textContent = this._paused ? 'RIPRENDI' : 'PAUSA';
       btn.classList.toggle('paused', this._paused);
     }
     const modeEl = this.container.querySelector('.agora-ctrl-mode');
-    if (modeEl) modeEl.textContent = this._paused ? 'PAUSED' : 'AUTO-CYCLE MODE';
+    if (modeEl) modeEl.textContent = this._paused ? 'IN PAUSA' : 'CICLO AUTOMATICO';
 
     if (!this._paused) {
       if (this._displayedCount < this._messages.length) {
@@ -803,7 +807,7 @@ export class AgoraModule extends ModuleBase {
 
   _updateCountdown() {
     const el = this.container.querySelector('[data-live="countdown"]');
-    if (el) el.textContent = `Next: ${this._nextCountdown}s`;
+    if (el) el.textContent = `Prossimo: ${this._nextCountdown}s`;
   }
 
   _startClock() {

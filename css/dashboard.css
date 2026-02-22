@@ -1982,75 +1982,41 @@ body.isolation-active .lago-ra-pulse {
   background: var(--bg-void);
 }
 
-/* ── Mission Control Bar ── */
-.agora-mission-bar {
+/* ── Navigation Tabs ── */
+.agora-nav-tabs {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 16px;
+  gap: 0;
+  padding: 0 16px;
   background: var(--bg-panel);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 
-.agora-mission-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.agora-mission-label {
+.agora-nav-tab {
   font-family: var(--font-display);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 600;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
-}
-
-.agora-mission-sub {
-  font-size: 10px;
   color: var(--text-dim);
-  letter-spacing: 1px;
+  background: transparent;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
 }
 
-.agora-mission-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.agora-status-badge {
-  font-family: var(--font-display);
-  font-size: 9px;
-  color: var(--green);
-  letter-spacing: 1.5px;
-  padding: 3px 10px;
-  border: 1px solid rgba(57, 255, 20, 0.25);
-  background: rgba(57, 255, 20, 0.04);
-  animation: pulse-state 2s ease-in-out infinite;
-}
-
-.agora-clock {
-  font-family: var(--font-display);
-  font-size: 12px;
+.agora-nav-tab:hover {
   color: var(--text-secondary);
-  letter-spacing: 1px;
+  background: rgba(0, 200, 255, 0.02);
 }
 
-.agora-date {
-  font-size: 10px;
-  color: var(--text-dim);
-  letter-spacing: 1px;
-}
-
-.agora-cycle-badge {
-  font-family: var(--font-display);
-  font-size: 10px;
-  color: var(--amber);
-  letter-spacing: 1.5px;
-  padding: 3px 10px;
-  border: 1px solid rgba(255, 191, 0, 0.2);
+.agora-nav-tab.active {
+  color: var(--cyan);
+  border-bottom-color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
 }
 
 /* ── Main Split ── */
@@ -2388,13 +2354,14 @@ body.isolation-active .lago-ra-pulse {
     display: none;
   }
 
-  .agora-mission-bar {
-    flex-wrap: wrap;
-    gap: 8px;
+  .agora-nav-tabs {
+    padding: 0 8px;
   }
 
-  .agora-mission-sub {
-    display: none;
+  .agora-nav-tab {
+    padding: 10px 12px;
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
   .agora-controls {
