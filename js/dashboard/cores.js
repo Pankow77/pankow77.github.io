@@ -243,6 +243,8 @@ export const CoreEngine = {
   _dominantCore: null,         // Who won the arena (null if UNRESOLVED)
   _unresolvedTension: false,   // false | { cores, delta, powers }
   _residualTension: [],        // Losers' scars: [{ coreId, power, preferredFrame }]
+  _jitterState: { lfo: 0, detune: 0, resonance: 0 },  // Persistent jitter — decays, doesn't reset
+  _dominanceStreak: {},        // coreId → consecutive wins count
 
   /**
    * Initialize. Listen for envelope events.
@@ -418,6 +420,27 @@ export const CoreEngine = {
       this._dominantCore = ranked[0].core;
     }
 
+    // ── Dominance streak tracking ──
+    // If one core wins too often, its effective weight gets dampened.
+    // Not to balance. To prevent mathematical dictatorship.
+    // Conflict must remain possible.
+    if (this._dominantCore) {
+      const winnerId = this._dominantCore.id;
+      // Increment winner's streak, reset everyone else's
+      for (const core of CORES) {
+        if (core.id === winnerId) {
+          this._dominanceStreak[core.id] = (this._dominanceStreak[core.id] || 0) + 1;
+        } else {
+          this._dominanceStreak[core.id] = 0;
+        }
+      }
+    } else {
+      // UNRESOLVED or no cores: reset all streaks
+      for (const core of CORES) {
+        this._dominanceStreak[core.id] = 0;
+      }
+    }
+
     // ══════════════════════════════════════
     //  PHASE 6: RESIDUAL TENSION — scars
     // ══════════════════════════════════════
@@ -490,13 +513,26 @@ export const CoreEngine = {
       ? this._recentDivergence.reduce((a, b) => a + b, 0) / this._recentDivergence.length
       : 0;
 
+    const JITTER_DECAY = 0.92;  // Trauma doesn't vanish. It cicatrizes.
+
     if (avgDivergence > CLIMATE_THRESHOLD) {
-      // Jitter intensity: 0 at threshold, max ~0.03 at divergence=1.0
+      // Feed new jitter into persistent state.
+      // Intensity scales with how far above threshold we are.
       const jitterIntensity = (avgDivergence - CLIMATE_THRESHOLD) * 0.04;
-      this._audioAccumulator.lfoSpeedShift += jitterIntensity * (Math.random() * 2 - 1);
-      this._audioAccumulator.droneDetune += jitterIntensity * 10 * (Math.random() * 2 - 1);
-      this._audioAccumulator.resonanceShift += jitterIntensity * 0.5 * (Math.random() * 2 - 1);
+      this._jitterState.lfo += jitterIntensity * (Math.random() * 2 - 1);
+      this._jitterState.detune += jitterIntensity * 10 * (Math.random() * 2 - 1);
+      this._jitterState.resonance += jitterIntensity * 0.5 * (Math.random() * 2 - 1);
+    } else {
+      // Below threshold: decay. Slow return. The scar fades but never fully.
+      this._jitterState.lfo *= JITTER_DECAY;
+      this._jitterState.detune *= JITTER_DECAY;
+      this._jitterState.resonance *= JITTER_DECAY;
     }
+
+    // Apply persistent jitter to audio field
+    this._audioAccumulator.lfoSpeedShift += this._jitterState.lfo;
+    this._audioAccumulator.droneDetune += this._jitterState.detune;
+    this._audioAccumulator.resonanceShift += this._jitterState.resonance;
 
     // ══════════════════════════════════════
     //  PHASE 9: STATE + EVENTS
@@ -570,7 +606,16 @@ export const CoreEngine = {
       }
     }
 
-    return Math.min(0.30, w);
+    // Dominance streak dampening.
+    // If this core has won too many consecutive rounds,
+    // its weight erodes. Not to punish. To keep conflict possible.
+    // Streak 0-3: no effect. 4+: -0.02 per additional win.
+    const streak = this._dominanceStreak[core.id] || 0;
+    if (streak > 3) {
+      w -= (streak - 3) * 0.02;
+    }
+
+    return Math.max(0.04, Math.min(0.30, w)); // Floor at 0.04 — no core goes silent
   },
 
   // ═══════════════════════════════════
