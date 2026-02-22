@@ -17,14 +17,28 @@ import { ModuleBase } from '../module-base.js';
 import { State } from '../state.js';
 import { Bus } from '../../bus.js';
 
+// ── SVG Icons (matching individual pages) ──
+const ICONS = {
+  teatri: `<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.8"/><line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="0.8" opacity="0.3"/><line x1="12" y1="3" x2="12" y2="21" stroke="currentColor" stroke-width="0.8" opacity="0.3"/></svg>`,
+  agora: `<svg viewBox="0 0 24 24" width="18" height="18"><polygon points="12,2 22,7.5 22,16.5 12,22 2,16.5 2,7.5" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><polygon points="12,6 18,9 18,15 12,18 6,15 6,9" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.3"/><circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.8"/></svg>`,
+  oracle: `<svg viewBox="0 0 24 24" width="18" height="18"><polyline points="1,12 5,12 8,5 11,19 14,8 17,16 20,12 23,12" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.8"/></svg>`,
+  archivio: `<svg viewBox="0 0 24 24" width="18" height="18"><rect x="4" y="3" width="16" height="18" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="8" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="8" y1="16" x2="13" y2="16" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg>`,
+  pneuma: `<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><path d="M12 3 Q18 8 12 12 Q6 16 12 21" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6"/></svg>`,
+  backbone: `<svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><rect x="14" y="3" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><rect x="3" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><rect x="14" y="14" width="7" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><line x1="10" y1="6.5" x2="14" y2="6.5" stroke="currentColor" stroke-width="0.8" opacity="0.3"/><line x1="6.5" y1="10" x2="6.5" y2="14" stroke="currentColor" stroke-width="0.8" opacity="0.3"/></svg>`,
+  eei: `<svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 20 L8 12 L12 15 L17 6 L21 10" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><circle cx="17" cy="6" r="2" fill="currentColor" opacity="0.6"/></svg>`,
+  chronos: `<svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><line x1="12" y1="6" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><line x1="12" y1="12" x2="16" y2="14" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" opacity="0.6"/></svg>`,
+  'lago-ra': `<svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1" opacity="0.3"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/><circle cx="12" cy="12" r="1.5" fill="currentColor" opacity="0.9"/></svg>`
+};
+
 // ── Tile definitions ──
 const TILES = [
   {
     id: 'teatri', label: 'TEATRI', route: 'teatri',
+    subtitle: 'Theater Monitor',
     status: () => {
       const t = State.get('teatri.theaters') || {};
       const alert = Object.values(t).filter(v => v === 'alert').length;
-      return alert > 0 ? `${alert} theater alert` : 'All theaters nominal';
+      return alert > 0 ? `${alert} THEATER ALERT` : 'ALL THEATERS NOMINAL';
     },
     micro: (tile) => {
       const t = State.get('teatri.theaters') || {};
@@ -41,7 +55,11 @@ const TILES = [
   },
   {
     id: 'agora', label: 'AGORA', route: 'agora',
-    status: () => `Intensità: ${State.get('agora.intensity') || 0}%`,
+    subtitle: '16-Core Deliberation',
+    status: () => {
+      const i = State.get('agora.intensity') || 0;
+      return `INTENSITÀ: ${i}%`;
+    },
     micro: (tile) => {
       const data = State.get('agora.polarization') || [];
       const container = document.createElement('div');
@@ -53,7 +71,6 @@ const TILES = [
         bar.style.height = `${(v / max) * 100}%`;
         container.appendChild(bar);
       });
-      // Glow red if intensity > 60
       const intensity = State.get('agora.intensity') || 0;
       if (intensity > 60) {
         tile.style.boxShadow = '0 0 15px rgba(255, 51, 68, 0.15)';
@@ -63,38 +80,48 @@ const TILES = [
   },
   {
     id: 'oracle', label: 'ORACLE', route: 'oracle',
+    subtitle: 'Planetary Intelligence',
     status: () => {
       const c = State.get('oracle.confidence') || 0;
-      return `Confidenza: ${c.toFixed(2)}`;
+      const stable = State.get('oracle.stable');
+      return `CONFIDENCE: ${(c * 100).toFixed(0)}%${stable === false ? ' · UNSTABLE' : ''}`;
     },
     micro: () => {
       const c = State.get('oracle.confidence') || 0;
       const stable = State.get('oracle.stable');
-      const el = document.createElement('div');
-      el.className = `micro-confidence${stable === false ? ' unstable' : ''}`;
-      el.textContent = (c * 100).toFixed(0) + '%';
-      return el;
+      const wrap = document.createElement('div');
+      wrap.className = 'micro-risk-bar';
+      const bar = document.createElement('div');
+      bar.className = 'risk-fill';
+      bar.style.width = `${c * 100}%`;
+      bar.style.background = stable === false
+        ? 'linear-gradient(90deg, var(--red-dim), var(--red))'
+        : 'linear-gradient(90deg, var(--cyan-dim), var(--cyan))';
+      wrap.appendChild(bar);
+      return wrap;
     }
   },
   {
     id: 'archivio', label: 'ARCHIVIO', route: 'archivio',
-    status: () => `${State.get('archivio.annotations') || 0} annotazioni`,
+    subtitle: 'Registro Silente',
+    status: () => `${State.get('archivio.annotations') || 0} ANNOTAZIONI`,
     micro: () => {
       const succession = State.get('archivio.succession');
       if (succession) {
         const badge = document.createElement('span');
         badge.className = 'ghost-badge';
-        badge.textContent = 'GHOST';
+        badge.textContent = 'GHOST_6';
         return badge;
       }
       const el = document.createElement('div');
-      el.style.cssText = 'font-size: 10px; color: var(--text-dim);';
-      el.textContent = 'Registro attivo';
+      el.className = 'micro-status-line';
+      el.textContent = 'REGISTRO ATTIVO';
       return el;
     }
   },
   {
     id: 'lago-ra', label: 'LAGO RÀ', route: null,
+    subtitle: '',
     status: () => {
       if (State.get('cycle.ready')) return 'PROSSIMO CICLO';
       return '';
@@ -115,9 +142,10 @@ const TILES = [
   },
   {
     id: 'pneuma', label: 'PNEUMA', route: 'pneuma',
+    subtitle: 'Emotional Topology',
     status: () => {
       const tone = State.get('pneuma.tone') || 'neutral';
-      return `Tono: ${tone}`;
+      return `TONO: ${tone.toUpperCase()}`;
     },
     micro: () => {
       const hue = State.get('pneuma.hue') || '#00c8ff';
@@ -129,45 +157,55 @@ const TILES = [
   },
   {
     id: 'backbone', label: 'BACKBONE', route: 'backbone',
+    subtitle: 'System Metabolism',
     status: () => {
       const modules = State.get('backbone.modules') || 0;
-      return `${modules} moduli attivi`;
+      return `${modules} MODULI ATTIVI`;
     },
     micro: () => {
       const el = document.createElement('div');
-      el.style.cssText = 'font-size: 10px; color: var(--text-dim);';
-      el.textContent = 'Metabolismo sistema';
+      el.className = 'micro-status-line';
+      el.textContent = 'METABOLISMO OPERATIVO';
       return el;
     }
   },
   {
     id: 'eei', label: 'EEI', route: 'eei',
+    subtitle: 'Exposure Predictor',
     status: () => {
       const idx = State.get('eei.index') || 0;
       const trend = State.get('eei.trend') || 'stable';
-      const arrow = trend === 'rising' ? '↑' : trend === 'falling' ? '↓' : '→';
-      return `Indice: ${idx.toFixed(1)} ${arrow}`;
+      const arrow = trend === 'rising' ? '▲' : trend === 'falling' ? '▼' : '►';
+      return `INDICE: ${idx.toFixed(1)} ${arrow}`;
     },
     micro: () => {
       const idx = State.get('eei.index') || 0;
-      const el = document.createElement('div');
-      el.className = 'micro-confidence';
-      el.style.color = idx > 7 ? 'var(--red)' : idx > 4 ? 'var(--amber)' : 'var(--green)';
-      el.textContent = idx.toFixed(1);
-      return el;
+      const wrap = document.createElement('div');
+      wrap.className = 'micro-risk-bar';
+      const bar = document.createElement('div');
+      bar.className = 'risk-fill';
+      bar.style.width = `${Math.min(100, idx * 10)}%`;
+      bar.style.background = idx > 7
+        ? 'linear-gradient(90deg, var(--red-dim), var(--red))'
+        : idx > 4
+          ? 'linear-gradient(90deg, var(--amber), var(--orange))'
+          : 'linear-gradient(90deg, var(--green-dim), var(--green))';
+      wrap.appendChild(bar);
+      return wrap;
     }
   },
   {
     id: 'chronos', label: 'URBAN CHRONOS', route: 'chronos',
+    subtitle: 'Temporal Analysis',
     status: () => {
       const events = State.get('chronos.events') || 0;
-      return `${events} eventi tracciati`;
+      return `${events} EVENTI TRACCIATI`;
     },
     micro: () => {
       const drift = State.get('chronos.drift') || 0;
       const el = document.createElement('div');
-      el.style.cssText = 'font-size: 10px; color: var(--text-dim);';
-      el.textContent = `Drift: ${drift}ms`;
+      el.className = 'micro-status-line';
+      el.textContent = `DRIFT: ${drift}ms`;
       return el;
     }
   }
@@ -234,9 +272,25 @@ export class HubModule extends ModuleBase {
       tile.classList.add('lago-ra');
     }
 
-    // Title
+    // Header row: icon + title + subtitle
+    const header = this.el('div', 'tile-header');
+
+    const icon = ICONS[def.id];
+    if (icon) {
+      const iconWrap = this.el('div', 'tile-icon');
+      iconWrap.innerHTML = icon;
+      header.appendChild(iconWrap);
+    }
+
+    const titleBlock = this.el('div', 'tile-title-block');
     const title = this.el('div', 'tile-title', def.label);
-    tile.appendChild(title);
+    titleBlock.appendChild(title);
+    if (def.subtitle) {
+      const sub = this.el('div', 'tile-subtitle', def.subtitle);
+      titleBlock.appendChild(sub);
+    }
+    header.appendChild(titleBlock);
+    tile.appendChild(header);
 
     // Status
     const status = this.el('div', 'tile-status');

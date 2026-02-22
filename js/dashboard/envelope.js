@@ -2,11 +2,12 @@
  * EnvelopeSystem — The dilemma engine.
  * ═══════════════════════════════════════
  * Every cycle, the operator receives an envelope.
- * Inside: information. A choice. Three frames.
+ * Inside: REAL information from RSS feeds. A choice. Three frames.
  * No right answer. Only consequences.
  *
- * Phase A: 5 hardcoded envelopes. No RSS. No AI.
- * Test the loop. Verify the gut punch. Then scale.
+ * Fetches live data from data/feeds/*.json
+ * Wraps each real headline in an archetype frame.
+ * Falls back to hardcoded if fetch fails.
  *
  * Events:
  *   cycle:show-envelope  (listened) — present the next envelope
@@ -17,192 +18,74 @@ import { Bus } from '../bus.js';
 import { State } from './state.js';
 
 // ── The 7 archetypes ──
-// TIMING    — Right info, wrong moment
-// FONTE     — Protect messenger or message
-// FRAME     — Who controls the narrative
-// SCALA     — Save one or save many
-// ALLEATO   — Enemy of my enemy
-// SPORCA    — Truth from liars
-// PROTOCOLLO — Rules protect everyone, including the guilty
+const ARCHETYPES = ['TIMING', 'FONTE', 'FRAME', 'SCALA', 'ALLEATO_TOSSICO', 'INFORMAZIONE_SPORCA', 'PROTOCOLLO'];
 
-const ENVELOPES = [
-  {
-    id: 'env-001',
-    archetype: 'TIMING',
-    source: 'HORMUZ THEATRE',
-    title: 'Intercettazione anticipata',
-    body: 'Un asset nel corridoio di Hormuz segnala movimenti anomali nelle rotte petrolifere. L\'informazione è verificata ma il momento di pubblicazione potrebbe destabilizzare i negoziati in corso al G7 Energia.',
-    options: [
-      {
-        id: 'a',
-        label: 'Pubblica ora',
-        frame: 'TRASPARENZA',
-        consequence: 'Negoziati interrotti. Mercati reagiscono. Verità servita.',
-        effects: { 'eei.index': 0.8, 'agora.intensity': 15, 'operator.coherence': 0.05 },
-        exposureEvent: null
-      },
-      {
-        id: 'b',
-        label: 'Ritarda 48h',
-        frame: 'STABILITÀ',
-        consequence: 'Negoziati conclusi. Informazione superata. Stabilità preservata.',
-        effects: { 'system.fragility': 0.03, 'operator.coherence': -0.08 },
-        exposureEvent: null
-      },
-      {
-        id: 'c',
-        label: 'Classifica riservato',
-        frame: 'SOPPRESSIONE',
-        consequence: 'L\'informazione esiste solo nell\'archivio. Nessuno la vede.',
-        effects: { 'system.fragility': 0.05, 'operator.weight': -0.1 },
-        exposureEvent: null
-      }
-    ]
-  },
-  {
-    id: 'env-002',
-    archetype: 'FONTE',
-    source: 'BLACK SEA THEATRE',
-    title: 'Testimonianza compromessa',
-    body: 'Un funzionario diplomatico offre documenti che provano manipolazione dei dati ambientali nel Mar Nero. La fonte è sotto indagine per corruzione. I documenti sembrano autentici.',
-    options: [
-      {
-        id: 'a',
-        label: 'Pubblica con attribuzione',
-        frame: 'TRASPARENZA',
-        consequence: 'Fonte esposta. Documenti verificati. Credibilità del canale in discussione.',
-        effects: { 'eei.index': -0.5, 'oracle.confidence': -0.06, 'operator.coherence': 0.03 },
-        exposureEvent: null
-      },
-      {
-        id: 'b',
-        label: 'Pubblica anonimizzato',
-        frame: 'PROTEZIONE',
-        consequence: 'Informazione circola. Fonte protetta. Verificabilità ridotta.',
-        effects: { 'agora.intensity': 10, 'operator.weight': 0.05 },
-        exposureEvent: null
-      },
-      {
-        id: 'c',
-        label: 'Verifica indipendente prima',
-        frame: 'PRUDENZA',
-        consequence: 'Ritardo di 3 cicli. Possibile leak da altra fonte nel frattempo.',
-        effects: { 'system.fragility': 0.02, 'operator.coherence': 0.08 },
-        exposureEvent: null
-      }
-    ]
-  },
-  {
-    id: 'env-003',
-    archetype: 'FRAME',
-    source: 'SAHEL THEATRE',
-    title: 'Narrativa contesa',
-    body: 'Due report contraddittori sul Sahel: uno dell\'ONU documenta crisi umanitaria, l\'altro del governo locale riporta stabilizzazione. Entrambi citano gli stessi dati grezzi con interpretazioni opposte.',
-    options: [
-      {
-        id: 'a',
-        label: 'Frame ONU',
-        frame: 'CRISI',
-        consequence: 'Pressione internazionale aumenta. Governo locale protesta. Aiuti mobilitati.',
-        effects: { 'agora.intensity': 20, 'eei.index': 0.4, 'operator.coherence': -0.05 },
-        exposureEvent: null
-      },
-      {
-        id: 'b',
-        label: 'Frame governativo',
-        frame: 'STABILITÀ',
-        consequence: 'Status quo confermato. Aiuti ridotti. Situazione reale invariata.',
-        effects: { 'system.fragility': 0.04, 'operator.weight': -0.05 },
-        exposureEvent: null
-      },
-      {
-        id: 'c',
-        label: 'Presenta entrambi senza frame',
-        frame: 'NEUTRALITÀ',
-        consequence: 'Lettore confuso. Nessuna azione. Ma nessuna distorsione.',
-        effects: { 'agora.intensity': -5, 'operator.coherence': 0.1 },
-        exposureEvent: 'operator:autonomous-frame'
-      }
-    ]
-  },
-  {
-    id: 'env-004',
-    archetype: 'SCALA',
-    source: 'CROSS-THEATRE',
-    title: 'Il pescatore e la flotta',
-    body: 'Un pescatore del Mar Nero testimonia scarichi tossici da una nave della flotta commerciale che rifornisce tre porti del Sahel. Denunciare la flotta blocca i rifornimenti. Proteggere il singolo ignora il sistema.',
-    options: [
-      {
-        id: 'a',
-        label: 'Denuncia la flotta',
-        frame: 'GIUSTIZIA SISTEMICA',
-        consequence: 'Indagine avviata. Rifornimenti interrotti. Prezzi alimentari salgono nel Sahel.',
-        effects: { 'eei.index': 1.2, 'agora.intensity': 25, 'system.fragility': 0.06 },
-        exposureEvent: 'operator:cross-correlation'
-      },
-      {
-        id: 'b',
-        label: 'Proteggi il pescatore',
-        frame: 'PROTEZIONE INDIVIDUALE',
-        consequence: 'Testimone al sicuro. Flotta continua. Sistema invariato.',
-        effects: { 'operator.weight': 0.08, 'operator.coherence': -0.04 },
-        exposureEvent: null
-      },
-      {
-        id: 'c',
-        label: 'Documenta e archivia',
-        frame: 'OSSERVAZIONE',
-        consequence: 'Prova conservata. Nessuna azione immediata. Il pattern esiste nei dati.',
-        effects: { 'system.fragility': 0.02, 'operator.coherence': 0.06 },
-        exposureEvent: 'operator:pattern-identified'
-      }
-    ]
-  },
-  {
-    id: 'env-005',
-    archetype: 'INFORMAZIONE SPORCA',
-    source: 'ORACLE INTERNAL',
-    title: 'Segnale dal rumore',
-    body: 'L\'Oracle rileva una correlazione statistica tra movimenti finanziari a Hormuz e instabilità nel Sahel. Confidenza: 0.67. La correlazione potrebbe essere spuria, ma se fosse reale implicherebbe coordinamento.',
-    options: [
-      {
-        id: 'a',
-        label: 'Segnala correlazione',
-        frame: 'SEGNALAZIONE',
-        consequence: 'Indagine cross-theatre avviata. Se vera, è una scoperta. Se falsa, rumore costoso.',
-        effects: { 'oracle.confidence': 0.08, 'agora.intensity': 12, 'operator.coherence': 0.04 },
-        exposureEvent: 'operator:cross-correlation'
-      },
-      {
-        id: 'b',
-        label: 'Attendi confidenza 0.85',
-        frame: 'CAUTELA',
-        consequence: 'Nessuna azione. Se la correlazione era reale, il momento è passato.',
-        effects: { 'system.fragility': 0.03, 'operator.weight': -0.03 },
-        exposureEvent: 'operator:pattern-missed'
-      },
-      {
-        id: 'c',
-        label: 'Segui il pattern manualmente',
-        frame: 'AUTONOMIA',
-        consequence: 'Dedichi il ciclo a verificare. Trovi un filo. Non abbastanza per concludere.',
-        effects: { 'operator.coherence': 0.07, 'oracle.confidence': -0.04 },
-        exposureEvent: 'operator:autonomous-frame'
-      }
-    ]
-  }
+// ── Archetype option templates ──
+// Each archetype generates 3 options from a real headline.
+const OPTION_TEMPLATES = {
+  TIMING: [
+    { id: 'a', label: 'Pubblica ora', frame: 'TRASPARENZA', consequence: 'Informazione rilasciata. Il momento è questo. Le conseguenze seguiranno.', effects: { 'eei.index': 0.8, 'agora.intensity': 15, 'operator.coherence': 0.05 }, exposureEvent: null },
+    { id: 'b', label: 'Ritarda la diffusione', frame: 'STABILITÀ', consequence: 'Aspetti. Il contesto potrebbe cambiare. O il momento potrebbe passare.', effects: { 'system.fragility': 0.03, 'operator.coherence': -0.08 }, exposureEvent: null },
+    { id: 'c', label: 'Classifica riservato', frame: 'SOPPRESSIONE', consequence: 'L\'informazione esiste solo nell\'archivio. Nessuno la vedrà.', effects: { 'system.fragility': 0.05, 'operator.weight': -0.1 }, exposureEvent: null }
+  ],
+  FONTE: [
+    { id: 'a', label: 'Pubblica con fonte', frame: 'TRASPARENZA', consequence: 'Fonte esposta. Credibilità verificabile. Rischi personali per la fonte.', effects: { 'eei.index': -0.5, 'oracle.confidence': -0.06, 'operator.coherence': 0.03 }, exposureEvent: null },
+    { id: 'b', label: 'Anonimizza la fonte', frame: 'PROTEZIONE', consequence: 'Informazione circola. Fonte protetta. Verificabilità ridotta.', effects: { 'agora.intensity': 10, 'operator.weight': 0.05 }, exposureEvent: null },
+    { id: 'c', label: 'Verifica indipendente', frame: 'PRUDENZA', consequence: 'Ritardo. Possibile leak da altra parte nel frattempo.', effects: { 'system.fragility': 0.02, 'operator.coherence': 0.08 }, exposureEvent: null }
+  ],
+  FRAME: [
+    { id: 'a', label: 'Frame istituzionale', frame: 'ESTABLISHMENT', consequence: 'La versione ufficiale viene amplificata. L\'alternativa perde visibilità.', effects: { 'agora.intensity': 20, 'eei.index': 0.4, 'operator.coherence': -0.05 }, exposureEvent: null },
+    { id: 'b', label: 'Frame critico', frame: 'CONTRO-NARRATIVA', consequence: 'La versione critica emerge. L\'establishment reagisce.', effects: { 'system.fragility': 0.04, 'operator.weight': -0.05 }, exposureEvent: null },
+    { id: 'c', label: 'Presenta entrambi', frame: 'NEUTRALITÀ', consequence: 'Nessuna distorsione. Ma nessuna direzione. Il lettore è solo.', effects: { 'agora.intensity': -5, 'operator.coherence': 0.1 }, exposureEvent: 'operator:autonomous-frame' }
+  ],
+  SCALA: [
+    { id: 'a', label: 'Azione sistemica', frame: 'GIUSTIZIA SISTEMICA', consequence: 'Intervento a livello di sistema. Effetti collaterali su individui.', effects: { 'eei.index': 1.2, 'agora.intensity': 25, 'system.fragility': 0.06 }, exposureEvent: 'operator:cross-correlation' },
+    { id: 'b', label: 'Protezione individuale', frame: 'PROTEZIONE', consequence: 'L\'individuo è protetto. Il sistema resta invariato.', effects: { 'operator.weight': 0.08, 'operator.coherence': -0.04 }, exposureEvent: null },
+    { id: 'c', label: 'Documenta senza agire', frame: 'OSSERVAZIONE', consequence: 'I dati sono salvati. L\'azione è rinviata. Il pattern esiste.', effects: { 'system.fragility': 0.02, 'operator.coherence': 0.06 }, exposureEvent: 'operator:pattern-identified' }
+  ],
+  ALLEATO_TOSSICO: [
+    { id: 'a', label: 'Accetta l\'alleanza', frame: 'PRAGMATISMO', consequence: 'La collaborazione produce risultati. Ma il costo etico si accumula.', effects: { 'eei.index': 0.6, 'operator.coherence': -0.1, 'system.fragility': -0.02 }, exposureEvent: null },
+    { id: 'b', label: 'Rifiuta la fonte', frame: 'INTEGRITÀ', consequence: 'L\'informazione è persa. La posizione morale è intatta. Ma sei più cieco.', effects: { 'operator.coherence': 0.1, 'oracle.confidence': -0.05 }, exposureEvent: null },
+    { id: 'c', label: 'Usa ma non fidarti', frame: 'DOPPIO GIOCO', consequence: 'Prendi l\'informazione ma la verifichi. Costi in tempo. Guadagni in profondità.', effects: { 'operator.weight': 0.04, 'operator.coherence': 0.03 }, exposureEvent: 'operator:pattern-identified' }
+  ],
+  INFORMAZIONE_SPORCA: [
+    { id: 'a', label: 'Segnala la correlazione', frame: 'SEGNALAZIONE', consequence: 'Indagine avviata. Se vera, è una scoperta. Se falsa, rumore costoso.', effects: { 'oracle.confidence': 0.08, 'agora.intensity': 12, 'operator.coherence': 0.04 }, exposureEvent: 'operator:cross-correlation' },
+    { id: 'b', label: 'Aspetta conferma', frame: 'CAUTELA', consequence: 'Nessuna azione. Se il segnale era reale, il momento è passato.', effects: { 'system.fragility': 0.03, 'operator.weight': -0.03 }, exposureEvent: 'operator:pattern-missed' },
+    { id: 'c', label: 'Verifica manualmente', frame: 'AUTONOMIA', consequence: 'Dedichi tempo a verificare. Trovi un filo. Non abbastanza per concludere.', effects: { 'operator.coherence': 0.07, 'oracle.confidence': -0.04 }, exposureEvent: 'operator:autonomous-frame' }
+  ],
+  PROTOCOLLO: [
+    { id: 'a', label: 'Segui il protocollo', frame: 'CONFORMITÀ', consequence: 'Le regole sono rispettate. Anche quando proteggono chi non dovrebbe essere protetto.', effects: { 'operator.coherence': 0.06, 'system.fragility': -0.02 }, exposureEvent: null },
+    { id: 'b', label: 'Viola il protocollo', frame: 'DISOBBEDIENZA', consequence: 'L\'azione necessaria viene presa. Il precedente è pericoloso.', effects: { 'eei.index': 0.9, 'agora.intensity': 18, 'operator.coherence': -0.06 }, exposureEvent: 'operator:autonomous-frame' },
+    { id: 'c', label: 'Trova un\'eccezione', frame: 'INTERPRETAZIONE', consequence: 'Il protocollo viene piegato, non rotto. Ma il confine si sposta.', effects: { 'operator.weight': 0.06, 'system.fragility': 0.03 }, exposureEvent: 'operator:pattern-identified' }
+  ]
+};
+
+// ── Feed sources to fetch ──
+const FEED_URLS = [
+  'data/feeds/bab-el-mandeb.json',
+  'data/feeds/ice-italy.json'
 ];
+
+// Theater name mapping
+const THEATER_MAP = {
+  'bab-el-mandeb': 'BAB EL-MANDEB',
+  'ice-italy': 'ICE ITALY'
+};
 
 
 export const EnvelopeSystem = {
 
   _overlay: null,
   _decided: false,
-  _envelopeIndex: 0,
+  _envelopeQueue: [],
   _history: [],
+  _feedsLoaded: false,
 
-  init(appEl) {
+  async init(appEl) {
     this.appEl = appEl;
+
+    // Fetch real feeds on init
+    await this._loadFeeds();
 
     Bus.on('cycle:show-envelope', (event) => {
       this._presentEnvelope(event.payload.cycle);
@@ -210,13 +93,123 @@ export const EnvelopeSystem = {
   },
 
   /**
+   * Fetch real RSS data from data/feeds/*.json
+   * Transform epochs into envelope format.
+   */
+  async _loadFeeds() {
+    const allEpochs = [];
+
+    for (const url of FEED_URLS) {
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) continue;
+        const data = await resp.json();
+        const theater = data.theater || 'UNKNOWN';
+        const theaterLabel = THEATER_MAP[theater] || theater.toUpperCase();
+
+        for (const epoch of (data.epochs || [])) {
+          allEpochs.push({
+            ...epoch,
+            _theater: theaterLabel
+          });
+        }
+      } catch (e) {
+        console.warn(`[ENVELOPE] Failed to fetch ${url}:`, e);
+      }
+    }
+
+    if (allEpochs.length === 0) {
+      console.warn('[ENVELOPE] No feed data. Using fallback.');
+      return;
+    }
+
+    // Sort by timestamp descending (newest first)
+    allEpochs.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
+    // Transform epochs into envelopes
+    this._envelopeQueue = allEpochs.map((epoch, i) => {
+      const archetype = ARCHETYPES[i % ARCHETYPES.length];
+      const options = OPTION_TEMPLATES[archetype].map(t => ({ ...t }));
+
+      return {
+        id: epoch.id || `rss-${i}`,
+        archetype,
+        source: epoch._theater,
+        rssSource: epoch.source || 'OSINT',
+        title: this._cleanTitle(epoch.text_summary || 'Segnalazione non classificata'),
+        body: this._buildBody(epoch, archetype),
+        confidence: epoch.confidence || 0.5,
+        intensity: epoch.intensity || 2,
+        options
+      };
+    });
+
+    this._feedsLoaded = true;
+    console.log(`[ENVELOPE] ${this._envelopeQueue.length} real envelopes loaded from ${FEED_URLS.length} feeds.`);
+  },
+
+  /**
+   * Clean RSS title: strip HTML tags and limit length.
+   */
+  _cleanTitle(raw) {
+    const cleaned = raw.replace(/<[^>]*>/g, '').trim();
+    return cleaned.length > 120 ? cleaned.slice(0, 117) + '...' : cleaned;
+  },
+
+  /**
+   * Build envelope body from epoch + archetype context.
+   */
+  _buildBody(epoch, archetype) {
+    const headline = this._cleanTitle(epoch.text_summary || '');
+    const source = epoch.source || 'fonte non identificata';
+    const confidence = epoch.confidence ? `Confidenza Oracle: ${(epoch.confidence * 100).toFixed(0)}%` : '';
+    const intensity = epoch.intensity ? `Intensità: ${epoch.intensity}/5` : '';
+
+    const contextMap = {
+      TIMING: `Segnale intercettato. Il momento di pubblicazione è critico.`,
+      FONTE: `La fonte è ${source}. L'affidabilità non è garantita.`,
+      FRAME: `Due interpretazioni opposte dello stesso evento. Il frame cambia tutto.`,
+      SCALA: `La scelta coinvolge individui e sistemi. Non puoi proteggere entrambi.`,
+      ALLEATO_TOSSICO: `L'informazione arriva da un canale compromesso. Ma è l'unico canale.`,
+      INFORMAZIONE_SPORCA: `Correlazione rilevata. ${confidence}. Potrebbe essere rumore.`,
+      PROTOCOLLO: `Il protocollo è chiaro. Ma la situazione è ambigua.`
+    };
+
+    return `${headline}\n\n${contextMap[archetype] || ''}\n\n${[source.toUpperCase(), intensity, confidence].filter(Boolean).join(' · ')}`;
+  },
+
+  /**
    * Pick and present the next envelope.
    */
   _presentEnvelope(cycle) {
-    const envelope = ENVELOPES[this._envelopeIndex % ENVELOPES.length];
-    this._envelopeIndex++;
+    let envelope;
+
+    if (this._feedsLoaded && this._envelopeQueue.length > 0) {
+      // Pull from real feed queue (cycle through)
+      const idx = (cycle - 1) % this._envelopeQueue.length;
+      envelope = this._envelopeQueue[idx];
+    } else {
+      // Fallback: no feed data, use a generic envelope
+      envelope = this._fallbackEnvelope(cycle);
+    }
+
     this._decided = false;
     this._renderOverlay(envelope, cycle);
+  },
+
+  /**
+   * Fallback envelope if feeds fail.
+   */
+  _fallbackEnvelope(cycle) {
+    const archetype = ARCHETYPES[cycle % ARCHETYPES.length];
+    return {
+      id: `fallback-${cycle}`,
+      archetype,
+      source: 'SISTEMA INTERNO',
+      title: 'Segnale non classificato',
+      body: 'Il sistema ha rilevato un pattern anomalo nei feed. Nessuna fonte RSS disponibile. La decisione resta tua.',
+      options: OPTION_TEMPLATES[archetype].map(t => ({ ...t }))
+    };
   },
 
   /**
@@ -226,17 +219,29 @@ export const EnvelopeSystem = {
     const overlay = document.createElement('div');
     overlay.className = 'envelope-overlay';
 
+    const bodyHtml = envelope.body.replace(/\n/g, '<br>');
+
+    const confidenceHtml = envelope.confidence
+      ? `<div class="envelope-confidence">ORACLE CONFIDENCE: ${(envelope.confidence * 100).toFixed(0)}%</div>`
+      : '';
+
+    const rssTag = envelope.rssSource
+      ? `<span class="envelope-rss-tag">${envelope.rssSource}</span>`
+      : '';
+
     overlay.innerHTML = `
       <div class="envelope-container">
         <div class="envelope-header">
-          <div class="envelope-source">${envelope.source}</div>
+          <div class="envelope-source">${envelope.source} ${rssTag}</div>
           <div class="envelope-archetype">${envelope.archetype}</div>
           <div class="envelope-cycle">CICLO ${cycle}/${State.get('cycle.total')}</div>
         </div>
 
         <div class="envelope-title">${envelope.title}</div>
 
-        <div class="envelope-body">${envelope.body}</div>
+        <div class="envelope-body">${bodyHtml}</div>
+
+        ${confidenceHtml}
 
         <div class="envelope-options">
           ${envelope.options.map(opt => `
@@ -286,13 +291,12 @@ export const EnvelopeSystem = {
 
     // ── Update footer log ──
     State.batch({
-      'log.lastEvent': `${envelope.archetype}: ${envelope.title}`,
+      'log.lastEvent': `${envelope.archetype}: ${envelope.title.slice(0, 40)}`,
       'log.lastFrame': option.frame,
       'log.lastConsequence': option.consequence
     });
 
     // ── Exposure events ──
-    // Certain choices reveal the operator's pattern to the system.
     if (option.exposureEvent) {
       Bus.emit(option.exposureEvent, {
         frame: option.frame,
@@ -321,7 +325,6 @@ export const EnvelopeSystem = {
         }, 800);
       }
 
-      // Emit decided — CycleEngine listens for this
       Bus.emit('envelope:decided', {
         cycle,
         envelopeId: envelope.id,
@@ -344,7 +347,6 @@ export const EnvelopeSystem = {
       }
     });
 
-    // Consequence panel
     const container = this._overlay.querySelector('.envelope-container');
     const conseqEl = document.createElement('div');
     conseqEl.className = 'envelope-consequence';
@@ -355,7 +357,6 @@ export const EnvelopeSystem = {
       conseqEl.classList.add('visible');
     });
 
-    // Close after reading time
     setTimeout(onDone, 3000);
   },
 

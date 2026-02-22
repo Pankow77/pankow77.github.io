@@ -74,7 +74,7 @@ export async function boot() {
 
   // ── Phase 4: Game engine ──
   CycleEngine.init();
-  EnvelopeSystem.init(appEl);
+  await EnvelopeSystem.init(appEl);
 
   // ── Phase 5: Open hub + present first envelope ──
   const path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');

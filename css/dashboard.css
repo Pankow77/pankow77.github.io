@@ -264,7 +264,7 @@ body.state-fractured::after {
   width: 100%;
   height: 2px;
   background: var(--tile-accent, var(--cyan));
-  opacity: 0;
+  opacity: 0.5;
   transition: opacity 0.3s;
 }
 
@@ -282,6 +282,37 @@ body.state-fractured::after {
   transform: scale(0.98);
 }
 
+/* ── Tile Header (icon + title block) ── */
+.tile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tile-icon {
+  flex-shrink: 0;
+  color: var(--tile-accent, var(--cyan));
+  opacity: 0.7;
+  margin-top: 1px;
+  transition: opacity 0.3s;
+}
+
+.tile:hover .tile-icon {
+  opacity: 1;
+}
+
+.tile-icon svg {
+  display: block;
+}
+
+.tile-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
 .tile-title {
   font-family: var(--font-display);
   font-size: 11px;
@@ -290,18 +321,88 @@ body.state-fractured::after {
   text-shadow: 0 0 8px rgba(0, 200, 255, 0.3);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 8px;
+}
+
+.tile-subtitle {
+  font-family: var(--font-body);
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .tile-status {
   font-size: 10px;
   color: var(--text-secondary);
   line-height: 1.4;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
 }
 
 .tile-micro {
   margin-top: auto;
   padding-top: 8px;
+}
+
+/* ── Risk Bar (Oracle, EEI) ── */
+.micro-risk-bar {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.risk-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Status Line (Backbone, Chronos, Archivio) ── */
+.micro-status-line {
+  font-size: 9px;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Pneuma Tone Bar ── */
+.pneuma-tone {
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+}
+
+/* ── Ghost Badge (Archivio) ── */
+.ghost-badge {
+  font-size: 9px;
+  font-family: var(--font-display);
+  color: var(--purple);
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+  animation: ghost-flicker 4s ease-in-out infinite;
+}
+
+@keyframes ghost-flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+/* ── LAGO RÀ Advance Button ── */
+.lago-ra-advance {
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--cyan);
+  text-align: center;
+  letter-spacing: 2px;
+  animation: advance-pulse 2s ease-in-out infinite;
+}
+
+@keyframes advance-pulse {
+  0%, 100% { opacity: 0.7; text-shadow: 0 0 8px rgba(0, 200, 255, 0.3); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(0, 200, 255, 0.6); }
 }
 
 /* ── LAGO RÀ (Center Tile) ── */
@@ -315,6 +416,14 @@ body.state-fractured::after {
 .tile.lago-ra:hover {
   transform: none;
   background: var(--bg-void);
+}
+
+.tile.lago-ra .tile-header {
+  justify-content: center;
+}
+
+.tile.lago-ra .tile-title-block {
+  align-items: center;
 }
 
 .tile.lago-ra .tile-title {
@@ -353,14 +462,14 @@ body.state-fractured::after {
   50% { transform: scale(0.85); opacity: 0.5; }
 }
 
-/* ── Tile Accent Colors ── */
+/* ── Tile Accent Colors (matched to individual pages) ── */
 .tile[data-module="teatri"]   { --tile-accent: var(--red); }
 .tile[data-module="agora"]    { --tile-accent: var(--green); }
-.tile[data-module="oracle"]   { --tile-accent: var(--purple); }
-.tile[data-module="archivio"] { --tile-accent: var(--ice); }
-.tile[data-module="pneuma"]   { --tile-accent: var(--orange); }
-.tile[data-module="backbone"] { --tile-accent: var(--red); }
-.tile[data-module="eei"]      { --tile-accent: var(--red); }
+.tile[data-module="oracle"]   { --tile-accent: var(--cyan); }
+.tile[data-module="archivio"] { --tile-accent: var(--cyan); }
+.tile[data-module="pneuma"]   { --tile-accent: var(--green); }
+.tile[data-module="backbone"] { --tile-accent: var(--pink); }
+.tile[data-module="eei"]      { --tile-accent: var(--green); }
 .tile[data-module="chronos"]  { --tile-accent: var(--teal); }
 
 /* ── Micro Visualizations ── */
@@ -1130,7 +1239,30 @@ body.isolation-active .tile[data-module="oracle"] .micro-confidence {
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.8;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
+}
+
+.envelope-rss-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--green);
+  background: rgba(57, 255, 20, 0.08);
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  padding: 2px 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.envelope-confidence {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 200, 255, 0.03);
 }
 
 .envelope-options {
