@@ -36,6 +36,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   final _witnessObjectController = TextEditingController();
 
   String _selectedScenario = 'ricerca';
+  EmotionalIntensity _selectedIntensity = EmotionalIntensity.medium;
 
   final _steps = const [
     _StepInfo(
@@ -103,6 +104,16 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       fields: ['witness'],
     ),
     _StepInfo(
+      title: 'CALIBRAZIONE',
+      subtitle: 'Intensità emotiva della sessione',
+      prompt:
+          'Quanto vuoi che il buio prema?\n\n'
+          'Non è una difficoltà. È una calibrazione terapeutica. '
+          'Se il tuo trauma è recente o ti senti fragile, scegli BASSA. '
+          'Il Comandante ti proteggerà di più.',
+      fields: ['intensity'],
+    ),
+    _StepInfo(
       title: 'SCENARIO',
       subtitle: 'Il luogo del tuo tramonto',
       prompt: 'Dove si consumano le tue ultime ore?',
@@ -153,6 +164,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       ghostIdentity: ghostId.isNotEmpty ? ghostId : null,
       silentWitnessName: witnessName.isNotEmpty ? witnessName : null,
       silentWitnessObject: witnessObj.isNotEmpty ? witnessObj : null,
+      intensity: _selectedIntensity,
     );
 
     Navigator.push(
@@ -394,9 +406,78 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               onChanged: (_) => setState(() {}),
             ),
           ],
+          if (step.fields.contains('intensity')) _buildIntensitySelector(),
           if (step.fields.contains('scenario')) _buildScenarioSelector(),
         ],
       ),
+    );
+  }
+
+  Widget _buildIntensitySelector() {
+    final options = {
+      EmotionalIntensity.low: (
+        'BASSA',
+        'Margini di sicurezza ampi. Ghost e Testimone appaiono una sola volta. '
+            'Narrazione malinconica. Il Comandante interviene prima. '
+            'Consigliata per traumi recenti o prima sessione.',
+        TerminusTheme.neonGreen,
+      ),
+      EmotionalIntensity.medium: (
+        'MEDIA (default)',
+        'Bilanciata. Ghost e Testimone appaiono normalmente. '
+            'Commander standard. Il buio preme ma non schiaccia.',
+        TerminusTheme.neonOrange,
+      ),
+      EmotionalIntensity.high: (
+        'ALTA',
+        'Piena intensità. Ghost persistente, Testimone permanente. '
+            '"Loro" usano la voce dei tuoi cari. Il buio è implacabile. '
+            'Solo per chi sa cosa affronta.',
+        TerminusTheme.neonRed,
+      ),
+    };
+
+    return Column(
+      children: options.entries.map((e) {
+        final isSelected = _selectedIntensity == e.key;
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 12),
+          child: InkWell(
+            onTap: () => setState(() => _selectedIntensity = e.key),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: isSelected
+                    ? e.value.$3.withValues(alpha: 0.08)
+                    : TerminusTheme.bgCard,
+                border: Border.all(
+                  color: isSelected
+                      ? e.value.$3.withValues(alpha: 0.5)
+                      : TerminusTheme.border,
+                ),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    e.value.$1,
+                    style: TerminusTheme.systemLog.copyWith(
+                      color: isSelected ? e.value.$3 : TerminusTheme.textSecondary,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    e.value.$2,
+                    style: TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }).toList(),
     );
   }
 
@@ -495,6 +576,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       case 6:
         return true; // Witness is optional
       case 7:
+        return true; // Intensity always has a default
+      case 8:
         return true; // Scenario always has a default
       default:
         return false;

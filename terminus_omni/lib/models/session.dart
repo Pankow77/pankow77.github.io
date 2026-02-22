@@ -116,6 +116,13 @@ class TerminusSession {
     buffer.writeln('LUMEN FINALE: $lumenCount/10');
     buffer.writeln();
     buffer.writeln('FINE DEL REGISTRO');
+    buffer.writeln();
+    buffer.writeln('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    buffer.writeln('AVVISO: Questo registro contiene dati personali.');
+    buffer.writeln('È archiviato localmente, crittografato sul dispositivo.');
+    buffer.writeln('Non viene mai trasmesso. Se perdi il dispositivo,');
+    buffer.writeln('perdi il registro. Questa è la sovranità dei dati.');
+    buffer.writeln('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     return buffer.toString();
   }
 

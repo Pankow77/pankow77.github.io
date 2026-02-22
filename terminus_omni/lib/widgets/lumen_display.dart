@@ -7,8 +7,13 @@ import '../config/theme.dart';
 /// when extinguished — with flicker, fade, and screen shake.
 class LumenDisplay extends StatelessWidget {
   final int currentLumen;
+  final bool performanceMode;
 
-  const LumenDisplay({super.key, required this.currentLumen});
+  const LumenDisplay({
+    super.key,
+    required this.currentLumen,
+    this.performanceMode = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +43,18 @@ class LumenDisplay extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 3),
                 child: isLit
-                    ? _FlickeringCandle(
-                        color: TerminusTheme.lumenColor(lumenIndex),
-                        intensity: lumenIndex <= 3 ? 0.8 : 0.4,
-                      )
-                    : _ExtinguishedCandle(
-                        color: TerminusTheme.lumenColor(lumenIndex),
-                      ),
+                    ? performanceMode
+                        ? _StaticCandle(
+                            color: TerminusTheme.lumenColor(lumenIndex))
+                        : _FlickeringCandle(
+                            color: TerminusTheme.lumenColor(lumenIndex),
+                            intensity: lumenIndex <= 3 ? 0.8 : 0.4,
+                          )
+                    : performanceMode
+                        ? _StaticExtinguished()
+                        : _ExtinguishedCandle(
+                            color: TerminusTheme.lumenColor(lumenIndex),
+                          ),
               );
             }),
           ),
@@ -254,6 +264,79 @@ class _ExtinguishedCandleState extends State<_ExtinguishedCandle>
           ),
         );
       },
+    );
+  }
+}
+
+/// Static lit candle — no animation, for performance mode.
+class _StaticCandle extends StatelessWidget {
+  final Color color;
+  const _StaticCandle({required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 20,
+      height: 36,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: 10,
+            height: 14,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: color.withValues(alpha: 0.8),
+              boxShadow: [
+                BoxShadow(
+                  color: color.withValues(alpha: 0.4),
+                  blurRadius: 8,
+                  spreadRadius: 2,
+                ),
+              ],
+            ),
+          ),
+          Container(width: 2, height: 3, color: TerminusTheme.textDim),
+          Container(
+            width: 8,
+            height: 15,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(1),
+              color: color.withValues(alpha: 0.25),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Static extinguished candle — no animation, for performance mode.
+class _StaticExtinguished extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 20,
+      height: 36,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(width: 4, height: 14, color: Colors.transparent),
+          Container(width: 2, height: 3, color: TerminusTheme.bgDeep),
+          Container(
+            width: 8,
+            height: 15,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(1),
+              color: TerminusTheme.bgDeep,
+              border: Border.all(
+                color: TerminusTheme.border.withValues(alpha: 0.2),
+                width: 0.5,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

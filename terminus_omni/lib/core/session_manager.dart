@@ -61,6 +61,7 @@ class SessionManager extends ChangeNotifier {
         scenarioId: scenarioId,
       );
       _lumenCount.restore(10);
+      _safetyCommander.setIntensity(profile.intensity);
 
       // Start LLM session and get initial narrative
       final initialNarrative = await llm.startSession(

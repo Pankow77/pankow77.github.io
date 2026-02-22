@@ -19,6 +19,20 @@ enum NarrativeMetaphor {
   eclipse, // Perdita graduale di luce, il mondo che si spegne
 }
 
+/// Emotional intensity calibration.
+///
+/// Controls how aggressively Ghost Voice, Silent Witness, and
+/// atmospheric elements operate. Lower intensity = wider safety
+/// margins, Commander triggers earlier, Ghost appears less frequently.
+///
+/// This is NOT a difficulty setting. It's a therapeutic dosing control
+/// (Ogden et al., 2006 — Window of Tolerance).
+enum EmotionalIntensity {
+  low,    // First-time users, recent trauma (<6 months), high sensitivity
+  medium, // Default. Balanced dosing, standard Commander threshold
+  high,   // Experienced users, resolved-but-unprocessed trauma
+}
+
 class VictimProfile {
   /// Full name of the character/subject.
   final String name;
@@ -65,6 +79,9 @@ class VictimProfile {
   /// The narrative metaphor chosen for this session.
   final NarrativeMetaphor metaphor;
 
+  /// Emotional intensity calibration (therapeutic dosing).
+  final EmotionalIntensity intensity;
+
   const VictimProfile({
     required this.name,
     required this.archetype,
@@ -79,6 +96,7 @@ class VictimProfile {
     this.silentWitnessName,
     this.silentWitnessObject,
     this.metaphor = NarrativeMetaphor.train,
+    this.intensity = EmotionalIntensity.medium,
   });
 
   Map<String, dynamic> toJson() => {
@@ -95,6 +113,7 @@ class VictimProfile {
         'silentWitnessName': silentWitnessName,
         'silentWitnessObject': silentWitnessObject,
         'metaphor': metaphor.name,
+        'intensity': intensity.name,
       };
 
   factory VictimProfile.fromJson(Map<String, dynamic> json) => VictimProfile(
@@ -113,5 +132,8 @@ class VictimProfile {
         metaphor: json['metaphor'] != null
             ? NarrativeMetaphor.values.byName(json['metaphor'] as String)
             : NarrativeMetaphor.train,
+        intensity: json['intensity'] != null
+            ? EmotionalIntensity.values.byName(json['intensity'] as String)
+            : EmotionalIntensity.medium,
       );
 }

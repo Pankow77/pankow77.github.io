@@ -1,4 +1,5 @@
 import '../config/constants.dart';
+import '../models/victim_profile.dart';
 
 /// The Commander Safety System — diegetic emotional pause.
 ///
@@ -7,18 +8,70 @@ import '../config/constants.dart';
 /// The subject stays in the game, is not judged, not pathologized,
 /// but has time to process.
 ///
-/// From Cristiano's design: "Se l'LLM si accorge che il picco emotivo
-/// è troppo alto, il comandante della nave interviene e obbliga
-/// l'equipaggio a mezz'ora di riposo."
+/// Intensity calibration (from Ogden et al., 2006):
+/// - LOW: Commander triggers at riskScore >= 3, Ghost never fires twice
+/// - MEDIUM: Commander triggers at riskScore >= 5 (default)
+/// - HIGH: Commander triggers at riskScore >= 7, full Ghost + Witness
 class SafetyCommander {
   int _consecutiveShortResponses = 0;
   int _repetitionCount = 0;
   String? _lastUserMessage;
   bool _pauseActive = false;
   DateTime? _pauseStartedAt;
+  int _pauseCount = 0;
+
+  /// Current intensity calibration.
+  EmotionalIntensity _intensity = EmotionalIntensity.medium;
 
   bool get isPauseActive => _pauseActive;
   DateTime? get pauseStartedAt => _pauseStartedAt;
+  int get pauseCount => _pauseCount;
+
+  /// Configure intensity from victim profile.
+  void setIntensity(EmotionalIntensity intensity) {
+    _intensity = intensity;
+  }
+
+  /// Risk score threshold based on intensity calibration.
+  int get _threshold {
+    switch (_intensity) {
+      case EmotionalIntensity.low:
+        return 3; // Triggers much earlier — wider safety margin
+      case EmotionalIntensity.medium:
+        return 5; // Default
+      case EmotionalIntensity.high:
+        return 7; // More tolerance for experienced users
+    }
+  }
+
+  /// Whether Ghost Voice should be suppressed at this intensity.
+  /// At LOW, ghost fires only once per session.
+  bool _ghostFiredThisSession = false;
+
+  bool shouldSuppressGhost() {
+    if (_intensity == EmotionalIntensity.low && _ghostFiredThisSession) {
+      return true;
+    }
+    return false;
+  }
+
+  void markGhostFired() {
+    _ghostFiredThisSession = true;
+  }
+
+  /// Whether Silent Witness should appear only once at LOW intensity.
+  bool _witnessFiredThisSession = false;
+
+  bool shouldSuppressWitness() {
+    if (_intensity == EmotionalIntensity.low && _witnessFiredThisSession) {
+      return true;
+    }
+    return false;
+  }
+
+  void markWitnessFired() {
+    _witnessFiredThisSession = true;
+  }
 
   /// Check if the user's message indicates emotional overload.
   /// Returns true if the Commander should intervene.
@@ -46,7 +99,8 @@ class SafetyCommander {
     }
 
     // Check for obsessive repetition
-    if (_lastUserMessage != null && _similarity(normalized, _lastUserMessage!) > 0.8) {
+    if (_lastUserMessage != null &&
+        _similarity(normalized, _lastUserMessage!) > 0.8) {
       _repetitionCount++;
       if (_repetitionCount >= 3) {
         riskScore += 3;
@@ -57,13 +111,14 @@ class SafetyCommander {
 
     _lastUserMessage = normalized;
 
-    return riskScore >= 5;
+    return riskScore >= _threshold;
   }
 
   /// Activate the Commander pause.
   void activatePause() {
     _pauseActive = true;
     _pauseStartedAt = DateTime.now();
+    _pauseCount++;
     _consecutiveShortResponses = 0;
     _repetitionCount = 0;
   }
@@ -82,7 +137,15 @@ class SafetyCommander {
   }
 
   /// The diegetic narrative for the Commander intervention.
-  String get commanderNarrative => '''
+  String get commanderNarrative {
+    // Different tone based on how many times the pause has been triggered
+    if (_pauseCount <= 1) {
+      return _firstPauseNarrative;
+    }
+    return _repeatPauseNarrative;
+  }
+
+  String get _firstPauseNarrative => '''
 ═══════════════════════════════════════════
 
 [INTERRUZIONE DI SISTEMA]
@@ -94,6 +157,23 @@ Il Comandante della struttura ha rilevato livelli di stress operativo critici ne
 Le luci della sala si abbassano a un caldo ambra. Il ronzio dei macchinari si riduce a un mormorio. Per i prossimi 30 minuti, il protocollo è sospeso. Non ci sono minacce. Non ci sono decisioni. C'è solo il silenzio e il respiro.
 
 Quando sarai pronto, scrivi qualsiasi cosa per riprendere. Il buio aspetterà.
+
+[TIMER: 30:00]
+
+═══════════════════════════════════════════''';
+
+  String get _repeatPauseNarrative => '''
+═══════════════════════════════════════════
+
+[INTERRUZIONE DI SISTEMA — PRIORITÀ MASSIMA]
+
+Il Comandante entra nella sala. Ti guarda.
+
+"So che vuoi andare avanti. Lo so. Ma il mio lavoro non è lasciarti andare avanti. Il mio lavoro è riportarti a casa. Trenta minuti. Siediti. Respira. È un ordine."
+
+Si siede di fronte a te. Non dice altro. Non se ne va.
+
+Quando sarai pronto, scrivi qualsiasi cosa per riprendere.
 
 [TIMER: 30:00]
 

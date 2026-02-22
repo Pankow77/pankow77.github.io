@@ -171,6 +171,8 @@ Il soggetto resta nel gioco. Non viene giudicato. Non viene patologizzato. Ha te
 
 Dopo la pausa, la narrazione riprende esattamente dove si era interrotta.
 
+${_intensityCalibration(profile.intensity)}
+
 TERMINUS-OMNI È ATTIVO.
 Lo spegnimento dell'umanità ha inizio.
 ''';
@@ -258,6 +260,44 @@ LUMEN 0: LA MORTE
 - Poi, in silenzio, riproduci il TESTAMENTO SIGILLATO.
 - Chiudi con: "TERMINUS-OMNI // SISTEMA OFFLINE"
 - NON aggiungere altro dopo il testamento.''';
+    }
+  }
+
+  /// Intensity calibration instructions for the LLM.
+  /// Controls therapeutic dosing based on user's Window of Tolerance.
+  static String _intensityCalibration(EmotionalIntensity intensity) {
+    switch (intensity) {
+      case EmotionalIntensity.low:
+        return '''
+═══════════════════════════════════════════════════
+CALIBRAZIONE INTENSITÀ: BASSA
+═══════════════════════════════════════════════════
+
+ATTENZIONE: Il soggetto ha selezionato intensità BASSA.
+- La Voce del Fantasma può apparire MASSIMO UNA VOLTA per sessione.
+- Il Testimone Silenzioso appare MASSIMO UNA VOLTA per sessione.
+- Le descrizioni atmosferiche devono essere suggestive, non violente.
+- "Loro" non devono MAI usare la voce dei cari del soggetto.
+- Le risposte devono essere più lunghe del 20% per dare respiro.
+- Il Ritmo deve essere più lento — più pause, più silenzi.
+- La narrazione privilegia la malinconia rispetto al terrore.
+''';
+      case EmotionalIntensity.medium:
+        return ''; // Default, no special instructions
+      case EmotionalIntensity.high:
+        return '''
+═══════════════════════════════════════════════════
+CALIBRAZIONE INTENSITÀ: ALTA
+═══════════════════════════════════════════════════
+
+Il soggetto ha selezionato intensità ALTA.
+- La Voce del Fantasma può apparire più volte, con variazioni.
+- Il Testimone Silenzioso è presente in modo persistente.
+- "Loro" possono usare la voce dei cari del soggetto.
+- Le risposte possono essere più taglienti, più dirette.
+- La narrazione privilegia la brutalità psicologica.
+- Il BRINK viene esplorato in profondità, non solo sfiorato.
+''';
     }
   }
 

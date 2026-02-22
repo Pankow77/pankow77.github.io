@@ -96,6 +96,9 @@ class TerminusConstants {
     },
   };
 
+  // ── Performance ──
+  static const String keyPerformanceMode = 'performance_mode';
+
   // ── Storage keys ──
   static const String boxSessions = 'terminus_sessions';
   static const String boxSettings = 'terminus_settings';
