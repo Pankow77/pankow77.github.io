@@ -978,6 +978,19 @@
         // ── INIT ──
         window.addEventListener('DOMContentLoaded', init);
     </script>
+<script src="js/world-bridge.js"></script>
+<script>
+// ── WORLD CLIMATE — Archivio Silente is an organ ──
+// Archivio heals. Transmutation = clarity = reduced culturalEntropy.
+WorldBridge.open('archivio-silente');
+const _origTransmute = window.executeTransmutation;
+if (_origTransmute) {
+    window.executeTransmutation = function() {
+        _origTransmute.apply(this, arguments);
+        WorldBridge.heal('archivio-silente', 0.6);
+    };
+}
+</script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>

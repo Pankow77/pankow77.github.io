@@ -22,6 +22,7 @@
 
 import { Bus } from '../bus.js';
 import { State } from './state.js';
+import { WorldState } from './world-state.js';
 
 // ── Constants ──
 const MASTER_VOLUME = 0.35;
@@ -158,6 +159,12 @@ export const SigilAudio = {
   /**
    * Update drone based on fragility (0.0 - 1.0).
    * Higher fragility = higher pitch, louder, wider filter, faster breathing.
+   *
+   * WORLD CLIMATE INTEGRATION:
+   *   structuralDrift  → raises resonance floor (Q increases)
+   *   culturalEntropy  → detunes the second oscillator more (beating)
+   *   worldBias.escalation → raises LFO speed minimum (faster unease)
+   *   The world changes the air. Not the events. The air.
    */
   _updateDrone(fragility) {
     if (!this._ctx) return;
@@ -165,11 +172,15 @@ export const SigilAudio = {
     // Oscillators keep moving. Only the master gain is zero.
     // When you unmute, the drone is exactly where it should be.
     const t = this._ctx.currentTime;
+    const climate = WorldState.getClimate();
 
     // Pitch: A1 (55Hz) → E2 (82Hz) with fragility
     const freq = DRONE_BASE_FREQ + (DRONE_MAX_FREQ - DRONE_BASE_FREQ) * fragility;
     this._drone.frequency.setTargetAtTime(freq, t, 2);
-    this._drone2.frequency.setTargetAtTime(freq + 0.5 + fragility * 2, t, 2);
+
+    // Second oscillator detune: world culturalEntropy widens the beating
+    const entropyDetune = climate.culturalEntropy * 3;  // Up to +3Hz beating
+    this._drone2.frequency.setTargetAtTime(freq + 0.5 + fragility * 2 + entropyDetune, t, 2);
 
     // Volume: 0.08 → 0.28
     const vol = 0.08 + fragility * 0.20;
@@ -179,8 +190,14 @@ export const SigilAudio = {
     const cutoff = 120 + fragility * 230;
     this._droneFilter.frequency.setTargetAtTime(cutoff, t, 2);
 
+    // Resonance floor: structuralDrift raises Q (world instability = focused drone)
+    const baseQ = 2 + climate.structuralDrift * 4;  // Q: 2 → 6
+    this._droneFilter.Q.setTargetAtTime(baseQ, t, 3);
+
     // LFO speed: 0.08Hz → 0.25Hz (breathing accelerates)
-    const lfoFreq = 0.08 + fragility * 0.17;
+    // World escalation bias raises the floor — restless breathing
+    const escalationFloor = Math.max(0, climate.worldBias.escalation) * 0.05;
+    const lfoFreq = 0.08 + escalationFloor + fragility * 0.17;
     this._droneLFO.frequency.setTargetAtTime(lfoFreq, t, 3);
 
     // LFO depth increases

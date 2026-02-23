@@ -1026,6 +1026,26 @@
     console.log('%cHYBRID SYNDICATE RESEARCH DIVISION', 'color: #ff0084; font-size: 12px;');
     console.log('%cSECURITY_LVL: OMEGA // PUBLIC ACCESS GRANTED', 'color: #00ffff;');
     </script>
+<script src="js/world-bridge.js"></script>
+<script>
+// ── WORLD CLIMATE — EEI Predictor is an organ ──
+// Shock activation = escalation pressure. Reset = healing.
+WorldBridge.open('eei-predictor');
+const _origShock = window.toggleShock;
+if (_origShock) {
+    window.toggleShock = function(id) {
+        _origShock.apply(this, arguments);
+        WorldBridge.pressure('eei-predictor', 0.5);
+    };
+}
+const _origReset = window.resetAll;
+if (_origReset) {
+    window.resetAll = function() {
+        _origReset.apply(this, arguments);
+        WorldBridge.heal('eei-predictor', 0.4);
+    };
+}
+</script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>

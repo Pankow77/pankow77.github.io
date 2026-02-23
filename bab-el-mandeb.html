@@ -1210,6 +1210,17 @@
             refreshUI();
         });
 
+        // ── WORLD CLIMATE — this page is an organ ──
+        Bus.emit('world:module-heartbeat', { moduleId: 'bab-el-mandeb' }, 'bab-el-mandeb');
+        Bus.on('bab-el-mandeb:epoch-ingested', (e) => {
+            const intensity = (e.payload && e.payload.intensity) ? e.payload.intensity / 5 : 0.5;
+            Bus.emit('world:module-pressure', {
+                moduleId: 'bab-el-mandeb',
+                intensity,
+                direction: 'pressure'
+            }, 'bab-el-mandeb');
+        });
+
         // ── CONSOLE ACCESS ──
         window.BAB = BabElMandebModule;
         window.BUS = Bus;

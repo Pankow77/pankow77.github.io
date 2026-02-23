@@ -28,6 +28,7 @@ import { EnvelopeSystem } from './envelope.js';
 import { PADC } from './padc.js';
 import { ProfiloOperativo } from './profilo.js';
 import { SigilAudio } from './audio.js';
+import { WorldState } from './world-state.js';
 
 export async function boot() {
   const appEl = document.getElementById('app');
@@ -73,10 +74,13 @@ export async function boot() {
   PADC.init(appEl);
   ProfiloOperativo.init(appEl);
 
-  // ── Phase 3.5: Nervous system (audio) ──
+  // ── Phase 3.5: World climate (persistent, cross-session) ──
+  WorldState.init();
+
+  // ── Phase 3.6: Nervous system (audio) ──
   SigilAudio.init(appEl);
 
-  // ── Phase 4: Game engine ──
+  // ── Phase 4: Game engine (Arena reads WorldState) ──
   CycleEngine.init();
   EnvelopeSystem.init(appEl);
 
@@ -96,5 +100,5 @@ export async function boot() {
     'color: #39ff14;'
   );
 
-  window.__dashboard = { Router, header, footer, CycleEngine, EnvelopeSystem, PADC, ProfiloOperativo, SigilAudio };
+  window.__dashboard = { Router, header, footer, CycleEngine, EnvelopeSystem, PADC, ProfiloOperativo, SigilAudio, WorldState };
 }

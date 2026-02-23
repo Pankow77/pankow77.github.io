@@ -47,6 +47,7 @@
 
 import { State } from './state.js';
 import { Bus } from '../bus.js';
+import { WorldState } from './world-state.js';
 
 // ═══════════════════════════════════
 //  AXIS DEFINITIONS
@@ -508,7 +509,13 @@ export const CoreEngine = {
     // If average divergence over last 8 rounds exceeds threshold,
     // the audio field gets LFO jitter. Not an event. A climate.
     // The drone becomes subtly irregular. The world feels uncertain.
-    const CLIMATE_THRESHOLD = 0.3;
+    //
+    // WORLD CLIMATE INTEGRATION:
+    // culturalEntropy lowers the threshold (easier to trigger jitter).
+    // structuralDrift amplifies jitter intensity.
+    // The standalone pages change the air the arena breathes.
+    const worldClimate = WorldState.getClimate();
+    const CLIMATE_THRESHOLD = Math.max(0.12, 0.3 - worldClimate.culturalEntropy * 0.15);
     const avgDivergence = this._recentDivergence.length > 0
       ? this._recentDivergence.reduce((a, b) => a + b, 0) / this._recentDivergence.length
       : 0;
@@ -518,7 +525,9 @@ export const CoreEngine = {
     if (avgDivergence > CLIMATE_THRESHOLD) {
       // Feed new jitter into persistent state.
       // Intensity scales with how far above threshold we are.
-      const jitterIntensity = (avgDivergence - CLIMATE_THRESHOLD) * 0.04;
+      // structuralDrift amplifies: unstable world = louder jitter.
+      const driftAmplifier = 1 + worldClimate.structuralDrift * 0.8;
+      const jitterIntensity = (avgDivergence - CLIMATE_THRESHOLD) * 0.04 * driftAmplifier;
       this._jitterState.lfo += jitterIntensity * (Math.random() * 2 - 1);
       this._jitterState.detune += jitterIntensity * 10 * (Math.random() * 2 - 1);
       this._jitterState.resonance += jitterIntensity * 0.5 * (Math.random() * 2 - 1);
@@ -544,6 +553,8 @@ export const CoreEngine = {
     State.set('agora.unresolvedTension', this._unresolvedTension || false);
     State.set('agora.divergence', divergence);
     State.set('agora.climate', avgDivergence > CLIMATE_THRESHOLD ? avgDivergence : 0);
+    State.set('world.structuralDrift', worldClimate.structuralDrift);
+    State.set('world.culturalEntropy', worldClimate.culturalEntropy);
 
     Bus.emit('agora:field-shift', {
       audio: { ...this._audioAccumulator },
@@ -688,6 +699,10 @@ export const CoreEngine = {
   /**
    * Frame → axis mapping. Single source of truth.
    * Each frame is a vector in the same 4D space as the cores.
+   *
+   * WORLD CLIMATE INTEGRATION:
+   *   effectiveFrame = baseFrame + worldBias * WORLD_K
+   *   The world tilts every frame. Not enough to dictate. Enough to matter.
    */
   _getFrameAxes(frame) {
     const FRAME_AXES = {
@@ -705,7 +720,21 @@ export const CoreEngine = {
       'CAUTELA':                { escalation: -0.5, temporality: +0.4, ethics: +0.2, scale: 0 },
       'AUTONOMIA':              { ethics: +0.4, scale: -0.3, escalation: +0.3, temporality: 0 }
     };
-    return FRAME_AXES[frame] || null;
+
+    const base = FRAME_AXES[frame];
+    if (!base) return null;
+
+    // ── WORLD BIAS INJECTION ──
+    // The world climate shifts every frame vector.
+    // k = 0.25: enough to tilt, not enough to dictate.
+    const WORLD_K = 0.25;
+    const bias = WorldState.getBiasVector();
+    return {
+      escalation:  clamp(base.escalation  + bias.escalation  * WORLD_K, -1, 1),
+      scale:       clamp(base.scale       + bias.scale       * WORLD_K, -1, 1),
+      ethics:      clamp(base.ethics      + bias.ethics      * WORLD_K, -1, 1),
+      temporality: clamp(base.temporality + bias.temporality * WORLD_K, -1, 1)
+    };
   },
 
   /**
@@ -878,3 +907,8 @@ export const CoreEngine = {
     return this._dissonance;
   }
 };
+
+// ── Utility ──
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}

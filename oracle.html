@@ -955,6 +955,17 @@
         await Identity.init();
         ECOSYSTEM.register('identity', Identity);
         ECOSYSTEM.register('oracle', OracleModule);
+
+        // ── WORLD CLIMATE — Oracle is an organ ──
+        // Oracle visit = stable reading, heals structuralDrift
+        Bus.emit('world:module-heartbeat', { moduleId: 'oracle' }, 'oracle');
+        Bus.on('oracle:scan-complete', () => {
+            Bus.emit('world:module-pressure', {
+                moduleId: 'oracle',
+                intensity: 0.3,
+                direction: 'heal'
+            }, 'oracle');
+        });
     </script>
 </body>
 </html>

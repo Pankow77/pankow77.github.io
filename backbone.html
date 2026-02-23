@@ -891,6 +891,9 @@
             }
         });
 
+        // ── WORLD CLIMATE — Backbone is an organ ──
+        Bus.emit('world:module-heartbeat', { moduleId: 'backbone' }, 'backbone');
+
         // ═══════════════════════════════════════
         // BOOT COMPLETE
         // ═══════════════════════════════════════

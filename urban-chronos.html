@@ -1449,6 +1449,29 @@
         // ── INIT ──
         window.addEventListener('DOMContentLoaded', init);
     </script>
+<script src="js/world-bridge.js"></script>
+<script>
+// ── WORLD CLIMATE — Urban Chronos is an organ ──
+// Time manipulation = structuralDrift pressure.
+WorldBridge.open('urban-chronos');
+// Epoch shifts = temporal pressure
+const _origShift = window.shiftEpoch;
+if (_origShift) {
+    window.shiftEpoch = function(n) {
+        _origShift.apply(this, arguments);
+        WorldBridge.pressure('urban-chronos', Math.min(1, Math.abs(n) * 0.15));
+    };
+}
+// Preset loading = structural pressure
+const _origPreset = window.loadPreset;
+if (_origPreset) {
+    window.loadPreset = function(name) {
+        _origPreset.apply(this, arguments);
+        const intensity = name === 'decay' ? 0.7 : name === 'sovereign' ? 0.5 : 0.3;
+        WorldBridge.pressure('urban-chronos', intensity);
+    };
+}
+</script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>

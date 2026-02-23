@@ -427,6 +427,18 @@
         window.DELIB = DeliberationEngine;
         window.ARCHIVE = ArchivioSilente;
 
+        // ── WORLD CLIMATE — this page is an organ ──
+        // Visit registers baseline pressure. Epoch ingestion increases it.
+        Bus.emit('world:module-heartbeat', { moduleId: 'ice-italy' }, 'ice-italy');
+        Bus.on('ice-italy:epoch-ingested', (e) => {
+            const intensity = (e.payload && e.payload.intensity) ? e.payload.intensity / 5 : 0.4;
+            Bus.emit('world:module-pressure', {
+                moduleId: 'ice-italy',
+                intensity,
+                direction: 'pressure'
+            }, 'ice-italy');
+        });
+
         // ── INIT ──
         refresh();
         setInterval(refresh, 30000);

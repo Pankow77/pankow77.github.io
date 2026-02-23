@@ -1272,6 +1272,28 @@ console.log('%cPNEUMA', 'color: #39ff14; font-size: 20px; font-weight: bold;');
 console.log('%cLOCAL OPERATIONAL SANCTUARY', 'color: #ffbf00; font-size: 11px;');
 console.log('%cDELTA S < 0 CONFIRMED', 'color: #00d4ff;');
 </script>
+<script src="js/world-bridge.js"></script>
+<script>
+// ── WORLD CLIMATE — Pneuma is an organ ──
+// Pneuma is a sanctuary. Visiting heals ethical tension.
+WorldBridge.open('pneuma');
+// Module switching = engagement pressure
+const _origSwitch = window.switchModule;
+if (_origSwitch) {
+    window.switchModule = function(mod) {
+        _origSwitch.apply(this, arguments);
+        WorldBridge.heal('pneuma', 0.3);
+    };
+}
+// Committing records = healing action (archival clarity)
+const _origCommit = window.commitRecord;
+if (_origCommit) {
+    window.commitRecord = function() {
+        _origCommit.apply(this, arguments);
+        WorldBridge.heal('pneuma', 0.5);
+    };
+}
+</script>
 <script src="js/core-feed.js"></script>
 </body>
 </html>
