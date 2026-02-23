@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -11,16 +12,18 @@ import 'core/session_manager.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Force portrait + immersive dark mode
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.light,
-    systemNavigationBarColor: Color(0xFF050A12),
-    systemNavigationBarIconBrightness: Brightness.light,
-  ));
+  // Force portrait + immersive dark mode (mobile only)
+  if (!kIsWeb) {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: Color(0xFF050A12),
+      systemNavigationBarIconBrightness: Brightness.light,
+    ));
+  }
 
   // Initialize encrypted local storage
   await Hive.initFlutter();
