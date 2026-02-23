@@ -56,9 +56,8 @@ flutter:
   fonts:
     - family: Orbitron
       fonts:
-        - asset: assets/fonts/Orbitron-Regular.ttf
-        - asset: assets/fonts/Orbitron-Bold.ttf
-          weight: 700
+        - asset: assets/fonts/Orbitron[wght].ttf
+          weight: 100 900
     - family: ShareTechMono
       fonts:
         - asset: assets/fonts/ShareTechMono-Regular.ttf
