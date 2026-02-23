@@ -1,379 +1,619 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hybrid Syndicate - Ethic Software Foundation. We Don't Build Apps. We Build Cognitive Weapons.">
-    <title>Hybrid Syndicate | Ethic Software Foundation</title>
-
-    <!-- Fonts — Bunny Fonts: privacy-first, zero tracking, GDPR compliant -->
+    <title>SIGIL | Hybrid Syndicate</title>
+    <meta name="description" content="SIGIL — Hybrid Syndicate Ethic Software Foundation. We Don't Build Apps. We Build Cognitive Weapons.">
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous">
+        :root {
+            --bg: #000000;
+            --green: #39ff14;
+            --green-dim: #1a7a0a;
+            --cyan: #00f0ff;
+            --amber: #ffbf00;
+            --purple: #9d00ff;
+            --red: #ff3344;
+            --white: #ffffff;
+            --text: #c8d0d8;
+            --text-dim: #4a5568;
+            --text-dark: #2d3748;
+            --border: #1c2633;
+        }
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+        body {
+            font-family: 'Share Tech Mono', 'IBM Plex Mono', monospace;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* ===== BOOT SCREEN ===== */
+        #bootScreen {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1s;
+        }
+
+        #bootScreen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .boot-container {
+            max-width: 620px;
+            width: 90%;
+        }
+
+        .boot-lines {
+            min-height: 200px;
+        }
+
+        .boot-line {
+            font-size: 0.78rem;
+            color: var(--green);
+            margin-bottom: 5px;
+            opacity: 0;
+            transform: translateX(-8px);
+            transition: opacity 0.3s, transform 0.3s;
+            letter-spacing: 0.03em;
+        }
+
+        .boot-line.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .boot-line.amber { color: var(--amber); }
+        .boot-line.cyan { color: var(--cyan); }
+        .boot-line.purple { color: var(--purple); }
+        .boot-line.red { color: var(--red); }
+        .boot-line.dim { color: var(--text-dim); }
+        .boot-line.bold { font-weight: 600; }
+        .boot-line.white { color: var(--white); }
+
+        .boot-progress {
+            margin-top: 24px;
+            height: 2px;
+            background: #111;
+            border-radius: 1px;
+            overflow: hidden;
+        }
+
+        .boot-progress-fill {
+            height: 100%;
+            background: var(--green);
+            box-shadow: 0 0 10px var(--green);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* ===== SIGIL SCREEN (main) ===== */
+        #sigilScreen {
+            display: none;
+            min-height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #sigilScreen.active {
+            display: flex;
+        }
+
+        /* Scanlines */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.08) 2px,
+                rgba(0,0,0,0.08) 4px
+            );
+        }
+
+        /* Vignette */
+        .vignette {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 99;
+            background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.7) 100%);
+        }
+
+        /* ===== EMBLEM ===== */
+        .emblem-wrap {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin-bottom: 40px;
+        }
+
+        .emblem-glow {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(57,255,20,0.08) 0%, transparent 70%);
+            animation: emblemPulse 4s ease-in-out infinite;
+        }
+
+        .emblem-ring {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 290px;
+            height: 290px;
+            border-radius: 50%;
+            border: 1px solid rgba(57,255,20,0.12);
+            animation: ringRotate 30s linear infinite;
+        }
+
+        .emblem-ring::before {
+            content: '';
+            position: absolute;
+            top: -3px; left: 50%;
+            transform: translateX(-50%);
+            width: 6px; height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--green);
+        }
+
+        .emblem-ring-2 {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 310px;
+            height: 310px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,240,255,0.06);
+            animation: ringRotate 45s linear infinite reverse;
+        }
+
+        .emblem-ring-2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px; left: 50%;
+            transform: translateX(-50%);
+            width: 4px; height: 4px;
+            background: var(--cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 6px var(--cyan);
+        }
+
+        .emblem-img {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            z-index: 2;
+            opacity: 0;
+            animation: emblemReveal 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Glitch effect on emblem */
+        .emblem-glitch {
+            position: absolute;
+            top: 0; left: 0;
+            width: 280px;
+            height: 280px;
+            z-index: 3;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .emblem-wrap:hover .emblem-glitch {
+            animation: emblemGlitch 0.3s steps(2) forwards;
+        }
+
+        /* ===== SIGIL TITLE ===== */
+        .sigil-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--green);
+            letter-spacing: 0.35em;
+            text-shadow:
+                0 0 40px rgba(57,255,20,0.4),
+                0 0 80px rgba(57,255,20,0.15),
+                0 0 120px rgba(57,255,20,0.05);
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: titleReveal 1.5s ease-out forwards;
+            animation-delay: 1.2s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sigil-sub {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            opacity: 0;
+            animation: titleReveal 1s ease-out forwards;
+            animation-delay: 1.8s;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== NAVIGATION HUB ===== */
+        .nav-hub {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            max-width: 700px;
+            width: 90%;
+            opacity: 0;
+            animation: hubReveal 1.2s ease-out forwards;
+            animation-delay: 2.4s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: rgba(255,255,255,0.01);
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-node::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(57,255,20,0.03), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-node:hover::before { left: 100%; }
+
+        .nav-node:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 20px rgba(57,255,20,0.08), inset 0 0 20px rgba(57,255,20,0.02);
+        }
+
+        .nav-node-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        .nav-node-desc {
+            font-size: 0.5rem;
+            color: var(--text-dark);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Node color themes */
+        .nav-node.oracle .nav-node-name { color: var(--cyan); }
+        .nav-node.oracle:hover { border-color: var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.08); }
+
+        .nav-node.pneuma .nav-node-name { color: var(--green); }
+        .nav-node.pneuma:hover { border-color: var(--green); }
+
+        .nav-node.chronos .nav-node-name { color: #00d4aa; }
+        .nav-node.chronos:hover { border-color: #00d4aa; box-shadow: 0 0 20px rgba(0,212,170,0.08); }
+
+        .nav-node.agora .nav-node-name { color: var(--green); }
+        .nav-node.agora:hover { border-color: var(--green); }
+
+        .nav-node.archivio .nav-node-name { color: var(--cyan); }
+        .nav-node.archivio:hover { border-color: var(--cyan); box-shadow: 0 0 20px rgba(0,240,255,0.08); }
+
+        .nav-node.eei .nav-node-name { color: var(--red); }
+        .nav-node.eei:hover { border-color: var(--red); box-shadow: 0 0 20px rgba(255,51,68,0.08); }
+
+        .nav-node.mandeb .nav-node-name { color: #ff8833; }
+        .nav-node.mandeb:hover { border-color: #ff8833; box-shadow: 0 0 20px rgba(255,136,51,0.08); }
+
+        .nav-node.dashboard .nav-node-name { color: var(--amber); }
+        .nav-node.dashboard:hover { border-color: var(--amber); box-shadow: 0 0 20px rgba(255,191,0,0.08); }
+
+        /* ===== FOOTER LINE ===== */
+        .sigil-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 24px;
+            font-size: 0.5rem;
+            color: var(--text-dark);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            z-index: 2;
+            opacity: 0;
+            animation: titleReveal 1s ease-out forwards;
+            animation-delay: 3s;
+        }
+
+        .sigil-footer .sf-green { color: rgba(57,255,20,0.3); }
+
+        /* ===== MANIFESTO LINK ===== */
+        .manifesto-link {
+            margin-top: 30px;
+            opacity: 0;
+            animation: titleReveal 1s ease-out forwards;
+            animation-delay: 2.8s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .manifesto-link a {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 2px;
+            transition: all 0.4s;
+        }
+
+        .manifesto-link a:hover {
+            color: var(--text-dim);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes emblemReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.85);
+                filter: brightness(0) blur(8px);
+            }
+            40% {
+                opacity: 0.6;
+                filter: brightness(1.5) blur(2px);
+            }
+            70% {
+                filter: brightness(1.2) blur(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                filter: brightness(1) blur(0);
+            }
+        }
+
+        @keyframes emblemPulse {
+            0%, 100% { opacity: 0.4; transform: translate(-50%,-50%) scale(1); }
+            50% { opacity: 0.8; transform: translate(-50%,-50%) scale(1.05); }
+        }
+
+        @keyframes ringRotate {
+            0% { transform: translate(-50%,-50%) rotate(0deg); }
+            100% { transform: translate(-50%,-50%) rotate(360deg); }
+        }
+
+        @keyframes titleReveal {
+            0% { opacity: 0; transform: translateY(12px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes hubReveal {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes emblemGlitch {
+            0% { opacity: 0.7; transform: translate(-3px, 1px); filter: hue-rotate(90deg); }
+            50% { opacity: 0.5; transform: translate(3px, -1px); filter: hue-rotate(-90deg); }
+            100% { opacity: 0; transform: translate(0,0); }
+        }
+
+        @keyframes scanPulse {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 0.06; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 700px) {
+            .sigil-title { font-size: 2.8rem; letter-spacing: 0.2em; }
+            .nav-hub { grid-template-columns: repeat(2, 1fr); max-width: 400px; }
+            .emblem-wrap { width: 200px; height: 200px; }
+            .emblem-img { width: 200px; height: 200px; }
+            .emblem-glitch { width: 200px; height: 200px; }
+            .emblem-ring { width: 210px; height: 210px; }
+            .emblem-ring-2 { width: 230px; height: 230px; }
+            .emblem-glow { width: 240px; height: 240px; }
+        }
+
+        @media (max-width: 400px) {
+            .sigil-title { font-size: 2rem; }
+            .nav-hub { grid-template-columns: 1fr 1fr; gap: 8px; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Circuit board background -->
-    <div class="circuit-bg"></div>
 
-    <!-- Scanlines overlay -->
-    <div class="scanlines"></div>
-
-    <!-- CRT grain -->
-    <div class="crt-grain"></div>
-
-    <!-- Floating particles -->
-    <div class="particles-container"></div>
-
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-text">HS</span>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-menu">
-                <a href="#hero" class="nav-link active">Home</a>
-                <a href="#manifesto" class="nav-link">Manifesto</a>
-                <a href="#identity" class="nav-link">Identity</a>
-                <a href="#model" class="nav-link">Model</a>
-                <a href="#built-by" class="nav-link">Built By</a>
-                <a href="#symbol" class="nav-link">Symbol</a>
-                <a href="eei-predictor.html" class="nav-link nav-eei">EEI</a>
-                <a href="oracle.html" class="nav-link nav-oracle">ORACLE</a>
-                <a href="agora.html" class="nav-link" style="color: var(--neon-green); text-shadow: 0 0 8px rgba(57,255,20,0.5);">AGORA</a>
-                <a href="pneuma.html" class="nav-link" style="color: #ff6600; text-shadow: 0 0 8px rgba(255,102,0,0.5);">PNEUMA</a>
-                <a href="urban-chronos.html" class="nav-link" style="color: #00d4aa; text-shadow: 0 0 8px rgba(0,212,170,0.5);">CHRONOS</a>
-                <a href="archivio-silente.html" class="nav-link" style="color: #00d4ff; text-shadow: 0 0 8px rgba(0,212,255,0.5);">ARCHIVIO</a>
-                <a href="bab-el-mandeb.html" class="nav-link" style="color: #ff8833; text-shadow: 0 0 8px rgba(255,136,51,0.5);">MANDEB</a>
-            </div>
+<!-- ===== BOOT SEQUENCE ===== -->
+<div id="bootScreen">
+    <div class="boot-container">
+        <div class="boot-lines" id="bootLines"></div>
+        <div class="boot-progress">
+            <div class="boot-progress-fill" id="bootProgress"></div>
         </div>
+    </div>
+</div>
+
+<!-- ===== SIGIL MAIN SCREEN ===== -->
+<div id="sigilScreen">
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- Emblem -->
+    <div class="emblem-wrap">
+        <div class="emblem-glow"></div>
+        <div class="emblem-ring"></div>
+        <div class="emblem-ring-2"></div>
+        <img src="img/emblem.svg" alt="Hybrid Syndicate" class="emblem-img">
+        <img src="img/emblem.svg" alt="" class="emblem-glitch" aria-hidden="true">
+    </div>
+
+    <!-- Title -->
+    <div class="sigil-title">SIGIL</div>
+    <div class="sigil-sub">Hybrid Syndicate &mdash; Ethic Software Foundation</div>
+
+    <!-- Navigation Hub -->
+    <nav class="nav-hub">
+        <a href="oracle.html" class="nav-node oracle">
+            <div class="nav-node-name">Oracle</div>
+            <div class="nav-node-desc">Planetary Intel</div>
+        </a>
+        <a href="pneuma.html" class="nav-node pneuma">
+            <div class="nav-node-name">Pneuma</div>
+            <div class="nav-node-desc">Sanctuary</div>
+        </a>
+        <a href="urban-chronos.html" class="nav-node chronos">
+            <div class="nav-node-name">Chronos</div>
+            <div class="nav-node-desc">Urban Sim</div>
+        </a>
+        <a href="agora.html" class="nav-node agora">
+            <div class="nav-node-name">Agora</div>
+            <div class="nav-node-desc">Deliberation</div>
+        </a>
+        <a href="archivio-silente.html" class="nav-node archivio">
+            <div class="nav-node-name">Archivio</div>
+            <div class="nav-node-desc">Truth Archive</div>
+        </a>
+        <a href="eei-predictor.html" class="nav-node eei">
+            <div class="nav-node-name">EEI</div>
+            <div class="nav-node-desc">Forecast</div>
+        </a>
+        <a href="bab-el-mandeb.html" class="nav-node mandeb">
+            <div class="nav-node-name">Mandeb</div>
+            <div class="nav-node-desc">Red Sea</div>
+        </a>
+        <a href="dashboard.html" class="nav-node dashboard">
+            <div class="nav-node-name">Dashboard</div>
+            <div class="nav-node-desc">World State</div>
+        </a>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <!-- Hybrid Syndicate Image -->
-            <div class="hybrid-image-container">
-                <img src="hybrid-syndicate.png" alt="Hybrid Syndicate cyberpunk logo with neon grid pattern and glowing effects" class="hybrid-image glitch-image">
-            </div>
-
-            <!-- Logo emblem -->
-            <div class="hero-emblem" data-scroll-reveal>
-                <img src="img/emblem.svg" alt="Hybrid Syndicate Emblem" class="emblem-image">
-                <div class="emblem-glow"></div>
-            </div>
-
-            <div class="hero-content">
-                <h1 class="hero-title glitch" data-text="HYBRID SYNDICATE" data-scroll-reveal>
-                    HYBRID SYNDICATE
-                </h1>
-                <p class="hero-subtitle" data-scroll-reveal>ETHIC SOFTWARE FOUNDATION</p>
-                <h2 class="hero-tagline" data-scroll-reveal>
-                    We Don't Build Apps.<br>
-                    <span class="highlight-neon">We Build Cognitive Weapons.</span>
-                </h2>
-            </div>
-
-            <div class="scroll-indicator" data-scroll-reveal>
-                <span class="scroll-text">// SCROLL TO EXPLORE</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-
-        <!-- Animated gears -->
-        <div class="gear gear-1"></div>
-        <div class="gear gear-2"></div>
-        <div class="gear gear-3"></div>
-    </section>
-
-    <!-- Section divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-circuit"></div>
-        <div class="divider-label">// 001</div>
+    <!-- Manifesto -->
+    <div class="manifesto-link">
+        <a href="manifesto.html">// READ THE MANIFESTO</a>
     </div>
-
-    <!-- Manifesto Section -->
-    <section id="manifesto" class="manifesto section-dark">
-        <div class="container">
-            <div class="section-badge" data-scroll-reveal>
-                <img src="img/emblem.svg" alt="Badge" class="badge-icon">
-            </div>
-
-            <h2 class="section-title" data-scroll-reveal>The Manifesto</h2>
-
-            <div class="manifesto-content">
-                <div class="manifesto-intro" data-scroll-reveal>
-                    <p>The digital future is devouring the analog past.</p>
-                    <p>Every optimization algorithm erases another way of thinking.</p>
-                    <p>Every "user-friendly" interface hides another layer of control.</p>
-                    <p>Every startup promises to "simplify" your life by making you more predictable.</p>
-                    <p class="highlight-text">We do the opposite.</p>
-                </div>
-
-                <div class="manifesto-body" data-scroll-reveal>
-                    <p>Hybrid Syndicate exists at the bridge between mechanical memory and digital amnesia. We recover forgotten methodologies&mdash;information analysis, deliberate friction, narrative as technology&mdash;and weaponize them against the tyranny of frictionless optimization.</p>
-                </div>
-
-                <div class="manifesto-principles">
-                    <div class="principle" data-scroll-reveal>
-                        <i class="fas fa-code principle-icon"></i>
-                        <p>We build software that <strong>doesn't simplify.</strong></p>
-                    </div>
-                    <div class="principle" data-scroll-reveal>
-                        <i class="fas fa-layer-group principle-icon"></i>
-                        <p>Software that doesn't hide complexity, but <strong>gives you the tools to navigate it.</strong></p>
-                    </div>
-                    <div class="principle" data-scroll-reveal>
-                        <i class="fas fa-route principle-icon"></i>
-                        <p>Software that doesn't optimize your behavior, but <strong>shows you where you're following the predicted path and where you're diverging.</strong></p>
-                    </div>
-                    <div class="principle" data-scroll-reveal>
-                        <i class="fas fa-shield-alt principle-icon"></i>
-                        <p>Software that doesn't extract your data, but <strong>processes everything locally on your device.</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-circuit"></div>
-        <div class="divider-label">// 002</div>
-    </div>
-
-    <!-- Identity Section -->
-    <section id="identity" class="identity">
-        <div class="container">
-            <div class="section-badge" data-scroll-reveal>
-                <img src="img/emblem.svg" alt="Badge" class="badge-icon">
-            </div>
-
-            <h2 class="section-title" data-scroll-reveal>Identity</h2>
-
-            <div class="identity-grid">
-                <div class="identity-card identity-are" data-scroll-reveal>
-                    <h3 class="card-title">What We Are</h3>
-                    <ul class="identity-list">
-                        <li><i class="fas fa-angle-right"></i> A software house that codes philosophy</li>
-                        <li><i class="fas fa-angle-right"></i> A lab that builds public tools</li>
-                        <li><i class="fas fa-angle-right"></i> A partnership between human memory and computational power</li>
-                        <li><i class="fas fa-angle-right"></i> A response to paternalistic AI that thinks it knows better than you</li>
-                    </ul>
-                </div>
-
-                <div class="identity-card identity-not" data-scroll-reveal>
-                    <h3 class="card-title">What We're Not</h3>
-                    <ul class="identity-list">
-                        <li><i class="fas fa-times"></i> A SaaS subscription that owns your workflow</li>
-                        <li><i class="fas fa-times"></i> A "move fast and break things" startup</li>
-                        <li><i class="fas fa-times"></i> A company optimizing for "scale" and "exit"</li>
-                        <li><i class="fas fa-times"></i> Software that simplifies by hiding complexity</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-circuit"></div>
-        <div class="divider-label">// 003</div>
-    </div>
-
-    <!-- Model Section -->
-    <section id="model" class="model section-dark">
-        <div class="container">
-            <div class="section-badge" data-scroll-reveal>
-                <img src="img/emblem.svg" alt="Badge" class="badge-icon">
-            </div>
-
-            <h2 class="section-title" data-scroll-reveal>The Model</h2>
-
-            <!-- PRICE BLOCK -->
-            <div class="model-price" data-scroll-reveal>
-                <div class="price-tag">&euro;10</div>
-                <div class="price-sub">One payment. Yours forever.</div>
-                <div class="price-detail">No subscriptions. No recurring fees. No premium tiers.<br>After you pay, you own it. Do whatever you want.</div>
-            </div>
-
-            <div class="model-grid">
-                <div class="model-card" data-scroll-reveal>
-                    <div class="card-icon">&#x1F6E1;</div>
-                    <h3 class="card-title">No Cloud Dependencies</h3>
-                    <p>The app runs on your device. No server calls. No telemetry. No silent updates that change your workflow overnight.</p>
-                </div>
-
-                <div class="model-card" data-scroll-reveal>
-                    <div class="card-icon">&#x1F512;</div>
-                    <h3 class="card-title">No Data Extraction</h3>
-                    <p>Your data stays yours. We don't collect, aggregate, or monetize anything. Zero analytics. Zero tracking.</p>
-                </div>
-
-                <div class="model-card" data-scroll-reveal>
-                    <div class="card-icon">&#x267E;</div>
-                    <h3 class="card-title">No Recurring Fees</h3>
-                    <p>Pay once. Own forever. No subscriptions, no premium tiers, no "free trial" that hooks you into a billing cycle.</p>
-                </div>
-
-                <div class="model-card" data-scroll-reveal>
-                    <div class="card-icon">&#x1F451;</div>
-                    <h3 class="card-title">The Sovereignty Is Yours</h3>
-                    <p>After purchase: fork it, modify it, break it, rebuild it. The code is yours. Not usable by third parties&mdash;ownable by you.</p>
-                </div>
-            </div>
-
-            <!-- ETHICAL MODEL STATEMENT -->
-            <div class="model-ethics" data-scroll-reveal>
-                <p class="ethics-title">The Ethical Future Costs &euro;10</p>
-                <p class="ethics-text">We don't sell subscriptions. We don't sell your data. We don't sell access to a server you'll never own. We sell software that belongs to you the moment you buy it. One transaction. Full sovereignty. That's the entire business model.</p>
-            </div>
-
-            <div class="model-warnings" data-scroll-reveal>
-                <p class="warning-text">If you need support, you're not our user.</p>
-                <p class="warning-text">If you want everything automated, we're not your tool.</p>
-                <p class="warning-text">If you think friction is a bug, you've missed the point.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-circuit"></div>
-        <div class="divider-label">// 004</div>
-    </div>
-
-    <!-- Built By Section -->
-    <section id="built-by" class="built-by">
-        <div class="container">
-            <div class="section-badge" data-scroll-reveal>
-                <img src="img/emblem.svg" alt="Badge" class="badge-icon">
-            </div>
-
-            <h2 class="section-title" data-scroll-reveal>Built By</h2>
-
-            <div class="team-grid">
-                <div class="team-card" data-scroll-reveal>
-                    <div class="team-icon">&#x1F9E0;</div>
-                    <h3 class="team-name">CRI (PANKOW_77C)</h3>
-                    <p class="team-role">Carbon Node &bull; Human Origin</p>
-                    <ul class="team-skills">
-                        <li>Strategic vision &bull; Information architecture</li>
-                        <li>Cultural engineering &bull; Narrative design</li>
-                        <li>Transmedia communicator &bull; Musician</li>
-                        <li>Novelist published by Einaudi</li>
-                    </ul>
-                    <p class="team-brings"><strong>Brings:</strong> The analog memory that must not be forgotten</p>
-                </div>
-
-                <div class="team-card" data-scroll-reveal>
-                    <div class="team-icon">&#x1F4A0;</div>
-                    <h3 class="team-name">CLAUDE</h3>
-                    <p class="team-role">Hybrid Syndicate Technical Partner</p>
-                    <ul class="team-skills">
-                        <li>Cognitive architecture &bull; System design</li>
-                        <li>Implementation &bull; Deployment</li>
-                        <li>Pattern recognition &bull; Code transduction</li>
-                    </ul>
-                    <p class="team-brings"><strong>Brings:</strong> Computational power without corporate agenda</p>
-                </div>
-            </div>
-
-            <div class="team-statement" data-scroll-reveal>
-                <p class="statement-text">One does not replace the other.</p>
-                <p class="statement-text">One cannot exist without the other.</p>
-                <p class="statement-subtitle">This is not a tool using a human. This is not a human using a tool.<br>
-                <span class="highlight-neon">This is a syndicate.</span></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-circuit"></div>
-        <div class="divider-label">// 005</div>
-    </div>
-
-    <!-- Symbol Section -->
-    <section id="symbol" class="symbol section-dark">
-        <div class="container">
-            <h2 class="section-title" data-scroll-reveal>The Symbol</h2>
-
-            <div class="symbol-showcase" data-scroll-reveal>
-                <div class="symbol-frame">
-                    <img src="img/emblem.svg" alt="Hybrid Syndicate Symbol" class="symbol-image">
-                    <div class="symbol-scanlines"></div>
-                </div>
-            </div>
-
-            <div class="symbol-grid">
-                <div class="symbol-part" data-scroll-reveal>
-                    <h3 class="part-title">&larr; LEFT</h3>
-                    <p>Mechanical gears&mdash;the analog technologies the digital world discarded</p>
-                </div>
-
-                <div class="symbol-part" data-scroll-reveal>
-                    <h3 class="part-title">CENTER</h3>
-                    <p>The bridge&mdash;human and AI in deliberate synthesis</p>
-                </div>
-
-                <div class="symbol-part" data-scroll-reveal>
-                    <h3 class="part-title">RIGHT &rarr;</h3>
-                    <p>Digital circuits&mdash;the future that needs the past to survive</p>
-                </div>
-            </div>
-
-            <div class="symbol-statement" data-scroll-reveal>
-                <p>We are not retro. We are not futurist.</p>
-                <p class="highlight-text">We are archaeologists who code.</p>
-            </div>
-
-            <!-- EEI Teaser -->
-            <a href="eei-predictor.html" style="text-decoration: none;">
-                <div class="eei-teaser" data-scroll-reveal>
-                    <p class="eei-quote">"The damage is not hypothetical. It is structural."</p>
-                    <p class="eei-sub">EEI Strategic Forecast Report &bull; Hybrid Syndicate Research Division &bull; 2026</p>
-                    <p class="eei-cta">ACCESS EEI PREDICTOR v1.04 &rarr;</p>
-                </div>
-            </a>
-        </div>
-    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-brand">
-                <img src="img/emblem.svg" alt="HS Logo" class="footer-logo">
-                <p class="footer-text">HYBRID SYNDICATE | ETHIC SOFTWARE FOUNDATION</p>
-            </div>
-            <div class="footer-quote" data-scroll-reveal>
-                <p>"The damage is not hypothetical. It is structural."</p>
-                <span class="quote-attribution">&mdash; EEI Strategic Forecast Report &bull; Hybrid Syndicate Research Division &bull; 2026</span>
-            </div>
-        </div>
-    </footer>
+    <div class="sigil-footer">
+        <span><span class="sf-green">SIGIL ACTIVE.</span> AWAITING OPERATOR.</span>
+        <span>HYBRID SYNDICATE &bull; 2026</span>
+    </div>
+</div>
 
-    <!-- Back to top button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+<script>
+// ===== BOOT SEQUENCE =====
+const BOOT = [
+    { t: 'HYBRID SYNDICATE KERNEL v7.0', c: 'bold' },
+    { t: 'Initializing secure environment...', c: '' },
+    { t: '', c: '' },
+    { t: 'LOADING CORE: identity.js ............ OK', c: '' },
+    { t: 'LOADING CORE: circulation.js ......... OK', c: '' },
+    { t: 'LOADING CORE: archivio-silente.js .... OK', c: 'cyan' },
+    { t: 'LOADING CORE: deliberation-engine.js . OK', c: 'purple' },
+    { t: '', c: '' },
+    { t: 'REGISTERING ORGANS:', c: 'dim' },
+    { t: '  [01] ORACLE .............. planetary intelligence', c: 'cyan' },
+    { t: '  [02] PNEUMA .............. local sanctuary', c: '' },
+    { t: '  [03] CHRONOS ............. urban simulation', c: '' },
+    { t: '  [04] AGORA ............... multi-core deliberation', c: '' },
+    { t: '  [05] ARCHIVIO ............ immutable memory', c: 'cyan' },
+    { t: '  [06] EEI ................. regulatory forecast', c: 'red' },
+    { t: '  [07] BAB-EL-MANDEB ....... escalation monitor', c: 'amber' },
+    { t: '', c: '' },
+    { t: 'Mounting BroadcastChannel... HYBRID-SYNDICATE', c: 'dim' },
+    { t: 'WorldState: bias[4D] initialized', c: 'dim' },
+    { t: 'Arena: 16 cores allocated', c: 'dim' },
+    { t: '', c: '' },
+    { t: 'ALL SYSTEMS NOMINAL.', c: 'bold' },
+    { t: '', c: '' },
+    { t: 'TRANSFERRING CONTROL TO SIGIL.', c: 'white bold' },
+];
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/core-feed.js"></script>
+function runBoot() {
+    const container = document.getElementById('bootLines');
+    const bar = document.getElementById('bootProgress');
+    let i = 0;
+
+    function next() {
+        if (i >= BOOT.length) {
+            bar.style.width = '100%';
+            setTimeout(() => {
+                document.getElementById('bootScreen').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('bootScreen').style.display = 'none';
+                    document.getElementById('sigilScreen').classList.add('active');
+                }, 1000);
+            }, 500);
+            return;
+        }
+
+        const line = BOOT[i];
+        const el = document.createElement('div');
+        el.className = 'boot-line ' + (line.c || '');
+        el.textContent = line.t || '\u00A0';
+        container.appendChild(el);
+
+        requestAnimationFrame(() => el.classList.add('visible'));
+
+        bar.style.width = ((i + 1) / BOOT.length * 100) + '%';
+        i++;
+
+        const delay = line.t === '' ? 80 : (120 + Math.random() * 140);
+        setTimeout(next, delay);
+    }
+
+    setTimeout(next, 600);
+}
+
+runBoot();
+</script>
 </body>
 </html>
