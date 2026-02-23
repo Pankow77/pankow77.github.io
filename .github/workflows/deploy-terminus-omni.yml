@@ -34,16 +34,18 @@ jobs:
           mkdir -p terminus_omni/assets/images
           mkdir -p terminus_omni/assets/audio
 
-          # Download Orbitron variable font (replaces deprecated static instances)
-          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/Orbitron%5Bwght%5D.ttf" \
-            -o "terminus_omni/assets/fonts/Orbitron[wght].ttf"
+          # Download Orbitron variable font (static files removed from Google Fonts repo)
+          curl -fsSL -L "https://github.com/google/fonts/raw/main/ofl/orbitron/Orbitron%5Bwght%5D.ttf" \
+            -o terminus_omni/assets/fonts/Orbitron.ttf
 
           # Download Share Tech Mono
-          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf" \
+          curl -fsSL -L "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf" \
             -o terminus_omni/assets/fonts/ShareTechMono-Regular.ttf
 
           echo "--- Downloaded fonts ---"
           ls -la terminus_omni/assets/fonts/
+          echo "--- Verify font files are not empty ---"
+          file terminus_omni/assets/fonts/*.ttf
 
       - name: Generate web platform
         working-directory: terminus_omni

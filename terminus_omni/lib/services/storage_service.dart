@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../config/constants.dart';
 import '../models/session.dart';
@@ -13,25 +12,26 @@ import '../models/session.dart';
 class StorageService {
   late Box<String> _sessionsBox;
   late Box<String> _settingsBox;
-  final FlutterSecureStorage _secureStorage = const FlutterSecureStorage();
+  late Box<String> _secretsBox;
 
   Future<void> init() async {
     _sessionsBox = await Hive.openBox<String>(TerminusConstants.boxSessions);
     _settingsBox = await Hive.openBox<String>(TerminusConstants.boxSettings);
+    _secretsBox = await Hive.openBox<String>('terminus_secrets');
   }
 
-  // ── API Key (stored in secure storage) ──
+  // ── API Key (stored in Hive — works on all platforms including web) ──
 
   Future<String?> getApiKey() async {
-    return await _secureStorage.read(key: TerminusConstants.keyApiKey);
+    return _secretsBox.get(TerminusConstants.keyApiKey);
   }
 
   Future<void> setApiKey(String key) async {
-    await _secureStorage.write(key: TerminusConstants.keyApiKey, value: key);
+    await _secretsBox.put(TerminusConstants.keyApiKey, key);
   }
 
   Future<void> deleteApiKey() async {
-    await _secureStorage.delete(key: TerminusConstants.keyApiKey);
+    await _secretsBox.delete(TerminusConstants.keyApiKey);
   }
 
   // ── Sessions ──
