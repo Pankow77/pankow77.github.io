@@ -18,14 +18,16 @@ import '../../widgets/terminal_grid.dart';
 import '../finale/final_recording_screen.dart';
 import 'ship_log_confirmation_screen.dart';
 
-/// The main session screen — the SICK TERMINAL.
+/// The main session screen — active terminal.
 ///
-/// Inspired by the concept art Image 3:
+/// Visual composition:
 /// - CRT monitor frame around the narrative
 /// - Entropy/Coherence graph in the HUD
 /// - Code rain intensifying as lumen drops
 /// - Terminal grid for quick actions
 /// - Heartbeat line showing system vital signs
+/// - Dynamic throttling: effects reduce GPU load at low lumen
+/// - Progressive label degradation: the UI rots with the subject
 class SessionScreen extends StatefulWidget {
   const SessionScreen({super.key});
 
@@ -115,12 +117,12 @@ class _SessionScreenState extends State<SessionScreen>
         backgroundColor: Colors.black,
         body: Stack(
           children: [
-            // Background code rain (intensifies as lumen drops)
+            // Background code rain (intensifies visually, throttled for GPU)
             if (!isPerf)
               Positioned.fill(
                 child: CodeRain(
                   color: _rainColor(sm.lumen),
-                  density: _rainDensity(sm.lumen),
+                  density: _rainDensity(sm.lumen) * _throttleFactor(sm.lumen),
                   speed: _rainSpeed(sm.lumen),
                   opacity: _rainOpacity(sm.lumen),
                 ),
@@ -143,8 +145,7 @@ class _SessionScreenState extends State<SessionScreen>
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 4),
                         child: CRTFrame(
-                          headerLabel:
-                              'TERMINUS-OMNI // ${_phaseLabel(sm.phase)}',
+                          headerLabel: _crtHeader(sm.lumen, sm.phase),
                           footerLabel:
                               'POOL:${session.dicePool}+${session.hopeDice} | '
                               'SCENE:${session.currentScene} | '
@@ -154,8 +155,8 @@ class _SessionScreenState extends State<SessionScreen>
                       ),
                     ),
 
-                    // ── Entropy graph ──
-                    if (!isPerf)
+                    // ── Entropy graph (throttled: freezes below lumen 2) ──
+                    if (!isPerf && sm.lumen > 2)
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12),
                         child: EntropyGraph(
@@ -221,15 +222,19 @@ class _SessionScreenState extends State<SessionScreen>
               ),
               const SizedBox(width: 6),
 
-              // Title with glitch at low lumen
-              if (sm.lumen <= 3)
+              // Title with progressive glitch (onset at lumen 5)
+              if (sm.lumen <= 5)
                 GlitchText(
-                  text: 'TERMINUS',
+                  text: sm.lumen <= 3
+                      ? 'TERMINUS'
+                      : 'TERMINUS-OMNI',
                   style: TerminusTheme.systemLog.copyWith(
                     color: TerminusTheme.lumenColor(sm.lumen),
                     fontSize: 11,
                   ),
-                  glitchIntensity: (4 - sm.lumen) * 0.2,
+                  glitchIntensity: sm.lumen <= 3
+                      ? (4 - sm.lumen) * 0.25
+                      : (6 - sm.lumen) * 0.08,
                 )
               else
                 Text(
@@ -571,12 +576,12 @@ class _SessionScreenState extends State<SessionScreen>
           ),
           const SizedBox(height: 12),
           GlitchText(
-            text: 'TERMINUS-OMNI // SYSTEM OFFLINE',
+            text: '[NULL] // \u2591\u2591\u2591\u2591\u2591\u2591',
             style: TerminusTheme.systemLog.copyWith(
               color: TerminusTheme.neonRed,
               fontSize: 11,
             ),
-            glitchIntensity: 0.5,
+            glitchIntensity: 0.7,
           ),
           const SizedBox(height: 16),
           OutlinedButton(
@@ -665,16 +670,35 @@ class _SessionScreenState extends State<SessionScreen>
   String _phaseLabel(SessionPhase phase) {
     switch (phase) {
       case SessionPhase.primiPassi:
-        return 'PHASE 1: FIRST STEPS';
+        return 'NOMINAL';
       case SessionPhase.assedio:
-        return 'PHASE 2: THE SIEGE';
+        return 'CRITICAL';
       case SessionPhase.declino:
-        return 'PHASE 3: THE DECLINE';
+        return 'TERMINAL';
       case SessionPhase.ultimaLuce:
-        return 'PHASE 4: LAST LIGHT';
+        return 'FLAT';
       case SessionPhase.morte:
-        return 'LUMEN 0: DEATH';
+        return 'NULL';
     }
+  }
+
+  /// CRT header label — degrades progressively as lumen drops.
+  /// The player feels the rot, doesn't read it.
+  String _crtHeader(int lumen, SessionPhase phase) {
+    if (lumen >= 7) return 'TERMINUS-OMNI // ${_phaseLabel(phase)}';
+    if (lumen >= 4) return 'TERM-OMNI // ${_phaseLabel(phase)}';
+    if (lumen >= 2) return 'TER\u2588\u2591NUS // ${_phaseLabel(phase)}';
+    if (lumen == 1) return '\u2588ER\u2591\u2588\u2591US // \u2591\u2591\u2591\u2591';
+    return '[NULL]';
+  }
+
+  /// Dynamic throttle factor — reduces GPU load as lumen drops.
+  /// Visual intensity stays, computation drops.
+  double _throttleFactor(int lumen) {
+    if (lumen >= 7) return 1.0;
+    if (lumen >= 4) return 0.8;
+    if (lumen >= 2) return 0.5;
+    return 0.3;
   }
 
   List<TerminalAction> _buildActions(SessionPhase phase) {

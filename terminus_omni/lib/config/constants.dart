@@ -106,7 +106,33 @@ class TerminusConstants {
     },
   };
 
-  // ── Performance ──
+  // ── Residual proporzionale ──
+  /// Accumulated failure margin threshold before cascade triggers.
+  static const double residualCascadeThreshold = 1.5;
+
+  // ── Climate jitter ──
+  /// Base jitter probability per lumen below onset.
+  static const double climateJitterBase = 0.03;
+
+  /// Lumen at which environmental jitter begins.
+  static const int climateJitterOnset = 8;
+
+  /// Climate jitter system messages (Italian, diegetic).
+  static const List<String> climateEvents = [
+    '[SISTEMA] Pressione ambientale anomala. I sensori tremano.',
+    '[SISTEMA] Interferenza magnetica. Segnale instabile.',
+    '[SISTEMA] Temperatura in calo. Il metallo geme.',
+    '[SISTEMA] Livelli di ossigeno: fluttuanti. Respira lento.',
+    '[SISTEMA] Rumore strutturale. Qualcosa si muove nelle pareti.',
+    '[SISTEMA] Condensazione sugli schermi. La visibilità cala.',
+    '[SISTEMA] Vibrazione anomala dal settore 7. Nessuna risposta.',
+  ];
+
+  /// Severe climate event: pool corrosion.
+  static const String climateCorrosionEvent =
+      '[SISTEMA] Corrosione rilevata nel pool operativo. Un dado è stato corrotto.';
+
+  // ── Performance & throttling ──
   static const String keyPerformanceMode = 'performance_mode';
 
   // ── Storage keys ──

@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 
+import '../config/constants.dart';
 import '../models/session.dart';
 import '../models/victim_profile.dart';
 import '../models/dice_result.dart';
@@ -28,6 +31,7 @@ class SessionManager extends ChangeNotifier {
   final LumenCount _lumenCount = LumenCount();
   final DiceEngine _diceEngine = DiceEngine();
   final SafetyCommander _safetyCommander = SafetyCommander();
+  final Random _rng = Random();
 
   bool _isLoading = false;
   String? _error;
@@ -61,6 +65,7 @@ class SessionManager extends ChangeNotifier {
         scenarioId: scenarioId,
       );
       _lumenCount.restore(10);
+      _diceEngine.resetResidual();
       _safetyCommander.setIntensity(profile.intensity);
 
       // Start LLM session and get initial narrative
@@ -134,6 +139,9 @@ class SessionManager extends ChangeNotifier {
         lumenAtMessage: _lumenCount.current,
       ));
 
+      // Climate jitter — environment bites independently
+      _applyClimateJitter();
+
       await storage.saveSession(_session!);
 
       _isLoading = false;
@@ -171,6 +179,20 @@ class SessionManager extends ChangeNotifier {
     // Burn hope die
     if (result.hopeLost) {
       _session!.hopeDice = 0;
+    }
+
+    // Residual cascade — accumulated failure pressure
+    if (_diceEngine.checkResidualCascade()) {
+      _lumenCount.extinguish(LumenExtinguishReason.residualCascade);
+      _session!.lumenCount = _lumenCount.current;
+      _session!.phase = _lumenCount.phase;
+      _session!.messages.add(ChatMessage(
+        role: 'system',
+        content: '[SISTEMA] La pressione accumulata cede. '
+            'Una candela si spegne sotto il peso dei fallimenti.',
+        timestamp: DateTime.now(),
+        lumenAtMessage: _lumenCount.current,
+      ));
     }
 
     // Check for Lumen 0
@@ -227,6 +249,55 @@ class SessionManager extends ChangeNotifier {
     ));
     await storage.saveSession(_session!);
     notifyListeners();
+  }
+
+  /// Climate jitter — environmental entropy events.
+  /// The system degrades independently of player actions.
+  void _applyClimateJitter() {
+    if (_session == null || _session!.isComplete) return;
+    final lumen = _lumenCount.current;
+    if (lumen >= TerminusConstants.climateJitterOnset) return;
+
+    final chance = (TerminusConstants.climateJitterOnset - lumen) *
+        TerminusConstants.climateJitterBase;
+    if (_rng.nextDouble() > chance) return;
+
+    // Severe event at lumen <= 2: corrode a die from the pool
+    if (lumen <= 2 && _session!.dicePool > 1 && _rng.nextDouble() < 0.4) {
+      _session!.dicePool--;
+      _session!.messages.add(ChatMessage(
+        role: 'system',
+        content:
+            '${TerminusConstants.climateCorrosionEvent} Pool: ${_session!.dicePool}.',
+        timestamp: DateTime.now(),
+        lumenAtMessage: lumen,
+      ));
+      return;
+    }
+
+    // Very rare severe: climate extinguishes a lumen (only at lumen <= 3)
+    if (lumen <= 3 && _rng.nextDouble() < 0.08) {
+      _lumenCount.extinguish(LumenExtinguishReason.climateDecay);
+      _session!.lumenCount = _lumenCount.current;
+      _session!.phase = _lumenCount.phase;
+      _session!.messages.add(ChatMessage(
+        role: 'system',
+        content: '[SISTEMA] Cedimento strutturale. '
+            'Una candela vacilla e si spegne. Lumen: ${_lumenCount.current}.',
+        timestamp: DateTime.now(),
+        lumenAtMessage: _lumenCount.current,
+      ));
+      return;
+    }
+
+    // Atmospheric event (flavor text, no mechanical impact)
+    final events = TerminusConstants.climateEvents;
+    _session!.messages.add(ChatMessage(
+      role: 'system',
+      content: events[_rng.nextInt(events.length)],
+      timestamp: DateTime.now(),
+      lumenAtMessage: lumen,
+    ));
   }
 
   /// Play the sealed testament at Lumen 0.

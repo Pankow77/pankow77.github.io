@@ -61,6 +61,8 @@ enum LumenExtinguishReason {
   virtueAbandoned,
   sceneTransition,
   momentBurned,
+  residualCascade,
+  climateDecay,
 }
 
 extension LumenReasonExt on LumenExtinguishReason {
@@ -78,6 +80,10 @@ extension LumenReasonExt on LumenExtinguishReason {
         return 'The scene has changed. The world is colder.';
       case LumenExtinguishReason.momentBurned:
         return 'The Moment has burned. Hope dies.';
+      case LumenExtinguishReason.residualCascade:
+        return 'Accumulated failures cascade. The pressure breaks through.';
+      case LumenExtinguishReason.climateDecay:
+        return 'The environment decays. A light flickers and dies.';
     }
   }
 }
