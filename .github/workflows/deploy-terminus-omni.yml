@@ -31,12 +31,12 @@ jobs:
       - name: Download Google Fonts
         run: |
           mkdir -p terminus_omni/assets/fonts
+          mkdir -p terminus_omni/assets/images
+          mkdir -p terminus_omni/assets/audio
 
-          # Download Orbitron
-          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/static/Orbitron-Regular.ttf" \
-            -o terminus_omni/assets/fonts/Orbitron-Regular.ttf
-          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/static/Orbitron-Bold.ttf" \
-            -o terminus_omni/assets/fonts/Orbitron-Bold.ttf
+          # Download Orbitron variable font (replaces deprecated static instances)
+          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/Orbitron%5Bwght%5D.ttf" \
+            -o "terminus_omni/assets/fonts/Orbitron[wght].ttf"
 
           # Download Share Tech Mono
           curl -fsSL "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf" \
