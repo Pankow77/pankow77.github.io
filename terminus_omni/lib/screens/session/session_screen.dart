@@ -11,6 +11,7 @@ import '../../widgets/lumen_display.dart';
 import '../../widgets/narrative_text.dart';
 import '../../widgets/glitch_text.dart';
 import '../../widgets/code_rain.dart';
+import '../../widgets/visual_engine/terminus_visual_engine.dart';
 import '../../widgets/crt_frame.dart';
 import '../../widgets/entropy_graph.dart';
 import '../../widgets/heartbeat_line.dart';
@@ -117,14 +118,16 @@ class _SessionScreenState extends State<SessionScreen>
         backgroundColor: Colors.black,
         body: Stack(
           children: [
-            // Background code rain (intensifies visually, throttled for GPU)
+            // Visual Engine background (phase-reactive)
             if (!isPerf)
               Positioned.fill(
-                child: CodeRain(
-                  color: _rainColor(sm.lumen),
-                  density: _rainDensity(sm.lumen) * _throttleFactor(sm.lumen),
-                  speed: _rainSpeed(sm.lumen),
-                  opacity: _rainOpacity(sm.lumen),
+                child: Opacity(
+                  opacity: 0.6,
+                  child: TerminusVisualEngine(
+                    lumenCount: sm.lumen,
+                    entropyValue: (1.0 - sm.lumen / 10.0).clamp(0.0, 1.0),
+                    coherenceValue: (sm.lumen / 10.0).clamp(0.0, 1.0),
+                  ),
                 ),
               ),
 
