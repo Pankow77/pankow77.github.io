@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-23T16:11:26.731Z",
-  "epoch_count": 6,
+  "last_fetch": "2026-02-23T17:36:21.157Z",
+  "epoch_count": 7,
   "epochs": [
+    {
+      "id": "rss_1f04ad08e2e5d7f1",
+      "timestamp": 1771865068000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xODJnck5FQ0xWUFZCU2hrMXd4VlRvRV9XdDRvYmd1YjVHeXhLbVlvNDJCRDRyYmN6TVpBNGJiSTJGaFNFVmRScURKcmdYYjVKMHJiMWpfUnBSQXI3NDk0?oc=5\" target=\"_blank\">Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xODJnck5FQ0xWUFZCU2hrMXd4VlRvRV9XdDRvYmd1YjVHeXhLbVlvNDJCRDRyYmN6TVpBNGJiSTJGaFNFVmRScURKcmdYYjVKMHJiMWpfUnBSQXI3NDk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-23T17:36:19.452Z"
+    },
     {
       "id": "rss_131d33a0db1621fc",
       "timestamp": 1771840208000,
