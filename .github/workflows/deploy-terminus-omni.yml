@@ -23,48 +23,55 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
           channel: 'stable'
 
-      - name: Download fonts
+      - name: Flutter version check
+        run: flutter --version
+
+      - name: Download Google Fonts
         run: |
           mkdir -p terminus_omni/assets/fonts
-          curl -L "https://fonts.google.com/download?family=Orbitron" -o /tmp/orbitron.zip
-          curl -L "https://fonts.google.com/download?family=Share+Tech+Mono" -o /tmp/stm.zip
-          unzip -o /tmp/orbitron.zip -d /tmp/orbitron
-          unzip -o /tmp/stm.zip -d /tmp/stm
-          find /tmp/orbitron -name "Orbitron-Regular.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
-          find /tmp/orbitron -name "Orbitron-Bold.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
-          find /tmp/stm -name "ShareTechMono-Regular.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
+
+          # Download Orbitron
+          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/static/Orbitron-Regular.ttf" \
+            -o terminus_omni/assets/fonts/Orbitron-Regular.ttf
+          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/orbitron/static/Orbitron-Bold.ttf" \
+            -o terminus_omni/assets/fonts/Orbitron-Bold.ttf
+
+          # Download Share Tech Mono
+          curl -fsSL "https://github.com/google/fonts/raw/main/ofl/sharetechmono/ShareTechMono-Regular.ttf" \
+            -o terminus_omni/assets/fonts/ShareTechMono-Regular.ttf
+
+          echo "--- Downloaded fonts ---"
           ls -la terminus_omni/assets/fonts/
 
-      - name: Generate Flutter web platform
+      - name: Generate web platform
         working-directory: terminus_omni
         run: |
-          flutter create --project-name terminus_omni .
+          flutter create --platforms=web .
           flutter pub get
 
       - name: Build Flutter web
         working-directory: terminus_omni
         run: flutter build web --release --base-href /terminus-omni/
 
-      - name: Assemble site
+      - name: Assemble full site
         run: |
           mkdir -p _site
-          # Copy existing site (everything except source/build dirs)
-          rsync -av \
-            --exclude='terminus_omni' \
-            --exclude='.git' \
-            --exclude='.github' \
-            --exclude='_site' \
-            --exclude='node_modules' \
-            --exclude='scripts' \
-            . _site/
-          # Add Flutter web build as subdirectory
+
+          # Copy existing site content
+          for item in *.html css js img data docs game hub.html *.png *.svg; do
+            if [ -e "$item" ]; then
+              cp -r "$item" _site/
+            fi
+          done
+
+          # Add Flutter web build
           cp -r terminus_omni/build/web _site/terminus-omni
-          echo "--- Site contents ---"
+
+          echo "=== Site root ==="
           ls -la _site/
-          echo "--- TERMINUS-OMNI app ---"
+          echo "=== TERMINUS-OMNI app ==="
           ls -la _site/terminus-omni/
 
       - name: Upload Pages artifact
@@ -77,7 +84,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}terminus-omni/
     permissions:
       pages: write
       id-token: write
