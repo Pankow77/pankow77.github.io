@@ -24,14 +24,12 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # Audio recording for vocal testament
-  record: ^5.0.5
+  # Audio (playback only — recording not yet implemented)
   audioplayers: ^6.0.0
 
   # Utilities
   uuid: ^4.2.1
   intl: ^0.19.0
-  path_provider: ^2.1.1
   flutter_secure_storage: ^9.0.0
 
   # UI
