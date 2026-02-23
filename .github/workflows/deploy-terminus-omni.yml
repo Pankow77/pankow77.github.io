@@ -1,0 +1,87 @@
+name: Deploy TERMINUS-OMNI Web
+
+on:
+  workflow_dispatch:
+    # Manual trigger from GitHub UI — works from tablet browser
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+
+      - name: Download fonts
+        run: |
+          mkdir -p terminus_omni/assets/fonts
+          curl -L "https://fonts.google.com/download?family=Orbitron" -o /tmp/orbitron.zip
+          curl -L "https://fonts.google.com/download?family=Share+Tech+Mono" -o /tmp/stm.zip
+          unzip -o /tmp/orbitron.zip -d /tmp/orbitron
+          unzip -o /tmp/stm.zip -d /tmp/stm
+          find /tmp/orbitron -name "Orbitron-Regular.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
+          find /tmp/orbitron -name "Orbitron-Bold.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
+          find /tmp/stm -name "ShareTechMono-Regular.ttf" -exec cp {} terminus_omni/assets/fonts/ \;
+          ls -la terminus_omni/assets/fonts/
+
+      - name: Generate Flutter web platform
+        working-directory: terminus_omni
+        run: |
+          flutter create --project-name terminus_omni .
+          flutter pub get
+
+      - name: Build Flutter web
+        working-directory: terminus_omni
+        run: flutter build web --release --base-href /terminus-omni/
+
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          # Copy existing site (everything except source/build dirs)
+          rsync -av \
+            --exclude='terminus_omni' \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='_site' \
+            --exclude='node_modules' \
+            --exclude='scripts' \
+            . _site/
+          # Add Flutter web build as subdirectory
+          cp -r terminus_omni/build/web _site/terminus-omni
+          echo "--- Site contents ---"
+          ls -la _site/
+          echo "--- TERMINUS-OMNI app ---"
+          ls -la _site/terminus-omni/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}terminus-omni/
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
