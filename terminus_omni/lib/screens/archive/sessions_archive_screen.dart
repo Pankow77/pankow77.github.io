@@ -12,7 +12,8 @@ class SessionsArchiveScreen extends StatefulWidget {
   const SessionsArchiveScreen({super.key});
 
   @override
-  State<SessionsArchiveScreen> createState() => _SessionsArchiveScreenState();
+  State<SessionsArchiveScreen> createState() =>
+      _SessionsArchiveScreenState();
 }
 
 class _SessionsArchiveScreenState extends State<SessionsArchiveScreen> {
@@ -40,22 +41,23 @@ class _SessionsArchiveScreenState extends State<SessionsArchiveScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'ARCHIVIO SESSIONI',
+            'SESSION ARCHIVE',
             style: TerminusTheme.displayMedium.copyWith(fontSize: 14),
           ),
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: TerminusTheme.textDim),
+            icon: const Icon(Icons.arrow_back,
+                color: TerminusTheme.textDim),
             onPressed: () => Navigator.pop(context),
           ),
         ),
         body: _loading
             ? const Center(
-                child:
-                    CircularProgressIndicator(color: TerminusTheme.neonCyan))
+                child: CircularProgressIndicator(
+                    color: TerminusTheme.neonCyan))
             : _sessions.isEmpty
                 ? Center(
                     child: Text(
-                      'Nessuna sessione archiviata.\nIl buio aspetta.',
+                      'No archived sessions.\nThe darkness awaits.',
                       style: TerminusTheme.narrativeItalic,
                       textAlign: TextAlign.center,
                     ),
@@ -98,20 +100,22 @@ class _SessionCard extends StatelessWidget {
             children: [
               Text(
                 session.profile.name,
-                style: TerminusTheme.displayMedium.copyWith(fontSize: 14),
+                style:
+                    TerminusTheme.displayMedium.copyWith(fontSize: 14),
               ),
               const Spacer(),
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 8, vertical: 2),
                 decoration: BoxDecoration(
                   color: isComplete
                       ? TerminusTheme.neonRed.withValues(alpha: 0.1)
-                      : TerminusTheme.neonGreen.withValues(alpha: 0.1),
+                      : TerminusTheme.neonGreen
+                          .withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(2),
                 ),
                 child: Text(
-                  isComplete ? 'COMPLETATA' : 'IN CORSO',
+                  isComplete ? 'COMPLETED' : 'IN PROGRESS',
                   style: TerminusTheme.systemLog.copyWith(
                     fontSize: 9,
                     color: isComplete
@@ -125,7 +129,8 @@ class _SessionCard extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             session.profile.archetype,
-            style: TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
+            style:
+                TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
           ),
           const SizedBox(height: 8),
           Row(
@@ -133,13 +138,14 @@ class _SessionCard extends StatelessWidget {
               Text(
                 'LUMEN: ${session.lumenCount}/10',
                 style: TerminusTheme.systemLog.copyWith(
-                  color: TerminusTheme.lumenColor(session.lumenCount),
+                  color:
+                      TerminusTheme.lumenColor(session.lumenCount),
                   fontSize: 10,
                 ),
               ),
               const SizedBox(width: 16),
               Text(
-                'MESSAGGI: ${session.messages.length}',
+                'MESSAGES: ${session.messages.length}',
                 style: TerminusTheme.systemLog.copyWith(
                   color: TerminusTheme.textDim,
                   fontSize: 10,
@@ -147,7 +153,7 @@ class _SessionCard extends StatelessWidget {
               ),
               const SizedBox(width: 16),
               Text(
-                'VERITÀ: ${session.truths.length}',
+                'TRUTHS: ${session.truths.length}',
                 style: TerminusTheme.systemLog.copyWith(
                   color: TerminusTheme.textDim,
                   fontSize: 10,

@@ -5,6 +5,7 @@ import '../../config/theme.dart';
 import '../../models/victim_profile.dart';
 import '../../core/session_manager.dart';
 import '../../widgets/scanline_overlay.dart';
+import '../../widgets/code_rain.dart';
 import '../session/session_screen.dart';
 
 /// The Vocal Testament — the sealed final message.
@@ -60,7 +61,6 @@ class _TestamentScreenState extends State<TestamentScreen> {
     );
 
     if (mounted) {
-      // Navigate to session, replacing the setup stack
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(builder: (_) => const SessionScreen()),
@@ -79,120 +79,162 @@ class _TestamentScreenState extends State<TestamentScreen> {
   Widget build(BuildContext context) {
     return ScanlineOverlay(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'IL TESTAMENTO',
-            style: TerminusTheme.displayMedium.copyWith(fontSize: 14),
-          ),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: TerminusTheme.textDim),
-            onPressed: () => Navigator.pop(context),
-          ),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'IL MESSAGGIO VOCALE',
-                style: TerminusTheme.systemLog.copyWith(
-                  color: TerminusTheme.neonRed,
-                ),
+        body: Stack(
+          children: [
+            // Red code rain — we are sealing a death message
+            const Positioned.fill(
+              child: CodeRain(
+                color: Color(0xFFFF003C),
+                density: 0.2,
+                speed: 0.15,
+                opacity: 0.04,
               ),
-              const SizedBox(height: 16),
-              Text(
-                'Sei nel buio totale. È il tuo ultimo istante consapevole. '
-                'Prima di sprofondare completamente, registri un messaggio.\n\n'
-                'A chi parli? Cosa dici loro mentre il mondo finisce?\n\n'
-                'Questo messaggio verrà sigillato e non sarà mai menzionato '
-                'fino all\'ultimo istante.',
-                style: TerminusTheme.narrative,
-              ),
-              const SizedBox(height: 24),
-              Expanded(
-                child: TextField(
-                  controller: _testamentController,
-                  style: TerminusTheme.narrative,
-                  maxLines: null,
-                  expands: true,
-                  textAlignVertical: TextAlignVertical.top,
-                  decoration: InputDecoration(
-                    hintText: 'Scrivi il tuo messaggio finale...',
-                    hintStyle: TerminusTheme.narrativeItalic.copyWith(
-                      color: TerminusTheme.textDim.withValues(alpha: 0.5),
-                    ),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(4),
-                      borderSide:
-                          const BorderSide(color: TerminusTheme.neonRed),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(4),
-                      borderSide: const BorderSide(
-                          color: TerminusTheme.neonRed, width: 1.5),
-                    ),
-                  ),
-                  onChanged: (_) => setState(() {}),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: TerminusTheme.neonRed.withValues(alpha: 0.05),
-                  border: Border.all(
-                      color: TerminusTheme.neonRed.withValues(alpha: 0.2)),
-                  borderRadius: BorderRadius.circular(4),
-                ),
-                child: Row(
-                  children: [
-                    Icon(Icons.lock_outline,
-                        color: TerminusTheme.neonRed.withValues(alpha: 0.6),
-                        size: 16),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        'Questo messaggio sarà sigillato. '
-                        'Verrà riprodotto solo quando l\'ultima luce si spegne.',
-                        style: TerminusTheme.systemLog.copyWith(
-                          color: TerminusTheme.neonRed.withValues(alpha: 0.7),
-                          fontSize: 10,
+            ),
+            Column(
+              children: [
+                SafeArea(
+                  bottom: false,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 8),
+                    child: Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.arrow_back,
+                              color: TerminusTheme.textDim, size: 18),
+                          onPressed: () => Navigator.pop(context),
                         ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed:
-                      _testamentController.text.trim().isNotEmpty && !_starting
-                          ? _startSession
-                          : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                        TerminusTheme.neonRed.withValues(alpha: 0.15),
-                    foregroundColor: TerminusTheme.neonRed,
-                    disabledBackgroundColor: TerminusTheme.bgPanel,
-                    disabledForegroundColor: TerminusTheme.textDim,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                        Text(
+                          'THE TESTAMENT',
+                          style: TerminusTheme.displayMedium
+                              .copyWith(fontSize: 14),
+                        ),
+                      ],
                     ),
                   ),
-                  child: Text(
-                    _starting
-                        ? 'INIZIALIZZAZIONE...'
-                        : 'SIGILLA E INIZIA LA SESSIONE',
-                    style: TerminusTheme.buttonText,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'THE SEALED MESSAGE',
+                          style: TerminusTheme.systemLog.copyWith(
+                            color: TerminusTheme.neonRed,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          'You are in total darkness. This is your last conscious moment. '
+                          'Before falling completely, you record a message.\n\n'
+                          'Who are you speaking to? What do you tell them as the world ends?\n\n'
+                          'This message will be sealed and never mentioned '
+                          'until the last light goes out.',
+                          style: TerminusTheme.narrative,
+                        ),
+                        const SizedBox(height: 24),
+                        Expanded(
+                          child: TextField(
+                            controller: _testamentController,
+                            style: TerminusTheme.narrative,
+                            maxLines: null,
+                            expands: true,
+                            textAlignVertical: TextAlignVertical.top,
+                            decoration: InputDecoration(
+                              hintText: 'Write your final message...',
+                              hintStyle:
+                                  TerminusTheme.narrativeItalic.copyWith(
+                                color: TerminusTheme.textDim
+                                    .withValues(alpha: 0.5),
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(4),
+                                borderSide: const BorderSide(
+                                    color: TerminusTheme.neonRed),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(4),
+                                borderSide: const BorderSide(
+                                    color: TerminusTheme.neonRed,
+                                    width: 1.5),
+                              ),
+                            ),
+                            onChanged: (_) => setState(() {}),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: TerminusTheme.neonRed
+                                .withValues(alpha: 0.05),
+                            border: Border.all(
+                                color: TerminusTheme.neonRed
+                                    .withValues(alpha: 0.2)),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Row(
+                            children: [
+                              Icon(Icons.lock_outline,
+                                  color: TerminusTheme.neonRed
+                                      .withValues(alpha: 0.6),
+                                  size: 16),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  'This message will be sealed. '
+                                  'It will only play when the last light goes out.',
+                                  style: TerminusTheme.systemLog.copyWith(
+                                    color: TerminusTheme.neonRed
+                                        .withValues(alpha: 0.7),
+                                    fontSize: 10,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: _testamentController.text
+                                        .trim()
+                                        .isNotEmpty &&
+                                    !_starting
+                                ? _startSession
+                                : null,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: TerminusTheme.neonRed
+                                  .withValues(alpha: 0.15),
+                              foregroundColor: TerminusTheme.neonRed,
+                              disabledBackgroundColor:
+                                  TerminusTheme.bgPanel,
+                              disabledForegroundColor:
+                                  TerminusTheme.textDim,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 16),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                            ),
+                            child: Text(
+                              _starting
+                                  ? 'INITIALIZING...'
+                                  : 'SEAL AND BEGIN SESSION',
+                              style: TerminusTheme.buttonText,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );

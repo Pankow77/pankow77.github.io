@@ -220,8 +220,8 @@ class SessionManager extends ChangeNotifier {
     _safetyCommander.deactivatePause();
     _session!.messages.add(ChatMessage(
       role: 'system',
-      content: '[RIPRESA OPERATIVA. Il Comandante ha autorizzato '
-          'il ritorno alle operazioni. Il buio aspettava.]',
+      content: '[OPERATIONAL RESUME. The Commander has authorized '
+          'return to operations. The darkness was waiting.]',
       timestamp: DateTime.now(),
       lumenAtMessage: _lumenCount.current,
     ));

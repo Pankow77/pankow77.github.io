@@ -82,46 +82,46 @@ class TerminusSession {
   String generateShipLog() {
     final buffer = StringBuffer();
     buffer.writeln('╔═══════════════════════════════════════╗');
-    buffer.writeln('║  REGISTRO DI BORDO — FILE RECUPERATO ║');
+    buffer.writeln('║  SHIP\'S LOG — RECOVERED FILE         ║');
     buffer.writeln('╚═══════════════════════════════════════╝');
     buffer.writeln();
-    buffer.writeln('SOGGETTO: ${profile.name}');
-    buffer.writeln('ARCHETIPO: ${profile.archetype}');
-    buffer.writeln('VIRTÙ: ${profile.virtue}');
-    buffer.writeln('VIZIO: ${profile.vice}');
-    buffer.writeln('MOMENTO DESIDERATO: ${profile.moment}');
+    buffer.writeln('SUBJECT: ${profile.name}');
+    buffer.writeln('ARCHETYPE: ${profile.archetype}');
+    buffer.writeln('VIRTUE: ${profile.virtue}');
+    buffer.writeln('VICE: ${profile.vice}');
+    buffer.writeln('DESIRED MOMENT: ${profile.moment}');
     buffer.writeln();
-    buffer.writeln('── VERITÀ STABILITE ──');
+    buffer.writeln('── ESTABLISHED TRUTHS ──');
     buffer.writeln();
     if (truths.isEmpty) {
-      buffer.writeln('Nessuna verità dichiarata.');
+      buffer.writeln('No truths declared.');
     } else {
       for (int i = 0; i < truths.length; i++) {
         final t = truths[i];
         buffer.writeln(
-            'VERITÀ ${i + 1} [Lumen ${t.lumenAtDeclaration}] '
-            '(${t.speaker == "terminus" ? "TERMINUS" : "SOGGETTO"}):');
+            'TRUTH ${i + 1} [Lumen ${t.lumenAtDeclaration}] '
+            '(${t.speaker == "terminus" ? "TERMINUS" : "SUBJECT"}):');
         buffer.writeln('"${t.text}"');
         buffer.writeln();
       }
     }
-    buffer.writeln('── DADI LANCIATI: ${rolls.length} ──');
+    buffer.writeln('── DICE ROLLED: ${rolls.length} ──');
     final successes = rolls.where((r) => r.isSuccess).length;
     final failures = rolls.where((r) => !r.isSuccess).length;
-    buffer.writeln('Successi: $successes | Fallimenti: $failures');
+    buffer.writeln('Successes: $successes | Failures: $failures');
     if (rolls.any((r) => r.hopeLost)) {
-      buffer.writeln('IL DADO SPERANZA È STATO BRUCIATO.');
+      buffer.writeln('THE HOPE DIE HAS BEEN BURNED.');
     }
     buffer.writeln();
-    buffer.writeln('LUMEN FINALE: $lumenCount/10');
+    buffer.writeln('FINAL LUMEN: $lumenCount/10');
     buffer.writeln();
-    buffer.writeln('FINE DEL REGISTRO');
+    buffer.writeln('END OF LOG');
     buffer.writeln();
     buffer.writeln('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    buffer.writeln('AVVISO: Questo registro contiene dati personali.');
-    buffer.writeln('È archiviato localmente, crittografato sul dispositivo.');
-    buffer.writeln('Non viene mai trasmesso. Se perdi il dispositivo,');
-    buffer.writeln('perdi il registro. Questa è la sovranità dei dati.');
+    buffer.writeln('NOTICE: This log contains personal data.');
+    buffer.writeln('It is stored locally, encrypted on the device.');
+    buffer.writeln('It is never transmitted. If you lose the device,');
+    buffer.writeln('you lose the log. This is data sovereignty.');
     buffer.writeln('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     return buffer.toString();
   }

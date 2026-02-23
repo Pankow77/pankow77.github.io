@@ -6,11 +6,12 @@ import '../../models/victim_profile.dart';
 import '../../services/llm_service.dart';
 import '../../services/storage_service.dart';
 import '../../widgets/scanline_overlay.dart';
+import '../../widgets/code_rain.dart';
 import 'testament_screen.dart';
 
-/// Character creation — building the Profilo Vittima.
+/// Character creation — building the Victim Profile.
 ///
-/// From the engineering prompt "L'Intervista dell'Anima":
+/// From the engineering prompt "The Soul Interview":
 /// One question at a time. Deep. Personal. No heroes — create someone who suffers.
 class CharacterCreationScreen extends StatefulWidget {
   const CharacterCreationScreen({super.key});
@@ -40,83 +41,83 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
 
   final _steps = const [
     _StepInfo(
-      title: 'CHI SEI?',
-      subtitle: 'Nome e Archetipo',
-      prompt: 'Come ti chiami e cosa facevi quando il sole è scomparso?\n\n'
-          'Non creare un eroe. Crea qualcuno che soffre.',
+      title: 'WHO ARE YOU?',
+      subtitle: 'Name and Archetype',
+      prompt: 'What is your name and what were you doing when the sun disappeared?\n\n'
+          'Do not create a hero. Create someone who suffers.',
       fields: ['name', 'archetype'],
     ),
     _StepInfo(
-      title: 'LA TUA VIRTÙ',
-      subtitle: 'La compulsione di aiuto',
+      title: 'YOUR VIRTUE',
+      subtitle: 'The compulsion to help',
       prompt:
-          'Descrivi la tua Virtù non come una qualità morale, ma come '
-          'una compulsione. Quando sei più te stesso — quando aiuti?\n\n'
-          'Cosa ti spinge ad aiutare gli altri, anche quando è stupido farlo?',
+          'Describe your Virtue not as a moral quality, but as '
+          'a compulsion. When are you most yourself — when you help?\n\n'
+          'What drives you to help others, even when it is foolish?',
       fields: ['virtue'],
     ),
     _StepInfo(
-      title: 'IL TUO VIZIO',
-      subtitle: 'La sopravvivenza',
+      title: 'YOUR VICE',
+      subtitle: 'Survival',
       prompt:
-          'Descrivi il tuo Vizio non come una debolezza, ma come la tua '
-          'sopravvivenza. Quando è più facile sopravvivere — facendolo?\n\n'
-          'Non è un peccato. È una risorsa.',
+          'Describe your Vice not as a weakness, but as your '
+          'survival mechanism. When is it easiest to survive — by doing this?\n\n'
+          'It is not a sin. It is a resource.',
       fields: ['vice'],
     ),
     _StepInfo(
-      title: 'IL TUO MOMENTO',
-      subtitle: 'L\'obiettivo prima della fine',
+      title: 'YOUR MOMENT',
+      subtitle: 'The goal before the end',
       prompt:
-          'Il tuo Momento non è una speranza astratta. È una scena specifica.\n\n'
-          'Descrivila nei minimi dettagli. Non dire "ritrovare mio figlio". '
-          'Descrivi il momento in cui lo abbracci, il tessuto della sua giacca, '
-          'il suono del suo respiro.',
+          'Your Moment is not an abstract hope. It is a specific scene.\n\n'
+          'Describe it in the smallest details. Do not say "find my child." '
+          'Describe the moment you embrace them, the fabric of their jacket, '
+          'the sound of their breathing.',
       fields: ['moment'],
     ),
     _StepInfo(
-      title: 'IL TUO BRINK',
-      subtitle: 'Il punto di rottura',
+      title: 'YOUR BRINK',
+      subtitle: 'The breaking point',
       prompt:
-          'Cosa hai visto, o cosa hai fatto, che ti ha fatto capire che non '
-          'c\'è più ritorno?\n\n'
-          'Qual è il segreto che ti divora? La ferita aperta da cui entra il buio?',
+          'What did you see, or what did you do, that made you understand '
+          'there is no going back?\n\n'
+          'What is the secret that devours you? The open wound where the darkness enters?',
       fields: ['brink'],
     ),
     _StepInfo(
-      title: 'LA VOCE DEL FANTASMA',
-      subtitle: 'Chi parla dal buio (opzionale)',
+      title: 'THE GHOST VOICE',
+      subtitle: 'Who speaks from the dark (optional)',
       prompt:
-          'C\'è una voce che senti quando sei sul punto di cedere.\n\n'
-          'Non ti salva. Non risponde alle tue domande. Dice solo una frase. '
-          'Poi silenzio.\n\n'
-          'Chi è? Cosa dice? Puoi lasciare vuoto se preferisci.',
+          'There is a voice you hear when you are about to break.\n\n'
+          'It does not save you. It does not answer your questions. It says only one phrase. '
+          'Then silence.\n\n'
+          'Who is it? What does it say? You can leave this empty.',
       fields: ['ghost'],
     ),
     _StepInfo(
-      title: 'IL TESTIMONE SILENZIOSO',
-      subtitle: 'La presenza muta (opzionale)',
+      title: 'THE SILENT WITNESS',
+      subtitle: 'The mute presence (optional)',
       prompt:
-          'C\'è qualcuno che ti guarda nel buio.\n\n'
-          'Non parla. Non parlerà mai. Ma la sua presenza pesa più di qualsiasi '
-          'parola. Forse è seduto a un pianoforte. Forse tiene una fotografia.\n\n'
-          'Chi è? Cosa ha vicino? Puoi lasciare vuoto se preferisci.',
+          'There is someone watching you in the dark.\n\n'
+          'They do not speak. They will never speak. But their presence weighs more '
+          'than any word. Perhaps they sit at a piano. Perhaps they hold a photograph.\n\n'
+          'Who are they? What is near them? You can leave this empty.',
       fields: ['witness'],
     ),
     _StepInfo(
-      title: 'CALIBRAZIONE',
-      subtitle: 'Intensità emotiva della sessione',
+      title: 'CALIBRATION',
+      subtitle: 'Emotional intensity of the session',
       prompt:
-          'Quanto vuoi che il buio prema?\n\n'
-          'Non è una difficoltà. È una calibrazione terapeutica. '
-          'Se il tuo trauma è recente o ti senti fragile, scegli BASSA. '
-          'Il Comandante ti proteggerà di più.',
+          'How hard do you want the darkness to press?\n\n'
+          'This is not a difficulty setting. It is a therapeutic calibration. '
+          'If your trauma is recent or you feel fragile, choose LOW. '
+          'The Commander will protect you more.',
       fields: ['intensity'],
     ),
     _StepInfo(
       title: 'SCENARIO',
-      subtitle: 'Il luogo del tuo tramonto',
-      prompt: 'Dove si consumano le tue ultime ore?',
+      subtitle: 'The place of your sunset',
+      prompt: 'Where do your final hours unfold?',
       fields: ['scenario'],
     ),
   ];
@@ -198,75 +199,127 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   Widget build(BuildContext context) {
     return ScanlineOverlay(
       child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'PROFILO VITTIMA',
-            style: TerminusTheme.displayMedium.copyWith(fontSize: 14),
-          ),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: TerminusTheme.textDim),
-            onPressed: () => Navigator.pop(context),
-          ),
-        ),
-        body: Column(
+        body: Stack(
           children: [
-            // Progress bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-              child: Row(
-                children: List.generate(_steps.length, (i) {
-                  return Expanded(
-                    child: Container(
-                      height: 2,
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      color: i <= _currentStep
-                          ? TerminusTheme.neonCyan
-                          : TerminusTheme.border,
-                    ),
-                  );
-                }),
+            // Subtle code rain background
+            const Positioned.fill(
+              child: CodeRain(
+                color: Color(0xFF00F0FF),
+                density: 0.15,
+                speed: 0.2,
+                opacity: 0.03,
               ),
             ),
-
-            // Content
-            Expanded(
-              child: PageView.builder(
-                controller: _pageController,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: _steps.length,
-                itemBuilder: (context, index) {
-                  final step = _steps[index];
-                  return _buildStep(step);
-                },
-              ),
-            ),
-
-            // Next button
-            Padding(
-              padding: const EdgeInsets.all(24),
-              child: SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: _canProceed() ? _next : null,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                        TerminusTheme.neonCyan.withValues(alpha: 0.15),
-                    foregroundColor: TerminusTheme.neonCyan,
-                    disabledBackgroundColor: TerminusTheme.bgPanel,
-                    disabledForegroundColor: TerminusTheme.textDim,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+            Column(
+              children: [
+                // Header
+                SafeArea(
+                  bottom: false,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 12, vertical: 8),
+                    child: Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(Icons.arrow_back,
+                              color: TerminusTheme.textDim, size: 18),
+                          onPressed: () => Navigator.pop(context),
+                        ),
+                        Text(
+                          'VICTIM PROFILE',
+                          style: TerminusTheme.displayMedium
+                              .copyWith(fontSize: 14),
+                        ),
+                        const Spacer(),
+                        Text(
+                          '${_currentStep + 1}/${_steps.length}',
+                          style: TerminusTheme.systemLog.copyWith(
+                            color: TerminusTheme.textDim,
+                            fontSize: 10,
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  child: Text(
-                    _currentStep < _steps.length - 1
-                        ? 'AVANTI'
-                        : 'REGISTRA TESTAMENTO',
-                    style: TerminusTheme.buttonText,
                   ),
                 ),
-              ),
+
+                // Progress bar
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 24, vertical: 4),
+                  child: Row(
+                    children: List.generate(_steps.length, (i) {
+                      return Expanded(
+                        child: Container(
+                          height: 2,
+                          margin:
+                              const EdgeInsets.symmetric(horizontal: 2),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(1),
+                            color: i <= _currentStep
+                                ? TerminusTheme.neonCyan
+                                : TerminusTheme.border,
+                            boxShadow: i <= _currentStep
+                                ? [
+                                    BoxShadow(
+                                      color: TerminusTheme.neonCyan
+                                          .withValues(alpha: 0.3),
+                                      blurRadius: 4,
+                                    ),
+                                  ]
+                                : null,
+                          ),
+                        ),
+                      );
+                    }),
+                  ),
+                ),
+
+                // Content
+                Expanded(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: _steps.length,
+                    itemBuilder: (context, index) {
+                      final step = _steps[index];
+                      return _buildStep(step);
+                    },
+                  ),
+                ),
+
+                // Next button
+                SafeArea(
+                  top: false,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: _canProceed() ? _next : null,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: TerminusTheme.neonCyan
+                              .withValues(alpha: 0.15),
+                          foregroundColor: TerminusTheme.neonCyan,
+                          disabledBackgroundColor: TerminusTheme.bgPanel,
+                          disabledForegroundColor: TerminusTheme.textDim,
+                          padding:
+                              const EdgeInsets.symmetric(vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                        ),
+                        child: Text(
+                          _currentStep < _steps.length - 1
+                              ? 'NEXT'
+                              : 'RECORD TESTAMENT',
+                          style: TerminusTheme.buttonText,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -297,7 +350,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
             TextField(
               controller: _nameController,
               style: TerminusTheme.narrative,
-              decoration: const InputDecoration(labelText: 'NOME'),
+              decoration: const InputDecoration(labelText: 'NAME'),
               onChanged: (_) => setState(() {}),
             ),
             const SizedBox(height: 16),
@@ -307,7 +360,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _archetypeController,
               style: TerminusTheme.narrative,
               decoration: const InputDecoration(
-                  labelText: 'ARCHETIPO (chi eri prima del buio)'),
+                  labelText: 'ARCHETYPE (who you were before the dark)'),
               onChanged: (_) => setState(() {}),
             ),
           if (step.fields.contains('virtue'))
@@ -315,7 +368,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _virtueController,
               style: TerminusTheme.narrative,
               maxLines: 3,
-              decoration: const InputDecoration(labelText: 'LA TUA VIRTÙ'),
+              decoration: const InputDecoration(labelText: 'YOUR VIRTUE'),
               onChanged: (_) => setState(() {}),
             ),
           if (step.fields.contains('vice'))
@@ -323,7 +376,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _viceController,
               style: TerminusTheme.narrative,
               maxLines: 3,
-              decoration: const InputDecoration(labelText: 'IL TUO VIZIO'),
+              decoration: const InputDecoration(labelText: 'YOUR VICE'),
               onChanged: (_) => setState(() {}),
             ),
           if (step.fields.contains('moment'))
@@ -332,7 +385,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               style: TerminusTheme.narrative,
               maxLines: 4,
               decoration: const InputDecoration(
-                  labelText: 'DESCRIVI LA SCENA NEI DETTAGLI'),
+                  labelText: 'DESCRIBE THE SCENE IN DETAIL'),
               onChanged: (_) => setState(() {}),
             ),
           if (step.fields.contains('brink'))
@@ -341,7 +394,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               style: TerminusTheme.narrative,
               maxLines: 5,
               decoration:
-                  const InputDecoration(labelText: 'IL PUNTO DI ROTTURA'),
+                  const InputDecoration(labelText: 'THE BREAKING POINT'),
               onChanged: (_) => setState(() {}),
             ),
           if (step.fields.contains('ghost')) ...[
@@ -353,8 +406,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               ),
               maxLines: 2,
               decoration: InputDecoration(
-                labelText: 'LA FRASE CHE DICE',
-                hintText: 'es: "Non ero pronto… ma questa volta sono qua."',
+                labelText: 'THE PHRASE IT SAYS',
+                hintText: 'e.g. "I wasn\'t ready... but this time I\'m here."',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
                   color: TerminusTheme.textDim.withValues(alpha: 0.3),
                   fontSize: 12,
@@ -367,8 +420,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _ghostIdentityController,
               style: TerminusTheme.narrative,
               decoration: InputDecoration(
-                labelText: 'CHI È (non verrà mai nominato nel gioco)',
-                hintText: 'es: "mia madre", "il mio migliore amico"',
+                labelText: 'WHO ARE THEY (will never be named in the game)',
+                hintText: 'e.g. "my mother", "my best friend"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
                   color: TerminusTheme.textDim.withValues(alpha: 0.3),
                   fontSize: 12,
@@ -382,8 +435,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _witnessNameController,
               style: TerminusTheme.narrative,
               decoration: InputDecoration(
-                labelText: 'CHI È',
-                hintText: 'es: "Papà", "Mio fratello"',
+                labelText: 'WHO ARE THEY',
+                hintText: 'e.g. "Dad", "My brother"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
                   color: TerminusTheme.textDim.withValues(alpha: 0.3),
                   fontSize: 12,
@@ -396,8 +449,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
               controller: _witnessObjectController,
               style: TerminusTheme.narrative,
               decoration: InputDecoration(
-                labelText: 'COSA HA VICINO',
-                hintText: 'es: "pianoforte", "sedia vuota", "fotografia"',
+                labelText: 'WHAT IS NEAR THEM',
+                hintText: 'e.g. "piano", "empty chair", "photograph"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
                   color: TerminusTheme.textDim.withValues(alpha: 0.3),
                   fontSize: 12,
@@ -416,23 +469,23 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   Widget _buildIntensitySelector() {
     final options = {
       EmotionalIntensity.low: (
-        'BASSA',
-        'Margini di sicurezza ampi. Ghost e Testimone appaiono una sola volta. '
-            'Narrazione malinconica. Il Comandante interviene prima. '
-            'Consigliata per traumi recenti o prima sessione.',
+        'LOW',
+        'Wide safety margins. Ghost and Witness appear only once. '
+            'Melancholic narration. The Commander intervenes earlier. '
+            'Recommended for recent trauma or first session.',
         TerminusTheme.neonGreen,
       ),
       EmotionalIntensity.medium: (
-        'MEDIA (default)',
-        'Bilanciata. Ghost e Testimone appaiono normalmente. '
-            'Commander standard. Il buio preme ma non schiaccia.',
+        'MEDIUM (default)',
+        'Balanced. Ghost and Witness appear normally. '
+            'Standard Commander. The darkness presses but does not crush.',
         TerminusTheme.neonOrange,
       ),
       EmotionalIntensity.high: (
-        'ALTA',
-        'Piena intensità. Ghost persistente, Testimone permanente. '
-            '"Loro" usano la voce dei tuoi cari. Il buio è implacabile. '
-            'Solo per chi sa cosa affronta.',
+        'HIGH',
+        'Full intensity. Persistent Ghost, permanent Witness. '
+            '"They" use the voice of your loved ones. The darkness is relentless. '
+            'Only for those who know what they face.',
         TerminusTheme.neonRed,
       ),
     };
@@ -464,13 +517,16 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                   Text(
                     e.value.$1,
                     style: TerminusTheme.systemLog.copyWith(
-                      color: isSelected ? e.value.$3 : TerminusTheme.textSecondary,
+                      color: isSelected
+                          ? e.value.$3
+                          : TerminusTheme.textSecondary,
                     ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     e.value.$2,
-                    style: TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
+                    style:
+                        TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
                   ),
                 ],
               ),
@@ -484,29 +540,29 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   Widget _buildScenarioSelector() {
     final scenarios = {
       'rifugio': (
-        'RIFUGIO COMPROMESSO',
-        'Un luogo "sicuro" che sta crollando. Cosa sacrifichiamo per la sicurezza falsa?'
+        'COMPROMISED SHELTER',
+        'A "safe" place that is collapsing. What do we sacrifice for false security?'
       ),
       'ricerca': (
-        'L\'ULTIMO TRENO',
-        'Un viaggio verso una destinazione. Ogni passo ti avvicina alla salvezza e alla morte.'
+        'THE LAST TRAIN',
+        'A journey toward a destination. Every step brings you closer to salvation and death.'
       ),
       'comunita': (
-        'COMUNITÀ DIVISA',
-        'Sopravvissuti con obiettivi conflittuali. Chi tradisci per sopravvivere?'
+        'DIVIDED COMMUNITY',
+        'Survivors with conflicting goals. Who do you betray to survive?'
       ),
       'memoria': (
-        'MEMORIA PERDUTA',
-        'Non ricordi il passato. La realtà è affidabile? Chi sei se non ricordi?'
+        'LOST MEMORY',
+        'You do not remember the past. Is reality reliable? Who are you if you cannot remember?'
       ),
       'sacrificio': (
-        'IL SACRIFICIO',
-        'Una strada per salvare il mondo, ma solo uno può farlo. Vale la pena?'
+        'THE SACRIFICE',
+        'A road to save the world, but only one can walk it. Is it worth it?'
       ),
       'tunnel': (
-        'IL TUNNEL',
-        'Un treno fermo in un tunnel infinito. Nessuna finestra. Nessuna luce avanti. '
-            'Le candele sono l\'unica prova che sei ancora vivo.'
+        'THE TUNNEL',
+        'A train stopped in an infinite tunnel. No windows. No light ahead. '
+            'The candles are the only proof you are still alive.'
       ),
     };
 
@@ -545,9 +601,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                   const SizedBox(height: 4),
                   Text(
                     e.value.$2,
-                    style: TerminusTheme.narrativeItalic.copyWith(
-                      fontSize: 12,
-                    ),
+                    style: TerminusTheme.narrativeItalic
+                        .copyWith(fontSize: 12),
                   ),
                 ],
               ),

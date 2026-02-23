@@ -47,7 +47,7 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            'API KEY SALVATA',
+            'API KEY SAVED',
             style: TerminusTheme.systemLog,
           ),
           backgroundColor: TerminusTheme.bgPanel,
@@ -69,11 +69,12 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'CONFIGURAZIONE',
+            'CONFIGURATION',
             style: TerminusTheme.displayMedium.copyWith(fontSize: 14),
           ),
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: TerminusTheme.textDim),
+            icon:
+                const Icon(Icons.arrow_back, color: TerminusTheme.textDim),
             onPressed: () => Navigator.pop(context),
           ),
         ),
@@ -88,9 +89,9 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
               ),
               const SizedBox(height: 8),
               Text(
-                'TERMINUS-OMNI richiede una API key di Google AI Studio '
-                'per comunicare con Gemini. La key è salvata localmente '
-                'sul tuo dispositivo e non viene mai trasmessa a terzi.',
+                'TERMINUS-OMNI requires a Google AI Studio API key '
+                'to communicate with Gemini. The key is stored locally '
+                'on your device and is never transmitted to third parties.',
                 style: TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
               ),
               const SizedBox(height: 24),
@@ -102,11 +103,14 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
                   labelText: 'API Key',
                   suffixIcon: IconButton(
                     icon: Icon(
-                      _obscure ? Icons.visibility_off : Icons.visibility,
+                      _obscure
+                          ? Icons.visibility_off
+                          : Icons.visibility,
                       color: TerminusTheme.textDim,
                       size: 18,
                     ),
-                    onPressed: () => setState(() => _obscure = !_obscure),
+                    onPressed: () =>
+                        setState(() => _obscure = !_obscure),
                   ),
                 ),
               ),
@@ -116,17 +120,19 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
                 child: ElevatedButton(
                   onPressed: _saving ? null : _save,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: TerminusTheme.neonCyan.withValues(alpha: 0.15),
+                    backgroundColor:
+                        TerminusTheme.neonCyan.withValues(alpha: 0.15),
                     foregroundColor: TerminusTheme.neonCyan,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4),
                       side: BorderSide(
-                          color: TerminusTheme.neonCyan.withValues(alpha: 0.3)),
+                          color: TerminusTheme.neonCyan
+                              .withValues(alpha: 0.3)),
                     ),
                   ),
                   child: Text(
-                    _saving ? 'SALVATAGGIO...' : 'SALVA',
+                    _saving ? 'SAVING...' : 'SAVE',
                     style: TerminusTheme.buttonText,
                   ),
                 ),

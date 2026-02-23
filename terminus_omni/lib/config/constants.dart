@@ -8,13 +8,13 @@ class TerminusConstants {
   static const int minLumen = 0;
 
   // ── Session phases (from engineering prompt Part VI) ──
-  static const int phase1Start = 10; // I Primi Passi
+  static const int phase1Start = 10; // First Steps
   static const int phase1End = 7;
-  static const int phase2Start = 6; // L'Assedio
+  static const int phase2Start = 6; // The Siege
   static const int phase2End = 4;
-  static const int phase3Start = 3; // Il Declino
+  static const int phase3Start = 3; // The Decline
   static const int phase3End = 2;
-  static const int phase4Lumen = 1; // L'Ultima Luce
+  static const int phase4Lumen = 1; // Last Light
 
   // ── Dice system ──
   static const int initialDicePool = 10;
@@ -38,6 +38,16 @@ class TerminusConstants {
   /// Emotional intensity keywords that trigger Commander check.
   /// The LLM monitors its own output + user input for these patterns.
   static const List<String> emotionalPeakIndicators = [
+    'i can\'t take it',
+    'i want to die',
+    'stop',
+    'i can\'t breathe',
+    'help',
+    'it hurts',
+    'i can\'t',
+    'i\'ll kill myself',
+    'it\'s too much',
+    // Italian variants (bilingual support)
     'non ce la faccio',
     'voglio morire',
     'basta',
@@ -62,37 +72,37 @@ class TerminusConstants {
   /// Scenario descriptions for the LLM context.
   static const Map<String, Map<String, String>> scenarioDescriptions = {
     'rifugio': {
-      'name': 'RIFUGIO COMPROMESSO',
-      'setting': 'Un luogo "sicuro" che sta crollando.',
-      'premise': 'Cosa sacrifichiamo per la sicurezza falsa?',
+      'name': 'COMPROMISED SHELTER',
+      'setting': 'A "safe" place that is collapsing.',
+      'premise': 'What do we sacrifice for false security?',
     },
     'ricerca': {
-      'name': 'L\'ULTIMO TRENO',
-      'setting': 'Un viaggio verso una destinazione.',
-      'premise': 'Ogni passo ti avvicina alla salvezza e alla morte.',
+      'name': 'THE LAST TRAIN',
+      'setting': 'A journey toward a destination.',
+      'premise': 'Every step brings you closer to salvation and death.',
     },
     'comunita': {
-      'name': 'COMUNITÀ DIVISA',
-      'setting': 'Sopravvissuti con obiettivi conflittuali.',
-      'premise': 'Chi tradisci per sopravvivere?',
+      'name': 'DIVIDED COMMUNITY',
+      'setting': 'Survivors with conflicting goals.',
+      'premise': 'Who do you betray to survive?',
     },
     'memoria': {
-      'name': 'MEMORIA PERDUTA',
-      'setting': 'Non ricordi il passato. La realtà è affidabile?',
-      'premise': 'Chi sei se non ricordi?',
+      'name': 'LOST MEMORY',
+      'setting': 'You do not remember the past. Is reality reliable?',
+      'premise': 'Who are you if you cannot remember?',
     },
     'sacrificio': {
-      'name': 'IL SACRIFICIO',
-      'setting': 'Una strada per salvare il mondo, ma solo uno può farlo.',
-      'premise': 'Vale la pena?',
+      'name': 'THE SACRIFICE',
+      'setting': 'A road to save the world, but only one can walk it.',
+      'premise': 'Is it worth it?',
     },
     'tunnel': {
-      'name': 'IL TUNNEL',
-      'setting': 'Un treno fermo in un tunnel infinito. Nessuna finestra. '
-          'Nessuna luce avanti. Il treno è partito il giorno del trauma. '
-          'È rimasto nel buio da allora.',
-      'premise': 'Le candele sono l\'unica prova che sei ancora vivo. '
-          'Il tunnel finisce. Scendi. La persona che hai perso non c\'è. Accetti.',
+      'name': 'THE TUNNEL',
+      'setting': 'A train stopped in an infinite tunnel. No windows. '
+          'No light ahead. The train departed the day of the trauma. '
+          'It has remained in the dark since.',
+      'premise': 'The candles are the only proof you are still alive. '
+          'The tunnel ends. You step off. The person you lost is not there. You accept.',
     },
   };
 

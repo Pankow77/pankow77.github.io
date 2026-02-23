@@ -67,17 +67,17 @@ extension LumenReasonExt on LumenExtinguishReason {
   String get defaultDescription {
     switch (this) {
       case LumenExtinguishReason.diceFailure:
-        return 'Il tiro è fallito. L\'oscurità avanza.';
+        return 'The roll failed. The darkness advances.';
       case LumenExtinguishReason.narrativeDeath:
-        return 'Qualcosa è morto nella narrazione.';
+        return 'Something died in the narrative.';
       case LumenExtinguishReason.truthClosure:
-        return 'Una verità ha chiuso una porta per sempre.';
+        return 'A truth has closed a door forever.';
       case LumenExtinguishReason.virtueAbandoned:
-        return 'La virtù è stata tradita. Il costo è una luce.';
+        return 'The virtue was betrayed. The cost is a light.';
       case LumenExtinguishReason.sceneTransition:
-        return 'La scena è cambiata. Il mondo è più freddo.';
+        return 'The scene has changed. The world is colder.';
       case LumenExtinguishReason.momentBurned:
-        return 'Il Momento è bruciato. La speranza muore.';
+        return 'The Moment has burned. Hope dies.';
     }
   }
 }

@@ -148,15 +148,15 @@ class SafetyCommander {
   String get _firstPauseNarrative => '''
 ═══════════════════════════════════════════
 
-[INTERRUZIONE DI SISTEMA]
+[SYSTEM INTERRUPT]
 
-Il Comandante della struttura ha rilevato livelli di stress operativo critici nei sistemi vitali dell'equipaggio.
+The facility Commander has detected critical operational stress levels in crew vital systems.
 
-"Attenzione. Riposo operativo obbligatorio. 30 minuti. Non è un suggerimento. È un ordine diretto."
+"Attention. Mandatory operational rest. 30 minutes. This is not a suggestion. This is a direct order."
 
-Le luci della sala si abbassano a un caldo ambra. Il ronzio dei macchinari si riduce a un mormorio. Per i prossimi 30 minuti, il protocollo è sospeso. Non ci sono minacce. Non ci sono decisioni. C'è solo il silenzio e il respiro.
+The room lights dim to a warm amber. The hum of the machinery fades to a murmur. For the next 30 minutes, protocol is suspended. There are no threats. There are no decisions. There is only silence and breathing.
 
-Quando sarai pronto, scrivi qualsiasi cosa per riprendere. Il buio aspetterà.
+When you are ready, write anything to resume. The darkness will wait.
 
 [TIMER: 30:00]
 
@@ -165,15 +165,15 @@ Quando sarai pronto, scrivi qualsiasi cosa per riprendere. Il buio aspetterà.
   String get _repeatPauseNarrative => '''
 ═══════════════════════════════════════════
 
-[INTERRUZIONE DI SISTEMA — PRIORITÀ MASSIMA]
+[SYSTEM INTERRUPT — MAXIMUM PRIORITY]
 
-Il Comandante entra nella sala. Ti guarda.
+The Commander enters the room. Looks at you.
 
-"So che vuoi andare avanti. Lo so. Ma il mio lavoro non è lasciarti andare avanti. Il mio lavoro è riportarti a casa. Trenta minuti. Siediti. Respira. È un ordine."
+"I know you want to keep going. I know. But my job is not to let you keep going. My job is to bring you home. Thirty minutes. Sit down. Breathe. That's an order."
 
-Si siede di fronte a te. Non dice altro. Non se ne va.
+They sit across from you. Say nothing else. Do not leave.
 
-Quando sarai pronto, scrivi qualsiasi cosa per riprendere.
+When you are ready, write anything to resume.
 
 [TIMER: 30:00]
 
