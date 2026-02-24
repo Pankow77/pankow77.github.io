@@ -1,10 +1,10 @@
-import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-/// Falling code rain effect — corrupted data cascading down the screen.
-/// Inspired by the concept art: not green Matrix, but color-shifting
-/// based on game state (cyan → red as entropy rises).
+/// High-performance code rain effect — uses drawRect particles instead of
+/// TextPainter, which was causing web freezes. Each "raindrop" is a
+/// glowing rectangle falling with trail fade, giving a similar effect
+/// at 10x less GPU cost.
 class CodeRain extends StatefulWidget {
   final Color color;
   final double density;
@@ -32,7 +32,7 @@ class _CodeRainState extends State<CodeRain>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 10),
+      duration: const Duration(seconds: 12),
     )..repeat();
   }
 
@@ -49,7 +49,7 @@ class _CodeRainState extends State<CodeRain>
         animation: _controller,
         builder: (context, _) {
           return CustomPaint(
-            painter: _CodeRainPainter(
+            painter: _RainPainter(
               progress: _controller.value,
               color: widget.color,
               density: widget.density,
@@ -64,7 +64,7 @@ class _CodeRainState extends State<CodeRain>
   }
 }
 
-class _CodeRainPainter extends CustomPainter {
+class _RainPainter extends CustomPainter {
   final double progress;
   final Color color;
   final double density;
@@ -72,16 +72,10 @@ class _CodeRainPainter extends CustomPainter {
   final double opacity;
 
   static final Random _rng = Random(42);
-  static final List<_RainColumn> _columns = [];
-  static bool _initialized = false;
+  static List<_Drop>? _drops;
+  static int _lastDropCount = 0;
 
-  static const String _chars =
-      '01アイウエオカキクケコサシスセソタチツテト'
-      'ナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン'
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-      '!@#\$%^&*(){}[]<>?/\\|~';
-
-  _CodeRainPainter({
+  _RainPainter({
     required this.progress,
     required this.color,
     required this.density,
@@ -91,101 +85,87 @@ class _CodeRainPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    if (!_initialized || _columns.isEmpty) {
-      _initColumns(size);
-      _initialized = true;
+    if (size.width <= 0 || size.height <= 0) return;
+
+    final colWidth = 18.0;
+    final numCols = (size.width / colWidth).ceil();
+    final targetDrops = (numCols * density).ceil();
+
+    if (_drops == null || _lastDropCount != targetDrops) {
+      _initDrops(targetDrops, numCols, size);
+      _lastDropCount = targetDrops;
     }
 
-    final charWidth = 12.0;
-    final charHeight = 16.0;
-    final numCols = (size.width / charWidth).ceil();
+    for (final drop in _drops!) {
+      final x = drop.col * colWidth + colWidth * 0.5;
+      final baseY = ((drop.startY + progress * size.height * drop.speed * speed * 2.5)
+              % (size.height + drop.length * 12.0)) -
+          drop.length * 12.0;
 
-    // Ensure we have enough columns
-    while (_columns.length < numCols) {
-      _columns.add(_RainColumn(
-        speed: 0.3 + _rng.nextDouble() * 0.7,
-        offset: _rng.nextDouble() * size.height,
-        length: 5 + _rng.nextInt(20),
-        chars: List.generate(
-            30, (_) => _chars[_rng.nextInt(_chars.length)]),
-      ));
-    }
+      for (int i = 0; i < drop.length; i++) {
+        final y = baseY + i * 12.0;
+        if (y < -12 || y > size.height) continue;
 
-    for (int col = 0; col < numCols; col++) {
-      if (_rng.nextDouble() > density) continue;
+        final fadeRatio = i / drop.length;
+        final alpha = opacity * (1.0 - fadeRatio * 0.85);
+        if (alpha <= 0.01) continue;
 
-      final column = _columns[col % _columns.length];
-      final x = col * charWidth;
-      final baseY = (column.offset +
-              progress * size.height * column.speed * speed * 3) %
-          (size.height + column.length * charHeight);
+        final isHead = i == 0;
+        final cellColor = isHead
+            ? Colors.white.withValues(alpha: alpha * 1.5)
+            : color.withValues(alpha: alpha);
 
-      for (int row = 0; row < column.length; row++) {
-        final y = baseY - row * charHeight;
-        if (y < -charHeight || y > size.height) continue;
+        final paint = Paint()..color = cellColor;
 
-        final fadeRatio = row / column.length;
-        final charOpacity = opacity * (1.0 - fadeRatio * 0.8);
-
-        if (charOpacity <= 0.01) continue;
-
-        final paint = Paint()
-          ..color = row == 0
-              ? Colors.white.withValues(alpha: charOpacity * 1.5)
-              : color.withValues(alpha: charOpacity);
-
-        final charIndex =
-            (col * 7 + row * 13 + (progress * 100).toInt()) %
-                column.chars.length;
-        final char = column.chars[charIndex];
-
-        final textPainter = TextPainter(
-          text: TextSpan(
-            text: char,
-            style: TextStyle(
-              fontFamily: 'ShareTechMono',
-              fontSize: 11,
-              color: paint.color,
-            ),
+        // Draw small glowing rectangles instead of text characters
+        final w = isHead ? 4.0 : 3.0;
+        final h = isHead ? 8.0 : 6.0;
+        canvas.drawRRect(
+          RRect.fromRectAndRadius(
+            Rect.fromCenter(center: Offset(x, y), width: w, height: h),
+            const Radius.circular(1),
           ),
-          textDirection: TextDirection.ltr,
-        )..layout();
+          paint,
+        );
 
-        textPainter.paint(canvas, Offset(x, y));
+        // Add glow for head particle
+        if (isHead) {
+          final glowPaint = Paint()
+            ..color = color.withValues(alpha: alpha * 0.4)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6);
+          canvas.drawCircle(Offset(x, y), 4, glowPaint);
+        }
       }
     }
   }
 
-  void _initColumns(Size size) {
-    _columns.clear();
-    final numCols = (size.width / 12).ceil();
-    for (int i = 0; i < numCols; i++) {
-      _columns.add(_RainColumn(
-        speed: 0.3 + _rng.nextDouble() * 0.7,
-        offset: _rng.nextDouble() * size.height,
-        length: 5 + _rng.nextInt(20),
-        chars: List.generate(
-            30, (_) => _chars[_rng.nextInt(_chars.length)]),
-      ));
-    }
+  void _initDrops(int count, int numCols, Size size) {
+    _drops = List.generate(count, (i) {
+      final col = i % numCols;
+      return _Drop(
+        col: col,
+        startY: _rng.nextDouble() * size.height * 2,
+        speed: 0.4 + _rng.nextDouble() * 0.6,
+        length: 4 + _rng.nextInt(12),
+      );
+    });
   }
 
   @override
-  bool shouldRepaint(covariant _CodeRainPainter oldDelegate) =>
-      oldDelegate.progress != progress ||
-      oldDelegate.color != color;
+  bool shouldRepaint(covariant _RainPainter oldDelegate) =>
+      oldDelegate.progress != progress || oldDelegate.color != color;
 }
 
-class _RainColumn {
+class _Drop {
+  final int col;
+  final double startY;
   final double speed;
-  final double offset;
   final int length;
-  final List<String> chars;
 
-  _RainColumn({
+  _Drop({
+    required this.col,
+    required this.startY,
     required this.speed,
-    required this.offset,
     required this.length,
-    required this.chars,
   });
 }

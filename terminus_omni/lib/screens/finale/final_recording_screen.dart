@@ -251,14 +251,8 @@ class _FinalRecordingScreenState extends State<FinalRecordingScreen>
                       Container(
                         width: double.infinity,
                         padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          border: Border.all(
-                            color:
-                                TerminusTheme.neonRed.withValues(alpha: 0.15),
-                          ),
-                          color:
-                              TerminusTheme.neonRed.withValues(alpha: 0.03),
+                        decoration: TerminusTheme.richPanel(
+                          accentColor: TerminusTheme.neonRed,
                         ),
                         child: NarrativeText(
                           text: '"${widget.testament}"',

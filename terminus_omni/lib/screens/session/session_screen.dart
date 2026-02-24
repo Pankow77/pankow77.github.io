@@ -15,19 +15,11 @@ import '../../widgets/crt_frame.dart';
 import '../../widgets/entropy_graph.dart';
 import '../../widgets/heartbeat_line.dart';
 import '../../widgets/terminal_grid.dart';
+import '../../widgets/circuit_background.dart';
 import '../finale/final_recording_screen.dart';
 import 'ship_log_confirmation_screen.dart';
 
-/// The main session screen — active terminal.
-///
-/// Visual composition:
-/// - CRT monitor frame around the narrative
-/// - Entropy/Coherence graph in the HUD
-/// - Code rain intensifying as lumen drops
-/// - Terminal grid for quick actions
-/// - Heartbeat line showing system vital signs
-/// - Dynamic throttling: effects reduce GPU load at low lumen
-/// - Progressive label degradation: the UI rots with the subject
+/// The main session screen — REDESIGNED with rich industrial UI.
 class SessionScreen extends StatefulWidget {
   const SessionScreen({super.key});
 
@@ -103,9 +95,7 @@ class _SessionScreenState extends State<SessionScreen>
 
     if (session == null) {
       return const Scaffold(
-        body: Center(
-          child: Text('No active session'),
-        ),
+        body: Center(child: Text('No active session')),
       );
     }
 
@@ -117,12 +107,37 @@ class _SessionScreenState extends State<SessionScreen>
         backgroundColor: Colors.black,
         body: Stack(
           children: [
-            // Background code rain (intensifies visually, throttled for GPU)
+            // Background gradient
+            Positioned.fill(
+              child: GradientBackground(
+                colors: [
+                  const Color(0xFF040810),
+                  Color.lerp(
+                    const Color(0xFF0A1428),
+                    const Color(0xFF1A0810),
+                    1.0 - sm.lumen / 10.0,
+                  )!,
+                  const Color(0xFF040810),
+                ],
+              ),
+            ),
+
+            // Circuit pattern (fades as lumen drops)
+            if (!isPerf && sm.lumen > 3)
+              Positioned.fill(
+                child: CircuitBackground(
+                  color: TerminusTheme.lumenColor(sm.lumen),
+                  opacity: 0.02,
+                ),
+              ),
+
+            // Code rain (intensifies visually, throttled for GPU)
             if (!isPerf)
               Positioned.fill(
                 child: CodeRain(
                   color: _rainColor(sm.lumen),
-                  density: _rainDensity(sm.lumen) * _throttleFactor(sm.lumen),
+                  density:
+                      _rainDensity(sm.lumen) * _throttleFactor(sm.lumen),
                   speed: _rainSpeed(sm.lumen),
                   opacity: _rainOpacity(sm.lumen),
                 ),
@@ -132,14 +147,14 @@ class _SessionScreenState extends State<SessionScreen>
             SafeArea(
               child: Column(
                 children: [
-                  // ── HUD Header ──
+                  // HUD Header
                   _buildHUD(sm, session),
 
-                  // ── Commander pause overlay ──
+                  // Commander pause overlay
                   if (sm.isPaused)
                     _buildCommanderPause(sm)
                   else ...[
-                    // ── Narrative area (inside CRT frame) ──
+                    // Narrative area inside CRT frame
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
@@ -150,12 +165,17 @@ class _SessionScreenState extends State<SessionScreen>
                               'POOL:${session.dicePool}+${session.hopeDice} | '
                               'SCENE:${session.currentScene} | '
                               'LUMEN:${sm.lumen}/10',
+                          borderColor: Color.lerp(
+                            const Color(0xFF1A2E50),
+                            const Color(0xFF3A1020),
+                            1.0 - sm.lumen / 10.0,
+                          )!,
                           child: _buildMessageList(session),
                         ),
                       ),
                     ),
 
-                    // ── Entropy graph (throttled: freezes below lumen 2) ──
+                    // Entropy graph
                     if (!isPerf && sm.lumen > 2)
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -165,7 +185,7 @@ class _SessionScreenState extends State<SessionScreen>
                         ),
                       ),
 
-                    // ── Terminal grid (quick actions) ──
+                    // Terminal grid
                     if (!session.isComplete)
                       Padding(
                         padding: const EdgeInsets.symmetric(
@@ -178,10 +198,10 @@ class _SessionScreenState extends State<SessionScreen>
                         ),
                       ),
 
-                    // ── Text input ──
+                    // Text input
                     if (!session.isComplete) _buildInputArea(sm),
 
-                    // ── Session complete ──
+                    // Session complete
                     if (session.isComplete) _buildSessionComplete(),
                   ],
                 ],
@@ -195,42 +215,56 @@ class _SessionScreenState extends State<SessionScreen>
 
   Widget _buildHUD(SessionManager sm, TerminusSession session) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.8),
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.black.withValues(alpha: 0.9),
+            Colors.black.withValues(alpha: 0.6),
+          ],
+        ),
         border: Border(
           bottom: BorderSide(
-            color: TerminusTheme.lumenColor(sm.lumen).withValues(alpha: 0.2),
+            color: TerminusTheme.lumenColor(sm.lumen).withValues(alpha: 0.25),
+            width: 1.5,
           ),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: TerminusTheme.lumenColor(sm.lumen).withValues(alpha: 0.05),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Column(
         children: [
           Row(
             children: [
-              // Back button
               GestureDetector(
                 onTap: () => Navigator.pop(context),
                 child: Container(
                   padding: const EdgeInsets.all(4),
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: TerminusTheme.textDim.withValues(alpha: 0.5),
-                    size: 16,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(
+                      color: TerminusTheme.textDim.withValues(alpha: 0.2),
+                    ),
                   ),
+                  child: Icon(Icons.arrow_back,
+                      color: TerminusTheme.textDim.withValues(alpha: 0.5),
+                      size: 16),
                 ),
               ),
-              const SizedBox(width: 6),
-
-              // Title with progressive glitch (onset at lumen 5)
+              const SizedBox(width: 8),
               if (sm.lumen <= 5)
                 GlitchText(
-                  text: sm.lumen <= 3
-                      ? 'TERMINUS'
-                      : 'TERMINUS-OMNI',
+                  text: sm.lumen <= 3 ? 'TERMINUS' : 'TERMINUS-OMNI',
                   style: TerminusTheme.systemLog.copyWith(
                     color: TerminusTheme.lumenColor(sm.lumen),
-                    fontSize: 11,
+                    fontSize: 12,
                   ),
                   glitchIntensity: sm.lumen <= 3
                       ? (4 - sm.lumen) * 0.25
@@ -241,36 +275,51 @@ class _SessionScreenState extends State<SessionScreen>
                   'TERMINUS-OMNI',
                   style: TerminusTheme.systemLog.copyWith(
                     color: TerminusTheme.lumenColor(sm.lumen),
-                    fontSize: 11,
+                    fontSize: 12,
+                    shadows: [
+                      Shadow(
+                        color: TerminusTheme.lumenColor(sm.lumen)
+                            .withValues(alpha: 0.3),
+                        blurRadius: 6,
+                      ),
+                    ],
                   ),
                 ),
-
               const Spacer(),
-
-              // Phase indicator
+              // Phase badge
               Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 6, vertical: 2),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(3),
-                  border: Border.all(
-                    color: _phaseColor(sm.phase).withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(4),
+                  gradient: LinearGradient(
+                    colors: [
+                      _phaseColor(sm.phase).withValues(alpha: 0.12),
+                      _phaseColor(sm.phase).withValues(alpha: 0.06),
+                    ],
                   ),
+                  border: Border.all(
+                    color: _phaseColor(sm.phase).withValues(alpha: 0.4),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: _phaseColor(sm.phase).withValues(alpha: 0.1),
+                      blurRadius: 6,
+                    ),
+                  ],
                 ),
                 child: Text(
                   _phaseLabel(sm.phase),
-                  style: TerminusTheme.systemLog.copyWith(
+                  style: TerminusTheme.labelText.copyWith(
                     color: _phaseColor(sm.phase),
-                    fontSize: 8,
-                    letterSpacing: 1,
+                    fontSize: 9,
+                    letterSpacing: 1.5,
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 6),
-
-          // Lumen display + heartbeat
+          const SizedBox(height: 8),
           Row(
             children: [
               Expanded(
@@ -283,11 +332,22 @@ class _SessionScreenState extends State<SessionScreen>
               const SizedBox(width: 8),
               Expanded(
                 flex: 2,
-                child: HeartbeatLine(
-                  color: TerminusTheme.lumenColor(sm.lumen),
-                  height: 36,
-                  isAlive: sm.lumen > 0,
-                  bpm: _heartRate(sm.lumen),
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: TerminusTheme.bgPanel.withValues(alpha: 0.5),
+                    border: Border.all(
+                      color: TerminusTheme.border.withValues(alpha: 0.3),
+                    ),
+                  ),
+                  child: HeartbeatLine(
+                    color: TerminusTheme.lumenColor(sm.lumen),
+                    height: 36,
+                    isAlive: sm.lumen > 0,
+                    bpm: _heartRate(sm.lumen),
+                  ),
                 ),
               ),
             ],
@@ -324,24 +384,21 @@ class _SessionScreenState extends State<SessionScreen>
         padding: const EdgeInsets.only(bottom: 12),
         child: Container(
           width: double.infinity,
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: TerminusTheme.neonPurple.withValues(alpha: 0.04),
-            borderRadius: BorderRadius.circular(3),
-            border: Border.all(
-                color: TerminusTheme.neonPurple.withValues(alpha: 0.15)),
+          padding: const EdgeInsets.all(14),
+          decoration: TerminusTheme.richPanel(
+            accentColor: TerminusTheme.neonPurple,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 '[SIGNAL — UNKNOWN FREQUENCY]',
-                style: TerminusTheme.systemLog.copyWith(
-                  color: TerminusTheme.neonPurple.withValues(alpha: 0.5),
+                style: TerminusTheme.labelText.copyWith(
+                  color: TerminusTheme.neonPurple.withValues(alpha: 0.6),
                   fontSize: 9,
                 ),
               ),
-              const SizedBox(height: 6),
+              const SizedBox(height: 8),
               GlitchText(
                 text: msg.content,
                 style: TerminusTheme.narrative.copyWith(
@@ -358,11 +415,11 @@ class _SessionScreenState extends State<SessionScreen>
 
     if (isUser) {
       textColor = TerminusTheme.neonGreen;
-      bgColor = TerminusTheme.neonGreen.withValues(alpha: 0.03);
+      bgColor = TerminusTheme.neonGreen.withValues(alpha: 0.04);
       prefix = '> ';
     } else if (isSystem) {
       textColor = TerminusTheme.neonOrange;
-      bgColor = TerminusTheme.neonOrange.withValues(alpha: 0.03);
+      bgColor = TerminusTheme.neonOrange.withValues(alpha: 0.04);
       prefix = '[SYSTEM] ';
     } else {
       textColor = TerminusTheme.textPrimary;
@@ -374,12 +431,12 @@ class _SessionScreenState extends State<SessionScreen>
       padding: const EdgeInsets.only(bottom: 12),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: bgColor,
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(6),
           border: isUser || isSystem
-              ? Border.all(color: textColor.withValues(alpha: 0.1))
+              ? Border.all(color: textColor.withValues(alpha: 0.15))
               : null,
         ),
         child: isUser || isSystem
@@ -405,18 +462,24 @@ class _SessionScreenState extends State<SessionScreen>
 
   Widget _buildInputArea(SessionManager sm) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.9),
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.black.withValues(alpha: 0.7),
+            Colors.black.withValues(alpha: 0.95),
+          ],
+        ),
         border: Border(
           top: BorderSide(
-            color: TerminusTheme.neonGreen.withValues(alpha: 0.15),
+            color: TerminusTheme.neonGreen.withValues(alpha: 0.2),
           ),
         ),
       ),
       child: Row(
         children: [
-          // Terminal prompt symbol
           Text(
             '>_',
             style: TerminusTheme.systemLog.copyWith(
@@ -424,7 +487,7 @@ class _SessionScreenState extends State<SessionScreen>
               fontSize: 14,
             ),
           ),
-          const SizedBox(width: 6),
+          const SizedBox(width: 8),
           Expanded(
             child: TextField(
               controller: _inputController,
@@ -442,44 +505,43 @@ class _SessionScreenState extends State<SessionScreen>
                   fontSize: 13,
                 ),
                 contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 8),
+                    horizontal: 12, vertical: 10),
                 isDense: true,
                 filled: true,
-                fillColor: const Color(0xFF050A12),
+                fillColor: const Color(0xFF060C18),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(6),
                   borderSide: BorderSide(
-                    color: TerminusTheme.neonGreen.withValues(alpha: 0.15),
+                    color: TerminusTheme.neonGreen.withValues(alpha: 0.2),
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(6),
                   borderSide: BorderSide(
-                    color: TerminusTheme.neonGreen.withValues(alpha: 0.15),
+                    color: TerminusTheme.neonGreen.withValues(alpha: 0.2),
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(3),
+                  borderRadius: BorderRadius.circular(6),
                   borderSide: BorderSide(
-                    color: TerminusTheme.neonGreen.withValues(alpha: 0.4),
+                    color: TerminusTheme.neonGreen.withValues(alpha: 0.5),
+                    width: 1.5,
                   ),
                 ),
               ),
               onSubmitted: (_) => _sendMessage(),
             ),
           ),
-          const SizedBox(width: 6),
+          const SizedBox(width: 8),
           GestureDetector(
             onTap: sm.isLoading ? null : _sendMessage,
             child: Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(3),
-                border: Border.all(
-                  color: sm.isLoading
-                      ? TerminusTheme.textDim.withValues(alpha: 0.2)
-                      : TerminusTheme.neonCyan.withValues(alpha: 0.3),
-                ),
+              padding: const EdgeInsets.all(10),
+              decoration: TerminusTheme.neonButton(
+                color: sm.isLoading
+                    ? TerminusTheme.textDim
+                    : TerminusTheme.neonCyan,
+                radius: 6,
               ),
               child: sm.isLoading
                   ? SizedBox(
@@ -508,47 +570,51 @@ class _SessionScreenState extends State<SessionScreen>
       child: Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                Icons.shield_outlined,
-                color: TerminusTheme.neonOrange.withValues(alpha: 0.6),
-                size: 48,
-              ),
-              const SizedBox(height: 16),
-              Text(
-                'OPERATIONAL REST',
-                style: TerminusTheme.displayMedium.copyWith(
-                  color: TerminusTheme.neonOrange,
-                ),
-              ),
-              const SizedBox(height: 16),
-              Text(
-                'The Commander has ordered a 30-minute rest.\n'
-                'There are no threats. There are no decisions.\n'
-                'There is only silence and breathing.',
-                style: TerminusTheme.narrative,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 32),
-              OutlinedButton(
-                onPressed: () => sm.resumeFromPause(),
-                style: OutlinedButton.styleFrom(
-                  side: BorderSide(
-                      color:
-                          TerminusTheme.neonOrange.withValues(alpha: 0.3)),
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 32, vertical: 14),
-                ),
-                child: Text(
-                  'I AM READY TO RESUME',
-                  style: TerminusTheme.buttonText.copyWith(
-                    color: TerminusTheme.neonOrange,
+          child: Container(
+            padding: const EdgeInsets.all(32),
+            decoration: TerminusTheme.richPanel(
+              accentColor: TerminusTheme.neonOrange,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: TerminusTheme.neonOrange.withValues(alpha: 0.1),
+                    border: Border.all(
+                      color: TerminusTheme.neonOrange.withValues(alpha: 0.3),
+                    ),
+                  ),
+                  child: Icon(
+                    Icons.shield_outlined,
+                    color: TerminusTheme.neonOrange.withValues(alpha: 0.7),
+                    size: 40,
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 20),
+                Text(
+                  'OPERATIONAL REST',
+                  style: TerminusTheme.displayMedium.copyWith(
+                    color: TerminusTheme.neonOrange,
+                    fontSize: 18,
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'The Commander has ordered a 30-minute rest.\n'
+                  'There are no threats. There are no decisions.\n'
+                  'There is only silence and breathing.',
+                  style: TerminusTheme.narrative,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 28),
+                _ResumeButton(
+                  onTap: () => sm.resumeFromPause(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -560,7 +626,14 @@ class _SessionScreenState extends State<SessionScreen>
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.9),
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.black.withValues(alpha: 0.7),
+            Colors.black.withValues(alpha: 0.95),
+          ],
+        ),
         border: Border(
           top: BorderSide(
             color: TerminusTheme.neonRed.withValues(alpha: 0.3),
@@ -583,45 +656,23 @@ class _SessionScreenState extends State<SessionScreen>
             ),
             glitchIntensity: 0.7,
           ),
-          const SizedBox(height: 16),
-          OutlinedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => ShipLogConfirmationScreen(
-                    session: session,
-                  ),
-                ),
-              );
-            },
-            style: OutlinedButton.styleFrom(
-              side: BorderSide(
-                  color: TerminusTheme.neonRed.withValues(alpha: 0.3)),
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 32, vertical: 14),
-            ),
-            child: Text(
-              'FINAL PLAYBACK',
-              style: TerminusTheme.buttonText.copyWith(
-                color: TerminusTheme.neonRed,
+          const SizedBox(height: 20),
+          _SessionEndButton(
+            label: 'FINAL PLAYBACK',
+            color: TerminusTheme.neonRed,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) =>
+                    ShipLogConfirmationScreen(session: session),
               ),
             ),
           ),
-          const SizedBox(height: 8),
-          OutlinedButton(
-            onPressed: () => Navigator.pop(context),
-            style: OutlinedButton.styleFrom(
-              side: const BorderSide(color: TerminusTheme.border),
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 32, vertical: 14),
-            ),
-            child: Text(
-              'RETURN TO THE LIGHT',
-              style: TerminusTheme.buttonText.copyWith(
-                color: TerminusTheme.textDim,
-              ),
-            ),
+          const SizedBox(height: 10),
+          _SessionEndButton(
+            label: 'RETURN TO THE LIGHT',
+            color: TerminusTheme.metalSteel,
+            onTap: () => Navigator.pop(context),
           ),
         ],
       ),
@@ -649,7 +700,7 @@ class _SessionScreenState extends State<SessionScreen>
     if (lumen >= 4) return 95;
     if (lumen >= 2) return 120;
     if (lumen == 1) return 140;
-    return 0; // flatline
+    return 0;
   }
 
   Color _phaseColor(SessionPhase phase) {
@@ -682,18 +733,16 @@ class _SessionScreenState extends State<SessionScreen>
     }
   }
 
-  /// CRT header label — degrades progressively as lumen drops.
-  /// The player feels the rot, doesn't read it.
   String _crtHeader(int lumen, SessionPhase phase) {
     if (lumen >= 7) return 'TERMINUS-OMNI // ${_phaseLabel(phase)}';
     if (lumen >= 4) return 'TERM-OMNI // ${_phaseLabel(phase)}';
-    if (lumen >= 2) return 'TER\u2588\u2591NUS // ${_phaseLabel(phase)}';
-    if (lumen == 1) return '\u2588ER\u2591\u2588\u2591US // \u2591\u2591\u2591\u2591';
+    if (lumen >= 2)
+      return 'TER\u2588\u2591NUS // ${_phaseLabel(phase)}';
+    if (lumen == 1)
+      return '\u2588ER\u2591\u2588\u2591US // \u2591\u2591\u2591\u2591';
     return '[NULL]';
   }
 
-  /// Dynamic throttle factor — reduces GPU load as lumen drops.
-  /// Visual intensity stays, computation drops.
   double _throttleFactor(int lumen) {
     if (lumen >= 7) return 1.0;
     if (lumen >= 4) return 0.8;
@@ -772,7 +821,8 @@ class _SessionScreenState extends State<SessionScreen>
             label: 'RESIST',
             type: ActionType.coherent,
             cost: null,
-            prompt: 'I resist the darkness with everything I have left.',
+            prompt:
+                'I resist the darkness with everything I have left.',
           ),
           TerminalAction(
             id: 'accept',
@@ -821,5 +871,81 @@ class _SessionScreenState extends State<SessionScreen>
       case SessionPhase.morte:
         return const [];
     }
+  }
+}
+
+class _ResumeButton extends StatefulWidget {
+  final VoidCallback onTap;
+  const _ResumeButton({required this.onTap});
+  @override
+  State<_ResumeButton> createState() => _ResumeButtonState();
+}
+
+class _ResumeButtonState extends State<_ResumeButton> {
+  bool _pressed = false;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) {
+        setState(() => _pressed = false);
+        widget.onTap();
+      },
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+        decoration: TerminusTheme.neonButton(
+          color: TerminusTheme.neonOrange,
+          isPressed: _pressed,
+        ),
+        child: Text(
+          'I AM READY TO RESUME',
+          style: TerminusTheme.buttonText.copyWith(
+            color: TerminusTheme.neonOrange,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SessionEndButton extends StatefulWidget {
+  final String label;
+  final Color color;
+  final VoidCallback onTap;
+  const _SessionEndButton(
+      {required this.label, required this.color, required this.onTap});
+  @override
+  State<_SessionEndButton> createState() => _SessionEndButtonState();
+}
+
+class _SessionEndButtonState extends State<_SessionEndButton> {
+  bool _pressed = false;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) {
+        setState(() => _pressed = false);
+        widget.onTap();
+      },
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        decoration: TerminusTheme.neonButton(
+          color: widget.color,
+          isPressed: _pressed,
+        ),
+        child: Center(
+          child: Text(
+            widget.label,
+            style: TerminusTheme.buttonText.copyWith(color: widget.color),
+          ),
+        ),
+      ),
+    );
   }
 }
