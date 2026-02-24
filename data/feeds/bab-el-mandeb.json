@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-24T09:47:29.527Z",
-  "epoch_count": 16,
+  "last_fetch": "2026-02-24T10:43:19.223Z",
+  "epoch_count": 17,
   "epochs": [
     {
       "id": "rss_47e4c2a102671c4a",
@@ -212,6 +212,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T17:36:19.452Z"
+    },
+    {
+      "id": "rss_3c68b129a81d7cb9",
+      "timestamp": 1771849111000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea naval force extends stay as Houthi attacks cease - Tradewinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOY0c2RHl0S1U1M1N6dm5JSEpmYl9zeS0wRFMxSDVSLWFIY0xsbWd1QnJoMU1yV01XbEpKaGNuVG5UZnVTd0NmM1pwNTlnYk9yNWRsN2x5UVBlcEU4amlwb1owbGhTd0xkMXJZTnVBRENwVldIZmxEbUQyR1IyenRMVkJpcV8wLXlnejhoaWxFdF9mclJuQ18zN21Tck5xdGtfbWg4UzlIWGhtalFEbG5z?oc=5\" target=\"_blank\">Red Sea naval force extends stay as Houthi attacks cease</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tradewinds News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY0c2RHl0S1U1M1N6dm5JSEpmYl9zeS0wRFMxSDVSLWFIY0xsbWd1QnJoMU1yV01XbEpKaGNuVG5UZnVTd0NmM1pwNTlnYk9yNWRsN2x5UVBlcEU4amlwb1owbGhTd0xkMXJZTnVBRENwVldIZmxEbUQyR1IyenRMVkJpcV8wLXlnejhoaWxFdF9mclJuQ18zN21Tck5xdGtfbWg4UzlIWGhtalFEbG5z?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-24T10:43:17.846Z"
     },
     {
       "id": "rss_131d33a0db1621fc",
