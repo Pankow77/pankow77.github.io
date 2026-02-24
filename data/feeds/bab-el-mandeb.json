@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-24T07:49:56.927Z",
-  "epoch_count": 12,
+  "last_fetch": "2026-02-24T08:41:25.212Z",
+  "epoch_count": 14,
   "epochs": [
+    {
+      "id": "rss_47e4c2a102671c4a",
+      "timestamp": 1771918853000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU extends mandate of Operation ASPIDES to safeguard freedom of navigation - سانا",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1aTzZITUFNMEtnQWo3bWl5TER5VnRKTDdibzhjTG01MmZKUTVuQzJxb2xPNHBIckpheFVrOUdGVEpBY0h2ZGJpS2dxQW5pcVFFTGdR?oc=5\" target=\"_blank\">EU extends mandate of Operation ASPIDES to safeguard freedom of navigation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">سانا</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1aTzZITUFNMEtnQWo3bWl5TER5VnRKTDdibzhjTG01MmZKUTVuQzJxb2xPNHBIckpheFVrOUdGVEpBY0h2ZGJpS2dxQW5pcVFFTGdR?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-24T08:41:24.755Z"
+    },
     {
       "id": "rss_d5b9fd10f34c7099",
       "timestamp": 1771909209000,
@@ -23,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T05:40:10.746Z"
+    },
+    {
+      "id": "rss_0989a7d4d4c175bc",
+      "timestamp": 1771892420000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE90NVF1MlIxV0NRMVdPWjNtYUJHQVhMYk8xUmQ3Slh4R0VYQTd3WUFiMk05eW9BUlZiTDZvbmphTkVuX1ZqZ2dFSDgzVVA5U1pTLXkwdU00ek9NZw?oc=5\" target=\"_blank\">Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE90NVF1MlIxV0NRMVdPWjNtYUJHQVhMYk8xUmQ3Slh4R0VYQTd3WUFiMk05eW9BUlZiTDZvbmphTkVuX1ZqZ2dFSDgzVVA5U1pTLXkwdU00ek9NZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-24T08:41:23.877Z"
     },
     {
       "id": "rss_12e2bf6037f5e7d2",
