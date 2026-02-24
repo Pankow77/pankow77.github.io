@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-24T01:48:55.738Z",
-  "epoch_count": 10,
+  "last_fetch": "2026-02-24T04:15:13.758Z",
+  "epoch_count": 11,
   "epochs": [
     {
       "id": "rss_12e2bf6037f5e7d2",
@@ -44,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T22:36:45.965Z"
+    },
+    {
+      "id": "rss_527a0a1cb0da906f",
+      "timestamp": 1771884287000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Extends Mandate Of Operation ASPIDES - Marine News Magazine",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPeHZxeGhjbzhWSDFEdUZPbTVOWXpSWlNFYVNvaTlpQzg4NmVWNXIxSFh4NlFNZTJCMEd2d0xCZFV6U2UyNGdTaUZKOXZ5M2JQRzJZSG95WTN3WWw3UlFiZUZpN1ZjWTQ1QjlYeWI5Ry1tdk1SdzBTNDlyX05OaDJGMA?oc=5\" target=\"_blank\">EU Extends Mandate Of Operation ASPIDES</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeHZxeGhjbzhWSDFEdUZPbTVOWXpSWlNFYVNvaTlpQzg4NmVWNXIxSFh4NlFNZTJCMEd2d0xCZFV6U2UyNGdTaUZKOXZ5M2JQRzJZSG95WTN3WWw3UlFiZUZpN1ZjWTQ1QjlYeWI5Ry1tdk1SdzBTNDlyX05OaDJGMA?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-24T04:15:13.320Z"
     },
     {
       "id": "rss_5724108d217bd7da",
