@@ -1,14 +1,15 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import '../../config/theme.dart';
 import '../../widgets/scanline_overlay.dart';
+import '../../widgets/visual_engine/tunnel_corridor_painter.dart';
 import '../home/home_screen.dart';
 
 /// Tunnel intro — the player is drawn into TERMINUS-OMNI.
 ///
-/// Concentric neon rectangles rush forward in perspective,
-/// creating the illusion of moving through a dark corridor.
-/// After 6 seconds (or on tap), transitions to HomeScreen.
+/// A 3D code corridor: walls covered in dense characters, floor with
+/// circular data-nodes, everything converging to a dark vanishing point.
+/// The image is "risucchiata nel nero" — sucked into the void.
+/// After 6.5 seconds (or on tap), transitions to HomeScreen.
 class TunnelIntroScreen extends StatefulWidget {
   const TunnelIntroScreen({super.key});
 
@@ -26,18 +27,18 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
   void initState() {
     super.initState();
 
-    // Continuous tunnel frame cycling (looping)
+    // Continuous corridor scroll (slower loop for immersive pull)
     _tunnelLoop = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2500),
+      duration: const Duration(milliseconds: 4000),
     )..repeat();
 
-    // Master timeline: 6 seconds total
+    // Master timeline: 6.5 seconds total
     //  0.00–0.12  fade in from black
     //  0.12–0.25  title fades in
-    //  0.25–0.55  steady tunnel + title
+    //  0.25–0.55  steady corridor + title
     //  0.55–0.65  "TAP TO ENTER" visible
-    //  0.65–0.82  acceleration, title zooms away
+    //  0.65–0.82  acceleration, title zooms into VP
     //  0.82–1.00  fade to black → navigate
     _timeline = AnimationController(
       vsync: this,
@@ -83,19 +84,29 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
 
               return Stack(
                 children: [
-                  // ── Layer 0: Tunnel ──
+                  // ── Layer 0: 3D Code Corridor ──
                   Positioned.fill(
                     child: CustomPaint(
-                      painter: _TunnelPainter(
+                      painter: TunnelCorridorPainter(
                         loop: _tunnelLoop.value,
                         phase: t,
                       ),
                     ),
                   ),
 
-                  // ── Layer 1: Title ──
+                  // ── Layer 1: TERMINUS OMNI title ──
                   if (t > 0.12 && t < 0.82)
-                    Center(child: _buildTitle(t)),
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      child: SafeArea(
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 32),
+                          child: _buildTitle(t),
+                        ),
+                      ),
+                    ),
 
                   // ── Layer 2: "TAP TO ENTER" ──
                   if (t > 0.30 && t < 0.70)
@@ -110,8 +121,8 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
                   if (t > 0.82)
                     Positioned.fill(
                       child: ColoredBox(
-                        color: Colors.black.withValues(
-                          alpha: ((t - 0.82) / 0.18).clamp(0.0, 1.0),
+                        color: Colors.black.withOpacity(
+                          ((t - 0.82) / 0.18).clamp(0.0, 1.0),
                         ),
                       ),
                     ),
@@ -124,7 +135,7 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
     );
   }
 
-  // ── Title: TERMINUS / OMNI ──
+  // ── Title: TERMINUS / OMNI — white phosphor glow ──
   Widget _buildTitle(double t) {
     double opacity;
     double scale;
@@ -138,7 +149,7 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
       opacity = 1.0;
       scale = 1.0;
     } else {
-      // Zoom into tunnel + fade
+      // Zoom into VP + fade
       final exit = ((t - 0.65) / 0.17).clamp(0.0, 1.0);
       opacity = 1.0 - exit;
       scale = 1.0 + exit * 5.0;
@@ -153,61 +164,63 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
           children: [
             Text(
               'TERMINUS',
-              style: TerminusTheme.displayLarge.copyWith(
-                fontSize: 38,
+              style: TextStyle(
+                fontFamily: 'Orbitron',
+                fontSize: 34,
+                fontWeight: FontWeight.w700,
+                color: Colors.white.withOpacity(0.92),
+                letterSpacing: 6,
                 shadows: [
                   Shadow(
-                    color: TerminusTheme.neonCyan.withValues(alpha: 0.8),
-                    blurRadius: 24,
-                  ),
-                  Shadow(
-                    color: TerminusTheme.neonCyan.withValues(alpha: 0.3),
-                    blurRadius: 50,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              'O M N I',
-              style: TerminusTheme.displayMedium.copyWith(
-                letterSpacing: 16,
-                color: TerminusTheme.neonCyan.withValues(alpha: 0.55),
-                shadows: [
-                  Shadow(
-                    color: TerminusTheme.neonCyan.withValues(alpha: 0.5),
+                    color: const Color(0xFFB0D0C0).withOpacity(0.5),
                     blurRadius: 18,
                   ),
+                  Shadow(
+                    color: const Color(0xFFB0D0C0).withOpacity(0.2),
+                    blurRadius: 40,
+                  ),
                 ],
               ),
             ),
-            const SizedBox(height: 16),
-            // Glow separator
+            const SizedBox(height: 4),
+            Text(
+              'O M N I',
+              style: TextStyle(
+                fontFamily: 'Orbitron',
+                fontSize: 15,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 14,
+                color: const Color(0xFFB0D0C0).withOpacity(0.55),
+                shadows: [
+                  Shadow(
+                    color: const Color(0xFFB0D0C0).withOpacity(0.3),
+                    blurRadius: 12,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 14),
+            // Thin phosphor separator
             Container(
-              width: 200,
+              width: 180,
               height: 1,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Colors.transparent,
-                    TerminusTheme.neonCyan.withValues(alpha: 0.5),
+                    const Color(0xFFB0D0C0).withOpacity(0.35),
                     Colors.transparent,
                   ],
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: TerminusTheme.neonCyan.withValues(alpha: 0.3),
-                    blurRadius: 8,
-                  ),
-                ],
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 10),
             Text(
               'THE INEVITABILITY ENGINE',
-              style: TerminusTheme.systemLog.copyWith(
+              style: TextStyle(
+                fontFamily: 'ShareTechMono',
                 fontSize: 9,
-                color: TerminusTheme.neonRed.withValues(alpha: 0.5),
+                color: const Color(0xFFFF003C).withOpacity(0.45),
                 letterSpacing: 3,
               ),
             ),
@@ -229,222 +242,13 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
       child: Text(
         '[ TAP TO ENTER ]',
         textAlign: TextAlign.center,
-        style: TerminusTheme.systemLog.copyWith(
-          color: TerminusTheme.neonCyan.withValues(alpha: 0.7),
-          letterSpacing: 4,
+        style: TextStyle(
+          fontFamily: 'ShareTechMono',
           fontSize: 11,
+          color: const Color(0xFFB0D0C0).withOpacity(0.6),
+          letterSpacing: 4,
         ),
       ),
     );
   }
-}
-
-// ═══════════════════════════════════════════════════════════════════
-//  Custom Painter: Neon tunnel in perspective
-// ═══════════════════════════════════════════════════════════════════
-
-class _TunnelPainter extends CustomPainter {
-  final double loop;
-  final double phase;
-
-  static const int _ringCount = 18;
-
-  _TunnelPainter({required this.loop, required this.phase});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final cx = size.width / 2;
-    final cy = size.height / 2;
-
-    // Master fade-in (first 12% of timeline)
-    final fadeIn = (phase / 0.12).clamp(0.0, 1.0);
-
-    // Speed multiplier: accelerates in final third
-    final speed =
-        phase < 0.65 ? 1.0 : 1.0 + (phase - 0.65) / 0.35 * 6.0;
-
-    // ── Vanishing-point glow ──
-    final vpRadius = 80.0 + (phase > 0.65 ? (phase - 0.65) * 200 : 0);
-    final vpPaint = Paint()
-      ..shader = RadialGradient(
-        colors: [
-          TerminusTheme.neonCyan.withValues(alpha: 0.12 * fadeIn),
-          TerminusTheme.neonCyan.withValues(alpha: 0.0),
-        ],
-      ).createShader(
-        Rect.fromCircle(center: Offset(cx, cy), radius: vpRadius),
-      );
-    canvas.drawCircle(Offset(cx, cy), vpRadius, vpPaint);
-
-    // ── Perspective guide lines (edges of corridor) ──
-    _drawGuideLines(canvas, size, cx, cy, fadeIn);
-
-    // ── Floor/ceiling depth lines ──
-    _drawDepthLines(canvas, size, cx, cy, fadeIn, speed);
-
-    // ── Tunnel rings (concentric rectangles) ──
-    for (int i = 0; i < _ringCount; i++) {
-      final ringT = ((loop * speed) + i / _ringCount) % 1.0;
-
-      // Exponential scale for perspective illusion
-      final scale = pow(ringT, 0.55).toDouble();
-      if (scale < 0.02) continue;
-
-      final halfW = cx * scale * 1.4;
-      final halfH = cy * scale * 1.4;
-
-      // Opacity: fade near vanishing point and near camera
-      double alpha;
-      if (ringT < 0.08) {
-        alpha = ringT / 0.08;
-      } else if (ringT > 0.88) {
-        alpha = (1.0 - ringT) / 0.12;
-      } else {
-        alpha = 1.0;
-      }
-      alpha *= fadeIn * 0.55;
-      if (alpha <= 0.01) continue;
-
-      final rect = Rect.fromCenter(
-        center: Offset(cx, cy),
-        width: halfW * 2,
-        height: halfH * 2,
-      );
-
-      // Solid neon outline
-      canvas.drawRect(
-        rect,
-        Paint()
-          ..color = TerminusTheme.neonCyan.withValues(alpha: alpha * 0.5)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 1.0 + scale * 2.0,
-      );
-
-      // Glow layer
-      canvas.drawRect(
-        rect,
-        Paint()
-          ..color = TerminusTheme.neonCyan.withValues(alpha: alpha * 0.15)
-          ..style = PaintingStyle.stroke
-          ..strokeWidth = 4.0 + scale * 8.0
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10),
-      );
-    }
-
-    // ── Speed streaks during acceleration ──
-    if (phase > 0.58) {
-      _drawSpeedStreaks(canvas, size, cx, cy, fadeIn);
-    }
-  }
-
-  /// Perspective lines from center to corners/edges (corridor structure)
-  void _drawGuideLines(
-      Canvas canvas, Size size, double cx, double cy, double fadeIn) {
-    final paint = Paint()
-      ..color = TerminusTheme.neonCyan.withValues(alpha: 0.05 * fadeIn)
-      ..strokeWidth = 0.5;
-
-    final glowPaint = Paint()
-      ..color = TerminusTheme.neonCyan.withValues(alpha: 0.03 * fadeIn)
-      ..strokeWidth = 3
-      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 4);
-
-    final center = Offset(cx, cy);
-    final endpoints = [
-      Offset.zero,
-      Offset(size.width, 0),
-      Offset(0, size.height),
-      Offset(size.width, size.height),
-      Offset(0, cy),
-      Offset(size.width, cy),
-      Offset(cx, 0),
-      Offset(cx, size.height),
-    ];
-
-    for (final ep in endpoints) {
-      canvas.drawLine(center, ep, glowPaint);
-      canvas.drawLine(center, ep, paint);
-    }
-  }
-
-  /// Horizontal depth lines on floor and ceiling for corridor feel
-  void _drawDepthLines(Canvas canvas, Size size, double cx, double cy,
-      double fadeIn, double speed) {
-    final paint = Paint()
-      ..color = TerminusTheme.neonCyan.withValues(alpha: 0.04 * fadeIn)
-      ..strokeWidth = 0.5;
-
-    const lineCount = 12;
-    for (int i = 0; i < lineCount; i++) {
-      final depthT = ((loop * speed * 0.7) + i / lineCount) % 1.0;
-      final scale = pow(depthT, 0.55).toDouble();
-      if (scale < 0.03) continue;
-
-      final halfH = cy * scale * 1.4;
-      final halfW = cx * scale * 1.4;
-
-      double alpha;
-      if (depthT < 0.1) {
-        alpha = depthT / 0.1;
-      } else if (depthT > 0.85) {
-        alpha = (1.0 - depthT) / 0.15;
-      } else {
-        alpha = 1.0;
-      }
-      alpha *= fadeIn * 0.3;
-      if (alpha <= 0.01) continue;
-
-      final linePaint = Paint()
-        ..color = TerminusTheme.neonCyan.withValues(alpha: alpha * 0.15)
-        ..strokeWidth = 0.5;
-
-      // Floor line
-      final floorY = cy + halfH;
-      canvas.drawLine(
-        Offset(cx - halfW, floorY),
-        Offset(cx + halfW, floorY),
-        linePaint,
-      );
-      // Ceiling line
-      final ceilY = cy - halfH;
-      canvas.drawLine(
-        Offset(cx - halfW, ceilY),
-        Offset(cx + halfW, ceilY),
-        linePaint,
-      );
-    }
-  }
-
-  /// Radial speed streaks during acceleration phase
-  void _drawSpeedStreaks(
-      Canvas canvas, Size size, double cx, double cy, double fadeIn) {
-    final rng = Random(42);
-    final intensity = ((phase - 0.58) / 0.30).clamp(0.0, 1.0);
-    final count = (50 * intensity).round();
-
-    for (int i = 0; i < count; i++) {
-      final angle = rng.nextDouble() * 2 * pi;
-      final dist = 20.0 + rng.nextDouble() * 60;
-      final len = 40.0 + rng.nextDouble() * 150 * intensity;
-
-      final startX = cx + cos(angle) * dist;
-      final startY = cy + sin(angle) * dist;
-      final endX = cx + cos(angle) * (dist + len);
-      final endY = cy + sin(angle) * (dist + len);
-
-      canvas.drawLine(
-        Offset(startX, startY),
-        Offset(endX, endY),
-        Paint()
-          ..color = Colors.white.withValues(
-            alpha: (0.06 + rng.nextDouble() * 0.18 * intensity) * fadeIn,
-          )
-          ..strokeWidth = 0.4 + rng.nextDouble() * 0.8,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _TunnelPainter old) =>
-      old.loop != loop || old.phase != phase;
 }
