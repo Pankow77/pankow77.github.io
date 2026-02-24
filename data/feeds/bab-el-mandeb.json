@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-24T04:15:13.758Z",
-  "epoch_count": 11,
+  "last_fetch": "2026-02-24T05:40:11.242Z",
+  "epoch_count": 12,
   "epochs": [
+    {
+      "id": "rss_d5b9fd10f34c7099",
+      "timestamp": 1771909209000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Council extends \"Aspides\" operation to safeguard Red Sea navigation - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5vZU5oUFM2UnY0MWpkWXgzWGdUb0pIam9va3BvWXIzVm8wVXQ4ZUNURFdCQjZmRkg3dmF0dzhoeUszeHBCZUxLMUc1TjRUaFNDc3c?oc=5\" target=\"_blank\">EU Council extends \"Aspides\" operation to safeguard Red Sea navigation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5vZU5oUFM2UnY0MWpkWXgzWGdUb0pIam9va3BvWXIzVm8wVXQ4ZUNURFdCQjZmRkg3dmF0dzhoeUszeHBCZUxLMUc1TjRUaFNDc3c?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-24T05:40:10.746Z"
+    },
     {
       "id": "rss_12e2bf6037f5e7d2",
       "timestamp": 1771887879000,
