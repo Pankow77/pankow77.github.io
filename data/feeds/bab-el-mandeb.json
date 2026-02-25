@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-25T08:42:36.559Z",
-  "epoch_count": 19,
+  "last_fetch": "2026-02-25T09:51:12.120Z",
+  "epoch_count": 21,
   "epochs": [
+    {
+      "id": "rss_ed1992cefa815bfb",
+      "timestamp": 1772012182000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU’s Operation Aspides to continue until February 2027 - defenceWeb",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPbU9mRXBVbEZrVk95U2szMkt6WmJ6d0RJVTFNdWlTVkhzZkpiRDFrZVpMQUZuLXdlQ1F3Vkk0VWVzaVJiWTJTZU1IWXdoT1JnVXQ1UnAtVThzMmFQTGNzSWdncVp6WWFSbDh3cUhPdDlWSHRiNkxjVUdRYUx2OHNVTFFFNXpuMHhKN0syVEJMOE0ycFJ3bGc?oc=5\" target=\"_blank\">EU’s Operation Aspides to continue until February 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">defenceWeb</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbU9mRXBVbEZrVk95U2szMkt6WmJ6d0RJVTFNdWlTVkhzZkpiRDFrZVpMQUZuLXdlQ1F3Vkk0VWVzaVJiWTJTZU1IWXdoT1JnVXQ1UnAtVThzMmFQTGNzSWdncVp6WWFSbDh3cUhPdDlWSHRiNkxjVUdRYUx2OHNVTFFFNXpuMHhKN0syVEJMOE0ycFJ3bGc?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-25T09:51:11.671Z"
+    },
+    {
+      "id": "rss_eb992dca599578d1",
+      "timestamp": 1771991108000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cyprus - Cyprus Shipping News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPYVAxNUdFOC1CN1lLQmpzZUp1bVllMEd5OEJJUkhEY1BNT0EzWk1URGdhYVdvbXFpZkNSc2NQdTJRQXpaMkI0cm9ab05KRHBYa1Q1WV9Ea2Fib2JRN2hTQ1FKSWE2QTN3VHh6bFNIZVJ5cy1ldm9iWTg5dnlaRW1VcU5qRkZiTFVKeUExbmR6TldiMEZoUVF5aHROdEdUbklFZkJLTDN6dnNMOVhNOXVQWXFGbjdxM3hnMkJZUVN4OA?oc=5\" target=\"_blank\">Cyprus</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Cyprus Shipping News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPYVAxNUdFOC1CN1lLQmpzZUp1bVllMEd5OEJJUkhEY1BNT0EzWk1URGdhYVdvbXFpZkNSc2NQdTJRQXpaMkI0cm9ab05KRHBYa1Q1WV9Ea2Fib2JRN2hTQ1FKSWE2QTN3VHh6bFNIZVJ5cy1ldm9iWTg5dnlaRW1VcU5qRkZiTFVKeUExbmR6TldiMEZoUVF5aHROdEdUbklFZkJLTDN6dnNMOVhNOXVQWXFGbjdxM3hnMkJZUVN4OA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-25T09:51:10.782Z"
+    },
     {
       "id": "rss_5bbb743fddef1e15",
       "timestamp": 1771984913000,
