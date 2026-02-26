@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-26T19:40:47.682Z",
-  "epoch_count": 21,
+  "last_fetch": "2026-02-26T20:32:54.787Z",
+  "epoch_count": 22,
   "epochs": [
     {
       "id": "rss_ed1992cefa815bfb",
@@ -344,6 +344,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T10:01:28.135Z"
+    },
+    {
+      "id": "rss_652ef8b52addcdb7",
+      "timestamp": 1771840203000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Mer Rouge: le Conseil proroge le mandat de l'opération ASPIDES en vue de préserver la liberté de navigation - consilium.europa.eu",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxOUU83MFlXYnZzMTZvRDhHMHgyMVgzdWVmU1pnYzNRdzhmUUFRQS1adG1NWE1iUXN1MmJVSUFTbEJndUVmc3N1UHE2eDAyRWVOd2JfTWd4UzN3QW1tYkJfeTAxUHRUMlc5cjB1dkF4RFVxc2hjR3YxYWZLMjJwdER1MnFMWkJ5akF5ZjhyLTJ2WjZ0cmsxSzRQX01JSVJUbVdBeDFScTVpTDRyeUJyRGJWZDFZV2kyOXVheXhfRjM5ejVGel9HZlhFVGVJWEFYclFpRHVGU0VuYUpLTW5fUld5Zmcwa1pNSGJHY2NHNHRCZ2g?oc=5\" target=\"_blank\">Mer Rouge: le Conseil proroge le mandat de l'opération ASPIDES en vue de préserver la liberté de navigat",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOUU83MFlXYnZzMTZvRDhHMHgyMVgzdWVmU1pnYzNRdzhmUUFRQS1adG1NWE1iUXN1MmJVSUFTbEJndUVmc3N1UHE2eDAyRWVOd2JfTWd4UzN3QW1tYkJfeTAxUHRUMlc5cjB1dkF4RFVxc2hjR3YxYWZLMjJwdER1MnFMWkJ5akF5ZjhyLTJ2WjZ0cmsxSzRQX01JSVJUbVdBeDFScTVpTDRyeUJyRGJWZDFZV2kyOXVheXhfRjM5ejVGel9HZlhFVGVJWEFYclFpRHVGU0VuYUpLTW5fUld5Zmcwa1pNSGJHY2NHNHRCZ2g?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-26T20:32:54.195Z"
     },
     {
       "id": "rss_9d3c2658d6247c07",
