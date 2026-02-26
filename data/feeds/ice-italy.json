@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-02-26T07:50:23.355Z",
-  "epoch_count": 12,
+  "last_fetch": "2026-02-26T08:41:25.036Z",
+  "epoch_count": 13,
   "epochs": [
     {
       "id": "rss_9f47f71a35dfe732",
@@ -26,6 +26,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-26T04:13:23.824Z"
+    },
+    {
+      "id": "rss_f5bf242fdcaf356f",
+      "timestamp": 1772065677000,
+      "source": "OSINT",
+      "actor": "ice",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Ice Agents Set to Have Security Role During Winter Olympics in Italy, Prompting Uproar - IMDb",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE14LTMwbjlBSWdNZzlXaVRSa0NqYjlUNUxoUXhJM3B6WDd4S3RiRU9NRC1DVmxvQXBnUGJSMjctUS1kcmtORktjU3l4WldfUQ?oc=5\" target=\"_blank\">Ice Agents Set to Have Security Role During Winter Olympics in Italy, Prompting Uproar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IMDb</font>",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE14LTMwbjlBSWdNZzlXaVRSa0NqYjlUNUxoUXhJM3B6WDd4S3RiRU9NRC1DVmxvQXBnUGJSMjctUS1kcmtORktjU3l4WldfUQ?oc=5",
+      "feed_id": "gn-ice-italy-en",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-26T08:41:23.521Z"
     },
     {
       "id": "rss_10f2190b860f91a2",
