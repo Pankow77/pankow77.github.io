@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-26T23:51:51.328Z",
-  "epoch_count": 22,
+  "last_fetch": "2026-02-27T01:45:45.823Z",
+  "epoch_count": 24,
   "epochs": [
+    {
+      "id": "rss_ee2cbe3514f14237",
+      "timestamp": 1772153937000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s First Zaraniq Brigade Repels Houthi Attack in Hays Sector - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ueEw1WnplVENPRUlZRW1IaS1aMV9QUVgzV001Z2RVVS1oTTlXOUx1ZGQybDBKb2lFRTB1Zl90TkEtZWtyc2toNmxGTUxWa1JoeUF4SEhNWDhLZw?oc=5\" target=\"_blank\">Yemen’s First Zaraniq Brigade Repels Houthi Attack in Hays Sector</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ueEw1WnplVENPRUlZRW1IaS1aMV9QUVgzV001Z2RVVS1oTTlXOUx1ZGQybDBKb2lFRTB1Zl90TkEtZWtyc2toNmxGTUxWa1JoeUF4SEhNWDhLZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-27T01:45:44.348Z"
+    },
+    {
+      "id": "rss_20408bfb121da5d4",
+      "timestamp": 1772125380000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "F-16 pilot’s narrow escape in missile attack shows risks of a new Mideast war - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ2UyYTNhUmM0dUJpajdvOWpiVHZkbUVvUll5cEg5NHQwVzBobTdzRVZvUFJ2UTZ0akNwQW1PZlBsLWlLSzQ5MkQydWw0ZGtUNmhYUTlmNkVlcEVkczQ4S0RjRkJiMEdXaC1lNFI2TnZ4dGNQMmhnbFliUmIzekNoOE9tOVZXd3M0U1BUS2RLR01NTW1VSFNhV0hWN3RPcFlDWEw1UWxYMmkzM3ZPYzBhZUVfTE11ZVFLcVIwVDh0WjBZbHJ0?oc=5\" target=\"_blank\">F-16 pilot’s narrow escape in missile attack shows risks of a new Mideast war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ2UyYTNhUmM0dUJpajdvOWpiVHZkbUVvUll5cEg5NHQwVzBobTdzRVZvUFJ2UTZ0akNwQW1PZlBsLWlLSzQ5MkQydWw0ZGtUNmhYUTlmNkVlcEVkczQ4S0RjRkJiMEdXaC1lNFI2TnZ4dGNQMmhnbFliUmIzekNoOE9tOVZXd3M0U1BUS2RLR01NTW1VSFNhV0hWN3RPcFlDWEw1UWxYMmkzM3ZPYzBhZUVfTE11ZVFLcVIwVDh0WjBZbHJ0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-27T01:45:44.349Z"
+    },
     {
       "id": "rss_ed1992cefa815bfb",
       "timestamp": 1772012182000,
