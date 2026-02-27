@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-02-27T18:36:22.482Z",
-  "epoch_count": 14,
+  "last_fetch": "2026-02-27T19:30:31.196Z",
+  "epoch_count": 15,
   "epochs": [
     {
       "id": "rss_3d3ae0e6882cfcd4",
@@ -27,6 +27,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-27T06:47:11.948Z"
+    },
+    {
+      "id": "rss_7a30666db7cc6ad4",
+      "timestamp": 1772075188000,
+      "source": "OSINT",
+      "actor": "olympics",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Qatari force concludes participation in securing Milano–Cortina 2026 Winter Olympic Games - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gJBVV95cUxQNkNYUUxPYjNwdFl4OS1XOGRqY3ZPT0JsblREaUVuUVBSdFhtNnd6eGl6dWttLXdDb3RFdzRSR1h1a1hvUGFqb2xJbU5zSW5wXzlOb25uNkFqdm5JMWRITjNqbjhlbjUxTDZidFZvc2Y3alFMSW5wNHB3aU01VVZjRFp1c2o2UjQ2WEdyZnc2Rk5tTDNFcVJjR2xwTndkUDB0ZENWRHhGRGRPRjVhVFhiVElpUFh6dFFLb1JzbXhSVDBRcm9hcUJMM1h3WFBIRUV3NTN4U1o3cE1yaU0zWUFyU3pueHl0bUM2T2NmNjhPbEN6Z0NYRTFSQzhxaHU1bzJtSmNZSUFNbnVQR0JMRl9RUExIcjNEOHhxWWlDQ3VnWkdHY00za255Zld0NG9OQUloQmtpV2NJaVBsQnpNajA2MDRmcEpKNTc2b3NkdUY0UU",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxQNkNYUUxPYjNwdFl4OS1XOGRqY3ZPT0JsblREaUVuUVBSdFhtNnd6eGl6dWttLXdDb3RFdzRSR1h1a1hvUGFqb2xJbU5zSW5wXzlOb25uNkFqdm5JMWRITjNqbjhlbjUxTDZidFZvc2Y3alFMSW5wNHB3aU01VVZjRFp1c2o2UjQ2WEdyZnc2Rk5tTDNFcVJjR2xwTndkUDB0ZENWRHhGRGRPRjVhVFhiVElpUFh6dFFLb1JzbXhSVDBRcm9hcUJMM1h3WFBIRUV3NTN4U1o3cE1yaU0zWUFyU3pueHl0bUM2T2NmNjhPbEN6Z0NYRTFSQzhxaHU1bzJtSmNZSUFNbnVQR0JMRl9RUExIcjNEOHhxWWlDQ3VnWkdHY00za255Zld0NG9OQUloQmtpV2NJaVBsQnpNajA2MDRmcEpKNTc2b3NkdUY0UUZFNjdRU1FNNlZVYXkxZUdqeVdHdEFBU0pVUQ?oc=5",
+      "feed_id": "gn-olympics-security",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-27T19:30:30.838Z"
     },
     {
       "id": "rss_9f47f71a35dfe732",
