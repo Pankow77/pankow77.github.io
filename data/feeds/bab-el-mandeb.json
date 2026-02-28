@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-28T19:18:44.526Z",
-  "epoch_count": 35,
+  "last_fetch": "2026-02-28T19:41:03.301Z",
+  "epoch_count": 36,
   "epochs": [
+    {
+      "id": "rss_08d1206d5d02397b",
+      "timestamp": 1772290617000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi warn of new Red Sea attacks - FreightWaves",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWczMW9LUlVDcnMtSk84c2h2OG1FNWtzc1VOdnVuMGFueDRIdElxR2MxTGVkTVBjcS1LNG9YX05Bd3lMQzI1U2lXWGRURnNuekRpa2tUV250LUFoTW1Zdk56dlgxdmlKR0ltNTFBOVBNNFFIanRZRjlQZld6RDdSOVFuM2RXanM?oc=5\" target=\"_blank\">Iran-backed Houthi warn of new Red Sea attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FreightWaves</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZWczMW9LUlVDcnMtSk84c2h2OG1FNWtzc1VOdnVuMGFueDRIdElxR2MxTGVkTVBjcS1LNG9YX05Bd3lMQzI1U2lXWGRURnNuekRpa2tUV250LUFoTW1Zdk56dlgxdmlKR0ltNTFBOVBNNFFIanRZRjlQZld6RDdSOVFuM2RXanM?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T19:41:03.298Z"
+    },
     {
       "id": "rss_783ea76e368287ff",
       "timestamp": 1772290245000,
