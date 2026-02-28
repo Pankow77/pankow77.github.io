@@ -89,6 +89,7 @@ class SessionManager extends ChangeNotifier {
       _error = e.toString();
       _isLoading = false;
       notifyListeners();
+      rethrow;
     }
   }
 

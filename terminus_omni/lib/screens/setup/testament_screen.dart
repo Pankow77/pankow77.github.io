@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../config/theme.dart';
 import '../../models/victim_profile.dart';
 import '../../core/session_manager.dart';
+import '../../services/llm_service.dart';
 import '../../widgets/scanline_overlay.dart';
 import '../../widgets/circuit_background.dart';
 import '../session/session_screen.dart';
@@ -41,9 +42,27 @@ class _TestamentScreenState extends State<TestamentScreen>
     )..forward();
   }
 
+  void _showError(String message) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: TerminusTheme.neonRed.withValues(alpha: 0.9),
+        duration: const Duration(seconds: 5),
+      ),
+    );
+  }
+
   Future<void> _startSession() async {
     final testament = _testamentController.text.trim();
     if (testament.isEmpty) return;
+
+    // Pre-flight: verify LLM is configured before starting
+    final llm = context.read<LlmService>();
+    if (!llm.isConfigured) {
+      _showError('API key not configured. Go to Configuration first.');
+      return;
+    }
 
     setState(() => _starting = true);
 
@@ -72,16 +91,7 @@ class _TestamentScreenState extends State<TestamentScreen>
 
       // Check if the session manager encountered an error
       if (sm.error != null) {
-        if (mounted) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text('Connection error. Try again.'),
-              backgroundColor: TerminusTheme.neonRed.withValues(alpha: 0.9),
-              duration: const Duration(seconds: 4),
-            ),
-          );
-          setState(() => _starting = false);
-        }
+        _showError('Connection error: ${sm.error}');
         return;
       }
 
@@ -93,14 +103,10 @@ class _TestamentScreenState extends State<TestamentScreen>
         );
       }
     } catch (e) {
+      _showError('Error: $e');
+    } finally {
+      // Always reset loading state so the button is never stuck
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error: ${e.toString()}'),
-            backgroundColor: TerminusTheme.neonRed.withValues(alpha: 0.9),
-            duration: const Duration(seconds: 4),
-          ),
-        );
         setState(() => _starting = false);
       }
     }

@@ -128,9 +128,12 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   }
 
   Future<void> _initLlm() async {
-    final key = await context.read<StorageService>().getApiKey();
-    if (key != null) {
-      context.read<LlmService>().configure(key);
+    final storage = context.read<StorageService>();
+    final llm = context.read<LlmService>();
+    final key = await storage.getApiKey();
+    if (!mounted) return;
+    if (key != null && key.isNotEmpty) {
+      llm.configure(key);
     }
   }
 
