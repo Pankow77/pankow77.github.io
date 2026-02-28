@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-28T10:19:37.679Z",
-  "epoch_count": 28,
+  "last_fetch": "2026-02-28T10:46:39.343Z",
+  "epoch_count": 30,
   "epochs": [
     {
       "id": "rss_6f67292d6a26057b",
@@ -23,6 +23,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-28T10:19:37.084Z"
+    },
+    {
+      "id": "rss_d0841554195d016f",
+      "timestamp": 1772272320000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Iranian-backed Houthi rebels to resume attacks on shipping in Red Sea corridor: Officials - The Hindu",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTG1hZENIeVhySlk0cllQSHJEalk5aUpfZVZ2RGpEallmU2FocUYxOUI4Vk1NUk9PWm04WHpaa2pveE1mandUazI3NFNIVDRKOEc0bmtydDJNcWUwUzR0czJWU1VBcFRhRVJ3ekxsWTRfZVJNUWE3cENaaVlHQU9qd2VNa2YwWGhSejlveTNPR3RwY1cxRDQ5R3A1S1BDLXpOcVA5OUh6UXppWmhQTzlCcXRFMnkzZjExR0VIODRuektnYWgwYnBfTUc0NlNrU3FuVkdkNmpOT3M0Nk5DSmdVN0x2Ry02U3l4R0p0RFBPVmXSAfcBQVVfeXFMUGNHZWFQbVh6VnJwM3QwWkJZdWlSaTlfUGJHbzBYM1VTYnJJNnhaNUVwOXctR3Z1MVN4ZTZFN2FJOWUzSmthbkpJUEpPdF9JQVdkY3RENE5VSFlhWi",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPTG1hZENIeVhySlk0cllQSHJEalk5aUpfZVZ2RGpEallmU2FocUYxOUI4Vk1NUk9PWm04WHpaa2pveE1mandUazI3NFNIVDRKOEc0bmtydDJNcWUwUzR0czJWU1VBcFRhRVJ3ekxsWTRfZVJNUWE3cENaaVlHQU9qd2VNa2YwWGhSejlveTNPR3RwY1cxRDQ5R3A1S1BDLXpOcVA5OUh6UXppWmhQTzlCcXRFMnkzZjExR0VIODRuektnYWgwYnBfTUc0NlNrU3FuVkdkNmpOT3M0Nk5DSmdVN0x2Ry02U3l4R0p0RFBPVmXSAfcBQVVfeXFMUGNHZWFQbVh6VnJwM3QwWkJZdWlSaTlfUGJHbzBYM1VTYnJJNnhaNUVwOXctR3Z1MVN4ZTZFN2FJOWUzSmthbkpJUEpPdF9JQVdkY3RENE5VSFlhWi1EcUdLTW5tdDNxQ0RaWXdjX0VjR0VMcFQ1VURXWUM1T0l0QUdxd1ZWTmpxRmR6Sk1YX3dsbU5lLWtDUHZySVpxTGlwRWlhb2hMZ3lhTURYRDNrR1dNeGdwbkNjZ3dlXzIwSTlYV0RoNEJHaG9oY3VHYWZucnkzdUFCNW92MDVEU0F4NmNUS3puU0lYckVWbWFVMHhESk83bkp4RQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T10:46:39.341Z"
     },
     {
       "id": "rss_9c5b75d73acae65e",
@@ -47,6 +71,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-28T09:46:37.644Z"
+    },
+    {
+      "id": "rss_d30fd9522e628cbc",
+      "timestamp": 1772269394000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis in Yemen warn of renewed Red Sea strikes: Officials - The Economic Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX3lfZFlNdUFMNjdFN2VESnpaNDM5SUNvM2x1UUJfVXRvR2tBeEFQU0tNemJKcXRrYW8xLU9IdGVoMms1NlREYk15YkJ1NEdLSUdCTEw4VC1DMm84WFNSWS1aekFWdUtwN3ZZbUkzbjE1R0xUQ2tZY2xfQVdNbDlBRmo2bm5oNmtpX2tWQzZ3QkRJVVc2OWwtWDJCYmxiOTZtd3BUWWdGWk1iZ05FdHdoeUlZcV9vbTNKSGRfdk9oRl9DVUNIUHltYU53WldhcnRVdy1V0gHYAUFVX3lxTFBoMU52aDVQemhFdThycG5lS0lPQzFjM25WdlowTFpOT0hzYTBhVnFqVTBYUnZkUTNQSDJVWGE5UldBZW1qWnhFLXdCWjFYd1VLOXMzdUpSMVNXWVNpQmZCcXJmNTM1Mk51eXJLX3pSektXbS1qMV92eH",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOX3lfZFlNdUFMNjdFN2VESnpaNDM5SUNvM2x1UUJfVXRvR2tBeEFQU0tNemJKcXRrYW8xLU9IdGVoMms1NlREYk15YkJ1NEdLSUdCTEw4VC1DMm84WFNSWS1aekFWdUtwN3ZZbUkzbjE1R0xUQ2tZY2xfQVdNbDlBRmo2bm5oNmtpX2tWQzZ3QkRJVVc2OWwtWDJCYmxiOTZtd3BUWWdGWk1iZ05FdHdoeUlZcV9vbTNKSGRfdk9oRl9DVUNIUHltYU53WldhcnRVdy1V0gHYAUFVX3lxTFBoMU52aDVQemhFdThycG5lS0lPQzFjM25WdlowTFpOT0hzYTBhVnFqVTBYUnZkUTNQSDJVWGE5UldBZW1qWnhFLXdCWjFYd1VLOXMzdUpSMVNXWVNpQmZCcXJmNTM1Mk51eXJLX3pSektXbS1qMV92eHd4OU05dmpaUUljN3JJQkdKR25TQWFJQXIyQVVaOTdSelYyazBEZDlwczE4dnVGRHdSZDZxdldVLVItMkZic0FtSzA0VVpHWVFIbzJQUi1vSWVZS0FtSmd2YktWUHpPTw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T10:46:38.168Z"
     },
     {
       "id": "rss_ecba8bf6f059a19b",
