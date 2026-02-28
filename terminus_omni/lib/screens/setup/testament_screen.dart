@@ -47,34 +47,62 @@ class _TestamentScreenState extends State<TestamentScreen>
 
     setState(() => _starting = true);
 
-    final fullProfile = VictimProfile(
-      name: widget.profile.name,
-      archetype: widget.profile.archetype,
-      virtue: widget.profile.virtue,
-      vice: widget.profile.vice,
-      moment: widget.profile.moment,
-      brink: widget.profile.brink,
-      testament: testament,
-      ghostVoicePhrase: widget.profile.ghostVoicePhrase,
-      ghostIdentity: widget.profile.ghostIdentity,
-      silentWitnessName: widget.profile.silentWitnessName,
-      silentWitnessObject: widget.profile.silentWitnessObject,
-      metaphor: widget.profile.metaphor,
-      intensity: widget.profile.intensity,
-    );
-
-    final sm = context.read<SessionManager>();
-    await sm.startNewSession(
-      profile: fullProfile,
-      scenarioId: widget.scenarioId,
-    );
-
-    if (mounted) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (_) => const SessionScreen()),
-        (route) => route.isFirst,
+    try {
+      final fullProfile = VictimProfile(
+        name: widget.profile.name,
+        archetype: widget.profile.archetype,
+        virtue: widget.profile.virtue,
+        vice: widget.profile.vice,
+        moment: widget.profile.moment,
+        brink: widget.profile.brink,
+        testament: testament,
+        ghostVoicePhrase: widget.profile.ghostVoicePhrase,
+        ghostIdentity: widget.profile.ghostIdentity,
+        silentWitnessName: widget.profile.silentWitnessName,
+        silentWitnessObject: widget.profile.silentWitnessObject,
+        metaphor: widget.profile.metaphor,
+        intensity: widget.profile.intensity,
       );
+
+      final sm = context.read<SessionManager>();
+      await sm.startNewSession(
+        profile: fullProfile,
+        scenarioId: widget.scenarioId,
+      );
+
+      // Check if the session manager encountered an error
+      if (sm.error != null) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Connection error. Try again.'),
+              backgroundColor: TerminusTheme.neonRed.withValues(alpha: 0.9),
+              duration: const Duration(seconds: 4),
+            ),
+          );
+          setState(() => _starting = false);
+        }
+        return;
+      }
+
+      if (mounted) {
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (_) => const SessionScreen()),
+          (route) => route.isFirst,
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error: ${e.toString()}'),
+            backgroundColor: TerminusTheme.neonRed.withValues(alpha: 0.9),
+            duration: const Duration(seconds: 4),
+          ),
+        );
+        setState(() => _starting = false);
+      }
     }
   }
 
