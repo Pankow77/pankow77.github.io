@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-28T15:43:12.638Z",
-  "epoch_count": 33,
+  "last_fetch": "2026-02-28T16:21:25.791Z",
+  "epoch_count": 35,
   "epochs": [
+    {
+      "id": "rss_783ea76e368287ff",
+      "timestamp": 1772290245000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Signal Renewed Red Sea Shipping Attacks After U.S.–Israeli Strikes on Iran - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQa3cyRXhuNlRGaUVBNDQ4SFkySXJRakUwTE1NZXdGdEZ3emRJWGo2LTh2c1UyV3dtaUFPLUdoeGdPNkszUzZQS2U1U19vcGZNZGItMm9Hblo4a0x2YlRSVDV1b25Id3lZUHB4QXFOdHNxejNYZkpzUlc3VVYzNVZXXzZic2huVjdLUHF3NlZ4YzgwMlg3WXdwOTlUYlpjSVk2VUVVNXdB?oc=5\" target=\"_blank\">Houthis Signal Renewed Red Sea Shipping Attacks After U.S.–Israeli Strikes on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa3cyRXhuNlRGaUVBNDQ4SFkySXJRakUwTE1NZXdGdEZ3emRJWGo2LTh2c1UyV3dtaUFPLUdoeGdPNkszUzZQS2U1U19vcGZNZGItMm9Hblo4a0x2YlRSVDV1b25Id3lZUHB4QXFOdHNxejNYZkpzUlc3VVYzNVZXXzZic2huVjdLUHF3NlZ4YzgwMlg3WXdwOTlUYlpjSVk2VUVVNXdB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T16:21:24.339Z"
+    },
     {
       "id": "rss_10bcb7ba5624ff22",
       "timestamp": 1772288365000,
@@ -23,6 +47,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-28T14:46:04.604Z"
+    },
+    {
+      "id": "rss_e7aae1e48d4b154e",
+      "timestamp": 1772282679000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "'Prime moment for Hezbollah and the Houthis': US-Israeli strikes on Iran risk igniting regional war - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdm95c20tOS01ZElKd0c2c2Z5amFsb2VaUkhuZ3VPQ1Rob2cwY1FCNVdlTTh2MTBMcmFBdzFWdFY4ZXVLZ05WcDdoS3NhbHRvWjFqelUzQmNKZHh3RVo4bmxKaXBOTTdzYk5RSUc5eTFGQ3dVLUt6T1dka1pKVHpkalRtbmlKbl9qTzlzbW5Oa3o4bTlVTG4tMUw4THFPRHVOWndBY2lUWmhvemlvT09ZNVAzNkJPdTJqdURwQkFGSDBxUQ?oc=5\" target=\"_blank\">'Prime moment for Hezbollah and the Houthis': US-Israeli strikes on Iran risk igniting regional war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdm95c20tOS01ZElKd0c2c2Z5amFsb2VaUkhuZ3VPQ1Rob2cwY1FCNVdlTTh2MTBMcmFBdzFWdFY4ZXVLZ05WcDdoS3NhbHRvWjFqelUzQmNKZHh3RVo4bmxKaXBOTTdzYk5RSUc5eTFGQ3dVLUt6T1dka1pKVHpkalRtbmlKbl9qTzlzbW5Oa3o4bTlVTG4tMUw4THFPRHVOWndBY2lUWmhvemlvT09ZNVAzNkJPdTJqdURwQkFGSDBxUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T16:21:24.339Z"
     },
     {
       "id": "rss_ad92e60a02843108",
