@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-28T21:41:55.983Z",
-  "epoch_count": 36,
+  "last_fetch": "2026-02-28T22:18:40.429Z",
+  "epoch_count": 37,
   "epochs": [
+    {
+      "id": "rss_132783e97ca560eb",
+      "timestamp": 1772302833000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Houthis Announce Resumption Of Red Sea Ship Attacks - Arise News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQZk1fLWdTZDFzOVZXRDRQbFdLc0QyMjhFOUV5TGk2X2x2eF9wdExaQ0lYaTZONE1BRkJRd1NqYzlPOFZkMGtWLWhpSkt5RVVXdGUySEpDZWk1MUpDdkhHMTNjNlBGR05DTWx4QjJIc1dSSzBkN1F0MDktMm9ZeVo1OUM0bFBKS3c?oc=5\" target=\"_blank\">Yemeni Houthis Announce Resumption Of Red Sea Ship Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arise News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZk1fLWdTZDFzOVZXRDRQbFdLc0QyMjhFOUV5TGk2X2x2eF9wdExaQ0lYaTZONE1BRkJRd1NqYzlPOFZkMGtWLWhpSkt5RVVXdGUySEpDZWk1MUpDdkhHMTNjNlBGR05DTWx4QjJIc1dSSzBkN1F0MDktMm9ZeVo1OUM0bFBKS3c?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T22:18:40.426Z"
+    },
     {
       "id": "rss_08d1206d5d02397b",
       "timestamp": 1772290617000,
