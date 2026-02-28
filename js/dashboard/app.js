@@ -20,6 +20,11 @@ import { HubModule } from './modules/hub.js';
 import { AgoraModule } from './modules/agora.js';
 import { OracleModule } from './modules/oracle.js';
 import { ArchivioModule } from './modules/archivio.js';
+import { TeatriModule } from './modules/teatri.js';
+import { PneumaModule } from './modules/pneuma.js';
+import { BackboneModule } from './modules/backbone.js';
+import { EEIModule } from './modules/eei.js';
+import { ChronosModule } from './modules/chronos.js';
 import { runIntro } from './intro.js';
 import { ExposureTracker } from './exposure.js';
 import { TerminationSequence } from './termination.js';
@@ -65,6 +70,11 @@ export async function boot() {
   Router.register('agora', new AgoraModule());
   Router.register('oracle', new OracleModule());
   Router.register('archivio', new ArchivioModule());
+  Router.register('teatri', new TeatriModule());
+  Router.register('pneuma', new PneumaModule());
+  Router.register('backbone', new BackboneModule());
+  Router.register('eei', new EEIModule());
+  Router.register('chronos', new ChronosModule());
 
   // ── Phase 3: Hidden systems ──
   ExposureTracker.init();
