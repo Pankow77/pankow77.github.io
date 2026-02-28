@@ -1,8 +1,33 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-02-28T12:37:15.941Z",
-  "epoch_count": 30,
+  "last_fetch": "2026-02-28T13:33:55.188Z",
+  "epoch_count": 32,
   "epochs": [
+    {
+      "id": "rss_ad92e60a02843108",
+      "timestamp": 1772282170000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis to Resume Missile, Drone Attacks on Israel and Red Sea Shipping: Reports – 28 February 2026 - heraldgoa.in",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTRCUVQtdDhIdHg3cXA5TEFLay1jUzJyX2hpX1lCYlpVc044cGtZTms1WEgtcVU3UVktdk9SdFVjWndNV0ZDaU1rNUhFSkVEaEVyRlFhWU5Ga2NRXzdsNE1WTU1TOFh3NDBfU29vYzNpUGYxZGxIdWl5dUU2VFA5X2FuZk83Q3E4UENnay1CeUdSMGlBMlA1Ui1VblU0NDBJWnktd21iV05BRXliYWFTVkJzTXoxVXZjcy1ERUJkNUZIdw?oc=5\" target=\"_blank\">Houthis to Resume Missile, Drone Attacks on Israel and Red Sea Shipping: Reports – 28 February 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">heraldgoa.in</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONTRCUVQtdDhIdHg3cXA5TEFLay1jUzJyX2hpX1lCYlpVc044cGtZTms1WEgtcVU3UVktdk9SdFVjWndNV0ZDaU1rNUhFSkVEaEVyRlFhWU5Ga2NRXzdsNE1WTU1TOFh3NDBfU29vYzNpUGYxZGxIdWl5dUU2VFA5X2FuZk83Q3E4UENnay1CeUdSMGlBMlA1Ui1VblU0NDBJWnktd21iV05BRXliYWFTVkJzTXoxVXZjcy1ERUJkNUZIdw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T13:33:55.186Z"
+    },
     {
       "id": "rss_6f67292d6a26057b",
       "timestamp": 1772273600000,
@@ -47,6 +72,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-28T10:46:39.341Z"
+    },
+    {
+      "id": "rss_3d454e132ed08ac4",
+      "timestamp": 1772271944000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis to resume Red Sea, Israel attacks in support of Iran - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNTmZFSjNnN29kSWhaN2FzZGZlaUZhYnlsM0NJNXBIR2Fud0xrdm8wRzA2MDBGbmNYVWdqblBnbWh5N1p4a2xVb2tzRmhTWWl6S2ZQS1ZpZXJLT0EzU29BNDQ0TTV5cVM1bkhmcFBpR1pPQ1RIMHNWLWdvVkFWNmhmaWExVUkzN2VlQVBFRlBiRnJMOFFlbnNjaA?oc=5\" target=\"_blank\">Houthis to resume Red Sea, Israel attacks in support of Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNTmZFSjNnN29kSWhaN2FzZGZlaUZhYnlsM0NJNXBIR2Fud0xrdm8wRzA2MDBGbmNYVWdqblBnbWh5N1p4a2xVb2tzRmhTWWl6S2ZQS1ZpZXJLT0EzU29BNDQ0TTV5cVM1bkhmcFBpR1pPQ1RIMHNWLWdvVkFWNmhmaWExVUkzN2VlQVBFRlBiRnJMOFFlbnNjaA?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-02-28T13:33:55.186Z"
     },
     {
       "id": "rss_9c5b75d73acae65e",
