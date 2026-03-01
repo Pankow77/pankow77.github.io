@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-01T01:57:11.569Z",
-  "epoch_count": 37,
+  "last_fetch": "2026-03-01T04:23:44.738Z",
+  "epoch_count": 38,
   "epochs": [
     {
       "id": "rss_132783e97ca560eb",
@@ -25,6 +25,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-28T22:18:40.426Z"
+    },
+    {
+      "id": "rss_88d2bc6bb50a8290",
+      "timestamp": 1772301600000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea risks resurface: Exporters warn of shipment delays, higher freight and insurance costs amid Middl - The Times of India",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAJBVV95cUxQNzJkd0g3QmhNS19iTmNXczdIS1BVTG1kUVlOT1hNaXRWOE83UGZURlkwdUhTQmk0Mi1IQkdBVEtSbWVVWHl2M1ZRM0Q1NmM5aTBIZWRkVXliNzFtVndqUVIxN2dvMnR3TVhsbjlEeWtxWTJHeUdmcnJCTzVENncxZ1doWWZtSmNQS2FUUXdmYWdVVk8yLWU2bEQwaTV5YWJNRUV6RVBtUHVKbEJrY0ljZi1jc2pZYXpkSTJrcmk2WUpQOTNWVExlcW1YWWNiWUFZWUw3ckx2NWliSWlBbnBaRWVZWldhT3NvZkpFR0Fha19fSzRaN0U4YnltTUp5WHNQSm8wWWw5SXlsSkdlZzk1MVVpOE5wM0RUeERXRHI5Z1VKMDBDTExwd3BucXDSAbICQVVfeXFMUEt2bWxkM2UwVkNqX3hJUXpLcjJ4LTh5UX",
+      "tags": [
+        "shipping",
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQNzJkd0g3QmhNS19iTmNXczdIS1BVTG1kUVlOT1hNaXRWOE83UGZURlkwdUhTQmk0Mi1IQkdBVEtSbWVVWHl2M1ZRM0Q1NmM5aTBIZWRkVXliNzFtVndqUVIxN2dvMnR3TVhsbjlEeWtxWTJHeUdmcnJCTzVENncxZ1doWWZtSmNQS2FUUXdmYWdVVk8yLWU2bEQwaTV5YWJNRUV6RVBtUHVKbEJrY0ljZi1jc2pZYXpkSTJrcmk2WUpQOTNWVExlcW1YWWNiWUFZWUw3ckx2NWliSWlBbnBaRWVZWldhT3NvZkpFR0Fha19fSzRaN0U4YnltTUp5WHNQSm8wWWw5SXlsSkdlZzk1MVVpOE5wM0RUeERXRHI5Z1VKMDBDTExwd3BucXDSAbICQVVfeXFMUEt2bWxkM2UwVkNqX3hJUXpLcjJ4LTh5UXBjbkhsTTdhSUpCOU42dzBRMDJKOWQ2ZlZLMWlUVjA2c0dZd2k2Vmw4Mi1xZFZMYmZaTWhraENwbnNMVUJxTXhuQ3l4MHU2YzVjN3hTcFpkd21TR3FYbURjMFg5cXdBcFFjRUhNWVFoLW82OG1Mb1ZwLU1pYXQ5NmlydHZfc001NVl6aFBaSGlLYTBtdFhITnNpRk11Qmg2LU9uZjNtR21NV1pSVlFTZVVPd2F0REpQSG5tekRiZGxhbEVXRDI1WlFHVUdyQTA3U01sLUNsdGx1R3N1N01weXIyTzh2NldXWGhmRjBvSHQxZ0gtTjREWHlGLTNCZE9ZcUZzSnFTLVZYTkNoWDlkMlBwX2hVMjI2aUNn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-01T04:23:43.435Z"
     },
     {
       "id": "rss_08d1206d5d02397b",
