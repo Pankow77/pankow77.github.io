@@ -1,8 +1,32 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-03-01T16:22:44.038Z",
-  "epoch_count": 15,
+  "last_fetch": "2026-03-01T16:50:31.259Z",
+  "epoch_count": 16,
   "epochs": [
+    {
+      "id": "rss_95f404991484c284",
+      "timestamp": 1772375790000,
+      "source": "OSINT",
+      "actor": "ice",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "ICE Agents Will Be Deployed To Italy For Olympic Games - AOL.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNSmNyUVp0dzA2Y0ZvX204T3NmQkMxVXRMRmZmN0cyMFVZS0lnUHg4UUIxZ0dILUVVa1hjbnJtZktrc211VWR3T1VtTEtGX29lWE92UGVQLWxObk5QYl9IMjFFV0NmbDhkSktDUEx5RGNwYmFmdm4zd252dFBmSXgtMHE3YkNMYWc?oc=5\" target=\"_blank\">ICE Agents Will Be Deployed To Italy For Olympic Games</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AOL.com</font>",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSmNyUVp0dzA2Y0ZvX204T3NmQkMxVXRMRmZmN0cyMFVZS0lnUHg4UUIxZ0dILUVVa1hjbnJtZktrc211VWR3T1VtTEtGX29lWE92UGVQLWxObk5QYl9IMjFFV0NmbDhkSktDUEx5RGNwYmFmdm4zd252dFBmSXgtMHE3YkNMYWc?oc=5",
+      "feed_id": "gn-ice-italy-en",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-01T16:50:29.767Z"
+    },
     {
       "id": "rss_3d3ae0e6882cfcd4",
       "timestamp": 1772114333000,
