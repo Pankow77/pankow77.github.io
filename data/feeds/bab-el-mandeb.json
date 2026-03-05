@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-05T20:59:57.872Z",
-  "epoch_count": 60,
+  "last_fetch": "2026-03-05T21:45:37.886Z",
+  "epoch_count": 61,
   "epochs": [
     {
       "id": "rss_9eadbe9e72f3f17a",
@@ -69,6 +69,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-04T22:27:20.171Z"
+    },
+    {
+      "id": "rss_75a6a376df11ef3b",
+      "timestamp": 1772643139000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "News Houthis ‘on the fence’ over Red Sea attacks, despite US strike on Iran - The Loadstar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxORHJkckR6bnBKY2dlY2tXekZZRjRfakQ3V1lXOVItSnVLTEFRV1VRbVJiRTlYNHlEWG0xRDQ0YUJGZVZUMEItcnhBTGE1MFA2OGw2eE0yUGFlZU41bklpZXNHeUtHbTlodjVqUkdQYXhrS3dNMVV1VGM1eU5pT1gwU2RaT01ESVZPcmZqdWJMNWxtTC05YW9OR2dsY19YYzRPcWZGYkp2UXdLX1JMRUE?oc=5\" target=\"_blank\">News Houthis ‘on the fence’ over Red Sea attacks, despite US strike on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Loadstar</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHJkckR6bnBKY2dlY2tXekZZRjRfakQ3V1lXOVItSnVLTEFRV1VRbVJiRTlYNHlEWG0xRDQ0YUJGZVZUMEItcnhBTGE1MFA2OGw2eE0yUGFlZU41bklpZXNHeUtHbTlodjVqUkdQYXhrS3dNMVV1VGM1eU5pT1gwU2RaT01ESVZPcmZqdWJMNWxtTC05YW9OR2dsY19YYzRPcWZGYkp2UXdLX1JMRUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-05T21:45:36.222Z"
     },
     {
       "id": "rss_7d1270a6b85f6b48",
