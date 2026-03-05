@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-05T20:04:15.025Z",
-  "epoch_count": 59,
+  "last_fetch": "2026-03-05T20:59:57.872Z",
+  "epoch_count": 60,
   "epochs": [
     {
       "id": "rss_9eadbe9e72f3f17a",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-05T19:23:04.249Z"
+    },
+    {
+      "id": "rss_c9d99691c228d13c",
+      "timestamp": 1772712811000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran war: What role will Yemen's Houthi group play? - dw.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXE0WVI5eGdTbDg3VGx3X3JPYUkxSGtnVFNSYmtuRmNaY2l6bWFPWWQ1ZG5LRTZBWnNtdW4yTGNmMzJzc3lmTHJlZmhleGxGVnRjT2F0ZUJtR3EzbTRwN0NfZlNqR2xQUXlmRkZDeU1NTFcxZ2w4b1FhN2VDbWFRSHdpXzNsNTBD0gGIAUFVX3lxTE1zc2FobEZjaFBFR2JORUF0RlM5dk1KZ3pERVVzbk1pb1ZSd1hDRjFrZmU5Mzh6ZUlWRl9HbGRobC1ubzlZWklQWjlONzU1NnQ5bzhYMDhLVllGenE0ZEdiZi1rQzZCWU9LWGlwY0NfMmJ2RDlJRlJYc3RDQzM3Qmg4WnFyWTRLOGI?oc=5\" target=\"_blank\">Iran war: What role will Yemen's Houthi group play?</a>&",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXE0WVI5eGdTbDg3VGx3X3JPYUkxSGtnVFNSYmtuRmNaY2l6bWFPWWQ1ZG5LRTZBWnNtdW4yTGNmMzJzc3lmTHJlZmhleGxGVnRjT2F0ZUJtR3EzbTRwN0NfZlNqR2xQUXlmRkZDeU1NTFcxZ2w4b1FhN2VDbWFRSHdpXzNsNTBD0gGIAUFVX3lxTE1zc2FobEZjaFBFR2JORUF0RlM5dk1KZ3pERVVzbk1pb1ZSd1hDRjFrZmU5Mzh6ZUlWRl9HbGRobC1ubzlZWklQWjlONzU1NnQ5bzhYMDhLVllGenE0ZEdiZi1rQzZCWU9LWGlwY0NfMmJ2RDlJRlJYc3RDQzM3Qmg4WnFyWTRLOGI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-05T20:59:56.282Z"
     },
     {
       "id": "rss_5d6905e61f12fd98",
