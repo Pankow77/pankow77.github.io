@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-03-07T18:56:49.537Z",
-  "epoch_count": 18,
+  "last_fetch": "2026-03-07T19:22:07.609Z",
+  "epoch_count": 19,
   "epochs": [
     {
       "id": "rss_93993bff9c2f2290",
@@ -23,6 +23,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-07T17:44:51.473Z"
+    },
+    {
+      "id": "rss_59e1f29f0774b3f2",
+      "timestamp": 1772821710000,
+      "source": "OSINT",
+      "actor": "olympics",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Milano Cortina 2026 Paralympic Winter Games open with stunning ceremony - International Paralympic Committee",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9wRnZwUlJINFpKUUdPZzEyNFI0eTJXQXM0aWlqNzRSeGpVOWpCNmFDUnByOUdleHVubm1seDlrTzFxXzFQVHducjhzSTVXRmxtMXU5Qm9rUGt5NW43TTY3YXNldWMybEJRT0xxLUNZNGhRZUNOQndJ?oc=5\" target=\"_blank\">Milano Cortina 2026 Paralympic Winter Games open with stunning ceremony</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Paralympic Committee</font>",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9wRnZwUlJINFpKUUdPZzEyNFI0eTJXQXM0aWlqNzRSeGpVOWpCNmFDUnByOUdleHVubm1seDlrTzFxXzFQVHducjhzSTVXRmxtMXU5Qm9rUGt5NW43TTY3YXNldWMybEJRT0xxLUNZNGhRZUNOQndJ?oc=5",
+      "feed_id": "gn-olympics-security",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-07T19:22:07.243Z"
     },
     {
       "id": "rss_700280101608ba9c",
