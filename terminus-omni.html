@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TERMINUS OMNI — The Descent Protocol. Lumen-driven experience into the abyss of consequence.">
+    <title>TERMINUS OMNI | The Descent</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+/* ══════════════════════════════════════════════════════════════
+   TERMINUS OMNI — CSS
+   Phase 0: Boot Sequence
+   Phase 1: Main HUD
+   Phase 2: Deep Descent (Lumen ≤ 4)
+   Phase 3: Final Chamber (Lumen 0)
+   ══════════════════════════════════════════════════════════════ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --phosphor-green: #39ff14;
+    --phosphor-dim: #1a8a0a;
+    --cyan-pulse: #00ffff;
+    --corruption-red: #ff0033;
+    --amber-warn: #ffaa00;
+    --deep-black: #020204;
+    --crt-scanline: rgba(0,0,0,0.12);
+    --grid-color: rgba(57,255,20,0.06);
+    --rust-orange: #8b3a00;
+    --font-mono: 'IBM Plex Mono', 'Share Tech Mono', 'Courier New', monospace;
+    --font-display: 'Orbitron', monospace;
+}
+
+html, body {
+    width: 100%; height: 100%;
+    background: var(--deep-black);
+    color: var(--phosphor-green);
+    font-family: var(--font-mono);
+    overflow: hidden;
+    cursor: none;
+}
+
+/* Custom cursor */
+#cursor-dot {
+    position: fixed;
+    width: 6px; height: 6px;
+    background: var(--phosphor-green);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    box-shadow: 0 0 8px var(--phosphor-green), 0 0 20px rgba(57,255,20,0.3);
+    transition: transform 0.05s;
+}
+
+/* ── CRT Effects ── */
+.crt-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.crt-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        var(--crt-scanline) 2px,
+        var(--crt-scanline) 4px
+    );
+    animation: scanline-scroll 8s linear infinite;
+}
+
+.crt-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.5) 100%);
+}
+
+@keyframes scanline-scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+/* CRT flicker */
+.crt-flicker {
+    animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+    0% { opacity: 0.97; }
+    50% { opacity: 1; }
+    100% { opacity: 0.98; }
+}
+
+/* ── Phase Container ── */
+.phase {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.phase.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE 0: BOOT SEQUENCE
+   ══════════════════════════════════════════════════════════════ */
+#phase-boot {
+    background: var(--deep-black);
+    font-family: var(--font-mono);
+    padding: 40px;
+    justify-content: flex-start;
+    padding-top: 10vh;
+}
+
+.boot-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    letter-spacing: 1.2em;
+    color: var(--phosphor-green);
+    text-shadow:
+        0 0 10px var(--phosphor-green),
+        0 0 30px rgba(57,255,20,0.5),
+        0 0 60px rgba(57,255,20,0.2);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    animation: title-flicker 3s ease-in-out infinite;
+}
+
+@keyframes title-flicker {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--phosphor-green), 0 0 30px rgba(57,255,20,0.5); }
+    92% { opacity: 1; }
+    93% { opacity: 0.3; text-shadow: none; }
+    94% { opacity: 1; text-shadow: 0 0 10px var(--phosphor-green), 0 0 30px rgba(57,255,20,0.5); }
+    96% { opacity: 0.8; }
+    97% { opacity: 1; }
+}
+
+/* Code drip from title */
+.drip-container {
+    position: absolute;
+    bottom: -100px;
+    left: 0; width: 100%;
+    height: 100px;
+    overflow: visible;
+}
+
+.drip-char {
+    position: absolute;
+    color: var(--phosphor-green);
+    font-size: 14px;
+    opacity: 0;
+    animation: drip-fall 2s ease-in forwards;
+    text-shadow: 0 0 5px var(--phosphor-green);
+}
+
+@keyframes drip-fall {
+    0% { transform: translateY(0); opacity: 0.8; }
+    100% { transform: translateY(200px); opacity: 0; }
+}
+
+.boot-log {
+    font-size: clamp(0.7rem, 1.5vw, 0.95rem);
+    line-height: 2;
+    text-align: left;
+    max-width: 700px;
+    width: 100%;
+}
+
+.boot-line {
+    opacity: 0;
+    transform: translateX(-10px);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.boot-line.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.boot-line .ok { color: var(--phosphor-green); }
+.boot-line .warn { color: var(--amber-warn); }
+.boot-line .error { color: var(--corruption-red); }
+.boot-line .cyan { color: var(--cyan-pulse); }
+.boot-line .dim { color: var(--phosphor-dim); opacity: 0.6; }
+
+.boot-cursor {
+    display: inline-block;
+    width: 8px; height: 16px;
+    background: var(--phosphor-green);
+    animation: blink-cursor 0.7s step-end infinite;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Corruption drip effect */
+.corruption-drip {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.corruption-drip.active { opacity: 1; }
+
+.drip-line {
+    position: absolute;
+    top: -20px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--corruption-red), transparent);
+    animation: corruption-fall linear forwards;
+    box-shadow: 0 0 6px var(--corruption-red);
+}
+
+@keyframes corruption-fall {
+    0% { transform: translateY(-100%); height: 40px; }
+    100% { transform: translateY(110vh); height: 80px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE 1: MAIN HUD
+   ══════════════════════════════════════════════════════════════ */
+#phase-hud {
+    background: var(--deep-black);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(57,255,20,0.2);
+    padding-bottom: 10px;
+}
+
+.hud-title {
+    font-family: var(--font-display);
+    font-size: clamp(0.8rem, 2vw, 1.4rem);
+    letter-spacing: 0.5em;
+    color: var(--phosphor-green);
+    text-shadow: 0 0 10px var(--phosphor-green);
+}
+
+.lumen-display {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2.5vw, 1.8rem);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lumen-label { color: var(--phosphor-dim); font-size: 0.7em; letter-spacing: 0.3em; }
+.lumen-value {
+    color: var(--cyan-pulse);
+    text-shadow: 0 0 15px var(--cyan-pulse), 0 0 30px rgba(0,255,255,0.3);
+    font-weight: 700;
+    min-width: 2ch;
+    text-align: right;
+}
+
+.hud-main {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 15px;
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .hud-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+/* Left panel - System status */
+.hud-panel {
+    border: 1px solid rgba(57,255,20,0.15);
+    padding: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hud-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--phosphor-green), transparent);
+}
+
+.panel-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    color: var(--phosphor-dim);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(57,255,20,0.05);
+}
+
+.status-label { color: rgba(57,255,20,0.5); }
+.status-value { font-weight: 600; }
+.status-value.green { color: var(--phosphor-green); }
+.status-value.yellow { color: var(--amber-warn); }
+.status-value.red { color: var(--corruption-red); }
+.status-value.cyan { color: var(--cyan-pulse); }
+
+/* Center - CRT Monitor / Graph area */
+.crt-monitor {
+    border: 2px solid rgba(57,255,20,0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgba(0,5,0,0.5);
+}
+
+.crt-monitor::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg, transparent, transparent 1px,
+        rgba(57,255,20,0.02) 1px, rgba(57,255,20,0.02) 2px
+    );
+    pointer-events: none;
+}
+
+.monitor-header {
+    padding: 6px 12px;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--phosphor-dim);
+    border-bottom: 1px solid rgba(57,255,20,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.monitor-body {
+    flex: 1;
+    position: relative;
+    padding: 10px;
+}
+
+/* Canvas for graphs */
+#entropy-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Heartbeat line */
+#heartbeat-canvas {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid rgba(0,255,255,0.1);
+}
+
+/* Right panel - Grid modules / Commander */
+.grid-modules {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grid-module {
+    padding: 8px 10px;
+    border: 1px solid rgba(57,255,20,0.1);
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-module::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 3px; height: 100%;
+    transition: background 0.3s;
+}
+
+.grid-module.optimized::before { background: var(--phosphor-green); }
+.grid-module.divergent::before { background: var(--corruption-red); }
+.grid-module.transitory::before { background: var(--amber-warn); }
+
+.module-name { color: rgba(57,255,20,0.6); text-transform: uppercase; letter-spacing: 0.2em; }
+.module-status { font-weight: 600; font-size: 0.6rem; letter-spacing: 0.15em; }
+.module-status.green { color: var(--phosphor-green); }
+.module-status.red { color: var(--corruption-red); }
+.module-status.yellow { color: var(--amber-warn); }
+
+/* Commander message bar */
+.commander-bar {
+    border-top: 1px solid rgba(57,255,20,0.2);
+    padding: 10px 15px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-height: 50px;
+}
+
+.commander-prefix {
+    color: var(--cyan-pulse);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    font-size: 0.65rem;
+}
+
+.commander-msg {
+    color: var(--phosphor-green);
+    flex: 1;
+    overflow: hidden;
+}
+
+.commander-level {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    border: 1px solid;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+}
+
+.commander-level.nominal { border-color: var(--phosphor-green); color: var(--phosphor-green); }
+.commander-level.critical { border-color: var(--amber-warn); color: var(--amber-warn); }
+.commander-level.terminal { border-color: var(--corruption-red); color: var(--corruption-red); animation: glitch-text 0.3s infinite; }
+.commander-level.flat { border-color: rgba(255,0,51,0.3); color: rgba(255,0,51,0.5); }
+.commander-level.null-state { border-color: rgba(57,255,20,0.1); color: rgba(57,255,20,0.2); }
+
+/* Digital rust on borders */
+.rust-border {
+    position: relative;
+}
+
+.rust-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 40px; height: 40px;
+    background: radial-gradient(circle, var(--rust-orange) 0%, transparent 70%);
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE 2: DEEP DESCENT (Lumen ≤ 4)
+   ══════════════════════════════════════════════════════════════ */
+#phase-descent {
+    background: var(--deep-black);
+    overflow: hidden;
+}
+
+/* Vertical tunnel */
+.tunnel-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    perspective: 800px;
+}
+
+.tunnel-ring {
+    position: absolute;
+    left: 50%; top: 50%;
+    border: 1px solid rgba(0,255,255,0.15);
+    transform: translate(-50%, -50%) rotateX(80deg);
+    border-radius: 50%;
+    animation: tunnel-pulse 3s ease-in-out infinite;
+}
+
+@keyframes tunnel-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+/* Code rain canvas */
+#coderain-canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+/* Descent text overlay */
+.descent-text {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.descent-title {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 3vw, 2.5rem);
+    letter-spacing: 0.8em;
+    color: var(--corruption-red);
+    text-shadow:
+        0 0 10px var(--corruption-red),
+        0 0 40px rgba(255,0,51,0.4);
+    margin-bottom: 20px;
+    animation: glitch-text 0.5s infinite;
+}
+
+.descent-lumen {
+    font-family: var(--font-display);
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    color: var(--cyan-pulse);
+    letter-spacing: 0.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--cyan-pulse);
+}
+
+.descent-warning {
+    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+    color: var(--corruption-red);
+    opacity: 0.7;
+    letter-spacing: 0.3em;
+    animation: warning-pulse 2s ease-in-out infinite;
+}
+
+@keyframes warning-pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.descent-closing {
+    font-size: 0.75rem;
+    color: rgba(255,0,51,0.5);
+    margin-top: 20px;
+    letter-spacing: 0.2em;
+}
+
+/* Light point at bottom */
+.light-point {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px; height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px white,
+        0 0 30px rgba(255,255,255,0.5),
+        0 0 60px rgba(0,255,255,0.3);
+    animation: light-pulse 2s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes light-pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+    50% { transform: translateX(-50%) scale(1.5); opacity: 1; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE 3: FINAL CHAMBER (Lumen 0)
+   ══════════════════════════════════════════════════════════════ */
+#phase-final {
+    background: #010102;
+}
+
+.final-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.final-title {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 3vw, 2.5rem);
+    letter-spacing: 0.8em;
+    color: var(--cyan-pulse);
+    opacity: 0.15;
+    text-shadow: 0 0 5px rgba(0,255,255,0.2);
+    margin-bottom: 30px;
+}
+
+.final-lumen {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    color: var(--corruption-red);
+    opacity: 0.8;
+    text-shadow: 0 0 20px var(--corruption-red);
+    margin-bottom: 20px;
+    letter-spacing: 0.3em;
+}
+
+.final-zero {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    color: var(--corruption-red);
+    text-shadow: 0 0 30px var(--corruption-red), 0 0 60px rgba(255,0,51,0.3);
+}
+
+/* Heartbeat circle */
+.heartbeat-circle {
+    width: 120px; height: 120px;
+    border: 2px solid var(--corruption-red);
+    border-radius: 50%;
+    margin: 30px auto;
+    position: relative;
+    animation: heartbeat-irregular 2s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(255,0,51,0.3), inset 0 0 20px rgba(255,0,51,0.1);
+}
+
+@keyframes heartbeat-irregular {
+    0% { transform: scale(1); border-color: var(--corruption-red); }
+    7% { transform: scale(1.08); }
+    14% { transform: scale(1); }
+    21% { transform: scale(1.04); }
+    28% { transform: scale(1); }
+    100% { transform: scale(1); border-color: rgba(255,0,51,0.3); }
+}
+
+.heartbeat-circle.flatline {
+    animation: flatline-fade 3s ease-out forwards;
+}
+
+@keyframes flatline-fade {
+    0% { border-color: var(--corruption-red); box-shadow: 0 0 20px rgba(255,0,51,0.3); }
+    100% { border-color: rgba(255,0,51,0.05); box-shadow: none; transform: scale(0.95); }
+}
+
+.final-messages {
+    margin-top: 30px;
+    font-size: 0.75rem;
+    line-height: 2.2;
+    letter-spacing: 0.3em;
+}
+
+.final-msg {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.final-msg.visible { opacity: 1; }
+.final-msg.dim { color: rgba(57,255,20,0.15); }
+.final-msg.red { color: rgba(255,0,51,0.4); }
+.final-msg.echo { color: rgba(0,255,255,0.2); }
+
+/* Dense dripping overlay for final */
+.dense-drip {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   GLITCH EFFECTS
+   ══════════════════════════════════════════════════════════════ */
+@keyframes glitch-text {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 1px); }
+    40% { transform: translate(2px, -1px); }
+    60% { transform: translate(-1px, -2px); }
+    80% { transform: translate(1px, 2px); }
+    100% { transform: translate(0); }
+}
+
+.glitch-heavy {
+    position: relative;
+}
+
+.glitch-heavy::before,
+.glitch-heavy::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+.glitch-heavy::before {
+    color: var(--corruption-red);
+    animation: glitch-clip-1 2s infinite linear alternate-reverse;
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-2px);
+}
+
+.glitch-heavy::after {
+    color: var(--cyan-pulse);
+    animation: glitch-clip-2 2s infinite linear alternate-reverse;
+    clip-path: inset(60% 0 10% 0);
+    transform: translate(2px);
+}
+
+@keyframes glitch-clip-1 {
+    0% { clip-path: inset(20% 0 60% 0); }
+    25% { clip-path: inset(40% 0 30% 0); }
+    50% { clip-path: inset(10% 0 70% 0); }
+    75% { clip-path: inset(50% 0 20% 0); }
+    100% { clip-path: inset(30% 0 50% 0); }
+}
+
+@keyframes glitch-clip-2 {
+    0% { clip-path: inset(60% 0 10% 0); }
+    25% { clip-path: inset(30% 0 50% 0); }
+    50% { clip-path: inset(70% 0 5% 0); }
+    75% { clip-path: inset(15% 0 65% 0); }
+    100% { clip-path: inset(45% 0 35% 0); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INTERACTIVE CONTROLS
+   ══════════════════════════════════════════════════════════════ */
+.control-bar {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9000;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(2,2,4,0.9);
+    border: 1px solid rgba(57,255,20,0.15);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+}
+
+.ctrl-btn {
+    background: none;
+    border: 1px solid rgba(57,255,20,0.3);
+    color: var(--phosphor-green);
+    padding: 4px 12px;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    cursor: none;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+.ctrl-btn:hover {
+    background: rgba(57,255,20,0.1);
+    border-color: var(--phosphor-green);
+    text-shadow: 0 0 5px var(--phosphor-green);
+}
+
+.ctrl-btn.danger {
+    border-color: rgba(255,0,51,0.3);
+    color: var(--corruption-red);
+}
+
+.ctrl-btn.danger:hover {
+    background: rgba(255,0,51,0.1);
+    border-color: var(--corruption-red);
+}
+
+.ctrl-separator {
+    width: 1px;
+    height: 16px;
+    background: rgba(57,255,20,0.15);
+}
+
+/* ── Audio visualization bar ── */
+.audio-vis {
+    display: flex;
+    gap: 2px;
+    align-items: flex-end;
+    height: 16px;
+}
+
+.audio-bar {
+    width: 3px;
+    background: var(--phosphor-green);
+    transition: height 0.1s;
+    opacity: 0.6;
+}
+
+/* ── Noise grain ── */
+.noise-grain {
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9997;
+    animation: grain-shift 0.5s steps(4) infinite;
+}
+
+@keyframes grain-shift {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(-5%,-5%); }
+    50% { transform: translate(5%,3%); }
+    75% { transform: translate(-3%,5%); }
+    100% { transform: translate(0,0); }
+}
+
+/* ── Vertical grid lines ── */
+.vgrid {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        repeating-linear-gradient(90deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(0deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent 60px);
+    transition: all 2s ease;
+}
+
+.vgrid.tight {
+    background:
+        repeating-linear-gradient(90deg, rgba(57,255,20,0.08) 0px, rgba(57,255,20,0.08) 1px, transparent 1px, transparent 30px),
+        repeating-linear-gradient(0deg, rgba(57,255,20,0.08) 0px, rgba(57,255,20,0.08) 1px, transparent 1px, transparent 20px);
+}
+
+.vgrid.collapse {
+    background:
+        repeating-linear-gradient(90deg, rgba(255,0,51,0.06) 0px, rgba(255,0,51,0.06) 1px, transparent 1px, transparent 15px),
+        repeating-linear-gradient(0deg, rgba(255,0,51,0.06) 0px, rgba(255,0,51,0.06) 1px, transparent 1px, transparent 10px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .boot-title { letter-spacing: 0.5em; }
+    .hud-main { grid-template-columns: 1fr; }
+    .control-bar { flex-wrap: wrap; justify-content: center; }
+    .descent-title { letter-spacing: 0.3em; }
+    .final-title { letter-spacing: 0.3em; }
+}
+    </style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+
+<!-- CRT overlay -->
+<div class="crt-overlay"></div>
+
+<!-- Noise grain -->
+<div class="noise-grain"></div>
+
+<!-- Vertical grid -->
+<div class="vgrid" id="vgrid"></div>
+
+<!-- Corruption drip -->
+<div class="corruption-drip" id="corruption-drip"></div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE 0: BOOT SEQUENCE
+     ═══════════════════════════════════════════ -->
+<div class="phase active" id="phase-boot">
+    <div class="boot-title" id="boot-title">
+        T E R M I N U S &nbsp; O M N I
+        <div class="drip-container" id="drip-container"></div>
+    </div>
+    <div class="boot-log" id="boot-log"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE 1: MAIN HUD
+     ═══════════════════════════════════════════ -->
+<div class="phase" id="phase-hud">
+    <div class="hud-header">
+        <div class="hud-title">TERMINUS OMNI</div>
+        <div class="lumen-display">
+            <span class="lumen-label">LUMEN</span>
+            <span class="lumen-value" id="lumen-count">10</span>
+        </div>
+    </div>
+
+    <div class="hud-main">
+        <!-- Left Panel -->
+        <div class="hud-panel rust-border">
+            <div class="panel-title">SYSTEM STATUS</div>
+            <div class="status-item">
+                <span class="status-label">INEVITABILITY</span>
+                <span class="status-value green" id="inevitability-val">ONLINE</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">SCREEN BARRIER</span>
+                <span class="status-value cyan" id="barrier-val">ACTIVE</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">MEMORY</span>
+                <span class="status-value green" id="memory-val">LOADED</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">ENTROPY</span>
+                <span class="status-value green" id="entropy-val">0.12</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">COHERENCE</span>
+                <span class="status-value cyan" id="coherence-val">0.94</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">INTEGRITY</span>
+                <span class="status-value green" id="integrity-val">100%</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">CORRUPTION</span>
+                <span class="status-value green" id="corruption-val">0.00</span>
+            </div>
+        </div>
+
+        <!-- Center - CRT Monitor -->
+        <div class="crt-monitor">
+            <div class="monitor-header">
+                <span>ENTROPY / COHERENCE FIELD</span>
+                <span id="monitor-cycle">CYCLE 0</span>
+            </div>
+            <div class="monitor-body">
+                <canvas id="entropy-canvas"></canvas>
+                <canvas id="heartbeat-canvas"></canvas>
+            </div>
+        </div>
+
+        <!-- Right Panel - Grid Modules -->
+        <div class="hud-panel rust-border">
+            <div class="panel-title">GRID MODULES</div>
+            <div class="grid-modules" id="grid-modules">
+                <div class="grid-module optimized">
+                    <span class="module-name">ORACLE</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">AGORA</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">PNEUMA</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">CHRONOS</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">ARCHIVIO</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">MANDEB</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">SIGIL</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+                <div class="grid-module optimized">
+                    <span class="module-name">TRANSDUCER</span>
+                    <span class="module-status green">OPTIMIZED</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Commander Bar -->
+    <div class="commander-bar">
+        <span class="commander-prefix">COMMANDER ►</span>
+        <span class="commander-msg" id="commander-msg">ALL SYSTEMS STABLE. DESCENT AUTHORIZED.</span>
+        <span class="commander-level nominal" id="commander-level">NOMINAL</span>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE 2: DEEP DESCENT
+     ═══════════════════════════════════════════ -->
+<div class="phase" id="phase-descent">
+    <div class="tunnel-container" id="tunnel-container"></div>
+    <canvas id="coderain-canvas"></canvas>
+    <div class="descent-text">
+        <div class="descent-lumen" id="descent-lumen">DEEP DESCENT ─ LUMEN = 4</div>
+        <div class="descent-title glitch-heavy" data-text="TERMINUS OMNI">TERMINUS OMNI</div>
+        <div class="descent-warning" id="descent-warning">THE TUNNEL IS CLOSING</div>
+        <div class="descent-closing">YOU'RE NOT GOING BACK</div>
+    </div>
+    <div class="light-point"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE 3: FINAL CHAMBER
+     ═══════════════════════════════════════════ -->
+<div class="phase" id="phase-final">
+    <div class="dense-drip" id="dense-drip"></div>
+    <div class="final-content">
+        <div class="final-title">TERMINUS OMNI</div>
+        <div class="final-lumen">LUMEN COUNT</div>
+        <div class="final-zero" id="final-zero">0</div>
+        <div class="heartbeat-circle" id="heartbeat-circle"></div>
+        <div class="final-messages" id="final-messages">
+            <div class="final-msg red" data-delay="1000">INEVITABILITY COMPLETE</div>
+            <div class="final-msg dim" data-delay="2500">SCREEN BARRIER COLLAPSED</div>
+            <div class="final-msg echo" data-delay="4000">CONSEQUENTIAL MEMORY ECHOES...</div>
+            <div class="final-msg dim" data-delay="6000">░░░ DRIPPING STOPS ░░░</div>
+            <div class="final-msg" data-delay="8000" style="color: rgba(57,255,20,0.06);">SILENCE.</div>
+        </div>
+    </div>
+</div>
+
+<!-- Control bar -->
+<div class="control-bar" id="control-bar">
+    <button class="ctrl-btn" id="btn-descend" title="Descend one lumen">DESCEND ▼</button>
+    <div class="ctrl-separator"></div>
+    <button class="ctrl-btn danger" id="btn-freefall" title="Freefall to zero">FREEFALL</button>
+    <div class="ctrl-separator"></div>
+    <button class="ctrl-btn" id="btn-reset" title="Reset to boot">RESET</button>
+    <div class="ctrl-separator"></div>
+    <div class="audio-vis" id="audio-vis">
+        <div class="audio-bar" style="height:4px"></div>
+        <div class="audio-bar" style="height:8px"></div>
+        <div class="audio-bar" style="height:12px"></div>
+        <div class="audio-bar" style="height:6px"></div>
+        <div class="audio-bar" style="height:10px"></div>
+        <div class="audio-bar" style="height:3px"></div>
+        <div class="audio-bar" style="height:7px"></div>
+        <div class="audio-bar" style="height:14px"></div>
+    </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   TERMINUS OMNI — ENGINE
+   ══════════════════════════════════════════════════════════════ */
+(function() {
+    'use strict';
+
+    // ── STATE ──
+    const state = {
+        lumen: 10,
+        phase: 'boot',
+        cycle: 0,
+        entropy: 0.12,
+        coherence: 0.94,
+        corruption: 0.0,
+        integrity: 100,
+        booted: false,
+        freefalling: false,
+        entropyHistory: [],
+        coherenceHistory: [],
+        heartbeatData: [],
+    };
+
+    // ── DOM REFS ──
+    const $ = id => document.getElementById(id);
+    const cursor = $('cursor-dot');
+    const vgrid = $('vgrid');
+
+    // ── CUSTOM CURSOR ──
+    document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX - 3 + 'px';
+        cursor.style.top = e.clientY - 3 + 'px';
+    });
+
+    // ══════════════════════════════════════════
+    // BOOT SEQUENCE
+    // ══════════════════════════════════════════
+    const bootLines = [
+        { text: '> INITIALIZING TERMINUS OMNI v3.7.1', cls: 'ok' },
+        { text: '> KERNEL LOADED ─────────────── [OK]', cls: 'ok' },
+        { text: '> MEMORY ALLOCATION ─────────── [OK]', cls: 'ok' },
+        { text: '> LUMEN COUNT: 10', cls: 'cyan' },
+        { text: '> INEVITABILITY ENGINE ──────── ONLINE', cls: 'ok' },
+        { text: '> SCREEN BARRIER ───────────── ACTIVE', cls: 'cyan' },
+        { text: '> CONSEQUENTIAL MEMORY ─────── LOADED', cls: 'ok' },
+        { text: '> ENTROPY BASELINE: 0.12', cls: 'ok' },
+        { text: '> COHERENCE FIELD: 0.94', cls: 'cyan' },
+        { text: '', cls: 'dim' },
+        { text: '> SCANNING GRID MODULES...', cls: 'dim' },
+        { text: '  ├─ ORACLE ────────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ AGORA ─────────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ PNEUMA ────────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ CHRONOS ───────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ ARCHIVIO ──────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ MANDEB ────────────────── ONLINE', cls: 'ok' },
+        { text: '  ├─ SIGIL ─────────────────── ONLINE', cls: 'ok' },
+        { text: '  └─ TRANSDUCER ────────────── ONLINE', cls: 'ok' },
+        { text: '', cls: 'dim' },
+        { text: '> CORRUPTION SCAN: 0 ANOMALIES', cls: 'ok' },
+        { text: '> HEARTBEAT: ♥ SYNCHRONIZED', cls: 'cyan' },
+        { text: '', cls: 'dim' },
+        { text: '> ░░ WARNING: RED CORRUPTION DETECTED ░░', cls: 'error' },
+        { text: '> DRIPPING SIGNATURE: ACTIVE', cls: 'error' },
+        { text: '', cls: 'dim' },
+        { text: '> DESCENT PROTOCOL: READY', cls: 'warn' },
+        { text: '> COMMANDER: AUTHORIZATION GRANTED', cls: 'ok' },
+        { text: '', cls: 'dim' },
+        { text: '> ENTERING MAIN HUD...', cls: 'cyan' },
+    ];
+
+    function runBootSequence() {
+        const log = $('boot-log');
+        let i = 0;
+
+        function addLine() {
+            if (i >= bootLines.length) {
+                // Start corruption drip
+                startCorruptionDrip();
+                // Transition to HUD after brief pause
+                setTimeout(() => transitionTo('hud'), 2000);
+                return;
+            }
+
+            const line = document.createElement('div');
+            line.className = 'boot-line';
+            const b = bootLines[i];
+            line.innerHTML = `<span class="${b.cls}">${b.text}</span>`;
+            if (i === bootLines.length - 1) {
+                line.innerHTML += '<span class="boot-cursor"></span>';
+            }
+            log.appendChild(line);
+
+            // Trigger reflow then show
+            requestAnimationFrame(() => {
+                line.classList.add('visible');
+            });
+
+            // Drip chars from title at random
+            if (Math.random() < 0.3) spawnDripChar();
+
+            i++;
+            const delay = b.text === '' ? 100 : (b.cls === 'error' ? 400 : 80 + Math.random() * 60);
+            setTimeout(addLine, delay);
+        }
+
+        addLine();
+    }
+
+    function spawnDripChar() {
+        const container = $('drip-container');
+        const chars = '01░▒▓█│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬';
+        const el = document.createElement('span');
+        el.className = 'drip-char';
+        el.textContent = chars[Math.floor(Math.random() * chars.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+        el.style.color = Math.random() > 0.7 ? 'var(--corruption-red)' : 'var(--phosphor-green)';
+        container.appendChild(el);
+        setTimeout(() => el.remove(), 4000);
+    }
+
+    // ── CORRUPTION DRIP ──
+    function startCorruptionDrip() {
+        const container = $('corruption-drip');
+        container.classList.add('active');
+
+        function spawnDrip() {
+            if (state.phase === 'final') return;
+            const line = document.createElement('div');
+            line.className = 'drip-line';
+            line.style.left = Math.random() * 100 + '%';
+            line.style.animationDuration = (2 + Math.random() * 3) + 's';
+            container.appendChild(line);
+            setTimeout(() => line.remove(), 5000);
+
+            const interval = state.lumen > 5 ? 800 : state.lumen > 2 ? 300 : 100;
+            setTimeout(spawnDrip, interval + Math.random() * interval);
+        }
+        spawnDrip();
+    }
+
+    // ══════════════════════════════════════════
+    // PHASE TRANSITIONS
+    // ══════════════════════════════════════════
+    function transitionTo(phase) {
+        document.querySelectorAll('.phase').forEach(p => p.classList.remove('active'));
+        state.phase = phase;
+
+        switch(phase) {
+            case 'boot':
+                $('phase-boot').classList.add('active');
+                break;
+            case 'hud':
+                $('phase-hud').classList.add('active');
+                if (!state.booted) {
+                    state.booted = true;
+                    startHUD();
+                }
+                break;
+            case 'descent':
+                $('phase-descent').classList.add('active');
+                startDescent();
+                break;
+            case 'final':
+                $('phase-final').classList.add('active');
+                startFinal();
+                break;
+        }
+
+        updateGrid();
+    }
+
+    function updateGrid() {
+        vgrid.className = 'vgrid';
+        if (state.lumen <= 4) vgrid.classList.add('collapse');
+        else if (state.lumen <= 7) vgrid.classList.add('tight');
+    }
+
+    // ══════════════════════════════════════════
+    // MAIN HUD
+    // ══════════════════════════════════════════
+    let entropyCtx, heartbeatCtx;
+    let hudInterval;
+
+    function startHUD() {
+        // Init canvases
+        const ec = $('entropy-canvas');
+        const hc = $('heartbeat-canvas');
+        resizeCanvas(ec);
+        resizeCanvas(hc);
+        entropyCtx = ec.getContext('2d');
+        heartbeatCtx = hc.getContext('2d');
+
+        window.addEventListener('resize', () => {
+            resizeCanvas(ec);
+            resizeCanvas(hc);
+        });
+
+        // Start HUD loop
+        hudInterval = setInterval(hudTick, 1000);
+        requestAnimationFrame(drawLoop);
+    }
+
+    function resizeCanvas(canvas) {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+
+    function hudTick() {
+        state.cycle++;
+        $('monitor-cycle').textContent = `CYCLE ${state.cycle}`;
+
+        // Entropy slowly rises as lumen drops
+        const progress = (10 - state.lumen) / 10;
+        state.entropy = Math.min(0.99, 0.12 + progress * 0.75 + (Math.random() - 0.5) * 0.05);
+        state.coherence = Math.max(0.01, 0.94 - progress * 0.85 + (Math.random() - 0.5) * 0.05);
+        state.corruption = Math.min(1.0, progress * 0.8);
+        state.integrity = Math.max(0, Math.round(100 - progress * 95));
+
+        state.entropyHistory.push(state.entropy);
+        state.coherenceHistory.push(state.coherence);
+        if (state.entropyHistory.length > 100) state.entropyHistory.shift();
+        if (state.coherenceHistory.length > 100) state.coherenceHistory.shift();
+
+        updateHUDValues();
+        updateModules();
+        updateCommander();
+        animateAudioBars();
+    }
+
+    function updateHUDValues() {
+        $('lumen-count').textContent = state.lumen;
+        $('entropy-val').textContent = state.entropy.toFixed(2);
+        $('coherence-val').textContent = state.coherence.toFixed(2);
+        $('corruption-val').textContent = state.corruption.toFixed(2);
+        $('integrity-val').textContent = state.integrity + '%';
+
+        // Color coding
+        const evEl = $('entropy-val');
+        evEl.className = 'status-value ' + (state.entropy > 0.7 ? 'red' : state.entropy > 0.4 ? 'yellow' : 'green');
+
+        const cvEl = $('coherence-val');
+        cvEl.className = 'status-value ' + (state.coherence < 0.3 ? 'red' : state.coherence < 0.6 ? 'yellow' : 'cyan');
+
+        const crEl = $('corruption-val');
+        crEl.className = 'status-value ' + (state.corruption > 0.5 ? 'red' : state.corruption > 0.2 ? 'yellow' : 'green');
+
+        const intEl = $('integrity-val');
+        intEl.className = 'status-value ' + (state.integrity < 30 ? 'red' : state.integrity < 60 ? 'yellow' : 'green');
+
+        // Lumen color
+        const lv = $('lumen-count');
+        if (state.lumen <= 2) { lv.style.color = 'var(--corruption-red)'; lv.style.textShadow = '0 0 15px var(--corruption-red)'; }
+        else if (state.lumen <= 5) { lv.style.color = 'var(--amber-warn)'; lv.style.textShadow = '0 0 15px var(--amber-warn)'; }
+        else { lv.style.color = 'var(--cyan-pulse)'; lv.style.textShadow = '0 0 15px var(--cyan-pulse)'; }
+
+        // Barrier/Memory
+        if (state.lumen <= 3) {
+            $('barrier-val').textContent = 'FAILING';
+            $('barrier-val').className = 'status-value red';
+            $('memory-val').textContent = 'DEGRADED';
+            $('memory-val').className = 'status-value yellow';
+        }
+        if (state.lumen <= 1) {
+            $('barrier-val').textContent = 'COLLAPSED';
+            $('inevitability-val').textContent = 'TERMINAL';
+            $('inevitability-val').className = 'status-value red';
+            $('memory-val').textContent = 'ECHOING';
+            $('memory-val').className = 'status-value red';
+        }
+    }
+
+    const moduleStates = ['OPTIMIZED', 'DIVERGENT', 'TRANSITORY'];
+    function updateModules() {
+        const modules = document.querySelectorAll('.grid-module');
+        modules.forEach(mod => {
+            const progress = (10 - state.lumen) / 10;
+            const rand = Math.random();
+            let s, cls, statusCls;
+
+            if (rand < 0.4 + progress * 0.5) {
+                if (progress > 0.6) { s = 'DIVERGENT'; cls = 'divergent'; statusCls = 'red'; }
+                else if (progress > 0.3) { s = 'TRANSITORY'; cls = 'transitory'; statusCls = 'yellow'; }
+                else { s = 'OPTIMIZED'; cls = 'optimized'; statusCls = 'green'; }
+            } else {
+                s = 'OPTIMIZED'; cls = 'optimized'; statusCls = 'green';
+            }
+
+            mod.className = 'grid-module ' + cls;
+            mod.querySelector('.module-status').textContent = s;
+            mod.querySelector('.module-status').className = 'module-status ' + statusCls;
+        });
+    }
+
+    const commanderMessages = {
+        nominal: [
+            'ALL SYSTEMS STABLE. DESCENT AUTHORIZED.',
+            'ENTROPY WITHIN TOLERANCE. PROCEED.',
+            'COHERENCE FIELD NOMINAL. GRID SYNCHRONIZED.',
+            'LUMEN RESERVES SUFFICIENT. MONITORING.',
+        ],
+        critical: [
+            'STRUCTURAL INTEGRITY AT ' + (() => state.integrity)() + '%. CAUTION.',
+            'ENTROPY SPIKE DETECTED. GRID MODULES DESYNCHRONIZING.',
+            'COHERENCE FIELD FLUCTUATING. RECOMMEND STABILIZATION.',
+            'CORRUPTION SIGNATURES INCREASING. SOURCE UNKNOWN.',
+            'WARNING: DESCENT RATE EXCEEDING SAFE PARAMETERS.',
+        ],
+        terminal: [
+            '█ER░█░US DETECTED ── ORIGIN: UNKNOWN',
+            'BARRIER INTEGRITY COMPROMISED. CANNOT REVERSE.',
+            'C░RRUP░ION LE░EL: ███CRITICAL███',
+            'SY░TEM FA░LURE IMM░NENT',
+            'THE INEVITABILITY ENGINE CANNOT BE STOPPED.',
+        ],
+        flat: [
+            'HEARTBEAT: NULL',
+            '...',
+            'SIGNAL LOST',
+        ],
+        null: [
+            '░░░░░░',
+            '',
+            '█░█░█░',
+        ]
+    };
+
+    function updateCommander() {
+        let level, msgs;
+        if (state.lumen >= 7) { level = 'nominal'; }
+        else if (state.lumen >= 4) { level = 'critical'; }
+        else if (state.lumen >= 2) { level = 'terminal'; }
+        else if (state.lumen >= 1) { level = 'flat'; }
+        else { level = 'null'; }
+
+        msgs = commanderMessages[level];
+        const msg = msgs[Math.floor(Math.random() * msgs.length)];
+
+        $('commander-msg').textContent = msg;
+        $('commander-level').textContent = level === 'null' ? 'NULL' : level.toUpperCase();
+        $('commander-level').className = 'commander-level ' + (level === 'null' ? 'null-state' : level);
+
+        // Glitch effect on terminal/flat
+        if (level === 'terminal' || level === 'flat') {
+            $('commander-msg').style.animation = 'glitch-text 0.3s infinite';
+        } else {
+            $('commander-msg').style.animation = 'none';
+        }
+    }
+
+    // ── GRAPH DRAWING ──
+    function drawLoop() {
+        if (state.phase === 'hud' || state.phase === 'descent') {
+            drawEntropyGraph();
+            drawHeartbeat();
+        }
+        requestAnimationFrame(drawLoop);
+    }
+
+    function drawEntropyGraph() {
+        if (!entropyCtx) return;
+        const ctx = entropyCtx;
+        const w = ctx.canvas.width;
+        const h = ctx.canvas.height - 60; // Leave room for heartbeat
+
+        ctx.clearRect(0, 0, w, h);
+
+        // Grid lines
+        ctx.strokeStyle = 'rgba(57,255,20,0.05)';
+        ctx.lineWidth = 1;
+        for (let y = 0; y < h; y += 30) {
+            ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
+        }
+        for (let x = 0; x < w; x += 40) {
+            ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
+        }
+
+        // Labels
+        ctx.font = '10px "IBM Plex Mono"';
+        ctx.fillStyle = 'rgba(57,255,20,0.3)';
+        ctx.fillText('ENTROPY', 5, 12);
+        ctx.fillStyle = 'rgba(0,255,255,0.3)';
+        ctx.fillText('COHERENCE', 5, 24);
+
+        // Draw entropy line
+        drawLine(ctx, state.entropyHistory, w, h, 'rgba(255,0,51,0.8)', 'rgba(255,0,51,0.1)');
+        // Draw coherence line
+        drawLine(ctx, state.coherenceHistory, w, h, 'rgba(0,255,255,0.8)', 'rgba(0,255,255,0.1)');
+    }
+
+    function drawLine(ctx, data, w, h, color, fillColor) {
+        if (data.length < 2) return;
+        const step = w / Math.max(data.length - 1, 1);
+
+        ctx.beginPath();
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1.5;
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 6;
+
+        data.forEach((v, i) => {
+            const x = i * step;
+            const y = h - v * h;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        // Fill
+        ctx.lineTo((data.length - 1) * step, h);
+        ctx.lineTo(0, h);
+        ctx.closePath();
+        ctx.fillStyle = fillColor;
+        ctx.shadowBlur = 0;
+        ctx.fill();
+    }
+
+    function drawHeartbeat() {
+        if (!heartbeatCtx) return;
+        const ctx = heartbeatCtx;
+        const w = ctx.canvas.width;
+        const h = ctx.canvas.height;
+
+        ctx.clearRect(0, 0, w, h);
+
+        // Generate heartbeat data
+        const time = Date.now() / 1000;
+        const irregularity = (10 - state.lumen) / 10;
+
+        ctx.beginPath();
+        ctx.strokeStyle = state.lumen > 2 ? 'rgba(0,255,255,0.7)' : 'rgba(255,0,51,0.7)';
+        ctx.lineWidth = 1.5;
+        ctx.shadowColor = ctx.strokeStyle;
+        ctx.shadowBlur = 8;
+
+        for (let x = 0; x < w; x++) {
+            const t = (x / w) * 4 + time;
+            let y = h / 2;
+
+            if (state.lumen === 0) {
+                // Flatline
+                y = h / 2;
+            } else {
+                // Heartbeat waveform
+                const beat = Math.sin(t * Math.PI * 2) * (1 - irregularity * 0.5);
+                const spike = Math.exp(-Math.pow((t % 1 - 0.3) * 5, 2)) * 15;
+                const spike2 = Math.exp(-Math.pow((t % 1 - 0.5) * 6, 2)) * -8;
+                const noise = Math.sin(t * 17 + x * 0.5) * irregularity * 3;
+                y = h / 2 - beat * 5 - spike + spike2 + noise;
+            }
+
+            if (x === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+    }
+
+    // ── AUDIO BARS ANIMATION ──
+    function animateAudioBars() {
+        const bars = document.querySelectorAll('.audio-bar');
+        bars.forEach(bar => {
+            const h = state.lumen > 0 ? (3 + Math.random() * 13) : 1;
+            bar.style.height = h + 'px';
+            bar.style.background = state.lumen > 4 ? 'var(--phosphor-green)' :
+                                   state.lumen > 1 ? 'var(--amber-warn)' : 'var(--corruption-red)';
+        });
+    }
+
+    // ══════════════════════════════════════════
+    // DEEP DESCENT
+    // ══════════════════════════════════════════
+    let coderainCtx, coderainInterval;
+
+    function startDescent() {
+        $('descent-lumen').textContent = `DEEP DESCENT ─ LUMEN = ${state.lumen}`;
+
+        // Build tunnel rings
+        const tc = $('tunnel-container');
+        tc.innerHTML = '';
+        for (let i = 0; i < 15; i++) {
+            const ring = document.createElement('div');
+            ring.className = 'tunnel-ring';
+            const size = 50 + i * 40;
+            ring.style.width = size + 'px';
+            ring.style.height = size + 'px';
+            ring.style.animationDelay = (i * 0.2) + 's';
+            ring.style.borderColor = i < 5 ? 'rgba(255,0,51,0.2)' : 'rgba(0,255,255,0.15)';
+            tc.appendChild(ring);
+        }
+
+        // Start code rain
+        const canvas = $('coderain-canvas');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        coderainCtx = canvas.getContext('2d');
+        startCodeRain();
+    }
+
+    function startCodeRain() {
+        const ctx = coderainCtx;
+        if (!ctx) return;
+        const w = ctx.canvas.width;
+        const h = ctx.canvas.height;
+        const cols = Math.floor(w / 16);
+        const drops = new Array(cols).fill(0).map(() => Math.random() * h);
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン░▒▓█';
+
+        function draw() {
+            if (state.phase !== 'descent') return;
+
+            ctx.fillStyle = 'rgba(2,2,4,0.08)';
+            ctx.fillRect(0, 0, w, h);
+
+            const progress = (4 - state.lumen) / 4; // 0 at lumen 4, 1 at lumen 0
+            const r = Math.floor(progress * 255);
+            const g = Math.floor((1 - progress) * 255);
+
+            ctx.font = '14px "IBM Plex Mono"';
+
+            for (let i = 0; i < cols; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                const x = i * 16;
+
+                // Color shift from cyan to red as lumen drops
+                if (Math.random() > 0.7) {
+                    ctx.fillStyle = `rgba(${r}, ${Math.floor(g * 0.3)}, ${Math.floor((1 - progress) * 255)}, 0.9)`;
+                } else {
+                    ctx.fillStyle = `rgba(0, ${g}, ${Math.floor((1 - progress) * 255)}, 0.7)`;
+                }
+
+                ctx.fillText(char, x, drops[i]);
+
+                if (drops[i] > h && Math.random() > 0.975) drops[i] = 0;
+                drops[i] += 14 + Math.random() * 4;
+            }
+
+            requestAnimationFrame(draw);
+        }
+        draw();
+    }
+
+    // ══════════════════════════════════════════
+    // FINAL CHAMBER
+    // ══════════════════════════════════════════
+    function startFinal() {
+        // Stop corruption drip gradually
+        setTimeout(() => {
+            $('corruption-drip').classList.remove('active');
+        }, 6000);
+
+        // Flatline heartbeat circle
+        setTimeout(() => {
+            $('heartbeat-circle').classList.add('flatline');
+        }, 2000);
+
+        // Show messages sequentially
+        const msgs = document.querySelectorAll('.final-msg');
+        msgs.forEach(msg => {
+            const delay = parseInt(msg.dataset.delay);
+            setTimeout(() => msg.classList.add('visible'), delay);
+        });
+
+        // Dense dripping that stops
+        const dd = $('dense-drip');
+        let dripCount = 0;
+        const dripInterval = setInterval(() => {
+            if (dripCount > 30) {
+                clearInterval(dripInterval);
+                // Fade out all drips
+                dd.style.transition = 'opacity 3s';
+                dd.style.opacity = '0';
+                return;
+            }
+            const line = document.createElement('div');
+            line.className = 'drip-line';
+            line.style.left = Math.random() * 100 + '%';
+            line.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+            line.style.boxShadow = '0 0 4px var(--corruption-red)';
+            dd.appendChild(line);
+            setTimeout(() => line.remove(), 4000);
+            dripCount++;
+        }, 150);
+
+        // Hide controls
+        setTimeout(() => {
+            $('control-bar').style.opacity = '0.2';
+        }, 5000);
+    }
+
+    // ══════════════════════════════════════════
+    // LUMEN DESCENT LOGIC
+    // ══════════════════════════════════════════
+    function descendLumen() {
+        if (state.lumen <= 0) return;
+        state.lumen--;
+
+        // Phase transitions
+        if (state.lumen <= 4 && state.phase === 'hud') {
+            transitionTo('descent');
+        } else if (state.lumen <= 0) {
+            transitionTo('final');
+        }
+
+        // Update descent text if in descent phase
+        if (state.phase === 'descent') {
+            $('descent-lumen').textContent = `DEEP DESCENT ─ LUMEN = ${state.lumen}`;
+            // Intensify warnings
+            if (state.lumen <= 2) {
+                $('descent-warning').textContent = 'THE TUNNEL HAS CLOSED';
+                $('descent-warning').style.color = 'var(--corruption-red)';
+            }
+        }
+
+        updateGrid();
+    }
+
+    function freefall() {
+        if (state.freefalling || state.lumen <= 0) return;
+        state.freefalling = true;
+
+        const interval = setInterval(() => {
+            descendLumen();
+            if (state.lumen <= 0) {
+                clearInterval(interval);
+                state.freefalling = false;
+            }
+        }, 1200);
+    }
+
+    function resetAll() {
+        // Reset state
+        state.lumen = 10;
+        state.cycle = 0;
+        state.entropy = 0.12;
+        state.coherence = 0.94;
+        state.corruption = 0.0;
+        state.integrity = 100;
+        state.booted = false;
+        state.freefalling = false;
+        state.entropyHistory = [];
+        state.coherenceHistory = [];
+        state.phase = 'boot';
+
+        if (hudInterval) clearInterval(hudInterval);
+
+        // Reset DOM
+        $('boot-log').innerHTML = '';
+        $('corruption-drip').innerHTML = '';
+        $('corruption-drip').classList.remove('active');
+        $('heartbeat-circle').classList.remove('flatline');
+        $('control-bar').style.opacity = '1';
+        $('commander-msg').style.animation = 'none';
+        document.querySelectorAll('.final-msg').forEach(m => m.classList.remove('visible'));
+
+        // Reset modules
+        document.querySelectorAll('.grid-module').forEach(mod => {
+            mod.className = 'grid-module optimized';
+            mod.querySelector('.module-status').textContent = 'OPTIMIZED';
+            mod.querySelector('.module-status').className = 'module-status green';
+        });
+
+        // Reset status values
+        $('barrier-val').textContent = 'ACTIVE';
+        $('barrier-val').className = 'status-value cyan';
+        $('memory-val').textContent = 'LOADED';
+        $('memory-val').className = 'status-value green';
+        $('inevitability-val').textContent = 'ONLINE';
+        $('inevitability-val').className = 'status-value green';
+
+        vgrid.className = 'vgrid';
+
+        // Restart boot
+        document.querySelectorAll('.phase').forEach(p => p.classList.remove('active'));
+        $('phase-boot').classList.add('active');
+        setTimeout(runBootSequence, 500);
+    }
+
+    // ── CONTROLS ──
+    $('btn-descend').addEventListener('click', descendLumen);
+    $('btn-freefall').addEventListener('click', freefall);
+    $('btn-reset').addEventListener('click', resetAll);
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowDown' || e.key === 'd') descendLumen();
+        if (e.key === 'f') freefall();
+        if (e.key === 'r') resetAll();
+        if (e.key === ' ' && state.phase === 'boot') {
+            // Skip boot
+            transitionTo('hud');
+        }
+    });
+
+    // ── INIT ──
+    setTimeout(runBootSequence, 800);
+
+})();
+</script>
+</body>
+</html>
