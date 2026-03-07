@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-07T10:19:30.639Z",
-  "epoch_count": 64,
+  "last_fetch": "2026-03-07T10:47:24.099Z",
+  "epoch_count": 65,
   "epochs": [
     {
       "id": "rss_a1679754f846e03a",
@@ -25,6 +25,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-03-07T05:57:50.422Z"
+    },
+    {
+      "id": "rss_a29f5aa8ccea3a5c",
+      "timestamp": 1772736868000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Will Iran’s Yemeni allies renew their Red Sea blockade? - Amwaj.media",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQNTNBUFdDX3duTXRUYnpOaHlIb3poT2VHaUFQamR5aHNlNXNYQklLTEdBb3ZaUHk5ekxmNGFOdTBpNGtzWGh4X1FxR2d5VmwxUzBLZ0NMQmxpbG1KYTluNWRWYUJyUF9qLVZHSDV5S3pzU3pzY0NqUW5rOVQ3eWo3UDRXU0MxVjI3OTA1NnV1Qm1rMWMxSHpxTmExR2o5SnZLSHc?oc=5\" target=\"_blank\">Will Iran’s Yemeni allies renew their Red Sea blockade?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Amwaj.media</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNTNBUFdDX3duTXRUYnpOaHlIb3poT2VHaUFQamR5aHNlNXNYQklLTEdBb3ZaUHk5ekxmNGFOdTBpNGtzWGh4X1FxR2d5VmwxUzBLZ0NMQmxpbG1KYTluNWRWYUJyUF9qLVZHSDV5S3pzU3pzY0NqUW5rOVQ3eWo3UDRXU0MxVjI3OTA1NnV1Qm1rMWMxSHpxTmExR2o5SnZLSHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-07T10:47:22.830Z"
     },
     {
       "id": "rss_49e2ea1899c9f2cc",
