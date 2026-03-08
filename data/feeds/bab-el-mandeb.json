@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-08T04:08:17.839Z",
-  "epoch_count": 66,
+  "last_fetch": "2026-03-08T05:27:38.824Z",
+  "epoch_count": 67,
   "epochs": [
     {
       "id": "rss_2f9f877139d73a27",
@@ -92,6 +92,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-06T10:30:35.836Z"
+    },
+    {
+      "id": "rss_c9791e1e253a9d30",
+      "timestamp": 1772730504000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "March 5, 2026: Iran War Maritime Intelligence Daily - Windward",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE9kckV6bDdMUHRkaTB0blZqRk8yTWQxOTIwbDM0eC11YVI5TmtnQ1ZIa1dzOUdoeXV3bWFwdUJzVTFLa1VwS1RjZWdEQVdTbmp5NlA5YVVsUXVwOTZYRHYwWExXb1h5aU9LMzhhdHd0QlUwdGcyRy1HNHJ3?oc=5\" target=\"_blank\">March 5, 2026: Iran War Maritime Intelligence Daily</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Windward</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9kckV6bDdMUHRkaTB0blZqRk8yTWQxOTIwbDM0eC11YVI5TmtnQ1ZIa1dzOUdoeXV3bWFwdUJzVTFLa1VwS1RjZWdEQVdTbmp5NlA5YVVsUXVwOTZYRHYwWExXb1h5aU9LMzhhdHd0QlUwdGcyRy1HNHJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-08T05:27:37.459Z"
     },
     {
       "id": "rss_2a1aeac610a63b29",
