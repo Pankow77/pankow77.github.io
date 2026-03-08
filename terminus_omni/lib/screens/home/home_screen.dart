@@ -8,18 +8,16 @@ import '../../widgets/scanline_overlay.dart';
 import '../../widgets/glitch_text.dart';
 import '../../widgets/code_rain.dart';
 import '../../widgets/heartbeat_line.dart';
+import '../../widgets/circuit_background.dart';
 import '../setup/api_key_screen.dart';
 import '../setup/character_creation_screen.dart';
 import '../session/session_screen.dart';
 import '../archive/sessions_archive_screen.dart';
 
-/// Home screen — the cinematic entry to TERMINUS-OMNI.
+/// Home screen — REDESIGNED cinematic entry to TERMINUS-OMNI.
 ///
-/// Inspired by "La Pianura della Voce Morta":
-/// - Code rain falling in the background
-/// - TERMINUS OMNI in cyan, glowing
-/// - Red heartbeat waveform pulsing across the center
-/// - Minimal action buttons that emerge from darkness
+/// Rich gradient background, circuit pattern overlay,
+/// industrial-style buttons with neon glow, metallic accents.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -41,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen>
 
     _fadeInController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 3000),
+      duration: const Duration(milliseconds: 2500),
     );
 
     _pulseController = AnimationController(
@@ -49,8 +47,7 @@ class _HomeScreenState extends State<HomeScreen>
       duration: const Duration(seconds: 4),
     )..repeat(reverse: true);
 
-    // Delay UI reveal for cinematic effect
-    Future.delayed(const Duration(milliseconds: 800), () {
+    Future.delayed(const Duration(milliseconds: 600), () {
       if (mounted) {
         _fadeInController.forward();
         setState(() => _showUI = true);
@@ -79,17 +76,29 @@ class _HomeScreenState extends State<HomeScreen>
         backgroundColor: Colors.black,
         body: Stack(
           children: [
-            // Layer 0: Code rain background
+            // Layer 0: Rich gradient background
             const Positioned.fill(
-              child: CodeRain(
-                color: Color(0xFF00F0FF),
-                density: 0.3,
-                speed: 0.4,
-                opacity: 0.06,
+              child: GradientBackground(),
+            ),
+
+            // Layer 1: Circuit pattern overlay
+            const Positioned.fill(
+              child: CircuitBackground(
+                opacity: 0.04,
               ),
             ),
 
-            // Layer 1: Gradient overlay (darkness from top and bottom)
+            // Layer 2: Subtle code rain
+            Positioned.fill(
+              child: CodeRain(
+                color: TerminusTheme.neonCyan,
+                density: 0.2,
+                speed: 0.3,
+                opacity: 0.04,
+              ),
+            ),
+
+            // Layer 3: Dark gradient overlay for depth
             Positioned.fill(
               child: DecoratedBox(
                 decoration: BoxDecoration(
@@ -97,44 +106,43 @@ class _HomeScreenState extends State<HomeScreen>
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Colors.black.withValues(alpha: 0.9),
-                      Colors.black.withValues(alpha: 0.3),
-                      Colors.black.withValues(alpha: 0.3),
-                      Colors.black.withValues(alpha: 0.95),
+                      Colors.black.withValues(alpha: 0.7),
+                      Colors.transparent,
+                      Colors.transparent,
+                      Colors.black.withValues(alpha: 0.8),
                     ],
-                    stops: const [0.0, 0.3, 0.7, 1.0],
+                    stops: const [0.0, 0.25, 0.75, 1.0],
                   ),
                 ),
               ),
             ),
 
-            // Layer 2: Main content
+            // Layer 4: Main content
             SafeArea(
               child: FadeTransition(
                 opacity: _fadeInController,
                 child: Column(
                   children: [
-                    const SizedBox(height: 80),
+                    const SizedBox(height: 60),
 
                     // TERMINUS OMNI title
                     _buildTitle(),
 
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 10),
 
                     // Subtitle
                     AnimatedBuilder(
                       animation: _pulseController,
                       builder: (context, _) {
                         return Opacity(
-                          opacity:
-                              0.3 + _pulseController.value * 0.3,
+                          opacity: 0.4 + _pulseController.value * 0.3,
                           child: Text(
                             'THE INEVITABILITY ENGINE',
-                            style: TerminusTheme.systemLog.copyWith(
-                              fontSize: 10,
+                            style: TerminusTheme.labelText.copyWith(
                               color: TerminusTheme.neonRed
-                                  .withValues(alpha: 0.6),
-                              letterSpacing: 3,
+                                  .withValues(alpha: 0.7),
+                              letterSpacing: 4,
+                              fontSize: 10,
                             ),
                           ),
                         );
@@ -143,15 +151,22 @@ class _HomeScreenState extends State<HomeScreen>
 
                     const Spacer(flex: 2),
 
-                    // Heartbeat line
+                    // Heartbeat line in a rich panel
                     Padding(
                       padding:
-                          const EdgeInsets.symmetric(horizontal: 24),
-                      child: HeartbeatLine(
-                        color: TerminusTheme.neonRed,
-                        height: 50,
-                        isAlive: true,
-                        bpm: 60,
+                          const EdgeInsets.symmetric(horizontal: 32),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 16),
+                        decoration: TerminusTheme.richPanel(
+                          accentColor: TerminusTheme.neonRed,
+                        ),
+                        child: HeartbeatLine(
+                          color: TerminusTheme.neonRed,
+                          height: 50,
+                          isAlive: true,
+                          bpm: 60,
+                        ),
                       ),
                     ),
 
@@ -181,29 +196,37 @@ class _HomeScreenState extends State<HomeScreen>
       children: [
         const GlitchText(
           text: 'TERMINUS',
-          glitchIntensity: 0.1,
+          glitchIntensity: 0.08,
         ),
-        const SizedBox(height: 2),
+        const SizedBox(height: 4),
         Text(
           'O M N I',
           style: TerminusTheme.displayMedium.copyWith(
-            letterSpacing: 14,
+            letterSpacing: 16,
+            fontSize: 16,
             color: TerminusTheme.neonCyan.withValues(alpha: 0.5),
+            shadows: [
+              Shadow(
+                color: TerminusTheme.neonCyan.withValues(alpha: 0.3),
+                blurRadius: 16,
+              ),
+            ],
           ),
         ),
-        const SizedBox(height: 12),
-        // Thin glowing separator line
+        const SizedBox(height: 16),
+        // Metallic gold separator
         Container(
-          width: 180,
-          height: 1,
+          width: 220,
+          height: 2,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.transparent,
-                TerminusTheme.neonCyan.withValues(alpha: 0.4),
-                Colors.transparent,
-              ],
-            ),
+            borderRadius: BorderRadius.circular(1),
+            gradient: TerminusTheme.goldAccent,
+            boxShadow: [
+              BoxShadow(
+                color: TerminusTheme.metalGold.withValues(alpha: 0.3),
+                blurRadius: 8,
+              ),
+            ],
           ),
         ),
       ],
@@ -212,11 +235,11 @@ class _HomeScreenState extends State<HomeScreen>
 
   Widget _buildActions(SessionManager sm) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 28),
       child: Column(
         children: [
           if (sm.isActive) ...[
-            _ActionButton(
+            _NeonActionButton(
               label: 'RESUME SESSION',
               color: TerminusTheme.neonOrange,
               icon: Icons.play_arrow_rounded,
@@ -226,12 +249,13 @@ class _HomeScreenState extends State<HomeScreen>
                     builder: (_) => const SessionScreen()),
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
           ],
-          _ActionButton(
+          _NeonActionButton(
             label: 'NEW SESSION',
             color: TerminusTheme.neonCyan,
             icon: Icons.local_fire_department_outlined,
+            isPrimary: true,
             onTap: () {
               if (!_hasApiKey) {
                 Navigator.push(
@@ -249,10 +273,10 @@ class _HomeScreenState extends State<HomeScreen>
               }
             },
           ),
-          const SizedBox(height: 12),
-          _ActionButton(
+          const SizedBox(height: 14),
+          _NeonActionButton(
             label: 'SESSION ARCHIVE',
-            color: TerminusTheme.textDim,
+            color: TerminusTheme.metalSteel,
             icon: Icons.archive_outlined,
             onTap: () => Navigator.push(
               context,
@@ -261,10 +285,10 @@ class _HomeScreenState extends State<HomeScreen>
                       const SessionsArchiveScreen()),
             ),
           ),
-          const SizedBox(height: 12),
-          _ActionButton(
+          const SizedBox(height: 14),
+          _NeonActionButton(
             label: 'CONFIGURATION',
-            color: TerminusTheme.textDim,
+            color: TerminusTheme.metalSteel,
             icon: Icons.settings_outlined,
             onTap: () => Navigator.push(
               context,
@@ -280,30 +304,45 @@ class _HomeScreenState extends State<HomeScreen>
   Widget _buildFooter() {
     return Column(
       children: [
+        // Gold separator
+        Container(
+          width: 120,
+          height: 1,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.transparent,
+                TerminusTheme.metalGold.withValues(alpha: 0.3),
+                Colors.transparent,
+              ],
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
         Text(
           'HYBRID SYNDICATE',
-          style: TerminusTheme.systemLog.copyWith(
-            color: TerminusTheme.textDim.withValues(alpha: 0.4),
-            fontSize: 9,
-            letterSpacing: 3,
+          style: TerminusTheme.labelText.copyWith(
+            color: TerminusTheme.metalGold.withValues(alpha: 0.5),
+            fontSize: 10,
+            letterSpacing: 4,
           ),
         ),
         const SizedBox(height: 3),
         Text(
           'ETHIC SOFTWARE FOUNDATION',
-          style: TerminusTheme.systemLog.copyWith(
-            color: TerminusTheme.textDim.withValues(alpha: 0.25),
+          style: TerminusTheme.labelText.copyWith(
+            color: TerminusTheme.metalGold.withValues(alpha: 0.3),
             fontSize: 8,
-            letterSpacing: 2,
+            letterSpacing: 3,
           ),
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 8),
         Text(
           '"Everyone will die. There is no salvation.\n'
           'There is only the story of how they fall."',
           style: TerminusTheme.narrativeItalic.copyWith(
             fontSize: 10,
-            color: TerminusTheme.textDim.withValues(alpha: 0.25),
+            color: TerminusTheme.textDim.withValues(alpha: 0.3),
           ),
           textAlign: TextAlign.center,
         ),
@@ -312,70 +351,71 @@ class _HomeScreenState extends State<HomeScreen>
   }
 }
 
-class _ActionButton extends StatefulWidget {
+/// Action button with neon glow, gradient fill, and press animation.
+class _NeonActionButton extends StatefulWidget {
   final String label;
   final Color color;
   final IconData icon;
   final VoidCallback onTap;
+  final bool isPrimary;
 
-  const _ActionButton({
+  const _NeonActionButton({
     required this.label,
     required this.color,
     required this.icon,
     required this.onTap,
+    this.isPrimary = false,
   });
 
   @override
-  State<_ActionButton> createState() => _ActionButtonState();
+  State<_NeonActionButton> createState() => _NeonActionButtonState();
 }
 
-class _ActionButtonState extends State<_ActionButton> {
-  bool _hovering = false;
+class _NeonActionButtonState extends State<_NeonActionButton> {
+  bool _pressed = false;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: GestureDetector(
-        onTapDown: (_) => setState(() => _hovering = true),
+        onTapDown: (_) => setState(() => _pressed = true),
         onTapUp: (_) {
-          setState(() => _hovering = false);
+          setState(() => _pressed = false);
           widget.onTap();
         },
-        onTapCancel: () => setState(() => _hovering = false),
+        onTapCancel: () => setState(() => _pressed = false),
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 150),
-          padding: const EdgeInsets.symmetric(vertical: 14),
-          decoration: BoxDecoration(
-            color: _hovering
-                ? widget.color.withValues(alpha: 0.08)
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(4),
-            border: Border.all(
-              color: widget.color.withValues(
-                  alpha: _hovering ? 0.5 : 0.2),
-              width: 1,
-            ),
-            boxShadow: _hovering
-                ? [
-                    BoxShadow(
-                      color: widget.color.withValues(alpha: 0.1),
-                      blurRadius: 12,
-                      spreadRadius: -2,
-                    ),
-                  ]
-                : null,
+          duration: const Duration(milliseconds: 120),
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          decoration: TerminusTheme.neonButton(
+            color: widget.color,
+            isPressed: _pressed,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(widget.icon, color: widget.color, size: 16),
-              const SizedBox(width: 10),
+              Icon(
+                widget.icon,
+                color: widget.color.withValues(
+                    alpha: _pressed ? 1.0 : 0.8),
+                size: 20,
+              ),
+              const SizedBox(width: 12),
               Text(
                 widget.label,
                 style: TerminusTheme.buttonText.copyWith(
-                  color: widget.color,
-                  fontSize: 12,
+                  color: widget.color.withValues(
+                      alpha: _pressed ? 1.0 : 0.85),
+                  fontSize: widget.isPrimary ? 15 : 13,
+                  shadows: widget.isPrimary
+                      ? [
+                          Shadow(
+                            color: widget.color.withValues(alpha: 0.4),
+                            blurRadius: 8,
+                          ),
+                        ]
+                      : null,
                 ),
               ),
             ],

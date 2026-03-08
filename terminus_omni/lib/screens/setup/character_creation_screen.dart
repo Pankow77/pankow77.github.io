@@ -6,13 +6,12 @@ import '../../models/victim_profile.dart';
 import '../../services/llm_service.dart';
 import '../../services/storage_service.dart';
 import '../../widgets/scanline_overlay.dart';
-import '../../widgets/code_rain.dart';
+import '../../widgets/circuit_background.dart';
 import 'testament_screen.dart';
 
-/// Character creation — building the Victim Profile.
+/// Character creation — REDESIGNED with rich panels and depth.
 ///
-/// From the engineering prompt "The Soul Interview":
-/// One question at a time. Deep. Personal. No heroes — create someone who suffers.
+/// Building the Victim Profile with industrial cyberpunk aesthetic.
 class CharacterCreationScreen extends StatefulWidget {
   const CharacterCreationScreen({super.key});
 
@@ -129,9 +128,12 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
   }
 
   Future<void> _initLlm() async {
-    final key = await context.read<StorageService>().getApiKey();
-    if (key != null) {
-      context.read<LlmService>().configure(key);
+    final storage = context.read<StorageService>();
+    final llm = context.read<LlmService>();
+    final key = await storage.getApiKey();
+    if (!mounted) return;
+    if (key != null && key.isNotEmpty) {
+      llm.configure(key);
     }
   }
 
@@ -160,7 +162,7 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       vice: _viceController.text.trim(),
       moment: _momentController.text.trim(),
       brink: _brinkController.text.trim(),
-      testament: '', // Will be set in testament screen
+      testament: '',
       ghostVoicePhrase: ghostPhrase.isNotEmpty ? ghostPhrase : null,
       ghostIdentity: ghostId.isNotEmpty ? ghostId : null,
       silentWitnessName: witnessName.isNotEmpty ? witnessName : null,
@@ -201,70 +203,108 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       child: Scaffold(
         body: Stack(
           children: [
-            // Subtle code rain background
-            const Positioned.fill(
-              child: CodeRain(
-                color: Color(0xFF00F0FF),
-                density: 0.15,
-                speed: 0.2,
-                opacity: 0.03,
-              ),
-            ),
+            const Positioned.fill(child: GradientBackground()),
+            const Positioned.fill(child: CircuitBackground(opacity: 0.03)),
             Column(
               children: [
-                // Header
                 SafeArea(
                   bottom: false,
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 12, vertical: 8),
+                        horizontal: 16, vertical: 10),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        bottom: BorderSide(
+                          color: TerminusTheme.border.withValues(alpha: 0.4),
+                        ),
+                      ),
+                    ),
                     child: Row(
                       children: [
-                        IconButton(
-                          icon: const Icon(Icons.arrow_back,
-                              color: TerminusTheme.textDim, size: 18),
-                          onPressed: () => Navigator.pop(context),
+                        GestureDetector(
+                          onTap: () => Navigator.pop(context),
+                          child: Container(
+                            padding: const EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: TerminusTheme.textDim
+                                    .withValues(alpha: 0.3),
+                              ),
+                            ),
+                            child: Icon(Icons.arrow_back,
+                                color: TerminusTheme.textDim
+                                    .withValues(alpha: 0.7),
+                                size: 18),
+                          ),
                         ),
+                        const SizedBox(width: 12),
                         Text(
                           'VICTIM PROFILE',
-                          style: TerminusTheme.displayMedium
-                              .copyWith(fontSize: 14),
+                          style: TerminusTheme.displaySmall.copyWith(
+                            color: TerminusTheme.neonCyan,
+                            shadows: [
+                              Shadow(
+                                color: TerminusTheme.neonCyan
+                                    .withValues(alpha: 0.3),
+                                blurRadius: 8,
+                              ),
+                            ],
+                          ),
                         ),
                         const Spacer(),
-                        Text(
-                          '${_currentStep + 1}/${_steps.length}',
-                          style: TerminusTheme.systemLog.copyWith(
-                            color: TerminusTheme.textDim,
-                            fontSize: 10,
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: TerminusTheme.neonCyan
+                                .withValues(alpha: 0.08),
+                            border: Border.all(
+                              color: TerminusTheme.neonCyan
+                                  .withValues(alpha: 0.3),
+                            ),
+                          ),
+                          child: Text(
+                            '${_currentStep + 1}/${_steps.length}',
+                            style: TerminusTheme.labelText.copyWith(
+                              color: TerminusTheme.neonCyan,
+                              fontSize: 12,
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
                 ),
-
-                // Progress bar
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 24, vertical: 4),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
                   child: Row(
                     children: List.generate(_steps.length, (i) {
+                      final isActive = i <= _currentStep;
                       return Expanded(
                         child: Container(
-                          height: 2,
-                          margin:
-                              const EdgeInsets.symmetric(horizontal: 2),
+                          height: 3,
+                          margin: const EdgeInsets.symmetric(horizontal: 2),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(1),
-                            color: i <= _currentStep
-                                ? TerminusTheme.neonCyan
-                                : TerminusTheme.border,
-                            boxShadow: i <= _currentStep
+                            borderRadius: BorderRadius.circular(2),
+                            gradient: isActive
+                                ? LinearGradient(colors: [
+                                    TerminusTheme.neonCyan
+                                        .withValues(alpha: 0.6),
+                                    TerminusTheme.neonCyan,
+                                  ])
+                                : null,
+                            color: isActive
+                                ? null
+                                : TerminusTheme.border.withValues(alpha: 0.3),
+                            boxShadow: isActive
                                 ? [
                                     BoxShadow(
                                       color: TerminusTheme.neonCyan
                                           .withValues(alpha: 0.3),
-                                      blurRadius: 4,
+                                      blurRadius: 6,
                                     ),
                                   ]
                                 : null,
@@ -274,47 +314,26 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                     }),
                   ),
                 ),
-
-                // Content
                 Expanded(
                   child: PageView.builder(
                     controller: _pageController,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: _steps.length,
-                    itemBuilder: (context, index) {
-                      final step = _steps[index];
-                      return _buildStep(step);
-                    },
+                    itemBuilder: (context, index) => _buildStep(_steps[index]),
                   ),
                 ),
-
-                // Next button
                 SafeArea(
                   top: false,
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: SizedBox(
                       width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: _canProceed() ? _next : null,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: TerminusTheme.neonCyan
-                              .withValues(alpha: 0.15),
-                          foregroundColor: TerminusTheme.neonCyan,
-                          disabledBackgroundColor: TerminusTheme.bgPanel,
-                          disabledForegroundColor: TerminusTheme.textDim,
-                          padding:
-                              const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                        ),
-                        child: Text(
-                          _currentStep < _steps.length - 1
-                              ? 'NEXT'
-                              : 'RECORD TESTAMENT',
-                          style: TerminusTheme.buttonText,
-                        ),
+                      child: _NextButton(
+                        label: _currentStep < _steps.length - 1
+                            ? 'NEXT'
+                            : 'RECORD TESTAMENT',
+                        enabled: _canProceed(),
+                        onTap: _next,
                       ),
                     ),
                   ),
@@ -329,23 +348,40 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
 
   Widget _buildStep(_StepInfo step) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(step.title, style: TerminusTheme.displayMedium),
-          const SizedBox(height: 4),
-          Text(
-            step.subtitle,
-            style: TerminusTheme.systemLog.copyWith(
-              color: TerminusTheme.neonOrange,
+          Text(step.title,
+              style: TerminusTheme.displayMedium.copyWith(fontSize: 22)),
+          const SizedBox(height: 6),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4),
+              gradient: LinearGradient(colors: [
+                TerminusTheme.neonOrange.withValues(alpha: 0.1),
+                Colors.transparent,
+              ]),
+              border: Border(
+                left: BorderSide(
+                  color: TerminusTheme.neonOrange.withValues(alpha: 0.5),
+                  width: 2,
+                ),
+              ),
             ),
+            child: Text(step.subtitle,
+                style: TerminusTheme.labelText
+                    .copyWith(color: TerminusTheme.neonOrange)),
           ),
           const SizedBox(height: 20),
-          Text(step.prompt, style: TerminusTheme.narrative),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.all(18),
+            decoration: TerminusTheme.richPanel(),
+            child: Text(step.prompt, style: TerminusTheme.narrative),
+          ),
           const SizedBox(height: 24),
-
-          // Input fields
           if (step.fields.contains('name')) ...[
             TextField(
               controller: _nameController,
@@ -401,17 +437,15 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
             TextField(
               controller: _ghostPhraseController,
               style: TerminusTheme.narrative.copyWith(
-                color: TerminusTheme.neonPurple,
-                fontStyle: FontStyle.italic,
-              ),
+                  color: TerminusTheme.neonPurple,
+                  fontStyle: FontStyle.italic),
               maxLines: 2,
               decoration: InputDecoration(
                 labelText: 'THE PHRASE IT SAYS',
                 hintText: 'e.g. "I wasn\'t ready... but this time I\'m here."',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
-                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
-                  fontSize: 12,
-                ),
+                    color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                    fontSize: 12),
               ),
               onChanged: (_) => setState(() {}),
             ),
@@ -423,9 +457,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                 labelText: 'WHO ARE THEY (will never be named in the game)',
                 hintText: 'e.g. "my mother", "my best friend"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
-                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
-                  fontSize: 12,
-                ),
+                    color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                    fontSize: 12),
               ),
               onChanged: (_) => setState(() {}),
             ),
@@ -438,9 +471,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                 labelText: 'WHO ARE THEY',
                 hintText: 'e.g. "Dad", "My brother"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
-                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
-                  fontSize: 12,
-                ),
+                    color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                    fontSize: 12),
               ),
               onChanged: (_) => setState(() {}),
             ),
@@ -452,9 +484,8 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
                 labelText: 'WHAT IS NEAR THEM',
                 hintText: 'e.g. "piano", "empty chair", "photograph"',
                 hintStyle: TerminusTheme.narrativeItalic.copyWith(
-                  color: TerminusTheme.textDim.withValues(alpha: 0.3),
-                  fontSize: 12,
-                ),
+                    color: TerminusTheme.textDim.withValues(alpha: 0.3),
+                    fontSize: 12),
               ),
               onChanged: (_) => setState(() {}),
             ),
@@ -471,63 +502,56 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       EmotionalIntensity.low: (
         'LOW',
         'Wide safety margins. Ghost and Witness appear only once. '
-            'Melancholic narration. The Commander intervenes earlier. '
-            'Recommended for recent trauma or first session.',
+            'Melancholic narration. Recommended for recent trauma or first session.',
         TerminusTheme.neonGreen,
       ),
       EmotionalIntensity.medium: (
         'MEDIUM (default)',
         'Balanced. Ghost and Witness appear normally. '
-            'Standard Commander. The darkness presses but does not crush.',
+            'The darkness presses but does not crush.',
         TerminusTheme.neonOrange,
       ),
       EmotionalIntensity.high: (
         'HIGH',
         'Full intensity. Persistent Ghost, permanent Witness. '
-            '"They" use the voice of your loved ones. The darkness is relentless. '
-            'Only for those who know what they face.',
+            'The darkness is relentless. Only for those who know what they face.',
         TerminusTheme.neonRed,
       ),
     };
-
     return Column(
       children: options.entries.map((e) {
         final isSelected = _selectedIntensity == e.key;
+        final color = e.value.$3;
         return Padding(
           padding: const EdgeInsets.only(bottom: 12),
           child: InkWell(
             onTap: () => setState(() => _selectedIntensity = e.key),
-            child: Container(
+            borderRadius: BorderRadius.circular(8),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
               width: double.infinity,
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: isSelected
-                    ? e.value.$3.withValues(alpha: 0.08)
-                    : TerminusTheme.bgCard,
-                border: Border.all(
-                  color: isSelected
-                      ? e.value.$3.withValues(alpha: 0.5)
-                      : TerminusTheme.border,
-                ),
-                borderRadius: BorderRadius.circular(4),
-              ),
+              padding: const EdgeInsets.all(18),
+              decoration: isSelected
+                  ? TerminusTheme.richPanel(accentColor: color)
+                  : BoxDecoration(
+                      color: TerminusTheme.bgCard,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                          color: TerminusTheme.border.withValues(alpha: 0.4)),
+                    ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    e.value.$1,
-                    style: TerminusTheme.systemLog.copyWith(
-                      color: isSelected
-                          ? e.value.$3
-                          : TerminusTheme.textSecondary,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    e.value.$2,
-                    style:
-                        TerminusTheme.narrativeItalic.copyWith(fontSize: 12),
-                  ),
+                  Text(e.value.$1,
+                      style: TerminusTheme.labelText.copyWith(
+                          color: isSelected
+                              ? color
+                              : TerminusTheme.textSecondary,
+                          fontSize: 13)),
+                  const SizedBox(height: 6),
+                  Text(e.value.$2,
+                      style: TerminusTheme.narrativeItalic
+                          .copyWith(fontSize: 12)),
                 ],
               ),
             ),
@@ -553,19 +577,17 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       ),
       'memoria': (
         'LOST MEMORY',
-        'You do not remember the past. Is reality reliable? Who are you if you cannot remember?'
+        'You do not remember the past. Is reality reliable?'
       ),
       'sacrificio': (
         'THE SACRIFICE',
-        'A road to save the world, but only one can walk it. Is it worth it?'
+        'A road to save the world, but only one can walk it.'
       ),
       'tunnel': (
         'THE TUNNEL',
-        'A train stopped in an infinite tunnel. No windows. No light ahead. '
-            'The candles are the only proof you are still alive.'
+        'A train stopped in an infinite tunnel. No windows. No light ahead.'
       ),
     };
-
     return Column(
       children: scenarios.entries.map((e) {
         final isSelected = _selectedScenario == e.key;
@@ -573,37 +595,33 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
           padding: const EdgeInsets.only(bottom: 12),
           child: InkWell(
             onTap: () => setState(() => _selectedScenario = e.key),
-            child: Container(
+            borderRadius: BorderRadius.circular(8),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
               width: double.infinity,
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: isSelected
-                    ? TerminusTheme.neonCyan.withValues(alpha: 0.08)
-                    : TerminusTheme.bgCard,
-                border: Border.all(
-                  color: isSelected
-                      ? TerminusTheme.neonCyan.withValues(alpha: 0.5)
-                      : TerminusTheme.border,
-                ),
-                borderRadius: BorderRadius.circular(4),
-              ),
+              padding: const EdgeInsets.all(18),
+              decoration: isSelected
+                  ? TerminusTheme.richPanel(
+                      accentColor: TerminusTheme.neonCyan)
+                  : BoxDecoration(
+                      color: TerminusTheme.bgCard,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                          color: TerminusTheme.border.withValues(alpha: 0.4)),
+                    ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    e.value.$1,
-                    style: TerminusTheme.systemLog.copyWith(
-                      color: isSelected
-                          ? TerminusTheme.neonCyan
-                          : TerminusTheme.textSecondary,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    e.value.$2,
-                    style: TerminusTheme.narrativeItalic
-                        .copyWith(fontSize: 12),
-                  ),
+                  Text(e.value.$1,
+                      style: TerminusTheme.labelText.copyWith(
+                          color: isSelected
+                              ? TerminusTheme.neonCyan
+                              : TerminusTheme.textSecondary,
+                          fontSize: 13)),
+                  const SizedBox(height: 6),
+                  Text(e.value.$2,
+                      style: TerminusTheme.narrativeItalic
+                          .copyWith(fontSize: 12)),
                 ],
               ),
             ),
@@ -627,16 +645,61 @@ class _CharacterCreationScreenState extends State<CharacterCreationScreen> {
       case 4:
         return _brinkController.text.trim().isNotEmpty;
       case 5:
-        return true; // Ghost is optional
       case 6:
-        return true; // Witness is optional
       case 7:
-        return true; // Intensity always has a default
       case 8:
-        return true; // Scenario always has a default
+        return true;
       default:
         return false;
     }
+  }
+}
+
+class _NextButton extends StatefulWidget {
+  final String label;
+  final bool enabled;
+  final VoidCallback onTap;
+  const _NextButton(
+      {required this.label, required this.enabled, required this.onTap});
+  @override
+  State<_NextButton> createState() => _NextButtonState();
+}
+
+class _NextButtonState extends State<_NextButton> {
+  bool _pressed = false;
+  @override
+  Widget build(BuildContext context) {
+    final color =
+        widget.enabled ? TerminusTheme.neonCyan : TerminusTheme.textDim;
+    return GestureDetector(
+      onTapDown:
+          widget.enabled ? (_) => setState(() => _pressed = true) : null,
+      onTapUp: widget.enabled
+          ? (_) {
+              setState(() => _pressed = false);
+              widget.onTap();
+            }
+          : null,
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        padding: const EdgeInsets.symmetric(vertical: 18),
+        decoration: TerminusTheme.neonButton(
+            color: color, isPressed: _pressed && widget.enabled),
+        child: Center(
+          child: Text(widget.label,
+              style: TerminusTheme.buttonText.copyWith(
+                  color: color.withValues(alpha: 0.9),
+                  shadows: widget.enabled
+                      ? [
+                          Shadow(
+                              color: color.withValues(alpha: 0.4),
+                              blurRadius: 8)
+                        ]
+                      : null)),
+        ),
+      ),
+    );
   }
 }
 
@@ -645,11 +708,9 @@ class _StepInfo {
   final String subtitle;
   final String prompt;
   final List<String> fields;
-
-  const _StepInfo({
-    required this.title,
-    required this.subtitle,
-    required this.prompt,
-    required this.fields,
-  });
+  const _StepInfo(
+      {required this.title,
+      required this.subtitle,
+      required this.prompt,
+      required this.fields});
 }

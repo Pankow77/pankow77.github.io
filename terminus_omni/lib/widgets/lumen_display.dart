@@ -2,9 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
 
-/// Visual display of the Lumen-Count.
-/// 10 animated candles that flicker when lit and fade to darkness
-/// when extinguished — with flicker, fade, and screen shake.
+/// Visual display of the Lumen-Count — REDESIGNED with richer panel.
 class LumenDisplay extends StatelessWidget {
   final int currentLumen;
   final bool performanceMode;
@@ -19,26 +17,33 @@ class LumenDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-      decoration: BoxDecoration(
-        color: TerminusTheme.bgPanel,
-        border: Border.all(color: TerminusTheme.border),
-        borderRadius: BorderRadius.circular(4),
+      decoration: TerminusTheme.richPanel(
+        accentColor: TerminusTheme.lumenColor(currentLumen),
+        borderWidth: 1,
+        radius: 6,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             'LUMEN-COUNT',
-            style: TerminusTheme.systemLog.copyWith(
+            style: TerminusTheme.labelText.copyWith(
               color: TerminusTheme.lumenColor(currentLumen),
-              fontSize: 10,
+              fontSize: 9,
+              shadows: [
+                Shadow(
+                  color: TerminusTheme.lumenColor(currentLumen)
+                      .withValues(alpha: 0.4),
+                  blurRadius: 4,
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(10, (i) {
-              final lumenIndex = i + 1; // 1, 2, 3... 10
+              final lumenIndex = i + 1;
               final isLit = lumenIndex <= currentLumen;
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 3),
@@ -64,6 +69,13 @@ class LumenDisplay extends StatelessWidget {
             style: TerminusTheme.displayMedium.copyWith(
               color: TerminusTheme.lumenColor(currentLumen),
               fontSize: 18,
+              shadows: [
+                Shadow(
+                  color: TerminusTheme.lumenColor(currentLumen)
+                      .withValues(alpha: 0.5),
+                  blurRadius: 8,
+                ),
+              ],
             ),
           ),
         ],
@@ -72,16 +84,10 @@ class LumenDisplay extends StatelessWidget {
   }
 }
 
-/// A single lit candle with a flickering flame animation.
 class _FlickeringCandle extends StatefulWidget {
   final Color color;
   final double intensity;
-
-  const _FlickeringCandle({
-    required this.color,
-    this.intensity = 0.4,
-  });
-
+  const _FlickeringCandle({required this.color, this.intensity = 0.4});
   @override
   State<_FlickeringCandle> createState() => _FlickeringCandleState();
 }
@@ -122,7 +128,6 @@ class _FlickeringCandleState extends State<_FlickeringCandle>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Flame
                 Opacity(
                   opacity: flicker.clamp(0.0, 1.0),
                   child: Container(
@@ -158,13 +163,7 @@ class _FlickeringCandleState extends State<_FlickeringCandle>
                     ),
                   ),
                 ),
-                // Wick
-                Container(
-                  width: 2,
-                  height: 3,
-                  color: TerminusTheme.textDim,
-                ),
-                // Candle body
+                Container(width: 2, height: 3, color: TerminusTheme.textDim),
                 Container(
                   width: 8,
                   height: 15,
@@ -186,12 +185,9 @@ class _FlickeringCandleState extends State<_FlickeringCandle>
   }
 }
 
-/// An extinguished candle — dark, still, dead.
 class _ExtinguishedCandle extends StatefulWidget {
   final Color color;
-
   const _ExtinguishedCandle({required this.color});
-
   @override
   State<_ExtinguishedCandle> createState() => _ExtinguishedCandleState();
 }
@@ -228,7 +224,6 @@ class _ExtinguishedCandleState extends State<_ExtinguishedCandle>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Smoke wisp (fades out)
                 Opacity(
                   opacity: (1 - _fadeController.value) * 0.4,
                   child: Container(
@@ -240,13 +235,7 @@ class _ExtinguishedCandleState extends State<_ExtinguishedCandle>
                     ),
                   ),
                 ),
-                // Dead wick
-                Container(
-                  width: 2,
-                  height: 3,
-                  color: TerminusTheme.bgDeep,
-                ),
-                // Candle body (dark)
+                Container(width: 2, height: 3, color: TerminusTheme.bgDeep),
                 Container(
                   width: 8,
                   height: 15,
@@ -268,11 +257,9 @@ class _ExtinguishedCandleState extends State<_ExtinguishedCandle>
   }
 }
 
-/// Static lit candle — no animation, for performance mode.
 class _StaticCandle extends StatelessWidget {
   final Color color;
   const _StaticCandle({required this.color});
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -311,7 +298,6 @@ class _StaticCandle extends StatelessWidget {
   }
 }
 
-/// Static extinguished candle — no animation, for performance mode.
 class _StaticExtinguished extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

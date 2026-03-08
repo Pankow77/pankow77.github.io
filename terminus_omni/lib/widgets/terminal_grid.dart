@@ -2,9 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
 
-/// Interactive terminal grid — the "keyboard" from the concept art.
-/// Each key represents a narrative action. Colors degrade from
-/// green (safe/coherent) to red (chaotic/entropic) based on game state.
+/// Interactive terminal grid — REDESIGNED with rich button styling.
 class TerminalGrid extends StatelessWidget {
   final int currentLumen;
   final List<TerminalAction> actions;
@@ -20,13 +18,10 @@ class TerminalGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: const Color(0xFF050A10),
-        borderRadius: BorderRadius.circular(6),
-        border: Border.all(
-          color: TerminusTheme.border.withValues(alpha: 0.4),
-        ),
+      padding: const EdgeInsets.all(10),
+      decoration: TerminusTheme.richPanel(
+        accentColor: TerminusTheme.lumenColor(currentLumen),
+        borderWidth: 1,
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -34,13 +29,30 @@ class TerminalGrid extends StatelessWidget {
           // Grid header
           Row(
             children: [
-              Text(
-                'ACTION MATRIX',
-                style: TextStyle(
-                  fontFamily: 'ShareTechMono',
-                  fontSize: 9,
-                  color: TerminusTheme.textDim.withValues(alpha: 0.5),
-                  letterSpacing: 2,
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(3),
+                  gradient: LinearGradient(
+                    colors: [
+                      TerminusTheme.metalGold.withValues(alpha: 0.1),
+                      Colors.transparent,
+                    ],
+                  ),
+                  border: Border(
+                    left: BorderSide(
+                      color: TerminusTheme.metalGold.withValues(alpha: 0.4),
+                      width: 2,
+                    ),
+                  ),
+                ),
+                child: Text(
+                  'ACTION MATRIX',
+                  style: TerminusTheme.labelText.copyWith(
+                    fontSize: 9,
+                    color: TerminusTheme.metalGold.withValues(alpha: 0.7),
+                  ),
                 ),
               ),
               const Spacer(),
@@ -48,17 +60,24 @@ class TerminalGrid extends StatelessWidget {
                 'L:$currentLumen',
                 style: TextStyle(
                   fontFamily: 'ShareTechMono',
-                  fontSize: 9,
+                  fontSize: 10,
                   color: TerminusTheme.lumenColor(currentLumen),
+                  shadows: [
+                    Shadow(
+                      color: TerminusTheme.lumenColor(currentLumen)
+                          .withValues(alpha: 0.4),
+                      blurRadius: 4,
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           // Action grid
           Wrap(
-            spacing: 6,
-            runSpacing: 6,
+            spacing: 8,
+            runSpacing: 8,
             children: actions.map((action) {
               return _TerminalKey(
                 action: action,
@@ -142,42 +161,24 @@ class _TerminalKeyState extends State<_TerminalKey>
           onTapCancel: () => setState(() => _isPressed = false),
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 100),
-            width: widget.action.isWide ? 140 : 65,
-            height: 44,
+            width: widget.action.isWide ? 150 : 72,
+            height: 50,
             transform: _isPressed
-                ? (Matrix4.identity()..translate(0.0, 2.0))
+                ? (Matrix4.identity()..translate(0.0, 1.0))
                 : Matrix4.identity(),
-            decoration: BoxDecoration(
-              color: isDisabled
-                  ? const Color(0xFF0A0E14)
-                  : Color.lerp(
-                      const Color(0xFF0A1018),
-                      color.withValues(alpha: 0.1),
-                      glowIntensity,
+            decoration: isDisabled
+                ? BoxDecoration(
+                    color: const Color(0xFF0A0E14),
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(
+                      color: TerminusTheme.border.withValues(alpha: 0.2),
                     ),
-              borderRadius: BorderRadius.circular(4),
-              border: Border.all(
-                color: isDisabled
-                    ? TerminusTheme.border.withValues(alpha: 0.2)
-                    : color.withValues(alpha: 0.3 + glowIntensity),
-                width: 1,
-              ),
-              boxShadow: isDisabled
-                  ? null
-                  : [
-                      BoxShadow(
-                        color: color.withValues(alpha: glowIntensity * 0.4),
-                        blurRadius: 8,
-                        spreadRadius: -2,
-                      ),
-                      if (_isPressed)
-                        BoxShadow(
-                          color: color.withValues(alpha: 0.2),
-                          blurRadius: 12,
-                          spreadRadius: 0,
-                        ),
-                    ],
-            ),
+                  )
+                : TerminusTheme.neonButton(
+                    color: color,
+                    isPressed: _isPressed,
+                    radius: 6,
+                  ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -185,11 +186,19 @@ class _TerminalKeyState extends State<_TerminalKey>
                   widget.action.label,
                   style: TextStyle(
                     fontFamily: 'ShareTechMono',
-                    fontSize: widget.action.isWide ? 10 : 9,
+                    fontSize: widget.action.isWide ? 11 : 10,
                     color: isDisabled
                         ? TerminusTheme.textDim.withValues(alpha: 0.2)
-                        : color.withValues(alpha: 0.8),
+                        : color.withValues(alpha: 0.9),
                     letterSpacing: 0.5,
+                    shadows: isDisabled
+                        ? null
+                        : [
+                            Shadow(
+                              color: color.withValues(alpha: 0.3),
+                              blurRadius: 4,
+                            ),
+                          ],
                   ),
                   textAlign: TextAlign.center,
                   maxLines: 2,
@@ -200,10 +209,10 @@ class _TerminalKeyState extends State<_TerminalKey>
                     widget.action.cost!,
                     style: TextStyle(
                       fontFamily: 'ShareTechMono',
-                      fontSize: 7,
+                      fontSize: 8,
                       color: isDisabled
                           ? TerminusTheme.textDim.withValues(alpha: 0.15)
-                          : TerminusTheme.textDim.withValues(alpha: 0.4),
+                          : TerminusTheme.textDim.withValues(alpha: 0.5),
                     ),
                   ),
               ],

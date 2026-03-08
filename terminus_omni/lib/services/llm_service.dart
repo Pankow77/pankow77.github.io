@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 import '../models/session.dart';
@@ -63,7 +65,7 @@ class LlmService {
       ]),
     ]);
 
-    // Send the initial scene setup request
+    // Send the initial scene setup request (with timeout to avoid hanging)
     final response = await _chat!.sendMessage(
       Content.text(
         'Inizia la SCENA 1. '
@@ -72,6 +74,10 @@ class LlmService {
         'e presenta la prima situazione al soggetto. '
         'Segui il Protocollo Atmospheric Suffocation.',
       ),
+    ).timeout(
+      const Duration(seconds: 30),
+      onTimeout: () =>
+          throw TimeoutException('LLM response timeout after 30s'),
     );
 
     return response.text ?? '[ERRORE: Nessuna risposta dal sistema]';
@@ -111,6 +117,10 @@ class LlmService {
 
     final response = await _chat!.sendMessage(
       Content.text(fullMessage),
+    ).timeout(
+      const Duration(seconds: 30),
+      onTimeout: () =>
+          throw TimeoutException('LLM response timeout after 30s'),
     );
 
     return response.text ?? '[ERRORE: Il buio ha inghiottito la risposta]';
@@ -131,6 +141,10 @@ class LlmService {
         'di dichiarare la sua. '
         'Formula: "Queste cose sono vere. Il mondo è oscuro."]',
       ),
+    ).timeout(
+      const Duration(seconds: 30),
+      onTimeout: () =>
+          throw TimeoutException('LLM response timeout after 30s'),
     );
 
     return response.text ?? '';
@@ -149,6 +163,10 @@ class LlmService {
         '"$testament" '
         'Chiudi con: TERMINUS-OMNI // SISTEMA OFFLINE]',
       ),
+    ).timeout(
+      const Duration(seconds: 30),
+      onTimeout: () =>
+          throw TimeoutException('LLM response timeout after 30s'),
     );
 
     return response.text ?? '';

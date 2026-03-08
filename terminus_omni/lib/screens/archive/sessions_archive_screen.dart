@@ -88,10 +88,8 @@ class _SessionCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: TerminusTheme.bgCard,
-        border: Border.all(color: TerminusTheme.border),
-        borderRadius: BorderRadius.circular(4),
+      decoration: TerminusTheme.richPanel(
+        accentColor: isComplete ? TerminusTheme.neonRed : TerminusTheme.neonCyan,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
