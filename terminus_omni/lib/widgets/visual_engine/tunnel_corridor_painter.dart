@@ -55,7 +55,7 @@ class TunnelCorridorPainter extends CustomPainter {
     final vp = Offset(cx, cy);
 
     final mainPaint = Paint()
-      ..color = _charColor.withOpacity(0.07 * fade)
+      ..color = _charColor.withValues(alpha: 0.07 * fade)
       ..strokeWidth = 0.5;
 
     // Corner-to-VP lines (define wall/floor/ceiling trapezoids)
@@ -66,7 +66,7 @@ class TunnelCorridorPainter extends CustomPainter {
 
     // Mid-edge guide lines (additional corridor structure)
     final faintPaint = Paint()
-      ..color = _charColor.withOpacity(0.035 * fade)
+      ..color = _charColor.withValues(alpha: 0.035 * fade)
       ..strokeWidth = 0.3;
 
     canvas.drawLine(Offset(0, cy), vp, faintPaint);
@@ -101,7 +101,7 @@ class TunnelCorridorPainter extends CustomPainter {
 
     // ── Depth frame (wireframe rectangle) ──
     final framePaint = Paint()
-      ..color = _charColor.withOpacity(alpha * 0.18)
+      ..color = _charColor.withValues(alpha: alpha * 0.18)
       ..strokeWidth = (0.7 * scale).clamp(0.2, 0.7);
     canvas.drawLine(Offset(left, top), Offset(right, top), framePaint);
     canvas.drawLine(Offset(left, bottom), Offset(right, bottom), framePaint);
@@ -194,7 +194,7 @@ class TunnelCorridorPainter extends CustomPainter {
     final y = bottomY - charSize * 0.35;
 
     final paint = Paint()
-      ..color = _charColor.withOpacity(alpha)
+      ..color = _charColor.withValues(alpha: alpha)
       ..style = PaintingStyle.stroke
       ..strokeWidth = (1.0 * scale).clamp(0.3, 1.0);
 
@@ -221,7 +221,7 @@ class TunnelCorridorPainter extends CustomPainter {
       style: TextStyle(
         fontFamily: 'ShareTechMono',
         fontSize: size,
-        color: _charColor.withOpacity(a),
+        color: _charColor.withValues(alpha: a),
       ),
     );
     _tp.layout();
@@ -234,7 +234,7 @@ class TunnelCorridorPainter extends CustomPainter {
     canvas.drawCircle(
       Offset(cx, cy),
       1.5,
-      Paint()..color = _charBright.withOpacity(0.85 * fade),
+      Paint()..color = _charBright.withValues(alpha: 0.85 * fade),
     );
 
     // Soft glow halo
@@ -246,7 +246,7 @@ class TunnelCorridorPainter extends CustomPainter {
           Offset(cx, cy),
           28.0,
           [
-            _charColor.withOpacity(0.09 * fade),
+            _charColor.withValues(alpha: 0.09 * fade),
             Colors.transparent,
           ],
         ),
@@ -264,7 +264,7 @@ class TunnelCorridorPainter extends CustomPainter {
           size.width * 0.7,
           [
             Colors.transparent,
-            Colors.black.withOpacity(0.55),
+            Colors.black.withValues(alpha: 0.55),
           ],
           [0.35, 1.0],
         ),

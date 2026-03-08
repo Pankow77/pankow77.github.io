@@ -201,9 +201,9 @@ class SessionManager extends ChangeNotifier {
       await _playTestament();
     }
 
-    // Send dice result context to LLM
+    // Send dice result context to LLM and record narrative response
     final diceContext = _diceEngine.formatResult(result);
-    await llm.sendMessage(
+    final diceNarrative = await llm.sendMessage(
       userMessage: diceContext,
       currentLumen: _lumenCount.current,
       dicePool: _session!.dicePool,
@@ -211,6 +211,13 @@ class SessionManager extends ChangeNotifier {
       phase: _lumenCount.phase,
       diceResultContext: diceContext,
     );
+
+    _session!.messages.add(ChatMessage(
+      role: 'terminus',
+      content: diceNarrative,
+      timestamp: DateTime.now(),
+      lumenAtMessage: _lumenCount.current,
+    ));
 
     await storage.saveSession(_session!);
     notifyListeners();

@@ -121,8 +121,8 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
                   if (t > 0.82)
                     Positioned.fill(
                       child: ColoredBox(
-                        color: Colors.black.withOpacity(
-                          ((t - 0.82) / 0.18).clamp(0.0, 1.0),
+                        color: Colors.black.withValues(
+                          alpha: ((t - 0.82) / 0.18).clamp(0.0, 1.0),
                         ),
                       ),
                     ),
@@ -168,15 +168,15 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
                 fontFamily: 'Orbitron',
                 fontSize: 34,
                 fontWeight: FontWeight.w700,
-                color: Colors.white.withOpacity(0.92),
+                color: Colors.white.withValues(alpha: 0.92),
                 letterSpacing: 6,
                 shadows: [
                   Shadow(
-                    color: const Color(0xFFB0D0C0).withOpacity(0.5),
+                    color: const Color(0xFFB0D0C0).withValues(alpha: 0.5),
                     blurRadius: 18,
                   ),
                   Shadow(
-                    color: const Color(0xFFB0D0C0).withOpacity(0.2),
+                    color: const Color(0xFFB0D0C0).withValues(alpha: 0.2),
                     blurRadius: 40,
                   ),
                 ],
@@ -190,10 +190,10 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 14,
-                color: const Color(0xFFB0D0C0).withOpacity(0.55),
+                color: const Color(0xFFB0D0C0).withValues(alpha: 0.55),
                 shadows: [
                   Shadow(
-                    color: const Color(0xFFB0D0C0).withOpacity(0.3),
+                    color: const Color(0xFFB0D0C0).withValues(alpha: 0.3),
                     blurRadius: 12,
                   ),
                 ],
@@ -208,7 +208,7 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
                 gradient: LinearGradient(
                   colors: [
                     Colors.transparent,
-                    const Color(0xFFB0D0C0).withOpacity(0.35),
+                    const Color(0xFFB0D0C0).withValues(alpha: 0.35),
                     Colors.transparent,
                   ],
                 ),
@@ -220,7 +220,7 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
               style: TextStyle(
                 fontFamily: 'ShareTechMono',
                 fontSize: 9,
-                color: const Color(0xFFFF003C).withOpacity(0.45),
+                color: const Color(0xFFFF003C).withValues(alpha: 0.45),
                 letterSpacing: 3,
               ),
             ),
@@ -245,7 +245,7 @@ class _TunnelIntroScreenState extends State<TunnelIntroScreen>
         style: TextStyle(
           fontFamily: 'ShareTechMono',
           fontSize: 11,
-          color: const Color(0xFFB0D0C0).withOpacity(0.6),
+          color: const Color(0xFFB0D0C0).withValues(alpha: 0.6),
           letterSpacing: 4,
         ),
       ),
