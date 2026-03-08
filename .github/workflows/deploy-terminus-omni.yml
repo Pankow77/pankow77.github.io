@@ -1,6 +1,8 @@
 name: Deploy TERMINUS-OMNI Web
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     # Manual trigger from GitHub UI — works from tablet browser
 
