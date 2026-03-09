@@ -79,7 +79,7 @@ export class TerminalRenderer {
       '',
       '════════════════════════════════════════════════════════════',
       '',
-      `Premi [INVIO] per iniziare la sessione operativa.`
+      ''
     ];
 
     const bootText = this._createElement('div', 'boot-text');
@@ -87,27 +87,12 @@ export class TerminalRenderer {
 
     // Typewriter effect for boot
     this._typewriterSequence(bootText, lines, 0, () => {
-      // Add cursor
-      const cursor = this._createElement('span', 'boot-cursor');
-      bootText.appendChild(cursor);
+      // Add visible start button
+      const startBtn = this._createElement('button', 'btn btn-primary boot-start-btn');
+      startBtn.textContent = '▶ INIZIA SESSIONE';
+      this.bootScreen.appendChild(startBtn);
 
-      // Wait for keypress
-      const handler = (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          document.removeEventListener('keydown', handler);
-          this.bootScreen.style.transition = 'opacity 0.5s';
-          this.bootScreen.style.opacity = '0';
-          setTimeout(() => {
-            this.bootScreen.remove();
-            this.bootScreen = null;
-            this.bus.emit('ui:boot_complete');
-          }, 500);
-        }
-      };
-      document.addEventListener('keydown', handler);
-
-      // Also allow click/tap
-      this.bootScreen.addEventListener('click', () => {
+      const dismissBoot = () => {
         document.removeEventListener('keydown', handler);
         this.bootScreen.style.transition = 'opacity 0.5s';
         this.bootScreen.style.opacity = '0';
@@ -116,7 +101,21 @@ export class TerminalRenderer {
           this.bootScreen = null;
           this.bus.emit('ui:boot_complete');
         }, 500);
-      }, { once: true });
+      };
+
+      // Keyboard handler
+      const handler = (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          dismissBoot();
+        }
+      };
+      document.addEventListener('keydown', handler);
+
+      // Button click/tap
+      startBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dismissBoot();
+      });
     });
   }
 
@@ -166,27 +165,33 @@ export class TerminalRenderer {
   }
 
   _renderContinuePrompt() {
-    const prompt = this._createElement('div', 'continue-prompt');
-    prompt.style.cssText = 'text-align: center; padding: 16px; color: var(--phosphor-dim); font-size: 12px; opacity: 0; animation: panel-appear 0.5s ease forwards;';
-    prompt.textContent = '[ Premi INVIO per procedere alla decisione ]';
-    this.content.appendChild(prompt);
+    const promptContainer = this._createElement('div', 'continue-prompt');
+    promptContainer.style.cssText = 'text-align: center; padding: 16px; opacity: 0; animation: panel-appear 0.5s ease forwards;';
+
+    const continueBtn = this._createElement('button', 'btn btn-primary continue-btn');
+    continueBtn.textContent = '▶ PROCEDI ALLA DECISIONE';
+    promptContainer.appendChild(continueBtn);
+
+    this.content.appendChild(promptContainer);
     this._scrollToBottom();
+
+    const dismiss = () => {
+      document.removeEventListener('keydown', handler);
+      promptContainer.remove();
+      this.bus.emit('ui:continue');
+    };
 
     const handler = (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
-        document.removeEventListener('keydown', handler);
-        prompt.remove();
-        this.bus.emit('ui:continue');
+        dismiss();
       }
     };
     document.addEventListener('keydown', handler);
 
-    prompt.style.cursor = 'pointer';
-    prompt.addEventListener('click', () => {
-      document.removeEventListener('keydown', handler);
-      prompt.remove();
-      this.bus.emit('ui:continue');
-    }, { once: true });
+    continueBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dismiss();
+    });
   }
 
   // ── Decision Panel ──

@@ -516,6 +516,27 @@ body::after {
   50% { border-color: transparent; }
 }
 
+/* ── Boot Start Button ── */
+.boot-start-btn {
+  margin-top: 24px;
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  animation: panel-appear 0.5s ease forwards, pulse-glow 2s ease-in-out infinite;
+}
+
+/* ── Continue Button ── */
+.continue-btn {
+  padding: 12px 28px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--phosphor-faint); }
+  50% { box-shadow: 0 0 12px var(--phosphor-glow); }
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   #sigil-app {
@@ -532,5 +553,28 @@ body::after {
 
   .protocol-text {
     font-size: 12px;
+  }
+
+  .decision-option {
+    padding: 16px 12px;
+    min-height: 48px;
+  }
+
+  .boot-start-btn,
+  .continue-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 16px;
+  }
+
+  .boot-text {
+    font-size: 11px;
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 }
