@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-09T20:29:16.790Z",
-  "epoch_count": 68,
+  "last_fetch": "2026-03-09T21:00:45.354Z",
+  "epoch_count": 69,
   "epochs": [
+    {
+      "id": "rss_9e5475984d54e810",
+      "timestamp": 1773065408000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Macron: Attack on Cyprus is an attack on all of Europe. France to send two frigates to the Red Sea - Armenia News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE83Mi1kVjltVmhFWHMwX1JUdnBKSFhaR3JRNVJ3Wm9XeVVxMnp2enUxWFBsRmZ4blhGVW90aVpEMFltdUxDaThnQU1ObFE?oc=5\" target=\"_blank\">Macron: Attack on Cyprus is an attack on all of Europe. France to send two frigates to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Armenia News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE83Mi1kVjltVmhFWHMwX1JUdnBKSFhaR3JRNVJ3Wm9XeVVxMnp2enUxWFBsRmZ4blhGVW90aVpEMFltdUxDaThnQU1ObFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-09T21:00:43.672Z"
+    },
     {
       "id": "rss_132ad794fac7f0b2",
       "timestamp": 1773061202000,
