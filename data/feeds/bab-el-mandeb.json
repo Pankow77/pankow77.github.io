@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-13T04:09:10.857Z",
-  "epoch_count": 76,
+  "last_fetch": "2026-03-13T05:31:26.867Z",
+  "epoch_count": 77,
   "epochs": [
     {
       "id": "rss_a40a97ed759e4684",
@@ -93,6 +93,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T04:10:25.512Z"
+    },
+    {
+      "id": "rss_5e39918f967744ff",
+      "timestamp": 1773248257000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "U.S. Maritime Commission Warns Shipping Lines Over Hormuz Crisis Surcharges - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPY0RINjhtbEhLN09XZVFQZlFlQW1XeUhfWTlBaVM3aDNXYTlobENYX0JIRTNhMDdzNkMzYWtzbTg0OXFSTFJ1SU5nOVhSXzB5M3N1QkRYN0lUTE1MaUVSWl9lelNDOTFEcUNsMU5jSDlGOEFVbC1FTXRkblFtQTNYa3U0VldOVkJ0aTJQU0t5dG8tMEZ4OG9CUkl5UFc?oc=5\" target=\"_blank\">U.S. Maritime Commission Warns Shipping Lines Over Hormuz Crisis Surcharges</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPY0RINjhtbEhLN09XZVFQZlFlQW1XeUhfWTlBaVM3aDNXYTlobENYX0JIRTNhMDdzNkMzYWtzbTg0OXFSTFJ1SU5nOVhSXzB5M3N1QkRYN0lUTE1MaUVSWl9lelNDOTFEcUNsMU5jSDlGOEFVbC1FTXRkblFtQTNYa3U0VldOVkJ0aTJQU0t5dG8tMEZ4OG9CUkl5UFc?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-13T05:31:26.357Z"
     },
     {
       "id": "rss_9b0d358f22e814eb",
