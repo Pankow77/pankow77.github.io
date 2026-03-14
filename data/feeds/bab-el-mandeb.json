@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-14T16:26:26.488Z",
-  "epoch_count": 82,
+  "last_fetch": "2026-03-14T16:55:43.846Z",
+  "epoch_count": 83,
   "epochs": [
     {
       "id": "rss_bfffec276f460c59",
@@ -246,6 +246,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-11T15:11:06.346Z"
+    },
+    {
+      "id": "rss_9644f15c97300e79",
+      "timestamp": 1773148205000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "CENTCOM: No Military Strikes in Yemen in April, No May 5th Strike in Marib - New America",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNVEF1dXBmelVwRDlYM0k2dWFFU0liSUljNTdRRU50c0dhakJtdjFBR05Ha2tQdUdkQnIxelN2VTVnRE1Zckd3Vy12VU9CeWVtLW9BaFdpV0huM0stV3djRHVpb0ZCNG9ncHNtZGlqa3BfNFFTcmR1UUVkZ1dPRmFjSDlNdjVEZkp2RTJMLW03NXFZNHdwWnFJTVNRUGxSLXJ6RGc?oc=5\" target=\"_blank\">CENTCOM: No Military Strikes in Yemen in April, No May 5th Strike in Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New America</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVEF1dXBmelVwRDlYM0k2dWFFU0liSUljNTdRRU50c0dhakJtdjFBR05Ha2tQdUdkQnIxelN2VTVnRE1Zckd3Vy12VU9CeWVtLW9BaFdpV0huM0stV3djRHVpb0ZCNG9ncHNtZGlqa3BfNFFTcmR1UUVkZ1dPRmFjSDlNdjVEZkp2RTJMLW03NXFZNHdwWnFJTVNRUGxSLXJ6RGc?oc=5",
+      "feed_id": "gn-centcom-yemen",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-14T16:55:42.925Z"
     },
     {
       "id": "rss_9e5475984d54e810",
