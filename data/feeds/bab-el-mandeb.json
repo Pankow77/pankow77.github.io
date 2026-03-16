@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-15T23:52:05.465Z",
-  "epoch_count": 87,
+  "last_fetch": "2026-03-16T02:02:02.078Z",
+  "epoch_count": 88,
   "epochs": [
     {
       "id": "rss_2c2f2d8061523077",
@@ -355,6 +355,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-14T16:55:42.925Z"
+    },
+    {
+      "id": "rss_aa8d1ee90abc603f",
+      "timestamp": 1773100344000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Two injured, two missing after suspected Houthi attack on ship in the Red Sea - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AJBVV95cUxNTE12YVBiTlhYNk5zMk9lM2xrcTloWEt4SUhSRGlTVUtkU2VER1lNVlVUUHd6TTBkUXpibFRuOGQ0QzE4RjJzZzc4VTlwMUNvT0FpTUxzeWJDeHJ6QlBUQXp5UGpIZ2ExX0E2Q08tZkVsX2l2VXdEMlZoRUxJSWFmbFpGdkcyNEFlUFRPS0NFekRLNU4tZUdIdmhGX3h0ZFc5X1c1SjhXczF4anNIRGRERVI0dHFhT09kSjFDcW9kcnlxVGpjZDVsanRXRDR6LUVxb1dMaWZEdzRhOEs0WVNwdmFudHpsanpGS292a245SjJ4eHNpbXV1V1ludGlzMU15bHR6R1FDcExCSGFaVGJ3QWsxdnZjNmkzbko1MmIxUVoxS0NzS1hhSnl0S2c3MEJSLVF0ZnBONk9RUXo1Z0FrRU92cUlOV1hINFUtQU1len",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxNTE12YVBiTlhYNk5zMk9lM2xrcTloWEt4SUhSRGlTVUtkU2VER1lNVlVUUHd6TTBkUXpibFRuOGQ0QzE4RjJzZzc4VTlwMUNvT0FpTUxzeWJDeHJ6QlBUQXp5UGpIZ2ExX0E2Q08tZkVsX2l2VXdEMlZoRUxJSWFmbFpGdkcyNEFlUFRPS0NFekRLNU4tZUdIdmhGX3h0ZFc5X1c1SjhXczF4anNIRGRERVI0dHFhT09kSjFDcW9kcnlxVGpjZDVsanRXRDR6LUVxb1dMaWZEdzRhOEs0WVNwdmFudHpsanpGS292a245SjJ4eHNpbXV1V1ludGlzMU15bHR6R1FDcExCSGFaVGJ3QWsxdnZjNmkzbko1MmIxUVoxS0NzS1hhSnl0S2c3MEJSLVF0ZnBONk9RUXo1Z0FrRU92cUlOV1hINFUtQU1lenBfaVl5ckc3eXlWRU9SX3NIcklCbg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-16T02:02:00.470Z"
     },
     {
       "id": "rss_9e5475984d54e810",
