@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-16T17:33:02.024Z",
-  "epoch_count": 94,
+  "last_fetch": "2026-03-16T18:56:18.686Z",
+  "epoch_count": 95,
   "epochs": [
     {
       "id": "rss_f842542e631a7058",
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-16T17:33:00.179Z"
+    },
+    {
+      "id": "rss_cbf02f234003a8ff",
+      "timestamp": 1773674091000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tajani: \"Strengthen the Aspides naval mission in the Red Sea; extending it to Hormuz is complicated\" - Eunews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxOMHlvYXpSTThGVTlxVS1lekhydWo4VXBoRHRTX2lMQ29ESlZwTkRSN2R5cUhrRXRRR3psRklLX1dRWFBrdmtVUTJ0bU9JWlBqbUI3dGR4bGhoSFNMMFRlSFlHZmhsR2NBX3Q0VHZjdXFuRzFoOTI3Q0N1UkZlNnRMNXBGNVhzdmM0VDhvWWlUcHBXV3d4ZDl1akU2ZllMeWR6OHpNcnZsUzQ4ZGdzc0tfYklDVFBmZ3Fud3AtcXVuNG0yU3lxN0YycTA3MG9yQQ?oc=5\" target=\"_blank\">Tajani: \"Strengthen the Aspides naval mission in the Red Sea; extending it to Hormuz is complicated\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eunews</fon",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOMHlvYXpSTThGVTlxVS1lekhydWo4VXBoRHRTX2lMQ29ESlZwTkRSN2R5cUhrRXRRR3psRklLX1dRWFBrdmtVUTJ0bU9JWlBqbUI3dGR4bGhoSFNMMFRlSFlHZmhsR2NBX3Q0VHZjdXFuRzFoOTI3Q0N1UkZlNnRMNXBGNVhzdmM0VDhvWWlUcHBXV3d4ZDl1akU2ZllMeWR6OHpNcnZsUzQ4ZGdzc0tfYklDVFBmZ3Fud3AtcXVuNG0yU3lxN0YycTA3MG9yQQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-16T18:56:17.975Z"
     },
     {
       "id": "rss_fa7ad937e0333f3b",
