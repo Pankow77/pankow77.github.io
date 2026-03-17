@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-17T21:33:52.645Z",
-  "epoch_count": 103,
+  "last_fetch": "2026-03-17T22:29:03.614Z",
+  "epoch_count": 104,
   "epochs": [
+    {
+      "id": "rss_3c0c0179c9e7c04f",
+      "timestamp": 1773785286000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Civilian casualties rise to 30 in Houthi drone attack on Iftar gathering in Yemen's Hajjah - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wRk1tS3ZuSWU2Y3dxUkFNQVJ1LXpzR21VNlZ5NUZGZ0NGWG82NUxONjhFU1dYN0FLbVVjS3lPVlozd190V2x0XzNCcDhGVnNRR1lyVXFmcXo5Zw?oc=5\" target=\"_blank\">Civilian casualties rise to 30 in Houthi drone attack on Iftar gathering in Yemen's Hajjah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wRk1tS3ZuSWU2Y3dxUkFNQVJ1LXpzR21VNlZ5NUZGZ0NGWG82NUxONjhFU1dYN0FLbVVjS3lPVlozd190V2x0XzNCcDhGVnNRR1lyVXFmcXo5Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-17T22:29:01.914Z"
+    },
     {
       "id": "rss_a483979f01acf5ad",
       "timestamp": 1773772312000,
