@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-17T11:40:48.609Z",
-  "epoch_count": 97,
+  "last_fetch": "2026-03-17T13:02:44.383Z",
+  "epoch_count": 98,
   "epochs": [
     {
       "id": "rss_41fa93f167c14c4c",
@@ -218,6 +218,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-15T20:52:25.403Z"
+    },
+    {
+      "id": "rss_60cd079d80ad046c",
+      "timestamp": 1773606375000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Why Yemen’s Houthis are staying out of the Israel-Iran war, and the message reportedly sent by US - ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nb00tazUwYTA2U1lNSXBnZnR1M1FPM3VfVUZhTmd5VTdfSXpmbXJUNWdwUEh0VjNrUnFnMmFzS0NUVEZRaGxNR3lROUN0a3FiU0pxV2JR?oc=5\" target=\"_blank\">Why Yemen’s Houthis are staying out of the Israel-Iran war, and the message reportedly sent by US</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ynetnews</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nb00tazUwYTA2U1lNSXBnZnR1M1FPM3VfVUZhTmd5VTdfSXpmbXJUNWdwUEh0VjNrUnFnMmFzS0NUVEZRaGxNR3lROUN0a3FiU0pxV2JR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-17T13:02:42.973Z"
     },
     {
       "id": "rss_b155e6bb530e4eaa",
