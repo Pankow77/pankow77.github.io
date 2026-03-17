@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-17T07:57:36.936Z",
-  "epoch_count": 96,
+  "last_fetch": "2026-03-17T08:56:27.173Z",
+  "epoch_count": 97,
   "epochs": [
     {
       "id": "rss_41fa93f167c14c4c",
@@ -176,6 +176,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-16T06:50:57.946Z"
+    },
+    {
+      "id": "rss_f929f1a91ef33dc9",
+      "timestamp": 1773630160000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lZ1hUeG5OM0o3a3NubXN6aHN2OXdCeVozTURSTFF0c1ZkRk9rdVBVbWJQM0V6YzNHM3k2bjd0WURyRXdLdDBHZ290cXRqMHYx?oc=5\" target=\"_blank\">Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lZ1hUeG5OM0o3a3NubXN6aHN2OXdCeVozTURSTFF0c1ZkRk9rdVBVbWJQM0V6YzNHM3k2bjd0WURyRXdLdDBHZ290cXRqMHYx?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-17T08:56:25.846Z"
     },
     {
       "id": "rss_2c2f2d8061523077",
