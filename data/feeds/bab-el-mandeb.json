@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-17T20:34:37.357Z",
-  "epoch_count": 101,
+  "last_fetch": "2026-03-17T21:33:52.645Z",
+  "epoch_count": 103,
   "epochs": [
     {
       "id": "rss_a483979f01acf5ad",
@@ -333,6 +333,27 @@
       "fetched_at": "2026-03-15T15:51:22.023Z"
     },
     {
+      "id": "rss_190f12343e6b8e66",
+      "timestamp": 1773573195000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemeni Houthis threaten to block Bab el-Mandeb Strait - Jagonews24.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE5UMjdvOW9lWXU0aGNCZHNpbnRZUG1BQUFnVGlSY0NJRmZ5U2J4VjJ3N3daVXVCdnlKSjF0VHRwSUd6eDZGbjkwZkh1bXZuMG1Mb3RuM2NfM2hIcEJ2NDJoM3VoUnjSAVBBVV95cUxNM1VVSkQ2VHFVdWQxV1doQm5vVVAzaEo4Yjg0bzFsbVV1akY1WFlxZTMwbzNaeWxRRjI1WExETVNMQzNUX19vVF9UUU9vaDFYNA?oc=5\" target=\"_blank\">Yemeni Houthis threaten to block Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Jagonews24.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5UMjdvOW9lWXU0aGNCZHNpbnRZUG1BQUFnVGlSY0NJRmZ5U2J4VjJ3N3daVXVCdnlKSjF0VHRwSUd6eDZGbjkwZkh1bXZuMG1Mb3RuM2NfM2hIcEJ2NDJoM3VoUnjSAVBBVV95cUxNM1VVSkQ2VHFVdWQxV1doQm5vVVAzaEo4Yjg0bzFsbVV1akY1WFlxZTMwbzNaeWxRRjI1WExETVNMQzNUX19vVF9UUU9vaDFYNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-17T21:33:51.071Z"
+    },
+    {
       "id": "rss_1999ffef238e6d95",
       "timestamp": 1773565381000,
       "source": "OSINT",
@@ -528,6 +549,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T21:01:33.599Z"
+    },
+    {
+      "id": "rss_6f782e2b47e02131",
+      "timestamp": 1773336415000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Fire Aboard USS Gerald R. Ford in Red Sea During Operation Epic Fury Raises Readiness Questions as U.S. Carrier Strike Group Faces Iran Tension - Defence Security Asia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOWWpwZFlxM0MwSFE4ODEyVmgtUVlPckdGWUVkekUxZlE0V0VPTUZOZmd3T2taUXBYcGdhQXVDb0lzWDNhTi13SnRvTUNzc1R5SGJadUtPS21Fd283U0lZOVNxbTdXTldVME5qdTY2LWJ3VGx0OEgwQ0lzRFpJVkhSczRPcXFlbXRhbkVLOTZkd1VYNkdKZVdWRV9OZ3dDZnFsT0Z5WjRmOHFMQnB4TUpr?oc=5\" target=\"_blank\">Fire Aboard USS Gerald R. Ford in Red Sea During Operation Epic Fury Raises Readiness Questions as U.S. Carrier Strike Group Faces Iran Tension</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Defence Se",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWWpwZFlxM0MwSFE4ODEyVmgtUVlPckdGWUVkekUxZlE0V0VPTUZOZmd3T2taUXBYcGdhQXVDb0lzWDNhTi13SnRvTUNzc1R5SGJadUtPS21Fd283U0lZOVNxbTdXTldVME5qdTY2LWJ3VGx0OEgwQ0lzRFpJVkhSczRPcXFlbXRhbkVLOTZkd1VYNkdKZVdWRV9OZ3dDZnFsT0Z5WjRmOHFMQnB4TUpr?oc=5",
+      "feed_id": "gn-centcom-yemen",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-17T21:33:51.540Z"
     },
     {
       "id": "rss_b863069b832ba7f0",
