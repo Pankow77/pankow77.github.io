@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-18T18:53:56.894Z",
-  "epoch_count": 106,
+  "last_fetch": "2026-03-18T19:45:35.189Z",
+  "epoch_count": 107,
   "epochs": [
     {
       "id": "rss_3c0c0179c9e7c04f",
@@ -572,6 +572,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T23:24:13.213Z"
+    },
+    {
+      "id": "rss_ed436beab7675744",
+      "timestamp": 1773352808000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthi leader declares support for Iran against US-Israeli attacks - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSGhHTkJ1X1FJT3JLQzdFVWdLSWU2N2lKQXJJaUZBVFJ6b1lmeXpFOGplS21xaTdOd3pDN2Zab0RjOGwzY2o5cUczNVhHNnptSUE5bk5lM1ZCSjB4ZWFEYUYwb0p4d3kxU3BpVjdCVFh4cDUzNVBIOXE4cUg1cVpqOWEyZWV4d216NTJFSUwtaUl0elZsOVFRR1lfMVhCUkRqYTNwM1FFb0t1ZU9pZlFCS2ZKaEdrZjZSRDJN?oc=5\" target=\"_blank\">Yemen’s Houthi leader declares support for Iran against US-Israeli attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSGhHTkJ1X1FJT3JLQzdFVWdLSWU2N2lKQXJJaUZBVFJ6b1lmeXpFOGplS21xaTdOd3pDN2Zab0RjOGwzY2o5cUczNVhHNnptSUE5bk5lM1ZCSjB4ZWFEYUYwb0p4d3kxU3BpVjdCVFh4cDUzNVBIOXE4cUg1cVpqOWEyZWV4d216NTJFSUwtaUl0elZsOVFRR1lfMVhCUkRqYTNwM1FFb0t1ZU9pZlFCS2ZKaEdrZjZSRDJN?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-18T19:45:33.663Z"
     },
     {
       "id": "rss_6d78c7ed9ba1b14b",
