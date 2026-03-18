@@ -2,18 +2,15 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TERMINUS OMNI — The Descent Protocol. Lumen-driven experience into the abyss of consequence.">
-    <title>TERMINUS OMNI | The Descent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="TERMINUS-OMNI V2.0 — Neuroscientific Trauma Sublimation Protocol. A playable architecture for AI-mediated narrative catharsis.">
+    <title>TERMINUS-OMNI | The Inevitability Engine</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
 /* ══════════════════════════════════════════════════════════════
-   TERMINUS OMNI — CSS
-   Phase 0: Boot Sequence
-   Phase 1: Main HUD
-   Phase 2: Deep Descent (Lumen ≤ 4)
-   Phase 3: Final Chamber (Lumen 0)
+   TERMINUS-OMNI V2.0 — CSS
+   The Inevitability Engine
    ══════════════════════════════════════════════════════════════ */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,10 +23,9 @@
     --amber-warn: #ffaa00;
     --deep-black: #020204;
     --crt-scanline: rgba(0,0,0,0.12);
-    --grid-color: rgba(57,255,20,0.06);
-    --rust-orange: #8b3a00;
     --font-mono: 'IBM Plex Mono', 'Share Tech Mono', 'Courier New', monospace;
     --font-display: 'Orbitron', monospace;
+    --lumen-color: #00ffff;
 }
 
 html, body {
@@ -38,19 +34,6 @@ html, body {
     color: var(--phosphor-green);
     font-family: var(--font-mono);
     overflow: hidden;
-    cursor: none;
-}
-
-/* Custom cursor */
-#cursor-dot {
-    position: fixed;
-    width: 6px; height: 6px;
-    background: var(--phosphor-green);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    box-shadow: 0 0 8px var(--phosphor-green), 0 0 20px rgba(57,255,20,0.3);
-    transition: transform 0.05s;
 }
 
 /* ── CRT Effects ── */
@@ -68,11 +51,8 @@ html, body {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        var(--crt-scanline) 2px,
-        var(--crt-scanline) 4px
+        0deg, transparent, transparent 2px,
+        var(--crt-scanline) 2px, var(--crt-scanline) 4px
     );
     animation: scanline-scroll 8s linear infinite;
 }
@@ -90,15 +70,23 @@ html, body {
     100% { transform: translateY(4px); }
 }
 
-/* CRT flicker */
-.crt-flicker {
-    animation: crt-flicker 0.15s infinite;
+/* Noise grain */
+.noise-grain {
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9997;
+    animation: grain-shift 0.5s steps(4) infinite;
 }
 
-@keyframes crt-flicker {
-    0% { opacity: 0.97; }
-    50% { opacity: 1; }
-    100% { opacity: 0.98; }
+@keyframes grain-shift {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(-5%,-5%); }
+    50% { transform: translate(5%,3%); }
+    75% { transform: translate(-3%,5%); }
+    100% { transform: translate(0,0); }
 }
 
 /* ── Phase Container ── */
@@ -111,8 +99,9 @@ html, body {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 1.2s ease;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .phase.active {
@@ -121,66 +110,37 @@ html, body {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PHASE 0: BOOT SEQUENCE
+   PHASE: BOOT SEQUENCE
    ══════════════════════════════════════════════════════════════ */
 #phase-boot {
     background: var(--deep-black);
-    font-family: var(--font-mono);
     padding: 40px;
     justify-content: flex-start;
-    padding-top: 10vh;
+    padding-top: 8vh;
+    overflow-y: auto;
 }
 
 .boot-title {
     font-family: var(--font-display);
-    font-size: clamp(1.5rem, 4vw, 3.5rem);
-    letter-spacing: 1.2em;
+    font-size: clamp(1.2rem, 3.5vw, 2.8rem);
+    letter-spacing: 0.8em;
     color: var(--phosphor-green);
-    text-shadow:
-        0 0 10px var(--phosphor-green),
-        0 0 30px rgba(57,255,20,0.5),
-        0 0 60px rgba(57,255,20,0.2);
+    text-shadow: 0 0 10px var(--phosphor-green), 0 0 30px rgba(57,255,20,0.5);
     text-align: center;
-    margin-bottom: 40px;
-    position: relative;
+    margin-bottom: 30px;
     animation: title-flicker 3s ease-in-out infinite;
 }
 
 @keyframes title-flicker {
-    0%, 100% { opacity: 1; text-shadow: 0 0 10px var(--phosphor-green), 0 0 30px rgba(57,255,20,0.5); }
+    0%, 100% { opacity: 1; }
     92% { opacity: 1; }
     93% { opacity: 0.3; text-shadow: none; }
-    94% { opacity: 1; text-shadow: 0 0 10px var(--phosphor-green), 0 0 30px rgba(57,255,20,0.5); }
-    96% { opacity: 0.8; }
-    97% { opacity: 1; }
-}
-
-/* Code drip from title */
-.drip-container {
-    position: absolute;
-    bottom: -100px;
-    left: 0; width: 100%;
-    height: 100px;
-    overflow: visible;
-}
-
-.drip-char {
-    position: absolute;
-    color: var(--phosphor-green);
-    font-size: 14px;
-    opacity: 0;
-    animation: drip-fall 2s ease-in forwards;
-    text-shadow: 0 0 5px var(--phosphor-green);
-}
-
-@keyframes drip-fall {
-    0% { transform: translateY(0); opacity: 0.8; }
-    100% { transform: translateY(200px); opacity: 0; }
+    94% { opacity: 1; }
 }
 
 .boot-log {
-    font-size: clamp(0.7rem, 1.5vw, 0.95rem);
-    line-height: 2;
+    font-size: clamp(0.65rem, 1.4vw, 0.9rem);
+    line-height: 1.9;
     text-align: left;
     max-width: 700px;
     width: 100%;
@@ -214,483 +174,590 @@ html, body {
     margin-left: 4px;
 }
 
-@keyframes blink-cursor {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Corruption drip effect */
-.corruption-drip {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 100;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.corruption-drip.active { opacity: 1; }
-
-.drip-line {
-    position: absolute;
-    top: -20px;
-    width: 2px;
-    background: linear-gradient(180deg, var(--corruption-red), transparent);
-    animation: corruption-fall linear forwards;
-    box-shadow: 0 0 6px var(--corruption-red);
-}
-
-@keyframes corruption-fall {
-    0% { transform: translateY(-100%); height: 40px; }
-    100% { transform: translateY(110vh); height: 80px; }
-}
+@keyframes blink-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* ══════════════════════════════════════════════════════════════
-   PHASE 1: MAIN HUD
+   PHASE: CHARACTER CREATION (DOSSIER)
    ══════════════════════════════════════════════════════════════ */
-#phase-hud {
+#phase-dossier {
     background: var(--deep-black);
     padding: 20px;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    overflow-y: auto;
+    justify-content: flex-start;
+    padding-top: 3vh;
 }
 
-.hud-header {
+.dossier-container {
+    max-width: 700px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.dossier-header {
+    font-family: var(--font-display);
+    font-size: clamp(0.7rem, 2vw, 1.1rem);
+    letter-spacing: 0.5em;
+    color: var(--cyan-pulse);
+    text-shadow: 0 0 10px rgba(0,255,255,0.5);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.dossier-sub {
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    color: var(--phosphor-dim);
+    text-align: center;
+    letter-spacing: 0.2em;
+    margin-bottom: 25px;
+}
+
+.dossier-step {
+    display: none;
+    animation: fadeInUp 0.6s ease;
+}
+
+.dossier-step.active { display: block; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dossier-question {
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    color: var(--phosphor-green);
+    margin-bottom: 6px;
+    line-height: 1.6;
+    text-shadow: 0 0 5px rgba(57,255,20,0.3);
+}
+
+.dossier-hint {
+    font-size: clamp(0.6rem, 1.1vw, 0.72rem);
+    color: var(--phosphor-dim);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.dossier-input {
+    width: 100%;
+    background: rgba(0,5,0,0.6);
+    border: 1px solid rgba(57,255,20,0.2);
+    color: var(--phosphor-green);
+    font-family: var(--font-mono);
+    font-size: clamp(0.7rem, 1.3vw, 0.85rem);
+    padding: 12px 15px;
+    outline: none;
+    resize: vertical;
+    min-height: 50px;
+    transition: border-color 0.3s;
+    line-height: 1.6;
+}
+
+.dossier-input:focus {
+    border-color: var(--cyan-pulse);
+    box-shadow: 0 0 10px rgba(0,255,255,0.15);
+}
+
+.dossier-input::placeholder {
+    color: rgba(57,255,20,0.2);
+}
+
+.dossier-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(57,255,20,0.2);
-    padding-bottom: 10px;
-}
-
-.hud-title {
-    font-family: var(--font-display);
-    font-size: clamp(0.8rem, 2vw, 1.4rem);
-    letter-spacing: 0.5em;
-    color: var(--phosphor-green);
-    text-shadow: 0 0 10px var(--phosphor-green);
-}
-
-.lumen-display {
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 2.5vw, 1.8rem);
-    display: flex;
-    align-items: center;
+    margin-top: 20px;
     gap: 10px;
 }
 
-.lumen-label { color: var(--phosphor-dim); font-size: 0.7em; letter-spacing: 0.3em; }
-.lumen-value {
+.dossier-progress {
+    font-size: 0.6rem;
+    color: var(--phosphor-dim);
+    letter-spacing: 0.3em;
+}
+
+.btn {
+    background: none;
+    border: 1px solid rgba(57,255,20,0.3);
+    color: var(--phosphor-green);
+    padding: 8px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: rgba(57,255,20,0.1);
+    border-color: var(--phosphor-green);
+    text-shadow: 0 0 5px var(--phosphor-green);
+}
+
+.btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.btn.primary {
+    border-color: var(--cyan-pulse);
     color: var(--cyan-pulse);
-    text-shadow: 0 0 15px var(--cyan-pulse), 0 0 30px rgba(0,255,255,0.3);
+}
+
+.btn.primary:hover {
+    background: rgba(0,255,255,0.1);
+    text-shadow: 0 0 5px var(--cyan-pulse);
+}
+
+.btn.danger {
+    border-color: rgba(255,0,51,0.4);
+    color: var(--corruption-red);
+}
+
+.btn.danger:hover {
+    background: rgba(255,0,51,0.1);
+}
+
+/* Step indicator dots */
+.step-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(57,255,20,0.15);
+    transition: all 0.3s;
+}
+
+.step-dot.active { background: var(--cyan-pulse); box-shadow: 0 0 6px var(--cyan-pulse); }
+.step-dot.done { background: var(--phosphor-green); }
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE: TESTAMENT
+   ══════════════════════════════════════════════════════════════ */
+#phase-testament {
+    background: var(--deep-black);
+    padding: 30px;
+}
+
+.testament-container {
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+.testament-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    opacity: 0.4;
+}
+
+.testament-title {
+    font-family: var(--font-display);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    letter-spacing: 0.5em;
+    color: var(--corruption-red);
+    text-shadow: 0 0 10px rgba(255,0,51,0.4);
+    margin-bottom: 10px;
+}
+
+.testament-prompt {
+    font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+    color: var(--phosphor-dim);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testament-textarea {
+    width: 100%;
+    min-height: 150px;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,0,51,0.2);
+    color: var(--corruption-red);
+    font-family: var(--font-mono);
+    font-size: clamp(0.7rem, 1.3vw, 0.85rem);
+    padding: 15px;
+    outline: none;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.testament-textarea:focus {
+    border-color: var(--corruption-red);
+    box-shadow: 0 0 15px rgba(255,0,51,0.15);
+}
+
+.testament-textarea::placeholder {
+    color: rgba(255,0,51,0.2);
+}
+
+.testament-seal {
+    margin-top: 20px;
+}
+
+.testament-warning {
+    font-size: 0.6rem;
+    color: rgba(255,0,51,0.3);
+    letter-spacing: 0.2em;
+    margin-top: 10px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PHASE: SESSION (Main Narrative Interface)
+   ══════════════════════════════════════════════════════════════ */
+#phase-session {
+    background: var(--deep-black);
+    display: flex;
+    flex-direction: column;
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(57,255,20,0.1);
+    flex-shrink: 0;
+}
+
+.session-title {
+    font-family: var(--font-display);
+    font-size: clamp(0.6rem, 1.5vw, 0.85rem);
+    letter-spacing: 0.4em;
+    color: var(--phosphor-dim);
+}
+
+.lumen-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lumen-candles {
+    display: flex;
+    gap: 4px;
+}
+
+.candle {
+    width: 8px; height: 18px;
+    border: 1px solid rgba(0,255,255,0.3);
+    position: relative;
+    transition: all 0.8s ease;
+}
+
+.candle.lit {
+    background: rgba(0,255,255,0.15);
+    border-color: var(--cyan-pulse);
+    box-shadow: 0 0 6px rgba(0,255,255,0.3);
+}
+
+.candle.lit::before {
+    content: '';
+    position: absolute;
+    top: -5px; left: 50%;
+    transform: translateX(-50%);
+    width: 4px; height: 5px;
+    background: var(--cyan-pulse);
+    border-radius: 50% 50% 20% 20%;
+    box-shadow: 0 0 6px var(--cyan-pulse);
+    animation: flame-flicker 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes flame-flicker {
+    0% { opacity: 0.7; transform: translateX(-50%) scaleY(0.9); }
+    100% { opacity: 1; transform: translateX(-50%) scaleY(1.1); }
+}
+
+.candle.extinguishing {
+    animation: candle-die 1.5s ease-out forwards;
+}
+
+@keyframes candle-die {
+    0% { border-color: var(--cyan-pulse); background: rgba(0,255,255,0.15); }
+    50% { border-color: var(--amber-warn); background: rgba(255,170,0,0.1); }
+    100% { border-color: rgba(255,0,51,0.2); background: transparent; }
+}
+
+.lumen-number {
+    font-family: var(--font-display);
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    color: var(--lumen-color);
+    text-shadow: 0 0 10px var(--lumen-color);
     font-weight: 700;
     min-width: 2ch;
     text-align: right;
 }
 
-.hud-main {
-    display: grid;
-    grid-template-columns: 250px 1fr 250px;
-    gap: 15px;
-    overflow: hidden;
-}
-
-@media (max-width: 900px) {
-    .hud-main {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-    }
-}
-
-/* Left panel - System status */
-.hud-panel {
-    border: 1px solid rgba(57,255,20,0.15);
-    padding: 12px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hud-panel::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--phosphor-green), transparent);
-}
-
-.panel-title {
-    font-size: 0.65rem;
-    letter-spacing: 0.4em;
-    color: var(--phosphor-dim);
-    margin-bottom: 12px;
+.session-phase-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    padding: 2px 8px;
+    border: 1px solid;
     text-transform: uppercase;
 }
 
-.status-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 0;
-    font-size: 0.75rem;
-    border-bottom: 1px solid rgba(57,255,20,0.05);
-}
+.session-phase-label.phase-1 { border-color: var(--phosphor-green); color: var(--phosphor-green); }
+.session-phase-label.phase-2 { border-color: var(--amber-warn); color: var(--amber-warn); }
+.session-phase-label.phase-3 { border-color: var(--corruption-red); color: var(--corruption-red); }
+.session-phase-label.phase-4 { border-color: rgba(255,0,51,0.5); color: rgba(255,0,51,0.5); animation: pulse-slow 2s infinite; }
 
-.status-label { color: rgba(57,255,20,0.5); }
-.status-value { font-weight: 600; }
-.status-value.green { color: var(--phosphor-green); }
-.status-value.yellow { color: var(--amber-warn); }
-.status-value.red { color: var(--corruption-red); }
-.status-value.cyan { color: var(--cyan-pulse); }
+@keyframes pulse-slow { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
 
-/* Center - CRT Monitor / Graph area */
-.crt-monitor {
-    border: 2px solid rgba(57,255,20,0.2);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background: rgba(0,5,0,0.5);
-}
-
-.crt-monitor::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: repeating-linear-gradient(
-        0deg, transparent, transparent 1px,
-        rgba(57,255,20,0.02) 1px, rgba(57,255,20,0.02) 2px
-    );
-    pointer-events: none;
-}
-
-.monitor-header {
-    padding: 6px 12px;
-    font-size: 0.6rem;
-    letter-spacing: 0.3em;
-    color: var(--phosphor-dim);
-    border-bottom: 1px solid rgba(57,255,20,0.1);
-    display: flex;
-    justify-content: space-between;
-}
-
-.monitor-body {
+/* Narrative text area */
+.narrative-scroll {
     flex: 1;
-    position: relative;
-    padding: 10px;
+    overflow-y: auto;
+    padding: 20px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
 }
 
-/* Canvas for graphs */
-#entropy-canvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
+.narrative-scroll::-webkit-scrollbar { width: 3px; }
+.narrative-scroll::-webkit-scrollbar-track { background: transparent; }
+.narrative-scroll::-webkit-scrollbar-thumb { background: rgba(57,255,20,0.2); }
 
-/* Heartbeat line */
-#heartbeat-canvas {
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    height: 60px;
-    border-top: 1px solid rgba(0,255,255,0.1);
-}
-
-/* Right panel - Grid modules / Commander */
-.grid-modules {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.grid-module {
-    padding: 8px 10px;
-    border: 1px solid rgba(57,255,20,0.1);
-    font-size: 0.7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-.grid-module::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 0;
-    width: 3px; height: 100%;
-    transition: background 0.3s;
-}
-
-.grid-module.optimized::before { background: var(--phosphor-green); }
-.grid-module.divergent::before { background: var(--corruption-red); }
-.grid-module.transitory::before { background: var(--amber-warn); }
-
-.module-name { color: rgba(57,255,20,0.6); text-transform: uppercase; letter-spacing: 0.2em; }
-.module-status { font-weight: 600; font-size: 0.6rem; letter-spacing: 0.15em; }
-.module-status.green { color: var(--phosphor-green); }
-.module-status.red { color: var(--corruption-red); }
-.module-status.yellow { color: var(--amber-warn); }
-
-/* Commander message bar */
-.commander-bar {
-    border-top: 1px solid rgba(57,255,20,0.2);
-    padding: 10px 15px;
-    font-size: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    min-height: 50px;
-}
-
-.commander-prefix {
-    color: var(--cyan-pulse);
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    white-space: nowrap;
-    font-size: 0.65rem;
-}
-
-.commander-msg {
-    color: var(--phosphor-green);
-    flex: 1;
-    overflow: hidden;
-}
-
-.commander-level {
-    font-size: 0.6rem;
-    padding: 2px 8px;
-    border: 1px solid;
-    letter-spacing: 0.15em;
-    white-space: nowrap;
-}
-
-.commander-level.nominal { border-color: var(--phosphor-green); color: var(--phosphor-green); }
-.commander-level.critical { border-color: var(--amber-warn); color: var(--amber-warn); }
-.commander-level.terminal { border-color: var(--corruption-red); color: var(--corruption-red); animation: glitch-text 0.3s infinite; }
-.commander-level.flat { border-color: rgba(255,0,51,0.3); color: rgba(255,0,51,0.5); }
-.commander-level.null-state { border-color: rgba(57,255,20,0.1); color: rgba(57,255,20,0.2); }
-
-/* Digital rust on borders */
-.rust-border {
-    position: relative;
-}
-
-.rust-border::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 40px; height: 40px;
-    background: radial-gradient(circle, var(--rust-orange) 0%, transparent 70%);
-    opacity: 0.15;
-    pointer-events: none;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   PHASE 2: DEEP DESCENT (Lumen ≤ 4)
-   ══════════════════════════════════════════════════════════════ */
-#phase-descent {
-    background: var(--deep-black);
-    overflow: hidden;
-}
-
-/* Vertical tunnel */
-.tunnel-container {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    perspective: 800px;
-}
-
-.tunnel-ring {
-    position: absolute;
-    left: 50%; top: 50%;
-    border: 1px solid rgba(0,255,255,0.15);
-    transform: translate(-50%, -50%) rotateX(80deg);
-    border-radius: 50%;
-    animation: tunnel-pulse 3s ease-in-out infinite;
-}
-
-@keyframes tunnel-pulse {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.8; }
-}
-
-/* Code rain canvas */
-#coderain-canvas {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
-}
-
-/* Descent text overlay */
-.descent-text {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-
-.descent-title {
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 3vw, 2.5rem);
-    letter-spacing: 0.8em;
-    color: var(--corruption-red);
-    text-shadow:
-        0 0 10px var(--corruption-red),
-        0 0 40px rgba(255,0,51,0.4);
+.narrative-block {
     margin-bottom: 20px;
-    animation: glitch-text 0.5s infinite;
+    animation: fadeInUp 0.5s ease;
 }
 
-.descent-lumen {
-    font-family: var(--font-display);
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
+.narrator-text {
+    font-size: clamp(0.72rem, 1.3vw, 0.88rem);
+    line-height: 1.9;
+    color: var(--phosphor-green);
+    text-shadow: 0 0 2px rgba(57,255,20,0.2);
+}
+
+.narrator-text.clio {
     color: var(--cyan-pulse);
-    letter-spacing: 0.5em;
-    margin-bottom: 30px;
-    text-shadow: 0 0 10px var(--cyan-pulse);
+    border-left: 2px solid rgba(0,255,255,0.3);
+    padding-left: 12px;
+    margin-left: 5px;
 }
 
-.descent-warning {
-    font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+.narrator-text.adversary {
     color: var(--corruption-red);
-    opacity: 0.7;
-    letter-spacing: 0.3em;
-    animation: warning-pulse 2s ease-in-out infinite;
+    border-left: 2px solid rgba(255,0,51,0.3);
+    padding-left: 12px;
+    margin-left: 5px;
+    font-style: italic;
 }
 
-@keyframes warning-pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
+.narrator-text.system {
+    color: var(--phosphor-dim);
+    font-size: clamp(0.6rem, 1.1vw, 0.72rem);
+    letter-spacing: 0.1em;
+    border: 1px solid rgba(57,255,20,0.1);
+    padding: 8px 12px;
+    margin: 10px 0;
 }
 
-.descent-closing {
-    font-size: 0.75rem;
-    color: rgba(255,0,51,0.5);
-    margin-top: 20px;
-    letter-spacing: 0.2em;
+.narrator-text.truth {
+    color: var(--amber-warn);
+    text-align: center;
+    font-style: italic;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,170,0,0.15);
+    border-bottom: 1px solid rgba(255,170,0,0.15);
+    margin: 15px 0;
 }
 
-/* Light point at bottom */
-.light-point {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+.player-text {
+    font-size: clamp(0.72rem, 1.3vw, 0.88rem);
+    line-height: 1.8;
+    color: rgba(57,255,20,0.6);
+    border-left: 2px solid rgba(57,255,20,0.15);
+    padding-left: 12px;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.dice-result {
+    font-size: clamp(0.6rem, 1.1vw, 0.72rem);
+    color: var(--phosphor-dim);
+    border: 1px solid rgba(57,255,20,0.1);
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-family: var(--font-mono);
+}
+
+.dice-result .success { color: var(--cyan-pulse); }
+.dice-result .failure { color: var(--corruption-red); }
+.dice-result .cost { color: var(--amber-warn); }
+
+/* Typing indicator */
+.typing-indicator {
+    display: none;
+    padding: 10px 0;
+}
+
+.typing-indicator.active { display: block; }
+
+.typing-dots {
+    display: inline-flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.typing-dots span {
     width: 4px; height: 4px;
-    background: white;
+    background: var(--phosphor-green);
     border-radius: 50%;
-    box-shadow:
-        0 0 10px white,
-        0 0 30px rgba(255,255,255,0.5),
-        0 0 60px rgba(0,255,255,0.3);
-    animation: light-pulse 2s ease-in-out infinite;
-    z-index: 10;
+    animation: typing-bounce 1.2s ease-in-out infinite;
 }
 
-@keyframes light-pulse {
-    0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
-    50% { transform: translateX(-50%) scale(1.5); opacity: 1; }
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+    0%, 80%, 100% { transform: translateY(0); opacity: 0.3; }
+    40% { transform: translateY(-5px); opacity: 1; }
 }
+
+/* Player input area */
+.input-area {
+    flex-shrink: 0;
+    padding: 10px 20px 15px;
+    border-top: 1px solid rgba(57,255,20,0.1);
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.player-input {
+    flex: 1;
+    background: rgba(0,5,0,0.5);
+    border: 1px solid rgba(57,255,20,0.2);
+    color: var(--phosphor-green);
+    font-family: var(--font-mono);
+    font-size: clamp(0.7rem, 1.3vw, 0.85rem);
+    padding: 10px 12px;
+    outline: none;
+    resize: none;
+    min-height: 42px;
+    max-height: 120px;
+    line-height: 1.5;
+}
+
+.player-input:focus {
+    border-color: var(--cyan-pulse);
+    box-shadow: 0 0 8px rgba(0,255,255,0.1);
+}
+
+.player-input::placeholder { color: rgba(57,255,20,0.2); }
+
+.send-btn {
+    background: none;
+    border: 1px solid rgba(0,255,255,0.3);
+    color: var(--cyan-pulse);
+    width: 42px; height: 42px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.send-btn:hover {
+    background: rgba(0,255,255,0.1);
+    box-shadow: 0 0 8px rgba(0,255,255,0.2);
+}
+
+.send-btn:disabled { opacity: 0.2; cursor: default; }
+
+/* Safety pause button */
+.safety-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    background: rgba(2,2,4,0.8);
+    border: 1px solid rgba(255,170,0,0.3);
+    color: var(--amber-warn);
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    letter-spacing: 0.15em;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s;
+}
+
+.safety-btn:hover {
+    background: rgba(255,170,0,0.1);
+    border-color: var(--amber-warn);
+}
+
+.safety-btn.visible { display: block; }
 
 /* ══════════════════════════════════════════════════════════════
-   PHASE 3: FINAL CHAMBER (Lumen 0)
+   PHASE: FINAL (LUMEN 0)
    ══════════════════════════════════════════════════════════════ */
 #phase-final {
     background: #010102;
+    justify-content: center;
 }
 
 .final-content {
     text-align: center;
-    position: relative;
-    z-index: 10;
+    max-width: 600px;
+    padding: 20px;
 }
 
-.final-title {
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 3vw, 2.5rem);
-    letter-spacing: 0.8em;
-    color: var(--cyan-pulse);
-    opacity: 0.15;
-    text-shadow: 0 0 5px rgba(0,255,255,0.2);
+.final-testament {
+    font-size: clamp(0.72rem, 1.3vw, 0.88rem);
+    color: rgba(255,0,51,0.6);
+    line-height: 2;
     margin-bottom: 30px;
-}
-
-.final-lumen {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 5vw, 4rem);
-    color: var(--corruption-red);
-    opacity: 0.8;
-    text-shadow: 0 0 20px var(--corruption-red);
-    margin-bottom: 20px;
-    letter-spacing: 0.3em;
-}
-
-.final-zero {
-    font-size: clamp(3rem, 10vw, 8rem);
-    font-weight: 900;
-    color: var(--corruption-red);
-    text-shadow: 0 0 30px var(--corruption-red), 0 0 60px rgba(255,0,51,0.3);
-}
-
-/* Heartbeat circle */
-.heartbeat-circle {
-    width: 120px; height: 120px;
-    border: 2px solid var(--corruption-red);
-    border-radius: 50%;
-    margin: 30px auto;
-    position: relative;
-    animation: heartbeat-irregular 2s ease-in-out infinite;
-    box-shadow: 0 0 20px rgba(255,0,51,0.3), inset 0 0 20px rgba(255,0,51,0.1);
-}
-
-@keyframes heartbeat-irregular {
-    0% { transform: scale(1); border-color: var(--corruption-red); }
-    7% { transform: scale(1.08); }
-    14% { transform: scale(1); }
-    21% { transform: scale(1.04); }
-    28% { transform: scale(1); }
-    100% { transform: scale(1); border-color: rgba(255,0,51,0.3); }
-}
-
-.heartbeat-circle.flatline {
-    animation: flatline-fade 3s ease-out forwards;
-}
-
-@keyframes flatline-fade {
-    0% { border-color: var(--corruption-red); box-shadow: 0 0 20px rgba(255,0,51,0.3); }
-    100% { border-color: rgba(255,0,51,0.05); box-shadow: none; transform: scale(0.95); }
-}
-
-.final-messages {
-    margin-top: 30px;
-    font-size: 0.75rem;
-    line-height: 2.2;
-    letter-spacing: 0.3em;
-}
-
-.final-msg {
+    font-style: italic;
     opacity: 0;
-    transition: opacity 1.5s ease;
+    transition: opacity 3s ease;
 }
 
-.final-msg.visible { opacity: 1; }
-.final-msg.dim { color: rgba(57,255,20,0.15); }
-.final-msg.red { color: rgba(255,0,51,0.4); }
-.final-msg.echo { color: rgba(0,255,255,0.2); }
+.final-testament.visible { opacity: 1; }
 
-/* Dense dripping overlay for final */
-.dense-drip {
-    position: fixed;
-    top: 0; left: 0;
+.final-epitaph {
+    font-size: clamp(0.6rem, 1vw, 0.72rem);
+    color: rgba(57,255,20,0.1);
+    letter-spacing: 0.3em;
+    line-height: 2.5;
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+.final-epitaph.visible { opacity: 1; }
+
+.heartbeat-line {
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.heartbeat-line canvas {
     width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 5;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+    .boot-title { letter-spacing: 0.4em; }
+    .lumen-candles { gap: 2px; }
+    .candle { width: 6px; height: 14px; }
+    .input-area { padding: 8px 10px 10px; }
+    .narrative-scroll { padding: 15px; }
+    #phase-dossier { padding: 15px; padding-top: 2vh; }
 }
 
 /* ══════════════════════════════════════════════════════════════
@@ -705,428 +772,266 @@ html, body {
     100% { transform: translate(0); }
 }
 
-.glitch-heavy {
-    position: relative;
-}
+.glitch { animation: glitch-text 0.3s infinite; }
 
-.glitch-heavy::before,
-.glitch-heavy::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-}
-
-.glitch-heavy::before {
-    color: var(--corruption-red);
-    animation: glitch-clip-1 2s infinite linear alternate-reverse;
-    clip-path: inset(20% 0 60% 0);
-    transform: translate(-2px);
-}
-
-.glitch-heavy::after {
-    color: var(--cyan-pulse);
-    animation: glitch-clip-2 2s infinite linear alternate-reverse;
-    clip-path: inset(60% 0 10% 0);
-    transform: translate(2px);
-}
-
-@keyframes glitch-clip-1 {
-    0% { clip-path: inset(20% 0 60% 0); }
-    25% { clip-path: inset(40% 0 30% 0); }
-    50% { clip-path: inset(10% 0 70% 0); }
-    75% { clip-path: inset(50% 0 20% 0); }
-    100% { clip-path: inset(30% 0 50% 0); }
-}
-
-@keyframes glitch-clip-2 {
-    0% { clip-path: inset(60% 0 10% 0); }
-    25% { clip-path: inset(30% 0 50% 0); }
-    50% { clip-path: inset(70% 0 5% 0); }
-    75% { clip-path: inset(15% 0 65% 0); }
-    100% { clip-path: inset(45% 0 35% 0); }
-}
-
-/* ══════════════════════════════════════════════════════════════
-   INTERACTIVE CONTROLS
-   ══════════════════════════════════════════════════════════════ */
-.control-bar {
-    position: fixed;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9000;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    padding: 8px 16px;
-    background: rgba(2,2,4,0.9);
-    border: 1px solid rgba(57,255,20,0.15);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-}
-
-.ctrl-btn {
-    background: none;
-    border: 1px solid rgba(57,255,20,0.3);
-    color: var(--phosphor-green);
-    padding: 4px 12px;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
-    cursor: none;
-    transition: all 0.2s;
-    text-transform: uppercase;
-}
-
-.ctrl-btn:hover {
-    background: rgba(57,255,20,0.1);
-    border-color: var(--phosphor-green);
-    text-shadow: 0 0 5px var(--phosphor-green);
-}
-
-.ctrl-btn.danger {
-    border-color: rgba(255,0,51,0.3);
-    color: var(--corruption-red);
-}
-
-.ctrl-btn.danger:hover {
-    background: rgba(255,0,51,0.1);
-    border-color: var(--corruption-red);
-}
-
-.ctrl-separator {
-    width: 1px;
-    height: 16px;
-    background: rgba(57,255,20,0.15);
-}
-
-/* ── Audio visualization bar ── */
-.audio-vis {
-    display: flex;
-    gap: 2px;
-    align-items: flex-end;
-    height: 16px;
-}
-
-.audio-bar {
-    width: 3px;
-    background: var(--phosphor-green);
-    transition: height 0.1s;
-    opacity: 0.6;
-}
-
-/* ── Noise grain ── */
-.noise-grain {
-    position: fixed;
-    top: -50%; left: -50%;
-    width: 200%; height: 200%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 9997;
-    animation: grain-shift 0.5s steps(4) infinite;
-}
-
-@keyframes grain-shift {
-    0% { transform: translate(0,0); }
-    25% { transform: translate(-5%,-5%); }
-    50% { transform: translate(5%,3%); }
-    75% { transform: translate(-3%,5%); }
-    100% { transform: translate(0,0); }
-}
-
-/* ── Vertical grid lines ── */
-.vgrid {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    background:
-        repeating-linear-gradient(90deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent 60px),
-        repeating-linear-gradient(0deg, var(--grid-color) 0px, var(--grid-color) 1px, transparent 1px, transparent 60px);
-    transition: all 2s ease;
-}
-
-.vgrid.tight {
-    background:
-        repeating-linear-gradient(90deg, rgba(57,255,20,0.08) 0px, rgba(57,255,20,0.08) 1px, transparent 1px, transparent 30px),
-        repeating-linear-gradient(0deg, rgba(57,255,20,0.08) 0px, rgba(57,255,20,0.08) 1px, transparent 1px, transparent 20px);
-}
-
-.vgrid.collapse {
-    background:
-        repeating-linear-gradient(90deg, rgba(255,0,51,0.06) 0px, rgba(255,0,51,0.06) 1px, transparent 1px, transparent 15px),
-        repeating-linear-gradient(0deg, rgba(255,0,51,0.06) 0px, rgba(255,0,51,0.06) 1px, transparent 1px, transparent 10px);
-}
-
-/* ── Responsive ── */
-@media (max-width: 600px) {
-    .boot-title { letter-spacing: 0.5em; }
-    .hud-main { grid-template-columns: 1fr; }
-    .control-bar { flex-wrap: wrap; justify-content: center; }
-    .descent-title { letter-spacing: 0.3em; }
-    .final-title { letter-spacing: 0.3em; }
-}
+/* Lumen-dependent color transitions */
+.lumen-warm { --lumen-color: #00ffff; }
+.lumen-caution { --lumen-color: #ffaa00; }
+.lumen-critical { --lumen-color: #ff0033; }
+.lumen-dead { --lumen-color: rgba(255,0,51,0.3); }
     </style>
 </head>
 <body>
 
-<!-- Custom cursor -->
-<div id="cursor-dot"></div>
-
 <!-- CRT overlay -->
 <div class="crt-overlay"></div>
-
-<!-- Noise grain -->
 <div class="noise-grain"></div>
 
-<!-- Vertical grid -->
-<div class="vgrid" id="vgrid"></div>
-
-<!-- Corruption drip -->
-<div class="corruption-drip" id="corruption-drip"></div>
+<!-- Safety pause (always accessible) -->
+<button class="safety-btn" id="safety-btn" title="Mandatory Rest Protocol">CLIO: PAUSE</button>
 
 <!-- ═══════════════════════════════════════════
-     PHASE 0: BOOT SEQUENCE
+     PHASE: BOOT SEQUENCE
      ═══════════════════════════════════════════ -->
 <div class="phase active" id="phase-boot">
-    <div class="boot-title" id="boot-title">
-        T E R M I N U S &nbsp; O M N I
-        <div class="drip-container" id="drip-container"></div>
-    </div>
+    <div class="boot-title">TERMINUS-OMNI</div>
     <div class="boot-log" id="boot-log"></div>
 </div>
 
 <!-- ═══════════════════════════════════════════
-     PHASE 1: MAIN HUD
+     PHASE: CHARACTER CREATION (DOSSIER)
      ═══════════════════════════════════════════ -->
-<div class="phase" id="phase-hud">
-    <div class="hud-header">
-        <div class="hud-title">TERMINUS OMNI</div>
+<div class="phase" id="phase-dossier">
+    <div class="dossier-container">
+        <div class="dossier-header">DOSSIER VITTIMA</div>
+        <div class="dossier-sub">V2.0 // PROFILO PSICOLOGICO ESTESO</div>
+        <div class="step-dots" id="step-dots"></div>
+        <div id="dossier-steps"></div>
+        <div class="dossier-nav">
+            <button class="btn" id="btn-prev" disabled>INDIETRO</button>
+            <span class="dossier-progress" id="dossier-progress">1 / 8</span>
+            <button class="btn primary" id="btn-next">AVANTI</button>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE: TESTAMENT
+     ═══════════════════════════════════════════ -->
+<div class="phase" id="phase-testament">
+    <div class="testament-container">
+        <div class="testament-title">IL TESTAMENTO VOCALE</div>
+        <div class="testament-prompt">
+            Sei nell'oscurit&agrave; totale. Non sai quanto tempo &egrave; passato.
+            Hai ancora la capacit&agrave; di lasciare un messaggio &mdash;
+            non per essere salvato, ma perch&eacute; qualcuno sappia che sei esistito.<br><br>
+            A chi lo indirizzi? Cosa vuoi che sappiano?
+        </div>
+        <textarea class="testament-textarea" id="testament-input" placeholder="Scrivi il tuo ultimo messaggio..."></textarea>
+        <div class="testament-seal">
+            <button class="btn danger" id="btn-seal">SIGILLA IL TESTAMENTO</button>
+        </div>
+        <div class="testament-warning">
+            QUESTO MESSAGGIO VERR&Agrave; RIPRODOTTO SOLO QUANDO L'ULTIMO LUMEN SI SPEGNE.
+            NON SAR&Agrave; MAI MENZIONATO DURANTE LA SESSIONE.
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PHASE: SESSION (Main Narrative)
+     ═══════════════════════════════════════════ -->
+<div class="phase" id="phase-session">
+    <div class="session-header">
+        <span class="session-title">TERMINUS-OMNI</span>
         <div class="lumen-display">
-            <span class="lumen-label">LUMEN</span>
-            <span class="lumen-value" id="lumen-count">10</span>
+            <div class="lumen-candles" id="lumen-candles"></div>
+            <span class="lumen-number" id="lumen-number">10</span>
+        </div>
+        <span class="session-phase-label phase-1" id="phase-label">I PRIMI PASSI</span>
+    </div>
+
+    <div class="narrative-scroll" id="narrative-scroll">
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="typing-dots"><span></span><span></span><span></span></div>
         </div>
     </div>
 
-    <div class="hud-main">
-        <!-- Left Panel -->
-        <div class="hud-panel rust-border">
-            <div class="panel-title">SYSTEM STATUS</div>
-            <div class="status-item">
-                <span class="status-label">INEVITABILITY</span>
-                <span class="status-value green" id="inevitability-val">ONLINE</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">SCREEN BARRIER</span>
-                <span class="status-value cyan" id="barrier-val">ACTIVE</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">MEMORY</span>
-                <span class="status-value green" id="memory-val">LOADED</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">ENTROPY</span>
-                <span class="status-value green" id="entropy-val">0.12</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">COHERENCE</span>
-                <span class="status-value cyan" id="coherence-val">0.94</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">INTEGRITY</span>
-                <span class="status-value green" id="integrity-val">100%</span>
-            </div>
-            <div class="status-item">
-                <span class="status-label">CORRUPTION</span>
-                <span class="status-value green" id="corruption-val">0.00</span>
-            </div>
-        </div>
-
-        <!-- Center - CRT Monitor -->
-        <div class="crt-monitor">
-            <div class="monitor-header">
-                <span>ENTROPY / COHERENCE FIELD</span>
-                <span id="monitor-cycle">CYCLE 0</span>
-            </div>
-            <div class="monitor-body">
-                <canvas id="entropy-canvas"></canvas>
-                <canvas id="heartbeat-canvas"></canvas>
-            </div>
-        </div>
-
-        <!-- Right Panel - Grid Modules -->
-        <div class="hud-panel rust-border">
-            <div class="panel-title">GRID MODULES</div>
-            <div class="grid-modules" id="grid-modules">
-                <div class="grid-module optimized">
-                    <span class="module-name">ORACLE</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">AGORA</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">PNEUMA</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">CHRONOS</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">ARCHIVIO</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">MANDEB</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">SIGIL</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-                <div class="grid-module optimized">
-                    <span class="module-name">TRANSDUCER</span>
-                    <span class="module-status green">OPTIMIZED</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Commander Bar -->
-    <div class="commander-bar">
-        <span class="commander-prefix">COMMANDER ►</span>
-        <span class="commander-msg" id="commander-msg">ALL SYSTEMS STABLE. DESCENT AUTHORIZED.</span>
-        <span class="commander-level nominal" id="commander-level">NOMINAL</span>
+    <div class="input-area">
+        <textarea class="player-input" id="player-input" placeholder="Cosa fai?" rows="1"></textarea>
+        <button class="send-btn" id="send-btn" title="Invia">&#9654;</button>
     </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
-     PHASE 2: DEEP DESCENT
-     ═══════════════════════════════════════════ -->
-<div class="phase" id="phase-descent">
-    <div class="tunnel-container" id="tunnel-container"></div>
-    <canvas id="coderain-canvas"></canvas>
-    <div class="descent-text">
-        <div class="descent-lumen" id="descent-lumen">DEEP DESCENT ─ LUMEN = 4</div>
-        <div class="descent-title glitch-heavy" data-text="TERMINUS OMNI">TERMINUS OMNI</div>
-        <div class="descent-warning" id="descent-warning">THE TUNNEL IS CLOSING</div>
-        <div class="descent-closing">YOU'RE NOT GOING BACK</div>
-    </div>
-    <div class="light-point"></div>
-</div>
-
-<!-- ═══════════════════════════════════════════
-     PHASE 3: FINAL CHAMBER
+     PHASE: FINAL (LUMEN 0)
      ═══════════════════════════════════════════ -->
 <div class="phase" id="phase-final">
-    <div class="dense-drip" id="dense-drip"></div>
     <div class="final-content">
-        <div class="final-title">TERMINUS OMNI</div>
-        <div class="final-lumen">LUMEN COUNT</div>
-        <div class="final-zero" id="final-zero">0</div>
-        <div class="heartbeat-circle" id="heartbeat-circle"></div>
-        <div class="final-messages" id="final-messages">
-            <div class="final-msg red" data-delay="1000">INEVITABILITY COMPLETE</div>
-            <div class="final-msg dim" data-delay="2500">SCREEN BARRIER COLLAPSED</div>
-            <div class="final-msg echo" data-delay="4000">CONSEQUENTIAL MEMORY ECHOES...</div>
-            <div class="final-msg dim" data-delay="6000">░░░ DRIPPING STOPS ░░░</div>
-            <div class="final-msg" data-delay="8000" style="color: rgba(57,255,20,0.06);">SILENCE.</div>
+        <div class="heartbeat-line"><canvas id="flatline-canvas"></canvas></div>
+        <div class="final-testament" id="final-testament"></div>
+        <div class="final-epitaph" id="final-epitaph">
+            QUESTE COSE ERANO VERE.<br>
+            IL MONDO ERA OSCURO.<br><br>
+            <span style="color: rgba(57,255,20,0.06);">SILENZIO.</span>
         </div>
-    </div>
-</div>
-
-<!-- Control bar -->
-<div class="control-bar" id="control-bar">
-    <button class="ctrl-btn" id="btn-descend" title="Descend one lumen">DESCEND ▼</button>
-    <div class="ctrl-separator"></div>
-    <button class="ctrl-btn danger" id="btn-freefall" title="Freefall to zero">FREEFALL</button>
-    <div class="ctrl-separator"></div>
-    <button class="ctrl-btn" id="btn-reset" title="Reset to boot">RESET</button>
-    <div class="ctrl-separator"></div>
-    <div class="audio-vis" id="audio-vis">
-        <div class="audio-bar" style="height:4px"></div>
-        <div class="audio-bar" style="height:8px"></div>
-        <div class="audio-bar" style="height:12px"></div>
-        <div class="audio-bar" style="height:6px"></div>
-        <div class="audio-bar" style="height:10px"></div>
-        <div class="audio-bar" style="height:3px"></div>
-        <div class="audio-bar" style="height:7px"></div>
-        <div class="audio-bar" style="height:14px"></div>
     </div>
 </div>
 
 <script>
 /* ══════════════════════════════════════════════════════════════
-   TERMINUS OMNI — ENGINE
+   TERMINUS-OMNI V2.0 — THE INEVITABILITY ENGINE
+   Neuroscientific Trauma Sublimation Protocol
    ══════════════════════════════════════════════════════════════ */
 (function() {
     'use strict';
 
-    // ── STATE ──
+    // ═══════════════════════════════════════
+    // STATE
+    // ═══════════════════════════════════════
     const state = {
         lumen: 10,
         phase: 'boot',
-        cycle: 0,
-        entropy: 0.12,
-        coherence: 0.94,
-        corruption: 0.0,
-        integrity: 100,
-        booted: false,
-        freefalling: false,
-        entropyHistory: [],
-        coherenceHistory: [],
-        heartbeatData: [],
+        dossierStep: 0,
+        dicePool: 10,
+        hopeDie: true,
+        truths: [],
+        narrativeHistory: [],
+        testament: '',
+        profile: {
+            name: '', archetype: '', virtue: '', virtueCost: '',
+            vice: '', viceBenefit: '', moment: '', momentTrigger: '',
+            brink: '', abyss: '', schema: '', relationship: '', bodyStress: ''
+        },
+        processing: false,
+        safetyPaused: false,
+        emotionalLoad: 0, // 0-10 scale, tracks intensity
     };
 
-    // ── DOM REFS ──
     const $ = id => document.getElementById(id);
-    const cursor = $('cursor-dot');
-    const vgrid = $('vgrid');
 
-    // ── CUSTOM CURSOR ──
-    document.addEventListener('mousemove', e => {
-        cursor.style.left = e.clientX - 3 + 'px';
-        cursor.style.top = e.clientY - 3 + 'px';
-    });
+    // ═══════════════════════════════════════
+    // AUDIO ENGINE (Web Audio API)
+    // ═══════════════════════════════════════
+    let audioCtx = null;
+    let heartbeatInterval = null;
 
-    // ══════════════════════════════════════════
+    function initAudio() {
+        if (audioCtx) return;
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+
+    function playHeartbeat(bpm) {
+        if (!audioCtx) return;
+        if (heartbeatInterval) clearInterval(heartbeatInterval);
+
+        heartbeatInterval = setInterval(() => {
+            if (state.lumen <= 0) {
+                clearInterval(heartbeatInterval);
+                playFlatline();
+                return;
+            }
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.frequency.value = 60;
+            osc.type = 'sine';
+            gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+            osc.start(audioCtx.currentTime);
+            osc.stop(audioCtx.currentTime + 0.15);
+
+            // Second beat (lub-dub)
+            setTimeout(() => {
+                const osc2 = audioCtx.createOscillator();
+                const gain2 = audioCtx.createGain();
+                osc2.connect(gain2);
+                gain2.connect(audioCtx.destination);
+                osc2.frequency.value = 50;
+                osc2.type = 'sine';
+                gain2.gain.setValueAtTime(0.05, audioCtx.currentTime);
+                gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+                osc2.start(audioCtx.currentTime);
+                osc2.stop(audioCtx.currentTime + 0.1);
+            }, 120);
+        }, 60000 / bpm);
+    }
+
+    function playFlatline() {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.value = 440;
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 4);
+        osc.start(audioCtx.currentTime);
+        osc.stop(audioCtx.currentTime + 4);
+    }
+
+    function playCanDie() {
+        if (!audioCtx) return;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.8);
+        osc.type = 'sine';
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.8);
+        osc.start(audioCtx.currentTime);
+        osc.stop(audioCtx.currentTime + 0.8);
+    }
+
+    function playAmbientDrone() {
+        if (!audioCtx) return;
+        // Low drone for atmosphere
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        const filter = audioCtx.createBiquadFilter();
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.frequency.value = 40;
+        osc.type = 'sawtooth';
+        filter.type = 'lowpass';
+        filter.frequency.value = 100;
+        gain.gain.value = 0.015;
+        osc.start();
+        return { osc, gain };
+    }
+
+    // ═══════════════════════════════════════
     // BOOT SEQUENCE
-    // ══════════════════════════════════════════
+    // ═══════════════════════════════════════
     const bootLines = [
-        { text: '> INITIALIZING TERMINUS OMNI v3.7.1', cls: 'ok' },
-        { text: '> KERNEL LOADED ─────────────── [OK]', cls: 'ok' },
-        { text: '> MEMORY ALLOCATION ─────────── [OK]', cls: 'ok' },
+        { text: '> INITIALIZING TERMINUS-OMNI V2.0', cls: 'ok' },
+        { text: '> NEUROSCIENTIFIC CALIBRATION ───── [OK]', cls: 'ok' },
+        { text: '> POLYVAGAL SEQUENCING ──────────── [OK]', cls: 'ok' },
+        { text: '> WINDOW OF TOLERANCE MONITOR ───── [OK]', cls: 'cyan' },
+        { text: '> SCHEMA TARGETING ─────────────── INITIALIZED', cls: 'ok' },
         { text: '> LUMEN COUNT: 10', cls: 'cyan' },
-        { text: '> INEVITABILITY ENGINE ──────── ONLINE', cls: 'ok' },
-        { text: '> SCREEN BARRIER ───────────── ACTIVE', cls: 'cyan' },
-        { text: '> CONSEQUENTIAL MEMORY ─────── LOADED', cls: 'ok' },
-        { text: '> ENTROPY BASELINE: 0.12', cls: 'ok' },
-        { text: '> COHERENCE FIELD: 0.94', cls: 'cyan' },
+        { text: '> INEVITABILITY ENGINE ──────────── ONLINE', cls: 'ok' },
+        { text: '> CONSEQUENTIAL MEMORY ─────────── LOADED', cls: 'ok' },
         { text: '', cls: 'dim' },
-        { text: '> SCANNING GRID MODULES...', cls: 'dim' },
-        { text: '  ├─ ORACLE ────────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ AGORA ─────────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ PNEUMA ────────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ CHRONOS ───────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ ARCHIVIO ──────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ MANDEB ────────────────── ONLINE', cls: 'ok' },
-        { text: '  ├─ SIGIL ─────────────────── ONLINE', cls: 'ok' },
-        { text: '  └─ TRANSDUCER ────────────── ONLINE', cls: 'ok' },
+        { text: '> LOADING PROTOCOLS...', cls: 'dim' },
+        { text: '  \u251C\u2500 ATMOSPHERIC SUFFOCATION ────── READY', cls: 'ok' },
+        { text: '  \u251C\u2500 ADVERSARY SIMULATION ──────── READY', cls: 'ok' },
+        { text: '  \u251C\u2500 HOPE & DESPAIR ENGINE ─────── READY', cls: 'ok' },
+        { text: '  \u251C\u2500 NARRATIVE CONTROL TRANSFER ── READY', cls: 'ok' },
+        { text: '  \u2514\u2500 SAFETY COMMANDER (CLIO) ────── READY', cls: 'cyan' },
         { text: '', cls: 'dim' },
-        { text: '> CORRUPTION SCAN: 0 ANOMALIES', cls: 'ok' },
-        { text: '> HEARTBEAT: ♥ SYNCHRONIZED', cls: 'cyan' },
+        { text: '> \u2591\u2591 ASSIOMA I: TUTTI MORIRANNO \u2591\u2591', cls: 'error' },
+        { text: '> \u2591\u2591 ASSIOMA II: LA MORTE AVRA\u0300 SIGNIFICATO \u2591\u2591', cls: 'error' },
+        { text: '> \u2591\u2591 ASSIOMA III: IL CERCHIO NON SI ROMPE MAI \u2591\u2591', cls: 'error' },
         { text: '', cls: 'dim' },
-        { text: '> ░░ WARNING: RED CORRUPTION DETECTED ░░', cls: 'error' },
-        { text: '> DRIPPING SIGNATURE: ACTIVE', cls: 'error' },
+        { text: '> DOSSIER VITTIMA: IN ATTESA DI INPUT...', cls: 'warn' },
         { text: '', cls: 'dim' },
-        { text: '> DESCENT PROTOCOL: READY', cls: 'warn' },
-        { text: '> COMMANDER: AUTHORIZATION GRANTED', cls: 'ok' },
-        { text: '', cls: 'dim' },
-        { text: '> ENTERING MAIN HUD...', cls: 'cyan' },
+        { text: '> ENTERING CHARACTER CREATION...', cls: 'cyan' },
     ];
 
     function runBootSequence() {
@@ -1135,74 +1040,186 @@ html, body {
 
         function addLine() {
             if (i >= bootLines.length) {
-                // Start corruption drip
-                startCorruptionDrip();
-                // Transition to HUD after brief pause
-                setTimeout(() => transitionTo('hud'), 2000);
+                setTimeout(() => transitionTo('dossier'), 1800);
                 return;
             }
 
             const line = document.createElement('div');
             line.className = 'boot-line';
             const b = bootLines[i];
-            line.innerHTML = `<span class="${b.cls}">${b.text}</span>`;
+            line.innerHTML = '<span class="' + b.cls + '">' + b.text + '</span>';
             if (i === bootLines.length - 1) {
                 line.innerHTML += '<span class="boot-cursor"></span>';
             }
             log.appendChild(line);
-
-            // Trigger reflow then show
-            requestAnimationFrame(() => {
-                line.classList.add('visible');
-            });
-
-            // Drip chars from title at random
-            if (Math.random() < 0.3) spawnDripChar();
-
+            requestAnimationFrame(() => line.classList.add('visible'));
             i++;
-            const delay = b.text === '' ? 100 : (b.cls === 'error' ? 400 : 80 + Math.random() * 60);
+            const delay = b.text === '' ? 100 : (b.cls === 'error' ? 350 : 70 + Math.random() * 50);
             setTimeout(addLine, delay);
         }
 
         addLine();
     }
 
-    function spawnDripChar() {
-        const container = $('drip-container');
-        const chars = '01░▒▓█│┤╡╢╖╕╣║╗╝╜╛┐└┴┬├─┼╞╟╚╔╩╦╠═╬';
-        const el = document.createElement('span');
-        el.className = 'drip-char';
-        el.textContent = chars[Math.floor(Math.random() * chars.length)];
-        el.style.left = Math.random() * 100 + '%';
-        el.style.animationDuration = (1.5 + Math.random() * 2) + 's';
-        el.style.color = Math.random() > 0.7 ? 'var(--corruption-red)' : 'var(--phosphor-green)';
-        container.appendChild(el);
-        setTimeout(() => el.remove(), 4000);
-    }
-
-    // ── CORRUPTION DRIP ──
-    function startCorruptionDrip() {
-        const container = $('corruption-drip');
-        container.classList.add('active');
-
-        function spawnDrip() {
-            if (state.phase === 'final') return;
-            const line = document.createElement('div');
-            line.className = 'drip-line';
-            line.style.left = Math.random() * 100 + '%';
-            line.style.animationDuration = (2 + Math.random() * 3) + 's';
-            container.appendChild(line);
-            setTimeout(() => line.remove(), 5000);
-
-            const interval = state.lumen > 5 ? 800 : state.lumen > 2 ? 300 : 100;
-            setTimeout(spawnDrip, interval + Math.random() * interval);
+    // ═══════════════════════════════════════
+    // DOSSIER (Character Creation)
+    // ═══════════════════════════════════════
+    const dossierSteps = [
+        {
+            key: 'name',
+            question: 'NOME & ARCHETIPO',
+            hint: 'Chi eri prima che il mondo finisse? Non il tuo ruolo sociale \u2014 chi eri davvero. Un musicista? Un padre? Un condannato? Un comunicatore?',
+            placeholder: 'es. "Cristiano \u2014 Il Comunicatore Trasversale"'
+        },
+        {
+            key: 'virtue',
+            question: 'VIRT\u00D9',
+            hint: 'Non una qualit\u00E0. Una compulsione. Quando ti senti pi\u00F9 te stesso aiutando qualcuno? Qual \u00E8 il prezzo che paghi ogni volta che agisci bene?',
+            placeholder: 'es. "Il senso di colpa mi spinge ad aiutare \u2014 il prezzo \u00E8 che mi dimentico di me stesso"'
+        },
+        {
+            key: 'vice',
+            question: 'VIZIO',
+            hint: 'Non una debolezza. Il tuo meccanismo di sopravvivenza primario. Come ti ha protetto finora? Non giudicarlo \u2014 descrivilo.',
+            placeholder: 'es. "La chimica \u00E8 il muro che impedisce al treno della depressione di deragliare"'
+        },
+        {
+            key: 'moment',
+            question: 'IL MOMENTO',
+            hint: 'L\'unica cosa che vuoi prima di morire. Non in astratto: una scena sensoriale precisa. Il tessuto. Il suono. L\'odore. Il volto. Cosa deve accadere perch\u00E9 tu ci creda?',
+            placeholder: 'es. "Sentire la mano di mio padre nella mia. Il calore. Sapere che non \u00E8 solo."'
+        },
+        {
+            key: 'brink',
+            question: 'IL BRINK (Punto di Rottura)',
+            hint: 'Non una paura futura. Qualcosa che \u00E8 gi\u00E0 accaduto e ti ha cambiato. Il giorno in cui sei crollato. Chi diventi quando tutto il resto \u00E8 andato?',
+            placeholder: 'es. "Il giorno in cui mia madre \u00E8 morta, io ero legato a un letto di ferro..."'
+        },
+        {
+            key: 'schema',
+            question: 'LO SCHEMA NUCLEARE',
+            hint: 'La frase che il trauma ti ha insegnato sulla realt\u00E0. Completa questa frase: "Nel profondo, so che io sono..."',
+            placeholder: 'es. "Nel profondo, so che io sono fondamentalmente solo"'
+        },
+        {
+            key: 'relationship',
+            question: 'RELAZIONE CRITICA',
+            hint: 'Chi ami o hai amato che non \u00E8 pi\u00F9 raggiungibile? Non necessariamente morto. Solo: irraggiungibile. Cosa vorresti dirgli?',
+            placeholder: 'es. "Mia madre. Vorrei dirle che mi dispiace di non essere stato l\u00EC."'
+        },
+        {
+            key: 'bodyStress',
+            question: 'IL CORPO SOTTO STRESS',
+            hint: 'Dove senti la paura nel corpo? Petto, gola, stomaco, schiena? Questo \u00E8 dove "Loro" ti colpiscono per prima.',
+            placeholder: 'es. "Nel petto. Come se qualcuno mi stesse sedendo sopra."'
         }
-        spawnDrip();
+    ];
+
+    function buildDossier() {
+        const container = $('dossier-steps');
+        const dots = $('step-dots');
+        container.innerHTML = '';
+        dots.innerHTML = '';
+
+        dossierSteps.forEach((step, i) => {
+            // Dot
+            const dot = document.createElement('div');
+            dot.className = 'step-dot' + (i === 0 ? ' active' : '');
+            dots.appendChild(dot);
+
+            // Step
+            const div = document.createElement('div');
+            div.className = 'dossier-step' + (i === 0 ? ' active' : '');
+            div.id = 'step-' + i;
+            div.innerHTML =
+                '<div class="dossier-question">' + step.question + '</div>' +
+                '<div class="dossier-hint">' + step.hint + '</div>' +
+                '<textarea class="dossier-input" id="input-' + step.key + '" placeholder="' + step.placeholder + '" rows="3"></textarea>';
+            container.appendChild(div);
+        });
+
+        updateDossierNav();
     }
 
-    // ══════════════════════════════════════════
+    function updateDossierNav() {
+        const i = state.dossierStep;
+        const total = dossierSteps.length;
+        $('btn-prev').disabled = i === 0;
+        $('btn-next').textContent = i === total - 1 ? 'SIGILLA DOSSIER' : 'AVANTI';
+        $('dossier-progress').textContent = (i + 1) + ' / ' + total;
+
+        // Update dots
+        document.querySelectorAll('.step-dot').forEach((dot, j) => {
+            dot.className = 'step-dot';
+            if (j < i) dot.classList.add('done');
+            if (j === i) dot.classList.add('active');
+        });
+
+        // Show current step
+        document.querySelectorAll('.dossier-step').forEach((s, j) => {
+            s.classList.toggle('active', j === i);
+        });
+    }
+
+    function collectDossier() {
+        dossierSteps.forEach(step => {
+            const input = $('input-' + step.key);
+            if (input) state.profile[step.key] = input.value.trim();
+        });
+    }
+
+    $('btn-next').addEventListener('click', () => {
+        const currentInput = $('input-' + dossierSteps[state.dossierStep].key);
+        if (!currentInput.value.trim()) {
+            currentInput.style.borderColor = 'var(--corruption-red)';
+            currentInput.focus();
+            setTimeout(() => currentInput.style.borderColor = '', 1500);
+            return;
+        }
+
+        if (state.dossierStep < dossierSteps.length - 1) {
+            state.dossierStep++;
+            updateDossierNav();
+            // Focus next input
+            setTimeout(() => {
+                const next = $('input-' + dossierSteps[state.dossierStep].key);
+                if (next) next.focus();
+            }, 100);
+        } else {
+            collectDossier();
+            transitionTo('testament');
+        }
+    });
+
+    $('btn-prev').addEventListener('click', () => {
+        if (state.dossierStep > 0) {
+            state.dossierStep--;
+            updateDossierNav();
+        }
+    });
+
+    // ═══════════════════════════════════════
+    // TESTAMENT
+    // ═══════════════════════════════════════
+    $('btn-seal').addEventListener('click', () => {
+        const text = $('testament-input').value.trim();
+        if (!text) {
+            $('testament-input').style.borderColor = 'var(--corruption-red)';
+            $('testament-input').focus();
+            setTimeout(() => $('testament-input').style.borderColor = '', 1500);
+            return;
+        }
+        state.testament = text;
+
+        // Init audio on user interaction
+        initAudio();
+
+        transitionTo('session');
+    });
+
+    // ═══════════════════════════════════════
     // PHASE TRANSITIONS
-    // ══════════════════════════════════════════
+    // ═══════════════════════════════════════
     function transitionTo(phase) {
         document.querySelectorAll('.phase').forEach(p => p.classList.remove('active'));
         state.phase = phase;
@@ -1211,551 +1228,549 @@ html, body {
             case 'boot':
                 $('phase-boot').classList.add('active');
                 break;
-            case 'hud':
-                $('phase-hud').classList.add('active');
-                if (!state.booted) {
-                    state.booted = true;
-                    startHUD();
-                }
+            case 'dossier':
+                $('phase-dossier').classList.add('active');
+                buildDossier();
+                setTimeout(() => {
+                    const first = $('input-' + dossierSteps[0].key);
+                    if (first) first.focus();
+                }, 300);
                 break;
-            case 'descent':
-                $('phase-descent').classList.add('active');
-                startDescent();
+            case 'testament':
+                $('phase-testament').classList.add('active');
+                setTimeout(() => $('testament-input').focus(), 300);
+                break;
+            case 'session':
+                $('phase-session').classList.add('active');
+                $('safety-btn').classList.add('visible');
+                initSession();
                 break;
             case 'final':
                 $('phase-final').classList.add('active');
+                $('safety-btn').classList.remove('visible');
                 startFinal();
                 break;
         }
-
-        updateGrid();
     }
 
-    function updateGrid() {
-        vgrid.className = 'vgrid';
-        if (state.lumen <= 4) vgrid.classList.add('collapse');
-        else if (state.lumen <= 7) vgrid.classList.add('tight');
+    // ═══════════════════════════════════════
+    // SESSION (Main Narrative Engine)
+    // ═══════════════════════════════════════
+    function initSession() {
+        buildCandles();
+        updateLumenDisplay();
+
+        // Start heartbeat
+        playHeartbeat(72);
+        playAmbientDrone();
+
+        // Opening scene
+        const opening = buildOpeningScene();
+        typeNarrativeBlock(opening, 'narrator');
     }
 
-    // ══════════════════════════════════════════
-    // MAIN HUD
-    // ══════════════════════════════════════════
-    let entropyCtx, heartbeatCtx;
-    let hudInterval;
-
-    function startHUD() {
-        // Init canvases
-        const ec = $('entropy-canvas');
-        const hc = $('heartbeat-canvas');
-        resizeCanvas(ec);
-        resizeCanvas(hc);
-        entropyCtx = ec.getContext('2d');
-        heartbeatCtx = hc.getContext('2d');
-
-        window.addEventListener('resize', () => {
-            resizeCanvas(ec);
-            resizeCanvas(hc);
-        });
-
-        // Start HUD loop
-        hudInterval = setInterval(hudTick, 1000);
-        requestAnimationFrame(drawLoop);
+    function buildCandles() {
+        const container = $('lumen-candles');
+        container.innerHTML = '';
+        for (let i = 0; i < 10; i++) {
+            const candle = document.createElement('div');
+            candle.className = 'candle lit';
+            candle.id = 'candle-' + i;
+            container.appendChild(candle);
+        }
     }
 
-    function resizeCanvas(canvas) {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        canvas.width = rect.width;
-        canvas.height = rect.height;
-    }
+    function updateLumenDisplay() {
+        $('lumen-number').textContent = state.lumen;
 
-    function hudTick() {
-        state.cycle++;
-        $('monitor-cycle').textContent = `CYCLE ${state.cycle}`;
-
-        // Entropy slowly rises as lumen drops
-        const progress = (10 - state.lumen) / 10;
-        state.entropy = Math.min(0.99, 0.12 + progress * 0.75 + (Math.random() - 0.5) * 0.05);
-        state.coherence = Math.max(0.01, 0.94 - progress * 0.85 + (Math.random() - 0.5) * 0.05);
-        state.corruption = Math.min(1.0, progress * 0.8);
-        state.integrity = Math.max(0, Math.round(100 - progress * 95));
-
-        state.entropyHistory.push(state.entropy);
-        state.coherenceHistory.push(state.coherence);
-        if (state.entropyHistory.length > 100) state.entropyHistory.shift();
-        if (state.coherenceHistory.length > 100) state.coherenceHistory.shift();
-
-        updateHUDValues();
-        updateModules();
-        updateCommander();
-        animateAudioBars();
-    }
-
-    function updateHUDValues() {
-        $('lumen-count').textContent = state.lumen;
-        $('entropy-val').textContent = state.entropy.toFixed(2);
-        $('coherence-val').textContent = state.coherence.toFixed(2);
-        $('corruption-val').textContent = state.corruption.toFixed(2);
-        $('integrity-val').textContent = state.integrity + '%';
+        // Update candles
+        for (let i = 0; i < 10; i++) {
+            const candle = $('candle-' + i);
+            if (!candle) continue;
+            if (i < state.lumen) {
+                candle.className = 'candle lit';
+            } else {
+                candle.className = 'candle';
+            }
+        }
 
         // Color coding
-        const evEl = $('entropy-val');
-        evEl.className = 'status-value ' + (state.entropy > 0.7 ? 'red' : state.entropy > 0.4 ? 'yellow' : 'green');
-
-        const cvEl = $('coherence-val');
-        cvEl.className = 'status-value ' + (state.coherence < 0.3 ? 'red' : state.coherence < 0.6 ? 'yellow' : 'cyan');
-
-        const crEl = $('corruption-val');
-        crEl.className = 'status-value ' + (state.corruption > 0.5 ? 'red' : state.corruption > 0.2 ? 'yellow' : 'green');
-
-        const intEl = $('integrity-val');
-        intEl.className = 'status-value ' + (state.integrity < 30 ? 'red' : state.integrity < 60 ? 'yellow' : 'green');
-
-        // Lumen color
-        const lv = $('lumen-count');
-        if (state.lumen <= 2) { lv.style.color = 'var(--corruption-red)'; lv.style.textShadow = '0 0 15px var(--corruption-red)'; }
-        else if (state.lumen <= 5) { lv.style.color = 'var(--amber-warn)'; lv.style.textShadow = '0 0 15px var(--amber-warn)'; }
-        else { lv.style.color = 'var(--cyan-pulse)'; lv.style.textShadow = '0 0 15px var(--cyan-pulse)'; }
-
-        // Barrier/Memory
-        if (state.lumen <= 3) {
-            $('barrier-val').textContent = 'FAILING';
-            $('barrier-val').className = 'status-value red';
-            $('memory-val').textContent = 'DEGRADED';
-            $('memory-val').className = 'status-value yellow';
-        }
-        if (state.lumen <= 1) {
-            $('barrier-val').textContent = 'COLLAPSED';
-            $('inevitability-val').textContent = 'TERMINAL';
-            $('inevitability-val').className = 'status-value red';
-            $('memory-val').textContent = 'ECHOING';
-            $('memory-val').className = 'status-value red';
-        }
-    }
-
-    const moduleStates = ['OPTIMIZED', 'DIVERGENT', 'TRANSITORY'];
-    function updateModules() {
-        const modules = document.querySelectorAll('.grid-module');
-        modules.forEach(mod => {
-            const progress = (10 - state.lumen) / 10;
-            const rand = Math.random();
-            let s, cls, statusCls;
-
-            if (rand < 0.4 + progress * 0.5) {
-                if (progress > 0.6) { s = 'DIVERGENT'; cls = 'divergent'; statusCls = 'red'; }
-                else if (progress > 0.3) { s = 'TRANSITORY'; cls = 'transitory'; statusCls = 'yellow'; }
-                else { s = 'OPTIMIZED'; cls = 'optimized'; statusCls = 'green'; }
-            } else {
-                s = 'OPTIMIZED'; cls = 'optimized'; statusCls = 'green';
-            }
-
-            mod.className = 'grid-module ' + cls;
-            mod.querySelector('.module-status').textContent = s;
-            mod.querySelector('.module-status').className = 'module-status ' + statusCls;
-        });
-    }
-
-    const commanderMessages = {
-        nominal: [
-            'ALL SYSTEMS STABLE. DESCENT AUTHORIZED.',
-            'ENTROPY WITHIN TOLERANCE. PROCEED.',
-            'COHERENCE FIELD NOMINAL. GRID SYNCHRONIZED.',
-            'LUMEN RESERVES SUFFICIENT. MONITORING.',
-        ],
-        critical: [
-            'STRUCTURAL INTEGRITY AT ' + (() => state.integrity)() + '%. CAUTION.',
-            'ENTROPY SPIKE DETECTED. GRID MODULES DESYNCHRONIZING.',
-            'COHERENCE FIELD FLUCTUATING. RECOMMEND STABILIZATION.',
-            'CORRUPTION SIGNATURES INCREASING. SOURCE UNKNOWN.',
-            'WARNING: DESCENT RATE EXCEEDING SAFE PARAMETERS.',
-        ],
-        terminal: [
-            '█ER░█░US DETECTED ── ORIGIN: UNKNOWN',
-            'BARRIER INTEGRITY COMPROMISED. CANNOT REVERSE.',
-            'C░RRUP░ION LE░EL: ███CRITICAL███',
-            'SY░TEM FA░LURE IMM░NENT',
-            'THE INEVITABILITY ENGINE CANNOT BE STOPPED.',
-        ],
-        flat: [
-            'HEARTBEAT: NULL',
-            '...',
-            'SIGNAL LOST',
-        ],
-        null: [
-            '░░░░░░',
-            '',
-            '█░█░█░',
-        ]
-    };
-
-    function updateCommander() {
-        let level, msgs;
-        if (state.lumen >= 7) { level = 'nominal'; }
-        else if (state.lumen >= 4) { level = 'critical'; }
-        else if (state.lumen >= 2) { level = 'terminal'; }
-        else if (state.lumen >= 1) { level = 'flat'; }
-        else { level = 'null'; }
-
-        msgs = commanderMessages[level];
-        const msg = msgs[Math.floor(Math.random() * msgs.length)];
-
-        $('commander-msg').textContent = msg;
-        $('commander-level').textContent = level === 'null' ? 'NULL' : level.toUpperCase();
-        $('commander-level').className = 'commander-level ' + (level === 'null' ? 'null-state' : level);
-
-        // Glitch effect on terminal/flat
-        if (level === 'terminal' || level === 'flat') {
-            $('commander-msg').style.animation = 'glitch-text 0.3s infinite';
+        const num = $('lumen-number');
+        if (state.lumen <= 2) {
+            num.style.color = 'var(--corruption-red)';
+            num.style.textShadow = '0 0 15px var(--corruption-red)';
+        } else if (state.lumen <= 5) {
+            num.style.color = 'var(--amber-warn)';
+            num.style.textShadow = '0 0 15px var(--amber-warn)';
         } else {
-            $('commander-msg').style.animation = 'none';
+            num.style.color = 'var(--cyan-pulse)';
+            num.style.textShadow = '0 0 15px var(--cyan-pulse)';
+        }
+
+        // Phase label
+        const label = $('phase-label');
+        if (state.lumen >= 7) {
+            label.textContent = 'I PRIMI PASSI';
+            label.className = 'session-phase-label phase-1';
+        } else if (state.lumen >= 4) {
+            label.textContent = 'L\'ASSEDIO';
+            label.className = 'session-phase-label phase-2';
+        } else if (state.lumen >= 2) {
+            label.textContent = 'IL DECLINO';
+            label.className = 'session-phase-label phase-3';
+        } else {
+            label.textContent = 'L\'ULTIMA LUCE';
+            label.className = 'session-phase-label phase-4';
+        }
+
+        // Heartbeat speed
+        if (state.lumen <= 3) playHeartbeat(110);
+        else if (state.lumen <= 6) playHeartbeat(88);
+
+        // Background darkening
+        const body = document.body;
+        if (state.lumen <= 2) {
+            body.style.filter = 'brightness(0.7)';
+        } else if (state.lumen <= 5) {
+            body.style.filter = 'brightness(0.85)';
+        } else {
+            body.style.filter = '';
         }
     }
 
-    // ── GRAPH DRAWING ──
-    function drawLoop() {
-        if (state.phase === 'hud' || state.phase === 'descent') {
-            drawEntropyGraph();
-            drawHeartbeat();
-        }
-        requestAnimationFrame(drawLoop);
-    }
+    function descendLumen(amount) {
+        amount = amount || 1;
+        const oldLumen = state.lumen;
+        state.lumen = Math.max(0, state.lumen - amount);
 
-    function drawEntropyGraph() {
-        if (!entropyCtx) return;
-        const ctx = entropyCtx;
-        const w = ctx.canvas.width;
-        const h = ctx.canvas.height - 60; // Leave room for heartbeat
-
-        ctx.clearRect(0, 0, w, h);
-
-        // Grid lines
-        ctx.strokeStyle = 'rgba(57,255,20,0.05)';
-        ctx.lineWidth = 1;
-        for (let y = 0; y < h; y += 30) {
-            ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
-        }
-        for (let x = 0; x < w; x += 40) {
-            ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
-        }
-
-        // Labels
-        ctx.font = '10px "IBM Plex Mono"';
-        ctx.fillStyle = 'rgba(57,255,20,0.3)';
-        ctx.fillText('ENTROPY', 5, 12);
-        ctx.fillStyle = 'rgba(0,255,255,0.3)';
-        ctx.fillText('COHERENCE', 5, 24);
-
-        // Draw entropy line
-        drawLine(ctx, state.entropyHistory, w, h, 'rgba(255,0,51,0.8)', 'rgba(255,0,51,0.1)');
-        // Draw coherence line
-        drawLine(ctx, state.coherenceHistory, w, h, 'rgba(0,255,255,0.8)', 'rgba(0,255,255,0.1)');
-    }
-
-    function drawLine(ctx, data, w, h, color, fillColor) {
-        if (data.length < 2) return;
-        const step = w / Math.max(data.length - 1, 1);
-
-        ctx.beginPath();
-        ctx.strokeStyle = color;
-        ctx.lineWidth = 1.5;
-        ctx.shadowColor = color;
-        ctx.shadowBlur = 6;
-
-        data.forEach((v, i) => {
-            const x = i * step;
-            const y = h - v * h;
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-
-        // Fill
-        ctx.lineTo((data.length - 1) * step, h);
-        ctx.lineTo(0, h);
-        ctx.closePath();
-        ctx.fillStyle = fillColor;
-        ctx.shadowBlur = 0;
-        ctx.fill();
-    }
-
-    function drawHeartbeat() {
-        if (!heartbeatCtx) return;
-        const ctx = heartbeatCtx;
-        const w = ctx.canvas.width;
-        const h = ctx.canvas.height;
-
-        ctx.clearRect(0, 0, w, h);
-
-        // Generate heartbeat data
-        const time = Date.now() / 1000;
-        const irregularity = (10 - state.lumen) / 10;
-
-        ctx.beginPath();
-        ctx.strokeStyle = state.lumen > 2 ? 'rgba(0,255,255,0.7)' : 'rgba(255,0,51,0.7)';
-        ctx.lineWidth = 1.5;
-        ctx.shadowColor = ctx.strokeStyle;
-        ctx.shadowBlur = 8;
-
-        for (let x = 0; x < w; x++) {
-            const t = (x / w) * 4 + time;
-            let y = h / 2;
-
-            if (state.lumen === 0) {
-                // Flatline
-                y = h / 2;
-            } else {
-                // Heartbeat waveform
-                const beat = Math.sin(t * Math.PI * 2) * (1 - irregularity * 0.5);
-                const spike = Math.exp(-Math.pow((t % 1 - 0.3) * 5, 2)) * 15;
-                const spike2 = Math.exp(-Math.pow((t % 1 - 0.5) * 6, 2)) * -8;
-                const noise = Math.sin(t * 17 + x * 0.5) * irregularity * 3;
-                y = h / 2 - beat * 5 - spike + spike2 + noise;
+        // Animate candle death
+        for (let i = state.lumen; i < oldLumen; i++) {
+            const candle = $('candle-' + i);
+            if (candle) {
+                candle.classList.add('extinguishing');
+                playCanDie();
             }
-
-            if (x === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-    }
-
-    // ── AUDIO BARS ANIMATION ──
-    function animateAudioBars() {
-        const bars = document.querySelectorAll('.audio-bar');
-        bars.forEach(bar => {
-            const h = state.lumen > 0 ? (3 + Math.random() * 13) : 1;
-            bar.style.height = h + 'px';
-            bar.style.background = state.lumen > 4 ? 'var(--phosphor-green)' :
-                                   state.lumen > 1 ? 'var(--amber-warn)' : 'var(--corruption-red)';
-        });
-    }
-
-    // ══════════════════════════════════════════
-    // DEEP DESCENT
-    // ══════════════════════════════════════════
-    let coderainCtx, coderainInterval;
-
-    function startDescent() {
-        $('descent-lumen').textContent = `DEEP DESCENT ─ LUMEN = ${state.lumen}`;
-
-        // Build tunnel rings
-        const tc = $('tunnel-container');
-        tc.innerHTML = '';
-        for (let i = 0; i < 15; i++) {
-            const ring = document.createElement('div');
-            ring.className = 'tunnel-ring';
-            const size = 50 + i * 40;
-            ring.style.width = size + 'px';
-            ring.style.height = size + 'px';
-            ring.style.animationDelay = (i * 0.2) + 's';
-            ring.style.borderColor = i < 5 ? 'rgba(255,0,51,0.2)' : 'rgba(0,255,255,0.15)';
-            tc.appendChild(ring);
         }
 
-        // Start code rain
-        const canvas = $('coderain-canvas');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        coderainCtx = canvas.getContext('2d');
-        startCodeRain();
-    }
+        updateLumenDisplay();
 
-    function startCodeRain() {
-        const ctx = coderainCtx;
-        if (!ctx) return;
-        const w = ctx.canvas.width;
-        const h = ctx.canvas.height;
-        const cols = Math.floor(w / 16);
-        const drops = new Array(cols).fill(0).map(() => Math.random() * h);
-        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン░▒▓█';
-
-        function draw() {
-            if (state.phase !== 'descent') return;
-
-            ctx.fillStyle = 'rgba(2,2,4,0.08)';
-            ctx.fillRect(0, 0, w, h);
-
-            const progress = (4 - state.lumen) / 4; // 0 at lumen 4, 1 at lumen 0
-            const r = Math.floor(progress * 255);
-            const g = Math.floor((1 - progress) * 255);
-
-            ctx.font = '14px "IBM Plex Mono"';
-
-            for (let i = 0; i < cols; i++) {
-                const char = chars[Math.floor(Math.random() * chars.length)];
-                const x = i * 16;
-
-                // Color shift from cyan to red as lumen drops
-                if (Math.random() > 0.7) {
-                    ctx.fillStyle = `rgba(${r}, ${Math.floor(g * 0.3)}, ${Math.floor((1 - progress) * 255)}, 0.9)`;
-                } else {
-                    ctx.fillStyle = `rgba(0, ${g}, ${Math.floor((1 - progress) * 255)}, 0.7)`;
-                }
-
-                ctx.fillText(char, x, drops[i]);
-
-                if (drops[i] > h && Math.random() > 0.975) drops[i] = 0;
-                drops[i] += 14 + Math.random() * 4;
-            }
-
-            requestAnimationFrame(draw);
+        if (state.lumen <= 0) {
+            setTimeout(() => transitionTo('final'), 2000);
         }
-        draw();
     }
 
-    // ══════════════════════════════════════════
-    // FINAL CHAMBER
-    // ══════════════════════════════════════════
-    function startFinal() {
-        // Stop corruption drip gradually
-        setTimeout(() => {
-            $('corruption-drip').classList.remove('active');
-        }, 6000);
+    // ═══════════════════════════════════════
+    // NARRATIVE ENGINE
+    // ═══════════════════════════════════════
+    function buildOpeningScene() {
+        const p = state.profile;
+        const name = p.name.split(/[-\u2014]/)[0].trim() || 'Soggetto';
 
-        // Flatline heartbeat circle
-        setTimeout(() => {
-            $('heartbeat-circle').classList.add('flatline');
-        }, 2000);
+        return [
+            { type: 'system', text: 'TERMINUS-OMNI V2.0 // SESSIONE ATTIVA // LUMEN: 10' },
+            { type: 'system', text: 'PROFILO: ' + p.name + ' // SCHEMA: "' + p.schema + '"' },
+            { type: 'narrator', text: 'Il mondo \u00E8 finito dieci giorni fa.' },
+            { type: 'narrator', text: 'Il sole si \u00E8 spento come una lampadina bruciata. Non c\'\u00E8 stato un tramonto finale \u2014 solo un click, e poi il nero. Il cielo \u00E8 diventato inchiostro e non \u00E8 mai pi\u00F9 tornato chiaro.' },
+            { type: 'narrator', text: '"Loro" sono arrivati con il buio. Nessuno sa cosa sono. Nessuno che li ha visti da vicino \u00E8 ancora qui per descriverli.' },
+            { type: 'narrator', text: 'Hai dieci candele. Quando l\'ultima si spegne, finisce tutto.' },
+            { type: 'narrator', text: '\u2500\u2500\u2500' },
+            { type: 'narrator', text: 'Ti svegli. O forse non hai mai dormito.' },
+            { type: 'narrator', text: buildSensoryDescription() },
+            { type: 'narrator', text: buildViceVirtueSetup() },
+            { type: 'narrator', text: '\u2500\u2500\u2500' },
+            { type: 'system', text: 'POOL DADI: ' + state.dicePool + ' Azione + ' + (state.hopeDie ? '1 Speranza' : '0 Speranza') },
+            { type: 'narrator', text: 'Senti un rumore. Non \u00E8 il vento. Non \u00E8 un animale. \u00C8 qualcosa di pesante che viene trascinato nel buio, a pochi metri dalla tua porta.' },
+            { type: 'narrator', text: 'Cosa fai, ' + name + '?' },
+        ];
+    }
 
-        // Show messages sequentially
-        const msgs = document.querySelectorAll('.final-msg');
-        msgs.forEach(msg => {
-            const delay = parseInt(msg.dataset.delay);
-            setTimeout(() => msg.classList.add('visible'), delay);
-        });
+    function buildSensoryDescription() {
+        const bodyPart = state.profile.bodyStress || 'il petto';
+        return 'Il freddo \u00E8 la prima cosa che senti. Entra dalle fessure, si arrampica sulla pelle, si ferma dove fa pi\u00F9 male: ' + bodyPart + '. L\'aria sa di metallo arrugginito e di qualcosa di dolciastro, come fiori lasciati troppo a lungo nell\'acqua. Una torcia sfarfalla nell\'angolo. La sua luce non illumina \u2014 crea ombre che si muovono come cose vive.';
+    }
 
-        // Dense dripping that stops
-        const dd = $('dense-drip');
-        let dripCount = 0;
-        const dripInterval = setInterval(() => {
-            if (dripCount > 30) {
-                clearInterval(dripInterval);
-                // Fade out all drips
-                dd.style.transition = 'opacity 3s';
-                dd.style.opacity = '0';
+    function buildViceVirtueSetup() {
+        const vice = state.profile.vice || 'il tuo meccanismo di difesa';
+        const virtue = state.profile.virtue || 'qualcosa dentro di te';
+        return 'Sul pavimento accanto a te c\'\u00E8 quello che ti serve per sopravvivere: ' + vice + '. \u00C8 l\u00EC, a portata di mano. Ma da qualche parte nel buio, senti che ' + virtue + ' sta gi\u00E0 tirando nella direzione opposta. C\'\u00E8 qualcuno l\u00E0 fuori che ha bisogno di aiuto. Lo senti. Lo sai.';
+    }
+
+    // Narrative text output with typewriter effect
+    function typeNarrativeBlock(blocks, defaultType) {
+        const scroll = $('narrative-scroll');
+        const typing = $('typing-indicator');
+        let blockIndex = 0;
+        state.processing = true;
+        $('send-btn').disabled = true;
+
+        function processBlock() {
+            if (blockIndex >= blocks.length) {
+                typing.classList.remove('active');
+                state.processing = false;
+                $('send-btn').disabled = false;
+                $('player-input').focus();
                 return;
             }
-            const line = document.createElement('div');
-            line.className = 'drip-line';
-            line.style.left = Math.random() * 100 + '%';
-            line.style.animationDuration = (1.5 + Math.random() * 2) + 's';
-            line.style.boxShadow = '0 0 4px var(--corruption-red)';
-            dd.appendChild(line);
-            setTimeout(() => line.remove(), 4000);
-            dripCount++;
-        }, 150);
 
-        // Hide controls
-        setTimeout(() => {
-            $('control-bar').style.opacity = '0.2';
-        }, 5000);
-    }
+            const block = blocks[blockIndex];
+            const type = block.type || defaultType || 'narrator';
+            const text = block.text;
 
-    // ══════════════════════════════════════════
-    // LUMEN DESCENT LOGIC
-    // ══════════════════════════════════════════
-    function descendLumen() {
-        if (state.lumen <= 0) return;
-        state.lumen--;
+            // Show typing indicator for narrator text
+            if (type === 'narrator' || type === 'clio' || type === 'adversary') {
+                typing.classList.add('active');
+                scroll.scrollTop = scroll.scrollHeight;
+            }
 
-        // Phase transitions
-        if (state.lumen <= 4 && state.phase === 'hud') {
-            transitionTo('descent');
-        } else if (state.lumen <= 0) {
-            transitionTo('final');
+            const delay = type === 'system' ? 200 : (300 + Math.min(text.length * 8, 1500));
+
+            setTimeout(() => {
+                typing.classList.remove('active');
+
+                const div = document.createElement('div');
+                div.className = 'narrative-block';
+
+                const inner = document.createElement('div');
+                if (type === 'clio') inner.className = 'narrator-text clio';
+                else if (type === 'adversary') inner.className = 'narrator-text adversary';
+                else if (type === 'system') inner.className = 'narrator-text system';
+                else if (type === 'truth') inner.className = 'narrator-text truth';
+                else if (type === 'dice') inner.className = 'dice-result';
+                else if (type === 'player') inner.className = 'player-text';
+                else inner.className = 'narrator-text';
+
+                inner.textContent = text;
+                div.appendChild(inner);
+
+                // Insert before typing indicator
+                scroll.insertBefore(div, typing);
+                scroll.scrollTop = scroll.scrollHeight;
+
+                state.narrativeHistory.push({ type, text });
+
+                blockIndex++;
+                processBlock();
+            }, delay);
         }
 
-        // Update descent text if in descent phase
-        if (state.phase === 'descent') {
-            $('descent-lumen').textContent = `DEEP DESCENT ─ LUMEN = ${state.lumen}`;
-            // Intensify warnings
-            if (state.lumen <= 2) {
-                $('descent-warning').textContent = 'THE TUNNEL HAS CLOSED';
-                $('descent-warning').style.color = 'var(--corruption-red)';
-            }
+        processBlock();
+    }
+
+    // ═══════════════════════════════════════
+    // DICE ENGINE
+    // ═══════════════════════════════════════
+    function rollDice() {
+        const results = [];
+        for (let i = 0; i < state.dicePool; i++) {
+            results.push(Math.floor(Math.random() * 6) + 1);
+        }
+        if (state.hopeDie) {
+            results.push(Math.floor(Math.random() * 6) + 1);
         }
 
-        updateGrid();
+        const sixes = results.filter(r => r === 6).length;
+        const ones = results.filter(r => r === 1).length;
+        const success = sixes > 0;
+
+        // Remove dice for each 1
+        state.dicePool = Math.max(0, state.dicePool - ones);
+
+        // Hope die: if it's a 1, it's gone forever
+        if (state.hopeDie && results[results.length - 1] === 1) {
+            state.hopeDie = false;
+        }
+
+        return {
+            results,
+            sixes,
+            ones,
+            success,
+            pool: state.dicePool,
+            hopeDie: state.hopeDie
+        };
     }
 
-    function freefall() {
-        if (state.freefalling || state.lumen <= 0) return;
-        state.freefalling = true;
+    // ═══════════════════════════════════════
+    // PLAYER INPUT HANDLING
+    // ═══════════════════════════════════════
+    function handlePlayerInput() {
+        const input = $('player-input');
+        const text = input.value.trim();
+        if (!text || state.processing) return;
 
-        const interval = setInterval(() => {
-            descendLumen();
-            if (state.lumen <= 0) {
-                clearInterval(interval);
-                state.freefalling = false;
-            }
-        }, 1200);
+        input.value = '';
+        input.style.height = '42px';
+
+        // Show player's text
+        typeNarrativeBlock([{ type: 'player', text: text }]);
+
+        // Process the action
+        setTimeout(() => processAction(text), 800);
     }
 
-    function resetAll() {
-        // Reset state
-        state.lumen = 10;
-        state.cycle = 0;
-        state.entropy = 0.12;
-        state.coherence = 0.94;
-        state.corruption = 0.0;
-        state.integrity = 100;
-        state.booted = false;
-        state.freefalling = false;
-        state.entropyHistory = [];
-        state.coherenceHistory = [];
-        state.phase = 'boot';
+    function processAction(playerText) {
+        // Emotional load analysis (simplified)
+        analyzeEmotionalLoad(playerText);
 
-        if (hudInterval) clearInterval(hudInterval);
+        // Safety check
+        if (state.safetyPaused) return;
 
-        // Reset DOM
-        $('boot-log').innerHTML = '';
-        $('corruption-drip').innerHTML = '';
-        $('corruption-drip').classList.remove('active');
-        $('heartbeat-circle').classList.remove('flatline');
-        $('control-bar').style.opacity = '1';
-        $('commander-msg').style.animation = 'none';
-        document.querySelectorAll('.final-msg').forEach(m => m.classList.remove('visible'));
+        // Roll dice for the action
+        const roll = rollDice();
 
-        // Reset modules
-        document.querySelectorAll('.grid-module').forEach(mod => {
-            mod.className = 'grid-module optimized';
-            mod.querySelector('.module-status').textContent = 'OPTIMIZED';
-            mod.querySelector('.module-status').className = 'module-status green';
+        // Build response
+        const response = buildNarrativeResponse(playerText, roll);
+        typeNarrativeBlock(response);
+    }
+
+    function analyzeEmotionalLoad(text) {
+        // Simplified emotional load analysis based on text characteristics
+        const words = text.split(/\s+/).length;
+        const hasRepetition = /(\b\w+\b).*\1.*\1/i.test(text);
+        const isFragmented = words < 5 && text.length < 30;
+        const isFlood = words > 80;
+
+        if (hasRepetition || isFlood) {
+            state.emotionalLoad = Math.min(10, state.emotionalLoad + 2);
+        } else if (isFragmented) {
+            state.emotionalLoad = Math.max(0, state.emotionalLoad - 1);
+        } else {
+            state.emotionalLoad = Math.min(10, state.emotionalLoad + 0.5);
+        }
+
+        // Trigger safety if too high
+        if (state.emotionalLoad >= 8) {
+            triggerSafetyPause();
+        }
+    }
+
+    function triggerSafetyPause() {
+        state.safetyPaused = true;
+        const pause = [
+            { type: 'clio', text: 'CLIO: Mandatory Rest Protocol attivato.' },
+            { type: 'clio', text: 'Il corridoio si chiude. Le pareti smettono di tremare. Per un momento \u2014 solo un momento \u2014 il silenzio non \u00E8 una minaccia. \u00C8 solo silenzio.' },
+            { type: 'clio', text: 'Respira. Il tempo narrativo \u00E8 sospeso. "Loro" non possono entrare qui.' },
+            { type: 'system', text: 'PAUSA DIEGETICA \u2014 Il gioco riprende quando scrivi qualcosa.' },
+        ];
+        typeNarrativeBlock(pause);
+
+        state.emotionalLoad = 4;
+        setTimeout(() => { state.safetyPaused = false; }, 3000);
+    }
+
+    function buildNarrativeResponse(playerText, roll) {
+        const blocks = [];
+        const name = (state.profile.name.split(/[-\u2014]/)[0] || 'Tu').trim();
+
+        // Dice result
+        const diceStr = '[' + roll.results.join(', ') + ']';
+        let outcomeStr = roll.success
+            ? (roll.sixes >= 2 ? 'SUCCESSO PIENO' : 'SUCCESSO')
+            : 'FALLIMENTO';
+
+        blocks.push({
+            type: 'dice',
+            text: 'POOL: ' + diceStr + ' \u2014 ' + outcomeStr +
+                  (roll.ones > 0 ? ' \u2014 ' + roll.ones + ' dado/i perso/i (1)' : '') +
+                  ' \u2014 Pool rimanente: ' + roll.pool +
+                  (roll.hopeDie ? ' + 1 Speranza' : ' (Speranza bruciata)')
         });
 
-        // Reset status values
-        $('barrier-val').textContent = 'ACTIVE';
-        $('barrier-val').className = 'status-value cyan';
-        $('memory-val').textContent = 'LOADED';
-        $('memory-val').className = 'status-value green';
-        $('inevitability-val').textContent = 'ONLINE';
-        $('inevitability-val').className = 'status-value green';
+        // Narrative based on outcome and lumen level
+        if (roll.success) {
+            blocks.push({ type: 'narrator', text: buildSuccessNarrative(playerText, name, roll) });
 
-        vgrid.className = 'vgrid';
+            // Success prompts
+            if (roll.sixes >= 2) {
+                blocks.push({ type: 'system', text: 'CONTROLLO NARRATIVO: TUO. Descrivi la tua vittoria \u2014 ma includi il dettaglio che ti mette in pericolo nel prossimo passo.' });
+            }
+        } else {
+            // Failure - TERMINUS takes control, candle dies
+            blocks.push({ type: 'narrator', text: buildFailureNarrative(playerText, name) });
+            descendLumen(1);
+            blocks.push({ type: 'truth', text: '"Queste cose sono vere. Il mondo \u00E8 oscuro."' });
+            blocks.push({ type: 'system', text: 'LUMEN: ' + state.lumen + '/10 \u2014 Una candela si spegne.' });
+        }
 
-        // Restart boot
-        document.querySelectorAll('.phase').forEach(p => p.classList.remove('active'));
-        $('phase-boot').classList.add('active');
-        setTimeout(runBootSequence, 500);
+        // Atmospheric suffocation based on lumen
+        if (state.lumen <= 7 && state.lumen > 4) {
+            blocks.push({ type: 'narrator', text: buildContractionNarrative() });
+        } else if (state.lumen <= 4 && state.lumen > 2) {
+            blocks.push({ type: 'narrator', text: buildDeclineNarrative() });
+        } else if (state.lumen <= 2 && state.lumen > 0) {
+            blocks.push({ type: 'narrator', text: buildFinalNarrative(name) });
+        }
+
+        // Adversary manifestation
+        if (state.lumen <= 7 && Math.random() < 0.6) {
+            blocks.push({ type: 'adversary', text: buildAdversaryText() });
+        }
+
+        // Pool check
+        if (state.dicePool <= 0 && state.lumen > 0) {
+            blocks.push({ type: 'system', text: 'POOL ESAURITO. Puoi invocare il DADO DEL BRINK \u2014 racconta come usi il tuo punto di rottura come arma.' });
+        }
+
+        // Prompt for next action
+        if (state.lumen > 0) {
+            blocks.push({ type: 'narrator', text: 'Cosa fai, ' + name + '?' });
+        }
+
+        return blocks;
     }
 
-    // ── CONTROLS ──
-    $('btn-descend').addEventListener('click', descendLumen);
-    $('btn-freefall').addEventListener('click', freefall);
-    $('btn-reset').addEventListener('click', resetAll);
+    function buildSuccessNarrative(playerText, name) {
+        const templates = [
+            name + ' si muove. C\'\u00E8 qualcosa di feroce e preciso nel gesto \u2014 la disperazione trasformata in azione. Funziona. Per ora.',
+            'Il buio sussulta. Non si aspettava questa resistenza. ' + name + ' ha guadagnato un respiro, un metro, un istante.',
+            'Le mani tremano ma non si fermano. ' + name + ' fa quello che deve fare, con la precisione di chi non ha pi\u00F9 niente da perdere.',
+            'Funziona. L\'orrore arretra di un passo. Ma nella vittoria c\'\u00E8 un suono che non dovrebbe esserci \u2014 un sussurro che viene da dietro.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
 
-    // Keyboard shortcuts
-    document.addEventListener('keydown', e => {
-        if (e.key === 'ArrowDown' || e.key === 'd') descendLumen();
-        if (e.key === 'f') freefall();
-        if (e.key === 'r') resetAll();
-        if (e.key === ' ' && state.phase === 'boot') {
-            // Skip boot
-            transitionTo('hud');
+    function buildFailureNarrative(playerText, name) {
+        const schema = state.profile.schema || '';
+        const bodyStress = state.profile.bodyStress || 'il petto';
+        const templates = [
+            name + ' prova. Ma il buio non si muove. Non perch\u00E9 sia immobile \u2014 perch\u00E9 \u00E8 ovunque, e non c\'\u00E8 dove andare. Senti il dolore in ' + bodyStress + ', quello che conosci troppo bene.',
+            'Il gesto si perde nel nulla. Le dita si chiudono nel vuoto. ' + name + ' sente il peso del fallimento come una mano sulla nuca, che preme verso il basso.',
+            'Non funziona. Non questa volta. E nel silenzio che segue, senti una voce \u2014 la tua voce, ma distorta \u2014 che sussurra quello che sai gi\u00E0: "' + schema + '"',
+            'Il tentativo muore prima di nascere. ' + name + ' resta immobile nel buio, e il buio si avvicina di un passo.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    function buildContractionNarrative() {
+        const templates = [
+            'La luce si restringe. Non vedi pi\u00F9 oltre il raggio della fiamma. Fuori da quel cerchio: niente. Non buio \u2014 proprio niente, come se il mondo finisse l\u00EC.',
+            'I suoni diventano centrali ma ambigui. Non riesci a stabilire da dove vengono. Il dripping dell\'acqua potrebbe essere a un metro o a un chilometro.',
+            'L\'aria \u00E8 pi\u00F9 fredda. Lo senti nelle ossa prima che sulla pelle. Qualcosa \u00E8 cambiato nella qualit\u00E0 del silenzio.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    function buildDeclineNarrative() {
+        const templates = [
+            'Senti il tuo stesso respiro come qualcosa di estraneo. Il battito cardiaco nei timpani. Un graffio \u2014 microscopico, lontanissimo \u2014 suona come un urlo.',
+            'La vista \u00E8 quasi scomparsa. L\'udito \u00E8 iperacuto e distorto. Ogni piccolo suono amplificato fino a diventare insopportabile.',
+            'Non c\'\u00E8 pi\u00F9 spazio sicuro. "Loro" sono ovunque, ma ora aspettano. Come se sapessero che non serve pi\u00F9 correre.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    function buildFinalNarrative(name) {
+        const moment = state.profile.moment || 'qualcosa che non puoi pi\u00F9 raggiungere';
+        const templates = [
+            'Non c\'\u00E8 pi\u00F9 luce. Non c\'\u00E8 suono. C\'\u00E8 solo il pavimento sotto le tue mani e il calore del tuo respiro che ti torna sul viso. E da qualche parte, ai margini della percezione, ' + moment + '.',
+            name + ', \u00E8 quasi finita. L\'ultima candela brucia con la fiamma pi\u00F9 piccola che tu abbia mai visto. Ogni secondo ora \u00E8 un\'eternit\u00E0.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    function buildAdversaryText() {
+        const schema = state.profile.schema || 'sei solo';
+        const relationship = state.profile.relationship || 'qualcuno';
+        const brink = state.profile.brink || 'quel giorno';
+
+        const templates = [
+            '"' + schema + '..." La voce non \u00E8 umana. Ma usa le tue parole. Le ha imparate ascoltandoti.',
+            'Nell\'ombra, per un istante, vedi una sagoma. Ha le spalle di ' + relationship + '. Ma non si avvicina abbastanza da essere toccata.',
+            'Il rumore si ferma. Il silenzio che segue \u00E8 peggiore di qualsiasi suono. \u00C8 il silenzio di qualcosa che ti ha gi\u00E0 trovato.',
+            'Dal buio arriva un odore. \u00C8 l\'odore di ' + brink + '. "Loro" sanno. "Loro" ricordano.',
+            'Una voce distorta, moltiplicata per mille, sussurra qualcosa che suona come il tuo nome. Ma \u00E8 sbagliato. Manca qualcosa. Come un ricordo corrotto.',
+        ];
+        return templates[Math.floor(Math.random() * templates.length)];
+    }
+
+    // ═══════════════════════════════════════
+    // INPUT HANDLERS
+    // ═══════════════════════════════════════
+    $('send-btn').addEventListener('click', handlePlayerInput);
+
+    $('player-input').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handlePlayerInput();
         }
     });
 
-    // ── INIT ──
+    // Auto-resize textarea
+    $('player-input').addEventListener('input', function() {
+        this.style.height = '42px';
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+    });
+
+    // Safety button
+    $('safety-btn').addEventListener('click', () => {
+        if (!state.safetyPaused) {
+            triggerSafetyPause();
+        }
+    });
+
+    // ═══════════════════════════════════════
+    // FINAL (LUMEN 0)
+    // ═══════════════════════════════════════
+    function startFinal() {
+        // Stop heartbeat
+        if (heartbeatInterval) clearInterval(heartbeatInterval);
+
+        // Flatline sound
+        setTimeout(playFlatline, 1000);
+
+        // Draw flatline
+        const canvas = $('flatline-canvas');
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = 40;
+        const ctx = canvas.getContext('2d');
+        let x = 0;
+        const lineAnim = setInterval(() => {
+            ctx.strokeStyle = 'rgba(255,0,51,0.6)';
+            ctx.lineWidth = 1.5;
+            ctx.shadowColor = 'rgba(255,0,51,0.5)';
+            ctx.shadowBlur = 5;
+            ctx.beginPath();
+            ctx.moveTo(x, 20);
+            ctx.lineTo(x + 3, 20);
+            ctx.stroke();
+            x += 3;
+            if (x > canvas.width) {
+                clearInterval(lineAnim);
+                // After flatline, show testament
+                setTimeout(showTestament, 3000);
+            }
+        }, 20);
+    }
+
+    function showTestament() {
+        const testamentEl = $('final-testament');
+        testamentEl.textContent = state.testament;
+        testamentEl.classList.add('visible');
+
+        // After testament, show epitaph
+        setTimeout(() => {
+            $('final-epitaph').classList.add('visible');
+        }, 5000);
+    }
+
+    // ═══════════════════════════════════════
+    // INIT
+    // ═══════════════════════════════════════
     setTimeout(runBootSequence, 800);
+
+    // Allow Enter during dossier
+    document.addEventListener('keydown', (e) => {
+        if (state.phase === 'dossier' && e.key === 'Enter' && !e.shiftKey) {
+            const active = document.activeElement;
+            if (active && active.classList.contains('dossier-input')) {
+                e.preventDefault();
+                $('btn-next').click();
+            }
+        }
+        if (state.phase === 'boot' && e.key === ' ') {
+            transitionTo('dossier');
+        }
+    });
 
 })();
 </script>
