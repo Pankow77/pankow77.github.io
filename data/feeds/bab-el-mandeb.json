@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-19T16:14:30.397Z",
-  "epoch_count": 119,
+  "last_fetch": "2026-03-19T17:31:05.109Z",
+  "epoch_count": 120,
   "epochs": [
     {
       "id": "rss_694dfb326481acd8",
@@ -92,6 +92,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T07:44:04.196Z"
+    },
+    {
+      "id": "rss_5b271034dc04959b",
+      "timestamp": 1773900232000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Can Iran shut down global internet by cutting Hormuz undersea cables? - India Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeDBucHk0UUhqVURabDRHdy15WmxQXzZVTmktSlpJd3BWSjg3aHRhcjZjUC1GUmpjMlIxTkZmdVBXdDFhaXExUHZLU1N0S28zV2JDQW56aTlpdmpranAzT3NCQTdob2NpcVdOdGJfRGo4S1pXWElGNHhZckdNYlRQTkhCdEZjN3k2aVh6M2RENFpQZmZ2RUg4el9jODJDdTAzNml0Q1E0RC0xSHQ1NWZSWUhCbUxEdUM2dnl0Z3U4LWhVTURmTDVuMjF2bXZva1kwYnhRQnVxd184T3Exd2Z1aw?oc=5\" target=\"_blank\">Can Iran shut down global internet by cutting Hormuz undersea cables?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">India Today</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeDBucHk0UUhqVURabDRHdy15WmxQXzZVTmktSlpJd3BWSjg3aHRhcjZjUC1GUmpjMlIxTkZmdVBXdDFhaXExUHZLU1N0S28zV2JDQW56aTlpdmpranAzT3NCQTdob2NpcVdOdGJfRGo4S1pXWElGNHhZckdNYlRQTkhCdEZjN3k2aVh6M2RENFpQZmZ2RUg4el9jODJDdTAzNml0Q1E0RC0xSHQ1NWZSWUhCbUxEdUM2dnl0Z3U4LWhVTURmTDVuMjF2bXZva1kwYnhRQnVxd184T3Exd2Z1aw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T17:31:03.528Z"
     },
     {
       "id": "rss_14e47dd1c2fca1ff",
