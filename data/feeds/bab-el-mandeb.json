@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-19T06:53:28.313Z",
-  "epoch_count": 114,
+  "last_fetch": "2026-03-19T07:44:05.488Z",
+  "epoch_count": 116,
   "epochs": [
+    {
+      "id": "rss_d7cc258a116de5c8",
+      "timestamp": 1773900671000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Israel-Iran war: Saudi Arabia's Red Sea port Yanbu targeted in aerial attack - The Economic Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVByZjZNTW44QllkeHRxM0U2YVc2S2M1a205ZGZsOXNERjNqOUxMX1cxLW9Qd2RablpDQjB5SFlCRUgtZnkwNlRNNU1MWU1yWXotQUd2YTAwbTJJSWs1RUlDMXhWcXVmZW9uZU9FaU4wcnlRaGYwZnFIVWowVmtjLXdaSTVJd2JYZUZMcmZiRkhmVjJBaHBINDF5ZlFSV0lSQm1PbHZGeFQ0M1lsa3JWakJZQlR1Y2N2V0lzS2hsQjVKUktjVm9vdHlFQ29idWFQOW1iX1h2eXdMX3FaNnNBN0Z2djVzeDlZSFlDOVFiaG5DbXNqd1VjSWxLbU9DSXFs0gGGAkFVX3lxTE1HN1BKSW0za2FZVEszcVNoTkZDUnBsb1ZjSXRVbnh3ZkFXS25CTmFZRjZaZFZZNTd5em5ncWdjYkFPd2pERXMyLWlXZE",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVByZjZNTW44QllkeHRxM0U2YVc2S2M1a205ZGZsOXNERjNqOUxMX1cxLW9Qd2RablpDQjB5SFlCRUgtZnkwNlRNNU1MWU1yWXotQUd2YTAwbTJJSWs1RUlDMXhWcXVmZW9uZU9FaU4wcnlRaGYwZnFIVWowVmtjLXdaSTVJd2JYZUZMcmZiRkhmVjJBaHBINDF5ZlFSV0lSQm1PbHZGeFQ0M1lsa3JWakJZQlR1Y2N2V0lzS2hsQjVKUktjVm9vdHlFQ29idWFQOW1iX1h2eXdMX3FaNnNBN0Z2djVzeDlZSFlDOVFiaG5DbXNqd1VjSWxLbU9DSXFs0gGGAkFVX3lxTE1HN1BKSW0za2FZVEszcVNoTkZDUnBsb1ZjSXRVbnh3ZkFXS25CTmFZRjZaZFZZNTd5em5ncWdjYkFPd2pERXMyLWlXZEtGbk9QU1M0ZXpkOV9obnQ1dVFhRk00NW5vaGljV1d1NGJneDFqQUVmaUdCeWFQZEx6bnJ0Skp1elp6NmtOU2FlTkRIY0JKVTMyd3dJVTk5Ylo2QUtBNEp5SWNhYVJVSDQzUTdudFlPMFQxYmVQTFRkZzZjaEFXYjVhaGZXb0NpTEhEdDBEdTc4dEpTY0RyVlhlb0N2czZVenJaTDFsVld1NjhyeTlFNFZWZXRXVktFdWFJQl9qVldUZmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T07:44:04.196Z"
+    },
     {
       "id": "rss_14e47dd1c2fca1ff",
       "timestamp": 1773900180000,
@@ -23,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T06:53:26.877Z"
+    },
+    {
+      "id": "rss_28a799daa30664bd",
+      "timestamp": 1773899820000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Aramco-Exxon refinery SAMREF in Saudi Arabia's Yanbu targeted, source says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNNGFCS2NfS3BkakM3VUY0N2ZTOXFuTnBhWmRudVhQYTRNallpYzU3emNzcHZib2JiNWQzdjdKZmhZWmh4SGVTZkNSbWlUQWdONlBUQi1vMGs2SG5mOTVQdE9KYTNWWHd4Z2Jiajl5OTkxNWs3aWxMeG9nVU1Wc19LWU55dmRGUWk5OHhXX0NCdGNLWWpzNko0akFpQnZ5TTFXMWpsUXVLY0hHdXE1b1pMMllzLVFDdUVDZExfR0x2R3d3Vl9t?oc=5\" target=\"_blank\">Saudi Aramco-Exxon refinery SAMREF in Saudi Arabia's Yanbu targeted, source says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNGFCS2NfS3BkakM3VUY0N2ZTOXFuTnBhWmRudVhQYTRNallpYzU3emNzcHZib2JiNWQzdjdKZmhZWmh4SGVTZkNSbWlUQWdONlBUQi1vMGs2SG5mOTVQdE9KYTNWWHd4Z2Jiajl5OTkxNWs3aWxMeG9nVU1Wc19LWU55dmRGUWk5OHhXX0NCdGNLWWpzNko0akFpQnZ5TTFXMWpsUXVLY0hHdXE1b1pMMllzLVFDdUVDZExfR0x2R3d3Vl9t?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-03-19T07:44:04.196Z"
     },
     {
       "id": "rss_2be6da51043093ba",
