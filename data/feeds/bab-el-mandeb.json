@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-19T17:31:05.109Z",
-  "epoch_count": 120,
+  "last_fetch": "2026-03-19T18:52:48.352Z",
+  "epoch_count": 121,
   "epochs": [
     {
       "id": "rss_694dfb326481acd8",
@@ -46,6 +46,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T15:11:24.813Z"
+    },
+    {
+      "id": "rss_2a5afd2964419685",
+      "timestamp": 1773913873000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia reports missile, drone attacks on Red Sea port, key refinery - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPVEhSZWZHX1YzYTR2V1g4MzRGeW1KTG1FeEZlWDNpVFNxRHRfQjVQbEMxV1dXa2NSYUgzdEJQbXdMRDJPUThadVNhZ2pzOGR0Um9nMkNnUWxXV2wwbDZzVmdHU0VUN0lkOEpTamtEQU5WZFZINUF0UHdLN00zTTF1RUk0VkF6N3RHS21uanB5dEdZWWFZcTVoQnlCR1V5Y25GZmplaDlNSkUwRFZjdVctTHNPeW5wR3c?oc=5\" target=\"_blank\">Saudi Arabia reports missile, drone attacks on Red Sea port, key refinery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVEhSZWZHX1YzYTR2V1g4MzRGeW1KTG1FeEZlWDNpVFNxRHRfQjVQbEMxV1dXa2NSYUgzdEJQbXdMRDJPUThadVNhZ2pzOGR0Um9nMkNnUWxXV2wwbDZzVmdHU0VUN0lkOEpTamtEQU5WZFZINUF0UHdLN00zTTF1RUk0VkF6N3RHS21uanB5dEdZWWFZcTVoQnlCR1V5Y25GZmplaDlNSkUwRFZjdVctTHNPeW5wR3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T18:52:46.481Z"
     },
     {
       "id": "rss_91ecbe781cf2d01a",
