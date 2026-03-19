@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-19T01:54:36.333Z",
-  "epoch_count": 108,
+  "last_fetch": "2026-03-19T04:21:23.424Z",
+  "epoch_count": 111,
   "epochs": [
     {
       "id": "rss_dfc73d450916476b",
@@ -23,6 +23,76 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-18T22:28:36.961Z"
+    },
+    {
+      "id": "rss_8207a4680e7e170d",
+      "timestamp": 1773838345000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Gerald R. Ford Carrier Strike Group continues Iran operation in Red Sea, US defense official tells Anadolu - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMmJodThaWGdRbEVxb2hVTkU5UXJ0VWJEbllhZGlRbmtqMlRnb1dWSDhaNnVKUVp4T3AtZ3JHRnk5U3JaemJheHNhUlJvRkp5VHlBdFc1YnBfclBzVEptd1JXWGJtdGJYWWhxNmlwSHVNOHhOWXRNUFV5TnJxYnlWSF9kVHFGbFVMYzVxRkJoZ2xDLU8tcTNxRjVkZ0FIUnQ1Zk5PVGw3R2sybEI5NlNpYUFjWkFlelVwR0FocllVOGZPTC16aFVWODNfUnlPdHlXZ05xMmQ5NDVVT0dYWjkw?oc=5\" target=\"_blank\">Gerald R. Ford Carrier Strike Group continues Iran operation in Red Sea, US defense official tells Anadolu</a>&nbsp;&nbsp;<font",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMmJodThaWGdRbEVxb2hVTkU5UXJ0VWJEbllhZGlRbmtqMlRnb1dWSDhaNnVKUVp4T3AtZ3JHRnk5U3JaemJheHNhUlJvRkp5VHlBdFc1YnBfclBzVEptd1JXWGJtdGJYWWhxNmlwSHVNOHhOWXRNUFV5TnJxYnlWSF9kVHFGbFVMYzVxRkJoZ2xDLU8tcTNxRjVkZ0FIUnQ1Zk5PVGw3R2sybEI5NlNpYUFjWkFlelVwR0FocllVOGZPTC16aFVWODNfUnlPdHlXZ05xMmQ5NDVVT0dYWjkw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T04:21:21.935Z"
+    },
+    {
+      "id": "rss_c2f406a592c3e012",
+      "timestamp": 1773832492000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Hajjah Residents Mourn Victims of Hairan Missile Attack, Condemn Houthi Strike on Civilians at Iftar - alsahwa-yemen.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE83TzVyU3FrNmRub19oOTl5Z2FvbVllakV6QzhwQmJWRFY2dFJndzNIX0xwNS1PZnBETGY1S1dLc3RhN1Ryem9xYktVSlZfOWxGNGc?oc=5\" target=\"_blank\">Hajjah Residents Mourn Victims of Hairan Missile Attack, Condemn Houthi Strike on Civilians at Iftar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">alsahwa-yemen.net</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE83TzVyU3FrNmRub19oOTl5Z2FvbVllakV6QzhwQmJWRFY2dFJndzNIX0xwNS1PZnBETGY1S1dLc3RhN1Ryem9xYktVSlZfOWxGNGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T04:21:21.936Z"
+    },
+    {
+      "id": "rss_4b2da70329f386b0",
+      "timestamp": 1773791423000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hairan Massacre During Iftar: New Witness to Houthi Crimes Against Civilians - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE12eUhfYXUxMGxWNU10YnlYN2dXbWItb1NTUTNJeld0aGFPd0FSelBVVWFfWlByb2dHX0tZUFM5ODU1R0twUnh0Mm5mcjZMRktVNnpSYjhKTjBwb1hPdXp1MkFNRnh5d0V0M3ljN0F6al84TFp5WGc?oc=5\" target=\"_blank\">Hairan Massacre During Iftar: New Witness to Houthi Crimes Against Civilians</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12eUhfYXUxMGxWNU10YnlYN2dXbWItb1NTUTNJeld0aGFPd0FSelBVVWFfWlByb2dHX0tZUFM5ODU1R0twUnh0Mm5mcjZMRktVNnpSYjhKTjBwb1hPdXp1MkFNRnh5d0V0M3ljN0F6al84TFp5WGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T04:21:21.936Z"
     },
     {
       "id": "rss_3c0c0179c9e7c04f",
