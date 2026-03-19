@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-19T04:21:23.424Z",
-  "epoch_count": 111,
+  "last_fetch": "2026-03-19T05:41:28.802Z",
+  "epoch_count": 113,
   "epochs": [
+    {
+      "id": "rss_2be6da51043093ba",
+      "timestamp": 1773896495000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU countries to bolster Red Sea maritime operation, draft conclusions show - Euractiv",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPOWRKMjVxLU9FVm1kN0YwcUlnbmxPRkIweWl6a2NzR3FaZ2Y2NjFEZmlIeXBsSGozUVlCRlBIZzltUTdWTndmeU9nUk12Njc0ekFxUUw1RDROUzNWQnZueWQ0Wkptc0o0TTVOczBNM25JZGpyTXV1N1VaLUlWUkJtcDJ2R2tjXzJJajBDalB2enlkRDZaN0FXVWtxeDhNNTZNZjVpTFdhZ05sTlVp?oc=5\" target=\"_blank\">EU countries to bolster Red Sea maritime operation, draft conclusions show</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euractiv</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPOWRKMjVxLU9FVm1kN0YwcUlnbmxPRkIweWl6a2NzR3FaZ2Y2NjFEZmlIeXBsSGozUVlCRlBIZzltUTdWTndmeU9nUk12Njc0ekFxUUw1RDROUzNWQnZueWQ0Wkptc0o0TTVOczBNM25JZGpyTXV1N1VaLUlWUkJtcDJ2R2tjXzJJajBDalB2enlkRDZaN0FXVWtxeDhNNTZNZjVpTFdhZ05sTlVp?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T05:41:28.366Z"
+    },
     {
       "id": "rss_dfc73d450916476b",
       "timestamp": 1773853341000,
@@ -70,6 +91,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T04:21:21.936Z"
+    },
+    {
+      "id": "rss_0a653b88ee2ee860",
+      "timestamp": 1773802100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Mystery of no Houthi attacks on Red Sea ships three weeks into Iran war - thenationalnews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNd3g3dVVTUjRfNy1TQWRqQ2F5aEJ3cllzcGx0UF94SUhIVTg1REM2TmdWVURFbVE5UUJFUU81NGtJRkF0WjY0MlB2ZDdEdTY5UTdZdUJjUVdlX0tjSGJUYmprU2RQMWlydEZlUEtHOUMtU3VKc1hxNTZadnNBN1pSSnN5QjhDTU8xSjVncnNFdnhBSEIySVRuTEo5SVlKYzQzVDgtbEpYUjVIVlZuc3FhQ3VwQ292cV9DZkdRQVR2eHhOVHc?oc=5\" target=\"_blank\">Mystery of no Houthi attacks on Red Sea ships three weeks into Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNd3g3dVVTUjRfNy1TQWRqQ2F5aEJ3cllzcGx0UF94SUhIVTg1REM2TmdWVURFbVE5UUJFUU81NGtJRkF0WjY0MlB2ZDdEdTY5UTdZdUJjUVdlX0tjSGJUYmprU2RQMWlydEZlUEtHOUMtU3VKc1hxNTZadnNBN1pSSnN5QjhDTU8xSjVncnNFdnhBSEIySVRuTEo5SVlKYzQzVDgtbEpYUjVIVlZuc3FhQ3VwQ292cV9DZkdRQVR2eHhOVHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-19T05:41:27.512Z"
     },
     {
       "id": "rss_4b2da70329f386b0",
