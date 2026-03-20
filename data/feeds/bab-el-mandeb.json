@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-20T15:38:41.301Z",
-  "epoch_count": 124,
+  "last_fetch": "2026-03-20T16:38:22.628Z",
+  "epoch_count": 125,
   "epochs": [
     {
       "id": "rss_1686191b21e017d8",
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-20T06:49:36.914Z"
+    },
+    {
+      "id": "rss_e562725ba791df24",
+      "timestamp": 1773948564000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Loses Patience as Red Sea Terminal and Refinery are Targeted - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQUUZYZkdVUVpmQzFFRXBnS2d4OVhRdzhSTF9JRW1ZUzBJaWF1XzRQRWsyMFZjWnV4dGRfMk4yRUlRanp2d1d0WVhaZTlwOWFmX0pabG5ncjZqR0ZHbFo1VjdVSGduam1tbTdQaGFJNjFpaUNfbjN3dGVKMkpnWEhveHVVRlNWMjhUX2F6cnFfZGx6MVRROW41OV9NZ0lmd21YSWE4RE1xUFNIRFl6VG1LS3hB?oc=5\" target=\"_blank\">Saudi Arabia Loses Patience as Red Sea Terminal and Refinery are Targeted</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUUZYZkdVUVpmQzFFRXBnS2d4OVhRdzhSTF9JRW1ZUzBJaWF1XzRQRWsyMFZjWnV4dGRfMk4yRUlRanp2d1d0WVhaZTlwOWFmX0pabG5ncjZqR0ZHbFo1VjdVSGduam1tbTdQaGFJNjFpaUNfbjN3dGVKMkpnWEhveHVVRlNWMjhUX2F6cnFfZGx6MVRROW41OV9NZ0lmd21YSWE4RE1xUFNIRFl6VG1LS3hB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-20T16:38:21.068Z"
     },
     {
       "id": "rss_dc5ad2afbd2b3952",
