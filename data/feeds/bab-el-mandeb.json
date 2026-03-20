@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-20T18:41:53.782Z",
-  "epoch_count": 126,
+  "last_fetch": "2026-03-20T19:34:51.426Z",
+  "epoch_count": 127,
   "epochs": [
     {
       "id": "rss_1686191b21e017d8",
@@ -25,6 +25,31 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-20T06:49:36.914Z"
+    },
+    {
+      "id": "rss_3dd2a8dfc9e01860",
+      "timestamp": 1773982040000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemeni forces warn of Red Sea strikes targetting warships if US joins Israel against Iran - The Economic Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxPTVl6TVlNd3RHVm9xaUZZS3Z4NVZsdjFxaXM1NzdKaXZxaWNUb0ZyR01COWJNS3AtUlZHT1BGU3FVLTBkWXdzR05jZTdhaGhTUEFRRUxrRjB3N2Y0YVluazItNzFrc0c0RTJNTjhIU2xzb3VDT0RZXzVHOUFZRzhwNlNqRjF2QjFHZ0hVUS1vUGZNWFF2RjhFcGVuOVlBWEZ0elQ2NWZhYXAxUEFQaUU5alJ1VTFqRlVLRlpac2R0Q1hSWlhoVVJjSjlVdkc1VmZLZG0wekFwb1hoRFp3WXZqOXBwQ25SSHQwNVEtZ0xtUC1xc3JiQThZMnVZQktpdkFEbG1R0gGIAkFVX3lxTFBYRUhqUVc1RE9qZVV6ZENBVV9kTURLN2M3cUx6RUxSR21ONTJnajY0THkwcjhDcVRnYW9LS0l0MUVOSkVCeUtIaX",
+      "tags": [
+        "iran-proxy",
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPTVl6TVlNd3RHVm9xaUZZS3Z4NVZsdjFxaXM1NzdKaXZxaWNUb0ZyR01COWJNS3AtUlZHT1BGU3FVLTBkWXdzR05jZTdhaGhTUEFRRUxrRjB3N2Y0YVluazItNzFrc0c0RTJNTjhIU2xzb3VDT0RZXzVHOUFZRzhwNlNqRjF2QjFHZ0hVUS1vUGZNWFF2RjhFcGVuOVlBWEZ0elQ2NWZhYXAxUEFQaUU5alJ1VTFqRlVLRlpac2R0Q1hSWlhoVVJjSjlVdkc1VmZLZG0wekFwb1hoRFp3WXZqOXBwQ25SSHQwNVEtZ0xtUC1xc3JiQThZMnVZQktpdkFEbG1R0gGIAkFVX3lxTFBYRUhqUVc1RE9qZVV6ZENBVV9kTURLN2M3cUx6RUxSR21ONTJnajY0THkwcjhDcVRnYW9LS0l0MUVOSkVCeUtIaXlHdXJKN0laM2hGdk0yRVJJVDFjTzFkb3NxcTJ5U3l2WkNuQmlTSjM0akp3WEQ2dmpnWF9CYzBfUHROWjBTb285STRIeEVJdHNKNDVrREtoZXNnbWFyLW90bU9rcWdaMmFjT3p2bF8xdVI5RXdHYWJsVklFcm5mdDBHY1VyQ0p6cXNYeWNBQTZSYzhoSFpsWHlIRnlkREZJbWtzTFBBZ1hmbXB1UXRwNy1pVUE2ZVFMZHBCM2ZkUzE0QWRHUXBQRA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-20T19:34:49.787Z"
     },
     {
       "id": "rss_e562725ba791df24",
