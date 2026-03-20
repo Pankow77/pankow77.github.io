@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-20T11:28:18.524Z",
-  "epoch_count": 123,
+  "last_fetch": "2026-03-20T11:54:07.722Z",
+  "epoch_count": 124,
   "epochs": [
     {
       "id": "rss_1686191b21e017d8",
@@ -70,6 +70,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T14:07:06.991Z"
+    },
+    {
+      "id": "rss_5b6b70fcf900188d",
+      "timestamp": 1773917154000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran Escalates Middle-East Tensions With Strike On Saudi Oil Giant - The Kenya Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPdWV5OWRtUk9OZGtZSGl0eTZWeDVUdTZPUHhuYjJTb2VFMW5GUnE1MWZuOUlGZlEyN24zSEpzTk5QSTNYU1B0djVaRGQ2aW1fb1JFTnFKWjgxZG0ySW1OcThhNFgtNzZJMWVMYmFBZklGVWh3OWE1ZnU4NXFhQkQtTmxBdlEwWkszY2c3dTVJTWtRazJzYnRUTUNJYWZzeVlSSGVuWVByOA?oc=5\" target=\"_blank\">Iran Escalates Middle-East Tensions With Strike On Saudi Oil Giant</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Kenya Times</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPdWV5OWRtUk9OZGtZSGl0eTZWeDVUdTZPUHhuYjJTb2VFMW5GUnE1MWZuOUlGZlEyN24zSEpzTk5QSTNYU1B0djVaRGQ2aW1fb1JFTnFKWjgxZG0ySW1OcThhNFgtNzZJMWVMYmFBZklGVWh3OWE1ZnU4NXFhQkQtTmxBdlEwWkszY2c3dTVJTWtRazJzYnRUTUNJYWZzeVlSSGVuWVByOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-20T11:54:06.237Z"
     },
     {
       "id": "rss_3ce228d5fb8e43cf",
