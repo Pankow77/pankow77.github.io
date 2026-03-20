@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-20T08:36:03.748Z",
-  "epoch_count": 122,
+  "last_fetch": "2026-03-20T09:36:32.006Z",
+  "epoch_count": 123,
   "epochs": [
     {
       "id": "rss_1686191b21e017d8",
@@ -25,6 +25,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-20T06:49:36.914Z"
+    },
+    {
+      "id": "rss_dc5ad2afbd2b3952",
+      "timestamp": 1773934982000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says Red Sea SAMREF refinery hit in Iranian drone attack - All Israel News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNZWJObHRvSkY4YkNjbjRGZ05iNjBGTElwRWl3WlhYa0dra1BYMGo2U2UtOVRMWDBZOEM4TVZha25sVTdLdVlWMWYtb00ySklCNV9qUVVicWloMlEzVVlmb21xMjBUMG1LRXpVOVozc3hDbmxQWEN3ek5zbEZvbWZSUmRKNzd2V0dSZ0xqaUw0VHpPbHBseVZid1hjaUxUcDBhenVR?oc=5\" target=\"_blank\">Saudi Arabia says Red Sea SAMREF refinery hit in Iranian drone attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">All Israel News</font>",
+      "tags": [
+        "iran-proxy",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZWJObHRvSkY4YkNjbjRGZ05iNjBGTElwRWl3WlhYa0dra1BYMGo2U2UtOVRMWDBZOEM4TVZha25sVTdLdVlWMWYtb00ySklCNV9qUVVicWloMlEzVVlmb21xMjBUMG1LRXpVOVozc3hDbmxQWEN3ek5zbEZvbWZSUmRKNzd2V0dSZ0xqaUw0VHpPbHBseVZid1hjaUxUcDBhenVR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-20T09:36:30.768Z"
     },
     {
       "id": "rss_694dfb326481acd8",
