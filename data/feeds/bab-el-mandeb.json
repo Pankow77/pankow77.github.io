@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-21T07:07:17.794Z",
-  "epoch_count": 128,
+  "last_fetch": "2026-03-21T07:50:50.197Z",
+  "epoch_count": 129,
   "epochs": [
     {
       "id": "rss_1971cf4c0b5c07b5",
@@ -544,6 +544,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T14:37:48.169Z"
+    },
+    {
+      "id": "rss_267baedf9386f3e3",
+      "timestamp": 1773722462000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "US jet loss deepens Red Sea strain - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSW9xNTZPTXM1OFJlclVoRGpCdUlIRmpIRkN5RnRCSk5hbnJ6dTVYNjdxczBDUXhyZEp2NVNxb1dId0JmdFZEUi1naW1tcjZJVFkzNWVKek02Qmx4RnRVTS1xaFMxYjdndDZMc1NsZHdZNXJlTW5RVkZXVThPczFWWTFjWlRaNWZUWGpxMkxmbUJESUNKMjczZXRrUXlvODFXNEtXckRGT1ZlcTFCT3g3WG1rdl9wZFJZWG52eEYwN3pHV1hrMTNhUUdyVWhTems1?oc=5\" target=\"_blank\">US jet loss deepens Red Sea strain</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSW9xNTZPTXM1OFJlclVoRGpCdUlIRmpIRkN5RnRCSk5hbnJ6dTVYNjdxczBDUXhyZEp2NVNxb1dId0JmdFZEUi1naW1tcjZJVFkzNWVKek02Qmx4RnRVTS1xaFMxYjdndDZMc1NsZHdZNXJlTW5RVkZXVThPczFWWTFjWlRaNWZUWGpxMkxmbUJESUNKMjczZXRrUXlvODFXNEtXckRGT1ZlcTFCT3g3WG1rdl9wZFJZWG52eEYwN3pHV1hrMTNhUUdyVWhTems1?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-21T07:50:48.852Z"
     },
     {
       "id": "rss_a5b95e4ce9062963",
