@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-21T16:24:31.312Z",
-  "epoch_count": 130,
+  "last_fetch": "2026-03-21T16:53:40.692Z",
+  "epoch_count": 131,
   "epochs": [
     {
       "id": "rss_42ac0c4483a4673a",
@@ -364,6 +364,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T05:41:28.366Z"
+    },
+    {
+      "id": "rss_698cb9ac619d3dd5",
+      "timestamp": 1773862205000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthi drone attack on Emirates a wake-up call for Israel - JNS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNa3pQajBYSUdxZzNNR18waUJWbDNTTWh1NkM3a3hxNW9kRHZ6aHRUeDY5a21EdW40S0RsLVBIdHc3a0dJNHBpekV3bEhDUVA4eC1aWHBXWVNFSmY4TkRZUDBTYVE3U1BLSmhMUlo0bnB2NlJseUQwc1FnYTBBQVZPYmdVbnR5blM5WHNEcTJ6dGRXRkk?oc=5\" target=\"_blank\">Houthi drone attack on Emirates a wake-up call for Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JNS</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNa3pQajBYSUdxZzNNR18waUJWbDNTTWh1NkM3a3hxNW9kRHZ6aHRUeDY5a21EdW40S0RsLVBIdHc3a0dJNHBpekV3bEhDUVA4eC1aWHBXWVNFSmY4TkRZUDBTYVE3U1BLSmhMUlo0bnB2NlJseUQwc1FnYTBBQVZPYmdVbnR5blM5WHNEcTJ6dGRXRkk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-21T16:53:39.182Z"
     },
     {
       "id": "rss_dfc73d450916476b",
