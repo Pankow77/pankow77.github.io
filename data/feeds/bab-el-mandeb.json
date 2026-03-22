@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-22T01:54:10.150Z",
-  "epoch_count": 132,
+  "last_fetch": "2026-03-22T04:16:57.358Z",
+  "epoch_count": 133,
   "epochs": [
     {
       "id": "rss_b125e48c66b59bca",
@@ -185,6 +185,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T14:07:06.991Z"
+    },
+    {
+      "id": "rss_b1f70154ceccd2de",
+      "timestamp": 1773917580000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "After Hormuz, a new choke point threatens world shipping - The Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNOXRkanFMaXhVWXFCT2lqdWVQejd2Y3JzZGtlTU9ScWNXYzBOSzFwUmJwQlRMN2lqakZlWnlvQXJWUkU4eHBBTDh0MDV4S3lqdGlMeXVpcDh0QXBMSlRmNlhpYU9WVUFSal9iekU2aTJNRzlpb1hwTFM4eTBEeTN2TDk5Unc1WFAtVVcyc3VTTU1EY1Vvc2c?oc=5\" target=\"_blank\">After Hormuz, a new choke point threatens world shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Telegraph</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOXRkanFMaXhVWXFCT2lqdWVQejd2Y3JzZGtlTU9ScWNXYzBOSzFwUmJwQlRMN2lqakZlWnlvQXJWUkU4eHBBTDh0MDV4S3lqdGlMeXVpcDh0QXBMSlRmNlhpYU9WVUFSal9iekU2aTJNRzlpb1hwTFM4eTBEeTN2TDk5Unc1WFAtVVcyc3VTTU1EY1Vvc2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-22T04:16:55.981Z"
     },
     {
       "id": "rss_5b6b70fcf900188d",
