@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-22T19:22:11.297Z",
-  "epoch_count": 135,
+  "last_fetch": "2026-03-22T20:22:17.268Z",
+  "epoch_count": 136,
   "epochs": [
     {
       "id": "rss_b125e48c66b59bca",
@@ -71,6 +71,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-21T15:21:39.879Z"
+    },
+    {
+      "id": "rss_d513515322ee4cce",
+      "timestamp": 1774015378000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Rattles Saudi’s Red Sea Oil Reset. Here’s What’s at Stake - BloombergNEF",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQblJ1eVBvV1BaX1FoSTlzT3oxQTdpWXFqVU5JR1BneTZyT2ZxLTQ2NlJsRnVhTG9FYV9qeThuYmd4UHJCNUdwZnV0R3RlNWY4VmdHUjJPdUMzU04tR1VTeFlHVkFzRWxwLU1FSmp5Vm1PRjJ1UUE1ZzRMSmM1eXVEZ0syeGVZdU9xU0VXeS15RDNnUXpSem1qWlkxUVhubEdSaHJkRnJn?oc=5\" target=\"_blank\">Iran Rattles Saudi’s Red Sea Oil Reset. Here’s What’s at Stake</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BloombergNEF</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQblJ1eVBvV1BaX1FoSTlzT3oxQTdpWXFqVU5JR1BneTZyT2ZxLTQ2NlJsRnVhTG9FYV9qeThuYmd4UHJCNUdwZnV0R3RlNWY4VmdHUjJPdUMzU04tR1VTeFlHVkFzRWxwLU1FSmp5Vm1PRjJ1UUE1ZzRMSmM1eXVEZ0syeGVZdU9xU0VXeS15RDNnUXpSem1qWlkxUVhubEdSaHJkRnJn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-22T20:22:15.731Z"
     },
     {
       "id": "rss_1971cf4c0b5c07b5",
