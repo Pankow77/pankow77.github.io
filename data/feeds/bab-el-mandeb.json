@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-22T13:40:39.287Z",
-  "epoch_count": 134,
+  "last_fetch": "2026-03-22T14:23:46.507Z",
+  "epoch_count": 135,
   "epochs": [
     {
       "id": "rss_b125e48c66b59bca",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-21T20:21:31.611Z"
+    },
+    {
+      "id": "rss_7528f51727b513e9",
+      "timestamp": 1774122034000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran Threatens to Expand Confrontation to Bab el-Mandeb and the Red Sea if the Island of Kharg is Attacked - وكالة صدى نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tZVBxcWM0a2xIVi12WDlKUHBsQVI4enMzYXVnSXdEZTZfYWJkeUR2VmhEU3IzSVBQelVsWmlxaHd2SGdvdDZXdlBrem5KQkZ4d3l6UWZR?oc=5\" target=\"_blank\">Iran Threatens to Expand Confrontation to Bab el-Mandeb and the Red Sea if the Island of Kharg is Attacked</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة صدى نيوز</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tZVBxcWM0a2xIVi12WDlKUHBsQVI4enMzYXVnSXdEZTZfYWJkeUR2VmhEU3IzSVBQelVsWmlxaHd2SGdvdDZXdlBrem5KQkZ4d3l6UWZR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-22T14:23:44.972Z"
     },
     {
       "id": "rss_42ac0c4483a4673a",
