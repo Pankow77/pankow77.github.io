@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-03-22T18:31:03.272Z",
-  "epoch_count": 24,
+  "last_fetch": "2026-03-22T19:22:13.242Z",
+  "epoch_count": 25,
   "epochs": [
     {
       "id": "rss_683bf66e2841069d",
@@ -48,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-22T06:45:05.322Z"
+    },
+    {
+      "id": "rss_fbae45a8ec31207e",
+      "timestamp": 1774140900000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Trump, da domani agenti dell'Ice negli aeroporti Usa - www.altoadige.it",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNYzM3ZlZtaXpfRTBmRkRhZFk0UTh2SUxsT0VUd2JzWXBNQnJpTGhPemxGakgydXBmNlAzVVE2cE8xTm0tTkxUVjEyQ3RMdnhzeF9JTkEzbmtMaDZMTkJ6YWxkWW5tM1lkTXZpVnUtdm9KM3Y5MlpUd0VUVFlfeTYwcmNwbnYzanh4OF9Ba2dvVTd2Q0RaTVFkRWpKNzRDb0ds?oc=5\" target=\"_blank\">Trump, da domani agenti dell'Ice negli aeroporti Usa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">www.altoadige.it</font>",
+      "tags": [
+        "meloni-trump"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYzM3ZlZtaXpfRTBmRkRhZFk0UTh2SUxsT0VUd2JzWXBNQnJpTGhPemxGakgydXBmNlAzVVE2cE8xTm0tTkxUVjEyQ3RMdnhzeF9JTkEzbmtMaDZMTkJ6YWxkWW5tM1lkTXZpVnUtdm9KM3Y5MlpUd0VUVFlfeTYwcmNwbnYzanh4OF9Ba2dvVTd2Q0RaTVFkRWpKNzRDb0ds?oc=5",
+      "feed_id": "gn-ice-italy-it",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-22T19:22:12.225Z"
     },
     {
       "id": "rss_d006b52843fd7be4",
