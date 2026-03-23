@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-23T23:00:12.112Z",
-  "epoch_count": 138,
+  "last_fetch": "2026-03-23T23:54:22.422Z",
+  "epoch_count": 140,
   "epochs": [
+    {
+      "id": "rss_eba0b6487d3ef059",
+      "timestamp": 1774284913000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis preemptively preparing for conflict amid Iran war, UAE media says - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rUzJ6akEzX2pmRzNvbnE3Q2taNDhWX3BIMjRFUXRQN1V6elU3YzFXM2RwMFp0XzhSYzhDWHVhNUtiNmN1UGtTVWlCWVBpZWFPNElubHEybWhLV1dU?oc=5\" target=\"_blank\">Houthis preemptively preparing for conflict amid Iran war, UAE media says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rUzJ6akEzX2pmRzNvbnE3Q2taNDhWX3BIMjRFUXRQN1V6elU3YzFXM2RwMFp0XzhSYzhDWHVhNUtiNmN1UGtTVWlCWVBpZWFPNElubHEybWhLV1dU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-23T23:54:20.725Z"
+    },
     {
       "id": "rss_864a560bb7fe143c",
       "timestamp": 1774241031000,
@@ -95,6 +118,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-22T14:23:44.972Z"
+    },
+    {
+      "id": "rss_1b2f82fc0dd82642",
+      "timestamp": 1774114740000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Warns of Consequences in Red Sea if US Seizes Kharg Island - Newsweek",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQckRNLXk2OTV1M1RxZWgtX2FucGg5M1AwWVdhUlhiNV9kbGRCSlZyNEU5TjZmSVBIcjNkV2lLNG1Hc1UtQ00ta2xiYUtHQWlMTExwSXh4ZmcxYk8zSWJ4ZjdvNXpFdWRfdDZzbVF2NWFEOTdaUkdiaDN2eE55aHpRY2RsQ0d5Z2lnTTFoNlFWcWgwZE9zRWgzQUIwckVNZEt4SVhEVTg5NGo0M0k?oc=5\" target=\"_blank\">Iran Warns of Consequences in Red Sea if US Seizes Kharg Island</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsweek</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQckRNLXk2OTV1M1RxZWgtX2FucGg5M1AwWVdhUlhiNV9kbGRCSlZyNEU5TjZmSVBIcjNkV2lLNG1Hc1UtQ00ta2xiYUtHQWlMTExwSXh4ZmcxYk8zSWJ4ZjdvNXpFdWRfdDZzbVF2NWFEOTdaUkdiaDN2eE55aHpRY2RsQ0d5Z2lnTTFoNlFWcWgwZE9zRWgzQUIwckVNZEt4SVhEVTg5NGo0M0k?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-23T23:54:20.726Z"
     },
     {
       "id": "rss_42ac0c4483a4673a",
