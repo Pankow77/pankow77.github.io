@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-24T14:40:19.924Z",
-  "epoch_count": 140,
+  "last_fetch": "2026-03-24T16:03:22.757Z",
+  "epoch_count": 141,
   "epochs": [
     {
       "id": "rss_eba0b6487d3ef059",
@@ -440,6 +440,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T09:39:00.028Z"
+    },
+    {
+      "id": "rss_d4cff8763a31ed63",
+      "timestamp": 1773905401000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Ramat Gan school, in ruins after Houthi attack, being torn down - JNS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOM1VQc0t5cW9TWFhMUTg3UTd1NzN1dF9fc3Fsbi1mdXIxSEJfME9tV2RWSEJQdFlUcUU4d1ZXTS1vcnhyc29SdnhaR3VRd3cwTHNGMGJYS0c3UjJtcjFydmQxWjZHRXVWaC1pRERTamNtYVNMWFF5eGNmTnVDdU0wb1hZOW5Na19Qa3JBdU9jdVVuNnJfdEMyXw?oc=5\" target=\"_blank\">Ramat Gan school, in ruins after Houthi attack, being torn down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JNS</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOM1VQc0t5cW9TWFhMUTg3UTd1NzN1dF9fc3Fsbi1mdXIxSEJfME9tV2RWSEJQdFlUcUU4d1ZXTS1vcnhyc29SdnhaR3VRd3cwTHNGMGJYS0c3UjJtcjFydmQxWjZHRXVWaC1pRERTamNtYVNMWFF5eGNmTnVDdU0wb1hZOW5Na19Qa3JBdU9jdVVuNnJfdEMyXw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-24T16:03:20.971Z"
     },
     {
       "id": "rss_d7cc258a116de5c8",
