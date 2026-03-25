@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-03-25T16:06:36.660Z",
-  "epoch_count": 27,
+  "last_fetch": "2026-03-25T17:33:05.527Z",
+  "epoch_count": 28,
   "epochs": [
     {
       "id": "rss_c45e621b9cee00f2",
@@ -46,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-23T18:48:30.652Z"
+    },
+    {
+      "id": "rss_0b4d659bdb79ecc1",
+      "timestamp": 1774218840000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Il Pakistan si offre come mediatore fra Iran e USA - RSI Radiotelevisione svizzera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUno3RndnTUtYTmJ0N1ZwNGUtbHhZajEyZ1owYUpHeEMwbjZudHl2VWwxcU1LalhuY3BDU2pqcFpmX1JTVlNEaXpKYU55UE1kTVI0em1PcEFTd0FtcmU1MEVac2l2NzlabzI5ZVMtUkxmaUU5dl9SUmpQTUNtUkNQMGJtZG5yRDdLZFcyeUp1S2I0LXItZ2tnSWxPOEhJZ1JRNmlzMHpjUWVTZw?oc=5\" target=\"_blank\">Il Pakistan si offre come mediatore fra Iran e USA</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RSI Radiotelevisione svizzera</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUno3RndnTUtYTmJ0N1ZwNGUtbHhZajEyZ1owYUpHeEMwbjZudHl2VWwxcU1LalhuY3BDU2pqcFpmX1JTVlNEaXpKYU55UE1kTVI0em1PcEFTd0FtcmU1MEVac2l2NzlabzI5ZVMtUkxmaUU5dl9SUmpQTUNtUkNQMGJtZG5yRDdLZFcyeUp1S2I0LXItZ2tnSWxPOEhJZ1JRNmlzMHpjUWVTZw?oc=5",
+      "feed_id": "gn-ice-italy-it",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-25T17:33:04.607Z"
     },
     {
       "id": "rss_683bf66e2841069d",
