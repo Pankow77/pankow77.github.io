@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-25T11:38:33.673Z",
-  "epoch_count": 141,
+  "last_fetch": "2026-03-25T13:00:12.212Z",
+  "epoch_count": 142,
   "epochs": [
     {
       "id": "rss_eba0b6487d3ef059",
@@ -164,6 +164,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-21T15:21:39.879Z"
+    },
+    {
+      "id": "rss_61473b304adaf589",
+      "timestamp": 1774085164000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "A new threat to global shipping as Yemen's Houthis threaten to close vital Bab el-Mandeb Strait - africanews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMnFSR3VkTVM5Q0ZyVWJvUmpxMEVDZW9QMUpQRFVaQnVfbi1CRU5qLWNleWdWZl84TWYxa2xXX0hLQWJfanlxRzM1Nk9KN1BCNVNjMEFIWnpIeTdoUjdTUVJXelY1WFRZcFppZHc1QUN2LUhPeHVCNFlaLXJ6MFlKNzh1bWlteUVVcFVCNXdwNE5nMVpBX09sWHA1ZFBJa3FZb3VEZjd6UnhsRGZ3dTdESF9vVEI2cE5ZWl9LdzV1dHBXczR4M1BMX9IBzgFBVV95cUxOZGMxRFhWMDNBM3ZrZEdZY2xfTXpXMG1CNTh4RGU3SnNiTDdvNzkwMzQzbWpnNUxzYWNNTWtnbnk4YWl6Rmw1cjA3cGVjX3RGaGpiS0Y1UWpTVTV4Nko2YWRESHJpY1FtRUNlZVBCMVpsV2FaVy02dzVKYnJBMFFJVkN5aH",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPMnFSR3VkTVM5Q0ZyVWJvUmpxMEVDZW9QMUpQRFVaQnVfbi1CRU5qLWNleWdWZl84TWYxa2xXX0hLQWJfanlxRzM1Nk9KN1BCNVNjMEFIWnpIeTdoUjdTUVJXelY1WFRZcFppZHc1QUN2LUhPeHVCNFlaLXJ6MFlKNzh1bWlteUVVcFVCNXdwNE5nMVpBX09sWHA1ZFBJa3FZb3VEZjd6UnhsRGZ3dTdESF9vVEI2cE5ZWl9LdzV1dHBXczR4M1BMX9IBzgFBVV95cUxOZGMxRFhWMDNBM3ZrZEdZY2xfTXpXMG1CNTh4RGU3SnNiTDdvNzkwMzQzbWpnNUxzYWNNTWtnbnk4YWl6Rmw1cjA3cGVjX3RGaGpiS0Y1UWpTVTV4Nko2YWRESHJpY1FtRUNlZVBCMVpsV2FaVy02dzVKYnJBMFFJVkN5aHdiOWR5SFltQVI2LXZ1RWc5ZEdMWUpHbzQ4cGx2RVNid0VjdUtXbjlmVnd1UERTUHhUSGdiemY1R0VPLUgyTWo4TzhrUzBkSHRaZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-25T13:00:10.738Z"
     },
     {
       "id": "rss_d513515322ee4cce",
