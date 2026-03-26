@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-26T18:59:39.904Z",
-  "epoch_count": 149,
+  "last_fetch": "2026-03-26T19:56:14.227Z",
+  "epoch_count": 151,
   "epochs": [
+    {
+      "id": "rss_e4ab1d0b0f3b8b68",
+      "timestamp": 1774552473000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "New MARAD Advisory Urges Ships to Disable AIS Tracking in Red Sea as Houthi Threat Lingers - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQOUY4a2hhbi0xUFBNeTVBZlhXX0F1VHEyUGpPcDY4TlpxTU5lcld5N2poQ3NaVGhPQkNfZjZIWHlkcGFIaXlGbG8wcWRnQXRhYmZXQUxJVjVqd0N1SERDc0VBbjM4cHhidVZvdGxsaU1QTUI2bnJUQ3hlMHVpbHZvd28xTjF0Z0Z0SnVSTHBYYVl2T2wwdFAwTXZRMlZkM3BjQXdRUDd6V2VxMERwQ3dpd1hR?oc=5\" target=\"_blank\">New MARAD Advisory Urges Ships to Disable AIS Tracking in Red Sea as Houthi Threat Lingers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOUY4a2hhbi0xUFBNeTVBZlhXX0F1VHEyUGpPcDY4TlpxTU5lcld5N2poQ3NaVGhPQkNfZjZIWHlkcGFIaXlGbG8wcWRnQXRhYmZXQUxJVjVqd0N1SERDc0VBbjM4cHhidVZvdGxsaU1QTUI2bnJUQ3hlMHVpbHZvd28xTjF0Z0Z0SnVSTHBYYVl2T2wwdFAwTXZRMlZkM3BjQXdRUDd6V2VxMERwQ3dpd1hR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-26T19:56:12.654Z"
+    },
     {
       "id": "rss_dd74644a37454bb1",
       "timestamp": 1774541110000,
@@ -23,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-26T18:59:38.338Z"
+    },
+    {
+      "id": "rss_9a627d10d401a5b2",
+      "timestamp": 1774516211000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "BT EXPLAINER: Why Bab el-Mandeb Strait is new Hormuz 2.0 after Iran's threat on 'new surprise fronts' - Business Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbnJLcFJ2WEIySG8tY2NEcUZTNXB5NDhERnlibWZzbVhpWDNMT0dGMVVqOWMya0NxcDdRWkJ3QV85djBHZkI3YlZNdkdhWXE3MUxVVldzV0EwUzFTeTF5aWpZSWw5YnNwT2lQNHRmM1NhNGJaSUVXRHBkSnNIMDFHTDFJdFhZSk9zaHUzcmIwM25NdEVZNDFQcmhBbmMxTTFObElPbk1temhlUktCaHE1blQta1liOTQ5enVhNFNUb1RfSnp6QkRmVXdncXRxYllIYXlmN09R0gHbAUFVX3lxTE9kQmp1QThtbnNJV0o5OEVUZ0tZNTB4ZkFmTkFITUlkUGpGRlU2eUp3NE5TT1BVMjM1ZDFHYjBJY1UydWV6UF8yelRFU2VfMk5udEZWQWl6YnM4ZTdibjcwM0FnbjF3ZXo2bG5jT1Jmbjd5V1NmSD",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQbnJLcFJ2WEIySG8tY2NEcUZTNXB5NDhERnlibWZzbVhpWDNMT0dGMVVqOWMya0NxcDdRWkJ3QV85djBHZkI3YlZNdkdhWXE3MUxVVldzV0EwUzFTeTF5aWpZSWw5YnNwT2lQNHRmM1NhNGJaSUVXRHBkSnNIMDFHTDFJdFhZSk9zaHUzcmIwM25NdEVZNDFQcmhBbmMxTTFObElPbk1temhlUktCaHE1blQta1liOTQ5enVhNFNUb1RfSnp6QkRmVXdncXRxYllIYXlmN09R0gHbAUFVX3lxTE9kQmp1QThtbnNJV0o5OEVUZ0tZNTB4ZkFmTkFITUlkUGpGRlU2eUp3NE5TT1BVMjM1ZDFHYjBJY1UydWV6UF8yelRFU2VfMk5udEZWQWl6YnM4ZTdibjcwM0FnbjF3ZXo2bG5jT1Jmbjd5V1NmSDgwekJ1N3Zvazl0dTBaQ2RlTnA3b3hKaFFFQzhRU0NfMzc4b2M3Q3FEaXJralI4NVNfZzFrUW91bVdRcG5RU3NNckFpYXMzcUl5U1FoV2hDcUE2M3YzY3hGeDRPLVYxYVR2eG8tVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-26T19:56:12.655Z"
     },
     {
       "id": "rss_ca1ef707caf45f34",
