@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-27T22:39:03.601Z",
-  "epoch_count": 156,
+  "last_fetch": "2026-03-27T23:28:33.873Z",
+  "epoch_count": 157,
   "epochs": [
+    {
+      "id": "rss_84d0fee7e58317fd",
+      "timestamp": 1774650898000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran threatens to attack Saudi port of Yanbu on Red Sea coast - Arab News PK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE9mdjJXRlZnTWtRdWRJQ0dyMmNPejhOTnFoeVlxTWF3VFh0SHE3cnNmdThWbU9ueEtfMDlQb2RCaHZWYVRvTTI1TUZfeWVCMVprTTBZZU1jbkVQZG4tWkE?oc=5\" target=\"_blank\">Iran threatens to attack Saudi port of Yanbu on Red Sea coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9mdjJXRlZnTWtRdWRJQ0dyMmNPejhOTnFoeVlxTWF3VFh0SHE3cnNmdThWbU9ueEtfMDlQb2RCaHZWYVRvTTI1TUZfeWVCMVprTTBZZU1jbkVQZG4tWkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-27T23:28:32.526Z"
+    },
     {
       "id": "rss_2561057d68b6f987",
       "timestamp": 1774647980000,
