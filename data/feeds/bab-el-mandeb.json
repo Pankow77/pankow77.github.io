@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T22:55:18.426Z",
-  "epoch_count": 220,
+  "last_fetch": "2026-03-28T23:27:11.452Z",
+  "epoch_count": 221,
   "epochs": [
     {
       "id": "rss_66be58a487f540c0",
@@ -165,6 +165,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T19:27:00.785Z"
+    },
+    {
+      "id": "rss_bc9f312ceb9c733b",
+      "timestamp": 1774723243000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthis launch attack on Israel as war on Iran expands - CNN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGdkT1pjSkpYcjRZRXhlNlNpRTUyQ3VUYnlwelptS201WTZqb1c3dTNzMFltYXc5ZXhHNi1Scm5tS3hkNzhRM0Y0Q1IyLWZQdmNHTkd0WUY1dUNlSnpYNDBQT3BleFNqVUdNejNvdE5zS0NDQnJmOXViOTNjVHJBOTZJcXBNNGE3VGdJZndIbjF5a2hKM29zZ3BR?oc=5\" target=\"_blank\">Houthis launch attack on Israel as war on Iran expands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGdkT1pjSkpYcjRZRXhlNlNpRTUyQ3VUYnlwelptS201WTZqb1c3dTNzMFltYXc5ZXhHNi1Scm5tS3hkNzhRM0Y0Q1IyLWZQdmNHTkd0WUY1dUNlSnpYNDBQT3BleFNqVUdNejNvdE5zS0NDQnJmOXViOTNjVHJBOTZJcXBNNGE3VGdJZndIbjF5a2hKM29zZ3BR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T23:27:10.144Z"
     },
     {
       "id": "rss_e67352f4da790456",
