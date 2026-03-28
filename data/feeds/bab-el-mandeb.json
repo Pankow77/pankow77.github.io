@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T17:01:49.274Z",
-  "epoch_count": 205,
+  "last_fetch": "2026-03-28T17:53:35.546Z",
+  "epoch_count": 207,
   "epochs": [
     {
       "id": "rss_692306bf971a1d87",
@@ -50,6 +50,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T17:01:47.901Z"
+    },
+    {
+      "id": "rss_24bf6ec77ce3f108",
+      "timestamp": 1774713798000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthis claim first missile attack on Israel since war began - pbs.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPUERFbVk1MDRIQnh1dGwzX0RRZjRKRlloWFNJdGhvV2VpSlpabUpzSDU2VEdlWmxkVkMxb1cwVHhLRXUtWFNTSVNjbzc0ZHlydURZZFl3Mm81b2Q0TG03bXhDX0tnMHFuM2E0cUZFWVZQR0RxUEdOaWV4Vy01UHNPa3hPa014Nnh4c1diZVZRcTJhUHpobzdqTjFvSHl2ai1xNVBsNdIBqgFBVV95cUxQTmw0NkIwaEwxdWttZmRwaEZCakVEd04xeWxEX05HbTNRTlV2S2YwZTFHRlhZNHhmMkYtN0dKS09NRndTSWFuS1U5MFlodnZkRmpGQVc0MXFiRWhLY1dLa3A3ZWJYX2h2LWdfZXV3WndBd3B1TmhZZnhONHpsQUVlOFBIMnFGRTA3ZjdwTlJVY0xvRTlqc1FiMk1mM0dWSTFvU2llMGV6dF",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUERFbVk1MDRIQnh1dGwzX0RRZjRKRlloWFNJdGhvV2VpSlpabUpzSDU2VEdlWmxkVkMxb1cwVHhLRXUtWFNTSVNjbzc0ZHlydURZZFl3Mm81b2Q0TG03bXhDX0tnMHFuM2E0cUZFWVZQR0RxUEdOaWV4Vy01UHNPa3hPa014Nnh4c1diZVZRcTJhUHpobzdqTjFvSHl2ai1xNVBsNdIBqgFBVV95cUxQTmw0NkIwaEwxdWttZmRwaEZCakVEd04xeWxEX05HbTNRTlV2S2YwZTFHRlhZNHhmMkYtN0dKS09NRndTSWFuS1U5MFlodnZkRmpGQVc0MXFiRWhLY1dLa3A3ZWJYX2h2LWdfZXV3WndBd3B1TmhZZnhONHpsQUVlOFBIMnFGRTA3ZjdwTlJVY0xvRTlqc1FiMk1mM0dWSTFvU2llMGV6dFpndw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T17:53:34.164Z"
     },
     {
       "id": "rss_6a6749ffb6262707",
@@ -309,6 +332,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:58:55.794Z"
+    },
+    {
+      "id": "rss_660fb47d08512f83",
+      "timestamp": 1774704067000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Who are Yemen’s Houthis? Militants opening a new front in a dangerous escalation - Gulf News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQN29nd25XWWRRcGVNb3djUlhvNV91V0RtLXZxQ0x3a1UyS0pxNV9TMUk0M1M4RHhrUWFmWUlsZWdMQXVMY2Q0UURjZ2tKM25OeGhldGVnd1hkRWdZODA1Nm9YSlJ6WkJneHMtNll4UW9nZ0Y2eWcxUWVLWGUzVHBIUXNGcV8yY1FGTUlrdWhmc1RYdG5Ua1dmQlFOdnY4U0Y0OExQY3pSdmlDdkc3N2JHctIBxgFBVV95cUxPTGxDeS1qdGR4STBWR1l1V2VXRkY0STRmeE4zRjBlTGFxM2RrRGdxN3pLWWZjR29feW05QzhxWWp4UkkwWjQtdkVLTDBzRHdXeWFLYVBIeE9WekRjSDlHRUgxYmdMSThRZmpPVS1lTFpjbk5QRlNBZ3AxRC1uY1lYUnM1UFdOSXBRRGQtTGVBRVdGRVNnQVk3VFNtaG",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQN29nd25XWWRRcGVNb3djUlhvNV91V0RtLXZxQ0x3a1UyS0pxNV9TMUk0M1M4RHhrUWFmWUlsZWdMQXVMY2Q0UURjZ2tKM25OeGhldGVnd1hkRWdZODA1Nm9YSlJ6WkJneHMtNll4UW9nZ0Y2eWcxUWVLWGUzVHBIUXNGcV8yY1FGTUlrdWhmc1RYdG5Ua1dmQlFOdnY4U0Y0OExQY3pSdmlDdkc3N2JHctIBxgFBVV95cUxPTGxDeS1qdGR4STBWR1l1V2VXRkY0STRmeE4zRjBlTGFxM2RrRGdxN3pLWWZjR29feW05QzhxWWp4UkkwWjQtdkVLTDBzRHdXeWFLYVBIeE9WekRjSDlHRUgxYmdMSThRZmpPVS1lTFpjbk5QRlNBZ3AxRC1uY1lYUnM1UFdOSXBRRGQtTGVBRVdGRVNnQVk3VFNtaG9RRmh1RG5jRzVJN2NnVU1OdWtCVDFHYkhCczlKQXBUMjB1MHdleHZiRWc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T17:53:35.541Z"
     },
     {
       "id": "rss_19896e69f5bfb2f7",
