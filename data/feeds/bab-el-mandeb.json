@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T11:33:39.519Z",
-  "epoch_count": 180,
+  "last_fetch": "2026-03-28T12:45:15.741Z",
+  "epoch_count": 185,
   "epochs": [
+    {
+      "id": "rss_aec4a572dcef00a2",
+      "timestamp": 1774699380000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Two Officers Seriously Wounded in Separate Southern Lebanon Incidents, IDF Says - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwJBVV95cUxNT0pEemFQbUpFYkZyYlV2cU9fN0FYT3VaZnA0REN6bTcxY2tuZmJKbGxjM09MQ1NtT3RodFRMeC0ybE1CeHRlX05EV1FOdjF1OV9BQms4VDM1cWhXQmxDcml1U1ozUF9aOWcyY0psQkJWOW14UXpqNFdpYmdpVTdmbGFScG5WWEhFbVNVLTN6MzBYUldxV05YRFJKc3IyOHRjOE5LaWF5TDdZZFh5S2l5d3BMWjhKVzVha3g5R01hRERTc0p1d1JPZ3daV0FmbG1NWFJKdTJwYzFXbmMyeWhZT2RTcmk1c1JFTEI4WldwWkFMYkdZaWlKSVpxeEJyZnI2eW9ISDdBODFkTkY2Z3dHS05iYm41SExFMWg3ZFlJeUpMMFUwNUdaaUpFcw?oc=5\" target=\"_blank\">Two Officers Seriously Wo",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNT0pEemFQbUpFYkZyYlV2cU9fN0FYT3VaZnA0REN6bTcxY2tuZmJKbGxjM09MQ1NtT3RodFRMeC0ybE1CeHRlX05EV1FOdjF1OV9BQms4VDM1cWhXQmxDcml1U1ozUF9aOWcyY0psQkJWOW14UXpqNFdpYmdpVTdmbGFScG5WWEhFbVNVLTN6MzBYUldxV05YRFJKc3IyOHRjOE5LaWF5TDdZZFh5S2l5d3BMWjhKVzVha3g5R01hRERTc0p1d1JPZ3daV0FmbG1NWFJKdTJwYzFXbmMyeWhZT2RTcmk1c1JFTEI4WldwWkFMYkdZaWlKSVpxeEJyZnI2eW9ISDdBODFkTkY2Z3dHS05iYm41SExFMWg3ZFlJeUpMMFUwNUdaaUpFcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T12:45:14.376Z"
+    },
     {
       "id": "rss_7fbd5986d68114fa",
       "timestamp": 1774695914000,
@@ -97,6 +118,53 @@
       "fetched_at": "2026-03-28T10:58:46.095Z"
     },
     {
+      "id": "rss_d9dba88008cd8f86",
+      "timestamp": 1774692721000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVZ2Z3d1MjduMVAwTkphREg2TDRfQk1KaUxTaTVWaC1jYnd0VUl2RFlGLUhUYTUyT0pFX3VQdGxnVWktQTVDM0thSmtlWkducmpKSnBnMnp0OEthSTliOEtyM2RUYk5ZUVBDLVE5dFFTQVNKMFowN0FBSjF4OXd5SzRLQjJndlpXeE9odkVBMGx4MmtMNXl5SUhuM0Z2c0JJWm1UUG4wWkJZTjJtY2s4?oc=5\" target=\"_blank\">Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVZ2Z3d1MjduMVAwTkphREg2TDRfQk1KaUxTaTVWaC1jYnd0VUl2RFlGLUhUYTUyT0pFX3VQdGxnVWktQTVDM0thSmtlWkducmpKSnBnMnp0OEthSTliOEtyM2RUYk5ZUVBDLVE5dFFTQVNKMFowN0FBSjF4OXd5SzRLQjJndlpXeE9odkVBMGx4MmtMNXl5SUhuM0Z2c0JJWm1UUG4wWkJZTjJtY2s4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T12:45:14.375Z"
+    },
+    {
+      "id": "rss_8102c99245c35376",
+      "timestamp": 1774690965000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthis claim missile attack on Israel in expanding conflict - france24.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNTXU2aEFVUUFEX0Y1MlFCRjhnMFFqcGZWa2JXNV9NZFNreHZhbTNIV3dpZ2I2aUFqZEVHZjdIVHZsNW5UUUNVVmtKSG1pVXlVaVlaT3BLejRwbi0tb3cxaWFUQnNpb1MtRDhXaFI5Y04tVmNMeHgwUEZ5bU1VMWF5eGxxb3hISVl1cVpVRjFoNWxCU1FTSEZ1V0g5eVo?oc=5\" target=\"_blank\">Yemen's Houthis claim missile attack on Israel in expanding conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">france24.com</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTXU2aEFVUUFEX0Y1MlFCRjhnMFFqcGZWa2JXNV9NZFNreHZhbTNIV3dpZ2I2aUFqZEVHZjdIVHZsNW5UUUNVVmtKSG1pVXlVaVlaT3BLejRwbi0tb3cxaWFUQnNpb1MtRDhXaFI5Y04tVmNMeHgwUEZ5bU1VMWF5eGxxb3hISVl1cVpVRjFoNWxCU1FTSEZ1V0g5eVo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T12:45:14.376Z"
+    },
+    {
       "id": "rss_5634a311a1cd5ee0",
       "timestamp": 1774689041000,
       "source": "OSINT",
@@ -166,6 +234,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T09:33:17.218Z"
+    },
+    {
+      "id": "rss_e9cf24f24f735cb5",
+      "timestamp": 1774686360000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Message to the US: why the Houthis chose to join the war now - ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE95LVNfZXM3X1Bqejd6M3k2Z3BQLUQ3T29HQm0tNDlGajBhSWQ5S0hYYlU2cVJ4SnlWSndQWUlDNnJSdEVvazFZNk50VGRHR1hwaVNNOUw1MndQcjB6MkFhV0IwNDRmX2F5Nk9KZG9B?oc=5\" target=\"_blank\">Message to the US: why the Houthis chose to join the war now</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE95LVNfZXM3X1Bqejd6M3k2Z3BQLUQ3T29HQm0tNDlGajBhSWQ5S0hYYlU2cVJ4SnlWSndQWUlDNnJSdEVvazFZNk50VGRHR1hwaVNNOUw1MndQcjB6MkFhV0IwNDRmX2F5Nk9KZG9B?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T12:45:14.378Z"
     },
     {
       "id": "rss_009d2d62d1570ea8",
@@ -482,6 +571,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T05:38:53.777Z"
+    },
+    {
+      "id": "rss_034f3ea5f81b81de",
+      "timestamp": 1774668291000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Iran war: Houthis claim attack on Israel, Zelenskyy in UAE - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOMFl0Vktka2p5d0ExZHIzOVVpd2J0MXIzV05BbVFiMDAtLUNxWW1GQ3k1WUxYRUV4OEVVckY0TW1hMlNRdUhmR3Q4WGo1cGhTd2ZCaTdiY2dLbjBtNjBHY1RLcTF4ZkdHQmRCc09CYVdMR3hYX2lNQlBpb3EyT1lMcE1JT1Q4Tm56Zm01dlF4NEZkVktnZ0Rz?oc=5\" target=\"_blank\">Iran war: Houthis claim attack on Israel, Zelenskyy in UAE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMFl0Vktka2p5d0ExZHIzOVVpd2J0MXIzV05BbVFiMDAtLUNxWW1GQ3k1WUxYRUV4OEVVckY0TW1hMlNRdUhmR3Q4WGo1cGhTd2ZCaTdiY2dLbjBtNjBHY1RLcTF4ZkdHQmRCc09CYVdMR3hYX2lNQlBpb3EyT1lMcE1JT1Q4Tm56Zm01dlF4NEZkVktnZ0Rz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T12:45:14.376Z"
     },
     {
       "id": "rss_34e46d2dc94c101b",
