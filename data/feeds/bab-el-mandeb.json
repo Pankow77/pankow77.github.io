@@ -1,8 +1,77 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T10:27:56.675Z",
-  "epoch_count": 176,
+  "last_fetch": "2026-03-28T10:58:47.536Z",
+  "epoch_count": 179,
   "epochs": [
+    {
+      "id": "rss_f4ed878aec7274c9",
+      "timestamp": 1774695217000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Threatening to “send the West back to the Stone Age”... another shock from the “Middle East war” [Hwang Jung-su’s Global Check-in] - bloomingbit",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1taEEwX0RseXQxazJObGVlU2xRNzcxcmx3TVY5MnE3ZWJiT1lkRjVkQU5menpJNnhCTTNwZTJkckdwYmZSRTU4QVdMeDdiLUNWY0JmUw?oc=5\" target=\"_blank\">Threatening to “send the West back to the Stone Age”... another shock from the “Middle East war” [Hwang Jung-su’s Global Check-in]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bloomingbit</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1taEEwX0RseXQxazJObGVlU2xRNzcxcmx3TVY5MnE3ZWJiT1lkRjVkQU5menpJNnhCTTNwZTJkckdwYmZSRTU4QVdMeDdiLUNWY0JmUw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T10:58:46.097Z"
+    },
+    {
+      "id": "rss_19d74dd2c5e47960",
+      "timestamp": 1774694840000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack signals a ‘serious’ escalation in Iran war - Financial Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5TUTh2WF9WRmxoWmRwdzdOOW1ldnh2NjFXZEZyTUc2Q3lQd0NaaTBfRkFZSXg0V3puYmhWRWcyXzB2WmJHWGtDVWFwaUVtWUpxZXpNZWd2VGx3V3ZESEZUUXZTMXRndkJTUWc4WnREUUM?oc=5\" target=\"_blank\">Houthi missile attack signals a ‘serious’ escalation in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TUTh2WF9WRmxoWmRwdzdOOW1ldnh2NjFXZEZyTUc2Q3lQd0NaaTBfRkFZSXg0V3puYmhWRWcyXzB2WmJHWGtDVWFwaUVtWUpxZXpNZWd2VGx3V3ZESEZUUXZTMXRndkJTUWc4WnREUUM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T10:58:46.096Z"
+    },
+    {
+      "id": "rss_dfe78aee73bc9fc8",
+      "timestamp": 1774693986000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - Audacy",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQMkpBb2RZTFdHZ2Vtclh3OXRGYnhJY3EyRkh2TC1Mb0VmaU9pV0RMTTVuWEUzZmk2RzJUa0RhUWFCWGtsVGtYYjgwMmF3SGVXYVZUVTFFUVpBZzZZaDJRNzJheThBT196T1hMQ3Q2WXE1UDI2NjhvdzNSM21JSzJRVE5ZNURzeWV1aTBBRQ?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Audacy</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMkpBb2RZTFdHZ2Vtclh3OXRGYnhJY3EyRkh2TC1Mb0VmaU9pV0RMTTVuWEUzZmk2RzJUa0RhUWFCWGtsVGtYYjgwMmF3SGVXYVZUVTFFUVpBZzZZaDJRNzJheThBT196T1hMQ3Q2WXE1UDI2NjhvdzNSM21JSzJRVE5ZNURzeWV1aTBBRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T10:58:46.095Z"
+    },
     {
       "id": "rss_5634a311a1cd5ee0",
       "timestamp": 1774689041000,
