@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T20:55:16.506Z",
-  "epoch_count": 212,
+  "last_fetch": "2026-03-28T21:26:46.017Z",
+  "epoch_count": 214,
   "epochs": [
+    {
+      "id": "rss_4d573b3d730b8f5b",
+      "timestamp": 1774725771000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - Star Beacon",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxOUVloQnZIT281QS1EZEtfLUhhRjZlQTZLeXVJUFpWMFotSjVKM29pNkpqMnhaaFRldk05b0dkZENzSGN5SDNwQmNVTzd2dVZFWjNpMUZHeHRYeE9BWFNRVmZqcm5BWnpwWXprdDdqcDg3SlNNMnoyQU5qdzhqalRzeXVJcE9ja0NLWGFwSm5xQXFuNF9XenRjcVB4bUZyVU90V1Q5azdBWTdlb010c3VIRkVPNzlKTFkzNWdBdWRkQ2pJVDhaVEs4UFNISTdKNTBjQmw1TWJ0Q3EwMi04QkJGMmlFWmROLUNPWFlid3hxNzdCbDBzd1I0ZnpROE5ZY2M1UnFB?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attac",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOUVloQnZIT281QS1EZEtfLUhhRjZlQTZLeXVJUFpWMFotSjVKM29pNkpqMnhaaFRldk05b0dkZENzSGN5SDNwQmNVTzd2dVZFWjNpMUZHeHRYeE9BWFNRVmZqcm5BWnpwWXprdDdqcDg3SlNNMnoyQU5qdzhqalRzeXVJcE9ja0NLWGFwSm5xQXFuNF9XenRjcVB4bUZyVU90V1Q5azdBWTdlb010c3VIRkVPNzlKTFkzNWdBdWRkQ2pJVDhaVEs4UFNISTdKNTBjQmw1TWJ0Q3EwMi04QkJGMmlFWmROLUNPWFlid3hxNzdCbDBzd1I0ZnpROE5ZY2M1UnFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T21:26:44.705Z"
+    },
     {
       "id": "rss_025b2c53e47e1f50",
       "timestamp": 1774724910000,
@@ -766,6 +790,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T09:33:17.219Z"
+    },
+    {
+      "id": "rss_91dd7baa160d10bf",
+      "timestamp": 1774688220000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis join Iran war with missile strike on Israel: What’s at stake - Egypt Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOSlRkTU1IREdtdXdka3pCdEF2NnhRU3JkQnZHbVEzRWJNTW5OQ204ekthc3dCQmx5T0ltZ0lvd0czMnJMLVY3YjVNVmJ0NXVuanZXU3E5NGFoSjQwaXg0by1jajd4RzZsT0NLVGdKYWZlTVRING5xTllxWDFnTDdCSnF6WjA2dXlwenZ3RW5DSHdUaTRpSXJBelVpaDFwZF9MOUVPLXd2MXE3UWlGUjhv?oc=5\" target=\"_blank\">Houthis join Iran war with missile strike on Israel: What’s at stake</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egypt Today</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSlRkTU1IREdtdXdka3pCdEF2NnhRU3JkQnZHbVEzRWJNTW5OQ204ekthc3dCQmx5T0ltZ0lvd0czMnJMLVY3YjVNVmJ0NXVuanZXU3E5NGFoSjQwaXg0by1jajd4RzZsT0NLVGdKYWZlTVRING5xTllxWDFnTDdCSnF6WjA2dXlwenZ3RW5DSHdUaTRpSXJBelVpaDFwZF9MOUVPLXd2MXE3UWlGUjhv?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T21:26:46.013Z"
     },
     {
       "id": "rss_b97917bec77a8656",
