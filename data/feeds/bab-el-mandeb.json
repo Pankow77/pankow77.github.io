@@ -1,8 +1,79 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T08:33:56.162Z",
-  "epoch_count": 171,
+  "last_fetch": "2026-03-28T09:33:18.422Z",
+  "epoch_count": 176,
   "epochs": [
+    {
+      "id": "rss_5634a311a1cd5ee0",
+      "timestamp": 1774689041000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthi military spokesman claims responsibility for missile attack on Israel - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQOUZQT05ZUnRGdlo5RTRQOHNlaGhuMEpSalUzRGJJUEVxZVJsOU5Gdm5DLXNaWE5LeVpTTzloSHIwRHAzblFUNDgyS0N3b1RzOHVER0dWNkVKcG8xUUhKZjVDZDA5enFkTkxTVjF0UW50VXJienBieTY4bFF3ZWdiRW84elhsVXF0UVVSWTBBMzM?oc=5\" target=\"_blank\">Yemen’s Houthi military spokesman claims responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQOUZQT05ZUnRGdlo5RTRQOHNlaGhuMEpSalUzRGJJUEVxZVJsOU5Gdm5DLXNaWE5LeVpTTzloSHIwRHAzblFUNDgyS0N3b1RzOHVER0dWNkVKcG8xUUhKZjVDZDA5enFkTkxTVjF0UW50VXJienBieTY4bFF3ZWdiRW84elhsVXF0UVVSWTBBMzM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T09:33:17.219Z"
+    },
+    {
+      "id": "rss_b97917bec77a8656",
+      "timestamp": 1774687284000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "US-Israel-Iran War Update: Houthis Join Conflict, Launch First Missile Attack on Israel; Red Sea Shipping &amp; Oil Routes at Risk - The Sunday Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZHI0SG9tUjJTcERRN2dFZlhtdHYyLXdFTTZoNTZMUGNYbi02aHVXa2JVWFp0aDRuQlZoczZ0NWxUZEdQTGdxM21tRW96bXNnUjRoSGUwOXBycktoMFkxb2tYTTFkWHdFMjZseE5TbEF6S0xFSVFYaWNTR25pVFdPbUdYckRDM0VDTnRrVHg1cEZKSnFZMVM1QUU1cGhEZldxRWs2czVfRjhuWVdCRS1ta0xjS0RWUG4wb2IxOG93UDZhUE9wM3ZTN0ZlaXY5Tk1MdzdpTUFyS2g5QXU2clVBRi1UREtBbXhXeUJhamVVUm5CWFJMd1lyX3h3?oc=5\" target=\"_blank\">US-Israel-Iran War Update: Houthis Join Conflict, Launch First Missile Attack on Israel; Re",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZHI0SG9tUjJTcERRN2dFZlhtdHYyLXdFTTZoNTZMUGNYbi02aHVXa2JVWFp0aDRuQlZoczZ0NWxUZEdQTGdxM21tRW96bXNnUjRoSGUwOXBycktoMFkxb2tYTTFkWHdFMjZseE5TbEF6S0xFSVFYaWNTR25pVFdPbUdYckRDM0VDTnRrVHg1cEZKSnFZMVM1QUU1cGhEZldxRWs2czVfRjhuWVdCRS1ta0xjS0RWUG4wb2IxOG93UDZhUE9wM3ZTN0ZlaXY5Tk1MdzdpTUFyS2g5QXU2clVBRi1UREtBbXhXeUJhamVVUm5CWFJMd1lyX3h3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T09:33:17.220Z"
+    },
+    {
+      "id": "rss_98f5d2184139f210",
+      "timestamp": 1774687007000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi Rebels Launch First Missile Strike on Israel - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1JIQzRnYVhQaVVTOTdrcXV2alUwYXlmbDBkeHMxalhkN1kyTmlpTFVEUEVZNFZhYUpMMWxMRWx5SDBCVmt3Q3pWY0hqeEUwVW9CZlFaMG5Fb09RMGNvcXJoaVNLRzJwako4b19UWXFNVEYzX3FwSGFXVUd1S1J1UEpkS3M?oc=5\" target=\"_blank\">Houthi Rebels Launch First Missile Strike on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1JIQzRnYVhQaVVTOTdrcXV2alUwYXlmbDBkeHMxalhkN1kyTmlpTFVEUEVZNFZhYUpMMWxMRWx5SDBCVmt3Q3pWY0hqeEUwVW9CZlFaMG5Fb09RMGNvcXJoaVNLRzJwako4b19UWXFNVEYzX3FwSGFXVUd1S1J1UEpkS3M?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T09:33:17.218Z"
+    },
     {
       "id": "rss_009d2d62d1570ea8",
       "timestamp": 1774685855000,
@@ -119,6 +190,29 @@
       "fetched_at": "2026-03-28T08:33:54.977Z"
     },
     {
+      "id": "rss_0fead3ff4ad1ae29",
+      "timestamp": 1774683675000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Iran war: Houthis claim attack on Israel - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPQmdVcGx0YXNMN0hNTkFEc3B0NVpDQXVmelpocVR2N2dvYVVoeWMxU0lkSUZQM2dPcG1EOW9lcFgteUZ6YXRua0pDQ0xzYm4wV3U1Y0wwNDNlNVBPSDdmYW5fYUpLdEFJTno2VU1WRzZkY1FSd2dpeC1VaElUTGd2VA?oc=5\" target=\"_blank\">Iran war: Houthis claim attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQmdVcGx0YXNMN0hNTkFEc3B0NVpDQXVmelpocVR2N2dvYVVoeWMxU0lkSUZQM2dPcG1EOW9lcFgteUZ6YXRua0pDQ0xzYm4wV3U1Y0wwNDNlNVBPSDdmYW5fYUpLdEFJTno2VU1WRzZkY1FSd2dpeC1VaElUTGd2VA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T09:33:17.218Z"
+    },
+    {
       "id": "rss_4b2887ed4feb61e9",
       "timestamp": 1774683249000,
       "source": "Reuters",
@@ -161,6 +255,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T08:33:54.978Z"
+    },
+    {
+      "id": "rss_2821767a3b6753e0",
+      "timestamp": 1774682640000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthi group claims ballistic missile attack on Israel - China Daily - Global Edition",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5BelBmbjVWZ25aQjVGSU5jb2t3MjJSWmdIQVNON3ptNVplOE01dzFjbHVxdVhJWjFYeXdnRVYxR29RNnlGZHpXQ0ZzbS1UWWJNekZobGhPamYybllaWDE5VlRKLTU0UHlDT2tSeXhnLUp1M2lOUEtiRl9iLUI?oc=5\" target=\"_blank\">Yemen's Houthi group claims ballistic missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5BelBmbjVWZ25aQjVGSU5jb2t3MjJSWmdIQVNON3ptNVplOE01dzFjbHVxdVhJWjFYeXdnRVYxR29RNnlGZHpXQ0ZzbS1UWWJNekZobGhPamYybllaWDE5VlRKLTU0UHlDT2tSeXhnLUp1M2lOUEtiRl9iLUI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T09:33:17.218Z"
     },
     {
       "id": "rss_b25d2e5040867ccc",
