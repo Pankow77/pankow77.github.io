@@ -1,8 +1,79 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T13:48:13.340Z",
-  "epoch_count": 187,
+  "last_fetch": "2026-03-28T14:28:17.139Z",
+  "epoch_count": 191,
   "epochs": [
+    {
+      "id": "rss_e3898f04c4196a12",
+      "timestamp": 1774707421000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis launch missiles at Israel, raising fears they will attack ships in the Red Sea - Fortune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQb1Z5REFybGRrQ3hJanhwWHRHVUUzbEZMcnpIMXlfMk03aG1yVnpuY1JIU1hJXzRmTUh6bzBGYl94YTdFMW1xYWRIb0gwX09WTDMzSnJocmFZbEN5OUlsTnlhZEIydG1iOENCQUtWQ2NlcVlWQVR2NE8tUVRULUpxdmQ2dkxXOWVzTjRQSDhrcFBYZFRHOXl0Uk5pUl9vVTNzRVNra2RSOW9iMkkxNDVENnpR?oc=5\" target=\"_blank\">Iran-backed Houthis launch missiles at Israel, raising fears they will attack ships in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQb1Z5REFybGRrQ3hJanhwWHRHVUUzbEZMcnpIMXlfMk03aG1yVnpuY1JIU1hJXzRmTUh6bzBGYl94YTdFMW1xYWRIb0gwX09WTDMzSnJocmFZbEN5OUlsTnlhZEIydG1iOENCQUtWQ2NlcVlWQVR2NE8tUVRULUpxdmQ2dkxXOWVzTjRQSDhrcFBYZFRHOXl0Uk5pUl9vVTNzRVNra2RSOW9iMkkxNDVENnpR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T14:28:15.727Z"
+    },
+    {
+      "id": "rss_35bc63021f2cb018",
+      "timestamp": 1774705725000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Iran-backed Houthis in Yemen launch attack on Israel for first time in war - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB2LW9fUjBuQ1haQUdiQzRBSDBVNkFWazR3dDZsbDBJZE5yeDRUQjFBN0RaS0dzWjNCSm1TdW85anFXNno3V3p4OXFEUEgwRVJNOC1LcUhRN3p6X21FRm5uaFZwTUFxeDVmR2pZYm9iem4wOHBzUGpyOWRLSEg?oc=5\" target=\"_blank\">Iran-backed Houthis in Yemen launch attack on Israel for first time in war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB2LW9fUjBuQ1haQUdiQzRBSDBVNkFWazR3dDZsbDBJZE5yeDRUQjFBN0RaS0dzWjNCSm1TdW85anFXNno3V3p4OXFEUEgwRVJNOC1LcUhRN3p6X21FRm5uaFZwTUFxeDVmR2pZYm9iem4wOHBzUGpyOWRLSEg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T14:28:15.726Z"
+    },
+    {
+      "id": "rss_05c2202e7a9bcc84",
+      "timestamp": 1774705379000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-Backed Houthi Rebels Attack Israel - forbes.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQU2xlcVNQaW0wZ1V2SUhwUWFpQmowSkRTNDdKZVpHUVE3OXBSVHBtVnlROXF6YWx2UTNtTExkVFp1RzRMczJ6VG40b1FoTnB0NUtxWmhQejZyRTRXaEtiODFWanVKQ0RBSW5jbktQTUJWU0p0X2RHOFRsZWxISDEtcWpKZ0k5QTlIb292M2ZiS3AtdTdkRG9sV0dDLUhSeWgyMm9qNFlVZ2dXVUpPbXROaEhCMzVqYWNqb1VKZEpWT3hLaTRmX0E?oc=5\" target=\"_blank\">Iran-Backed Houthi Rebels Attack Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">forbes.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQU2xlcVNQaW0wZ1V2SUhwUWFpQmowSkRTNDdKZVpHUVE3OXBSVHBtVnlROXF6YWx2UTNtTExkVFp1RzRMczJ6VG40b1FoTnB0NUtxWmhQejZyRTRXaEtiODFWanVKQ0RBSW5jbktQTUJWU0p0X2RHOFRsZWxISDEtcWpKZ0k5QTlIb292M2ZiS3AtdTdkRG9sV0dDLUhSeWgyMm9qNFlVZ2dXVUpPbXROaEhCMzVqYWNqb1VKZEpWT3hLaTRmX0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T14:28:15.727Z"
+    },
     {
       "id": "rss_86cfb7dc431afdc9",
       "timestamp": 1774704631000,
@@ -68,6 +139,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T12:45:14.376Z"
+    },
+    {
+      "id": "rss_b739928b22a946d1",
+      "timestamp": 1774696025000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Why the Houthis waited until now to strike Israel amid Iran war - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uVG0xS2VnTkpiNXFfeU9oOGpNRXp4Q3FsZnpKbl9ELVVsSXVGcDVBQzZ0TlMxS1M4akZlT0ktY3RPRkxPVC1EVnFSSjAybWVCQ3hVZ2tXbG4waER2?oc=5\" target=\"_blank\">Why the Houthis waited until now to strike Israel amid Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uVG0xS2VnTkpiNXFfeU9oOGpNRXp4Q3FsZnpKbl9ELVVsSXVGcDVBQzZ0TlMxS1M4akZlT0ktY3RPRkxPVC1EVnFSSjAybWVCQ3hVZ2tXbG4waER2?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T14:28:15.727Z"
     },
     {
       "id": "rss_7fbd5986d68114fa",
