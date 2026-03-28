@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T18:34:45.111Z",
-  "epoch_count": 207,
+  "last_fetch": "2026-03-28T19:27:00.791Z",
+  "epoch_count": 209,
   "epochs": [
+    {
+      "id": "rss_c22153bfca03b3c6",
+      "timestamp": 1774723500000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis enter Middle East conflict, fire missiles towards Israel - NZ Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPcE5JUmo4MTluYjRYZlpnLU1hLVE0YndPZkw0c3VrR3U2aTlaWlZHc0lza0Y4Tlp6dzJOR1p4dk9XREJjMXQzeHYyNzhyVG40U2hBbE5KN1BySHhiM2JVbXBza1U5OXdqNF8tM0g4dk9yTWNkWndacmFuVk91c0lYYkRUenBMSVJuUjRUSWhVck5DX1pOWXFqaGhBczVxbVlSQVVVVXI3X29VZFZ0SjB1QkIzY0xEUmw4eVNmc245NDE5Nktva2FWM3ZwY2dZUQ?oc=5\" target=\"_blank\">Yemen's Houthis enter Middle East conflict, fire missiles towards Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NZ Herald</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPcE5JUmo4MTluYjRYZlpnLU1hLVE0YndPZkw0c3VrR3U2aTlaWlZHc0lza0Y4Tlp6dzJOR1p4dk9XREJjMXQzeHYyNzhyVG40U2hBbE5KN1BySHhiM2JVbXBza1U5OXdqNF8tM0g4dk9yTWNkWndacmFuVk91c0lYYkRUenBMSVJuUjRUSWhVck5DX1pOWXFqaGhBczVxbVlSQVVVVXI3X29VZFZ0SjB1QkIzY0xEUmw4eVNmc245NDE5Nktva2FWM3ZwY2dZUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T19:27:00.785Z"
+    },
+    {
+      "id": "rss_7af20018cdeee7c7",
+      "timestamp": 1774721912000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis join war with attack against Israel - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oY1N1ME83RElJVUc5OFZSaXJFMms5a1Z4MDdxR2VrN3JPam9RVUZMQlpqdzZsYUVBNko1RWtRM2s4ckpiR0FxdDlXS1RuYXBlOElaZU1uYThidw?oc=5\" target=\"_blank\">Iran-backed Houthis join war with attack against Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oY1N1ME83RElJVUc5OFZSaXJFMms5a1Z4MDdxR2VrN3JPam9RVUZMQlpqdzZsYUVBNko1RWtRM2s4ckpiR0FxdDlXS1RuYXBlOElaZU1uYThidw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T19:26:59.277Z"
+    },
     {
       "id": "rss_692306bf971a1d87",
       "timestamp": 1774715447000,
