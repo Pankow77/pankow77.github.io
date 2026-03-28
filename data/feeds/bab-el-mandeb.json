@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T06:53:50.680Z",
-  "epoch_count": 163,
+  "last_fetch": "2026-03-28T07:41:43.360Z",
+  "epoch_count": 164,
   "epochs": [
     {
       "id": "rss_b25d2e5040867ccc",
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T06:53:49.572Z"
+    },
+    {
+      "id": "rss_21a76628fff3c558",
+      "timestamp": 1774675680000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why all eyes are on the ‘Strait of Tears’ as Houthis enter war - AFR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNV3lfZDlnLU9KZUVsS1YxdlFrNkhNbkJNdUdkX1czZFlOZV9wU09FWnMyOXNyaUFBWWdjcmpNRVo2YWQzWlRqMTBxNjNyTmpDMnlXVWNMRjNlRTNjUmtSdkRJaFJlOHpTaG8zMUZJTXkxcHFaOHhnQ2xLNElVYXZ4azNIZm1STnV2alBqcXZmV1p1Q2FFM2UzTmQwZVJHbFhKNDZOM01LV0NIRkl1MVRfLUtKUm9fdw?oc=5\" target=\"_blank\">Why all eyes are on the ‘Strait of Tears’ as Houthis enter war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFR</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNV3lfZDlnLU9KZUVsS1YxdlFrNkhNbkJNdUdkX1czZFlOZV9wU09FWnMyOXNyaUFBWWdjcmpNRVo2YWQzWlRqMTBxNjNyTmpDMnlXVWNMRjNlRTNjUmtSdkRJaFJlOHpTaG8zMUZJTXkxcHFaOHhnQ2xLNElVYXZ4azNIZm1STnV2alBqcXZmV1p1Q2FFM2UzTmQwZVJHbFhKNDZOM01LV0NIRkl1MVRfLUtKUm9fdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T07:41:41.944Z"
     },
     {
       "id": "rss_4c23b81da2b33b99",
