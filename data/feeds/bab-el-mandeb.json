@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T22:24:27.946Z",
-  "epoch_count": 216,
+  "last_fetch": "2026-03-28T22:55:18.426Z",
+  "epoch_count": 220,
   "epochs": [
+    {
+      "id": "rss_66be58a487f540c0",
+      "timestamp": 1774738030000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis claim missile attacks on Israel, entering Middle East war - Daily Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQMENpandSWkI2ZDVhNjhpMk1MaW1vNTBKejl0UUYtUmNMc2ZYTUpOU1ZDY0hnWEk3SUt6S1lrRVcyNGdpZ2VYVmJQU1p5SXlBV3p4RnYyRlB2eEhodEJJZHB4ZXNFRlBMMDdpY29ELUFoeUJTWmc0WWFfemdEN2R2N19lZkFuX1NkMURFM3AzNjY1eGdjdXlFeFItRnVpWk3SAawBQVVfeXFMUDJiX181MjBfaDQxbmtFaXl3MUEzUlVEOF9XN3BrS0xiRE1jSWRlYjQyZVFGV3piVGowUTd2TURPbm9aSUg2VDM4dE1hOFdhSXZfX1hzSDUzRk5rY1l6TWhjZWk5TUx0dFBFUVVmc2VKb3VURDJBUXVFanNyNE0yN0x1WVhGa3ppQ1J3b2xSTWEyNTAwS3lydzBxTEJZNUh5SGhzVl9vQjd5QXkwMQ",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMENpandSWkI2ZDVhNjhpMk1MaW1vNTBKejl0UUYtUmNMc2ZYTUpOU1ZDY0hnWEk3SUt6S1lrRVcyNGdpZ2VYVmJQU1p5SXlBV3p4RnYyRlB2eEhodEJJZHB4ZXNFRlBMMDdpY29ELUFoeUJTWmc0WWFfemdEN2R2N19lZkFuX1NkMURFM3AzNjY1eGdjdXlFeFItRnVpWk3SAawBQVVfeXFMUDJiX181MjBfaDQxbmtFaXl3MUEzUlVEOF9XN3BrS0xiRE1jSWRlYjQyZVFGV3piVGowUTd2TURPbm9aSUg2VDM4dE1hOFdhSXZfX1hzSDUzRk5rY1l6TWhjZWk5TUx0dFBFUVVmc2VKb3VURDJBUXVFanNyNE0yN0x1WVhGa3ppQ1J3b2xSTWEyNTAwS3lydzBxTEJZNUh5SGhzVl9vQjd5QXkwMQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T22:55:18.422Z"
+    },
+    {
+      "id": "rss_b9da43b39519f580",
+      "timestamp": 1774736776000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthi Red Sea Trap: How Insurance Companies Could Decide the Fate of Global Trade, Oil Markets, the World Economy, and US Elections! (A Short Note) - Anas Alhajji | Substack",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQby1lbTZCNURVbm44cGd1N1M0d3lGamNtWGV6UlAxczUyODJ4ei0tZ1hCZ1RwQ1N4cUFJR2JobEVwUHp2RXRHTnhZUmhDelh0Y1BiWU1YRFNXLTBTWUpOVGNFZ3BQdE5QcjJYNUgyOWYycGMzZlRaOWFzVjZ0a2NYag?oc=5\" target=\"_blank\">The Houthi Red Sea Trap: How Insurance Companies Could Decide the Fate of Global Trade, Oil Markets, the World Economy, and US Elections! (A Short Note)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anas Alhajji | Substack</font>",
+      "tags": [
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQby1lbTZCNURVbm44cGd1N1M0d3lGamNtWGV6UlAxczUyODJ4ei0tZ1hCZ1RwQ1N4cUFJR2JobEVwUHp2RXRHTnhZUmhDelh0Y1BiWU1YRFNXLTBTWUpOVGNFZ3BQdE5QcjJYNUgyOWYycGMzZlRaOWFzVjZ0a2NYag?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T22:55:16.897Z"
+    },
     {
       "id": "rss_c05482e7043f7700",
       "timestamp": 1774734316000,
@@ -1023,6 +1069,30 @@
       "fetched_at": "2026-03-28T08:33:54.977Z"
     },
     {
+      "id": "rss_4942134bef7b57e0",
+      "timestamp": 1774684800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Temple Daily Telegram",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPYllRbHVwV2J6Q3VoaTVBcEJmQjdBc0plbW42TUFEaDhtdWllNmozMy1tcGppX0pOMUdoMzZLVjJWZ253Mjg5NkdTZEpUbFlvZDBlakhLdDBJVUZCWTMwUlF0UFJsWEtFcHcyRXRwa0NDLUdlZ09Yc2lGR1Q3M0I3RVF4Q1phUGxZeTZRZ1l3M0FWZGJienc?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Temple Daily Telegram</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPYllRbHVwV2J6Q3VoaTVBcEJmQjdBc0plbW42TUFEaDhtdWllNmozMy1tcGppX0pOMUdoMzZLVjJWZ253Mjg5NkdTZEpUbFlvZDBlakhLdDBJVUZCWTMwUlF0UFJsWEtFcHcyRXRwa0NDLUdlZ09Yc2lGR1Q3M0I3RVF4Q1phUGxZeTZRZ1l3M0FWZGJienc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T22:55:18.421Z"
+    },
+    {
       "id": "rss_0d5e1c51559fe458",
       "timestamp": 1774683745000,
       "source": "Al Jazeera",
@@ -1430,6 +1500,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-27T09:59:02.967Z"
+    },
+    {
+      "id": "rss_314c65bbdd9091ea",
+      "timestamp": 1774594800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel stokes fears of renewed strikes on Red Sea shipping - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPNWd6djZVb2VVZ2lRMEZtRjBiZVdDVnJNVzNiMV9MaGlveGtPRF9HQmFJWG9DZ2kzdlRKM09sZnN0TUo3X25TM2xMeVZGbXRzekF3SlhXZnN6ZjRHQlRfVklSTjFoTTBPcC12VVB3VjFaVUVqcElQQVdFWkxlVlY5TWFMV0EyZVd3Z2pTbG5TODV0QWRsLTZ6NzRiSjJNRWtSMVFWZEppeVh1VjFmVU1ReWVNMDLSAboBQVVfeXFMTnhJVVBpTkRiZnFHRkNLV09tQ0x2S2xaemRnSi1ucEhhY1QzVWRuRGNZcWlDbW1maU44bXYwQzgxQVFxWW02ZGNGSjBLTGpKcWJ3S0ppanZSMDY5QTJzZ2k2cHhWSjkyelQwUmRQekRhLTNLcTBCR0hVVEhMM045cDNDNk83eUJOUDl4bzl3QTBUaXhGT0hROV",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPNWd6djZVb2VVZ2lRMEZtRjBiZVdDVnJNVzNiMV9MaGlveGtPRF9HQmFJWG9DZ2kzdlRKM09sZnN0TUo3X25TM2xMeVZGbXRzekF3SlhXZnN6ZjRHQlRfVklSTjFoTTBPcC12VVB3VjFaVUVqcElQQVdFWkxlVlY5TWFMV0EyZVd3Z2pTbG5TODV0QWRsLTZ6NzRiSjJNRWtSMVFWZEppeVh1VjFmVU1ReWVNMDLSAboBQVVfeXFMTnhJVVBpTkRiZnFHRkNLV09tQ0x2S2xaemRnSi1ucEhhY1QzVWRuRGNZcWlDbW1maU44bXYwQzgxQVFxWW02ZGNGSjBLTGpKcWJ3S0ppanZSMDY5QTJzZ2k2cHhWSjkyelQwUmRQekRhLTNLcTBCR0hVVEhMM045cDNDNk83eUJOUDl4bzl3QTBUaXhGT0hROVU0dnhXTGVQcklLQVN4czd5aUxHMGJ4S3ltTmFjM0N6NVpB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T22:55:18.421Z"
     },
     {
       "id": "rss_2e56da730b786e2b",
