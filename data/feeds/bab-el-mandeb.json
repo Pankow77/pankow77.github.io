@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T14:58:57.184Z",
-  "epoch_count": 197,
+  "last_fetch": "2026-03-28T15:37:28.532Z",
+  "epoch_count": 200,
   "epochs": [
+    {
+      "id": "rss_6383191abb987a70",
+      "timestamp": 1774711033000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they have launched their first attack in Iran war - Dallas News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1g3SGZ4Q1lNX1o1RXdSTWFSR0EzUjB6UmhjUzVGb1kxZ2YzazMyaVpHRFFpNUh0ZWNaUmlrTzZOOGRoYTlHUkpSYXY1NWF3b1huSEpjckdRSjlTa1F6eVFDTDNNLU9DYzlFUi1sRzMxVnlzdUwwY1RJZmhvcV9tYmV0bnBpd2RrMm8xa3JfWjNxbHNPOHB0NzZiUUpWVHZIa3RmZnM0Sk5iR0UwbXdNNld3aEU?oc=5\" target=\"_blank\">Houthis say they have launched their first attack in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dallas News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1g3SGZ4Q1lNX1o1RXdSTWFSR0EzUjB6UmhjUzVGb1kxZ2YzazMyaVpHRFFpNUh0ZWNaUmlrTzZOOGRoYTlHUkpSYXY1NWF3b1huSEpjckdRSjlTa1F6eVFDTDNNLU9DYzlFUi1sRzMxVnlzdUwwY1RJZmhvcV9tYmV0bnBpd2RrMm8xa3JfWjNxbHNPOHB0NzZiUUpWVHZIa3RmZnM0Sk5iR0UwbXdNNld3aEU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T15:37:26.993Z"
+    },
     {
       "id": "rss_f8805d50a624f3e4",
       "timestamp": 1774709596000,
@@ -191,6 +214,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:58:55.794Z"
+    },
+    {
+      "id": "rss_19896e69f5bfb2f7",
+      "timestamp": 1774704007000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthi attack spells trouble for Trump - The Spectator",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE5neTcyMTFkcUpYM09tT3Q5T1pqZWRKSnBlTkM3bXF0M0phNXBrSWNxVTQ1LXlpTmRYU1otckQtMlFxRU1zWm5VWjZUX2d4ZGwxNWJ3NHhvRE5vSnQ1RFJOMWNaQ3J5S1doX0Z6Q2pjZlNZX3dmQms3ZnlnR0JrUQ?oc=5\" target=\"_blank\">The Houthi attack spells trouble for Trump</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Spectator</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5neTcyMTFkcUpYM09tT3Q5T1pqZWRKSnBlTkM3bXF0M0phNXBrSWNxVTQ1LXlpTmRYU1otckQtMlFxRU1zWm5VWjZUX2d4ZGwxNWJ3NHhvRE5vSnQ1RFJOMWNaQ3J5S1doX0Z6Q2pjZlNZX3dmQms3ZnlnR0JrUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T15:37:26.991Z"
     },
     {
       "id": "rss_85ea287f3f4d0979",
@@ -784,6 +828,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T07:41:41.944Z"
+    },
+    {
+      "id": "rss_ae5542d4ec213484",
+      "timestamp": 1774672020000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis strike at Israel as attacks on Iran continue - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNNVVtc1ZtWmlSeGkxX2N1VkZxUW1RUkFReGRKX0o5OXROT21WUjVGMS1lUFlqVFpNcUtSN3gtR3BaMFNaMGR5RDRkYW1DaExPcXJ6eEx6dXlYRVBIWEpHSm94dWNlRTZlQnhaR1BwNGl0WnhneklBenpxV1dMcDFROHlGMFQtOVF1ZGxWUm14VWtvMXlicko5bWZZWHdvSUo1aUJELWxZYTgwZFZkX3ZJd242Z0I?oc=5\" target=\"_blank\">Yemen's Houthis strike at Israel as attacks on Iran continue</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNVVtc1ZtWmlSeGkxX2N1VkZxUW1RUkFReGRKX0o5OXROT21WUjVGMS1lUFlqVFpNcUtSN3gtR3BaMFNaMGR5RDRkYW1DaExPcXJ6eEx6dXlYRVBIWEpHSm94dWNlRTZlQnhaR1BwNGl0WnhneklBenpxV1dMcDFROHlGMFQtOVF1ZGxWUm14VWtvMXlicko5bWZZWHdvSUo1aUJELWxZYTgwZFZkX3ZJd242Z0I?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-03-28T15:37:26.993Z"
     },
     {
       "id": "rss_4c23b81da2b33b99",
