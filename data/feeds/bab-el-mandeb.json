@@ -1,8 +1,56 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T16:28:46.441Z",
-  "epoch_count": 203,
+  "last_fetch": "2026-03-28T17:01:49.274Z",
+  "epoch_count": 205,
   "epochs": [
+    {
+      "id": "rss_692306bf971a1d87",
+      "timestamp": 1774715447000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Ottumwa Courier",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwJBVV95cUxOT2VMamo0OUc2NVpnTWkwS01IYlRtQWczeUZhQjR0Z0lrOUlSd1d6azBqSHJfZkl6dGd3TGp2WFdUbE93TzRsNVdyQ25MWDdodnBXNjJiZ0JNNWhBZzF1aXBTSlRTb0lQWnlyZHVyR2tocW5pVFlmN0JsbG9rMnZXQVhaV005RXMzVnJtZUpFNWVGNjB5WV85U2J3U2dHVnY2Y3F1bExHQ3g4YTdXQlRUZnVvb2lWVlptTmtwdjUxVGJVZXVHZUVGVThxaWJGeFFHNlYyYlFWejJpNmszSUNDUm01eXpIYTN3OHl0X1g4cHJ5al8yakNJT21ISFN1RmVKbjdXOXhKUkp5UFE0Mk1F?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red S",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOT2VMamo0OUc2NVpnTWkwS01IYlRtQWczeUZhQjR0Z0lrOUlSd1d6azBqSHJfZkl6dGd3TGp2WFdUbE93TzRsNVdyQ25MWDdodnBXNjJiZ0JNNWhBZzF1aXBTSlRTb0lQWnlyZHVyR2tocW5pVFlmN0JsbG9rMnZXQVhaV005RXMzVnJtZUpFNWVGNjB5WV85U2J3U2dHVnY2Y3F1bExHQ3g4YTdXQlRUZnVvb2lWVlptTmtwdjUxVGJVZXVHZUVGVThxaWJGeFFHNlYyYlFWejJpNmszSUNDUm01eXpIYTN3OHl0X1g4cHJ5al8yakNJT21ISFN1RmVKbjdXOXhKUkp5UFE0Mk1F?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T17:01:47.903Z"
+    },
+    {
+      "id": "rss_8cdabf70b56290ec",
+      "timestamp": 1774714725000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - WTOP",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQUjlkTzBQVFpDbmZaMmxFRFpNTTJQUl9tdjVjdnVKdDEzYXZ2RXhvVndnRzRPaENkVGRXVEJnQmdWc0x6dEthZWFhd1V3M09uUlByTVZpZ3hEcXVpcFc1ZU9GSzZUY1ZGTWFJQjRpZ292dGlBOC1Na1Izam0tT1YtWFhUZ25CSnBpNGN3ZEtVdVowY2V6YW9vWk9nQXhSVHhUT2t2Q1hscE05cDlYdnJPM0FwaUUwTkZXOUN0OTNCeEhJdzFMRDV0ZTIzNA?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WTOP</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUjlkTzBQVFpDbmZaMmxFRFpNTTJQUl9tdjVjdnVKdDEzYXZ2RXhvVndnRzRPaENkVGRXVEJnQmdWc0x6dEthZWFhd1V3M09uUlByTVZpZ3hEcXVpcFc1ZU9GSzZUY1ZGTWFJQjRpZ292dGlBOC1Na1Izam0tT1YtWFhUZ25CSnBpNGN3ZEtVdVowY2V6YW9vWk9nQXhSVHhUT2t2Q1hscE05cDlYdnJPM0FwaUUwTkZXOUN0OTNCeEhJdzFMRDV0ZTIzNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T17:01:47.901Z"
+    },
     {
       "id": "rss_6a6749ffb6262707",
       "timestamp": 1774712931000,
