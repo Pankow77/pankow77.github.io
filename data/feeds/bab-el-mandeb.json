@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T12:45:15.741Z",
-  "epoch_count": 185,
+  "last_fetch": "2026-03-28T13:48:13.340Z",
+  "epoch_count": 187,
   "epochs": [
+    {
+      "id": "rss_86cfb7dc431afdc9",
+      "timestamp": 1774704631000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - washingtonpost.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPM3Vzd0xtS1Q1MlVzd3Y0T3ltMVhsb3lEcVFQT1hweHJ5NU12eWZ4WVVWbW9ic24tbGoxV2VkcjlOdGRseEhEcmtzV0gyLXh0aGlHZVI5Si14cmxQVEhDT0RjMV9lYjlUVF80MFhXOVQ0S0doQVFyRlJfTWFmNi0yZk5CMDJ4UDdScEJMZFJqM3ZiX3BRdFNEWXc2dkFDZEZwbmhJc1FmcUItVGIyY1UwWDRaOEhWQ3BPNVdEaWZQQWZtTGY3Nlc5aXlRODNHYk0?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">washingtonpost.com</",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPM3Vzd0xtS1Q1MlVzd3Y0T3ltMVhsb3lEcVFQT1hweHJ5NU12eWZ4WVVWbW9ic24tbGoxV2VkcjlOdGRseEhEcmtzV0gyLXh0aGlHZVI5Si14cmxQVEhDT0RjMV9lYjlUVF80MFhXOVQ0S0doQVFyRlJfTWFmNi0yZk5CMDJ4UDdScEJMZFJqM3ZiX3BRdFNEWXc2dkFDZEZwbmhJc1FmcUItVGIyY1UwWDRaOEhWQ3BPNVdEaWZQQWZtTGY3Nlc5aXlRODNHYk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T13:48:11.762Z"
+    },
+    {
+      "id": "rss_85ea287f3f4d0979",
+      "timestamp": 1774700991000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Fire at Israel and Vow Further Attacks - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOUXNaODNFbEpBTWZqVHk1NGJsVjI4WGg1aVRSMnBtUzU1LUs1R0hIbUNFa2FySnhRQjhOdDFzRlBYTExhOXVNdzhyVGQ3Q2tqeVh6ZjF2MFp5U2lvVVZzS3BmWFBuSHYzUGZZVWlBY28wZ1dPM2UyVm45b2N4d2hZdnNjM2hHYjJvMG1ObElId3hsQQ?oc=5\" target=\"_blank\">Yemen’s Houthis Fire at Israel and Vow Further Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUXNaODNFbEpBTWZqVHk1NGJsVjI4WGg1aVRSMnBtUzU1LUs1R0hIbUNFa2FySnhRQjhOdDFzRlBYTExhOXVNdzhyVGQ3Q2tqeVh6ZjF2MFp5U2lvVVZzS3BmWFBuSHYzUGZZVWlBY28wZ1dPM2UyVm45b2N4d2hZdnNjM2hHYjJvMG1ObElId3hsQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T13:48:11.762Z"
+    },
     {
       "id": "rss_aec4a572dcef00a2",
       "timestamp": 1774699380000,
