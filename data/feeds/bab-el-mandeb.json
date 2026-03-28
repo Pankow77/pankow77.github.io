@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T20:25:27.332Z",
-  "epoch_count": 211,
+  "last_fetch": "2026-03-28T20:55:16.506Z",
+  "epoch_count": 212,
   "epochs": [
     {
       "id": "rss_025b2c53e47e1f50",
@@ -332,6 +332,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:28:15.727Z"
+    },
+    {
+      "id": "rss_8b1ca86034e4b2e1",
+      "timestamp": 1774707240000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi forces enter Iran conflict with missile attacks on Israeli military sites - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0RTS2pPUloya2sxVi0zLXdVSEZXWjB6Q0NKaWJJLWRHMktwdzNNb0QzakRfclE2ckZQWEtLRW4xWXZYRS1GY2ViOXV6bktJVWxHNl9zSkFQN0xRQW93X0pQTDVUTEpWSEJQbW5zdmNDS3ZYaHA2UlhLUzlEVW9fQThXajIxN1JDYmtoaUQ1QnVpMlh2YXhjWnN4azlTUk55VUtmemdkUF8xbi16V3MtVE80Vk9kRWs0azgtU1FUcjNuYzlv?oc=5\" target=\"_blank\">Houthi forces enter Iran conflict with missile attacks on Israeli military sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0RTS2pPUloya2sxVi0zLXdVSEZXWjB6Q0NKaWJJLWRHMktwdzNNb0QzakRfclE2ckZQWEtLRW4xWXZYRS1GY2ViOXV6bktJVWxHNl9zSkFQN0xRQW93X0pQTDVUTEpWSEJQbW5zdmNDS3ZYaHA2UlhLUzlEVW9fQThXajIxN1JDYmtoaUQ1QnVpMlh2YXhjWnN4azlTUk55VUtmemdkUF8xbi16V3MtVE80Vk9kRWs0azgtU1FUcjNuYzlv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-28T20:55:15.188Z"
     },
     {
       "id": "rss_35bc63021f2cb018",
