@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T08:35:26.028Z",
-  "epoch_count": 228,
+  "last_fetch": "2026-03-29T09:32:53.202Z",
+  "epoch_count": 229,
   "epochs": [
     {
       "id": "rss_02285742ecbd0798",
@@ -47,6 +47,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T07:32:23.680Z"
+    },
+    {
+      "id": "rss_23cd8b94a6f886b5",
+      "timestamp": 1774750550000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Toronto Star",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUHkwTkhYRnViY25aZDBQaWxYdzhYWmVhQjVFQm9XYU8xZy1CVFpfWXhqTnFiVHd3YWZySUVQbmtTSk5xeXJTd1AwNElYNV9qT1E5bUoya2xrSzA0MDNyQXNzdTFMbjlqR0Jldi1PZmQtcm9TQnNUMm1nSmloV0hDRG15M1lSWXpxbVpiZGxScFYxYTFoQ0M5YjRnVjZ2aTFiYkRBR2VTczV6cmFnMW0zQXVjV3Y0ZldUZWo0N1BLMmd5bXBnUDZfcnp4aWJEeTNmV2t2WE9PcU9VeXh3el9EYTl0RHJpcDIwSFBGX0t0U0lJdndhOHV3cHRDbm5TUjhxZjB0Yk9LQzc0bGM?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea sh",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUHkwTkhYRnViY25aZDBQaWxYdzhYWmVhQjVFQm9XYU8xZy1CVFpfWXhqTnFiVHd3YWZySUVQbmtTSk5xeXJTd1AwNElYNV9qT1E5bUoya2xrSzA0MDNyQXNzdTFMbjlqR0Jldi1PZmQtcm9TQnNUMm1nSmloV0hDRG15M1lSWXpxbVpiZGxScFYxYTFoQ0M5YjRnVjZ2aTFiYkRBR2VTczV6cmFnMW0zQXVjV3Y0ZldUZWo0N1BLMmd5bXBnUDZfcnp4aWJEeTNmV2t2WE9PcU9VeXh3el9EYTl0RHJpcDIwSFBGX0t0U0lJdndhOHV3cHRDbm5TUjhxZjB0Yk9LQzc0bGM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T09:32:52.038Z"
     },
     {
       "id": "rss_9e11379c31c39e58",
