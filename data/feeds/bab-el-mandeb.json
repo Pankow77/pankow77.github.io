@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T11:01:20.047Z",
-  "epoch_count": 232,
+  "last_fetch": "2026-03-29T11:51:16.690Z",
+  "epoch_count": 235,
   "epochs": [
+    {
+      "id": "rss_3f03cf0a37544e6e",
+      "timestamp": 1774783531000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "US and Israel Attack Iran: Yemen's Houthi group claims ballistic missile attack on Israel - news.cgtn.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5DWEZzTW1MZW5KcVc5QkZqM2R4ci1LMV9KUXFkb0c4WEJkcnpwWlhGUG5MTHViWG1FRktQSTJMRW5OVmRRMkhaZWlDWndlaWd4MXpVVmw4UGFOWVhHR3ZvQjZBTmt0LWJ0QUhRV3pFUUVRN1A5eEhUNw?oc=5\" target=\"_blank\">US and Israel Attack Iran: Yemen's Houthi group claims ballistic missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5DWEZzTW1MZW5KcVc5QkZqM2R4ci1LMV9KUXFkb0c4WEJkcnpwWlhGUG5MTHViWG1FRktQSTJMRW5OVmRRMkhaZWlDWndlaWd4MXpVVmw4UGFOWVhHR3ZvQjZBTmt0LWJ0QUhRV3pFUUVRN1A5eEhUNw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T11:51:15.269Z"
+    },
+    {
+      "id": "rss_dee2448a39c55083",
+      "timestamp": 1774780860000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Missile Activity Prompts EUNAVFOR Advisory for Bab el-Mandeb Transit - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMW9qdFYyVUZWQ1U2YV9Ob2RRZjB0M0huMHAxbVNza0d0b0doYnhFRDI5TjdxRWozM2pLLW9qZXhTSW1hdC1zX1dGZ0hsbEYyTWtWRkVaLUdtLU5OY1RXZy1qeTUtMk1aTjJRUHhwTkRXSkRaWlhJYkVKdnhsdllYbWdLX05JR2dCd0s2WGljY0FXU3VPUUllRzFlRnhpZE1Kdy1TY3FYN1lCREdZcElNRmN6M2kxdGktWlVv?oc=5\" target=\"_blank\">Houthi Missile Activity Prompts EUNAVFOR Advisory for Bab el-Mandeb Transit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMW9qdFYyVUZWQ1U2YV9Ob2RRZjB0M0huMHAxbVNza0d0b0doYnhFRDI5TjdxRWozM2pLLW9qZXhTSW1hdC1zX1dGZ0hsbEYyTWtWRkVaLUdtLU5OY1RXZy1qeTUtMk1aTjJRUHhwTkRXSkRaWlhJYkVKdnhsdllYbWdLX05JR2dCd0s2WGljY0FXU3VPUUllRzFlRnhpZE1Kdy1TY3FYN1lCREdZcElNRmN6M2kxdGktWlVv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T11:51:15.267Z"
+    },
     {
       "id": "rss_393ca94bf94cd673",
       "timestamp": 1774778526000,
@@ -208,6 +255,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T02:03:57.019Z"
+    },
+    {
+      "id": "rss_c9c1973a24ad7524",
+      "timestamp": 1774739640000,
+      "source": "Reuters",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran warns US over ground attack as regional powers meet in Pakistan - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbGZJMUdyVUtHd0VTaE5QTnhITmJGNE5EMDdwMVZsV2h5UFdDenF6bGpMdVBPdUN0MkZMM1RwOThuVTgxV1dLY0Zsbmdyck5oUUZYd3JSVExjNy1lR0dMZE5KVTdBTjJXeVhWS0J1RlVBOGlReTdpUmJlTThLaEdmVld5S2JYOHB1eTkxSEU0aVNneWlBaVg5RkNFUlprR1I3em41bWtDdXFWUDJZV3czX1hZSktrRDhMWHE5OW03N0pWYUtSX0sxblZPM0lvakZS?oc=5\" target=\"_blank\">Iran warns US over ground attack as regional powers meet in Pakistan</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbGZJMUdyVUtHd0VTaE5QTnhITmJGNE5EMDdwMVZsV2h5UFdDenF6bGpMdVBPdUN0MkZMM1RwOThuVTgxV1dLY0Zsbmdyck5oUUZYd3JSVExjNy1lR0dMZE5KVTdBTjJXeVhWS0J1RlVBOGlReTdpUmJlTThLaEdmVld5S2JYOHB1eTkxSEU0aVNneWlBaVg5RkNFUlprR1I3em41bWtDdXFWUDJZV3czX1hZSktrRDhMWHE5OW03N0pWYUtSX0sxblZPM0lvakZS?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-03-29T11:51:15.268Z"
     },
     {
       "id": "rss_66be58a487f540c0",
