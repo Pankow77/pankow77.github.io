@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T15:27:26.739Z",
-  "epoch_count": 239,
+  "last_fetch": "2026-03-29T15:54:19.924Z",
+  "epoch_count": 240,
   "epochs": [
     {
       "id": "rss_7742699d7ca49e0e",
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T15:27:25.363Z"
+    },
+    {
+      "id": "rss_6fb5d3223893de1c",
+      "timestamp": 1774796280000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel stokes fears - timesdaily.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQdVVpTTJha3VfQ05HQWxuR1I1R0luZ3lxQXJMLWF4ODBwRzJybjVkN3B0blY3dEFubXBiMnRsNHB1M1dJSkdFN0Y4eXhWa2czUktOWXdrV3MxUGVFWkxPaHZyZTE0NmhNb3hDOVZkR2JaQWFJdlNKV1hVUFNaLWxiY3JlaXdfUDBuZmpENW1aRi1iWldQdDgzZ01UWkdFdjBtZms2UnFka3NUczNoLUxmNGJRZ2hSMjVOYUFYX0gyYUZZckpYamVjcm1UX00?oc=5\" target=\"_blank\">Houthi missile attack on Israel stokes fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">timesdaily.com</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdVVpTTJha3VfQ05HQWxuR1I1R0luZ3lxQXJMLWF4ODBwRzJybjVkN3B0blY3dEFubXBiMnRsNHB1M1dJSkdFN0Y4eXhWa2czUktOWXdrV3MxUGVFWkxPaHZyZTE0NmhNb3hDOVZkR2JaQWFJdlNKV1hVUFNaLWxiY3JlaXdfUDBuZmpENW1aRi1iWldQdDgzZ01UWkdFdjBtZms2UnFka3NUczNoLUxmNGJRZ2hSMjVOYUFYX0gyYUZZckpYamVjcm1UX00?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T15:54:18.427Z"
     },
     {
       "id": "rss_76e121c984cd3f56",
