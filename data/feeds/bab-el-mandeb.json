@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T02:03:58.427Z",
-  "epoch_count": 224,
+  "last_fetch": "2026-03-29T04:58:15.261Z",
+  "epoch_count": 226,
   "epochs": [
     {
       "id": "rss_9e11379c31c39e58",
@@ -120,6 +120,30 @@
       "fetched_at": "2026-03-28T22:55:16.897Z"
     },
     {
+      "id": "rss_bb11c1ddc1478ed9",
+      "timestamp": 1774735574000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Enter Iran War With Missile Strikes on Israel, Threatening Red Sea - News Ghana",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOam1GbmRPaUJ3b2tJcG1zaEZjZklOM2x2b3M5V0ljVDVUVkVFSFp5UjVsZEhaV0VSS0ZncjFhR2dkcXdPakFEeXQyelFjYk4yakNuRWFnVGprZWxzR25tMXc1T1FoTUZMM2twNHNxMXBzdWg2cUtvdElJVmdvUU0wZWx5RmJ0SmRjNjdzSFR1aEZyR0pnVXpnb2FCWHFMdnJGbGk3Z1hB?oc=5\" target=\"_blank\">Houthis Enter Iran War With Missile Strikes on Israel, Threatening Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News Ghana</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOam1GbmRPaUJ3b2tJcG1zaEZjZklOM2x2b3M5V0ljVDVUVkVFSFp5UjVsZEhaV0VSS0ZncjFhR2dkcXdPakFEeXQyelFjYk4yakNuRWFnVGprZWxzR25tMXc1T1FoTUZMM2twNHNxMXBzdWg2cUtvdElJVmdvUU0wZWx5RmJ0SmRjNjdzSFR1aEZyR0pnVXpnb2FCWHFMdnJGbGk3Z1hB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T04:58:15.256Z"
+    },
+    {
       "id": "rss_c05482e7043f7700",
       "timestamp": 1774734316000,
       "source": "OSINT",
@@ -142,6 +166,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T22:24:26.695Z"
+    },
+    {
+      "id": "rss_fa4863b0ee7ae392",
+      "timestamp": 1774732089000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "The Houthis’ attack on Israel heralds a significant escalation in the war with Iran - The Economist",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcUhzU3VrcmhPMll6RzNuVEV6MWxmcHJFekdXTE1kRkRCWXIwZ1JVQUhob1dIQ29Ja1dzMkpEVVdMRFp3RlJxV2o0LW9zQklpcjRjQXJlNFJhQ1hCdmJSTHFHTXJVbThJakVoMGF2cXVmaTF1Uk9Zdjh3cm5mdlVpM1BsQVhEYjJFSHlSUWFKSktxU0tsXzJaY3JKVGJpRzBWMzg2VEJ5bTJ2ZHhSMmxlNHdueEM2Xzk4QVV6TF96UTktbFFkZElxOTFIVHJNYi1mUjRXLVVDclRmdw?oc=5\" target=\"_blank\">The Houthis’ attack on Israel heralds a significant escalation in the war with Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Economis",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPcUhzU3VrcmhPMll6RzNuVEV6MWxmcHJFekdXTE1kRkRCWXIwZ1JVQUhob1dIQ29Ja1dzMkpEVVdMRFp3RlJxV2o0LW9zQklpcjRjQXJlNFJhQ1hCdmJSTHFHTXJVbThJakVoMGF2cXVmaTF1Uk9Zdjh3cm5mdlVpM1BsQVhEYjJFSHlSUWFKSktxU0tsXzJaY3JKVGJpRzBWMzg2VEJ5bTJ2ZHhSMmxlNHdueEM2Xzk4QVV6TF96UTktbFFkZElxOTFIVHJNYi1mUjRXLVVDclRmdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T04:58:13.754Z"
     },
     {
       "id": "rss_1450c8b41197f2ce",
