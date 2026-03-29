@@ -1,8 +1,78 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-28T23:55:14.728Z",
-  "epoch_count": 221,
+  "last_fetch": "2026-03-29T02:03:58.427Z",
+  "epoch_count": 224,
   "epochs": [
+    {
+      "id": "rss_9e11379c31c39e58",
+      "timestamp": 1774745874000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EUNAVFOR ASPIDES warns of rising Red Sea shipping threat - Container News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNMVYwRFl3U0tVdmlET0pveEk5MlliYXlNUnNXb1FBLXpaSThvbVRPUGZpUjd2aUZjXzVrQTdSM1hBcXBTdS1JUEVJN3FlQVc0MjhtLWJQUlBKT0lieEotdy11SWVSNjJaaXQxWVVTQURBSms0dFdmV1I1YS1zYV9sMVBqOXZndXBJM3lZYQ?oc=5\" target=\"_blank\">EUNAVFOR ASPIDES warns of rising Red Sea shipping threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Container News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMVYwRFl3U0tVdmlET0pveEk5MlliYXlNUnNXb1FBLXpaSThvbVRPUGZpUjd2aUZjXzVrQTdSM1hBcXBTdS1JUEVJN3FlQVc0MjhtLWJQUlBKT0lieEotdy11SWVSNjJaaXQxWVVTQURBSms0dFdmV1I1YS1zYV9sMVBqOXZndXBJM3lZYQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T02:03:57.876Z"
+    },
+    {
+      "id": "rss_f19584640fb1dc73",
+      "timestamp": 1774741515000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel - WRAL",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcFN1X0F3bVVCUG85VTNiaVNicnNJUHJ0ODRXb2NWZ094NWNta0lkN2hSME5PUVJBeGlrSExoX2JsdzM5TDdxQ013ZXQxNzNTc3BwUkhVM3BPM202RV9oblREU0NkYmpfeTN0WVZjSG1kSzVWUmw2T05TcHp4NTk3SnFuWjJhcEhTVDkzcHNiamNDYnZKVUthbGFJc3ZNZjU1X3M1LWUzUGpPbEtMR3ZsQ01IX1JIRVRQdWZmcXVkVFJnRlU?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WRAL</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcFN1X0F3bVVCUG85VTNiaVNicnNJUHJ0ODRXb2NWZ094NWNta0lkN2hSME5PUVJBeGlrSExoX2JsdzM5TDdxQ013ZXQxNzNTc3BwUkhVM3BPM202RV9oblREU0NkYmpfeTN0WVZjSG1kSzVWUmw2T05TcHp4NTk3SnFuWjJhcEhTVDkzcHNiamNDYnZKVUthbGFJc3ZNZjU1X3M1LWUzUGpPbEtMR3ZsQ01IX1JIRVRQdWZmcXVkVFJnRlU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T02:03:57.019Z"
+    },
+    {
+      "id": "rss_257bf86ded8817a1",
+      "timestamp": 1774740068000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Iran war: Houthis claim 2nd attack on Israel in 24 hours - dw.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOVVphOFZLSkYyZkVGbGhFaW9TZ0UzYXZ3NTNIR2ZRenZYQjhjbTlOZmRDb0JjOW5mS0J2eTdka3VoZVdwRHVWN01mU19jMDZSbnRfek1EejF3UlJKNXJ6YUloQjltVGhYaTVldmdFWlVuRnJZNWIyV0JxUmZDX3VUWjE4R0c3aVBlYUVVRi1ucl9HMGlvZHc?oc=5\" target=\"_blank\">Iran war: Houthis claim 2nd attack on Israel in 24 hours</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dw.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVVphOFZLSkYyZkVGbGhFaW9TZ0UzYXZ3NTNIR2ZRenZYQjhjbTlOZmRDb0JjOW5mS0J2eTdka3VoZVdwRHVWN01mU19jMDZSbnRfek1EejF3UlJKNXJ6YUloQjltVGhYaTVldmdFWlVuRnJZNWIyV0JxUmZDX3VUWjE4R0c3aVBlYUVVRi1ucl9HMGlvZHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T02:03:57.019Z"
+    },
     {
       "id": "rss_66be58a487f540c0",
       "timestamp": 1774738030000,
