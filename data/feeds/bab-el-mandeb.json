@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T14:30:33.835Z",
-  "epoch_count": 237,
+  "last_fetch": "2026-03-29T15:27:26.739Z",
+  "epoch_count": 239,
   "epochs": [
+    {
+      "id": "rss_7742699d7ca49e0e",
+      "timestamp": 1774796783000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Houthis Attack on Israel Threatens Red Sea Ceasefire - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQSV9fVjdnMnlvR09aZkxFeklpV19wb294VE03MXpiUF9QWnp1NklDc01XblluTnFHeXB4VnNFV01PQ0toR2Z6NHpMbXJoRUlSWkpRbkVWUTdyMVl0UUc1eUdBTUNNa0ZMekRtWGlQSTZpWEFmZFZXcUxndFY5N0RuUm9vNEJGUk1McHAyUG5uTjdGWEhJeHc?oc=5\" target=\"_blank\">Houthis Attack on Israel Threatens Red Sea Ceasefire</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSV9fVjdnMnlvR09aZkxFeklpV19wb294VE03MXpiUF9QWnp1NklDc01XblluTnFHeXB4VnNFV01PQ0toR2Z6NHpMbXJoRUlSWkpRbkVWUTdyMVl0UUc1eUdBTUNNa0ZMekRtWGlQSTZpWEFmZFZXcUxndFY5N0RuUm9vNEJGUk1McHAyUG5uTjdGWEhJeHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T15:27:25.363Z"
+    },
     {
       "id": "rss_76e121c984cd3f56",
       "timestamp": 1774785062000,
@@ -460,6 +481,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T21:52:46.023Z"
+    },
+    {
+      "id": "rss_f1a0cc25428ade44",
+      "timestamp": 1774725961000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOcDJkMTBWdVRpdzdLU18tMzJmTVc3aE80cmtIU05RTTZpZ19OQVJJcm1UUi0tMWxFakxucGU0YmNSM1BGQzMwX1FrLTZwd3V0UGg0WlpFTEFLSWYtelc0VTNrWlJIcHFGai1tajVpWUJvOThFQUtpeVp4bG9kMFI5OTh2NmlPbkRjRTE3amlNcElzb0R2VVJ4RExzZzRweXU4SFYzOTMxQ2ZMTFo0R0FKV2hZR0pPX3ZLMEpZUE1XM05KTmlJZXc?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcDJkMTBWdVRpdzdLU18tMzJmTVc3aE80cmtIU05RTTZpZ19OQVJJcm1UUi0tMWxFakxucGU0YmNSM1BGQzMwX1FrLTZwd3V0UGg0WlpFTEFLSWYtelc0VTNrWlJIcHFGai1tajVpWUJvOThFQUtpeVp4bG9kMFI5OTh2NmlPbkRjRTE3amlNcElzb0R2VVJ4RExzZzRweXU4SFYzOTMxQ2ZMTFo0R0FKV2hZR0pPX3ZLMEpZUE1XM05KTmlJZXc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T15:27:26.735Z"
     },
     {
       "id": "rss_4d573b3d730b8f5b",
