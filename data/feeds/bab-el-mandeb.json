@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T17:02:36.947Z",
-  "epoch_count": 241,
+  "last_fetch": "2026-03-29T17:56:06.362Z",
+  "epoch_count": 243,
   "epochs": [
+    {
+      "id": "rss_ee057ba5cc2732af",
+      "timestamp": 1774799634000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis Join War, Threaten Red Sea Trade Routes - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQSG44RHhTYWpJQ0J3VDF4aXpFU1JxNFhSVWZhdS1NY0R5U3l0b2tlWFF5VzBrY0xiX2o4ZC1vOWtZOU5mdmNfb2JGN29ZUXpZSmxQWk1TMVo4N0JYbWxJSllvdDdxNzJfQlVnencyQ0ljWFhkNlJkbTk2dEdVZF9KSzUyR2s?oc=5\" target=\"_blank\">Houthis Join War, Threaten Red Sea Trade Routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSG44RHhTYWpJQ0J3VDF4aXpFU1JxNFhSVWZhdS1NY0R5U3l0b2tlWFF5VzBrY0xiX2o4ZC1vOWtZOU5mdmNfb2JGN29ZUXpZSmxQWk1TMVo4N0JYbWxJSllvdDdxNzJfQlVnencyQ0ljWFhkNlJkbTk2dEdVZF9KSzUyR2s?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T17:56:04.836Z"
+    },
+    {
+      "id": "rss_79101cf3016ae3ee",
+      "timestamp": 1774797164000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis open new front in Iran war: Will Yemeni group block Bab al-Mandeb? - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHhaeEQwR2kxRDVUWk82Z09YWmprc3JfN19VX0JVbkVmZWtxQm1zdlVBcmVQT21IOEsweGR0MkdXd3YtZDV4bkNraXZXQ3I2cVRYYTZLOWwxZWlyNHpKX09uc3hYejRBbmdzSXdTOThTekE1YlhzS01WSEhVbUFQa2ZBdXZJWmhjem1ESnA5cnpSVGM2LXM4OTB6VFE2clBaUHhra3JYSXdhcEtwYU1TdmxwRdIBuAFBVV95cUxNMFpYWFl0aS1MajBUSWNIWTgtTzYwVnpIQTZLMDMxN3JUd3BldGNpYlEyTGJwQWlPaWxlMWE1bjVCT0c3c1VVQURMdXJ2S0NsOGVUT0tQOUpCNllYdDNfbTIxTHFuN0lBcU00XzBVUjJXV0xfYXR2dUZFZS1fUDlMdUhKLUR6T3VzbVpSTzU1Y0Y0elhWMVprUE",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHhaeEQwR2kxRDVUWk82Z09YWmprc3JfN19VX0JVbkVmZWtxQm1zdlVBcmVQT21IOEsweGR0MkdXd3YtZDV4bkNraXZXQ3I2cVRYYTZLOWwxZWlyNHpKX09uc3hYejRBbmdzSXdTOThTekE1YlhzS01WSEhVbUFQa2ZBdXZJWmhjem1ESnA5cnpSVGM2LXM4OTB6VFE2clBaUHhra3JYSXdhcEtwYU1TdmxwRdIBuAFBVV95cUxNMFpYWFl0aS1MajBUSWNIWTgtTzYwVnpIQTZLMDMxN3JUd3BldGNpYlEyTGJwQWlPaWxlMWE1bjVCT0c3c1VVQURMdXJ2S0NsOGVUT0tQOUpCNllYdDNfbTIxTHFuN0lBcU00XzBVUjJXV0xfYXR2dUZFZS1fUDlMdUhKLUR6T3VzbVpSTzU1Y0Y0elhWMVprUENLUEduckZQOFhTaGJWRy1VMkd3cnRlQnU1SjBNUmxq?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-03-29T17:56:04.834Z"
+    },
     {
       "id": "rss_7742699d7ca49e0e",
       "timestamp": 1774796783000,
