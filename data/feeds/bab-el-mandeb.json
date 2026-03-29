@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-29T15:54:19.924Z",
-  "epoch_count": 240,
+  "last_fetch": "2026-03-29T16:29:39.742Z",
+  "epoch_count": 241,
   "epochs": [
     {
       "id": "rss_7742699d7ca49e0e",
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T15:54:18.427Z"
+    },
+    {
+      "id": "rss_e4da981414627cd0",
+      "timestamp": 1774795648000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi rebels fired missiles at Israel and warned of Bab el Mandeb closure - mezha.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CZEJxRC11TnhmRHh2ZkI4b3RiUTdSOWdVUnRVYU9laGRiVGp4OVMwYTk5ZnNnRlRsSUxmQnVUV2FpWWdnQ2ZxdDZQU2hrMGJyUV9zdklvUW5qcm1V?oc=5\" target=\"_blank\">Houthi rebels fired missiles at Israel and warned of Bab el Mandeb closure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mezha.net</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CZEJxRC11TnhmRHh2ZkI4b3RiUTdSOWdVUnRVYU9laGRiVGp4OVMwYTk5ZnNnRlRsSUxmQnVUV2FpWWdnQ2ZxdDZQU2hrMGJyUV9zdklvUW5qcm1V?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-29T16:29:38.320Z"
     },
     {
       "id": "rss_76e121c984cd3f56",
