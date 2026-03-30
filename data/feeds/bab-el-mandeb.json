@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T21:38:03.961Z",
-  "epoch_count": 267,
+  "last_fetch": "2026-03-30T22:31:14.707Z",
+  "epoch_count": 269,
   "epochs": [
     {
       "id": "rss_ee7135b4e3151ced",
@@ -91,6 +91,27 @@
       "fetched_at": "2026-03-30T16:02:59.002Z"
     },
     {
+      "id": "rss_b60a7a6b0ae57ff3",
+      "timestamp": 1774882989000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The EU Council reviews Aspides and Atalanta naval missions, both will focus on underwater security - Eunews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQdG5LWGVCaDVQTFk0ZzhmcW9HM3JMTGQ0d084TUlJR21xaExYVDhMTnE5S29EVGk3ZVdtd0plejF6REd3azhxYktyT0hOX2ROSVBsRmJ5ZmFESERMMDQ5RkJraXJWc1dtVkw4YXFqU0E3UkY1bzdIdDUzdGRyRElGTzFNdEdvRF85bk5sSi1lQV9MX0JMQlpLWFN5N0FqUndtaVNCeW9LSmJPMVlIZ2RnbUVRclVGejFwek00VWxnVTNGMnl3clZhRHBhZGRiS3M?oc=5\" target=\"_blank\">The EU Council reviews Aspides and Atalanta naval missions, both will focus on underwater security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eunews</font",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQdG5LWGVCaDVQTFk0ZzhmcW9HM3JMTGQ0d084TUlJR21xaExYVDhMTnE5S29EVGk3ZVdtd0plejF6REd3azhxYktyT0hOX2ROSVBsRmJ5ZmFESERMMDQ5RkJraXJWc1dtVkw4YXFqU0E3UkY1bzdIdDUzdGRyRElGTzFNdEdvRF85bk5sSi1lQV9MX0JMQlpLWFN5N0FqUndtaVNCeW9LSmJPMVlIZ2RnbUVRclVGejFwek00VWxnVTNGMnl3clZhRHBhZGRiS3M?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T22:31:14.100Z"
+    },
+    {
       "id": "rss_2e35e097c71929e8",
       "timestamp": 1774870043000,
       "source": "OSINT",
@@ -131,6 +152,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T11:31:39.766Z"
+    },
+    {
+      "id": "rss_c877374fb67c1c82",
+      "timestamp": 1774860173000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "How Yemen’s Houthis Could Worsen the Oil Crunch - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3dlRG5ULWRNY21SZGNnZ3dSQ1FmYjVyNWsxbjd0bU9sczdlTlByRnVBSVpFd0tTRGZrV2xIakhIbkFXVmVQOElfcEYycHhYeEVWLUJwWXpoU185elpYdGNpTEdWZUh2X2FQNm1NdkVTb01iNjZVN2poX2VnODFkQ0VBVnROek95Sm9EXzRXa3R4XzJvZTRDM1hNMzV0a0FtZVRQcGdGQS12a0U?oc=5\" target=\"_blank\">How Yemen’s Houthis Could Worsen the Oil Crunch</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3dlRG5ULWRNY21SZGNnZ3dSQ1FmYjVyNWsxbjd0bU9sczdlTlByRnVBSVpFd0tTRGZrV2xIakhIbkFXVmVQOElfcEYycHhYeEVWLUJwWXpoU185elpYdGNpTEdWZUh2X2FQNm1NdkVTb01iNjZVN2poX2VnODFkQ0VBVnROek95Sm9EXzRXa3R4XzJvZTRDM1hNMzV0a0FtZVRQcGdGQS12a0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T22:31:13.230Z"
     },
     {
       "id": "rss_d8344ee0d7631386",
