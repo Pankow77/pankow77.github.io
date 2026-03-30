@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T05:09:53.546Z",
-  "epoch_count": 250,
+  "last_fetch": "2026-03-30T07:06:34.319Z",
+  "epoch_count": 254,
   "epochs": [
+    {
+      "id": "rss_e0e14afb1d75fbc8",
+      "timestamp": 1774849260000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Attacks on Israel Signal Solidarity, Threaten Red Sea Shipping Resumption - News and Statistics - IndexBox",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOa2VFUTRYVWs5ZGdnVHZteFowTDRlejR1VGt0YTZ6QXg4a2hwQW9pQ3ZHSkdpQUJ0bFZSN3I4VGgxV3Bqc3pEdkxWOGtDc3AwNFZKSmgwRHVhRmVkNFNNREN3NklnM2ZWSkc3QlRiUGJGZlduVGxhbHQwR04wMHJKTUJaeHBXMmMwcVZCZVZVN3hOTUp2OGJRdUZXSlBCVk1iTnd6RHpoSzRhajB1?oc=5\" target=\"_blank\">Houthi Attacks on Israel Signal Solidarity, Threaten Red Sea Shipping Resumption - News and Statistics</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IndexBox</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOa2VFUTRYVWs5ZGdnVHZteFowTDRlejR1VGt0YTZ6QXg4a2hwQW9pQ3ZHSkdpQUJ0bFZSN3I4VGgxV3Bqc3pEdkxWOGtDc3AwNFZKSmgwRHVhRmVkNFNNREN3NklnM2ZWSkc3QlRiUGJGZlduVGxhbHQwR04wMHJKTUJaeHBXMmMwcVZCZVZVN3hOTUp2OGJRdUZXSlBCVk1iTnd6RHpoSzRhajB1?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T07:06:34.313Z"
+    },
     {
       "id": "rss_b8a455ac1e40b495",
       "timestamp": 1774845675000,
@@ -46,6 +69,27 @@
       "fetched_at": "2026-03-30T05:09:51.924Z"
     },
     {
+      "id": "rss_bce298cf94730b55",
+      "timestamp": 1774839840000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Gold steady as softer dollar offsets fading Fed rate-cut hopes - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWWdTRm5fRWl6eXRlRUxTTEZqYVA3MWZzcmdQSzlMZ1RvcGtTOGdqMmhxTGVTODhsSHhuQWR0UDNXYVVGTUNYWVFGelpCZWl0WXZ3dng5U1FXTFZZUVM5M3lfYkV3VVlHLTVOTVUwNUd1emYzbzFmOGM1UFlhLWc3R1ZCMGFTX0tvektOM0V0ZXVPRjByT08zc3puQldkdExFTm96a3p6Sno?oc=5\" target=\"_blank\">Gold steady as softer dollar offsets fading Fed rate-cut hopes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWWdTRm5fRWl6eXRlRUxTTEZqYVA3MWZzcmdQSzlMZ1RvcGtTOGdqMmhxTGVTODhsSHhuQWR0UDNXYVVGTUNYWVFGelpCZWl0WXZ3dng5U1FXTFZZUVM5M3lfYkV3VVlHLTVOTVUwNUd1emYzbzFmOGM1UFlhLWc3R1ZCMGFTX0tvektOM0V0ZXVPRjByT08zc3puQldkdExFTm96a3p6Sno?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-03-30T07:06:32.941Z"
+    },
+    {
       "id": "rss_ab8b04e4279ffdc0",
       "timestamp": 1774839807000,
       "source": "OSINT",
@@ -67,6 +111,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T05:09:52.926Z"
+    },
+    {
+      "id": "rss_d6d8e1384f1f69fa",
+      "timestamp": 1774831931000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "US urges ships to go “dark” in Red Sea as Houthi threat lingers - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNRmhjUWtDa1EyNEVudXE5UENzVkVoQkFIVDBWR19DUjFlajRsTGtGQ0p0Y2FZelhHN2lrVmlzSmtraXplajJ4ZzRuUHBOOFppRDdIQ0pSSTJodHpibDFTT2RhdExVVDZTcXF6M1VWTWRvejdITVU2c0pib1lVZ0lhWXhjVU9ET3dsR2FLekNtYTBKSXQwWFZKWGNUSEswWm05OFRsekpDVnJYc3V2cGc?oc=5\" target=\"_blank\">US urges ships to go “dark” in Red Sea as Houthi threat lingers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRmhjUWtDa1EyNEVudXE5UENzVkVoQkFIVDBWR19DUjFlajRsTGtGQ0p0Y2FZelhHN2lrVmlzSmtraXplajJ4ZzRuUHBOOFppRDdIQ0pSSTJodHpibDFTT2RhdExVVDZTcXF6M1VWTWRvejdITVU2c0pib1lVZ0lhWXhjVU9ET3dsR2FLekNtYTBKSXQwWFZKWGNUSEswWm05OFRsekpDVnJYc3V2cGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T07:06:32.941Z"
     },
     {
       "id": "rss_9136753ff66d782d",
@@ -241,6 +308,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T12:45:59.932Z"
+    },
+    {
+      "id": "rss_56d6ce2cf083d2d4",
+      "timestamp": 1774784745000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwNBVV95cUxPOU1iZzRmaW96V3RYTTh5ZUJiVG5hY3pINzJOSjFGZWZoVklocFlCaEFYZG1VTnYwMTdISGFBRUdxVzVrRU1pRENRUndURmJEdXVCOWJYLWg2Y0dVWDlhRzh3WGp5M0UyeVBtTllzNmZYZ2hXOXlCVkd2SGl5T1lfNFdvMUZMSTdvWnJsYk1RYjRSdEV3QXpqdi1YcDdIUWxveU92dGQyZFVfMEpEdEhqbFM4VFplblFqNElxNmM4ZGRhaVlOdUF2MUpzbUhDLTBfVnZiZkRNTXE3cDB0ZWlCQmpzRy1SRmlFQ2RrSTdGb0FPQTczNEtlOXFJbXZtNnNVcGZDcFNWaWhQWFRKSVlpOERiV0VhQ2c4blNxc1FVQ0xlSHB3eXJXSUw3bUtSQklXb1JTcFdNbnNSdF9WS0RvZThZVDk0OENKLUI3cG1uMm",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxPOU1iZzRmaW96V3RYTTh5ZUJiVG5hY3pINzJOSjFGZWZoVklocFlCaEFYZG1VTnYwMTdISGFBRUdxVzVrRU1pRENRUndURmJEdXVCOWJYLWg2Y0dVWDlhRzh3WGp5M0UyeVBtTllzNmZYZ2hXOXlCVkd2SGl5T1lfNFdvMUZMSTdvWnJsYk1RYjRSdEV3QXpqdi1YcDdIUWxveU92dGQyZFVfMEpEdEhqbFM4VFplblFqNElxNmM4ZGRhaVlOdUF2MUpzbUhDLTBfVnZiZkRNTXE3cDB0ZWlCQmpzRy1SRmlFQ2RrSTdGb0FPQTczNEtlOXFJbXZtNnNVcGZDcFNWaWhQWFRKSVlpOERiV0VhQ2c4blNxc1FVQ0xlSHB3eXJXSUw3bUtSQklXb1JTcFdNbnNSdF9WS0RvZThZVDk0OENKLUI3cG1uMmpWYlpDTFcwSTdjNEhkTF9yR25RZVR5S256YllLTDV1TmZaZ01nRURDQlgwc1F3Y0c0bGttSWdTeEwzQmNmQU1pQm8wNnc4RU9FS1BPZER3?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T07:06:34.314Z"
     },
     {
       "id": "rss_3f03cf0a37544e6e",
