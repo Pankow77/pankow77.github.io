@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T07:06:34.319Z",
-  "epoch_count": 254,
+  "last_fetch": "2026-03-30T08:53:50.320Z",
+  "epoch_count": 257,
   "epochs": [
+    {
+      "id": "rss_d8344ee0d7631386",
+      "timestamp": 1774857877000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EUNAVFOR ASPIDES: Threat level for merchant vessels in Red Sea and Gulf of Aden - Safety4Sea",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUw1ZEdMNU1TOG5FbHZlRFczTEpZS2lKbFdVX2s5dGdRbFh6b0UtVXlKaDNLUVhMV1VVU0FXLVBkbHVGV0xQVURvUndlbWZQcGkyUGpmZTJ0c0lvS1hZaENVQktiU09aazYybVhtYklyZHVTNFFaZGVCNGR2ejRrUU05M0gyZ01ZaFVkRVp5X0Z1OVpOUmdvOFRHSHRuWGFNbFFQdg?oc=5\" target=\"_blank\">EUNAVFOR ASPIDES: Threat level for merchant vessels in Red Sea and Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Safety4Sea</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUw1ZEdMNU1TOG5FbHZlRFczTEpZS2lKbFdVX2s5dGdRbFh6b0UtVXlKaDNLUVhMV1VVU0FXLVBkbHVGV0xQVURvUndlbWZQcGkyUGpmZTJ0c0lvS1hZaENVQktiU09aazYybVhtYklyZHVTNFFaZGVCNGR2ejRrUU05M0gyZ01ZaFVkRVp5X0Z1OVpOUmdvOFRHSHRuWGFNbFFQdg?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T08:53:49.891Z"
+    },
     {
       "id": "rss_e0e14afb1d75fbc8",
       "timestamp": 1774849260000,
@@ -111,6 +134,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T05:09:52.926Z"
+    },
+    {
+      "id": "rss_3e61ba96727cd3c4",
+      "timestamp": 1774832832000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5\" target=\"_blank\">Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T08:53:50.314Z"
     },
     {
       "id": "rss_d6d8e1384f1f69fa",
@@ -723,6 +770,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T04:58:15.256Z"
+    },
+    {
+      "id": "rss_5c33965bd45f4b95",
+      "timestamp": 1774734372000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis launch ballistic missile at Israel as Middle East conflict escalates - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxOLWVqbXN6ejQzWVlkczBIUXF0YjNUdURCamsxQ0VNWGRRdjZFLWhFR0xudmFxNUNpazYtcFRnSUIwRHcwX3p2QlAzUE9iMGRLNUtmbWN6T3IwRjk3M3h4OEJTX2lHVjN3LTc4WXVqN2FIZzNuOGRFREFtUlAtbnVucThaNWRFQ1BvREJYMVhfeUc3VFpjckMzYlE4MUVXUThSM2V6UlBHS1E4UVJ0R0FGWXoxQ0xzRVI0QmxWbVJ6TVpqWnIwRXBTVDVRdGphdw?oc=5\" target=\"_blank\">Yemen’s Houthis launch ballistic missile at Israel as Middle East conflict escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLWVqbXN6ejQzWVlkczBIUXF0YjNUdURCamsxQ0VNWGRRdjZFLWhFR0xudmFxNUNpazYtcFRnSUIwRHcwX3p2QlAzUE9iMGRLNUtmbWN6T3IwRjk3M3h4OEJTX2lHVjN3LTc4WXVqN2FIZzNuOGRFREFtUlAtbnVucThaNWRFQ1BvREJYMVhfeUc3VFpjckMzYlE4MUVXUThSM2V6UlBHS1E4UVJ0R0FGWXoxQ0xzRVI0QmxWbVJ6TVpqWnIwRXBTVDVRdGphdw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T08:53:50.315Z"
     },
     {
       "id": "rss_c05482e7043f7700",
