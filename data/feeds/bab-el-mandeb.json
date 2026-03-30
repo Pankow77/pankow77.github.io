@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T16:03:00.640Z",
-  "epoch_count": 263,
+  "last_fetch": "2026-03-30T17:26:46.672Z",
+  "epoch_count": 264,
   "epochs": [
     {
       "id": "rss_57045fa040b47453",
@@ -622,6 +622,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T10:28:39.117Z"
+    },
+    {
+      "id": "rss_8add89c6a52f1197",
+      "timestamp": 1774767600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran tensions rise after Houthi missile attack - fdd.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPUjFWaTU0UW1KbHctMEtFUVhNaDVJSVV1X2czMUtWWm1XWkM5cHFlam1PWDBMOWE2ZmM2STF2bmtpdm5oYmoyem4wZGstZ2QyOUpwdG5saHlIQmJXeV9WT3c5UWd2QUtsS1BrNnFHRlVIWFNFbjhCTHhNcjdZR1NJbWlibmJhNkd5ZkZlNHZoa3VfLWJS?oc=5\" target=\"_blank\">Iran tensions rise after Houthi missile attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fdd.org</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUjFWaTU0UW1KbHctMEtFUVhNaDVJSVV1X2czMUtWWm1XWkM5cHFlam1PWDBMOWE2ZmM2STF2bmtpdm5oYmoyem4wZGstZ2QyOUpwdG5saHlIQmJXeV9WT3c5UWd2QUtsS1BrNnFHRlVIWFNFbjhCTHhNcjdZR1NJbWlibmJhNkd5ZkZlNHZoa3VfLWJS?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T17:26:44.932Z"
     },
     {
       "id": "rss_02285742ecbd0798",
