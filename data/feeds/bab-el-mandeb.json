@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T10:13:30.302Z",
-  "epoch_count": 258,
+  "last_fetch": "2026-03-30T11:31:41.240Z",
+  "epoch_count": 260,
   "epochs": [
+    {
+      "id": "rss_2521561772f20d05",
+      "timestamp": 1774868570000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Not the First Time: AP Erases Houthi Attacks on Israel - camera.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNSTRzQ253YTZEMTZENWNVektwYVA4Zk50bUZzdk5kYTFpa0t5dUtFQWowZmwwN0FJSUtDc2dCQU1QcERrOFFMUnpTOFFNVGswTmthcDhEbHVSMnJvWjhLQWwxTmZianM2MXFoNXM1Q2k3MjMtZGp5ZEhtdlhlUnRZMXk0ZUxhODFiWEp4NHRB?oc=5\" target=\"_blank\">Not the First Time: AP Erases Houthi Attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">camera.org</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSTRzQ253YTZEMTZENWNVektwYVA4Zk50bUZzdk5kYTFpa0t5dUtFQWowZmwwN0FJSUtDc2dCQU1QcERrOFFMUnpTOFFNVGswTmthcDhEbHVSMnJvWjhLQWwxTmZianM2MXFoNXM1Q2k3MjMtZGp5ZEhtdlhlUnRZMXk0ZUxhODFiWEp4NHRB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T11:31:39.766Z"
+    },
     {
       "id": "rss_d8344ee0d7631386",
       "timestamp": 1774857877000,
@@ -25,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T08:53:49.891Z"
+    },
+    {
+      "id": "rss_c86f16c508dbb2f9",
+      "timestamp": 1774856152000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Rises as Widening Conflict Endangers Red Sea, Hormuz Flows - Offshore Engineer Magazine",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQWWRLS015MmxrMzB6WnBMT0IyeWI3cEdqckktbjV1b2hqVmEzT1A1OWRiRzVxNjd4Z25VeUpfLUJEcVVOcUk3VWxSNzk1LVFGdzhoLW1NeFppdHdUQkNxYVUwVjF2T1Jzc1Zvd29HSmRvcG4yVzB0MGdjUzNPdmRyeWhqWTEyVHdJWElaLUpFN2pITHJ2ZXl1cGJoVkY2YzBv?oc=5\" target=\"_blank\">Oil Rises as Widening Conflict Endangers Red Sea, Hormuz Flows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Offshore Engineer Magazine</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWWRLS015MmxrMzB6WnBMT0IyeWI3cEdqckktbjV1b2hqVmEzT1A1OWRiRzVxNjd4Z25VeUpfLUJEcVVOcUk3VWxSNzk1LVFGdzhoLW1NeFppdHdUQkNxYVUwVjF2T1Jzc1Zvd29HSmRvcG4yVzB0MGdjUzNPdmRyeWhqWTEyVHdJWElaLUpFN2pITHJ2ZXl1cGJoVkY2YzBv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T11:31:39.768Z"
     },
     {
       "id": "rss_e0e14afb1d75fbc8",
