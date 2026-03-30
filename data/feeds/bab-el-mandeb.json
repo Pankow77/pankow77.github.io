@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T13:10:18.271Z",
-  "epoch_count": 260,
+  "last_fetch": "2026-03-30T14:48:05.202Z",
+  "epoch_count": 261,
   "epochs": [
     {
       "id": "rss_2521561772f20d05",
@@ -2358,6 +2358,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-27T21:58:43.752Z"
+    },
+    {
+      "id": "rss_40d1abd3ad689eee",
+      "timestamp": 1774643865000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why the Iran War Makes Red Sea Shipping a Bigger Worry - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT21zMGo0M25tN2lRVnZQeFB4VDdCdmdveWdlZFA0M1BHUmd5SEQzd2tXam52WkJscERsdS1pUHpNX094RFRvVEdibU55SGN2bmxpV1RzMGcyWE5Yd1ZyMVNMdVBEcEFvcmhfajNFT0xKRzk2b09rSGdCcG1Jamo1b1ozSmVhMzBDV1JUXzhubGlNQUc1M0xrbmo4OXRBajhhWFQwdGlRODg?oc=5\" target=\"_blank\">Why the Iran War Makes Red Sea Shipping a Bigger Worry</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQT21zMGo0M25tN2lRVnZQeFB4VDdCdmdveWdlZFA0M1BHUmd5SEQzd2tXam52WkJscERsdS1pUHpNX094RFRvVEdibU55SGN2bmxpV1RzMGcyWE5Yd1ZyMVNMdVBEcEFvcmhfajNFT0xKRzk2b09rSGdCcG1Jamo1b1ozSmVhMzBDV1JUXzhubGlNQUc1M0xrbmo4OXRBajhhWFQwdGlRODg?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-30T14:48:05.196Z"
     },
     {
       "id": "rss_1bed43ae66d7f971",
