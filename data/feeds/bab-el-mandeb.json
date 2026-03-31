@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T04:57:50.305Z",
-  "epoch_count": 276,
+  "last_fetch": "2026-03-31T06:16:45.511Z",
+  "epoch_count": 277,
   "epochs": [
     {
       "id": "rss_120617e8a32e4503",
@@ -349,6 +349,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T11:31:39.768Z"
+    },
+    {
+      "id": "rss_4f481d58730436f3",
+      "timestamp": 1774850100000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why Iran war makes Red Sea shipping a bigger worry - The Straits Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQRHR4WFNPX0VkeDBhb09yOUI1eUp0bjcwQmR1ay1GcjQ5QndwcnJHZUd5MENSMXE2TmtIQTBsUEg2ZEhMNHpUbzYwYzlqR2tkOFdXSm5mSUF5S1VBTDk0cnctZGJjVnZEUVlKTHFMYVFSdGplZ1BvT0I1RnNfcGszSzFTQ1k4c2JtTjJiNzJYTlM4V0pvZnF5S2V4dklXdFFad2RF?oc=5\" target=\"_blank\">Why Iran war makes Red Sea shipping a bigger worry</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRHR4WFNPX0VkeDBhb09yOUI1eUp0bjcwQmR1ay1GcjQ5QndwcnJHZUd5MENSMXE2TmtIQTBsUEg2ZEhMNHpUbzYwYzlqR2tkOFdXSm5mSUF5S1VBTDk0cnctZGJjVnZEUVlKTHFMYVFSdGplZ1BvT0I1RnNfcGszSzFTQ1k4c2JtTjJiNzJYTlM4V0pvZnF5S2V4dklXdFFad2RF?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T06:16:45.506Z"
     },
     {
       "id": "rss_e0e14afb1d75fbc8",
