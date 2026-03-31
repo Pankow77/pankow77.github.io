@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T14:06:58.633Z",
-  "epoch_count": 282,
+  "last_fetch": "2026-03-31T15:43:58.995Z",
+  "epoch_count": 283,
   "epochs": [
     {
       "id": "rss_d6e9e5a2f24f79e7",
@@ -2623,6 +2623,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T06:53:49.572Z"
+    },
+    {
+      "id": "rss_fcc2dd9f523ed600",
+      "timestamp": 1774676642000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel - KSAT",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPTEhCNGZ0QlUyelJ5ZjJhZi02enpjMEpPcVltakJyMUJ2N0U4U3FaWmt5NkRMOGVzcnRTckY1eE1iVC1fc1RZMkpxaHpvakhicGotN1pXMTd5R0FtY1BpSl9MQnZHQXVrVkVxLXRDLTdYSHdsVTJySy1VQ21SUHBvVi12RWxpZDg4dFBTZ3hQZEQtNXJXTEtkV2doUlJGMllGZmM1cHp5c3Z3ZXhGS2ZxUncxRjd5a1lLd09YUktoSXNfWGh5aElqX0hVclhEZw?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KSAT</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTEhCNGZ0QlUyelJ5ZjJhZi02enpjMEpPcVltakJyMUJ2N0U4U3FaWmt5NkRMOGVzcnRTckY1eE1iVC1fc1RZMkpxaHpvakhicGotN1pXMTd5R0FtY1BpSl9MQnZHQXVrVkVxLXRDLTdYSHdsVTJySy1VQ21SUHBvVi12RWxpZDg4dFBTZ3hQZEQtNXJXTEtkV2doUlJGMllGZmM1cHp5c3Z3ZXhGS2ZxUncxRjd5a1lLd09YUktoSXNfWGh5aElqX0hVclhEZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T15:43:57.514Z"
     },
     {
       "id": "rss_21a76628fff3c558",
