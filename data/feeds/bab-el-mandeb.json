@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T12:05:36.961Z",
-  "epoch_count": 281,
+  "last_fetch": "2026-03-31T14:06:58.633Z",
+  "epoch_count": 282,
   "epochs": [
     {
       "id": "rss_d6e9e5a2f24f79e7",
@@ -1955,6 +1955,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T15:37:26.991Z"
+    },
+    {
+      "id": "rss_41f47b9dde4af9c1",
+      "timestamp": 1774703127000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis join the Iran war, launch missile at Israel - Axios",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE1KaWVIVXlqMDVySW5zNExoN05vOUZOWlBxTGZkdWRWT0lqVzJGQTVLMV9uc01Va3FabkNQTmdWN1VrNUVESEI0eW1EY3djci1VOHB3NlNKSVEtaWR1N0Q0RVlSb2hxSUZLcmtvcjJoZzFIZw?oc=5\" target=\"_blank\">Houthis join the Iran war, launch missile at Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Axios</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1KaWVIVXlqMDVySW5zNExoN05vOUZOWlBxTGZkdWRWT0lqVzJGQTVLMV9uc01Va3FabkNQTmdWN1VrNUVESEI0eW1EY3djci1VOHB3NlNKSVEtaWR1N0Q0RVlSb2hxSUZLcmtvcjJoZzFIZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T14:06:57.050Z"
     },
     {
       "id": "rss_85ea287f3f4d0979",
