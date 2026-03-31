@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T08:53:30.094Z",
-  "epoch_count": 278,
+  "last_fetch": "2026-03-31T10:02:28.526Z",
+  "epoch_count": 280,
   "epochs": [
+    {
+      "id": "rss_f75f7735f66708d4",
+      "timestamp": 1774948269000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis fire missile toward Israel, raising more fears for Red Sea shipping - defenceWeb",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPNzM5Y0VRLThyQ1c2N2pVb29KUE4zVmxkbU5qRk51TGN5eldRUU9DMU9PaDBKT3dkVDZicUdPaUdLRGhBMHBrWTZyTW5IR3h4TDZkVnRRb092YjBYLVhFazdtTHZmbi1KbHlzYU1nY29XNWxjdG5XN3N5M2dqdEc2bHBqWEF6TG52YWZ3d1FjNW9zNkxoODR4Qi1EUkdQNjZ2M3FGRjVBWTFsV202cWxSN1FR?oc=5\" target=\"_blank\">Houthis fire missile toward Israel, raising more fears for Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">defenceWeb</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNzM5Y0VRLThyQ1c2N2pVb29KUE4zVmxkbU5qRk51TGN5eldRUU9DMU9PaDBKT3dkVDZicUdPaUdLRGhBMHBrWTZyTW5IR3h4TDZkVnRRb092YjBYLVhFazdtTHZmbi1KbHlzYU1nY29XNWxjdG5XN3N5M2dqdEc2bHBqWEF6TG52YWZ3d1FjNW9zNkxoODR4Qi1EUkdQNjZ2M3FGRjVBWTFsV202cWxSN1FR?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T10:02:28.521Z"
+    },
     {
       "id": "rss_3a2370a9c894bda6",
       "timestamp": 1774943425000,
@@ -25,6 +49,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-31T08:53:28.727Z"
+    },
+    {
+      "id": "rss_ae537a086ab9f805",
+      "timestamp": 1774941522000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "After backing Iran with Israel strike, Houthis avoid further escalation, for now - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNSHBvNzFDbk1GQ2V0b1Y1cWgwUm95el9mMjg4RnNwZE9XQXZJeFpIOEY4UGZScklIdjRfNGRMaXVMQlRiY3ZsMU9oOWhTcUoxNVpRZG1uYTUyTjNfN09TeUxzY0hHdEwtenlMcE1lX01Tb3BwVVFyUXZZQkdGWlFpaVJmNFBCV25WcjZTVUdDZ080WXZjNTNsZEhPMDNlS0pZT0YtUFc1bm5uZW1JWFHSAbMBQVVfeXFMUDJOM0RfbGxQNnY4b3VXbGhYamNLNHp3MElUZVMtdjBBaTNyRnQwX3RKdFRvNW1LeE5qQ3JDeU51MHYxUDdROThYYUZ1clRydzZFZ19TV1lCRXVwMnA5bWUyUjJEUFpQT29TUy1GeVoxMTVtMUd2d29jLWEwS2V6aFM2TUN3X1RuSlhsNFRjVXZFMUlybDg4M3o1SDk1SD",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSHBvNzFDbk1GQ2V0b1Y1cWgwUm95el9mMjg4RnNwZE9XQXZJeFpIOEY4UGZScklIdjRfNGRMaXVMQlRiY3ZsMU9oOWhTcUoxNVpRZG1uYTUyTjNfN09TeUxzY0hHdEwtenlMcE1lX01Tb3BwVVFyUXZZQkdGWlFpaVJmNFBCV25WcjZTVUdDZ080WXZjNTNsZEhPMDNlS0pZT0YtUFc1bm5uZW1JWFHSAbMBQVVfeXFMUDJOM0RfbGxQNnY4b3VXbGhYamNLNHp3MElUZVMtdjBBaTNyRnQwX3RKdFRvNW1LeE5qQ3JDeU51MHYxUDdROThYYUZ1clRydzZFZ19TV1lCRXVwMnA5bWUyUjJEUFpQT29TUy1GeVoxMTVtMUd2d29jLWEwS2V6aFM2TUN3X1RuSlhsNFRjVXZFMUlybDg4M3o1SDk1SDY3YkF1YnFabmU2ZFEyZWg3RWRlc3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T10:02:26.934Z"
     },
     {
       "id": "rss_120617e8a32e4503",
