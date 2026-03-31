@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-30T23:30:50.715Z",
-  "epoch_count": 271,
+  "last_fetch": "2026-03-31T02:01:05.214Z",
+  "epoch_count": 273,
   "epochs": [
+    {
+      "id": "rss_8ae20314a78681cd",
+      "timestamp": 1774916100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "International Oil Prices Rise Over 2% Amid Reports of Iran Urging Yemeni Houthi Forces to Attack Red Sea Shipping - AASTOCKS.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQd3VMVVV3dloxYnlFZllhWXFwekdWME1zUnR4aW1uNlZkRDdJQ0FJX3hMUW1FV2FQZ2Zha2s2blZuUjFEMGMwUnpPSklqZ2NWUW5rcjIxQ2NSQWJZTTY0R3N5cndZc21TSENmN3M4LWlIRjY1d0NCVnZIVzFEUTBzdEU4SEcyZTVSbXc?oc=5\" target=\"_blank\">International Oil Prices Rise Over 2% Amid Reports of Iran Urging Yemeni Houthi Forces to Attack Red Sea Shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AASTOCKS.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQd3VMVVV3dloxYnlFZllhWXFwekdWME1zUnR4aW1uNlZkRDdJQ0FJX3hMUW1FV2FQZ2Zha2s2blZuUjFEMGMwUnpPSklqZ2NWUW5rcjIxQ2NSQWJZTTY0R3N5cndZc21TSENmN3M4LWlIRjY1d0NCVnZIVzFEUTBzdEU4SEcyZTVSbXc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T02:01:05.208Z"
+    },
     {
       "id": "rss_b8ec2fdf078dd612",
       "timestamp": 1774911150000,
@@ -841,6 +865,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T07:32:23.680Z"
+    },
+    {
+      "id": "rss_3230f2667b674b50",
+      "timestamp": 1774753270000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - msn.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPR2ttX2JQV2F0WkV0WmpZLThMQ05jM2hoYlItS2w1OHBuRGZmUmUyZ2N3bmlzYzMtWFVrc0NlMHM4dnVoakZTMGpiOGNXQ3RqOFZNVUl0MEpxNUNBVTB1cWE2SlNfaGxJREV2M0ttaTJTNFVDUWduOXJSLUo4Tmh2ak1wSDNKN19WemtidzZBUUxEZzhqVXdDSEUxdkVncFdSaVEwS0tGRzZwLU12eXBtVXNueG02ZDYzcnk2MnYyT1FFSGxBVWc?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPR2ttX2JQV2F0WkV0WmpZLThMQ05jM2hoYlItS2w1OHBuRGZmUmUyZ2N3bmlzYzMtWFVrc0NlMHM4dnVoakZTMGpiOGNXQ3RqOFZNVUl0MEpxNUNBVTB1cWE2SlNfaGxJREV2M0ttaTJTNFVDUWduOXJSLUo4Tmh2ak1wSDNKN19WemtidzZBUUxEZzhqVXdDSEUxdkVncFdSaVEwS0tGRzZwLU12eXBtVXNueG02ZDYzcnk2MnYyT1FFSGxBVWc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T02:01:05.210Z"
     },
     {
       "id": "rss_23cd8b94a6f886b5",
