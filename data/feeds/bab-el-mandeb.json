@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T02:01:05.214Z",
-  "epoch_count": 273,
+  "last_fetch": "2026-03-31T04:57:50.305Z",
+  "epoch_count": 276,
   "epochs": [
+    {
+      "id": "rss_120617e8a32e4503",
+      "timestamp": 1774926437000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea: EU extends Aspides mission - Table.Briefings",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE90Z01BOUh3TGgtVDB2dm1OWmRVc2h5ci14TXctNlpCYVdnMllfb2g1UExXMWJNTU5fdC1DUlNleExURENzbERQd1dHU2dOZE94MTZpNDZRQlBSODNVcjBvTG94SHNNcnYyY005bHJYM3BkMU1LV3RReWpsR0hwWDQ?oc=5\" target=\"_blank\">Red Sea: EU extends Aspides mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Table.Briefings</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE90Z01BOUh3TGgtVDB2dm1OWmRVc2h5ci14TXctNlpCYVdnMllfb2g1UExXMWJNTU5fdC1DUlNleExURENzbERQd1dHU2dOZE94MTZpNDZRQlBSODNVcjBvTG94SHNNcnYyY005bHJYM3BkMU1LV3RReWpsR0hwWDQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T04:57:49.876Z"
+    },
+    {
+      "id": "rss_6dab51c7bf7b92c6",
+      "timestamp": 1774925712000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran pressuring Houthis to attack Red Sea tankers, officials say - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQV1ZNVUZycTRPT0NKOVJXZUJ4SE9WQ1lYdmdKcE9ZdURsanU4UFpKX0VVRC1JYXFNejZQV1lidjUzZHRORkNQZF9QUjF4ME0xUWJxNXlwSWJEcWtVTWhJdmZQdlRqQ3RLZy1jV1dTeXVNN3RDelh6bGJtbFRhOUtLd2JCcWV3RXRXZmplWFRsVlAxLTV2NXJ3dEREUlRacHhBY1l4NkwxWG94TVQ2dTkyc2tBczluZ2dwcHpzdTlUVXQ5ajFubVHSAcYBQVVfeXFMTjU5bElnTUQ2TmFIOWNjY255TDl2OXEwUmxqYUVTcXlrRWhIYzJuakIwQVhZVkEzTGtUNHZGZlVGR1pRLWphbzJ6dkVSWERMLXJaZXdMd0U0VTBINl9JbFFTVkxVUUtnNTFaVkFnYUJGMFM4dlY0bXVLTWNEZmZ4dmU4UVRaal",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV1ZNVUZycTRPT0NKOVJXZUJ4SE9WQ1lYdmdKcE9ZdURsanU4UFpKX0VVRC1JYXFNejZQV1lidjUzZHRORkNQZF9QUjF4ME0xUWJxNXlwSWJEcWtVTWhJdmZQdlRqQ3RLZy1jV1dTeXVNN3RDelh6bGJtbFRhOUtLd2JCcWV3RXRXZmplWFRsVlAxLTV2NXJ3dEREUlRacHhBY1l4NkwxWG94TVQ2dTkyc2tBczluZ2dwcHpzdTlUVXQ5ajFubVHSAcYBQVVfeXFMTjU5bElnTUQ2TmFIOWNjY255TDl2OXEwUmxqYUVTcXlrRWhIYzJuakIwQVhZVkEzTGtUNHZGZlVGR1pRLWphbzJ6dkVSWERMLXJaZXdMd0U0VTBINl9JbFFTVkxVUUtnNTFaVkFnYUJGMFM4dlY0bXVLTWNEZmZ4dmU4UVRaall1Mmxxc2FwMWpicVMwNlE4X1ZlT2VvWnJzOGF2VmE4YUFjeFFJSzJTb2N4Nkxublh2RnFDLVNSQ3RLRUdIS3Rn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T04:57:49.040Z"
+    },
     {
       "id": "rss_8ae20314a78681cd",
       "timestamp": 1774916100000,
@@ -134,6 +179,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T18:11:53.012Z"
+    },
+    {
+      "id": "rss_7556ee9ebf98f276",
+      "timestamp": 1774892612000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthis Are Now in the War—But How Deep? - Foreign Policy",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQTjY1eVo2cktnM3lHcE55ZVNfS1pIYjh5aG1SNkxKTDJ4RlI4dkV5dndZZUlyQUtlRWRhYk5KaS1nZ0lvMmk3THFTbjM3RzBJUXhVXzJ1aHRBcS0tVjJ4WXFmRk9KVGx3T0NxSDBYQkNrUmdBeHZLWi1keVNnTzhKRG9SOWQ4RXlMZGd0RkRYdm5sZTQ?oc=5\" target=\"_blank\">The Houthis Are Now in the War—But How Deep?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foreign Policy</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTjY1eVo2cktnM3lHcE55ZVNfS1pIYjh5aG1SNkxKTDJ4RlI4dkV5dndZZUlyQUtlRWRhYk5KaS1nZ0lvMmk3THFTbjM3RzBJUXhVXzJ1aHRBcS0tVjJ4WXFmRk9KVGx3T0NxSDBYQkNrUmdBeHZLWi1keVNnTzhKRG9SOWQ4RXlMZGd0RkRYdm5sZTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-03-31T04:57:49.041Z"
     },
     {
       "id": "rss_57045fa040b47453",
