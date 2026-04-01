@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-01T08:16:58.325Z",
-  "epoch_count": 292,
+  "last_fetch": "2026-04-01T09:44:00.414Z",
+  "epoch_count": 294,
   "epochs": [
+    {
+      "id": "rss_1617539cd862a4f7",
+      "timestamp": 1775034789000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis Threaten Strait No 2 As Iran War Expands. What It Means For India - NDTV",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgJBVV95cUxONjkwX1cxRUtIQi12eTdXMi1ONzc3eTVOS1ZHbTZDQXpHOEhVekFVOEVFTzkxQUUxbzloOEk2MFpnMDBKaUNEWlQ3Y3hISHNod1JEaW5GaTA5ZWZ2c3hVdVRMTzRpTEtXVWhicURSNnEzdkZ1dXI4Z1lueldPU0FGb3dzYkxWWEhUc1k0a2thVGplVmFJakRGV20xbl9FTnBvaTJuS0ZDZ3lyVWxCbWFQLVdidVZCbXZiMXQ5Y3BQeG4wSkVFOVdGMlQwQnhXSjJGcjA2NFlWV1p5SXdYYkF2V3FvLTVMZnVEc2xpSGNKclRzT3JUOEthT1oyXzRQVkxNc1J0VDljbWU3UXFjaFE?oc=5\" target=\"_blank\">Houthis Threaten Strait No 2 As Iran War Expands. What It Means ",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxONjkwX1cxRUtIQi12eTdXMi1ONzc3eTVOS1ZHbTZDQXpHOEhVekFVOEVFTzkxQUUxbzloOEk2MFpnMDBKaUNEWlQ3Y3hISHNod1JEaW5GaTA5ZWZ2c3hVdVRMTzRpTEtXVWhicURSNnEzdkZ1dXI4Z1lueldPU0FGb3dzYkxWWEhUc1k0a2thVGplVmFJakRGV20xbl9FTnBvaTJuS0ZDZ3lyVWxCbWFQLVdidVZCbXZiMXQ5Y3BQeG4wSkVFOVdGMlQwQnhXSjJGcjA2NFlWV1p5SXdYYkF2V3FvLTVMZnVEc2xpSGNKclRzT3JUOEthT1oyXzRQVkxNc1J0VDljbWU3UXFjaFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-01T09:43:59.080Z"
+    },
     {
       "id": "rss_dbbbb358ae9449ea",
       "timestamp": 1774991649000,
@@ -514,6 +537,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T11:31:39.766Z"
+    },
+    {
+      "id": "rss_c27a043cabdd7948",
+      "timestamp": 1774861200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Bedford Gazette",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgJBVV95cUxNbTA3Qzh2NFAzUFFsejJtWlJ2Smt5dVQ2VkFWN3JJSnd6ZzZ0dk04RUluV2U0ZHEzZ2pKNWdxZ0VYejRRVHJZeEphck1OSEQtMklVeFJGUUU0YXRMQWVqYzY5X2JTVm5wQVNSMkxRM003SGRwdE9JUUVzNDlQREFsY3JwbXRKRUVuZFBEczdQXzdxSlpvZEJwRGxxdGNmLXl6VDVjc2JCRUZKcXppSkhMN1dxVTZyWFZYMS1RYjVvV2haMVQ5ZzAxZmtlSXFocGVWdjRBOVZPNVY1dGlxNlc5UVRpeTBaTjluRXZmWFNGN2tpMTFlUEF2dHF1QmJHYm9NZ0VQWURB?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping ",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNbTA3Qzh2NFAzUFFsejJtWlJ2Smt5dVQ2VkFWN3JJSnd6ZzZ0dk04RUluV2U0ZHEzZ2pKNWdxZ0VYejRRVHJZeEphck1OSEQtMklVeFJGUUU0YXRMQWVqYzY5X2JTVm5wQVNSMkxRM003SGRwdE9JUUVzNDlQREFsY3JwbXRKRUVuZFBEczdQXzdxSlpvZEJwRGxxdGNmLXl6VDVjc2JCRUZKcXppSkhMN1dxVTZyWFZYMS1RYjVvV2haMVQ5ZzAxZmtlSXFocGVWdjRBOVZPNVY1dGlxNlc5UVRpeTBaTjluRXZmWFNGN2tpMTFlUEF2dHF1QmJHYm9NZ0VQWURB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-01T09:44:00.409Z"
     },
     {
       "id": "rss_c877374fb67c1c82",
