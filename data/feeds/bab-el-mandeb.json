@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-03-31T23:30:44.719Z",
-  "epoch_count": 286,
+  "last_fetch": "2026-04-01T02:09:10.138Z",
+  "epoch_count": 288,
   "epochs": [
     {
       "id": "rss_dbbbb358ae9449ea",
@@ -272,6 +272,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T23:30:49.445Z"
+    },
+    {
+      "id": "rss_c15dda6662a6d142",
+      "timestamp": 1774902989000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Presses Houthis on Red Sea Shipping, Officials Say - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOak9DNE80SkZSRGdaZEk1eUJlZWlEMnJZdG1LeEZwTTQ2NVprLUQwSG8wenc1VjFFOGJ0QWNqT1lZSkJPOW1BeDl5OXhtZnVnRnhQTWFsN2FhTDNxWXkyV2Y4MzUzN295TzlOVXpyZWc4WXd6WC1WUXFySDJBWm5xbGVOclRtMmlzU0JBTW5RUTMtZVlGMHpkRmFSYlAtWjdoaFZZczR3d2s0a2o5WGtrb0RGYjc?oc=5\" target=\"_blank\">Iran Presses Houthis on Red Sea Shipping, Officials Say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOak9DNE80SkZSRGdaZEk1eUJlZWlEMnJZdG1LeEZwTTQ2NVprLUQwSG8wenc1VjFFOGJ0QWNqT1lZSkJPOW1BeDl5OXhtZnVnRnhQTWFsN2FhTDNxWXkyV2Y4MzUzN295TzlOVXpyZWc4WXd6WC1WUXFySDJBWm5xbGVOclRtMmlzU0JBTW5RUTMtZVlGMHpkRmFSYlAtWjdoaFZZczR3d2s0a2o5WGtrb0RGYjc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-01T02:09:10.132Z"
     },
     {
       "id": "rss_ee7135b4e3151ced",
@@ -709,6 +733,30 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-03-30T05:09:51.924Z"
+    },
+    {
+      "id": "rss_df2f9fb39791e31f",
+      "timestamp": 1774819577000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran tensions rise after Houthi missile attack - LiveNOW from FOX",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Uc0JLRWxuSEtBbm9fejRYT0hqQ2RPcFpoSGVIM09MdkZ1NzlLN3NvNEgyRWRmRDEwbUpHVUl5VDZZcW11UHRvUEVtcEtNNGI0OHJqbHkwR1Z3LXFsbnJFQ2xuQdIBaEFVX3lxTFB1S0tQNGFyLUg5eXFkU25ZWENIS1ZJX2dMaEU0TnU4alI1bWZXdmtFOGdBb2NzTUFObDQ0MHpmS2lLRXJMSnRzVzVMRHMwckl2Sy1LTkhKUmRuMHRveTZMb3VlNEctV0ZF?oc=5\" target=\"_blank\">Iran tensions rise after Houthi missile attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">LiveNOW from FOX</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Uc0JLRWxuSEtBbm9fejRYT0hqQ2RPcFpoSGVIM09MdkZ1NzlLN3NvNEgyRWRmRDEwbUpHVUl5VDZZcW11UHRvUEVtcEtNNGI0OHJqbHkwR1Z3LXFsbnJFQ2xuQdIBaEFVX3lxTFB1S0tQNGFyLUg5eXFkU25ZWENIS1ZJX2dMaEU0TnU4alI1bWZXdmtFOGdBb2NzTUFObDQ0MHpmS2lLRXJMSnRzVzVMRHMwckl2Sy1LTkhKUmRuMHRveTZMb3VlNEctV0ZF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-01T02:09:08.598Z"
     },
     {
       "id": "rss_10009eb83133d3e7",
