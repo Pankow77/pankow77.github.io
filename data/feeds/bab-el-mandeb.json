@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-01T22:33:12.897Z",
-  "epoch_count": 296,
+  "last_fetch": "2026-04-01T23:32:41.446Z",
+  "epoch_count": 297,
   "epochs": [
     {
       "id": "rss_f00692c454783cdb",
@@ -162,6 +162,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T05:10:38.323Z"
+    },
+    {
+      "id": "rss_202b31a88713e4c7",
+      "timestamp": 1774981744000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - msn.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPY2dFUW92SWRMVDVpRkFQTHByX2xDN3VsUTlKVDJMNUlhaU9FMTRUalNTWGRlSUljMFV1YVFqS3ZVaGxQZmdtNkdNVTZtWVVXMnpCT0IwU1UxQlg2QUlyQTRYRjZsSGVaWHBSbEk5M29sSm1DSVVVYlJkUnNGN3hNMjh5RnF2MDdLUUxLX09EMEpwQ1ZLbkZmRzlUdGpwQWdlZzB6am9ueDJrSXctNHlDU2lrZ1hMbEx4SHhZcklWNzVycG9peHc?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPY2dFUW92SWRMVDVpRkFQTHByX2xDN3VsUTlKVDJMNUlhaU9FMTRUalNTWGRlSUljMFV1YVFqS3ZVaGxQZmdtNkdNVTZtWVVXMnpCT0IwU1UxQlg2QUlyQTRYRjZsSGVaWHBSbEk5M29sSm1DSVVVYlJkUnNGN3hNMjh5RnF2MDdLUUxLX09EMEpwQ1ZLbkZmRzlUdGpwQWdlZzB6am9ueDJrSXctNHlDU2lrZ1hMbEx4SHhZcklWNzVycG9peHc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-01T23:32:41.442Z"
     },
     {
       "id": "rss_2ecd9a2dfc4fbbe4",
