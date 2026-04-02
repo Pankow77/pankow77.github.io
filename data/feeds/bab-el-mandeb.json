@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T10:54:36.570Z",
-  "epoch_count": 298,
+  "last_fetch": "2026-04-02T11:42:30.570Z",
+  "epoch_count": 299,
   "epochs": [
     {
       "id": "rss_9499ff77f998991d",
@@ -2001,6 +2001,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T16:28:44.902Z"
+    },
+    {
+      "id": "rss_b12f9f3ccd1a9909",
+      "timestamp": 1774711186000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "CENTCOM: Iran naval threat to shipping over - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5mRktxSkc3ZVZpNWg4T0x3UnBqUUZwYkJBZERJT0M0cFRHUmdyd1lwbkVVd1JvcVBaajVyRkFKLTZ2am1tVGt0RmZwbENObG5lM2hWd01HcWtIRmtSOXBUbVBhWEliRXJCdlFkYnJ4TGhGRDBHNVZURndadUNhTGs?oc=5\" target=\"_blank\">CENTCOM: Iran naval threat to shipping over</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5mRktxSkc3ZVZpNWg4T0x3UnBqUUZwYkJBZERJT0M0cFRHUmdyd1lwbkVVd1JvcVBaajVyRkFKLTZ2am1tVGt0RmZwbENObG5lM2hWd01HcWtIRmtSOXBUbVBhWEliRXJCdlFkYnJ4TGhGRDBHNVZURndadUNhTGs?oc=5",
+      "feed_id": "gn-centcom-yemen",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T11:42:29.413Z"
     },
     {
       "id": "rss_6383191abb987a70",
