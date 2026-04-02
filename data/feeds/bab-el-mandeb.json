@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T18:51:55.810Z",
-  "epoch_count": 300,
+  "last_fetch": "2026-04-02T19:47:34.696Z",
+  "epoch_count": 301,
   "epochs": [
     {
       "id": "rss_9499ff77f998991d",
@@ -91,6 +91,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T09:43:59.080Z"
+    },
+    {
+      "id": "rss_de6a0097c04236da",
+      "timestamp": 1775027378000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis Claim 3rd Missile Attack Targeting Israel - Asharq Al-Awsat | Explore World News Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOdWlBc1JNWTZaOUp6ZHhUN3pwWktYQ3RSN1ZhV0lES3VaUUxUUTZObGwxRktVMGt1ektvUlczXzJwS1FTSWZQV0dJLTVOM09hck9Bd2JhZ21OcGpwc1oxV3hob0JELXFyYnZiQWE2dlFRWUZQaGJwS1d6TnNQeTBhcEM5S0hTREl6bExUS0lpZUMtRFFkUFkydWJZaUpCb3l3NXMzdQ?oc=5\" target=\"_blank\">Yemen's Houthis Claim 3rd Missile Attack Targeting Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat | Explore World News Today</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdWlBc1JNWTZaOUp6ZHhUN3pwWktYQ3RSN1ZhV0lES3VaUUxUUTZObGwxRktVMGt1ektvUlczXzJwS1FTSWZQV0dJLTVOM09hck9Bd2JhZ21OcGpwc1oxV3hob0JELXFyYnZiQWE2dlFRWUZQaGJwS1d6TnNQeTBhcEM5S0hTREl6bExUS0lpZUMtRFFkUFkydWJZaUpCb3l3NXMzdQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T19:47:33.232Z"
     },
     {
       "id": "rss_dbbbb358ae9449ea",
