@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T21:33:43.265Z",
-  "epoch_count": 302,
+  "last_fetch": "2026-04-02T22:27:38.529Z",
+  "epoch_count": 303,
   "epochs": [
+    {
+      "id": "rss_fc244865b1d80834",
+      "timestamp": 1775162069000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi launch 4th missile attack on Israel; say future action depends on 'enemy escalation or de-escalation' - Ahram Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9XXzlhRlJpa0VSWVZTUkp0V093aUowLW1ibFdzNFVyQUs3amUtb3l1VkhOYjhmX2lPQ281VGtjdy1ndnpuMkU3bnJQXzFweExHay1zOXJoUE8?oc=5\" target=\"_blank\">Houthi launch 4th missile attack on Israel; say future action depends on 'enemy escalation or de-escalation'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9XXzlhRlJpa0VSWVZTUkp0V093aUowLW1ibFdzNFVyQUs3amUtb3l1VkhOYjhmX2lPQ281VGtjdy1ndnpuMkU3bnJQXzFweExHay1zOXJoUE8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T22:27:37.168Z"
+    },
     {
       "id": "rss_df9e34d18515d8f9",
       "timestamp": 1775159829000,
