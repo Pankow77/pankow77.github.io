@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T15:57:05.415Z",
-  "epoch_count": 299,
+  "last_fetch": "2026-04-02T16:57:24.842Z",
+  "epoch_count": 300,
   "epochs": [
     {
       "id": "rss_9499ff77f998991d",
@@ -321,6 +321,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-31T10:02:26.934Z"
+    },
+    {
+      "id": "rss_945f33243e713bfc",
+      "timestamp": 1774940400000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Threat to Red Sea Shipping Could Reemerge as Iran Conflict Deepens - WWD",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9AFBVV95cUxQNnJfSXVKbTFZNW9xMmtqYm8xSnFkZUo0RGZFODBfdm1KTTF0LWwyXzhFekJ5bVNueFN2T25jcVk3WXpUa2ItRGR2VXQwV2dhUHhiUWRwR1VwQ3gxdUJUMEtLRVVqaGpMVExzTWtyY19YU2RHRHhfMHFVWE5HOWpBMU5nVTBCUGtselh6S0M1Zl9wRzRfSzhyVkk2bUhZUGJnWmZ3djhQbG1XOGRYNEF1blhVWGRWR0REblZiMTlpV21CQ1hLWEtUZlJMSHlvR2ZrQXdoLV9lUldFYVRtSjNjMGI3eHVVV3QyYmNhbGdzWGF2UExm?oc=5\" target=\"_blank\">Houthi Threat to Red Sea Shipping Could Reemerge as Iran Conflict Deepens</a>&nbsp;&nbsp;<font colo",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQNnJfSXVKbTFZNW9xMmtqYm8xSnFkZUo0RGZFODBfdm1KTTF0LWwyXzhFekJ5bVNueFN2T25jcVk3WXpUa2ItRGR2VXQwV2dhUHhiUWRwR1VwQ3gxdUJUMEtLRVVqaGpMVExzTWtyY19YU2RHRHhfMHFVWE5HOWpBMU5nVTBCUGtselh6S0M1Zl9wRzRfSzhyVkk2bUhZUGJnWmZ3djhQbG1XOGRYNEF1blhVWGRWR0REblZiMTlpV21CQ1hLWEtUZlJMSHlvR2ZrQXdoLV9lUldFYVRtSjNjMGI3eHVVV3QyYmNhbGdzWGF2UExm?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T16:57:23.540Z"
     },
     {
       "id": "rss_120617e8a32e4503",
