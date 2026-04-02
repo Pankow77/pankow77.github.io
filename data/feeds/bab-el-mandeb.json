@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T22:59:55.653Z",
-  "epoch_count": 304,
+  "last_fetch": "2026-04-02T23:42:46.067Z",
+  "epoch_count": 306,
   "epochs": [
+    {
+      "id": "rss_20419c7e4ceafbb4",
+      "timestamp": 1775171220000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Waves of Iranian, Houthi Missile Attacks Target Central Israel, Five Wounded - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingJBVV95cUxPemMtM01UZDU4b0Nsb1VuRm5UcjZlem5ZZUxDQVRMQUlsZGZyVnlEbTVHd2Q1Y1JwTFV5bnNudG9BeTE2S1F1VlFsSVptVl9rNnVwTjYyN2gwbUxVM3Q2bHRRUTVPMGJVTFlPSXBOUTRIYkhjQ0FZYnFpVklhX0hzR3NuV0FCcmFfem8tNWw0WUMtd29xNm1PZzNRU2YyUGhBNGdCM2Q4OVduYWF4OWJKRm04VzlRSW1NSkxKUXhiOEppdGNwNjZVR1VTaEhudmZaMFNuRGhta1IxMHpGSXhtcEtXYlJ3bDM4Y2htNHFuakhvSUJiS0ZQclFwVjRkS25MWmFIUHZlNi1NZXFuUzNaUGN4LVFxUVJ4WFh6X2xn?oc=5\" target=\"_blank\">Waves of Iranian, Houthi Missile Attacks Ta",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPemMtM01UZDU4b0Nsb1VuRm5UcjZlem5ZZUxDQVRMQUlsZGZyVnlEbTVHd2Q1Y1JwTFV5bnNudG9BeTE2S1F1VlFsSVptVl9rNnVwTjYyN2gwbUxVM3Q2bHRRUTVPMGJVTFlPSXBOUTRIYkhjQ0FZYnFpVklhX0hzR3NuV0FCcmFfem8tNWw0WUMtd29xNm1PZzNRU2YyUGhBNGdCM2Q4OVduYWF4OWJKRm04VzlRSW1NSkxKUXhiOEppdGNwNjZVR1VTaEhudmZaMFNuRGhta1IxMHpGSXhtcEtXYlJ3bDM4Y2htNHFuakhvSUJiS0ZQclFwVjRkS25MWmFIUHZlNi1NZXFuUzNaUGN4LVFxUVJ4WFh6X2xn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T23:42:44.743Z"
+    },
+    {
+      "id": "rss_4f48d3a4fc89da24",
+      "timestamp": 1775168931000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Russian Mariner Departs Yemen After Houthi Red Sea Attack - Global Banking &amp; Finance Review®",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNTzg5SWpRTFRFTHdMNWxSWmN2dWNTVThqaTJpai1iNXJnV2NBcEZacEJ3Nk9qdk9TZ2psNkZKbzJtb2hycjlWQnFtX2txSldtU2FqbmJxQzczaFVEMnE2NHloaWhFbkZlZGhqY2gtd09CZVNPVzhOejdLVHVKUGpHRGdhYmpxQXE2ejVobmR5dHp6MTdtMGh5cUp4WnNtaEFMUzFV?oc=5\" target=\"_blank\">Russian Mariner Departs Yemen After Houthi Red Sea Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Global Banking & Finance Review®</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTzg5SWpRTFRFTHdMNWxSWmN2dWNTVThqaTJpai1iNXJnV2NBcEZacEJ3Nk9qdk9TZ2psNkZKbzJtb2hycjlWQnFtX2txSldtU2FqbmJxQzczaFVEMnE2NHloaWhFbkZlZGhqY2gtd09CZVNPVzhOejdLVHVKUGpHRGdhYmpxQXE2ejVobmR5dHp6MTdtMGh5cUp4WnNtaEFMUzFV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-02T23:42:44.743Z"
+    },
     {
       "id": "rss_3b4a3c8c7bf78e12",
       "timestamp": 1775168340000,
