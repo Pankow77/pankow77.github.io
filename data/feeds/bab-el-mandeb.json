@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-02T23:42:46.067Z",
-  "epoch_count": 306,
+  "last_fetch": "2026-04-03T01:58:20.931Z",
+  "epoch_count": 307,
   "epochs": [
     {
       "id": "rss_20419c7e4ceafbb4",
@@ -744,6 +744,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T22:31:14.100Z"
+    },
+    {
+      "id": "rss_0272605b9c2bd798",
+      "timestamp": 1774871894000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Maritime security: Council updates mandates of EU naval operations ASPIDES and ATALANTA - consilium.europa.eu",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRHZTUkM5WlMwMHRWTFYxZXJiYVBQTGQ4UmE3d0llYkdMNHYzT3lNMFF6dklBWVF0QW1Db3NmXzZreXVpU183LS1kRVdCUkJ1RXBXWTVBLUVONnlTT09YSUpqWTNNRGVwWW91a1g2MjUzVHZPeEJwNHgzQnI5LWc5UmRrODFNXzd5MlFQY0NvU3BVWU9iaHU2UHJYVUhteGZKMTFkNEhRcGk4SW80YnJLamR1MmxrZC1jcnJQSnRJTGhDUkpXN2tGMGhLTmdzaV9FWTBqX0IteDFwbFNBbTNNMWU3Wk5lZmJDX1E?oc=5\" target=\"_blank\">Maritime security: Council updates mandates of EU naval operations ASPIDES and ATALANTA</a>&nbsp;&nbsp;<font col",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQRHZTUkM5WlMwMHRWTFYxZXJiYVBQTGQ4UmE3d0llYkdMNHYzT3lNMFF6dklBWVF0QW1Db3NmXzZreXVpU183LS1kRVdCUkJ1RXBXWTVBLUVONnlTT09YSUpqWTNNRGVwWW91a1g2MjUzVHZPeEJwNHgzQnI5LWc5UmRrODFNXzd5MlFQY0NvU3BVWU9iaHU2UHJYVUhteGZKMTFkNEhRcGk4SW80YnJLamR1MmxrZC1jcnJQSnRJTGhDUkpXN2tGMGhLTmdzaV9FWTBqX0IteDFwbFNBbTNNMWU3Wk5lZmJDX1E?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-03T01:58:20.390Z"
     },
     {
       "id": "rss_2e35e097c71929e8",
