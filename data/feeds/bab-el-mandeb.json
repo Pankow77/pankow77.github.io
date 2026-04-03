@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-03T06:10:13.867Z",
-  "epoch_count": 308,
+  "last_fetch": "2026-04-03T07:42:42.216Z",
+  "epoch_count": 309,
   "epochs": [
+    {
+      "id": "rss_5c99d51721dbc7f0",
+      "timestamp": 1775201594000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi Drone Attack Injures Soldier in Shabwah - khabaragency.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE5nZ3B1MVlEZUFQejFGWFZCUmg3UG9XR3h5VmwxOHdsLWdyMGdSc3VUMUxYMDlOOHZ6eEhUdEJuaGJleFp2ZmZueUwyaTdSdXExNTNTc1hGVQ?oc=5\" target=\"_blank\">Houthi Drone Attack Injures Soldier in Shabwah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">khabaragency.net</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5nZ3B1MVlEZUFQejFGWFZCUmg3UG9XR3h5VmwxOHdsLWdyMGdSc3VUMUxYMDlOOHZ6eEhUdEJuaGJleFp2ZmZueUwyaTdSdXExNTNTc1hGVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-03T07:42:40.914Z"
+    },
     {
       "id": "rss_736e733e8e3bfb9e",
       "timestamp": 1775191931000,
