@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-03T17:30:26.319Z",
-  "epoch_count": 310,
+  "last_fetch": "2026-04-03T18:40:36.628Z",
+  "epoch_count": 311,
   "epochs": [
     {
       "id": "rss_c3abb0a0bed6c5fe",
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-03T17:30:24.666Z"
+    },
+    {
+      "id": "rss_bb7bdfc10af52029",
+      "timestamp": 1775209014000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Russian Mariner Held After Houthi Red Sea Attack Leaves Yemen for Home - Asharq Al-Awsat | Explore World News Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOamlMTjhkVWxXeEhVazJSaGtaUllaWXNmdWRCSDNlaFExU29sQmFvR2lMdHNPU1ZQazI0QzBwS3psa2dwQ09HU0pCX3dFSUMwTVRCTThHMkJBeGRSRVp1eG5OTjZoVEwwcnhHNjRfU3VPaDV4TlJWWDFBb2hVUE8wZ1A1QlhCVWNUMGtFZFZHcnZmVXgzZVFUWHRocDlfU1h2VmN0aDVGdWRaclJhYkZuTjJB?oc=5\" target=\"_blank\">Russian Mariner Held After Houthi Red Sea Attack Leaves Yemen for Home</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat | Explore World News Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOamlMTjhkVWxXeEhVazJSaGtaUllaWXNmdWRCSDNlaFExU29sQmFvR2lMdHNPU1ZQazI0QzBwS3psa2dwQ09HU0pCX3dFSUMwTVRCTThHMkJBeGRSRVp1eG5OTjZoVEwwcnhHNjRfU3VPaDV4TlJWWDFBb2hVUE8wZ1A1QlhCVWNUMGtFZFZHcnZmVXgzZVFUWHRocDlfU1h2VmN0aDVGdWRaclJhYkZuTjJB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-03T18:40:35.234Z"
     },
     {
       "id": "rss_5c99d51721dbc7f0",
