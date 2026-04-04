@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-04T08:36:20.069Z",
-  "epoch_count": 314,
+  "last_fetch": "2026-04-04T09:33:27.121Z",
+  "epoch_count": 315,
   "epochs": [
     {
       "id": "rss_9debf1e57d8fabaf",
@@ -337,6 +337,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T09:43:59.080Z"
+    },
+    {
+      "id": "rss_7482c5190dc2ee0d",
+      "timestamp": 1775031553000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis claim joint missile attack with Iran, Hezbollah on Israel - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxObXg1SXZoS1dZZERJQkozUUZyemxrQ2ZkVTVjM2NCZExlb2hCcFhuSDVCOTBrLWhQZWZRSzItX3ljc0twaHozc001aFR0Qk9kSVJGaEhRYVRmVjk2YzJ4TjdEdjFlMGhUcFlFeU5oWGxHRnBQVVpWR0wwN3ZWTzNNMXduVXlXak5oQ29hMzNEYlNOX3piUWxoRk5YdWdZWjJ0NDJkV3dlXzlhdkxneGc?oc=5\" target=\"_blank\">Houthis claim joint missile attack with Iran, Hezbollah on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObXg1SXZoS1dZZERJQkozUUZyemxrQ2ZkVTVjM2NCZExlb2hCcFhuSDVCOTBrLWhQZWZRSzItX3ljc0twaHozc001aFR0Qk9kSVJGaEhRYVRmVjk2YzJ4TjdEdjFlMGhUcFlFeU5oWGxHRnBQVVpWR0wwN3ZWTzNNMXduVXlXak5oQ29hMzNEYlNOX3piUWxoRk5YdWdZWjJ0NDJkV3dlXzlhdkxneGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-04T09:33:25.970Z"
     },
     {
       "id": "rss_de6a0097c04236da",
