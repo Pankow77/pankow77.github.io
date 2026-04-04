@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-04T11:01:28.462Z",
-  "epoch_count": 316,
+  "last_fetch": "2026-04-04T11:51:08.606Z",
+  "epoch_count": 318,
   "epochs": [
+    {
+      "id": "rss_1e256f74721fee2c",
+      "timestamp": 1775300759000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi actions endanger Bab-el-Mandeb transit, risk global oil and food shipments - mezha.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTFAtaEFaQkdaZDhsbi1Rc1U0ZUxVNWJhVFJlNmtIS3pzLXBLZVZJWXBuSFMxZVJ4SzRoQ3k0VnZZdGFKVnRibzY2WE10WENoc3hQQU5ZeVEtMDQ3MjdsV3lkc1F1VTVNdTN6dGtZaXdhbmFTUVlX?oc=5\" target=\"_blank\">Houthi actions endanger Bab-el-Mandeb transit, risk global oil and food shipments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mezha.net</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAtaEFaQkdaZDhsbi1Rc1U0ZUxVNWJhVFJlNmtIS3pzLXBLZVZJWXBuSFMxZVJ4SzRoQ3k0VnZZdGFKVnRibzY2WE10WENoc3hQQU5ZeVEtMDQ3MjdsV3lkc1F1VTVNdTN6dGtZaXdhbmFTUVlX?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-04T11:51:07.266Z"
+    },
     {
       "id": "rss_30efc181b13ff228",
       "timestamp": 1775298900000,
@@ -292,6 +315,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-02T06:09:34.911Z"
+    },
+    {
+      "id": "rss_93b9ae547a49ab9a",
+      "timestamp": 1775084948000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwJBVV95cUxOX3BXMDhQTDJGU3ZaaEVHMDFiTWhjUnk4aWtXcU4zM1hxOGdhQ0o1UnNBaUpiYnd3MXRhbHFKcjctYzZXQ3hQSWFfOGtNMUdBaFE1QU9UY25WSUdMb1B0cTJYczRNMWNEbFB1a21CckVMSmMtSFNRdFhHb2ltSF9iYlVBakVObmpueVQ3VWlQZEJmdkRUZElCMlVmY2kzVkxtLWxuU1ZuV0lpOVVKTDVtbDFfNHd0am5laWFJYmZPS084cldzMXpkbU1UZGtoU0xWdm1Nb0F1OWtaVGo0RTl6b2VwdnpSODBYSDl5YkJzSFJET1ViVEJnbU9DcnZXZDNyMV84VEFpOA?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping sec",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOX3BXMDhQTDJGU3ZaaEVHMDFiTWhjUnk4aWtXcU4zM1hxOGdhQ0o1UnNBaUpiYnd3MXRhbHFKcjctYzZXQ3hQSWFfOGtNMUdBaFE1QU9UY25WSUdMb1B0cTJYczRNMWNEbFB1a21CckVMSmMtSFNRdFhHb2ltSF9iYlVBakVObmpueVQ3VWlQZEJmdkRUZElCMlVmY2kzVkxtLWxuU1ZuV0lpOVVKTDVtbDFfNHd0am5laWFJYmZPS084cldzMXpkbU1UZGtoU0xWdm1Nb0F1OWtaVGo0RTl6b2VwdnpSODBYSDl5YkJzSFJET1ViVEJnbU9DcnZXZDNyMV84VEFpOA?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-04T11:51:08.601Z"
     },
     {
       "id": "rss_f00692c454783cdb",
