@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-04T19:54:35.107Z",
-  "epoch_count": 319,
+  "last_fetch": "2026-04-04T20:26:06.667Z",
+  "epoch_count": 320,
   "epochs": [
     {
       "id": "rss_491ae6ad682e73cb",
@@ -71,6 +71,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-04T11:01:27.102Z"
+    },
+    {
+      "id": "rss_e318401ced000347",
+      "timestamp": 1775290594000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Houthis Threaten ‘Gradual Escalation’ after Fourth Attack on Israel - english.aawsat.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNbkZoNlVnbEJPb09OUEd1SU9WWE1GcUR5djZTcFhQV1JtZVZCVFZNZWFRMEtwVjk4QjJIeWtwRUg4ZXZzTEtXOGNYemNOU2ZTWVRrcjhFRlNsaDJzZ3Q0UVNRMzdIUTM3a0QxNFRJT2RDd1U2MHJpb1o5QnVqSTdZa0MxaTdjSkVvc3V4XzdzUUZ0Y0VwZ19TeGpqeUZ5eC0zanpjOGF6WGxxQks3Sm02c3pyT1ZxQjJUcEVMVGl2dURhQjRE?oc=5\" target=\"_blank\">Houthis Threaten ‘Gradual Escalation’ after Fourth Attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">english.aawsat.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbkZoNlVnbEJPb09OUEd1SU9WWE1GcUR5djZTcFhQV1JtZVZCVFZNZWFRMEtwVjk4QjJIeWtwRUg4ZXZzTEtXOGNYemNOU2ZTWVRrcjhFRlNsaDJzZ3Q0UVNRMzdIUTM3a0QxNFRJT2RDd1U2MHJpb1o5QnVqSTdZa0MxaTdjSkVvc3V4XzdzUUZ0Y0VwZ19TeGpqeUZ5eC0zanpjOGF6WGxxQks3Sm02c3pyT1ZxQjJUcEVMVGl2dURhQjRE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-04T20:26:05.230Z"
     },
     {
       "id": "rss_9debf1e57d8fabaf",
