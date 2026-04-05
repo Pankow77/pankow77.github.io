@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-05T02:04:21.023Z",
-  "epoch_count": 321,
+  "last_fetch": "2026-04-05T04:59:13.762Z",
+  "epoch_count": 323,
   "epochs": [
     {
       "id": "rss_56fbe46c30a2eb66",
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-04T23:31:36.042Z"
+    },
+    {
+      "id": "rss_24acab328a02111c",
+      "timestamp": 1775336302000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa2Y2aGJSalVxZXZhVjRTcHY2V0gyVlY1cGNxRW4ta2p1ZHdQelRSWGh2RDVObk9sbFFXRjBwMmRyQnVUSlJRM3JzTlozeUlEZ21ZdjhmTUNhU0ZBaDhxblh6M0xsLUV5aHZKOWtzdnA4YXprNEIwU2VIUGc4eTRXWHdHenlub2NDcHRQbmVBejU0VGd3UmZFME9kNzd0c2gxTWphTGdmOHp0cUkzSXEwdUEwR3V2TEpsemtEdURaT1lLazA?oc=5\" target=\"_blank\">How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa2Y2aGJSalVxZXZhVjRTcHY2V0gyVlY1cGNxRW4ta2p1ZHdQelRSWGh2RDVObk9sbFFXRjBwMmRyQnVUSlJRM3JzTlozeUlEZ21ZdjhmTUNhU0ZBaDhxblh6M0xsLUV5aHZKOWtzdnA4YXprNEIwU2VIUGc4eTRXWHdHenlub2NDcHRQbmVBejU0VGd3UmZFME9kNzd0c2gxTWphTGdmOHp0cUkzSXEwdUEwR3V2TEpsemtEdURaT1lLazA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-05T04:59:12.438Z"
     },
     {
       "id": "rss_491ae6ad682e73cb",
@@ -336,6 +359,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-02T20:30:53.873Z"
+    },
+    {
+      "id": "rss_0ff7752fe0f4e606",
+      "timestamp": 1775142248000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi spokesperson threatens US, Israel as Iran conflict intensifies - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnVzIxMFdpUTlNdTBfU2NBTFJXdTk2MGY1YjlmUDFicThSa3kwSkZDMzhqdmFVWHl1SGxfNkRSWW9VUG80eWVwSXk5NFhDWnA0S3RoUDVB?oc=5\" target=\"_blank\">Houthi spokesperson threatens US, Israel as Iran conflict intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fox News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnVzIxMFdpUTlNdTBfU2NBTFJXdTk2MGY1YjlmUDFicThSa3kwSkZDMzhqdmFVWHl1SGxfNkRSWW9VUG80eWVwSXk5NFhDWnA0S3RoUDVB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-05T04:59:12.439Z"
     },
     {
       "id": "rss_8fed43b239491858",
