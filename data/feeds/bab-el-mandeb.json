@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-05T06:16:12.658Z",
-  "epoch_count": 323,
+  "last_fetch": "2026-04-05T07:36:39.669Z",
+  "epoch_count": 325,
   "epochs": [
     {
       "id": "rss_56fbe46c30a2eb66",
@@ -161,6 +161,27 @@
       "fetched_at": "2026-04-03T19:35:38.557Z"
     },
     {
+      "id": "rss_e289a493b78084cc",
+      "timestamp": 1775216319000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "News from Israel and the Jewish world in Spanish - Aurora Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6AFBVV95cUxOalBZcEtreUYxT3ViTHY1dWp4S29EY1pWalBoQmxDb0tiSHVZVzQwZkpFeWU0X2Nrck1iZjV4NW1NaTcwZWt2RnRfTjZVNzNMaThQOWxvT3pTdmxnVWgxUkJKQUZwSlZKTy1HUWI0REs1UHE4ZjBrU05LTkt2aEFydXBBNUVLRXRlb0U0eG45VjAwdURiV0VKVS00Z09zeXl6ZFlvSTVFbFNRMU9tZDBOajhSOUlmcXdpNWlSd014NzNOZFdSek90RldXT1pkaG9HckRiN0pObzRPY3kwMy03X19sQVJPNy1i?oc=5\" target=\"_blank\">News from Israel and the Jewish world in Spanish</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aurora Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOalBZcEtreUYxT3ViTHY1dWp4S29EY1pWalBoQmxDb0tiSHVZVzQwZkpFeWU0X2Nrck1iZjV4NW1NaTcwZWt2RnRfTjZVNzNMaThQOWxvT3pTdmxnVWgxUkJKQUZwSlZKTy1HUWI0REs1UHE4ZjBrU05LTkt2aEFydXBBNUVLRXRlb0U0eG45VjAwdURiV0VKVS00Z09zeXl6ZFlvSTVFbFNRMU9tZDBOajhSOUlmcXdpNWlSd014NzNOZFdSek90RldXT1pkaG9HckRiN0pObzRPY3kwMy03X19sQVJPNy1i?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-05T07:36:38.212Z"
+    },
+    {
       "id": "rss_c3abb0a0bed6c5fe",
       "timestamp": 1775214412000,
       "source": "OSINT",
@@ -247,6 +268,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-03T06:10:12.696Z"
+    },
+    {
+      "id": "rss_60aaef66c60de93a",
+      "timestamp": 1775191059000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’ - interaksyon.philstar.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZUREc2tnUkUteEJ6aTd4VzM3MkJ5b1ZUVG1CRnpubUNaNThYX2xBdklRaHA0aFZYVGRUWjJIMFlobFhEUGRzZVBNU0RvcTJJcGFiMFE1LTJmNFBhOWpXdHdIM3JTNHRmMlFqSlhfUEVvbGlsb0NycEdodVJIUzlURnBIU0pqRTR6MUcxMjQwSmFzTDlmS0NEem1DWFh1NmNzRmRzWFhCM05CeDZyQm5JMGZxcWI3UFZnVkFtNWtsSFlZeFBzOUVtMnpxUFZkZ0toUVgxNjdfd2ZfZzNkS1E0NWJEeC1UZmhrN3QxLUZvUkI?oc=5\" target=\"_blank\">Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’</a>&nbsp;&",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZUREc2tnUkUteEJ6aTd4VzM3MkJ5b1ZUVG1CRnpubUNaNThYX2xBdklRaHA0aFZYVGRUWjJIMFlobFhEUGRzZVBNU0RvcTJJcGFiMFE1LTJmNFBhOWpXdHdIM3JTNHRmMlFqSlhfUEVvbGlsb0NycEdodVJIUzlURnBIU0pqRTR6MUcxMjQwSmFzTDlmS0NEem1DWFh1NmNzRmRzWFhCM05CeDZyQm5JMGZxcWI3UFZnVkFtNWtsSFlZeFBzOUVtMnpxUFZkZ0toUVgxNjdfd2ZfZzNkS1E0NWJEeC1UZmhrN3QxLUZvUkI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-05T07:36:38.212Z"
     },
     {
       "id": "rss_20419c7e4ceafbb4",
