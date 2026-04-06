@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-06T14:42:11.040Z",
-  "epoch_count": 332,
+  "last_fetch": "2026-04-06T15:41:38.761Z",
+  "epoch_count": 333,
   "epochs": [
+    {
+      "id": "rss_9afe762c45d9b5c0",
+      "timestamp": 1775487316000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi rebels: \"Joint attack with Iran’s Islamic Revolutionary Guard Corps and Hezbollah\" - bloomingbit",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1wallEQjh5Y1JGMXZwWEhNdHZDRjRuSzdpQ0FobW03Y2doc1Y1N3oyeGxucFA3UndoQ3BhZjdlNC1rUS1nT2VMRkNyVjdnZUVkMWo2eQ?oc=5\" target=\"_blank\">Houthi rebels: \"Joint attack with Iran’s Islamic Revolutionary Guard Corps and Hezbollah\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bloomingbit</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1wallEQjh5Y1JGMXZwWEhNdHZDRjRuSzdpQ0FobW03Y2doc1Y1N3oyeGxucFA3UndoQ3BhZjdlNC1rUS1nT2VMRkNyVjdnZUVkMWo2eQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-06T15:41:37.285Z"
+    },
     {
       "id": "rss_0e1b94eee9147737",
       "timestamp": 1775485087000,
