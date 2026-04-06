@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-06T05:09:06.509Z",
-  "epoch_count": 329,
+  "last_fetch": "2026-04-06T07:07:26.646Z",
+  "epoch_count": 330,
   "epochs": [
     {
       "id": "rss_f237783249b4aab6",
@@ -90,6 +90,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-04T23:31:36.042Z"
+    },
+    {
+      "id": "rss_b54a49aba57be8f9",
+      "timestamp": 1775336977000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim fifth attack on Israel with missiles, drones - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNbmc2QkNiWEktLThZMW9mN3NERTZjR1l2RzAtQ0FQbllQa1NIcEJ1eHNNTkRlbk1OUW9WRF9KRzhMd3VGdTBmQXVja1cxRFhHbGNiaXFZalVaQnZtbjJRdkpXOUxCWkc5VFl6dmJVN1Byd2xsaXdDTUlCMHhIOFhhdW5IQWtQVkhPQ0E4LWtocVhDZkxpWGhpWkpXYVNpN2s0?oc=5\" target=\"_blank\">Yemen’s Houthis claim fifth attack on Israel with missiles, drones</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbmc2QkNiWEktLThZMW9mN3NERTZjR1l2RzAtQ0FQbllQa1NIcEJ1eHNNTkRlbk1OUW9WRF9KRzhMd3VGdTBmQXVja1cxRFhHbGNiaXFZalVaQnZtbjJRdkpXOUxCWkc5VFl6dmJVN1Byd2xsaXdDTUlCMHhIOFhhdW5IQWtQVkhPQ0E4LWtocVhDZkxpWGhpWkpXYVNpN2s0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-06T07:07:25.293Z"
     },
     {
       "id": "rss_24acab328a02111c",
