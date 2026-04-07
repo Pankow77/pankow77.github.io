@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-07T08:57:06.016Z",
-  "epoch_count": 337,
+  "last_fetch": "2026-04-07T10:08:20.926Z",
+  "epoch_count": 339,
   "epochs": [
     {
       "id": "rss_d4ac2609e95b46b0",
@@ -23,6 +23,50 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-07T08:57:04.721Z"
+    },
+    {
+      "id": "rss_ecf8d851dafd60b4",
+      "timestamp": 1775549340000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi member warns of possible Bab el-Mandeb Strait closure amid escalation in Middle East - bastillepost.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVVp2MXZIa1pmMDJwdHBoX2UzdjNyRG52NUpDOHdYQ0R0TnJ6dmtwd2o3ZzJZYlJnZVk3eTVObEJvYjAtTUR0MlBFQUwyOTV3MnBUWXEtdlpyVU9BR3dzYU1DY0FXeEU5NGlmTTJ4cktCMkhSTVRnUnJtLU1Pa2xMVWFfNTFDT2VCU1BkNExqbU5ET1g3Q1NBQ3Q0QnZOLWM3ZThHNTVBTXRJRHY2QmswOWtNMFF2UGxyb19BanNIa0ktLVBNREE3dWhDVFh1aGJqcWY3U2JTa3l6N1k?oc=5\" target=\"_blank\">Houthi member warns of possible Bab el-Mandeb Strait closure amid escalation in Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bas",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVVp2MXZIa1pmMDJwdHBoX2UzdjNyRG52NUpDOHdYQ0R0TnJ6dmtwd2o3ZzJZYlJnZVk3eTVObEJvYjAtTUR0MlBFQUwyOTV3MnBUWXEtdlpyVU9BR3dzYU1DY0FXeEU5NGlmTTJ4cktCMkhSTVRnUnJtLU1Pa2xMVWFfNTFDT2VCU1BkNExqbU5ET1g3Q1NBQ3Q0QnZOLWM3ZThHNTVBTXRJRHY2QmswOWtNMFF2UGxyb19BanNIa0ktLVBNREE3dWhDVFh1aGJqcWY3U2JTa3l6N1k?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-07T10:08:19.620Z"
+    },
+    {
+      "id": "rss_a888e5671bf414b7",
+      "timestamp": 1775507333000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Lebanon’s Hezbollah and Yemen’s Houthis join Iran in strike on Israel - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMmpUM2NOWUFlUzc0TXE5NGhybnlYbmxQenFGdkxaUG1LUjhRck9BNGhUdEROSXV2WFFyUThZYWVNcmtHZDctdGhkb3Y2SFAwd3VtWE02SW9iUDFwV0FDc1laWjBteUUzdm9DbFRNOV9VaWVlcUIwX0NlV094VVVwTmNRSkJSS3g3dTFxSTFPNmpvSWxpeDNKQUVVNXJsbE5GWVIxMXc2OUxhR0HSAbABQVVfeXFMUGxpUldEbkJWTFBPOThTOF95Q0NXc2JlYW80VlhlVnN1SFJqODdmWFQ3RlBGSWp2MWJKTW5hbGttbVpIZXlzbmsyeFE3MGdXNnk0WWFTV3JJaEduYzZjNW4zdWM4UGJteUZOQUpQb2J6MkdrckhYTVktdFN6bE1tcE9UTDNBVHRQRUxRWlBVZ3R0TjdTc08yd2NPUVRaSHFTWV",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMmpUM2NOWUFlUzc0TXE5NGhybnlYbmxQenFGdkxaUG1LUjhRck9BNGhUdEROSXV2WFFyUThZYWVNcmtHZDctdGhkb3Y2SFAwd3VtWE02SW9iUDFwV0FDc1laWjBteUUzdm9DbFRNOV9VaWVlcUIwX0NlV094VVVwTmNRSkJSS3g3dTFxSTFPNmpvSWxpeDNKQUVVNXJsbE5GWVIxMXc2OUxhR0HSAbABQVVfeXFMUGxpUldEbkJWTFBPOThTOF95Q0NXc2JlYW80VlhlVnN1SFJqODdmWFQ3RlBGSWp2MWJKTW5hbGttbVpIZXlzbmsyeFE3MGdXNnk0WWFTV3JJaEduYzZjNW4zdWM4UGJteUZOQUpQb2J6MkdrckhYTVktdFN6bE1tcE9UTDNBVHRQRUxRWlBVZ3R0TjdTc08yd2NPUVRaSHFTWVk5X1Fqa29tSWExQkhVNmY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-04-07T10:08:19.619Z"
     },
     {
       "id": "rss_e9cde0070ab08589",
