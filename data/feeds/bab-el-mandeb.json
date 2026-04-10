@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-09T23:59:22.036Z",
-  "epoch_count": 347,
+  "last_fetch": "2026-04-10T03:29:15.231Z",
+  "epoch_count": 348,
   "epochs": [
     {
       "id": "rss_ff17f744b76d935c",
@@ -607,6 +607,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-04T20:26:05.230Z"
+    },
+    {
+      "id": "rss_c06070abb6bc8960",
+      "timestamp": 1775278800000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Bab el-Mandeb Strait | Map, Chokepoint, Red Sea, Iran War, Yemen, &amp; Hormuz - Britannica",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE5hcnVJcDdaaFpBajFCTXIzRXRBdmZrTWVxMnBqekRBMjZNZUp3azFGQTVhV3lCZHZPd1F0cnUtb2paZ2N1LVRjLW14U2dGWURVTmxOTTlqZV9rTW8wcy1JNFdVYw?oc=5\" target=\"_blank\">Bab el-Mandeb Strait | Map, Chokepoint, Red Sea, Iran War, Yemen, & Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Britannica</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5hcnVJcDdaaFpBajFCTXIzRXRBdmZrTWVxMnBqekRBMjZNZUp3azFGQTVhV3lCZHZPd1F0cnUtb2paZ2N1LVRjLW14U2dGWURVTmxOTTlqZV9rTW8wcy1JNFdVYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-10T03:29:13.792Z"
     },
     {
       "id": "rss_9debf1e57d8fabaf",
