@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-12T21:30:34.607Z",
-  "epoch_count": 353,
+  "last_fetch": "2026-04-12T22:28:50.830Z",
+  "epoch_count": 354,
   "epochs": [
     {
       "id": "rss_7043bb7c75df605f",
@@ -135,6 +135,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-08T14:52:09.792Z"
+    },
+    {
+      "id": "rss_6e6b008ff1a20af3",
+      "timestamp": 1775591999000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Second choke point crisis looms as Houthis threaten key Red Sea shipping lane - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPam03Q09aYlhyRkZBZTBiMm9Ed0w2RTJTOXJvSEVLS05CTVhNZlBCN0tOR09ibUpJaHFMbXZfQmhxWjg4N29vaTRxZm5IZ0podWZMY0VyUTZZeXRRbXprMHo2Z3QtTlFRVWpnX1JRTFhSRW1YYVd2Z1dGVlhhNjF1dGd3YlBxWkdxNGs4LXZrbkxjRnVfZDhnTkotMFdHX1I1U21DcVpubmhNdFnSAbABQVVfeXFMTU1MVDNiSmZvbG5nVjNRc1V6LUhON29wREp1U2JWNjZKcVo1V2NvcXJvbHdMX2cwMTRfQzZsU3JrMkFnbmRDWkU2MHNtalM5ZXlJQXU3dGRmakdUVEZTZWtLcGxlMGJ0RDhvVEFPVHpiUHpmazNRbG1mc25KNzhvSjNZeWJrQXJ2dDh2YjkyZ0dRem0xVXRfSzF6VWctYnR0eG",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPam03Q09aYlhyRkZBZTBiMm9Ed0w2RTJTOXJvSEVLS05CTVhNZlBCN0tOR09ibUpJaHFMbXZfQmhxWjg4N29vaTRxZm5IZ0podWZMY0VyUTZZeXRRbXprMHo2Z3QtTlFRVWpnX1JRTFhSRW1YYVd2Z1dGVlhhNjF1dGd3YlBxWkdxNGs4LXZrbkxjRnVfZDhnTkotMFdHX1I1U21DcVpubmhNdFnSAbABQVVfeXFMTU1MVDNiSmZvbG5nVjNRc1V6LUhON29wREp1U2JWNjZKcVo1V2NvcXJvbHdMX2cwMTRfQzZsU3JrMkFnbmRDWkU2MHNtalM5ZXlJQXU3dGRmakdUVEZTZWtLcGxlMGJ0RDhvVEFPVHpiUHpmazNRbG1mc25KNzhvSjNZeWJrQXJ2dDh2YjkyZ0dRem0xVXRfSzF6VWctYnR0eGJTQXY5VG0xQlB2eTVhUlU?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-12T22:28:50.824Z"
     },
     {
       "id": "rss_16245be394dcf19c",
