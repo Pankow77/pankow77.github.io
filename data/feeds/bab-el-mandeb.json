@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-12T05:19:44.691Z",
-  "epoch_count": 351,
+  "last_fetch": "2026-04-12T06:52:10.986Z",
+  "epoch_count": 352,
   "epochs": [
     {
       "id": "rss_3f705d1090bcd860",
@@ -445,6 +445,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-08T23:58:14.948Z"
+    },
+    {
+      "id": "rss_6bbd7beb1834b7fb",
+      "timestamp": 1775419034000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Naval Mission Aspides Secures New Convoy in the Red Sea - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE8yR3F6S21xOXprM3NHVUpDVlI4dl95WXpabTBfZlZxUWtPZlhubngyNVp4Y2t3VHJGdjVVQUJEREREZkRVTjBlc0dJQks?oc=5\" target=\"_blank\">EU Naval Mission Aspides Secures New Convoy in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8yR3F6S21xOXprM3NHVUpDVlI4dl95WXpabTBfZlZxUWtPZlhubngyNVp4Y2t3VHJGdjVVQUJEREREZkRVTjBlc0dJQks?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-12T06:52:10.497Z"
     },
     {
       "id": "rss_f237783249b4aab6",
