@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-15T16:02:19.069Z",
-  "epoch_count": 365,
+  "last_fetch": "2026-04-15T17:37:36.985Z",
+  "epoch_count": 366,
   "epochs": [
     {
       "id": "rss_ed66dc99729bf1ba",
@@ -69,6 +69,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T07:51:41.340Z"
+    },
+    {
+      "id": "rss_564b2a4987532a64",
+      "timestamp": 1776214680000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia urges US to ease Hormuz push as Iran threat widens to Red Sea - CHOSUNBIZ - Chosunbiz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWGFrcHFHVGQ3OHFPemhnSVI3VkN4RDhtZUFHblN6VVhWYkdEOHFENjFkV3RBMDcxT09WOEoyazJUNGxIVG9qdW1VakRqdlVHbldkeUNMWE5OUEpjWF9CU044Q0UxY1pyLXNzZVBhQ1RGNXR6TnR0OVVJcFlXZndLdGU0Q2c1UzQ10gGcAUFVX3lxTFB5SlRiUUNtZkdkUmd4dFR4LUE1eUc2dmIySmlMeVpISXF0NC0zTk50OWZzbTYxSjQ0X1k5cXVwd3Z5ZWVxVThnMUhYY3ZmMUlkRlRWWWJiNkVpa0JVc3BQVHZQSkctYzhWRHRNNVhMaHkxTUIyMlNJUlFySk82VmxWX2VQamE1a013RmZUSnVFVEttN2ZfTmxLLVBwUA?oc=5\" target=\"_blank\">Saudi Arabia urges US to ease",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWGFrcHFHVGQ3OHFPemhnSVI3VkN4RDhtZUFHblN6VVhWYkdEOHFENjFkV3RBMDcxT09WOEoyazJUNGxIVG9qdW1VakRqdlVHbldkeUNMWE5OUEpjWF9CU044Q0UxY1pyLXNzZVBhQ1RGNXR6TnR0OVVJcFlXZndLdGU0Q2c1UzQ10gGcAUFVX3lxTFB5SlRiUUNtZkdkUmd4dFR4LUE1eUc2dmIySmlMeVpISXF0NC0zTk50OWZzbTYxSjQ0X1k5cXVwd3Z5ZWVxVThnMUhYY3ZmMUlkRlRWWWJiNkVpa0JVc3BQVHZQSkctYzhWRHRNNVhMaHkxTUIyMlNJUlFySk82VmxWX2VQamE1a013RmZUSnVFVEttN2ZfTmxLLVBwUA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-15T17:37:35.278Z"
     },
     {
       "id": "rss_efed8daf618e7134",
