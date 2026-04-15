@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-15T03:46:33.858Z",
-  "epoch_count": 361,
+  "last_fetch": "2026-04-15T05:57:39.609Z",
+  "epoch_count": 362,
   "epochs": [
     {
       "id": "rss_efed8daf618e7134",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-14T19:07:52.925Z"
+    },
+    {
+      "id": "rss_241646d2e950d76f",
+      "timestamp": 1776136440000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "What is the ‘Gate of Tears’? Key shipping route that could be attacked by Houthis and disrupt global economy - The Independent",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNZlFzN25LbkRCcDExdnlpWHE4STFiMnRjYUtRZ2ViVi0tRGQyQ2xGSHZLbEJDeEgtZjVqNFRYMzlUVzdZZ3I1TURLNTFSN3ZqZ0d3QzBtVkJrMWVvd1dYRS1YSFJDY0dZbVhGSlJSVXpnNzB1YWVscDVieDI5Y09UUHU0ZWpWZ29pNXpZV19VNFdWLVAwSEwzTjE5MGNhc05qSEVjQmFZRVhERC1KZmJxc3ZB?oc=5\" target=\"_blank\">What is the ‘Gate of Tears’? Key shipping route that could be attacked by Houthis and disrupt global economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Independent</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNZlFzN25LbkRCcDExdnlpWHE4STFiMnRjYUtRZ2ViVi0tRGQyQ2xGSHZLbEJDeEgtZjVqNFRYMzlUVzdZZ3I1TURLNTFSN3ZqZ0d3QzBtVkJrMWVvd1dYRS1YSFJDY0dZbVhGSlJSVXpnNzB1YWVscDVieDI5Y09UUHU0ZWpWZ29pNXpZV19VNFdWLVAwSEwzTjE5MGNhc05qSEVjQmFZRVhERC1KZmJxc3ZB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-15T05:57:38.252Z"
     },
     {
       "id": "rss_a9d0ed6702c9d5f4",
