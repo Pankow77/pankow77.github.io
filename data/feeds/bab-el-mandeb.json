@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-15T10:40:40.518Z",
-  "epoch_count": 363,
+  "last_fetch": "2026-04-15T11:53:53.884Z",
+  "epoch_count": 364,
   "epochs": [
+    {
+      "id": "rss_c23b5070d2044f30",
+      "timestamp": 1776252332000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran Threatens Red Sea Blockade Against U.S. Maritime Blockade - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPVXltUTlKSW81SnFUTVVYOWthMklrOHlGMHdQN09WSEFtODJ5Zjc1c2Q4ckliMWVxekI4eWVSdkw5dzcxb3duVjduN0l6LXc0cHBBMm5EX2Z6cy1yaWFtbWtFakVxdk5vLS11UFRIVElvVzdnd1pydVNXTVo4R0VfR1U2M2Q?oc=5\" target=\"_blank\">Iran Threatens Red Sea Blockade Against U.S. Maritime Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVXltUTlKSW81SnFUTVVYOWthMklrOHlGMHdQN09WSEFtODJ5Zjc1c2Q4ckliMWVxekI4eWVSdkw5dzcxb3duVjduN0l6LXc0cHBBMm5EX2Z6cy1yaWFtbWtFakVxdk5vLS11UFRIVElvVzdnd1pydVNXTVo4R0VfR1U2M2Q?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-15T11:53:52.286Z"
+    },
     {
       "id": "rss_e13882d7256b4327",
       "timestamp": 1776233285000,
