@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-16T09:20:52.773Z",
-  "epoch_count": 370,
+  "last_fetch": "2026-04-16T10:43:53.702Z",
+  "epoch_count": 371,
   "epochs": [
     {
       "id": "rss_0b87b1c73d312e68",
@@ -139,6 +139,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T17:37:35.278Z"
+    },
+    {
+      "id": "rss_c6660b7841b21b02",
+      "timestamp": 1776207149000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Red Sea ship attack threatens new war with Houthis - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgJBVV95cUxQWW55U3Vod0VpcUI2N1FoT21JWVJQQUVTWU4yLWY0TWZPazlhYnFMc2N3WGJFaXJTN2lUbkFDRENrS2o3aEJEOXo0MVBMSzVzdjhZeDNIU0pFTjlHV1dWa3UzdGgtMURpVmdiclhLdjJBaUdHbndlNm9xUGVmcTAtMnFMZTdiRmxJNGhuWFNhU0FyeFJfNUFPMVQ1aVl1SVBKd3BVeXNacnhsUjFpb29BY1BLV2tmUWRjT1pUaGtvZ0YteXFtUEhPUkZXeUR4QW44LU1xdzhuZ0daRFJhalpQbjRsczJ4REJQR18wNDhMaW9ramxYNU5MZHFNR3c1SGR3TUJMZl9DaDhjemhRYURoeXl4UE1XcHRrVVcxN2M2dHF1LXlITkhCcUtmR3B0d3JOSjVPNVdB?oc=5\" target=\"_blank\">Red Sea shi",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQWW55U3Vod0VpcUI2N1FoT21JWVJQQUVTWU4yLWY0TWZPazlhYnFMc2N3WGJFaXJTN2lUbkFDRENrS2o3aEJEOXo0MVBMSzVzdjhZeDNIU0pFTjlHV1dWa3UzdGgtMURpVmdiclhLdjJBaUdHbndlNm9xUGVmcTAtMnFMZTdiRmxJNGhuWFNhU0FyeFJfNUFPMVQ1aVl1SVBKd3BVeXNacnhsUjFpb29BY1BLV2tmUWRjT1pUaGtvZ0YteXFtUEhPUkZXeUR4QW44LU1xdzhuZ0daRFJhalpQbjRsczJ4REJQR18wNDhMaW9ramxYNU5MZHFNR3c1SGR3TUJMZl9DaDhjemhRYURoeXl4UE1XcHRrVVcxN2M2dHF1LXlITkhCcUtmR3B0d3JOSjVPNVdB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-16T10:43:53.697Z"
     },
     {
       "id": "rss_1eca63db335df38b",
