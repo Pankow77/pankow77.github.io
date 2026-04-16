@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-16T13:43:14.293Z",
-  "epoch_count": 372,
+  "last_fetch": "2026-04-16T15:22:36.699Z",
+  "epoch_count": 373,
   "epochs": [
     {
       "id": "rss_f9a150590e9d9fdd",
@@ -26,6 +26,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-16T13:43:14.288Z"
+    },
+    {
+      "id": "rss_ff23c3d891f61dc9",
+      "timestamp": 1776318621000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "U.S. Supercarrier Forced to Flee Red Sea: USS George H.W. Bush Takes 6,000-Mile Detour Around Africa as Houthi Threat Rewrites Global Naval Strategy - Defence Security Asia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOLVE2MnNVVkRYWmF6Q2xhMlZsbFc2MGNZUlo4ZldDdFVlQnhOQ2NtcU5GUC0xaW5UcFYxdW54UFdSN25jd3ZrdTVLMkplWkg2a2hNWGRkTjB1Rlc5SFlRTWlxdjMzUWJwamlXMFQ4Y3M0OTlrOVVIOVZ0SWIyZEdHRWlxVDZCTGZCREp2MXAtZnJ1UDh0UUlrMTE4OU02MTVRVFd1Vl9nbVZ1cHJPVFE?oc=5\" target=\"_blank\">U.S. Supercarrier Forced to Flee Red Sea: USS George H.W. Bush Takes 6,000-Mile Detour Around Africa as Houthi Threat Rewrites Global Naval Strategy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Defenc",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOLVE2MnNVVkRYWmF6Q2xhMlZsbFc2MGNZUlo4ZldDdFVlQnhOQ2NtcU5GUC0xaW5UcFYxdW54UFdSN25jd3ZrdTVLMkplWkg2a2hNWGRkTjB1Rlc5SFlRTWlxdjMzUWJwamlXMFQ4Y3M0OTlrOVVIOVZ0SWIyZEdHRWlxVDZCTGZCREp2MXAtZnJ1UDh0UUlrMTE4OU02MTVRVFd1Vl9nbVZ1cHJPVFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-16T15:22:35.125Z"
     },
     {
       "id": "rss_0b87b1c73d312e68",
