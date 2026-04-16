@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-16T11:56:32.819Z",
-  "epoch_count": 371,
+  "last_fetch": "2026-04-16T13:43:14.293Z",
+  "epoch_count": 372,
   "epochs": [
+    {
+      "id": "rss_f9a150590e9d9fdd",
+      "timestamp": 1776344248000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran Red Sea Shipping Threat: Trade Route Risks - Discovery Alert",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5jNkZ5VUxqdmxmOXN2eG1icUlOT21XRWRZRnVrQVByXzBZOHI0a3Awdy1GRlVZdVZGU29XLTJ0WkhTd0NHMFZ2TXNwT21QR2lnNlh1UV9jUHh0NUJaXzFqX01PQ3l0NXlpTkZ3MHR4U3YxUQ?oc=5\" target=\"_blank\">Iran Red Sea Shipping Threat: Trade Route Risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Discovery Alert</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5jNkZ5VUxqdmxmOXN2eG1icUlOT21XRWRZRnVrQVByXzBZOHI0a3Awdy1GRlVZdVZGU29XLTJ0WkhTd0NHMFZ2TXNwT21QR2lnNlh1UV9jUHh0NUJaXzFqX01PQ3l0NXlpTkZ3MHR4U3YxUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-16T13:43:14.288Z"
+    },
     {
       "id": "rss_0b87b1c73d312e68",
       "timestamp": 1776288637000,
