@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-25T18:02:38.867Z",
-  "epoch_count": 385,
+  "last_fetch": "2026-04-25T19:24:17.897Z",
+  "epoch_count": 386,
   "epochs": [
+    {
+      "id": "rss_79f057843e36fb35",
+      "timestamp": 1777140751000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "2 Soldiers Killed in Houthi Drone Attack on Shabwa Defense Forces in Marib - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TVHU0ZmRVWllrLURBTEptckFMMDlTZ2h5OHVOOVkzYjg0SW1BM2ktZDUtR2daRnZXb1ZwN3JpSVlxc0pLTXBKSFZCSzJrZVhJcnRQWGN2RGNxWnVQODRB?oc=5\" target=\"_blank\">2 Soldiers Killed in Houthi Drone Attack on Shabwa Defense Forces in Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TVHU0ZmRVWllrLURBTEptckFMMDlTZ2h5OHVOOVkzYjg0SW1BM2ktZDUtR2daRnZXb1ZwN3JpSVlxc0pLTXBKSFZCSzJrZVhJcnRQWGN2RGNxWnVQODRB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-25T19:24:16.554Z"
+    },
     {
       "id": "rss_636864fcd4c1e2b7",
       "timestamp": 1777019256000,

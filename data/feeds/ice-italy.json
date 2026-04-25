@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-04-25T18:02:40.701Z",
-  "epoch_count": 36,
+  "last_fetch": "2026-04-25T19:24:19.721Z",
+  "epoch_count": 37,
   "epochs": [
     {
       "id": "rss_8c2120716fe16c18",
@@ -26,6 +26,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-25T05:45:25.637Z"
+    },
+    {
+      "id": "rss_9d08db542fd51615",
+      "timestamp": 1777042110000,
+      "source": "OSINT",
+      "actor": "ice",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "ICE agents set to have security role during Winter Olympics in Italy, prompting uproar - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgNBVV95cUxOTkNPeFhXTV9YZVdjUHIyY1dtVU9tc2Zwc0c5NjB4SEZGNUdBODVKbEp4Z1ZHdFY4Z2Y3M0dtZU5IaHJ4WHY0b203VG0tVGRNVm92SWJQYjJZdUlOQVR1YnNKczRvaDB0VHpSUHRoWDNpOU5rYnUyV1N3cEh3Z1hJQndzbTFZQmRlSU54QUVDNENpTFMwWDBsVDdtazZvWi14ODNaRktoSm1NZ1liRjRxVWF1TE9NOVNUTld1QkJMMzRoUWJ0dzVnNVQzdWx5eHQ3ZW9uejBBR3ZBX0lOaGJELXBBQmF4UW1fVzJLX3hJTXhybTRmU1NxRGRxN2g0aHJtRDl6aVV0WmVWSERQTnNCZUlkT0hZeHFnUkhObFRwN1FaRGJFblFNYkRFb0lXLXd6ajc0TjIwRUp4VzFFMURUMXNkVGhQR1JoQVRqTlRrcF",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgNBVV95cUxOTkNPeFhXTV9YZVdjUHIyY1dtVU9tc2Zwc0c5NjB4SEZGNUdBODVKbEp4Z1ZHdFY4Z2Y3M0dtZU5IaHJ4WHY0b203VG0tVGRNVm92SWJQYjJZdUlOQVR1YnNKczRvaDB0VHpSUHRoWDNpOU5rYnUyV1N3cEh3Z1hJQndzbTFZQmRlSU54QUVDNENpTFMwWDBsVDdtazZvWi14ODNaRktoSm1NZ1liRjRxVWF1TE9NOVNUTld1QkJMMzRoUWJ0dzVnNVQzdWx5eHQ3ZW9uejBBR3ZBX0lOaGJELXBBQmF4UW1fVzJLX3hJTXhybTRmU1NxRGRxN2g0aHJtRDl6aVV0WmVWSERQTnNCZUlkT0hZeHFnUkhObFRwN1FaRGJFblFNYkRFb0lXLXd6ajc0TjIwRUp4VzFFMURUMXNkVGhQR1JoQVRqTlRrcFNsLU5aWFRJTHRIck5RTjRtRVRaVTV0ZXN4VDRYaURyWlVlQzJBYU1sS2ZBaXIzLXlGbjVoemZJbHdHS0VFdmdRT20zampLeVF1dw?oc=5",
+      "feed_id": "gn-ice-italy-en",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-25T19:24:18.332Z"
     },
     {
       "id": "rss_d1f1b8cb0731d449",
