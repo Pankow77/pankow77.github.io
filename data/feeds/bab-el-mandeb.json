@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-26T14:05:14.158Z",
-  "epoch_count": 386,
+  "last_fetch": "2026-04-26T15:06:58.253Z",
+  "epoch_count": 387,
   "epochs": [
     {
       "id": "rss_79f057843e36fb35",
@@ -25,6 +25,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-25T19:24:16.554Z"
+    },
+    {
+      "id": "rss_8e43cab2a555d7bc",
+      "timestamp": 1777075682000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Israel stokes fears of renewed strikes on Red Sea shipping - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioANBVV95cUxQeC1wc2ZOclRBYmZ6aDl6VEV1T2JBbnBwTXRhODhhalZrVDhRWERRSDVQNXF1Sk5HMlhRZDctNGUyMzE1dnlxLXNQMExMVFJXNW1EeHZOem50MTdNa25SN1BWbGpnY1pqTkgyOGVUMEZZSjVQMkZaWmFBRGx5bkJESkpMeE1pMDBvLXFjZFd5eEVZZkJWdWJTUndGUVJLdEZ1OGJXUEs5Q0xKUVc3VUFiWFpfUjJZV3loVHVyZ0M5VnloWExSWU1fX3RuOGFWekNFY1FnU1JVV1I3VjlGRWN0M05YZzdUNnpaTlR4ZGlUQjh1dnczWGFXaEFrWWltM2xvWFVPc19FZXBnc0hmZGIwczNERDVJVFFlS3NDejkxeC10ZXotRjZSTjE1SVAwSURkSUs1bExzTE1uUkR4cEFMb3NnWXdqRENSMkxLem43SH",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioANBVV95cUxQeC1wc2ZOclRBYmZ6aDl6VEV1T2JBbnBwTXRhODhhalZrVDhRWERRSDVQNXF1Sk5HMlhRZDctNGUyMzE1dnlxLXNQMExMVFJXNW1EeHZOem50MTdNa25SN1BWbGpnY1pqTkgyOGVUMEZZSjVQMkZaWmFBRGx5bkJESkpMeE1pMDBvLXFjZFd5eEVZZkJWdWJTUndGUVJLdEZ1OGJXUEs5Q0xKUVc3VUFiWFpfUjJZV3loVHVyZ0M5VnloWExSWU1fX3RuOGFWekNFY1FnU1JVV1I3VjlGRWN0M05YZzdUNnpaTlR4ZGlUQjh1dnczWGFXaEFrWWltM2xvWFVPc19FZXBnc0hmZGIwczNERDVJVFFlS3NDejkxeC10ZXotRjZSTjE1SVAwSURkSUs1bExzTE1uUkR4cEFMb3NnWXdqRENSMkxLem43SHZlTXJ5bUxrUE9qNm1IalVUWGxLMlFsSW1YclZoMjJONGNrNjRMYmpzOGhlMFBOUDZWUmVOYkUwSV9XODhheUZuYXk4SFktTlFZWlFwb2k0Wg?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-26T15:06:58.247Z"
     },
     {
       "id": "rss_636864fcd4c1e2b7",
