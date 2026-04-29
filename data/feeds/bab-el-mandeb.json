@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-04-29T21:56:03.449Z",
-  "epoch_count": 392,
+  "last_fetch": "2026-04-29T22:54:58.714Z",
+  "epoch_count": 393,
   "epochs": [
     {
       "id": "rss_bab2bff42eac1389",
@@ -46,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-29T08:09:16.596Z"
+    },
+    {
+      "id": "rss_be8646a49cdc7b15",
+      "timestamp": 1777385642000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Another Houthi attack in the Red Sea kills at least three - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAJBVV95cUxOc2RFb1BXWGYzaG1qTVdmRzFvSGJicERhNTFfUzBONnZXeDh6OEw5bnJudHRIN3pxTGpSd24zWDFMR2J3ZWtKTG90WFhwZzFEVFFGR3VJd3VsLVBld1I3YnNqUjZpNEkyckhxVFNjcjlMLXk4NVZRRlpwSVIxc2xoM3VwRWRsREhOV0dKakJ6STlIMjJNaFdGTldfMV9Wd1ZPZEp2WHg4dmRaMXcxVVVSdHZRRzJXU003MUkzWkZ2WDF3U3NZVlpOOS00ZnVrNFFjQVpmekpRTmZEdUFWUUxfanJ1SDQwQ3k3dVNETDZNX1c1eHNmRkc3OF9EWDdtZkVUQTNnM1BkeUdDTlIwbFdHajJ4Z0pQS0R3SV9palE4X0xuRy1idDg1WGZHeXpvMVkxalZoYlZRaDI4eFJMeVpMaw?oc=5\" target=\"_blan",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOc2RFb1BXWGYzaG1qTVdmRzFvSGJicERhNTFfUzBONnZXeDh6OEw5bnJudHRIN3pxTGpSd24zWDFMR2J3ZWtKTG90WFhwZzFEVFFGR3VJd3VsLVBld1I3YnNqUjZpNEkyckhxVFNjcjlMLXk4NVZRRlpwSVIxc2xoM3VwRWRsREhOV0dKakJ6STlIMjJNaFdGTldfMV9Wd1ZPZEp2WHg4dmRaMXcxVVVSdHZRRzJXU003MUkzWkZ2WDF3U3NZVlpOOS00ZnVrNFFjQVpmekpRTmZEdUFWUUxfanJ1SDQwQ3k3dVNETDZNX1c1eHNmRkc3OF9EWDdtZkVUQTNnM1BkeUdDTlIwbFdHajJ4Z0pQS0R3SV9palE4X0xuRy1idDg1WGZHeXpvMVkxalZoYlZRaDI4eFJMeVpMaw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-29T22:54:57.290Z"
     },
     {
       "id": "rss_88c3a7d1dabed330",
