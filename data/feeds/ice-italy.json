@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-04-30T20:06:58.766Z",
-  "epoch_count": 40,
+  "last_fetch": "2026-04-30T21:31:40.446Z",
+  "epoch_count": 41,
   "epochs": [
     {
       "id": "rss_20225e48c24957dc",
@@ -74,6 +74,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-28T22:53:16.397Z"
+    },
+    {
+      "id": "rss_bca0ef1d5ffcc18a",
+      "timestamp": 1777117491000,
+      "source": "OSINT",
+      "actor": "ice",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fury as ICE agents are given security role at the Winter Olympics in Italy - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9AJBVV95cUxNc3JrazJqR1FHVXFSZkk0RnhSZ2Uyd3p2LWZzUUZhQXJ2aVRZeXBBY3Zya2JoN2JRcW9nTjV2RmpHblZuSklXSGh1SlZoaTdFUXZxOXV6VnVmV1FjNlhWZDNuUl9TSjFBMkRUeUVzZmFOa3Q4a1NaSHhYM1I2Sm1ESXlCaUNxRHRVTHNtdnpvQVpUS3gxNmdmdTlZdHJ1ZVRna01sNGRsU2VtUHFHWnk5SXRPZ1NJMW8ybGJIbzRWZFJRVUFISjZ0NlZEVFVPcDBHYXFmbzZmeDdIV2VzeFVFRGxHV1RmaU1xSHdISDc5QzZEZnctVXV2bVhBZll1Zm5kSnE3V09IMm4zQVJQUlVSWU9BSFdUWU9LTnB5ZVEySS10RUFIVGw0T0pWOTlFOHE5eFZUbnJ2ZldmaE9ZYUJUN2hIT0djc3lUWWFkNUZINF",
+      "tags": [
+        "olympics-2026",
+        "milano-cortina"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxNc3JrazJqR1FHVXFSZkk0RnhSZ2Uyd3p2LWZzUUZhQXJ2aVRZeXBBY3Zya2JoN2JRcW9nTjV2RmpHblZuSklXSGh1SlZoaTdFUXZxOXV6VnVmV1FjNlhWZDNuUl9TSjFBMkRUeUVzZmFOa3Q4a1NaSHhYM1I2Sm1ESXlCaUNxRHRVTHNtdnpvQVpUS3gxNmdmdTlZdHJ1ZVRna01sNGRsU2VtUHFHWnk5SXRPZ1NJMW8ybGJIbzRWZFJRVUFISjZ0NlZEVFVPcDBHYXFmbzZmeDdIV2VzeFVFRGxHV1RmaU1xSHdISDc5QzZEZnctVXV2bVhBZll1Zm5kSnE3V09IMm4zQVJQUlVSWU9BSFdUWU9LTnB5ZVEySS10RUFIVGw0T0pWOTlFOHE5eFZUbnJ2ZldmaE9ZYUJUN2hIT0djc3lUWWFkNUZINFRyZG5hYi1tS2FISHR3MkVjZU15Q3l4N3pQem1ZSXlZTzR0Vng?oc=5",
+      "feed_id": "gn-ice-italy-en",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-04-30T21:31:39.172Z"
     },
     {
       "id": "rss_8c2120716fe16c18",
