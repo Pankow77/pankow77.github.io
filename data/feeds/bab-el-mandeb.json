@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-01T21:12:43.054Z",
-  "epoch_count": 395,
+  "last_fetch": "2026-05-01T22:10:49.387Z",
+  "epoch_count": 396,
   "epochs": [
+    {
+      "id": "rss_6b7dff7af7127d00",
+      "timestamp": 1777672683000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen : Houthi Drone Attack Kills Soldier, Wounds 2 in Southern Marib - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WQXM4LUMyN3M1X0llMzhSM2M4SC1peGpZMExmOFpncFYxRm1oMl96cGM1VDB2RDFKNHVzSElMUmEzQTlPRW5MVlZLUkY5M2NEaVFydFRDXzFaQQ?oc=5\" target=\"_blank\">Yemen : Houthi Drone Attack Kills Soldier, Wounds 2 in Southern Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WQXM4LUMyN3M1X0llMzhSM2M4SC1peGpZMExmOFpncFYxRm1oMl96cGM1VDB2RDFKNHVzSElMUmEzQTlPRW5MVlZLUkY5M2NEaVFydFRDXzFaQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-01T22:10:47.948Z"
+    },
     {
       "id": "rss_56472ba02e7ea46a",
       "timestamp": 1777617330000,
