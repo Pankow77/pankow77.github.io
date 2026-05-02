@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-02T06:09:26.080Z",
-  "epoch_count": 396,
+  "last_fetch": "2026-05-02T08:05:12.316Z",
+  "epoch_count": 397,
   "epochs": [
     {
       "id": "rss_6b7dff7af7127d00",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-01T22:10:47.948Z"
+    },
+    {
+      "id": "rss_254fa7a4a597193c",
+      "timestamp": 1777632093000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea tanker transits surpass pre-Houthi crisis levels in rush to secure Saudi barrels - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMGdnb1VQQ3RVenVmbmlkRVdzaFdfaVFsdjJ4MEt5UlM5bzdNR09WTzE0eWRoaFRHREJwcnBCMlJOMXRiX3lHNVYtdW9QWHlRM2ctSzZ6UkxGRG84dmFfdjQxUlNVMWV5YUpNS0ZKVVF4V0p4UllhVjVqVTBiQmlFWS01Yi14a0tiWF9zckFxSVp2WTJCeGJNUU91NzlrRURCMjlXbTdTSjR0MUtfT0VILU04SUx1Y2FRT2YyT0x6eVlEd0E?oc=5\" target=\"_blank\">Red Sea tanker transits surpass pre-Houthi crisis levels in rush to secure Saudi barrels</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMGdnb1VQQ3RVenVmbmlkRVdzaFdfaVFsdjJ4MEt5UlM5bzdNR09WTzE0eWRoaFRHREJwcnBCMlJOMXRiX3lHNVYtdW9QWHlRM2ctSzZ6UkxGRG84dmFfdjQxUlNVMWV5YUpNS0ZKVVF4V0p4UllhVjVqVTBiQmlFWS01Yi14a0tiWF9zckFxSVp2WTJCeGJNUU91NzlrRURCMjlXbTdTSjR0MUtfT0VILU04SUx1Y2FRT2YyT0x6eVlEd0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-02T08:05:10.896Z"
     },
     {
       "id": "rss_56472ba02e7ea46a",
