@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-10T08:25:20.697Z",
-  "epoch_count": 403,
+  "last_fetch": "2026-05-10T09:52:21.212Z",
+  "epoch_count": 404,
   "epochs": [
     {
       "id": "rss_72a6eec9401528c6",
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-09T10:31:15.957Z"
+    },
+    {
+      "id": "rss_fc3b713e2a55a573",
+      "timestamp": 1778043600000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Civil War - Britannica",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE5nNGFkMjBUdUhBTHpIbm1aVm8xdjZOd21uSXEtdklGSVZWN1NLWjUzSFN1QWtrSEdQdDMyU29nQjd3dUFxNFNtRjhOeUhJMzF5cW1hZkFsVVRRWm00dWc?oc=5\" target=\"_blank\">Yemeni Civil War</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Britannica</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5nNGFkMjBUdUhBTHpIbm1aVm8xdjZOd21uSXEtdklGSVZWN1NLWjUzSFN1QWtrSEdQdDMyU29nQjd3dUFxNFNtRjhOeUhJMzF5cW1hZkFsVVRRWm00dWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-10T09:52:19.831Z"
     },
     {
       "id": "rss_3eb0baf7a276d297",
