@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-11T13:44:20.559Z",
-  "epoch_count": 404,
+  "last_fetch": "2026-05-11T16:29:04.316Z",
+  "epoch_count": 405,
   "epochs": [
     {
       "id": "rss_72a6eec9401528c6",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-09T10:31:15.957Z"
+    },
+    {
+      "id": "rss_1a0c5294906ed583",
+      "timestamp": 1778061327000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_AJBVV95cUxOREh2b3N5NVNGTTRGSm1Id3IxRm9qN1M2eW9KcURHNV9SMjVqcjlwaTM1UVNlQktERmN5OTFzSlJ0aXlxRFhuZndSVm13Ny1tYVlMLThEOUctVFBLNGhXeTdJUktPNlpucEkxbkFGQnFpMF9RQlJzTjFqUEVYWmlnTG9EbXdsc3dycUdBVFpCMVJIaEIxM3Y1NHJGSUdRek5SUlBzTnVPY3NXckJtTW1kS0xOX0xzRmZJcnJjeHVPN0trNWtTX1V3bmhPUE9fdzkzX2xpeHBzY0cxVmZSVjVsNnF1SFlfMlhVX19YWHNSUjMxaFhjMnFIUUZIaURWSWE4S2dKWGJDdVpLUzdFQjFlRlZjVHB5YnhwOVBVWk9QNngtRU96bmd4YUc4WFhydjgxakVMVFZmVWRqOUhldnd2U3lrcVM2am5tS1lCM0pJUV",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxOREh2b3N5NVNGTTRGSm1Id3IxRm9qN1M2eW9KcURHNV9SMjVqcjlwaTM1UVNlQktERmN5OTFzSlJ0aXlxRFhuZndSVm13Ny1tYVlMLThEOUctVFBLNGhXeTdJUktPNlpucEkxbkFGQnFpMF9RQlJzTjFqUEVYWmlnTG9EbXdsc3dycUdBVFpCMVJIaEIxM3Y1NHJGSUdRek5SUlBzTnVPY3NXckJtTW1kS0xOX0xzRmZJcnJjeHVPN0trNWtTX1V3bmhPUE9fdzkzX2xpeHBzY0cxVmZSVjVsNnF1SFlfMlhVX19YWHNSUjMxaFhjMnFIUUZIaURWSWE4S2dKWGJDdVpLUzdFQjFlRlZjVHB5YnhwOVBVWk9QNngtRU96bmd4YUc4WFhydjgxakVMVFZmVWRqOUhldnd2U3lrcVM2am5tS1lCM0pJUVNBd0RlR2VSeV9FT0hFdHFHUFN0N3VtZV8tOGw3R0pzZHJrUWwxdVhiYV9fUg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-11T16:29:02.600Z"
     },
     {
       "id": "rss_fc3b713e2a55a573",
