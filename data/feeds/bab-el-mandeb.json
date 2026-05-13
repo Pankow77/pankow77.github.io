@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-13T06:44:38.710Z",
-  "epoch_count": 406,
+  "last_fetch": "2026-05-13T09:40:51.315Z",
+  "epoch_count": 407,
   "epochs": [
     {
       "id": "rss_05fdc795c53b528c",
@@ -26,6 +26,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-12T11:29:25.254Z"
+    },
+    {
+      "id": "rss_0c76a55091bc446e",
+      "timestamp": 1778483085000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Likely Houthi attack on Dutch ship wounds 2, forces crew to abandon vessel - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigANBVV95cUxQSTZMRmR4a1k5U0N4anhzd2RrenBhZGRfWW9ENDE3NXZiLXRnMDhtdVBkeE4tUmIwTTRkanhuNXV5Rk9UM1V4Tm9TYnlNNEppQVNPZDNaNFRNWkhxUE9XLXVHdWk1NDhmeEpIQ2VTYnZKM2N6YThlQ25kZUlKV3hmcWk4LXl6NllGWkJCVm11VlB5RnBRaU9GVmh2c01HR0dYYm5INkl6TnZ0NlZyU0RLUFJDRVdsUm5lZWtiWkE4cnhzeUdNdU43WEp4WWFXQmNqT09uaEFkNVZqUDkxRlcwMlMwTEdmYWxnU2tiUFkxU1haYUFGaXVfLVJRWXFhaWN0Q044Qm8zZmhRcVU3Tjk4NnU3ZVhCOFE2ZHpCNnRiQmdOSWV2VnBTZS1fUjBMNVNzYXpXOWY1azZkX1FtSWhBZXh4Z0IxYjU5Uk1najhCOT",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigANBVV95cUxQSTZMRmR4a1k5U0N4anhzd2RrenBhZGRfWW9ENDE3NXZiLXRnMDhtdVBkeE4tUmIwTTRkanhuNXV5Rk9UM1V4Tm9TYnlNNEppQVNPZDNaNFRNWkhxUE9XLXVHdWk1NDhmeEpIQ2VTYnZKM2N6YThlQ25kZUlKV3hmcWk4LXl6NllGWkJCVm11VlB5RnBRaU9GVmh2c01HR0dYYm5INkl6TnZ0NlZyU0RLUFJDRVdsUm5lZWtiWkE4cnhzeUdNdU43WEp4WWFXQmNqT09uaEFkNVZqUDkxRlcwMlMwTEdmYWxnU2tiUFkxU1haYUFGaXVfLVJRWXFhaWN0Q044Qm8zZmhRcVU3Tjk4NnU3ZVhCOFE2ZHpCNnRiQmdOSWV2VnBTZS1fUjBMNVNzYXpXOWY1azZkX1FtSWhBZXh4Z0IxYjU5Uk1najhCOTUzMFg2RXZWT1BBUnpZaXl6d3UyY0FSeVpuSk9mUkpOT0YwY3NWT015c3N0dGx4MEQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-13T09:40:49.936Z"
     },
     {
       "id": "rss_72a6eec9401528c6",
