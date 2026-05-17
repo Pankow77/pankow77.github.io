@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-17T10:03:08.424Z",
-  "epoch_count": 412,
+  "last_fetch": "2026-05-17T10:54:03.685Z",
+  "epoch_count": 413,
   "epochs": [
+    {
+      "id": "rss_752a5ffa50ea6382",
+      "timestamp": 1778922412000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Civilian injured in Houthi missile attack on a Marib neighborhood - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE90R2NRS2VBeUpmVDNLLWgwc3FyVWpUdVpQUWk1SGMwYi1WaGZ5cjllYVVFLTlaX1Bsc1BwOVB1U2lnVzVwdGlDR25TbHg2UQ?oc=5\" target=\"_blank\">Civilian injured in Houthi missile attack on a Marib neighborhood</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE90R2NRS2VBeUpmVDNLLWgwc3FyVWpUdVpQUWk1SGMwYi1WaGZ5cjllYVVFLTlaX1Bsc1BwOVB1U2lnVzVwdGlDR25TbHg2UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-17T10:54:02.398Z"
+    },
     {
       "id": "rss_231f8e35eaaf6613",
       "timestamp": 1778918570000,
