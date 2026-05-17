@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-17T00:38:57.704Z",
-  "epoch_count": 411,
+  "last_fetch": "2026-05-17T01:36:48.714Z",
+  "epoch_count": 412,
   "epochs": [
     {
       "id": "rss_231f8e35eaaf6613",
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-16T17:52:50.357Z"
+    },
+    {
+      "id": "rss_5d703925e9aff9ec",
+      "timestamp": 1778918080000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Washington denounces Houthi attack on Bahrain Defense Forces - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JODFTSzl6WWlSM0h4TWQzMVpNUTc4ZWZLdTJnb1hLa21YbV9oZ2I1MkpyakRjOTRfbHNYR1E4ZmVzQzlzd0dSelVWajFrN1k?oc=5\" target=\"_blank\">Washington denounces Houthi attack on Bahrain Defense Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JODFTSzl6WWlSM0h4TWQzMVpNUTc4ZWZLdTJnb1hLa21YbV9oZ2I1MkpyakRjOTRfbHNYR1E4ZmVzQzlzd0dSelVWajFrN1k?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-17T01:36:47.351Z"
     },
     {
       "id": "rss_4b15689cdd490242",
