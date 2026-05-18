@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-18T00:40:11.497Z",
-  "epoch_count": 414,
+  "last_fetch": "2026-05-18T01:41:59.226Z",
+  "epoch_count": 415,
   "epochs": [
     {
       "id": "rss_3af080fcb0c8a2b4",
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-17T22:47:22.938Z"
+    },
+    {
+      "id": "rss_2eb97668e7ea265d",
+      "timestamp": 1778928028000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hadi condoles relatives of officerskilled in Houthi terror attack - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE00dWZMQjF3SjBBRGZ5bERINXZQaGluZUR4LUFKMFk5OTRVNHJsbk5OWnRwcEUzVVktb0tXRUd4Q2E2NGlRQ1dPQ3NsTGhLdw?oc=5\" target=\"_blank\">Hadi condoles relatives of officerskilled in Houthi terror attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE00dWZMQjF3SjBBRGZ5bERINXZQaGluZUR4LUFKMFk5OTRVNHJsbk5OWnRwcEUzVVktb0tXRUd4Q2E2NGlRQ1dPQ3NsTGhLdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-18T01:41:57.834Z"
     },
     {
       "id": "rss_752a5ffa50ea6382",
