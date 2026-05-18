@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-18T16:35:07.528Z",
-  "epoch_count": 415,
+  "last_fetch": "2026-05-18T17:42:54.917Z",
+  "epoch_count": 417,
   "epochs": [
+    {
+      "id": "rss_b8717caa95f5bd6e",
+      "timestamp": 1778945990000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Marib: army repels Houthi attack, kills at least 30 militants - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE82bm45TUk5Q0YzNFNUMUVGR0l4M0ZYa2h5UjNjWDhXb0x1S1hmUXB5eHM3anE4R2pmWnVxT0tSejJOU0Q2Vm5OZVFLMndWUQ?oc=5\" target=\"_blank\">Marib: army repels Houthi attack, kills at least 30 militants</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE82bm45TUk5Q0YzNFNUMUVGR0l4M0ZYa2h5UjNjWDhXb0x1S1hmUXB5eHM3anE4R2pmWnVxT0tSejJOU0Q2Vm5OZVFLMndWUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-18T17:42:53.275Z"
+    },
     {
       "id": "rss_3af080fcb0c8a2b4",
       "timestamp": 1778934080000,
@@ -109,6 +130,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-17T01:36:47.351Z"
+    },
+    {
+      "id": "rss_19c9c09736909603",
+      "timestamp": 1778916427000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen Government Condemns Houthi Attack on UN Offices, Humanitarian Work - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE43WVIwX01wT203ZTlxY21FWmltM1FRS0M5TjU5ZmNmaVRuYjUwQzd3QWhoRTBzWThjcVliNUN5ZnJwb1pXSDh3bTc4aw?oc=5\" target=\"_blank\">Yemen Government Condemns Houthi Attack on UN Offices, Humanitarian Work</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE43WVIwX01wT203ZTlxY21FWmltM1FRS0M5TjU5ZmNmaVRuYjUwQzd3QWhoRTBzWThjcVliNUN5ZnJwb1pXSDh3bTc4aw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-18T17:42:53.274Z"
     },
     {
       "id": "rss_4b15689cdd490242",
