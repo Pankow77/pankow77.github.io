@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-18T20:32:38.570Z",
-  "epoch_count": 417,
+  "last_fetch": "2026-05-18T21:27:48.495Z",
+  "epoch_count": 418,
   "epochs": [
     {
       "id": "rss_b8717caa95f5bd6e",
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T17:42:53.275Z"
+    },
+    {
+      "id": "rss_9b35c31fcba8e902",
+      "timestamp": 1778939540000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Arab League Secretary-General condemns Houthi attack that claimed lives of Bahraini soldiers - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UeGV0dHp5MDQ5anJkM25oUXJYMzVUWHpMclpTYjF4UzU3eU81Q3RDZlpsZTRsMlYtOXM5aW16ZGdPQXpFS2RkOVFmTFozenM?oc=5\" target=\"_blank\">Arab League Secretary-General condemns Houthi attack that claimed lives of Bahraini soldiers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UeGV0dHp5MDQ5anJkM25oUXJYMzVUWHpMclpTYjF4UzU3eU81Q3RDZlpsZTRsMlYtOXM5aW16ZGdPQXpFS2RkOVFmTFozenM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-18T21:27:47.003Z"
     },
     {
       "id": "rss_3af080fcb0c8a2b4",
