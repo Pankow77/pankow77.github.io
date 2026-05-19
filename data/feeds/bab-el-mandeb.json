@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-19T21:31:44.117Z",
-  "epoch_count": 419,
+  "last_fetch": "2026-05-19T22:27:49.559Z",
+  "epoch_count": 420,
   "epochs": [
     {
       "id": "rss_b8717caa95f5bd6e",
@@ -86,6 +86,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T23:24:23.959Z"
+    },
+    {
+      "id": "rss_9c4525e751ffc433",
+      "timestamp": 1778933360000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Bulgaria condemns the terrorist Houthi attack on Al-Dhabba seaport - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBRT3c4Q19HZjdWRFl2MGoyRWZfV1NkZ0w2OUJXOE9GOEEwalI1VFNRaEd0dXB2ZzlpSGdZQVZZa2hibmllM2RjRmNMcm1tQQ?oc=5\" target=\"_blank\">Bulgaria condemns the terrorist Houthi attack on Al-Dhabba seaport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBRT3c4Q19HZjdWRFl2MGoyRWZfV1NkZ0w2OUJXOE9GOEEwalI1VFNRaEd0dXB2ZzlpSGdZQVZZa2hibmllM2RjRmNMcm1tQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-19T22:27:48.215Z"
     },
     {
       "id": "rss_2eb97668e7ea265d",
