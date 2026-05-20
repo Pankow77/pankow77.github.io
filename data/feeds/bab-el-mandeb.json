@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-20T03:07:57.641Z",
-  "epoch_count": 421,
+  "last_fetch": "2026-05-20T04:52:50.600Z",
+  "epoch_count": 422,
   "epochs": [
     {
       "id": "rss_b8717caa95f5bd6e",
@@ -235,6 +235,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T17:42:53.274Z"
+    },
+    {
+      "id": "rss_33b55c91f863c0b4",
+      "timestamp": 1778914090000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Army repels Houthi attack, kills 100 militants east of Sana’a - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTE5oaHZmZ0E4ZWp3cmdMTWRXa3V0a2FYeEJHOVU1dG0tQVNMVGJmVW0tLXpndkpnMHVRSTY1UkZxRTdLVFBGTldpTklB?oc=5\" target=\"_blank\">Army repels Houthi attack, kills 100 militants east of Sana’a</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5oaHZmZ0E4ZWp3cmdMTWRXa3V0a2FYeEJHOVU1dG0tQVNMVGJmVW0tLXpndkpnMHVRSTY1UkZxRTdLVFBGTldpTklB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-20T04:52:49.119Z"
     },
     {
       "id": "rss_4b15689cdd490242",
