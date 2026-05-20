@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-20T00:42:59.711Z",
-  "epoch_count": 420,
+  "last_fetch": "2026-05-20T01:42:10.003Z",
+  "epoch_count": 421,
   "epochs": [
     {
       "id": "rss_b8717caa95f5bd6e",
@@ -44,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T21:27:47.003Z"
+    },
+    {
+      "id": "rss_5f805869fa47e153",
+      "timestamp": 1778935176000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen condemns Houthi terror attack on Saudi oil field - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBkMzNRMk1lU0dfTU5pVThta245M3RoeHI0aGxuTENjS0twZ2xScXpfZWdyT1EwVjFVb2xwczNobmRQWEJaTXZkOHJ4Mmhwdw?oc=5\" target=\"_blank\">Yemen condemns Houthi terror attack on Saudi oil field</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBkMzNRMk1lU0dfTU5pVThta245M3RoeHI0aGxuTENjS0twZ2xScXpfZWdyT1EwVjFVb2xwczNobmRQWEJaTXZkOHJ4Mmhwdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-20T01:42:08.530Z"
     },
     {
       "id": "rss_3af080fcb0c8a2b4",
