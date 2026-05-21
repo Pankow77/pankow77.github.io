@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-21T22:36:58.877Z",
-  "epoch_count": 422,
+  "last_fetch": "2026-05-21T23:23:41.214Z",
+  "epoch_count": 423,
   "epochs": [
     {
       "id": "rss_b8717caa95f5bd6e",
@@ -172,6 +172,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-17T10:54:02.398Z"
+    },
+    {
+      "id": "rss_fbe735726101335c",
+      "timestamp": 1778919595000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Eryani: Houthi attack on Sea Champion vessel is a direct target on food imports and aid - sabanew.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE5vUDBDbENmR1prTGc2cHdXSVVVX2J5TVE4YjJhaGNjOEpYQkVEWFBTbzljVndsQTJlNDRvM0x1X214UGhSeTNXZW1nTmJ4aDg?oc=5\" target=\"_blank\">Eryani: Houthi attack on Sea Champion vessel is a direct target on food imports and aid</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5vUDBDbENmR1prTGc2cHdXSVVVX2J5TVE4YjJhaGNjOEpYQkVEWFBTbzljVndsQTJlNDRvM0x1X214UGhSeTNXZW1nTmJ4aDg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-21T23:23:39.993Z"
     },
     {
       "id": "rss_231f8e35eaaf6613",
