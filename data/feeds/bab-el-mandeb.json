@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-05-27T17:05:45.706Z",
-  "epoch_count": 428,
+  "last_fetch": "2026-05-27T18:18:09.977Z",
+  "epoch_count": 429,
   "epochs": [
     {
       "id": "rss_22a428013c60a45a",
@@ -67,6 +67,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-26T21:03:26.869Z"
+    },
+    {
+      "id": "rss_d9dc274a1942027f",
+      "timestamp": 1779752083000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel - News On AIR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5\" target=\"_blank\">Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News On AIR</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-05-27T18:18:08.508Z"
     },
     {
       "id": "rss_c28ad57c64fd5bb3",
