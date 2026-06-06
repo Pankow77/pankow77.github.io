@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-06T08:54:01.596Z",
-  "epoch_count": 436,
+  "last_fetch": "2026-06-06T09:42:08.144Z",
+  "epoch_count": 437,
   "epochs": [
     {
       "id": "rss_7e1f4a95cd7c0e9f",
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-06T00:43:00.551Z"
+    },
+    {
+      "id": "rss_fdc7c302c906aeea",
+      "timestamp": 1780697417000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Army Repels Houthi Attack in Marib, Eastern Yemen - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBiZk9jaC1rTlBHS1MtNHVaUlMzZ09GN1pzSG4xV044cmdDY0hZaHZpNk9oc2JjYnlVVTNSbDNVRGNCYTFId0hsZVVOSC01eGpvdXVmcnBrX0NqME01OWxCZmlKd19QV1pkNWlrSmNrM1JwdHlMMHc?oc=5\" target=\"_blank\">Yemeni Army Repels Houthi Attack in Marib, Eastern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiZk9jaC1rTlBHS1MtNHVaUlMzZ09GN1pzSG4xV044cmdDY0hZaHZpNk9oc2JjYnlVVTNSbDNVRGNCYTFId0hsZVVOSC01eGpvdXVmcnBrX0NqME01OWxCZmlKd19QV1pkNWlrSmNrM1JwdHlMMHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-06T09:42:06.869Z"
     },
     {
       "id": "rss_c25d70bf9130edab",
