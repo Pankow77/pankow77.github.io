@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-05T23:53:40.351Z",
-  "epoch_count": 435,
+  "last_fetch": "2026-06-06T00:43:02.049Z",
+  "epoch_count": 436,
   "epochs": [
+    {
+      "id": "rss_7e1f4a95cd7c0e9f",
+      "timestamp": 1780699139000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "UAE, US intercept Houthi missile attack targeting Abu Dhabi - Ahram Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPVmdIRlpleHJ1SzQwdkhLcUZycmRwVlZkNS1KbFNvelZzMlRYa29BaHAzWkp3czdSMk5mSk10VG1FZVhmSXZheHNnelNpLVJPVTJ4RkVxV0JtVXdCMzBMYk94YnFqeVByanduUGpSNWtLNnNCazZlOVJMUEc0WDJpNzAzODJQQQ?oc=5\" target=\"_blank\">UAE, US intercept Houthi missile attack targeting Abu Dhabi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVmdIRlpleHJ1SzQwdkhLcUZycmRwVlZkNS1KbFNvelZzMlRYa29BaHAzWkp3czdSMk5mSk10VG1FZVhmSXZheHNnelNpLVJPVTJ4RkVxV0JtVXdCMzBMYk94YnFqeVByanduUGpSNWtLNnNCazZlOVJMUEc0WDJpNzAzODJQQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-06T00:43:00.551Z"
+    },
     {
       "id": "rss_c25d70bf9130edab",
       "timestamp": 1780689300000,
