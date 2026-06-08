@@ -1,8 +1,101 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-08T05:05:37.627Z",
-  "epoch_count": 439,
+  "last_fetch": "2026-06-08T07:06:54.555Z",
+  "epoch_count": 443,
   "epochs": [
+    {
+      "id": "rss_047a22190e611478",
+      "timestamp": 1780901420000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi threaten to attack Israeli ships in the Red Sea - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNNlJsblp6UEREYUtyelRLaGhBckREZFdGbUcwNkFTYVJ6Q09KRmJ1bHVZUWRsdzJySUFtMGoyVENlSElJbXI4Q1pabzZGb0lnYVdzN3JJSTY3WmJKaDFYWF95YVFrNF9zUGtEUy1YYzRzWEJlREFHaDlaWGlpaXE2NGg0TlpCT0g1Q21uY1loMlBGTzNlcXUxQnpHdkNMdw?oc=5\" target=\"_blank\">Houthi threaten to attack Israeli ships in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNlJsblp6UEREYUtyelRLaGhBckREZFdGbUcwNkFTYVJ6Q09KRmJ1bHVZUWRsdzJySUFtMGoyVENlSElJbXI4Q1pabzZGb0lnYVdzN3JJSTY3WmJKaDFYWF95YVFrNF9zUGtEUy1YYzRzWEJlREFHaDlaWGlpaXE2NGg0TlpCT0g1Q21uY1loMlBGTzNlcXUxQnpHdkNMdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T07:06:53.272Z"
+    },
+    {
+      "id": "rss_f512d4bd85ceeb5f",
+      "timestamp": 1780900332000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Attack Israel, Declare Ban on Israeli Shipping in Red Sea - Asharq Al-Awsat | Explore World News Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVU5dmNvM0hva3ZlVmdocTR4aXhDQkltbW54NEQ3ODN5VldGTmU2UjFwNnozZ1NFdXRPcjdBWVZyVWRnb2Q2cWZ6cWR6eTlWZ1V4T01wNkRvVkw1T2NhSTlqcU5ObDRyTnpNb3hlb2Y2MFVoWnFzeFZkVWdpVEFITWNSQkZXUHJxY1FXWW0teWRZbDJXd2VKb1dYbTVINmN3VzRveU9zaw?oc=5\" target=\"_blank\">Houthis Attack Israel, Declare Ban on Israeli Shipping in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat | Explore World News Today</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVU5dmNvM0hva3ZlVmdocTR4aXhDQkltbW54NEQ3ODN5VldGTmU2UjFwNnozZ1NFdXRPcjdBWVZyVWRnb2Q2cWZ6cWR6eTlWZ1V4T01wNkRvVkw1T2NhSTlqcU5ObDRyTnpNb3hlb2Y2MFVoWnFzeFZkVWdpVEFITWNSQkZXUHJxY1FXWW0teWRZbDJXd2VKb1dYbTVINmN3VzRveU9zaw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T07:06:53.272Z"
+    },
+    {
+      "id": "rss_f772b3ed1738bbf5",
+      "timestamp": 1780900200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis declare ban on Israeli shipping in Red Sea: Statement - Al Arabiya English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ29uRUZwU0tDSnltc0d4UGpEOEt0QWF4M2JMb0NPZzVWMm5ER3d1TDc2T3loVHRJcUNoeDZGdUQySzY1YmhTNWViVWU3eGxwdXc3ZDlUWUx4Vk9FUmhubXN3TWRlMUVxV3lqRzhOTjVFTmU5TEhLSnVJRmhLb2FPVUc5aGlzVnFTNmlxWWNaX2ZLc0xuazJLV3NTU2Y4MnB4aExFTmd3ZXBNdlRUUGhZQ2poZ2NKZDBGOWxGX2hIRzd3ZEtI0gHKAUFVX3lxTE52VDBzN2dCeGZpbVVMSXAwN2M0MHZXUEhHSmhzOVdhU1MtXzJ6ZTlydlUybkNNUDlEeDd1TFItODY1M01QWkxsWEtYb0t1aWtaQlpMa2RObFRQQ2xJM0EzeG84OFFraGJ6RVFweGZuczU0NjJPQ3RDdWdvdHhRSEVjZEJrSDZYd2",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ29uRUZwU0tDSnltc0d4UGpEOEt0QWF4M2JMb0NPZzVWMm5ER3d1TDc2T3loVHRJcUNoeDZGdUQySzY1YmhTNWViVWU3eGxwdXc3ZDlUWUx4Vk9FUmhubXN3TWRlMUVxV3lqRzhOTjVFTmU5TEhLSnVJRmhLb2FPVUc5aGlzVnFTNmlxWWNaX2ZLc0xuazJLV3NTU2Y4MnB4aExFTmd3ZXBNdlRUUGhZQ2poZ2NKZDBGOWxGX2hIRzd3ZEtI0gHKAUFVX3lxTE52VDBzN2dCeGZpbVVMSXAwN2M0MHZXUEhHSmhzOVdhU1MtXzJ6ZTlydlUybkNNUDlEeDd1TFItODY1M01QWkxsWEtYb0t1aWtaQlpMa2RObFRQQ2xJM0EzeG84OFFraGJ6RVFweGZuczU0NjJPQ3RDdWdvdHhRSEVjZEJrSDZYd2ROZFI0U0JpZ0Z4Q1E5SFdYSjlQLXd6eTZvcDVaOU42T1hjMWRJNU16a0RGNC1SUF9PdXdoMVFSd3R0NHNkOFhQRlE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T07:06:53.272Z"
+    },
+    {
+      "id": "rss_3314b637c86578fc",
+      "timestamp": 1780898700000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthi rebels claim missile attack on Israel and say Israel-affiliated vessels are a target again in Red Sea - WKYC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAJBVV95cUxPdThKSnRDNnBGalBhTzZvclVPaTJRZmp4c1hYak5kMUNEWmM0WkFxd1cwYW9tNlRoNXRraDZpNnE3cjM0b0c4RDRVUm9vc3NIel9Wc0FHV0FtZnhUSHR6d2pucVFULTZpbllNOVJEUnkwb2hNRVc4blBNaUNBSWF3NTNla2FwTERDQUZGYTk1WmtpaFBUN0lSZzV1VEMwcTNjaDhBX3ZELXRoUVBWM2RueC1WNTVPVTlia2puaWM5RHlPNkRPbnhIckFHc0RUYU5SdDhHQjMtZGV5bm9IVEQtTWZwcG4wR2pHaHpjZm4ybDh4ajRyWFFnd2xRcm52em1LSjdNZXJzdm8ySEIxMmxqZ0lUMlRDVU1mSi1GeGp0NDNiSzIxUVZKMHhKVENqRlAtMkRQZkJDdjg?oc=5\" target=\"_blank\">Yemen's ",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPdThKSnRDNnBGalBhTzZvclVPaTJRZmp4c1hYak5kMUNEWmM0WkFxd1cwYW9tNlRoNXRraDZpNnE3cjM0b0c4RDRVUm9vc3NIel9Wc0FHV0FtZnhUSHR6d2pucVFULTZpbllNOVJEUnkwb2hNRVc4blBNaUNBSWF3NTNla2FwTERDQUZGYTk1WmtpaFBUN0lSZzV1VEMwcTNjaDhBX3ZELXRoUVBWM2RueC1WNTVPVTlia2puaWM5RHlPNkRPbnhIckFHc0RUYU5SdDhHQjMtZGV5bm9IVEQtTWZwcG4wR2pHaHpjZm4ybDh4ajRyWFFnd2xRcm52em1LSjdNZXJzdm8ySEIxMmxqZ0lUMlRDVU1mSi1GeGp0NDNiSzIxUVZKMHhKVENqRlAtMkRQZkJDdjg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T07:06:53.272Z"
+    },
     {
       "id": "rss_bbeab311b479ce5f",
       "timestamp": 1780888205000,
