@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-08T09:06:13.474Z",
-  "epoch_count": 451,
+  "last_fetch": "2026-06-08T11:14:24.316Z",
+  "epoch_count": 455,
   "epochs": [
+    {
+      "id": "rss_7e045059e4ee544b",
+      "timestamp": 1780916124000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthi rebels claim missile attack on Israel - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxOcHR6eVUzbFppNy05SEd2b2theTBvWEd3RGc5OFlSUG9vd19RaWllWjhGaVZLcFNmZEhac1gxRE9VeFlrbWxIZjlOMWpHNV9mTzlYQnBiTTI5MTZoSVR1NEZkZXlGeS1PcHBKcWFQYTA0Ymg3QlpOR2xyZzFpVWYzWFJnNzFpRV9mclE?oc=5\" target=\"_blank\">Yemen’s Houthi rebels claim missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcHR6eVUzbFppNy05SEd2b2theTBvWEd3RGc5OFlSUG9vd19RaWllWjhGaVZLcFNmZEhac1gxRE9VeFlrbWxIZjlOMWpHNV9mTzlYQnBiTTI5MTZoSVR1NEZkZXlGeS1PcHBKcWFQYTA0Ymg3QlpOR2xyZzFpVWYzWFJnNzFpRV9mclE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T11:14:22.989Z"
+    },
     {
       "id": "rss_22f654de113fa585",
       "timestamp": 1780906922000,
@@ -140,6 +163,29 @@
       "fetched_at": "2026-06-08T09:06:13.468Z"
     },
     {
+      "id": "rss_ed606c5a46eb7b8a",
+      "timestamp": 1780902780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim attack on Israel, threaten to target Israel-affiliated vessels in Red Sea - Naharnet",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZElHOHpNaDdfT0FENHFFRWNGMEpDQTZuQm1hd1JaU011WFFFbEVNN2hrcmR1Sjh4MUx1SjZNbTExTjFQcVQzV1B6QzZDc2R5clNzSzJoQnkzUWpSNkZnZDNTdmRtX0FOM3ZqM2dnQ0tMa0NmUFpKelBrOWJJVTNFcVpqTFNwaDQ1YUotN0FrdHRnS1cteGZ5NjBfdjdvRGx3OXRydUw0RncwSGpTS1hEUzJjWmhUNndIel81bEdDRVpTNmtZVGNzaw?oc=5\" target=\"_blank\">Houthis claim attack on Israel, threaten to target Israel-affiliated vessels in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Naharnet</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZElHOHpNaDdfT0FENHFFRWNGMEpDQTZuQm1hd1JaU011WFFFbEVNN2hrcmR1Sjh4MUx1SjZNbTExTjFQcVQzV1B6QzZDc2R5clNzSzJoQnkzUWpSNkZnZDNTdmRtX0FOM3ZqM2dnQ0tMa0NmUFpKelBrOWJJVTNFcVpqTFNwaDQ1YUotN0FrdHRnS1cteGZ5NjBfdjdvRGx3OXRydUw0RncwSGpTS1hEUzJjWmhUNndIel81bEdDRVpTNmtZVGNzaw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T11:14:22.989Z"
+    },
+    {
       "id": "rss_c3658e31ec67e90c",
       "timestamp": 1780902680000,
       "source": "OSINT",
@@ -159,6 +205,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
+    },
+    {
+      "id": "rss_06e3fcc39fa093b1",
+      "timestamp": 1780901895000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Could Bab el-Mandeb Become the Next Strait of Hormuz? - horn review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNWkFBWDFGaUxDZHdmOWNPNjBVRVVqU1A1OWxSTXljQ1BMMGZrYnRSS0UxdFVKbi1qbWticjZMaUhrMlV0VTE3SUZVU3FoaFZiRkNrV29HTGYxakhtQzlTZnhGU0lVbkZQMGlRX1hMcEUyZ2UwUENMTjBEeE9rM2IwT016N1dtdHVDa1JITUN4eXM?oc=5\" target=\"_blank\">Could Bab el-Mandeb Become the Next Strait of Hormuz?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWkFBWDFGaUxDZHdmOWNPNjBVRVVqU1A1OWxSTXljQ1BMMGZrYnRSS0UxdFVKbi1qbWticjZMaUhrMlV0VTE3SUZVU3FoaFZiRkNrV29HTGYxakhtQzlTZnhGU0lVbkZQMGlRX1hMcEUyZ2UwUENMTjBEeE9rM2IwT016N1dtdHVDa1JITUN4eXM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T11:14:22.988Z"
     },
     {
       "id": "rss_047a22190e611478",
@@ -296,6 +363,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T05:05:36.250Z"
+    },
+    {
+      "id": "rss_1e34830c223187cb",
+      "timestamp": 1780888132000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Four houses in West Bank damaged in direct hit as Iran launches waves of attacks - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBOSTRDcjBaTjlHSm9zcFFJc0xWeEd0QUNzdHF0UTFCcTBsZU1VTzVkNzB2YWdOaDNEWHVzRkxQZ2FuOFd5VmxsWUJrLXVSQkNGemdZM0ZvMTdyUGRqb0hOUFBXRVJlQ01aZmhIZlp3?oc=5\" target=\"_blank\">Four houses in West Bank damaged in direct hit as Iran launches waves of attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBOSTRDcjBaTjlHSm9zcFFJc0xWeEd0QUNzdHF0UTFCcTBsZU1VTzVkNzB2YWdOaDNEWHVzRkxQZ2FuOFd5VmxsWUJrLXVSQkNGemdZM0ZvMTdyUGRqb0hOUFBXRVJlQ01aZmhIZlp3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T11:14:22.989Z"
     },
     {
       "id": "rss_62b16feb22480b8f",
