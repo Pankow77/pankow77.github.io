@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-08T11:14:24.316Z",
-  "epoch_count": 455,
+  "last_fetch": "2026-06-08T12:51:20.364Z",
+  "epoch_count": 459,
   "epochs": [
+    {
+      "id": "rss_95c87324aa3b70e1",
+      "timestamp": 1780919889000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Explainer: Why are the Houthis threatening to attack Red Sea shipping and what does it mean for oil markets? - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5\" target=\"_blank\">Explainer: Why are the Houthis threatening to attack Red Sea shipping and what does it mean for oil markets?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-06-08T12:51:18.714Z"
+    },
+    {
+      "id": "rss_498311e6abe0f76d",
+      "timestamp": 1780918689000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemen's Iran-backed Houthis threaten Israeli shipping in the Red Sea - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxJeXJBNklmZEtETkg1d3ZTRkY2NUh4dlNXcy11Y0FYXzVoXzZ2anNoSHhuUTdSSUFvN2V4TzdfTlAwc0NLWEFYZFRuLWx3cUtUNEJmN1dkMVE1bHJhYXJJOW1VVEJZZFRtTTMzUUExNHlKNmtyQWlGbHAxY24xd0ptRnk5MWh5UHNNVmFaRUppckQ0WjlteHFPTHNVa0cxdll4cjdiVmE0dzVwWkhERXFONzM?oc=5\" target=\"_blank\">Yemen's Iran-backed Houthis threaten Israeli shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxJeXJBNklmZEtETkg1d3ZTRkY2NUh4dlNXcy11Y0FYXzVoXzZ2anNoSHhuUTdSSUFvN2V4TzdfTlAwc0NLWEFYZFRuLWx3cUtUNEJmN1dkMVE1bHJhYXJJOW1VVEJZZFRtTTMzUUExNHlKNmtyQWlGbHAxY24xd0ptRnk5MWh5UHNNVmFaRUppckQ0WjlteHFPTHNVa0cxdll4cjdiVmE0dzVwWkhERXFONzM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-06-08T12:51:18.713Z"
+    },
     {
       "id": "rss_7e045059e4ee544b",
       "timestamp": 1780916124000,
@@ -27,6 +74,27 @@
       "fetched_at": "2026-06-08T11:14:22.989Z"
     },
     {
+      "id": "rss_e93844eefdf9b0d8",
+      "timestamp": 1780912803000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "As Yemen's Houthis enter the fray, Israel is once again in active conflict on four fronts - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBlRERNdFN5d3ZjOHpOR0RkQ1FpV181NTNXOUNQSGwyaFA2dWJFVzc5Wmg2dEZ0TmRPcE8yM1RjWHJjd2FMSWxzWGVCcVltZ21HcEYwcWFYenRrbUJqS2Jfd3p3eEpzYVJWbnJhX0dR?oc=5\" target=\"_blank\">As Yemen's Houthis enter the fray, Israel is once again in active conflict on four fronts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBlRERNdFN5d3ZjOHpOR0RkQ1FpV181NTNXOUNQSGwyaFA2dWJFVzc5Wmg2dEZ0TmRPcE8yM1RjWHJjd2FMSWxzWGVCcVltZ21HcEYwcWFYenRrbUJqS2Jfd3p3eEpzYVJWbnJhX0dR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T12:51:18.714Z"
+    },
+    {
       "id": "rss_22f654de113fa585",
       "timestamp": 1780906922000,
       "source": "OSINT",
@@ -48,6 +116,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
+    },
+    {
+      "id": "rss_8f47d1ace420400a",
+      "timestamp": 1780905780000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iranian-backed Houthi rebels vow to block Israeli ships sailing in Red Sea - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOV0V3cDZ4N3FkenBjWXl0dkpKUzBNajVEOXNhdU1qbkFxRWEzQlN4SUZsMHhJcDE4VkU4d2E3WUd3bXhYOFZPa1pwcWJEMTVDU09ObmlRVlBJcnVySHRkODhkLTdnRW5KemFmVmZfdExmelNrTUFOZ2VDX0o1djY5SmpXQVFQTTdRZThuSUZNNm51SUZmYVViVzMwRThwZC1OZDZydDd1cjJhb3JPdG5n?oc=5\" target=\"_blank\">Iranian-backed Houthi rebels vow to block Israeli ships sailing in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOV0V3cDZ4N3FkenBjWXl0dkpKUzBNajVEOXNhdU1qbkFxRWEzQlN4SUZsMHhJcDE4VkU4d2E3WUd3bXhYOFZPa1pwcWJEMTVDU09ObmlRVlBJcnVySHRkODhkLTdnRW5KemFmVmZfdExmelNrTUFOZ2VDX0o1djY5SmpXQVFQTTdRZThuSUZNNm51SUZmYVViVzMwRThwZC1OZDZydDd1cjJhb3JPdG5n?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T12:51:18.714Z"
     },
     {
       "id": "rss_976f20610a05c697",
