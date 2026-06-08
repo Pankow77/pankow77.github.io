@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-08T21:13:13.880Z",
-  "epoch_count": 475,
+  "last_fetch": "2026-06-08T22:04:44.169Z",
+  "epoch_count": 477,
   "epochs": [
+    {
+      "id": "rss_24f02179d2f065e1",
+      "timestamp": 1780954019000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthis impose total naval blockade on Israel in Red Sea escalation - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPZTBzNElISGFDUkIxNFRwYWlydHhYaXJSVmdqRDU1OURBcTJad3BaSUJJTnREUEQtREVXWUNhQnVnMG5wMXNKWnI5VWtZNGFIbENEdXA5a09uNGZ0Tk4tZ0dfUjhFZjBXdFFSRy1Vd1haWU1XNUpzM25OYlV6WUVBUXhjLVhHVkc5U09rcjVCQVB1YUVaMTFwMlhDbw?oc=5\" target=\"_blank\">Houthis impose total naval blockade on Israel in Red Sea escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZTBzNElISGFDUkIxNFRwYWlydHhYaXJSVmdqRDU1OURBcTJad3BaSUJJTnREUEQtREVXWUNhQnVnMG5wMXNKWnI5VWtZNGFIbENEdXA5a09uNGZ0Tk4tZ0dfUjhFZjBXdFFSRy1Vd1haWU1XNUpzM25OYlV6WUVBUXhjLVhHVkc5U09rcjVCQVB1YUVaMTFwMlhDbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T22:04:42.642Z"
+    },
     {
       "id": "rss_a37f0264f6073586",
       "timestamp": 1780949023000,
@@ -25,6 +46,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
+    },
+    {
+      "id": "rss_ead132b021fee35e",
+      "timestamp": 1780946150000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attack Red Sea shipping ban - Daily Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5XdExxZWF6c0dfNFRReUR6aks1NENmbFYwbHFJWkhGZUF4czhuODdtcVI3RkFnZng4Y0wtdU9DbndRdldhZW5nRDJIVFpVU1NjeDNOT0p2cGhUTHV5X2hHZEs4UnZROTh1bW5QNm1PR0ZFVlRSeHRhQ2wwOA?oc=5\" target=\"_blank\">Houthi missile attack Red Sea shipping ban</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Tribune</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5XdExxZWF6c0dfNFRReUR6aks1NENmbFYwbHFJWkhGZUF4czhuODdtcVI3RkFnZng4Y0wtdU9DbndRdldhZW5nRDJIVFpVU1NjeDNOT0p2cGhUTHV5X2hHZEs4UnZROTh1bW5QNm1PR0ZFVlRSeHRhQ2wwOA?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-08T22:04:44.163Z"
     },
     {
       "id": "rss_b199c6b783047737",
