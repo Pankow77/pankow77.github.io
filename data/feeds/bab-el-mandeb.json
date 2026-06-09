@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-09T00:41:04.900Z",
-  "epoch_count": 479,
+  "last_fetch": "2026-06-09T01:38:20.023Z",
+  "epoch_count": 480,
   "epochs": [
     {
       "id": "rss_24f02179d2f065e1",
@@ -351,6 +351,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T17:07:36.153Z"
+    },
+    {
+      "id": "rss_01e29188e9c015c6",
+      "timestamp": 1780922783000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "How the Houthi naval blockade will affect Israel’s economy and global trade - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vcG5QQzE1TVBhdnFjekdEcTByY1pmX3BrdE1ES2g1dkxqM3pHa2JQMUFCOXR1Nzl1UmtpX2xkQldLQVNva3VsWEJreW8zV3JmWEZfV2FSWTdneFhCczJ0cVFvOA?oc=5\" target=\"_blank\">How the Houthi naval blockade will affect Israel’s economy and global trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vcG5QQzE1TVBhdnFjekdEcTByY1pmX3BrdE1ES2g1dkxqM3pHa2JQMUFCOXR1Nzl1UmtpX2xkQldLQVNva3VsWEJreW8zV3JmWEZfV2FSWTdneFhCczJ0cVFvOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-09T01:38:18.626Z"
     },
     {
       "id": "rss_95c87324aa3b70e1",
