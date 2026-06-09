@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-09T03:08:01.778Z",
-  "epoch_count": 480,
+  "last_fetch": "2026-06-09T04:53:04.978Z",
+  "epoch_count": 482,
   "epochs": [
     {
       "id": "rss_24f02179d2f065e1",
@@ -489,6 +489,27 @@
       "fetched_at": "2026-06-08T12:51:18.714Z"
     },
     {
+      "id": "rss_aa99b5bebd66b61f",
+      "timestamp": 1780910441000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they will ban Israeli maritime navigation in Red Sea - middle-east-online.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOdlFRUlBpaHV2cWh5blo1b1BRY2lITmkyZHpNNVEwT0RZVWxFeHh1LW03UTc0SUQ0c2s1Z2NYUHRTZjluZU9UY2lteDF6Q2w1VGVnQVQ3UE1odGc4NjVJUHhhaU9jamY4ODN5Z2dWYjROOTdBdFpvRzBMUkd5OU1OaS04QURrQnZtS2FlWkJGNDNvZ1pJY1RDdU1HMA?oc=5\" target=\"_blank\">Houthis say they will ban Israeli maritime navigation in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middle-east-online.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdlFRUlBpaHV2cWh5blo1b1BRY2lITmkyZHpNNVEwT0RZVWxFeHh1LW03UTc0SUQ0c2s1Z2NYUHRTZjluZU9UY2lteDF6Q2w1VGVnQVQ3UE1odGc4NjVJUHhhaU9jamY4ODN5Z2dWYjROOTdBdFpvRzBMUkd5OU1OaS04QURrQnZtS2FlWkJGNDNvZ1pJY1RDdU1HMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-09T04:53:03.632Z"
+    },
+    {
       "id": "rss_22f654de113fa585",
       "timestamp": 1780906922000,
       "source": "OSINT",
@@ -510,6 +531,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
+    },
+    {
+      "id": "rss_8e49b7a89d0e2d6c",
+      "timestamp": 1780906380000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Defying Trump, Israel strikes Iranian military, fuel targets; Iran, Houthis fire missiles at Israel - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOUHl5aEs3Znd1VjJJRldsNjhscXlRLVdmY3VTRWFLUXo5RGduRHFPM2RSSjlzM2xEb2h5QUg0UThrNk1CTC1USzNNNk1jdTA3cFhBbmtnQlMwRVRyMWxNZUJ3UkRNVXpLX3htYjVvYkhURWNSWXJsRWYyRUdLbDRJN2JnSng3RlpoSzFoVlVWZTJXSzJUaGlJbjluSkp3VmVQYkljdTZXdXFOaElWZnN6dHpScFdFWXhTbzBFNk94WFpFb0dD0gHKAUFVX3lxTFBJSm5keHVNcGFwRzBaZnVkRWh6Z29ZUXFhVUdVVGpuemVTR19YNTBSRElwcEpZbWpYVzZzblhlY3pmOVNONEF0SEpPaUtwbXZnVVhEUFZva3ZxdkFlQnNZelp2YWN0ZWdjalFxNXMxMEg5T0tPaGFKeHlXY0g4bHhoeldReWJzd2",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUHl5aEs3Znd1VjJJRldsNjhscXlRLVdmY3VTRWFLUXo5RGduRHFPM2RSSjlzM2xEb2h5QUg0UThrNk1CTC1USzNNNk1jdTA3cFhBbmtnQlMwRVRyMWxNZUJ3UkRNVXpLX3htYjVvYkhURWNSWXJsRWYyRUdLbDRJN2JnSng3RlpoSzFoVlVWZTJXSzJUaGlJbjluSkp3VmVQYkljdTZXdXFOaElWZnN6dHpScFdFWXhTbzBFNk94WFpFb0dD0gHKAUFVX3lxTFBJSm5keHVNcGFwRzBaZnVkRWh6Z29ZUXFhVUdVVGpuemVTR19YNTBSRElwcEpZbWpYVzZzblhlY3pmOVNONEF0SEpPaUtwbXZnVVhEUFZva3ZxdkFlQnNZelp2YWN0ZWdjalFxNXMxMEg5T0tPaGFKeHlXY0g4bHhoeldReWJzd2VwN1BQQ3pSYkpZZ1RmTUYwVHpvUXdCVDQzd21XcVItX3NFSENYR0RrSzVhc0NveG93c2xxdEpCaV9fUDZwNk9sQ3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-09T04:53:03.632Z"
     },
     {
       "id": "rss_8f47d1ace420400a",
