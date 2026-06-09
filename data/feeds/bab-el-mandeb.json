@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-09T23:29:24.297Z",
-  "epoch_count": 490,
+  "last_fetch": "2026-06-09T23:58:55.563Z",
+  "epoch_count": 491,
   "epochs": [
     {
       "id": "rss_0cb25f97a5bbdb70",
@@ -23,6 +23,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T22:32:22.983Z"
+    },
+    {
+      "id": "rss_408dc2a28c542371",
+      "timestamp": 1781040796000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis fire missile at Israel, threaten Red Sea shipping - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxNMi1Gc2pNcHhjS1pLTnVRaVp6VFotQXhraVMzTG91RDlaVVZTUFlxbnR3RXpTb0JPeC1WYy0wLXVjZTFrUkVpckdoMVM2RnBMc0RONXNmMzFjQnR4a3ZSTDE1dGN5TXZiT1U1WXhWUnowVHRPMUZTUVVxMU10MVNUdzJHTWh0TVVlbE9jTk1GZjJvUXNLVnp1QW52VkNsdjB5RGVMU1I2akN5Mzh4bDFIUlFLUWtzR0dpVWY3TWIya1RRc1VvWk9WazlFRFBUaldwb0VlVk9rWHE3RTA0WFNWdnFsaUdrYWhjODdubjhaZ28?oc=5\" target=\"_blank\">Houthis fire missile at Israel, threaten Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNMi1Gc2pNcHhjS1pLTnVRaVp6VFotQXhraVMzTG91RDlaVVZTUFlxbnR3RXpTb0JPeC1WYy0wLXVjZTFrUkVpckdoMVM2RnBMc0RONXNmMzFjQnR4a3ZSTDE1dGN5TXZiT1U1WXhWUnowVHRPMUZTUVVxMU10MVNUdzJHTWh0TVVlbE9jTk1GZjJvUXNLVnp1QW52VkNsdjB5RGVMU1I2akN5Mzh4bDFIUlFLUWtzR0dpVWY3TWIya1RRc1VvWk9WazlFRFBUaldwb0VlVk9rWHE3RTA0WFNWdnFsaUdrYWhjODdubjhaZ28?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-09T23:58:55.556Z"
     },
     {
       "id": "rss_510c5a15e624d64b",
