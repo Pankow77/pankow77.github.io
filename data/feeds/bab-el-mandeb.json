@@ -1,7 +1,7 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-10T02:20:24.630Z",
-  "epoch_count": 491,
+  "last_fetch": "2026-06-10T03:45:51.357Z",
+  "epoch_count": 494,
   "epochs": [
     {
       "id": "rss_0cb25f97a5bbdb70",
@@ -140,6 +140,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T10:39:55.001Z"
+    },
+    {
+      "id": "rss_22afa18985ae2b5e",
+      "timestamp": 1780994280000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis Threaten To Ban Israeli Ships In Red Sea, Launch 2 Missiles At Tel Aviv - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxNM004elprR2s4clV4a2V0ZHpfX3R6a2IwUTdaWm5BeEpVTE5KRlktcmZNSXNOT19GZkRnZVpCS3REOWNCZDFaUGZ2WWY0MDZUQ1BmaENSMUt0bmZjVW1jdEZGQmhFTHVaVGlZQ0JpZzNDS2FGdTN1SEFqRmpXTW1TaHJCTDQ4ZHdJdkRlZi0zUE5iMzNiQWZ2c0hwVGtvaVdna0NXTUxSekxnTlRacFNYUDYxbU12OVU?oc=5\" target=\"_blank\">Houthis Threaten To Ban Israeli Ships In Red Sea, Launch 2 Missiles At Tel Aviv</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNM004elprR2s4clV4a2V0ZHpfX3R6a2IwUTdaWm5BeEpVTE5KRlktcmZNSXNOT19GZkRnZVpCS3REOWNCZDFaUGZ2WWY0MDZUQ1BmaENSMUt0bmZjVW1jdEZGQmhFTHVaVGlZQ0JpZzNDS2FGdTN1SEFqRmpXTW1TaHJCTDQ4ZHdJdkRlZi0zUE5iMzNiQWZ2c0hwVGtvaVdna0NXTUxSekxnTlRacFNYUDYxbU12OVU?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-10T03:45:51.348Z"
     },
     {
       "id": "rss_f7d6ceb623adf54b",
@@ -966,6 +990,27 @@
       "fetched_at": "2026-06-08T11:14:22.988Z"
     },
     {
+      "id": "rss_71eb4ecadc20ce3e",
+      "timestamp": 1780901868000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis declare 'total' ban on Israeli maritime navigation in Red Sea - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQYTBFR3ZhbmFja0dJTGdaYXNGQ294MENVNk9KTHdsR09MNWhrWXlwcG5mSEkwRGw0OFFCSnZQX05KWkxIeU40c2s5N0JlVUJpal9IbmtKVU9HTHgwYk15VkZVOHptcEhKU1B1bEFHT3NjN3UwcXNmekF4R1Y3dWZPX2hYR3dyaE9oM19DQjg5ZkRyTHlIak13cGNXMG12c2xGcWhseE9LczJ5V2VESXlOVGZB?oc=5\" target=\"_blank\">Houthis declare 'total' ban on Israeli maritime navigation in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYTBFR3ZhbmFja0dJTGdaYXNGQ294MENVNk9KTHdsR09MNWhrWXlwcG5mSEkwRGw0OFFCSnZQX05KWkxIeU40c2s5N0JlVUJpal9IbmtKVU9HTHgwYk15VkZVOHptcEhKU1B1bEFHT3NjN3UwcXNmekF4R1Y3dWZPX2hYR3dyaE9oM19DQjg5ZkRyTHlIak13cGNXMG12c2xGcWhseE9LczJ5V2VESXlOVGZB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-10T03:45:51.348Z"
+    },
+    {
       "id": "rss_994d2399ab16c7d2",
       "timestamp": 1780901705000,
       "source": "OSINT",
@@ -1078,6 +1123,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
+    },
+    {
+      "id": "rss_ac0560ed3d10385e",
+      "timestamp": 1780899421000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis vow to blockade 'enemy ships' in Red Sea - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaWFPbFJhLWFFOWFOSUlyNHdKWjk1T2JjOTZOZWlhZzBoekJVenVuQUNyQVJjU0s5eS1hWDhsUVYwYlRGeVZLMkwzY2pPMlR0YkFVeFNLZEoyZ1gxelBFZVFxWEhTZE84MDBCRE9CRkxhMUpPc0xTdmlROVdmaTBSb0VFTmZ1WmtKVEhxQ1RCNnA3VXJhd2Qyb0pwVXdvSjAySGVPOC1JcGJTUQ?oc=5\" target=\"_blank\">Yemen's Houthis vow to blockade 'enemy ships' in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaWFPbFJhLWFFOWFOSUlyNHdKWjk1T2JjOTZOZWlhZzBoekJVenVuQUNyQVJjU0s5eS1hWDhsUVYwYlRGeVZLMkwzY2pPMlR0YkFVeFNLZEoyZ1gxelBFZVFxWEhTZE84MDBCRE9CRkxhMUpPc0xTdmlROVdmaTBSb0VFTmZ1WmtKVEhxQ1RCNnA3VXJhd2Qyb0pwVXdvSjAySGVPOC1JcGJTUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-10T03:45:51.348Z"
     },
     {
       "id": "rss_2f6e1fa7db64cd15",
