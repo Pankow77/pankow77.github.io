@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-10T08:52:27.382Z",
-  "epoch_count": 494,
+  "last_fetch": "2026-06-10T10:26:24.002Z",
+  "epoch_count": 496,
   "epochs": [
+    {
+      "id": "rss_26cf62836d7acd95",
+      "timestamp": 1781073676000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Cargo vessel targeted off Yemen near Bab al-Mandeb Strait after Houthi threat - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPRmR2WXRHeHJmUi1nV2JWMlhqN1BUWEdKZWduYVVYc2d2SzZzcVhZODgta05RbGJjaHFHUHVGTjJKUlA3WWRGeVoxRkpmYVdSU2pJMW5lWjRMMjlaamlna0IxRDF4dXdfZjU4Z18zQmk4MXZ0UVJwTVoxWWRDcTFCVjdZa2RyQWZXVnZrQXZNbnhoWU5zd0JSSmRtRWh6eERIdTBZVjRBN0R4S0JWd3RUaEtDSVFWUWpsc0wtNmRFY1dNcGQ5?oc=5\" target=\"_blank\">Cargo vessel targeted off Yemen near Bab al-Mandeb Strait after Houthi threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRmR2WXRHeHJmUi1nV2JWMlhqN1BUWEdKZWduYVVYc2d2SzZzcVhZODgta05RbGJjaHFHUHVGTjJKUlA3WWRGeVoxRkpmYVdSU2pJMW5lWjRMMjlaamlna0IxRDF4dXdfZjU4Z18zQmk4MXZ0UVJwTVoxWWRDcTFCVjdZa2RyQWZXVnZrQXZNbnhoWU5zd0JSSmRtRWh6eERIdTBZVjRBN0R4S0JWd3RUaEtDSVFWUWpsc0wtNmRFY1dNcGQ5?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-10T10:26:22.543Z"
+    },
     {
       "id": "rss_0cb25f97a5bbdb70",
       "timestamp": 1781041588000,
@@ -324,6 +347,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T13:27:47.313Z"
+    },
+    {
+      "id": "rss_e1720364e2647f08",
+      "timestamp": 1780937427000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten Israeli shipping in the Red Sea, add to regional concerns - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNQVVMY25GYk5OVXl3X2Fhb3Jxd21WdHlmUUp4MFVtNEJKR0NVTlNsdXEwakFRbW0zOFFoTVVaZmFHTDFMbDFhN0xRdlJnRVdEZ1pyNmlSaXJoM2NJZThwS2Z4ejRWbFJ5WG1nbDNwanp4cDR4Y0pCQ2ZDellpeVNaNmNuRVRCdXI2amw0cUU5bEJzX2c?oc=5\" target=\"_blank\">Houthis threaten Israeli shipping in the Red Sea, add to regional concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQVVMY25GYk5OVXl3X2Fhb3Jxd21WdHlmUUp4MFVtNEJKR0NVTlNsdXEwakFRbW0zOFFoTVVaZmFHTDFMbDFhN0xRdlJnRVdEZ1pyNmlSaXJoM2NJZThwS2Z4ejRWbFJ5WG1nbDNwanp4cDR4Y0pCQ2ZDellpeVNaNmNuRVRCdXI2amw0cUU5bEJzX2c?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-10T10:26:23.996Z"
     },
     {
       "id": "rss_b199c6b783047737",
