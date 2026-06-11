@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-11T09:00:23.801Z",
-  "epoch_count": 497,
+  "last_fetch": "2026-06-11T11:03:19.776Z",
+  "epoch_count": 499,
   "epochs": [
+    {
+      "id": "rss_0dfd649c22249890",
+      "timestamp": 1781171340000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "How Iran-linked Houthis’ Red Sea shipping threat risks bigger oil shock - The Straits Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOczk1OTRMOTJOR0R5QkRUNVFNR2JqLUpCUG1PSnpldjA4YThFUlFGZk56UkJPMGNCV3hNcDJ6NGVENUlRYW5NX0tzOVJuTDBKU0RuOVBTZHdGRFY5Q2ZWajhCWDRoTVJzMUs3WkxhZ2pGQkE1Szl3Y1JGOGpXeVo0UXpDOGZ3ZXZ0RDJ6R3RyNnRxaHBUS3l5TGFGRlBDSzdnUENMdWhIS2NhSnJzeTMxTmhlV2V6UXFK?oc=5\" target=\"_blank\">How Iran-linked Houthis’ Red Sea shipping threat risks bigger oil shock</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOczk1OTRMOTJOR0R5QkRUNVFNR2JqLUpCUG1PSnpldjA4YThFUlFGZk56UkJPMGNCV3hNcDJ6NGVENUlRYW5NX0tzOVJuTDBKU0RuOVBTZHdGRFY5Q2ZWajhCWDRoTVJzMUs3WkxhZ2pGQkE1Szl3Y1JGOGpXeVo0UXpDOGZ3ZXZ0RDJ6R3RyNnRxaHBUS3l5TGFGRlBDSzdnUENMdWhIS2NhSnJzeTMxTmhlV2V6UXFK?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-11T11:03:18.432Z"
+    },
+    {
+      "id": "rss_14eb717b8e335509",
+      "timestamp": 1781170397000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Egypt working around the clock for US-Iran deal to end war - Egypt Independent",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVlnNFlaRWlwVU9vcXczaXo5aGtHd3pzeVVITEFXVnk1NnA2TW1TUUJ6ekh4YmZXcDFmZEgyYnR2M1BSbEFTbm1acFZhV2REY3NxZkFaSzBSb2ZmSUdQd3pxLTJmQkNha3prN0tsQmlUd2JzNGgwa0c2ckljeFRFY0JNOElONkF2XzZfeURHVEMyMGpFSGc4?oc=5\" target=\"_blank\">Egypt working around the clock for US-Iran deal to end war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egypt Independent</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVlnNFlaRWlwVU9vcXczaXo5aGtHd3pzeVVITEFXVnk1NnA2TW1TUUJ6ekh4YmZXcDFmZEgyYnR2M1BSbEFTbm1acFZhV2REY3NxZkFaSzBSb2ZmSUdQd3pxLTJmQkNha3prN0tsQmlUd2JzNGgwa0c2ckljeFRFY0JNOElONkF2XzZfeURHVEMyMGpFSGc4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-11T11:03:18.432Z"
+    },
     {
       "id": "rss_8fe89a6d30674abd",
       "timestamp": 1781096219000,
