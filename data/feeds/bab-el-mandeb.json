@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-13T20:29:08.851Z",
+  "last_fetch": "2026-06-13T20:55:47.937Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -368,6 +368,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T06:23:26.709Z"
+    },
+    {
+      "id": "rss_e97a6700919a7006",
+      "timestamp": 1780963483000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten Red Sea shipping as US warns Israel on Iran - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9AFBVV95cUxOdm5nbWtzX28tQXA2Mng4Tm9LMDA4QXpuc0s3Y1dSWmRsQ0lJUC1RcTY1czY3WHprSFE1bjFaMXdmQVBzeWQwTDJuYjFybEk2Uk5iZDBBbmFOSmt4Z1hpNXJpX2FMT1dsOWRYZDRWaE5sRWFENW41SVRrd3N6NW15MnBrdVlWYnJVRmQ1ak5aUEtuNEFhdDVUMDF6eDlmUjlRTVMzamdUV2FRdGRXUGZJRllXc1RDalFOUC1hcHNKeXE5NHdYZnNoSExHb29JUG4xYzdxeDhXY0VCZXM4Mnprck9xYk9tSlRSd0VxMlFfQVB0RTFT?oc=5\" target=\"_blank\">Houthis threaten Red Sea shipping as US warns Israel on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">M",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOdm5nbWtzX28tQXA2Mng4Tm9LMDA4QXpuc0s3Y1dSWmRsQ0lJUC1RcTY1czY3WHprSFE1bjFaMXdmQVBzeWQwTDJuYjFybEk2Uk5iZDBBbmFOSmt4Z1hpNXJpX2FMT1dsOWRYZDRWaE5sRWFENW41SVRrd3N6NW15MnBrdVlWYnJVRmQ1ak5aUEtuNEFhdDVUMDF6eDlmUjlRTVMzamdUV2FRdGRXUGZJRllXc1RDalFOUC1hcHNKeXE5NHdYZnNoSExHb29JUG4xYzdxeDhXY0VCZXM4Mnprck9xYk9tSlRSd0VxMlFfQVB0RTFT?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-13T20:55:47.931Z"
     },
     {
       "id": "rss_0fad80213620d482",
@@ -11242,29 +11266,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-21T09:26:14.969Z"
-    },
-    {
-      "id": "rss_55bae90ef6de986a",
-      "timestamp": 1771506405000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "LNG shipping tentatively returns to Red Sea, despite risks - Montel News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQblpRQlBZbGFzQzNYcUlrWFF0VDFTV1JCbkwyZlR6Skl3cFBFc2NTY2lyUklMT0RpQ2VGaFYtTU9KcTdyZ0JoLW1HVUs4MHlZSkRzekxMWGF4eV93endlOFRWY1Noci14ODlHUTB5a2ZYZ3llYVVTcHh2TjVWMFI4d19UbFlGQkl5NEt5U3dnY04wN0pKN2dYNmNqaXNMRWwxaGpOei0zMm5uVkpseU5WbnM4LTdaZ2FjeHJCODVOZw?oc=5\" target=\"_blank\">LNG shipping tentatively returns to Red Sea, despite risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Montel News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQblpRQlBZbGFzQzNYcUlrWFF0VDFTV1JCbkwyZlR6Skl3cFBFc2NTY2lyUklMT0RpQ2VGaFYtTU9KcTdyZ0JoLW1HVUs4MHlZSkRzekxMWGF4eV93endlOFRWY1Noci14ODlHUTB5a2ZYZ3llYVVTcHh2TjVWMFI4d19UbFlGQkl5NEt5U3dnY04wN0pKN2dYNmNqaXNMRWwxaGpOei0zMm5uVkpseU5WbnM4LTdaZ2FjeHJCODVOZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-20T07:29:27.580Z"
     }
   ]
 }
