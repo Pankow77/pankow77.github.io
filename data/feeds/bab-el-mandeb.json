@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-13T18:29:49.899Z",
+  "last_fetch": "2026-06-13T18:58:33.082Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e4f06fe7bf0096ca",
+      "timestamp": 1781353807000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Thirteen Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in Iraq on June 1, 2026. - facebook.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZUFwZm4zYnpLUzlfYl80a2doRTRid091V2pxUzBZSWRwR1VXUy1pV3Z4RktPa0R0cjY5enIxWnFPb0p6ZFgwUmtlVFRkdUZNcUdfQ2xKZVFhM2paSjhvZ19TZWpxNF9IZVdwNFB1UnUzUHpEQUxVS0pmLVJjeTBsakxHUDNYbDhnYW5DRUlhUWw0bnlYYTRUNzBRWTVKVHRCNlJBSzhWaXFHdTlZdnQ3Vy1COWFER2o2ZHh3eVVHaHltMDhMcVR0T1BnaGtuVTVhMnV6VmV2ZHdqXzNSenZ3?oc=5\" target=\"_blank\">Thirteen Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in I",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZUFwZm4zYnpLUzlfYl80a2doRTRid091V2pxUzBZSWRwR1VXUy1pV3Z4RktPa0R0cjY5enIxWnFPb0p6ZFgwUmtlVFRkdUZNcUdfQ2xKZVFhM2paSjhvZ19TZWpxNF9IZVdwNFB1UnUzUHpEQUxVS0pmLVJjeTBsakxHUDNYbDhnYW5DRUlhUWw0bnlYYTRUNzBRWTVKVHRCNlJBSzhWaXFHdTlZdnQ3Vy1COWFER2o2ZHh3eVVHaHltMDhMcVR0T1BnaGtuVTVhMnV6VmV2ZHdqXzNSenZ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-13T18:58:31.614Z"
+    },
     {
       "id": "rss_cc69ad468e05c31a",
       "timestamp": 1781240715000,
@@ -11242,29 +11265,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-20T07:29:27.580Z"
-    },
-    {
-      "id": "rss_a2845a9d2b46cab0",
-      "timestamp": 1771479065000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi threats and US-Iran conflict escalate Ramadan fears in Yemen - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjRpY3JKRXVuYmtBTHVMQnFVUElZTTVGeGhNMUQtYmxGSVBQRG1OazZKRFVtX0hWSWVlVHlYMUJUSUlQZTZ4VTlTZnFwUnZFY2dHQ0liZTRSVk00T2t6THg5dzZiaTBjSE1zQWotc25uWF9qdUFNbWZVb3VMQ2pOS0ZWNDhEMWFtazVxRXlBWFl0TGo0ZVVWOHpOeGNLOVYxd0dWZ1VkUVdhdng10gGyAUFVX3lxTE1jQXpBWFhtdDNTRjIxT3BCMHRVWmhGSVFRMmhqLWt3RzdfbDlYS3J1WElZX2RjT1QtaXV3cFAzeDRmY3M3bXZuUlhRMFp4d05DZk9jVElMbUl4cTcwOTZvLXhxOXllWllaT05nTVhkbnJVd3lSUUwwZlZ0ZmFxWVBMWFpFdldWTzJQUHFxZkdGZW5rVWxjMVdzSzBPM0wwZD",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjRpY3JKRXVuYmtBTHVMQnFVUElZTTVGeGhNMUQtYmxGSVBQRG1OazZKRFVtX0hWSWVlVHlYMUJUSUlQZTZ4VTlTZnFwUnZFY2dHQ0liZTRSVk00T2t6THg5dzZiaTBjSE1zQWotc25uWF9qdUFNbWZVb3VMQ2pOS0ZWNDhEMWFtazVxRXlBWFl0TGo0ZVVWOHpOeGNLOVYxd0dWZ1VkUVdhdng10gGyAUFVX3lxTE1jQXpBWFhtdDNTRjIxT3BCMHRVWmhGSVFRMmhqLWt3RzdfbDlYS3J1WElZX2RjT1QtaXV3cFAzeDRmY3M3bXZuUlhRMFp4d05DZk9jVElMbUl4cTcwOTZvLXhxOXllWllaT05nTVhkbnJVd3lSUUwwZlZ0ZmFxWVBMWFpFdldWTzJQUHFxZkdGZW5rVWxjMVdzSzBPM0wwZDA2dTYxQ1BScWhrZG14SGthN1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-02-20T07:29:27.579Z"
     }
   ]
 }
