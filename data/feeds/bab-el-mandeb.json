@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-13T08:08:18.184Z",
+  "last_fetch": "2026-06-13T09:36:52.366Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -91,6 +91,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-11T11:03:18.432Z"
+    },
+    {
+      "id": "rss_518aea2a2c76cad2",
+      "timestamp": 1781115142000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Armed Security Team Repels Suspected Pirate Attack Off Yemen - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQTjVyTGEwMFFxV25ReVV1WEhaWFdpdzZGRW93ZDNySm5nR01rMm1DSFlnd2pnbkNLX2IzUjBPTFFIVFZ4RGtzZEppN192WXczVHY3MHYxdTJvbHlIZHJDSmwtOHRCRUNrX09TemFEZnpwRURiVVJNZFJVaUlmREFYa2xVN2dxQUtOMVE?oc=5\" target=\"_blank\">Armed Security Team Repels Suspected Pirate Attack Off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTjVyTGEwMFFxV25ReVV1WEhaWFdpdzZGRW93ZDNySm5nR01rMm1DSFlnd2pnbkNLX2IzUjBPTFFIVFZ4RGtzZEppN192WXczVHY3MHYxdTJvbHlIZHJDSmwtOHRCRUNrX09TemFEZnpwRURiVVJNZFJVaUlmREFYa2xVN2dxQUtOMVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-13T09:36:50.933Z"
     },
     {
       "id": "rss_8fe89a6d30674abd",
@@ -11244,27 +11265,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-02-20T07:29:27.579Z"
-    },
-    {
-      "id": "rss_477dc85c14028511",
-      "timestamp": 1771346684000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea dark transits at two-year high - Lloyd's List",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOaWJmRkMwelQ2TlEyWXZNOTNId1RrVzJoZTl2elZwVVF3QWxqWHMxQTFiNVNwdlVFejI4WXFSbDgwWHY1eFVldXExVnNxSUdaZkJXWEZDMEZMcXBycHJOX1VHTktoUkxkOEVzTDgteENFVk9RR2NMSmZzYnE4X3dhVw?oc=5\" target=\"_blank\">Red Sea dark transits at two-year high</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOaWJmRkMwelQ2TlEyWXZNOTNId1RrVzJoZTl2elZwVVF3QWxqWHMxQTFiNVNwdlVFejI4WXFSbDgwWHY1eFVldXExVnNxSUdaZkJXWEZDMEZMcXBycHJOX1VHTktoUkxkOEVzTDgteENFVk9RR2NMSmZzYnE4X3dhVw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-20T07:29:27.580Z"
     }
   ]
 }
