@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-13T21:29:59.475Z",
+  "last_fetch": "2026-06-13T21:55:02.241Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -159,6 +159,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T14:32:25.331Z"
+    },
+    {
+      "id": "rss_408f9c1010ea43b1",
+      "timestamp": 1781090753000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis ban Israeli ships in Red Sea after missile strike - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDNmZ05OU0JXcEQ3S3FROXRQS1BqbGhpRVpraDk1VG1zLWVxdmFNNlBfNlp5Ymlxc0huSFNENG1uT2xERWFBdFJjNWxMMnUxaWltWHBibkJZRndQZGJYYkZDYlRmRHRBWFpYeTVnQVhfcEE3b2gzQUxHVTR3anBheC0xZThzemFPempLbW1qSGFpekRCaGJwQk1XeDNOQmRNRE5mWDJrQTROUQ?oc=5\" target=\"_blank\">Houthis ban Israeli ships in Red Sea after missile strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDNmZ05OU0JXcEQ3S3FROXRQS1BqbGhpRVpraDk1VG1zLWVxdmFNNlBfNlp5Ymlxc0huSFNENG1uT2xERWFBdFJjNWxMMnUxaWltWHBibkJZRndQZGJYYkZDYlRmRHRBWFpYeTVnQVhfcEE3b2gzQUxHVTR3anBheC0xZThzemFPempLbW1qSGFpekRCaGJwQk1XeDNOQmRNRE5mWDJrQTROUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-13T21:55:02.235Z"
     },
     {
       "id": "rss_26cf62836d7acd95",
@@ -11243,29 +11267,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-26T20:32:54.195Z"
-    },
-    {
-      "id": "rss_9d3c2658d6247c07",
-      "timestamp": 1771528265000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Eyal Zamir, Katz threaten Iran, Houthis should they attack - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE10djR4QlRvQkZ3eDhRZEVjYWhMMkI5clZBZVpfZTZXUzhreGRrTlVDWHQ5SDlneTFmeFlla2FEczdRMGpjeHV6aEM1cXlfV2oxOUxWR1pSZHo2Wmx4MVg3Xy1NRHV0TW52bHp6cGlB?oc=5\" target=\"_blank\">Eyal Zamir, Katz threaten Iran, Houthis should they attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE10djR4QlRvQkZ3eDhRZEVjYWhMMkI5clZBZVpfZTZXUzhreGRrTlVDWHQ5SDlneTFmeFlla2FEczdRMGpjeHV6aEM1cXlfV2oxOUxWR1pSZHo2Wmx4MVg3Xy1NRHV0TW52bHp6cGlB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-21T09:26:14.969Z"
     }
   ]
 }
