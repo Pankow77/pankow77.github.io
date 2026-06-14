@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-14T15:13:07.919Z",
+  "last_fetch": "2026-06-14T16:02:01.561Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_24410b536a932d4f",
+      "timestamp": 1781430929000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "THIRTEEN Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in Iraq on June 1, 2026. - facebook.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNExRUjZvNWJTMnlKZlJ4WFRRZGx6Z29xUXFQcFZxYmVEaUdvWjEyNURhQWpVbXNPUDIyMkFFSzAxbDNTLVVfOUxJSkE2VURNbWNhVS1LbXUyd0Q4dGpNM3FOcWtqclpTaU51R2pNVFZXcndwcFljSlI0SEd6UjdReDVmLS1QbVZ6cDZpVlBVVVRfSk5mbDlXUXVIVkN5NGozLVZxbWxhaEdHQnlNU09rZGhoWHd1MFk2M08zYy04dUw0RGRxaDc0T0NnNnJEVUozRjA3NC1vTWlkX2pVQzZV?oc=5\" target=\"_blank\">THIRTEEN Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in I",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNExRUjZvNWJTMnlKZlJ4WFRRZGx6Z29xUXFQcFZxYmVEaUdvWjEyNURhQWpVbXNPUDIyMkFFSzAxbDNTLVVfOUxJSkE2VURNbWNhVS1LbXUyd0Q4dGpNM3FOcWtqclpTaU51R2pNVFZXcndwcFljSlI0SEd6UjdReDVmLS1QbVZ6cDZpVlBVVVRfSk5mbDlXUXVIVkN5NGozLVZxbWxhaEdHQnlNU09rZGhoWHd1MFk2M08zYy04dUw0RGRxaDc0T0NnNnJEVUozRjA3NC1vTWlkX2pVQzZV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-14T16:02:00.064Z"
+    },
     {
       "id": "rss_e4f06fe7bf0096ca",
       "timestamp": 1781353807000,
@@ -11246,27 +11269,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T10:01:28.135Z"
-    },
-    {
-      "id": "rss_652ef8b52addcdb7",
-      "timestamp": 1771840203000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Mer Rouge: le Conseil proroge le mandat de l'opération ASPIDES en vue de préserver la liberté de navigation - consilium.europa.eu",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxOUU83MFlXYnZzMTZvRDhHMHgyMVgzdWVmU1pnYzNRdzhmUUFRQS1adG1NWE1iUXN1MmJVSUFTbEJndUVmc3N1UHE2eDAyRWVOd2JfTWd4UzN3QW1tYkJfeTAxUHRUMlc5cjB1dkF4RFVxc2hjR3YxYWZLMjJwdER1MnFMWkJ5akF5ZjhyLTJ2WjZ0cmsxSzRQX01JSVJUbVdBeDFScTVpTDRyeUJyRGJWZDFZV2kyOXVheXhfRjM5ejVGel9HZlhFVGVJWEFYclFpRHVGU0VuYUpLTW5fUld5Zmcwa1pNSGJHY2NHNHRCZ2g?oc=5\" target=\"_blank\">Mer Rouge: le Conseil proroge le mandat de l'opération ASPIDES en vue de préserver la liberté de navigat",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOUU83MFlXYnZzMTZvRDhHMHgyMVgzdWVmU1pnYzNRdzhmUUFRQS1adG1NWE1iUXN1MmJVSUFTbEJndUVmc3N1UHE2eDAyRWVOd2JfTWd4UzN3QW1tYkJfeTAxUHRUMlc5cjB1dkF4RFVxc2hjR3YxYWZLMjJwdER1MnFMWkJ5akF5ZjhyLTJ2WjZ0cmsxSzRQX01JSVJUbVdBeDFScTVpTDRyeUJyRGJWZDFZV2kyOXVheXhfRjM5ejVGel9HZlhFVGVJWEFYclFpRHVGU0VuYUpLTW5fUld5Zmcwa1pNSGJHY2NHNHRCZ2g?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-26T20:32:54.195Z"
     }
   ]
 }
