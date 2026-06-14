@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-14T16:58:17.797Z",
+  "last_fetch": "2026-06-14T17:35:59.944Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -1084,6 +1084,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T12:51:18.714Z"
+    },
+    {
+      "id": "rss_595120aba529b60c",
+      "timestamp": 1780905763000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten total Red Sea shipping ban on Israel as regional tensions surge - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FZXpYUm5tNkVMeVlKUDY1cWxxeERqWjQtaVVjVjUxeHpGSnNBSUVITWZLdHZQZDN3eW5JT1JVWmdRSUliMEw5Y282OU9CdVpTTjJGSnBtRUg?oc=5\" target=\"_blank\">Houthis threaten total Red Sea shipping ban on Israel as regional tensions surge</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FZXpYUm5tNkVMeVlKUDY1cWxxeERqWjQtaVVjVjUxeHpGSnNBSUVITWZLdHZQZDN3eW5JT1JVWmdRSUliMEw5Y282OU9CdVpTTjJGSnBtRUg?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-14T17:35:59.938Z"
     },
     {
       "id": "rss_976f20610a05c697",
@@ -11248,27 +11271,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T10:43:17.846Z"
-    },
-    {
-      "id": "rss_131d33a0db1621fc",
-      "timestamp": 1771840208000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea: Council extends the mandate of Operation ASPIDES to safeguard freedom of navigation - consilium.europa.eu",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxPUml3NGZtVEtLWEh2ZXo4dVBCb19IZzVtTkcwUGR0ZVFFVUtyNHdCc0ZIV0luMnJJZHZvYnpvOGpIMU5zdXBzcUludkJsTDhHSmFiZU11aktjRURXNHZBeFB1SWJPa2pzZGJwTC1ONlZueHh3aTBYcXJHdUtCMXVfMlNaWXNSQ0l0bFdGYzZSWDNoVEtfOWZJNU5ibFpmLWdpNURHTUR2V2VibXBlZ0ppYXhGQ0JFeVNzSVk0MnlQZk92Z1J5U2JaTFUtOEtDeVI1TmxNR2JxTm5ydlhyMU56bzBXZEdqWnRqbnBLWjBWQ08?oc=5\" target=\"_blank\">Red Sea: Council extends the mandate of Operation ASPIDES to safeguard freedom of navigation</a>&nbsp;&n",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPUml3NGZtVEtLWEh2ZXo4dVBCb19IZzVtTkcwUGR0ZVFFVUtyNHdCc0ZIV0luMnJJZHZvYnpvOGpIMU5zdXBzcUludkJsTDhHSmFiZU11aktjRURXNHZBeFB1SWJPa2pzZGJwTC1ONlZueHh3aTBYcXJHdUtCMXVfMlNaWXNSQ0l0bFdGYzZSWDNoVEtfOWZJNU5ibFpmLWdpNURHTUR2V2VibXBlZ0ppYXhGQ0JFeVNzSVk0MnlQZk92Z1J5U2JaTFUtOEtDeVI1TmxNR2JxTm5ydlhyMU56bzBXZEdqWnRqbnBLWjBWQ08?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-23T10:01:28.135Z"
     }
   ]
 }
