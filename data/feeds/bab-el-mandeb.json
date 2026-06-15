@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-15T00:49:58.227Z",
+  "last_fetch": "2026-06-15T01:51:30.233Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -48,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-13T18:58:31.614Z"
+    },
+    {
+      "id": "rss_f669f9fbb89ab611",
+      "timestamp": 1781247600000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU strengthens naval missions in Red Sea and Indian Ocean - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEVEeGhLWU9wTDVYMDFPU21nd0JYSkg2eW1vZG5YdExBTG9ZODlvdUFXdnU0ekI0UDNLWEt4UzBvdFBKUDFNc0ZxSTZUM0VEV3E5cjM4YVZrVlF2eEE2WmozUlJvRWJVNE9tNlNRZ0M5TnEyRERpNVpaeXE2TUF4bkRCOThTM3F0WlZaOFlRaklWU3N2MjNGT2xHR2N1c1ZwX2FjOHg2elI?oc=5\" target=\"_blank\">EU strengthens naval missions in Red Sea and Indian Ocean</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEVEeGhLWU9wTDVYMDFPU21nd0JYSkg2eW1vZG5YdExBTG9ZODlvdUFXdnU0ekI0UDNLWEt4UzBvdFBKUDFNc0ZxSTZUM0VEV3E5cjM4YVZrVlF2eEE2WmozUlJvRWJVNE9tNlNRZ0M5TnEyRERpNVpaeXE2TUF4bkRCOThTM3F0WlZaOFlRaklWU3N2MjNGT2xHR2N1c1ZwX2FjOHg2elI?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-15T01:51:29.740Z"
     },
     {
       "id": "rss_cc69ad468e05c31a",
@@ -11250,27 +11273,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T17:36:19.452Z"
-    },
-    {
-      "id": "rss_3c68b129a81d7cb9",
-      "timestamp": 1771849111000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea naval force extends stay as Houthi attacks cease - Tradewinds News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOY0c2RHl0S1U1M1N6dm5JSEpmYl9zeS0wRFMxSDVSLWFIY0xsbWd1QnJoMU1yV01XbEpKaGNuVG5UZnVTd0NmM1pwNTlnYk9yNWRsN2x5UVBlcEU4amlwb1owbGhTd0xkMXJZTnVBRENwVldIZmxEbUQyR1IyenRMVkJpcV8wLXlnejhoaWxFdF9mclJuQ18zN21Tck5xdGtfbWg4UzlIWGhtalFEbG5z?oc=5\" target=\"_blank\">Red Sea naval force extends stay as Houthi attacks cease</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tradewinds News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOY0c2RHl0S1U1M1N6dm5JSEpmYl9zeS0wRFMxSDVSLWFIY0xsbWd1QnJoMU1yV01XbEpKaGNuVG5UZnVTd0NmM1pwNTlnYk9yNWRsN2x5UVBlcEU4amlwb1owbGhTd0xkMXJZTnVBRENwVldIZmxEbUQyR1IyenRMVkJpcV8wLXlnejhoaWxFdF9mclJuQ18zN21Tck5xdGtfbWg4UzlIWGhtalFEbG5z?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T10:43:17.846Z"
     }
   ]
 }
