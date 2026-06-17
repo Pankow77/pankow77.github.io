@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-16T23:58:53.249Z",
+  "last_fetch": "2026-06-17T01:23:36.859Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e4e0542b8879feeb",
+      "timestamp": 1781657528000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Joint Forces Foil Houthi Attack in Al Dhaleh - وكالة خبر للأنباء",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTFBOLWEyQ180X1BGZ3VLRG5SLUZrU1EyaHhKSUxSSUMyTC1FUXdVTktJUlJtNVdZWUtpWUdVZ0pCa0V2VVZCd2lTbnJmcUF5cGtETUhybGNVVQ?oc=5\" target=\"_blank\">Joint Forces Foil Houthi Attack in Al Dhaleh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBOLWEyQ180X1BGZ3VLRG5SLUZrU1EyaHhKSUxSSUMyTC1FUXdVTktJUlJtNVdZWUtpWUdVZ0pCa0V2VVZCd2lTbnJmcUF5cGtETUhybGNVVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-17T01:23:35.385Z"
+    },
     {
       "id": "rss_3c4139a1651f615d",
       "timestamp": 1781553581000,
@@ -11256,27 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T22:36:45.965Z"
-    },
-    {
-      "id": "rss_527a0a1cb0da906f",
-      "timestamp": 1771884287000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Extends Mandate Of Operation ASPIDES - Marine News Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxPeHZxeGhjbzhWSDFEdUZPbTVOWXpSWlNFYVNvaTlpQzg4NmVWNXIxSFh4NlFNZTJCMEd2d0xCZFV6U2UyNGdTaUZKOXZ5M2JQRzJZSG95WTN3WWw3UlFiZUZpN1ZjWTQ1QjlYeWI5Ry1tdk1SdzBTNDlyX05OaDJGMA?oc=5\" target=\"_blank\">EU Extends Mandate Of Operation ASPIDES</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeHZxeGhjbzhWSDFEdUZPbTVOWXpSWlNFYVNvaTlpQzg4NmVWNXIxSFh4NlFNZTJCMEd2d0xCZFV6U2UyNGdTaUZKOXZ5M2JQRzJZSG95WTN3WWw3UlFiZUZpN1ZjWTQ1QjlYeWI5Ry1tdk1SdzBTNDlyX05OaDJGMA?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T04:15:13.320Z"
     }
   ]
 }
