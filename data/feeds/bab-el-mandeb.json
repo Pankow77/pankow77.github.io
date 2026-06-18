@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-18T19:17:48.280Z",
+  "last_fetch": "2026-06-18T20:17:05.908Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fe1af7b52265c080",
+      "timestamp": 1781732112000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Washington-Tehran Understandings Stimulate Houthi Desire for Military Escalation - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE9NR0g3MnhrTGFWVkRCZE0tNDMtT2dKY3dFVWR0dUtxb19vbHBzRzVYMWFpclkxdm5zeGM5eGxlSzJocGlVWXFCMG1MckRkS3o4eWk4UkNUVjhqMnM5XzJ5ckFIbHo4T0NxWVdiRHNfTXQwd1dNbXc?oc=5\" target=\"_blank\">Washington-Tehran Understandings Stimulate Houthi Desire for Military Escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9NR0g3MnhrTGFWVkRCZE0tNDMtT2dKY3dFVWR0dUtxb19vbHBzRzVYMWFpclkxdm5zeGM5eGxlSzJocGlVWXFCMG1MckRkS3o4eWk4UkNUVjhqMnM5XzJ5ckFIbHo4T0NxWVdiRHNfTXQwd1dNbXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-18T20:17:04.421Z"
+    },
     {
       "id": "rss_e4e0542b8879feeb",
       "timestamp": 1781657528000,
@@ -11256,27 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-23T23:31:21.083Z"
-    },
-    {
-      "id": "rss_1f1ba8479e90a7a6",
-      "timestamp": 1771884615000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Extends Red Sea Naval Mission to 2027 - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE5FcVVXU28zUlhyUHFNdWktb1REQy1FcGU3cUdhQkNsZ0VTWTZ1WUJ3Vi1vTm5ZOTZWTERyUEQzckE3UEJWbEJ2Ym9wOHhFelFvcnhIaWc2dThXcVJQNWxXcUI1emZHRE5zTzZaOEZ0Yw?oc=5\" target=\"_blank\">EU Extends Red Sea Naval Mission to 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5FcVVXU28zUlhyUHFNdWktb1REQy1FcGU3cUdhQkNsZ0VTWTZ1WUJ3Vi1vTm5ZOTZWTERyUEQzckE3UEJWbEJ2Ym9wOHhFelFvcnhIaWc2dThXcVJQNWxXcUI1emZHRE5zTzZaOEZ0Yw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-23T22:36:45.965Z"
     }
   ]
 }
