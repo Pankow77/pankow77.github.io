@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-19T07:15:02.538Z",
+  "last_fetch": "2026-06-19T09:11:15.885Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -113,6 +113,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-14T16:02:00.064Z"
+    },
+    {
+      "id": "rss_36bbba7907de3242",
+      "timestamp": 1781430607000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis threaten Israeli shipping in the Red Sea - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEY1MHVIMTFDZGw3SkhVNUE2MU9La1d3MzE3ZzJmeDd3Rk1MbWhidy1LV3I0UFFCSFBJbWFIZTBraWtWdHhZVUw4M3lScVVJbmZxRGR0YXdFVVd1bXN1Qm5jNExudkFTaXdoejF5RWFoU1F0c1dKWjE5aG9rTGlkYno5bUxsUFg0eTFNVTA1LWI4OFZTMjUxQ2JycDAtN1BDTTNMVWR4WXlreUFN?oc=5\" target=\"_blank\">Yemen's Houthis threaten Israeli shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEY1MHVIMTFDZGw3SkhVNUE2MU9La1d3MzE3ZzJmeDd3Rk1MbWhidy1LV3I0UFFCSFBJbWFIZTBraWtWdHhZVUw4M3lScVVJbmZxRGR0YXdFVVd1bXN1Qm5jNExudkFTaXdoejF5RWFoU1F0c1dKWjE5aG9rTGlkYno5bUxsUFg0eTFNVTA1LWI4OFZTMjUxQ2JycDAtN1BDTTNMVWR4WXlreUFN?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-19T09:11:15.880Z"
     },
     {
       "id": "rss_e4f06fe7bf0096ca",
@@ -11256,27 +11279,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T08:41:23.877Z"
-    },
-    {
-      "id": "rss_12e2bf6037f5e7d2",
-      "timestamp": 1771887879000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Council extends \"Aspides\" operation to safeguard Red Sea navigation - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE1idFBSWFJtN2JPdWx3QUptSnJyOTJtSzRucXhBSnB1enR5ellQblRKTXJEaDhvaE8tMnFVdDBsaHRCa2F0cmdnRFE4UWc?oc=5\" target=\"_blank\">EU Council extends \"Aspides\" operation to safeguard Red Sea navigation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1idFBSWFJtN2JPdWx3QUptSnJyOTJtSzRucXhBSnB1enR5ellQblRKTXJEaDhvaE8tMnFVdDBsaHRCa2F0cmdnRFE4UWc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-23T23:31:21.083Z"
     }
   ]
 }
