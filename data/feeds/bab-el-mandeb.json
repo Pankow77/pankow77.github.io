@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-21T08:50:18.897Z",
+  "last_fetch": "2026-06-21T10:15:08.995Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7e295122de65f220",
+      "timestamp": 1782032409000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU's Aspides Mission Secures Over 120 Ships in Red Sea Transit Last Month - وكالة خبر للأنباء",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTFB1OExvTUthWWpUSjVzLWJuNUJ3bEV0ZFNFTVVYT1FfQ2JuRXh0TGR0cWVRaXdoM2dBdDE2THVva2NxWUlBcFdwY3k3V1RoNDVZTkYtVmc3cw?oc=5\" target=\"_blank\">EU's Aspides Mission Secures Over 120 Ships in Red Sea Transit Last Month</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB1OExvTUthWWpUSjVzLWJuNUJ3bEV0ZFNFTVVYT1FfQ2JuRXh0TGR0cWVRaXdoM2dBdDE2THVva2NxWUlBcFdwY3k3V1RoNDVZTkYtVmc3cw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-21T10:15:08.562Z"
+    },
     {
       "id": "rss_fe1af7b52265c080",
       "timestamp": 1781732112000,
@@ -11258,27 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T05:40:10.746Z"
-    },
-    {
-      "id": "rss_0989a7d4d4c175bc",
-      "timestamp": 1771892420000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE90NVF1MlIxV0NRMVdPWjNtYUJHQVhMYk8xUmQ3Slh4R0VYQTd3WUFiMk05eW9BUlZiTDZvbmphTkVuX1ZqZ2dFSDgzVVA5U1pTLXkwdU00ek9NZw?oc=5\" target=\"_blank\">Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE90NVF1MlIxV0NRMVdPWjNtYUJHQVhMYk8xUmQ3Slh4R0VYQTd3WUFiMk05eW9BUlZiTDZvbmphTkVuX1ZqZ2dFSDgzVVA5U1pTLXkwdU00ek9NZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T08:41:23.877Z"
     }
   ]
 }
