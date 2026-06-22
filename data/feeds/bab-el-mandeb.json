@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-22T09:29:22.039Z",
+  "last_fetch": "2026-06-22T11:25:07.072Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_35450cbcb9c6c638",
+      "timestamp": 1782127317000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Egypt attacks Sudanese mining sites in Red Sea State, records casualities - The Guardian Nigeria News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0hQcVZNa05JdzN4aWxRSmtQelk1SlZGU2JNZ0N2NTBvd2ZIRHcyYnpLOHE1WTluQ0FHSXIteFhqVW1aWkx2MS1xU3FEdGxfbldWYm0xUi1VMnlTNUl5eU5OcU91VGZwcXVhOURaNC1GMFJZSjllcnNmZ1FQSk5kcDNlRXJCUHNIenZEQUNSd3pqcmtESm13X3dibkZoN0E?oc=5\" target=\"_blank\">Egypt attacks Sudanese mining sites in Red Sea State, records casualities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian Nigeria News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0hQcVZNa05JdzN4aWxRSmtQelk1SlZGU2JNZ0N2NTBvd2ZIRHcyYnpLOHE1WTluQ0FHSXIteFhqVW1aWkx2MS1xU3FEdGxfbldWYm0xUi1VMnlTNUl5eU5OcU91VGZwcXVhOURaNC1GMFJZSjllcnNmZ1FQSk5kcDNlRXJCUHNIenZEQUNSd3pqcmtESm13X3dibkZoN0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-22T11:25:05.733Z"
+    },
     {
       "id": "rss_7e295122de65f220",
       "timestamp": 1782032409000,
@@ -11260,27 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T09:47:29.102Z"
-    },
-    {
-      "id": "rss_d5b9fd10f34c7099",
-      "timestamp": 1771909209000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Council extends \"Aspides\" operation to safeguard Red Sea navigation - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5vZU5oUFM2UnY0MWpkWXgzWGdUb0pIam9va3BvWXIzVm8wVXQ4ZUNURFdCQjZmRkg3dmF0dzhoeUszeHBCZUxLMUc1TjRUaFNDc3c?oc=5\" target=\"_blank\">EU Council extends \"Aspides\" operation to safeguard Red Sea navigation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5vZU5oUFM2UnY0MWpkWXgzWGdUb0pIam9va3BvWXIzVm8wVXQ4ZUNURFdCQjZmRkg3dmF0dzhoeUszeHBCZUxLMUc1TjRUaFNDc3c?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T05:40:10.746Z"
     }
   ]
 }
