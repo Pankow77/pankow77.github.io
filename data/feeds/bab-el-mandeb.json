@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-25T07:45:26.496Z",
+  "last_fetch": "2026-06-25T09:06:38.240Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -44,6 +44,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-25T01:42:35.014Z"
+    },
+    {
+      "id": "rss_a0e0119f2eddaf90",
+      "timestamp": 1782312086000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Allianz: The Age of Predictable Shipping Is Over - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE85LV8ta1hnRGg4VzdRaWV1TXdxTjBDcWs2V1p6OC1fSUh1QVUxX3lPdlRUQUs2T2toQmVKMnM1ZkszMFNja2VYYmxIZTBhNWt0eVc5MFZmZmpFam84TWthX0dnemRBeGJfLWt1Y1UybEo2bVpVSVltYQ?oc=5\" target=\"_blank\">Allianz: The Age of Predictable Shipping Is Over</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE85LV8ta1hnRGg4VzdRaWV1TXdxTjBDcWs2V1p6OC1fSUh1QVUxX3lPdlRUQUs2T2toQmVKMnM1ZkszMFNja2VYYmxIZTBhNWt0eVc5MFZmZmpFam84TWthX0dnemRBeGJfLWt1Y1UybEo2bVpVSVltYQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-25T09:06:37.739Z"
     },
     {
       "id": "rss_35450cbcb9c6c638",
@@ -11260,27 +11283,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T15:29:56.846Z"
-    },
-    {
-      "id": "rss_47e4c2a102671c4a",
-      "timestamp": 1771918853000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU extends mandate of Operation ASPIDES to safeguard freedom of navigation - سانا",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1aTzZITUFNMEtnQWo3bWl5TER5VnRKTDdibzhjTG01MmZKUTVuQzJxb2xPNHBIckpheFVrOUdGVEpBY0h2ZGJpS2dxQW5pcVFFTGdR?oc=5\" target=\"_blank\">EU extends mandate of Operation ASPIDES to safeguard freedom of navigation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">سانا</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1aTzZITUFNMEtnQWo3bWl5TER5VnRKTDdibzhjTG01MmZKUTVuQzJxb2xPNHBIckpheFVrOUdGVEpBY0h2ZGJpS2dxQW5pcVFFTGdR?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T08:41:24.755Z"
     }
   ]
 }
