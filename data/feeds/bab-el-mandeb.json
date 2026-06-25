@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-25T01:42:36.485Z",
+  "last_fetch": "2026-06-25T03:07:33.312Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_04a661a7e15d6fa3",
+      "timestamp": 1782336807000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Another Hormuz? The Red Sea’s Threat to the Global Economy - Council on Foreign Relations",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5\" target=\"_blank\">Another Hormuz? The Red Sea’s Threat to the Global Economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-25T03:07:31.683Z"
+    },
     {
       "id": "rss_c89b33e91b5b5d24",
       "timestamp": 1782320744000,
@@ -11260,27 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-24T08:41:24.755Z"
-    },
-    {
-      "id": "rss_bc187f4f9a8a5b08",
-      "timestamp": 1771918249000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The European Council extends naval operation Aspides to protect navigation in the Red Sea until next February - libyaupdate.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXJlbXUtQ0hGTll4NnFxOFhiQXFNUy1zTFhDbGtfWkFhZEo2bWZrOFVva1VxNVFLc19GTkx2ZGlYaTlEdDJuLXVIQVVOeGNyZnc2c2JGb2pJNjZwbEYtZmxhd0Y3MlMzQldiX0Vpb1E1MHVwTXZ2WG1DQUQyVWJYNVhyVlFndV9ZbjExM1gteUpYRFdPODB2Z1Q1d2wwNzBqNVlxcGNZX09rRl9XWGVzZ280bHYyQmh4a1BxZjZVQ3U3aDhOd1lxRDJ4SGdpa2M?oc=5\" target=\"_blank\">The European Council extends naval operation Aspides to protect navigation in the Red Sea until next February</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">l",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXJlbXUtQ0hGTll4NnFxOFhiQXFNUy1zTFhDbGtfWkFhZEo2bWZrOFVva1VxNVFLc19GTkx2ZGlYaTlEdDJuLXVIQVVOeGNyZnc2c2JGb2pJNjZwbEYtZmxhd0Y3MlMzQldiX0Vpb1E1MHVwTXZ2WG1DQUQyVWJYNVhyVlFndV9ZbjExM1gteUpYRFdPODB2Z1Q1d2wwNzBqNVlxcGNZX09rRl9XWGVzZ280bHYyQmh4a1BxZjZVQ3U3aDhOd1lxRDJ4SGdpa2M?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T09:47:29.102Z"
     }
   ]
 }
