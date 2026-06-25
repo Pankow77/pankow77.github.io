@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-25T00:43:46.021Z",
+  "last_fetch": "2026-06-25T01:42:36.485Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c89b33e91b5b5d24",
+      "timestamp": 1782320744000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemen rejects Israeli claims of Houthi plot against Eilat - The New Arab",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR3ZRMjcwcVZSbWh6N3lETGQ1eDdFWUlQak1sdG5oandiZnZiWXJuS2hjdzJNZ0NVMXd2bFN2ckswN2xxNmEzS0djWnZQdGo1MEd4bVRIYWg5eTBMcmhEN3AwLWJBV0hIRXpEaU1KU2NOT0hCYTBiem50aDY0cS1vUXdsdHJtUUlKeGw4?oc=5\" target=\"_blank\">Yemen rejects Israeli claims of Houthi plot against Eilat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Arab</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNR3ZRMjcwcVZSbWh6N3lETGQ1eDdFWUlQak1sdG5oandiZnZiWXJuS2hjdzJNZ0NVMXd2bFN2ckswN2xxNmEzS0djWnZQdGo1MEd4bVRIYWg5eTBMcmhEN3AwLWJBV0hIRXpEaU1KU2NOT0hCYTBiem50aDY0cS1vUXdsdHJtUUlKeGw4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-25T01:42:35.014Z"
+    },
     {
       "id": "rss_35450cbcb9c6c638",
       "timestamp": 1782127317000,
@@ -11255,27 +11276,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQXJlbXUtQ0hGTll4NnFxOFhiQXFNUy1zTFhDbGtfWkFhZEo2bWZrOFVva1VxNVFLc19GTkx2ZGlYaTlEdDJuLXVIQVVOeGNyZnc2c2JGb2pJNjZwbEYtZmxhd0Y3MlMzQldiX0Vpb1E1MHVwTXZ2WG1DQUQyVWJYNVhyVlFndV9ZbjExM1gteUpYRFdPODB2Z1Q1d2wwNzBqNVlxcGNZX09rRl9XWGVzZ280bHYyQmh4a1BxZjZVQ3U3aDhOd1lxRDJ4SGdpa2M?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T09:47:29.102Z"
-    },
-    {
-      "id": "rss_3d4fdda6501be8a5",
-      "timestamp": 1771910096000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "European Council extends mandate of Operation Aspides security initiative - Baird Maritime",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOWEk0QkgwdkJzR2JyZXV1cWlkc2xrZW0xZ0dybVVBQ013MWpNdFhINUszeXhBeENhLVYzUF9VbERjc0kza0tIVUtsN3hReVUtX3lmcGtqLWpMREhTWDFHNzhuemhjc0NXamJQT2dNclBTY05sbVNHQk5GRGdaWjlESEEwWXdwdl82aWFQT1B3akltVGhmRlllY3dQeE9ScTZNS2ExMlljNTdQLWJKZGQ2RGZlS3RCUWp1QlHSAccBQVVfeXFMUDBQNDFIS0ZIRTNyRk01ZFh6U1QtbzhFdGp4V0hKdHlqdVdtNWpDSWM2SjNubzAtdUpzanlxbGdYdjZXQUxXZXNPUThqTUpFU0FjX29pQmJVUTIyR05fZlFVRFJRMXItd21ybjkyc3RURDJqOFpIWjBvYXlmcU1ma1U0Z1lrWU1jZC1wYnBhbV90eU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWEk0QkgwdkJzR2JyZXV1cWlkc2xrZW0xZ0dybVVBQ013MWpNdFhINUszeXhBeENhLVYzUF9VbERjc0kza0tIVUtsN3hReVUtX3lmcGtqLWpMREhTWDFHNzhuemhjc0NXamJQT2dNclBTY05sbVNHQk5GRGdaWjlESEEwWXdwdl82aWFQT1B3akltVGhmRlllY3dQeE9ScTZNS2ExMlljNTdQLWJKZGQ2RGZlS3RCUWp1QlHSAccBQVVfeXFMUDBQNDFIS0ZIRTNyRk01ZFh6U1QtbzhFdGp4V0hKdHlqdVdtNWpDSWM2SjNubzAtdUpzanlxbGdYdjZXQUxXZXNPUThqTUpFU0FjX29pQmJVUTIyR05fZlFVRFJRMXItd21ybjkyc3RURDJqOFpIWjBvYXlmcU1ma1U0Z1lrWU1jZC1wYnBhbV90eURBLTdidVVkLUZyaVZZNGpvbENWN0o1NEVXUHFoUVpyYVJTeGwzcUktb0xBd3ZNb1o4MjdOaw?oc=5",
       "feed_id": "gn-eunavfor-aspides",
       "origin": "rss",
       "confidence": 0.3,
