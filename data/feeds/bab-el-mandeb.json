@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-26T15:46:59.544Z",
+  "last_fetch": "2026-06-26T16:40:43.883Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6238f058769a461f",
+      "timestamp": 1782488367000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Rising Tensions in Yemen Threaten Red Sea Transits - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmVYY19uUmNOajdubzFETVJQa2Ita2F4ZS10RVM0N00zOHBzMjFQWVRRZnVnV0pSaHhjN3ZBcDczTEdrVWJoSU51WlBCV21WMGZCYTJpc3BoelJ5Z0dsQ25TUHIyQ2UwLTdvbEpPMFB2LVdiYnYxRjF1UG5HX2Y4T0JQbzdKV25od3ZJQ1poeFRha0E?oc=5\" target=\"_blank\">Rising Tensions in Yemen Threaten Red Sea Transits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPNmVYY19uUmNOajdubzFETVJQa2Ita2F4ZS10RVM0N00zOHBzMjFQWVRRZnVnV0pSaHhjN3ZBcDczTEdrVWJoSU51WlBCV21WMGZCYTJpc3BoelJ5Z0dsQ25TUHIyQ2UwLTdvbEpPMFB2LVdiYnYxRjF1UG5HX2Y4T0JQbzdKV25od3ZJQ1poeFRha0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-26T16:40:42.405Z"
+    },
     {
       "id": "rss_22e7a02c47b1899b",
       "timestamp": 1782433421000,
@@ -11258,29 +11279,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-25T09:51:10.782Z"
-    },
-    {
-      "id": "rss_5bbb743fddef1e15",
-      "timestamp": 1771984913000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU extends Red Sea naval mission to protect shipping until 2027 - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNOW1MYVNNMDByYTgya2lDcXZyRTl3dnVUM2dHMHdSS2dZYVhwazBNemd5TnlUYVZOd3dicG81TE5IQmMxNWlVbzlfR3J6M2pMekF6bHpqZjNqaEFvYVUzUENBdDdtSFd5a3FZazhCeDY1RmRlTDBlVEc2ejA3aGlTNjI0cDRrZ0NVcXdETzdRYWtnalotU3RUb0ZQbkxSTEtYdGhYYllPWlJtSjk1Q19GOA?oc=5\" target=\"_blank\">EU extends Red Sea naval mission to protect shipping until 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOW1MYVNNMDByYTgya2lDcXZyRTl3dnVUM2dHMHdSS2dZYVhwazBNemd5TnlUYVZOd3dicG81TE5IQmMxNWlVbzlfR3J6M2pMekF6bHpqZjNqaEFvYVUzUENBdDdtSFd5a3FZazhCeDY1RmRlTDBlVEc2ejA3aGlTNjI0cDRrZ0NVcXdETzdRYWtnalotU3RUb0ZQbkxSTEtYdGhYYllPWlJtSjk1Q19GOA?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-25T04:17:18.942Z"
     }
   ]
 }
