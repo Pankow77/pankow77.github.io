@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-25T23:36:29.683Z",
+  "last_fetch": "2026-06-26T00:44:58.917Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_22e7a02c47b1899b",
+      "timestamp": 1782433421000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Joint Forces Secure Houthi Arms Depots in Al Dhale'e Offensive - وكالة خبر للأنباء",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE41cnd5MTdqRHZmMm52Qzc0V3RiNTgwQjN0RGF6WTJVcDJRWDJ5TVVBTUp1aEFHTDlsYmU0X0MxX084dm1yc3g4ek9hbURGeXFGQU9DQ0FEUQ?oc=5\" target=\"_blank\">Joint Forces Secure Houthi Arms Depots in Al Dhale'e Offensive</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE41cnd5MTdqRHZmMm52Qzc0V3RiNTgwQjN0RGF6WTJVcDJRWDJ5TVVBTUp1aEFHTDlsYmU0X0MxX084dm1yc3g4ek9hbURGeXFGQU9DQ0FEUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-26T00:44:57.619Z"
+    },
     {
       "id": "rss_04a661a7e15d6fa3",
       "timestamp": 1782336807000,
@@ -11260,29 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-25T04:17:18.942Z"
-    },
-    {
-      "id": "rss_28caec8bf515ce44",
-      "timestamp": 1771938762000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Extends Operation ASPIDES Until 2027, Allocates €15 Million To Protect Red Sea Shipping - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigANBVV95cUxOLUstZEc5VjBhWHAtNzM0czNQMG1WTTZkNUVDTmhhd2ZIVFR4eWpsTnBWdTNHU1B1THRMQVZYZDJPZXdydEdROVduRWxkWDdfOG1jbFlZZGlzX3kzUFR0SjFCN1RoUTVFWEJaRHVMazlhcGt4cjdFQ1FqZWJXTWp2QmsxM1pJRmJJTkhnTTM3V3BwaHBIOUJ4UzZSYUZlLTgtS25hd0hldU41TEVxd2VJbzBGWnRwTnUtV3Zlb3lMMWFWUng3cjFJYnZ1OG9feEh0aVYzWVU3aXFsZTE1OEJuYTRZSFRnYWNZSTdaLV9PUUlVRVByeUktMUpaQzA3RVNtUW9GUmwxS2NxNzJRTGxvZmdqZF82Sjl1a1RCOWJuQVlyZGZya0JpTVNqdzhQeUVBeFFGSjFfRGdfd0xncVNSOUFENHRPVTFQYjFPWEdUMU",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigANBVV95cUxOLUstZEc5VjBhWHAtNzM0czNQMG1WTTZkNUVDTmhhd2ZIVFR4eWpsTnBWdTNHU1B1THRMQVZYZDJPZXdydEdROVduRWxkWDdfOG1jbFlZZGlzX3kzUFR0SjFCN1RoUTVFWEJaRHVMazlhcGt4cjdFQ1FqZWJXTWp2QmsxM1pJRmJJTkhnTTM3V3BwaHBIOUJ4UzZSYUZlLTgtS25hd0hldU41TEVxd2VJbzBGWnRwTnUtV3Zlb3lMMWFWUng3cjFJYnZ1OG9feEh0aVYzWVU3aXFsZTE1OEJuYTRZSFRnYWNZSTdaLV9PUUlVRVByeUktMUpaQzA3RVNtUW9GUmwxS2NxNzJRTGxvZmdqZF82Sjl1a1RCOWJuQVlyZGZya0JpTVNqdzhQeUVBeFFGSjFfRGdfd0xncVNSOUFENHRPVTFQYjFPWEdUMUZtM0NvcGJUcnBvWkRmVEI4VXhLNEFZbHlWcVROUl9qOEg2UEFhb19YdjIzWWxMN1Y?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-24T15:29:56.846Z"
     }
   ]
 }
