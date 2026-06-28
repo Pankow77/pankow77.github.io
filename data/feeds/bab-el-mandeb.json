@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-06-28T00:43:34.609Z",
+  "last_fetch": "2026-06-28T01:43:20.932Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -65,6 +65,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-26T00:44:57.619Z"
+    },
+    {
+      "id": "rss_ff182ddcb4138a06",
+      "timestamp": 1782404079000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Heads for Record Monthly Leap as Houthi Attacks Widen Gulf Conflict - EnergyNow.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQQWhIVzN5Mk5LRjJ4aldfRGlaaXlZUUlFOXZpd0VZSFd3LU82QVgzTk5GblhwZlNDUDl3NHRuUXN5SExjR2VINFItOFBZNGxfb19QSTFUYV9BbHMtR2JCMzlCNjNWc0Q3WjdzTWdFT0Q5Z3hBQ3JlWEI4cXkxQ24tQXdwNmtuWl9qaUlZbU1YZ1h6aXdkZjhseDlsZldNN3NoVGZjSQ?oc=5\" target=\"_blank\">Oil Heads for Record Monthly Leap as Houthi Attacks Widen Gulf Conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EnergyNow.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQWhIVzN5Mk5LRjJ4aldfRGlaaXlZUUlFOXZpd0VZSFd3LU82QVgzTk5GblhwZlNDUDl3NHRuUXN5SExjR2VINFItOFBZNGxfb19QSTFUYV9BbHMtR2JCMzlCNjNWc0Q3WjdzTWdFT0Q5Z3hBQ3JlWEI4cXkxQ24tQXdwNmtuWl9qaUlZbU1YZ1h6aXdkZjhseDlsZldNN3NoVGZjSQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-06-28T01:43:19.324Z"
     },
     {
       "id": "rss_04a661a7e15d6fa3",
@@ -11256,27 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-27T01:45:44.349Z"
-    },
-    {
-      "id": "rss_ed1992cefa815bfb",
-      "timestamp": 1772012182000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU’s Operation Aspides to continue until February 2027 - defenceWeb",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPbU9mRXBVbEZrVk95U2szMkt6WmJ6d0RJVTFNdWlTVkhzZkpiRDFrZVpMQUZuLXdlQ1F3Vkk0VWVzaVJiWTJTZU1IWXdoT1JnVXQ1UnAtVThzMmFQTGNzSWdncVp6WWFSbDh3cUhPdDlWSHRiNkxjVUdRYUx2OHNVTFFFNXpuMHhKN0syVEJMOE0ycFJ3bGc?oc=5\" target=\"_blank\">EU’s Operation Aspides to continue until February 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">defenceWeb</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbU9mRXBVbEZrVk95U2szMkt6WmJ6d0RJVTFNdWlTVkhzZkpiRDFrZVpMQUZuLXdlQ1F3Vkk0VWVzaVJiWTJTZU1IWXdoT1JnVXQ1UnAtVThzMmFQTGNzSWdncVp6WWFSbDh3cUhPdDlWSHRiNkxjVUdRYUx2OHNVTFFFNXpuMHhKN0syVEJMOE0ycFJ3bGc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-25T09:51:11.671Z"
     }
   ]
 }
