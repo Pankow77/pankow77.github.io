@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-04T03:04:25.052Z",
+  "last_fetch": "2026-07-04T04:43:11.573Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d079314c35661406",
+      "timestamp": 1783134516000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Saudi-led Coalition vows forceful response to Houthi escalation and regional threats - Gulf News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNZkdQM1cwZmhqOU9BRXhUZDV6ZnRNZXRQbXJDVXExcWt3R1E3MXljU2I0bEN0Q1NRWWhsVzFxTEFQS2RxZFppQXBTU2JtN3RoZUpraUpTdzVrbzhlaE1lMXgzdHZCR1JvM1BfZ0pIRkZzM1pXRjJxc2poU3IzdGJPM0EwMDV2YjRTVXRRd0tqbmVyY1owWnE4eERYczRURnlpWTBSZ1FUNlJqZmNCSE1VdjllTTM2Zm1oekVjRXJiTnJrLWRyaGVXdS0yQVRGUGM?oc=5\" target=\"_blank\">Saudi-led Coalition vows forceful response to Houthi escalation and regional threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf News</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZkdQM1cwZmhqOU9BRXhUZDV6ZnRNZXRQbXJDVXExcWt3R1E3MXljU2I0bEN0Q1NRWWhsVzFxTEFQS2RxZFppQXBTU2JtN3RoZUpraUpTdzVrbzhlaE1lMXgzdHZCR1JvM1BfZ0pIRkZzM1pXRjJxc2poU3IzdGJPM0EwMDV2YjRTVXRRd0tqbmVyY1owWnE4eERYczRURnlpWTBSZ1FUNlJqZmNCSE1VdjllTTM2Zm1oekVjRXJiTnJrLWRyaGVXdS0yQVRGUGM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-04T04:43:10.246Z"
+    },
     {
       "id": "rss_66c6385b0c68e8d3",
       "timestamp": 1783099331000,
@@ -11254,27 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-02-27T20:23:23.426Z"
-    },
-    {
-      "id": "rss_ee2cbe3514f14237",
-      "timestamp": 1772153937000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s First Zaraniq Brigade Repels Houthi Attack in Hays Sector - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ueEw1WnplVENPRUlZRW1IaS1aMV9QUVgzV001Z2RVVS1oTTlXOUx1ZGQybDBKb2lFRTB1Zl90TkEtZWtyc2toNmxGTUxWa1JoeUF4SEhNWDhLZw?oc=5\" target=\"_blank\">Yemen’s First Zaraniq Brigade Repels Houthi Attack in Hays Sector</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ueEw1WnplVENPRUlZRW1IaS1aMV9QUVgzV001Z2RVVS1oTTlXOUx1ZGQybDBKb2lFRTB1Zl90TkEtZWtyc2toNmxGTUxWa1JoeUF4SEhNWDhLZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-27T01:45:44.348Z"
     }
   ]
 }
