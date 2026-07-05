@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T12:37:49.823Z",
+  "last_fetch": "2026-07-05T13:31:38.423Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a6a90e10d8c2820e",
+      "timestamp": 1783256222000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo vessel in Red Sea reports coming under attack, UK maritime body says - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOU2pnNmNzUTctOHVzeDVQdDZCZHBfZFlHUEhzcmN5c3BpUWVzaTlxQm5UNkZ1NC1SYkd3MkRaNFdSWkRSTXVFXzhpNXFjcWhqd0FVSEFFUG1MdTdfeUlLOVhDenh3UUt5N0NVTHRyLUFzbGFHVnpxY2xCZlFxZ204b3lJNUJyLUFGcjFleU5mOTlVak16MXl5cmVQTjBCd9IBowFBVV95cUxOWkhoQTlPVm1JU1RDQmkzc2UxdHZpZEY4U0pBSWdVUTdOcV9nVzBvQnB6eWhvSDhfWnA4REZvOFNsOGk3YXBCdHVMWHd6SlZ2MzhKdkpERm1EaW9OWjdVRFFZaS03SXpldGM4TjhHN0ZiN3paYnNuWGxISmFlckFVd24tYlhzUV9oSU1odTJOTUdGdU9ZSlJXT216b3BxVk43WDRV?oc=5\" target=",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOU2pnNmNzUTctOHVzeDVQdDZCZHBfZFlHUEhzcmN5c3BpUWVzaTlxQm5UNkZ1NC1SYkd3MkRaNFdSWkRSTXVFXzhpNXFjcWhqd0FVSEFFUG1MdTdfeUlLOVhDenh3UUt5N0NVTHRyLUFzbGFHVnpxY2xCZlFxZ204b3lJNUJyLUFGcjFleU5mOTlVak16MXl5cmVQTjBCd9IBowFBVV95cUxOWkhoQTlPVm1JU1RDQmkzc2UxdHZpZEY4U0pBSWdVUTdOcV9nVzBvQnB6eWhvSDhfWnA4REZvOFNsOGk3YXBCdHVMWHd6SlZ2MzhKdkpERm1EaW9OWjdVRFFZaS03SXpldGM4TjhHN0ZiN3paYnNuWGxISmFlckFVd24tYlhzUV9oSU1odTJOTUdGdU9ZSlJXT216b3BxVk43WDRV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T13:31:36.875Z"
+    },
     {
       "id": "rss_1806da08ab698fe7",
       "timestamp": 1783254299000,
@@ -275,6 +298,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T11:10:56.862Z"
+    },
+    {
+      "id": "rss_b02e6114726b8999",
+      "timestamp": 1783243589000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack in Hodeidah leaves 14 military dead - Demócrata",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOWWdMd0dJbmxOVHVMX1FqVG5saXV5bmNyaVJxVS1oay15MTY2aVdNNnFPblJyY183WkFfWllmUzZPYjFKV09zTFpPM1lxN1hoY2pJaDFRUjFJODZGT0FwU3g1ZFVUY0FvdmdpcE1FTVBWa1FfWmt2Rno4NFp2bnhubl9oUUd3Q1M4LXlMWGtlSWF2ejBjRVFwdjJKd1NsNUtWNTl5NHlvZ3FaTUZxUmpz?oc=5\" target=\"_blank\">Houthi attack in Hodeidah leaves 14 military dead</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Demócrata</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOWWdMd0dJbmxOVHVMX1FqVG5saXV5bmNyaVJxVS1oay15MTY2aVdNNnFPblJyY183WkFfWllmUzZPYjFKV09zTFpPM1lxN1hoY2pJaDFRUjFJODZGT0FwU3g1ZFVUY0FvdmdpcE1FTVBWa1FfWmt2Rno4NFp2bnhubl9oUUd3Q1M4LXlMWGtlSWF2ejBjRVFwdjJKd1NsNUtWNTl5NHlvZ3FaTUZxUmpz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T13:31:36.877Z"
     },
     {
       "id": "rss_0d2f9e6294b657d0",
@@ -11218,48 +11262,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-02T15:38:27.988Z"
-    },
-    {
-      "id": "rss_5ffb3f3412c87449",
-      "timestamp": 1772403766000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Hormuz erupts: Attacks, GPS jamming, Houthi threats rock Strait amid US-Israeli strikes - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQdWxMRldTZDZOS2hpQ1BGaEVoVVk4SDA3Q1M2U0pRYkZMUnZUUlNnS2d1YV9TWTVVeXFlTUFxUEFTQk5CaVA2ZUMySHgtaDR6SHZXOVAtb1ZScjBJVnU0SGctbFpmOHlTY2JJR0h2NENXUXhzWExTdE8wOVhPVFozX1VhX251Ykwzb29ZbTkwbnAxemlJa3AxUklQN05zSWF2STRZSHQwQldTUl9tS1FzTGxJONIBuAFBVV95cUxQNXk3eDF5SnNUUXhMVWFQVEFyaXdIX2hHRU1MRll4Ry1rQVcxby1IWWVIMm85ekdfSWh5c1liekRLZ3ZiQTFxRFZ6N1NiN242SjMwYnA5UFJFRTFRNzdpanZYc2dSVV9sR1VUWjVtbzRmZ080T0ZHS0NvdWgzREg0Rkh6WEU0OHVFeERzSUJkUjg0dTg4bFQyZU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdWxMRldTZDZOS2hpQ1BGaEVoVVk4SDA3Q1M2U0pRYkZMUnZUUlNnS2d1YV9TWTVVeXFlTUFxUEFTQk5CaVA2ZUMySHgtaDR6SHZXOVAtb1ZScjBJVnU0SGctbFpmOHlTY2JJR0h2NENXUXhzWExTdE8wOVhPVFozX1VhX251Ykwzb29ZbTkwbnAxemlJa3AxUklQN05zSWF2STRZSHQwQldTUl9tS1FzTGxJONIBuAFBVV95cUxQNXk3eDF5SnNUUXhMVWFQVEFyaXdIX2hHRU1MRll4Ry1rQVcxby1IWWVIMm85ekdfSWh5c1liekRLZ3ZiQTFxRFZ6N1NiN242SjMwYnA5UFJFRTFRNzdpanZYc2dSVV9sR1VUWjVtbzRmZ080T0ZHS0NvdWgzREg0Rkh6WEU0OHVFeERzSUJkUjg0dTg4bFQyZU5ZSURQVTEwRnlhVUZ1S3NrTHNJRV9sekd2dHlTTGli?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-02T01:48:46.151Z"
-    },
-    {
-      "id": "rss_4d97a2a469484c7b",
-      "timestamp": 1772401661000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU's Naval Mission Aspides Ramps Up in the Red Sea - Devdiscourse",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxObFJSZ2dyQ1M0VjVWekN4RjE3RHBYOTczQUJYYXc1VkhYTl9uNXNlRGtodmFRZmRIa3lLSE5zWGtTWjlJQTZmUWh0dDZqNlBSRmJUUTNJZmNCWWRvdzZFUXdTc0tuRXdScFNfeDJlNWRwUHRjc0t0eHNfRHFqclRtSmM4eFYxdTZXck9NOGVOY3pjMzkxaHlNQmw0OHhiVGU3OXRGcnRsc9IBrAFBVV95cUxQVFJlV1JPeTREYTBEb2tYQTNvZ2RYVHpqMGVGU203M2xFeDZlSE5ZSGotY01kWjRMaldMaTIxYU5yWFhncTM1NDFOZFF5YjJIVUVCcFczV1NFaGp1dHlfb3BveE01SnAwemxfclNISGpXaWgwbzZjTFBnZERPSEhCMHVhUEowaFBTNjNzQjYxa09wcTdZMzI4cS15WHpDRHFYYjRQVW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObFJSZ2dyQ1M0VjVWekN4RjE3RHBYOTczQUJYYXc1VkhYTl9uNXNlRGtodmFRZmRIa3lLSE5zWGtTWjlJQTZmUWh0dDZqNlBSRmJUUTNJZmNCWWRvdzZFUXdTc0tuRXdScFNfeDJlNWRwUHRjc0t0eHNfRHFqclRtSmM4eFYxdTZXck9NOGVOY3pjMzkxaHlNQmw0OHhiVGU3OXRGcnRsc9IBrAFBVV95cUxQVFJlV1JPeTREYTBEb2tYQTNvZ2RYVHpqMGVGU203M2xFeDZlSE5ZSGotY01kWjRMaldMaTIxYU5yWFhncTM1NDFOZFF5YjJIVUVCcFczV1NFaGp1dHlfb3BveE01SnAwemxfclNISGpXaWgwbzZjTFBnZERPSEhCMHVhUEowaFBTNjNzQjYxa09wcTdZMzI4cS15WHpDRHFYYjRQVWhUc2VmMUtS?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-01T22:48:35.533Z"
     }
   ]
 }
