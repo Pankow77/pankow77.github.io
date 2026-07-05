@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T19:29:48.423Z",
+  "last_fetch": "2026-07-05T19:59:09.878Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T18:23:09.689Z"
+    },
+    {
+      "id": "rss_541fb0043632a3f8",
+      "timestamp": 1783273561000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo Ship Attacked in Red Sea off Yemen, Crew Safe - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNd0hpTHUwWi1JNFJpUll3cjBQMnM1M1JvaHNPSV9PdTlZN0VBVlVxam5XcFBjU2tGRUFLa184TURCcTBIVUpzRlVHbndDWklQTnphRm5PaG9XUDBFVnM2cWxsZGVZNFVPOEs0WXBUSTl4LV95Z19UdkR0LTVNeUY3dWNKalN3U3NzNHBZQ2xfd0FaV1BKYU9YWjln?oc=5\" target=\"_blank\">Cargo Ship Attacked in Red Sea off Yemen, Crew Safe</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNd0hpTHUwWi1JNFJpUll3cjBQMnM1M1JvaHNPSV9PdTlZN0VBVlVxam5XcFBjU2tGRUFLa184TURCcTBIVUpzRlVHbndDWklQTnphRm5PaG9XUDBFVnM2cWxsZGVZNFVPOEs0WXBUSTl4LV95Z19UdkR0LTVNeUY3dWNKalN3U3NzNHBZQ2xfd0FaV1BKYU9YWjln?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T19:59:08.535Z"
     },
     {
       "id": "rss_1aa7e0b442abd416",
@@ -11232,27 +11255,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-04T15:36:15.068Z"
-    },
-    {
-      "id": "rss_26c8cdffa6c46ea0",
-      "timestamp": 1772625553000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Fire breaks out at Saudi Aramco site after Houthi militia attack - Egypt Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgJBVV95cUxNUXlxZWdzZFFiTU5vOXlpY2hsMlFWMzNEVEZNZ0I2YnFaYlFNUko5VE1xNUkwUUZBN1g1MW0wODJrek5qSkQ0Vm94VllEOF8wbDBLem5HYVZUYkVtdzVhWGtaQTZ0dWNxTWFQLVVtakdOcjhaQ3NIZ05pczlaQ0lDVnU0NGttN05hWnJXYUpTcnZjdVVhMGJzcnRUZDc0T3VWSmNrX2pLVW1xVVdsd004LU5PQTZPNDhTLWZCRVQyVUx4cXQxVjZSNVktc01NT1p1NUlRaTg1NmlnZkdtOXU2Zmh4Y0N4WU5uZ21yYV9JSUQ4aVZpZjFKQkltbTVidGZsTVJKVnpQZUV6UEdjRFk3NFRn?oc=5\" target=\"_blank\">Fire breaks out at Saudi Aramco site after Houthi militia a",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNUXlxZWdzZFFiTU5vOXlpY2hsMlFWMzNEVEZNZ0I2YnFaYlFNUko5VE1xNUkwUUZBN1g1MW0wODJrek5qSkQ0Vm94VllEOF8wbDBLem5HYVZUYkVtdzVhWGtaQTZ0dWNxTWFQLVVtakdOcjhaQ3NIZ05pczlaQ0lDVnU0NGttN05hWnJXYUpTcnZjdVVhMGJzcnRUZDc0T3VWSmNrX2pLVW1xVVdsd004LU5PQTZPNDhTLWZCRVQyVUx4cXQxVjZSNVktc01NT1p1NUlRaTg1NmlnZkdtOXU2Zmh4Y0N4WU5uZ21yYV9JSUQ4aVZpZjFKQkltbTVidGZsTVJKVnpQZUV6UEdjRFk3NFRn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-04T12:46:59.738Z"
     }
   ]
 }
