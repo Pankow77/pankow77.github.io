@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T16:49:02.900Z",
+  "last_fetch": "2026-07-05T17:26:26.256Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_065a8254acbc7cff",
+      "timestamp": 1783269539000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi rebels kill 16 Yemeni government troops in fiercest clashes in years - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY1",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY182YUQ3clVR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-05T17:26:24.161Z"
+    },
     {
       "id": "rss_56304487fbe84e29",
       "timestamp": 1783263901000,
@@ -25,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T15:53:44.468Z"
+    },
+    {
+      "id": "rss_52486d3eb9b2ab63",
+      "timestamp": 1783262743000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UK: Cargo ship under attack in the Red Sea - NewsNation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE80d2dfOUFTYXl6SkRtdUJzUHJDY2FrcGFLUi1uQlZUS2FGa2twSW9HcTdvUlZkOW80NTVQSVRIQXphV19WMFBWZnFJbFBhc3p2STR3emZMSjFyM200MmNkb3oxa2xycjFUS21fSjBCMWVGQ3lzckZSWkxtY9IBgAFBVV95cUxObFAyWkVoTlE3bGpCQm0wQmJHWjFsX1dIUFRYZFpQT084bS02US1FNTRwU3FhZzFvNkhEeWJ2cE1ZZ0c0TFhYbFlzbmdMUHBHN1FteE00ellDVHZPTXB6M0RUcW1YWldkdF9KZTdqeHhTdE5IS2JqS1NPTHpfdFJTYw?oc=5\" target=\"_blank\">UK: Cargo ship under attack in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NewsN",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE80d2dfOUFTYXl6SkRtdUJzUHJDY2FrcGFLUi1uQlZUS2FGa2twSW9HcTdvUlZkOW80NTVQSVRIQXphV19WMFBWZnFJbFBhc3p2STR3emZMSjFyM200MmNkb3oxa2xycjFUS21fSjBCMWVGQ3lzckZSWkxtY9IBgAFBVV95cUxObFAyWkVoTlE3bGpCQm0wQmJHWjFsX1dIUFRYZFpQT084bS02US1FNTRwU3FhZzFvNkhEeWJ2cE1ZZ0c0TFhYbFlzbmdMUHBHN1FteE00ellDVHZPTXB6M0RUcW1YWldkdF9KZTdqeHhTdE5IS2JqS1NPTHpfdFJTYw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T17:26:26.250Z"
     },
     {
       "id": "rss_66c091d6a8859ca5",
@@ -11211,54 +11255,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-04T05:28:00.228Z"
-    },
-    {
-      "id": "rss_a14c3fd236a47616",
-      "timestamp": 1772554032000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis Must Decide: Join Iran’s War Against the US and Israel or Abandon Iran - Stimson Center",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQYnE4eWQxVmExalp3a2VXcVMxLUd4eDR3dDYyb3VneEViaEpmZnBPTDluVGc1U0dXVkdxYUxaS2FSd3VHMEhqOEs1b3dtckdtbXROVzk2UHNjMkJTaHhZa0tpbEUwNWVOMlNIZXozbERTWGZpZlJtSjlqZ2NLWXRJMGFhMTVCUnc0elliWXhHOE0zTko2aUNSbmptajJTaHBuTlZ6RC1PUVNHZ3l4dF9J?oc=5\" target=\"_blank\">The Houthis Must Decide: Join Iran’s War Against the US and Israel or Abandon Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Stimson Center</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYnE4eWQxVmExalp3a2VXcVMxLUd4eDR3dDYyb3VneEViaEpmZnBPTDluVGc1U0dXVkdxYUxaS2FSd3VHMEhqOEs1b3dtckdtbXROVzk2UHNjMkJTaHhZa0tpbEUwNWVOMlNIZXozbERTWGZpZlJtSjlqZ2NLWXRJMGFhMTVCUnc0elliWXhHOE0zTko2aUNSbmptajJTaHBuTlZ6RC1PUVNHZ3l4dF9J?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-04T12:46:59.737Z"
-    },
-    {
-      "id": "rss_598d22c5471a4c9d",
-      "timestamp": 1772542057000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis To Resume Missile And Drone Attacks On Ships Transiting The Red Sea - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNTTRVa3dkV1VRSGxiZHpNckNHbk56bkRqYkx6dndHWkkyVEYxMDJyWDFWeGJBMTZ2RU4tTHhLT0k1NXZuT1FnQVV2bjJhOUdaS0dSeXRscEp5cUl2Q04yWUNBLS1qYlhnbTV0SUNxcFRCdGFEVTIyWElhaU4xSXhaaFRZTkxtNUtKTnBBWnRvaW9JcHlra0oxRV9FS3d0T2JjYnR0cUh6RWlfQ2ZXOVRfS3h0eVFla0FwaGo0cHJZbVFwdDFkOFE?oc=5\" target=\"_blank\">Yemen’s Houthis To Resume Missile And Drone Attacks On Ships Transiting The Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTTRVa3dkV1VRSGxiZHpNckNHbk56bkRqYkx6dndHWkkyVEYxMDJyWDFWeGJBMTZ2RU4tTHhLT0k1NXZuT1FnQVV2bjJhOUdaS0dSeXRscEp5cUl2Q04yWUNBLS1qYlhnbTV0SUNxcFRCdGFEVTIyWElhaU4xSXhaaFRZTkxtNUtKTnBBWnRvaW9JcHlra0oxRV9FS3d0T2JjYnR0cUh6RWlfQ2ZXOVRfS3h0eVFla0FwaGo0cHJZbVFwdDFkOFE?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-03T20:28:19.996Z"
     }
   ]
 }
