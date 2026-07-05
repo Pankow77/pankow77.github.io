@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T21:48:04.837Z",
+  "last_fetch": "2026-07-05T22:20:48.853Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e2cc43ffa632624f",
+      "timestamp": 1783288614000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo Ship Reports Attack Near Hodeidah, Yemen - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPNi1YWHNrZDZVWXV3SU5SSnRvdVhtelB0UjVfblMzM2NYNXVrQUZZUnFGamY2eDI4M291NlYwdjJUY1RoMGEyU2haVjhCNXgzX1RNUnZoQ0t5YmhoYUZicmdpVkJfc2h5QTRYNm5DOXlzZE5IZVF0T3pJVGJuR1lmbVA3ak9oYjg3Q005SQ?oc=5\" target=\"_blank\">Cargo Ship Reports Attack Near Hodeidah, Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNi1YWHNrZDZVWXV3SU5SSnRvdVhtelB0UjVfblMzM2NYNXVrQUZZUnFGamY2eDI4M291NlYwdjJUY1RoMGEyU2haVjhCNXgzX1RNUnZoQ0t5YmhoYUZicmdpVkJfc2h5QTRYNm5DOXlzZE5IZVF0T3pJVGJuR1lmbVA3ak9oYjg3Q005SQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T22:20:47.449Z"
+    },
+    {
+      "id": "rss_1e2bbd1eaaaa6d8d",
+      "timestamp": 1783288226000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Kill 16 Government Troops in Attack South of Hodeidah, AFP Medics Say: 17 Sources (West Asian: 10) - NewsCord",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxQakpmYk5WbEdISjZwTDU2QXJ6NTZRQ05kMFBNUklTOXpaamI1d2RfNF9jMWxyRm55MHRJSkVsbDgzS1hXMEZlNlYtR0ZvaGgxZmExNHJ5Ry0tTUxpT2xrMExic0pZNGJkUnduQWNKOUJxVG5mYkhWb2dKSzJEYlFfUVIzRXdMc0ZXczl5dEQwOHRnYmo2YTFsQjBKZGRacnZ1LUliUkppc0JfalJ1bmdSX1N0LUhWZkpaUTRNYmVlQzBHa3RBTTJaRmFtSS1ESWlpU3NQNkNUSW5zZElZRFVDOUFjY3g?oc=5\" target=\"_blank\">Houthis Kill 16 Government Troops in Attack South of Hodeidah, AFP Medics Say: 17 Sources (West Asian: 10)</a>&nbsp;&nbs",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQakpmYk5WbEdISjZwTDU2QXJ6NTZRQ05kMFBNUklTOXpaamI1d2RfNF9jMWxyRm55MHRJSkVsbDgzS1hXMEZlNlYtR0ZvaGgxZmExNHJ5Ry0tTUxpT2xrMExic0pZNGJkUnduQWNKOUJxVG5mYkhWb2dKSzJEYlFfUVIzRXdMc0ZXczl5dEQwOHRnYmo2YTFsQjBKZGRacnZ1LUliUkppc0JfalJ1bmdSX1N0LUhWZkpaUTRNYmVlQzBHa3RBTTJaRmFtSS1ESWlpU3NQNkNUSW5zZElZRFVDOUFjY3g?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T22:20:47.449Z"
+    },
     {
       "id": "rss_d925f58ae58d0d76",
       "timestamp": 1783285242000,
@@ -11209,52 +11253,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-05T22:27:16.703Z"
-    },
-    {
-      "id": "rss_9eadbe9e72f3f17a",
-      "timestamp": 1772718978000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "France, Italy, Greece to Help Ensure Red Sea Shipping Transit - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTExFQkctMWQxdG1MbGNJV0FpVHFRX1FwM2lOZGFwMmE0VVhPa3I1aWZBclBzdHZwQ0haamczTDNLWXNwSnJuYlBjV096bmRtVGNER3ZjTHJnNC14ZjA3b0NFYlVXM081WWdCeXlJeGVRR1BOSzdZMXV1Q1YzYjlNREV0SnpNc1Ft?oc=5\" target=\"_blank\">France, Italy, Greece to Help Ensure Red Sea Shipping Transit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTExFQkctMWQxdG1MbGNJV0FpVHFRX1FwM2lOZGFwMmE0VVhPa3I1aWZBclBzdHZwQ0haamczTDNLWXNwSnJuYlBjV096bmRtVGNER3ZjTHJnNC14ZjA3b0NFYlVXM081WWdCeXlJeGVRR1BOSzdZMXV1Q1YzYjlNREV0SnpNc1Ft?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-05T19:23:04.249Z"
-    },
-    {
-      "id": "rss_c9d99691c228d13c",
-      "timestamp": 1772712811000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran war: What role will Yemen's Houthi group play? - dw.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXE0WVI5eGdTbDg3VGx3X3JPYUkxSGtnVFNSYmtuRmNaY2l6bWFPWWQ1ZG5LRTZBWnNtdW4yTGNmMzJzc3lmTHJlZmhleGxGVnRjT2F0ZUJtR3EzbTRwN0NfZlNqR2xQUXlmRkZDeU1NTFcxZ2w4b1FhN2VDbWFRSHdpXzNsNTBD0gGIAUFVX3lxTE1zc2FobEZjaFBFR2JORUF0RlM5dk1KZ3pERVVzbk1pb1ZSd1hDRjFrZmU5Mzh6ZUlWRl9HbGRobC1ubzlZWklQWjlONzU1NnQ5bzhYMDhLVllGenE0ZEdiZi1rQzZCWU9LWGlwY0NfMmJ2RDlJRlJYc3RDQzM3Qmg4WnFyWTRLOGI?oc=5\" target=\"_blank\">Iran war: What role will Yemen's Houthi group play?</a>&",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbXE0WVI5eGdTbDg3VGx3X3JPYUkxSGtnVFNSYmtuRmNaY2l6bWFPWWQ1ZG5LRTZBWnNtdW4yTGNmMzJzc3lmTHJlZmhleGxGVnRjT2F0ZUJtR3EzbTRwN0NfZlNqR2xQUXlmRkZDeU1NTFcxZ2w4b1FhN2VDbWFRSHdpXzNsNTBD0gGIAUFVX3lxTE1zc2FobEZjaFBFR2JORUF0RlM5dk1KZ3pERVVzbk1pb1ZSd1hDRjFrZmU5Mzh6ZUlWRl9HbGRobC1ubzlZWklQWjlONzU1NnQ5bzhYMDhLVllGenE0ZEdiZi1rQzZCWU9LWGlwY0NfMmJ2RDlJRlJYc3RDQzM3Qmg4WnFyWTRLOGI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-05T20:59:56.282Z"
     }
   ]
 }
