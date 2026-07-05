@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T17:51:10.661Z",
+  "last_fetch": "2026-07-05T18:23:11.166Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_dba931e01f5341e0",
+      "timestamp": 1783275599000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthis kill 16 government troops; British agency reports attack on cargo ship in Red Sea - CBS News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQNzJITTlQd1hvOHl2NU9YZGFvcGh4dF8tVnZaeU1RVXZqc1ktX1dTNWZyXzFyMzBCWUVUZkxEc1habjlXdWp4bzBjbnAxUm9PVmp6NG1ndlR2dVVxN2lmMF9DUk1KUEZDb3RueDVPdzZBUWYtLVN3V2J4blVxTnhDSg?oc=5\" target=\"_blank\">Yemen's Houthis kill 16 government troops; British agency reports attack on cargo ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNzJITTlQd1hvOHl2NU9YZGFvcGh4dF8tVnZaeU1RVXZqc1ktX1dTNWZyXzFyMzBCWUVUZkxEc1habjlXdWp4bzBjbnAxUm9PVmp6NG1ndlR2dVVxN2lmMF9DUk1KUEZDb3RueDVPdzZBUWYtLVN3V2J4blVxTnhDSg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T18:23:09.689Z"
+    },
     {
       "id": "rss_065a8254acbc7cff",
       "timestamp": 1783269539000,
@@ -134,6 +157,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T14:32:22.627Z"
+    },
+    {
+      "id": "rss_9f0f36dd6a556a5f",
+      "timestamp": 1783256513000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthis launch major offensive in western Yemen, raising fears of wider escalation - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5CdjY3eTlQY1UwQjZ3U1E5Z2V5elhyQ1F4V2IydHNpY1dDZXBzcWg1OVFjaW9Sbkl3UURDcjJQN3pqYmlUc1BLV1Q1aklvdGdFQlFkbi1Md19pdnpwUlFsaDNXYXFLUlYtTFE?oc=5\" target=\"_blank\">Houthis launch major offensive in western Yemen, raising fears of wider escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5CdjY3eTlQY1UwQjZ3U1E5Z2V5elhyQ1F4V2IydHNpY1dDZXBzcWg1OVFjaW9Sbkl3UURDcjJQN3pqYmlUc1BLV1Q1aklvdGdFQlFkbi1Md19pdnpwUlFsaDNXYXFLUlYtTFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T18:23:09.690Z"
     },
     {
       "id": "rss_a6a90e10d8c2820e",
@@ -11211,50 +11255,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-04T11:52:41.828Z"
-    },
-    {
-      "id": "rss_62b1999c1c42c12c",
-      "timestamp": 1772617132000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "IDF prepares for potential Houthi attack amid Iran war - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5jZ2NON1FJRGxHbDdEVDI0REtoS0VrMHBrcG56V0I1cTRWMDNFdXhrRzJ2VVBUTl95bFNfMlJyQVZURkJ0cGdCSW9XZV9XeHkxelRvZTcyWlVBT1dZLXZKQW9mOTBOX2VwVnVLd0RB?oc=5\" target=\"_blank\">IDF prepares for potential Houthi attack amid Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5jZ2NON1FJRGxHbDdEVDI0REtoS0VrMHBrcG56V0I1cTRWMDNFdXhrRzJ2VVBUTl95bFNfMlJyQVZURkJ0cGdCSW9XZV9XeHkxelRvZTcyWlVBT1dZLXZKQW9mOTBOX2VwVnVLd0RB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-04T10:32:34.623Z"
-    },
-    {
-      "id": "rss_186c9f227b08ad8b",
-      "timestamp": 1772597171000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Naval mission in the Red Sea: CDU defense politician Ernst calls for strengthening of EU Aspides mission - Table.Briefings",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxOb0MxVksxSVk4elNOQUZILVBRVGNUQXY5Z05jSG84ak1KbThrZUd3UDVtMUZVMzktemEtcHBzaF9xbW1xU3VrWDB1V0tMU00yMHVYZ3ZMWENKYXhfSF9XcW1BZnJGVlRDTU9KVEJ6MG9JTVJNNjltVUNWSjFXSVkxWHg0SzNJX1lZaThEM3lVR242bmRIRlFOLUtPbGxyakwwVUN3OVZjVVlpb1I0a1JfNzRjcXgwTlZPM255TlVNcVpmMmV1Y0pjZG1YdEktdjJobkZIT2diU1R1ZVE?oc=5\" target=\"_blank\">Naval mission in the Red Sea: CDU defense politician Ernst calls for strengthening of EU Aspides mission</a>&nbsp;&nbsp;<font color=",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOb0MxVksxSVk4elNOQUZILVBRVGNUQXY5Z05jSG84ak1KbThrZUd3UDVtMUZVMzktemEtcHBzaF9xbW1xU3VrWDB1V0tMU00yMHVYZ3ZMWENKYXhfSF9XcW1BZnJGVlRDTU9KVEJ6MG9JTVJNNjltVUNWSjFXSVkxWHg0SzNJX1lZaThEM3lVR242bmRIRlFOLUtPbGxyakwwVUN3OVZjVVlpb1I0a1JfNzRjcXgwTlZPM255TlVNcVpmMmV1Y0pjZG1YdEktdjJobkZIT2diU1R1ZVE?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-04T05:28:00.228Z"
     }
   ]
 }
