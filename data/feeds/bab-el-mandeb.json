@@ -1,8 +1,78 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T11:10:58.209Z",
+  "last_fetch": "2026-07-05T11:58:00.721Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fe5103feb2829d28",
+      "timestamp": 1783251060000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "'Under attack by unknown assailants': British military reports fresh cargo ship attack off Yemen - The Times of India",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxNbEpHdVE0QTA2amZIdldmcGFSTW1FRzNabEFsX0NVejlnUXVNVGR0RmFWeldsVEpJai1XcEVHcXdTOG9xdVBtNThFYmZ0cFkteHJFTUE5R1FFU0h3eWVGOWRNR3h1TWpOVEZiT2dRZ05VTmhiUi00d0h0a1ZyeU9VNG8teTQ0NV9oT1VUN244ZVNobTlLNWVET2dDRFBxSXdjdFpoazNZSGF3V0x4enctRHUyQ0RKR0ptMllNalVJUVpmT0QxaTBDajBfM0wzYXN0bjgtWU9HQkNKTUpSTjB1VjhmcE51a0pRaE5kbURDcXAyZmlqRU5wNVN1eFE5YnNvc29Z0gGIAkFVX3lxTFB0amZ0X3hDQ2wyNHdJOXlQZzdpZ19FNUcwV3NFc25HQlVuNUQxblVsNnlXeGstZms3cnNsTkxTeGliWEtmMmlZdU",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNbEpHdVE0QTA2amZIdldmcGFSTW1FRzNabEFsX0NVejlnUXVNVGR0RmFWeldsVEpJai1XcEVHcXdTOG9xdVBtNThFYmZ0cFkteHJFTUE5R1FFU0h3eWVGOWRNR3h1TWpOVEZiT2dRZ05VTmhiUi00d0h0a1ZyeU9VNG8teTQ0NV9oT1VUN244ZVNobTlLNWVET2dDRFBxSXdjdFpoazNZSGF3V0x4enctRHUyQ0RKR0ptMllNalVJUVpmT0QxaTBDajBfM0wzYXN0bjgtWU9HQkNKTUpSTjB1VjhmcE51a0pRaE5kbURDcXAyZmlqRU5wNVN1eFE5YnNvc29Z0gGIAkFVX3lxTFB0amZ0X3hDQ2wyNHdJOXlQZzdpZ19FNUcwV3NFc25HQlVuNUQxblVsNnlXeGstZms3cnNsTkxTeGliWEtmMmlZdUdBSDhWVzhGSkwzT3FUb2FxNGJwXzVLMkFfVl9BdDNTX3lBMU16Vk1kLXEwVm53QWVvaVo2YWIwaW5zelBNTkhMZmVYSDJkRzVQRnVZNEZBNFF1Mkt5MGhNX0tyUkFLV3dFN1lQbjZNcHNvTG55WVo0YmFDSGprUFhZdzd6Yjdva1ZlaUZWbGhYc1p5dnhucGtNaXA5bVE2Z2J4ckhRSkZVaEJrZkhaSHFLcGdFc21BeWRkYkEyYUV3b25lY2lqZg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T11:57:58.052Z"
+    },
+    {
+      "id": "rss_c1f6aabbcf668f62",
+      "timestamp": 1783250344000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Plotting Red Sea Blockade? Cargo Ship 'Attacked' By Houthi Fighters Near Yemen - The Times of India",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxPcjRfbzJ0aXpfZzJxd19aMWE1R0VtWWhacE4wTVpmeVpNbDlGdWxMVEp0VVF2WkFWbjBGS3dGa0l2R2g4THVLdHdkLUt6azVENUF3LTZlMy1udk1Ca2dTVG9JRHFPcGNrR2hMaDVTN2ozSGVZU2hBVjhKcUgtNDhieXpScTlFUUtfajE3S0J6Rmt3TDNIWVg0RkpLZTB3OVRxc2o5M3VGUzBwX0dhWWNhdXptaGdtX2RFOTNIOGJzOXJSbjNxM3BVSkxGQTdYd1hzZGNFd0ktV2xPNkVJMjc4NmdtSlNCN1dabE85alY1WUdzRUXSAfgBQVVfeXFMTVA4SHBQLVBLWUNlWWNVMDVRMG5KQjBRakc2OV81NGlHRVhqUGFibVZIZWVNaEFwSnNvX2ZmbEpNNm1Ud3F4TFdYLWgtQ2dQdVgwUFpPRkp1Yl",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPcjRfbzJ0aXpfZzJxd19aMWE1R0VtWWhacE4wTVpmeVpNbDlGdWxMVEp0VVF2WkFWbjBGS3dGa0l2R2g4THVLdHdkLUt6azVENUF3LTZlMy1udk1Ca2dTVG9JRHFPcGNrR2hMaDVTN2ozSGVZU2hBVjhKcUgtNDhieXpScTlFUUtfajE3S0J6Rmt3TDNIWVg0RkpLZTB3OVRxc2o5M3VGUzBwX0dhWWNhdXptaGdtX2RFOTNIOGJzOXJSbjNxM3BVSkxGQTdYd1hzZGNFd0ktV2xPNkVJMjc4NmdtSlNCN1dabE85alY1WUdzRUXSAfgBQVVfeXFMTVA4SHBQLVBLWUNlWWNVMDVRMG5KQjBRakc2OV81NGlHRVhqUGFibVZIZWVNaEFwSnNvX2ZmbEpNNm1Ud3F4TFdYLWgtQ2dQdVgwUFpPRkp1YlF3d2ZpQnQ4RGFJNDk3WWh5THhBc01qU0lNV185TlFoRnRucDRiSFIxZ1VjRkJMUG9fcEFDZVhBVW1Uc3lfWW9uV0ppb25tYVZKbW12bmp0U3ZBR1VxdlhPUGdYMU43OFVqZEFiSU5zb2MwaTBlblhhYW1xWlJEeEpFTHFMZTRfTU5sSkp3V19IMWkybU9nRXRsdjlQYTFGTFMtWlRsZXo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T11:57:58.053Z"
+    },
+    {
+      "id": "rss_421244c0fb1db782",
+      "timestamp": 1783248493000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo Ship Reports Attack Off Yemen, Adding to Red Sea Risks - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb0VIRXdSV19pQ0Q5Z2lFNTExc1QxODNXZWZudlNDRUpoaDAtOGJSQzFCenBRY01WS2xVQ2lMdFZSZDNzSVgxSnQxVXdrZjlremNfR002NEVSVW1ZTzRyOTNQVW9qNS1UUGFJUXp0RjYxeHFFNmRNZmVaVXVzcFJNYlRqa3BjSFJnSzVabVBxTjhPSl9QSnFEVFFSMHViMUtmLXBhUE5OVzd3V2FmWkVLYkRSaWdYQ2U3?oc=5\" target=\"_blank\">Cargo Ship Reports Attack Off Yemen, Adding to Red Sea Risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPb0VIRXdSV19pQ0Q5Z2lFNTExc1QxODNXZWZudlNDRUpoaDAtOGJSQzFCenBRY01WS2xVQ2lMdFZSZDNzSVgxSnQxVXdrZjlremNfR002NEVSVW1ZTzRyOTNQVW9qNS1UUGFJUXp0RjYxeHFFNmRNZmVaVXVzcFJNYlRqa3BjSFJnSzVabVBxTjhPSl9QSnFEVFFSMHViMUtmLXBhUE5OVzd3V2FmWkVLYkRSaWdYQ2U3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T11:57:58.052Z"
+    },
     {
       "id": "rss_31f4d377ab8391ef",
       "timestamp": 1783248420000,
@@ -11192,76 +11262,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-01T15:44:14.873Z"
-    },
-    {
-      "id": "rss_132783e97ca560eb",
-      "timestamp": 1772302833000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Houthis Announce Resumption Of Red Sea Ship Attacks - Arise News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQZk1fLWdTZDFzOVZXRDRQbFdLc0QyMjhFOUV5TGk2X2x2eF9wdExaQ0lYaTZONE1BRkJRd1NqYzlPOFZkMGtWLWhpSkt5RVVXdGUySEpDZWk1MUpDdkhHMTNjNlBGR05DTWx4QjJIc1dSSzBkN1F0MDktMm9ZeVo1OUM0bFBKS3c?oc=5\" target=\"_blank\">Yemeni Houthis Announce Resumption Of Red Sea Ship Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arise News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZk1fLWdTZDFzOVZXRDRQbFdLc0QyMjhFOUV5TGk2X2x2eF9wdExaQ0lYaTZONE1BRkJRd1NqYzlPOFZkMGtWLWhpSkt5RVVXdGUySEpDZWk1MUpDdkhHMTNjNlBGR05DTWx4QjJIc1dSSzBkN1F0MDktMm9ZeVo1OUM0bFBKS3c?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-02-28T22:18:40.426Z"
-    },
-    {
-      "id": "rss_88d2bc6bb50a8290",
-      "timestamp": 1772301600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea risks resurface: Exporters warn of shipment delays, higher freight and insurance costs amid Middl - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAJBVV95cUxQNzJkd0g3QmhNS19iTmNXczdIS1BVTG1kUVlOT1hNaXRWOE83UGZURlkwdUhTQmk0Mi1IQkdBVEtSbWVVWHl2M1ZRM0Q1NmM5aTBIZWRkVXliNzFtVndqUVIxN2dvMnR3TVhsbjlEeWtxWTJHeUdmcnJCTzVENncxZ1doWWZtSmNQS2FUUXdmYWdVVk8yLWU2bEQwaTV5YWJNRUV6RVBtUHVKbEJrY0ljZi1jc2pZYXpkSTJrcmk2WUpQOTNWVExlcW1YWWNiWUFZWUw3ckx2NWliSWlBbnBaRWVZWldhT3NvZkpFR0Fha19fSzRaN0U4YnltTUp5WHNQSm8wWWw5SXlsSkdlZzk1MVVpOE5wM0RUeERXRHI5Z1VKMDBDTExwd3BucXDSAbICQVVfeXFMUEt2bWxkM2UwVkNqX3hJUXpLcjJ4LTh5UX",
-      "tags": [
-        "shipping",
-        "insurance"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxQNzJkd0g3QmhNS19iTmNXczdIS1BVTG1kUVlOT1hNaXRWOE83UGZURlkwdUhTQmk0Mi1IQkdBVEtSbWVVWHl2M1ZRM0Q1NmM5aTBIZWRkVXliNzFtVndqUVIxN2dvMnR3TVhsbjlEeWtxWTJHeUdmcnJCTzVENncxZ1doWWZtSmNQS2FUUXdmYWdVVk8yLWU2bEQwaTV5YWJNRUV6RVBtUHVKbEJrY0ljZi1jc2pZYXpkSTJrcmk2WUpQOTNWVExlcW1YWWNiWUFZWUw3ckx2NWliSWlBbnBaRWVZWldhT3NvZkpFR0Fha19fSzRaN0U4YnltTUp5WHNQSm8wWWw5SXlsSkdlZzk1MVVpOE5wM0RUeERXRHI5Z1VKMDBDTExwd3BucXDSAbICQVVfeXFMUEt2bWxkM2UwVkNqX3hJUXpLcjJ4LTh5UXBjbkhsTTdhSUpCOU42dzBRMDJKOWQ2ZlZLMWlUVjA2c0dZd2k2Vmw4Mi1xZFZMYmZaTWhraENwbnNMVUJxTXhuQ3l4MHU2YzVjN3hTcFpkd21TR3FYbURjMFg5cXdBcFFjRUhNWVFoLW82OG1Mb1ZwLU1pYXQ5NmlydHZfc001NVl6aFBaSGlLYTBtdFhITnNpRk11Qmg2LU9uZjNtR21NV1pSVlFTZVVPd2F0REpQSG5tekRiZGxhbEVXRDI1WlFHVUdyQTA3U01sLUNsdGx1R3N1N01weXIyTzh2NldXWGhmRjBvSHQxZ0gtTjREWHlGLTNCZE9ZcUZzSnFTLVZYTkNoWDlkMlBwX2hVMjI2aUNn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-01T04:23:43.435Z"
-    },
-    {
-      "id": "rss_84ab747f24dd063d",
-      "timestamp": 1772292341000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "IRAN War Explodes: Houthis Threaten Red Sea, Israel As Middle East Burns | WATCH - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxNaEpycFlrNFR5Zk95YnYzZ3NhdmdUcVhWQ2JMUm5sQkY2aWVvNld1azZkUWpGUGJYR2NuM25MSHZiZ1lfd21zSkRiMm5zd29KM2E1Y24yVjQwWTM3V255SmlrbGV5OHVQa3lxbkwzWEFjYnZlTElFVzMtWnk2UHNxbmZOQl9wc3o2RE94WmQ4S3pxdUI4NXJGd0p6XzJhRDJidE9wYlh3YkRwb0dXOTBUa1lmMzNzWEg3Um5XekhRdnQzYklURXZoVG11X3lpTFpvOU1RVEN4d0dhQWhMbVpKc0Nzal9KOFVod2FuRDBn0gHzAUFVX3lxTE9DX0ZxckxrOHAyd0pTLTZPRFZRVkE4bzFybThoVzllZXhBNzN1eDBTdXJUV24zTm5RVjFHeXdGc1hfbURqWTREQTdtWU1SQUlfaUNCSG0wX19pZkc2RF",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNaEpycFlrNFR5Zk95YnYzZ3NhdmdUcVhWQ2JMUm5sQkY2aWVvNld1azZkUWpGUGJYR2NuM25MSHZiZ1lfd21zSkRiMm5zd29KM2E1Y24yVjQwWTM3V255SmlrbGV5OHVQa3lxbkwzWEFjYnZlTElFVzMtWnk2UHNxbmZOQl9wc3o2RE94WmQ4S3pxdUI4NXJGd0p6XzJhRDJidE9wYlh3YkRwb0dXOTBUa1lmMzNzWEg3Um5XekhRdnQzYklURXZoVG11X3lpTFpvOU1RVEN4d0dhQWhMbVpKc0Nzal9KOFVod2FuRDBn0gHzAUFVX3lxTE9DX0ZxckxrOHAyd0pTLTZPRFZRVkE4bzFybThoVzllZXhBNzN1eDBTdXJUV24zTm5RVjFHeXdGc1hfbURqWTREQTdtWU1SQUlfaUNCSG0wX19pZkc2RFlsZ2JRMFNERHg3dXIyRmR0TVZaS3RpdXliQXRfYnl1TENuYnF1Z09fclFyTElOTkVlR1k0aUxpWmVSbHpZazVROWVJemJrcnRUdEkxR2lQUXdfZlBDTjlpVFRMRW40bk5lTXZGUFkteTB1Mll6em1iN0pSRjI1Z1BFREVkalRNS2o4XzNoQ2cwSG4wS0k2MkRqZHhOVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-01T07:30:04.300Z"
     }
   ]
 }
