@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T11:58:00.721Z",
+  "last_fetch": "2026-07-05T12:37:49.823Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1806da08ab698fe7",
+      "timestamp": 1783254299000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Armed assailants attack cargo ship in Red Sea off Yemen, UK military says - India Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEdmOEMxLVFocW1mMEFUQnB2d2N6TWJ1SXNTZ21Sa0hDQ0FRVmVwODlDUU9KT1hwSDhvcXNrcHh2Z20zdTQyX0RMekR4eWhONlVBMC1JMUdobEpDblZ4bXVsYzVwbE9aMjNJZzc3d29fWlpHOVUxY2dmcmtpUTIwV0RGVkNDM28xQ2VxbVF1OFlZdi1QNnNrWTNnTUotMzBJc0VEa1FoRnVyWFhZdUt6dkJEbU9aOWZaRkxmazZMNTnSAcYBQVVfeXFMUDdEYzZjdEJ1UUNrQTluU0NXdDdKUjYzYkstUG1wZUI5U0xjZUV1TFlWbmdZZkVpS21OUHNuTHE1ZklmN1J5bHNWUHpQTk9rcGtoMGZmOW1rc3dIcm5wNDRBaHA0X2RnMzIzSmJRdWJFX1I4UUczeFV2QlYtNFozY3I0dWVkYjBOWm1zdU",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEdmOEMxLVFocW1mMEFUQnB2d2N6TWJ1SXNTZ21Sa0hDQ0FRVmVwODlDUU9KT1hwSDhvcXNrcHh2Z20zdTQyX0RMekR4eWhONlVBMC1JMUdobEpDblZ4bXVsYzVwbE9aMjNJZzc3d29fWlpHOVUxY2dmcmtpUTIwV0RGVkNDM28xQ2VxbVF1OFlZdi1QNnNrWTNnTUotMzBJc0VEa1FoRnVyWFhZdUt6dkJEbU9aOWZaRkxmazZMNTnSAcYBQVVfeXFMUDdEYzZjdEJ1UUNrQTluU0NXdDdKUjYzYkstUG1wZUI5U0xjZUV1TFlWbmdZZkVpS21OUHNuTHE1ZklmN1J5bHNWUHpQTk9rcGtoMGZmOW1rc3dIcm5wNDRBaHA0X2RnMzIzSmJRdWJFX1I4UUczeFV2QlYtNFozY3I0dWVkYjBOWm1zdURyZlR0aGVxTGJjaGtETmZFWWFQWlg3b2pLdXg0Z2tjQjFxM3dUVVZ2ZWxOWlVBS2o4LXNRVkhDcGt3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T12:37:48.623Z"
+    },
     {
       "id": "rss_fe5103feb2829d28",
       "timestamp": 1783251060000,
@@ -116,6 +139,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T11:10:56.862Z"
+    },
+    {
+      "id": "rss_732f08dfcbbd2f00",
+      "timestamp": 1783245464000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Breaking news. Cargo ship reports being attacked in the Red Sea, maritime agency says - Euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNcnlXNGRmamNOekRac3BOcTJlNzJQRkRTS3NPbXpuX0p0YXRHYUhOa19FY3lZcF8zd3VXUkJiSE42X3ZEaW4yMUFfaGJvOFQtTHJfLTNDRnBGWk1VUzBUNVU2d0tKTlRMMTdJcWpRaVo2emxHY0Z0SFpQc3V4T0xQVjBrc0hTSzVvT1otamxsZUs4X256OWc?oc=5\" target=\"_blank\">Breaking news. Cargo ship reports being attacked in the Red Sea, maritime agency says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcnlXNGRmamNOekRac3BOcTJlNzJQRkRTS3NPbXpuX0p0YXRHYUhOa19FY3lZcF8zd3VXUkJiSE42X3ZEaW4yMUFfaGJvOFQtTHJfLTNDRnBGWk1VUzBUNVU2d0tKTlRMMTdJcWpRaVo2emxHY0Z0SFpQc3V4T0xQVjBrc0hTSzVvT1otamxsZUs4X256OWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T12:37:48.623Z"
     },
     {
       "id": "rss_d0309fbfe9308db6",
@@ -11214,54 +11260,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-01T22:48:35.533Z"
-    },
-    {
-      "id": "rss_c9438c47f2f09e8f",
-      "timestamp": 1772388727000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "U.S.-Israeli Attacks on Iran Disrupt Shipping in the Red Sea - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOXzk1M1lhMnR3NVhxdE1xSTZXSmtkOTVrZlVVUFBRRTZjVjZ2YTFiXy03NUdPWkZoaUJFT0V6VEZHWjRZR2JhSWJidUgzVi1oaDA1WWoxN29fa1pLRkY0Z2JSRTFUeUt1WkdaTHJnX2hpVlE3cEVLeTZvWHMyV0ZoRFF4bEJreU0?oc=5\" target=\"_blank\">U.S.-Israeli Attacks on Iran Disrupt Shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOXzk1M1lhMnR3NVhxdE1xSTZXSmtkOTVrZlVVUFBRRTZjVjZ2YTFiXy03NUdPWkZoaUJFT0V6VEZHWjRZR2JhSWJidUgzVi1oaDA1WWoxN29fa1pLRkY0Z2JSRTFUeUt1WkdaTHJnX2hpVlE3cEVLeTZvWHMyV0ZoRFF4bEJreU0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-01T21:44:04.103Z"
-    },
-    {
-      "id": "rss_f434b2cc76a3ddd3",
-      "timestamp": 1772375056000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran attacks prompt Red Sea rethink as box shipping exits Strait of Hormuz - Lloyd's List",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQV01Samk3bU5LSlJTY3VuaFIwNWR0dVRUSnJ5c2stQ3JxSUdqaXhBTDExVldhTFJFbzNCWlJqeERPMGNkNlYtZjFRT0RGdEJ4ZHNZNmJMdXAxbjVLX1hTbGVOMVpXcVVocjd6OFg1UEZtOFM1bXNPS3lfZ3JDQno5SWZkUjJZWVJyNkl0V0dsdTA5anBOVmlhUTZRV0wwbG53YXp3aWJaaDZMdHBxbllwQg?oc=5\" target=\"_blank\">Iran attacks prompt Red Sea rethink as box shipping exits Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQV01Samk3bU5LSlJTY3VuaFIwNWR0dVRUSnJ5c2stQ3JxSUdqaXhBTDExVldhTFJFbzNCWlJqeERPMGNkNlYtZjFRT0RGdEJ4ZHNZNmJMdXAxbjVLX1hTbGVOMVpXcVVocjd6OFg1UEZtOFM1bXNPS3lfZ3JDQno5SWZkUjJZWVJyNkl0V0dsdTA5anBOVmlhUTZRV0wwbG53YXp3aWJaaDZMdHBxbllwQg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-01T15:44:14.873Z"
     }
   ]
 }
