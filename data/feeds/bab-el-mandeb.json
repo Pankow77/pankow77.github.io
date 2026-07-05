@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-05T21:23:03.538Z",
+  "last_fetch": "2026-07-05T21:48:04.837Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d925f58ae58d0d76",
+      "timestamp": 1783285242000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo Ship Reports Attack Off Yemen, Adding To Red Sea Risks - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOT2Nza0Y5MVNQdVZOQTM4UC1CUkZLX0xQZUF2UkIzMFJPWVdQb0NtWkE4SFZvV2VfUllTRF9IOGJLWVRjVEI4eTV2dnctcXd3WERUVFFLalN6emt5UHJHci10MWFXbV96OFdnYm1ybjFyTGlFN1NIU0pQcXpCaGJVOEI3dVE3VVdN?oc=5\" target=\"_blank\">Cargo Ship Reports Attack Off Yemen, Adding To Red Sea Risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOT2Nza0Y5MVNQdVZOQTM4UC1CUkZLX0xQZUF2UkIzMFJPWVdQb0NtWkE4SFZvV2VfUllTRF9IOGJLWVRjVEI4eTV2dnctcXd3WERUVFFLalN6emt5UHJHci10MWFXbV96OFdnYm1ybjFyTGlFN1NIU0pQcXpCaGJVOEI3dVE3VVdN?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T21:48:03.374Z"
+    },
     {
       "id": "rss_0515852dc8ca769c",
       "timestamp": 1783284924000,
@@ -25,6 +48,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T21:23:02.182Z"
+    },
+    {
+      "id": "rss_8a43f53952b127fe",
+      "timestamp": 1783276800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Kills 14 Yemen Government Troops Near Hodeidah - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZRnh6OVVzTmhQc055VEJtbEctWDdYYXVQY0p0VG9NaU9BZnJqc2JnTk5EeE9xaXExMTZOTDQ5c0hPVkhtdEUzb0dvWWJkS0FlcGxNeTRB?oc=5\" target=\"_blank\">Houthi Attack Kills 14 Yemen Government Troops Near Hodeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ZRnh6OVVzTmhQc055VEJtbEctWDdYYXVQY0p0VG9NaU9BZnJqc2JnTk5EeE9xaXExMTZOTDQ5c0hPVkhtdEUzb0dvWWJkS0FlcGxNeTRB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-05T21:48:03.374Z"
     },
     {
       "id": "rss_dba931e01f5341e0",
@@ -11211,50 +11255,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-05T20:59:56.282Z"
-    },
-    {
-      "id": "rss_5d6905e61f12fd98",
-      "timestamp": 1772662962000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Fire breaks out at Saudi Aramco site after Houthi militia attack - Egypt Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAJBVV95cUxQT0dvczRhck5zcDJOSFBLaG1WOW5NNWx6WnAxVzIyS2E2bUFwb05aR1hheUtMSFB6S0ZsaE1xRy1CVXFpdWpMLWs4N3dnUWR2TFNwZ0lBMnhQelowazdLb1FOZmhLZXpzRjJSTlVFWFNYRFRNdmRuU21TcTB5dWk2QkRtdE5jd1JYLVhHVmRjTml1QTg2ZXdvQ2pSZmhEd2lDNkZ2SUR0V2dWV01IVzZsWDBOV1FnWFo0VzB5ekQwVFUzekJYNWQtdUpieHdfYmljU083bnNKaWkza0dQN0Z0dWRTRk1ZenhIN3hSVlFONVowdFFla2FCaXlKRVplX282dzZlZmZ4YVUxZ1pS?oc=5\" target=\"_blank\">Fire breaks out at Saudi Aramco site after Houthi militia attack</a",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxQT0dvczRhck5zcDJOSFBLaG1WOW5NNWx6WnAxVzIyS2E2bUFwb05aR1hheUtMSFB6S0ZsaE1xRy1CVXFpdWpMLWs4N3dnUWR2TFNwZ0lBMnhQelowazdLb1FOZmhLZXpzRjJSTlVFWFNYRFRNdmRuU21TcTB5dWk2QkRtdE5jd1JYLVhHVmRjTml1QTg2ZXdvQ2pSZmhEd2lDNkZ2SUR0V2dWV01IVzZsWDBOV1FnWFo0VzB5ekQwVFUzekJYNWQtdUpieHdfYmljU083bnNKaWkza0dQN0Z0dWRTRk1ZenhIN3hSVlFONVowdFFla2FCaXlKRVplX282dzZlZmZ4YVUxZ1pS?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-04T22:27:20.171Z"
-    },
-    {
-      "id": "rss_75a6a376df11ef3b",
-      "timestamp": 1772643139000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "News Houthis ‘on the fence’ over Red Sea attacks, despite US strike on Iran - The Loadstar",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxORHJkckR6bnBKY2dlY2tXekZZRjRfakQ3V1lXOVItSnVLTEFRV1VRbVJiRTlYNHlEWG0xRDQ0YUJGZVZUMEItcnhBTGE1MFA2OGw2eE0yUGFlZU41bklpZXNHeUtHbTlodjVqUkdQYXhrS3dNMVV1VGM1eU5pT1gwU2RaT01ESVZPcmZqdWJMNWxtTC05YW9OR2dsY19YYzRPcWZGYkp2UXdLX1JMRUE?oc=5\" target=\"_blank\">News Houthis ‘on the fence’ over Red Sea attacks, despite US strike on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Loadstar</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORHJkckR6bnBKY2dlY2tXekZZRjRfakQ3V1lXOVItSnVLTEFRV1VRbVJiRTlYNHlEWG0xRDQ0YUJGZVZUMEItcnhBTGE1MFA2OGw2eE0yUGFlZU41bklpZXNHeUtHbTlodjVqUkdQYXhrS3dNMVV1VGM1eU5pT1gwU2RaT01ESVZPcmZqdWJMNWxtTC05YW9OR2dsY19YYzRPcWZGYkp2UXdLX1JMRUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-05T21:45:36.222Z"
     }
   ]
 }
