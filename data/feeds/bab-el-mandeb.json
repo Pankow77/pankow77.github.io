@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-06T20:37:58.908Z",
+  "last_fetch": "2026-07-06T21:31:58.878Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6dcfa41ca435e005",
+      "timestamp": 1783363444000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Maersk, Hapag-Lloyd Resume Red Sea Service Despite Fresh Security Concerns - WWD",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxONmtaNTNfUFRJZzhaMm02SE4xTU9UR0dMZFlGOGFxM3lMajZIUE5nY2JfUm42cndERm12MTZ2Rlk3dU9mX1hPYzhYcWNMRGFXMVNUejRlZzJSWDByNkFBb2d1d2tCTWYtejBNN2puM0I0cTVWUnhYaF83dFBpOTd3V3lGVG5Bbi1HZlJqVy1IZkdPT3ZRMTZtT1Z5emE1TGZMakRaT3JzbENqM2ktQ2dtcmFzaDZzRUxvZ2tYVzhEckI5THN3VjEzakpqejlKZw?oc=5\" target=\"_blank\">Maersk, Hapag-Lloyd Resume Red Sea Service Despite Fresh Security Concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WWD</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONmtaNTNfUFRJZzhaMm02SE4xTU9UR0dMZFlGOGFxM3lMajZIUE5nY2JfUm42cndERm12MTZ2Rlk3dU9mX1hPYzhYcWNMRGFXMVNUejRlZzJSWDByNkFBb2d1d2tCTWYtejBNN2puM0I0cTVWUnhYaF83dFBpOTd3V3lGVG5Bbi1HZlJqVy1IZkdPT3ZRMTZtT1Z5emE1TGZMakRaT3JzbENqM2ktQ2dtcmFzaDZzRUxvZ2tYVzhEckI5THN3VjEzakpqejlKZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-06T21:31:57.437Z"
+    },
     {
       "id": "rss_81e55d10336e3e25",
       "timestamp": 1783329120000,
@@ -11226,29 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T17:45:36.437Z"
-    },
-    {
-      "id": "rss_2f9f877139d73a27",
-      "timestamp": 1772857479000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why Yemen’s Houthis are staying out of Israel-US fight with Iran – for now - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPVkJxT1F5RXdKU25Yc1dNQlhOT3hyQUUxWWt0SzZodkVURHYtRmIxOXY0cWh6VHRnWHpOZTdfWXdQdDQ0OTlkNDc4U2lWNWtVRlRmMlNOYk1IemY5MFVPTklUeW4zQXY5cXI4SDNINW9ucG43WGQ2V2lWOTdFMngteVRQMHpyci1wUmRDNUxvNV9TRXFmaUlfV3RmbGdIbXZyaFN0OG5wc3ozTE4yMmJpNNIBtgFBVV95cUxNX2dSM3dJdnBaUEJ1WENtOUJtc1BlU0syeW9LMDRmQzAxbFJiRkNkbzdGOWw5WXEtRUhkTGJYa05fcUl5V1RheFRPTW1RbGI4eENTT0V2X2ZkTXZIUm41U1oyN1p2anpQRmd1TE1qcFRVQWxNMG9VS1hwSmQ0dTdkXzVZN0RNSk5LSklqd2ROdkpnYjBwSHhIU3NQZT",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVkJxT1F5RXdKU25Yc1dNQlhOT3hyQUUxWWt0SzZodkVURHYtRmIxOXY0cWh6VHRnWHpOZTdfWXdQdDQ0OTlkNDc4U2lWNWtVRlRmMlNOYk1IemY5MFVPTklUeW4zQXY5cXI4SDNINW9ucG43WGQ2V2lWOTdFMngteVRQMHpyci1wUmRDNUxvNV9TRXFmaUlfV3RmbGdIbXZyaFN0OG5wc3ozTE4yMmJpNNIBtgFBVV95cUxNX2dSM3dJdnBaUEJ1WENtOUJtc1BlU0syeW9LMDRmQzAxbFJiRkNkbzdGOWw5WXEtRUhkTGJYa05fcUl5V1RheFRPTW1RbGI4eENTT0V2X2ZkTXZIUm41U1oyN1p2anpQRmd1TE1qcFRVQWxNMG9VS1hwSmQ0dTdkXzVZN0RNSk5LSklqd2ROdkpnYjBwSHhIU3NQZTJRZFdqSFVmZEp2S1F4WEdQZmo3TGY4VnJqQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-03-08T01:48:47.961Z"
     }
   ]
 }
