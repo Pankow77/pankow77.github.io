@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-06T10:33:24.180Z",
+  "last_fetch": "2026-07-06T12:17:50.448Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_81e55d10336e3e25",
+      "timestamp": 1783329120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Liberian-flagged bulker Magic Seas sinks after Houthi attack in Red Sea - PortNews IAA",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE5jZ0l3dk1RT01qa20wU1NuRkZuaktLZkVaOXNualYyWkJNQ2ViVWtOc3BCdkxUM1RhYmhlVXAyb3RUM2poNC1TMUlLVQ?oc=5\" target=\"_blank\">Liberian-flagged bulker Magic Seas sinks after Houthi attack in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PortNews IAA</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5jZ0l3dk1RT01qa20wU1NuRkZuaktLZkVaOXNualYyWkJNQ2ViVWtOc3BCdkxUM1RhYmhlVXAyb3RUM2poNC1TMUlLVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-06T12:17:49.127Z"
+    },
     {
       "id": "rss_c75507f826e316b7",
       "timestamp": 1783309020000,
@@ -11230,29 +11251,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-03-07T05:57:50.422Z"
-    },
-    {
-      "id": "rss_a29f5aa8ccea3a5c",
-      "timestamp": 1772736868000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Will Iran’s Yemeni allies renew their Red Sea blockade? - Amwaj.media",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQNTNBUFdDX3duTXRUYnpOaHlIb3poT2VHaUFQamR5aHNlNXNYQklLTEdBb3ZaUHk5ekxmNGFOdTBpNGtzWGh4X1FxR2d5VmwxUzBLZ0NMQmxpbG1KYTluNWRWYUJyUF9qLVZHSDV5S3pzU3pzY0NqUW5rOVQ3eWo3UDRXU0MxVjI3OTA1NnV1Qm1rMWMxSHpxTmExR2o5SnZLSHc?oc=5\" target=\"_blank\">Will Iran’s Yemeni allies renew their Red Sea blockade?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Amwaj.media</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNTNBUFdDX3duTXRUYnpOaHlIb3poT2VHaUFQamR5aHNlNXNYQklLTEdBb3ZaUHk5ekxmNGFOdTBpNGtzWGh4X1FxR2d5VmwxUzBLZ0NMQmxpbG1KYTluNWRWYUJyUF9qLVZHSDV5S3pzU3pzY0NqUW5rOVQ3eWo3UDRXU0MxVjI3OTA1NnV1Qm1rMWMxSHpxTmExR2o5SnZLSHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-07T10:47:22.830Z"
     }
   ]
 }
