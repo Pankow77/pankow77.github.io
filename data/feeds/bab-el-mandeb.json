@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-06T06:32:57.369Z",
+  "last_fetch": "2026-07-06T08:31:32.692Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-06T04:56:03.942Z"
+    },
+    {
+      "id": "rss_596271bb3efa3b74",
+      "timestamp": 1783308212000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Armed Skiff Attacks Bulk Carrier Off Hodeida as Houthi Ground Operations Escalate - SOFX",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPYW01VVUwNEpaTmtyQjByT1l0WXZ2Sy0wQ055QzVpa29fUDhLRUJvTWhFd3FEVGYtV0ZnekoyVjR0V0FBcDdVRVZWbDZWQUI5c0xoQkhIVDA1YXBRLUtvNDZ5dDloVW9fZ2lJemxpWmNKQWpNUUplWGp1ODdjeXpIbUlXSnllcWxteVE0ckFGN3dOdjAyekd3NVlSRkNuYmg2a0haOTRB?oc=5\" target=\"_blank\">Armed Skiff Attacks Bulk Carrier Off Hodeida as Houthi Ground Operations Escalate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SOFX</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPYW01VVUwNEpaTmtyQjByT1l0WXZ2Sy0wQ055QzVpa29fUDhLRUJvTWhFd3FEVGYtV0ZnekoyVjR0V0FBcDdVRVZWbDZWQUI5c0xoQkhIVDA1YXBRLUtvNDZ5dDloVW9fZ2lJemxpWmNKQWpNUUplWGp1ODdjeXpIbUlXSnllcWxteVE0ckFGN3dOdjAyekd3NVlSRkNuYmg2a0haOTRB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-06T08:31:31.433Z"
     },
     {
       "id": "rss_e2cc43ffa632624f",
@@ -11232,27 +11253,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-07T10:47:22.830Z"
-    },
-    {
-      "id": "rss_49e2ea1899c9f2cc",
-      "timestamp": 1772735408000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis could still join war, IDF sources say - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5rZzlsaVEzVmZubS14dXFzVmFCRGk3bnpmTGhPTkxvaTlRMW91cHI2SEs1SkVHTkFkcW56TjdtRWRESEhVX1hlUzlLVmxkR1Z6SmFyVlJDUGUzQkhzYTA2MjlMS2hPdG5OSUE?oc=5\" target=\"_blank\">Yemen's Houthis could still join war, IDF sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5rZzlsaVEzVmZubS14dXFzVmFCRGk3bnpmTGhPTkxvaTlRMW91cHI2SEs1SkVHTkFkcW56TjdtRWRESEhVX1hlUzlLVmxkR1Z6SmFyVlJDUGUzQkhzYTA2MjlMS2hPdG5OSUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-06T10:30:35.836Z"
     }
   ]
 }
