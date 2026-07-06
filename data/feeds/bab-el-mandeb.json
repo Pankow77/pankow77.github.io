@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-06T21:31:58.878Z",
+  "last_fetch": "2026-07-06T22:26:57.481Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-06T21:31:57.437Z"
+    },
+    {
+      "id": "rss_c97c9f4568ba8e15",
+      "timestamp": 1783336048000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea security worsens as Hormuz transits rise - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxONFBQNlhXQmZvNXh4U0VST3pYY0xRQkJ1VEJDX0tuMW9ycFQ3SnRuSjFFaGZzQ2xBbzJxZlRHMUtXU2E2Z3BiZTRqdlhVVmlEZ2FtVVozcFJDd3V3ajEyNmpDLThlRUVoRFNHVHVkekg0XzV4SFI1SHRISTFWR3h3MW8tZzk3Z2tBRVdpUmhTN3pHems5bWc?oc=5\" target=\"_blank\">Red Sea security worsens as Hormuz transits rise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONFBQNlhXQmZvNXh4U0VST3pYY0xRQkJ1VEJDX0tuMW9ycFQ3SnRuSjFFaGZzQ2xBbzJxZlRHMUtXU2E2Z3BiZTRqdlhVVmlEZ2FtVVozcFJDd3V3ajEyNmpDLThlRUVoRFNHVHVkekg0XzV4SFI1SHRISTFWR3h3MW8tZzk3Z2tBRVdpUmhTN3pHems5bWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-06T22:26:56.128Z"
     },
     {
       "id": "rss_81e55d10336e3e25",
@@ -11226,27 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-09T14:03:55.840Z"
-    },
-    {
-      "id": "rss_3933ec953d297183",
-      "timestamp": 1773022209000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "US Deploys Two Carrier Strike Groups to Middle East as Operation Epic Fury Escalates - quwa.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxORXl0Zm55QndsejRKaG9ac29NejlTZFhEdlhhNDFmbHhrUzloa1lTcU5aR25Nd2RvME1DRWRpemZsSVdUQmc4ekVRUVVVc2pHRXdDVTlaeGlTQnUxS2JDVWNXVy1sNTRGd3hwMWFnZlU0X2w2a1FoV1JWUG5PWUdCb2UtMmpHOXJtUnRjdTBHb0pfUTRTVUlMdElEZUhvejduVVBVZ3RsNmlUazhWNm15SjktQ192cFp5X29TVnF6aVU2djBhSF80?oc=5\" target=\"_blank\">US Deploys Two Carrier Strike Groups to Middle East as Operation Epic Fury Escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">quwa.org</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxORXl0Zm55QndsejRKaG9ac29NejlTZFhEdlhhNDFmbHhrUzloa1lTcU5aR25Nd2RvME1DRWRpemZsSVdUQmc4ekVRUVVVc2pHRXdDVTlaeGlTQnUxS2JDVWNXVy1sNTRGd3hwMWFnZlU0X2w2a1FoV1JWUG5PWUdCb2UtMmpHOXJtUnRjdTBHb0pfUTRTVUlMdElEZUhvejduVVBVZ3RsNmlUazhWNm15SjktQ192cFp5X29TVnF6aVU2djBhSF80?oc=5",
-      "feed_id": "gn-centcom-yemen",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-12T17:45:36.437Z"
     }
   ]
 }
