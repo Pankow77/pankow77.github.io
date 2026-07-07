@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-07T13:48:52.222Z",
+  "last_fetch": "2026-07-07T15:00:35.475Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_06f96cb5dc1f0c3d",
+      "timestamp": 1783406850000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The crushing Navy response that followed a Houthi attack at sea - MSN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNamZvOVRQa3ZaTXotWFVLdWRUbm4tOFNtYXNFUHpQYTMzbllBNzJQZHBHaklFZGs1TFQyTFZ6YjhUR3N6QlVhZnpXQm90dHBlRWlzd0huRkg3MkJtRFJIVF9xZ3NIUjRkSGdXYzdLWTNvWFRRaFBhWFRJYTFJYjNfWnRYOG1DaTlvU25zTmNfVU8tYnlGTkNyckcwZjRONlBMN2FaQnUtZmd5QlJOdU5JQ2dZSUNsTDg0RkFGZDNBMDVYdw?oc=5\" target=\"_blank\">The crushing Navy response that followed a Houthi attack at sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
+      "tags": [
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNamZvOVRQa3ZaTXotWFVLdWRUbm4tOFNtYXNFUHpQYTMzbllBNzJQZHBHaklFZGs1TFQyTFZ6YjhUR3N6QlVhZnpXQm90dHBlRWlzd0huRkg3MkJtRFJIVF9xZ3NIUjRkSGdXYzdLWTNvWFRRaFBhWFRJYTFJYjNfWnRYOG1DaTlvU25zTmNfVU8tYnlGTkNyckcwZjRONlBMN2FaQnUtZmd5QlJOdU5JQ2dZSUNsTDg0RkFGZDNBMDVYdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-07T15:00:34.106Z"
+    },
     {
       "id": "rss_58062fefcc8a88d2",
       "timestamp": 1783388472000,
@@ -11223,30 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-09T21:00:43.672Z"
-    },
-    {
-      "id": "rss_d0e6e662d1a9b051",
-      "timestamp": 1773061257000,
-      "source": "Reuters",
-      "actor": "other",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "France to deploy almost dozen warships, mulls Hormuz mission, Macron says - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPc0xsOVFJMEpzUl95YTEtMDNPNzh2eHBrRGN0Qng5MnhwWENfSFgzNEo4REswQ3FoeVFrUU5sSzhyTWQ2Y2N4ZmxDRXhSdFpUUWJsWmd0cW5wZk82U1F3QnpaX1VKWHNXSWxLVW5zZm5MQUw3c3AtTmxsYXNCdXhOZGx0dmtqQWMzMFIweFFUUlFTVEJadHRYUDBTbmhmd0U?oc=5\" target=\"_blank\">France to deploy almost dozen warships, mulls Hormuz mission, Macron says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPc0xsOVFJMEpzUl95YTEtMDNPNzh2eHBrRGN0Qng5MnhwWENfSFgzNEo4REswQ3FoeVFrUU5sSzhyTWQ2Y2N4ZmxDRXhSdFpUUWJsWmd0cW5wZk82U1F3QnpaX1VKWHNXSWxLVW5zZm5MQUw3c3AtTmxsYXNCdXhOZGx0dmtqQWMzMFIweFFUUlFTVEJadHRYUDBTbmhmd0U?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-03-10T11:56:45.437Z"
     }
   ]
 }
