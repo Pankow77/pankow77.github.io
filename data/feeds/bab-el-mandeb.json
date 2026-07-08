@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-08T20:54:00.631Z",
+  "last_fetch": "2026-07-08T21:25:05.640Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_21ca045485b725b3",
+      "timestamp": 1783524357000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "From Hormuz to Bab el Mandeb: The Lesson the World Must Not Ignore - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNS2xiTC04TFRUZWZKOUlYbVk2Y3NlcTF6aVhPTmtfODlNYm05QWNXZjR0dXlob2dnMXF2blgyUVZYWER0dC10VXpEVWZRZFJCN0MwSVNzYkRnbXNlcTRhSnRPSWV0TWVQYUdDaXZ2ajhHTk5rd3VMNVVnVzludUFONU5zYWxhRlBWS3UzOXVuUGdYWnVaNnQwRUNrWWV0OXRMV2dpc0N3UQ?oc=5\" target=\"_blank\">From Hormuz to Bab el Mandeb: The Lesson the World Must Not Ignore</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS2xiTC04TFRUZWZKOUlYbVk2Y3NlcTF6aVhPTmtfODlNYm05QWNXZjR0dXlob2dnMXF2blgyUVZYWER0dC10VXpEVWZRZFJCN0MwSVNzYkRnbXNlcTRhSnRPSWV0TWVQYUdDaXZ2ajhHTk5rd3VMNVVnVzludUFONU5zYWxhRlBWS3UzOXVuUGdYWnVaNnQwRUNrWWV0OXRMV2dpc0N3UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-08T21:25:04.219Z"
+    },
     {
       "id": "rss_42ecf010851c368a",
       "timestamp": 1783492349000,
@@ -11225,29 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T23:53:50.069Z"
-    },
-    {
-      "id": "rss_62ef5c0c9324d32f",
-      "timestamp": 1773258405000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran signals closure of Bab el-Mandeb alongside Strait of Hormuz - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNRHcxR1o0NTIyeUZlYUNjdVFYUE1TRE9HZ3U3bDBza2MxdG9SNjEwblYzM3pZcnQ5NXR6OWRCV1JWYUpBY0ZIQjVVc1N5ZEtQSTJMV2I4Q3NJVHFhb3IzQU0zN3UyZG5sTDYtWlJxZUVheGMwLU5KRmNYTGtLMThDRGl0ZVBueTYxVFl6dmNWVkJ5bGlMbXpUU3RjMVBJQ0l5MkZxVU93Wnl3eklX?oc=5\" target=\"_blank\">Iran signals closure of Bab el-Mandeb alongside Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNRHcxR1o0NTIyeUZlYUNjdVFYUE1TRE9HZ3U3bDBza2MxdG9SNjEwblYzM3pZcnQ5NXR6OWRCV1JWYUpBY0ZIQjVVc1N5ZEtQSTJMV2I4Q3NJVHFhb3IzQU0zN3UyZG5sTDYtWlJxZUVheGMwLU5KRmNYTGtLMThDRGl0ZVBueTYxVFl6dmNWVkJ5bGlMbXpUU3RjMVBJQ0l5MkZxVU93Wnl3eklX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-12T04:10:25.512Z"
     }
   ]
 }
