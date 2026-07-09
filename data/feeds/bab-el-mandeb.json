@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-09T09:06:12.615Z",
+  "last_fetch": "2026-07-09T12:00:38.886Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2d8da60a97e429ef",
+      "timestamp": 1783597525000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran’s Hormuz Playbook Could Be Coming to the Red Sea - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNkZ4SW8wdVlUSXVPZXhFNHRhbUh2b3lGbDgtSnFPLVFkSGNQTmVXb2hPQ3NIRFpaUDhjdW4zTHJ3MWtvaGNoelRIM202WVhKY3hibWNaT0ZxeXRGcHE3X1N4MjladmlqeGhOTkllR0ZnZS1fYzg4UEl6ZFZXeWNQYzhvTmVadHRsaF9DaE82UFhFRHpLeTdqTnBUcGFFZw?oc=5\" target=\"_blank\">Iran’s Hormuz Playbook Could Be Coming to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNkZ4SW8wdVlUSXVPZXhFNHRhbUh2b3lGbDgtSnFPLVFkSGNQTmVXb2hPQ3NIRFpaUDhjdW4zTHJ3MWtvaGNoelRIM202WVhKY3hibWNaT0ZxeXRGcHE3X1N4MjladmlqeGhOTkllR0ZnZS1fYzg4UEl6ZFZXeWNQYzhvTmVadHRsaF9DaE82UFhFRHpLeTdqTnBUcGFFZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-09T12:00:37.540Z"
+    },
     {
       "id": "rss_1d7f7f0f83b3a9f9",
       "timestamp": 1783532681000,
@@ -11222,30 +11245,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T21:33:51.540Z"
-    },
-    {
-      "id": "rss_b863069b832ba7f0",
-      "timestamp": 1773322490000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Maritime Drone and UAV Strike Hits US-linked Oil Tanker in Red Sea - Garowe Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPdVJGUzJrS21CMGRnaURIdXA3TWFMVmQtVF9CZkQ0eWVyZXVpZ2JJeGwxNW9oX0xrTFhYQTUzeERVRjRjY1l4ZGtpOUsyaUdXdGpGR0o0Ri14OWR0NFUtZ0tabnl2MWxrbVdRVnU1UW1jWWdGNUFUQUtTSFh0ejNKMGpDWXREcFF5VmtVWTRhNUhyTV90MHZpMGN1UXJaYzhBdFdfck9YeElxQndXR3ctZ0dDaDhlamM?oc=5\" target=\"_blank\">Houthi Maritime Drone and UAV Strike Hits US-linked Oil Tanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Garowe Online</font>",
-      "tags": [
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPdVJGUzJrS21CMGRnaURIdXA3TWFMVmQtVF9CZkQ0eWVyZXVpZ2JJeGwxNW9oX0xrTFhYQTUzeERVRjRjY1l4ZGtpOUsyaUdXdGpGR0o0Ri14OWR0NFUtZ0tabnl2MWxrbVdRVnU1UW1jWWdGNUFUQUtTSFh0ejNKMGpDWXREcFF5VmtVWTRhNUhyTV90MHZpMGN1UXJaYzhBdFdfck9YeElxQndXR3ctZ0dDaDhlamM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-12T16:33:20.425Z"
     }
   ]
 }
