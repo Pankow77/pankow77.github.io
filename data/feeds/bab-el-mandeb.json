@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-08T23:51:28.773Z",
+  "last_fetch": "2026-07-09T00:34:43.395Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1d7f7f0f83b3a9f9",
+      "timestamp": 1783532681000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Officials: We'll Set Saudi Arabia Back To 1930 - MEMRI | Middle East Media Research Institute",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcU93LW9tQ19sRklPU2M4NHEtZkhRc2tvMUdMbXJ1NFdvZ29SZzNDSHdiWnBOQUZxcTlCQ3Z3ZXJ4d2gyUmdXeGh5aUNyM2x3QzllNUFOSjRzZzNhLWVlSnprSXNUbm4yVlI3cUtGMXFKRk9sREd5YkJvYzN0c2duY18tbzk3TTlxLVZ2blprN2sxMDlGTWdwRk53eE1Ka29zbmhBM2RxLTh4OUM5X0w5OS1PbTIwclVS?oc=5\" target=\"_blank\">Houthi Officials: We'll Set Saudi Arabia Back To 1930</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MEMRI | Middle East Media Research Institute</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcU93LW9tQ19sRklPU2M4NHEtZkhRc2tvMUdMbXJ1NFdvZ29SZzNDSHdiWnBOQUZxcTlCQ3Z3ZXJ4d2gyUmdXeGh5aUNyM2x3QzllNUFOSjRzZzNhLWVlSnprSXNUbm4yVlI3cUtGMXFKRk9sREd5YkJvYzN0c2duY18tbzk3TTlxLVZ2blprN2sxMDlGTWdwRk53eE1Ka29zbmhBM2RxLTh4OUM5X0w5OS1PbTIwclVS?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-09T00:34:42.118Z"
+    },
     {
       "id": "rss_21ca045485b725b3",
       "timestamp": 1783524357000,
@@ -11225,27 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T16:33:20.425Z"
-    },
-    {
-      "id": "rss_e074129d194ddaad",
-      "timestamp": 1773306187000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YaUUwc3ZCbTdqZUZRVlNmQ1dzbWo0M3cxT2ZYQWVMREVKTEJ6SElBV3B1NGdfMldKS3RDR3hKelpHQTlWTHhhZUlIMlFFVDRtOE42ZkZnalgwRGNwdWxpTnFrTTZJMmgt?oc=5\" target=\"_blank\">Yemen: 19 Soldiers Killed and Wounded in Houthi Attack on Hodaeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5YaUUwc3ZCbTdqZUZRVlNmQ1dzbWo0M3cxT2ZYQWVMREVKTEJ6SElBV3B1NGdfMldKS3RDR3hKelpHQTlWTHhhZUlIMlFFVDRtOE42ZkZnalgwRGNwdWxpTnFrTTZJMmgt?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T23:53:50.069Z"
     }
   ]
 }
