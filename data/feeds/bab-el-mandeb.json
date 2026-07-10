@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-09T23:53:37.838Z",
+  "last_fetch": "2026-07-10T00:36:36.193Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -816,6 +816,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T11:57:58.053Z"
+    },
+    {
+      "id": "rss_342991b807a27d65",
+      "timestamp": 1783250117000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "14 government troops killed in Houthi attack in Yemen, says officials - New Age BD",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcEpEYmxoUnJZTld5N2xLaUh6VHV1RHNsQ1ZZOHNhdjBMb01UYjktUEhMX05xbm5aQm1KQjRpcnNtUERPSFZNRlZxVU03WmR6OTZDTVcwTnRQcmpreVZ6NXN3RWlnTWpVc2pKa1BsWThULUpkTUlIR3hOV0E5bUFqc1JuVEhOUGthV191aEZSS1ZfR2dLTzd3c21fT1lQS1d2SkJYUm1QY1JwVHFLeFJRUmh0eHl5SE1h?oc=5\" target=\"_blank\">14 government troops killed in Houthi attack in Yemen, says officials</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New Age BD</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcEpEYmxoUnJZTld5N2xLaUh6VHV1RHNsQ1ZZOHNhdjBMb01UYjktUEhMX05xbm5aQm1KQjRpcnNtUERPSFZNRlZxVU03WmR6OTZDTVcwTnRQcmpreVZ6NXN3RWlnTWpVc2pKa1BsWThULUpkTUlIR3hOV0E5bUFqc1JuVEhOUGthV191aEZSS1ZfR2dLTzd3c21fT1lQS1d2SkJYUm1QY1JwVHFLeFJRUmh0eHl5SE1h?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-10T00:36:34.865Z"
     },
     {
       "id": "rss_421244c0fb1db782",
@@ -11220,29 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-18T19:45:33.663Z"
-    },
-    {
-      "id": "rss_6d78c7ed9ba1b14b",
-      "timestamp": 1773342504000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Threatens Closure of Bab el-Mandeb Strait and Red Sea - times of islamabad",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPM3lLWWgyUTNCZHJLU1d2bG1pSV9uVFU1dlktSmhPNTdvVHFrT0hqclF1bUswa0hxcV83TUdOX0xMcVhHNGVEdDdYYnBERl9MaFBvRkdzdEg1dFBhY1NOaDdid0htcS1wMUo2TFc5MjhHOHNSYW1zYXFmYmlRdlVtMXk1cHhhUFMzTks3VEpTWDBuWXNXR2NyeE1KQWFIYktK?oc=5\" target=\"_blank\">Iran Threatens Closure of Bab el-Mandeb Strait and Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">times of islamabad</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPM3lLWWgyUTNCZHJLU1d2bG1pSV9uVFU1dlktSmhPNTdvVHFrT0hqclF1bUswa0hxcV83TUdOX0xMcVhHNGVEdDdYYnBERl9MaFBvRkdzdEg1dFBhY1NOaDdid0htcS1wMUo2TFc5MjhHOHNSYW1zYXFmYmlRdlVtMXk1cHhhUFMzTks3VEpTWDBuWXNXR2NyeE1KQWFIYktK?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-12T21:01:33.599Z"
     }
   ]
 }
