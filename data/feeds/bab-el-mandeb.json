@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-11T12:19:01.008Z",
+  "last_fetch": "2026-07-11T12:47:57.449Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -132,6 +132,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-07T21:02:11.349Z"
+    },
+    {
+      "id": "rss_71828f6c5469c72a",
+      "timestamp": 1783450792000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pirate Attacks Spike Off The Horn Of Africa - TWZ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQV3ZmZ1ZzcUdPM284OV9GbTl5VDE4LXBpREYxeHBqRy00OHV5cTVBU3JpQ1pRaWRiemFXd2F2QXlvSlVsWE56MFVGbF9DQUJGbkQ5VHU4RWxnWWNuVEJOYm1ma1d1NVp4SlhJaV9fdWRFREdwLXY0R1czb2hYemFVdmlPZlNLYi1saGZ4VW1lbVRkbGc?oc=5\" target=\"_blank\">Pirate Attacks Spike Off The Horn Of Africa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TWZ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQV3ZmZ1ZzcUdPM284OV9GbTl5VDE4LXBpREYxeHBqRy00OHV5cTVBU3JpQ1pRaWRiemFXd2F2QXlvSlVsWE56MFVGbF9DQUJGbkQ5VHU4RWxnWWNuVEJOYm1ma1d1NVp4SlhJaV9fdWRFREdwLXY0R1czb2hYemFVdmlPZlNLYi1saGZ4VW1lbVRkbGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-11T12:47:56.291Z"
     },
     {
       "id": "rss_4fe607efd14f1343",
@@ -11218,29 +11239,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-12T23:24:13.213Z"
-    },
-    {
-      "id": "rss_ed436beab7675744",
-      "timestamp": 1773352808000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthi leader declares support for Iran against US-Israeli attacks - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSGhHTkJ1X1FJT3JLQzdFVWdLSWU2N2lKQXJJaUZBVFJ6b1lmeXpFOGplS21xaTdOd3pDN2Zab0RjOGwzY2o5cUczNVhHNnptSUE5bk5lM1ZCSjB4ZWFEYUYwb0p4d3kxU3BpVjdCVFh4cDUzNVBIOXE4cUg1cVpqOWEyZWV4d216NTJFSUwtaUl0elZsOVFRR1lfMVhCUkRqYTNwM1FFb0t1ZU9pZlFCS2ZKaEdrZjZSRDJN?oc=5\" target=\"_blank\">Yemen’s Houthi leader declares support for Iran against US-Israeli attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSGhHTkJ1X1FJT3JLQzdFVWdLSWU2N2lKQXJJaUZBVFJ6b1lmeXpFOGplS21xaTdOd3pDN2Zab0RjOGwzY2o5cUczNVhHNnptSUE5bk5lM1ZCSjB4ZWFEYUYwb0p4d3kxU3BpVjdCVFh4cDUzNVBIOXE4cUg1cVpqOWEyZWV4d216NTJFSUwtaUl0elZsOVFRR1lfMVhCUkRqYTNwM1FFb0t1ZU9pZlFCS2ZKaEdrZjZSRDJN?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-18T19:45:33.663Z"
     }
   ]
 }
