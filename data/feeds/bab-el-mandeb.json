@@ -1,8 +1,96 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T17:15:08.867Z",
+  "last_fetch": "2026-07-13T18:07:55.461Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_37c22cee67a61a56",
+      "timestamp": 1783965763000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Iran condemns attack on Yemen’s Houthi-held Sanaa airport - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjFKLXgySllqTjZZWHRxa1hINFl0UjNNaktCcXdEYlNzSFpWVXc0NlQ4XzQ2ejAydE1rSG4wWUsyYmZ3eW8zdzlnWVRYbTA4TE5LZm91OEdqR0xQRF9OOV94QlgxWl93c29CVGc4dlljTnhQVWVWOGtfRVEtRDlBVU5xRDZsb2Vmd243MkhkeDJVUVkwZHFWb2NzVC1WVTRnS3l6Uw?oc=5\" target=\"_blank\">Iran condemns attack on Yemen’s Houthi-held Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjFKLXgySllqTjZZWHRxa1hINFl0UjNNaktCcXdEYlNzSFpWVXc0NlQ4XzQ2ejAydE1rSG4wWUsyYmZ3eW8zdzlnWVRYbTA4TE5LZm91OEdqR0xQRF9OOV94QlgxWl93c29CVGc4dlljTnhQVWVWOGtfRVEtRDlBVU5xRDZsb2Vmd243MkhkeDJVUVkwZHFWb2NzVC1WVTRnS3l6Uw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:07:53.941Z"
+    },
+    {
+      "id": "rss_3f86ad88bde4867c",
+      "timestamp": 1783964250000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthis fire at Saudi Arabia after attack on Yemeni airport, Saudi officials say - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNajI5RE51bDV0eXZHcEJwOW1rbjc4R09MTmdWQkhVRnRuVXh5c3oyUllsRVU2YkFDeng3dkk3dVE0SzU2X1VKNmFqOHNpNldwVmhqS0FjMVowWnFHZUJFQ3hwMFdJTWp5SDFEMmNmdkkxLVotTXczZGh5ejRNREhuMHRxMjMtMUpUb3dISnFNMnQ1Qnc4N3ZnVlF0dnVaYm9GWUhFcUZUWjRkWms5SXM3M2pPclJYWHhBNnZkZVFxT0Npbmc?oc=5\" target=\"_blank\">Houthis fire at Saudi Arabia after attack on Yemeni airport, Saudi officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNajI5RE51bDV0eXZHcEJwOW1rbjc4R09MTmdWQkhVRnRuVXh5c3oyUllsRVU2YkFDeng3dkk3dVE0SzU2X1VKNmFqOHNpNldwVmhqS0FjMVowWnFHZUJFQ3hwMFdJTWp5SDFEMmNmdkkxLVotTXczZGh5ejRNREhuMHRxMjMtMUpUb3dISnFNMnQ1Qnc4N3ZnVlF0dnVaYm9GWUhFcUZUWjRkWms5SXM3M2pPclJYWHhBNnZkZVFxT0Npbmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:07:53.940Z"
+    },
+    {
+      "id": "rss_8bbf111294662b22",
+      "timestamp": 1783963665000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Houthis fire missiles at Saudi Arabia, reportedly intercepted by air defenses - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDWTdVdnREMDJhblU4ZGUweGFDd0ZYNEVuZU5mNDVoZF9ISXh3X1Z2emRZWGdrclU1ZGNrQ3Jjc3Y3aW9kamhzcUJqcjlKZmF6VGpiUmJBV05yWXVo?oc=5\" target=\"_blank\">Houthis fire missiles at Saudi Arabia, reportedly intercepted by air defenses</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDWTdVdnREMDJhblU4ZGUweGFDd0ZYNEVuZU5mNDVoZF9ISXh3X1Z2emRZWGdrclU1ZGNrQ3Jjc3Y3aW9kamhzcUJqcjlKZmF6VGpiUmJBV05yWXVo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:07:53.940Z"
+    },
+    {
+      "id": "rss_df5c05a1fcbb73a8",
+      "timestamp": 1783962218000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Saudi airport sends oil prices surging over 6% - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDVZRlR6NWdHV1ZyQWNUdVVYTjZmWWRKcE00OVJHZnRmQkR2UktITWM0YXMwbkxtazBLWm5EWndNakpTRTJrejkzRHFobGstdjZSbk5DSEVDMXdiZGpiWEs3VjJBUEVMNV9BSjlPeDRIa0pCX1ZSbkc4SFlXNzgyaGhwYWtKaVduUnN5RnAtYlZMUGxP?oc=5\" target=\"_blank\">Houthi attack on Saudi airport sends oil prices surging over 6%</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbDVZRlR6NWdHV1ZyQWNUdVVYTjZmWWRKcE00OVJHZnRmQkR2UktITWM0YXMwbkxtazBLWm5EWndNakpTRTJrejkzRHFobGstdjZSbk5DSEVDMXdiZGpiWEs3VjJBUEVMNV9BSjlPeDRIa0pCX1ZSbkc4SFlXNzgyaGhwYWtKaVduUnN5RnAtYlZMUGxP?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:07:53.940Z"
+    },
     {
       "id": "rss_2ee6e4057cebc685",
       "timestamp": 1783957774000,
@@ -11153,92 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T21:33:51.071Z"
-    },
-    {
-      "id": "rss_1999ffef238e6d95",
-      "timestamp": 1773565381000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Hormuz shut, Bab el-Mandeb next? Houthi warnings put another chokepoint at risk - Business Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb1RVVnIxemFIajZCZVMxbC1xTWlwdnJrczlBWmV1V0x5bEpMTUV3eTJscDFGTURRSGY2TjBMOGxFSUlnZEE4LS03RVRDUUNWQjFLSXZuMUZ5Vnk0NS1pMGRrUTB1bGdESjlkS1JLNlJKN081andJM0Z1ZDkzRHRWUlp5ZC1MSGlPZ2Zad1A5WFB6SFduWHJuNHJJU1NsTGVyTGUxSHozUDBib2tvMnNJSHZCYURmdHY5S0MzZGh1NlpkN3VDTWhRMzV6V1RLT05CWnZqODRVU3FVUzZBRVU0N01PdmZVZ9IB6wFBVV95cUxQR3BORllHcUN0Q2tMZER4TjA5c2g0RDU1bGNJektjcXNsTFNwT0hlZjJsVEppWTNFcVMzMzI1d0FFdGtFSm5pRGhQQ28xd2xSN0JDLWxtSlJ1V3pzMHlQZnpIaENIRl",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOb1RVVnIxemFIajZCZVMxbC1xTWlwdnJrczlBWmV1V0x5bEpMTUV3eTJscDFGTURRSGY2TjBMOGxFSUlnZEE4LS03RVRDUUNWQjFLSXZuMUZ5Vnk0NS1pMGRrUTB1bGdESjlkS1JLNlJKN081andJM0Z1ZDkzRHRWUlp5ZC1MSGlPZ2Zad1A5WFB6SFduWHJuNHJJU1NsTGVyTGUxSHozUDBib2tvMnNJSHZCYURmdHY5S0MzZGh1NlpkN3VDTWhRMzV6V1RLT05CWnZqODRVU3FVUzZBRVU0N01PdmZVZ9IB6wFBVV95cUxQR3BORllHcUN0Q2tMZER4TjA5c2g0RDU1bGNJektjcXNsTFNwT0hlZjJsVEppWTNFcVMzMzI1d0FFdGtFSm5pRGhQQ28xd2xSN0JDLWxtSlJ1V3pzMHlQZnpIaENIRlV1TFRlT1Z0MGVsbGhkNy1neDdHS2xjMVJRSE56RFdfMVRLRVZpdWMtMmNNVlpFQ1EyYmF0ekNnUW5ta2czZzg0ZGw2aGM1ZW9PcGtFMzFHUXJwNm5OREFlOTh2VjBRb2xGOThuSlRvaHlVeFBLWk1UX1dBUUJxdmI3OEx6TVYxZkJOUy1v?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-15T09:30:07.709Z"
-    },
-    {
-      "id": "rss_3531dd59fa8a7e74",
-      "timestamp": 1773538263000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Another strait to get shut after Hormuz? Houthis ready to pull trigger in Iran war - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi7gFBVV95cUxOOHUwRFV1UlUtb2ltcEZleFlEaF9yWllwOUVKWElIMDdxSDZydWpIeWw2amt2eVdlamFuOGlwNEtzM3A3UnZ6YTJpLVVWZ1JTU3FURUlhZFhDVzAxeUdBem9wTkVveVdfOGpTdXpSQWdGMS1HSHhVdzNVSXVRMFdzYlFyVE5hbXpIMWppdXIxR0twMTRXRERvV1lnbXhyaElaVlNkQURhcmtVckd2MWFGMVc3azZhS2thNjN6V2U0Nm4xdFNfVC1fclVqS2V3M21Va0FIa0U3SHFLeVdyTkp5THlFMTB6dVFfY3I0d1F30gHzAUFVX3lxTE95OElNb1FWUUJOZ0dSXy1DTFBCcWYyOVYxbHRCYXdBbHZhNGE2bURxSHQ4ZnNkZ3NGNHdWdUc1dXpVQ0RqUjVoSURaZTdWSTJONzBjdXh6bUJja01Udn",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOOHUwRFV1UlUtb2ltcEZleFlEaF9yWllwOUVKWElIMDdxSDZydWpIeWw2amt2eVdlamFuOGlwNEtzM3A3UnZ6YTJpLVVWZ1JTU3FURUlhZFhDVzAxeUdBem9wTkVveVdfOGpTdXpSQWdGMS1HSHhVdzNVSXVRMFdzYlFyVE5hbXpIMWppdXIxR0twMTRXRERvV1lnbXhyaElaVlNkQURhcmtVckd2MWFGMVc3azZhS2thNjN6V2U0Nm4xdFNfVC1fclVqS2V3M21Va0FIa0U3SHFLeVdyTkp5THlFMTB6dVFfY3I0d1F30gHzAUFVX3lxTE95OElNb1FWUUJOZ0dSXy1DTFBCcWYyOVYxbHRCYXdBbHZhNGE2bURxSHQ4ZnNkZ3NGNHdWdUc1dXpVQ0RqUjVoSURaZTdWSTJONzBjdXh6bUJja01UdnpxOTBDZmtpZjRaeDdFWVZvVi1Ka0pVbWlLbzhfbHJwZHREN0Utei0ydXNxZ1pReUs2TllwMzl3SVVfaUw4RXY0dElmUDBxTmxkVEFOalZnekI3NWREOF9nOXlTSzRaM0owN0M1VW5vYmNfY0Q1RVh5SGN6MWtwRnZoamNiN3dzUEZyVzJSSlN3VWtWZTM0YkJWX3UxSQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-15T02:00:24.756Z"
-    },
-    {
-      "id": "rss_bfffec276f460c59",
-      "timestamp": 1773496531000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Five Houthi Militants Killed, 14 Injured in Clashes with National Army West of Taiz - alsahwa-yemen.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yUlF4cUJlZEJqV2I4TGFwMXc0Q3JaZGE0TnNncGE5ZUhuOFY4ZDM0bURmNGlsUUZGeUhDdjNNeThIVk1DNDJRdEcwN3AyNnVWTGc?oc=5\" target=\"_blank\">Five Houthi Militants Killed, 14 Injured in Clashes with National Army West of Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">alsahwa-yemen.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4yUlF4cUJlZEJqV2I4TGFwMXc0Q3JaZGE0TnNncGE5ZUhuOFY4ZDM0bURmNGlsUUZGeUhDdjNNeThIVk1DNDJRdEcwN3AyNnVWTGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-14T14:24:32.687Z"
-    },
-    {
-      "id": "rss_62769a96de5de211",
-      "timestamp": 1773472854000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Bab el-Mandeb Strait: Is the Red Sea oil's last lifeline or the next trap? | DW News - Modern Ghana",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE5iSExrd2N5aVhzUktuRkhmYVVPRzJHVmlfTXlFOXdTUlNsZ3NrTTE5QWFyWVJNeF94ZnEwUHg5ZkxESE94WFNseHVhOHBTd1NaUkxlZXN2Nm1zM1B0UjBZ0gFcQVVfeXFMTzlJNGJ2eHFJdzBBbTBlZHNVcEZ3QUtXaE1WVjVCLWR3RzJwaHNaZ0RyUS1kYjE0S2tqaWVmOUwybWdVNV8tSHBSZmFvYl9xV2ZnSmVhQ2VGc2dMWkk?oc=5\" target=\"_blank\">Bab el-Mandeb Strait: Is the Red Sea oil's last lifeline or the next trap? | DW News</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Modern Ghana</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5iSExrd2N5aVhzUktuRkhmYVVPRzJHVmlfTXlFOXdTUlNsZ3NrTTE5QWFyWVJNeF94ZnEwUHg5ZkxESE94WFNseHVhOHBTd1NaUkxlZXN2Nm1zM1B0UjBZ0gFcQVVfeXFMTzlJNGJ2eHFJdzBBbTBlZHNVcEZ3QUtXaE1WVjVCLWR3RzJwaHNaZ0RyUS1kYjE0S2tqaWVmOUwybWdVNV8tSHBSZmFvYl9xV2ZnSmVhQ2VGc2dMWkk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-14T07:54:34.731Z"
     }
   ]
 }
