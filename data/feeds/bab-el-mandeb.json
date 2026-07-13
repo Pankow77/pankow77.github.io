@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T10:35:39.700Z",
+  "last_fetch": "2026-07-13T12:01:06.172Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a542ea5d8ed8a4d4",
+      "timestamp": 1783941177000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis accuse Saudi Arabia of striking Sanaa airport to block Iranian plane - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OODFzQktJaWRPQ1lHcGlqdTBFTFlqOU5EaHJuTm5hTWlyNHRJMGVpc01tRGtqOTA2ZU1fX21xTGZPSlJmY3J0UHVGZEp5Um15VUhrSUF3?oc=5\" target=\"_blank\">Houthis accuse Saudi Arabia of striking Sanaa airport to block Iranian plane</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OODFzQktJaWRPQ1lHcGlqdTBFTFlqOU5EaHJuTm5hTWlyNHRJMGVpc01tRGtqOTA2ZU1fX21xTGZPSlJmY3J0UHVGZEp5Um15VUhrSUF3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T12:01:04.697Z"
+    },
     {
       "id": "rss_2d8da60a97e429ef",
       "timestamp": 1783597525000,
@@ -11218,27 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-13T16:35:32.237Z"
-    },
-    {
-      "id": "rss_a40a97ed759e4684",
-      "timestamp": 1773353537000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "CENTCOM: US refueling aircraft crashes in western Iraq - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOUElDUGdWVGwydWROSno5R1RmUWpaUVE5S25wZnRJblVKQy13ZVFtQkZtcUxNT3ZMODhpMHFiSzdQaGtHV0ZHWXc5MjV5UUxHWGdIMFhTX2xEZloyeTZRaXA3ZEVodF9HLTNZVWJuV3ZjUmszNVR1RzEyWG5iTzJBa0pEblJtMnJSWU9YTA?oc=5\" target=\"_blank\">CENTCOM: US refueling aircraft crashes in western Iraq</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUElDUGdWVGwydWROSno5R1RmUWpaUVE5S25wZnRJblVKQy13ZVFtQkZtcUxNT3ZMODhpMHFiSzdQaGtHV0ZHWXc5MjV5UUxHWGdIMFhTX2xEZloyeTZRaXA3ZEVodF9HLTNZVWJuV3ZjUmszNVR1RzEyWG5iTzJBa0pEblJtMnJSWU9YTA?oc=5",
-      "feed_id": "gn-centcom-yemen",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-12T23:24:13.213Z"
     }
   ]
 }
