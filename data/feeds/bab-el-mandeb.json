@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T18:58:14.828Z",
+  "last_fetch": "2026-07-13T19:34:24.854Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -243,6 +243,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-13T16:21:33.083Z"
+    },
+    {
+      "id": "rss_bb4cfad4c90e4606",
+      "timestamp": 1783953120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Govt Says Hit Sanaa Airport, Houthis Attack Saudi Arabia - Barron's",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOaUdPMm9veFhXb05wY0ZDNUZBZlhiSjdXYVhzMVQ4Q0pncVBnTk1pLUtVWmFRSkN4VktpTTFPcGlGdjNJbmZxTGtCZzVXd2g5emZjNHoteHlrbEFtLVJGa1RyVkhxZjhXbTkwc0Z2Rl9ISGlJRndlN01ma3dLc2dzVUFoU0tYVk5XX3pjTHRfbFk3NXVjMTJqeE1ISUhLb2RIS2hMY1BRM3pkRUNx?oc=5\" target=\"_blank\">Yemen Govt Says Hit Sanaa Airport, Houthis Attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Barron's</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOaUdPMm9veFhXb05wY0ZDNUZBZlhiSjdXYVhzMVQ4Q0pncVBnTk1pLUtVWmFRSkN4VktpTTFPcGlGdjNJbmZxTGtCZzVXd2g5emZjNHoteHlrbEFtLVJGa1RyVkhxZjhXbTkwc0Z2Rl9ISGlJRndlN01ma3dLc2dzVUFoU0tYVk5XX3pjTHRfbFk3NXVjMTJqeE1ISUhLb2RIS2hMY1BRM3pkRUNx?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T19:34:23.415Z"
     },
     {
       "id": "rss_a542ea5d8ed8a4d4",
@@ -11220,27 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-16T06:50:57.946Z"
-    },
-    {
-      "id": "rss_f929f1a91ef33dc9",
-      "timestamp": 1773630160000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lZ1hUeG5OM0o3a3NubXN6aHN2OXdCeVozTURSTFF0c1ZkRk9rdVBVbWJQM0V6YzNHM3k2bjd0WURyRXdLdDBHZ290cXRqMHYx?oc=5\" target=\"_blank\">Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5lZ1hUeG5OM0o3a3NubXN6aHN2OXdCeVozTURSTFF0c1ZkRk9rdVBVbWJQM0V6YzNHM3k2bjd0WURyRXdLdDBHZ290cXRqMHYx?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T08:56:25.846Z"
     }
   ]
 }
