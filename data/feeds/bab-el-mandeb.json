@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T22:47:06.846Z",
+  "last_fetch": "2026-07-13T23:19:19.819Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a5bca272888d8e7",
+      "timestamp": 1783983043000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Announces Thwarting Houthi Attack and Intercepting Ballistic Missiles in Its Airspace - صوت الإمارات",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNU3diMkNYaUlnUWNCeGdFcnJHSTdvby1MaWtRSVpvVjZnUkJDbmtUZ3hYY0hSbEhTXzJndHo0eEZSUzZ5akRSSC0zNG92dnlDVUxyaWdkczJCTHBHcTBYNi1QM0Fza3lrQ01rdzlic0U5NTdxTlRDNlJTNnU1emxqbFRxTWZ4Y3FtTmxzNU96M0RKNHB6LWlzLURCLW8yRjZ0aHJvMU5tSWxsNy1Mak56WVRTNjhTZ3M3bmpUQ3lSc1E3Z1EyYk03UHBvbjlrVTJWdGlEYjNkR1hwRHc4RXJLU3Y3RS0?oc=5\" target=\"_blank\">Saudi Arabia Announces Thwarting Houthi Attack and Intercepting Ballistic Missiles in Its Airspace</a>&nbsp;&nbsp;<font ",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNU3diMkNYaUlnUWNCeGdFcnJHSTdvby1MaWtRSVpvVjZnUkJDbmtUZ3hYY0hSbEhTXzJndHo0eEZSUzZ5akRSSC0zNG92dnlDVUxyaWdkczJCTHBHcTBYNi1QM0Fza3lrQ01rdzlic0U5NTdxTlRDNlJTNnU1emxqbFRxTWZ4Y3FtTmxzNU96M0RKNHB6LWlzLURCLW8yRjZ0aHJvMU5tSWxsNy1Mak56WVRTNjhTZ3M3bmpUQ3lSc1E3Z1EyYk03UHBvbjlrVTJWdGlEYjNkR1hwRHc4RXJLU3Y3RS0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T23:19:18.491Z"
+    },
     {
       "id": "rss_da95cb7b1823d240",
       "timestamp": 1783974021000,
@@ -11216,27 +11239,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-16T18:56:17.975Z"
-    },
-    {
-      "id": "rss_fa7ad937e0333f3b",
-      "timestamp": 1773672427000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EXPLAINER: Operation Aspides in the spotlight as EU debates Hormuz - Euractiv",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPMVZfZ3hJVV8yMkZPcWJuM09TNkhkS1pwSUR1akhZNzRQVENhQ3NoWXhhODhXOVNSbE01bGZiTDR2NUdmWndoX2cyLVI3eGg5T0lGQUdPM0haSmtRMTZIUHNnRl9uejBlTktjZGoxSHNLaTNIeWpzb2VoSXpneFNYT2pvZ1BNM2cxQkhUekx0M0diYmJRZVJKZ1pXdzg?oc=5\" target=\"_blank\">EXPLAINER: Operation Aspides in the spotlight as EU debates Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euractiv</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMVZfZ3hJVV8yMkZPcWJuM09TNkhkS1pwSUR1akhZNzRQVENhQ3NoWXhhODhXOVNSbE01bGZiTDR2NUdmWndoX2cyLVI3eGg5T0lGQUdPM0haSmtRMTZIUHNnRl9uejBlTktjZGoxSHNLaTNIeWpzb2VoSXpneFNYT2pvZ1BNM2cxQkhUekx0M0diYmJRZVJKZ1pXdzg?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-16T16:02:04.182Z"
     }
   ]
 }
