@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T20:26:51.406Z",
+  "last_fetch": "2026-07-13T20:49:51.784Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T20:26:50.060Z"
+    },
+    {
+      "id": "rss_034c297b14fd6d97",
+      "timestamp": 1783973529000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia intercepts Houthi missile attack launched in retaliation for earlier strikes on Sana'a - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNT2xDa09kMVh5aU1ieWJFNUMyRHFnNklrcFVhMlM0OThuWS1JZ3RjYjlvVDdJekFxM0hvQkZmVGNGeXc5amhER0ZkakloN3NDaFl1VDBNOVpndlIwQmFyMUtxcmtUQVpEZG8yd01OaDhIOU5iX0NtQkk2QXlZSk1tclE4RzVqRXIyekt5UzFjVXFQdkowRGJZQUduQQ?oc=5\" target=\"_blank\">Saudi Arabia intercepts Houthi missile attack launched in retaliation for earlier strikes on Sana'a</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNT2xDa09kMVh5aU1ieWJFNUMyRHFnNklrcFVhMlM0OThuWS1JZ3RjYjlvVDdJekFxM0hvQkZmVGNGeXc5amhER0ZkakloN3NDaFl1VDBNOVpndlIwQmFyMUtxcmtUQVpEZG8yd01OaDhIOU5iX0NtQkk2QXlZSk1tclE4RzVqRXIyekt5UzFjVXFQdkowRGJZQUduQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T20:49:50.491Z"
     },
     {
       "id": "rss_b7f27ac46131efe8",
@@ -11216,27 +11239,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-18T07:53:54.099Z"
-    },
-    {
-      "id": "rss_c51887266be22949",
-      "timestamp": 1773660027000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Artillery attack on a Yemen village kills at least 10 as government blames Houthi rebels - abcnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOMzA0b2F3d2xsMEVWX1AzcEt3S0ZWOXBldkhfbWQ4N1EzY2hVTXdYZEtLQUoyTlFnU1RENmlsU08zUmpEZHB4cUVRcElTZzdtejMyZXZzQ2hCWlFlU3JNRWdwa3NfMGQ4QVJSb1pBMl92N24xdWh6UlB5ZG82aTJFbm1yNUUzRE5fQkZUSVIwdXQxQXEzRjB6TW1HWlU1dERfMW5BRXJOb2pLakZET3hQZdIBtgFBVV95cUxQMlFyLTBHdHhnMHJaMjdXc3ZCbzFwSUU3Z05pSjFTLUJzUFRZMF9KYTZISTl6NllPckhpWXFhTUtiM2RBQzZLNXkyeWFWOUplSWRnM19WNDhQYjlLQk1tQXdkbVFXakg0RUwySHlLTkVXSlJDRXpsbXVLMWR2S2ZNenBORG9EemhLai0xQUpYb09xYmtVVkU3RjVPRm",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMzA0b2F3d2xsMEVWX1AzcEt3S0ZWOXBldkhfbWQ4N1EzY2hVTXdYZEtLQUoyTlFnU1RENmlsU08zUmpEZHB4cUVRcElTZzdtejMyZXZzQ2hCWlFlU3JNRWdwa3NfMGQ4QVJSb1pBMl92N24xdWh6UlB5ZG82aTJFbm1yNUUzRE5fQkZUSVIwdXQxQXEzRjB6TW1HWlU1dERfMW5BRXJOb2pLakZET3hQZdIBtgFBVV95cUxQMlFyLTBHdHhnMHJaMjdXc3ZCbzFwSUU3Z05pSjFTLUJzUFRZMF9KYTZISTl6NllPckhpWXFhTUtiM2RBQzZLNXkyeWFWOUplSWRnM19WNDhQYjlLQk1tQXdkbVFXakg0RUwySHlLTkVXSlJDRXpsbXVLMWR2S2ZNenBORG9EemhLai0xQUpYb09xYmtVVkU3RjVPRmJUU2MzanBWNVBFb0tBaVREaGJrMnI0akg5QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-16T11:42:58.146Z"
     }
   ]
 }
