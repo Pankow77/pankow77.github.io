@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T16:21:34.665Z",
+  "last_fetch": "2026-07-13T17:15:08.867Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T16:21:33.083Z"
+    },
+    {
+      "id": "rss_52c718e948112e86",
+      "timestamp": 1783956723000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis accuse Saudi Arabia of striking Sanaa airport, vow retaliation - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxQV2Q4MUdSUXZ0ZWdUWnM4SFNoV0lqYlBHTy1PMURKeFA1TS02RWRjbVZDYzJTY29obkdIa29MV2Y1WjZta2c5TXRzTEdNRjc3alR0MGtNV3QzUXpoanJyLWQ4VHV4NlM2WloyaWZaenV1Y1hqUjY1dHNaaXRiWnoxdmxLYWtyNURVQlRfblZjaFBYTmdXNDVVVFFlM1BWS3M2SzFOcm5MakVrYWNwM01aT0s2UThnckpQRDlSUjdqRjlMaWM4eTJtRG5JZU9FQQ?oc=5\" target=\"_blank\">Houthis accuse Saudi Arabia of striking Sanaa airport, vow retaliation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQV2Q4MUdSUXZ0ZWdUWnM4SFNoV0lqYlBHTy1PMURKeFA1TS02RWRjbVZDYzJTY29obkdIa29MV2Y1WjZta2c5TXRzTEdNRjc3alR0MGtNV3QzUXpoanJyLWQ4VHV4NlM2WloyaWZaenV1Y1hqUjY1dHNaaXRiWnoxdmxLYWtyNURVQlRfblZjaFBYTmdXNDVVVFFlM1BWS3M2SzFOcm5MakVrYWNwM01aT0s2UThnckpQRDlSUjdqRjlMaWM4eTJtRG5JZU9FQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-13T17:15:07.403Z"
     },
     {
       "id": "rss_4b5563bac3de10ab",
@@ -11218,27 +11239,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-14T07:54:34.731Z"
-    },
-    {
-      "id": "rss_08caa9eabfb7be95",
-      "timestamp": 1773449501000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Army Thwarts Houthi Attack West of Taiz - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE9jNUZ1ZHNvaWJZYTBoLU5MTC1tOTBfWGM2NUZyb3lHNGhTZDExQmM3dUFRX3hIN00xUU9BOHhHWTNRVHpSUlJQS3FHM3VyMkpyaFdOZ1A2TUxOYUlRVXhTX1BYaWZtNU1TdUFGVGNBTnF4Nm44VVE?oc=5\" target=\"_blank\">Yemeni Army Thwarts Houthi Attack West of Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9jNUZ1ZHNvaWJZYTBoLU5MTC1tOTBfWGM2NUZyb3lHNGhTZDExQmM3dUFRX3hIN00xUU9BOHhHWTNRVHpSUlJQS3FHM3VyMkpyaFdOZ1A2TUxOYUlRVXhTX1BYaWZtNU1TdUFGVGNBTnF4Nm44VVE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-14T07:10:06.769Z"
     }
   ]
 }
