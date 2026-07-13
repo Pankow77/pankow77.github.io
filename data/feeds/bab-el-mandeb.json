@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T18:07:55.461Z",
+  "last_fetch": "2026-07-13T18:58:14.828Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ee889b2d169bf64e",
+      "timestamp": 1783966799000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 4,
+      "text_summary": "KSA foils Houthi strike attempt - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5hdUVPTlQtajViS2tZb1pBemFfOUFJVWt4UnJaX19GblU2UUZwRVYzSjNaZ2RHbWE5bjQzVmc0ZHVwalU0cWd5Ty1UQkpiWmFvbEtob0VrWHBMOG1tNV80UFp4TVpXNlhCYktpaXN2SEtZYjA?oc=5\" target=\"_blank\">KSA foils Houthi strike attempt - Shafaq News | Latest breaking news in Iraq and the world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5hdUVPTlQtajViS2tZb1pBemFfOUFJVWt4UnJaX19GblU2UUZwRVYzSjNaZ2RHbWE5bjQzVmc0ZHVwalU0cWd5Ty1UQkpiWmFvbEtob0VrWHBMOG1tNV80UFp4TVpXNlhCYktpaXN2SEtZYjA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:58:13.196Z"
+    },
+    {
+      "id": "rss_62a20b526cd180c4",
+      "timestamp": 1783966200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "🇾🇪 Wild footage released by Houthi media reportedly shows an attack on Sanaa International Airport’s runway, forcing an Iranian aircraft to divert and land at Hodeidah instead. Yemen’s Defense Ministry says the strike was triggered because the Houthis were - x.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE5jNVIzbFlVdE9UclFKR0Y4Z1RvSENQVXUtSWJKTjZhN3pTbXpQLWpWRm55LUlmSGRBQW1Gb3hoR3NGNlRFVm1RSWk0c1ZwOWhvVFdvQmNOY1hyQnl3X3NkZFpn?oc=5\" target=\"_blank\">🇾🇪 Wild footage released by Houthi media reportedly shows an attack on Sanaa International Airport’s runway, forcing an Iranian aircraft to divert and land at Hodeidah instead. Yemen’s Defense Ministry says the strike was triggered because the Houthis were</a>&nbsp;&nbsp;<font color=\"#6f6f6f\"",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5jNVIzbFlVdE9UclFKR0Y4Z1RvSENQVXUtSWJKTjZhN3pTbXpQLWpWRm55LUlmSGRBQW1Gb3hoR3NGNlRFVm1RSWk0c1ZwOWhvVFdvQmNOY1hyQnl3X3NkZFpn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:58:13.196Z"
+    },
     {
       "id": "rss_37c22cee67a61a56",
       "timestamp": 1783965763000,
@@ -25,6 +69,50 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T18:07:53.941Z"
+    },
+    {
+      "id": "rss_b2ddf8c5531168ab",
+      "timestamp": 1783964966000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict - Dawn",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVVqbjBoRGEyVU1sUEEzNjFuOHprbE9zX2MxOThIVmRFTHVuZFNsdDI2WGQ0dkNWMG5fbEMzUWtzR0tKUGJuX0ZkaW1tS1d3YU1Jd0VCd2NLdDBDZWE0cVFWWTVlaE1idmdCdTN4V3Q5SU81UGMyelFLcTFIQ2V4WHlEakJ4RW9xd0NDNXNaZGdHbjVZS0tUbDVUY3dPbDRlbTlOeDJhZnZnY2FjNThGclhrRlJHaTl0UXdBNVlSSlRlTnc?oc=5\" target=\"_blank\">Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVVqbjBoRGEyVU1sUEEzNjFuOHprbE9zX2MxOThIVmRFTHVuZFNsdDI2WGQ0dkNWMG5fbEMzUWtzR0tKUGJuX0ZkaW1tS1d3YU1Jd0VCd2NLdDBDZWE0cVFWWTVlaE1idmdCdTN4V3Q5SU81UGMyelFLcTFIQ2V4WHlEakJ4RW9xd0NDNXNaZGdHbjVZS0tUbDVUY3dPbDRlbTlOeDJhZnZnY2FjNThGclhrRlJHaTl0UXdBNVlSSlRlTnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:58:13.197Z"
+    },
+    {
+      "id": "rss_8908d6e9a735ef62",
+      "timestamp": 1783964581000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi air defenses intercept Houthi ballistic missiles amid Yemen tensions - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLWhmLVphNWRMckZXbTdidFVVRFJ5R1dGMUROWGpENlZNTDM1V2pYQTYyRGdqcU55ZGd0V0V2U0UxaklsN0l2bEdjTUk4Ynp5SlR4QTBSY2Qxelg0ZDlVRjFqYkVnQ1RKWnY2bElEM3dpY1dQSTQwenA4M1RrZEFLc2MxZ2hFSjhaVVhBNV9ZQ2xuSTJPQWZpd3JZaDhaQVNNanhvRXk1TTJJZDFEdm9JMExFcklCRjV2MEVJ?oc=5\" target=\"_blank\">Saudi air defenses intercept Houthi ballistic missiles amid Yemen tensions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLWhmLVphNWRMckZXbTdidFVVRFJ5R1dGMUROWGpENlZNTDM1V2pYQTYyRGdqcU55ZGd0V0V2U0UxaklsN0l2bEdjTUk4Ynp5SlR4QTBSY2Qxelg0ZDlVRjFqYkVnQ1RKWnY2bElEM3dpY1dQSTQwenA4M1RrZEFLc2MxZ2hFSjhaVVhBNV9ZQ2xuSTJPQWZpd3JZaDhaQVNNanhvRXk1TTJJZDFEdm9JMExFcklCRjV2MEVJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-13T18:58:13.196Z"
     },
     {
       "id": "rss_3f86ad88bde4867c",
@@ -11153,94 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T08:56:25.846Z"
-    },
-    {
-      "id": "rss_2c2f2d8061523077",
-      "timestamp": 1773607856000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Middle East Crisis: After Hormuz, Is the Bab el-Mandeb Strait the Next Shoe to Drop? Global Trade Faces 'Double Chokepoint' as Houthis Declare 'Hour Zero' for Naval Blockade - The Sunday Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgJBVV95cUxQYUJ4b0tDUVVEVGJyYnU4NnFJOUNleFZYbHZDYXBmRWdPZUpxNHl6LXMtZTBMX0VhazQ2N2liV0RZN1g0S2lJcDhXNFJvUzlkRFdGdlAwREJNUXZ2Tk1taERpYXRGVDI0Y2xpMmZtaGdtOW1JRXd6Y21VdWJYbDZHT1hybTE4T0tUOElSNkxDZjBmN21lNEVNWU16cm5LcEJQRUs2YnN3Q25FXzZZU3c3eTV0b3JYV0o1cEpWUGdmWDFhQkdlcEZvVDUxWTBjZlFUTURKVHhOS0VTVXdtVl9nb1hFbFFNMHhXdVlXWmpkRFFoZHhHTm41YjdwanQ2VTVpMWxhYWw3dTBfTmlpeU5qQTFuVHlMOWRHdF9idmdvWDRwRXdoZVU5TDB4TC1wbTJmZzczY3VR?oc=5\" target=\"_blank\">Middle East",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQYUJ4b0tDUVVEVGJyYnU4NnFJOUNleFZYbHZDYXBmRWdPZUpxNHl6LXMtZTBMX0VhazQ2N2liV0RZN1g0S2lJcDhXNFJvUzlkRFdGdlAwREJNUXZ2Tk1taERpYXRGVDI0Y2xpMmZtaGdtOW1JRXd6Y21VdWJYbDZHT1hybTE4T0tUOElSNkxDZjBmN21lNEVNWU16cm5LcEJQRUs2YnN3Q25FXzZZU3c3eTV0b3JYV0o1cEpWUGdmWDFhQkdlcEZvVDUxWTBjZlFUTURKVHhOS0VTVXdtVl9nb1hFbFFNMHhXdVlXWmpkRFFoZHhHTm41YjdwanQ2VTVpMWxhYWw3dTBfTmlpeU5qQTFuVHlMOWRHdF9idmdvWDRwRXdoZVU5TDB4TC1wbTJmZzczY3VR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-15T20:52:25.403Z"
-    },
-    {
-      "id": "rss_60cd079d80ad046c",
-      "timestamp": 1773606375000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Why Yemen’s Houthis are staying out of the Israel-Iran war, and the message reportedly sent by US - ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nb00tazUwYTA2U1lNSXBnZnR1M1FPM3VfVUZhTmd5VTdfSXpmbXJUNWdwUEh0VjNrUnFnMmFzS0NUVEZRaGxNR3lROUN0a3FiU0pxV2JR?oc=5\" target=\"_blank\">Why Yemen’s Houthis are staying out of the Israel-Iran war, and the message reportedly sent by US</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ynetnews</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nb00tazUwYTA2U1lNSXBnZnR1M1FPM3VfVUZhTmd5VTdfSXpmbXJUNWdwUEh0VjNrUnFnMmFzS0NUVEZRaGxNR3lROUN0a3FiU0pxV2JR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T13:02:42.973Z"
-    },
-    {
-      "id": "rss_b155e6bb530e4eaa",
-      "timestamp": 1773580005000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "As Iran’s other proxy groups join war, Houthi rebels in Yemen hold back, for now - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNTWd1MlZfMUttZGFlWlV4V2lidWQ0ZzhoWVJFbDM5RGZyMkl3RUljWmNxMmxRUC11NnA0X2I1S2JVcEdpcEV5ejQ2VEQ1Mjd0Vk9iVk02S2FQUDVYa2pqVHdNTGJhWUFpQk9RVDdaSHVhVGd5S1F6a0pqYmxCR2lqVE4xWC1nNW5VVHh6SmZ4NTB4ckt2VlBRZDR2WHF0N25OS2xKbjJGTUIyaGxL0gGyAUFVX3lxTE0yS2RJb1BybG91MG1XMUlxR0syZHFGOW11S0x2SHNSNEdxTGRwODMxbGxHN1prWUxoWkN0azI5cU5NX2tOenNyR3liMU03OHpyUklZbUFobThfMFNQcG44Ym91U3RabGVtT2RSWi1XbUFXZzFqYU1rUWFWalNNMU9zS0V1Y0hTLXNVajRqalpZb0lORHd5QXpSaWluZUNEY0",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTWd1MlZfMUttZGFlWlV4V2lidWQ0ZzhoWVJFbDM5RGZyMkl3RUljWmNxMmxRUC11NnA0X2I1S2JVcEdpcEV5ejQ2VEQ1Mjd0Vk9iVk02S2FQUDVYa2pqVHdNTGJhWUFpQk9RVDdaSHVhVGd5S1F6a0pqYmxCR2lqVE4xWC1nNW5VVHh6SmZ4NTB4ckt2VlBRZDR2WHF0N25OS2xKbjJGTUIyaGxL0gGyAUFVX3lxTE0yS2RJb1BybG91MG1XMUlxR0syZHFGOW11S0x2SHNSNEdxTGRwODMxbGxHN1prWUxoWkN0azI5cU5NX2tOenNyR3liMU03OHpyUklZbUFobThfMFNQcG44Ym91U3RabGVtT2RSWi1XbUFXZzFqYU1rUWFWalNNMU9zS0V1Y0hTLXNVajRqalpZb0lORHd5QXpSaWluZUNEY0JYeS1yY2NkS3RabWdVTm01Rnc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-15T15:51:22.023Z"
-    },
-    {
-      "id": "rss_190f12343e6b8e66",
-      "timestamp": 1773573195000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemeni Houthis threaten to block Bab el-Mandeb Strait - Jagonews24.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE5UMjdvOW9lWXU0aGNCZHNpbnRZUG1BQUFnVGlSY0NJRmZ5U2J4VjJ3N3daVXVCdnlKSjF0VHRwSUd6eDZGbjkwZkh1bXZuMG1Mb3RuM2NfM2hIcEJ2NDJoM3VoUnjSAVBBVV95cUxNM1VVSkQ2VHFVdWQxV1doQm5vVVAzaEo4Yjg0bzFsbVV1akY1WFlxZTMwbzNaeWxRRjI1WExETVNMQzNUX19vVF9UUU9vaDFYNA?oc=5\" target=\"_blank\">Yemeni Houthis threaten to block Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Jagonews24.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5UMjdvOW9lWXU0aGNCZHNpbnRZUG1BQUFnVGlSY0NJRmZ5U2J4VjJ3N3daVXVCdnlKSjF0VHRwSUd6eDZGbjkwZkh1bXZuMG1Mb3RuM2NfM2hIcEJ2NDJoM3VoUnjSAVBBVV95cUxNM1VVSkQ2VHFVdWQxV1doQm5vVVAzaEo4Yjg0bzFsbVV1akY1WFlxZTMwbzNaeWxRRjI1WExETVNMQzNUX19vVF9UUU9vaDFYNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T21:33:51.071Z"
     }
   ]
 }
