@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-13T23:46:48.770Z",
+  "last_fetch": "2026-07-14T00:27:56.559Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_663fec35afcafcd6",
+      "timestamp": 1783988312000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Saudi condemned - Gulf Daily News (Bahrain)",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTFBGWEx6MmlOWmx2TWF2VkM3LWJVcl9FdkJPbVVBQkhfSk5FSzl6Njd1bVNBUmFzYUlZSnN6Yl9aUnZHVU02dWVyQ2ljWHZRalZMVmtMU2tVd0thYVcyWmFxd3NhcVNvLXV0M2tLUlhscmN6RHdSNXBjZnczQVpqMnc?oc=5\" target=\"_blank\">Houthi attack on Saudi condemned</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf Daily News (Bahrain)</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGWEx6MmlOWmx2TWF2VkM3LWJVcl9FdkJPbVVBQkhfSk5FSzl6Njd1bVNBUmFzYUlZSnN6Yl9aUnZHVU02dWVyQ2ljWHZRalZMVmtMU2tVd0thYVcyWmFxd3NhcVNvLXV0M2tLUlhscmN6RHdSNXBjZnczQVpqMnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T00:27:55.253Z"
+    },
     {
       "id": "rss_1a5bca272888d8e7",
       "timestamp": 1783983043000,
@@ -92,6 +113,30 @@
       "fetched_at": "2026-07-13T20:26:50.060Z"
     },
     {
+      "id": "rss_f2ebdb63e68b1e16",
+      "timestamp": 1783968780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis fire missile at Saudi Arabia, vow revenge after airport strike - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNQkRrSUFGMWJicDBUUFdBNmZBVFZNdjY4dkFoYmluMkdpOHJBdFpNa1J2Q28wU3BxalZEWWxodTdJTXBIU2tpTWtnSlU4WjNJYWxfRVFUVS05SEx5aHFYWVdOTkdvVm93UWR3Q0ZjQUIzQ3p6bEtULWRxaTV1Vld5REJ1MTIwT1pBRTFRODdjRFQ1SnNVZlA3N1JwbVR2SHE4bk5wUmtmY2Z2TXlNQ0RpcA?oc=5\" target=\"_blank\">Iran-backed Houthis fire missile at Saudi Arabia, vow revenge after airport strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQkRrSUFGMWJicDBUUFdBNmZBVFZNdjY4dkFoYmluMkdpOHJBdFpNa1J2Q28wU3BxalZEWWxodTdJTXBIU2tpTWtnSlU4WjNJYWxfRVFUVS05SEx5aHFYWVdOTkdvVm93UWR3Q0ZjQUIzQ3p6bEtULWRxaTV1Vld5REJ1MTIwT1pBRTFRODdjRFQ1SnNVZlA3N1JwbVR2SHE4bk5wUmtmY2Z2TXlNQ0RpcA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T00:27:55.252Z"
+    },
+    {
       "id": "rss_ee889b2d169bf64e",
       "timestamp": 1783966799000,
       "source": "OSINT",
@@ -178,6 +223,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T18:58:13.197Z"
+    },
+    {
+      "id": "rss_1025c6d0ea69cdb7",
+      "timestamp": 1783964966000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia - Dawn",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFBMczB4RmwtTzBYTDM2X1AtbWc5Z0xqZGk4dTJrWjdic0NaMU9va2ZJQ1hLTTNWNWlyU0VCdUJiLWtOcHQ5MkVtYw?oc=5\" target=\"_blank\">Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBMczB4RmwtTzBYTDM2X1AtbWc5Z0xqZGk4dTJrWjdic0NaMU9va2ZJQ1hLTTNWNWlyU0VCdUJiLWtOcHQ5MkVtYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T00:27:55.252Z"
     },
     {
       "id": "rss_8908d6e9a735ef62",
@@ -11176,69 +11242,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T16:01:50.163Z"
-    },
-    {
-      "id": "rss_41fa93f167c14c4c",
-      "timestamp": 1773686342000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Bureaucracy Blocks Aspides Mission Expansion to Hormuz - Военное дело",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPdTVNT0tVdWN1ZEJjUEdMZS1jU0VBeHRkZ1ZGdmdXVWRMdVoyWG5aWVZZemJTc2pWbFZTWVBILWdDSG54TTdub0VobmNpQXktY3ZFLXlQZmlQaWptVTNTaHJpelZwLUJZVURLN095OW9zUEhpQ1Z1XzNMOEdITU9ZYTlkWkJYUXgyR2VCQ0pZT0pfZzM3ZVFudF9STUtvX28?oc=5\" target=\"_blank\">EU Bureaucracy Blocks Aspides Mission Expansion to Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Военное дело</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdTVNT0tVdWN1ZEJjUEdMZS1jU0VBeHRkZ1ZGdmdXVWRMdVoyWG5aWVZZemJTc2pWbFZTWVBILWdDSG54TTdub0VobmNpQXktY3ZFLXlQZmlQaWptVTNTaHJpelZwLUJZVURLN095OW9zUEhpQ1Z1XzNMOEdITU9ZYTlkWkJYUXgyR2VCQ0pZT0pfZzM3ZVFudF9STUtvX28?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-16T22:28:45.410Z"
-    },
-    {
-      "id": "rss_f842542e631a7058",
-      "timestamp": 1773678840000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Artillery attack on a Yemen village kills at least 10 as government blames Houthi rebels - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNLU44Rlk2cTlRYmZyRUcyZFhrZHFzN043U2pvQUpqc0VSVlA4Ykx3NWk4Z2NEYlZYdEtuVHdhVllXcV91YXVRSGRpOWZFeGN1N3JkQWphUTFPQ1ZnMDQ4RHdZNWUzdWlwd0l2S0dDNnoxaWVQRnllMlNNV3dFRHBiMi1DX2xRVzZkZjZ0YzVCMFc?oc=5\" target=\"_blank\">Artillery attack on a Yemen village kills at least 10 as government blames Houthi rebels</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNLU44Rlk2cTlRYmZyRUcyZFhrZHFzN043U2pvQUpqc0VSVlA4Ykx3NWk4Z2NEYlZYdEtuVHdhVllXcV91YXVRSGRpOWZFeGN1N3JkQWphUTFPQ1ZnMDQ4RHdZNWUzdWlwd0l2S0dDNnoxaWVQRnllMlNNV3dFRHBiMi1DX2xRVzZkZjZ0YzVCMFc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-16T17:33:00.179Z"
-    },
-    {
-      "id": "rss_cbf02f234003a8ff",
-      "timestamp": 1773674091000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tajani: \"Strengthen the Aspides naval mission in the Red Sea; extending it to Hormuz is complicated\" - Eunews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxOMHlvYXpSTThGVTlxVS1lekhydWo4VXBoRHRTX2lMQ29ESlZwTkRSN2R5cUhrRXRRR3psRklLX1dRWFBrdmtVUTJ0bU9JWlBqbUI3dGR4bGhoSFNMMFRlSFlHZmhsR2NBX3Q0VHZjdXFuRzFoOTI3Q0N1UkZlNnRMNXBGNVhzdmM0VDhvWWlUcHBXV3d4ZDl1akU2ZllMeWR6OHpNcnZsUzQ4ZGdzc0tfYklDVFBmZ3Fud3AtcXVuNG0yU3lxN0YycTA3MG9yQQ?oc=5\" target=\"_blank\">Tajani: \"Strengthen the Aspides naval mission in the Red Sea; extending it to Hormuz is complicated\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eunews</fon",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOMHlvYXpSTThGVTlxVS1lekhydWo4VXBoRHRTX2lMQ29ESlZwTkRSN2R5cUhrRXRRR3psRklLX1dRWFBrdmtVUTJ0bU9JWlBqbUI3dGR4bGhoSFNMMFRlSFlHZmhsR2NBX3Q0VHZjdXFuRzFoOTI3Q0N1UkZlNnRMNXBGNVhzdmM0VDhvWWlUcHBXV3d4ZDl1akU2ZllMeWR6OHpNcnZsUzQ4ZGdzc0tfYklDVFBmZ3Fud3AtcXVuNG0yU3lxN0YycTA3MG9yQQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-16T18:56:17.975Z"
     }
   ]
 }
