@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T05:00:25.864Z",
+  "last_fetch": "2026-07-14T06:14:51.481Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -109,6 +109,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T02:16:24.186Z"
+    },
+    {
+      "id": "rss_0a319ead22fe6837",
+      "timestamp": 1783980467000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "In major escalation, Yemen’s Houthis target Saudi Arabia’s Abha airport - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUxDWDVUY0kyZzFRQnI1UFBoSDRXc0IyNG1oaG1ndmlzalNxR1ZXck91RnpRcENocmx2UlhXQk00YklCUzVNQVJteUFscnFibWZHbHFvclprMVU3Z0ZTT0Zxc0ZKYnpXaHEzVjZvcVRoTEJLOUMyM3lyWnUxV01pSEtJZDBRV05JVVpmaTZzazRNTU1td3ZJeVF3Q0RHeVhD0gGmAUFVX3lxTE1waFN5emhjWWFSS1NKRlFnUXZtU2pUb0FDRzUtOXRvZ3hpczZlMmN6a1UzbGhpX1BYYkZSOTZMc1hDdlM5bHozaWE0ZHc1a2FQSGFaVnVuY1MteGN3SDdJek5NZi1ORE5va2JMUEVLYWtnU3VFUTBYZTRwT1FxRXJfbTJJZENvTnVCWlFmb3RFNmlNc2V6VXg2M05sV2VzSGpyOW1tNkE?oc=5\" ",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUxDWDVUY0kyZzFRQnI1UFBoSDRXc0IyNG1oaG1ndmlzalNxR1ZXck91RnpRcENocmx2UlhXQk00YklCUzVNQVJteUFscnFibWZHbHFvclprMVU3Z0ZTT0Zxc0ZKYnpXaHEzVjZvcVRoTEJLOUMyM3lyWnUxV01pSEtJZDBRV05JVVpmaTZzazRNTU1td3ZJeVF3Q0RHeVhD0gGmAUFVX3lxTE1waFN5emhjWWFSS1NKRlFnUXZtU2pUb0FDRzUtOXRvZ3hpczZlMmN6a1UzbGhpX1BYYkZSOTZMc1hDdlM5bHozaWE0ZHc1a2FQSGFaVnVuY1MteGN3SDdJek5NZi1ORE5va2JMUEVLYWtnU3VFUTBYZTRwT1FxRXJfbTJJZENvTnVCWlFmb3RFNmlNc2V6VXg2M05sV2VzSGpyOW1tNkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T06:14:50.227Z"
     },
     {
       "id": "rss_da95cb7b1823d240",
@@ -11217,29 +11238,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T05:41:27.512Z"
-    },
-    {
-      "id": "rss_4b2da70329f386b0",
-      "timestamp": 1773791423000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Hairan Massacre During Iftar: New Witness to Houthi Crimes Against Civilians - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE12eUhfYXUxMGxWNU10YnlYN2dXbWItb1NTUTNJeld0aGFPd0FSelBVVWFfWlByb2dHX0tZUFM5ODU1R0twUnh0Mm5mcjZMRktVNnpSYjhKTjBwb1hPdXp1MkFNRnh5d0V0M3ljN0F6al84TFp5WGc?oc=5\" target=\"_blank\">Hairan Massacre During Iftar: New Witness to Houthi Crimes Against Civilians</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12eUhfYXUxMGxWNU10YnlYN2dXbWItb1NTUTNJeld0aGFPd0FSelBVVWFfWlByb2dHX0tZUFM5ODU1R0twUnh0Mm5mcjZMRktVNnpSYjhKTjBwb1hPdXp1MkFNRnh5d0V0M3ljN0F6al84TFp5WGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T04:21:21.936Z"
     }
   ]
 }
