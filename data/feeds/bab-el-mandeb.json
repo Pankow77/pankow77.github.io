@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T01:00:18.893Z",
+  "last_fetch": "2026-07-14T02:16:25.481Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_763a9f2a43d1e00e",
+      "timestamp": 1783991625000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthi Rebels Attack Saudi Airport... Middle East Conflict Expands to Three Fronts - 아시아경제",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9udnJPWEY5ekxUbDV0NGNNeFZrMDhmRlBKZnhKMUlrem5iaFNVa2Nmd0kxbk5ONkk3NnVQYTl5bTQ1bUtWZ1dHWGlVTTBMTFpMMGV4b2NhZXNJVmU3aEhQRWt2ZkZtRFpFTGtWWTRJTllCcVJ6eXhz?oc=5\" target=\"_blank\">Yemen's Houthi Rebels Attack Saudi Airport... Middle East Conflict Expands to Three Fronts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">아시아경제</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9udnJPWEY5ekxUbDV0NGNNeFZrMDhmRlBKZnhKMUlrem5iaFNVa2Nmd0kxbk5ONkk3NnVQYTl5bTQ1bUtWZ1dHWGlVTTBMTFpMMGV4b2NhZXNJVmU3aEhQRWt2ZkZtRFpFTGtWWTRJTllCcVJ6eXhz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T02:16:24.185Z"
+    },
     {
       "id": "rss_663fec35afcafcd6",
       "timestamp": 1783988312000,
@@ -48,6 +69,27 @@
       "fetched_at": "2026-07-13T23:19:18.491Z"
     },
     {
+      "id": "rss_8ab3fbc96dc92dfa",
+      "timestamp": 1783980558000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack Saudi Arabia after Sanaa airport hit - Free Malaysia Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYnJHQW11U1hIRi1pVG5nOWVwRzF2TG9wcnZYOTcxZmo3ckV0WFVvTk9VWUtfVW9DOVAtSm5CNjhsdUhiMkthc3drc1hRR1htN3JYckZoY3lab3RfeEtGNWYzTEd5WmNjN2Zua0lyQjBYWndpR0Y2MVRBbVhZeFJXQXdiWFdNTnNiMGE5VHNCcmx4bDZ6LXhwZ29abHN5QzRtYnpHX3MxN0gwNHRXOFgycXNZNHllSlhKY0lMME5CYTZheUE?oc=5\" target=\"_blank\">Houthis attack Saudi Arabia after Sanaa airport hit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Free Malaysia Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYnJHQW11U1hIRi1pVG5nOWVwRzF2TG9wcnZYOTcxZmo3ckV0WFVvTk9VWUtfVW9DOVAtSm5CNjhsdUhiMkthc3drc1hRR1htN3JYckZoY3lab3RfeEtGNWYzTEd5WmNjN2Zua0lyQjBYWndpR0Y2MVRBbVhZeFJXQXdiWFdNTnNiMGE5VHNCcmx4bDZ6LXhwZ29abHN5QzRtYnpHX3MxN0gwNHRXOFgycXNZNHllSlhKY0lMME5CYTZheUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T02:16:24.186Z"
+    },
+    {
       "id": "rss_da95cb7b1823d240",
       "timestamp": 1783974021000,
       "source": "OSINT",
@@ -67,6 +109,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T20:26:50.060Z"
+    },
+    {
+      "id": "rss_11d09ce7b6fba748",
+      "timestamp": 1783973760000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi air defenses intercept Houthi ballistic missile threat targeting southern region - Saudi Gazette",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE12bTlrNXp5cmpZZDI1RmM5WGNFTlotNjZ2Uk5FNExpVlFReUdlbm9xRENMeE5sY2lSeXZiTVE1R3owX1AwNTFSU3dPMjZNTEdPbWxyTQ?oc=5\" target=\"_blank\">Saudi air defenses intercept Houthi ballistic missile threat targeting southern region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Saudi Gazette</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE12bTlrNXp5cmpZZDI1RmM5WGNFTlotNjZ2Uk5FNExpVlFReUdlbm9xRENMeE5sY2lSeXZiTVE1R3owX1AwNTFSU3dPMjZNTEdPbWxyTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T02:16:24.186Z"
     },
     {
       "id": "rss_034c297b14fd6d97",
@@ -11175,73 +11240,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T20:34:36.881Z"
-    },
-    {
-      "id": "rss_3ca206b613aa928d",
-      "timestamp": 1773743390000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Europe Has Helped the U.S. Protect Shipping. The Strait of Hormuz Is Different. - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0lycmM1clRiS1Q0SHotdk5waDhHUzRZdExBM1ZIbGxtQjdLTmM3bVR2T0xEZ0t0SFY4OHJOZ3Qwb3FlQXRKY3BKSWo1RjVReGpKOEthZWU2amFHOURYX0RlZnFnUk0xQndmTnFUU0ZFRzdHaGFvOG9TN3llSE9CbS1yRWp2YnRSbkthYQ?oc=5\" target=\"_blank\">Europe Has Helped the U.S. Protect Shipping. The Strait of Hormuz Is Different.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPT0lycmM1clRiS1Q0SHotdk5waDhHUzRZdExBM1ZIbGxtQjdLTmM3bVR2T0xEZ0t0SFY4OHJOZ3Qwb3FlQXRKY3BKSWo1RjVReGpKOEthZWU2amFHOURYX0RlZnFnUk0xQndmTnFUU0ZFRzdHaGFvOG9TN3llSE9CbS1yRWp2YnRSbkthYQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T14:37:48.169Z"
-    },
-    {
-      "id": "rss_267baedf9386f3e3",
-      "timestamp": 1773722462000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "US jet loss deepens Red Sea strain - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSW9xNTZPTXM1OFJlclVoRGpCdUlIRmpIRkN5RnRCSk5hbnJ6dTVYNjdxczBDUXhyZEp2NVNxb1dId0JmdFZEUi1naW1tcjZJVFkzNWVKek02Qmx4RnRVTS1xaFMxYjdndDZMc1NsZHdZNXJlTW5RVkZXVThPczFWWTFjWlRaNWZUWGpxMkxmbUJESUNKMjczZXRrUXlvODFXNEtXckRGT1ZlcTFCT3g3WG1rdl9wZFJZWG52eEYwN3pHV1hrMTNhUUdyVWhTems1?oc=5\" target=\"_blank\">US jet loss deepens Red Sea strain</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSW9xNTZPTXM1OFJlclVoRGpCdUlIRmpIRkN5RnRCSk5hbnJ6dTVYNjdxczBDUXhyZEp2NVNxb1dId0JmdFZEUi1naW1tcjZJVFkzNWVKek02Qmx4RnRVTS1xaFMxYjdndDZMc1NsZHdZNXJlTW5RVkZXVThPczFWWTFjWlRaNWZUWGpxMkxmbUJESUNKMjczZXRrUXlvODFXNEtXckRGT1ZlcTFCT3g3WG1rdl9wZFJZWG52eEYwN3pHV1hrMTNhUUdyVWhTems1?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-21T07:50:48.852Z"
-    },
-    {
-      "id": "rss_a5b95e4ce9062963",
-      "timestamp": 1773694980000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Exclusive: First Chinese Supertanker Loads Saudi Crude via Red Sea, Bypassing Strait of Hormuz - Caixin Global",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxNMlpwWVBweUlqZVRfcE1NOU1QS0g5aGQ2OTdDYjJENHRDLTFoVGo0MklFWXlEaU5CWkJ3aFU0WHJzSVp4SUdSd3hNd0tlUFBTYmJtMzN6c1RuTGFBRWhhOXY3dlA2RWloN3A3QWJnd0NEYkJqd09LMVdTRUJfUUdJdnE3NGNBZ0x1WFZzQ2dhSFptY2F6bGFjMVhYeFpjT2Q2VWUzUHQ0UHJHMTlScjBaMk5kOWdINnJWbURLSm5mQnpkeTExX3g0cmllZGxTVk85SGp4XzE0UzJpNXVyNU1lZw?oc=5\" target=\"_blank\">Exclusive: First Chinese Supertanker Loads Saudi Crude via Red Sea, Bypassing Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNMlpwWVBweUlqZVRfcE1NOU1QS0g5aGQ2OTdDYjJENHRDLTFoVGo0MklFWXlEaU5CWkJ3aFU0WHJzSVp4SUdSd3hNd0tlUFBTYmJtMzN6c1RuTGFBRWhhOXY3dlA2RWloN3A3QWJnd0NEYkJqd09LMVdTRUJfUUdJdnE3NGNBZ0x1WFZzQ2dhSFptY2F6bGFjMVhYeFpjT2Q2VWUzUHQ0UHJHMTlScjBaMk5kOWdINnJWbURLSm5mQnpkeTExX3g0cmllZGxTVk85SGp4XzE0UzJpNXVyNU1lZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T16:01:50.163Z"
     }
   ]
 }
