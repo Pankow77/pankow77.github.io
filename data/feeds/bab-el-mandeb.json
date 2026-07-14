@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T02:16:25.481Z",
+  "last_fetch": "2026-07-14T03:36:55.751Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -420,6 +420,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T21:20:17.231Z"
+    },
+    {
+      "id": "rss_487b947f9892a30d",
+      "timestamp": 1783962315000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis fire missiles at Saudi Arabia after blast at Sanaa airport - thenationalnews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPcWJfYUF2S1hsYjBCNzN1Q3FiSmpTVTNwTTFiY2dMYXNGTy16d1h6aTZJdVdrTG9fOHZqQ1RzVEhQYUFyTDlQalN2WWxPaU13TlJfd0JIVTcyeDNuczRGanQ1dnhZYVFCN0VDUjBnQkhCb3dyQ2dHdG14ZGRLR0dMTXY0Nlp4aG05bzNhQUhEQnJtTFAtOFRKUU1UUnFpc0syZm1tc2liOGlRdzNzZTk2WE5acHF2WWV0QldQMFp0YUZOSV9jdzE3WWh3?oc=5\" target=\"_blank\">Houthis fire missiles at Saudi Arabia after blast at Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcWJfYUF2S1hsYjBCNzN1Q3FiSmpTVTNwTTFiY2dMYXNGTy16d1h6aTZJdVdrTG9fOHZqQ1RzVEhQYUFyTDlQalN2WWxPaU13TlJfd0JIVTcyeDNuczRGanQ1dnhZYVFCN0VDUjBnQkhCb3dyQ2dHdG14ZGRLR0dMTXY0Nlp4aG05bzNhQUhEQnJtTFAtOFRKUU1UUnFpc0syZm1tc2liOGlRdzNzZTk2WE5acHF2WWV0QldQMFp0YUZOSV9jdzE3WWh3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T03:36:54.395Z"
     },
     {
       "id": "rss_df5c05a1fcbb73a8",
@@ -11219,27 +11242,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-17T22:29:01.914Z"
-    },
-    {
-      "id": "rss_a483979f01acf5ad",
-      "timestamp": 1773772312000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU will not expand ASPIDES mission in Red Sea, Kallas says - Operativ Məlumat Mərkəzi",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxON2ZhQ0NIdmU1a1VfVnVmbjBzeFlCVnNnd2FkX3dVVEpvck9xUllZakZiUm1wSWFUVmUtUmJ4OE9tQnZCcmN0TzBkcWRpbUlzejk1cXpFUklmaGRxSzZ4TENubmFSNld5SlZmNlhma0pZSENnVjdZMm0zRmpUUTFCYXBTMW1GYVliTUFpY0JtSldfemdwSk1Udw?oc=5\" target=\"_blank\">EU will not expand ASPIDES mission in Red Sea, Kallas says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Operativ Məlumat Mərkəzi</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxON2ZhQ0NIdmU1a1VfVnVmbjBzeFlCVnNnd2FkX3dVVEpvck9xUllZakZiUm1wSWFUVmUtUmJ4OE9tQnZCcmN0TzBkcWRpbUlzejk1cXpFUklmaGRxSzZ4TENubmFSNld5SlZmNlhma0pZSENnVjdZMm0zRmpUUTFCYXBTMW1GYVliTUFpY0JtSldfemdwSk1Udw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T20:34:36.881Z"
     }
   ]
 }
