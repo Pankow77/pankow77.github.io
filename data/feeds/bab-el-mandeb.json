@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T10:08:51.860Z",
+  "last_fetch": "2026-07-14T11:02:13.263Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8ce2c652a93d46ce",
+      "timestamp": 1784023363000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JUUEybW1MMS1kY2M5X1pTSHJhQURuNXpMUVlsN1lOcm94cWN6ZEZxVHdNd3djM0RxcWpIdlpKQTVHUnlYLUVXTlRNdWhMQk8wOF9YVS1zQ1dwUQ?oc=5\" target=\"_blank\">Yemen's Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JUUEybW1MMS1kY2M5X1pTSHJhQURuNXpMUVlsN1lOcm94cWN6ZEZxVHdNd3djM0RxcWpIdlpKQTVHUnlYLUVXTlRNdWhMQk8wOF9YVS1zQ1dwUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T11:02:11.850Z"
+    },
     {
       "id": "rss_365c44f7017b14b2",
       "timestamp": 1784017612000,
@@ -11214,27 +11237,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-21T16:53:39.182Z"
-    },
-    {
-      "id": "rss_dfc73d450916476b",
-      "timestamp": 1773853341000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why the Red Sea could be the next choke point for the global economy - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQbk9veGRYTGN4aEs4cVUxZFE2MTJzQlh4TkJxTjhuVmNTMlZ2RlNZLXpoSk1TeFR3OUs3djlFSlhxWmpCc09zdE4tTHp2TVFhR1pEQTJDems0Y1lGV21PT2Q2YlhXMXB6MnRlVXVNUENiRGk0NWhiU2FqcTdTdmtGUHlfckpNajg?oc=5\" target=\"_blank\">Why the Red Sea could be the next choke point for the global economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbk9veGRYTGN4aEs4cVUxZFE2MTJzQlh4TkJxTjhuVmNTMlZ2RlNZLXpoSk1TeFR3OUs3djlFSlhxWmpCc09zdE4tTHp2TVFhR1pEQTJDems0Y1lGV21PT2Q2YlhXMXB6MnRlVXVNUENiRGk0NWhiU2FqcTdTdmtGUHlfckpNajg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-18T22:28:36.961Z"
     }
   ]
 }
