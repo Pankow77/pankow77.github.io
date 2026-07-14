@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T15:30:29.614Z",
+  "last_fetch": "2026-07-14T16:27:41.887Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_84a46b29a8d203c0",
+      "timestamp": 1784043898000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Missiles, drones and cancelled flights: Saudi airport attack raises West Asia tensions - The Indian Express",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRWpyTTdxXzU0ekhjdkxlMXpISGR4VzQzWXZ3cEhfYk1NR3FEUDR3cy1uaFVHRENuclBtcmVHY2VQVEJsd2lyejVrQkFZS0t1ZU1zMVFzRi0wWUFuQktWUUpRSm1LdEFIWjU1ZWljbnM5TWZkY0V5R0tBVWJNd1hzMHdRSDg2SXNIMjBKVkV6QW5lWTM1am9WUGlJaFE3QTlGV2t1dElnNlNNVG56cDl2aVZiUkN3NnRURGdYLXZzQWRVaW9rQ3RXSdIBzwFBVV95cUxNRWdjYVdfMkMyZXMxa1VCbkhRRkZhZjZfS0tVSW1acXZOcE1yOUdVOFc2Z0ZYRE1aUF9lZmlMWElGbWZTWjJUc3czQ3hCbUdfaWJpWFlSeGdQTmVoVW5WUlloeWdlLU1sQjlrTlh1eTZ1OF84T1VDVk9KTUlYbkt1NXp1bS",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQRWpyTTdxXzU0ekhjdkxlMXpISGR4VzQzWXZ3cEhfYk1NR3FEUDR3cy1uaFVHRENuclBtcmVHY2VQVEJsd2lyejVrQkFZS0t1ZU1zMVFzRi0wWUFuQktWUUpRSm1LdEFIWjU1ZWljbnM5TWZkY0V5R0tBVWJNd1hzMHdRSDg2SXNIMjBKVkV6QW5lWTM1am9WUGlJaFE3QTlGV2t1dElnNlNNVG56cDl2aVZiUkN3NnRURGdYLXZzQWRVaW9rQ3RXSdIBzwFBVV95cUxNRWdjYVdfMkMyZXMxa1VCbkhRRkZhZjZfS0tVSW1acXZOcE1yOUdVOFc2Z0ZYRE1aUF9lZmlMWElGbWZTWjJUc3czQ3hCbUdfaWJpWFlSeGdQTmVoVW5WUlloeWdlLU1sQjlrTlh1eTZ1OF84T1VDVk9KTUlYbkt1NXp1bS05T3d1aWVaeFRMMjJ0Ui1wSlExNGY4MGM1ZzJkOE1rV24xWUdrX0k0QUdxS20wTU9DWlBzd09pN0lFa09tc0pMX1VSbkNwVm5YdzA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T16:27:40.678Z"
+    },
+    {
+      "id": "rss_23f8c51b3abd9387",
+      "timestamp": 1784043535000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Lebanese PM condemns Houthi retaliatory attack on Saudi airport - VOI.ID",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQ0FVX3lxTE16RWZfTGJpZDBmTHl4WGFpcFAtdE1FMmh2TWI3dFMzeG5xVmFQdEN4NkpqMVFJTkVreFBDOGY4ZmJUNVnSAUJBVV95cUxQQk13YVVuUjU0dklXZlk5aHNwWGkxQlQ4Zk5zSlJmMXA2Rk1xLVgwTU9PdHlteWhpbGpDc1RjSGlJQUE?oc=5\" target=\"_blank\">Lebanese PM condemns Houthi retaliatory attack on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOI.ID</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE16RWZfTGJpZDBmTHl4WGFpcFAtdE1FMmh2TWI3dFMzeG5xVmFQdEN4NkpqMVFJTkVreFBDOGY4ZmJUNVnSAUJBVV95cUxQQk13YVVuUjU0dklXZlk5aHNwWGkxQlQ4Zk5zSlJmMXA2Rk1xLVgwTU9PdHlteWhpbGpDc1RjSGlJQUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T16:27:40.679Z"
+    },
     {
       "id": "rss_f0e6b40b5403e667",
       "timestamp": 1784042550000,
@@ -44,6 +89,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T15:30:27.964Z"
+    },
+    {
+      "id": "rss_d962f4bf649faff1",
+      "timestamp": 1784040800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Arab League slams Houthi attack on Saudi Arabia - Fana News -",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNQ1lseWZLcGxlYW5WV2JQczVMUWN4XzNXQTJSbkM0Rmx4c0hhQWdsZlRsSEc0Y1ZTUGRsbkI1VTlvOTlsTUhBZ1dYNHdlX1RmRmptSWdqOE13b2pjYVFkTlZUX1hFVmpmaWRxNGwyT3RRRjdpUzl3X1VrZ05yX3p1WnpsNEsySXN4ZWhDeFRn?oc=5\" target=\"_blank\">Arab League slams Houthi attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fana News -</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQ1lseWZLcGxlYW5WV2JQczVMUWN4XzNXQTJSbkM0Rmx4c0hhQWdsZlRsSEc0Y1ZTUGRsbkI1VTlvOTlsTUhBZ1dYNHdlX1RmRmptSWdqOE13b2pjYVFkTlZUX1hFVmpmaWRxNGwyT3RRRjdpUzl3X1VrZ05yX3p1WnpsNEsySXN4ZWhDeFRn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T16:27:40.677Z"
     },
     {
       "id": "rss_6f427980f50af14d",
@@ -11172,73 +11238,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T09:39:00.028Z"
-    },
-    {
-      "id": "rss_d4cff8763a31ed63",
-      "timestamp": 1773905401000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Ramat Gan school, in ruins after Houthi attack, being torn down - JNS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOM1VQc0t5cW9TWFhMUTg3UTd1NzN1dF9fc3Fsbi1mdXIxSEJfME9tV2RWSEJQdFlUcUU4d1ZXTS1vcnhyc29SdnhaR3VRd3cwTHNGMGJYS0c3UjJtcjFydmQxWjZHRXVWaC1pRERTamNtYVNMWFF5eGNmTnVDdU0wb1hZOW5Na19Qa3JBdU9jdVVuNnJfdEMyXw?oc=5\" target=\"_blank\">Ramat Gan school, in ruins after Houthi attack, being torn down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JNS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOM1VQc0t5cW9TWFhMUTg3UTd1NzN1dF9fc3Fsbi1mdXIxSEJfME9tV2RWSEJQdFlUcUU4d1ZXTS1vcnhyc29SdnhaR3VRd3cwTHNGMGJYS0c3UjJtcjFydmQxWjZHRXVWaC1pRERTamNtYVNMWFF5eGNmTnVDdU0wb1hZOW5Na19Qa3JBdU9jdVVuNnJfdEMyXw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-24T16:03:20.971Z"
-    },
-    {
-      "id": "rss_d7cc258a116de5c8",
-      "timestamp": 1773900671000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Israel-Iran war: Saudi Arabia's Red Sea port Yanbu targeted in aerial attack - The Economic Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVByZjZNTW44QllkeHRxM0U2YVc2S2M1a205ZGZsOXNERjNqOUxMX1cxLW9Qd2RablpDQjB5SFlCRUgtZnkwNlRNNU1MWU1yWXotQUd2YTAwbTJJSWs1RUlDMXhWcXVmZW9uZU9FaU4wcnlRaGYwZnFIVWowVmtjLXdaSTVJd2JYZUZMcmZiRkhmVjJBaHBINDF5ZlFSV0lSQm1PbHZGeFQ0M1lsa3JWakJZQlR1Y2N2V0lzS2hsQjVKUktjVm9vdHlFQ29idWFQOW1iX1h2eXdMX3FaNnNBN0Z2djVzeDlZSFlDOVFiaG5DbXNqd1VjSWxLbU9DSXFs0gGGAkFVX3lxTE1HN1BKSW0za2FZVEszcVNoTkZDUnBsb1ZjSXRVbnh3ZkFXS25CTmFZRjZaZFZZNTd5em5ncWdjYkFPd2pERXMyLWlXZE",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVVByZjZNTW44QllkeHRxM0U2YVc2S2M1a205ZGZsOXNERjNqOUxMX1cxLW9Qd2RablpDQjB5SFlCRUgtZnkwNlRNNU1MWU1yWXotQUd2YTAwbTJJSWs1RUlDMXhWcXVmZW9uZU9FaU4wcnlRaGYwZnFIVWowVmtjLXdaSTVJd2JYZUZMcmZiRkhmVjJBaHBINDF5ZlFSV0lSQm1PbHZGeFQ0M1lsa3JWakJZQlR1Y2N2V0lzS2hsQjVKUktjVm9vdHlFQ29idWFQOW1iX1h2eXdMX3FaNnNBN0Z2djVzeDlZSFlDOVFiaG5DbXNqd1VjSWxLbU9DSXFs0gGGAkFVX3lxTE1HN1BKSW0za2FZVEszcVNoTkZDUnBsb1ZjSXRVbnh3ZkFXS25CTmFZRjZaZFZZNTd5em5ncWdjYkFPd2pERXMyLWlXZEtGbk9QU1M0ZXpkOV9obnQ1dVFhRk00NW5vaGljV1d1NGJneDFqQUVmaUdCeWFQZEx6bnJ0Skp1elp6NmtOU2FlTkRIY0JKVTMyd3dJVTk5Ylo2QUtBNEp5SWNhYVJVSDQzUTdudFlPMFQxYmVQTFRkZzZjaEFXYjVhaGZXb0NpTEhEdDBEdTc4dEpTY0RyVlhlb0N2czZVenJaTDFsVld1NjhyeTlFNFZWZXRXVktFdWFJQl9qVldUZmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T07:44:04.196Z"
-    },
-    {
-      "id": "rss_5b271034dc04959b",
-      "timestamp": 1773900232000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Can Iran shut down global internet by cutting Hormuz undersea cables? - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeDBucHk0UUhqVURabDRHdy15WmxQXzZVTmktSlpJd3BWSjg3aHRhcjZjUC1GUmpjMlIxTkZmdVBXdDFhaXExUHZLU1N0S28zV2JDQW56aTlpdmpranAzT3NCQTdob2NpcVdOdGJfRGo4S1pXWElGNHhZckdNYlRQTkhCdEZjN3k2aVh6M2RENFpQZmZ2RUg4el9jODJDdTAzNml0Q1E0RC0xSHQ1NWZSWUhCbUxEdUM2dnl0Z3U4LWhVTURmTDVuMjF2bXZva1kwYnhRQnVxd184T3Exd2Z1aw?oc=5\" target=\"_blank\">Can Iran shut down global internet by cutting Hormuz undersea cables?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">India Today</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPeDBucHk0UUhqVURabDRHdy15WmxQXzZVTmktSlpJd3BWSjg3aHRhcjZjUC1GUmpjMlIxTkZmdVBXdDFhaXExUHZLU1N0S28zV2JDQW56aTlpdmpranAzT3NCQTdob2NpcVdOdGJfRGo4S1pXWElGNHhZckdNYlRQTkhCdEZjN3k2aVh6M2RENFpQZmZ2RUg4el9jODJDdTAzNml0Q1E0RC0xSHQ1NWZSWUhCbUxEdUM2dnl0Z3U4LWhVTURmTDVuMjF2bXZva1kwYnhRQnVxd184T3Exd2Z1aw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T17:31:03.528Z"
     }
   ]
 }
