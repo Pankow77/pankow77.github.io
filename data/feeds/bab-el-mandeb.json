@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T08:14:52.131Z",
+  "last_fetch": "2026-07-14T09:13:01.123Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_365c44f7017b14b2",
+      "timestamp": 1784017612000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi missiles, drones strike Saudi Arabia in worst attack in years - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQYldab05WckNpVFJuRVdodkExdGZRdXdhdURVYmpRRE5PVkoxWVFmdThoeWl4YUpxUU1KOEtYcTEtYnZidk9ILWlNUGViLTJaeFFleUJHS1BHdXhueVdERktWdS1UTUx6Z3ZURHFFU2ZsVG40dFdiaDJVU0IwNlZKd3lsdjA4SE9kZDhNX1NkUzZaa1oxUHdQV2E2NA?oc=5\" target=\"_blank\">Houthi missiles, drones strike Saudi Arabia in worst attack in years</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYldab05WckNpVFJuRVdodkExdGZRdXdhdURVYmpRRE5PVkoxWVFmdThoeWl4YUpxUU1KOEtYcTEtYnZidk9ILWlNUGViLTJaeFFleUJHS1BHdXhueVdERktWdS1UTUx6Z3ZURHFFU2ZsVG40dFdiaDJVU0IwNlZKd3lsdjA4SE9kZDhNX1NkUzZaa1oxUHdQV2E2NA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T09:12:59.725Z"
+    },
     {
       "id": "rss_731f28044d5ff126",
       "timestamp": 1784013526000,
@@ -174,6 +198,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T06:14:50.227Z"
+    },
+    {
+      "id": "rss_1c132a5c27ac7874",
+      "timestamp": 1783976505000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why there may be a renewed war between Houthis, Saudia Arabia - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uYTZJbjl0UmMtQ1V0NzR4VU1pdFYxVzBUTXQyb0VPR1ZSU05KNnpwek1PSTNReXQ1NTBKWTJCb2laQm5pWFJtY0diU21FaUFTWUtlRGRnUGdFTUhE?oc=5\" target=\"_blank\">Why there may be a renewed war between Houthis, Saudia Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uYTZJbjl0UmMtQ1V0NzR4VU1pdFYxVzBUTXQyb0VPR1ZSU05KNnpwek1PSTNReXQ1NTBKWTJCb2laQm5pWFJtY0diU21FaUFTWUtlRGRnUGdFTUhE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T09:12:59.725Z"
     },
     {
       "id": "rss_da95cb7b1823d240",
@@ -11190,50 +11235,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-18T22:28:36.961Z"
-    },
-    {
-      "id": "rss_76170cb81d64b239",
-      "timestamp": 1773847800000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia's Red Sea Oil Exports Jump To Nearly 4 Million bpd - Crude Oil Prices Today | OilPrice.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQMktJdW9KTXJuSWFMemZReXNGV0VrcEVNVjdtUzh2TzUxQ2J6bDhPRkVCMW5UNFlIUEZyaGswTXRHYkxKbWRmUG1OZWZuSlV1N2pXOHdLWFJ1YmJOdzFZaUZ6T1pkRFluZDM0UXVaUWduSFR2cWdlajYydVJ5VGpnbFhJU0FhZjhCZ3J5UnY3WlJraFZqWTBBXzhaNnAxRDJFaC1CRGxteDFseVFaVHF6S1FIQjFCMHQ2VXfSAb8BQVVfeXFMUHk3V2VtaU5hbnpJZEFfMUtKQlZPVnRQdVNmaHF5UWF3alNKTEFUWlhnR29BcjVPcDlKaERVbWdtZGZ6TU9CY25kUklSU25RUlF6TmhUT3FNejZNQlV2RGlwc1pCeTNXUG5HYkhGOFRHQ1k4Y1JuYzh5UDZsUUpiMmlhVzgwUXNNeFJ0dEJYcDJkZD",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMktJdW9KTXJuSWFMemZReXNGV0VrcEVNVjdtUzh2TzUxQ2J6bDhPRkVCMW5UNFlIUEZyaGswTXRHYkxKbWRmUG1OZWZuSlV1N2pXOHdLWFJ1YmJOdzFZaUZ6T1pkRFluZDM0UXVaUWduSFR2cWdlajYydVJ5VGpnbFhJU0FhZjhCZ3J5UnY3WlJraFZqWTBBXzhaNnAxRDJFaC1CRGxteDFseVFaVHF6S1FIQjFCMHQ2VXfSAb8BQVVfeXFMUHk3V2VtaU5hbnpJZEFfMUtKQlZPVnRQdVNmaHF5UWF3alNKTEFUWlhnR29BcjVPcDlKaERVbWdtZGZ6TU9CY25kUklSU25RUlF6TmhUT3FNejZNQlV2RGlwc1pCeTNXUG5HYkhGOFRHQ1k4Y1JuYzh5UDZsUUpiMmlhVzgwUXNNeFJ0dEJYcDJkZDhQY0Y1eWdWa0JIblRQVk9QTjFPSUsxWGxLQTRqZGZVdUlueTFaNHRZdGNQeGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T17:32:50.139Z"
-    },
-    {
-      "id": "rss_8207a4680e7e170d",
-      "timestamp": 1773838345000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Gerald R. Ford Carrier Strike Group continues Iran operation in Red Sea, US defense official tells Anadolu - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMmJodThaWGdRbEVxb2hVTkU5UXJ0VWJEbllhZGlRbmtqMlRnb1dWSDhaNnVKUVp4T3AtZ3JHRnk5U3JaemJheHNhUlJvRkp5VHlBdFc1YnBfclBzVEptd1JXWGJtdGJYWWhxNmlwSHVNOHhOWXRNUFV5TnJxYnlWSF9kVHFGbFVMYzVxRkJoZ2xDLU8tcTNxRjVkZ0FIUnQ1Zk5PVGw3R2sybEI5NlNpYUFjWkFlelVwR0FocllVOGZPTC16aFVWODNfUnlPdHlXZ05xMmQ5NDVVT0dYWjkw?oc=5\" target=\"_blank\">Gerald R. Ford Carrier Strike Group continues Iran operation in Red Sea, US defense official tells Anadolu</a>&nbsp;&nbsp;<font",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOMmJodThaWGdRbEVxb2hVTkU5UXJ0VWJEbllhZGlRbmtqMlRnb1dWSDhaNnVKUVp4T3AtZ3JHRnk5U3JaemJheHNhUlJvRkp5VHlBdFc1YnBfclBzVEptd1JXWGJtdGJYWWhxNmlwSHVNOHhOWXRNUFV5TnJxYnlWSF9kVHFGbFVMYzVxRkJoZ2xDLU8tcTNxRjVkZ0FIUnQ1Zk5PVGw3R2sybEI5NlNpYUFjWkFlelVwR0FocllVOGZPTC16aFVWODNfUnlPdHlXZ05xMmQ5NDVVT0dYWjkw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T04:21:21.935Z"
     }
   ]
 }
