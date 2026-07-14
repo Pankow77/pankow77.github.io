@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T16:54:28.785Z",
+  "last_fetch": "2026-07-14T17:27:19.216Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -26,6 +26,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T16:27:40.678Z"
+    },
+    {
+      "id": "rss_d94ecafad976c917",
+      "timestamp": 1784043780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Gulf states: Houthi attacks on Saudi Arabia require firm international response - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ3loR0VCNy1uVGUyZmNPcXh4cXFqNUVjSnk1NWxlNnUyZXE2UkxxUHRIWWxEbnRtQ3dVdkhCZmRPZFNodW1yU0k3UVZlbW42cGQ0ejZ6WEI1X3Z1ZFlpRDV1QXpILUhEMjlSUEREQjVoWXhvbWZSemt6SWNMTi1NdW01MUhHc2xHZmVaTURINjlkMjJpel91UDVsd3o4Uks0dGM5Q1NZcGw1Y05Nc2FjbnVvQW53bmptSktXQ3N0Y9IBxAFBVV95cUxQRnBNLWYtUGxDem9NZ29BRUZ5Ukp6akFCZEo1SWFQWkFQNjMwS25DWHBuVHN1ZkxqZXRQeFdzaFhfWlI2SmxwTGxZeXdGRkVwT3RFeDNqd2cwVGZDeTNVVk1ZQ3ZjYmNGc3dPdDNEbHVDY2dkUTkyNlFYYlhwWXUxMGV6elV1TVJVWHNNVU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNQ3loR0VCNy1uVGUyZmNPcXh4cXFqNUVjSnk1NWxlNnUyZXE2UkxxUHRIWWxEbnRtQ3dVdkhCZmRPZFNodW1yU0k3UVZlbW42cGQ0ejZ6WEI1X3Z1ZFlpRDV1QXpILUhEMjlSUEREQjVoWXhvbWZSemt6SWNMTi1NdW01MUhHc2xHZmVaTURINjlkMjJpel91UDVsd3o4Uks0dGM5Q1NZcGw1Y05Nc2FjbnVvQW53bmptSktXQ3N0Y9IBxAFBVV95cUxQRnBNLWYtUGxDem9NZ29BRUZ5Ukp6akFCZEo1SWFQWkFQNjMwS25DWHBuVHN1ZkxqZXRQeFdzaFhfWlI2SmxwTGxZeXdGRkVwT3RFeDNqd2cwVGZDeTNVVk1ZQ3ZjYmNGc3dPdDNEbHVDY2dkUTkyNlFYYlhwWXUxMGV6elV1TVJVWHNNVU9RTjlDVVVtVU1jZmVzNkdrLTl5SnNCQWpQbF9JWkFEXzNZcDdQa3QzdmNROHZHY0F3dU51U2Fv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T17:27:17.890Z"
     },
     {
       "id": "rss_23f8c51b3abd9387",
@@ -11215,29 +11236,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T18:52:46.481Z"
-    },
-    {
-      "id": "rss_91ecbe781cf2d01a",
-      "timestamp": 1773913073000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Israel-Iran war: Saudi Arabia's Red Sea port Yanbu targeted in aerial attack - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgJBVV95cUxONENqMGkzaGdaQjVYc0t2YnVDRTYxcXlnNjhoa1NZRGlNbVRXdWZvcnFvQnJzeDloWFRoSXBwLVdCaDROdWo4azRjc2J0MWI3TndteFVlRmFNSFpPeFd4YmI1cldvaVRSbWRLSFoyVkxsdTgzNVFDakJRclVRSWFEb2ptbnBTeXl6eUY1TExweUlybWZaXzliVDhXSlVhMlFpZlY2bU5nS21CMXFBc2dKVkJPNzcwUy1lUERuNF8xSGdLMFF0aWtTQVVTZnUta0dNTnAxUC1VaGg1ejdxdEVRRHlmM2JXbEdrM0hHLXdDbFFZYU5zVzRITWxIMGs0TEd0Mzh5Z1FR?oc=5\" target=\"_blank\">Israel-Iran war: Saudi Arabia's Red Sea port Yanbu targeted in aerial attac",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxONENqMGkzaGdaQjVYc0t2YnVDRTYxcXlnNjhoa1NZRGlNbVRXdWZvcnFvQnJzeDloWFRoSXBwLVdCaDROdWo4azRjc2J0MWI3TndteFVlRmFNSFpPeFd4YmI1cldvaVRSbWRLSFoyVkxsdTgzNVFDakJRclVRSWFEb2ptbnBTeXl6eUY1TExweUlybWZaXzliVDhXSlVhMlFpZlY2bU5nS21CMXFBc2dKVkJPNzcwUy1lUERuNF8xSGdLMFF0aWtTQVVTZnUta0dNTnAxUC1VaGg1ejdxdEVRRHlmM2JXbEdrM0hHLXdDbFFZYU5zVzRITWxIMGs0TEd0Mzh5Z1FR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T09:39:00.028Z"
     }
   ]
 }
