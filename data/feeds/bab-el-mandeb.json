@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T07:14:24.555Z",
+  "last_fetch": "2026-07-14T08:14:52.131Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_731f28044d5ff126",
+      "timestamp": 1784013526000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "GCC Condemns Terrorist Houthi Attack against Saudi Arabia - Asharq Al-Awsat English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNZVRMcktkVHFTSTBXZF9IRmZDYWpLVENOZUNNSlg4QTdsOFA1YzAxQlNvUUg2cHFoMEZ5YlpBT2Rnc2dhclczWmNZMXpWM1BJdXNVZFBtLXdEODhWUXdKUUVBcFBveUg5RjV4Y3hLai1WbUdYWnpCaXZYcERnWEZ0VXB4OGxfT3FJMHEwU2MxMjhfSWZqSkFpbnY1S1VpQQ?oc=5\" target=\"_blank\">GCC Condemns Terrorist Houthi Attack against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZVRMcktkVHFTSTBXZF9IRmZDYWpLVENOZUNNSlg4QTdsOFA1YzAxQlNvUUg2cHFoMEZ5YlpBT2Rnc2dhclczWmNZMXpWM1BJdXNVZFBtLXdEODhWUXdKUUVBcFBveUg5RjV4Y3hLai1WbUdYWnpCaXZYcERnWEZ0VXB4OGxfT3FJMHEwU2MxMjhfSWZqSkFpbnY1S1VpQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T08:14:50.859Z"
+    },
     {
       "id": "rss_f572cdd712434429",
       "timestamp": 1784012738000,
@@ -11213,30 +11234,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T04:21:21.935Z"
-    },
-    {
-      "id": "rss_c2f406a592c3e012",
-      "timestamp": 1773832492000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Hajjah Residents Mourn Victims of Hairan Missile Attack, Condemn Houthi Strike on Civilians at Iftar - alsahwa-yemen.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE83TzVyU3FrNmRub19oOTl5Z2FvbVllakV6QzhwQmJWRFY2dFJndzNIX0xwNS1PZnBETGY1S1dLc3RhN1Ryem9xYktVSlZfOWxGNGc?oc=5\" target=\"_blank\">Hajjah Residents Mourn Victims of Hairan Missile Attack, Condemn Houthi Strike on Civilians at Iftar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">alsahwa-yemen.net</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE83TzVyU3FrNmRub19oOTl5Z2FvbVllakV6QzhwQmJWRFY2dFJndzNIX0xwNS1PZnBETGY1S1dLc3RhN1Ryem9xYktVSlZfOWxGNGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T04:21:21.936Z"
     }
   ]
 }
