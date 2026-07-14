@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T06:14:51.481Z",
+  "last_fetch": "2026-07-14T07:14:24.555Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f572cdd712434429",
+      "timestamp": 1784012738000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi Group Launches Missile Attack on Saudi Arabia, Ending Informal Truce - Ratopati",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPc2xwZzlHc0FTUDhsb1BBM3UxSFVCYnQxMWNxaWpYVEt2OXh5NmVkdEJtSm53ZVlvZENRZ2xJRHE1dzEyS2ZKek1HNGt0a0NuampiWFBOazBFeFh0Ymx3NXRUSFJ2NldjbXhLZ3F2b1lTdkxraERyQkljaUZ3bWJnM2liN3U?oc=5\" target=\"_blank\">Houthi Group Launches Missile Attack on Saudi Arabia, Ending Informal Truce</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ratopati</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPc2xwZzlHc0FTUDhsb1BBM3UxSFVCYnQxMWNxaWpYVEt2OXh5NmVkdEJtSm53ZVlvZENRZ2xJRHE1dzEyS2ZKek1HNGt0a0NuampiWFBOazBFeFh0Ymx3NXRUSFJ2NldjbXhLZ3F2b1lTdkxraERyQkljaUZ3bWJnM2liN3U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T07:14:23.147Z"
+    },
     {
       "id": "rss_1de2ab76e7a22154",
       "timestamp": 1784002361000,
@@ -11214,30 +11237,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T04:21:21.936Z"
-    },
-    {
-      "id": "rss_0a653b88ee2ee860",
-      "timestamp": 1773802100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Mystery of no Houthi attacks on Red Sea ships three weeks into Iran war - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNd3g3dVVTUjRfNy1TQWRqQ2F5aEJ3cllzcGx0UF94SUhIVTg1REM2TmdWVURFbVE5UUJFUU81NGtJRkF0WjY0MlB2ZDdEdTY5UTdZdUJjUVdlX0tjSGJUYmprU2RQMWlydEZlUEtHOUMtU3VKc1hxNTZadnNBN1pSSnN5QjhDTU8xSjVncnNFdnhBSEIySVRuTEo5SVlKYzQzVDgtbEpYUjVIVlZuc3FhQ3VwQ292cV9DZkdRQVR2eHhOVHc?oc=5\" target=\"_blank\">Mystery of no Houthi attacks on Red Sea ships three weeks into Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNd3g3dVVTUjRfNy1TQWRqQ2F5aEJ3cllzcGx0UF94SUhIVTg1REM2TmdWVURFbVE5UUJFUU81NGtJRkF0WjY0MlB2ZDdEdTY5UTdZdUJjUVdlX0tjSGJUYmprU2RQMWlydEZlUEtHOUMtU3VKc1hxNTZadnNBN1pSSnN5QjhDTU8xSjVncnNFdnhBSEIySVRuTEo5SVlKYzQzVDgtbEpYUjVIVlZuc3FhQ3VwQ292cV9DZkdRQVR2eHhOVHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T05:41:27.512Z"
     }
   ]
 }
