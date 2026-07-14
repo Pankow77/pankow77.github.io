@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-14T03:36:55.751Z",
+  "last_fetch": "2026-07-14T05:00:25.864Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1de2ab76e7a22154",
+      "timestamp": 1784002361000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Pakistan condemns Houthi attack on Saudi Arabia, urges regional de-escalation - Arab News PK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBYS29QNXd6QWdyd0dDS25Wd2dtYXhxWEQ1TlE2Tzd3NFJGd2tZUUc5dEpnVTlJbVROYWlxWEpPRkNWNzBJOEZOcUtsRUJmcDZQd0VhcGtvWUI?oc=5\" target=\"_blank\">Pakistan condemns Houthi attack on Saudi Arabia, urges regional de-escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBYS29QNXd6QWdyd0dDS25Wd2dtYXhxWEQ1TlE2Tzd3NFJGd2tZUUc5dEpnVTlJbVROYWlxWEpPRkNWNzBJOEZOcUtsRUJmcDZQd0VhcGtvWUI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-14T05:00:24.506Z"
+    },
     {
       "id": "rss_763a9f2a43d1e00e",
       "timestamp": 1783991625000,
@@ -11219,29 +11240,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-19T04:21:21.936Z"
-    },
-    {
-      "id": "rss_3c0c0179c9e7c04f",
-      "timestamp": 1773785286000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Civilian casualties rise to 30 in Houthi drone attack on Iftar gathering in Yemen's Hajjah - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wRk1tS3ZuSWU2Y3dxUkFNQVJ1LXpzR21VNlZ5NUZGZ0NGWG82NUxONjhFU1dYN0FLbVVjS3lPVlozd190V2x0XzNCcDhGVnNRR1lyVXFmcXo5Zw?oc=5\" target=\"_blank\">Civilian casualties rise to 30 in Houthi drone attack on Iftar gathering in Yemen's Hajjah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1wRk1tS3ZuSWU2Y3dxUkFNQVJ1LXpzR21VNlZ5NUZGZ0NGWG82NUxONjhFU1dYN0FLbVVjS3lPVlozd190V2x0XzNCcDhGVnNRR1lyVXFmcXo5Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-17T22:29:01.914Z"
     }
   ]
 }
