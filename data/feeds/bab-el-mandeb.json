@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T13:32:56.864Z",
+  "last_fetch": "2026-07-15T14:34:16.852Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -67,6 +67,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T12:55:43.594Z"
+    },
+    {
+      "id": "rss_9efbe706199529f8",
+      "timestamp": 1784114556000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran threatens to block more vital seaways - CBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5ObmtXeGpBcU91dGs5eWZhV216NG1wcEdPV0ljMWw2OGdla0tCS1VIcWZLeGo0cFVpXzV5bWJCb0JCNmdNVDYwbUhhcUVDdzIzY0F2WUlfQ0E0YU84YTJEQTlZZnhiSUp2ajgzZ2loWVlQbHA0S2c?oc=5\" target=\"_blank\">Iran threatens to block more vital seaways</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBC</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ObmtXeGpBcU91dGs5eWZhV216NG1wcEdPV0ljMWw2OGdla0tCS1VIcWZLeGo0cFVpXzV5bWJCb0JCNmdNVDYwbUhhcUVDdzIzY0F2WUlfQ0E0YU84YTJEQTlZZnhiSUp2ajgzZ2loWVlQbHA0S2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T14:34:15.482Z"
     },
     {
       "id": "rss_89aeca1acda13c63",
@@ -11200,29 +11223,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-21T20:21:31.611Z"
-    },
-    {
-      "id": "rss_7528f51727b513e9",
-      "timestamp": 1774122034000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Threatens to Expand Confrontation to Bab el-Mandeb and the Red Sea if the Island of Kharg is Attacked - وكالة صدى نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tZVBxcWM0a2xIVi12WDlKUHBsQVI4enMzYXVnSXdEZTZfYWJkeUR2VmhEU3IzSVBQelVsWmlxaHd2SGdvdDZXdlBrem5KQkZ4d3l6UWZR?oc=5\" target=\"_blank\">Iran Threatens to Expand Confrontation to Bab el-Mandeb and the Red Sea if the Island of Kharg is Attacked</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة صدى نيوز</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8tZVBxcWM0a2xIVi12WDlKUHBsQVI4enMzYXVnSXdEZTZfYWJkeUR2VmhEU3IzSVBQelVsWmlxaHd2SGdvdDZXdlBrem5KQkZ4d3l6UWZR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-22T14:23:44.972Z"
     }
   ]
 }
