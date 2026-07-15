@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T07:15:22.837Z",
+  "last_fetch": "2026-07-15T08:15:18.138Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_89aeca1acda13c63",
+      "timestamp": 1784100099000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Türkiye, Egypt condemn Houthi attacks on Saudi Arabia and strikes on UAE tankers - سانا",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFA0Um1xTVFJVGw3ei1nM0x6a2c3TXUyeW9qWlNCRVNxU2g4TnhhSlhDUms1Q25IRWUwR3dzZjZ3ZngzXzZyRnQwN2puWEhCd0Ri?oc=5\" target=\"_blank\">Türkiye, Egypt condemn Houthi attacks on Saudi Arabia and strikes on UAE tankers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">سانا</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA0Um1xTVFJVGw3ei1nM0x6a2c3TXUyeW9qWlNCRVNxU2g4TnhhSlhDUms1Q25IRWUwR3dzZjZ3ZngzXzZyRnQwN2puWEhCd0Ri?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T08:15:16.953Z"
+    },
     {
       "id": "rss_e203e03c2aaac42e",
       "timestamp": 1784091903000,
@@ -11204,29 +11227,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-25T13:00:10.738Z"
-    },
-    {
-      "id": "rss_d513515322ee4cce",
-      "timestamp": 1774015378000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran Rattles Saudi’s Red Sea Oil Reset. Here’s What’s at Stake - BloombergNEF",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQblJ1eVBvV1BaX1FoSTlzT3oxQTdpWXFqVU5JR1BneTZyT2ZxLTQ2NlJsRnVhTG9FYV9qeThuYmd4UHJCNUdwZnV0R3RlNWY4VmdHUjJPdUMzU04tR1VTeFlHVkFzRWxwLU1FSmp5Vm1PRjJ1UUE1ZzRMSmM1eXVEZ0syeGVZdU9xU0VXeS15RDNnUXpSem1qWlkxUVhubEdSaHJkRnJn?oc=5\" target=\"_blank\">Iran Rattles Saudi’s Red Sea Oil Reset. Here’s What’s at Stake</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BloombergNEF</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQblJ1eVBvV1BaX1FoSTlzT3oxQTdpWXFqVU5JR1BneTZyT2ZxLTQ2NlJsRnVhTG9FYV9qeThuYmd4UHJCNUdwZnV0R3RlNWY4VmdHUjJPdUMzU04tR1VTeFlHVkFzRWxwLU1FSmp5Vm1PRjJ1UUE1ZzRMSmM1eXVEZ0syeGVZdU9xU0VXeS15RDNnUXpSem1qWlkxUVhubEdSaHJkRnJn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-22T20:22:15.731Z"
     }
   ]
 }
