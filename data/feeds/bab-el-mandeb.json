@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T21:21:10.154Z",
+  "last_fetch": "2026-07-15T21:47:30.067Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5e29df97eae2586d",
+      "timestamp": 1784151766000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni army repels Houthi attack in Al-Jawf province - Yeni Safak English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQaTI5enc5MWllM0JqalR4b3R4N0R5QllhdVlKWDAxMzc3NC1GYm80UllMM3FUTnI3NngzRGdMNzFUMUY0R1JnSmlDQ0V1YkZNNzRJZmoxNFZrbEJGZDc4bXljVy1tYi1Sc0w1aGYwSmhEQnpGd2MtYkwzdDI5cDNLVnJoYUFUVFlyNE5MWFFObTAzcUUwNmc?oc=5\" target=\"_blank\">Yemeni army repels Houthi attack in Al-Jawf province</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Safak English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaTI5enc5MWllM0JqalR4b3R4N0R5QllhdVlKWDAxMzc3NC1GYm80UllMM3FUTnI3NngzRGdMNzFUMUY0R1JnSmlDQ0V1YkZNNzRJZmoxNFZrbEJGZDc4bXljVy1tYi1Sc0w1aGYwSmhEQnpGd2MtYkwzdDI5cDNLVnJoYUFUVFlyNE5MWFFObTAzcUUwNmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T21:47:28.802Z"
+    },
     {
       "id": "rss_e30510625c8ca442",
       "timestamp": 1784147135000,
@@ -11191,29 +11212,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-25T18:51:16.998Z"
-    },
-    {
-      "id": "rss_48ebf45a6eff95c1",
-      "timestamp": 1774455813000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran threatens to block the Red Sea via the Bab el-Mandeb Strait - investingLive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdzVGNlpmb3RVN3dlb1hPRklDcnEyQWVSNFFscVQ1WktlNFMxdWRObGFtV0dSR0hBenFGeWJHREkxMmlzTTg4NnNEckVmc3lnMDRtWU4xcGp3WjhIMVNvcU8xZEw3RlNuZGV4NzJ3b1htWlZwZ3k2dG01RUgyTkxwZVhGd3ZkUnh0cVFYSUZCSGdKeEE0dURZVGxQU01PeVBoNE1WWjl2R0LSAa4BQVVfeXFMTXJpRXBiSUxSZzRRVXlqekstYWFmYW1OMFBIMWx2aEVHcm84LUJqR1hub3gtQjJpUkpoYjJRN1VjUFVuV0VoZkRnbk1tWGNNZkFyWUlZS2NYVmNjSS1BVE9YdXVSVENTalBPNVNqbmY4dHhTbExUZFY1Zkk5OENYOXZtOUZFcl9TMWhuNUota3g2cG1NODZvX1NBdnlEcFJDMy1RUH",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdzVGNlpmb3RVN3dlb1hPRklDcnEyQWVSNFFscVQ1WktlNFMxdWRObGFtV0dSR0hBenFGeWJHREkxMmlzTTg4NnNEckVmc3lnMDRtWU4xcGp3WjhIMVNvcU8xZEw3RlNuZGV4NzJ3b1htWlZwZ3k2dG01RUgyTkxwZVhGd3ZkUnh0cVFYSUZCSGdKeEE0dURZVGxQU01PeVBoNE1WWjl2R0LSAa4BQVVfeXFMTXJpRXBiSUxSZzRRVXlqekstYWFmYW1OMFBIMWx2aEVHcm84LUJqR1hub3gtQjJpUkpoYjJRN1VjUFVuV0VoZkRnbk1tWGNNZkFyWUlZS2NYVmNjSS1BVE9YdXVSVENTalBPNVNqbmY4dHhTbExUZFY1Zkk5OENYOXZtOUZFcl9TMWhuNUota3g2cG1NODZvX1NBdnlEcFJDMy1RUHZDYTR0OTBkaUhB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-25T17:33:02.180Z"
     }
   ]
 }
