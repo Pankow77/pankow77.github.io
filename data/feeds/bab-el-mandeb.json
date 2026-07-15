@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T16:31:20.105Z",
+  "last_fetch": "2026-07-15T17:28:45.135Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c6f31a389ac0f26d",
+      "timestamp": 1784134382000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Yemeni militia intercepts boat with Houthi weapon-making gear in Bab al-Mandeb - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ3JjX2hUNmNKVllmRjdqVUFrdjl3TExJSXBnZFRGZkczOTU1YVkyNlFsQk1hYU1HVmZtSDdwcVFrUndydHJPR1RsUnRMQnhMaVJ3VWFUaHROVzQzQTNDRUpjYkZodkhWa0VFN0VDT0JOR3BtVS1TX0NVTG1vVmdDSkpuand5QWU3Q3FFaE41Z2RwVW8ybW5aSnpqWC1fendBYVJVSUUxSHc2Zw?oc=5\" target=\"_blank\">Yemeni militia intercepts boat with Houthi weapon-making gear in Bab al-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ3JjX2hUNmNKVllmRjdqVUFrdjl3TExJSXBnZFRGZkczOTU1YVkyNlFsQk1hYU1HVmZtSDdwcVFrUndydHJPR1RsUnRMQnhMaVJ3VWFUaHROVzQzQTNDRUpjYkZodkhWa0VFN0VDT0JOR3BtVS1TX0NVTG1vVmdDSkpuand5QWU3Q3FFaE41Z2RwVW8ybW5aSnpqWC1fendBYVJVSUUxSHc2Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T17:28:43.787Z"
+    },
     {
       "id": "rss_f17e4bd2d9802516",
       "timestamp": 1784122048000,
@@ -11200,29 +11221,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-23T12:58:25.713Z"
-    },
-    {
-      "id": "rss_a7d0982657fd4873",
-      "timestamp": 1774215714000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Coalition warns Houthi threat to close Bab el-Mandeb Strait ‘may constitute a heightened risk’ - Tradewinds News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNEZoQ3dxdXBYeXhEM2dwUTBBZG81dzI5RW8wWWs4bms1NXYzdl9CN0V1ckpITVhNN3ZUeU82dk4xT3drM3FVc2U2c3Fpc1hfTldiRGJIRjJad1p3emVtcWoyY1ppbm4xTEZUSjZyVnk5WUtGWm9RbjVnMmVUVEdWNW9sQlZ6N2FHMWFHUzUxa0JraHVuRmNwMDRoTS1GSURVTXZrNkJ6Qzk1aDdhNDJQYmlOT0NrMnNpcXM4ZjJKS0NkUEN2RmlvT2pfQllTY1cwcVI5dXRqWDdTLVdH?oc=5\" target=\"_blank\">Coalition warns Houthi threat to close Bab el-Mandeb Strait ‘may constitute a heightened risk’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\"",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPNEZoQ3dxdXBYeXhEM2dwUTBBZG81dzI5RW8wWWs4bms1NXYzdl9CN0V1ckpITVhNN3ZUeU82dk4xT3drM3FVc2U2c3Fpc1hfTldiRGJIRjJad1p3emVtcWoyY1ppbm4xTEZUSjZyVnk5WUtGWm9RbjVnMmVUVEdWNW9sQlZ6N2FHMWFHUzUxa0JraHVuRmNwMDRoTS1GSURVTXZrNkJ6Qzk1aDdhNDJQYmlOT0NrMnNpcXM4ZjJKS0NkUEN2RmlvT2pfQllTY1cwcVI5dXRqWDdTLVdH?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-22T21:48:26.081Z"
     }
   ]
 }
