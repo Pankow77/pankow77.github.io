@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T05:23:31.145Z",
+  "last_fetch": "2026-07-15T06:15:26.312Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -48,6 +48,27 @@
       "fetched_at": "2026-07-15T05:23:29.866Z"
     },
     {
+      "id": "rss_4b11c86c6a59d1d0",
+      "timestamp": 1784090051000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UN extends monitoring of Houthi attacks in Red Sea for six months - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPREtsYXo5VTN5V2UxOUFJbGY2UVNfbmdfdTVJblRuRm01UFhEaDJ0b0xYbXVhS3FPdHhMNGdwNHZKTHU4cXBwSFFqZFBoVV9rVzNTRjVxdlFjQjl1aTlmR3ZPRmxkVXRwa0hWb2pzMnlrbVFwd24wQ1FlamhqM3cyM3cwM2I5V29FVlJvZUZvWHFod2NScWc5Yg?oc=5\" target=\"_blank\">UN extends monitoring of Houthi attacks in Red Sea for six months</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPREtsYXo5VTN5V2UxOUFJbGY2UVNfbmdfdTVJblRuRm01UFhEaDJ0b0xYbXVhS3FPdHhMNGdwNHZKTHU4cXBwSFFqZFBoVV9rVzNTRjVxdlFjQjl1aTlmR3ZPRmxkVXRwa0hWb2pzMnlrbVFwd24wQ1FlamhqM3cyM3cwM2I5V29FVlJvZUZvWHFod2NScWc5Yg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T06:15:24.918Z"
+    },
+    {
       "id": "rss_803c96c83a774916",
       "timestamp": 1784081266000,
       "source": "OSINT",
@@ -69,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T03:02:55.264Z"
+    },
+    {
+      "id": "rss_e91ef2c58471e8f6",
+      "timestamp": 1784080450000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Ankara urges restraint after Houthi attack on Saudi Arabia - Hürriyet Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQenpEajF4WjlOdDlBdjhsNE11QkFiajE3QnpjRGF6ek9VeDVUOVQ5TVJJcm9iN1ZaX3pJYkdKLThBeWZacC1MZl80MkdGcFJuNW4td3ZSZUFwTXNYNHJYWWw1ckZvMC1ZNXZvVjZpRGR4d1l4WUozbVhhWkg5Z0RHa1RkUXZOc0d5ZkhXMzJuZ2hjX3JNdXFXeE01cFpBM19n?oc=5\" target=\"_blank\">Ankara urges restraint after Houthi attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Hürriyet Daily News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQenpEajF4WjlOdDlBdjhsNE11QkFiajE3QnpjRGF6ek9VeDVUOVQ5TVJJcm9iN1ZaX3pJYkdKLThBeWZacC1MZl80MkdGcFJuNW4td3ZSZUFwTXNYNHJYWWw1ckZvMC1ZNXZvVjZpRGR4d1l4WUozbVhhWkg5Z0RHa1RkUXZOc0d5ZkhXMzJuZ2hjX3JNdXFXeE01cFpBM19n?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T06:15:24.917Z"
     },
     {
       "id": "rss_14973232e7171a66",
@@ -11185,52 +11227,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-22T20:22:15.731Z"
-    },
-    {
-      "id": "rss_1971cf4c0b5c07b5",
-      "timestamp": 1773989620000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis weigh Bab al-Mandab blockade to back Iran, official says - news.cgtn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPZHAxUTViWG82eUk1N1FhYjlWT2lJOXVJblpRSWNjOUhBMnhhU29Xem9tZzJqQWlnem1SSEd2TmJjU2ZESG5sdXFJd0FERFBPUXRaVV9odTAzSkhuRUt4Y0thRW5RUWJEZTh6VGJveG1EZjcxUlo0LTAyVFJKeXFwZmdfR2R0dWhvT2ZFbGFOOVFNc2ZUSGhpamV1Z1ZhenZXcTdTZ1ZFUk9MUTJBTEpLemp1VjhjMDM4U1JHT0pB?oc=5\" target=\"_blank\">Yemen's Houthis weigh Bab al-Mandab blockade to back Iran, official says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPZHAxUTViWG82eUk1N1FhYjlWT2lJOXVJblpRSWNjOUhBMnhhU29Xem9tZzJqQWlnem1SSEd2TmJjU2ZESG5sdXFJd0FERFBPUXRaVV9odTAzSkhuRUt4Y0thRW5RUWJEZTh6VGJveG1EZjcxUlo0LTAyVFJKeXFwZmdfR2R0dWhvT2ZFbGFOOVFNc2ZUSGhpamV1Z1ZhenZXcTdTZ1ZFUk9MUTJBTEpLemp1VjhjMDM4U1JHT0pB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T20:57:54.522Z"
-    },
-    {
-      "id": "rss_1686191b21e017d8",
-      "timestamp": 1773988178000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Saudi Arabia Reels from Aerial Attack on Red Sea Oil Export Hub Yanbu as Intensifying Iran‑Israel War Sparks Retaliatory Strikes on Gulf Energy Infrastructure, Shifts Global Oil Supply Routes, Drives Prices Higher and Raises Fears of Deepening Regional En - Travel And Tour World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2wJBVV95cUxQYWtPZndFYlVrVEU5RlhzVFJPcFZWTVBwN2FNMkNzQS1vZWVVVnZIWG9VajRnLWF4alNkQWRSSHhXN1BHbTBUQ3l6VkpKRHBwTUE2cTJ5QjRhOFBTSElIUUpHVFF3YnpIU2Z2NklSb1ZXbWFnNXRBa0UxSkpiWjdxWDk5Q1BOS1VZUFJhNHVucW5yVjJGZHlES2d3MUsxSF9zX0wwZnprekZhVmUwUEw3Z1VxYVo1c1NRUVE4eFg0QXFVb3RvWEpsbzFvNVVTbVJGLXNqbk5DQ0pSSXVsTVBzTnZUUUttUEdVc2J2bnFDd245VHg4Zmlzck9qbi1lR2VsU3lITjd2ekFZWkJ6aDhoQzloQ2RGRldsZzRsRzZIUnVZRFRMeENYcUtWZzdlajlBN25USlBuNjdQMkpuNVR1ZmdDLUNXVXFzZDZmNm95Vm",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxQYWtPZndFYlVrVEU5RlhzVFJPcFZWTVBwN2FNMkNzQS1vZWVVVnZIWG9VajRnLWF4alNkQWRSSHhXN1BHbTBUQ3l6VkpKRHBwTUE2cTJ5QjRhOFBTSElIUUpHVFF3YnpIU2Z2NklSb1ZXbWFnNXRBa0UxSkpiWjdxWDk5Q1BOS1VZUFJhNHVucW5yVjJGZHlES2d3MUsxSF9zX0wwZnprekZhVmUwUEw3Z1VxYVo1c1NRUVE4eFg0QXFVb3RvWEpsbzFvNVVTbVJGLXNqbk5DQ0pSSXVsTVBzTnZUUUttUEdVc2J2bnFDd245VHg4Zmlzck9qbi1lR2VsU3lITjd2ekFZWkJ6aDhoQzloQ2RGRldsZzRsRzZIUnVZRFRMeENYcUtWZzdlajlBN25USlBuNjdQMkpuNVR1ZmdDLUNXVXFzZDZmNm95VmE1SjJ1NkhXNkJSYw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T06:49:36.914Z"
     }
   ]
 }
