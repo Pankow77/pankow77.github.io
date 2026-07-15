@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T01:38:04.431Z",
+  "last_fetch": "2026-07-15T03:02:56.592Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_803c96c83a774916",
+      "timestamp": 1784081266000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iranian plane lands in Yemen, raising Red Sea strategic concerns - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQNnBrLWF0LUpBUzhTaDVNMUlQOVVwWHp2bVEwc0NUTGxZRkQ2VEhpbkNqaE1EVkRnbFA5Q010SGs2SGgxVkNONzJDNVBDVC04NFNkbHN4d2FlY3FjWVJ1aUwyUVdGUm83TzJ2YlozX0dvdVVtMTNCZ2tTdDBrX291WjlxU2Z6SmdtU2I0T2R2VEVBUFhJamc?oc=5\" target=\"_blank\">Iranian plane lands in Yemen, raising Red Sea strategic concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNnBrLWF0LUpBUzhTaDVNMUlQOVVwWHp2bVEwc0NUTGxZRkQ2VEhpbkNqaE1EVkRnbFA5Q010SGs2SGgxVkNONzJDNVBDVC04NFNkbHN4d2FlY3FjWVJ1aUwyUVdGUm83TzJ2YlozX0dvdVVtMTNCZ2tTdDBrX291WjlxU2Z6SmdtU2I0T2R2VEVBUFhJamc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T03:02:55.264Z"
+    },
+    {
+      "id": "rss_14973232e7171a66",
+      "timestamp": 1784079752000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni Foreign Ministry Condemns Houthi Terrorist Attack on Saudi Arabia - وكالة الأنباء السعودية",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiSkFVX3lxTFBLNTNzeXlFR0ZhbTRGZ3lOVmFNTl9rcEdUNVQ2bmJ6cEp0Q3ZSVFFqRl9QRzRSdjdfczRwUDE2WjZVVUN0VmVJUDFR?oc=5\" target=\"_blank\">Yemeni Foreign Ministry Condemns Houthi Terrorist Attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة الأنباء السعودية</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBLNTNzeXlFR0ZhbTRGZ3lOVmFNTl9rcEdUNVQ2bmJ6cEp0Q3ZSVFFqRl9QRzRSdjdfczRwUDE2WjZVVUN0VmVJUDFR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T03:02:55.265Z"
+    },
     {
       "id": "rss_ee4f5d17d469108e",
       "timestamp": 1784065696000,
@@ -289,6 +333,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T09:12:59.725Z"
+    },
+    {
+      "id": "rss_e8fbf5288111a9b4",
+      "timestamp": 1784015499000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Iran-Backed Houthis Strike Saudi Arabia in Major Escalation - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPNE1NcmVmaDhWbHFrQ2xJeGVlak1jQnUzY3IzTklINUV2NXN2RnBqdVZyVUNLX295NWZDN1dYS3RweXhEZXBoZDZxbDh0TjVMcHpxaXlJOHU4Mi05dHpJQ2k3MnJMbmdNRFRIbUViMGxYNFM5bklvSThNUnNrUmh3S0FDbzVpRGs1ZDdfXzRoTUI5bWEybnkxLTcwaHNPMU9oMEJjelh3bmhHR1VlUnNj?oc=5\" target=\"_blank\">Iran-Backed Houthis Strike Saudi Arabia in Major Escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNE1NcmVmaDhWbHFrQ2xJeGVlak1jQnUzY3IzTklINUV2NXN2RnBqdVZyVUNLX295NWZDN1dYS3RweXhEZXBoZDZxbDh0TjVMcHpxaXlJOHU4Mi05dHpJQ2k3MnJMbmdNRFRIbUViMGxYNFM5bklvSThNUnNrUmh3S0FDbzVpRGs1ZDdfXzRoTUI5bWEybnkxLTcwaHNPMU9oMEJjelh3bmhHR1VlUnNj?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T03:02:55.264Z"
     },
     {
       "id": "rss_731f28044d5ff126",
@@ -11166,74 +11233,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-20T16:38:21.068Z"
-    },
-    {
-      "id": "rss_dc5ad2afbd2b3952",
-      "timestamp": 1773934982000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia says Red Sea SAMREF refinery hit in Iranian drone attack - All Israel News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNZWJObHRvSkY4YkNjbjRGZ05iNjBGTElwRWl3WlhYa0dra1BYMGo2U2UtOVRMWDBZOEM4TVZha25sVTdLdVlWMWYtb00ySklCNV9qUVVicWloMlEzVVlmb21xMjBUMG1LRXpVOVozc3hDbmxQWEN3ek5zbEZvbWZSUmRKNzd2V0dSZ0xqaUw0VHpPbHBseVZid1hjaUxUcDBhenVR?oc=5\" target=\"_blank\">Saudi Arabia says Red Sea SAMREF refinery hit in Iranian drone attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">All Israel News</font>",
-      "tags": [
-        "iran-proxy",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZWJObHRvSkY4YkNjbjRGZ05iNjBGTElwRWl3WlhYa0dra1BYMGo2U2UtOVRMWDBZOEM4TVZha25sVTdLdVlWMWYtb00ySklCNV9qUVVicWloMlEzVVlmb21xMjBUMG1LRXpVOVozc3hDbmxQWEN3ek5zbEZvbWZSUmRKNzd2V0dSZ0xqaUw0VHpPbHBseVZid1hjaUxUcDBhenVR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T09:36:30.768Z"
-    },
-    {
-      "id": "rss_694dfb326481acd8",
-      "timestamp": 1773926001000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea Crisis! Saudi Yanbu Port Resumes Operations Urgently After Attack; 'Last Channel' Under Pressure? - 富途牛牛",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMXkwT0Ixa0x4R0V1RDJFaDloVjRsUU9DNTZZVWZGTmZjQlJIeHdjMURwTWl5VnktckM1MW5wdjFYUUFNRHpER1lKSTFSZndZaFkzazU1YV9KZGd6dy1pM0F3OFNXYnJFcjFNcjBaLU1kdHg1N2Nkd2FjT3lKVFJjVkhFSjV6cFdkYjlMbldTaV9vYnl2b3htTGhWT052UEZzRGFFN3NTeU5rZw?oc=5\" target=\"_blank\">Red Sea Crisis! Saudi Yanbu Port Resumes Operations Urgently After Attack; 'Last Channel' Under Pressure?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">富途牛牛</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMXkwT0Ixa0x4R0V1RDJFaDloVjRsUU9DNTZZVWZGTmZjQlJIeHdjMURwTWl5VnktckM1MW5wdjFYUUFNRHpER1lKSTFSZndZaFkzazU1YV9KZGd6dy1pM0F3OFNXYnJFcjFNcjBaLU1kdHg1N2Nkd2FjT3lKVFJjVkhFSjV6cFdkYjlMbldTaV9vYnl2b3htTGhWT052UEZzRGFFN3NTeU5rZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-19T14:07:06.991Z"
-    },
-    {
-      "id": "rss_b1f70154ceccd2de",
-      "timestamp": 1773917580000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "After Hormuz, a new choke point threatens world shipping - The Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNOXRkanFMaXhVWXFCT2lqdWVQejd2Y3JzZGtlTU9ScWNXYzBOSzFwUmJwQlRMN2lqakZlWnlvQXJWUkU4eHBBTDh0MDV4S3lqdGlMeXVpcDh0QXBMSlRmNlhpYU9WVUFSal9iekU2aTJNRzlpb1hwTFM4eTBEeTN2TDk5Unc1WFAtVVcyc3VTTU1EY1Vvc2c?oc=5\" target=\"_blank\">After Hormuz, a new choke point threatens world shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOXRkanFMaXhVWXFCT2lqdWVQejd2Y3JzZGtlTU9ScWNXYzBOSzFwUmJwQlRMN2lqakZlWnlvQXJWUkU4eHBBTDh0MDV4S3lqdGlMeXVpcDh0QXBMSlRmNlhpYU9WVUFSal9iekU2aTJNRzlpb1hwTFM4eTBEeTN2TDk5Unc1WFAtVVcyc3VTTU1EY1Vvc2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-22T04:16:55.981Z"
     }
   ]
 }
