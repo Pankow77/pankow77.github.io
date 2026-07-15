@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T04:29:37.652Z",
+  "last_fetch": "2026-07-15T05:23:31.145Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e203e03c2aaac42e",
+      "timestamp": 1784091903000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "After Hormuz, Iran threatens the Red Sea - vijesti.me",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQa0UwSF9WdmdzUVEtRUJKTVhiMHByMkFGTUZyQTk0S2N0MEpILWNoSEptZjRDSndBeHVDODJpZUJ1TkJCMXdQOXpwekdBWi1WMUptVFQtMmtuVkZmblRHNHFpUEc5eWlqakoybGhIc2ZpdTRRNmtDWXBEMTlCZ28zcDcyd0hfOXhScFJZU9IBfkFVX3lxTFB0WE9oNDc5TVV2OWhHZmVVekhGZlU3V21VdjJDZHpVVmdSWE5EY3VybmVucVIwOHpydjd2TnpUTUo5UW9pTk9OMWdiMzdZNkVRYnBQQ3FKQ1Nrc2RqdnNFbi05bFpYSTNRUmlqODhCaHdYbkg2N1pQUWRRVlA3Zw?oc=5\" target=\"_blank\">After Hormuz, Iran threatens the Red Sea</a>&nbsp;&nbsp;<font col",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQa0UwSF9WdmdzUVEtRUJKTVhiMHByMkFGTUZyQTk0S2N0MEpILWNoSEptZjRDSndBeHVDODJpZUJ1TkJCMXdQOXpwekdBWi1WMUptVFQtMmtuVkZmblRHNHFpUEc5eWlqakoybGhIc2ZpdTRRNmtDWXBEMTlCZ28zcDcyd0hfOXhScFJZU9IBfkFVX3lxTFB0WE9oNDc5TVV2OWhHZmVVekhGZlU3V21VdjJDZHpVVmdSWE5EY3VybmVucVIwOHpydjd2TnpUTUo5UW9pTk9OMWdiMzdZNkVRYnBQQ3FKQ1Nrc2RqdnNFbi05bFpYSTNRUmlqODhCaHdYbkg2N1pQUWRRVlA3Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T05:23:29.867Z"
+    },
+    {
+      "id": "rss_1f7ac719050e7abc",
+      "timestamp": 1784091562000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Arab, Islamic Countries Slam Terrorist Houthi Attack against Saudi Arabia - ASHARQ AL-AWSAT English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPcVd3UF9CeHNHM1hSSXVyUmNPd0F5UXNPSWFZc3V2ajNHa3ppSWx3S2ltUThlQlMwSU55WnByaGFSYThiZWlBcFhCVWlXcjNTczBhV01ySll5T1p6UnhSVjdlekgyZHFrdS1qUVRxMjVFMUtxLWhVYkdBMjBpNUpKeGdNWDRQai11Mm50eHFrMWJyczVLdXdXc3ViYjNSQ09SYjRMY3Z4UFhQQTBXSEZvTkhn?oc=5\" target=\"_blank\">Arab, Islamic Countries Slam Terrorist Houthi Attack against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcVd3UF9CeHNHM1hSSXVyUmNPd0F5UXNPSWFZc3V2ajNHa3ppSWx3S2ltUThlQlMwSU55WnByaGFSYThiZWlBcFhCVWlXcjNTczBhV01ySll5T1p6UnhSVjdlekgyZHFrdS1qUVRxMjVFMUtxLWhVYkdBMjBpNUpKeGdNWDRQai11Mm50eHFrMWJyczVLdXdXc3ViYjNSQ09SYjRMY3Z4UFhQQTBXSEZvTkhn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T05:23:29.866Z"
+    },
     {
       "id": "rss_803c96c83a774916",
       "timestamp": 1784081266000,
@@ -11187,52 +11231,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-20T06:49:36.914Z"
-    },
-    {
-      "id": "rss_3dd2a8dfc9e01860",
-      "timestamp": 1773982040000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemeni forces warn of Red Sea strikes targetting warships if US joins Israel against Iran - The Economic Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxPTVl6TVlNd3RHVm9xaUZZS3Z4NVZsdjFxaXM1NzdKaXZxaWNUb0ZyR01COWJNS3AtUlZHT1BGU3FVLTBkWXdzR05jZTdhaGhTUEFRRUxrRjB3N2Y0YVluazItNzFrc0c0RTJNTjhIU2xzb3VDT0RZXzVHOUFZRzhwNlNqRjF2QjFHZ0hVUS1vUGZNWFF2RjhFcGVuOVlBWEZ0elQ2NWZhYXAxUEFQaUU5alJ1VTFqRlVLRlpac2R0Q1hSWlhoVVJjSjlVdkc1VmZLZG0wekFwb1hoRFp3WXZqOXBwQ25SSHQwNVEtZ0xtUC1xc3JiQThZMnVZQktpdkFEbG1R0gGIAkFVX3lxTFBYRUhqUVc1RE9qZVV6ZENBVV9kTURLN2M3cUx6RUxSR21ONTJnajY0THkwcjhDcVRnYW9LS0l0MUVOSkVCeUtIaX",
-      "tags": [
-        "iran-proxy",
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPTVl6TVlNd3RHVm9xaUZZS3Z4NVZsdjFxaXM1NzdKaXZxaWNUb0ZyR01COWJNS3AtUlZHT1BGU3FVLTBkWXdzR05jZTdhaGhTUEFRRUxrRjB3N2Y0YVluazItNzFrc0c0RTJNTjhIU2xzb3VDT0RZXzVHOUFZRzhwNlNqRjF2QjFHZ0hVUS1vUGZNWFF2RjhFcGVuOVlBWEZ0elQ2NWZhYXAxUEFQaUU5alJ1VTFqRlVLRlpac2R0Q1hSWlhoVVJjSjlVdkc1VmZLZG0wekFwb1hoRFp3WXZqOXBwQ25SSHQwNVEtZ0xtUC1xc3JiQThZMnVZQktpdkFEbG1R0gGIAkFVX3lxTFBYRUhqUVc1RE9qZVV6ZENBVV9kTURLN2M3cUx6RUxSR21ONTJnajY0THkwcjhDcVRnYW9LS0l0MUVOSkVCeUtIaXlHdXJKN0laM2hGdk0yRVJJVDFjTzFkb3NxcTJ5U3l2WkNuQmlTSjM0akp3WEQ2dmpnWF9CYzBfUHROWjBTb285STRIeEVJdHNKNDVrREtoZXNnbWFyLW90bU9rcWdaMmFjT3p2bF8xdVI5RXdHYWJsVklFcm5mdDBHY1VyQ0p6cXNYeWNBQTZSYzhoSFpsWHlIRnlkREZJbWtzTFBBZ1hmbXB1UXRwNy1pVUE2ZVFMZHBCM2ZkUzE0QWRHUXBQRA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T19:34:49.787Z"
-    },
-    {
-      "id": "rss_e562725ba791df24",
-      "timestamp": 1773948564000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Loses Patience as Red Sea Terminal and Refinery are Targeted - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQUUZYZkdVUVpmQzFFRXBnS2d4OVhRdzhSTF9JRW1ZUzBJaWF1XzRQRWsyMFZjWnV4dGRfMk4yRUlRanp2d1d0WVhaZTlwOWFmX0pabG5ncjZqR0ZHbFo1VjdVSGduam1tbTdQaGFJNjFpaUNfbjN3dGVKMkpnWEhveHVVRlNWMjhUX2F6cnFfZGx6MVRROW41OV9NZ0lmd21YSWE4RE1xUFNIRFl6VG1LS3hB?oc=5\" target=\"_blank\">Saudi Arabia Loses Patience as Red Sea Terminal and Refinery are Targeted</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUUZYZkdVUVpmQzFFRXBnS2d4OVhRdzhSTF9JRW1ZUzBJaWF1XzRQRWsyMFZjWnV4dGRfMk4yRUlRanp2d1d0WVhaZTlwOWFmX0pabG5ncjZqR0ZHbFo1VjdVSGduam1tbTdQaGFJNjFpaUNfbjN3dGVKMkpnWEhveHVVRlNWMjhUX2F6cnFfZGx6MVRROW41OV9NZ0lmd21YSWE4RE1xUFNIRFl6VG1LS3hB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-20T16:38:21.068Z"
     }
   ]
 }
