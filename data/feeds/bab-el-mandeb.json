@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-15T19:28:00.377Z",
+  "last_fetch": "2026-07-15T19:54:56.377Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -153,6 +153,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T14:34:15.482Z"
+    },
+    {
+      "id": "rss_d80b0789a07032ae",
+      "timestamp": 1784108779000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran threatens to cut off vital seaways in response to Trump's renewed blockade - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOOFJzRjBmdjM3Q01NRnowMElOTWJaREFEeHBGQVR0emFHOUFmcFZLUzNZa2paWkpsekZfdXFVMTZ4RmRzVzJ1WVZuZDBmRklHc3NhTEFsVWpxSnJMQjJfU01jZjhmdGExdWF0czhWbnVJOEwzRWhTQkpMSFBWbTE2TTFZUHNPWXlhYUItRmF0RWNnWEJhMk9CSkxJNFFYcVlaSmp6X2NMckFlM2djVjJ4QnlLaVZmbG1SMDdjUjl6TUdJbWRfODJqWFlKcnpuQlk?oc=5\" target=\"_blank\">Iran threatens to cut off vital seaways in response to Trump's renewed blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOOFJzRjBmdjM3Q01NRnowMElOTWJaREFEeHBGQVR0emFHOUFmcFZLUzNZa2paWkpsekZfdXFVMTZ4RmRzVzJ1WVZuZDBmRklHc3NhTEFsVWpxSnJMQjJfU01jZjhmdGExdWF0czhWbnVJOEwzRWhTQkpMSFBWbTE2TTFZUHNPWXlhYUItRmF0RWNnWEJhMk9CSkxJNFFYcVlaSmp6X2NMckFlM2djVjJ4QnlLaVZmbG1SMDdjUjl6TUdJbWRfODJqWFlKcnpuQlk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-15T19:54:55.010Z"
     },
     {
       "id": "rss_89aeca1acda13c63",
@@ -11193,29 +11216,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-25T14:39:05.780Z"
-    },
-    {
-      "id": "rss_eba0b6487d3ef059",
-      "timestamp": 1774284913000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis preemptively preparing for conflict amid Iran war, UAE media says - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rUzJ6akEzX2pmRzNvbnE3Q2taNDhWX3BIMjRFUXRQN1V6elU3YzFXM2RwMFp0XzhSYzhDWHVhNUtiNmN1UGtTVWlCWVBpZWFPNElubHEybWhLV1dU?oc=5\" target=\"_blank\">Houthis preemptively preparing for conflict amid Iran war, UAE media says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rUzJ6akEzX2pmRzNvbnE3Q2taNDhWX3BIMjRFUXRQN1V6elU3YzFXM2RwMFp0XzhSYzhDWHVhNUtiNmN1UGtTVWlCWVBpZWFPNElubHEybWhLV1dU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-23T23:54:20.725Z"
     }
   ]
 }
