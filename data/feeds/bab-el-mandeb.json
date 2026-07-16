@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T21:49:12.567Z",
+  "last_fetch": "2026-07-16T22:20:51.188Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fc332475407d8df2",
+      "timestamp": 1784238722000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran Tells Yemen’s Houthis to Close Bab El-Mandeb If U.S. Strikes Power Infrastructure - NewsCord",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPQkVOOUZqUjl1U0dTSjJXRGNmNUZGdHNVUXhCVU1waktZQ1NUSUtyU0h2RnF5RlQtNS1mOVhja3FSdXBQWHJhSE01VTBrbmhrengtcGV2VVBYOUFxTExBejdZOUY5WnRrVHBCUEJMZktRZmRLbTg5N2pJb3RFckVXdDJDYS1VWVBsUV9DMXRISENWdEphbjhOZlJQbTlTOGxDdG9jOUdxRHFfeDBqT1E5aE5YR2o5WHVhZE9oZ0pYbFRJVUplUXZaSW9qeUFPczhIWUNrVUY0WGlMR3ZFaHZHVmVla3FuLW81cVE?oc=5\" target=\"_blank\">Iran Tells Yemen’s Houthis to Close Bab El-Mandeb If U.S. Strikes Power Infrastructure</a>&nbsp;&nbsp;<font colo",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPQkVOOUZqUjl1U0dTSjJXRGNmNUZGdHNVUXhCVU1waktZQ1NUSUtyU0h2RnF5RlQtNS1mOVhja3FSdXBQWHJhSE01VTBrbmhrengtcGV2VVBYOUFxTExBejdZOUY5WnRrVHBCUEJMZktRZmRLbTg5N2pJb3RFckVXdDJDYS1VWVBsUV9DMXRISENWdEphbjhOZlJQbTlTOGxDdG9jOUdxRHFfeDBqT1E5aE5YR2o5WHVhZE9oZ0pYbFRJVUplUXZaSW9qeUFPczhIWUNrVUY0WGlMR3ZFaHZHVmVla3FuLW81cVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T22:20:49.905Z"
+    },
     {
       "id": "rss_71dedb961152caa0",
       "timestamp": 1784222400000,
@@ -11188,30 +11211,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T09:33:17.218Z"
-    },
-    {
-      "id": "rss_f97b10cee1478a22",
-      "timestamp": 1774682340000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis Join Iran War, Consider Closing Red Sea Shipping Route - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigJBVV95cUxNV1QwZFIxSHliVy1ydTN1UUJwUUJYdHdOUmY0R0QwMzB5dFRRTmlxX1lGelVGWHlBZjhmeE8xTm42U3dhaHd1YUI4ellJYmJ1V01vQmtFNnRhX3dmTFF5NnN5cVdoNFpFaURXVEhFZ0JpTUZKQWM1SjZoQVVNWDJZYUxSUWJDREtNS2pSbEg3YnJnQzRHRk9Kc2FVYUJsS0xoVkV5QTRjWXZzdTlOdXNGWnVocjgzdDFuWDJBMFVWbnpFbVNqYkQxT1EwWjJTTnQ0cjNQQzd4SWZNemVKRVF6YmdKRklqRmkySjBrY0hjMkREVWxxQjVka3V5ZlNHODUtSF9QLUhGYjhvdw?oc=5\" target=\"_blank\">Yemen's Houthis Join Iran War, Consider Closing Red Sea Shipping Rout",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNV1QwZFIxSHliVy1ydTN1UUJwUUJYdHdOUmY0R0QwMzB5dFRRTmlxX1lGelVGWHlBZjhmeE8xTm42U3dhaHd1YUI4ellJYmJ1V01vQmtFNnRhX3dmTFF5NnN5cVdoNFpFaURXVEhFZ0JpTUZKQWM1SjZoQVVNWDJZYUxSUWJDREtNS2pSbEg3YnJnQzRHRk9Kc2FVYUJsS0xoVkV5QTRjWXZzdTlOdXNGWnVocjgzdDFuWDJBMFVWbnpFbVNqYkQxT1EwWjJTTnQ0cjNQQzd4SWZNemVKRVF6YmdKRklqRmkySjBrY0hjMkREVWxxQjVka3V5ZlNHODUtSF9QLUhGYjhvdw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T14:58:57.179Z"
     }
   ]
 }
