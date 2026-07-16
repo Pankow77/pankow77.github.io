@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T19:51:58.420Z",
+  "last_fetch": "2026-07-16T20:18:43.905Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -274,6 +274,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T15:10:53.953Z"
+    },
+    {
+      "id": "rss_bd8dea4dfef02dc7",
+      "timestamp": 1784211914000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pakistan worries about being drawn into US-Iran conflict after Houthis attack Saudi Arabia - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFhQU183WFFqVnZ6Z2VtXzc2LUk0eW9kSzZ4d3Y2Mk9fMkFmQTYteGFkeGZKMW1LYzFOclEzWWRQdDFZVFUxcDYzd1hGanh3WWJoZ0tDc2ljNmZ4aVN2cURsMFVtbXh1YnhaeG9pU0hscWFYclR3QWVDRUtobUhGQ2Q4ZkVfV1Y1STVsdk5QYnhHUy16UjFpMmhFRWV1V1FQRXhuTXdNOXdIVXB6b0tGV2dyMkNTVUJZVDNSeWR5VGdidFYwWGQ0cm5Eb1I?oc=5\" target=\"_blank\">Pakistan worries about being drawn into US-Iran conflict after Houthis attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFhQU183WFFqVnZ6Z2VtXzc2LUk0eW9kSzZ4d3Y2Mk9fMkFmQTYteGFkeGZKMW1LYzFOclEzWWRQdDFZVFUxcDYzd1hGanh3WWJoZ0tDc2ljNmZ4aVN2cURsMFVtbXh1YnhaeG9pU0hscWFYclR3QWVDRUtobUhGQ2Q4ZkVfV1Y1STVsdk5QYnhHUy16UjFpMmhFRWV1V1FQRXhuTXdNOXdIVXB6b0tGV2dyMkNTVUJZVDNSeWR5VGdidFYwWGQ0cm5Eb1I?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-16T20:18:42.557Z"
     },
     {
       "id": "rss_cd90a24d70ffb278",
@@ -11189,29 +11212,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:58:57.179Z"
-    },
-    {
-      "id": "rss_b25d2e5040867ccc",
-      "timestamp": 1774679640000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Israel faces first missile from Yemen in suspected Houthi attack - The Siasat Daily",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOcDlTcldUTTZEaTN5cXFQczVQTHBtbnpfRHV1REhfY09INzZQdDBNVUxCRzhpZUFrYmFtcTNnSUFRR1JPYnlBdGNCaDF2Vm5iY3RDYUd4UTFtTFpRbjZrYzNLSWY1VlNzYXRHbHVNR3c5UUU4MHZlNGoxRng3dHJxZFBaTk5DRjZmT2gzSGRwUXgwODlUcTJDYXl4T1fSAaIBQVVfeXFMTXVrTnNla1FKSmR4c3FIMFNGQ0VxMERWVkIxdkpvNUs4TWxkR2RQbnR2eXJhSEJsYXBkcGZKMGpiQ25lYWp0aFdrbkNUMExiZGhLUkNlYk83RldSX093OF9XNlo2LXBWd0xBaDc3Z1hDMFpOUTl1M3dnRy1uS0pvSmNGT3pmelAyTzF0WG8tUDZiN2RQNzdvNE9MQnlJdnpBRHFR?oc=5\" target=\"_bl",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOcDlTcldUTTZEaTN5cXFQczVQTHBtbnpfRHV1REhfY09INzZQdDBNVUxCRzhpZUFrYmFtcTNnSUFRR1JPYnlBdGNCaDF2Vm5iY3RDYUd4UTFtTFpRbjZrYzNLSWY1VlNzYXRHbHVNR3c5UUU4MHZlNGoxRng3dHJxZFBaTk5DRjZmT2gzSGRwUXgwODlUcTJDYXl4T1fSAaIBQVVfeXFMTXVrTnNla1FKSmR4c3FIMFNGQ0VxMERWVkIxdkpvNUs4TWxkR2RQbnR2eXJhSEJsYXBkcGZKMGpiQ25lYWp0aFdrbkNUMExiZGhLUkNlYk83RldSX093OF9XNlo2LXBWd0xBaDc3Z1hDMFpOUTl1M3dnRy1uS0pvSmNGT3pmelAyTzF0WG8tUDZiN2RQNzdvNE9MQnlJdnpBRHFR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T06:53:49.572Z"
     }
   ]
 }
