@@ -1,8 +1,75 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T15:58:52.143Z",
+  "last_fetch": "2026-07-16T16:35:39.298Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_08c15ef30d88bf0c",
+      "timestamp": 1784218312000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Army Repels Houthi Attack in Al-Jawf - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBGOVh0LWlTZmRqM0lySklKMjRfSDZYWHNaRnktOGNLSmE4enkxU1NielY2djZxcEw5Q2xGVFQ1cTY5V0lFcGd6TzN1YjFkb2lOMjhGMkVTRkROZw?oc=5\" target=\"_blank\">Yemeni Army Repels Houthi Attack in Al-Jawf</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBGOVh0LWlTZmRqM0lySklKMjRfSDZYWHNaRnktOGNLSmE4enkxU1NielY2djZxcEw5Q2xGVFQ1cTY5V0lFcGd6TzN1YjFkb2lOMjhGMkVTRkROZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T16:35:37.989Z"
+    },
+    {
+      "id": "rss_8e0e1a459f0cd47e",
+      "timestamp": 1784218129000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran tells Houthis to close Bab El-Mandeb strait if US hits power network: Reports - arabnews.jp",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBGaWlrcnBLNVhRRlR4N0ZNbVk5SHkwdzd6QTVYb2NENE4wRGJNemM0NUtHSlVjVnZaTlVRVDZGZXFFc1J4QXRVZ1Atb2p3SGdqclhHU0t6QTM0dm1LMFo4QkxteUI?oc=5\" target=\"_blank\">Iran tells Houthis to close Bab El-Mandeb strait if US hits power network: Reports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">arabnews.jp</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBGaWlrcnBLNVhRRlR4N0ZNbVk5SHkwdzd6QTVYb2NENE4wRGJNemM0NUtHSlVjVnZaTlVRVDZGZXFFc1J4QXRVZ1Atb2p3SGdqclhHU0t6QTM0dm1LMFo4QkxteUI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T16:35:37.989Z"
+    },
+    {
+      "id": "rss_cf58127558caa9d7",
+      "timestamp": 1784217219000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran calls on Houthis to prepare to cut off Red Sea gateway — can the terror group do it? - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPLTJuNGxpLXA2aUlIVjUtUU1YWW54UHBfbVo1ZENFRkdXWTBDV19QNHBqM1FlOXJUZndLd1d2bDRkVWJ5WmdvNEdYWEFVeHpOdkhYS19qeVVkZjc0NmpaYUFJZjJNQ3I5YlFXQlNaVmxoemxNdGFaNG1oQXQ0WWlwVG50Q0I1T0ltdkctMGRPUnFPVHNQVjBtb3FzaHk5OFA1OGd1S2pB0gGrAUFVX3lxTE00U2stelBNc0RsV0tqWllLelBGR2p0TlYyaW9tT0dvLVRnV05pdm1nVTh0S3hNMUJ1SURzcjUyd1RtcjMtSmV3NE85N1d4YmpsQkhWLS1abFEtR0NTTE5YdHJPLTBfMUZzRW9iUkJsdU0yaHJUSUgwT1JOODlWSXNSakg3ZWhlZ1RvckxISHJ3cmNSTkFndV9GVnJuRHJWNlZTWTl0bz",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLTJuNGxpLXA2aUlIVjUtUU1YWW54UHBfbVo1ZENFRkdXWTBDV19QNHBqM1FlOXJUZndLd1d2bDRkVWJ5WmdvNEdYWEFVeHpOdkhYS19qeVVkZjc0NmpaYUFJZjJNQ3I5YlFXQlNaVmxoemxNdGFaNG1oQXQ0WWlwVG50Q0I1T0ltdkctMGRPUnFPVHNQVjBtb3FzaHk5OFA1OGd1S2pB0gGrAUFVX3lxTE00U2stelBNc0RsV0tqWllLelBGR2p0TlYyaW9tT0dvLVRnV05pdm1nVTh0S3hNMUJ1SURzcjUyd1RtcjMtSmV3NE85N1d4YmpsQkhWLS1abFEtR0NTTE5YdHJPLTBfMUZzRW9iUkJsdU0yaHJUSUgwT1JOODlWSXNSakg3ZWhlZ1RvckxISHJ3cmNSTkFndV9GVnJuRHJWNlZTWTl0bzhWQUV1MA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T16:35:37.989Z"
+    },
     {
       "id": "rss_6f89ba44f25406f6",
       "timestamp": 1784215200000,
@@ -25,6 +92,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T15:58:50.551Z"
+    },
+    {
+      "id": "rss_d555290d401b8f56",
+      "timestamp": 1784213700000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Bab al-Mandeb: The next strait Iran is threatening to shut down - Newsweek",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOd1NkSGJlNXJiZUdfM3dPSDFuR1JfUUNzV1ptVzg1T2NOVzM2R2IyR0tZX0htTjJvUE5LRDB3ZDdVeDBzRTlWeDZnOTRSbXZYeUpOYV9PRnBScW1GMHlESS1rN0JxeTliTERtN1ptLUNnS2R4VjhRU0c0NDlFTl9MaXFDdm1GOVBnRll0R1BBd1ZLOXo1VHFPU0F4ZEc?oc=5\" target=\"_blank\">Bab al-Mandeb: The next strait Iran is threatening to shut down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsweek</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd1NkSGJlNXJiZUdfM3dPSDFuR1JfUUNzV1ptVzg1T2NOVzM2R2IyR0tZX0htTjJvUE5LRDB3ZDdVeDBzRTlWeDZnOTRSbXZYeUpOYV9PRnBScW1GMHlESS1rN0JxeTliTERtN1ptLUNnS2R4VjhRU0c0NDlFTl9MaXFDdm1GOVBnRll0R1BBd1ZLOXo1VHFPU0F4ZEc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T16:35:37.989Z"
     },
     {
       "id": "rss_8c54b8dce536b726",
@@ -11121,98 +11211,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T05:38:53.777Z"
-    },
-    {
-      "id": "rss_3c16306fcd937a9b",
-      "timestamp": 1774669762000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Iran-backed Houthis threaten to join war: ‘Our fingers are on the trigger’ - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQdzhQcEtYeGlkU0tLQ0dCSW5MYTM3eWxtSXNENktjcWtiVEZHTERnMzl2Q243OTNKN2cxc3Y2dVdPUXJWT0tXYU04elBvRDcwbFFaWkF5Q0w4S3Y1RjQtbmlBQzJJTTNhejRtQlhpQTVnbUQxbjEwWVB2OHVDMm15T3lfemo0bXNXRmZNUE9IamlqNnZZMktQckpjQy04bnBEa1lKS1Mzc3htdnE0RmfSAbMBQVVfeXFMTmx3dmlHaXdJUEJUVlRwYlJsejJNNEEteWpXa2hvOXd5RHdZWVkxOU85LWdIZ2FuZS1sRDlwT0JDVURrcEp5UEpqcGdEbHlPd1ZhR3NhOWRFSVdtdXM0OG04QXM5YVFxYlBzZ1dMZ0RSdUJybGpvTnY2UFA0Y1YwQTcwTF9UbE5QcE5aclp6bXFMemZQdUNpd19hdTV3cX",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdzhQcEtYeGlkU0tLQ0dCSW5MYTM3eWxtSXNENktjcWtiVEZHTERnMzl2Q243OTNKN2cxc3Y2dVdPUXJWT0tXYU04elBvRDcwbFFaWkF5Q0w4S3Y1RjQtbmlBQzJJTTNhejRtQlhpQTVnbUQxbjEwWVB2OHVDMm15T3lfemo0bXNXRmZNUE9IamlqNnZZMktQckpjQy04bnBEa1lKS1Mzc3htdnE0RmfSAbMBQVVfeXFMTmx3dmlHaXdJUEJUVlRwYlJsejJNNEEteWpXa2hvOXd5RHdZWVkxOU85LWdIZ2FuZS1sRDlwT0JDVURrcEp5UEpqcGdEbHlPd1ZhR3NhOWRFSVdtdXM0OG04QXM5YVFxYlBzZ1dMZ0RSdUJybGpvTnY2UFA0Y1YwQTcwTF9UbE5QcE5aclp6bXFMemZQdUNpd19hdTV3cXV6dUprVDY0M1JoTzlsZmw2cFU1RkU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T05:38:53.777Z"
-    },
-    {
-      "id": "rss_034f3ea5f81b81de",
-      "timestamp": 1774668291000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Iran war: Houthis claim attack on Israel, Zelenskyy in UAE - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOMFl0Vktka2p5d0ExZHIzOVVpd2J0MXIzV05BbVFiMDAtLUNxWW1GQ3k1WUxYRUV4OEVVckY0TW1hMlNRdUhmR3Q4WGo1cGhTd2ZCaTdiY2dLbjBtNjBHY1RLcTF4ZkdHQmRCc09CYVdMR3hYX2lNQlBpb3EyT1lMcE1JT1Q4Tm56Zm01dlF4NEZkVktnZ0Rz?oc=5\" target=\"_blank\">Iran war: Houthis claim attack on Israel, Zelenskyy in UAE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMFl0Vktka2p5d0ExZHIzOVVpd2J0MXIzV05BbVFiMDAtLUNxWW1GQ3k1WUxYRUV4OEVVckY0TW1hMlNRdUhmR3Q4WGo1cGhTd2ZCaTdiY2dLbjBtNjBHY1RLcTF4ZkdHQmRCc09CYVdMR3hYX2lNQlBpb3EyT1lMcE1JT1Q4Tm56Zm01dlF4NEZkVktnZ0Rz?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T12:45:14.376Z"
-    },
-    {
-      "id": "rss_34e46d2dc94c101b",
-      "timestamp": 1774657652000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis give Iran war ultimatum to US-Israel, raise stakes in Red Sea, Bab al-Mandeb with three conditions - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgJBVV95cUxPWHl2ZlZhNzZueGFMalhpUUF6Uzk3NWNvSV9hVVItMWZCYnlZZFdyN1dkRm5UM2dvZ3pHZ3JPWHJwYWdBcm9VQWlqS2E3R0Ezc2hYbU8tQ1Q1b3NkWFFMdmtKakhDZmFKV3hGUmMtM0pYVkd3TThubHAtbUQyNjZaeTYzbFJNWDN4LWs1U29Wa2tOdENMM28zaHFjWWhWQWpZa2plRHItbUliMEFDNEpUbm4teWhYYk14Y1pRZFFHdGItMll6Snp4Z2pyOE5CcDBDVXVlbExwdTk4MWdqeS0wVkN2dGpMTVhyZjhZUWpoS0N2d2hIRWVRVkxPWUo4T2oyR0djbWxMNm45ejIxcXFxSFVFRXFRakU2QnQ0eGdnMTZ2eDdMVkdfZHVB?oc=5\" target=\"_blank\">Houthis give Iran war ultim",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxPWHl2ZlZhNzZueGFMalhpUUF6Uzk3NWNvSV9hVVItMWZCYnlZZFdyN1dkRm5UM2dvZ3pHZ3JPWHJwYWdBcm9VQWlqS2E3R0Ezc2hYbU8tQ1Q1b3NkWFFMdmtKakhDZmFKV3hGUmMtM0pYVkd3TThubHAtbUQyNjZaeTYzbFJNWDN4LWs1U29Wa2tOdENMM28zaHFjWWhWQWpZa2plRHItbUliMEFDNEpUbm4teWhYYk14Y1pRZFFHdGItMll6Snp4Z2pyOE5CcDBDVXVlbExwdTk4MWdqeS0wVkN2dGpMTVhyZjhZUWpoS0N2d2hIRWVRVkxPWUo4T2oyR0djbWxMNm45ejIxcXFxSFVFRXFRakU2QnQ0eGdnMTZ2eDdMVkdfZHVB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T01:51:13.642Z"
-    },
-    {
-      "id": "rss_84d0fee7e58317fd",
-      "timestamp": 1774650898000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran threatens to attack Saudi port of Yanbu on Red Sea coast - Arab News PK",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE9mdjJXRlZnTWtRdWRJQ0dyMmNPejhOTnFoeVlxTWF3VFh0SHE3cnNmdThWbU9ueEtfMDlQb2RCaHZWYVRvTTI1TUZfeWVCMVprTTBZZU1jbkVQZG4tWkE?oc=5\" target=\"_blank\">Iran threatens to attack Saudi port of Yanbu on Red Sea coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9mdjJXRlZnTWtRdWRJQ0dyMmNPejhOTnFoeVlxTWF3VFh0SHE3cnNmdThWbU9ueEtfMDlQb2RCaHZWYVRvTTI1TUZfeWVCMVprTTBZZU1jbkVQZG4tWkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-27T23:28:32.526Z"
     }
   ]
 }
