@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T16:35:39.298Z",
+  "last_fetch": "2026-07-16T17:29:50.426Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_71dedb961152caa0",
+      "timestamp": 1784222400000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Report: Iran Urges Houthis to Threaten Red Sea Oil Route - Newser",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOSEc5RDE5c2lUQXFDcWU3c1Nyd3F3YXhUYnRBb050azBkeTh3ZUpqZFlqd2JYcGVlaVVFazZPNVN6SEJXS1cyM0d1aXhBdkJWUmt2b19ZU2F3LWZoMlM0LVBwOEhlSzFocWJrY2NDZ0oteVE1b3plZGVPQ2pPREFxQ1lnTFY1eUxWNFlaWmhWaHBOczN4dVRWckR6QTc?oc=5\" target=\"_blank\">Report: Iran Urges Houthis to Threaten Red Sea Oil Route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newser</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSEc5RDE5c2lUQXFDcWU3c1Nyd3F3YXhUYnRBb050azBkeTh3ZUpqZFlqd2JYcGVlaVVFazZPNVN6SEJXS1cyM0d1aXhBdkJWUmt2b19ZU2F3LWZoMlM0LVBwOEhlSzFocWJrY2NDZ0oteVE1b3plZGVPQ2pPREFxQ1lnTFY1eUxWNFlaWmhWaHBOczN4dVRWckR6QTc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T17:29:48.952Z"
+    },
     {
       "id": "rss_08c15ef30d88bf0c",
       "timestamp": 1784218312000,
@@ -48,6 +71,29 @@
       "fetched_at": "2026-07-16T16:35:37.989Z"
     },
     {
+      "id": "rss_783063e58e4ae5a2",
+      "timestamp": 1784217719000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Tells Houthis to Close Red Sea Gateway if U.S. Hits Power Network - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxONFc2WHhRMmxGYnJnN2hhVzNsY1VMRVRMeFhya3RIa2ZQQ2NqZ0ZqWGcya0RiT2NnNGYxMHF4SGVoLVlmUTBXRV9OazMzOUNZTkZaMVN5eUpEZXN5OFpNUnBKd19zLTZYbVhtc2FsblFiNU8tMTUya1RjMm9NYjVoNmQwZnVicFBYU2pOU1c2U0ZGNU5fN3c?oc=5\" target=\"_blank\">Iran Tells Houthis to Close Red Sea Gateway if U.S. Hits Power Network</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONFc2WHhRMmxGYnJnN2hhVzNsY1VMRVRMeFhya3RIa2ZQQ2NqZ0ZqWGcya0RiT2NnNGYxMHF4SGVoLVlmUTBXRV9OazMzOUNZTkZaMVN5eUpEZXN5OFpNUnBKd19zLTZYbVhtc2FsblFiNU8tMTUya1RjMm9NYjVoNmQwZnVicFBYU2pOU1c2U0ZGNU5fN3c?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T17:29:49.891Z"
+    },
+    {
       "id": "rss_cf58127558caa9d7",
       "timestamp": 1784217219000,
       "source": "OSINT",
@@ -69,6 +115,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T16:35:37.989Z"
+    },
+    {
+      "id": "rss_118ee6b031025be1",
+      "timestamp": 1784215260000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Could Bab-el-Mandeb be shut? Report says Iran has Houthis on standby - WION",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOdDRkZmIyWFZjWXlrZ3lWWmcyNEtOaFk1OWVjZV84X2xrREJfSlJpYXBoWERDekgxTzdQX3BwVk9mMzE2YnFJV0NOeUxwU19xcTlBalp6MlVoNXVhdklNcmNoZ3hERG5WTTlnbGFYWW5ndnI1RVRoQnU4Y3BHVFU2cERXbS1TMGFCTTFxcFF3X29iejBoZXE2ZlQ2UdIBoAFBVV95cUxPTkIxNEJOTVZlZkZaREtDR0lKeC04TlVXZVhWZkR6UWdpeEhwQ0dFc0ZnN2h3ZW4yU2oxbEdUREdvdG9sUVdaVnhucldXWHhGekdHazBkSU5XcTBxNnJneWNOQUhIc21IN2RQU2U2RWJ2a01PZXVNZFZtM1IwNXFuckp5WFJudl82QzI3MkJZQzlOVy1OV0s2QnowV2ZvRUpV?oc=5\" target=\"_blank\"",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdDRkZmIyWFZjWXlrZ3lWWmcyNEtOaFk1OWVjZV84X2xrREJfSlJpYXBoWERDekgxTzdQX3BwVk9mMzE2YnFJV0NOeUxwU19xcTlBalp6MlVoNXVhdklNcmNoZ3hERG5WTTlnbGFYWW5ndnI1RVRoQnU4Y3BHVFU2cERXbS1TMGFCTTFxcFF3X29iejBoZXE2ZlQ2UdIBoAFBVV95cUxPTkIxNEJOTVZlZkZaREtDR0lKeC04TlVXZVhWZkR6UWdpeEhwQ0dFc0ZnN2h3ZW4yU2oxbEdUREdvdG9sUVdaVnhucldXWHhGekdHazBkSU5XcTBxNnJneWNOQUhIc21IN2RQU2U2RWJ2a01PZXVNZFZtM1IwNXFuckp5WFJudl82QzI3MkJZQzlOVy1OV0s2QnowV2ZvRUpV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T17:29:48.952Z"
     },
     {
       "id": "rss_6f89ba44f25406f6",
@@ -11144,73 +11213,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T07:41:41.944Z"
-    },
-    {
-      "id": "rss_ae5542d4ec213484",
-      "timestamp": 1774672020000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis strike at Israel as attacks on Iran continue - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNNVVtc1ZtWmlSeGkxX2N1VkZxUW1RUkFReGRKX0o5OXROT21WUjVGMS1lUFlqVFpNcUtSN3gtR3BaMFNaMGR5RDRkYW1DaExPcXJ6eEx6dXlYRVBIWEpHSm94dWNlRTZlQnhaR1BwNGl0WnhneklBenpxV1dMcDFROHlGMFQtOVF1ZGxWUm14VWtvMXlicko5bWZZWHdvSUo1aUJELWxZYTgwZFZkX3ZJd242Z0I?oc=5\" target=\"_blank\">Yemen's Houthis strike at Israel as attacks on Iran continue</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNVVtc1ZtWmlSeGkxX2N1VkZxUW1RUkFReGRKX0o5OXROT21WUjVGMS1lUFlqVFpNcUtSN3gtR3BaMFNaMGR5RDRkYW1DaExPcXJ6eEx6dXlYRVBIWEpHSm94dWNlRTZlQnhaR1BwNGl0WnhneklBenpxV1dMcDFROHlGMFQtOVF1ZGxWUm14VWtvMXlicko5bWZZWHdvSUo1aUJELWxZYTgwZFZkX3ZJd242Z0I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-03-28T15:37:26.993Z"
-    },
-    {
-      "id": "rss_4c23b81da2b33b99",
-      "timestamp": 1774671769000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Israeli army reports war’s first missile attack from Yemen - Free Malaysia Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNT3o4b1FCQjZjcjZTYUhZNy1qWkdkNjNiblJuRWVCSnJGdlpST09laHEteGR4U3dJYTU5ejI1MlJfVWdydmw3TEF3TTEtUXk5N3p3QkxRXzJMeUpEZTMySWpyTXBfbXQwZXMyN002N1VvQ0Q1b010b29MVEJGTThWTmQ1Uno4cW9CcXlPN3FKdktVOTVMbkcxNTM0OXhoNk0tc0FERURJOXVrUzYxRkdyUE4wbGxZVXRN?oc=5\" target=\"_blank\">Israeli army reports war’s first missile attack from Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Free Malaysia Today</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNT3o4b1FCQjZjcjZTYUhZNy1qWkdkNjNiblJuRWVCSnJGdlpST09laHEteGR4U3dJYTU5ejI1MlJfVWdydmw3TEF3TTEtUXk5N3p3QkxRXzJMeUpEZTMySWpyTXBfbXQwZXMyN002N1VvQ0Q1b010b29MVEJGTThWTmQ1Uno4cW9CcXlPN3FKdktVOTVMbkcxNTM0OXhoNk0tc0FERURJOXVrUzYxRkdyUE4wbGxZVXRN?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T06:53:49.573Z"
-    },
-    {
-      "id": "rss_cb0db1bd6b6e92f0",
-      "timestamp": 1774671069000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis target Israel for first time since war began - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrU3RYOGlvVlFHWTN4dVNINm4wckVWbGt6WUVBeW5GNldrU1ZvOWp1RWo5dDYtV3NjLVdZS1JlTHpBLVlqczVJYTM3VjNCQTI4aEU0X1dxYTAzWkI2?oc=5\" target=\"_blank\">Houthis target Israel for first time since war began</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrU3RYOGlvVlFHWTN4dVNINm4wckVWbGt6WUVBeW5GNldrU1ZvOWp1RWo5dDYtV3NjLVdZS1JlTHpBLVlqczVJYTM3VjNCQTI4aEU0X1dxYTAzWkI2?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T05:38:53.777Z"
     }
   ]
 }
