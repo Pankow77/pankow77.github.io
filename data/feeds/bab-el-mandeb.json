@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T22:47:38.516Z",
+  "last_fetch": "2026-07-16T23:18:26.888Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T22:20:49.905Z"
+    },
+    {
+      "id": "rss_12d1993d2749faac",
+      "timestamp": 1784231565000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hot Weather and Politics Bring Yemen Back to the Brink in the Bab el Mandeb - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQclhJRWtlb05FTGg0cFFwUndoUEJ1NHR1Qk5LNlI3Skc1WUZ2VjM4QmFvTUJOSGhQT1k3OUYzSWFBLTNXSTJTWjREcjl0Nm9TaHZITlowcllvR2pLWGVQQWVzb1d4MFJHUzAyV2tlQWdVcHQ5UTVkd3Iwd3l4YVJ5dXZHMExOcjhhV2hhNkY4TnRuNVdpUUxpUXNnNWNCbkRPcmhGck1LWElmT0I2QklzaUtITk1Gd1Ix?oc=5\" target=\"_blank\">Hot Weather and Politics Bring Yemen Back to the Brink in the Bab el Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQclhJRWtlb05FTGg0cFFwUndoUEJ1NHR1Qk5LNlI3Skc1WUZ2VjM4QmFvTUJOSGhQT1k3OUYzSWFBLTNXSTJTWjREcjl0Nm9TaHZITlowcllvR2pLWGVQQWVzb1d4MFJHUzAyV2tlQWdVcHQ5UTVkd3Iwd3l4YVJ5dXZHMExOcjhhV2hhNkY4TnRuNVdpUUxpUXNnNWNCbkRPcmhGck1LWElmT0I2QklzaUtITk1Gd1Ix?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T23:18:25.606Z"
     },
     {
       "id": "rss_71dedb961152caa0",
@@ -11188,29 +11209,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T08:33:54.978Z"
-    },
-    {
-      "id": "rss_2821767a3b6753e0",
-      "timestamp": 1774682640000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi group claims ballistic missile attack on Israel - China Daily - Global Edition",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5BelBmbjVWZ25aQjVGSU5jb2t3MjJSWmdIQVNON3ptNVplOE01dzFjbHVxdVhJWjFYeXdnRVYxR29RNnlGZHpXQ0ZzbS1UWWJNekZobGhPamYybllaWDE5VlRKLTU0UHlDT2tSeXhnLUp1M2lOUEtiRl9iLUI?oc=5\" target=\"_blank\">Yemen's Houthi group claims ballistic missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily - Global Edition</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5BelBmbjVWZ25aQjVGSU5jb2t3MjJSWmdIQVNON3ptNVplOE01dzFjbHVxdVhJWjFYeXdnRVYxR29RNnlGZHpXQ0ZzbS1UWWJNekZobGhPamYybllaWDE5VlRKLTU0UHlDT2tSeXhnLUp1M2lOUEtiRl9iLUI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T09:33:17.218Z"
     }
   ]
 }
