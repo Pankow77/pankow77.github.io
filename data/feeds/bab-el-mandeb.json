@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T07:17:11.080Z",
+  "last_fetch": "2026-07-16T08:15:29.017Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_92bdb28290b37fe3",
+      "timestamp": 1784187480000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran eyes the Red Sea: How it can control the vital maritime chokepoint - The Times of India",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbXFyc2VFWXdNanMyUXFJNUR6QlhnMTVsTWRXWGtDU1pJTkFCQ0ItR0JNUEVLZFl3eldrOG0tRlNOSWtLZFNlekpIRXlQcjV4RXZicUdoMzhXZ196RWRpYmVudjg2S3ZiRlVWUTI2LTloSlk5NDVLSHRKVk5EcFRwdnFfb29oSnZrRDRsZW5PaE50U3ZaSVB4cGpBdENQb24tSjZpQlRSd04tbzF5MGh1eWlqb1lCZnpGWmNXeVV2OXY4MHFNOEdtaU5sSW92VmpLYndrMWl5SG5vZ0RHQ3drd0duSdIB6AFBVV95cUxOd29oSFAzM0hCQVk5TThIMTZHbW81VWNVZTlKSm9MMkVqVTZpeXBoczlidjU1azhaRXJJN2lfeXl5WWk3SFRwV2c3Sk54QnR2N2dZRzhqMUJjSHh5eFYtUEdrQUhjYkRVTW",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbXFyc2VFWXdNanMyUXFJNUR6QlhnMTVsTWRXWGtDU1pJTkFCQ0ItR0JNUEVLZFl3eldrOG0tRlNOSWtLZFNlekpIRXlQcjV4RXZicUdoMzhXZ196RWRpYmVudjg2S3ZiRlVWUTI2LTloSlk5NDVLSHRKVk5EcFRwdnFfb29oSnZrRDRsZW5PaE50U3ZaSVB4cGpBdENQb24tSjZpQlRSd04tbzF5MGh1eWlqb1lCZnpGWmNXeVV2OXY4MHFNOEdtaU5sSW92VmpLYndrMWl5SG5vZ0RHQ3drd0duSdIB6AFBVV95cUxOd29oSFAzM0hCQVk5TThIMTZHbW81VWNVZTlKSm9MMkVqVTZpeXBoczlidjU1azhaRXJJN2lfeXl5WWk3SFRwV2c3Sk54QnR2N2dZRzhqMUJjSHh5eFYtUEdrQUhjYkRVTWFXb1lRc1RKQWdLVG80d1JNaUlSS2hGeEgzYXh0X0dtNlFkMUlEb0NNZlF6NzI2Wmk1ZGhOa1VvVno4LUl6c3NibmhIcC13SC1QMk9SODhPcEc4eUlFckVXQk1OQURuZDFtZVVsbkRZYktPU0tLSEs4NVBzQ2FLT3hUQS13WXdZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T08:15:27.714Z"
+    },
     {
       "id": "rss_6db64b7ee0033ec5",
       "timestamp": 1784159123000,
@@ -46,6 +69,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T21:47:28.802Z"
+    },
+    {
+      "id": "rss_3aa7fd836f1e12df",
+      "timestamp": 1784148784000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis say Sanaa airport fully operational after airstrike - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQd3VuUndoUk5BWXFXaFRUX29IaVkzaUNUUFV6OGdxakNjcXNoTWFabVU3VTQ5N1F1eS1QbVdLeXdkMk5QS0FtcC1qUTE4ckdYWU16eS16NzVOVk9ZVGFRM1k0cDJrdlM5WGJpZWxPNjRSMy1XUWVhT3VFNUF5QzVYTXVwWUJRWm05V09ad21icnZUZXJPUVhFTVJ0UU9ESGNpWmI1cnFRQVVvdGMxbFNjektB?oc=5\" target=\"_blank\">Yemen’s Houthis say Sanaa airport fully operational after airstrike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd3VuUndoUk5BWXFXaFRUX29IaVkzaUNUUFV6OGdxakNjcXNoTWFabVU3VTQ5N1F1eS1QbVdLeXdkMk5QS0FtcC1qUTE4ckdYWU16eS16NzVOVk9ZVGFRM1k0cDJrdlM5WGJpZWxPNjRSMy1XUWVhT3VFNUF5QzVYTXVwWUJRWm05V09ad21icnZUZXJPUVhFTVJ0UU9ESGNpWmI1cnFRQVVvdGMxbFNjektB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T08:15:27.714Z"
     },
     {
       "id": "rss_e30510625c8ca442",
@@ -11168,50 +11212,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-26T19:56:12.655Z"
-    },
-    {
-      "id": "rss_ca1ef707caf45f34",
-      "timestamp": 1774496040000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Explained: Hormuz 2.0? Why Bab el-Mandeb Strait is suddenly in the global spotlight - WION",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOUDVYYjdLM3pObnVzaEh2VkwzcGczZ3VxWDFHUHJDeXM1MmdCYk5YYjlMNVUtN0E5dWJZM0E0cXJBU216YmxwY2VVcF9rS0lKM3FIV0xyR0JJMTk5Vmg2U1g3V2xTempreUJwNnVZNVRNZkhfTkVMZjhYeXVzQ2VQZHBsbTVEcWM1Q3JUOGhRdXhXMUpiQkJERzZEQ2JlZlNQekJwMTNWRWZONXZCc1F5UzRUWXJITzloT3gzbUxXZFJjS3hV?oc=5\" target=\"_blank\">Explained: Hormuz 2.0? Why Bab el-Mandeb Strait is suddenly in the global spotlight</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WION</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUDVYYjdLM3pObnVzaEh2VkwzcGczZ3VxWDFHUHJDeXM1MmdCYk5YYjlMNVUtN0E5dWJZM0E0cXJBU216YmxwY2VVcF9rS0lKM3FIV0xyR0JJMTk5Vmg2U1g3V2xTempreUJwNnVZNVRNZkhfTkVMZjhYeXVzQ2VQZHBsbTVEcWM1Q3JUOGhRdXhXMUpiQkJERzZEQ2JlZlNQekJwMTNWRWZONXZCc1F5UzRUWXJITzloT3gzbUxXZFJjS3hV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-26T06:10:44.520Z"
-    },
-    {
-      "id": "rss_77f0eb4935122a65",
-      "timestamp": 1774485277000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Threatens to Block Red Sea Gateway After Hormuz… Warns of Bab el-Mandeb Closure - bloomingbit",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1MaDdkWUZXRDM0aXBnZWJ4cFNzTmR0aTEyM0JWTl9jYmpNa0lXVmpEUDBLdzloX0dsRWp4a0RlLWNlRFAtajh5Z1l3S2QyM3J5bVBYZQ?oc=5\" target=\"_blank\">Iran Threatens to Block Red Sea Gateway After Hormuz… Warns of Bab el-Mandeb Closure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bloomingbit</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1MaDdkWUZXRDM0aXBnZWJ4cFNzTmR0aTEyM0JWTl9jYmpNa0lXVmpEUDBLdzloX0dsRWp4a0RlLWNlRFAtajh5Z1l3S2QyM3J5bVBYZQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-26T01:59:10.796Z"
     }
   ]
 }
