@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T17:56:17.967Z",
+  "last_fetch": "2026-07-16T18:28:14.587Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T17:29:48.952Z"
+    },
+    {
+      "id": "rss_402348c646ce7cf0",
+      "timestamp": 1784219010000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten to attack oil facilities in Saudi Arabia amid Yemen tensions - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPMGdaS2oycnh5S1A3SGliYzZvYzA5WlcxMFlfb0NqVUR5TWZwLXJjTnlCa0hXREJTbFJKYkRFZzhEUDNJa3EySldIMkY0Rmh6VVFwVWkyZzdnUURhRDM0MmJ4QTVldE1UV1l4WVhVQmpDbEF4NFJTeTVBektkcW1xSHFySkZ4YW9jVExRX2paNjZkTnNBenFZNkRzcVZSaVdYcW9tRjVIZHhpQndPRXJQX21feXl5LVcwTGlETktQMA?oc=5\" target=\"_blank\">Houthis threaten to attack oil facilities in Saudi Arabia amid Yemen tensions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMGdaS2oycnh5S1A3SGliYzZvYzA5WlcxMFlfb0NqVUR5TWZwLXJjTnlCa0hXREJTbFJKYkRFZzhEUDNJa3EySldIMkY0Rmh6VVFwVWkyZzdnUURhRDM0MmJ4QTVldE1UV1l4WVhVQmpDbEF4NFJTeTVBektkcW1xSHFySkZ4YW9jVExRX2paNjZkTnNBenFZNkRzcVZSaVdYcW9tRjVIZHhpQndPRXJQX21feXl5LVcwTGlETktQMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T18:28:12.970Z"
     },
     {
       "id": "rss_08c15ef30d88bf0c",
@@ -436,6 +457,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T08:15:27.714Z"
+    },
+    {
+      "id": "rss_b6044c13eb59f86b",
+      "timestamp": 1784173835000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Riyadh Strikes Houthi-Controlled Airport To Block Flight From Iran - Foundation for Defense of Democracies",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbFlidlJYc0J4SGNfMWJBTllRVlVhQ3VmUHQyN3pfelZjRlJoQmQ2RkR3NjV2TGZsLTVrX0l5TGR0eXRwWDdXYzRHUmZ5QXQ4S1l2UGhBaHpOLUlwS1VWZDdGTF9lVnNNaEdGV3J6MFA3c2JBYU1yaXQ3WmZZaWd0UGZPUFJ3VTBscmNFbTZEMEJWNXl2VjlvLURuZnVvWGtKQXg3eXJlU2UwQ28?oc=5\" target=\"_blank\">Riyadh Strikes Houthi-Controlled Airport To Block Flight From Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foundation for Defense of Democracies</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbFlidlJYc0J4SGNfMWJBTllRVlVhQ3VmUHQyN3pfelZjRlJoQmQ2RkR3NjV2TGZsLTVrX0l5TGR0eXRwWDdXYzRHUmZ5QXQ4S1l2UGhBaHpOLUlwS1VWZDdGTF9lVnNNaEdGV3J6MFA3c2JBYU1yaXQ3WmZZaWd0UGZPUFJ3VTBscmNFbTZEMEJWNXl2VjlvLURuZnVvWGtKQXg3eXJlU2UwQ28?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T18:28:12.970Z"
     },
     {
       "id": "rss_6db64b7ee0033ec5",
@@ -11168,51 +11212,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T06:53:49.572Z"
-    },
-    {
-      "id": "rss_fcc2dd9f523ed600",
-      "timestamp": 1774676642000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel - KSAT",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPTEhCNGZ0QlUyelJ5ZjJhZi02enpjMEpPcVltakJyMUJ2N0U4U3FaWmt5NkRMOGVzcnRTckY1eE1iVC1fc1RZMkpxaHpvakhicGotN1pXMTd5R0FtY1BpSl9MQnZHQXVrVkVxLXRDLTdYSHdsVTJySy1VQ21SUHBvVi12RWxpZDg4dFBTZ3hQZEQtNXJXTEtkV2doUlJGMllGZmM1cHp5c3Z3ZXhGS2ZxUncxRjd5a1lLd09YUktoSXNfWGh5aElqX0hVclhEZw?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KSAT</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTEhCNGZ0QlUyelJ5ZjJhZi02enpjMEpPcVltakJyMUJ2N0U4U3FaWmt5NkRMOGVzcnRTckY1eE1iVC1fc1RZMkpxaHpvakhicGotN1pXMTd5R0FtY1BpSl9MQnZHQXVrVkVxLXRDLTdYSHdsVTJySy1VQ21SUHBvVi12RWxpZDg4dFBTZ3hQZEQtNXJXTEtkV2doUlJGMllGZmM1cHp5c3Z3ZXhGS2ZxUncxRjd5a1lLd09YUktoSXNfWGh5aElqX0hVclhEZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T15:43:57.514Z"
-    },
-    {
-      "id": "rss_21a76628fff3c558",
-      "timestamp": 1774675680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why all eyes are on the ‘Strait of Tears’ as Houthis enter war - AFR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNV3lfZDlnLU9KZUVsS1YxdlFrNkhNbkJNdUdkX1czZFlOZV9wU09FWnMyOXNyaUFBWWdjcmpNRVo2YWQzWlRqMTBxNjNyTmpDMnlXVWNMRjNlRTNjUmtSdkRJaFJlOHpTaG8zMUZJTXkxcHFaOHhnQ2xLNElVYXZ4azNIZm1STnV2alBqcXZmV1p1Q2FFM2UzTmQwZVJHbFhKNDZOM01LV0NIRkl1MVRfLUtKUm9fdw?oc=5\" target=\"_blank\">Why all eyes are on the ‘Strait of Tears’ as Houthis enter war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFR</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNV3lfZDlnLU9KZUVsS1YxdlFrNkhNbkJNdUdkX1czZFlOZV9wU09FWnMyOXNyaUFBWWdjcmpNRVo2YWQzWlRqMTBxNjNyTmpDMnlXVWNMRjNlRTNjUmtSdkRJaFJlOHpTaG8zMUZJTXkxcHFaOHhnQ2xLNElVYXZ4azNIZm1STnV2alBqcXZmV1p1Q2FFM2UzTmQwZVJHbFhKNDZOM01LV0NIRkl1MVRfLUtKUm9fdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T07:41:41.944Z"
     }
   ]
 }
