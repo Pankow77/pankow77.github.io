@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T23:18:26.888Z",
+  "last_fetch": "2026-07-16T23:47:36.973Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_009093ec28b1bca7",
+      "timestamp": 1784242895000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran tells Houthis to close Red Sea gateway if US hits power network, sources say - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNYWs1Qm92MnNnaGZTQ19uMVdyUlRCTkVYY09oZm1kN1M0eTFkQ3Q5eFNqSGxQYkwtVEQxblBLdllFOHV1T0JPUmhKeXpWcmx6MzRmSzVDTGtETVRxQUxsVzhJdXExY3J5QURQV3k0U192NWxjZWlyR0FLWnNfLW5LU3UxVmVZR2c3RlR1YUQxaUk0Tm1ucDNISThySWxQUXltbHdvSVVJdzBIQU5UYjhwNXJqT1FoOGRlM1dtbFdWdw?oc=5\" target=\"_blank\">Iran tells Houthis to close Red Sea gateway if US hits power network, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNYWs1Qm92MnNnaGZTQ19uMVdyUlRCTkVYY09oZm1kN1M0eTFkQ3Q5eFNqSGxQYkwtVEQxblBLdllFOHV1T0JPUmhKeXpWcmx6MzRmSzVDTGtETVRxQUxsVzhJdXExY3J5QURQV3k0U192NWxjZWlyR0FLWnNfLW5LU3UxVmVZR2c3RlR1YUQxaUk0Tm1ucDNISThySWxQUXltbHdvSVVJdzBIQU5UYjhwNXJqT1FoOGRlM1dtbFdWdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T23:47:35.512Z"
+    },
     {
       "id": "rss_fc332475407d8df2",
       "timestamp": 1784238722000,
@@ -11186,29 +11209,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-03-28T08:33:54.977Z"
-    },
-    {
-      "id": "rss_76cfc211816be84e",
-      "timestamp": 1774682662000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim responsibility for ballistic missile attack on Israel this morning - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPeGloR1RVRGhFOWVxOF9ncGhWWXkzdzYwSmxzbDJVSUpfU3MxcFBVX2tFUU5qNEwxYzNoTC1NVDlFU1Zab3VHYmllelRYZ2xLNWxZTjhMelR4bzUtZjRFUUp3UHJCbGl4QmJ0U2VDbndxb0ZGdXVUTGtTai15aTRaNzBkM2N5SjlaX21EbjhCN01BaFlCNFlhREJCNFhMMlI5ajM5S0JGa1UxYXZsQUg2N3BrUEFOUE1VQ2x4YWZDVnNiM3N0?oc=5\" target=\"_blank\">Houthis claim responsibility for ballistic missile attack on Israel this morning</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPeGloR1RVRGhFOWVxOF9ncGhWWXkzdzYwSmxzbDJVSUpfU3MxcFBVX2tFUU5qNEwxYzNoTC1NVDlFU1Zab3VHYmllelRYZ2xLNWxZTjhMelR4bzUtZjRFUUp3UHJCbGl4QmJ0U2VDbndxb0ZGdXVUTGtTai15aTRaNzBkM2N5SjlaX21EbjhCN01BaFlCNFlhREJCNFhMMlI5ajM5S0JGa1UxYXZsQUg2N3BrUEFOUE1VQ2x4YWZDVnNiM3N0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T08:33:54.978Z"
     }
   ]
 }
