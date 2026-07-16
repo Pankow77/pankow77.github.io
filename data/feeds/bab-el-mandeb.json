@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-16T12:00:40.023Z",
+  "last_fetch": "2026-07-16T13:00:23.678Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a86c012ef9886679",
+      "timestamp": 1784206020000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran threatens to close Red Sea gateway if US strikes power grid: Report - The News International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEVaT0l5akNMaktFWVFHUThFbFNXdDFmTHQ2bUQ0aTZfOHJUTkY0aHRnMGdtUTNacTZjWFVnNkU2VmswWmNYSWgxMm9mWXo1TlJtQUxtcVFtRU44U3hoSEYwV2xEMkp6UGc2NEJfNzdyeDlrb1YtU3NQQkxsT3lWeGk3YU9TRVlFSjlvUjhUeFBwYldGNEpiOUhtaXF0TDgwOW5LWXdLSi1xNU43OU1OaGVZZw?oc=5\" target=\"_blank\">Iran threatens to close Red Sea gateway if US strikes power grid: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The News International</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEVaT0l5akNMaktFWVFHUThFbFNXdDFmTHQ2bUQ0aTZfOHJUTkY0aHRnMGdtUTNacTZjWFVnNkU2VmswWmNYSWgxMm9mWXo1TlJtQUxtcVFtRU44U3hoSEYwV2xEMkp6UGc2NEJfNzdyeDlrb1YtU3NQQkxsT3lWeGk3YU9TRVlFSjlvUjhUeFBwYldGNEpiOUhtaXF0TDgwOW5LWXdLSi1xNU43OU1OaGVZZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T13:00:22.291Z"
+    },
+    {
+      "id": "rss_966a93f503e65dc0",
+      "timestamp": 1784204964000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran threatens Red Sea shipping, tells Houthis to ready Bab el-Mandeb blockade - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ZaVgyTEhNMWFaQ2wzaERhSWcwTFlvcHdIb2o1ZE9ZVTg5NGQ1Z1VNbk1yRTdhVE43SkY0QUJ0cmxlSVpGOUhMaFZzWnZrejh1QVExV0lB?oc=5\" target=\"_blank\">Iran threatens Red Sea shipping, tells Houthis to ready Bab el-Mandeb blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ZaVgyTEhNMWFaQ2wzaERhSWcwTFlvcHdIb2o1ZE9ZVTg5NGQ1Z1VNbk1yRTdhVE43SkY0QUJ0cmxlSVpGOUhMaFZzWnZrejh1QVExV0lB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-16T13:00:22.290Z"
+    },
     {
       "id": "rss_e461b4dcf9aab948",
       "timestamp": 1784202965000,
@@ -11170,50 +11217,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-27T05:06:58.016Z"
-    },
-    {
-      "id": "rss_14637ccfe04a989e",
-      "timestamp": 1774562400000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Far from Hormuz, a second Middle East strait enters the crosshairs - Politico",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNRVk5R3dFUFp0U3FoTjBNQ2J3dm1NUE5LYThreFdKLUN4eVhfQjc1TjVjWENWaU5sTUJuN1RQdFd1eUpxVjZPeG9FdjlPSlNhM3FqbDgzdmU4djgyMzJIUE9oeFVWUzB2X0JueHF5LVllelJpalNTWGxWUUwzY3FKek9ib0s5QQ?oc=5\" target=\"_blank\">Far from Hormuz, a second Middle East strait enters the crosshairs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNRVk5R3dFUFp0U3FoTjBNQ2J3dm1NUE5LYThreFdKLUN4eVhfQjc1TjVjWENWaU5sTUJuN1RQdFd1eUpxVjZPeG9FdjlPSlNhM3FqbDgzdmU4djgyMzJIUE9oeFVWUzB2X0JueHF5LVllelJpalNTWGxWUUwzY3FKek9ib0s5QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-26T22:25:04.605Z"
-    },
-    {
-      "id": "rss_e4ab1d0b0f3b8b68",
-      "timestamp": 1774552473000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "New MARAD Advisory Urges Ships to Disable AIS Tracking in Red Sea as Houthi Threat Lingers - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQOUY4a2hhbi0xUFBNeTVBZlhXX0F1VHEyUGpPcDY4TlpxTU5lcld5N2poQ3NaVGhPQkNfZjZIWHlkcGFIaXlGbG8wcWRnQXRhYmZXQUxJVjVqd0N1SERDc0VBbjM4cHhidVZvdGxsaU1QTUI2bnJUQ3hlMHVpbHZvd28xTjF0Z0Z0SnVSTHBYYVl2T2wwdFAwTXZRMlZkM3BjQXdRUDd6V2VxMERwQ3dpd1hR?oc=5\" target=\"_blank\">New MARAD Advisory Urges Ships to Disable AIS Tracking in Red Sea as Houthi Threat Lingers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOUY4a2hhbi0xUFBNeTVBZlhXX0F1VHEyUGpPcDY4TlpxTU5lcld5N2poQ3NaVGhPQkNfZjZIWHlkcGFIaXlGbG8wcWRnQXRhYmZXQUxJVjVqd0N1SERDc0VBbjM4cHhidVZvdGxsaU1QTUI2bnJUQ3hlMHVpbHZvd28xTjF0Z0Z0SnVSTHBYYVl2T2wwdFAwTXZRMlZkM3BjQXdRUDd6V2VxMERwQ3dpd1hR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-26T19:56:12.654Z"
     }
   ]
 }
