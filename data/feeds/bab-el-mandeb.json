@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T07:39:25.780Z",
+  "last_fetch": "2026-07-17T08:44:02.672Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_df63e2f1e6a43687",
+      "timestamp": 1784276098000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran reportedly tells Houthis to prep Red Sea closure if US hits power grid - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa2ROQ0dVSU51UEhTRUpiWDBONEI3ZC1lNi1EQjZzVnBTNTZQVmVnUmxwTWFpTGRURXkzVmFoSllHTnVvOUJLWHBldVkwbEJWemlYWHlQQUNIbFZtZG0xWWlhS0pOMG1oeUg3bFYwWDVZSlRQYTFzMW1UVW8zVHlxbExWeFR6NUc4OTAzQXJBTXJyV2hKaENMTmdwazJnbFczUG9rQmVyWFZLcV9KWDRVQU91YkxiMzFlVFFz?oc=5\" target=\"_blank\">Iran reportedly tells Houthis to prep Red Sea closure if US hits power grid</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQa2ROQ0dVSU51UEhTRUpiWDBONEI3ZC1lNi1EQjZzVnBTNTZQVmVnUmxwTWFpTGRURXkzVmFoSllHTnVvOUJLWHBldVkwbEJWemlYWHlQQUNIbFZtZG0xWWlhS0pOMG1oeUg3bFYwWDVZSlRQYTFzMW1UVW8zVHlxbExWeFR6NUc4OTAzQXJBTXJyV2hKaENMTmdwazJnbFczUG9rQmVyWFZLcV9KWDRVQU91YkxiMzFlVFFz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T08:44:01.430Z"
+    },
     {
       "id": "rss_1ca2220b90707893",
       "timestamp": 1784252220000,
@@ -11179,29 +11202,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR2ZEgzM1IxanR2REhweVNjbzMxbWNwVXY2REZVTmlaTGFsaldxWEZ4M05obkM0aWFPUzlPdjlHN1N6eXZLMnNPaEM0akFhamd0MncteWswc1duNU1ubkJJWWg3cF9Pb1VXWFpMZVRQbDE1NURQS3ptN0V0MHNhY1g4dmx5b25INDRMQVNzbnVNbHNDQmg4OGMyUVN1VkhTQkNuVWJWN1JGdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T08:33:54.977Z"
-    },
-    {
-      "id": "rss_f94f1acc871a45fa",
-      "timestamp": 1774685126000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Latest: Israel stops missile fired from Yemen as concerns about Houthis entering the war rise - KTLA",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZEl3ZjJNNXowVkFBU3RlWnFxT3hBRURmc0czVEMtYUFQbTJyX21VZUhudzJzUzF4Ukt3OFBqSW1MNTI4U3lvdnViUXVlQ3cxRTZJSnpBMUp4OU91bFlhd2FYLWhuc0RsYmVDQlVHSDRZLUJTM21TZkhhemx4QlB6dTRWd1JKazJ0bHQwdW9UaGUydlp1d3Rfc2lMQXpSV1lDNmhIeWg4VWlhNEpCOVNPV1ZiZ3JidHhPLVlxYW5SdzgtYTFWVWNkMldFYzNUYWN2YzduUTZXUWVGRDUxajc3M24yQ3kxd9IB6wFBVV95cUxNWXVVMkowVmdHbktXN3V3cVkwX09CenRNeHFMSjVOeVZZSEhOa0Vjb1NRd1VaSU1TNGFfRjBEaWZRVEVocnV2UllJd0Q3dDJzNHJiZi1aYl9yVEpTR2xqQkhPSjNpb1",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZEl3ZjJNNXowVkFBU3RlWnFxT3hBRURmc0czVEMtYUFQbTJyX21VZUhudzJzUzF4Ukt3OFBqSW1MNTI4U3lvdnViUXVlQ3cxRTZJSnpBMUp4OU91bFlhd2FYLWhuc0RsYmVDQlVHSDRZLUJTM21TZkhhemx4QlB6dTRWd1JKazJ0bHQwdW9UaGUydlp1d3Rfc2lMQXpSV1lDNmhIeWg4VWlhNEpCOVNPV1ZiZ3JidHhPLVlxYW5SdzgtYTFWVWNkMldFYzNUYWN2YzduUTZXUWVGRDUxajc3M24yQ3kxd9IB6wFBVV95cUxNWXVVMkowVmdHbktXN3V3cVkwX09CenRNeHFMSjVOeVZZSEhOa0Vjb1NRd1VaSU1TNGFfRjBEaWZRVEVocnV2UllJd0Q3dDJzNHJiZi1aYl9yVEpTR2xqQkhPSjNpb1N6anliVGMteDY3N0VFTFp6R3g1QjdybE9xZllYWTBScnhnRkVTckdtWE1ydEdzRGpDckFyTm53UVdkZjc0dnJkTnNBeFByLXpDaE5rRGVjRTZwUWRvVGlYWmY0X3ZUZGM5LTJpXzVoSGNfTFBpQXBNelNYdUw1SlB5Q1J2aGdYSDRWWG5r?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
