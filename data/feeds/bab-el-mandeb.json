@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T06:47:57.331Z",
+  "last_fetch": "2026-07-17T07:39:25.780Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -966,6 +966,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T08:15:16.953Z"
+    },
+    {
+      "id": "rss_9e557b50e1cae0c5",
+      "timestamp": 1784098800000,
+      "source": "Reuters",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Why Iranian, Houthi threats to Red Sea shipping matter more for oil now - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNb2VIVDBvQW5VRElkejZ4aTNza0V1ZmRZaWRnanljRVI4c0l0VnBZeG9pNm5YajNORzM1NFVaZW11NGh6T2pZeU9jZmpiQl9fWXhpemcyZjlDTGltOXhzdk5ZblBQM0xpcmlhS0ZzWkJmRFdhWTRURHNMamd4dThqMDNGYXZvNXJ6d0x3eTBZWWl4MUZZTnZ5d3NCZnJzWTNieEVGc1Y0MlU1VjVTUnYzR0dVVVJKUVJfSl8wTjZhVEUzSFBOZnc?oc=5\" target=\"_blank\">Why Iranian, Houthi threats to Red Sea shipping matter more for oil now</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNb2VIVDBvQW5VRElkejZ4aTNza0V1ZmRZaWRnanljRVI4c0l0VnBZeG9pNm5YajNORzM1NFVaZW11NGh6T2pZeU9jZmpiQl9fWXhpemcyZjlDTGltOXhzdk5ZblBQM0xpcmlhS0ZzWkJmRFdhWTRURHNMamd4dThqMDNGYXZvNXJ6d0x3eTBZWWl4MUZZTnZ5d3NCZnJzWTNieEVGc1Y0MlU1VjVTUnYzR0dVVVJKUVJfSl8wTjZhVEUzSFBOZnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-17T07:39:24.559Z"
     },
     {
       "id": "rss_e203e03c2aaac42e",
@@ -11178,30 +11202,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZEl3ZjJNNXowVkFBU3RlWnFxT3hBRURmc0czVEMtYUFQbTJyX21VZUhudzJzUzF4Ukt3OFBqSW1MNTI4U3lvdnViUXVlQ3cxRTZJSnpBMUp4OU91bFlhd2FYLWhuc0RsYmVDQlVHSDRZLUJTM21TZkhhemx4QlB6dTRWd1JKazJ0bHQwdW9UaGUydlp1d3Rfc2lMQXpSV1lDNmhIeWg4VWlhNEpCOVNPV1ZiZ3JidHhPLVlxYW5SdzgtYTFWVWNkMldFYzNUYWN2YzduUTZXUWVGRDUxajc3M24yQ3kxd9IB6wFBVV95cUxNWXVVMkowVmdHbktXN3V3cVkwX09CenRNeHFMSjVOeVZZSEhOa0Vjb1NRd1VaSU1TNGFfRjBEaWZRVEVocnV2UllJd0Q3dDJzNHJiZi1aYl9yVEpTR2xqQkhPSjNpb1N6anliVGMteDY3N0VFTFp6R3g1QjdybE9xZllYWTBScnhnRkVTckdtWE1ydEdzRGpDckFyTm53UVdkZjc0dnJkTnNBeFByLXpDaE5rRGVjRTZwUWRvVGlYWmY0X3ZUZGM5LTJpXzVoSGNfTFBpQXBNelNYdUw1SlB5Q1J2aGdYSDRWWG5r?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T08:33:54.977Z"
-    },
-    {
-      "id": "rss_ef25b395ea8d7b25",
-      "timestamp": 1774685126000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - Ottumwa Courier",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAJBVV95cUxNNGFtOVNwbXRhSEEwQ2dxMjc0VFFLYTdEdGVxbXFybll0aEhXcXhiakRIenBEcWdqZXpEbjFPMzRKTUswNloyY3FYdEZ2NXphaU1XZ1NiQWNyWDREd1RuVkNxZjZld0FXTll5QV9YVEpid3VTY19pOU9QYTJHUld5TllubkNKRDN5bzdLcmFGT0RrN241NmVqdzgza0luUURLUTJYX0hZbWl6dkM4MnNERHVDZDNuTDZmTHFkekxGSFFvTU1jZ0l1anFXa2QwVjZlbWV6VDdrSW0zRG1RQlZHcUk1cUhLVThFSDBFVEt1Y3BzOC1YLU1wUmhRVUtqY0dSOWRLODhVNUZVd2M1aEZFYnM5MWZkcklP?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim resp",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNNGFtOVNwbXRhSEEwQ2dxMjc0VFFLYTdEdGVxbXFybll0aEhXcXhiakRIenBEcWdqZXpEbjFPMzRKTUswNloyY3FYdEZ2NXphaU1XZ1NiQWNyWDREd1RuVkNxZjZld0FXTll5QV9YVEpid3VTY19pOU9QYTJHUld5TllubkNKRDN5bzdLcmFGT0RrN241NmVqdzgza0luUURLUTJYX0hZbWl6dkM4MnNERHVDZDNuTDZmTHFkekxGSFFvTU1jZ0l1anFXa2QwVjZlbWV6VDdrSW0zRG1RQlZHcUk1cUhLVThFSDBFVEt1Y3BzOC1YLU1wUmhRVUtqY0dSOWRLODhVNUZVd2M1aEZFYnM5MWZkcklP?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
