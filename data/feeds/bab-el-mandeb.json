@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T11:58:04.010Z",
+  "last_fetch": "2026-07-17T12:34:47.731Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fae68fdad37a7d50",
+      "timestamp": 1784290980000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU bolsters Red Sea mission amid reports Houthis may shut key waterway - Euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxORHBUNkdXRHd2ckFxR2xpQ0lHcVlfZ2NxR0pfRnBSdFVYSEhDNDBFUW5ONU1XWElla0FSakdTRVlFZU9ObDhhcV9Kd1dqWkZEcUtDVGZPZnVtbC04ZTFIN0VBS3JIUWxKelJDTnAwT3RBQmJyTlZCaU5IcmphR1JBUjIxSHdKLXJzcnhJeXRHaEJDSWdranRfMTFDejF5b0d1RnlqVTNtWXBBYUE?oc=5\" target=\"_blank\">EU bolsters Red Sea mission amid reports Houthis may shut key waterway</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORHBUNkdXRHd2ckFxR2xpQ0lHcVlfZ2NxR0pfRnBSdFVYSEhDNDBFUW5ONU1XWElla0FSakdTRVlFZU9ObDhhcV9Kd1dqWkZEcUtDVGZPZnVtbC04ZTFIN0VBS3JIUWxKelJDTnAwT3RBQmJyTlZCaU5IcmphR1JBUjIxSHdKLXJzcnhJeXRHaEJDSWdranRfMTFDejF5b0d1RnlqVTNtWXBBYUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T12:34:46.366Z"
+    },
+    {
+      "id": "rss_dfc7a20e333eca1d",
+      "timestamp": 1784290950000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Oil prices surge 12% on Iran Kuwait attack and Red Sea threat - qz.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1wLTZaa3JPbDI2SlhSNFgzSy03X3R3Q3hPTy0xUE5ndkdJcHV3cWVPNGwxNGFZbTdINFB1Z3FxSm9IajR5cFJKMWJvbl84aTBsTnM3S0swaFM1dGExX1ZWdUI4ZG9hNC1XM05TNlVtQmFLSTJKYWl1T29jSmVabEk?oc=5\" target=\"_blank\">Oil prices surge 12% on Iran Kuwait attack and Red Sea threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">qz.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wLTZaa3JPbDI2SlhSNFgzSy03X3R3Q3hPTy0xUE5ndkdJcHV3cWVPNGwxNGFZbTdINFB1Z3FxSm9IajR5cFJKMWJvbl84aTBsTnM3S0swaFM1dGExX1ZWdUI4ZG9hNC1XM05TNlVtQmFLSTJKYWl1T29jSmVabEk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T12:34:46.366Z"
+    },
     {
       "id": "rss_ef051efac898163b",
       "timestamp": 1784282151000,
@@ -11166,50 +11210,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T09:33:17.220Z"
-    },
-    {
-      "id": "rss_98f5d2184139f210",
-      "timestamp": 1774687007000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Rebels Launch First Missile Strike on Israel - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1JIQzRnYVhQaVVTOTdrcXV2alUwYXlmbDBkeHMxalhkN1kyTmlpTFVEUEVZNFZhYUpMMWxMRWx5SDBCVmt3Q3pWY0hqeEUwVW9CZlFaMG5Fb09RMGNvcXJoaVNLRzJwako4b19UWXFNVEYzX3FwSGFXVUd1S1J1UEpkS3M?oc=5\" target=\"_blank\">Houthi Rebels Launch First Missile Strike on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN1JIQzRnYVhQaVVTOTdrcXV2alUwYXlmbDBkeHMxalhkN1kyTmlpTFVEUEVZNFZhYUpMMWxMRWx5SDBCVmt3Q3pWY0hqeEUwVW9CZlFaMG5Fb09RMGNvcXJoaVNLRzJwako4b19UWXFNVEYzX3FwSGFXVUd1S1J1UEpkS3M?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T09:33:17.218Z"
-    },
-    {
-      "id": "rss_e9cf24f24f735cb5",
-      "timestamp": 1774686360000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Message to the US: why the Houthis chose to join the war now - ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE95LVNfZXM3X1Bqejd6M3k2Z3BQLUQ3T29HQm0tNDlGajBhSWQ5S0hYYlU2cVJ4SnlWSndQWUlDNnJSdEVvazFZNk50VGRHR1hwaVNNOUw1MndQcjB6MkFhV0IwNDRmX2F5Nk9KZG9B?oc=5\" target=\"_blank\">Message to the US: why the Houthis chose to join the war now</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE95LVNfZXM3X1Bqejd6M3k2Z3BQLUQ3T29HQm0tNDlGajBhSWQ5S0hYYlU2cVJ4SnlWSndQWUlDNnJSdEVvazFZNk50VGRHR1hwaVNNOUw1MndQcjB6MkFhV0IwNDRmX2F5Nk9KZG9B?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T12:45:14.378Z"
     }
   ]
 }
