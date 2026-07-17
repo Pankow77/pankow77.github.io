@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T09:34:35.143Z",
+  "last_fetch": "2026-07-17T10:32:56.986Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ef051efac898163b",
+      "timestamp": 1784282151000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Unauthorized tanker boarding near Yemen appears to be piracy, not Houthi attack - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaGh1RUVFcUNUdXhja1ZrZEhNSHBoNUNhcFhkaTRKOU9DUUM0blBOTWVOSDFkTTFoYzZBWE5mYUhNbUNBRFNHNGRJNGtyUlFMT2xDY3paTnk3R19pdUFUU1FLVzN0alNSYXhpdW1iX2hkRUI2REtZRjF2THBFaTNnUENPNXFYazJTM1dNRDVIRGE4X09iTGI1d0ctcTFxUDlyUXZ4dHN3OWdXVTJHYlJKd2E3Z3ZLQXA2aTAyYm5wVG9TUQ?oc=5\" target=\"_blank\">Unauthorized tanker boarding near Yemen appears to be piracy, not Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPaGh1RUVFcUNUdXhja1ZrZEhNSHBoNUNhcFhkaTRKOU9DUUM0blBOTWVOSDFkTTFoYzZBWE5mYUhNbUNBRFNHNGRJNGtyUlFMT2xDY3paTnk3R19pdUFUU1FLVzN0alNSYXhpdW1iX2hkRUI2REtZRjF2THBFaTNnUENPNXFYazJTM1dNRDVIRGE4X09iTGI1d0ctcTFxUDlyUXZ4dHN3OWdXVTJHYlJKd2E3Z3ZLQXA2aTAyYm5wVG9TUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T10:32:55.862Z"
+    },
     {
       "id": "rss_bf38e3ace22ffcd3",
       "timestamp": 1784277647000,
@@ -11187,27 +11210,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T12:45:14.378Z"
-    },
-    {
-      "id": "rss_009d2d62d1570ea8",
-      "timestamp": 1774685855000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "First Houthi attack on Israel since the start of the war - L'Orient Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxORldJb1lZUE9PeUVibGlXY2k4cXNacGp6X3liUE9tLUpRZW5tWVZaMEx3R05CTzFpbG9qWS00SDdqX0RqT0h0bWU5c09heHB2dFEyRzd4MHFBSXBvZkRMcnJEeFIyMEphU3Z4UVkxWDdpWUo4Nzl4OGlHZHgyb3VjN3BYamRWZm5VemxzQkRKODBiVVZSZEJ2TnBKRU95RFRLVC05M180TnNIMUg1RFE?oc=5\" target=\"_blank\">First Houthi attack on Israel since the start of the war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">L'Orient Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORldJb1lZUE9PeUVibGlXY2k4cXNacGp6X3liUE9tLUpRZW5tWVZaMEx3R05CTzFpbG9qWS00SDdqX0RqT0h0bWU5c09heHB2dFEyRzd4MHFBSXBvZkRMcnJEeFIyMEphU3Z4UVkxWDdpWUo4Nzl4OGlHZHgyb3VjN3BYamRWZm5VemxzQkRKODBiVVZSZEJ2TnBKRU95RFRLVC05M180TnNIMUg1RFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T08:33:54.978Z"
     }
   ]
 }
