@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T00:30:42.707Z",
+  "last_fetch": "2026-07-17T01:34:28.328Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -249,6 +249,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T15:58:50.551Z"
+    },
+    {
+      "id": "rss_db498c396e728741",
+      "timestamp": 1784215140000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran asks Houthis to block Red Sea if US hits energy sites: Reports - The Hill",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOS1hwVGU5ZkYtU1M0dG5sUVROZEJsNGk5Z012Nm1HZklIdENiWmEwRU51TGNrV3V3d2ItbTl0ZTVncWQwdlI3SUQ4cDlVRTVreDVTNEItQ2JMOWpEX2VnR2VITWF1S1FLQnJleXY4SUdiOXc4VUotQlVWQ2dBbURpbXNkTHZfSy1jOEZCV2N6OTUwVzdGMXFaU0h0c01uUmlTaGluaDN30gGrAUFVX3lxTE9KT1JpMkx3SzVYc3plaERRZlgtYzd2WFV0SnFuWkJqZUdlSlhMbndtZ0dPcVNHLWlITTFBaW0zbmUxR1RVT1o5UnNqb1lqWVFlUE9WdXp0M1RtS0lHVzVOM1hJd2x0WVBETnlleGM0bHBCaFlXSTU4ZU95bS0yaExYS1dWNDV3UkRvaFZYOWVnYTlXSktXQjFZSUJfUW5vamRFVnhkLW",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOS1hwVGU5ZkYtU1M0dG5sUVROZEJsNGk5Z012Nm1HZklIdENiWmEwRU51TGNrV3V3d2ItbTl0ZTVncWQwdlI3SUQ4cDlVRTVreDVTNEItQ2JMOWpEX2VnR2VITWF1S1FLQnJleXY4SUdiOXc4VUotQlVWQ2dBbURpbXNkTHZfSy1jOEZCV2N6OTUwVzdGMXFaU0h0c01uUmlTaGluaDN30gGrAUFVX3lxTE9KT1JpMkx3SzVYc3plaERRZlgtYzd2WFV0SnFuWkJqZUdlSlhMbndtZ0dPcVNHLWlITTFBaW0zbmUxR1RVT1o5UnNqb1lqWVFlUE9WdXp0M1RtS0lHVzVOM1hJd2x0WVBETnlleGM0bHBCaFlXSTU4ZU95bS0yaExYS1dWNDV3UkRvaFZYOWVnYTlXSktXQjFZSUJfUW5vamRFVnhkLWhXam9GUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T01:34:26.890Z"
     },
     {
       "id": "rss_d555290d401b8f56",
@@ -11188,27 +11211,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T09:33:17.218Z"
-    },
-    {
-      "id": "rss_4b2887ed4feb61e9",
-      "timestamp": 1774683249000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthis confirm launching attack on Israel for first time in current war - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVhVWlVDQkU4VVhQaUJXRUNiQ0JkaVFXdDlJVUU1bHpudFp2MWU0MHppYmFkWndKR3lGRmUzd0llNEVaMzZJVzVoOElXT1FIZ3JHa2tNOXRFLVFjamV5TjkyaUs2MlhYQzlxUi1NNldSSnMtbFNrSHVBT1F0Y2Q4SHBTN1U5U29nbTRyU0JDRlZweGdzVXBRbzJkeXNSX3F5VnloWjlFVzQ1WVlmbVViTHpCRkpOV0JrYUtpMVFQRGc?oc=5\" target=\"_blank\">Yemen's Houthis confirm launching attack on Israel for first time in current war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNVhVWlVDQkU4VVhQaUJXRUNiQ0JkaVFXdDlJVUU1bHpudFp2MWU0MHppYmFkWndKR3lGRmUzd0llNEVaMzZJVzVoOElXT1FIZ3JHa2tNOXRFLVFjamV5TjkyaUs2MlhYQzlxUi1NNldSSnMtbFNrSHVBT1F0Y2Q4SHBTN1U5U29nbTRyU0JDRlZweGdzVXBRbzJkeXNSX3F5VnloWjlFVzQ1WVlmbVViTHpCRkpOV0JrYUtpMVFQRGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-03-28T08:33:54.977Z"
     }
   ]
 }
