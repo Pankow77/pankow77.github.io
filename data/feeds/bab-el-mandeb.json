@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-17T08:44:02.672Z",
+  "last_fetch": "2026-07-17T09:34:35.143Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bf38e3ace22ffcd3",
+      "timestamp": 1784277647000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Asks Houthis To Stand Ready To Block Red Sea Shipping If US Hits Power Infrastructure - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOVUZudUdjbGlmLXVfeklLU3pYZW9YVHFuaTlfNFUyU1RMSHlCeHZtV19UZ3BqdzdCR2RUbld4ZTZaeGtXT3dudjZZZ0pVTGtZaHZJeEFIWFZtOS1SVXVnNk9SbW5wTk5KcGtUWVJ2M3c3S0JOTW9mdVpXNl92X0M0QVZwNm9fUXVfVUNfVWFyQ3NJeXFmMWJyYjc1NjFlMEtyTVQ2WnB5LW1KaWRGQlpIbXdQM0pFZ0otZDNKaUl3?oc=5\" target=\"_blank\">Iran Asks Houthis To Stand Ready To Block Red Sea Shipping If US Hits Power Infrastructure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVUZudUdjbGlmLXVfeklLU3pYZW9YVHFuaTlfNFUyU1RMSHlCeHZtV19UZ3BqdzdCR2RUbld4ZTZaeGtXT3dudjZZZ0pVTGtZaHZJeEFIWFZtOS1SVXVnNk9SbW5wTk5KcGtUWVJ2M3c3S0JOTW9mdVpXNl92X0M0QVZwNm9fUXVfVUNfVWFyQ3NJeXFmMWJyYjc1NjFlMEtyTVQ2WnB5LW1KaWRGQlpIbXdQM0pFZ0otZDNKaUl3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-17T09:34:34.044Z"
+    },
     {
       "id": "rss_df63e2f1e6a43687",
       "timestamp": 1784276098000,
@@ -11184,29 +11208,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T08:33:54.978Z"
-    },
-    {
-      "id": "rss_408cb55f5f453f29",
-      "timestamp": 1774685290000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim responsibility for missile attack on Israel, their first since war started - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR2ZEgzM1IxanR2REhweVNjbzMxbWNwVXY2REZVTmlaTGFsaldxWEZ4M05obkM0aWFPUzlPdjlHN1N6eXZLMnNPaEM0akFhamd0MncteWswc1duNU1ubkJJWWg3cF9Pb1VXWFpMZVRQbDE1NURQS3ptN0V0MHNhY1g4dmx5b25INDRMQVNzbnVNbHNDQmg4OGMyUVN1VkhTQkNuVWJWN1JGdw?oc=5\" target=\"_blank\">Yemen’s Houthis claim responsibility for missile attack on Israel, their first since war started</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNeDR2ZEgzM1IxanR2REhweVNjbzMxbWNwVXY2REZVTmlaTGFsaldxWEZ4M05obkM0aWFPUzlPdjlHN1N6eXZLMnNPaEM0akFhamd0MncteWswc1duNU1ubkJJWWg3cF9Pb1VXWFpMZVRQbDE1NURQS3ptN0V0MHNhY1g4dmx5b25INDRMQVNzbnVNbHNDQmg4OGMyUVN1VkhTQkNuVWJWN1JGdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T08:33:54.977Z"
     }
   ]
 }
