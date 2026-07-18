@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-18T01:01:57.044Z",
+  "last_fetch": "2026-07-18T02:16:26.222Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_afac41e37fcde7c9",
+      "timestamp": 1784334660000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran Directs Houthis to Ready Bab el-Mandeb Strait Closure in Response to U.S. Threats - News and Statistics - IndexBox",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPM0FlLVg0eXVrZnQ1ZGZQeGJvVkhIUjJzd2NldEJGSFE3U3g1SmtGWjNGc00zbU9iUFpwcUUzRG5XZlhUVjlhTHNCX05nV0pkVng5VGZuNnJzYWtycURERlpSVjZFRzgtMmVhWFAtalZObFVacnpfZGRqRjltTDJ6UVBsRGNGUE8zSDhMa195dFlrZlFBQ1ltR3JyR1JxU3dENG9qQQ?oc=5\" target=\"_blank\">Iran Directs Houthis to Ready Bab el-Mandeb Strait Closure in Response to U.S. Threats - News and Statistics</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IndexBox</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM0FlLVg0eXVrZnQ1ZGZQeGJvVkhIUjJzd2NldEJGSFE3U3g1SmtGWjNGc00zbU9iUFpwcUUzRG5XZlhUVjlhTHNCX05nV0pkVng5VGZuNnJzYWtycURERlpSVjZFRzgtMmVhWFAtalZObFVacnpfZGRqRjltTDJ6UVBsRGNGUE8zSDhMa195dFlrZlFBQ1ltR3JyR1JxU3dENG9qQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-18T02:16:24.851Z"
+    },
     {
       "id": "rss_73e7247c84c17bad",
       "timestamp": 1784300087000,
@@ -11177,30 +11200,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T12:45:14.375Z"
-    },
-    {
-      "id": "rss_411a785a21bf8990",
-      "timestamp": 1774691833000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthi enter war as Iran strikes disrupt shipping - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOdXRXc1d1UEdyODNwc1BoczQ3NEhrTXV6RkItZWJseWthREJnWGp0OXI1cEh5eTdYUm1pWklSLWZlckpyVE1SVThJcW5mWHhCTWFiMWpnakFzMnJzaDdRS3dKZ2gzSUNfNkZDMl8ycWFzb2h5UHFPalM0TjhXRFZmU2FIVVF6QXNzOFU5RTAzc3VKOWdrN01PTkRSUlVKWTNRelNn?oc=5\" target=\"_blank\">Yemen's Houthi enter war as Iran strikes disrupt shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdXRXc1d1UEdyODNwc1BoczQ3NEhrTXV6RkItZWJseWthREJnWGp0OXI1cEh5eTdYUm1pWklSLWZlckpyVE1SVThJcW5mWHhCTWFiMWpnakFzMnJzaDdRS3dKZ2gzSUNfNkZDMl8ycWFzb2h5UHFPalM0TjhXRFZmU2FIVVF6QXNzOFU5RTAzc3VKOWdrN01PTkRSUlVKWTNRelNn?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T16:28:46.435Z"
     }
   ]
 }
