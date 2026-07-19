@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-19T20:45:59.160Z",
+  "last_fetch": "2026-07-19T21:16:56.032Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -113,6 +113,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-19T04:37:06.558Z"
+    },
+    {
+      "id": "rss_69d3582df1ecf69f",
+      "timestamp": 1784295000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran Expands Oil Chokepoint Threat as Houthis Eye Red Sea Shipping - Crude Oil Prices Today | OilPrice.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPSDVQR0JmQWMzZG15c1ZFNUxCTmY5bVY5VFNnb19SMHlUQ3czSF9heERhNXEyOTFGQ1h2aGFGR013dWtIVHZCYllvY1k2czVTTE8xTzFIQWlTMU5xNno3ckoxbHNMOWdza1puU3pTMzhLZHJwMF9Fd1ZhZWd0N09wMnlneTJmdDViSTFZZEZRN3VvVHFHVGlja1NORGpGRXM5aUlLOEZvTTVtRW5XaWdIcGdxNEvSAboBQVVfeXFMUGFOOG9TdXJOQzhscGtxS29OTFRBWG5YQ1FIWVFTR0JkLVEtVTVIQ3ZQZ0JTQUQtODRkeF9YbUlUcG9qdURJMktnRzRlUGl0TzRDX2dpNXEtOFhjUWg3dEFfSjlpZzgwSVFyai1lc0k1bVZfTFROdXpxWFI2VGdMUXMtTTFFSVcyT2l3QXQyWWJZa2RtQWg0TF",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSDVQR0JmQWMzZG15c1ZFNUxCTmY5bVY5VFNnb19SMHlUQ3czSF9heERhNXEyOTFGQ1h2aGFGR013dWtIVHZCYllvY1k2czVTTE8xTzFIQWlTMU5xNno3ckoxbHNMOWdza1puU3pTMzhLZHJwMF9Fd1ZhZWd0N09wMnlneTJmdDViSTFZZEZRN3VvVHFHVGlja1NORGpGRXM5aUlLOEZvTTVtRW5XaWdIcGdxNEvSAboBQVVfeXFMUGFOOG9TdXJOQzhscGtxS29OTFRBWG5YQ1FIWVFTR0JkLVEtVTVIQ3ZQZ0JTQUQtODRkeF9YbUlUcG9qdURJMktnRzRlUGl0TzRDX2dpNXEtOFhjUWg3dEFfSjlpZzgwSVFyai1lc0k1bVZfTFROdXpxWFI2VGdMUXMtTTFFSVcyT2l3QXQyWWJZa2RtQWg0TFJLMWJIT0pka0FJdjVXWHRjQ0VsMldCY1lPZng3Z0hheWF3?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-19T21:16:56.027Z"
     },
     {
       "id": "rss_1c0ad2f3d96006b7",
@@ -11174,30 +11198,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T10:58:46.097Z"
-    },
-    {
-      "id": "rss_19d74dd2c5e47960",
-      "timestamp": 1774694840000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack signals a ‘serious’ escalation in Iran war - Financial Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5TUTh2WF9WRmxoWmRwdzdOOW1ldnh2NjFXZEZyTUc2Q3lQd0NaaTBfRkFZSXg0V3puYmhWRWcyXzB2WmJHWGtDVWFwaUVtWUpxZXpNZWd2VGx3V3ZESEZUUXZTMXRndkJTUWc4WnREUUM?oc=5\" target=\"_blank\">Houthi missile attack signals a ‘serious’ escalation in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5TUTh2WF9WRmxoWmRwdzdOOW1ldnh2NjFXZEZyTUc2Q3lQd0NaaTBfRkFZSXg0V3puYmhWRWcyXzB2WmJHWGtDVWFwaUVtWUpxZXpNZWd2VGx3V3ZESEZUUXZTMXRndkJTUWc4WnREUUM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T10:58:46.096Z"
     }
   ]
 }
