@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-19T03:03:44.144Z",
+  "last_fetch": "2026-07-19T04:37:07.892Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -67,6 +67,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-17T15:27:59.310Z"
+    },
+    {
+      "id": "rss_a01d314e51d32d9c",
+      "timestamp": 1784296950000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Twin chokepoint threat looms after latest Hormuz tanker attack - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZV9TWDRtRGRqaEdBQ19uTlNtV2F6TG9RcElNeXFBTkFRYndicnRaeGhaLUM2a3RQMVlOa1JLYnlMd05YbU1qcEgyUmswLUkwZjNMU3VLeWlqVWVCbnJHOXo0X1doWFFRSW9femdITkc4cjgyZWttNHpwdUN1bnpOekpDckxjbGV1OFJibDZvWlpaR0tZQVFQOUswdWZpTFhNNkF4OXFWVUo?oc=5\" target=\"_blank\">Twin chokepoint threat looms after latest Hormuz tanker attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOZV9TWDRtRGRqaEdBQ19uTlNtV2F6TG9RcElNeXFBTkFRYndicnRaeGhaLUM2a3RQMVlOa1JLYnlMd05YbU1qcEgyUmswLUkwZjNMU3VLeWlqVWVCbnJHOXo0X1doWFFRSW9femdITkc4cjgyZWttNHpwdUN1bnpOekpDckxjbGV1OFJibDZvWlpaR0tZQVFQOUswdWZpTFhNNkF4OXFWVUo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-19T04:37:06.558Z"
     },
     {
       "id": "rss_1c0ad2f3d96006b7",
@@ -11176,30 +11199,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T10:58:46.095Z"
-    },
-    {
-      "id": "rss_d9dba88008cd8f86",
-      "timestamp": 1774692721000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVZ2Z3d1MjduMVAwTkphREg2TDRfQk1KaUxTaTVWaC1jYnd0VUl2RFlGLUhUYTUyT0pFX3VQdGxnVWktQTVDM0thSmtlWkducmpKSnBnMnp0OEthSTliOEtyM2RUYk5ZUVBDLVE5dFFTQVNKMFowN0FBSjF4OXd5SzRLQjJndlpXeE9odkVBMGx4MmtMNXl5SUhuM0Z2c0JJWm1UUG4wWkJZTjJtY2s4?oc=5\" target=\"_blank\">Iran-backed Houthis fire missile at Israel from Yemen, risking further escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOdVZ2Z3d1MjduMVAwTkphREg2TDRfQk1KaUxTaTVWaC1jYnd0VUl2RFlGLUhUYTUyT0pFX3VQdGxnVWktQTVDM0thSmtlWkducmpKSnBnMnp0OEthSTliOEtyM2RUYk5ZUVBDLVE5dFFTQVNKMFowN0FBSjF4OXd5SzRLQjJndlpXeE9odkVBMGx4MmtMNXl5SUhuM0Z2c0JJWm1UUG4wWkJZTjJtY2s4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T12:45:14.375Z"
     }
   ]
 }
