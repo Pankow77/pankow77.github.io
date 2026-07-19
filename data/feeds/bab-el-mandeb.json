@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-19T18:18:34.862Z",
+  "last_fetch": "2026-07-19T18:47:37.265Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ade076bcd1d5fde2",
+      "timestamp": 1784484069000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran Calls on Houthis to Disrupt the Bab el-Mandeb Strait - الحرة",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE84ejF1N1g4VC1Qc2x2MldrNUM3SnVwNWt5Uzh6dUNKenJZN2Jld2NQVmFkYzBCMVhfQ0s1S1lZSmZsQQ?oc=5\" target=\"_blank\">Iran Calls on Houthis to Disrupt the Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE84ejF1N1g4VC1Qc2x2MldrNUM3SnVwNWt5Uzh6dUNKenJZN2Jld2NQVmFkYzBCMVhfQ0s1S1lZSmZsQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-19T18:47:35.979Z"
+    },
     {
       "id": "rss_afac41e37fcde7c9",
       "timestamp": 1784334660000,
@@ -11175,30 +11198,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T10:58:46.096Z"
-    },
-    {
-      "id": "rss_dfe78aee73bc9fc8",
-      "timestamp": 1774693986000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - Audacy",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQMkpBb2RZTFdHZ2Vtclh3OXRGYnhJY3EyRkh2TC1Mb0VmaU9pV0RMTTVuWEUzZmk2RzJUa0RhUWFCWGtsVGtYYjgwMmF3SGVXYVZUVTFFUVpBZzZZaDJRNzJheThBT196T1hMQ3Q2WXE1UDI2NjhvdzNSM21JSzJRVE5ZNURzeWV1aTBBRQ?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Audacy</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMkpBb2RZTFdHZ2Vtclh3OXRGYnhJY3EyRkh2TC1Mb0VmaU9pV0RMTTVuWEUzZmk2RzJUa0RhUWFCWGtsVGtYYjgwMmF3SGVXYVZUVTFFUVpBZzZZaDJRNzJheThBT196T1hMQ3Q2WXE1UDI2NjhvdzNSM21JSzJRVE5ZNURzeWV1aTBBRQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T10:58:46.095Z"
     }
   ]
 }
