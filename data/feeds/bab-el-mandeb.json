@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T22:20:17.128Z",
+  "last_fetch": "2026-07-20T22:47:18.863Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b644c2003c4a7b33",
+      "timestamp": 1784586908000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea crisis redux: Could Bab el Mandeb be the next tanker chokepoint? - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdGFRQTNhQ2Q3TWpaYmYtNlhJc0FSc3JuUExQaXp4Q1pGblhrRERmOEtjU2E5YlhWckdkVHJJOXhNaHNtQld5NXJyelBfWmQ1X05vSHB3VXBzYVFZbHZvY2JqVmRjQWJrU182R0g4Y09uSDAwTXlReHdIZGUzT2lMSk93VWJKSEliT3ZOTjJrVE4yZ2VHaWUzRUR0MDdkX3UtUnpwcGdXaWgyU2s?oc=5\" target=\"_blank\">Red Sea crisis redux: Could Bab el Mandeb be the next tanker chokepoint?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdGFRQTNhQ2Q3TWpaYmYtNlhJc0FSc3JuUExQaXp4Q1pGblhrRERmOEtjU2E5YlhWckdkVHJJOXhNaHNtQld5NXJyelBfWmQ1X05vSHB3VXBzYVFZbHZvY2JqVmRjQWJrU182R0g4Y09uSDAwTXlReHdIZGUzT2lMSk93VWJKSEliT3ZOTjJrVE4yZ2VHaWUzRUR0MDdkX3UtUnpwcGdXaWgyU2s?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T22:47:17.343Z"
+    },
     {
       "id": "rss_0283eefb9244a6a2",
       "timestamp": 1784574571000,
@@ -11164,30 +11187,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T15:37:26.993Z"
-    },
-    {
-      "id": "rss_f8805d50a624f3e4",
-      "timestamp": 1774709596000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis Enter Iran War With Missile Attack on Israel - mb.ntd.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxONzd0SmItQVgtYWVxckVwUjZWMVB4VGc5eXN2dXNyZ2Jaa21rWlp0cW9BWElFSm5tVlZydlNJWU9VaXJMNkNMY3BONzdGMFhuZXZaVzJOTVhpQU9jUHN3RDc5MG9nanVYc3VCUHQxR05JQlRIZV9qYUQ1NFVtNU5IdDJsY1o3eVhjN04xOQ?oc=5\" target=\"_blank\">Houthis Enter Iran War With Missile Attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mb.ntd.com</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONzd0SmItQVgtYWVxckVwUjZWMVB4VGc5eXN2dXNyZ2Jaa21rWlp0cW9BWElFSm5tVlZydlNJWU9VaXJMNkNMY3BONzdGMFhuZXZaVzJOTVhpQU9jUHN3RDc5MG9nanVYc3VCUHQxR05JQlRIZV9qYUQ1NFVtNU5IdDJsY1o3eVhjN04xOQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T14:58:55.795Z"
     }
   ]
 }
