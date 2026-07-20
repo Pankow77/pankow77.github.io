@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T22:47:18.863Z",
+  "last_fetch": "2026-07-20T23:21:28.707Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2af177bc90fce549",
+      "timestamp": 1784587998000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Red Sea blockade would lift oil prices, but workarounds could limit impact - Forth.News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DSk9aTTc5eVBjSTFNOERHLXBOOWZBdC1NNFdtVDc5UVIzb0lmaDFOS2xnakdxdU9KWVlqSm1fbl94LVg1TFdqVGFJZzBCZWpIVktQYlVDbmpwQXdtSWlkTmdpOA?oc=5\" target=\"_blank\">Houthi Red Sea blockade would lift oil prices, but workarounds could limit impact</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Forth.News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DSk9aTTc5eVBjSTFNOERHLXBOOWZBdC1NNFdtVDc5UVIzb0lmaDFOS2xnakdxdU9KWVlqSm1fbl94LVg1TFdqVGFJZzBCZWpIVktQYlVDbmpwQXdtSWlkTmdpOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T23:21:27.340Z"
+    },
     {
       "id": "rss_b644c2003c4a7b33",
       "timestamp": 1784586908000,
@@ -11164,29 +11185,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-02T11:42:29.413Z"
-    },
-    {
-      "id": "rss_6383191abb987a70",
-      "timestamp": 1774711033000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they have launched their first attack in Iran war - Dallas News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1g3SGZ4Q1lNX1o1RXdSTWFSR0EzUjB6UmhjUzVGb1kxZ2YzazMyaVpHRFFpNUh0ZWNaUmlrTzZOOGRoYTlHUkpSYXY1NWF3b1huSEpjckdRSjlTa1F6eVFDTDNNLU9DYzlFUi1sRzMxVnlzdUwwY1RJZmhvcV9tYmV0bnBpd2RrMm8xa3JfWjNxbHNPOHB0NzZiUUpWVHZIa3RmZnM0Sk5iR0UwbXdNNld3aEU?oc=5\" target=\"_blank\">Houthis say they have launched their first attack in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dallas News</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1g3SGZ4Q1lNX1o1RXdSTWFSR0EzUjB6UmhjUzVGb1kxZ2YzazMyaVpHRFFpNUh0ZWNaUmlrTzZOOGRoYTlHUkpSYXY1NWF3b1huSEpjckdRSjlTa1F6eVFDTDNNLU9DYzlFUi1sRzMxVnlzdUwwY1RJZmhvcV9tYmV0bnBpd2RrMm8xa3JfWjNxbHNPOHB0NzZiUUpWVHZIa3RmZnM0Sk5iR0UwbXdNNld3aEU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T15:37:26.993Z"
     }
   ]
 }
