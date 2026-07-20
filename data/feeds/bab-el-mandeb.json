@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T07:34:44.757Z",
+  "last_fetch": "2026-07-20T09:03:30.027Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_aab78cee60ea96c1",
+      "timestamp": 1784535707000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Old Saudi fire footage misrepresented as recent Houthi attack - Yahoo News UK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNVGN2SUpQVDQyNDZFT1BOUHROWGdvd2d1VkRIdEVneWwxdFd6NEpxT0NXcWR6NFJsazl6TDhNS1pMRHE1YkNrUG5hcDlBVWV5enJDM2ZvZ2hrZFUwSFJ0NW93MnlsejhxeFQtYzByVXlDTG1scnpkLVdNOTV2dXRYc19Remg?oc=5\" target=\"_blank\">Old Saudi fire footage misrepresented as recent Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News UK</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNVGN2SUpQVDQyNDZFT1BOUHROWGdvd2d1VkRIdEVneWwxdFd6NEpxT0NXcWR6NFJsazl6TDhNS1pMRHE1YkNrUG5hcDlBVWV5enJDM2ZvZ2hrZFUwSFJ0NW93MnlsejhxeFQtYzByVXlDTG1scnpkLVdNOTV2dXRYc19Remg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T09:03:28.684Z"
+    },
+    {
+      "id": "rss_83c6662ee9e02759",
+      "timestamp": 1784532979000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why the Red Sea remains one of the world's most dangerous shipping routes - The Economic Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwJBVV95cUxOak41aVJSTEktZC1XeXpNMGNOMnlzMmNMaHJWNFZUWDlQczNkNDJoUlpXWHlhN0VCVmp2ZDFxOGk4ZmRZdTZFTlVkNFNZNTlUUjRyY1F2ZXQ1RElZN0tHWmpaRWhNNEdtX0lsS2JUVmo1dHdzTnUwbVljYmRjRGx0MzNrVG1qaWMtZjFEeXJJVE1ia3VkbGcxOEZnaGo4dzU3dnBERHVQODJ3ZHhBYmNyeGs2WnRVdU8wd0JIU0tnNVZkWmh0OW1ZeWdlUXBVSGVQbndOaEItN3doWTBGeEVMX1hOXzMtcW4wV0ROa2lkWXJQSFJacEVPMzFDaHJGTEUxeWpoTUoxcUhWMEZ0QVdqS2dtZkg0Yk90eXgzWGttUGtZcTNCMGR0OTZ6QlVlOVl1R0VuQ0VJMNIBvAJBVV95cUxNSTR5eHpBT2NadDFqWX",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxOak41aVJSTEktZC1XeXpNMGNOMnlzMmNMaHJWNFZUWDlQczNkNDJoUlpXWHlhN0VCVmp2ZDFxOGk4ZmRZdTZFTlVkNFNZNTlUUjRyY1F2ZXQ1RElZN0tHWmpaRWhNNEdtX0lsS2JUVmo1dHdzTnUwbVljYmRjRGx0MzNrVG1qaWMtZjFEeXJJVE1ia3VkbGcxOEZnaGo4dzU3dnBERHVQODJ3ZHhBYmNyeGs2WnRVdU8wd0JIU0tnNVZkWmh0OW1ZeWdlUXBVSGVQbndOaEItN3doWTBGeEVMX1hOXzMtcW4wV0ROa2lkWXJQSFJacEVPMzFDaHJGTEUxeWpoTUoxcUhWMEZ0QVdqS2dtZkg0Yk90eXgzWGttUGtZcTNCMGR0OTZ6QlVlOVl1R0VuQ0VJMNIBvAJBVV95cUxNSTR5eHpBT2NadDFqWXVBdWcyTV92dXlkSHZrNzUta2hJeWRfbkR1VWpCY00zeDdadjU2TUFCNVVDS21BQ1JFZUZuNjZ1TG1VSFFVTjdKV1Yzald3dEhHc1ZCcllwZVEwM0JETXcxSHI2WjdEYnZtR25QZXMtNnlaMlBDNXFPREJoaTBrUHlNVmQtd0ZnWmIwQ3p0Q25EZjQ0b0FWNngzX3lKSVl2a19FZzJwOE95N0FhS3FCMk1jSDl6UVlsRWRmXzI3aGhTdU5kSWloWVBIVlVHYjBlZ2lROWdEN1RlOFlIM3VoY25wZUt2RFJiY2I4c094NWtiRW1hTkZUSDJINlZHVlg0SVlnUEx6ckxVdWdlTjNjWF9ucjlNZjJSZk90dUZMZTVWZlJiSGlQeWxobkZqYTRK?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T09:03:28.684Z"
+    },
     {
       "id": "rss_ade076bcd1d5fde2",
       "timestamp": 1784484069000,
@@ -11153,51 +11197,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:28:15.727Z"
-    },
-    {
-      "id": "rss_7fbd5986d68114fa",
-      "timestamp": 1774695914000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis join war with missile targeting Israel, Red Sea shipping routes likely to affect - Onmanorama",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZkJsM2l2RjBEcENnbF9JLWVNb1EwRjdEOVBQYkxRQnhsS1JJZ0o3WUF0ZnpuSWJqZUhTVHZVNmtMY25jSjNHTjZrc2lYMzdyRnBKS3RUU0hEOEExWmZ6V1E0c1BPSC1ITUcxUFZXLUVkZVItM2ViRVlseV9UWjJhcmpJMWpXa1c4T25DTmd0OVhoTkJoaktRRHlDUTgzekdZelp0NlhwVk5aeWM4RDgzZUlnRU44TnBhVUhfck9mLTJPZkNRclpSSWt6QnNlZl9FcHdWNzhKaVhHSGtP?oc=5\" target=\"_blank\">Yemen's Houthis join war with missile targeting Israel, Red Sea shipping routes likely to affect</a>&nbsp;&nbsp;<font color=\"#6f6f6",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZkJsM2l2RjBEcENnbF9JLWVNb1EwRjdEOVBQYkxRQnhsS1JJZ0o3WUF0ZnpuSWJqZUhTVHZVNmtMY25jSjNHTjZrc2lYMzdyRnBKS3RUU0hEOEExWmZ6V1E0c1BPSC1ITUcxUFZXLUVkZVItM2ViRVlseV9UWjJhcmpJMWpXa1c4T25DTmd0OVhoTkJoaktRRHlDUTgzekdZelp0NlhwVk5aeWM4RDgzZUlnRU44TnBhVUhfck9mLTJPZkNRclpSSWt6QnNlZl9FcHdWNzhKaVhHSGtP?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T11:33:39.513Z"
-    },
-    {
-      "id": "rss_f4ed878aec7274c9",
-      "timestamp": 1774695217000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Threatening to “send the West back to the Stone Age”... another shock from the “Middle East war” [Hwang Jung-su’s Global Check-in] - bloomingbit",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE1taEEwX0RseXQxazJObGVlU2xRNzcxcmx3TVY5MnE3ZWJiT1lkRjVkQU5menpJNnhCTTNwZTJkckdwYmZSRTU4QVdMeDdiLUNWY0JmUw?oc=5\" target=\"_blank\">Threatening to “send the West back to the Stone Age”... another shock from the “Middle East war” [Hwang Jung-su’s Global Check-in]</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bloomingbit</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1taEEwX0RseXQxazJObGVlU2xRNzcxcmx3TVY5MnE3ZWJiT1lkRjVkQU5menpJNnhCTTNwZTJkckdwYmZSRTU4QVdMeDdiLUNWY0JmUw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T10:58:46.097Z"
     }
   ]
 }
