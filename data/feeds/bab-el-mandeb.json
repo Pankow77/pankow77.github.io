@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T13:12:31.651Z",
+  "last_fetch": "2026-07-20T14:15:04.212Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T13:12:30.310Z"
+    },
+    {
+      "id": "rss_c2ee2ef4c6f282b1",
+      "timestamp": 1784551217000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran's Houthi allies in Yemen declare maritime embargo against Saudi Arabia - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBQNmR4TENuTURCWDVJZHhFZU5OTWZTNHpVQ1NEc2hQR1htb01UOGFxeGZvUjVFQnRIZGxYUVZJeDZ6VWUwbW9QbE9OZTZXWTFjbmRRbEJtRlFlQ0tibnM4eU9VeTY1cXpBa29SLWVYaXZvMjBYZGfSAXtBVV95cUxQYTNvZU5JelkxUVNubGR1NkJoOTVicnpEeENLSWlPdUlNRDdnMGlTeWNnZmdHRGZQRHhNeWF5WmdMbmpDcUFOV3dWTlZ2dW5Ud2hmY20wOG8yNy0xRW1DajhzaHNxNlQ0NHRRWl9EYlVUa25kUTIza0MwUkE?oc=5\" target=\"_blank\">Iran's Houthi allies in Yemen declare maritime embargo against Saudi Arabia</a>&nbsp;&nbsp;<font col",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQNmR4TENuTURCWDVJZHhFZU5OTWZTNHpVQ1NEc2hQR1htb01UOGFxeGZvUjVFQnRIZGxYUVZJeDZ6VWUwbW9QbE9OZTZXWTFjbmRRbEJtRlFlQ0tibnM4eU9VeTY1cXpBa29SLWVYaXZvMjBYZGfSAXtBVV95cUxQYTNvZU5JelkxUVNubGR1NkJoOTVicnpEeENLSWlPdUlNRDdnMGlTeWNnZmdHRGZQRHhNeWF5WmdMbmpDcUFOV3dWTlZ2dW5Ud2hmY20wOG8yNy0xRW1DajhzaHNxNlQ0NHRRWl9EYlVUa25kUTIza0MwUkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T14:15:02.756Z"
     },
     {
       "id": "rss_ef60e11bffb72f63",
@@ -11176,27 +11199,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T13:48:11.762Z"
-    },
-    {
-      "id": "rss_aec4a572dcef00a2",
-      "timestamp": 1774699380000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Two Officers Seriously Wounded in Separate Southern Lebanon Incidents, IDF Says - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwJBVV95cUxNT0pEemFQbUpFYkZyYlV2cU9fN0FYT3VaZnA0REN6bTcxY2tuZmJKbGxjM09MQ1NtT3RodFRMeC0ybE1CeHRlX05EV1FOdjF1OV9BQms4VDM1cWhXQmxDcml1U1ozUF9aOWcyY0psQkJWOW14UXpqNFdpYmdpVTdmbGFScG5WWEhFbVNVLTN6MzBYUldxV05YRFJKc3IyOHRjOE5LaWF5TDdZZFh5S2l5d3BMWjhKVzVha3g5R01hRERTc0p1d1JPZ3daV0FmbG1NWFJKdTJwYzFXbmMyeWhZT2RTcmk1c1JFTEI4WldwWkFMYkdZaWlKSVpxeEJyZnI2eW9ISDdBODFkTkY2Z3dHS05iYm41SExFMWg3ZFlJeUpMMFUwNUdaaUpFcw?oc=5\" target=\"_blank\">Two Officers Seriously Wo",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNT0pEemFQbUpFYkZyYlV2cU9fN0FYT3VaZnA0REN6bTcxY2tuZmJKbGxjM09MQ1NtT3RodFRMeC0ybE1CeHRlX05EV1FOdjF1OV9BQms4VDM1cWhXQmxDcml1U1ozUF9aOWcyY0psQkJWOW14UXpqNFdpYmdpVTdmbGFScG5WWEhFbVNVLTN6MzBYUldxV05YRFJKc3IyOHRjOE5LaWF5TDdZZFh5S2l5d3BMWjhKVzVha3g5R01hRERTc0p1d1JPZ3daV0FmbG1NWFJKdTJwYzFXbmMyeWhZT2RTcmk1c1JFTEI4WldwWkFMYkdZaWlKSVpxeEJyZnI2eW9ISDdBODFkTkY2Z3dHS05iYm41SExFMWg3ZFlJeUpMMFUwNUdaaUpFcw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T12:45:14.376Z"
     }
   ]
 }
