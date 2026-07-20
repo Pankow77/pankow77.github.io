@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T16:59:21.605Z",
+  "last_fetch": "2026-07-20T17:49:06.319Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e893b66b223ff1ed",
+      "timestamp": 1784569323000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "U.S., Iran trade strikes as Houthis declare blockade of Red Sea oil route - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNZFJMZEJZcVVXSEt3ZE1Dek9HTFpvNkZEZWdESTg1ZW8tWjFuZFZUeUlQTjFoOWlUamVMcTNNc3JpZVhxa0x1dFctOVVEc2FEWmJiT2gtS09DMDZkSkZPTUF4cHNUTzZab2dTSi1kc2VSVXhPSkxGRDAwQ1VkU3RCU1NHYXY4TkpQakVEOXFvaTFPVWtLX3pWNmhhLVo1OGRkR2JwdU1iVQ?oc=5\" target=\"_blank\">U.S., Iran trade strikes as Houthis declare blockade of Red Sea oil route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZFJMZEJZcVVXSEt3ZE1Dek9HTFpvNkZEZWdESTg1ZW8tWjFuZFZUeUlQTjFoOWlUamVMcTNNc3JpZVhxa0x1dFctOVVEc2FEWmJiT2gtS09DMDZkSkZPTUF4cHNUTzZab2dTSi1kc2VSVXhPSkxGRDAwQ1VkU3RCU1NHYXY4TkpQakVEOXFvaTFPVWtLX3pWNmhhLVo1OGRkR2JwdU1iVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T17:49:04.925Z"
+    },
+    {
+      "id": "rss_e63d455c93581b0e",
+      "timestamp": 1784568716000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea war insurance costs rise after Houthi blockade, sources say - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcFBRdmdXSFFsMHF5ZnI4dVNpbDRtLWVHbGtWXzRfZUVJLUhRdE9oYjN4V05jdmE4SDE5UmN6TXVJRmk1V3cxM182bTlOMnhHdlVIUW43UENkckdvcHhUeHRsSDJYWTU4cTlFOV9KR0VkaF9ORmNUeUhlak80NVJxdXc5SXZBXzNmV2pYWVo4V1VKVndWYk1DeFJ0UjRnZUtwWmd2ejVjcTMzN2RuU252Y2hnS01SVTlJRWRJ?oc=5\" target=\"_blank\">Red Sea war insurance costs rise after Houthi blockade, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcFBRdmdXSFFsMHF5ZnI4dVNpbDRtLWVHbGtWXzRfZUVJLUhRdE9oYjN4V05jdmE4SDE5UmN6TXVJRmk1V3cxM182bTlOMnhHdlVIUW43UENkckdvcHhUeHRsSDJYWTU4cTlFOV9KR0VkaF9ORmNUeUhlak80NVJxdXc5SXZBXzNmV2pYWVo4V1VKVndWYk1DeFJ0UjRnZUtwWmd2ejVjcTMzN2RuU252Y2hnS01SVTlJRWRJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-20T17:49:04.924Z"
+    },
     {
       "id": "rss_e27422bb2f2ec286",
       "timestamp": 1784562600000,
@@ -25,6 +71,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T16:59:20.271Z"
+    },
+    {
+      "id": "rss_792273b6cd3ad53d",
+      "timestamp": 1784562313000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Yemen's Iranian-backed Houthis say they will block Saudi shipping at Red Sea gateway - ABC News - Breaking News, Latest News and Videos",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVnJSbldfQVlZN29WaHdaSkl1VnJTLWRfazR1WENzNy1OYXdieVJhX3gwUl9vVWw4TkoyN2Q5MEVNYWZnZkJJMm51QUloMTFSN2NMWEtaRE9vdXhobjI3OG9zalBEUjJzcEhvVDRSSEtfb2dlSkFHRVc0NTUtNjRlYzdKbVQzNjNLVnFYX1ZmdGozYmRKM3BuRzJCVTBTVmhldURiRzRlb2x2OWvSAbABQVVfeXFMTlBxc1JqeEFiWmxFbGQ0OFF3VTZmR05tdDNtcDFmeWVzZDU5bWNIZHAyLWdJNUwyQmE1TS1yQ3FQTzFCbFE4R0U0Y0JmeU5mdk9PMGRwVExnS2J3dE1MbDdJbFBKWkttbHVKRnlqTW1Hc25QTTNndW1qbC1WMXF6X0IxRmVkLVFMcTVhTGRuX3dVUTRjT2VGTTVkZjlEdGlEY1",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVnJSbldfQVlZN29WaHdaSkl1VnJTLWRfazR1WENzNy1OYXdieVJhX3gwUl9vVWw4TkoyN2Q5MEVNYWZnZkJJMm51QUloMTFSN2NMWEtaRE9vdXhobjI3OG9zalBEUjJzcEhvVDRSSEtfb2dlSkFHRVc0NTUtNjRlYzdKbVQzNjNLVnFYX1ZmdGozYmRKM3BuRzJCVTBTVmhldURiRzRlb2x2OWvSAbABQVVfeXFMTlBxc1JqeEFiWmxFbGQ0OFF3VTZmR05tdDNtcDFmeWVzZDU5bWNIZHAyLWdJNUwyQmE1TS1yQ3FQTzFCbFE4R0U0Y0JmeU5mdk9PMGRwVExnS2J3dE1MbDdJbFBKWkttbHVKRnlqTW1Hc25QTTNndW1qbC1WMXF6X0IxRmVkLVFMcTVhTGRuX3dVUTRjT2VGTTVkZjlEdGlEY1d0TEhXSm1iNFFuTUpISWs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T17:49:04.924Z"
     },
     {
       "id": "rss_f527b4a40f286335",
@@ -11123,78 +11193,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T14:58:55.794Z"
-    },
-    {
-      "id": "rss_e3898f04c4196a12",
-      "timestamp": 1774707421000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis launch missiles at Israel, raising fears they will attack ships in the Red Sea - Fortune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQb1Z5REFybGRrQ3hJanhwWHRHVUUzbEZMcnpIMXlfMk03aG1yVnpuY1JIU1hJXzRmTUh6bzBGYl94YTdFMW1xYWRIb0gwX09WTDMzSnJocmFZbEN5OUlsTnlhZEIydG1iOENCQUtWQ2NlcVlWQVR2NE8tUVRULUpxdmQ2dkxXOWVzTjRQSDhrcFBYZFRHOXl0Uk5pUl9vVTNzRVNra2RSOW9iMkkxNDVENnpR?oc=5\" target=\"_blank\">Iran-backed Houthis launch missiles at Israel, raising fears they will attack ships in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>",
-      "tags": [
-        "iran-proxy",
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQb1Z5REFybGRrQ3hJanhwWHRHVUUzbEZMcnpIMXlfMk03aG1yVnpuY1JIU1hJXzRmTUh6bzBGYl94YTdFMW1xYWRIb0gwX09WTDMzSnJocmFZbEN5OUlsTnlhZEIydG1iOENCQUtWQ2NlcVlWQVR2NE8tUVRULUpxdmQ2dkxXOWVzTjRQSDhrcFBYZFRHOXl0Uk5pUl9vVTNzRVNra2RSOW9iMkkxNDVENnpR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T14:28:15.727Z"
-    },
-    {
-      "id": "rss_8b1ca86034e4b2e1",
-      "timestamp": 1774707240000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi forces enter Iran conflict with missile attacks on Israeli military sites - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0RTS2pPUloya2sxVi0zLXdVSEZXWjB6Q0NKaWJJLWRHMktwdzNNb0QzakRfclE2ckZQWEtLRW4xWXZYRS1GY2ViOXV6bktJVWxHNl9zSkFQN0xRQW93X0pQTDVUTEpWSEJQbW5zdmNDS3ZYaHA2UlhLUzlEVW9fQThXajIxN1JDYmtoaUQ1QnVpMlh2YXhjWnN4azlTUk55VUtmemdkUF8xbi16V3MtVE80Vk9kRWs0azgtU1FUcjNuYzlv?oc=5\" target=\"_blank\">Houthi forces enter Iran conflict with missile attacks on Israeli military sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQS0RTS2pPUloya2sxVi0zLXdVSEZXWjB6Q0NKaWJJLWRHMktwdzNNb0QzakRfclE2ckZQWEtLRW4xWXZYRS1GY2ViOXV6bktJVWxHNl9zSkFQN0xRQW93X0pQTDVUTEpWSEJQbW5zdmNDS3ZYaHA2UlhLUzlEVW9fQThXajIxN1JDYmtoaUQ1QnVpMlh2YXhjWnN4azlTUk55VUtmemdkUF8xbi16V3MtVE80Vk9kRWs0azgtU1FUcjNuYzlv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T20:55:15.188Z"
-    },
-    {
-      "id": "rss_35bc63021f2cb018",
-      "timestamp": 1774705725000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Iran-backed Houthis in Yemen launch attack on Israel for first time in war - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFB2LW9fUjBuQ1haQUdiQzRBSDBVNkFWazR3dDZsbDBJZE5yeDRUQjFBN0RaS0dzWjNCSm1TdW85anFXNno3V3p4OXFEUEgwRVJNOC1LcUhRN3p6X21FRm5uaFZwTUFxeDVmR2pZYm9iem4wOHBzUGpyOWRLSEg?oc=5\" target=\"_blank\">Iran-backed Houthis in Yemen launch attack on Israel for first time in war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB2LW9fUjBuQ1haQUdiQzRBSDBVNkFWazR3dDZsbDBJZE5yeDRUQjFBN0RaS0dzWjNCSm1TdW85anFXNno3V3p4OXFEUEgwRVJNOC1LcUhRN3p6X21FRm5uaFZwTUFxeDVmR2pZYm9iem4wOHBzUGpyOWRLSEg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T14:28:15.726Z"
     }
   ]
 }
