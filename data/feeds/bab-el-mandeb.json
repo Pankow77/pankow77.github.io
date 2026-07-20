@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T15:14:33.038Z",
+  "last_fetch": "2026-07-20T16:04:08.484Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6f1710f30fb609dc",
+      "timestamp": 1784558455000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis threaten Bab el-Mandeb closure in Saudi Arabia embargo - Euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPR3hwcmFhcDYxTFJGUlZiX2JSMU5oM2FXNURVcThFVWlEd3ctX0taZXVQRWV6WkdSRGU2YlVnQl80R2pCMFREM2VBdlRXaktIekkwdEZfRDlrNWxPRUY2Q1ItbXQ1MjZZV3VjcUFMQVFiNFp0QVh5MTlGNTJ6VkZjYnVtajk0VnhCdVpoRHZZR09IM0c0bEVqLTRtX1pDZnhoVjdaejd0YlVCTG5W?oc=5\" target=\"_blank\">Yemen’s Houthis threaten Bab el-Mandeb closure in Saudi Arabia embargo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPR3hwcmFhcDYxTFJGUlZiX2JSMU5oM2FXNURVcThFVWlEd3ctX0taZXVQRWV6WkdSRGU2YlVnQl80R2pCMFREM2VBdlRXaktIekkwdEZfRDlrNWxPRUY2Q1ItbXQ1MjZZV3VjcUFMQVFiNFp0QVh5MTlGNTJ6VkZjYnVtajk0VnhCdVpoRHZZR09IM0c0bEVqLTRtX1pDZnhoVjdaejd0YlVCTG5W?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-20T16:04:07.159Z"
+    },
+    {
+      "id": "rss_38a0e2e8bb825624",
+      "timestamp": 1784558144000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis declare naval blockade against Saudi Arabia - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQcUowRTU0M2hEUzRtdXAxY1FENjh0OWdXcEJlb2h4VlpBOVdGM2YzZ1BQSVhLMFQwOXhRN01aQ1poMVd5TTNRUHBZbV9jNWZRaGFaejU2ckpkNW5HUlZSdlJXWU5GNTlFU0NFUU9DYkJ1LXVFNHZBanlSemdrb3M1Vm80azBhNlRmTGRWbjQ2dEtkQVNfbTVNMUVReDIwYXB6aDNjN0pReHQ5S1BBUFl1NUc4Z1VyVHB4MWNnQ09JZw?oc=5\" target=\"_blank\">Yemen's Houthis declare naval blockade against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcUowRTU0M2hEUzRtdXAxY1FENjh0OWdXcEJlb2h4VlpBOVdGM2YzZ1BQSVhLMFQwOXhRN01aQ1poMVd5TTNRUHBZbV9jNWZRaGFaejU2ckpkNW5HUlZSdlJXWU5GNTlFU0NFUU9DYkJ1LXVFNHZBanlSemdrb3M1Vm80azBhNlRmTGRWbjQ2dEtkQVNfbTVNMUVReDIwYXB6aDNjN0pReHQ5S1BBUFl1NUc4Z1VyVHB4MWNnQ09JZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-20T16:04:07.159Z"
+    },
     {
       "id": "rss_9f0d44d2175e2a9b",
       "timestamp": 1784557805000,
@@ -11154,50 +11196,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T13:48:11.762Z"
-    },
-    {
-      "id": "rss_a5190df43d5ed835",
-      "timestamp": 1774704362000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthis claim responsibility for missile attack on Israel - CBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxOQmN1OFg2WUMxZXlNS1JmcUpWVW9qMmVkUjdHM2hSZkh4ejFZcWNCRWg2WVpPRFJBYnJpdWdzcjY0WXhJelVVZDBaVVJIdnNJM0MzTTM5MjVXQ2JZNWlfZ2c5QjJ2enFpX3Q3eG5uNkI5X1JZanljSTFjUTlkd29Leg?oc=5\" target=\"_blank\">Yemen's Houthis claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBC</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQmN1OFg2WUMxZXlNS1JmcUpWVW9qMmVkUjdHM2hSZkh4ejFZcWNCRWg2WVpPRFJBYnJpdWdzcjY0WXhJelVVZDBaVVJIdnNJM0MzTTM5MjVXQ2JZNWlfZ2c5QjJ2enFpX3Q3eG5uNkI5X1JZanljSTFjUTlkd29Leg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T14:58:55.794Z"
-    },
-    {
-      "id": "rss_660fb47d08512f83",
-      "timestamp": 1774704067000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Who are Yemen’s Houthis? Militants opening a new front in a dangerous escalation - Gulf News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQN29nd25XWWRRcGVNb3djUlhvNV91V0RtLXZxQ0x3a1UyS0pxNV9TMUk0M1M4RHhrUWFmWUlsZWdMQXVMY2Q0UURjZ2tKM25OeGhldGVnd1hkRWdZODA1Nm9YSlJ6WkJneHMtNll4UW9nZ0Y2eWcxUWVLWGUzVHBIUXNGcV8yY1FGTUlrdWhmc1RYdG5Ua1dmQlFOdnY4U0Y0OExQY3pSdmlDdkc3N2JHctIBxgFBVV95cUxPTGxDeS1qdGR4STBWR1l1V2VXRkY0STRmeE4zRjBlTGFxM2RrRGdxN3pLWWZjR29feW05QzhxWWp4UkkwWjQtdkVLTDBzRHdXeWFLYVBIeE9WekRjSDlHRUgxYmdMSThRZmpPVS1lTFpjbk5QRlNBZ3AxRC1uY1lYUnM1UFdOSXBRRGQtTGVBRVdGRVNnQVk3VFNtaG",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQN29nd25XWWRRcGVNb3djUlhvNV91V0RtLXZxQ0x3a1UyS0pxNV9TMUk0M1M4RHhrUWFmWUlsZWdMQXVMY2Q0UURjZ2tKM25OeGhldGVnd1hkRWdZODA1Nm9YSlJ6WkJneHMtNll4UW9nZ0Y2eWcxUWVLWGUzVHBIUXNGcV8yY1FGTUlrdWhmc1RYdG5Ua1dmQlFOdnY4U0Y0OExQY3pSdmlDdkc3N2JHctIBxgFBVV95cUxPTGxDeS1qdGR4STBWR1l1V2VXRkY0STRmeE4zRjBlTGFxM2RrRGdxN3pLWWZjR29feW05QzhxWWp4UkkwWjQtdkVLTDBzRHdXeWFLYVBIeE9WekRjSDlHRUgxYmdMSThRZmpPVS1lTFpjbk5QRlNBZ3AxRC1uY1lYUnM1UFdOSXBRRGQtTGVBRVdGRVNnQVk3VFNtaG9RRmh1RG5jRzVJN2NnVU1OdWtCVDFHYkhCczlKQXBUMjB1MHdleHZiRWc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T17:53:35.541Z"
     }
   ]
 }
