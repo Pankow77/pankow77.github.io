@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T12:03:43.286Z",
+  "last_fetch": "2026-07-21T12:58:15.429Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b102013f5e185164",
+      "timestamp": 1784635954000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Chinese Oil Tanker U-Turns in Red Sea After Houthi Attack Threat - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOdGlsUjFqOVZmeURyX2MxQzUtOXVNdVdDaFg3OXU0NjRSMWRnNTNVN1oxeF9HWTdNbzhuRW5OZm1Ed3pZVFpZeTFtS1FRM1J4TFQ5eUJwNDlCM1JJeEM1c2o3dU9BNmNyRWxGa21mQ25Ec1JxeldKT1pDdXlRRE90S1R2RURFWDFsTko3TGxfRkVEVFBPa0ZWT2JVdDNHazczcU1xMnlFZGZzbTNhX2xVdHhxbU94QQ?oc=5\" target=\"_blank\">Chinese Oil Tanker U-Turns in Red Sea After Houthi Attack Threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdGlsUjFqOVZmeURyX2MxQzUtOXVNdVdDaFg3OXU0NjRSMWRnNTNVN1oxeF9HWTdNbzhuRW5OZm1Ed3pZVFpZeTFtS1FRM1J4TFQ5eUJwNDlCM1JJeEM1c2o3dU9BNmNyRWxGa21mQ25Ec1JxeldKT1pDdXlRRE90S1R2RURFWDFsTko3TGxfRkVEVFBPa0ZWT2JVdDNHazczcU1xMnlFZGZzbTNhX2xVdHhxbU94QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T12:58:14.160Z"
+    },
+    {
+      "id": "rss_8c662aedbb3db723",
+      "timestamp": 1784632603000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis warn shipping companies to avoid Saudi ports, email shows - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQZFE2MFI3R2M4S2lDTDFZMGZtNnJ0cm5FMThZT1pYVldXUzUwVUdFQTd0RUprcjhzbVB3OFl5NTFLMk5MX3NSV3U0UWxTempZdGJLaXdKU09VS3ZGaXo1b0hLdWJPN0JkRFplalkwNXM5SFJfLXNKTl83Tm9ZNmlJTjJRMVJ1clRETy1SOWpIYmN0cXd0WnZEYVZ0VXN4OWpMN0V4X2RaeGpvc3RyTFpRa2drYWhtQQ?oc=5\" target=\"_blank\">Houthis warn shipping companies to avoid Saudi ports, email shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZFE2MFI3R2M4S2lDTDFZMGZtNnJ0cm5FMThZT1pYVldXUzUwVUdFQTd0RUprcjhzbVB3OFl5NTFLMk5MX3NSV3U0UWxTempZdGJLaXdKU09VS3ZGaXo1b0hLdWJPN0JkRFplalkwNXM5SFJfLXNKTl83Tm9ZNmlJTjJRMVJ1clRETy1SOWpIYmN0cXd0WnZEYVZ0VXN4OWpMN0V4X2RaeGpvc3RyTFpRa2drYWhtQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-21T12:58:14.161Z"
+    },
     {
       "id": "rss_d1fe5f62cf7d1741",
       "timestamp": 1784628120000,
@@ -11133,52 +11179,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T19:52:26.472Z"
-    },
-    {
-      "id": "rss_c22153bfca03b3c6",
-      "timestamp": 1774723500000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis enter Middle East conflict, fire missiles towards Israel - NZ Herald",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPcE5JUmo4MTluYjRYZlpnLU1hLVE0YndPZkw0c3VrR3U2aTlaWlZHc0lza0Y4Tlp6dzJOR1p4dk9XREJjMXQzeHYyNzhyVG40U2hBbE5KN1BySHhiM2JVbXBza1U5OXdqNF8tM0g4dk9yTWNkWndacmFuVk91c0lYYkRUenBMSVJuUjRUSWhVck5DX1pOWXFqaGhBczVxbVlSQVVVVXI3X29VZFZ0SjB1QkIzY0xEUmw4eVNmc245NDE5Nktva2FWM3ZwY2dZUQ?oc=5\" target=\"_blank\">Yemen's Houthis enter Middle East conflict, fire missiles towards Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NZ Herald</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPcE5JUmo4MTluYjRYZlpnLU1hLVE0YndPZkw0c3VrR3U2aTlaWlZHc0lza0Y4Tlp6dzJOR1p4dk9XREJjMXQzeHYyNzhyVG40U2hBbE5KN1BySHhiM2JVbXBza1U5OXdqNF8tM0g4dk9yTWNkWndacmFuVk91c0lYYkRUenBMSVJuUjRUSWhVck5DX1pOWXFqaGhBczVxbVlSQVVVVXI3X29VZFZ0SjB1QkIzY0xEUmw4eVNmc245NDE5Nktva2FWM3ZwY2dZUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T19:27:00.785Z"
-    },
-    {
-      "id": "rss_bc9f312ceb9c733b",
-      "timestamp": 1774723243000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis launch attack on Israel as war on Iran expands - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGdkT1pjSkpYcjRZRXhlNlNpRTUyQ3VUYnlwelptS201WTZqb1c3dTNzMFltYXc5ZXhHNi1Scm5tS3hkNzhRM0Y0Q1IyLWZQdmNHTkd0WUY1dUNlSnpYNDBQT3BleFNqVUdNejNvdE5zS0NDQnJmOXViOTNjVHJBOTZJcXBNNGE3VGdJZndIbjF5a2hKM29zZ3BR?oc=5\" target=\"_blank\">Houthis launch attack on Israel as war on Iran expands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGdkT1pjSkpYcjRZRXhlNlNpRTUyQ3VUYnlwelptS201WTZqb1c3dTNzMFltYXc5ZXhHNi1Scm5tS3hkNzhRM0Y0Q1IyLWZQdmNHTkd0WUY1dUNlSnpYNDBQT3BleFNqVUdNejNvdE5zS0NDQnJmOXViOTNjVHJBOTZJcXBNNGE3VGdJZndIbjF5a2hKM29zZ3BR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T23:27:10.144Z"
     }
   ]
 }
