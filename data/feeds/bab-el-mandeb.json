@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T09:19:03.496Z",
+  "last_fetch": "2026-07-21T10:17:10.297Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_be226018f9294251",
+      "timestamp": 1784627378000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "A Red Sea blockade threatens a new front in U.S.-Iran war - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEtLcUJfSEVjZ1I4WTU2cnNYenZrVVlBUEFHLXJSVTJZUjg5UzBuT094dVlYV1A1bjlVQXZDek91ZzlkelRvLWhOd1MwX3kwR3ZCOS1XbWF2M2xITHRtV0w2bVVnMmkyWkpQd2ZxWFJIcGVoN3dtNU9ndi1VOEo0Z2s5cE5BOW9KRktySHBvN0xGUlg4d2JGWlpJWmNVQQ?oc=5\" target=\"_blank\">A Red Sea blockade threatens a new front in U.S.-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEtLcUJfSEVjZ1I4WTU2cnNYenZrVVlBUEFHLXJSVTJZUjg5UzBuT094dVlYV1A1bjlVQXZDek91ZzlkelRvLWhOd1MwX3kwR3ZCOS1XbWF2M2xITHRtV0w2bVVnMmkyWkpQd2ZxWFJIcGVoN3dtNU9ndi1VOEo0Z2s5cE5BOW9KRktySHBvN0xGUlg4d2JGWlpJWmNVQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T10:17:09.134Z"
+    },
+    {
+      "id": "rss_c86d36bbddc4c85f",
+      "timestamp": 1784624811000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Red Sea insurance rates jump following Houthi blockade threat - Baird Maritime",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOU2QxU0hUbWxBN0lWcm42MFlVdGZMT09QYl9SX04zclptQk5ZZlhSZjMtV0RTQnZURzFoZEx6eHd0M2xxMlZuODlfZUZwU2F3RjdPUy1KdW1YMW9HVkhYbGQ3aXhaZ0xqU3dia2VwX0dtX1ZIUVpPVkxBMXU3b3cyYTY3R2k1WWJxeGNEeWVUYUVtZmpjVm9rSzlZckt1M0lUVEHSAa8BQVVfeXFMUGRDS01FZ1htT0RnQzJBUW9MUXprRmNGUGdYMVVzUHdyT3VtSVB4VnM0b2xYUzM2V016VXRmVEpMakNQT1NwY0hRNWpGVU9yb2tNal91c2JDUE9xdHlDN2lqS0FrZ05KZGh5aU5qbzZpMUlSbVo3M2FJZXJVYV81M0tEeTNZOWE2OWV3NXQzdC1XU1pZU0xJaHFpeVlESGZYUTZwNHQ3N1dKOF",
+      "tags": [
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOU2QxU0hUbWxBN0lWcm42MFlVdGZMT09QYl9SX04zclptQk5ZZlhSZjMtV0RTQnZURzFoZEx6eHd0M2xxMlZuODlfZUZwU2F3RjdPUy1KdW1YMW9HVkhYbGQ3aXhaZ0xqU3dia2VwX0dtX1ZIUVpPVkxBMXU3b3cyYTY3R2k1WWJxeGNEeWVUYUVtZmpjVm9rSzlZckt1M0lUVEHSAa8BQVVfeXFMUGRDS01FZ1htT0RnQzJBUW9MUXprRmNGUGdYMVVzUHdyT3VtSVB4VnM0b2xYUzM2V016VXRmVEpMakNQT1NwY0hRNWpGVU9yb2tNal91c2JDUE9xdHlDN2lqS0FrZ05KZGh5aU5qbzZpMUlSbVo3M2FJZXJVYV81M0tEeTNZOWE2OWV3NXQzdC1XU1pZU0xJaHFpeVlESGZYUTZwNHQ3N1dKOFhkQmpMZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T10:17:09.134Z"
+    },
     {
       "id": "rss_3193f62b8dbee916",
       "timestamp": 1784623975000,
@@ -11133,53 +11179,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T19:52:25.022Z"
-    },
-    {
-      "id": "rss_7af20018cdeee7c7",
-      "timestamp": 1774721912000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis join war with attack against Israel - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oY1N1ME83RElJVUc5OFZSaXJFMms5a1Z4MDdxR2VrN3JPam9RVUZMQlpqdzZsYUVBNko1RWtRM2s4ckpiR0FxdDlXS1RuYXBlOElaZU1uYThidw?oc=5\" target=\"_blank\">Iran-backed Houthis join war with attack against Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oY1N1ME83RElJVUc5OFZSaXJFMms5a1Z4MDdxR2VrN3JPam9RVUZMQlpqdzZsYUVBNko1RWtRM2s4ckpiR0FxdDlXS1RuYXBlOElaZU1uYThidw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T19:26:59.277Z"
-    },
-    {
-      "id": "rss_692306bf971a1d87",
-      "timestamp": 1774715447000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Ottumwa Courier",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwJBVV95cUxOT2VMamo0OUc2NVpnTWkwS01IYlRtQWczeUZhQjR0Z0lrOUlSd1d6azBqSHJfZkl6dGd3TGp2WFdUbE93TzRsNVdyQ25MWDdodnBXNjJiZ0JNNWhBZzF1aXBTSlRTb0lQWnlyZHVyR2tocW5pVFlmN0JsbG9rMnZXQVhaV005RXMzVnJtZUpFNWVGNjB5WV85U2J3U2dHVnY2Y3F1bExHQ3g4YTdXQlRUZnVvb2lWVlptTmtwdjUxVGJVZXVHZUVGVThxaWJGeFFHNlYyYlFWejJpNmszSUNDUm01eXpIYTN3OHl0X1g4cHJ5al8yakNJT21ISFN1RmVKbjdXOXhKUkp5UFE0Mk1F?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red S",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOT2VMamo0OUc2NVpnTWkwS01IYlRtQWczeUZhQjR0Z0lrOUlSd1d6azBqSHJfZkl6dGd3TGp2WFdUbE93TzRsNVdyQ25MWDdodnBXNjJiZ0JNNWhBZzF1aXBTSlRTb0lQWnlyZHVyR2tocW5pVFlmN0JsbG9rMnZXQVhaV005RXMzVnJtZUpFNWVGNjB5WV85U2J3U2dHVnY2Y3F1bExHQ3g4YTdXQlRUZnVvb2lWVlptTmtwdjUxVGJVZXVHZUVGVThxaWJGeFFHNlYyYlFWejJpNmszSUNDUm01eXpIYTN3OHl0X1g4cHJ5al8yakNJT21ISFN1RmVKbjdXOXhKUkp5UFE0Mk1F?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T17:01:47.903Z"
     }
   ]
 }
