@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T08:16:42.120Z",
+  "last_fetch": "2026-07-21T09:19:03.496Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3193f62b8dbee916",
+      "timestamp": 1784623975000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea War Insurance Costs Rise After Houthi Blockade, Sources Say - Insurance Journal",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE5haTlSeTVzVnByR2ZZU3R1eTY5RlVfcGpMOTVZVGhScUlJT0RMekE5N2JkbkNxVDRCYWc3eVZReHRSTVhLM05fNEZGeHo3Y0JPcFhqdFg0bGlVbEFSRkczNVNRMUgzVEM5RWZZSkNrOFBUSXFoam5QMDY1aTVXQQ?oc=5\" target=\"_blank\">Red Sea War Insurance Costs Rise After Houthi Blockade, Sources Say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Insurance Journal</font>",
+      "tags": [
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5haTlSeTVzVnByR2ZZU3R1eTY5RlVfcGpMOTVZVGhScUlJT0RMekE5N2JkbkNxVDRCYWc3eVZReHRSTVhLM05fNEZGeHo3Y0JPcFhqdFg0bGlVbEFSRkczNVNRMUgzVEM5RWZZSkNrOFBUSXFoam5QMDY1aTVXQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T09:19:02.240Z"
+    },
     {
       "id": "rss_73e6779f28ae977b",
       "timestamp": 1784613915000,
@@ -11157,30 +11180,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T17:01:47.903Z"
-    },
-    {
-      "id": "rss_8cdabf70b56290ec",
-      "timestamp": 1774714725000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel - WTOP",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQUjlkTzBQVFpDbmZaMmxFRFpNTTJQUl9tdjVjdnVKdDEzYXZ2RXhvVndnRzRPaENkVGRXVEJnQmdWc0x6dEthZWFhd1V3M09uUlByTVZpZ3hEcXVpcFc1ZU9GSzZUY1ZGTWFJQjRpZ292dGlBOC1Na1Izam0tT1YtWFhUZ25CSnBpNGN3ZEtVdVowY2V6YW9vWk9nQXhSVHhUT2t2Q1hscE05cDlYdnJPM0FwaUUwTkZXOUN0OTNCeEhJdzFMRDV0ZTIzNA?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WTOP</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUjlkTzBQVFpDbmZaMmxFRFpNTTJQUl9tdjVjdnVKdDEzYXZ2RXhvVndnRzRPaENkVGRXVEJnQmdWc0x6dEthZWFhd1V3M09uUlByTVZpZ3hEcXVpcFc1ZU9GSzZUY1ZGTWFJQjRpZ292dGlBOC1Na1Izam0tT1YtWFhUZ25CSnBpNGN3ZEtVdVowY2V6YW9vWk9nQXhSVHhUT2t2Q1hscE05cDlYdnJPM0FwaUUwTkZXOUN0OTNCeEhJdzFMRDV0ZTIzNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T17:01:47.901Z"
     }
   ]
 }
