@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T05:59:36.485Z",
+  "last_fetch": "2026-07-21T07:02:40.459Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_73e6779f28ae977b",
+      "timestamp": 1784613915000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "US continues to attack Iran as tension expands to Red Sea - Premium Times Nigeria",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOa0JSY3BjOUJUXzFjbUZmcDJNbjItWXZMenYwTk1ibk1lX000SW1KM1gzenppUDhsMzlCZWR2X2Frb0tXWnNrbE9vRG1iUmRsZjUzR0Ftem50RGpRUGlzMmM0a3dySVZ5VlJmQ2NOU3U5b1ZUbG5uaGVQMWY3a2ZSV2xOUTdTSVhURE5zSnZaTDRzMEttVXZQa3lCaWwzaUY2UjJlWFJWa1VwSzhf?oc=5\" target=\"_blank\">US continues to attack Iran as tension expands to Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Premium Times Nigeria</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOa0JSY3BjOUJUXzFjbUZmcDJNbjItWXZMenYwTk1ibk1lX000SW1KM1gzenppUDhsMzlCZWR2X2Frb0tXWnNrbE9vRG1iUmRsZjUzR0Ftem50RGpRUGlzMmM0a3dySVZ5VlJmQ2NOU3U5b1ZUbG5uaGVQMWY3a2ZSV2xOUTdTSVhURE5zSnZaTDRzMEttVXZQa3lCaWwzaUY2UjJlWFJWa1VwSzhf?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T07:02:39.234Z"
+    },
     {
       "id": "rss_0da206aea78f83cc",
       "timestamp": 1784597405000,
@@ -11158,29 +11181,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T17:01:47.901Z"
-    },
-    {
-      "id": "rss_24bf6ec77ce3f108",
-      "timestamp": 1774713798000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthis claim first missile attack on Israel since war began - pbs.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPUERFbVk1MDRIQnh1dGwzX0RRZjRKRlloWFNJdGhvV2VpSlpabUpzSDU2VEdlWmxkVkMxb1cwVHhLRXUtWFNTSVNjbzc0ZHlydURZZFl3Mm81b2Q0TG03bXhDX0tnMHFuM2E0cUZFWVZQR0RxUEdOaWV4Vy01UHNPa3hPa014Nnh4c1diZVZRcTJhUHpobzdqTjFvSHl2ai1xNVBsNdIBqgFBVV95cUxQTmw0NkIwaEwxdWttZmRwaEZCakVEd04xeWxEX05HbTNRTlV2S2YwZTFHRlhZNHhmMkYtN0dKS09NRndTSWFuS1U5MFlodnZkRmpGQVc0MXFiRWhLY1dLa3A3ZWJYX2h2LWdfZXV3WndBd3B1TmhZZnhONHpsQUVlOFBIMnFGRTA3ZjdwTlJVY0xvRTlqc1FiMk1mM0dWSTFvU2llMGV6dF",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUERFbVk1MDRIQnh1dGwzX0RRZjRKRlloWFNJdGhvV2VpSlpabUpzSDU2VEdlWmxkVkMxb1cwVHhLRXUtWFNTSVNjbzc0ZHlydURZZFl3Mm81b2Q0TG03bXhDX0tnMHFuM2E0cUZFWVZQR0RxUEdOaWV4Vy01UHNPa3hPa014Nnh4c1diZVZRcTJhUHpobzdqTjFvSHl2ai1xNVBsNdIBqgFBVV95cUxQTmw0NkIwaEwxdWttZmRwaEZCakVEd04xeWxEX05HbTNRTlV2S2YwZTFHRlhZNHhmMkYtN0dKS09NRndTSWFuS1U5MFlodnZkRmpGQVc0MXFiRWhLY1dLa3A3ZWJYX2h2LWdfZXV3WndBd3B1TmhZZnhONHpsQUVlOFBIMnFGRTA3ZjdwTlJVY0xvRTlqc1FiMk1mM0dWSTFvU2llMGV6dFpndw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T17:53:34.164Z"
     }
   ]
 }
