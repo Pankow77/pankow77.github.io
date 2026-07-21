@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T01:34:10.754Z",
+  "last_fetch": "2026-07-21T03:03:23.745Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0da206aea78f83cc",
+      "timestamp": 1784597405000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea shipping route in crisis: Houthi blockade of the Bab el-Mandeb Strait puts 4.7 million barrels per day of Saudi crude oil at risk of disruption - Moomoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNQUhwSHJGdExfOTB6ZEtYNVBIdi1wVlg3ZjVyTlpkMGMtS1dwUVFZVFN5UEhYV3piSk95RTdUOHJJZE4tWnU4WGljdGt3MEJGNWwtRmJQT0pja1BQTThZZWI4LWFQVmttNXhocWtUb2NmUngzdG8wcGRFcVpISkZzbmZUdjU0RndtQTVhZXZ5ajlGRnM1dkJ0a3pHbTRKdw?oc=5\" target=\"_blank\">Red Sea shipping route in crisis: Houthi blockade of the Bab el-Mandeb Strait puts 4.7 million barrels per day of Saudi crude oil at risk of disruption</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Moomoo</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQUhwSHJGdExfOTB6ZEtYNVBIdi1wVlg3ZjVyTlpkMGMtS1dwUVFZVFN5UEhYV3piSk95RTdUOHJJZE4tWnU4WGljdGt3MEJGNWwtRmJQT0pja1BQTThZZWI4LWFQVmttNXhocWtUb2NmUngzdG8wcGRFcVpISkZzbmZUdjU0RndtQTVhZXZ5ajlGRnM1dkJ0a3pHbTRKdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T03:03:22.339Z"
+    },
     {
       "id": "rss_2af177bc90fce549",
       "timestamp": 1784587998000,
@@ -11158,29 +11181,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T17:53:34.164Z"
-    },
-    {
-      "id": "rss_6a6749ffb6262707",
-      "timestamp": 1774712931000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "What could Houthi involvement in the Iran war mean? - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPNUdfY0Qwd2M3aTM0SExtRUEyZ2NHS0dHVHZSSlhNZFNVYmItLTUtd1lzbUhHZnlscVNWQ0EtSk1IRTJZVVR0bVdubWFRNVhwV3ZlcFJBVVk1UUFnVEgxbXJFclRVcjE0WVN1ZW1IbGF3S0NXR0FsWXdRTkg0M1RIcjFHVjM?oc=5\" target=\"_blank\">What could Houthi involvement in the Iran war mean?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNUdfY0Qwd2M3aTM0SExtRUEyZ2NHS0dHVHZSSlhNZFNVYmItLTUtd1lzbUhHZnlscVNWQ0EtSk1IRTJZVVR0bVdubWFRNVhwV3ZlcFJBVVk1UUFnVEgxbXJFclRVcjE0WVN1ZW1IbGF3S0NXR0FsWXdRTkg0M1RIcjFHVjM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T16:28:44.903Z"
     }
   ]
 }
