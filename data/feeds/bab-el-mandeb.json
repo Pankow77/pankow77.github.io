@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T20:27:18.200Z",
+  "last_fetch": "2026-07-21T20:52:49.548Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_48cc557ee9dab43d",
+      "timestamp": 1784666319000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Is a blockade of Bab el-Mandeb a Strait of Hormuz redux? - Northeastern Global News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQdFg0andQT0M3cW5UTEdySm9qXzBVa0hheUEzY1BpdFJQN3p2N0s1b3VJLVhVSk1sUTBJWFFWLW1QbU5qb2RMamF0N08zSmlkdlAwUzFjM3hhZ3BZd2dOUC1ZTF9EQ1hfRHVoTXBmWUFMLUF2Rjh2Y2t6QzFuV1pPMXVmMWo?oc=5\" target=\"_blank\">Is a blockade of Bab el-Mandeb a Strait of Hormuz redux?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Northeastern Global News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdFg0andQT0M3cW5UTEdySm9qXzBVa0hheUEzY1BpdFJQN3p2N0s1b3VJLVhVSk1sUTBJWFFWLW1QbU5qb2RMamF0N08zSmlkdlAwUzFjM3hhZ3BZd2dOUC1ZTF9EQ1hfRHVoTXBmWUFMLUF2Rjh2Y2t6QzFuV1pPMXVmMWo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T20:52:48.117Z"
+    },
     {
       "id": "rss_6bb0c29c02fbc705",
       "timestamp": 1784665254000,
@@ -25,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T20:27:16.813Z"
+    },
+    {
+      "id": "rss_020a35b91e14dc6a",
+      "timestamp": 1784664609000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Why new Houthi threats in the Red Sea could spell trouble for global oil prices and inflation - The Conversation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOQWpWR0tVODR4NG1DWHFtdXZzcHV5aFpzb0ZlRmJBb21mdW93Mzg1ZHZQM3ZkcHREdEdfbGpWTmZnZHFFUU8weHNXYnZFcGJGSnl6QWU3TjZuc0VibHVlQ1ZwZ2ppa0QtcWJUMDczcmFmdnduVFdkeG1NYWNUQURZYkUzUXBZeXk5eUw0ZTVwUnk0SUpTelZ2d20zT0hsaEh2UjFXV1V3TVlXOFJVNmpGelNRZFk3aDU2NVppN1Rtdy1iWHByNWk0?oc=5\" target=\"_blank\">Why new Houthi threats in the Red Sea could spell trouble for global oil prices and inflation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOQWpWR0tVODR4NG1DWHFtdXZzcHV5aFpzb0ZlRmJBb21mdW93Mzg1ZHZQM3ZkcHREdEdfbGpWTmZnZHFFUU8weHNXYnZFcGJGSnl6QWU3TjZuc0VibHVlQ1ZwZ2ppa0QtcWJUMDczcmFmdnduVFdkeG1NYWNUQURZYkUzUXBZeXk5eUw0ZTVwUnk0SUpTelZ2d20zT0hsaEh2UjFXV1V3TVlXOFJVNmpGelNRZFk3aDU2NVppN1Rtdy1iWHByNWk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T20:52:48.117Z"
     },
     {
       "id": "rss_3df256a84c1d8fd2",
@@ -11122,53 +11164,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T09:32:52.038Z"
-    },
-    {
-      "id": "rss_9e11379c31c39e58",
-      "timestamp": 1774745874000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "EUNAVFOR ASPIDES warns of rising Red Sea shipping threat - Container News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNMVYwRFl3U0tVdmlET0pveEk5MlliYXlNUnNXb1FBLXpaSThvbVRPUGZpUjd2aUZjXzVrQTdSM1hBcXBTdS1JUEVJN3FlQVc0MjhtLWJQUlBKT0lieEotdy11SWVSNjJaaXQxWVVTQURBSms0dFdmV1I1YS1zYV9sMVBqOXZndXBJM3lZYQ?oc=5\" target=\"_blank\">EUNAVFOR ASPIDES warns of rising Red Sea shipping threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Container News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMVYwRFl3U0tVdmlET0pveEk5MlliYXlNUnNXb1FBLXpaSThvbVRPUGZpUjd2aUZjXzVrQTdSM1hBcXBTdS1JUEVJN3FlQVc0MjhtLWJQUlBKT0lieEotdy11SWVSNjJaaXQxWVVTQURBSms0dFdmV1I1YS1zYV9sMVBqOXZndXBJM3lZYQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T02:03:57.876Z"
-    },
-    {
-      "id": "rss_f19584640fb1dc73",
-      "timestamp": 1774741515000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel - WRAL",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcFN1X0F3bVVCUG85VTNiaVNicnNJUHJ0ODRXb2NWZ094NWNta0lkN2hSME5PUVJBeGlrSExoX2JsdzM5TDdxQ013ZXQxNzNTc3BwUkhVM3BPM202RV9oblREU0NkYmpfeTN0WVZjSG1kSzVWUmw2T05TcHp4NTk3SnFuWjJhcEhTVDkzcHNiamNDYnZKVUthbGFJc3ZNZjU1X3M1LWUzUGpPbEtMR3ZsQ01IX1JIRVRQdWZmcXVkVFJnRlU?oc=5\" target=\"_blank\">The Latest: Iranian-backed Houthi rebels claim responsibility for missile attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WRAL</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcFN1X0F3bVVCUG85VTNiaVNicnNJUHJ0ODRXb2NWZ094NWNta0lkN2hSME5PUVJBeGlrSExoX2JsdzM5TDdxQ013ZXQxNzNTc3BwUkhVM3BPM202RV9oblREU0NkYmpfeTN0WVZjSG1kSzVWUmw2T05TcHp4NTk3SnFuWjJhcEhTVDkzcHNiamNDYnZKVUthbGFJc3ZNZjU1X3M1LWUzUGpPbEtMR3ZsQ01IX1JIRVRQdWZmcXVkVFJnRlU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T02:03:57.019Z"
     }
   ]
 }
