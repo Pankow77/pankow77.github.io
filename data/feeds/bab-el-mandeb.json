@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T15:33:21.620Z",
+  "last_fetch": "2026-07-21T16:30:32.928Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -434,6 +434,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T00:30:37.315Z"
+    },
+    {
+      "id": "rss_b66e65dcd52b95d9",
+      "timestamp": 1784580373000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "How Houthis’ Red Sea Threat Risks Bigger Oil Shock - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0Q0STg2bEtVUUVGT2llY0hjb0J5Mmw5N1I5d2RXUE9vcUNGZVBlYmN0M19GZVNhUVVKSXVJbkFOU1UyVGRwWFdnN0dVbUtSamI3NXZsWXpZaXpIWlV3UEtoUFF1OTZRajN2YlIwYW5TM25BY3MybkJyQUM5UlFsS3dneFZxUGlDSURkWmZiYmVBQ0ZGMlFIbTZ4ekFvMnd3WGc?oc=5\" target=\"_blank\">How Houthis’ Red Sea Threat Risks Bigger Oil Shock</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0Q0STg2bEtVUUVGT2llY0hjb0J5Mmw5N1I5d2RXUE9vcUNGZVBlYmN0M19GZVNhUVVKSXVJbkFOU1UyVGRwWFdnN0dVbUtSamI3NXZsWXpZaXpIWlV3UEtoUFF1OTZRajN2YlIwYW5TM25BY3MybkJyQUM5UlFsS3dneFZxUGlDSURkWmZiYmVBQ0ZGMlFIbTZ4ekFvMnd3WGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T16:30:31.641Z"
     },
     {
       "id": "rss_0283eefb9244a6a2",
@@ -11150,30 +11171,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T22:55:16.897Z"
-    },
-    {
-      "id": "rss_bb11c1ddc1478ed9",
-      "timestamp": 1774735574000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Enter Iran War With Missile Strikes on Israel, Threatening Red Sea - News Ghana",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOam1GbmRPaUJ3b2tJcG1zaEZjZklOM2x2b3M5V0ljVDVUVkVFSFp5UjVsZEhaV0VSS0ZncjFhR2dkcXdPakFEeXQyelFjYk4yakNuRWFnVGprZWxzR25tMXc1T1FoTUZMM2twNHNxMXBzdWg2cUtvdElJVmdvUU0wZWx5RmJ0SmRjNjdzSFR1aEZyR0pnVXpnb2FCWHFMdnJGbGk3Z1hB?oc=5\" target=\"_blank\">Houthis Enter Iran War With Missile Strikes on Israel, Threatening Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News Ghana</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOam1GbmRPaUJ3b2tJcG1zaEZjZklOM2x2b3M5V0ljVDVUVkVFSFp5UjVsZEhaV0VSS0ZncjFhR2dkcXdPakFEeXQyelFjYk4yakNuRWFnVGprZWxzR25tMXc1T1FoTUZMM2twNHNxMXBzdWg2cUtvdElJVmdvUU0wZWx5RmJ0SmRjNjdzSFR1aEZyR0pnVXpnb2FCWHFMdnJGbGk3Z1hB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T04:58:15.256Z"
     }
   ]
 }
