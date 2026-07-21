@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T17:29:53.315Z",
+  "last_fetch": "2026-07-21T17:59:23.244Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T17:29:51.832Z"
+    },
+    {
+      "id": "rss_390f6fbc6e0d1f72",
+      "timestamp": 1784654068000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tankers with Saudi crude turn back as Houthis open new front in US-Iran war - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQT0Jlc0k2UzBpUjR0R3ZWd2NKVzZVM2F6azd0VWk0WlYySWhpTU8zc2V2NTVWc3hWRzBYSUk2LXNTSzhoUnF1VUotZ1FhdTlMVE53TmtEUllYSThLU3hSU3hIRGRxZHFoaFZXM2VReGdxNGVVcGVOYXh4NTcwdHBpWkZqLWtCTHhOdjFIbWhJcExkcUo3amxFa0x3N3VadTVqbXh2LUxQYXV1Y05IM0N4QlVlUjNmWHM?oc=5\" target=\"_blank\">Tankers with Saudi crude turn back as Houthis open new front in US-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQT0Jlc0k2UzBpUjR0R3ZWd2NKVzZVM2F6azd0VWk0WlYySWhpTU8zc2V2NTVWc3hWRzBYSUk2LXNTSzhoUnF1VUotZ1FhdTlMVE53TmtEUllYSThLU3hSU3hIRGRxZHFoaFZXM2VReGdxNGVVcGVOYXh4NTcwdHBpWkZqLWtCTHhOdjFIbWhJcExkcUo3amxFa0x3N3VadTVqbXh2LUxQYXV1Y05IM0N4QlVlUjNmWHM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-21T17:59:21.933Z"
     },
     {
       "id": "rss_d38a642d8009f16f",
@@ -11147,29 +11171,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-03-29T11:51:15.268Z"
-    },
-    {
-      "id": "rss_66be58a487f540c0",
-      "timestamp": 1774738030000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthis claim missile attacks on Israel, entering Middle East war - Daily Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQMENpandSWkI2ZDVhNjhpMk1MaW1vNTBKejl0UUYtUmNMc2ZYTUpOU1ZDY0hnWEk3SUt6S1lrRVcyNGdpZ2VYVmJQU1p5SXlBV3p4RnYyRlB2eEhodEJJZHB4ZXNFRlBMMDdpY29ELUFoeUJTWmc0WWFfemdEN2R2N19lZkFuX1NkMURFM3AzNjY1eGdjdXlFeFItRnVpWk3SAawBQVVfeXFMUDJiX181MjBfaDQxbmtFaXl3MUEzUlVEOF9XN3BrS0xiRE1jSWRlYjQyZVFGV3piVGowUTd2TURPbm9aSUg2VDM4dE1hOFdhSXZfX1hzSDUzRk5rY1l6TWhjZWk5TUx0dFBFUVVmc2VKb3VURDJBUXVFanNyNE0yN0x1WVhGa3ppQ1J3b2xSTWEyNTAwS3lydzBxTEJZNUh5SGhzVl9vQjd5QXkwMQ",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMENpandSWkI2ZDVhNjhpMk1MaW1vNTBKejl0UUYtUmNMc2ZYTUpOU1ZDY0hnWEk3SUt6S1lrRVcyNGdpZ2VYVmJQU1p5SXlBV3p4RnYyRlB2eEhodEJJZHB4ZXNFRlBMMDdpY29ELUFoeUJTWmc0WWFfemdEN2R2N19lZkFuX1NkMURFM3AzNjY1eGdjdXlFeFItRnVpWk3SAawBQVVfeXFMUDJiX181MjBfaDQxbmtFaXl3MUEzUlVEOF9XN3BrS0xiRE1jSWRlYjQyZVFGV3piVGowUTd2TURPbm9aSUg2VDM4dE1hOFdhSXZfX1hzSDUzRk5rY1l6TWhjZWk5TUx0dFBFUVVmc2VKb3VURDJBUXVFanNyNE0yN0x1WVhGa3ppQ1J3b2xSTWEyNTAwS3lydzBxTEJZNUh5SGhzVl9vQjd5QXkwMQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T22:55:18.422Z"
     }
   ]
 }
