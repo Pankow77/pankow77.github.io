@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T14:41:27.691Z",
+  "last_fetch": "2026-07-21T15:33:21.620Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_561178a662a8b6ad",
+      "timestamp": 1784645113000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis warn shipping firms to avoid Saudi ports or face attack: What to know - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPdWlpMW8yM29FWUh3eWdFV2U2TkJsS2xzS08wQ21fUUdpUXNPS2NVSGkyV3pDQl9INlhaM0xka2szSXN2em95anBWY1R6cWNGME1wbW82VXpIOFZ4TmlvOXRCYVNxMUpub1ppcmUzSnRPUnl1SEFnRUQ0QW1wRE9KSjgwY2tWa0Q2M0p4Qm16NmVHcHd0d1hjc2NLMTRBQ1BRdzVOTWNzemptb2tPTURBV0NYRGlTdw?oc=5\" target=\"_blank\">Houthis warn shipping firms to avoid Saudi ports or face attack: What to know</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPdWlpMW8yM29FWUh3eWdFV2U2TkJsS2xzS08wQ21fUUdpUXNPS2NVSGkyV3pDQl9INlhaM0xka2szSXN2em95anBWY1R6cWNGME1wbW82VXpIOFZ4TmlvOXRCYVNxMUpub1ppcmUzSnRPUnl1SEFnRUQ0QW1wRE9KSjgwY2tWa0Q2M0p4Qm16NmVHcHd0d1hjc2NLMTRBQ1BRdzVOTWNzemptb2tPTURBV0NYRGlTdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T15:33:20.016Z"
+    },
     {
       "id": "rss_6b2f48cff7800a60",
       "timestamp": 1784642157000,
@@ -161,6 +184,29 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-21T12:58:14.161Z"
+    },
+    {
+      "id": "rss_acd527b2e2dc1794",
+      "timestamp": 1784629303000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Amid U.S.-Iran war, Houthi rebels threaten to blockade another key strait - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE9rdGFHaTIzbU5aV0JvNTAzWkVTbVpsVlZZZzFjalpVSmtuUmd1UHFvYVl3clVkQnR6bVAxV2tHNXhQNG5DN3JHdmpsbjQ0RnFTb1hub0I1TjlzUS1RY3gtNlpkMGtYc0lsR055UA?oc=5\" target=\"_blank\">Amid U.S.-Iran war, Houthi rebels threaten to blockade another key strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rdGFHaTIzbU5aV0JvNTAzWkVTbVpsVlZZZzFjalpVSmtuUmd1UHFvYVl3clVkQnR6bVAxV2tHNXhQNG5DN3JHdmpsbjQ0RnFTb1hub0I1TjlzUS1RY3gtNlpkMGtYc0lsR055UA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T15:33:20.016Z"
     },
     {
       "id": "rss_d1fe5f62cf7d1741",
@@ -11128,53 +11174,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T04:58:15.256Z"
-    },
-    {
-      "id": "rss_5c33965bd45f4b95",
-      "timestamp": 1774734372000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis launch ballistic missile at Israel as Middle East conflict escalates - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxOLWVqbXN6ejQzWVlkczBIUXF0YjNUdURCamsxQ0VNWGRRdjZFLWhFR0xudmFxNUNpazYtcFRnSUIwRHcwX3p2QlAzUE9iMGRLNUtmbWN6T3IwRjk3M3h4OEJTX2lHVjN3LTc4WXVqN2FIZzNuOGRFREFtUlAtbnVucThaNWRFQ1BvREJYMVhfeUc3VFpjckMzYlE4MUVXUThSM2V6UlBHS1E4UVJ0R0FGWXoxQ0xzRVI0QmxWbVJ6TVpqWnIwRXBTVDVRdGphdw?oc=5\" target=\"_blank\">Yemen’s Houthis launch ballistic missile at Israel as Middle East conflict escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOLWVqbXN6ejQzWVlkczBIUXF0YjNUdURCamsxQ0VNWGRRdjZFLWhFR0xudmFxNUNpazYtcFRnSUIwRHcwX3p2QlAzUE9iMGRLNUtmbWN6T3IwRjk3M3h4OEJTX2lHVjN3LTc4WXVqN2FIZzNuOGRFREFtUlAtbnVucThaNWRFQ1BvREJYMVhfeUc3VFpjckMzYlE4MUVXUThSM2V6UlBHS1E4UVJ0R0FGWXoxQ0xzRVI0QmxWbVJ6TVpqWnIwRXBTVDVRdGphdw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T08:53:50.315Z"
-    },
-    {
-      "id": "rss_c05482e7043f7700",
-      "timestamp": 1774734316000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "DW News. . Yemen's Iran-backed Houthis has claimed responsibility for a missile attack on Israel on Saturday, raising concerns about the rebel group entering the fighting in the Middle East and ​the prospects of a broader regional confrontation. - facebook.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOSkVvSDR5TnpGa01NTTFEZWhxVjVJNmZRYkR2a2VMU1EzOTVMZW9aZF9xZ1diRWM3XzBIM3RHc0NNNkQwdDdfbVBwWGFQVDl0RVBfRUtrMlljRWZnc2p3NmRyOERDTDVVQ202dzBQYTNDMERrSEZaLVdzTExYYVhZUU52N3NOT0lybk13T3VrQ1h3OWhuNEZDVTl5Q2lJbjlXZ0xtaDdjdTExMFlzNGVN?oc=5\" target=\"_blank\">DW News. . Yemen's Iran-backed Houthis has claimed responsibility for a missile attack on Israel on Saturday, raising concerns about the rebel group entering the fighting in the Middle East a",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSkVvSDR5TnpGa01NTTFEZWhxVjVJNmZRYkR2a2VMU1EzOTVMZW9aZF9xZ1diRWM3XzBIM3RHc0NNNkQwdDdfbVBwWGFQVDl0RVBfRUtrMlljRWZnc2p3NmRyOERDTDVVQ202dzBQYTNDMERrSEZaLVdzTExYYVhZUU52N3NOT0lybk13T3VrQ1h3OWhuNEZDVTl5Q2lJbjlXZ0xtaDdjdTExMFlzNGVN?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T22:24:26.695Z"
     }
   ]
 }
