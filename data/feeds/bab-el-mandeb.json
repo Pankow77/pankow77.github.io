@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T16:30:32.928Z",
+  "last_fetch": "2026-07-21T17:29:53.315Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3df256a84c1d8fd2",
+      "timestamp": 1784654820000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten to attack shipping tankers if they use Saudi Arabian ports on Red Sea - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNWlhzVUE0TXI4UWVwNDdteTZKaXJDcWU3bG9sVjRQZHYwTE90N1hIMDNxT2lheUtyUUhTUm1Cb19kcHpxNHAyTHBpcm1nQ1RBSTJ0SnpiZ3llNWJGdERSRjlXUUVDdDNwVWd6RzFWc0VWMDc0Uk92eS1WVXFMUFBKaF9rNFZja1hDQnpfSEUtMVc0RWFZOVMtTW9qWUdGMjFtZWRsS3B5cHhuSElZaUdWSVVab0c?oc=5\" target=\"_blank\">Houthis threaten to attack shipping tankers if they use Saudi Arabian ports on Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWlhzVUE0TXI4UWVwNDdteTZKaXJDcWU3bG9sVjRQZHYwTE90N1hIMDNxT2lheUtyUUhTUm1Cb19kcHpxNHAyTHBpcm1nQ1RBSTJ0SnpiZ3llNWJGdERSRjlXUUVDdDNwVWd6RzFWc0VWMDc0Uk92eS1WVXFMUFBKaF9rNFZja1hDQnpfSEUtMVc0RWFZOVMtTW9qWUdGMjFtZWRsS3B5cHhuSElZaUdWSVVab0c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T17:29:51.832Z"
+    },
+    {
+      "id": "rss_d38a642d8009f16f",
+      "timestamp": 1784654014000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Blockade of Saudi Shipping Begins to Bite - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQaDQ1SEZfQm9DVmxYVHJLclNEOTBCazdDclFBRWE2WTRQSzFGbjVTWW15NlVFM2ZKUjQ0SUlDUDBsc2pEWmpjYVNqRHkxZ2YyUG9pT1hDMDAzNFpvelFTRW14aVNEd1YxR3ZIblpyRVBGVjB3TmdaaXlJZTVfRnFKZ0tia1ZVaW03c0tfbXJ5b00?oc=5\" target=\"_blank\">Houthi Blockade of Saudi Shipping Begins to Bite</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaDQ1SEZfQm9DVmxYVHJLclNEOTBCazdDclFBRWE2WTRQSzFGbjVTWW15NlVFM2ZKUjQ0SUlDUDBsc2pEWmpjYVNqRHkxZ2YyUG9pT1hDMDAzNFpvelFTRW14aVNEd1YxR3ZIblpyRVBGVjB3TmdaaXlJZTVfRnFKZ0tia1ZVaW03c0tfbXJ5b00?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T17:29:51.832Z"
+    },
     {
       "id": "rss_561178a662a8b6ad",
       "timestamp": 1784645113000,
@@ -11124,53 +11170,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T22:55:18.422Z"
-    },
-    {
-      "id": "rss_2eccbdede664a5e9",
-      "timestamp": 1774737564000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim responsibility for earlier drone and missile attack on Eilat - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQQTNKdi1IX0tZRnFlc0pnelRfeE9WakltWWZuRko5d2RCeURvUHl0MWpncEo5dm9BTlVNOHd6SHg3TGxJUndnd2I5QTJWNVJHeWJMeXVNUkcxdzV1YUlvaEtFS084X3hKc01Nb2ZTREdvdUJ1dGJCYWVLX1Y5bm1lR25WN0g2aEp4VXNnb0JyX2t2NmpibW9lQ0pELVB6WG0yUThtTXE1T004VVMwNGI1QUVzalJWU0ZYdDR1bw?oc=5\" target=\"_blank\">Houthis claim responsibility for earlier drone and missile attack on Eilat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQTNKdi1IX0tZRnFlc0pnelRfeE9WakltWWZuRko5d2RCeURvUHl0MWpncEo5dm9BTlVNOHd6SHg3TGxJUndnd2I5QTJWNVJHeWJMeXVNUkcxdzV1YUlvaEtFS084X3hKc01Nb2ZTREdvdUJ1dGJCYWVLX1Y5bm1lR25WN0g2aEp4VXNnb0JyX2t2NmpibW9lQ0pELVB6WG0yUThtTXE1T004VVMwNGI1QUVzalJWU0ZYdDR1bw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T19:29:02.673Z"
-    },
-    {
-      "id": "rss_b9da43b39519f580",
-      "timestamp": 1774736776000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthi Red Sea Trap: How Insurance Companies Could Decide the Fate of Global Trade, Oil Markets, the World Economy, and US Elections! (A Short Note) - Anas Alhajji | Substack",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQby1lbTZCNURVbm44cGd1N1M0d3lGamNtWGV6UlAxczUyODJ4ei0tZ1hCZ1RwQ1N4cUFJR2JobEVwUHp2RXRHTnhZUmhDelh0Y1BiWU1YRFNXLTBTWUpOVGNFZ3BQdE5QcjJYNUgyOWYycGMzZlRaOWFzVjZ0a2NYag?oc=5\" target=\"_blank\">The Houthi Red Sea Trap: How Insurance Companies Could Decide the Fate of Global Trade, Oil Markets, the World Economy, and US Elections! (A Short Note)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anas Alhajji | Substack</font>",
-      "tags": [
-        "insurance"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQby1lbTZCNURVbm44cGd1N1M0d3lGamNtWGV6UlAxczUyODJ4ei0tZ1hCZ1RwQ1N4cUFJR2JobEVwUHp2RXRHTnhZUmhDelh0Y1BiWU1YRFNXLTBTWUpOVGNFZ3BQdE5QcjJYNUgyOWYycGMzZlRaOWFzVjZ0a2NYag?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T22:55:16.897Z"
     }
   ]
 }
