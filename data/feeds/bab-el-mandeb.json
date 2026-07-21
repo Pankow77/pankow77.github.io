@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-20T23:47:22.951Z",
+  "last_fetch": "2026-07-21T00:30:38.664Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T22:47:17.343Z"
+    },
+    {
+      "id": "rss_95a994697af8a2cf",
+      "timestamp": 1784584330000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "U.S. Airstrikes on Iran Continue, Conflict Expands Beyond Hormuz - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxObnZNUlVtTE95MkxUazU5ZFp3T180QWw2SzU0WmZzWk14N1dWZ3M2RTlpdmY2eXRnRFYwSG9rdzE3WERUaTY0UkNQaXBpazB2ZndFZTRQR09DSGVrOTE3VExzdnFOYXhGeloxaWhseHBPcDNuV2Jxb2JKbzBzQVo3RzRSbkI?oc=5\" target=\"_blank\">U.S. Airstrikes on Iran Continue, Conflict Expands Beyond Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObnZNUlVtTE95MkxUazU5ZFp3T180QWw2SzU0WmZzWk14N1dWZ3M2RTlpdmY2eXRnRFYwSG9rdzE3WERUaTY0UkNQaXBpazB2ZndFZTRQR09DSGVrOTE3VExzdnFOYXhGeloxaWhseHBPcDNuV2Jxb2JKbzBzQVo3RzRSbkI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T00:30:37.315Z"
     },
     {
       "id": "rss_0283eefb9244a6a2",
@@ -357,6 +380,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T14:15:02.756Z"
+    },
+    {
+      "id": "rss_d6123cd6b86c91ab",
+      "timestamp": 1784549838000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis declare naval blockade on Saudi Arabia - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE11SUpCSXJNOTBQY0doQ25WcWs0dEhydWRNMzJEVXI2SDd0Zm1zSVRHT2t5NzZ3d3dHUFdGWUFRbHNiRkJrem53N0hvQU95OFk5dC1aNWk0cFM0cDlB?oc=5\" target=\"_blank\">Houthis declare naval blockade on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE11SUpCSXJNOTBQY0doQ25WcWs0dEhydWRNMzJEVXI2SDd0Zm1zSVRHT2t5NzZ3d3dHUFdGWUFRbHNiRkJrem53N0hvQU95OFk5dC1aNWk0cFM0cDlB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T00:30:37.314Z"
     },
     {
       "id": "rss_ef60e11bffb72f63",
@@ -11137,54 +11181,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-28T16:28:44.903Z"
-    },
-    {
-      "id": "rss_97d7ecf16ade7a0b",
-      "timestamp": 1774711664000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran live updates: Houthi rebels join conflict with missile attack as war enters 29th day - LiveNOW from FOX",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZWhmajZzU0VrSW0yQzhnSWlXcmRhaS1vRVJnWERBNFRkQ3F6aTFpWk9hMmdKcmN6aGNxRG13cUtVdmZscUU3ZVJWcFRWZWFUQ3ZiWG5lbXNJalRwUS1nbDNFMGhCNldsdnR0ei1peVY2Z1ZiaWhfS3gwcE5wREgtUk1QQ3BzaF9KbGJ3dlQ5Ty02SHcxdWJaSnBNQmhZRzlyVVdtMTNuZTc2c2_SAbABQVVfeXFMT2ktY1NZQmtiUlF6T2tlS1FSTktkRzF1WlozQkR0Y2hwX0xWZUpVYWtOZTRQRk5RXzNmSFlCcDVjRTJ0TzZKVGdBYm9xQm1KZ3lnVk1ySFZnQUxzbjdhLXdLSXdtdnFVUG1rTXhtQlBMaWtUUG5uTGRpajllNlpyS3JEcjdET3YzS01HNGdiZ0NLUFppeTdzNTdfU0pRWmF2cl",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZWhmajZzU0VrSW0yQzhnSWlXcmRhaS1vRVJnWERBNFRkQ3F6aTFpWk9hMmdKcmN6aGNxRG13cUtVdmZscUU3ZVJWcFRWZWFUQ3ZiWG5lbXNJalRwUS1nbDNFMGhCNldsdnR0ei1peVY2Z1ZiaWhfS3gwcE5wREgtUk1QQ3BzaF9KbGJ3dlQ5Ty02SHcxdWJaSnBNQmhZRzlyVVdtMTNuZTc2c2_SAbABQVVfeXFMT2ktY1NZQmtiUlF6T2tlS1FSTktkRzF1WlozQkR0Y2hwX0xWZUpVYWtOZTRQRk5RXzNmSFlCcDVjRTJ0TzZKVGdBYm9xQm1KZ3lnVk1ySFZnQUxzbjdhLXdLSXdtdnFVUG1rTXhtQlBMaWtUUG5uTGRpajllNlpyS3JEcjdET3YzS01HNGdiZ0NLUFppeTdzNTdfU0pRWmF2clo4RlBfQ0t5cEV4UnZRNXQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-28T16:28:44.902Z"
-    },
-    {
-      "id": "rss_b12f9f3ccd1a9909",
-      "timestamp": 1774711186000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "CENTCOM: Iran naval threat to shipping over - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5mRktxSkc3ZVZpNWg4T0x3UnBqUUZwYkJBZERJT0M0cFRHUmdyd1lwbkVVd1JvcVBaajVyRkFKLTZ2am1tVGt0RmZwbENObG5lM2hWd01HcWtIRmtSOXBUbVBhWEliRXJCdlFkYnJ4TGhGRDBHNVZURndadUNhTGs?oc=5\" target=\"_blank\">CENTCOM: Iran naval threat to shipping over</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5mRktxSkc3ZVZpNWg4T0x3UnBqUUZwYkJBZERJT0M0cFRHUmdyd1lwbkVVd1JvcVBaajVyRkFKLTZ2am1tVGt0RmZwbENObG5lM2hWd01HcWtIRmtSOXBUbVBhWEliRXJCdlFkYnJ4TGhGRDBHNVZURndadUNhTGs?oc=5",
-      "feed_id": "gn-centcom-yemen",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-02T11:42:29.413Z"
     }
   ]
 }
