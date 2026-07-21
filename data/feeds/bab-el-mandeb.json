@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T22:18:55.308Z",
+  "last_fetch": "2026-07-21T22:46:56.060Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -137,6 +137,53 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T17:29:51.832Z"
+    },
+    {
+      "id": "rss_c19e998688ed3eff",
+      "timestamp": 1784653080000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 4,
+      "text_summary": "Oil tankers forced to turn back, take longer route after Iran proxy threatens another critical choke point - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZDlpeU1NQ19heVJhLXJxMzJQYUtoN2U5blBiUnpobGsyMnhqaXlJWXZuektKR095Tks0WGNfbG83Mi1mNGtCYl81TmlSVXJVU2FUY2dRT3g4Vy1xd0dMMFBzSDMzbTgxd251U0szOFJJdHJORnFaYWtDMnNqeUxaWDBldmVUdkZjUkJVUzQ2a09OT215WEZEcDh0RzJWX3NxclYtRklDdW1DNG14ckVIdlhXaFZQRzRRQWdINWItZTNPZw?oc=5\" target=\"_blank\">Oil tankers forced to turn back, take longer route after Iran proxy threatens another critical choke point</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZDlpeU1NQ19heVJhLXJxMzJQYUtoN2U5blBiUnpobGsyMnhqaXlJWXZuektKR095Tks0WGNfbG83Mi1mNGtCYl81TmlSVXJVU2FUY2dRT3g4Vy1xd0dMMFBzSDMzbTgxd251U0szOFJJdHJORnFaYWtDMnNqeUxaWDBldmVUdkZjUkJVUzQ2a09OT215WEZEcDh0RzJWX3NxclYtRklDdW1DNG14ckVIdlhXaFZQRzRRQWdINWItZTNPZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T22:46:54.613Z"
+    },
+    {
+      "id": "rss_b7ccd439ae7c38d0",
+      "timestamp": 1784651444000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Two Saudi Crude Tankers Turn Around After Houthi Threats - Marine News Magazine",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5hbjQ5QVVPVVltMVFRTFhWZDJUekM4NE9aaTEwZTNuUEcxeUpnYzUta2FNR1ZZdUU4M21DTkVqbDV4SmdmNU8tLXF4N1draEZpQXNCdk5FeDdTc2tEUFZXcU9wcV9OUjV5Q2VBOEw4anhoQU9TcE1kVWxLamRuQ1E?oc=5\" target=\"_blank\">Two Saudi Crude Tankers Turn Around After Houthi Threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5hbjQ5QVVPVVltMVFRTFhWZDJUekM4NE9aaTEwZTNuUEcxeUpnYzUta2FNR1ZZdUU4M21DTkVqbDV4SmdmNU8tLXF4N1draEZpQXNCdk5FeDdTc2tEUFZXcU9wcV9OUjV5Q2VBOEw4anhoQU9TcE1kVWxLamRuQ1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-21T22:46:54.613Z"
     },
     {
       "id": "rss_d25264b83549aed6",
@@ -11116,54 +11163,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T07:32:23.680Z"
-    },
-    {
-      "id": "rss_3230f2667b674b50",
-      "timestamp": 1774753270000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - msn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPR2ttX2JQV2F0WkV0WmpZLThMQ05jM2hoYlItS2w1OHBuRGZmUmUyZ2N3bmlzYzMtWFVrc0NlMHM4dnVoakZTMGpiOGNXQ3RqOFZNVUl0MEpxNUNBVTB1cWE2SlNfaGxJREV2M0ttaTJTNFVDUWduOXJSLUo4Tmh2ak1wSDNKN19WemtidzZBUUxEZzhqVXdDSEUxdkVncFdSaVEwS0tGRzZwLU12eXBtVXNueG02ZDYzcnk2MnYyT1FFSGxBVWc?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPR2ttX2JQV2F0WkV0WmpZLThMQ05jM2hoYlItS2w1OHBuRGZmUmUyZ2N3bmlzYzMtWFVrc0NlMHM4dnVoakZTMGpiOGNXQ3RqOFZNVUl0MEpxNUNBVTB1cWE2SlNfaGxJREV2M0ttaTJTNFVDUWduOXJSLUo4Tmh2ak1wSDNKN19WemtidzZBUUxEZzhqVXdDSEUxdkVncFdSaVEwS0tGRzZwLU12eXBtVXNueG02ZDYzcnk2MnYyT1FFSGxBVWc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T02:01:05.210Z"
-    },
-    {
-      "id": "rss_23cd8b94a6f886b5",
-      "timestamp": 1774750550000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Toronto Star",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUHkwTkhYRnViY25aZDBQaWxYdzhYWmVhQjVFQm9XYU8xZy1CVFpfWXhqTnFiVHd3YWZySUVQbmtTSk5xeXJTd1AwNElYNV9qT1E5bUoya2xrSzA0MDNyQXNzdTFMbjlqR0Jldi1PZmQtcm9TQnNUMm1nSmloV0hDRG15M1lSWXpxbVpiZGxScFYxYTFoQ0M5YjRnVjZ2aTFiYkRBR2VTczV6cmFnMW0zQXVjV3Y0ZldUZWo0N1BLMmd5bXBnUDZfcnp4aWJEeTNmV2t2WE9PcU9VeXh3el9EYTl0RHJpcDIwSFBGX0t0U0lJdndhOHV3cHRDbm5TUjhxZjB0Yk9LQzc0bGM?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea sh",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQUHkwTkhYRnViY25aZDBQaWxYdzhYWmVhQjVFQm9XYU8xZy1CVFpfWXhqTnFiVHd3YWZySUVQbmtTSk5xeXJTd1AwNElYNV9qT1E5bUoya2xrSzA0MDNyQXNzdTFMbjlqR0Jldi1PZmQtcm9TQnNUMm1nSmloV0hDRG15M1lSWXpxbVpiZGxScFYxYTFoQ0M5YjRnVjZ2aTFiYkRBR2VTczV6cmFnMW0zQXVjV3Y0ZldUZWo0N1BLMmd5bXBnUDZfcnp4aWJEeTNmV2t2WE9PcU9VeXh3el9EYTl0RHJpcDIwSFBGX0t0U0lJdndhOHV3cHRDbm5TUjhxZjB0Yk9LQzc0bGM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T09:32:52.038Z"
     }
   ]
 }
