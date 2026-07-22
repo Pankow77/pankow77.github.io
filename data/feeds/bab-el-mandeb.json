@@ -1,8 +1,33 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T08:16:51.335Z",
+  "last_fetch": "2026-07-22T09:18:16.316Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_25e224069c200353",
+      "timestamp": 1784710702000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missiles and drones ready to attack shipping near Bab el-Mandeb Strait, military warns - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbDFMSkQ0OUMtdHJsZWtwc1c2Uy1lVFF2YjRLUXl0Rl83a3k4U1Z6dmJmZ0tPRGhUMmxrT3dzZFp5VDczaEp3eHBOSkxxbEFmNVJiSVVMS1NDWEN1VjA0YkhpU1NmRVNZdjh6STVTeEgwamU3THZab1l6bmJVSzYxcDQxTlBRWmJHaUM0dEFGV3MzNGFZbFJrNl84YTdoTEFiSV8zSWUyLWJaaGhCbm03WTZaU0tPQXh1QmsxbFdUWkhFZWp5bkw2NTlOR3hEOVdpYVViNktIRzI3ck0?oc=5\" target=\"_blank\">Houthi missiles and drones ready to attack shipping near Bab el-Mandeb Strait, military warns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">T",
+      "tags": [
+        "missile",
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbDFMSkQ0OUMtdHJsZWtwc1c2Uy1lVFF2YjRLUXl0Rl83a3k4U1Z6dmJmZ0tPRGhUMmxrT3dzZFp5VDczaEp3eHBOSkxxbEFmNVJiSVVMS1NDWEN1VjA0YkhpU1NmRVNZdjh6STVTeEgwamU3THZab1l6bmJVSzYxcDQxTlBRWmJHaUM0dEFGV3MzNGFZbFJrNl84YTdoTEFiSV8zSWUyLWJaaGhCbm03WTZaU0tPQXh1QmsxbFdUWkhFZWp5bkw2NTlOR3hEOVdpYVViNktIRzI3ck0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T09:18:14.906Z"
+    },
     {
       "id": "rss_4e5afa7a504aeb4b",
       "timestamp": 1784706328000,
@@ -25,6 +50,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T08:16:50.098Z"
+    },
+    {
+      "id": "rss_9afea365dfa25caa",
+      "timestamp": 1784703785000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Rubio: US still open to Iran talks, but Tehran is not serious - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DSVRfaDlGSm9WUzFFdElwOHJtU1BYMDhTZEpMSlZ5Sm1fcGRaX3lFV29waGl3VlFYVWxldW01ZlJab3hZM2puSzVpb204M2hVRDdTaVJ3?oc=5\" target=\"_blank\">Rubio: US still open to Iran talks, but Tehran is not serious</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DSVRfaDlGSm9WUzFFdElwOHJtU1BYMDhTZEpMSlZ5Sm1fcGRaX3lFV29waGl3VlFYVWxldW01ZlJab3hZM2puSzVpb204M2hVRDdTaVJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T09:18:14.907Z"
     },
     {
       "id": "rss_f082c3ff618cfccc",
@@ -11117,54 +11165,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T12:45:59.932Z"
-    },
-    {
-      "id": "rss_56d6ce2cf083d2d4",
-      "timestamp": 1774784745000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwNBVV95cUxPOU1iZzRmaW96V3RYTTh5ZUJiVG5hY3pINzJOSjFGZWZoVklocFlCaEFYZG1VTnYwMTdISGFBRUdxVzVrRU1pRENRUndURmJEdXVCOWJYLWg2Y0dVWDlhRzh3WGp5M0UyeVBtTllzNmZYZ2hXOXlCVkd2SGl5T1lfNFdvMUZMSTdvWnJsYk1RYjRSdEV3QXpqdi1YcDdIUWxveU92dGQyZFVfMEpEdEhqbFM4VFplblFqNElxNmM4ZGRhaVlOdUF2MUpzbUhDLTBfVnZiZkRNTXE3cDB0ZWlCQmpzRy1SRmlFQ2RrSTdGb0FPQTczNEtlOXFJbXZtNnNVcGZDcFNWaWhQWFRKSVlpOERiV0VhQ2c4blNxc1FVQ0xlSHB3eXJXSUw3bUtSQklXb1JTcFdNbnNSdF9WS0RvZThZVDk0OENKLUI3cG1uMm",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwNBVV95cUxPOU1iZzRmaW96V3RYTTh5ZUJiVG5hY3pINzJOSjFGZWZoVklocFlCaEFYZG1VTnYwMTdISGFBRUdxVzVrRU1pRENRUndURmJEdXVCOWJYLWg2Y0dVWDlhRzh3WGp5M0UyeVBtTllzNmZYZ2hXOXlCVkd2SGl5T1lfNFdvMUZMSTdvWnJsYk1RYjRSdEV3QXpqdi1YcDdIUWxveU92dGQyZFVfMEpEdEhqbFM4VFplblFqNElxNmM4ZGRhaVlOdUF2MUpzbUhDLTBfVnZiZkRNTXE3cDB0ZWlCQmpzRy1SRmlFQ2RrSTdGb0FPQTczNEtlOXFJbXZtNnNVcGZDcFNWaWhQWFRKSVlpOERiV0VhQ2c4blNxc1FVQ0xlSHB3eXJXSUw3bUtSQklXb1JTcFdNbnNSdF9WS0RvZThZVDk0OENKLUI3cG1uMmpWYlpDTFcwSTdjNEhkTF9yR25RZVR5S256YllLTDV1TmZaZ01nRURDQlgwc1F3Y0c0bGttSWdTeEwzQmNmQU1pQm8wNnc4RU9FS1BPZER3?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T07:06:34.314Z"
-    },
-    {
-      "id": "rss_3f03cf0a37544e6e",
-      "timestamp": 1774783531000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "US and Israel Attack Iran: Yemen's Houthi group claims ballistic missile attack on Israel - news.cgtn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5DWEZzTW1MZW5KcVc5QkZqM2R4ci1LMV9KUXFkb0c4WEJkcnpwWlhGUG5MTHViWG1FRktQSTJMRW5OVmRRMkhaZWlDWndlaWd4MXpVVmw4UGFOWVhHR3ZvQjZBTmt0LWJ0QUhRV3pFUUVRN1A5eEhUNw?oc=5\" target=\"_blank\">US and Israel Attack Iran: Yemen's Houthi group claims ballistic missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5DWEZzTW1MZW5KcVc5QkZqM2R4ci1LMV9KUXFkb0c4WEJkcnpwWlhGUG5MTHViWG1FRktQSTJMRW5OVmRRMkhaZWlDWndlaWd4MXpVVmw4UGFOWVhHR3ZvQjZBTmt0LWJ0QUhRV3pFUUVRN1A5eEhUNw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T11:51:15.269Z"
     }
   ]
 }
