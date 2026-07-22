@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T00:29:10.596Z",
+  "last_fetch": "2026-07-22T01:02:37.629Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_689bfa3d384ff735",
+      "timestamp": 1784679900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "A new threat by Yemen's Houthis could widen the Iran war and put another trade chokepoint at risk - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQU2hFT3FQLUM4NEFZXzFYM19IWXRPZFdlQkVzMG8xTjNiMWtCNjRrcGp3S3dnZUNmT0hMVVpBRHljY1RWTXpYdHM2MXRnZ29NOHVSc3oxSXVaUW5PSjdoTmNid1pTelpoa21LVHUyd1p5ckl4d1lFaGgzR1ZoNjNvQ2E0RklIalNpZDRQY1pHTENYMTN0Y2xkMndUOWNHQjlhR1owQkx3?oc=5\" target=\"_blank\">A new threat by Yemen's Houthis could widen the Iran war and put another trade chokepoint at risk</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQU2hFT3FQLUM4NEFZXzFYM19IWXRPZFdlQkVzMG8xTjNiMWtCNjRrcGp3S3dnZUNmT0hMVVpBRHljY1RWTXpYdHM2MXRnZ29NOHVSc3oxSXVaUW5PSjdoTmNid1pTelpoa21LVHUyd1p5ckl4d1lFaGgzR1ZoNjNvQ2E0RklIalNpZDRQY1pHTENYMTN0Y2xkMndUOWNHQjlhR1owQkx3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T01:02:36.312Z"
+    },
     {
       "id": "rss_94b5a56a12d30e13",
       "timestamp": 1784678488000,
@@ -111,6 +134,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T23:19:35.379Z"
+    },
+    {
+      "id": "rss_e8ed283cd0930c62",
+      "timestamp": 1784659240000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Legality of a Houthi Bab el-Mandeb Blockade under International Law - Diplomacy and Law",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQUXZwN1N3NDJMWldDNFdEenpIMlpZbG1MWnlRQjNpZVFRX2tEVkI2dE9OQU4tNk5oS1kxYTVpTmM1TXVpN1pfelhuY1RuTUgxMmNoQXhvWG14QmtxeUxYLU12T09RZ083M2R5WjZnN054WEI5djNudV8xUkRDRFlUbUp4N2hYbVlLeWlzag?oc=5\" target=\"_blank\">The Legality of a Houthi Bab el-Mandeb Blockade under International Law</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Diplomacy and Law</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUXZwN1N3NDJMWldDNFdEenpIMlpZbG1MWnlRQjNpZVFRX2tEVkI2dE9OQU4tNk5oS1kxYTVpTmM1TXVpN1pfelhuY1RuTUgxMmNoQXhvWG14QmtxeUxYLU12T09RZ083M2R5WjZnN054WEI5djNudV8xUkRDRFlUbUp4N2hYbVlLeWlzag?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T01:02:36.314Z"
     },
     {
       "id": "rss_3df256a84c1d8fd2",
@@ -11115,53 +11159,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T11:01:19.630Z"
-    },
-    {
-      "id": "rss_f7ff81c86a40559a",
-      "timestamp": 1774768409000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi attacks on Israel open new front in Mideast war, threaten Red Sea shipping - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNaXc1RHc1YzZWVjVrU0NucEJfTXVrYi1STW5ibl9wbkhWYmhsNS1MNmttSzRoNHRSUHRkcy03aVg3MGw1cG9Bc0VPQjg4QUlpNjZCYmV2dDN3R0RoVVpCYkYyQ3VsdDFUSi1LNXNqTHNEOVpKQkpBLU55bkcyQnhiNGVOWWx6NU4yNDV0dzlCNmZiblhFSTdEbUtDY3YwSWpCNHZfaWlsWmU2ZER5RGNyenFzLVlyUUhXWHNXX1NsZzFTYWVvZXdoc1Uxa2I?oc=5\" target=\"_blank\">Houthi attacks on Israel open new front in Mideast war, threaten Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaXc1RHc1YzZWVjVrU0NucEJfTXVrYi1STW5ibl9wbkhWYmhsNS1MNmttSzRoNHRSUHRkcy03aVg3MGw1cG9Bc0VPQjg4QUlpNjZCYmV2dDN3R0RoVVpCYkYyQ3VsdDFUSi1LNXNqTHNEOVpKQkpBLU55bkcyQnhiNGVOWWx6NU4yNDV0dzlCNmZiblhFSTdEbUtDY3YwSWpCNHZfaWlsWmU2ZER5RGNyenFzLVlyUUhXWHNXX1NsZzFTYWVvZXdoc1Uxa2I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T10:28:39.117Z"
-    },
-    {
-      "id": "rss_8add89c6a52f1197",
-      "timestamp": 1774767600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran tensions rise after Houthi missile attack - fdd.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPUjFWaTU0UW1KbHctMEtFUVhNaDVJSVV1X2czMUtWWm1XWkM5cHFlam1PWDBMOWE2ZmM2STF2bmtpdm5oYmoyem4wZGstZ2QyOUpwdG5saHlIQmJXeV9WT3c5UWd2QUtsS1BrNnFHRlVIWFNFbjhCTHhNcjdZR1NJbWlibmJhNkd5ZkZlNHZoa3VfLWJS?oc=5\" target=\"_blank\">Iran tensions rise after Houthi missile attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fdd.org</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUjFWaTU0UW1KbHctMEtFUVhNaDVJSVV1X2czMUtWWm1XWkM5cHFlam1PWDBMOWE2ZmM2STF2bmtpdm5oYmoyem4wZGstZ2QyOUpwdG5saHlIQmJXeV9WT3c5UWd2QUtsS1BrNnFHRlVIWFNFbjhCTHhNcjdZR1NJbWlibmJhNkd5ZkZlNHZoa3VfLWJS?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T17:26:44.932Z"
     }
   ]
 }
