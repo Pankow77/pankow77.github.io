@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T22:21:40.279Z",
+  "last_fetch": "2026-07-22T22:47:56.105Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9b8f7482f440cd30",
+      "timestamp": 1784759717000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim attack on two Saudi oil tankers - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbdIBngFBVV95cUxQX2piN0J0Q2YwOUcyOTZBc2lFdkJpR3Q4SGJwMjhmVHlvZzJjM0pKUzgzWWZwMzRDdXhQWGRveG9NTTFwT1ZHX1ozYTdWcmlfa2J4STdFWXhuQ0U0azRaVEdIcDV3elJnRklrYWNUOHV2Z3ZrWDBEVC1DY3ZqWGRWTXpzYTJZNlZGWVlpaDIxb1R3ZFd5clItcE1VMDYtUQ?oc=5\" target=\"_blank\">Yemen",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbdIBngFBVV95cUxQX2piN0J0Q2YwOUcyOTZBc2lFdkJpR3Q4SGJwMjhmVHlvZzJjM0pKUzgzWWZwMzRDdXhQWGRveG9NTTFwT1ZHX1ozYTdWcmlfa2J4STdFWXhuQ0U0azRaVEdIcDV3elJnRklrYWNUOHV2Z3ZrWDBEVC1DY3ZqWGRWTXpzYTJZNlZGWVlpaDIxb1R3ZFd5clItcE1VMDYtUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-22T22:47:54.854Z"
+    },
+    {
+      "id": "rss_b470c85bc6008274",
+      "timestamp": 1784758920000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack 2 Saudi-flagged tankers in Red Sea -- opening second front in Middle East war - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxONTNKRUNuc2Y2Ukw0QXV2TzVtSTRaRUJ6S09kVjZUclNDVnlOc0tzVzZacm1IaHEwTnZaeS1vT2plYXd5N0RvNFJmMk9nSDB1YWlBend5Ym9DbkRMZEFsaGZJSWN5UUE0bDJ4NDlkejBiZ2k0Ry0wM29qbDhZUTVfaG8xTWhEb2N4QXE0UXFaTWhZel83al8xcDgxeHZMU1c2NWZadDBMeE5DeTNvc1V0bTFjWm5mZk1ZN2NIUHVTa2RqeXZENUhr?oc=5\" target=\"_blank\">Houthis attack 2 Saudi-flagged tankers in Red Sea -- opening second front in Middle East war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONTNKRUNuc2Y2Ukw0QXV2TzVtSTRaRUJ6S09kVjZUclNDVnlOc0tzVzZacm1IaHEwTnZaeS1vT2plYXd5N0RvNFJmMk9nSDB1YWlBend5Ym9DbkRMZEFsaGZJSWN5UUE0bDJ4NDlkejBiZ2k0Ry0wM29qbDhZUTVfaG8xTWhEb2N4QXE0UXFaTWhZel83al8xcDgxeHZMU1c2NWZadDBMeE5DeTNvc1V0bTFjWm5mZk1ZN2NIUHVTa2RqeXZENUhr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T22:47:54.854Z"
+    },
     {
       "id": "rss_4c12bb69bafbc176",
       "timestamp": 1784757726000,
@@ -25,6 +71,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T22:21:39.093Z"
+    },
+    {
+      "id": "rss_03dcb7bce72f7962",
+      "timestamp": 1784744820000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi threats in Red Sea risk new front in US-Iran war - The Hill",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxNNEswMm1YYi1pOFFjMDFER3lWOGVMbms5X0hfdWJxa25sVWxEMjBESTl0cHliYWhLZjQ2YWVWU0N2a0xnb0Y1TXB2Tjk3SC1fcWxTMXd2NnJCVTNkZ3hUcl9IcVZ4ZWhPS3JkLVZnQkZOazlOVUYyRDZ5VTliVURsNV9xdw?oc=5\" target=\"_blank\">Houthi threats in Red Sea risk new front in US-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Hill</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNNEswMm1YYi1pOFFjMDFER3lWOGVMbms5X0hfdWJxa25sVWxEMjBESTl0cHliYWhLZjQ2YWVWU0N2a0xnb0Y1TXB2Tjk3SC1fcWxTMXd2NnJCVTNkZ3hUcl9IcVZ4ZWhPS3JkLVZnQkZOazlOVUYyRDZ5VTliVURsNV9xdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T22:47:54.854Z"
     },
     {
       "id": "rss_080c653e4d86b0c2",
@@ -11105,74 +11174,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T11:31:39.766Z"
-    },
-    {
-      "id": "rss_c27a043cabdd7948",
-      "timestamp": 1774861200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - Bedford Gazette",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgJBVV95cUxNbTA3Qzh2NFAzUFFsejJtWlJ2Smt5dVQ2VkFWN3JJSnd6ZzZ0dk04RUluV2U0ZHEzZ2pKNWdxZ0VYejRRVHJZeEphck1OSEQtMklVeFJGUUU0YXRMQWVqYzY5X2JTVm5wQVNSMkxRM003SGRwdE9JUUVzNDlQREFsY3JwbXRKRUVuZFBEczdQXzdxSlpvZEJwRGxxdGNmLXl6VDVjc2JCRUZKcXppSkhMN1dxVTZyWFZYMS1RYjVvV2haMVQ5ZzAxZmtlSXFocGVWdjRBOVZPNVY1dGlxNlc5UVRpeTBaTjluRXZmWFNGN2tpMTFlUEF2dHF1QmJHYm9NZ0VQWURB?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping ",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNbTA3Qzh2NFAzUFFsejJtWlJ2Smt5dVQ2VkFWN3JJSnd6ZzZ0dk04RUluV2U0ZHEzZ2pKNWdxZ0VYejRRVHJZeEphck1OSEQtMklVeFJGUUU0YXRMQWVqYzY5X2JTVm5wQVNSMkxRM003SGRwdE9JUUVzNDlQREFsY3JwbXRKRUVuZFBEczdQXzdxSlpvZEJwRGxxdGNmLXl6VDVjc2JCRUZKcXppSkhMN1dxVTZyWFZYMS1RYjVvV2haMVQ5ZzAxZmtlSXFocGVWdjRBOVZPNVY1dGlxNlc5UVRpeTBaTjluRXZmWFNGN2tpMTFlUEF2dHF1QmJHYm9NZ0VQWURB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-01T09:44:00.409Z"
-    },
-    {
-      "id": "rss_c877374fb67c1c82",
-      "timestamp": 1774860173000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "How Yemen’s Houthis Could Worsen the Oil Crunch - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3dlRG5ULWRNY21SZGNnZ3dSQ1FmYjVyNWsxbjd0bU9sczdlTlByRnVBSVpFd0tTRGZrV2xIakhIbkFXVmVQOElfcEYycHhYeEVWLUJwWXpoU185elpYdGNpTEdWZUh2X2FQNm1NdkVTb01iNjZVN2poX2VnODFkQ0VBVnROek95Sm9EXzRXa3R4XzJvZTRDM1hNMzV0a0FtZVRQcGdGQS12a0U?oc=5\" target=\"_blank\">How Yemen’s Houthis Could Worsen the Oil Crunch</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3dlRG5ULWRNY21SZGNnZ3dSQ1FmYjVyNWsxbjd0bU9sczdlTlByRnVBSVpFd0tTRGZrV2xIakhIbkFXVmVQOElfcEYycHhYeEVWLUJwWXpoU185elpYdGNpTEdWZUh2X2FQNm1NdkVTb01iNjZVN2poX2VnODFkQ0VBVnROek95Sm9EXzRXa3R4XzJvZTRDM1hNMzV0a0FtZVRQcGdGQS12a0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T22:31:13.230Z"
-    },
-    {
-      "id": "rss_d8344ee0d7631386",
-      "timestamp": 1774857877000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "EUNAVFOR ASPIDES: Threat level for merchant vessels in Red Sea and Gulf of Aden - Safety4Sea",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUw1ZEdMNU1TOG5FbHZlRFczTEpZS2lKbFdVX2s5dGdRbFh6b0UtVXlKaDNLUVhMV1VVU0FXLVBkbHVGV0xQVURvUndlbWZQcGkyUGpmZTJ0c0lvS1hZaENVQktiU09aazYybVhtYklyZHVTNFFaZGVCNGR2ejRrUU05M0gyZ01ZaFVkRVp5X0Z1OVpOUmdvOFRHSHRuWGFNbFFQdg?oc=5\" target=\"_blank\">EUNAVFOR ASPIDES: Threat level for merchant vessels in Red Sea and Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Safety4Sea</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUw1ZEdMNU1TOG5FbHZlRFczTEpZS2lKbFdVX2s5dGdRbFh6b0UtVXlKaDNLUVhMV1VVU0FXLVBkbHVGV0xQVURvUndlbWZQcGkyUGpmZTJ0c0lvS1hZaENVQktiU09aazYybVhtYklyZHVTNFFaZGVCNGR2ejRrUU05M0gyZ01ZaFVkRVp5X0Z1OVpOUmdvOFRHSHRuWGFNbFFQdg?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T08:53:49.891Z"
     }
   ]
 }
