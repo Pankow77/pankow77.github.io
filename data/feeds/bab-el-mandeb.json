@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T12:06:02.075Z",
+  "last_fetch": "2026-07-22T12:59:59.174Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_657b3a991b17b167",
+      "timestamp": 1784723768000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Oil tankers turn around in the Red Sea as Houthis threaten merchant ships - media - Українські Національні Новини (УНН)",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPMjNfUzU4SHdvTDltTjlLeC1DZWE0VXVoTWl0bDdOSDBSSHhSbV8xdmlBS2hGTW1iR1RiN1FFZDB0RDdUbWFyelJ4Qk55TnJ2dzVJM0MtQklsc2ZEQzNYSXA0R1JzVGlQLVFzdERQQ2dIV0VBWHJyMnR2TE1qX1JIRm5yZnhxb2otUFFDNnRRSlE2YXR4Y3dnS09lVWJKRk9KMEVaalNkWdIBpgFBVV95cUxNUFl2MGQzaDVMUVNsVHd4TmVzb2Z1WENXMTdhTHZuS0h6LTY1d0ZqbWdZZXJwLVVkNW90bG1ib0pCM3Zla21aNEx2VWs2eTVYcmtVNDhlSGFmVFlKN3pIZmYyMlZEVGtZZkJPTWRFRFZ3SS1QaGF1enI5SjdJT29CeENjVmJLTkdqSktQTm96eF9OaUtKU1kzVG0ycjFiUlZRRlRCQW",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMjNfUzU4SHdvTDltTjlLeC1DZWE0VXVoTWl0bDdOSDBSSHhSbV8xdmlBS2hGTW1iR1RiN1FFZDB0RDdUbWFyelJ4Qk55TnJ2dzVJM0MtQklsc2ZEQzNYSXA0R1JzVGlQLVFzdERQQ2dIV0VBWHJyMnR2TE1qX1JIRm5yZnhxb2otUFFDNnRRSlE2YXR4Y3dnS09lVWJKRk9KMEVaalNkWdIBpgFBVV95cUxNUFl2MGQzaDVMUVNsVHd4TmVzb2Z1WENXMTdhTHZuS0h6LTY1d0ZqbWdZZXJwLVVkNW90bG1ib0pCM3Zla21aNEx2VWs2eTVYcmtVNDhlSGFmVFlKN3pIZmYyMlZEVGtZZkJPTWRFRFZ3SS1QaGF1enI5SjdJT29CeENjVmJLTkdqSktQTm96eF9OaUtKU1kzVG0ycjFiUlZRRlRCQWhn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T12:59:58.017Z"
+    },
     {
       "id": "rss_2f8d288bb82a4e87",
       "timestamp": 1784720354000,
@@ -25,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T12:06:00.885Z"
+    },
+    {
+      "id": "rss_a4309d4215de5179",
+      "timestamp": 1784717161000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "U.S. and Iranian attacks continue as tensions mount on a key waterway in the Red Sea - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTFBmVHBOV1ItYWFfdHBVZmEyQnRtTnlvVVozMjA3UnMzbFBZWDh0YmpwTHZXM2k3SUtJcGZDSlpNWklVNzhkMkxNRnQ4emZRR2VWdm1CbXo0QkR3M2ZVeEpDM1RsTjExanBVdHJqcw?oc=5\" target=\"_blank\">U.S. and Iranian attacks continue as tensions mount on a key waterway in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBmVHBOV1ItYWFfdHBVZmEyQnRtTnlvVVozMjA3UnMzbFBZWDh0YmpwTHZXM2k3SUtJcGZDSlpNWklVNzhkMkxNRnQ4emZRR2VWdm1CbXo0QkR3M2ZVeEpDM1RsTjExanBVdHJqcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T12:59:58.016Z"
     },
     {
       "id": "rss_eeeca6dfaf07a374",
@@ -11121,50 +11167,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T17:56:04.836Z"
-    },
-    {
-      "id": "rss_877b9b500135d9af",
-      "timestamp": 1774799473000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthi attack on Israel stokes fears of renewed strikes - Egyptian Gazette",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPS3NRYlZscGlBRlR3RFRXeHBaS3cwSXlHYmlkUGRjLUdMeC1GYlBkRzFRcWlRUV9CMjMwdlBYZFg5SFg2dnRPeU9DblpDQjZqZm1PZEhxemtGeG51LWlzczR0enQtcUlPekVsUFpCOUQ5V1ctcXFiaW9DRU1Tb0NTQkNjamNEMl9YV0N5Zm5VWFkxNFZoR2c?oc=5\" target=\"_blank\">Houthi attack on Israel stokes fears of renewed strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egyptian Gazette</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPS3NRYlZscGlBRlR3RFRXeHBaS3cwSXlHYmlkUGRjLUdMeC1GYlBkRzFRcWlRUV9CMjMwdlBYZFg5SFg2dnRPeU9DblpDQjZqZm1PZEhxemtGeG51LWlzczR0enQtcUlPekVsUFpCOUQ5V1ctcXFiaW9DRU1Tb0NTQkNjamNEMl9YV0N5Zm5VWFkxNFZoR2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T05:09:51.924Z"
-    },
-    {
-      "id": "rss_79101cf3016ae3ee",
-      "timestamp": 1774797164000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis open new front in Iran war: Will Yemeni group block Bab al-Mandeb? - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHhaeEQwR2kxRDVUWk82Z09YWmprc3JfN19VX0JVbkVmZWtxQm1zdlVBcmVQT21IOEsweGR0MkdXd3YtZDV4bkNraXZXQ3I2cVRYYTZLOWwxZWlyNHpKX09uc3hYejRBbmdzSXdTOThTekE1YlhzS01WSEhVbUFQa2ZBdXZJWmhjem1ESnA5cnpSVGM2LXM4OTB6VFE2clBaUHhra3JYSXdhcEtwYU1TdmxwRdIBuAFBVV95cUxNMFpYWFl0aS1MajBUSWNIWTgtTzYwVnpIQTZLMDMxN3JUd3BldGNpYlEyTGJwQWlPaWxlMWE1bjVCT0c3c1VVQURMdXJ2S0NsOGVUT0tQOUpCNllYdDNfbTIxTHFuN0lBcU00XzBVUjJXV0xfYXR2dUZFZS1fUDlMdUhKLUR6T3VzbVpSTzU1Y0Y0elhWMVprUE",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUHhaeEQwR2kxRDVUWk82Z09YWmprc3JfN19VX0JVbkVmZWtxQm1zdlVBcmVQT21IOEsweGR0MkdXd3YtZDV4bkNraXZXQ3I2cVRYYTZLOWwxZWlyNHpKX09uc3hYejRBbmdzSXdTOThTekE1YlhzS01WSEhVbUFQa2ZBdXZJWmhjem1ESnA5cnpSVGM2LXM4OTB6VFE2clBaUHhra3JYSXdhcEtwYU1TdmxwRdIBuAFBVV95cUxNMFpYWFl0aS1MajBUSWNIWTgtTzYwVnpIQTZLMDMxN3JUd3BldGNpYlEyTGJwQWlPaWxlMWE1bjVCT0c3c1VVQURMdXJ2S0NsOGVUT0tQOUpCNllYdDNfbTIxTHFuN0lBcU00XzBVUjJXV0xfYXR2dUZFZS1fUDlMdUhKLUR6T3VzbVpSTzU1Y0Y0elhWMVprUENLUEduckZQOFhTaGJWRy1VMkd3cnRlQnU1SjBNUmxq?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-03-29T17:56:04.834Z"
     }
   ]
 }
