@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T11:14:12.479Z",
+  "last_fetch": "2026-07-22T12:06:02.075Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2f8d288bb82a4e87",
+      "timestamp": 1784720354000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea traffic turns cautious as Houthis prepare to attack shipping - Quantum Commodity Intelligence",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNbW10Y0RORl82eGgxczk2WjNhR1FQVFExdEhiMGZ4eGowQUpuRk5sUWZtVHlQYXhFN2hINnpYMno3cWJBUXVDNjZuN3FlVWZXTWpOa28zM1gzR0NWRHlBYmdMNlZYUmJYWFlwRTBEbHJZcXcxekxyekhBMk9TakkwVHB0ejNZTmREbFJQYl9rRHJuX0xFcUhYbkxVMmtUYmstcTRMSlRUZGk4X2xoMV9INw?oc=5\" target=\"_blank\">Red Sea traffic turns cautious as Houthis prepare to attack shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbW10Y0RORl82eGgxczk2WjNhR1FQVFExdEhiMGZ4eGowQUpuRk5sUWZtVHlQYXhFN2hINnpYMno3cWJBUXVDNjZuN3FlVWZXTWpOa28zM1gzR0NWRHlBYmdMNlZYUmJYWFlwRTBEbHJZcXcxekxyekhBMk9TakkwVHB0ejNZTmREbFJQYl9rRHJuX0xFcUhYbkxVMmtUYmstcTRMSlRUZGk4X2xoMV9INw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T12:06:00.885Z"
+    },
     {
       "id": "rss_eeeca6dfaf07a374",
       "timestamp": 1784715283000,
@@ -911,6 +934,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T00:30:37.315Z"
+    },
+    {
+      "id": "rss_fa210f0748dc5b2c",
+      "timestamp": 1784583019000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis announce 'maritime embargo' against Saudi Arabia - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaQ0tfRjhLY0N3N094a25WcVZLMkNrOTZlaWJCS2ZTb3ZTSGRTRkNKR05yd01HZkhFdENYSzFuNXlyQ2hvLVZ1ZTRDbjd1WTV3UWZWWnltbzBRQQ?oc=5\" target=\"_blank\">Yemen's Houthis announce 'maritime embargo' against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaQ0tfRjhLY0N3N094a25WcVZLMkNrOTZlaWJCS2ZTb3ZTSGRTRkNKR05yd01HZkhFdENYSzFuNXlyQ2hvLVZ1ZTRDbjd1WTV3UWZWWnltbzBRQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T12:06:00.884Z"
     },
     {
       "id": "rss_b66e65dcd52b95d9",
@@ -11121,50 +11165,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-03-29T17:56:04.834Z"
-    },
-    {
-      "id": "rss_7742699d7ca49e0e",
-      "timestamp": 1774796783000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 3,
-      "text_summary": "Houthis Attack on Israel Threatens Red Sea Ceasefire - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQSV9fVjdnMnlvR09aZkxFeklpV19wb294VE03MXpiUF9QWnp1NklDc01XblluTnFHeXB4VnNFV01PQ0toR2Z6NHpMbXJoRUlSWkpRbkVWUTdyMVl0UUc1eUdBTUNNa0ZMekRtWGlQSTZpWEFmZFZXcUxndFY5N0RuUm9vNEJGUk1McHAyUG5uTjdGWEhJeHc?oc=5\" target=\"_blank\">Houthis Attack on Israel Threatens Red Sea Ceasefire</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSV9fVjdnMnlvR09aZkxFeklpV19wb294VE03MXpiUF9QWnp1NklDc01XblluTnFHeXB4VnNFV01PQ0toR2Z6NHpMbXJoRUlSWkpRbkVWUTdyMVl0UUc1eUdBTUNNa0ZMekRtWGlQSTZpWEFmZFZXcUxndFY5N0RuUm9vNEJGUk1McHAyUG5uTjdGWEhJeHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T15:27:25.363Z"
-    },
-    {
-      "id": "rss_6fb5d3223893de1c",
-      "timestamp": 1774796280000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Israel stokes fears - timesdaily.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQdVVpTTJha3VfQ05HQWxuR1I1R0luZ3lxQXJMLWF4ODBwRzJybjVkN3B0blY3dEFubXBiMnRsNHB1M1dJSkdFN0Y4eXhWa2czUktOWXdrV3MxUGVFWkxPaHZyZTE0NmhNb3hDOVZkR2JaQWFJdlNKV1hVUFNaLWxiY3JlaXdfUDBuZmpENW1aRi1iWldQdDgzZ01UWkdFdjBtZms2UnFka3NUczNoLUxmNGJRZ2hSMjVOYUFYX0gyYUZZckpYamVjcm1UX00?oc=5\" target=\"_blank\">Houthi missile attack on Israel stokes fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">timesdaily.com</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdVVpTTJha3VfQ05HQWxuR1I1R0luZ3lxQXJMLWF4ODBwRzJybjVkN3B0blY3dEFubXBiMnRsNHB1M1dJSkdFN0Y4eXhWa2czUktOWXdrV3MxUGVFWkxPaHZyZTE0NmhNb3hDOVZkR2JaQWFJdlNKV1hVUFNaLWxiY3JlaXdfUDBuZmpENW1aRi1iWldQdDgzZ01UWkdFdjBtZms2UnFka3NUczNoLUxmNGJRZ2hSMjVOYUFYX0gyYUZZckpYamVjcm1UX00?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T15:54:18.427Z"
     }
   ]
 }
