@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T12:59:59.174Z",
+  "last_fetch": "2026-07-22T13:38:55.557Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9a8f1c4c0c4685cc",
+      "timestamp": 1784724599000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EU's Aspides mission advises some ships to avoid Red Sea - Over Houthi threats - Caliber.Az",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2lpckZGMUR0R05WajdsZDlNSWV6TWVsb1dyb29icENrUlJWYzVpZTlFMkVUeUhiSzZmRXkzd0tDWi13QXVjSDZ6ZC02RFdaNnRpdVlGRGRnWHRSRU5EMkhnbDh2ZGtNcWYxakt6ZjdzamI1T0thd1J1aVhXVjU1M3ZoQ3VkTUdsNndmRzVpVmlQWWFKdmRMQ3MwWUwzVkc0aEFVUXBRQUVEd3c?oc=5\" target=\"_blank\">EU's Aspides mission advises some ships to avoid Red Sea - Over Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Caliber.Az</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2lpckZGMUR0R05WajdsZDlNSWV6TWVsb1dyb29icENrUlJWYzVpZTlFMkVUeUhiSzZmRXkzd0tDWi13QXVjSDZ6ZC02RFdaNnRpdVlGRGRnWHRSRU5EMkhnbDh2ZGtNcWYxakt6ZjdzamI1T0thd1J1aVhXVjU1M3ZoQ3VkTUdsNndmRzVpVmlQWWFKdmRMQ3MwWUwzVkc0aEFVUXBRQUVEd3c?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T13:38:55.041Z"
+    },
     {
       "id": "rss_657b3a991b17b167",
       "timestamp": 1784723768000,
@@ -11146,27 +11169,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T10:13:30.298Z"
-    },
-    {
-      "id": "rss_ee057ba5cc2732af",
-      "timestamp": 1774799634000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis Join War, Threaten Red Sea Trade Routes - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQSG44RHhTYWpJQ0J3VDF4aXpFU1JxNFhSVWZhdS1NY0R5U3l0b2tlWFF5VzBrY0xiX2o4ZC1vOWtZOU5mdmNfb2JGN29ZUXpZSmxQWk1TMVo4N0JYbWxJSllvdDdxNzJfQlVnencyQ0ljWFhkNlJkbTk2dEdVZF9KSzUyR2s?oc=5\" target=\"_blank\">Houthis Join War, Threaten Red Sea Trade Routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQSG44RHhTYWpJQ0J3VDF4aXpFU1JxNFhSVWZhdS1NY0R5U3l0b2tlWFF5VzBrY0xiX2o4ZC1vOWtZOU5mdmNfb2JGN29ZUXpZSmxQWk1TMVo4N0JYbWxJSllvdDdxNzJfQlVnencyQ0ljWFhkNlJkbTk2dEdVZF9KSzUyR2s?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T17:56:04.836Z"
     }
   ]
 }
