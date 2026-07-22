@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-21T23:47:25.703Z",
+  "last_fetch": "2026-07-22T00:29:10.596Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_94b5a56a12d30e13",
+      "timestamp": 1784678488000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Ships bound for Saudi Arabia turn around in sign of new Red Sea blockade - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPX2VwaGxuMFpoUGRXejlXTnJsNXQ2aWt3S0xNMmw5VjJXVS1EVFhDTWNxLVdaN2h5Uzg5WEJ0a1l2T0lWLWFkTXBZeE94Z2JhMWVlU3lhWjRGbUxSNk5LUVRGLTdWcC1LUVplVldLWjh3ZnlKWjdaa0ZqSUVhb3VXQ1JDU3U5bTZLODJaV3Jvd2JhT3FZcnl2NEUzTHAyYU0yWDZjT0pPdGVwS2pLTVNxVQ?oc=5\" target=\"_blank\">Ships bound for Saudi Arabia turn around in sign of new Red Sea blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX2VwaGxuMFpoUGRXejlXTnJsNXQ2aWt3S0xNMmw5VjJXVS1EVFhDTWNxLVdaN2h5Uzg5WEJ0a1l2T0lWLWFkTXBZeE94Z2JhMWVlU3lhWjRGbUxSNk5LUVRGLTdWcC1LUVplVldLWjh3ZnlKWjdaa0ZqSUVhb3VXQ1JDU3U5bTZLODJaV3Jvd2JhT3FZcnl2NEUzTHAyYU0yWDZjT0pPdGVwS2pLTVNxVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T00:29:09.143Z"
+    },
     {
       "id": "rss_48cc557ee9dab43d",
       "timestamp": 1784666319000,
@@ -11139,27 +11162,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T17:26:44.932Z"
-    },
-    {
-      "id": "rss_02285742ecbd0798",
-      "timestamp": 1774766323000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Gate Of Tears: Why Bab el-Mandeb Is Emerging As The Next Global Chokepoint - Open Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOam5oQXpxZlFBcV9TSDFlV3VJb0EzMjZYZE40Z0RMUXhNZmh5SUQ2UDRJQ1lxQkV5OXBfZlBXVjRXRmUtemxLNGJBZ2s4QTZfZGFpdVo2Z1RtQnczVTdPMGZzS2hLWk5nNGJoQjdBMl9YZi1FT0xZWnExTFhlUmQ5MGRqN3NiZDZxcTUyQVdYRlRIdmZsZlEyOGwxcjZBVEdoQkJTVmltS24ySms?oc=5\" target=\"_blank\">Gate Of Tears: Why Bab el-Mandeb Is Emerging As The Next Global Chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Open Magazine</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOam5oQXpxZlFBcV9TSDFlV3VJb0EzMjZYZE40Z0RMUXhNZmh5SUQ2UDRJQ1lxQkV5OXBfZlBXVjRXRmUtemxLNGJBZ2s4QTZfZGFpdVo2Z1RtQnczVTdPMGZzS2hLWk5nNGJoQjdBMl9YZi1FT0xZWnExTFhlUmQ5MGRqN3NiZDZxcTUyQVdYRlRIdmZsZlEyOGwxcjZBVEdoQkJTVmltS24ySms?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T07:32:23.680Z"
     }
   ]
 }
