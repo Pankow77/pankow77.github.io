@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T16:30:49.696Z",
+  "last_fetch": "2026-07-22T17:29:29.772Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -396,6 +396,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T07:22:39.509Z"
+    },
+    {
+      "id": "rss_7e15a35d411fdd8d",
+      "timestamp": 1784696580000,
+      "source": "Reuters",
+      "actor": "centcom",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Red Sea threat would challenge a stretched US military - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPOThodmVRdFZqSlZuSnpSMDJBb1dkX1NUam1GcVJsRWlHcV9qM0x6MUhXRlJtRXd3MWdKMHpYOVFvUGZjcmUtR1pkSTZsUEd2M2xZS1YtUGRqUkhteGw5QzR6a1ZhcG4wR1c4LXUzaXZrN3ctTlI2Vkc4NzlnUlRBb01pY3kxRTlweVFDWGMydnpsLThrUGlXamcxX3RDTnFpVXFwY1FJT01LRU1pVEdxdW1pQQ?oc=5\" target=\"_blank\">Houthi Red Sea threat would challenge a stretched US military</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPOThodmVRdFZqSlZuSnpSMDJBb1dkX1NUam1GcVJsRWlHcV9qM0x6MUhXRlJtRXd3MWdKMHpYOVFvUGZjcmUtR1pkSTZsUEd2M2xZS1YtUGRqUkhteGw5QzR6a1ZhcG4wR1c4LXUzaXZrN3ctTlI2Vkc4NzlnUlRBb01pY3kxRTlweVFDWGMydnpsLThrUGlXamcxX3RDTnFpVXFwY1FJT01LRU1pVEdxdW1pQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-22T17:29:28.386Z"
     },
     {
       "id": "rss_689bfa3d384ff735",
@@ -2535,6 +2556,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T08:15:27.714Z"
+    },
+    {
+      "id": "rss_3e61ba96727cd3c4",
+      "timestamp": 1784185200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5\" target=\"_blank\">Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T17:29:29.767Z"
     },
     {
       "id": "rss_b6044c13eb59f86b",
@@ -11127,48 +11172,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T05:09:51.924Z"
-    },
-    {
-      "id": "rss_1fad535f37e2079d",
-      "timestamp": 1774843132000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Crude oil futures gain after Houthi attack on Israel - BusinessLine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOY0JDVGVmRHRXbE5RLTJCRzBsYXNCcEFZa0ZvdEp1ZVBlUnVvQU05SHFBZTR5MV9wUXljZ1NTWWJEWjctQ0FZaUZOVTVsV3kxQm9QLW94cUpMS0R3eFpSVjRqdTlKM01WQVV1NXJiNGwwYjR2QkZjZThzNTA3b0VNR0lfMGFqVUpOTUs2YjN4Rm1ENVFQU2Z0V1VZQkNXRHFNU3RKZUdWS2Y0aU9iZFNTb29nOERZOEZGZ3RYOWlOdDItaWpIQ2dhbdIBzwFBVV95cUxPOEJ6UmNSQ1BSSEwwUzI1U3lYcnQ0Z2pQajJrM0NTQnQ0Qi0tMDI4WVFHblhTV3doV0tqa2t4Zk9VNkV4NWJMVGI0N0pfcVMwOEplWTh3emhvTzBrNGVXLVJCbVQwZTVCaFJaRkFaWlFKREVOY014NTA3REFnaWxuNkdrVl",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOY0JDVGVmRHRXbE5RLTJCRzBsYXNCcEFZa0ZvdEp1ZVBlUnVvQU05SHFBZTR5MV9wUXljZ1NTWWJEWjctQ0FZaUZOVTVsV3kxQm9QLW94cUpMS0R3eFpSVjRqdTlKM01WQVV1NXJiNGwwYjR2QkZjZThzNTA3b0VNR0lfMGFqVUpOTUs2YjN4Rm1ENVFQU2Z0V1VZQkNXRHFNU3RKZUdWS2Y0aU9iZFNTb29nOERZOEZGZ3RYOWlOdDItaWpIQ2dhbdIBzwFBVV95cUxPOEJ6UmNSQ1BSSEwwUzI1U3lYcnQ0Z2pQajJrM0NTQnQ0Qi0tMDI4WVFHblhTV3doV0tqa2t4Zk9VNkV4NWJMVGI0N0pfcVMwOEplWTh3emhvTzBrNGVXLVJCbVQwZTVCaFJaRkFaWlFKREVOY014NTA3REFnaWxuNkdrVlIxcUoyY2doNnhfTjVtem9weDJ1QmRJdUYzZ3hKYVljbElOd0hZZUhOdTlqaGZoVE14UWFrY09jTTl1WGF2T1NLN1JnY25ra0xsOWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T05:09:51.924Z"
-    },
-    {
-      "id": "rss_bce298cf94730b55",
-      "timestamp": 1774839840000,
-      "source": "Reuters",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Gold steady as softer dollar offsets fading Fed rate-cut hopes - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWWdTRm5fRWl6eXRlRUxTTEZqYVA3MWZzcmdQSzlMZ1RvcGtTOGdqMmhxTGVTODhsSHhuQWR0UDNXYVVGTUNYWVFGelpCZWl0WXZ3dng5U1FXTFZZUVM5M3lfYkV3VVlHLTVOTVUwNUd1emYzbzFmOGM1UFlhLWc3R1ZCMGFTX0tvektOM0V0ZXVPRjByT08zc3puQldkdExFTm96a3p6Sno?oc=5\" target=\"_blank\">Gold steady as softer dollar offsets fading Fed rate-cut hopes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPWWdTRm5fRWl6eXRlRUxTTEZqYVA3MWZzcmdQSzlMZ1RvcGtTOGdqMmhxTGVTODhsSHhuQWR0UDNXYVVGTUNYWVFGelpCZWl0WXZ3dng5U1FXTFZZUVM5M3lfYkV3VVlHLTVOTVUwNUd1emYzbzFmOGM1UFlhLWc3R1ZCMGFTX0tvektOM0V0ZXVPRjByT08zc3puQldkdExFTm96a3p6Sno?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-03-30T07:06:32.941Z"
     }
   ]
 }
