@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T07:22:40.763Z",
+  "last_fetch": "2026-07-22T08:16:51.335Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4e5afa7a504aeb4b",
+      "timestamp": 1784706328000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi militants poised to attack shipping near Bab el-Mandeb strait - Crypto Briefing",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVBuQWdYOEdIYVFfWWFndEZrNUNySEdMUnBuSy01R09lVGlGTHJlZTN4VEpldm9ReDFRTFBpU0tXTjNicWdHaGxFUjBpc1h4akRVM2JNVng2RHk5ejRVOEVYNjAtNk1IQ0hueV9TVWE2TENBWGNIS3V3RnF0RGh4bzJ5TU5PUXAwc3RIcE5HZTFzd0pBNTNqbHowY28?oc=5\" target=\"_blank\">Houthi militants poised to attack shipping near Bab el-Mandeb strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVBuQWdYOEdIYVFfWWFndEZrNUNySEdMUnBuSy01R09lVGlGTHJlZTN4VEpldm9ReDFRTFBpU0tXTjNicWdHaGxFUjBpc1h4akRVM2JNVng2RHk5ejRVOEVYNjAtNk1IQ0hueV9TVWE2TENBWGNIS3V3RnF0RGh4bzJ5TU5PUXAwc3RIcE5HZTFzd0pBNTNqbHowY28?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T08:16:50.098Z"
+    },
     {
       "id": "rss_f082c3ff618cfccc",
       "timestamp": 1784699220000,
@@ -385,6 +408,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T14:41:24.395Z"
+    },
+    {
+      "id": "rss_0a832e2979dde0d7",
+      "timestamp": 1784642005000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Oil Tankers Turn Back in Red Sea After Houthi Attack Threat - Supply Chain Brain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxON19TYlJXNGpUZmdqUlVhSTUwTHQ2S3lEd1VVZ3N0MlhaX3kzRjFUaUVvMHdORm1FQk5MRy1fQ1lJM3NFYkEwMHh5bHVvV1ViV3A4eUlrS25KVUk2NFVsd1FkeDhIS1BMWHg0Z1BFbDN0eklPbkI5WElhQTNTOC1FZWk4Y29DRWM5WEw2elcwRFIxUWNFbC1BYXpQMnh4UF8zaEpqdDdsMndkUFVSMW80QlBn?oc=5\" target=\"_blank\">Oil Tankers Turn Back in Red Sea After Houthi Attack Threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Supply Chain Brain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxON19TYlJXNGpUZmdqUlVhSTUwTHQ2S3lEd1VVZ3N0MlhaX3kzRjFUaUVvMHdORm1FQk5MRy1fQ1lJM3NFYkEwMHh5bHVvV1ViV3A4eUlrS25KVUk2NFVsd1FkeDhIS1BMWHg0Z1BFbDN0eklPbkI5WElhQTNTOC1FZWk4Y29DRWM5WEw2elcwRFIxUWNFbC1BYXpQMnh4UF8zaEpqdDdsMndkUFVSMW80QlBn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T08:16:50.097Z"
     },
     {
       "id": "rss_2d734c40bdd163e7",
@@ -11119,50 +11165,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T11:51:15.269Z"
-    },
-    {
-      "id": "rss_dee2448a39c55083",
-      "timestamp": 1774780860000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi Missile Activity Prompts EUNAVFOR Advisory for Bab el-Mandeb Transit - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMW9qdFYyVUZWQ1U2YV9Ob2RRZjB0M0huMHAxbVNza0d0b0doYnhFRDI5TjdxRWozM2pLLW9qZXhTSW1hdC1zX1dGZ0hsbEYyTWtWRkVaLUdtLU5OY1RXZy1qeTUtMk1aTjJRUHhwTkRXSkRaWlhJYkVKdnhsdllYbWdLX05JR2dCd0s2WGljY0FXU3VPUUllRzFlRnhpZE1Kdy1TY3FYN1lCREdZcElNRmN6M2kxdGktWlVv?oc=5\" target=\"_blank\">Houthi Missile Activity Prompts EUNAVFOR Advisory for Bab el-Mandeb Transit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOMW9qdFYyVUZWQ1U2YV9Ob2RRZjB0M0huMHAxbVNza0d0b0doYnhFRDI5TjdxRWozM2pLLW9qZXhTSW1hdC1zX1dGZ0hsbEYyTWtWRkVaLUdtLU5OY1RXZy1qeTUtMk1aTjJRUHhwTkRXSkRaWlhJYkVKdnhsdllYbWdLX05JR2dCd0s2WGljY0FXU3VPUUllRzFlRnhpZE1Kdy1TY3FYN1lCREdZcElNRmN6M2kxdGktWlVv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T11:51:15.267Z"
-    },
-    {
-      "id": "rss_b4ec16a9c225d5a8",
-      "timestamp": 1774780607000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthi militants raise Red Sea trade risks amid Hormuz blockade - Gulf News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNMTN2dUNxRzBONmlQTmJWZ1NOVXlHek9PeWpFRVNPMFB2dldjbmxNeHhaWkhBV3Ftam54dUZNRnNocHgxY3RsQXM2cElkTUNBcFg2eWdKVnBIRkktSVlxdThGc3ZTOFJ6RUJKRU1hX3ZvMHdFYmhLTjlNWEVxRHNqQ1R5MktpNUQ0UkVoLXhQV2VlSFc0SjcyQ190NGFDOHhQQW9vczlGV2FsZDE2UENncDF30gHEAUFVX3lxTE1LNmJZcFFmUm1aYUQxSUZfaVAtdEtfT2RpMzdnZndUV3hFdzhIemlGdGthWV9JM2NZSzVYVlpRa25aR1pKMVk0SFROcmRIMlU2OU40eTlJenVwQU5ydlMyYmljNnVXRFY5dzBnQ3dXNGt6d2lfOElxTENPa1NEcHdJcFhkVlM2U2RSUHota0RUOXFERTdSQjF6Ql",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMTN2dUNxRzBONmlQTmJWZ1NOVXlHek9PeWpFRVNPMFB2dldjbmxNeHhaWkhBV3Ftam54dUZNRnNocHgxY3RsQXM2cElkTUNBcFg2eWdKVnBIRkktSVlxdThGc3ZTOFJ6RUJKRU1hX3ZvMHdFYmhLTjlNWEVxRHNqQ1R5MktpNUQ0UkVoLXhQV2VlSFc0SjcyQ190NGFDOHhQQW9vczlGV2FsZDE2UENncDF30gHEAUFVX3lxTE1LNmJZcFFmUm1aYUQxSUZfaVAtdEtfT2RpMzdnZndUV3hFdzhIemlGdGthWV9JM2NZSzVYVlpRa25aR1pKMVk0SFROcmRIMlU2OU40eTlJenVwQU5ydlMyYmljNnVXRFY5dzBnQ3dXNGt6d2lfOElxTENPa1NEcHdJcFhkVlM2U2RSUHota0RUOXFERTdSQjF6QlpWYUY1ZThwYVg1Ynl2RENyTHBEZ2F4Y011U1BmakROZjJpellfWVpWa3U?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T05:09:53.541Z"
     }
   ]
 }
