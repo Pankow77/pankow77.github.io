@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T21:49:12.242Z",
+  "last_fetch": "2026-07-22T22:21:40.279Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4c12bb69bafbc176",
+      "timestamp": 1784757726000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Climbs After Houthis Attack Two Saudi Tankers in the Red Sea - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPblhUSnVWZURkR1BPSGpaQ2RHYVJxU3Etb3ZRdm9uUXo5SThndWMxdHdNbmNvdDNRZHB0alVqT1o5Sm8xTGsyZDlUVkxxZlA3RGZZcGFkMl8xZUloV2ZDU1VBTElKMy04MVhVT2JJVXdxOHBwZExDRGtvSkNNYXFabXF1Yks5UUlaZENES0wxQlEtYlVERk51M0RuSTBnQWM?oc=5\" target=\"_blank\">Oil Climbs After Houthis Attack Two Saudi Tankers in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPblhUSnVWZURkR1BPSGpaQ2RHYVJxU3Etb3ZRdm9uUXo5SThndWMxdHdNbmNvdDNRZHB0alVqT1o5Sm8xTGsyZDlUVkxxZlA3RGZZcGFkMl8xZUloV2ZDU1VBTElKMy04MVhVT2JJVXdxOHBwZExDRGtvSkNNYXFabXF1Yks5UUlaZENES0wxQlEtYlVERk51M0RuSTBnQWM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T22:21:39.093Z"
+    },
     {
       "id": "rss_080c653e4d86b0c2",
       "timestamp": 1784743740000,
@@ -25,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T19:29:55.692Z"
+    },
+    {
+      "id": "rss_631b83811578b088",
+      "timestamp": 1784739600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi blockade of Saudi Arabia opens second front in widening Iran war - Northeast Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDFHanZlVENZNVNDOFI0QS1YQjRGQWFCMmVCTWphc3Blam9vTXNuVEZlNEhSM1k2UGx1WDQzd2xEanJDMjNnMXgzWE5BemdnaWpIbUtCWHFReHg4RGFOTi1NNTM0TzhOSEVIZ3hLeU1HWFVEWGh0a0NCRVpLNlE0RHRkTDlDTEdHaXNGM2dueThfSTBtRTNNRzd4WnFQZHVjMmwyQU0tdlY4MVpXRXlF?oc=5\" target=\"_blank\">Houthi blockade of Saudi Arabia opens second front in widening Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Northeast Times</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDFHanZlVENZNVNDOFI0QS1YQjRGQWFCMmVCTWphc3Blam9vTXNuVEZlNEhSM1k2UGx1WDQzd2xEanJDMjNnMXgzWE5BemdnaWpIbUtCWHFReHg4RGFOTi1NNTM0TzhOSEVIZ3hLeU1HWFVEWGh0a0NCRVpLNlE0RHRkTDlDTEdHaXNGM2dueThfSTBtRTNNRzd4WnFQZHVjMmwyQU0tdlY4MVpXRXlF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T22:21:39.092Z"
     },
     {
       "id": "rss_d30b019500055346",
@@ -11127,51 +11173,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T08:53:49.891Z"
-    },
-    {
-      "id": "rss_c86f16c508dbb2f9",
-      "timestamp": 1774856152000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Rises as Widening Conflict Endangers Red Sea, Hormuz Flows - Offshore Engineer Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQWWRLS015MmxrMzB6WnBMT0IyeWI3cEdqckktbjV1b2hqVmEzT1A1OWRiRzVxNjd4Z25VeUpfLUJEcVVOcUk3VWxSNzk1LVFGdzhoLW1NeFppdHdUQkNxYVUwVjF2T1Jzc1Zvd29HSmRvcG4yVzB0MGdjUzNPdmRyeWhqWTEyVHdJWElaLUpFN2pITHJ2ZXl1cGJoVkY2YzBv?oc=5\" target=\"_blank\">Oil Rises as Widening Conflict Endangers Red Sea, Hormuz Flows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Offshore Engineer Magazine</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWWRLS015MmxrMzB6WnBMT0IyeWI3cEdqckktbjV1b2hqVmEzT1A1OWRiRzVxNjd4Z25VeUpfLUJEcVVOcUk3VWxSNzk1LVFGdzhoLW1NeFppdHdUQkNxYVUwVjF2T1Jzc1Zvd29HSmRvcG4yVzB0MGdjUzNPdmRyeWhqWTEyVHdJWElaLUpFN2pITHJ2ZXl1cGJoVkY2YzBv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T11:31:39.768Z"
-    },
-    {
-      "id": "rss_4f481d58730436f3",
-      "timestamp": 1774850100000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why Iran war makes Red Sea shipping a bigger worry - The Straits Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQRHR4WFNPX0VkeDBhb09yOUI1eUp0bjcwQmR1ay1GcjQ5QndwcnJHZUd5MENSMXE2TmtIQTBsUEg2ZEhMNHpUbzYwYzlqR2tkOFdXSm5mSUF5S1VBTDk0cnctZGJjVnZEUVlKTHFMYVFSdGplZ1BvT0I1RnNfcGszSzFTQ1k4c2JtTjJiNzJYTlM4V0pvZnF5S2V4dklXdFFad2RF?oc=5\" target=\"_blank\">Why Iran war makes Red Sea shipping a bigger worry</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRHR4WFNPX0VkeDBhb09yOUI1eUp0bjcwQmR1ay1GcjQ5QndwcnJHZUd5MENSMXE2TmtIQTBsUEg2ZEhMNHpUbzYwYzlqR2tkOFdXSm5mSUF5S1VBTDk0cnctZGJjVnZEUVlKTHFMYVFSdGplZ1BvT0I1RnNfcGszSzFTQ1k4c2JtTjJiNzJYTlM4V0pvZnF5S2V4dklXdFFad2RF?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T06:16:45.506Z"
     }
   ]
 }
