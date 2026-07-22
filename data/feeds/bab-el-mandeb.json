@@ -1,8 +1,33 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T14:40:39.840Z",
+  "last_fetch": "2026-07-22T16:30:49.696Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_688b4ca958924e77",
+      "timestamp": 1784736317000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Houthis deploy missiles and drones to attack ships in southern Red Sea, naval group says - oodaloop.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOaDZ2OU5qV2JuTXdxQ3dINDNjbExaLUhra3BEMUFIQkFjUklPdjUzTmZTaFYwUWNZQnluQXU2LWtTRzkxR2g3bW96NVF5VUtvWmk0NjRSNHRCNUV1NVZNa29nRERwa2hvU1A1YUFtaUQ2Z2FZS2h4MlB0UHZIdVZ3N0RoemlhZ0U4WnlGZXpoYjN0UnE5UDlmUzBLckgwYUNoU3lCYkwweU1LWEc3UWQxd1pXLVVMeDRXdHpwT18tMS1hX0o1VXdF?oc=5\" target=\"_blank\">Houthis deploy missiles and drones to attack ships in southern Red Sea, naval group says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">oodaloop.com</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaDZ2OU5qV2JuTXdxQ3dINDNjbExaLUhra3BEMUFIQkFjUklPdjUzTmZTaFYwUWNZQnluQXU2LWtTRzkxR2g3bW96NVF5VUtvWmk0NjRSNHRCNUV1NVZNa29nRERwa2hvU1A1YUFtaUQ2Z2FZS2h4MlB0UHZIdVZ3N0RoemlhZ0U4WnlGZXpoYjN0UnE5UDlmUzBLckgwYUNoU3lCYkwweU1LWEc3UWQxd1pXLVVMeDRXdHpwT18tMS1hX0o1VXdF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T16:30:48.313Z"
+    },
     {
       "id": "rss_39884fc8be429c02",
       "timestamp": 1784729737000,
@@ -50,6 +75,29 @@
       "fetched_at": "2026-07-22T14:40:38.353Z"
     },
     {
+      "id": "rss_2d7eb1a841af27f7",
+      "timestamp": 1784728351000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Warns Israeli- and U.S.-Linked Ships to Avoid Red Sea Amid Houthi Saudi Embargo - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUF5NDRSaHBtenFaZmVDRHlWeThiV05oRGI5VUV5UGI3RmtfV1JqNGF2c2hRbWJiQkZBazhvMW9UbWp5alplWS1KT1czekFtTTZiZGp6ZGhjdFk2SWNlX2NkOEtiNkFFQlJrVkFVSUowbVhib25BTHFoMm5GNjk4clFhRmN4YnpQM24xWTB6RU9yd3ZaQjBDOHNNdzRZenl2cE5ZSw?oc=5\" target=\"_blank\">EU Warns Israeli- and U.S.-Linked Ships to Avoid Red Sea Amid Houthi Saudi Embargo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUF5NDRSaHBtenFaZmVDRHlWeThiV05oRGI5VUV5UGI3RmtfV1JqNGF2c2hRbWJiQkZBazhvMW9UbWp5alplWS1KT1czekFtTTZiZGp6ZGhjdFk2SWNlX2NkOEtiNkFFQlJrVkFVSUowbVhib25BTHFoMm5GNjk4clFhRmN4YnpQM24xWTB6RU9yd3ZaQjBDOHNNdzRZenl2cE5ZSw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T16:30:49.184Z"
+    },
+    {
       "id": "rss_6299bc5bd6864534",
       "timestamp": 1784727547000,
       "source": "OSINT",
@@ -94,6 +142,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T14:40:38.352Z"
+    },
+    {
+      "id": "rss_81b1481c7a2bf4d5",
+      "timestamp": 1784726465000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "More ships change course in Red Sea after Houthi threats, data shows - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVpnSVhMeHp3ZE5RTlFFUEF6OW5PaUZsWGtoM3J2eUh1eGczY0hsVkt5MzRLY2s5YnJqaUxmVU13bG5QYmVrZmZoYzFNbXpRbVhkSHpVWkQtOGJ2UnNNdHh4YnU0V3hvRS1WcTd4UGJ5V0M0c21CRG5CdS1ZenVKNkJ2V2pwSEt5NWNBOEg2UkZmOVJFd3JZSXZOV3hyeW9SQjE2dTZQbzBZOVRBcHVwZ3ZpTWdOeGJoX3JRTkpNTHc5eGhsbUE?oc=5\" target=\"_blank\">More ships change course in Red Sea after Houthi threats, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVpnSVhMeHp3ZE5RTlFFUEF6OW5PaUZsWGtoM3J2eUh1eGczY0hsVkt5MzRLY2s5YnJqaUxmVU13bG5QYmVrZmZoYzFNbXpRbVhkSHpVWkQtOGJ2UnNNdHh4YnU0V3hvRS1WcTd4UGJ5V0M0c21CRG5CdS1ZenVKNkJ2V2pwSEt5NWNBOEg2UkZmOVJFd3JZSXZOV3hyeW9SQjE2dTZQbzBZOVRBcHVwZ3ZpTWdOeGJoX3JRTkpNTHc5eGhsbUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-22T16:30:48.312Z"
     },
     {
       "id": "rss_9a8f1c4c0c4685cc",
@@ -11097,76 +11168,6 @@
       "origin": "rss",
       "confidence": 0.51,
       "source_weight": 0.85,
-      "fetched_at": "2026-03-30T07:06:32.941Z"
-    },
-    {
-      "id": "rss_ab8b04e4279ffdc0",
-      "timestamp": 1774839807000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Operation Aspides: Risks to shipping in the Red Sea and the Gulf of Aden - Table.Briefings",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNYkxVQlljZVF1Q0RCZ04yNTEzdHRWS2YzTS1ZeXJwQUFNdGRkVzJmWVVPNHg5SlRJQUVvTC1FTVhhdWhqZl83NkJBMW1wSm50QkdUVHYxal95cUJkSE9rZW9Hc3FrWFM4Z0VXcXlfLTZKaV9NVHdPOXJJRngyRWYxNHNhRmFiSHFheXE5NVE5NDVVUWgtNjBGWGZTSzlSY2Y2QkxRWWdCUlhreW54Tmc?oc=5\" target=\"_blank\">Operation Aspides: Risks to shipping in the Red Sea and the Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Table.Briefings</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYkxVQlljZVF1Q0RCZ04yNTEzdHRWS2YzTS1ZeXJwQUFNdGRkVzJmWVVPNHg5SlRJQUVvTC1FTVhhdWhqZl83NkJBMW1wSm50QkdUVHYxal95cUJkSE9rZW9Hc3FrWFM4Z0VXcXlfLTZKaV9NVHdPOXJJRngyRWYxNHNhRmFiSHFheXE5NVE5NDVVUWgtNjBGWGZTSzlSY2Y2QkxRWWdCUlhreW54Tmc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T05:09:52.926Z"
-    },
-    {
-      "id": "rss_3e61ba96727cd3c4",
-      "timestamp": 1774832832000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5\" target=\"_blank\">Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T08:53:50.314Z"
-    },
-    {
-      "id": "rss_d6d8e1384f1f69fa",
-      "timestamp": 1774831931000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "US urges ships to go “dark” in Red Sea as Houthi threat lingers - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNRmhjUWtDa1EyNEVudXE5UENzVkVoQkFIVDBWR19DUjFlajRsTGtGQ0p0Y2FZelhHN2lrVmlzSmtraXplajJ4ZzRuUHBOOFppRDdIQ0pSSTJodHpibDFTT2RhdExVVDZTcXF6M1VWTWRvejdITVU2c0pib1lVZ0lhWXhjVU9ET3dsR2FLekNtYTBKSXQwWFZKWGNUSEswWm05OFRsekpDVnJYc3V2cGc?oc=5\" target=\"_blank\">US urges ships to go “dark” in Red Sea as Houthi threat lingers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRmhjUWtDa1EyNEVudXE5UENzVkVoQkFIVDBWR19DUjFlajRsTGtGQ0p0Y2FZelhHN2lrVmlzSmtraXplajJ4ZzRuUHBOOFppRDdIQ0pSSTJodHpibDFTT2RhdExVVDZTcXF6M1VWTWRvejdITVU2c0pib1lVZ0lhWXhjVU9ET3dsR2FLekNtYTBKSXQwWFZKWGNUSEswWm05OFRsekpDVnJYc3V2cGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
       "fetched_at": "2026-03-30T07:06:32.941Z"
     }
   ]
