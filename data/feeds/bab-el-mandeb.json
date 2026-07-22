@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T10:17:10.692Z",
+  "last_fetch": "2026-07-22T11:14:12.479Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_eeeca6dfaf07a374",
+      "timestamp": 1784715283000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "What is the Bab el-Mandeb Strait, and why does the Houthi ‘blockade’ threat against Saudi Arabia matter? - The Indian Express",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTGgyakJmNEhNVUFMbWpNeWVZSnlhTFhhNG12UFdfcjBZWFBTRHFPenpLaEQyMnBFejhVaG4yWWtScEhVTk9qcWhXNUtLRWhZbDhtMEcxcXRrNlRvVHFORkFPeDRGZkVDc2loZnRpNzAtUmxIbzJEUjYtamItbGNIc1JnNDlaYXFha2ZScElNOHVjZF9sel9DQVhHMTJzZ1pqTFpQZE9qd2RrR1lYdlRhTVdkbThENlVOS29wR0x6V2bSAccBQVVfeXFMUGd5ZUpEY3hGX3ZKOGVMc1NXZTFRZnF2RWg3UHJHd0F2bTgwbkxjaWJJWjAxemJkMlFxRzB0R0YwQ2pZZEVoaF9DaTZjVU5ERWNpWHVMZXZPUUlIeTMxd2VmMWR4WWE1aE1hYjg0NWM3a2RBZ0k1QzNPTFRrZE5hdk9DWXctLURWWGtGZF",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTGgyakJmNEhNVUFMbWpNeWVZSnlhTFhhNG12UFdfcjBZWFBTRHFPenpLaEQyMnBFejhVaG4yWWtScEhVTk9qcWhXNUtLRWhZbDhtMEcxcXRrNlRvVHFORkFPeDRGZkVDc2loZnRpNzAtUmxIbzJEUjYtamItbGNIc1JnNDlaYXFha2ZScElNOHVjZF9sel9DQVhHMTJzZ1pqTFpQZE9qd2RrR1lYdlRhTVdkbThENlVOS29wR0x6V2bSAccBQVVfeXFMUGd5ZUpEY3hGX3ZKOGVMc1NXZTFRZnF2RWg3UHJHd0F2bTgwbkxjaWJJWjAxemJkMlFxRzB0R0YwQ2pZZEVoaF9DaTZjVU5ERWNpWHVMZXZPUUlIeTMxd2VmMWR4WWE1aE1hYjg0NWM3a2RBZ0k1QzNPTFRrZE5hdk9DWXctLURWWGtGZFpaWVdtV2QtSEl0dHY0Zk8tR0xhX2hoSUJKZ3oybDN2Q1dXQ2ptNkt4dHVOSjlWZWt4ZXNGMjhETF9kUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T11:14:11.375Z"
+    },
     {
       "id": "rss_2eba9d7c91f7274f",
       "timestamp": 1784712446000,
@@ -11144,29 +11165,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T15:54:18.427Z"
-    },
-    {
-      "id": "rss_e4da981414627cd0",
-      "timestamp": 1774795648000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi rebels fired missiles at Israel and warned of Bab el Mandeb closure - mezha.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CZEJxRC11TnhmRHh2ZkI4b3RiUTdSOWdVUnRVYU9laGRiVGp4OVMwYTk5ZnNnRlRsSUxmQnVUV2FpWWdnQ2ZxdDZQU2hrMGJyUV9zdklvUW5qcm1V?oc=5\" target=\"_blank\">Houthi rebels fired missiles at Israel and warned of Bab el Mandeb closure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mezha.net</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5CZEJxRC11TnhmRHh2ZkI4b3RiUTdSOWdVUnRVYU9laGRiVGp4OVMwYTk5ZnNnRlRsSUxmQnVUV2FpWWdnQ2ZxdDZQU2hrMGJyUV9zdklvUW5qcm1V?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T16:29:38.320Z"
     }
   ]
 }
