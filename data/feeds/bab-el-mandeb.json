@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T18:53:52.023Z",
+  "last_fetch": "2026-07-22T19:29:56.974Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_080c653e4d86b0c2",
+      "timestamp": 1784743740000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Trump threatens Iranian infrastructure after Houthis block Red Sea artery - The Detroit News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQUdxa3ZJWWc1VlVEaUlOVzg5amhsSmY1Vi1uRDRfVGJubnJUdTR0TzNEdDlsdmJCV3lNazAya3JxbGlUWXNvOFEtNUFtSDNtaVdLVWNsTG5vY1laUHVWM3BCTUdWTGVlTE9zbTZIQUF1Z3c5YlFYNkJJR0I5eUVoZWRqQXpFR2F6YVJnSzZjSTJNLWZBWVhDOFdnaVM2bi1rSUNwRUxLVUU0RnZBLXp1WlBnbElrU29Xc19UNDZNaDI4OG1XTVBwdktFNU5oNTMzY3VHbHhHUHVJMmt3?oc=5\" target=\"_blank\">Trump threatens Iranian infrastructure after Houthis block Red Sea artery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Detroit News</fo",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQUdxa3ZJWWc1VlVEaUlOVzg5amhsSmY1Vi1uRDRfVGJubnJUdTR0TzNEdDlsdmJCV3lNazAya3JxbGlUWXNvOFEtNUFtSDNtaVdLVWNsTG5vY1laUHVWM3BCTUdWTGVlTE9zbTZIQUF1Z3c5YlFYNkJJR0I5eUVoZWRqQXpFR2F6YVJnSzZjSTJNLWZBWVhDOFdnaVM2bi1rSUNwRUxLVUU0RnZBLXp1WlBnbElrU29Xc19UNDZNaDI4OG1XTVBwdktFNU5oNTMzY3VHbHhHUHVJMmt3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T19:29:55.692Z"
+    },
     {
       "id": "rss_688b4ca958924e77",
       "timestamp": 1784736317000,
@@ -11151,27 +11174,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T07:06:34.313Z"
-    },
-    {
-      "id": "rss_b8a455ac1e40b495",
-      "timestamp": 1774845675000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Gold falls as Houthi attack lifts oil, Fed rate-cut hopes dim - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQajh1WlVMdF9CcklBZTY5RV9oZmpnZ3g4Vk1SRzlENHc3NGVjdUN3X3Y5TU9NcHpnY0l0TjF4Y1FCbUhSTnlacVhxNFNpYld4czkyUk9BZ2Ixc0l6N3ZFdVZfS2JtSml0ZGpSME1uMUhpWUpQYTdNTUpyOG01OU9aTWU2S2IwSTN5WE9CYnRNZlNfU0VRRUJoWTBvbDhleGhuWWRBc3VweW02MGJBdXlwWTFB?oc=5\" target=\"_blank\">Gold falls as Houthi attack lifts oil, Fed rate-cut hopes dim</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQajh1WlVMdF9CcklBZTY5RV9oZmpnZ3g4Vk1SRzlENHc3NGVjdUN3X3Y5TU9NcHpnY0l0TjF4Y1FCbUhSTnlacVhxNFNpYld4czkyUk9BZ2Ixc0l6N3ZFdVZfS2JtSml0ZGpSME1uMUhpWUpQYTdNTUpyOG01OU9aTWU2S2IwSTN5WE9CYnRNZlNfU0VRRUJoWTBvbDhleGhuWWRBc3VweW02MGJBdXlwWTFB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T05:09:51.924Z"
     }
   ]
 }
