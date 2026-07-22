@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T03:40:12.343Z",
+  "last_fetch": "2026-07-22T05:03:55.507Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -48,6 +48,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T00:29:09.143Z"
+    },
+    {
+      "id": "rss_15e76d9899363f7f",
+      "timestamp": 1784676720000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "2 tankers carrying Saudi oil reverse course in Red Sea after Houthi threat, amid widening U.S.-Iran war - CBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE92OFhOY3FwWnVHd2NVbXQwUlE3QWlvMjJrNEE2R3QwMEJrWWxtN21ORWd0NnU0OHhfQWJVMmlvLVk5cC1JQ25lNWJsWDI4bTNFTjcwMDNWbDdKMkVRSFhtYlUtMDk5dFBYSGw0?oc=5\" target=\"_blank\">2 tankers carrying Saudi oil reverse course in Red Sea after Houthi threat, amid widening U.S.-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBC</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE92OFhOY3FwWnVHd2NVbXQwUlE3QWlvMjJrNEE2R3QwMEJrWWxtN21ORWd0NnU0OHhfQWJVMmlvLVk5cC1JQ25lNWJsWDI4bTNFTjcwMDNWbDdKMkVRSFhtYlUtMDk5dFBYSGw0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-22T05:03:54.147Z"
     },
     {
       "id": "rss_48cc557ee9dab43d",
@@ -11136,29 +11160,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-29T10:28:39.115Z"
-    },
-    {
-      "id": "rss_05a0dc65bb9b5792",
-      "timestamp": 1774771000000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "\"Aspides Warns: Yemeni Houthi Attacks Could Disrupt Shipping in Red Sea, Gulf of Aden - fakti.bg",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOR3JwRzBrd216a0R0UC13cEp4YkNFMXV4OXZTQ1NHNEdfZDdWZ05lLTloY29RZDhmdno1MTBWZU9kd3kweTNMNXBEUGVCUXpvbG5pRTBsdGc1SG1Na1JBVTdURE12OEJ1a1VXNUx5UVZ2MVlpUVdPZUtaN25Dd1ladms4YV9sU0xqWFZxVE1MY0VLUkdISVc4SlRWeUM2WkpkQ3I5S1gwYVpxSkYzb2JEUnM2cUdCZjA?oc=5\" target=\"_blank\">\"Aspides Warns: Yemeni Houthi Attacks Could Disrupt Shipping in Red Sea, Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fakti.bg</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOR3JwRzBrd216a0R0UC13cEp4YkNFMXV4OXZTQ1NHNEdfZDdWZ05lLTloY29RZDhmdno1MTBWZU9kd3kweTNMNXBEUGVCUXpvbG5pRTBsdGc1SG1Na1JBVTdURE12OEJ1a1VXNUx5UVZ2MVlpUVdPZUtaN25Dd1ladms4YV9sU0xqWFZxVE1MY0VLUkdISVc4SlRWeUM2WkpkQ3I5S1gwYVpxSkYzb2JEUnM2cUdCZjA?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-29T11:01:19.630Z"
     }
   ]
 }
