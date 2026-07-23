@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T09:17:34.204Z",
+  "last_fetch": "2026-07-23T10:16:23.774Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6cb631dd019339ae",
+      "timestamp": 1784799770000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran vows to keep up strikes as Houthis attack Saudi shipping in Red Sea - The New Indian Express",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZWhCbjBZdkVZczZJWXNHSzRUdkY0TzhoYlJzOU5hbWFlZ091VnNnU1JNV1JfRldJeDhSdWRfYlBkVjA4VlFTU2tLUngwVHpsZndiZHk2UjQ3U09TaGFrMDFEcFdueWp0VzhHQnRZdjVTZ2xtMzh3eXZDMG0wNGp1OW8tWDJJNFFsNUFpbVN2NVZ6RV9VWTJYWkcwVkUtOU1CVXV6d29TSWN1MjRYS2RrQmkzMzUwaThHdFdnWVdBVjPSAc4BQVVfeXFMTWk4eGVYZXh0VjhtVk94Um1UR3ZUTmVRNk5ZZEN3TTBJOWgtR1VUbTFFT25ON1ZBTHRZU3hhcktlTzJTQlhBWFFDOWRpS3E0RGFpVzZ5azFUWU03VTNhaEtlVTlhS0p2WUhOVUtSM2lxTHBQU2g0c0s2dU9lRDk5ellUMXc2S3hTbjRfNG",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZWhCbjBZdkVZczZJWXNHSzRUdkY0TzhoYlJzOU5hbWFlZ091VnNnU1JNV1JfRldJeDhSdWRfYlBkVjA4VlFTU2tLUngwVHpsZndiZHk2UjQ3U09TaGFrMDFEcFdueWp0VzhHQnRZdjVTZ2xtMzh3eXZDMG0wNGp1OW8tWDJJNFFsNUFpbVN2NVZ6RV9VWTJYWkcwVkUtOU1CVXV6d29TSWN1MjRYS2RrQmkzMzUwaThHdFdnWVdBVjPSAc4BQVVfeXFMTWk4eGVYZXh0VjhtVk94Um1UR3ZUTmVRNk5ZZEN3TTBJOWgtR1VUbTFFT25ON1ZBTHRZU3hhcktlTzJTQlhBWFFDOWRpS3E0RGFpVzZ5azFUWU03VTNhaEtlVTlhS0p2WUhOVUtSM2lxTHBQU2g0c0s2dU9lRDk5ellUMXc2S3hTbjRfNGZSLUxjN2VFcTBNMTllMGpTSFpuNVBIaGEzdjByN1Zma2ZYQVNLMVg4UWp4emdaZXFUOEhvTGNZNGJKTGp3WEZjN1E?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T10:16:23.768Z"
+    },
     {
       "id": "rss_362a7a60e539b60e",
       "timestamp": 1784796345000,
@@ -165,6 +189,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T07:02:01.711Z"
+    },
+    {
+      "id": "rss_10e97db2fa6b6d9c",
+      "timestamp": 1784787022000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis target Red Sea shipping as US hits Iran - The New Indian Express",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPUFFEejlaZWxZTEpkZEY1eDU0bE1wSXRwWXplaEstQ3dMdk9GdkwwZ0NDcmdGYUNic3ozUTVLSnJlS21tS01Ra2N4RWpaTEctazg5RlhMM0lzVjhNT05MTkRkamNGQU1jUkxqNXF1c0dwelRFVXRGNHBvMTE1TUVFRXViU3pPdjcwa3NnSHVwR3VrSU1Xem94TGlMUFZrdGfSAawBQVVfeXFMT0xJS2RVNzdvNENiQ3VFQ0JLZGdmLU94SG1VbTNQQXQyWFEzakdoX1g4RWJ0dHlKTzdYY1Jvb0ZtMWd3SmZEUU9YV1k1M0ZIM29RS0FJXy1MbHVnV0YxV00wN2xfcGZWM1BCcVc4SG53NGFydURvb3A1Ykl6ZndscllJOXZYNUF4OTNMdDhkbUo3OUxmQ0Y0ZFBBYndXQWQtMXZqaGFOREJNS1BCaQ",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUFFEejlaZWxZTEpkZEY1eDU0bE1wSXRwWXplaEstQ3dMdk9GdkwwZ0NDcmdGYUNic3ozUTVLSnJlS21tS01Ra2N4RWpaTEctazg5RlhMM0lzVjhNT05MTkRkamNGQU1jUkxqNXF1c0dwelRFVXRGNHBvMTE1TUVFRXViU3pPdjcwa3NnSHVwR3VrSU1Xem94TGlMUFZrdGfSAawBQVVfeXFMT0xJS2RVNzdvNENiQ3VFQ0JLZGdmLU94SG1VbTNQQXQyWFEzakdoX1g4RWJ0dHlKTzdYY1Jvb0ZtMWd3SmZEUU9YV1k1M0ZIM29RS0FJXy1MbHVnV0YxV00wN2xfcGZWM1BCcVc4SG53NGFydURvb3A1Ykl6ZndscllJOXZYNUF4OTNMdDhkbUo3OUxmQ0Y0ZFBBYndXQWQtMXZqaGFOREJNS1BCaQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T10:16:23.768Z"
     },
     {
       "id": "rss_a03fcfbba006525c",
@@ -11149,51 +11197,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-02T19:47:33.232Z"
-    },
-    {
-      "id": "rss_dbbbb358ae9449ea",
-      "timestamp": 1774991649000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "DW News. . The Yemeni Houthi militia just joined the Iran war, prompting many to fear they could block another vital shipping route — the Bab el-Mandeb Strait. #dwgeopolitics - facebook.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQU0lKRWRRejNuMnh5S05oYU54YW54Q1VEYXJtZmdjY1F5ZVNhR1JUQllGOW84WHJJSkI2cS1xY2VjTmFnQ2pRRUF6akFIMnZJUzdaSEd4LXVGSUVpNlRBMGNtaGFBOExCckhCWVNzbmlkdjF5R1FjQk9Ia0hUNnAwNllUa0MxTF9yYVpGZlBaZWtiaHpINW1ma0tNeXp0cWVCcm1zMGxqWUFCRFlhQ2F3SmZINlo3bnM?oc=5\" target=\"_blank\">DW News. . The Yemeni Houthi militia just joined the Iran war, prompting many to fear they could block another vital shipping route — the Bab el-Mandeb Strait. #dwgeopolitics</a>&n",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQU0lKRWRRejNuMnh5S05oYU54YW54Q1VEYXJtZmdjY1F5ZVNhR1JUQllGOW84WHJJSkI2cS1xY2VjTmFnQ2pRRUF6akFIMnZJUzdaSEd4LXVGSUVpNlRBMGNtaGFBOExCckhCWVNzbmlkdjF5R1FjQk9Ia0hUNnAwNllUa0MxTF9yYVpGZlBaZWtiaHpINW1ma0tNeXp0cWVCcm1zMGxqWUFCRFlhQ2F3SmZINlo3bnM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T22:30:37.574Z"
-    },
-    {
-      "id": "rss_7f6b0ccd3050af5b",
-      "timestamp": 1774984080000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Strait of Hormuz crisis is drawing eyes to another point nearby: ‘the Gate of Tears’ - Fortune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPTkZLYXlYNU1OMEJOM2M2Z0VielUzYUc3R081WkVJVTZpX0QwX0ZXSWs5UkxQSzkwVVBTUDNyNUIybkRiSWJlOTl4Tk5vUGR4QTJwOC00X3pxcUR6Zk55dnNUNU14QkpxRHg2TkZFTHRmUmFIck5JX1lYWFgybDJGTXF0ZjdKUFE?oc=5\" target=\"_blank\">The Strait of Hormuz crisis is drawing eyes to another point nearby: ‘the Gate of Tears’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTkZLYXlYNU1OMEJOM2M2Z0VielUzYUc3R081WkVJVTZpX0QwX0ZXSWs5UkxQSzkwVVBTUDNyNUIybkRiSWJlOTl4Tk5vUGR4QTJwOC00X3pxcUR6Zk55dnNUNU14QkpxRHg2TkZFTHRmUmFIck5JX1lYWFgybDJGTXF0ZjdKUFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T19:54:13.679Z"
     }
   ]
 }
