@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T16:59:14.964Z",
+  "last_fetch": "2026-07-23T17:35:41.473Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3b960baaa949fd12",
+      "timestamp": 1784826071000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Global oil prices cross $100 a barrel as Iran war sends fuel prices surging - ABC7 New York",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPSElaUndhZ2xoOXRLNi1UdkxHTGlJUUNsWktNODZTM2JObjBIVVlJcWhQYzN0SVNPbUJxXy15RS0wVTN3ZzRKMXBwOUtZRS1KM19fcjBJN2tBTzJ0OGM3eXZrSXRselp2ZTFBVXhhVEhJaVpwR3RDdjZOdDlJRG9sdkZjYjlSeTQ5d191YTNTX1ByTmxoWXlnUHJhdExCUQ?oc=5\" target=\"_blank\">Global oil prices cross $100 a barrel as Iran war sends fuel prices surging</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC7 New York</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSElaUndhZ2xoOXRLNi1UdkxHTGlJUUNsWktNODZTM2JObjBIVVlJcWhQYzN0SVNPbUJxXy15RS0wVTN3ZzRKMXBwOUtZRS1KM19fcjBJN2tBTzJ0OGM3eXZrSXRselp2ZTFBVXhhVEhJaVpwR3RDdjZOdDlJRG9sdkZjYjlSeTQ5d191YTNTX1ByTmxoWXlnUHJhdExCUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T17:35:40.209Z"
+    },
     {
       "id": "rss_3d47fb6cdfeb495c",
       "timestamp": 1784822400000,
@@ -11178,27 +11201,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-05T07:36:38.212Z"
-    },
-    {
-      "id": "rss_c3abb0a0bed6c5fe",
-      "timestamp": 1775214412000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Red Sea attack survivor from Russia begins journey home - bairdmaritime.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOazl0TEc5M01uZzU0RGthc1FmRkdmNWE0UUZ0ZU90WFA5Q3F1N3FSb19sbkUxNGVaSzBqTGZ4a1VKZ0F3TUlBbGVneUZBel9WZ2VZVkhab2I3aHY4dVQtUHNrWjVhbnEwdkRRODJTY0RIQlc3X2kxV1U2WElxak1ZRkRacnFvX2xnRXlEV2lmTXp0aFQ0N2VQTEY3SnlpSGMtUkl3T0N5cmY3ajZtZjVZa2pDVF9ubFBfaGfSAccBQVVfeXFMT25OWDgwcFBwNEh2VXo0aFpLVEw1QV96YXFzLUFOd1BEeDRRV19HbGZNRXZ0ckRwUEhURktycll4X1BiQ2d3WTJKSVZXZy11b3IydWpYVkx5YkZvTXNqVkFKQlVPUzZYSzQyOThiRWN1R1FVN2hFLUU0dzdkVkxvVDgzVzhfN3V3VEVsamFRWXdmbF",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOazl0TEc5M01uZzU0RGthc1FmRkdmNWE0UUZ0ZU90WFA5Q3F1N3FSb19sbkUxNGVaSzBqTGZ4a1VKZ0F3TUlBbGVneUZBel9WZ2VZVkhab2I3aHY4dVQtUHNrWjVhbnEwdkRRODJTY0RIQlc3X2kxV1U2WElxak1ZRkRacnFvX2xnRXlEV2lmTXp0aFQ0N2VQTEY3SnlpSGMtUkl3T0N5cmY3ajZtZjVZa2pDVF9ubFBfaGfSAccBQVVfeXFMT25OWDgwcFBwNEh2VXo0aFpLVEw1QV96YXFzLUFOd1BEeDRRV19HbGZNRXZ0ckRwUEhURktycll4X1BiQ2d3WTJKSVZXZy11b3IydWpYVkx5YkZvTXNqVkFKQlVPUzZYSzQyOThiRWN1R1FVN2hFLUU0dzdkVkxvVDgzVzhfN3V3VEVsamFRWXdmbF9rWGxjMVV0Qk9ibFlkSjZGWnNXTVd0eTBpblhZeWpLUXZBYWJpbFJaN2xIemc0VlM0Y2Eydw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-03T17:30:24.666Z"
     }
   ]
 }
