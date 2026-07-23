@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-22T23:47:59.937Z",
+  "last_fetch": "2026-07-23T00:31:07.266Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e59ec0444f3786f6",
+      "timestamp": 1784763934000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Crude oil adds to gains after Houthis attack two Saudi tankers in the Red Sea (USO:NYSEARCA) - Seeking Alpha",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPYjBwNndRWVBRdWkyckFEUjZBVVdCaU1OV0NQS1pmbUR3WWRxVGdVQjZ4SHdMXzl0c3U5d2s0c3hHbFBIUmNUZFNIelFMb2xJRG8xNVBFT2Jaa3FWNzZJM0RWOUtSU29zaVE0NjV0eUViamxCbDhILTZkRTNOVGhlUTl6dF9ZSVQ0T3ZSM2hhQ3pPT3R1WjRFZnlpdXZwNDhNcy10Y2pDdEY2RUtCQXhYdA?oc=5\" target=\"_blank\">Crude oil adds to gains after Houthis attack two Saudi tankers in the Red Sea (USO:NYSEARCA)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYjBwNndRWVBRdWkyckFEUjZBVVdCaU1OV0NQS1pmbUR3WWRxVGdVQjZ4SHdMXzl0c3U5d2s0c3hHbFBIUmNUZFNIelFMb2xJRG8xNVBFT2Jaa3FWNzZJM0RWOUtSU29zaVE0NjV0eUViamxCbDhILTZkRTNOVGhlUTl6dF9ZSVQ0T3ZSM2hhQ3pPT3R1WjRFZnlpdXZwNDhNcy10Y2pDdEY2RUtCQXhYdA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T00:31:05.853Z"
+    },
     {
       "id": "rss_9b8f7482f440cd30",
       "timestamp": 1784759717000,
@@ -11153,27 +11176,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T16:02:59.000Z"
-    },
-    {
-      "id": "rss_2521561772f20d05",
-      "timestamp": 1774868570000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Not the First Time: AP Erases Houthi Attacks on Israel - camera.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNSTRzQ253YTZEMTZENWNVektwYVA4Zk50bUZzdk5kYTFpa0t5dUtFQWowZmwwN0FJSUtDc2dCQU1QcERrOFFMUnpTOFFNVGswTmthcDhEbHVSMnJvWjhLQWwxTmZianM2MXFoNXM1Q2k3MjMtZGp5ZEhtdlhlUnRZMXk0ZUxhODFiWEp4NHRB?oc=5\" target=\"_blank\">Not the First Time: AP Erases Houthi Attacks on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">camera.org</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNSTRzQ253YTZEMTZENWNVektwYVA4Zk50bUZzdk5kYTFpa0t5dUtFQWowZmwwN0FJSUtDc2dCQU1QcERrOFFMUnpTOFFNVGswTmthcDhEbHVSMnJvWjhLQWwxTmZianM2MXFoNXM1Q2k3MjMtZGp5ZEhtdlhlUnRZMXk0ZUxhODFiWEp4NHRB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T11:31:39.766Z"
     }
   ]
 }
