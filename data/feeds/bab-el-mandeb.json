@@ -1,8 +1,102 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T04:36:23.286Z",
+  "last_fetch": "2026-07-23T06:00:11.038Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b38acfa139442d3a",
+      "timestamp": 1784785857000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack tankers in Red Sea, Iran blocks Strait of Hormuz, oil prices soar - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QMkFoYmNhRkwxaFNUZk5Gc3J4RzZMQXdFd1R6N1dBaUd1eGIzV3hMSDJVY0h0STRMRF9PVGNEWmVrM01NQkxVV2dlSDd4WmZmM2hvRHNRN2M5X0hL?oc=5\" target=\"_blank\">Houthis attack tankers in Red Sea, Iran blocks Strait of Hormuz, oil prices soar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QMkFoYmNhRkwxaFNUZk5Gc3J4RzZMQXdFd1R6N1dBaUd1eGIzV3hMSDJVY0h0STRMRF9PVGNEWmVrM01NQkxVV2dlSDd4WmZmM2hvRHNRN2M5X0hL?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T06:00:09.652Z"
+    },
+    {
+      "id": "rss_cb294e1713de5640",
+      "timestamp": 1784783892000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack two Saudi oil tankers, set one ablaze in Red Sea - mediaselangor.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9DZXNzVldqaTZxdDE5aFJwYUVacHJuTTdqdlZEVEZxcThtcXpSazRlbERwUGdsei1odVFLY09HclU2SV9vYWtjeldZc2gwSDZHRGNyMHJB?oc=5\" target=\"_blank\">Houthis attack two Saudi oil tankers, set one ablaze in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mediaselangor.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9DZXNzVldqaTZxdDE5aFJwYUVacHJuTTdqdlZEVEZxcThtcXpSazRlbERwUGdsei1odVFLY09HclU2SV9vYWtjeldZc2gwSDZHRGNyMHJB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T06:00:09.653Z"
+    },
+    {
+      "id": "rss_f173993704ba47db",
+      "timestamp": 1784780340000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis claim strikes on two Saudi tankers as US attacks on Iran widen - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ1JsblNHaHJYUGZkamxpRE45THVhZ1htLVhaczA3VVJla3ZOWHhjVGtESVljTjRKTFZPSmhpY0lvTndkdlk4QU9uVi13Z3BQRG9CYVNsLWh2OGl4QmM3V2g3VWRnNnp1MGNUMzhEOXp2VTFMUjBiX1cxbXhzb0doNy1BNGZGdF9CWThfbGIwREtxekh5bGdCY0QzbXVod2k0?oc=5\" target=\"_blank\">Houthis claim strikes on two Saudi tankers as US attacks on Iran widen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ1JsblNHaHJYUGZkamxpRE45THVhZ1htLVhaczA3VVJla3ZOWHhjVGtESVljTjRKTFZPSmhpY0lvTndkdlk4QU9uVi13Z3BQRG9CYVNsLWh2OGl4QmM3V2g3VWRnNnp1MGNUMzhEOXp2VTFMUjBiX1cxbXhzb0doNy1BNGZGdF9CWThfbGIwREtxekh5bGdCY0QzbXVod2k0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T06:00:09.653Z"
+    },
+    {
+      "id": "rss_c4d18c02f01e0453",
+      "timestamp": 1784779200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Nigeria's LNG shipment becomes first to cross key Red Sea route in four months amid Houthi threats - Business Insider Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa2dvN0FFQ2JWdVp0Q055M3VNYjd6MDJQNlM0Qk9XNndqQ2Z1Yi02LXFsREYtRmJqZW55b3FUb0M3S1pXbGtCWmRnVXlVSDZPcHlKRWk3UFhpQmFua0RRWlBBQ3lzNnFSOE1Ea2VXOXFaLVRiU1U5X1pTWVg0S3F4RG9fX0ZkQmZQSlBpVXlvaFRhR3d4OS0yQzJ6UzBhNDFXei14RmZnT1ZUTndzbXJfSE51SjFCbnpsNWkxZjE3VUZOTUVtWGgwNjFXbTdkRnZUSkxXWnln?oc=5\" target=\"_blank\">Nigeria's LNG shipment becomes first to cross key Red Sea route in four months amid Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bus",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa2dvN0FFQ2JWdVp0Q055M3VNYjd6MDJQNlM0Qk9XNndqQ2Z1Yi02LXFsREYtRmJqZW55b3FUb0M3S1pXbGtCWmRnVXlVSDZPcHlKRWk3UFhpQmFua0RRWlBBQ3lzNnFSOE1Ea2VXOXFaLVRiU1U5X1pTWVg0S3F4RG9fX0ZkQmZQSlBpVXlvaFRhR3d4OS0yQzJ6UzBhNDFXei14RmZnT1ZUTndzbXJfSE51SjFCbnpsNWkxZjE3VUZOTUVtWGgwNjFXbTdkRnZUSkxXWnln?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T06:00:09.653Z"
+    },
     {
       "id": "rss_7307c38464034439",
       "timestamp": 1784775029000,
@@ -25,6 +119,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T03:03:37.931Z"
+    },
+    {
+      "id": "rss_f264941d448b9111",
+      "timestamp": 1784774340000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis claim attack on oil tankers after US launches more strikes on Iran - Yahoo News Canada",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE0yQTRYM0FRcXdPMFB2RlQ5LUZfamJEdnJ0Smlha090TVFPVk1HMmphR0RVUlo2eTB3TEJqUENpV0lVZFFCZEE4LXpSb2stZGt6bk1xU3I1a1FJZk5ON3J0a19sSTN5RnRlRE12bThnUHdyay16TmJQY0YzT2d3QQ?oc=5\" target=\"_blank\">Houthis claim attack on oil tankers after US launches more strikes on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News Canada</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0yQTRYM0FRcXdPMFB2RlQ5LUZfamJEdnJ0Smlha090TVFPVk1HMmphR0RVUlo2eTB3TEJqUENpV0lVZFFCZEE4LXpSb2stZGt6bk1xU3I1a1FJZk5ON3J0a19sSTN5RnRlRE12bThnUHdyay16TmJQY0YzT2d3QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T06:00:09.653Z"
     },
     {
       "id": "rss_0ae1b5449d412096",
@@ -11076,119 +11194,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-31T04:57:49.040Z"
-    },
-    {
-      "id": "rss_23953bf11922a09e",
-      "timestamp": 1774924680000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’ - The Conversation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNSWcwRjdOSVZ6OGFCVnhqa3NkZWdUSHk2NEFmVXdnRkpMVzJuODlqTmxEY0U2aEt4b3JES1RJVnlxY0ZTRElfelFNWDFmQnF6alZlVFR1SFNaQUJidU51SHNhSnUzVm1kMVk1eFNNTVB2SzhMdXd5NDlaUTBaTE92dko2a0ZnMV9CUUFCVGx3Z3M4WEpTS2RtUGUxV1NNaTVTZUI0d0E4c2prcEpyaWhfc1ViLURNbUp4ZXRUQ0pzaGdwWk5M?oc=5\" target=\"_blank\">Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSWcwRjdOSVZ6OGFCVnhqa3NkZWdUSHk2NEFmVXdnRkpMVzJuODlqTmxEY0U2aEt4b3JES1RJVnlxY0ZTRElfelFNWDFmQnF6alZlVFR1SFNaQUJidU51SHNhSnUzVm1kMVk1eFNNTVB2SzhMdXd5NDlaUTBaTE92dko2a0ZnMV9CUUFCVGx3Z3M4WEpTS2RtUGUxV1NNaTVTZUI0d0E4c2prcEpyaWhfc1ViLURNbUp4ZXRUQ0pzaGdwWk5M?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-03T23:29:36.716Z"
-    },
-    {
-      "id": "rss_8ae20314a78681cd",
-      "timestamp": 1774916100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "International Oil Prices Rise Over 2% Amid Reports of Iran Urging Yemeni Houthi Forces to Attack Red Sea Shipping - AASTOCKS.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQd3VMVVV3dloxYnlFZllhWXFwekdWME1zUnR4aW1uNlZkRDdJQ0FJX3hMUW1FV2FQZ2Zha2s2blZuUjFEMGMwUnpPSklqZ2NWUW5rcjIxQ2NSQWJZTTY0R3N5cndZc21TSENmN3M4LWlIRjY1d0NCVnZIVzFEUTBzdEU4SEcyZTVSbXc?oc=5\" target=\"_blank\">International Oil Prices Rise Over 2% Amid Reports of Iran Urging Yemeni Houthi Forces to Attack Red Sea Shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AASTOCKS.com</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQd3VMVVV3dloxYnlFZllhWXFwekdWME1zUnR4aW1uNlZkRDdJQ0FJX3hMUW1FV2FQZ2Zha2s2blZuUjFEMGMwUnpPSklqZ2NWUW5rcjIxQ2NSQWJZTTY0R3N5cndZc21TSENmN3M4LWlIRjY1d0NCVnZIVzFEUTBzdEU4SEcyZTVSbXc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T02:01:05.208Z"
-    },
-    {
-      "id": "rss_b8ec2fdf078dd612",
-      "timestamp": 1774911150000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Options dwindle for getting oil out of Middle East if Bab-el-Mandeb Strait closes - abcnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNTEZxNWYtdDFtejB0NEQtbzZSdVBBSjNqLUttdkQ1dXFkWndUb3VrVmlIQVhrWmxXUFh1cEhTMEh0STRIcFNuRVk1eGhGVWI1eGl2dDNsUDNEeTZndDVmMjVwNTN2bzh0eFhMT01xZnR1NUJBbVRad1JTMndpbzBSNG1pNHB0aDB5SUdiWlR4bUpVZHBfOXRsQ0NfTERwTEHSAaQBQVVfeXFMUFZnQmFRWElsYUUyTFZVVHhNazRfeHJzQlgwTm9CRVNtcWtFdW1NQURFWEh0cWNuWDI1ZDhlV01nTEpwOERqTXlGekpHTko5MG9aU0NsTDJvVUtCdURGRkNzNGlMc0stdEYxTnRBMEduSTA1VVB0Wno2c1B1dURSNTlRbThtY1E2Tjk5YnBPWW1nVHZWNXRaTkNPQ1dGeGczMUJTVHU?oc=5\" targ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTEZxNWYtdDFtejB0NEQtbzZSdVBBSjNqLUttdkQ1dXFkWndUb3VrVmlIQVhrWmxXUFh1cEhTMEh0STRIcFNuRVk1eGhGVWI1eGl2dDNsUDNEeTZndDVmMjVwNTN2bzh0eFhMT01xZnR1NUJBbVRad1JTMndpbzBSNG1pNHB0aDB5SUdiWlR4bUpVZHBfOXRsQ0NfTERwTEHSAaQBQVVfeXFMUFZnQmFRWElsYUUyTFZVVHhNazRfeHJzQlgwTm9CRVNtcWtFdW1NQURFWEh0cWNuWDI1ZDhlV01nTEpwOERqTXlGekpHTko5MG9aU0NsTDJvVUtCdURGRkNzNGlMc0stdEYxTnRBMEduSTA1VVB0Wno2c1B1dURSNTlRbThtY1E2Tjk5YnBPWW1nVHZWNXRaTkNPQ1dGeGczMUJTVHU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T23:30:49.445Z"
-    },
-    {
-      "id": "rss_5c30a0120985cf71",
-      "timestamp": 1774911150000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "News Content Hub - As Houthis join war, Houthi-linked maritime threat level remains 'moderate' - rivieramm.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNWlNYUhISXVKcFJMMVBkWFlZaExLN29Eck9LRWcxUEp0OE8zaDlodVZuWktaV1hmMFl6NjdBbGFTU0JfQVZJYXZtdm5TMDJhNlA0TEdUSzZ0eEJjV2dHclFmMDJMbklFTmpwMGZFSGRZMWhVckJfY2J6MTZXTW9nOHBEOHVWTlFRNG1UdDNSbThQNUZ3eGdhR2tXR0VqSlpUQ2M1QlVYeTdtQQ?oc=5\" target=\"_blank\">News Content Hub - As Houthis join war, Houthi-linked maritime threat level remains 'moderate'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">rivieramm.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNWlNYUhISXVKcFJMMVBkWFlZaExLN29Eck9LRWcxUEp0OE8zaDlodVZuWktaV1hmMFl6NjdBbGFTU0JfQVZJYXZtdm5TMDJhNlA0TEdUSzZ0eEJjV2dHclFmMDJMbklFTmpwMGZFSGRZMWhVckJfY2J6MTZXTW9nOHBEOHVWTlFRNG1UdDNSbThQNUZ3eGdhR2tXR0VqSlpUQ2M1QlVYeTdtQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T23:30:49.445Z"
-    },
-    {
-      "id": "rss_c15dda6662a6d142",
-      "timestamp": 1774902989000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran Presses Houthis on Red Sea Shipping, Officials Say - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOak9DNE80SkZSRGdaZEk1eUJlZWlEMnJZdG1LeEZwTTQ2NVprLUQwSG8wenc1VjFFOGJ0QWNqT1lZSkJPOW1BeDl5OXhtZnVnRnhQTWFsN2FhTDNxWXkyV2Y4MzUzN295TzlOVXpyZWc4WXd6WC1WUXFySDJBWm5xbGVOclRtMmlzU0JBTW5RUTMtZVlGMHpkRmFSYlAtWjdoaFZZczR3d2s0a2o5WGtrb0RGYjc?oc=5\" target=\"_blank\">Iran Presses Houthis on Red Sea Shipping, Officials Say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOak9DNE80SkZSRGdaZEk1eUJlZWlEMnJZdG1LeEZwTTQ2NVprLUQwSG8wenc1VjFFOGJ0QWNqT1lZSkJPOW1BeDl5OXhtZnVnRnhQTWFsN2FhTDNxWXkyV2Y4MzUzN295TzlOVXpyZWc4WXd6WC1WUXFySDJBWm5xbGVOclRtMmlzU0JBTW5RUTMtZVlGMHpkRmFSYlAtWjdoaFZZczR3d2s0a2o5WGtrb0RGYjc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-01T02:09:10.132Z"
     }
   ]
 }
