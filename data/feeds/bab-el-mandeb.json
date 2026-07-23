@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T18:27:17.571Z",
+  "last_fetch": "2026-07-23T18:52:42.536Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c6f8115d4c385e80",
+      "timestamp": 1784831105000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil Rises After Houthi Attack on Saudi Vessels in Red Sea - Benzinga",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOWU9oVXVoTUdfbVZoZVJ2VVdTMlU4ZnYxbUMxUkJYQmoydTU0RVFudEZHQmZTbHhDcHprM3VTS3BtdnlMRUMxbHFCSk5NMktPSjdHZDNRSzdVSlpSQnBnMGdXT04zSVN3OHpOY2lDSm53WEpGNUlvUmd1STliLVN5dW5qVVZuenowWmdoejh6cHpDeC1KX3dYOWpXWDhrc3VKNlRVRk5SME5pMGpfbDR4N01jR29RdlBHR2c?oc=5\" target=\"_blank\">Oil Rises After Houthi Attack on Saudi Vessels in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Benzinga</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWU9oVXVoTUdfbVZoZVJ2VVdTMlU4ZnYxbUMxUkJYQmoydTU0RVFudEZHQmZTbHhDcHprM3VTS3BtdnlMRUMxbHFCSk5NMktPSjdHZDNRSzdVSlpSQnBnMGdXT04zSVN3OHpOY2lDSm53WEpGNUlvUmd1STliLVN5dW5qVVZuenowWmdoejh6cHpDeC1KX3dYOWpXWDhrc3VKNlRVRk5SME5pMGpfbDR4N01jR29RdlBHR2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T18:52:41.239Z"
+    },
     {
       "id": "rss_79f33f8722f1a80c",
       "timestamp": 1784829668000,
@@ -11183,29 +11206,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-04T11:51:07.266Z"
-    },
-    {
-      "id": "rss_30efc181b13ff228",
-      "timestamp": 1775298900000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran parliament planning to target Bab el Mandeb? Why this Red Sea–Gulf of Aden strait matters - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxPN1l4NjBPaHItUUpvM01rMm02Vkx5VzBFeUM5MTY2RFV3YUNjRTB6QzJ4ZHVQZW91VmlMV3Y5WGwzMlhVd1lYdkJLZFhvdVlQTHMtWEFIbm45ZHhMSWF3SllrX2lkdGZPUndCUHlETzQ4Nko3TDlCSUE3alJSWFhFX2FrNVo4RFoyanpQQnF6SWJmeUFhXzh1SVRBUFg1ZDdsa1VuU3BpWFQxS0pDN0xMaVdGYWkzUEhqaUFZUUR3Vjl1Q1g1VTNwY0JVdzVRMXI4SGVJVnRYVVRyVUFxX1hzSm96SnVxczlwNUh2UFZialVWc05HZFlTal9pNVBmZC1ac2lfMEl6Mm85cFpPSEhTdlBSb9IBmAJBVV95cUxNUTJHVkpwRkgzVWpnY2ZQRlN2UzhQN3NpeEZwQUlFcEZVN2ZubzhrS2c3UHRTa3RhM1",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPN1l4NjBPaHItUUpvM01rMm02Vkx5VzBFeUM5MTY2RFV3YUNjRTB6QzJ4ZHVQZW91VmlMV3Y5WGwzMlhVd1lYdkJLZFhvdVlQTHMtWEFIbm45ZHhMSWF3SllrX2lkdGZPUndCUHlETzQ4Nko3TDlCSUE3alJSWFhFX2FrNVo4RFoyanpQQnF6SWJmeUFhXzh1SVRBUFg1ZDdsa1VuU3BpWFQxS0pDN0xMaVdGYWkzUEhqaUFZUUR3Vjl1Q1g1VTNwY0JVdzVRMXI4SGVJVnRYVVRyVUFxX1hzSm96SnVxczlwNUh2UFZialVWc05HZFlTal9pNVBmZC1ac2lfMEl6Mm85cFpPSEhTdlBSb9IBmAJBVV95cUxNUTJHVkpwRkgzVWpnY2ZQRlN2UzhQN3NpeEZwQUlFcEZVN2ZubzhrS2c3UHRTa3RhM1o2dlZLV0Jic2dZTjVmdFUwM2U3a1gwTWRsRVhnQW0yaU81ekdtWlhWNzFSVVE3WmlKZlllbU1HWjB6MlVyc3J1di01YXlpQjM5OVNiLXN5Smx5S3VvaF9SRVpzcy1uM0RXWWMxUHJKM1dVWS1zdlFTazdyVl9teExvU1g1REJwV3RvYWQ4MUgyMTQ3SUk1cGtQRXB0TzY1S0liMlhvamw4MzNMZDRKdjhONlNrLXd0X1J4bjBhcW1xZXF1RlZ1NnVaYmhQTWFWRmhqWkpSNnBwQTAwalFPQ3BmYnA0aktp?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-04T11:01:27.102Z"
     }
   ]
 }
