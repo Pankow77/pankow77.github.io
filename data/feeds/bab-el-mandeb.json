@@ -1,8 +1,75 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T15:14:37.492Z",
+  "last_fetch": "2026-07-23T16:04:14.288Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_75d0e6210a8e0449",
+      "timestamp": 1784821599000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "‘Rogue’ AI Drama Spurs Safety Debate, Oil up 5% on Houthi Attack - Asia Financial",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOZm8wbG5Kcl8wM0RWcUVWOGdMeVVkVXo5Q01sNWRDR0k2Q1Z3RTcteHowSHhoVFR4QU9ZcGdHdlZDYmNYS3AyYzQ2RGZVS19FQWlXWHJUMUg3WnRpS1Fsb0MyOTNhdWxyOFpzejVrSTBzcDhwVklYNy1tVmFqYk5HOFVkWnhCQkhxSzQ4VkktajhaZXNY?oc=5\" target=\"_blank\">‘Rogue’ AI Drama Spurs Safety Debate, Oil up 5% on Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asia Financial</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZm8wbG5Kcl8wM0RWcUVWOGdMeVVkVXo5Q01sNWRDR0k2Q1Z3RTcteHowSHhoVFR4QU9ZcGdHdlZDYmNYS3AyYzQ2RGZVS19FQWlXWHJUMUg3WnRpS1Fsb0MyOTNhdWxyOFpzejVrSTBzcDhwVklYNy1tVmFqYk5HOFVkWnhCQkhxSzQ4VkktajhaZXNY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T16:04:12.477Z"
+    },
+    {
+      "id": "rss_fad78a0ed8092957",
+      "timestamp": 1784821102000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 4,
+      "text_summary": "Tensions over Yemen chokepoint threaten to ignite another theater of US-Iran war - ABC News - Breaking News, Latest News and Videos",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQZEMyQ3ZCczBHeFkyS3dqUzJtQjcwbjNocWxTT3lRdHJzbmJWQWVKaWF2S2NUMWlMamhrbXRlYTdmYUNrYXlGQktxV3Nid3c4c1JSbkFPdUxPWXpncUZhSHFUMS1mbEp4cklpdHhGTWRGc3hpNnJQTlZaMThEUlFTeHhpalVCLTZfX0VEYVNGNFhCYktXRE1tNW9fZl9EcGZ6X1dhRnJyeHNnOTc4VnBj0gG0AUFVX3lxTFBmU2N0THVRSUMzYndQSC1vcXhJOEhoalk2RFV2djNlaVNlRnlVTDBRaWFMeG5XSFd6QV9aMDYzdEI1VXVwTEd3X0VJak5XdTNGbTM5RGoxVEtUMkFxNTMyZHFGek01NlBvc0h2bk8xSFBaRHFVNnU4QVJybVhpYndDTldrWGlkS2lZQlFselhzUzZwM3VwWXVEREpPb3",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZEMyQ3ZCczBHeFkyS3dqUzJtQjcwbjNocWxTT3lRdHJzbmJWQWVKaWF2S2NUMWlMamhrbXRlYTdmYUNrYXlGQktxV3Nid3c4c1JSbkFPdUxPWXpncUZhSHFUMS1mbEp4cklpdHhGTWRGc3hpNnJQTlZaMThEUlFTeHhpalVCLTZfX0VEYVNGNFhCYktXRE1tNW9fZl9EcGZ6X1dhRnJyeHNnOTc4VnBj0gG0AUFVX3lxTFBmU2N0THVRSUMzYndQSC1vcXhJOEhoalk2RFV2djNlaVNlRnlVTDBRaWFMeG5XSFd6QV9aMDYzdEI1VXVwTEd3X0VJak5XdTNGbTM5RGoxVEtUMkFxNTMyZHFGek01NlBvc0h2bk8xSFBaRHFVNnU4QVJybVhpYndDTldrWGlkS2lZQlFselhzUzZwM3VwWXVEREpPb3VleldjOC05SERwRmNUbjJibGgxVWdQcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T16:04:12.477Z"
+    },
+    {
+      "id": "rss_756b26416a82511a",
+      "timestamp": 1784820924000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "U.S. Holds Iran Accountable for New Houthi Attacks - IranWire",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQWXpvYmVoWDZBbUhQa0tVRUxBRFdtWXoyQTNkWXQ4Rndvek9qX0dWRW1nQVZXVnZQaGpsTlg4cmJBZXJtS1Rta2pBbDgtUm9QZHA3ZTU4WkFBdm5aWGJaZzNRTlZoRElMdi15STZzTlg3eU5RM2lJUmx6UkJKXzVadUZjQ2owMzNoVjdaU1NR?oc=5\" target=\"_blank\">U.S. Holds Iran Accountable for New Houthi Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IranWire</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWXpvYmVoWDZBbUhQa0tVRUxBRFdtWXoyQTNkWXQ4Rndvek9qX0dWRW1nQVZXVnZQaGpsTlg4cmJBZXJtS1Rta2pBbDgtUm9QZHA3ZTU4WkFBdm5aWGJaZzNRTlZoRElMdi15STZzTlg3eU5RM2lJUmx6UkJKXzVadUZjQ2owMzNoVjdaU1NR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T16:04:12.477Z"
+    },
     {
       "id": "rss_abfb83827321531c",
       "timestamp": 1784818762000,
@@ -70,6 +137,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T15:14:35.686Z"
+    },
+    {
+      "id": "rss_4cbb1e67a805997e",
+      "timestamp": 1784812155000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil surges to $100 per barrel after Red Sea attacks - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOMHdMaXlYMmdiMllLaVZGYnpYUVpNNkUzRVJVY3VkcXhWU3RFY0VRX29Zel9taHRSejBKQmZWc2pRSVMxMjlPM05tdVJpeFozM2x4SVptdlpZVzJCSVFkNVIxOEZCUFZkY0o4Zk45UHR5WTVvZGROVjV1Rmh4eFV3ZW9iSDA0eVQ1aUJhWFJ0cWV0TENnbXJXMmlSTi1wMUZaZUJJd2RrV01YcUx2bmdhdk1R?oc=5\" target=\"_blank\">Oil surges to $100 per barrel after Red Sea attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMHdMaXlYMmdiMllLaVZGYnpYUVpNNkUzRVJVY3VkcXhWU3RFY0VRX29Zel9taHRSejBKQmZWc2pRSVMxMjlPM05tdVJpeFozM2x4SVptdlpZVzJCSVFkNVIxOEZCUFZkY0o4Zk45UHR5WTVvZGROVjV1Rmh4eFV3ZW9iSDA0eVQ1aUJhWFJ0cWV0TENnbXJXMmlSTi1wMUZaZUJJd2RrV01YcUx2bmdhdk1R?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T16:04:12.477Z"
     },
     {
       "id": "rss_aaff811580e7dbbc",
@@ -11108,97 +11196,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-03T07:42:40.914Z"
-    },
-    {
-      "id": "rss_736e733e8e3bfb9e",
-      "timestamp": 1775191931000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea arena: Yemen’s Houthis open fourth front in Iran war, with global implications - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9UMUl1ajVmSmhGQjAwb05XUzR3ZHR5d01oVVVnaEt1czNHMmxoOGNJcHdrb3lncVczR1lXYV9Ld2Nyb1oybThjUXdiSzNGRnE1LWJMVGIxVGpsYkFB?oc=5\" target=\"_blank\">Red Sea arena: Yemen’s Houthis open fourth front in Iran war, with global implications</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9UMUl1ajVmSmhGQjAwb05XUzR3ZHR5d01oVVVnaEt1czNHMmxoOGNJcHdrb3lncVczR1lXYV9Ld2Nyb1oybThjUXdiSzNGRnE1LWJMVGIxVGpsYkFB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-03T06:10:12.696Z"
-    },
-    {
-      "id": "rss_60aaef66c60de93a",
-      "timestamp": 1775191059000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’ - interaksyon.philstar.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZUREc2tnUkUteEJ6aTd4VzM3MkJ5b1ZUVG1CRnpubUNaNThYX2xBdklRaHA0aFZYVGRUWjJIMFlobFhEUGRzZVBNU0RvcTJJcGFiMFE1LTJmNFBhOWpXdHdIM3JTNHRmMlFqSlhfUEVvbGlsb0NycEdodVJIUzlURnBIU0pqRTR6MUcxMjQwSmFzTDlmS0NEem1DWFh1NmNzRmRzWFhCM05CeDZyQm5JMGZxcWI3UFZnVkFtNWtsSFlZeFBzOUVtMnpxUFZkZ0toUVgxNjdfd2ZfZzNkS1E0NWJEeC1UZmhrN3QxLUZvUkI?oc=5\" target=\"_blank\">Why a second global shipping chokepoint could soon live up to its name as the ‘Gate of Tears’</a>&nbsp;&",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQZUREc2tnUkUteEJ6aTd4VzM3MkJ5b1ZUVG1CRnpubUNaNThYX2xBdklRaHA0aFZYVGRUWjJIMFlobFhEUGRzZVBNU0RvcTJJcGFiMFE1LTJmNFBhOWpXdHdIM3JTNHRmMlFqSlhfUEVvbGlsb0NycEdodVJIUzlURnBIU0pqRTR6MUcxMjQwSmFzTDlmS0NEem1DWFh1NmNzRmRzWFhCM05CeDZyQm5JMGZxcWI3UFZnVkFtNWtsSFlZeFBzOUVtMnpxUFZkZ0toUVgxNjdfd2ZfZzNkS1E0NWJEeC1UZmhrN3QxLUZvUkI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-05T07:36:38.212Z"
-    },
-    {
-      "id": "rss_20419c7e4ceafbb4",
-      "timestamp": 1775171220000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Waves of Iranian, Houthi Missile Attacks Target Central Israel, Five Wounded - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingJBVV95cUxPemMtM01UZDU4b0Nsb1VuRm5UcjZlem5ZZUxDQVRMQUlsZGZyVnlEbTVHd2Q1Y1JwTFV5bnNudG9BeTE2S1F1VlFsSVptVl9rNnVwTjYyN2gwbUxVM3Q2bHRRUTVPMGJVTFlPSXBOUTRIYkhjQ0FZYnFpVklhX0hzR3NuV0FCcmFfem8tNWw0WUMtd29xNm1PZzNRU2YyUGhBNGdCM2Q4OVduYWF4OWJKRm04VzlRSW1NSkxKUXhiOEppdGNwNjZVR1VTaEhudmZaMFNuRGhta1IxMHpGSXhtcEtXYlJ3bDM4Y2htNHFuakhvSUJiS0ZQclFwVjRkS25MWmFIUHZlNi1NZXFuUzNaUGN4LVFxUVJ4WFh6X2xn?oc=5\" target=\"_blank\">Waves of Iranian, Houthi Missile Attacks Ta",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingJBVV95cUxPemMtM01UZDU4b0Nsb1VuRm5UcjZlem5ZZUxDQVRMQUlsZGZyVnlEbTVHd2Q1Y1JwTFV5bnNudG9BeTE2S1F1VlFsSVptVl9rNnVwTjYyN2gwbUxVM3Q2bHRRUTVPMGJVTFlPSXBOUTRIYkhjQ0FZYnFpVklhX0hzR3NuV0FCcmFfem8tNWw0WUMtd29xNm1PZzNRU2YyUGhBNGdCM2Q4OVduYWF4OWJKRm04VzlRSW1NSkxKUXhiOEppdGNwNjZVR1VTaEhudmZaMFNuRGhta1IxMHpGSXhtcEtXYlJ3bDM4Y2htNHFuakhvSUJiS0ZQclFwVjRkS25MWmFIUHZlNi1NZXFuUzNaUGN4LVFxUVJ4WFh6X2xn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-02T23:42:44.743Z"
-    },
-    {
-      "id": "rss_4f48d3a4fc89da24",
-      "timestamp": 1775168931000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Russian Mariner Departs Yemen After Houthi Red Sea Attack - Global Banking &amp; Finance Review®",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNTzg5SWpRTFRFTHdMNWxSWmN2dWNTVThqaTJpai1iNXJnV2NBcEZacEJ3Nk9qdk9TZ2psNkZKbzJtb2hycjlWQnFtX2txSldtU2FqbmJxQzczaFVEMnE2NHloaWhFbkZlZGhqY2gtd09CZVNPVzhOejdLVHVKUGpHRGdhYmpxQXE2ejVobmR5dHp6MTdtMGh5cUp4WnNtaEFMUzFV?oc=5\" target=\"_blank\">Russian Mariner Departs Yemen After Houthi Red Sea Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Global Banking & Finance Review®</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTzg5SWpRTFRFTHdMNWxSWmN2dWNTVThqaTJpai1iNXJnV2NBcEZacEJ3Nk9qdk9TZ2psNkZKbzJtb2hycjlWQnFtX2txSldtU2FqbmJxQzczaFVEMnE2NHloaWhFbkZlZGhqY2gtd09CZVNPVzhOejdLVHVKUGpHRGdhYmpxQXE2ejVobmR5dHp6MTdtMGh5cUp4WnNtaEFMUzFV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-02T23:42:44.743Z"
     }
   ]
 }
