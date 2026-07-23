@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T10:16:23.774Z",
+  "last_fetch": "2026-07-23T11:14:40.818Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0110ddd46d6bd767",
+      "timestamp": 1784804856000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Oil tankers attacked as Iran threatens to turn new trade route into a ‘Gate of Tears’ - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPRkJKVWFoWEl3NG02VG5ZNFBDNl9BdDZ4YnNKVVpzMkhUdTItWUJpMFJkQ2FiOV9Rd0Z3SVozNVYxbnItZnRtT1JIRS0zVmN6X0UtSjVvanEtMEFNTFNaNVJkS0NOcXNJb2o1bW51ZG5LOE5wNVB1bk41S1lqZXYtcV9uLWZhLXkwVW5icEFwdXJmbUp2TGpJNXRvZ1ZQODdlQUY5bUtidnBiQVFuVjdRUQ?oc=5\" target=\"_blank\">Oil tankers attacked as Iran threatens to turn new trade route into a ‘Gate of Tears’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRkJKVWFoWEl3NG02VG5ZNFBDNl9BdDZ4YnNKVVpzMkhUdTItWUJpMFJkQ2FiOV9Rd0Z3SVozNVYxbnItZnRtT1JIRS0zVmN6X0UtSjVvanEtMEFNTFNaNVJkS0NOcXNJb2o1bW51ZG5LOE5wNVB1bk41S1lqZXYtcV9uLWZhLXkwVW5icEFwdXJmbUp2TGpJNXRvZ1ZQODdlQUY5bUtidnBiQVFuVjdRUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T11:14:39.513Z"
+    },
+    {
+      "id": "rss_3d8d49623080879d",
+      "timestamp": 1784801844000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "At least one Saudi oil tanker is attacked in the Red Sea as war risks widen - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNajJaYmtVVnhKcFM1ay1QQy05ZDZhS2swdzFsTUQ1bExuMllEbFJKX2l0OHVjV25XWUtMUTVRNUVNMUdRdm5od202VDJXbkpsbFhQU3pwNmtjbG1IWlJWOTZMa1NSX1FuV3AzM1IxRVo2Q1NQa0ZmSWZ6QnpyVFVwcEw2N3ptNjBoTHdWNElaYnFDUWxZUi1PbGtZbFRxczJEN1VSUV9MeldGMnd2Si1LWQ?oc=5\" target=\"_blank\">At least one Saudi oil tanker is attacked in the Red Sea as war risks widen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNajJaYmtVVnhKcFM1ay1QQy05ZDZhS2swdzFsTUQ1bExuMllEbFJKX2l0OHVjV25XWUtMUTVRNUVNMUdRdm5od202VDJXbkpsbFhQU3pwNmtjbG1IWlJWOTZMa1NSX1FuV3AzM1IxRVo2Q1NQa0ZmSWZ6QnpyVFVwcEw2N3ptNjBoTHdWNElaYnFDUWxZUi1PbGtZbFRxczJEN1VSUV9MeldGMnd2Si1LWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T11:14:39.513Z"
+    },
     {
       "id": "rss_6cb631dd019339ae",
       "timestamp": 1784799770000,
@@ -11150,53 +11197,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T09:43:59.080Z"
-    },
-    {
-      "id": "rss_7482c5190dc2ee0d",
-      "timestamp": 1775031553000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthis claim joint missile attack with Iran, Hezbollah on Israel - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxObXg1SXZoS1dZZERJQkozUUZyemxrQ2ZkVTVjM2NCZExlb2hCcFhuSDVCOTBrLWhQZWZRSzItX3ljc0twaHozc001aFR0Qk9kSVJGaEhRYVRmVjk2YzJ4TjdEdjFlMGhUcFlFeU5oWGxHRnBQVVpWR0wwN3ZWTzNNMXduVXlXak5oQ29hMzNEYlNOX3piUWxoRk5YdWdZWjJ0NDJkV3dlXzlhdkxneGc?oc=5\" target=\"_blank\">Houthis claim joint missile attack with Iran, Hezbollah on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObXg1SXZoS1dZZERJQkozUUZyemxrQ2ZkVTVjM2NCZExlb2hCcFhuSDVCOTBrLWhQZWZRSzItX3ljc0twaHozc001aFR0Qk9kSVJGaEhRYVRmVjk2YzJ4TjdEdjFlMGhUcFlFeU5oWGxHRnBQVVpWR0wwN3ZWTzNNMXduVXlXak5oQ29hMzNEYlNOX3piUWxoRk5YdWdZWjJ0NDJkV3dlXzlhdkxneGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-04T09:33:25.970Z"
-    },
-    {
-      "id": "rss_de6a0097c04236da",
-      "timestamp": 1775027378000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis Claim 3rd Missile Attack Targeting Israel - Asharq Al-Awsat | Explore World News Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOdWlBc1JNWTZaOUp6ZHhUN3pwWktYQ3RSN1ZhV0lES3VaUUxUUTZObGwxRktVMGt1ektvUlczXzJwS1FTSWZQV0dJLTVOM09hck9Bd2JhZ21OcGpwc1oxV3hob0JELXFyYnZiQWE2dlFRWUZQaGJwS1d6TnNQeTBhcEM5S0hTREl6bExUS0lpZUMtRFFkUFkydWJZaUpCb3l3NXMzdQ?oc=5\" target=\"_blank\">Yemen's Houthis Claim 3rd Missile Attack Targeting Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat | Explore World News Today</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdWlBc1JNWTZaOUp6ZHhUN3pwWktYQ3RSN1ZhV0lES3VaUUxUUTZObGwxRktVMGt1ektvUlczXzJwS1FTSWZQV0dJLTVOM09hck9Bd2JhZ21OcGpwc1oxV3hob0JELXFyYnZiQWE2dlFRWUZQaGJwS1d6TnNQeTBhcEM5S0hTREl6bExUS0lpZUMtRFFkUFkydWJZaUpCb3l3NXMzdQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-02T19:47:33.232Z"
     }
   ]
 }
