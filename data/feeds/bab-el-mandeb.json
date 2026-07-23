@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T13:00:30.001Z",
+  "last_fetch": "2026-07-23T14:15:04.880Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -210,6 +210,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T10:16:23.768Z"
+    },
+    {
+      "id": "rss_bc1b5dba65a1daff",
+      "timestamp": 1784796531000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Attack On Saudi Tankers In Red Sea - Marine News Magazine",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQR0YtQnZTcnpCSDc5VVFCN09rMmlMYVgwem1qUW1iVjlvR0NxakZSOGJlR29oVHNETGRuZVJicURwTUtCVmd2WWZDZEN3MWc0eDVnZEpRSHpqcy1KMjhsc1lOUTk4QVFoUmpTTXRfU3dPeWJVU3RsZ0QxTWk3cHZwZDF2aw?oc=5\" target=\"_blank\">Houthis Claim Attack On Saudi Tankers In Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQR0YtQnZTcnpCSDc5VVFCN09rMmlMYVgwem1qUW1iVjlvR0NxakZSOGJlR29oVHNETGRuZVJicURwTUtCVmd2WWZDZEN3MWc0eDVnZEpRSHpqcy1KMjhsc1lOUTk4QVFoUmpTTXRfU3dPeWJVU3RsZ0QxTWk3cHZwZDF2aw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T14:15:03.427Z"
     },
     {
       "id": "rss_362a7a60e539b60e",
@@ -11175,29 +11198,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-02T20:30:53.873Z"
-    },
-    {
-      "id": "rss_0ff7752fe0f4e606",
-      "timestamp": 1775142248000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi spokesperson threatens US, Israel as Iran conflict intensifies - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnVzIxMFdpUTlNdTBfU2NBTFJXdTk2MGY1YjlmUDFicThSa3kwSkZDMzhqdmFVWHl1SGxfNkRSWW9VUG80eWVwSXk5NFhDWnA0S3RoUDVB?oc=5\" target=\"_blank\">Houthi spokesperson threatens US, Israel as Iran conflict intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fox News</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnVzIxMFdpUTlNdTBfU2NBTFJXdTk2MGY1YjlmUDFicThSa3kwSkZDMzhqdmFVWHl1SGxfNkRSWW9VUG80eWVwSXk5NFhDWnA0S3RoUDVB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-05T04:59:12.439Z"
     }
   ]
 }
