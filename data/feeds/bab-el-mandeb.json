@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T03:03:39.252Z",
+  "last_fetch": "2026-07-23T04:36:23.286Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -140,6 +140,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T01:34:54.281Z"
+    },
+    {
+      "id": "rss_b448002f9d300c4a",
+      "timestamp": 1784767643000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil climbs for 5th straight day as Houthis attack Saudi tankers in Red Sea - Investing.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOaXdnQ1Nhd01YaXhNQVlqamYxZUlRbDExZVZMZnY4bUhVWHI1RTU0MzcxanZYdU5sVElreVNHcUUtRFN4UjNrdXhMZFhRRFM3cHh1N2puTWhZVllIdVotdVBsekJRUVJqVG9HTV8tZGVOWXd6Y1pRNWxjVDdRU01QLTg2NHpHRjZOX3RQenowdlV5MjBNVkliR055a204R0I0Zy01bE1ZR0VjajNScVpWWWRSSFRxbWt2SnNsSlUxSGpiN1RibGRSUVlR?oc=5\" target=\"_blank\">Oil climbs for 5th straight day as Houthis attack Saudi tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOaXdnQ1Nhd01YaXhNQVlqamYxZUlRbDExZVZMZnY4bUhVWHI1RTU0MzcxanZYdU5sVElreVNHcUUtRFN4UjNrdXhMZFhRRFM3cHh1N2puTWhZVllIdVotdVBsekJRUVJqVG9HTV8tZGVOWXd6Y1pRNWxjVDdRU01QLTg2NHpHRjZOX3RQenowdlV5MjBNVkliR055a204R0I0Zy01bE1ZR0VjajNScVpWWWRSSFRxbWt2SnNsSlUxSGpiN1RibGRSUVlR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T04:36:21.928Z"
     },
     {
       "id": "rss_e59ec0444f3786f6",
@@ -11166,27 +11189,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T02:09:10.132Z"
-    },
-    {
-      "id": "rss_ee7135b4e3151ced",
-      "timestamp": 1774899243000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Reviews Red Sea Mission Mandate amid Potential Houthi Attack\nEnglish: EU Reviews Red Sea Mission Mandate amid Potential Houthi Attack - VOI.id",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9Ed0ZmcW9fVGVhUHowNEZDZ2trSm9NZG1mSmljS21CWVBJQ0dTd2JMaWtGd0d0aS1vU3lQLXQ0SzBSY0HSAUJBVV95cUxPRFN0b2RReE0zc1dPYnY0c0RIV3FmTllkWTRodG9WY00xRjlZbmZGRy1qbWFhM2FPUy0wVERIb3FEZ0E?oc=5\" target=\"_blank\">EU Reviews Red Sea Mission Mandate amid Potential Houthi Attack\nEnglish: EU Reviews Red Sea Mission Mandate amid Potential Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOI.id</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9Ed0ZmcW9fVGVhUHowNEZDZ2trSm9NZG1mSmljS21CWVBJQ0dTd2JMaWtGd0d0aS1vU3lQLXQ0SzBSY0HSAUJBVV95cUxPRFN0b2RReE0zc1dPYnY0c0RIV3FmTllkWTRodG9WY00xRjlZbmZGRy1qbWFhM2FPUy0wVERIb3FEZ0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T20:40:26.602Z"
     }
   ]
 }
