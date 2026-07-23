@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T20:48:03.526Z",
+  "last_fetch": "2026-07-23T21:23:51.230Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -95,6 +95,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:52:41.239Z"
+    },
+    {
+      "id": "rss_a2ced68afb9140e3",
+      "timestamp": 1784829788000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil tops $100 after Houthi attack on Saudi tankers disrupts supply - The Journal Record",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQX1g3aU1yUlRpc2RNZUh5bEh5QzcwaV9UTlN6VkllTjNvM1ZWMXBTOHBwN0pzdFIxYjdSdkZVdnowMURoRVhzYTc3QWM5Q0tRajFTRFJydy0zWDhwOTdkWC1nbEc4N1h4YmdXWWlJSTItaWR6Q2dyMjNtaXQtS2xDQUtXUDk5aGFFUndoRFFB?oc=5\" target=\"_blank\">Oil tops $100 after Houthi attack on Saudi tankers disrupts supply</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Journal Record</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX1g3aU1yUlRpc2RNZUh5bEh5QzcwaV9UTlN6VkllTjNvM1ZWMXBTOHBwN0pzdFIxYjdSdkZVdnowMURoRVhzYTc3QWM5Q0tRajFTRFJydy0zWDhwOTdkWC1nbEc4N1h4YmdXWWlJSTItaWR6Q2dyMjNtaXQtS2xDQUtXUDk5aGFFUndoRFFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T21:23:50.082Z"
     },
     {
       "id": "rss_79f33f8722f1a80c",
@@ -11186,27 +11209,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-04-05T14:31:44.760Z"
-    },
-    {
-      "id": "rss_0fbaf3cbf9c8e478",
-      "timestamp": 1775373093000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis Vow to Continue Military Operations After Attack on Tel Aviv - teleSUR English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPNjJHRUR0NGYtTjFxWTB0UUx2bVctbDV2M0otZmVNQUltYkVCRklfSlB1WnFvMjJ0UVdTaDk3OGlVQW9JNnlkOUkxeVlqYlVsSFRzMmtDVEpZeDBzYUhrQmxYU1psWUVmXy1CVUNGX2ZFdXUwc1BOMEVoVURiM0lUa050YlJSNG5yaUo1aVU3OHUwWC1ORGFfM0hxcFl4TGpRelE?oc=5\" target=\"_blank\">Houthis Vow to Continue Military Operations After Attack on Tel Aviv</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">teleSUR English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPNjJHRUR0NGYtTjFxWTB0UUx2bVctbDV2M0otZmVNQUltYkVCRklfSlB1WnFvMjJ0UVdTaDk3OGlVQW9JNnlkOUkxeVlqYlVsSFRzMmtDVEpZeDBzYUhrQmxYU1psWUVmXy1CVUNGX2ZFdXUwc1BOMEVoVURiM0lUa050YlJSNG5yaUo1aVU3OHUwWC1ORGFfM0hxcFl4TGpRelE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-05T13:51:57.891Z"
     }
   ]
 }
