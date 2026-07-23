@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T12:05:04.519Z",
+  "last_fetch": "2026-07-23T13:00:30.001Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_aaff811580e7dbbc",
+      "timestamp": 1784809978000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis attack 2 Saudi oil tankers in the Red Sea, threatening to open a new front in the Iran war - Baltimore Sun",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9PaE5jVVVVb0pOYmh0eTVMbEo3VUJHSkUzZ0t0UnJFWUpIV3UzMWllUzB2dE8wY0ZLT29INUFCZEpjZ2xfWklYWksxeFFYdjZUWmVhYl9JVVV2NkNWMndwWDdkV2s4LUZrYjdPdWVfV3NhaUU1OExXMERNVQ?oc=5\" target=\"_blank\">Houthis attack 2 Saudi oil tankers in the Red Sea, threatening to open a new front in the Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Baltimore Sun</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9PaE5jVVVVb0pOYmh0eTVMbEo3VUJHSkUzZ0t0UnJFWUpIV3UzMWllUzB2dE8wY0ZLT29INUFCZEpjZ2xfWklYWksxeFFYdjZUWmVhYl9JVVV2NkNWMndwWDdkV2s4LUZrYjdPdWVfV3NhaUU1OExXMERNVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T13:00:28.837Z"
+    },
+    {
+      "id": "rss_e79e800dff7a0324",
+      "timestamp": 1784808548000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Will the Houthis escalate attacks on the Bab el-Mandeb Strait? - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFA2Y01INVJhVXlsb25XTk1GaWphaENXd1ctTkxneGZtRlBCVlRQMEhLRU44WWRoOVRab05sVWgtVVU2QVdwTzV5NWptYl93dEdTNnlhTGtiS2Q4N2F6?oc=5\" target=\"_blank\">Will the Houthis escalate attacks on the Bab el-Mandeb Strait?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA2Y01INVJhVXlsb25XTk1GaWphaENXd1ctTkxneGZtRlBCVlRQMEhLRU44WWRoOVRab05sVWgtVVU2QVdwTzV5NWptYl93dEdTNnlhTGtiS2Q4N2F6?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T13:00:28.838Z"
+    },
     {
       "id": "rss_012298db98a6394d",
       "timestamp": 1784807872000,
@@ -11153,50 +11198,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-05T04:59:12.439Z"
-    },
-    {
-      "id": "rss_8fed43b239491858",
-      "timestamp": 1775127143000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis coordinate with Iran, but retain independence, despite war - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE51SkcyZGJHT0FvMl9ERWxGM0JDTXJ0RDJTTVNERDVwd05EcGkzb0xJc0RQNXk5TnJXTTVjMnU2bTg1VkJSbzJLM0FDbmhNRVNUMmZrbTJQaldjV1hMU1BqUDRvMHh2QlRUUV9iVzNkSFlNd0ZhaUHSAXtBVV95cUxQVWdPZWU1amNtXzU4ZU00WHliT1hUUWU1YUlLdzdiNmp4LW4tWkxGXzgtS2VmVGNfeE5wS3RjbnVXTG54Vm9aNF9ESk9PVjY3ekU1dWVoRE1LOERmNTl4TEg0dEZUWnJjcHZJU0cyOElVX24xblN2a19XWVk?oc=5\" target=\"_blank\">Yemen’s Houthis coordinate with Iran, but retain independence, despite war</a>&nbsp;&nbsp;<font colo",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE51SkcyZGJHT0FvMl9ERWxGM0JDTXJ0RDJTTVNERDVwd05EcGkzb0xJc0RQNXk5TnJXTTVjMnU2bTg1VkJSbzJLM0FDbmhNRVNUMmZrbTJQaldjV1hMU1BqUDRvMHh2QlRUUV9iVzNkSFlNd0ZhaUHSAXtBVV95cUxQVWdPZWU1amNtXzU4ZU00WHliT1hUUWU1YUlLdzdiNmp4LW4tWkxGXzgtS2VmVGNfeE5wS3RjbnVXTG54Vm9aNF9ESk9PVjY3ekU1dWVoRE1LOERmNTl4TEg0dEZUWnJjcHZJU0cyOElVX24xblN2a19XWVk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-04-03T23:59:20.653Z"
-    },
-    {
-      "id": "rss_9499ff77f998991d",
-      "timestamp": 1775087853000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis threaten potential closure of key Red Sea strait if Gulf states join war - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQRUdHU09HV2ZnNnhmeHZrMnlZUmM4TzE0bk9OcHhHTWdYUFVBU081ZEpoeTZKVlhnQXRNNVFXYXhCV2FBU2JmbFg1ekFNSURObThJMmhoaDV0bFV0NFlTRi1Mdk45M2kySGdVTVVjbFl5dkE4cVVPRDB6enZIQjI0V1JWQkxLVEZZSThHYUNqVVRhM2FmZlV3TVpUNVRoR295em8zSFFrWWZJc2ZvOFdNeFlnMEhHREZxdkHSAb8BQVVfeXFMT1NPVEQtUzV0em56eVpsMTdZRmd4NGRoancxeVE3di1tREdyaHVTcDFtenZoODA3YTRVVVJSNkgyNzFmRWI0NGduNzI1bDdxWnpXUnp4OWdQcEYySmZ2SlkxYkxhcTBrSGktM21FdGdtZWpMTlFCUGhiLTBSTTM2aFd5MnkzQjhzb3BQRjhuY0Jacz",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQRUdHU09HV2ZnNnhmeHZrMnlZUmM4TzE0bk9OcHhHTWdYUFVBU081ZEpoeTZKVlhnQXRNNVFXYXhCV2FBU2JmbFg1ekFNSURObThJMmhoaDV0bFV0NFlTRi1Mdk45M2kySGdVTVVjbFl5dkE4cVVPRDB6enZIQjI0V1JWQkxLVEZZSThHYUNqVVRhM2FmZlV3TVpUNVRoR295em8zSFFrWWZJc2ZvOFdNeFlnMEhHREZxdkHSAb8BQVVfeXFMT1NPVEQtUzV0em56eVpsMTdZRmd4NGRoancxeVE3di1tREdyaHVTcDFtenZoODA3YTRVVVJSNkgyNzFmRWI0NGduNzI1bDdxWnpXUnp4OWdQcEYySmZ2SlkxYkxhcTBrSGktM21FdGdtZWpMTlFCUGhiLTBSTTM2aFd5MnkzQjhzb3BQRjhuY0JaczRiUWZOMGoxbElyMTR3SmJ5aDZLQ3lpRFNfbDJpTkFZcjdlTWw1VVJ2UXY3dWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-02T06:09:34.911Z"
     }
   ]
 }
