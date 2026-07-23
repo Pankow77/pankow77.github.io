@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T18:52:42.536Z",
+  "last_fetch": "2026-07-23T19:30:25.118Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_421ed70c5d9277b9",
+      "timestamp": 1784832960000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis attack Saudi tankers in the Red Sea, threatening to widen Iran war - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHFrc1BFd1MyNGJEdWFibkJiY1dGVjRNY2tOWUNTbEZTaEw5Z3liZFUxOWExS3ZhdExIZGpjRUFsSW9WWVcyZC1aRmdaRWtVSUFyVHBxeU5wOWZfYTBYbFpZZ25uYUVxUE8tRzQ0d2VOYVk2bTZlUW8yY0RZdnFmQnVqQjRkc2RoQ2Nya19n?oc=5\" target=\"_blank\">Yemen’s Houthis attack Saudi tankers in the Red Sea, threatening to widen Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHFrc1BFd1MyNGJEdWFibkJiY1dGVjRNY2tOWUNTbEZTaEw5Z3liZFUxOWExS3ZhdExIZGpjRUFsSW9WWVcyZC1aRmdaRWtVSUFyVHBxeU5wOWZfYTBYbFpZZ25uYUVxUE8tRzQ0d2VOYVk2bTZlUW8yY0RZdnFmQnVqQjRkc2RoQ2Nya19n?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T19:30:23.765Z"
+    },
     {
       "id": "rss_c6f8115d4c385e80",
       "timestamp": 1784831105000,
@@ -94,6 +118,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:27:16.037Z"
+    },
+    {
+      "id": "rss_04207d473f56b213",
+      "timestamp": 1784826368000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks raise fears of wider Middle East conflict and more global economic damage - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oVlRJbjJ3d1BLRjJGR2hrclg2ckp6YVZ3Z25oa3dScWVfcTAxN0YtRi1EZE9yck1yeGp4X2VxRldBeE9wSGQ2SThfSWs0MzdvUmZ5ZEFQX1hUUQ?oc=5\" target=\"_blank\">Houthi attacks raise fears of wider Middle East conflict and more global economic damage</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oVlRJbjJ3d1BLRjJGR2hrclg2ckp6YVZ3Z25oa3dScWVfcTAxN0YtRi1EZE9yck1yeGp4X2VxRldBeE9wSGQ2SThfSWs0MzdvUmZ5ZEFQX1hUUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T19:30:23.764Z"
     },
     {
       "id": "rss_3b960baaa949fd12",
@@ -576,6 +621,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T09:17:34.198Z"
+    },
+    {
+      "id": "rss_eb02a33480d7b4cc",
+      "timestamp": 1784795839000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil tankers attacked in the Red Sea as U.S.-Iran war widens and fuel prices spike - NBC Los Angeles",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOFVMWkRXbzVvV3ZLX3JPYmJyV3dKcU9RV2lWTkFSOVo1Vl9qaG44V2ZEODdNYmlXWnhjNE5qQXZkaEtkTlhWZUV4SWUxTko4VENDOHdCT2xiZkxvM0NPSHoxOUVQLWpUZ29TLWFIZmg0MWNUem13aHBwcDY5QmpmaWV0NXpTLVJxa1dRSnY2Y2NBakxhZXhPZHBhQThYaFFxOWtjUXlSejlyRDdBZHM3ZlJlWjNFQXdyeFo3cWJfbldzZ2vSAcsBQVVfeXFMTjIyZVN0RzBYOHFFY0lNeDBPS0E5d1ZCenVweFpNemNCZGRMS2IzYjVUTS1oUEdVU2pmOG5pTWxlY3B2NWdkcFpYa3NOc0NzaC12T3ZweFRPNE1aSU12TnpTWVFDY21HMGJ3a0NDeVR0YnhCSnlyVFZmT2pjRDJOR1d2WXNzcVRxd1",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOFVMWkRXbzVvV3ZLX3JPYmJyV3dKcU9RV2lWTkFSOVo1Vl9qaG44V2ZEODdNYmlXWnhjNE5qQXZkaEtkTlhWZUV4SWUxTko4VENDOHdCT2xiZkxvM0NPSHoxOUVQLWpUZ29TLWFIZmg0MWNUem13aHBwcDY5QmpmaWV0NXpTLVJxa1dRSnY2Y2NBakxhZXhPZHBhQThYaFFxOWtjUXlSejlyRDdBZHM3ZlJlWjNFQXdyeFo3cWJfbldzZ2vSAcsBQVVfeXFMTjIyZVN0RzBYOHFFY0lNeDBPS0E5d1ZCenVweFpNemNCZGRMS2IzYjVUTS1oUEdVU2pmOG5pTWxlY3B2NWdkcFpYa3NOc0NzaC12T3ZweFRPNE1aSU12TnpTWVFDY21HMGJ3a0NDeVR0YnhCSnlyVFZmT2pjRDJOR1d2WXNzcVRxd1AtSkc5YXhiNDRYYjFKcEVmSl8wZUx1aVA3ejJ5QXQ2UVlZNUFreWpJUlJmX01GMzF4emtGQ3Z4d0xkZHlNWEduWE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T19:30:23.765Z"
     },
     {
       "id": "rss_65eee93b2adf7514",
@@ -11137,75 +11206,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-06T07:07:25.293Z"
-    },
-    {
-      "id": "rss_24acab328a02111c",
-      "timestamp": 1775336302000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa2Y2aGJSalVxZXZhVjRTcHY2V0gyVlY1cGNxRW4ta2p1ZHdQelRSWGh2RDVObk9sbFFXRjBwMmRyQnVUSlJRM3JzTlozeUlEZ21ZdjhmTUNhU0ZBaDhxblh6M0xsLUV5aHZKOWtzdnA4YXprNEIwU2VIUGc4eTRXWHdHenlub2NDcHRQbmVBejU0VGd3UmZFME9kNzd0c2gxTWphTGdmOHp0cUkzSXEwdUEwR3V2TEpsemtEdURaT1lLazA?oc=5\" target=\"_blank\">How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOa2Y2aGJSalVxZXZhVjRTcHY2V0gyVlY1cGNxRW4ta2p1ZHdQelRSWGh2RDVObk9sbFFXRjBwMmRyQnVUSlJRM3JzTlozeUlEZ21ZdjhmTUNhU0ZBaDhxblh6M0xsLUV5aHZKOWtzdnA4YXprNEIwU2VIUGc4eTRXWHdHenlub2NDcHRQbmVBejU0VGd3UmZFME9kNzd0c2gxTWphTGdmOHp0cUkzSXEwdUEwR3V2TEpsemtEdURaT1lLazA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-05T04:59:12.438Z"
-    },
-    {
-      "id": "rss_491ae6ad682e73cb",
-      "timestamp": 1775302305000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi-Held Russian Seafarer Leaves Yemen After 8-Month Detention Following Red Sea Ship Attack - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_gJBVV95cUxQRGp5REtERjFGMWtqcEw2cmVFU0JNLURCUGRzTFpXelB0VWVBbGlOc0VsRDJLZ2dJVGRDOG90b0lQZFJVV2luTW94dFpRaEppT3JqdC1UN2RQVzN3ZE5WTHkzRkdzeXZUT0FHQVNhOERzT091UVhMc25pVC0wdURYZjc3OVlSckRGRnVpblJ3X0pJbHlGVWFMU3dsRVdNZFZhXzRMcDhpdm53OVlSVnFpUEZMSGdra2g2Ui1LVDdEY01WR0xXaFdMUHFlU2tSV1FpN0QwcEdTNF84NmtiWDZLajdBejFLX0E5VDRqaU0weDRuNXYzN0RFWm42UWg2bzBUT05XS1BfWWczWjBQMHlkRTkwcUFjajlYVVN4cHZ6U0E5ZFVWeVVMSTYtd2NmSTRJTk5ZemFyeWZXZjhGWi1Db3pVMW1hZWpBdExDVGFrYm",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi_gJBVV95cUxQRGp5REtERjFGMWtqcEw2cmVFU0JNLURCUGRzTFpXelB0VWVBbGlOc0VsRDJLZ2dJVGRDOG90b0lQZFJVV2luTW94dFpRaEppT3JqdC1UN2RQVzN3ZE5WTHkzRkdzeXZUT0FHQVNhOERzT091UVhMc25pVC0wdURYZjc3OVlSckRGRnVpblJ3X0pJbHlGVWFMU3dsRVdNZFZhXzRMcDhpdm53OVlSVnFpUEZMSGdra2g2Ui1LVDdEY01WR0xXaFdMUHFlU2tSV1FpN0QwcEdTNF84NmtiWDZLajdBejFLX0E5VDRqaU0weDRuNXYzN0RFWm42UWg2bzBUT05XS1BfWWczWjBQMHlkRTkwcUFjajlYVVN4cHZ6U0E5ZFVWeVVMSTYtd2NmSTRJTk5ZemFyeWZXZjhGWi1Db3pVMW1hZWpBdExDVGFrYmJ3cnh2UEh4bjc2Q0ZQQzV4cnVnWFRhOHNpRjdENUFObFRTaUUwbm5wOXAtWlNB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-04T12:45:48.508Z"
-    },
-    {
-      "id": "rss_1e256f74721fee2c",
-      "timestamp": 1775300759000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi actions endanger Bab-el-Mandeb transit, risk global oil and food shipments - mezha.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTFAtaEFaQkdaZDhsbi1Rc1U0ZUxVNWJhVFJlNmtIS3pzLXBLZVZJWXBuSFMxZVJ4SzRoQ3k0VnZZdGFKVnRibzY2WE10WENoc3hQQU5ZeVEtMDQ3MjdsV3lkc1F1VTVNdTN6dGtZaXdhbmFTUVlX?oc=5\" target=\"_blank\">Houthi actions endanger Bab-el-Mandeb transit, risk global oil and food shipments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mezha.net</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAtaEFaQkdaZDhsbi1Rc1U0ZUxVNWJhVFJlNmtIS3pzLXBLZVZJWXBuSFMxZVJ4SzRoQ3k0VnZZdGFKVnRibzY2WE10WENoc3hQQU5ZeVEtMDQ3MjdsV3lkc1F1VTVNdTN6dGtZaXdhbmFTUVlX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-04T11:51:07.266Z"
     }
   ]
 }
