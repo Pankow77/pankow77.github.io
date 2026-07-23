@@ -1,8 +1,100 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T01:34:55.688Z",
+  "last_fetch": "2026-07-23T03:03:39.252Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7307c38464034439",
+      "timestamp": 1784775029000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea - chinadailyasia.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE8xUzRkU2wxOU5TcG12SExRZUlQN0hmcGNHVGdXVkxxTXl2Y3c3QnFvNFVCSmhBZVgtTDdObVpaV3FCNjB0enhwYzhuMjFQbmFjZXVwX3dxYzA?oc=5\" target=\"_blank\">Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyasia.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8xUzRkU2wxOU5TcG12SExRZUlQN0hmcGNHVGdXVkxxTXl2Y3c3QnFvNFVCSmhBZVgtTDdObVpaV3FCNjB0enhwYzhuMjFQbmFjZXVwX3dxYzA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T03:03:37.931Z"
+    },
+    {
+      "id": "rss_0ae1b5449d412096",
+      "timestamp": 1784773740000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Two Chinese supertankers with Saudi oil head to Bab el-Mandeb for Red Sea exit - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMzBfZ2dVYUNDa2lMZlVQYXFfSWU3bWlaZjRVTV9DM0V3NjRDN2pvWnRhMVE4T2RwYXhGdTd1ZEMybWE4ekJGcC1Oa3lsWnFwQ1ZISE5XcUZOazlVaEZQaU9jLTQ2UmstZkZ3UWw5amhGQU1TTVY4VGRXX2R6d0xOMENmTmlYTHBKOGJnRTNDdzVZQ1p3NXA0alZSOVJxV0dwS3AxQkliUkpES0hneVdYMmtjNFpERW1TRkNUVDN5Z2E?oc=5\" target=\"_blank\">Two Chinese supertankers with Saudi oil head to Bab el-Mandeb for Red Sea exit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPMzBfZ2dVYUNDa2lMZlVQYXFfSWU3bWlaZjRVTV9DM0V3NjRDN2pvWnRhMVE4T2RwYXhGdTd1ZEMybWE4ekJGcC1Oa3lsWnFwQ1ZISE5XcUZOazlVaEZQaU9jLTQ2UmstZkZ3UWw5amhGQU1TTVY4VGRXX2R6d0xOMENmTmlYTHBKOGJnRTNDdzVZQ1p3NXA0alZSOVJxV0dwS3AxQkliUkpES0hneVdYMmtjNFpERW1TRkNUVDN5Z2E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-23T03:03:37.931Z"
+    },
+    {
+      "id": "rss_85d4bc69afb4f1d9",
+      "timestamp": 1784770552000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Claim Strikes on 2 Saudi Oil Tankers in Red Sea - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOUnVaX2NCcGJoU01vZ3k5ZWltZUx0Q1hKdDduNUZ0TXlrOVkyNE5abVBGS0hEN3E3ejlHYmZJQ2lpNHdrV3UwLXRvTEpZTHN6YmJCSFNNQ0d1T3A5NlgzY3hyQkRqX1FyUDNTRUxXQU94WV9MWV9UZk9GX0VEb2w5WVNTUVdDU2JZT2RhRmd5VVdsaFpm?oc=5\" target=\"_blank\">Houthis Claim Strikes on 2 Saudi Oil Tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUnVaX2NCcGJoU01vZ3k5ZWltZUx0Q1hKdDduNUZ0TXlrOVkyNE5abVBGS0hEN3E3ejlHYmZJQ2lpNHdrV3UwLXRvTEpZTHN6YmJCSFNNQ0d1T3A5NlgzY3hyQkRqX1FyUDNTRUxXQU94WV9MWV9UZk9GX0VEb2w5WVNTUVdDU2JZT2RhRmd5VVdsaFpm?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T03:03:37.931Z"
+    },
+    {
+      "id": "rss_942acf8c2429bc0f",
+      "timestamp": 1784770336000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi tanker on fire after Houthi strike in Red Sea - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNWHFUNklqeVVVa2ZkRHo4UkRSVWZnSlpJUGRkMU5BRzJtMll0c3lERUhEUkVSdG1ybDA0Vllla1l2ZmdDcEJ3VmptT0M0eGt0OHVRc0RzZjJZRlZ6Z19QaEg4Y1MxcXY3R2xaUWVaUVA4T2o5dnZXNE5fUVJJWm5ZS2VqNVZ6WGdNLW1sODVNa2RxWjFobHcwc1ln?oc=5\" target=\"_blank\">Saudi tanker on fire after Houthi strike in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWHFUNklqeVVVa2ZkRHo4UkRSVWZnSlpJUGRkMU5BRzJtMll0c3lERUhEUkVSdG1ybDA0Vllla1l2ZmdDcEJ3VmptT0M0eGt0OHVRc0RzZjJZRlZ6Z19QaEg4Y1MxcXY3R2xaUWVaUVA4T2o5dnZXNE5fUVJJWm5ZS2VqNVZ6WGdNLW1sODVNa2RxWjFobHcwc1ln?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T03:03:37.931Z"
+    },
     {
       "id": "rss_f0ce354aebea5e94",
       "timestamp": 1784770114000,
@@ -11095,93 +11187,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-03-30T20:40:26.602Z"
-    },
-    {
-      "id": "rss_57ba8d5aac01632c",
-      "timestamp": 1774898175000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes - sentinelcolorado.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNcWs4MG1JWHJaZk55M3QzV05ya0gwM1d2Y0ppei0wRUE2eDJjdXc4ME83V25NYjJlVTcwbkQtTjJrM0hPNEVFQzk4QTkxdEdKOFIydDZMcGJfR0ZodFpsd1ZHX0NNSTNUbmZkbU9YOVdLbkhSYzc3TlJENnhkVXI0RGlkRkx2VFFMdnpzZ1IxOVJyN1ptSDc3MWVkTWVXa0d5Q2pxOHlnUzFzUmZMS1BrQTJpLVlaMmlWZHBhWGJXVE12SGVB?oc=5\" target=\"_blank\">A Houthi missile attack on Israel stokes fears of renewed Red Sea shipping strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sentinelcolorado.com</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcWs4MG1JWHJaZk55M3QzV05ya0gwM1d2Y0ppei0wRUE2eDJjdXc4ME83V25NYjJlVTcwbkQtTjJrM0hPNEVFQzk4QTkxdEdKOFIydDZMcGJfR0ZodFpsd1ZHX0NNSTNUbmZkbU9YOVdLbkhSYzc3TlJENnhkVXI0RGlkRkx2VFFMdnpzZ1IxOVJyN1ptSDc3MWVkTWVXa0d5Q2pxOHlnUzFzUmZMS1BrQTJpLVlaMmlWZHBhWGJXVE12SGVB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T19:32:56.691Z"
-    },
-    {
-      "id": "rss_3a188f7574bbf4fd",
-      "timestamp": 1774893420000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Commodity wrap: Houthi attack boosts gold; Brent sees 58% surge in March - Invezz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPUHFILWhDU3ZqbXJUM1MwS3Z4WXZUVUdxZmtsZm1hcGU5cHZISXVqV3hHOVYwNUVoWTZKcGZDcFdUeG9FNmJXX2RKVWxpUUJvTll5R2M5bjI5eWhGNTJUckxHTmJmMGcxd0sxYVJfdVdFVG9Rd3JMUEZ5VG0zNDdHQ2xqVXQyUFROaU50R1ptQ05mRDVsQ3NxdVN2ZEZGcF9YSHFNa3Nlbl8yS3pMR3QxQ2Z5bF9mdw?oc=5\" target=\"_blank\">Commodity wrap: Houthi attack boosts gold; Brent sees 58% surge in March</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Invezz</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPUHFILWhDU3ZqbXJUM1MwS3Z4WXZUVUdxZmtsZm1hcGU5cHZISXVqV3hHOVYwNUVoWTZKcGZDcFdUeG9FNmJXX2RKVWxpUUJvTll5R2M5bjI5eWhGNTJUckxHTmJmMGcxd0sxYVJfdVdFVG9Rd3JMUEZ5VG0zNDdHQ2xqVXQyUFROaU50R1ptQ05mRDVsQ3NxdVN2ZEZGcF9YSHFNa3Nlbl8yS3pMR3QxQ2Z5bF9mdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T18:11:53.012Z"
-    },
-    {
-      "id": "rss_7556ee9ebf98f276",
-      "timestamp": 1774892612000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis Are Now in the War—But How Deep? - Foreign Policy",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQTjY1eVo2cktnM3lHcE55ZVNfS1pIYjh5aG1SNkxKTDJ4RlI4dkV5dndZZUlyQUtlRWRhYk5KaS1nZ0lvMmk3THFTbjM3RzBJUXhVXzJ1aHRBcS0tVjJ4WXFmRk9KVGx3T0NxSDBYQkNrUmdBeHZLWi1keVNnTzhKRG9SOWQ4RXlMZGd0RkRYdm5sZTQ?oc=5\" target=\"_blank\">The Houthis Are Now in the War—But How Deep?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foreign Policy</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTjY1eVo2cktnM3lHcE55ZVNfS1pIYjh5aG1SNkxKTDJ4RlI4dkV5dndZZUlyQUtlRWRhYk5KaS1nZ0lvMmk3THFTbjM3RzBJUXhVXzJ1aHRBcS0tVjJ4WXFmRk9KVGx3T0NxSDBYQkNrUmdBeHZLWi1keVNnTzhKRG9SOWQ4RXlMZGd0RkRYdm5sZTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T04:57:49.041Z"
-    },
-    {
-      "id": "rss_57045fa040b47453",
-      "timestamp": 1774886147000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "South Korea's Oil Industry Braces for Bab el-Mandeb Strait Blockade - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQTlNWSWFFREdQRmdRUzBlM1pOdnhjZmdBa3pBR2JIQ25BWTlLcjRrOG8tVXVzSHNQczhCZXQxOVV1Q2dkb1JTWTc0SlBvOGFiN2JGNnhXaW03VXNOdVpjTzlFaVJPc3NxTDlQTkNQZUVSbDVIaVJmSHNEVnBSWDFITHFMZC1WTHhaRlVpM0ZB?oc=5\" target=\"_blank\">South Korea's Oil Industry Braces for Bab el-Mandeb Strait Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTlNWSWFFREdQRmdRUzBlM1pOdnhjZmdBa3pBR2JIQ25BWTlLcjRrOG8tVXVzSHNQczhCZXQxOVV1Q2dkb1JTWTc0SlBvOGFiN2JGNnhXaW03VXNOdVpjTzlFaVJPc3NxTDlQTkNQZUVSbDVIaVJmSHNEVnBSWDFITHFMZC1WTHhaRlVpM0ZB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-30T16:02:59.002Z"
     }
   ]
 }
