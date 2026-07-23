@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-23T07:02:03.212Z",
+  "last_fetch": "2026-07-23T08:16:56.392Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_65eee93b2adf7514",
+      "timestamp": 1784790166000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis say they attacked 2 Saudi oil tankers in the Red Sea as US carries out 12th night of strikes - WSB-TV",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOSWhESVlrNWN3UHp1VUpyTFZNRi1wVmoxZmtOLXNMNDdYSlJsTGxoUlFRNWpncmRDcnpJZzF0UlpHcHpEcERvekQySC1SXy03cGZYeHJSR1JyZzNacE10dmVsakc2XzZIdjh3b05rcVhnRGhpbkM5OThHMThJVWRlVEpneUNhakN2WHVJZEsyU3hQcnZubHpz0gGXAUFVX3lxTE5JaERJWWs1Y3dQenVVSnJMVk1GLXBWajFma04tc0w0N1hKUmxMbGhSUVE1amdyZENyeklnMXRSWkdwekRwRG96RDJILVJfLTdwZlh4clJHUnJnM1pwTXR2ZWxqRzZfNkh2OHdvTmtxWGdEaGluQzk5OEcxOElVZGVUSmd5Q2FqQ3ZYdUlkSzJTeFBydm5senM?oc=5\" target=\"_blank\">Houthis say they",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSWhESVlrNWN3UHp1VUpyTFZNRi1wVmoxZmtOLXNMNDdYSlJsTGxoUlFRNWpncmRDcnpJZzF0UlpHcHpEcERvekQySC1SXy03cGZYeHJSR1JyZzNacE10dmVsakc2XzZIdjh3b05rcVhnRGhpbkM5OThHMThJVWRlVEpneUNhakN2WHVJZEsyU3hQcnZubHpz0gGXAUFVX3lxTE5JaERJWWs1Y3dQenVVSnJMVk1GLXBWajFma04tc0w0N1hKUmxMbGhSUVE1amdyZENyeklnMXRSWkdwekRwRG96RDJILVJfLTdwZlh4clJHUnJnM1pwTXR2ZWxqRzZfNkh2OHdvTmtxWGdEaGluQzk5OEcxOElVZGVUSmd5Q2FqQ3ZYdUlkSzJTeFBydm5senM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T08:16:55.126Z"
+    },
     {
       "id": "rss_3b86b061863cb70a",
       "timestamp": 1784788928000,
@@ -49,6 +72,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T07:02:03.206Z"
+    },
+    {
+      "id": "rss_dbb0eb825bf36af6",
+      "timestamp": 1784788380000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "China Tankers Head to Red Sea Chokepoint Despite Houthi Attacks - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPVkFfMXY3VE5HUHpmVWFaUEJtemRCUVM3R2lIUlNtVG1PNXZjLU1jM2ZIdlhEdGF6QUpTbVNSVjRUeXpXdEE4WExteTFzcjhWc19RblNsX3VkZkdfTUJFYmh3cVhyWTJXckxTZGMxOUFTOVE3aHFHTzRyaTFZNWFFMi0tSS1YVXJZTGptX05GUHVnU2VNM1NNTjVCRzRtZmQ0cnNiaFNjV2JGWXlTYncyVzlEOVQ?oc=5\" target=\"_blank\">China Tankers Head to Red Sea Chokepoint Despite Houthi Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVkFfMXY3VE5HUHpmVWFaUEJtemRCUVM3R2lIUlNtVG1PNXZjLU1jM2ZIdlhEdGF6QUpTbVNSVjRUeXpXdEE4WExteTFzcjhWc19RblNsX3VkZkdfTUJFYmh3cVhyWTJXckxTZGMxOUFTOVE3aHFHTzRyaTFZNWFFMi0tSS1YVXJZTGptX05GUHVnU2VNM1NNTjVCRzRtZmQ0cnNiaFNjV2JGWXlTYncyVzlEOVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T08:16:55.127Z"
     },
     {
       "id": "rss_ba6ec11dc810a59c",
@@ -536,6 +582,29 @@
       "fetched_at": "2026-07-23T01:34:54.280Z"
     },
     {
+      "id": "rss_966fcd458af47d39",
+      "timestamp": 1784756820000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they attacked two Saudi tankers; Saudi Arabia says one ablaze in Red Sea - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPZHZGNUJIVDM4b051ZHVfNEJYZmRlSTdLdDY5S0hLUFpCcTJFeU41bW5mMGtSbVNRNGhBdnhta3JpaFVXeGkxc1VwVmZvY19Ibm9DU0VwNWt6cWJDTm02YVJFZzV3UTZmRmpHckNTWkxGV2pCQjBqZHRDdExub2U0OGlraDNlcWFKaS14R3RDdjBRYk5mZDRoYkNfVG1tcmZybXpwZ1I4d0Z1bldT?oc=5\" target=\"_blank\">Houthis say they attacked two Saudi tankers; Saudi Arabia says one ablaze in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPZHZGNUJIVDM4b051ZHVfNEJYZmRlSTdLdDY5S0hLUFpCcTJFeU41bW5mMGtSbVNRNGhBdnhta3JpaFVXeGkxc1VwVmZvY19Ibm9DU0VwNWt6cWJDTm02YVJFZzV3UTZmRmpHckNTWkxGV2pCQjBqZHRDdExub2U0OGlraDNlcWFKaS14R3RDdjBRYk5mZDRoYkNfVG1tcmZybXpwZ1I4d0Z1bldT?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-23T08:16:55.126Z"
+    },
+    {
       "id": "rss_03dcb7bce72f7962",
       "timestamp": 1784744820000,
       "source": "OSINT",
@@ -856,6 +925,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T12:06:00.885Z"
+    },
+    {
+      "id": "rss_2bfab8c02c07da2a",
+      "timestamp": 1784719200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea - chinadailyhk",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IbDJodjJfc3lEcFFJZGY2UGdFbWxNc1pha0c5OTBKcXV3ZlJ3STVPdnp0Nmw4THBEU3ZYenZkd3lEUXFyUUM5QkRrTTFlU0pYSGpyUlltTHRmUQ?oc=5\" target=\"_blank\">Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyhk</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IbDJodjJfc3lEcFFJZGY2UGdFbWxNc1pha0c5OTBKcXV3ZlJ3STVPdnp0Nmw4THBEU3ZYenZkd3lEUXFyUUM5QkRrTTFlU0pYSGpyUlltTHRmUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-23T08:16:56.386Z"
     },
     {
       "id": "rss_a4309d4215de5179",
@@ -11102,98 +11194,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-01T05:10:38.323Z"
-    },
-    {
-      "id": "rss_202b31a88713e4c7",
-      "timestamp": 1774981744000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Israel raises concerns over Red Sea shipping security - msn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPY2dFUW92SWRMVDVpRkFQTHByX2xDN3VsUTlKVDJMNUlhaU9FMTRUalNTWGRlSUljMFV1YVFqS3ZVaGxQZmdtNkdNVTZtWVVXMnpCT0IwU1UxQlg2QUlyQTRYRjZsSGVaWHBSbEk5M29sSm1DSVVVYlJkUnNGN3hNMjh5RnF2MDdLUUxLX09EMEpwQ1ZLbkZmRzlUdGpwQWdlZzB6am9ueDJrSXctNHlDU2lrZ1hMbEx4SHhZcklWNzVycG9peHc?oc=5\" target=\"_blank\">Houthi missile attack on Israel raises concerns over Red Sea shipping security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">msn.com</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPY2dFUW92SWRMVDVpRkFQTHByX2xDN3VsUTlKVDJMNUlhaU9FMTRUalNTWGRlSUljMFV1YVFqS3ZVaGxQZmdtNkdNVTZtWVVXMnpCT0IwU1UxQlg2QUlyQTRYRjZsSGVaWHBSbEk5M29sSm1DSVVVYlJkUnNGN3hNMjh5RnF2MDdLUUxLX09EMEpwQ1ZLbkZmRzlUdGpwQWdlZzB6am9ueDJrSXctNHlDU2lrZ1hMbEx4SHhZcklWNzVycG9peHc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-01T23:32:41.442Z"
-    },
-    {
-      "id": "rss_2ecd9a2dfc4fbbe4",
-      "timestamp": 1774973611000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran pushes Houthis toward Red Sea attacks as Israel keeps restrictions unchanged - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE55d1F5UWs2Z3ZzQk9Sd2Rmbm9uV3FFdlZrTUNNY3k2UUZZQldnODJBbFBRSHNCdERnc3UtWFlTZjU4Y2JhNXJ6RG5TWWw4eFFpUzd4TVNkb2x2b0p4?oc=5\" target=\"_blank\">Iran pushes Houthis toward Red Sea attacks as Israel keeps restrictions unchanged</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE55d1F5UWs2Z3ZzQk9Sd2Rmbm9uV3FFdlZrTUNNY3k2UUZZQldnODJBbFBRSHNCdERnc3UtWFlTZjU4Y2JhNXJ6RG5TWWw4eFFpUzd4TVNkb2x2b0p4?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T17:53:18.690Z"
-    },
-    {
-      "id": "rss_d6e9e5a2f24f79e7",
-      "timestamp": 1774953428000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Enhances Naval Mission Directives to Improve Maritime Security in Red Sea - The CSR Journal",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPS1pFd3VyRkMwejVVNzE1QVBzRXNBTFdocllqcC1VX3dYZE1yVGt2S1FBaUFnOWxMOW5yemRZSE1COS1vZnQxTUMxX0NhZHY2Ql9jc3N3WkJOWURsZndqek1xVDZGa1dqa1ZCME9kUHlrdzNRcXJuU0NkOFh0RUtTRkpVVXdJN2RhY1dRZlNQT2w?oc=5\" target=\"_blank\">EU Enhances Naval Mission Directives to Improve Maritime Security in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The CSR Journal</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPS1pFd3VyRkMwejVVNzE1QVBzRXNBTFdocllqcC1VX3dYZE1yVGt2S1FBaUFnOWxMOW5yemRZSE1COS1vZnQxTUMxX0NhZHY2Ql9jc3N3WkJOWURsZndqek1xVDZGa1dqa1ZCME9kUHlrdzNRcXJuU0NkOFh0RUtTRkpVVXdJN2RhY1dRZlNQT2w?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T11:25:43.511Z"
-    },
-    {
-      "id": "rss_f75f7735f66708d4",
-      "timestamp": 1774948269000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis fire missile toward Israel, raising more fears for Red Sea shipping - defenceWeb",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPNzM5Y0VRLThyQ1c2N2pVb29KUE4zVmxkbU5qRk51TGN5eldRUU9DMU9PaDBKT3dkVDZicUdPaUdLRGhBMHBrWTZyTW5IR3h4TDZkVnRRb092YjBYLVhFazdtTHZmbi1KbHlzYU1nY29XNWxjdG5XN3N5M2dqdEc2bHBqWEF6TG52YWZ3d1FjNW9zNkxoODR4Qi1EUkdQNjZ2M3FGRjVBWTFsV202cWxSN1FR?oc=5\" target=\"_blank\">Houthis fire missile toward Israel, raising more fears for Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">defenceWeb</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNzM5Y0VRLThyQ1c2N2pVb29KUE4zVmxkbU5qRk51TGN5eldRUU9DMU9PaDBKT3dkVDZicUdPaUdLRGhBMHBrWTZyTW5IR3h4TDZkVnRRb092YjBYLVhFazdtTHZmbi1KbHlzYU1nY29XNWxjdG5XN3N5M2dqdEc2bHBqWEF6TG52YWZ3d1FjNW9zNkxoODR4Qi1EUkdQNjZ2M3FGRjVBWTFsV202cWxSN1FR?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-03-31T10:02:28.521Z"
     }
   ]
 }
