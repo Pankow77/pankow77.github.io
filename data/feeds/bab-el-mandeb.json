@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T15:30:24.574Z",
+  "last_fetch": "2026-07-24T16:32:31.696Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_dc48a4ead0d1cd16",
+      "timestamp": 1784899980000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi spokesperson says naval blockade in Bab el-Mandeb is only against Saudi Arabia - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMnUxakpyQlJBTm9tRWYxMkFZQ3VObGlNcmU3UjJZYjRiMHh6ZU9uSVI5OGJuNndmaHRiUzNaU1JxNTEtaFJyTVFQeEh6M0hfOUotQWJITHd6M2o3VmNpOElMbVFPLTNIZE43cnM3QVJmbUpVcnhnc04zNGF3dmhCNXJIbm1HdGRHWU92TG9iaG94YXRzVm5UcE9saWQ3U2pmOUlNUXV5a2tJaDF2UC1wTmdQN0FGWHYwNVNBeTdrX0ZlRWk4UWcwUQ?oc=5\" target=\"_blank\">Houthi spokesperson says naval blockade in Bab el-Mandeb is only against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMnUxakpyQlJBTm9tRWYxMkFZQ3VObGlNcmU3UjJZYjRiMHh6ZU9uSVI5OGJuNndmaHRiUzNaU1JxNTEtaFJyTVFQeEh6M0hfOUotQWJITHd6M2o3VmNpOElMbVFPLTNIZE43cnM3QVJmbUpVcnhnc04zNGF3dmhCNXJIbm1HdGRHWU92TG9iaG94YXRzVm5UcE9saWQ3U2pmOUlNUXV5a2tJaDF2UC1wTmdQN0FGWHYwNVNBeTdrX0ZlRWk4UWcwUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T16:32:30.369Z"
+    },
     {
       "id": "rss_97c2e9ec71f9cb45",
       "timestamp": 1784896284000,
@@ -117,6 +138,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T12:00:41.007Z"
+    },
+    {
+      "id": "rss_21d2c38f05f77eb4",
+      "timestamp": 1784887275000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea shipping insurance costs double overnight after Houthi attack - Baird Maritime",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQNkQ1Skl2T0I1YnRDOUJHYThiRXJHS3BwS2ZPVEdySWdnWjVwaEk1MDNzcEZ6VzdsNHhOWDJNTTY0T0w4N1FBX3o1a2NQRlhrRTRRUl9SM1lVTzMtV0RibmpXcDdOcElTUTJEb0ZMcUdpM0lpcHF6WFhKMkZOSnJwV2xESVBmWWk4eDFmUndMMHd3UlIzY0VQUDAzbjBtdzBBTFo2V2hNVVR1aHNnVDhHRG1tVHJYeDN0cXfSAboBQVVfeXFMUDZENUpJdk9CNWJ0QzlCR2E4YkVyR0twcEtmT1RHcklnZ1o1cGhJNTAzc3BGelc3bDR4TlgyTU02NE9MODdRQV96NWtjUEZYa0U0UVJfUjNZVU8zLVdEYm5qV3A3TnBJU1EyRG9GTHFHaTNJaXBxelhYSjJGTkpycFdsRElQZllpOHgxZlJ3TDB3d1",
+      "tags": [
+        "shipping",
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNkQ1Skl2T0I1YnRDOUJHYThiRXJHS3BwS2ZPVEdySWdnWjVwaEk1MDNzcEZ6VzdsNHhOWDJNTTY0T0w4N1FBX3o1a2NQRlhrRTRRUl9SM1lVTzMtV0RibmpXcDdOcElTUTJEb0ZMcUdpM0lpcHF6WFhKMkZOSnJwV2xESVBmWWk4eDFmUndMMHd3UlIzY0VQUDAzbjBtdzBBTFo2V2hNVVR1aHNnVDhHRG1tVHJYeDN0cXfSAboBQVVfeXFMUDZENUpJdk9CNWJ0QzlCR2E4YkVyR0twcEtmT1RHcklnZ1o1cGhJNTAzc3BGelc3bDR4TlgyTU02NE9MODdRQV96NWtjUEZYa0U0UVJfUjNZVU8zLVdEYm5qV3A3TnBJU1EyRG9GTHFHaTNJaXBxelhYSjJGTkpycFdsRElQZllpOHgxZlJ3TDB3d1JSM2NFUFAwM24wbXcwQUxaNldoTVVUdWhzZ1Q4R0RtbVRyWHgzdHF3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T16:32:30.369Z"
     },
     {
       "id": "rss_56079b5431e41dfd",
@@ -11177,53 +11222,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-10T13:53:47.980Z"
-    },
-    {
-      "id": "rss_ff17f744b76d935c",
-      "timestamp": 1775737487000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "What to Know About the Bab El-Mandeb Strait as Iran Threatens to Restrict Other Key Trade Passage - Time Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNRjNNQVA2QkRaSTV5S1drZE5yb1pCRVNxLVBORWVrWnZTTUV5am5QSDhRLUd1dEF5WE1OeFQ3Y1FLNnhGT19rSFRmai0tb1QxTFR4UmNYYWlEZnRKdG9tZDMweFFhdnZqV1BGR2o0bFBpTGxKb0VWeHRqb0hpVUJUTXE5dGVETmd0V1VMaVU3WjZXYUR0MUwycl94b0NlSkFrbkRlOWxHTQ?oc=5\" target=\"_blank\">What to Know About the Bab El-Mandeb Strait as Iran Threatens to Restrict Other Key Trade Passage</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Time Magazine</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRjNNQVA2QkRaSTV5S1drZE5yb1pCRVNxLVBORWVrWnZTTUV5am5QSDhRLUd1dEF5WE1OeFQ3Y1FLNnhGT19rSFRmai0tb1QxTFR4UmNYYWlEZnRKdG9tZDMweFFhdnZqV1BGR2o0bFBpTGxKb0VWeHRqb0hpVUJUTXE5dGVETmd0V1VMaVU3WjZXYUR0MUwycl94b0NlSkFrbkRlOWxHTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-09T19:03:22.864Z"
-    },
-    {
-      "id": "rss_bc25cae0399e3536",
-      "timestamp": 1775656428000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Key Saudi Pipeline To Red Sea Hit By Iranian Drone Attack Despite U.S.-Iran Ceasefire Announcement - International Business Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxOQmVoQVQxcV8zdy1pb0tyczRHSW50UDZHVXN3YlRMQS05MHQ1aDlOWkMxaFBPTmxRRHNDdkVLYzAxcHhHbFVudm5oVEpudWw3TmxPWmFxQXA2anJFMHRVb0JQSU9CVTV3QTI1aEczbDhhRFVkdkR5ZlAxN0QtSjR0S1NVUjJTdXBIZ25XQlVUR2l2OFdfc0NENkFKNmFmc0ppUkNvY0cxalctV1l2dnNYYU9aSENkMm5BWGNYWVFIdw?oc=5\" target=\"_blank\">Key Saudi Pipeline To Red Sea Hit By Iranian Drone Attack Despite U.S.-Iran Ceasefire Announcement</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Business Times</fon",
-      "tags": [
-        "iran-proxy",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQmVoQVQxcV8zdy1pb0tyczRHSW50UDZHVXN3YlRMQS05MHQ1aDlOWkMxaFBPTmxRRHNDdkVLYzAxcHhHbFVudm5oVEpudWw3TmxPWmFxQXA2anJFMHRVb0JQSU9CVTV3QTI1aEczbDhhRFVkdkR5ZlAxN0QtSjR0S1NVUjJTdXBIZ25XQlVUR2l2OFdfc0NENkFKNmFmc0ppUkNvY0cxalctV1l2dnNYYU9aSENkMm5BWGNYWVFIdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-08T14:52:09.792Z"
     }
   ]
 }
