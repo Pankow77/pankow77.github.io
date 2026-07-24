@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T22:48:06.819Z",
+  "last_fetch": "2026-07-24T23:22:13.290Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0a6c18d608741d6c",
+      "timestamp": 1784933578000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi strikes Houthi sites in Yemen after Red Sea tanker attack - Moneycontrol.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPdzFrRjRGYmxqSWstcGRUWGVYMy1PZzFIbDF5Q0NQNWpwS19Bc0hEMkNQb3NobHhrb1Y2T0cwcV8tZFpTTGRfRE5Hd3VNN0hHc1dsYmZsZnpNdmt1Wk81VDQwd0NUOHV5b0pkZUJYLTFXSFNhcVQ0TFhNUjhuWllWT3NRaFY5QTlKTjhhWlZXMmlYdUR0Yjg4T1RpS2xzeWp1UElpYnphVEttdGt1ajhCaHhzR1hZMU9HdGJmbtIBwgFBVV95cUxOelJRRjJVdWlqMngybEU3ckZKc3dHOFJ6blQ4NWdqZnh0TzdKMnBuXzkzenBwWTRSVHZzdkFhdE9Xc21WNUthcEVnenpQU3ZEY3I4enppMjZHdzYxajdJa1JPeVVRNW9NS3NWV1diOGFxLWZKandzdjBWR0ZYRXMzb3Yzb2h4bHFpNnA2UnpLMU",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdzFrRjRGYmxqSWstcGRUWGVYMy1PZzFIbDF5Q0NQNWpwS19Bc0hEMkNQb3NobHhrb1Y2T0cwcV8tZFpTTGRfRE5Hd3VNN0hHc1dsYmZsZnpNdmt1Wk81VDQwd0NUOHV5b0pkZUJYLTFXSFNhcVQ0TFhNUjhuWllWT3NRaFY5QTlKTjhhWlZXMmlYdUR0Yjg4T1RpS2xzeWp1UElpYnphVEttdGt1ajhCaHhzR1hZMU9HdGJmbtIBwgFBVV95cUxOelJRRjJVdWlqMngybEU3ckZKc3dHOFJ6blQ4NWdqZnh0TzdKMnBuXzkzenBwWTRSVHZzdkFhdE9Xc21WNUthcEVnenpQU3ZEY3I4enppMjZHdzYxajdJa1JPeVVRNW9NS3NWV1diOGFxLWZKandzdjBWR0ZYRXMzb3Yzb2h4bHFpNnA2UnpLMUstc1hoRXdMTTdLMDB5Rk1qakVPbDRVb3R6amdvemFwSmMzTGpLNGFmWkxRcmh0RUh4dw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T23:22:13.284Z"
+    },
     {
       "id": "rss_8f94c38a2f07bb21",
       "timestamp": 1784925116000,
@@ -11204,29 +11227,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-14T17:41:17.295Z"
-    },
-    {
-      "id": "rss_61279d1a442416c4",
-      "timestamp": 1776098820000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "What is the ‘Gate of Tears’? Key shipping route that could be attacked by Houthis and disrupt global economy - The Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxONk9aRGJTUUsteUhoSGkxZ2VuU0ctUEI0dXdHNVM5ZXNBRHBXZHJxRll6Vzc2a3ZWaGgzemlEX3FFdk9Mbmt0djJqRlNWaG9oV2NzeUJsd3BLLVR0S1Vvc2RnaEk5RkNrTTdJYUZTV0ZJc3NFTFZiQ21YTTJDWG1XZUVBNlo3MGZQNWU2Q1J3dmV3b3hsR0VPbXJMUi1pYXJmcXB6dXI4VlI5elRFNlhPUDZxR0V6dzQ?oc=5\" target=\"_blank\">What is the ‘Gate of Tears’? Key shipping route that could be attacked by Houthis and disrupt global economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Independent</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONk9aRGJTUUsteUhoSGkxZ2VuU0ctUEI0dXdHNVM5ZXNBRHBXZHJxRll6Vzc2a3ZWaGgzemlEX3FFdk9Mbmt0djJqRlNWaG9oV2NzeUJsd3BLLVR0S1Vvc2RnaEk5RkNrTTdJYUZTV0ZJc3NFTFZiQ21YTTJDWG1XZUVBNlo3MGZQNWU2Q1J3dmV3b3hsR0VPbXJMUi1pYXJmcXB6dXI4VlI5elRFNlhPUDZxR0V6dzQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-14T02:07:42.308Z"
     }
   ]
 }
