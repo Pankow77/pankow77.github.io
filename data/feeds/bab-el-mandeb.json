@@ -1,8 +1,77 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T11:09:32.471Z",
+  "last_fetch": "2026-07-24T12:00:42.252Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4fb1a6085a0a48e2",
+      "timestamp": 1784892276000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Trump Vows Retaliation Against Iran for Houthi Attack in Red Sea - TODAY.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZ0I2T1hwQWtOVW1XWjllWnZfRVc4SmJ0cTUwNVNNQlU0TUp3d05LUE03d0dqNC1yZWhvY18wUUp5aDZ6QVpwVlRyRUpnSWFGaGVPdVZGSmpvNGNtVkZRdnNfZVl3Ti12TGVpc1hjVy1leEt1YlZwRE4xcUNCb0xkTHBCbHU4dEZxTU05QVg4S1k1SVAzb0MyZUpUYjlfWnctdm1TaHBYVl8?oc=5\" target=\"_blank\">Trump Vows Retaliation Against Iran for Houthi Attack in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TODAY.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZ0I2T1hwQWtOVW1XWjllWnZfRVc4SmJ0cTUwNVNNQlU0TUp3d05LUE03d0dqNC1yZWhvY18wUUp5aDZ6QVpwVlRyRUpnSWFGaGVPdVZGSmpvNGNtVkZRdnNfZVl3Ti12TGVpc1hjVy1leEt1YlZwRE4xcUNCb0xkTHBCbHU4dEZxTU05QVg4S1k1SVAzb0MyZUpUYjlfWnctdm1TaHBYVl8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T12:00:41.007Z"
+    },
+    {
+      "id": "rss_e55140dd056b4462",
+      "timestamp": 1784891636000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens war - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVVBPQ0I2WkRxUFdZWkNFUDlOb2tPRWtFX05MUXp3ODhwLXpyQV96MmxLZFNEWlk0VkRSNGl0YmVQRE54MFpYX2hhbHZ2UVhydjBzLVdRNm5PZ1cwdW41V1A4MWpueHE2ajNhOXRkNGI3U18yY2s1V3EwWERXeDlNblBZVHJLS2dyeG5mTEVNZXVySVdnbVF4Ym5DemhyRHl1VGFFU2JUMGc?oc=5\" target=\"_blank\">U.S. launches new strikes and Trump threatens ‘massive attack’ as Iran widens war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPVVBPQ0I2WkRxUFdZWkNFUDlOb2tPRWtFX05MUXp3ODhwLXpyQV96MmxLZFNEWlk0VkRSNGl0YmVQRE54MFpYX2hhbHZ2UVhydjBzLVdRNm5PZ1cwdW41V1A4MWpueHE2ajNhOXRkNGI3U18yY2s1V3EwWERXeDlNblBZVHJLS2dyeG5mTEVNZXVySVdnbVF4Ym5DemhyRHl1VGFFU2JUMGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T12:00:41.007Z"
+    },
+    {
+      "id": "rss_0be8b74a1dc932d7",
+      "timestamp": 1784887920000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "U.S. carries out more strikes as Trump threatens Iran, Houthis with \"major military punishment\" - CBS News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQbnFoblVaeW56TWFYUWE1SGl5N0RtX2t1S25oOFprWVlLZjFPa0Nmdm5hWjdzcmNpTGJCejk5OUxnMF9Pbnh0SklXc3BRYlktaVR2cS1Mbk1FNVVhak5QakV0UEh2VXF5UEFJQ2ppWXZ1Um9FX2lYSEpiaUEtT3dFaEQ2N3lRdTRLSjZRTnZGWk1PUk1tWHUwOVdVZjc?oc=5\" target=\"_blank\">U.S. carries out more strikes as Trump threatens Iran, Houthis with \"major military punishment\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbnFoblVaeW56TWFYUWE1SGl5N0RtX2t1S25oOFprWVlLZjFPa0Nmdm5hWjdzcmNpTGJCejk5OUxnMF9Pbnh0SklXc3BRYlktaVR2cS1Mbk1FNVVhak5QakV0UEh2VXF5UEFJQ2ppWXZ1Um9FX2lYSEpiaUEtT3dFaEQ2N3lRdTRLSjZRTnZGWk1PUk1tWHUwOVdVZjc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T12:00:41.007Z"
+    },
     {
       "id": "rss_56079b5431e41dfd",
       "timestamp": 1784885447000,
@@ -11155,73 +11224,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-07T19:58:59.029Z"
-    },
-    {
-      "id": "rss_1e6c935ea9eec721",
-      "timestamp": 1775586060000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran vows to take control of key Bab el-Mandeb Strait amid Trump’s chilling annihilation threat - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPZm80bGtxSW5tcVY2aC03UUJqVUZfRmRYVmxBbVNYUWs4SnQwd2trTldSMnFRQW5TUThBSGR0SzRIY2prRFoyRHZJX2ZDamNWb1ZPaEtIUmhCcU1KRmdxQWpkT1A3S3FETDRXeml4a2ZhQ04weHNOSldjTWV1bFUtRWZFalpZd2puLWxnTFU4cHZCeU40bFFNaENhUDI0NmVicnU1c0lubnNfRGhNcnhOSFV0Ty1QbDRDYnM2QTNEOF9Yd2NE?oc=5\" target=\"_blank\">Iran vows to take control of key Bab el-Mandeb Strait amid Trump’s chilling annihilation threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZm80bGtxSW5tcVY2aC03UUJqVUZfRmRYVmxBbVNYUWs4SnQwd2trTldSMnFRQW5TUThBSGR0SzRIY2prRFoyRHZJX2ZDamNWb1ZPaEtIUmhCcU1KRmdxQWpkT1A3S3FETDRXeml4a2ZhQ04weHNOSldjTWV1bFUtRWZFalpZd2puLWxnTFU4cHZCeU40bFFNaENhUDI0NmVicnU1c0lubnNfRGhNcnhOSFV0Ty1QbDRDYnM2QTNEOF9Yd2NE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-07T19:58:59.027Z"
-    },
-    {
-      "id": "rss_961044452911d888",
-      "timestamp": 1775580742000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi threat spikes US-Iran ceasefire odds as Bab el-Mandeb tensions rise - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNMG5iU2pKOXBGMVBpR1VTcGJXWGd1UEM4SXNrR0VXNlB3cFZQa2dtYjlXdTUzOEtLRXJtcnF6NXdDZFpSYWdjMkJ5TlFHZ2Noc0Qtc0pFX3ZQV05zX0VwaG1mWWlWdXprTWtsbnRHb0tGLW9oUWE5Ri1BSHNEUnUtWGZNMzZEakNsSE85cVlJaGN3Z2pHbXhCR0RZcHh1d2diX2ctVQ?oc=5\" target=\"_blank\">Houthi threat spikes US-Iran ceasefire odds as Bab el-Mandeb tensions rise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMG5iU2pKOXBGMVBpR1VTcGJXWGd1UEM4SXNrR0VXNlB3cFZQa2dtYjlXdTUzOEtLRXJtcnF6NXdDZFpSYWdjMkJ5TlFHZ2Noc0Qtc0pFX3ZQV05zX0VwaG1mWWlWdXprTWtsbnRHb0tGLW9oUWE5Ri1BSHNEUnUtWGZNMzZEakNsSE85cVlJaGN3Z2pHbXhCR0RZcHh1d2diX2ctVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-07T16:52:52.819Z"
-    },
-    {
-      "id": "rss_376333268103b943",
-      "timestamp": 1775577248000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Japan Explores Oil Routes to Bypass Hormuz - chosun.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPdTlYNmNYMXcwTjI2b0l1X0prY09zREZxSlZ1bjl0eVBTVTdUWFVJb2pyYmhDVjdHME9FdGhFbU1BMEVHamplZG5rMm1IZjlQLUYtdklPNFpNOHVWQW9nME8xeHhuMWZZMzdVMWw2bUJTdm5aRkI2dWY2c1cyUGxoRTk0XzE?oc=5\" target=\"_blank\">Japan Explores Oil Routes to Bypass Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chosun.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdTlYNmNYMXcwTjI2b0l1X0prY09zREZxSlZ1bjl0eVBTVTdUWFVJb2pyYmhDVjdHME9FdGhFbU1BMEVHamplZG5rMm1IZjlQLUYtdklPNFpNOHVWQW9nME8xeHhuMWZZMzdVMWw2bUJTdm5aRkI2dWY2c1cyUGxoRTk0XzE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-07T16:52:52.819Z"
     }
   ]
 }
