@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T02:17:06.176Z",
+  "last_fetch": "2026-07-24T03:39:33.062Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_62bf3c2bc2e3d67a",
+      "timestamp": 1784864103000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "As oil soars, experts watch Red Sea tankers for clarity on Houthi blockade - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZHRWUzBiZTY0SGluMDR3YWwxWFR5RjFtR2dSS2dCd0p6TElfSmtMWVQxZm41Rjl4R0dDZlZONHM3RlF6NUNXVWFQdTBFNUhqalFpMEdLSnVJTk01Rk5ockpvdXYwblFXa0lKSUFGekRuNFBrZkJBOVh5RVlLZE12X0NrQlpmMVNnbUZzMV9MQzhFWGxZajZROWo5TnprbFJqaHlOWVdBblRvOXhGWWM5TU56Z3RMUVJI0gG-AUFVX3lxTE5iUXVfSmsyN0tBSUhFTG9vai1iR0ItY0NKS0dHd0tfb1lBSE5HWlJkMVBtUkVVc2I1N3lYOXBuQjNtck9wUkE2eGZUa1ZLT1lvYXFSblVtYUpybGV5bHpjWEl0N2hsRzBfalp6ZjB5Rk1Wd0Q2c1lGekNrdmVRd0gtRWVMel9VWF9FTnI4WTIxbi0tQT",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQZHRWUzBiZTY0SGluMDR3YWwxWFR5RjFtR2dSS2dCd0p6TElfSmtMWVQxZm41Rjl4R0dDZlZONHM3RlF6NUNXVWFQdTBFNUhqalFpMEdLSnVJTk01Rk5ockpvdXYwblFXa0lKSUFGekRuNFBrZkJBOVh5RVlLZE12X0NrQlpmMVNnbUZzMV9MQzhFWGxZajZROWo5TnprbFJqaHlOWVdBblRvOXhGWWM5TU56Z3RMUVJI0gG-AUFVX3lxTE5iUXVfSmsyN0tBSUhFTG9vai1iR0ItY0NKS0dHd0tfb1lBSE5HWlJkMVBtUkVVc2I1N3lYOXBuQjNtck9wUkE2eGZUa1ZLT1lvYXFSblVtYUpybGV5bHpjWEl0N2hsRzBfalp6ZjB5Rk1Wd0Q2c1lGekNrdmVRd0gtRWVMel9VWF9FTnI4WTIxbi0tQTRianFUQ0RLRVFtN3l3Qk9Ibk11NlM2dW9iX2EySkE4M21pYmRIcHlvUVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-24T03:39:31.727Z"
+    },
     {
       "id": "rss_ad66dbc2a5e2a62a",
       "timestamp": 1784847180000,
@@ -11188,29 +11211,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-06T15:41:37.285Z"
-    },
-    {
-      "id": "rss_0e1b94eee9147737",
-      "timestamp": 1775485087000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis decided to attack Israel independently of Iran, official says - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE84SU1yME1tcUV5MnhPWHp0cm9aTzFWVFZZSU1Vd2tlZnZKNFozSVl2UGcxNVlkakM5S3Y5YVZMRndYUlp6X1V2T3dobGxPYW82OHlKZ01pRVBLdE42?oc=5\" target=\"_blank\">Houthis decided to attack Israel independently of Iran, official says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE84SU1yME1tcUV5MnhPWHp0cm9aTzFWVFZZSU1Vd2tlZnZKNFozSVl2UGcxNVlkakM5S3Y5YVZMRndYUlp6X1V2T3dobGxPYW82OHlKZ01pRVBLdE42?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-06T14:42:09.625Z"
     }
   ]
 }
