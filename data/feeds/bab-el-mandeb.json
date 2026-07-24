@@ -1,8 +1,99 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T18:30:34.979Z",
+  "last_fetch": "2026-07-24T19:30:24.229Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_499372b8372035af",
+      "timestamp": 1784920562000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis deny they closed Bab al-Mandeb Strait - dw.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcjFxNUY0LTJUX2FHZDFfclI2U0xVc0ZydmNVUlFGOXdoMmRLdFVKZTlMMlNPQjA1ODMwS2FGSkoyLWl4UFlSSFlIUTNVTkc3V3JicHNzNmZWeXI0RHNxeVNkXzI4MFg5Y21lQ1VUM3hZMDkwSjBUdHE5VnlJTlBxTGR3cHB4eHdUaU85SUJ2bnhYdw?oc=5\" target=\"_blank\">Yemen's Houthis deny they closed Bab al-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dw.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcjFxNUY0LTJUX2FHZDFfclI2U0xVc0ZydmNVUlFGOXdoMmRLdFVKZTlMMlNPQjA1ODMwS2FGSkoyLWl4UFlSSFlIUTNVTkc3V3JicHNzNmZWeXI0RHNxeVNkXzI4MFg5Y21lQ1VUM3hZMDkwSjBUdHE5VnlJTlBxTGR3cHB4eHdUaU85SUJ2bnhYdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T19:30:22.788Z"
+    },
+    {
+      "id": "rss_061f00444826d3f8",
+      "timestamp": 1784918861000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOYnZkSnE3cjdkVWpBWnVkQi1qUndVbHZkb2Q3amhCWEdibTlJNVRzcEt5OUNnQTd3QnBfUjlwV2Q5SVJ4cTlVelpQLXpva0l6allVSDVEOTRJc2I5R2ZJclk5Ukc1VzhkQ2hNQkdNeVllaEZMWlJ6d25KelM0RURFdFhjcGQ1ZkpkeDVia0Jn0gGTAUFVX3lxTE16dkxjTHEtc0Yzc1lhYkw5aEVVMG9aYlczbnFrSS1lY3EyNWpPSWw4bVpGMlQ0cGdOVnFNYjJUTHg3cW1VMkFZaHJHUl9uMEJVZlhOY1Bqc0FHQ3JHTUxjLW1jWEZqX0F3YWZ3clJyU2l2RDNQOXBHVXhwa3dscDFyaDVHUXdWN2xYV3dUNE5JTVg4Yw?oc=5\" target=\"_blank\">Oil shipments are under attack on",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYnZkSnE3cjdkVWpBWnVkQi1qUndVbHZkb2Q3amhCWEdibTlJNVRzcEt5OUNnQTd3QnBfUjlwV2Q5SVJ4cTlVelpQLXpva0l6allVSDVEOTRJc2I5R2ZJclk5Ukc1VzhkQ2hNQkdNeVllaEZMWlJ6d25KelM0RURFdFhjcGQ1ZkpkeDVia0Jn0gGTAUFVX3lxTE16dkxjTHEtc0Yzc1lhYkw5aEVVMG9aYlczbnFrSS1lY3EyNWpPSWw4bVpGMlQ0cGdOVnFNYjJUTHg3cW1VMkFZaHJHUl9uMEJVZlhOY1Bqc0FHQ3JHTUxjLW1jWEZqX0F3YWZ3clJyU2l2RDNQOXBHVXhwa3dscDFyaDVHUXdWN2xYV3dUNE5JTVg4Yw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T19:30:22.787Z"
+    },
+    {
+      "id": "rss_3f7f00a414dbaedd",
+      "timestamp": 1784915472000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "US strikes Iran from south to north after Trump threats over Red Sea shipping - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQaDBzcWROanlhQ1RGUVowWmpPcklHTEhnMUNNMkZiRW9TVlVIWFVHZ0hZWXM1UjFVMlhRT2xhTThEb19yekFkeDUyU3F1Qi1QdWx4X3NtcTk3elZiempDbnhKVWJhWm92cDMzX2FjMEZMQmVhaExTRFlwb3VNU0l0c3JjT29nQjRZOVQzbUJSa2pRX3daU1dBNXFmaUpNVzhPSG51WnNWQzNrOFhQbk4wRjJrVGE?oc=5\" target=\"_blank\">US strikes Iran from south to north after Trump threats over Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaDBzcWROanlhQ1RGUVowWmpPcklHTEhnMUNNMkZiRW9TVlVIWFVHZ0hZWXM1UjFVMlhRT2xhTThEb19yekFkeDUyU3F1Qi1QdWx4X3NtcTk3elZiempDbnhKVWJhWm92cDMzX2FjMEZMQmVhaExTRFlwb3VNU0l0c3JjT29nQjRZOVQzbUJSa2pRX3daU1dBNXFmaUpNVzhPSG51WnNWQzNrOFhQbk4wRjJrVGE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T19:30:22.788Z"
+    },
+    {
+      "id": "rss_2e412002f9a9b2c1",
+      "timestamp": 1784909580000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Donald Trump says decision on ‘massive attack’ against Iran is close - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOX080UG13UG5QNjJFR3RYaFRSc1dzSWxvNFRkYkdJZkYxcWNDaDRwSEtOd205MnpMZFVWYVpLd1FvM1hVdGFWV2RHc0pUSWd0M2JXQTZOVm5ZQTAxWnhfOHZ6TE1DaFl3NVNrNE43aURsb0pGSXVTWjJoSVpNUEY3MDh0cE9STXdkUjZIeHpSdnZEX1N6NmJBbE4tcDlST01zUWJRT2ZSSjNEdDBMdkpF?oc=5\" target=\"_blank\">Donald Trump says decision on ‘massive attack’ against Iran is close</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX080UG13UG5QNjJFR3RYaFRSc1dzSWxvNFRkYkdJZkYxcWNDaDRwSEtOd205MnpMZFVWYVpLd1FvM1hVdGFWV2RHc0pUSWd0M2JXQTZOVm5ZQTAxWnhfOHZ6TE1DaFl3NVNrNE43aURsb0pGSXVTWjJoSVpNUEY3MDh0cE9STXdkUjZIeHpSdnZEX1N6NmJBbE4tcDlST01zUWJRT2ZSSjNEdDBMdkpF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T19:30:22.789Z"
+    },
     {
       "id": "rss_dc48a4ead0d1cd16",
       "timestamp": 1784899980000,
@@ -11138,92 +11229,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-13T06:11:03.487Z"
-    },
-    {
-      "id": "rss_d876bd9bb7023c17",
-      "timestamp": 1776032684000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil prices surge 4% after Houthi attack on Israel, head for third straight monthly gain. What’s the near-term outlook? - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1ANBVV95cUxNenkxUVFWQkdQdVRwOEJfZENZWEYwMUZxakRmSjhKcmVYX25FQ3NMem1tTEFqZnZLUjhCTTV5TEk4SWRCbFBuS2E3Zk84UVozLVhMcDhGZTFRWjdaNHNJZWZGVXJYWkJoQmZndm9vSVJGenpsVXZpSGFiSHRNUjN5Z1RSWTQ1VGtLMUxJQXlMZTBYZDJSdTZkd05KbFFVaGVMX0RNVWphZ1VNYkNzRHAxcExhVEVmNTEtNE1QdTRKa1djSF84ZFZsSEN0bUgxNmhmTDFZcVVpN1dDZEQwc1hkaXZpa0ZOR2R3cGtSczljRzBjQjVsSmlYbk83RkFaVThHMHBObkwtcHY3TlJfd21PQWlTeEtyeGlpRm5xQmJLYzFVUXJ0bGVOalFSdVpUY0JTQzRuZ3Zic3J5aDhRaUxvUTZiVG9vT2hhLVhqOE1kal",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1ANBVV95cUxNenkxUVFWQkdQdVRwOEJfZENZWEYwMUZxakRmSjhKcmVYX25FQ3NMem1tTEFqZnZLUjhCTTV5TEk4SWRCbFBuS2E3Zk84UVozLVhMcDhGZTFRWjdaNHNJZWZGVXJYWkJoQmZndm9vSVJGenpsVXZpSGFiSHRNUjN5Z1RSWTQ1VGtLMUxJQXlMZTBYZDJSdTZkd05KbFFVaGVMX0RNVWphZ1VNYkNzRHAxcExhVEVmNTEtNE1QdTRKa1djSF84ZFZsSEN0bUgxNmhmTDFZcVVpN1dDZEQwc1hkaXZpa0ZOR2R3cGtSczljRzBjQjVsSmlYbk83RkFaVThHMHBObkwtcHY3TlJfd21PQWlTeEtyeGlpRm5xQmJLYzFVUXJ0bGVOalFSdVpUY0JTQzRuZ3Zic3J5aDhRaUxvUTZiVG9vT2hhLVhqOE1kalRNZWg2WUpqLWtoNW9NdC1MNlNIYl9JcVZfbzMxOUhlU1VCdmRIanY2cmVTQ1ZCdW9fSEtMSGloSTlkcGFoODZDUFRmSFZQVlJrOUNrYzEzc3hnaFR2MU1LMXkwaWN3Q2Q0VlEtRmx1Y0dTUGlaajN4ZlllaHJVbU5GT2pGM2hiOEhndDA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-13T13:17:57.822Z"
-    },
-    {
-      "id": "rss_7043bb7c75df605f",
-      "timestamp": 1775991852000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "AI-Generated Image Falsely Claims Houthi Missile Strike on Ben Gurion Airport - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQLTgwSkFfb21kVVpiMkVkWDZjZ0I3NFJ1UkpFZWtoN1FlT1JNTU9WNTFQdEo5UkNXcjNIdkJaMkxfRktKdlJQaEUtUEV0RHRENEY3V3FkLVR1ODdfVUI4bUdYLUNiMkN4TnI2SkpuX0tHY19fVW96YmhQSzh3dDEwUXdzVUpUU3A2cGZDb0s3TVJVUW9EcTR3emp1aWo0YVMwN2xaeGx0ZXMwMzJ0M2xjNWUxS3EtVG5idUh2bjJ3?oc=5\" target=\"_blank\">AI-Generated Image Falsely Claims Houthi Missile Strike on Ben Gurion Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLTgwSkFfb21kVVpiMkVkWDZjZ0I3NFJ1UkpFZWtoN1FlT1JNTU9WNTFQdEo5UkNXcjNIdkJaMkxfRktKdlJQaEUtUEV0RHRENEY3V3FkLVR1ODdfVUI4bUdYLUNiMkN4TnI2SkpuX0tHY19fVW96YmhQSzh3dDEwUXdzVUpUU3A2cGZDb0s3TVJVUW9EcTR3emp1aWo0YVMwN2xaeGx0ZXMwMzJ0M2xjNWUxS3EtVG5idUh2bjJ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-12T19:36:23.465Z"
-    },
-    {
-      "id": "rss_3f705d1090bcd860",
-      "timestamp": 1775939499000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Army Repels a Houthi Attack Southeast Of Taiz - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE5IeUdMMUZOM1VUeTNSbHhsVk1VNURaQUxUS1g2cnZEZGVHNUZPTy03YlZRdGZTVmhSVExZNnJwMmxhTXZoaGM0YTJGcXUwVWdMYnBLbXAtV3ROaFFDV2NINTFvVjFueW1RNmtvaGdiaVBiWEgxc3c?oc=5\" target=\"_blank\">Yemeni Army Repels a Houthi Attack Southeast Of Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5IeUdMMUZOM1VUeTNSbHhsVk1VNURaQUxUS1g2cnZEZGVHNUZPTy03YlZRdGZTVmhSVExZNnJwMmxhTXZoaGM0YTJGcXUwVWdMYnBLbXAtV3ROaFFDV2NINTFvVjFueW1RNmtvaGdiaVBiWEgxc3c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-11T21:54:58.642Z"
-    },
-    {
-      "id": "rss_cea38d428c8c4f57",
-      "timestamp": 1775866117000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Flows from Saudi Port Steady for Now despite Attack - Rigzone",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxObFdhVVlKT1lqWGd3ZmpDSThYVWlrNFZ2TnFyZ1E4RjVhclk4MkNMMmhuQTl2ak5lSUNmV29WVGtTNmlkbGF1ajFwWkY2UUhfY1B5c182ZHNjV0I0dU1zSDRIcjc0UFNxc1E0S1d0bEFVczV5WmtOTjFHdTliSFdHNWxjQUo5MG4xSlQ2dkRCY29pQXBYRHJnRzdJVDljUTdncko5R1EyS3VXYW9manhYTVJPWWR4Yjc2?oc=5\" target=\"_blank\">Oil Flows from Saudi Port Steady for Now despite Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Rigzone</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxObFdhVVlKT1lqWGd3ZmpDSThYVWlrNFZ2TnFyZ1E4RjVhclk4MkNMMmhuQTl2ak5lSUNmV29WVGtTNmlkbGF1ajFwWkY2UUhfY1B5c182ZHNjV0I0dU1zSDRIcjc0UFNxc1E0S1d0bEFVczV5WmtOTjFHdTliSFdHNWxjQUo5MG4xSlQ2dkRCY29pQXBYRHJnRzdJVDljUTdncko5R1EyS3VXYW9manhYTVJPWWR4Yjc2?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-11T05:43:19.657Z"
     }
   ]
 }
