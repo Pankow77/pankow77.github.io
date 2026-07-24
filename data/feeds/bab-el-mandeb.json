@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T19:30:24.229Z",
+  "last_fetch": "2026-07-24T20:29:38.219Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d813da77f28731c0",
+      "timestamp": 1784922649000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi vessel sustains minor hull damage after Red Sea attack, state news agency says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNZmVnQzBKdENLU1Y5aXhpcVVpZVNtbDJyUGhJNWdlMF9zaVBRSmc4a0FFLUN1QjRVcFNvZDNjZFQwcWx6YWRNWEFOaVZoS0ZjWjFoMXlwQjN0bGk3d1lZSnVTYUNQZl9YenZOUk1ZZXMxX1RxTGhzR3VrclI2YXY5OWRWNVRpNGthOVFackVyQUpwTFlQVzh4S1M2cDM2MjdKWjRJX2R2QXpPSWpwa2hJdFBNRjhXdjhoeXJBaTczMUVrckxiU2ZPZ0hBNGc?oc=5\" target=\"_blank\">Saudi vessel sustains minor hull damage after Red Sea attack, state news agency says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZmVnQzBKdENLU1Y5aXhpcVVpZVNtbDJyUGhJNWdlMF9zaVBRSmc4a0FFLUN1QjRVcFNvZDNjZFQwcWx6YWRNWEFOaVZoS0ZjWjFoMXlwQjN0bGk3d1lZSnVTYUNQZl9YenZOUk1ZZXMxX1RxTGhzR3VrclI2YXY5OWRWNVRpNGthOVFackVyQUpwTFlQVzh4S1M2cDM2MjdKWjRJX2R2QXpPSWpwa2hJdFBNRjhXdjhoeXJBaTczMUVrckxiU2ZPZ0hBNGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-24T20:29:36.877Z"
+    },
     {
       "id": "rss_499372b8372035af",
       "timestamp": 1784920562000,
@@ -11206,29 +11229,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-13T16:19:25.697Z"
-    },
-    {
-      "id": "rss_24aae7b57a8878a2",
-      "timestamp": 1776059839000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Threatens Bab el-Mandeb Blockade Over U.S. Hormuz Counterblockade - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNY0s5TXBzengyZGhpcGZxa3VCZWdjR3Z2WXFsWjBRUXRfSVQxNklVZWZYUmVtSVVjdzNnWDhMRlBnT0ZBOUhid3haYWp4ck54XzRBbzRtbGNsYjJtSzdkY0RXQVRRczRpbFVhOC1scnQ3SkVZcldBUll1SzduNVVtTndHUDg?oc=5\" target=\"_blank\">Iran Threatens Bab el-Mandeb Blockade Over U.S. Hormuz Counterblockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNY0s5TXBzengyZGhpcGZxa3VCZWdjR3Z2WXFsWjBRUXRfSVQxNklVZWZYUmVtSVVjdzNnWDhMRlBnT0ZBOUhid3haYWp4ck54XzRBbzRtbGNsYjJtSzdkY0RXQVRRczRpbFVhOC1scnQ3SkVZcldBUll1SzduNVVtTndHUDg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-13T06:11:03.487Z"
     }
   ]
 }
