@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T09:16:37.695Z",
+  "last_fetch": "2026-07-24T10:15:41.604Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_56079b5431e41dfd",
+      "timestamp": 1784885447000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tanker Exits Red Sea Dark as Another China Ship Heads to Strait - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnYyUTZ2R1JSQ2RVWE9ac0RxUWR6Q2czWk1tMXllWVZsUlhDcXhNTmczX2NnVFFPVTJzRHpEeVZSRnJZUG5QWDJpdW14Nk1RdzdMeGNhLVd1clRJb1NlUUZILV9fOTdCVUxMRjUtcVI3OVJQdHZkb1hsdFE4RWNLSW1HT0xvcXFhUGxjOER1M2FvSEMwN3NqZWNSZEFldHVlT3pibHllTE91eXVRYUtiNlozaWM?oc=5\" target=\"_blank\">Tanker Exits Red Sea Dark as Another China Ship Heads to Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnYyUTZ2R1JSQ2RVWE9ac0RxUWR6Q2czWk1tMXllWVZsUlhDcXhNTmczX2NnVFFPVTJzRHpEeVZSRnJZUG5QWDJpdW14Nk1RdzdMeGNhLVd1clRJb1NlUUZILV9fOTdCVUxMRjUtcVI3OVJQdHZkb1hsdFE4RWNLSW1HT0xvcXFhUGxjOER1M2FvSEMwN3NqZWNSZEFldHVlT3pibHllTE91eXVRYUtiNlozaWM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-24T10:15:40.183Z"
+    },
     {
       "id": "rss_4102495c72c45f56",
       "timestamp": 1784879402000,
@@ -11199,27 +11222,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-07T15:53:13.508Z"
-    },
-    {
-      "id": "rss_d4ac2609e95b46b0",
-      "timestamp": 1775552059000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Russian seafarer returns home nine months after Houthi attack - Tradewinds News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxObkNscFFQWHdDdnZhLUxDbktwYUhCT0tMbFBTMll1ZF8wMUdMejI1YXNid2xCakhjRkRhWFI0RUlQem1tMmRVMmZibWRkZi1EOTVJMXRDalc2bHdXU0dha3pSRFJxR1A1YzVDNUJ3V2l5ZWNUT0FzLTRkbTNCOWtWMEg5THRpbU9JZU5jZmEtcF95SkViTl9HY01YS1FTZHJ5RWRqbTRIXzZVS0RfOWttdmtn?oc=5\" target=\"_blank\">Russian seafarer returns home nine months after Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tradewinds News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObkNscFFQWHdDdnZhLUxDbktwYUhCT0tMbFBTMll1ZF8wMUdMejI1YXNid2xCakhjRkRhWFI0RUlQem1tMmRVMmZibWRkZi1EOTVJMXRDalc2bHdXU0dha3pSRFJxR1A1YzVDNUJ3V2l5ZWNUT0FzLTRkbTNCOWtWMEg5THRpbU9JZU5jZmEtcF95SkViTl9HY01YS1FTZHJ5RWRqbTRIXzZVS0RfOWttdmtn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-07T08:57:04.721Z"
     }
   ]
 }
