@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T10:15:41.604Z",
+  "last_fetch": "2026-07-24T11:09:32.471Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -94,6 +94,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T05:04:00.682Z"
+    },
+    {
+      "id": "rss_3ff0d2ca2ba02d65",
+      "timestamp": 1784865600000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Trump vows to punish Iran and Houthis for attacks in Red Sea - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQNFdZY1R2bFRCTk51X1E2U2dLZUphMDA2MVlUaGRzOEJXRXc5Vl9ObDNaVE9FNnU4eTV6TXBjYjRyR2xZekJYeGY2VHNrYW9hSjhpSjQ0aVJEdXBkSk9Ja2NXRjZjQng3Rkp1eFBHMlVwQ2paZUlVRnZUN0l3OThQRlZVLTJDanZHREpMTjFNVm9odWl5alZwRUpDbUhwSWRWeHc?oc=5\" target=\"_blank\">Trump vows to punish Iran and Houthis for attacks in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNFdZY1R2bFRCTk51X1E2U2dLZUphMDA2MVlUaGRzOEJXRXc5Vl9ObDNaVE9FNnU4eTV6TXBjYjRyR2xZekJYeGY2VHNrYW9hSjhpSjQ0aVJEdXBkSk9Ja2NXRjZjQng3Rkp1eFBHMlVwQ2paZUlVRnZUN0l3OThQRlZVLTJDanZHREpMTjFNVm9odWl5alZwRUpDbUhwSWRWeHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-24T11:09:31.006Z"
     },
     {
       "id": "rss_b7463a578aefee34",
@@ -11199,29 +11222,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-07T16:52:52.819Z"
-    },
-    {
-      "id": "rss_a6a5669bdfcf3168",
-      "timestamp": 1775570299000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis threaten Bab el-Mandeb Strait, complicating Gulf response to Iran - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1aNGJ4Qk1kX0lrdHkyZUZwcWE1THdGZEZENHN0dENPenA5dFJGSElka0NkdEJNcUIwN05xM0gwME9vNXljeGs0VDhLSlN6R2VXbTVMYWJ5cEpYSVFU?oc=5\" target=\"_blank\">Houthis threaten Bab el-Mandeb Strait, complicating Gulf response to Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1aNGJ4Qk1kX0lrdHkyZUZwcWE1THdGZEZENHN0dENPenA5dFJGSElka0NkdEJNcUIwN05xM0gwME9vNXljeGs0VDhLSlN6R2VXbTVMYWJ5cEpYSVFU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-07T15:53:13.508Z"
     }
   ]
 }
