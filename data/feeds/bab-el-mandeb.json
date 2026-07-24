@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-24T20:54:08.231Z",
+  "last_fetch": "2026-07-24T21:24:01.401Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8f94c38a2f07bb21",
+      "timestamp": 1784925116000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi’s strike Yemen’s Houthi-held Hodeidah: Rebel media - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNYnhheEFDTVVVMU0tbFY1aGRvQUsyTHpUeUY3MWxheDI3a2Y4ZXFBMFlac3lpMEtmdFlzd2JFWUtPOFRRbHlLTEtoZkN5V0hkeEZkalRid21TSGozaDRaVWxWM2ZSdEQySFItVlRKWE5HLV9FS0FlZXoxMlczZkZCNTlaMWtrLU1hNVJIbTIzNzVJWWRFQ2kxR9IBngFBVV95cUxPc2xmbldyM2NZMUdPV1pCVEoteU82dkFlbUN2NHh6MUFBbXV2YVVuczdSMVE1Njg0eUJCLUNmMWZZUmtMMTItZ1MzTUQ1cXBSSkpxemoxR0JDaXBIREhRVFF3czd4eHZQZVRPQ0F4Ry1TNmtnRHlOT0FqV1dWWXhXRGZZdVR1WEFXb19VWXREc1NFWDlwejMxTFdxTFdudw?oc=5\" target=\"_blank\">Saudi",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYnhheEFDTVVVMU0tbFY1aGRvQUsyTHpUeUY3MWxheDI3a2Y4ZXFBMFlac3lpMEtmdFlzd2JFWUtPOFRRbHlLTEtoZkN5V0hkeEZkalRid21TSGozaDRaVWxWM2ZSdEQySFItVlRKWE5HLV9FS0FlZXoxMlczZkZCNTlaMWtrLU1hNVJIbTIzNzVJWWRFQ2kxR9IBngFBVV95cUxPc2xmbldyM2NZMUdPV1pCVEoteU82dkFlbUN2NHh6MUFBbXV2YVVuczdSMVE1Njg0eUJCLUNmMWZZUmtMMTItZ1MzTUQ1cXBSSkpxemoxR0JDaXBIREhRVFF3czd4eHZQZVRPQ0F4Ry1TNmtnRHlOT0FqV1dWWXhXRGZZdVR1WEFXb19VWXREc1NFWDlwejMxTFdxTFdudw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-24T21:24:00.050Z"
+    },
     {
       "id": "rss_d813da77f28731c0",
       "timestamp": 1784922649000,
@@ -11206,29 +11227,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-14T02:07:42.308Z"
-    },
-    {
-      "id": "rss_4d6315fa504bdad3",
-      "timestamp": 1776092880000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen may close key Red Sea strait amid US threats to blockade Iran: Report - PressTV",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQVTVwdHpFZmd4SGIxNkp6djNWTzR2LXp0VkFGZ3lTZDFNVGJXN042X3hkN3ZmMTUzbWY5dlVYRnk3YkcxNXdpV3BpaUt3NWZtWnFjMEZTOVJnc2NpRHFudDVkQ2s3WjVLaEpZci14TXdvc1hvNWtlbXhYLUZDTTZOaVZYWkRhZUhXOThXSnZPSWZKaGVkbG5GWmpoRXhmbURwUUdj?oc=5\" target=\"_blank\">Yemen may close key Red Sea strait amid US threats to blockade Iran: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PressTV</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVTVwdHpFZmd4SGIxNkp6djNWTzR2LXp0VkFGZ3lTZDFNVGJXN042X3hkN3ZmMTUzbWY5dlVYRnk3YkcxNXdpV3BpaUt3NWZtWnFjMEZTOVJnc2NpRHFudDVkQ2s3WjVLaEpZci14TXdvc1hvNWtlbXhYLUZDTTZOaVZYWkRhZUhXOThXSnZPSWZKaGVkbG5GWmpoRXhmbURwUUdj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-13T16:19:25.697Z"
     }
   ]
 }
