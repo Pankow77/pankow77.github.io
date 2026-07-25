@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T18:47:57.871Z",
+  "last_fetch": "2026-07-25T19:26:25.124Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_08665beb3ec721c7",
+      "timestamp": 1784996374000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Keeps Flowing From Red Sea As Hormuz Bypass Stays Open - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHo3YlF3UGRRUmZBdHNoZ1N1ODZUaldPbmhxQTBBZXF5alRHdXYzLURnQ21vcHVoYTZTdXhaTWJqZ3dUYmpkWXZ4ODRSMnpwa0N4RGhPNGI5cWZFdS15QjdWYlFXN2xFZE10ZmFSbG9tcmdCN3U2ZnNfaTZCelo2S2hhZ2UtQjA?oc=5\" target=\"_blank\">Oil Keeps Flowing From Red Sea As Hormuz Bypass Stays Open</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHo3YlF3UGRRUmZBdHNoZ1N1ODZUaldPbmhxQTBBZXF5alRHdXYzLURnQ21vcHVoYTZTdXhaTWJqZ3dUYmpkWXZ4ODRSMnpwa0N4RGhPNGI5cWZFdS15QjdWYlFXN2xFZE10ZmFSbG9tcmdCN3U2ZnNfaTZCelo2S2hhZ2UtQjA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T19:26:23.908Z"
+    },
     {
       "id": "rss_7be0b7e0e042f723",
       "timestamp": 1784993962000,
@@ -11209,29 +11230,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-19T07:15:58.995Z"
-    },
-    {
-      "id": "rss_ea25d8922a90463d",
-      "timestamp": 1776575552000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi threat to close Bab el-Mandeb raises global shipping alarm - Minute Mirror",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPcXQ0UzBiTkhSTC1MRzRpZENxMFcxUWx5ZUVlSlJMZkJlWnJzc0IwbS1MMG5rR3JZSGVuSHRJNkdtc0V4WGdHX19iTXdPNTB2UG94bndDMnBQZGVuUXgwN2I3OWZzUXFZN1h4cjJ3aktWVkRDM0dBZVh0SU0zSzA1eFRLTnZGOFhjMFJUVWV1VHRDM010X1RoQkpMWlVMMXlMQ1M0?oc=5\" target=\"_blank\">Houthi threat to close Bab el-Mandeb raises global shipping alarm</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Minute Mirror</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcXQ0UzBiTkhSTC1MRzRpZENxMFcxUWx5ZUVlSlJMZkJlWnJzc0IwbS1MMG5rR3JZSGVuSHRJNkdtc0V4WGdHX19iTXdPNTB2UG94bndDMnBQZGVuUXgwN2I3OWZzUXFZN1h4cjJ3aktWVkRDM0dBZVh0SU0zSzA1eFRLTnZGOFhjMFJUVWV1VHRDM010X1RoQkpMWlVMMXlMQ1M0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-19T05:55:46.587Z"
     }
   ]
 }
