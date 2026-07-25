@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T12:49:11.703Z",
+  "last_fetch": "2026-07-25T13:31:07.661Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -255,6 +255,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T23:48:50.805Z"
+    },
+    {
+      "id": "rss_c957366f3bab293a",
+      "timestamp": 1784926620000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia and Houthis exchange fire as air defences intercept attack on oil refinery - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPZXJqVTM2Sjk5OGw4TnB5SWw2S0xRNG03eE5JLVFfZnp1NXluaGlpU3hHa2o2NHVCTERuOEpHeEliODNVblllcG1FTzdINTZVRUFSLWg2dXphTVphTVRtR0tSYVdKaTJPTEpwN1B3TFZZVnBNRjJvLWV4U3BvYUZud0RzNVpCLUJxRjBYU0U4SkVNbnRwNlhVRTZVS0p1TjlOczBLTG8zNG5nSHFZMzY4WFNZSGIyMlFKMmRJUg?oc=5\" target=\"_blank\">Saudi Arabia and Houthis exchange fire as air defences intercept attack on oil refinery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZXJqVTM2Sjk5OGw4TnB5SWw2S0xRNG03eE5JLVFfZnp1NXluaGlpU3hHa2o2NHVCTERuOEpHeEliODNVblllcG1FTzdINTZVRUFSLWg2dXphTVphTVRtR0tSYVdKaTJPTEpwN1B3TFZZVnBNRjJvLWV4U3BvYUZud0RzNVpCLUJxRjBYU0U4SkVNbnRwNlhVRTZVS0p1TjlOczBLTG8zNG5nSHFZMzY4WFNZSGIyMlFKMmRJUg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-25T13:31:06.412Z"
     },
     {
       "id": "rss_255818503bf08f76",
@@ -11209,29 +11230,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-16T15:22:35.125Z"
-    },
-    {
-      "id": "rss_0b87b1c73d312e68",
-      "timestamp": 1776288637000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 4,
-      "text_summary": "What is Bab el-Mandeb? The critical trade route Iran threatens to shut down - The Economic Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxPeXY2ak1WRWFLNmdtaXNOX05obDQyUmFSNkcyODBKSTg4XzYycldYeU9zVGNrRFVmNVVvQWZleGNFSnV4RVJtTmpjbnNCWWY4R2tRQ3l3bWsxeXlzaW5oSkxkMXhqZTNfZWNpMm1aWG9pSFNMVU5tam95MzRkVVltYWdXczJBdDZXeW1fOUtoSFJ3MDFWSElXZmxKTUlFdEdPNmxpU0NBWVdjRWdMNk80ZzUwVHNWX3JZMGMtT29aSmFfM0xveXBoTzJTbEFiZnB2NkMxTXVVLTduaTY3UHg2M0tDMkvSAeoBQVVfeXFMUGJwQnBBby0yeW1kcUg4NTJLUWx5TFNmRjl2alJ6TlFmY0FqVzhhRmlER05BLU9yNi1yNFRTbHNhYUdtSmR6SC1kOHdnZ3FMVDdSM19aTVFmTjJJWlR3cGxxX1gxalNScX",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPeXY2ak1WRWFLNmdtaXNOX05obDQyUmFSNkcyODBKSTg4XzYycldYeU9zVGNrRFVmNVVvQWZleGNFSnV4RVJtTmpjbnNCWWY4R2tRQ3l3bWsxeXlzaW5oSkxkMXhqZTNfZWNpMm1aWG9pSFNMVU5tam95MzRkVVltYWdXczJBdDZXeW1fOUtoSFJ3MDFWSElXZmxKTUlFdEdPNmxpU0NBWVdjRWdMNk80ZzUwVHNWX3JZMGMtT29aSmFfM0xveXBoTzJTbEFiZnB2NkMxTXVVLTduaTY3UHg2M0tDMkvSAeoBQVVfeXFMUGJwQnBBby0yeW1kcUg4NTJLUWx5TFNmRjl2alJ6TlFmY0FqVzhhRmlER05BLU9yNi1yNFRTbHNhYUdtSmR6SC1kOHdnZ3FMVDdSM19aTVFmTjJJWlR3cGxxX1gxalNScXVxMk5jcExOaFdFcmVJSHJ2WXY0MjBlQ2pOa3BBR0V0NTZvb0tUSjJkOWlNVGkwb0JLNS1nemQ2MHNkelg4Vkxpa09hcFgtUW80Nm5mTHphOUpqZ0VUZEtzaFktYUdJeFdVcXJWU09ibG5HN2t1bnNzQm9saFdCUHdEWmtjcWEzRGxB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T22:08:19.399Z"
     }
   ]
 }
