@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T04:33:40.191Z",
+  "last_fetch": "2026-07-25T05:52:58.784Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_70d4fcef5817662f",
+      "timestamp": 1784952999000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim missile attack on southern Saudi Arabia - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNYWU0YmVCSklOeTQ5d1hoNUtlNlRrbWMtNGpoTm9jNGlKMWowYTVjVXlNendIZE5WN290WDFqcVRqdVZwWi1YZ0k3NEdFZXB0WXZUNE15eU1ZdElIVTlLVUNvSEJCY3RGYTBPTG5zcW0zVFlaTnAxVGI4aDl3ZkJLbXRNUzk2RGp3MVF6WTQzWGhtXzlOeXlpcFl2S0ptR3VP?oc=5\" target=\"_blank\">Houthis claim missile attack on southern Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYWU0YmVCSklOeTQ5d1hoNUtlNlRrbWMtNGpoTm9jNGlKMWowYTVjVXlNendIZE5WN290WDFqcVRqdVZwWi1YZ0k3NEdFZXB0WXZUNE15eU1ZdElIVTlLVUNvSEJCY3RGYTBPTG5zcW0zVFlaTnAxVGI4aDl3ZkJLbXRNUzk2RGp3MVF6WTQzWGhtXzlOeXlpcFl2S0ptR3VP?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T05:52:57.382Z"
+    },
+    {
+      "id": "rss_caaef111a0c5d0d1",
+      "timestamp": 1784951762000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran war: Houthis vow response to Saudi strikes on Hodeida - dw.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3UyYUFFQ05TNV9MQVluVExzcjZnSXVTQ1hOdzBWSFlJYzl1MERhZllGMUZQYk5mUVJNWlk3Mzl1Ul9LMzFlb3NUQTZpWWpOS3pCYjlVQlhzTWZleTNBTXhPRjBpOGlVTngxUnZBdjRvdnBxX1BTRjNnTGZuRWx2aHB6QlYtdWtNSFNjVWFhTmhTVmVkVzFwZDJ4SmsyZ0FiYlJmQzJSNXc?oc=5\" target=\"_blank\">Iran war: Houthis vow response to Saudi strikes on Hodeida</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dw.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3UyYUFFQ05TNV9MQVluVExzcjZnSXVTQ1hOdzBWSFlJYzl1MERhZllGMUZQYk5mUVJNWlk3Mzl1Ul9LMzFlb3NUQTZpWWpOS3pCYjlVQlhzTWZleTNBTXhPRjBpOGlVTngxUnZBdjRvdnBxX1BTRjNnTGZuRWx2aHB6QlYtdWtNSFNjVWFhTmhTVmVkVzFwZDJ4SmsyZ0FiYlJmQzJSNXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T05:52:57.382Z"
+    },
     {
       "id": "rss_5ac1723c5b25b583",
       "timestamp": 1784949351000,
@@ -25,6 +71,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T04:33:38.960Z"
+    },
+    {
+      "id": "rss_a6714836dc62c415",
+      "timestamp": 1784947380000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Iran-backed Houthis claim missile attack on Saudi Arabia as Middle East war widens - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxONGtzUUVWZzk5bHlYMW50bFg3QW94RFZwbXN6ZEY4eVVTVG5pdlRjd2F1V3gySEd3NVZVbHpFbVExQ2ZjMVBVcS1WMUduM3lSNWkxRzVJWGt3Q0huTW51SmdYQTYtY3RJYXVLUnpKUkZLb3c0aHpYQk9SSUNVLXhzQnY4TTFYOE1vbVQwS0h3clplUkpKenY0WVJpUkU?oc=5\" target=\"_blank\">Iran-backed Houthis claim missile attack on Saudi Arabia as Middle East war widens</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONGtzUUVWZzk5bHlYMW50bFg3QW94RFZwbXN6ZEY4eVVTVG5pdlRjd2F1V3gySEd3NVZVbHpFbVExQ2ZjMVBVcS1WMUduM3lSNWkxRzVJWGt3Q0huTW51SmdYQTYtY3RJYXVLUnpKUkZLb3c0aHpYQk9SSUNVLXhzQnY4TTFYOE1vbVQwS0h3clplUkpKenY0WVJpUkU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T05:52:57.382Z"
     },
     {
       "id": "rss_457d791ad8c2a341",
@@ -11158,73 +11228,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T17:37:35.278Z"
-    },
-    {
-      "id": "rss_c6660b7841b21b02",
-      "timestamp": 1776207149000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Red Sea ship attack threatens new war with Houthis - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgJBVV95cUxQWW55U3Vod0VpcUI2N1FoT21JWVJQQUVTWU4yLWY0TWZPazlhYnFMc2N3WGJFaXJTN2lUbkFDRENrS2o3aEJEOXo0MVBMSzVzdjhZeDNIU0pFTjlHV1dWa3UzdGgtMURpVmdiclhLdjJBaUdHbndlNm9xUGVmcTAtMnFMZTdiRmxJNGhuWFNhU0FyeFJfNUFPMVQ1aVl1SVBKd3BVeXNacnhsUjFpb29BY1BLV2tmUWRjT1pUaGtvZ0YteXFtUEhPUkZXeUR4QW44LU1xdzhuZ0daRFJhalpQbjRsczJ4REJQR18wNDhMaW9ramxYNU5MZHFNR3c1SGR3TUJMZl9DaDhjemhRYURoeXl4UE1XcHRrVVcxN2M2dHF1LXlITkhCcUtmR3B0d3JOSjVPNVdB?oc=5\" target=\"_blank\">Red Sea shi",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgJBVV95cUxQWW55U3Vod0VpcUI2N1FoT21JWVJQQUVTWU4yLWY0TWZPazlhYnFMc2N3WGJFaXJTN2lUbkFDRENrS2o3aEJEOXo0MVBMSzVzdjhZeDNIU0pFTjlHV1dWa3UzdGgtMURpVmdiclhLdjJBaUdHbndlNm9xUGVmcTAtMnFMZTdiRmxJNGhuWFNhU0FyeFJfNUFPMVQ1aVl1SVBKd3BVeXNacnhsUjFpb29BY1BLV2tmUWRjT1pUaGtvZ0YteXFtUEhPUkZXeUR4QW44LU1xdzhuZ0daRFJhalpQbjRsczJ4REJQR18wNDhMaW9ramxYNU5MZHFNR3c1SGR3TUJMZl9DaDhjemhRYURoeXl4UE1XcHRrVVcxN2M2dHF1LXlITkhCcUtmR3B0d3JOSjVPNVdB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-16T10:43:53.697Z"
-    },
-    {
-      "id": "rss_1eca63db335df38b",
-      "timestamp": 1776172901000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "A US Navy Aircraft Carrier Is Circling Africa To Reach The Middle East - Forbes",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNUGtTTmRZUjFidVB4dmNEMXhUMnFUZFFkTVJjTVU3Y2d3ejVBbDJ0cTAyWEtYY3NNeU1manVHclRlNlZ2Tk9wRHdRcFF3VV93bENyQXNaNjFtbFJyeHVjSWN0NHFFRS1GejZSMWlKT1FvbHNCUnhBb01ieFJFc1RrY0tITF92Qlk2V1dMVG1aUFJEcnN4ck5nYXl6RGZzdEI2LTBWNlJ2WXRjc3NONzQzU2Q0UzIwd3M3Q3NFbDA4TQ?oc=5\" target=\"_blank\">A US Navy Aircraft Carrier Is Circling Africa To Reach The Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Forbes</font>",
-      "tags": [
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUGtTTmRZUjFidVB4dmNEMXhUMnFUZFFkTVJjTVU3Y2d3ejVBbDJ0cTAyWEtYY3NNeU1manVHclRlNlZ2Tk9wRHdRcFF3VV93bENyQXNaNjFtbFJyeHVjSWN0NHFFRS1GejZSMWlKT1FvbHNCUnhBb01ieFJFc1RrY0tITF92Qlk2V1dMVG1aUFJEcnN4ck5nYXl6RGZzdEI2LTBWNlJ2WXRjc3NONzQzU2Q0UzIwd3M3Q3NFbDA4TQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T19:09:48.933Z"
-    },
-    {
-      "id": "rss_0692aa7c79096cc8",
-      "timestamp": 1776150000000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Conflict in Yemen and the Red Sea | Global Conflict Tracker - Council on Foreign Relations",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE1wLVlLT0hRb1JoS2NYWXdlLWtBdlJHVjBfUFMzLW04cU9ENTE3VVlwUW5IdHRqdDhfTmFqZ1FiRnBRcDU3a3NUajF4Ny1Wb1UxN2lqR091Q1BETVNSZm5maTVEeGhLM3VySUZuRVc5Yw?oc=5\" target=\"_blank\">Conflict in Yemen and the Red Sea | Global Conflict Tracker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wLVlLT0hRb1JoS2NYWXdlLWtBdlJHVjBfUFMzLW04cU9ENTE3VVlwUW5IdHRqdDhfTmFqZ1FiRnBRcDU3a3NUajF4Ny1Wb1UxN2lqR091Q1BETVNSZm5maTVEeGhLM3VySUZuRVc5Yw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T19:09:50.377Z"
     }
   ]
 }
