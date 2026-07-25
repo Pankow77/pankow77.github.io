@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T13:31:07.661Z",
+  "last_fetch": "2026-07-25T14:31:29.639Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0114dc89aa6fc7fb",
+      "timestamp": 1784988324000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Reported Houthi attack on Saudi Aramco site renews Red Sea shipping concerns (videos) - Philenews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2xDLVhMTS12QjN1NGoxd1QtWG9ZMmVPTmdLcTU2bllTVXk1MG5PV3lZRVpFLXFLTmlHLXh2OGt0WUZ4SFBxdlR6YXBpTUVGejVVRXFEYWI0LUV1a2pvVUhnNFBkLXU3UzVycGpWVVdXclh5MTV3ZEs5NEFFalpudzIxVU52SGxDMEdaZ2o1cjJZamZw?oc=5\" target=\"_blank\">Reported Houthi attack on Saudi Aramco site renews Red Sea shipping concerns (videos)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Philenews</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2xDLVhMTS12QjN1NGoxd1QtWG9ZMmVPTmdLcTU2bllTVXk1MG5PV3lZRVpFLXFLTmlHLXh2OGt0WUZ4SFBxdlR6YXBpTUVGejVVRXFEYWI0LUV1a2pvVUhnNFBkLXU3UzVycGpWVVdXclh5MTV3ZEs5NEFFalpudzIxVU52SGxDMEdaZ2o1cjJZamZw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T14:31:29.631Z"
+    },
+    {
+      "id": "rss_86c0a0d054bfa99b",
+      "timestamp": 1784985525000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack Saudi Aramco sites – with Yemen at risk of renewed war - thenationalnews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQT091R3hvNGZCd2h2eHpPRzhBWG9ETEQwa3MwNmNXQS02UkJCOG1kaFdJRXVpUE5YcG5CMGZnemJrOWFxdi13ZDNhVDlVcEItUHF4VHUzMGVONXRwS0RJdXlOejhIb3ZzeWw1Y01DZEZ2SjlsR1dFcS1qSWItRUVVRldmSHNpMGxSOXdXemVuNWtWS1gxQlB1MEtKWFdXVmo4MnBUZmphdGxuMHVocDNpWGxWYW45WTBvOHl5ZWZB?oc=5\" target=\"_blank\">Houthis attack Saudi Aramco sites – with Yemen at risk of renewed war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQT091R3hvNGZCd2h2eHpPRzhBWG9ETEQwa3MwNmNXQS02UkJCOG1kaFdJRXVpUE5YcG5CMGZnemJrOWFxdi13ZDNhVDlVcEItUHF4VHUzMGVONXRwS0RJdXlOejhIb3ZzeWw1Y01DZEZ2SjlsR1dFcS1qSWItRUVVRldmSHNpMGxSOXdXemVuNWtWS1gxQlB1MEtKWFdXVmo4MnBUZmphdGxuMHVocDNpWGxWYW45WTBvOHl5ZWZB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T14:31:28.297Z"
+    },
     {
       "id": "rss_7525213d02e059db",
       "timestamp": 1784974978000,
@@ -11186,50 +11230,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-16T13:43:14.288Z"
-    },
-    {
-      "id": "rss_02127c6c9de75660",
-      "timestamp": 1776327916000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "After Strait of Hormuz, is Bab el-Mandeb next? How could Iran block the passage without direct border... - Moneycontrol.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxOMFNnTmZxX3FrV0JEZDJSWU56M0VXS2VkVy1sUXZaV0p4WGhhUWhSUFBpZlF3am51UTQ3clpxUmFoaEozOXE4Y2F0QjFZSGJVZWw0LU85SHEzTk1wN0xpN2Z4T3dOekc3RWpfRjR4dHBoMlE0VnNKRENMd0x2NFA0cW9vRmlHSDR3MEZKLVlNRXRSaldibVZZZU9wUlI4M2JxbnQ3R3pzdVdJMURFSmFuWHJ0aFJtYjZDN2lyN2FKVTU4YURqRVpRaHR2cW9MVEZtVHFOSVU0VjNfRXRvb0daekJtVzRCOHFrVURsY3FtOUttdnZKbEHSAfsBQVVfeXFMUE15ODFYazdNSjBjUXlOclREaDNyVDc2Vko2c2xPR28xMmtRQ1FWSHpUOHZvQWtFbUNhVWhZX1g2eUNXWE1WUnI3bTNNb19ieHFUUG5XVn",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOMFNnTmZxX3FrV0JEZDJSWU56M0VXS2VkVy1sUXZaV0p4WGhhUWhSUFBpZlF3am51UTQ3clpxUmFoaEozOXE4Y2F0QjFZSGJVZWw0LU85SHEzTk1wN0xpN2Z4T3dOekc3RWpfRjR4dHBoMlE0VnNKRENMd0x2NFA0cW9vRmlHSDR3MEZKLVlNRXRSaldibVZZZU9wUlI4M2JxbnQ3R3pzdVdJMURFSmFuWHJ0aFJtYjZDN2lyN2FKVTU4YURqRVpRaHR2cW9MVEZtVHFOSVU0VjNfRXRvb0daekJtVzRCOHFrVURsY3FtOUttdnZKbEHSAfsBQVVfeXFMUE15ODFYazdNSjBjUXlOclREaDNyVDc2Vko2c2xPR28xMmtRQ1FWSHpUOHZvQWtFbUNhVWhZX1g2eUNXWE1WUnI3bTNNb19ieHFUUG5XVnZfZzRPY2tnRzlrMGUwOWlNNWlZdUdnM2JqU1FOUlpNV292MUlQRzZYdGdJcDhMVzNIZFdBaWxUMXMtcTBLSFZtekVfTFplRnVkQjdJN1V0TUsycnp0bWxvRkx1Uzc4aWhwS2VjR1Rpbk1zTHJvZTc1dXR0WkNTMTZGTG1ZNEVQX3dLQXI3ZllQaEdYWHdERWZ0b2IwcGhPWl9RX2x0NGZwT0xLSkk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-17T05:14:20.013Z"
-    },
-    {
-      "id": "rss_ff23c3d891f61dc9",
-      "timestamp": 1776318621000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "U.S. Supercarrier Forced to Flee Red Sea: USS George H.W. Bush Takes 6,000-Mile Detour Around Africa as Houthi Threat Rewrites Global Naval Strategy - Defence Security Asia",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOLVE2MnNVVkRYWmF6Q2xhMlZsbFc2MGNZUlo4ZldDdFVlQnhOQ2NtcU5GUC0xaW5UcFYxdW54UFdSN25jd3ZrdTVLMkplWkg2a2hNWGRkTjB1Rlc5SFlRTWlxdjMzUWJwamlXMFQ4Y3M0OTlrOVVIOVZ0SWIyZEdHRWlxVDZCTGZCREp2MXAtZnJ1UDh0UUlrMTE4OU02MTVRVFd1Vl9nbVZ1cHJPVFE?oc=5\" target=\"_blank\">U.S. Supercarrier Forced to Flee Red Sea: USS George H.W. Bush Takes 6,000-Mile Detour Around Africa as Houthi Threat Rewrites Global Naval Strategy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Defenc",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOLVE2MnNVVkRYWmF6Q2xhMlZsbFc2MGNZUlo4ZldDdFVlQnhOQ2NtcU5GUC0xaW5UcFYxdW54UFdSN25jd3ZrdTVLMkplWkg2a2hNWGRkTjB1Rlc5SFlRTWlxdjMzUWJwamlXMFQ4Y3M0OTlrOVVIOVZ0SWIyZEdHRWlxVDZCTGZCREp2MXAtZnJ1UDh0UUlrMTE4OU02MTVRVFd1Vl9nbVZ1cHJPVFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-16T15:22:35.125Z"
     }
   ]
 }
