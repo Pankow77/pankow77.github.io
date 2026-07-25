@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T10:30:40.916Z",
+  "last_fetch": "2026-07-25T11:26:00.014Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7525213d02e059db",
+      "timestamp": 1784974978000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi military strikes Houthi targets in Yemen after the Iran-backed militia attacked Red Sea shipping - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPczRiQmJ3SUp1TUJNbnNVa2I4ME5TeWFON3BtaGVySWFXdExrUkI5RnB6VDJIWGpZdmVOcUZCcDY4ZVY4eDktT3JVQXhqNklPUjFYdUhyQXRTV1R3NG1SSVEycHpJeFJaYWNaNElqb3JsUXVEY2xTOXVzV1dkV184T21zU09Ca2NZV0ZSSm1PclNmQWxXVnJj0gGcAUFVX3lxTE9BNXJWRGsyeE1Ta1FqT3RqdklsQWo1TFZrSTExWDBGaDluY0NFdzZJZFEwSHp3VWFtNmFaV19xVmJ1YkM0REhmVDhGcmFwQkVMYzd0UVRxQVZFOGNjWHFFczNhelNheUpqT3RpVVBYbzJMRGNuR1ZsRzZ6SkVpTkRib2VlbGhBeG5hbGhmdEYtUkQ4OUc5LTJoRGJVUQ?oc=5\" target=\"_blank\">Saudi mil",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPczRiQmJ3SUp1TUJNbnNVa2I4ME5TeWFON3BtaGVySWFXdExrUkI5RnB6VDJIWGpZdmVOcUZCcDY4ZVY4eDktT3JVQXhqNklPUjFYdUhyQXRTV1R3NG1SSVEycHpJeFJaYWNaNElqb3JsUXVEY2xTOXVzV1dkV184T21zU09Ca2NZV0ZSSm1PclNmQWxXVnJj0gGcAUFVX3lxTE9BNXJWRGsyeE1Ta1FqT3RqdklsQWo1TFZrSTExWDBGaDluY0NFdzZJZFEwSHp3VWFtNmFaV19xVmJ1YkM0REhmVDhGcmFwQkVMYzd0UVRxQVZFOGNjWHFFczNhelNheUpqT3RpVVBYbzJMRGNuR1ZsRzZ6SkVpTkRib2VlbGhBeG5hbGhmdEYtUkQ4OUc5LTJoRGJVUQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T11:26:00.007Z"
+    },
     {
       "id": "rss_64bd04b44caa0042",
       "timestamp": 1784966634000,
@@ -164,6 +188,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T01:34:02.099Z"
+    },
+    {
+      "id": "rss_b8d3c8f680d21786",
+      "timestamp": 1784934215000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Attack Saudi Oil Tankers in the Red Sea - The Institute for Energy Research",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNcmdvcndaQnUySnVZMnc5VFJnV0UtaFduY1BBb3Z5aW1SYWRTLWVSMDhlUlVLTUU2RFpKUjVHS1RuaEJ4WVZ0Q0lNN3FpWHhRQVkyUmxoN0xTSkRpbGszeFdhRXh2X016enh2akQ5WWt2UUl4RUgxRExyN2xzbTdpeVpHbmtUcmJvSGViemdPdGR2ZkF4M3l6djhUV24zSHN4akNfY3cyY1lEaXgtT1gySEVR?oc=5\" target=\"_blank\">Houthis Attack Saudi Oil Tankers in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Institute for Energy Research</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcmdvcndaQnUySnVZMnc5VFJnV0UtaFduY1BBb3Z5aW1SYWRTLWVSMDhlUlVLTUU2RFpKUjVHS1RuaEJ4WVZ0Q0lNN3FpWHhRQVkyUmxoN0xTSkRpbGszeFdhRXh2X016enh2akQ5WWt2UUl4RUgxRExyN2xzbTdpeVpHbmtUcmJvSGViemdPdGR2ZkF4M3l6djhUV24zSHN4akNfY3cyY1lEaXgtT1gySEVR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T11:25:58.757Z"
     },
     {
       "id": "rss_0a6c18d608741d6c",
@@ -11185,53 +11232,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T22:08:19.399Z"
-    },
-    {
-      "id": "rss_ed66dc99729bf1ba",
-      "timestamp": 1776259920000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran threatens Red Sea blockade as US maritime pressure intensifies - CHOSUNBIZ - Chosunbiz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ01LU2xQVXFnNmlhN3BHRXR2NnUwYVBuR1lzX1B4RkZjZ2Zfa3JKTXVKTGFuTV9iNmdRT3RYTHdSbjROMVZRX202Q2dkTUZxY0VDMVlJMGpvRVJSY3JlaFJaNHptbHItSllEejVHTFZkWE0zc29lTXEzNVk2eFU1ZG1OTlhWT21m0gGcAUFVX3lxTE5QTVNwdllzY2s2MkYxdDZvQW9HNlZvRE5Fc0dNbFBhRGNzbS1uQVdHSXlMeFV4RERJNDRtbzA1Ti1XbUh3NnBTamh0YThRZVhtc19OYVg3UEg1S0NKVHdVY256ZUZ0Wk9PRGZtSjdhaGJSN3Jpeld4VmpGZzZzcVFQZjE5eTUxcS1pWWtacFE5UTRVMHVKdVdUbUE5Sw?oc=5\" target=\"_blank\">Iran threatens Red Sea blocka",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOQ01LU2xQVXFnNmlhN3BHRXR2NnUwYVBuR1lzX1B4RkZjZ2Zfa3JKTXVKTGFuTV9iNmdRT3RYTHdSbjROMVZRX202Q2dkTUZxY0VDMVlJMGpvRVJSY3JlaFJaNHptbHItSllEejVHTFZkWE0zc29lTXEzNVk2eFU1ZG1OTlhWT21m0gGcAUFVX3lxTE5QTVNwdllzY2s2MkYxdDZvQW9HNlZvRE5Fc0dNbFBhRGNzbS1uQVdHSXlMeFV4RERJNDRtbzA1Ti1XbUh3NnBTamh0YThRZVhtc19OYVg3UEg1S0NKVHdVY256ZUZ0Wk9PRGZtSjdhaGJSN3Jpeld4VmpGZzZzcVFQZjE5eTUxcS1pWWtacFE5UTRVMHVKdVdUbUE5Sw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T14:52:44.119Z"
-    },
-    {
-      "id": "rss_277224e0c9491ae3",
-      "timestamp": 1776256803000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran threatens to disrupt shipping in Red Sea unless US lifts Hormuz blockade - ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBwaDBMbk9jN0YtVkk1eTA2aDdITmZBak5NNVdFSlNra3diRDAyTUdlLTVUamcyeXlDSUlGQ3poWkN0SnI3ZHlHUTMyTFM4eVRaeXVPS0FR?oc=5\" target=\"_blank\">Iran threatens to disrupt shipping in Red Sea unless US lifts Hormuz blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ynetnews</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBwaDBMbk9jN0YtVkk1eTA2aDdITmZBak5NNVdFSlNra3diRDAyTUdlLTVUamcyeXlDSUlGQ3poWkN0SnI3ZHlHUTMyTFM4eVRaeXVPS0FR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T19:09:48.932Z"
     }
   ]
 }
