@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T14:31:29.639Z",
+  "last_fetch": "2026-07-25T15:23:13.997Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_699590981ab1f2a8",
+      "timestamp": 1784989718000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis strike Saudi cities after Hodeida raids raise Red Sea shipping fears - India Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVERDcWxsajBfamcwWHFzLV9NSVByRHRHWnBDS0ZlTndaUXc5RV80dVd4WFpZbW9HWUt3ZzQxSTRNTlE0ZHU1QXJlZmhNSFdreV9SWVdqMU40QWtkSXFvaUlJcFlZTmZYM0xrZEtQOVBfNklKU3FKWjRWcFVBUkJVSTE2MzlYcG05X21wdjhWZzc0Sm1nMm0yM1Vxd0thWWppUGpjdXNiLWdaZHBCOGdOaXpVMXY5RmgwSjhwa2R3Y1lVbVV5ZGhWTTViUGxuQVNMZ2o1cG5B?oc=5\" target=\"_blank\">Houthis strike Saudi cities after Hodeida raids raise Red Sea shipping fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">India Today</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVERDcWxsajBfamcwWHFzLV9NSVByRHRHWnBDS0ZlTndaUXc5RV80dVd4WFpZbW9HWUt3ZzQxSTRNTlE0ZHU1QXJlZmhNSFdreV9SWVdqMU40QWtkSXFvaUlJcFlZTmZYM0xrZEtQOVBfNklKU3FKWjRWcFVBUkJVSTE2MzlYcG05X21wdjhWZzc0Sm1nMm0yM1Vxd0thWWppUGpjdXNiLWdaZHBCOGdOaXpVMXY5RmgwSjhwa2R3Y1lVbVV5ZGhWTTViUGxuQVNMZ2o1cG5B?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T15:23:13.992Z"
+    },
+    {
+      "id": "rss_4255bafa53f2ba58",
+      "timestamp": 1784988392000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis fire missiles, drones at Saudi Arabia in response to strikes on Hodeida - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnhqRWFaNEdOSkwzb0NUdkR4RDlEdmY5aWE5VFh5LUlld21TV2FvSXZfWS1jYldFdFcwS2R5aEFaWjlGeEt5aEhzeEpDQ3d4ZUhFQVp5Y3hXUjFhR0cyZUhtQ3N3Q2dXWVBuSndMYnZ3cHZMNmxYQlBXVlJlTld1T3l0OTZLSWdwWE42dHoyZHlVNXlSOWJCSll6UEZGWXdRQWZ4ZXVVbExjWTgwbzFlZzc4TlJFREQyVXc?oc=5\" target=\"_blank\">Yemen’s Houthis fire missiles, drones at Saudi Arabia in response to strikes on Hodeida</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnhqRWFaNEdOSkwzb0NUdkR4RDlEdmY5aWE5VFh5LUlld21TV2FvSXZfWS1jYldFdFcwS2R5aEFaWjlGeEt5aEhzeEpDQ3d4ZUhFQVp5Y3hXUjFhR0cyZUhtQ3N3Q2dXWVBuSndMYnZ3cHZMNmxYQlBXVlJlTld1T3l0OTZLSWdwWE42dHoyZHlVNXlSOWJCSll6UEZGWXdRQWZ4ZXVVbExjWTgwbzFlZzc4TlJFREQyVXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T15:23:12.592Z"
+    },
     {
       "id": "rss_0114dc89aa6fc7fb",
       "timestamp": 1784988324000,
@@ -11183,53 +11230,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-20T17:34:14.392Z"
-    },
-    {
-      "id": "rss_dd3d476382cfbafd",
-      "timestamp": 1776384846000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Red Sea ship attack threatens new war with Houthis - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwJBVV95cUxNWkFsUUlqaHJoT21STURueFowa3prR3pJZVVLX2xpZzdBbzdZUHNIUzNWQVdxUlIxcmdUdHNQRU9taW1QR1BTcjRQc1VaRHhleFlQejloV1JIREs1S1FsWUIyV1FjYmExQUVOWlFPVUdTLWNZS3YzeDY4WlJBRTNQaVl0dkVkWkFBSEpGU09Rcjhwcml1Y3RPUjVHZURNTTdicTBQRHBoNE50bXlDWmxtSzZRM3Y4ZUFFYjZ2ZS1vY2N5czFHYm1WMUpWVlFvdXh1N1JkMEJmWkhNVHhRN21JcVpqOVM0cmRObkd1ZTcyaUxrUml4ci1ORTJYQ25ZQWFLajBnVmhmcTlTekhLSFdIOXBhbHE4VTFfd2NkUUxKTXJjOUVuSnFRbDQ2SlZoUmF2YlZJQjBRZw?oc=5\" target=\"_blank\">Red Sea s",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNWkFsUUlqaHJoT21STURueFowa3prR3pJZVVLX2xpZzdBbzdZUHNIUzNWQVdxUlIxcmdUdHNQRU9taW1QR1BTcjRQc1VaRHhleFlQejloV1JIREs1S1FsWUIyV1FjYmExQUVOWlFPVUdTLWNZS3YzeDY4WlJBRTNQaVl0dkVkWkFBSEpGU09Rcjhwcml1Y3RPUjVHZURNTTdicTBQRHBoNE50bXlDWmxtSzZRM3Y4ZUFFYjZ2ZS1vY2N5czFHYm1WMUpWVlFvdXh1N1JkMEJmWkhNVHhRN21JcVpqOVM0cmRObkd1ZTcyaUxrUml4ci1ORTJYQ25ZQWFLajBnVmhmcTlTekhLSFdIOXBhbHE4VTFfd2NkUUxKTXJjOUVuSnFRbDQ2SlZoUmF2YlZJQjBRZw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-17T17:45:57.931Z"
-    },
-    {
-      "id": "rss_f9a150590e9d9fdd",
-      "timestamp": 1776344248000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Red Sea Shipping Threat: Trade Route Risks - Discovery Alert",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE5jNkZ5VUxqdmxmOXN2eG1icUlOT21XRWRZRnVrQVByXzBZOHI0a3Awdy1GRlVZdVZGU29XLTJ0WkhTd0NHMFZ2TXNwT21QR2lnNlh1UV9jUHh0NUJaXzFqX01PQ3l0NXlpTkZ3MHR4U3YxUQ?oc=5\" target=\"_blank\">Iran Red Sea Shipping Threat: Trade Route Risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Discovery Alert</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5jNkZ5VUxqdmxmOXN2eG1icUlOT21XRWRZRnVrQVByXzBZOHI0a3Awdy1GRlVZdVZGU29XLTJ0WkhTd0NHMFZ2TXNwT21QR2lnNlh1UV9jUHh0NUJaXzFqX01PQ3l0NXlpTkZ3MHR4U3YxUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-16T13:43:14.288Z"
     }
   ]
 }
