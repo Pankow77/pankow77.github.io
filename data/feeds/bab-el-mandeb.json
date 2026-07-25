@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T20:46:14.185Z",
+  "last_fetch": "2026-07-25T21:17:47.908Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1f325ae9ff120cdc",
+      "timestamp": 1785008286000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition targets Houthi positions as Red Sea shipping comes under renewed attack - Times Kuwait",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZlNmT3VoQW04YXpvclZrdzRCM3VsVDRiU1RPcmdLLVR2dTlqWTBoWFZTY0oxalpLdjJqVE5Xb2xHa040Y3AzVk0xcWk2ZXBGT0U4NXVLc1VnQTJFTVNNSnktdTNja1JzYU1QdFN6bkRXTXdLLWtVZ1daYWp5M3BlaWVFc2l3UklPLTBzOGpwdTBZMkI4RjZkRC16QTdJdXBzSHpZcDJRcGM3SVFTaTBKUHJ1WmxlaHM?oc=5\" target=\"_blank\">Saudi-led coalition targets Houthi positions as Red Sea shipping comes under renewed attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Times Kuwait</font>",
+      "tags": [
+        "shipping",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZlNmT3VoQW04YXpvclZrdzRCM3VsVDRiU1RPcmdLLVR2dTlqWTBoWFZTY0oxalpLdjJqVE5Xb2xHa040Y3AzVk0xcWk2ZXBGT0U4NXVLc1VnQTJFTVNNSnktdTNja1JzYU1QdFN6bkRXTXdLLWtVZ1daYWp5M3BlaWVFc2l3UklPLTBzOGpwdTBZMkI4RjZkRC16QTdJdXBzSHpZcDJRcGM3SVFTaTBKUHJ1WmxlaHM?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T21:17:47.901Z"
+    },
     {
       "id": "rss_08665beb3ec721c7",
       "timestamp": 1784996374000,
@@ -11209,27 +11233,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-19T12:53:46.986Z"
-    },
-    {
-      "id": "rss_006653f3d15af9cd",
-      "timestamp": 1776578954000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "War Update: Houthi movement Issues Warning Over Bab-el-Mandeb Strait - ABP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQOThISmFocjlmZTJFYXJOdkhmWnpQd1I4OHZoREJkWERyckRHR192OEVPSjNaVExGYlhNdktPYlNGOHJGTHVLWGg1blNJNWFMN3RucmtoVlpmUmhqUGJDQThpQVk3dmpOVE1ZeTJxSm82WjJ4VlJUOUpfcFpXRGlRMUEwamxPUW5COTRJUFM2elJaZDNDd1FqOE9PS1VRd2JKMEpTMDlYcWZXOVJYZ0pVbHI0RXNUSHV3eEHSAb8BQVVfeXFMTS1uazlXU3JtWjJtTl9fXzhrRUMyVHF4STRRd2dTUzFEMFl0ZDA4UjNBRTlFRnk4TUdqMGxIdGVoZXRzRWtCSnhnYmtkSmkwcWJ2dGs3b0U0dkNEYUlRYUN5TmlaZzdRQUh2elRnajMtckZNNVhlZHZTc1Rsd1lFdWh5bmhDcmZhRTZBWUhmREdxc1",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQOThISmFocjlmZTJFYXJOdkhmWnpQd1I4OHZoREJkWERyckRHR192OEVPSjNaVExGYlhNdktPYlNGOHJGTHVLWGg1blNJNWFMN3RucmtoVlpmUmhqUGJDQThpQVk3dmpOVE1ZeTJxSm82WjJ4VlJUOUpfcFpXRGlRMUEwamxPUW5COTRJUFM2elJaZDNDd1FqOE9PS1VRd2JKMEpTMDlYcWZXOVJYZ0pVbHI0RXNUSHV3eEHSAb8BQVVfeXFMTS1uazlXU3JtWjJtTl9fXzhrRUMyVHF4STRRd2dTUzFEMFl0ZDA4UjNBRTlFRnk4TUdqMGxIdGVoZXRzRWtCSnhnYmtkSmkwcWJ2dGs3b0U0dkNEYUlRYUN5TmlaZzdRQUh2elRnajMtckZNNVhlZHZTc1Rsd1lFdWh5bmhDcmZhRTZBWUhmREdxc1pKT045THhfeU5lZl9YdnFXYUlVWkRNZ05JZnRXeHlpOHUyekNUbjVoMFhkOGM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-19T07:15:58.995Z"
     }
   ]
 }
