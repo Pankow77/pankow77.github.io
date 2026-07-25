@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T06:47:13.055Z",
+  "last_fetch": "2026-07-25T07:38:49.339Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_dd2dd958f3d31995",
+      "timestamp": 1784954920000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia and Houthis trade fire as US fires on tanker in Hormuz Strait - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXMFN4NE9tTE1Ub0dqX2ZDNVh1RzVNUmhMZGdhbUlfd3VZSi1KcmNYMmM4dm1acGlMLWt0TEpUX214WXBaV0JCRnZEdC1jWklyZ0J2YzltQkFmZw?oc=5\" target=\"_blank\">Saudi Arabia and Houthis trade fire as US fires on tanker in Hormuz Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXMFN4NE9tTE1Ub0dqX2ZDNVh1RzVNUmhMZGdhbUlfd3VZSi1KcmNYMmM4dm1acGlMLWt0TEpUX214WXBaV0JCRnZEdC1jWklyZ0J2YzltQkFmZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T07:38:48.206Z"
+    },
     {
       "id": "rss_70d4fcef5817662f",
       "timestamp": 1784952999000,
@@ -11209,27 +11232,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T11:53:52.286Z"
-    },
-    {
-      "id": "rss_edc82fdd4d0afa53",
-      "timestamp": 1776236989000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Sara Duterte seeks justice for Filipino seafarers killed in Houthi attack - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gJBVV95cUxNbkhwSWxLRkszTGk1V3VKdDZicEwtQl9lOEh3YkJJQmFtUlBmd3JXejlsWDRHRTNRMl93N3FOcHZrV3J5V1hVTTFZc01jZnNOZGw0OEhEcUFSYjA0dlFDYVVIcWFfb1p5WnVBcFhHOGdCNTBaeWhtaUxPQmxyZ0E0UDVhSnBOTExiTjd5bmlJSWI1UDJBSjc2eW9wSlpsVkJ3UWh2WF84S2VPTzNublQzUmF3enpOS0VMbFRldml0eHBiQ0NBdXltaUl6UWlncmpwY3pSREpxS0l5dXlhSk1jUDFNX3FUTVFYaFpOOWhWY3hmOUtzNkVCWHFraEVFWnV0WVBySTdDdlVUM2VfOGNGSHV6MEo1Y2kzRmdHckFLbWZta0daNjNMTVZzeXlBQ2lkX3dWeDVLQWdGS3NLSEo0bGE3bmF1aTVBZjNReEIxT3",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxNbkhwSWxLRkszTGk1V3VKdDZicEwtQl9lOEh3YkJJQmFtUlBmd3JXejlsWDRHRTNRMl93N3FOcHZrV3J5V1hVTTFZc01jZnNOZGw0OEhEcUFSYjA0dlFDYVVIcWFfb1p5WnVBcFhHOGdCNTBaeWhtaUxPQmxyZ0E0UDVhSnBOTExiTjd5bmlJSWI1UDJBSjc2eW9wSlpsVkJ3UWh2WF84S2VPTzNublQzUmF3enpOS0VMbFRldml0eHBiQ0NBdXltaUl6UWlncmpwY3pSREpxS0l5dXlhSk1jUDFNX3FUTVFYaFpOOWhWY3hmOUtzNkVCWHFraEVFWnV0WVBySTdDdlVUM2VfOGNGSHV6MEo1Y2kzRmdHckFLbWZta0daNjNMTVZzeXlBQ2lkX3dWeDVLQWdGS3NLSEo0bGE3bmF1aTVBZjNReEIxT3pDVEN4ODRuM0ZR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-16T22:35:43.464Z"
     }
   ]
 }
