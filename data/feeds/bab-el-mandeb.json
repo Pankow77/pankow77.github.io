@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T15:23:13.997Z",
+  "last_fetch": "2026-07-25T15:50:04.963Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7be0b7e0e042f723",
+      "timestamp": 1784993962000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim attack on Saudi oil refinery as Iran war widens to Red Sea - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOOVpNZ2psN29sT085Yy0tT0xweWpLcTBRbUxaVlRGS1hJVFRHc3R0QjdlSWEybjlnNmtKYXM4WjQxaG9neGFqZkNrUEthVHJsQ2VEM0VEX2hJc2tIcHNZT0tEV3JQRUtrbk9YT0dGOGo0T0VVbUVkOVZaS29hWHRBcUw0QkJ4VjlSc2h6czhXWGRkT2xiMkJJUlBkcENSX0VjQndrSjJlT25vS2FFSVA4WE5B?oc=5\" target=\"_blank\">Houthis claim attack on Saudi oil refinery as Iran war widens to Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOOVpNZ2psN29sT085Yy0tT0xweWpLcTBRbUxaVlRGS1hJVFRHc3R0QjdlSWEybjlnNmtKYXM4WjQxaG9neGFqZkNrUEthVHJsQ2VEM0VEX2hJc2tIcHNZT0tEV3JQRUtrbk9YT0dGOGo0T0VVbUVkOVZaS29hWHRBcUw0QkJ4VjlSc2h6czhXWGRkT2xiMkJJUlBkcENSX0VjQndrSjJlT25vS2FFSVA4WE5B?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T15:50:03.609Z"
+    },
     {
       "id": "rss_699590981ab1f2a8",
       "timestamp": 1784989718000,
@@ -11209,27 +11232,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-19T05:55:46.587Z"
-    },
-    {
-      "id": "rss_b50164ca4b08b54f",
-      "timestamp": 1776507486000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil prices surge 4% after Houthi attack on Israel, head for third straight monthly gain. What’s the near-term outlook? - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgJBVV95cUxObWZsU0dSVzRoWFVKR3BTYVN5aHpLbWFZVm1Bc0xTamw0QjEwblFveU9ha1FqdnZWYVZlZTlHeURwdWs4ckVjZUppbEhwN2FPTEo1MDNnNm5mTlk1dkhmaFM1OFUtOUJmcWwybkl2bjA2Rm14Z0RONUtVdFJaNlVrYmt3SFhmOEJpQmR4Ui12aExwTWstaUtiNjRYeE9SZXVLbkpFU1RCdDZkZTBOaG1tM0xlMVNyZHF2bE9FR0lETVRYT1gzcUhteFZhbUpTQW05STgzTmhOSU12YVFvaFdMbzgxcmRsQkNuRDVGMFBMSm5hLW5SZjd1Y1ZucnFrQWhqRGJxeFF6c21naFF6LVU3OWg0Vnk1OVByRm5XMWR4NjhHSDBmb1pvX3ZKVmowVEZwQkdUdVV0THNzSGFVQXc?oc=5\" target=\"_blank\">",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxObWZsU0dSVzRoWFVKR3BTYVN5aHpLbWFZVm1Bc0xTamw0QjEwblFveU9ha1FqdnZWYVZlZTlHeURwdWs4ckVjZUppbEhwN2FPTEo1MDNnNm5mTlk1dkhmaFM1OFUtOUJmcWwybkl2bjA2Rm14Z0RONUtVdFJaNlVrYmt3SFhmOEJpQmR4Ui12aExwTWstaUtiNjRYeE9SZXVLbkpFU1RCdDZkZTBOaG1tM0xlMVNyZHF2bE9FR0lETVRYT1gzcUhteFZhbUpTQW05STgzTmhOSU12YVFvaFdMbzgxcmRsQkNuRDVGMFBMSm5hLW5SZjd1Y1ZucnFrQWhqRGJxeFF6c21naFF6LVU3OWg0Vnk1OVByRm5XMWR4NjhHSDBmb1pvX3ZKVmowVEZwQkdUdVV0THNzSGFVQXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-20T17:34:14.392Z"
     }
   ]
 }
