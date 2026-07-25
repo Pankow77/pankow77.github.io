@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-25T07:38:49.339Z",
+  "last_fetch": "2026-07-25T08:41:05.787Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_64bd04b44caa0042",
+      "timestamp": 1784966634000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Missile Attack On Saudi City After Kingdom Strikes Yemen Targets - i24NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNRVNqd2ttQXFNbzZ4ZUlRQmhtcFdTQzBnRGNnS1NOY0NXLWlDS0xla2dQYTBwd0s2d0VJT1RObWgxNDhEOFQxR3d4LUUyOXBTaHBJcFk5X0lIVmNzUExKbVRFbW1YM21tSUxNRUlmQ01PWW1wS2hBZXVjYS10Tm1sMDZCUm56NDFYLTJVZ2x4Mzc4NFJjTDJZMjdEM3R0bkNGZmJQTE1LTlQwbXFKbl9Cc1FEektGR1lFcUlVR2dBaGV6TzJK?oc=5\" target=\"_blank\">Houthis Claim Missile Attack On Saudi City After Kingdom Strikes Yemen Targets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRVNqd2ttQXFNbzZ4ZUlRQmhtcFdTQzBnRGNnS1NOY0NXLWlDS0xla2dQYTBwd0s2d0VJT1RObWgxNDhEOFQxR3d4LUUyOXBTaHBJcFk5X0lIVmNzUExKbVRFbW1YM21tSUxNRUlmQ01PWW1wS2hBZXVjYS10Tm1sMDZCUm56NDFYLTJVZ2x4Mzc4NFJjTDJZMjdEM3R0bkNGZmJQTE1LTlQwbXFKbl9Cc1FEektGR1lFcUlVR2dBaGV6TzJK?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-25T08:41:04.641Z"
+    },
     {
       "id": "rss_dd2dd958f3d31995",
       "timestamp": 1784954920000,
@@ -11209,29 +11232,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-15T19:09:48.932Z"
-    },
-    {
-      "id": "rss_c23b5070d2044f30",
-      "timestamp": 1776252332000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran Threatens Red Sea Blockade Against U.S. Maritime Blockade - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPVXltUTlKSW81SnFUTVVYOWthMklrOHlGMHdQN09WSEFtODJ5Zjc1c2Q4ckliMWVxekI4eWVSdkw5dzcxb3duVjduN0l6LXc0cHBBMm5EX2Z6cy1yaWFtbWtFakVxdk5vLS11UFRIVElvVzdnd1pydVNXTVo4R0VfR1U2M2Q?oc=5\" target=\"_blank\">Iran Threatens Red Sea Blockade Against U.S. Maritime Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVXltUTlKSW81SnFUTVVYOWthMklrOHlGMHdQN09WSEFtODJ5Zjc1c2Q4ckliMWVxekI4eWVSdkw5dzcxb3duVjduN0l6LXc0cHBBMm5EX2Z6cy1yaWFtbWtFakVxdk5vLS11UFRIVElvVzdnd1pydVNXTVo4R0VfR1U2M2Q?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-15T11:53:52.286Z"
     }
   ]
 }
