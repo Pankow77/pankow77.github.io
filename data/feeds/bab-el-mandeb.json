@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T16:47:25.416Z",
+  "last_fetch": "2026-07-26T17:21:48.928Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_64a2198d67eb88c7",
+      "timestamp": 1785085200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Analysis • Red Sea rupture: Will the Houthis bring Trump and Iran back to the table? - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxPQTRJUG9yRVJIMG1sZFlPUmFVaGpaLUNtaGx4RzFUQ19Ca3ZPd1FOWV9LakJUVUx2MVZJTFNRYURvOC1ubk9penM4MmdEUUZycXlqNjZod0RoWmNtN3Q5UHZYSm5RZ2JlRTloVjRTRDlfOU42N2plaEs0emx6RWlBM2laZXpzZi1nQ0txMHZDZDFJLTFTWGF0LWkxZElQdzlqNWpET2I4c1JDQm9WdzJTRjdzU2loN2FJMnByWi1VOXZJbmh2TmYwWUxOMXNrVzFITW5OWndfc2wxWExQejJtT0dnXzlNWlJvcHRlRE1RMFFFT25JN0tnWTNRMGkySmFjOGFqLUdnNDVNRUJtaGppOV8tdw?oc=5\" target=\"_blank\">Analysis • Red Sea rupture: Will the Houthis bring Trump ",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPQTRJUG9yRVJIMG1sZFlPUmFVaGpaLUNtaGx4RzFUQ19Ca3ZPd1FOWV9LakJUVUx2MVZJTFNRYURvOC1ubk9penM4MmdEUUZycXlqNjZod0RoWmNtN3Q5UHZYSm5RZ2JlRTloVjRTRDlfOU42N2plaEs0emx6RWlBM2laZXpzZi1nQ0txMHZDZDFJLTFTWGF0LWkxZElQdzlqNWpET2I4c1JDQm9WdzJTRjdzU2loN2FJMnByWi1VOXZJbmh2TmYwWUxOMXNrVzFITW5OWndfc2wxWExQejJtT0dnXzlNWlJvcHRlRE1RMFFFT25JN0tnWTNRMGkySmFjOGFqLUdnNDVNRUJtaGppOV8tdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T17:21:47.559Z"
+    },
     {
       "id": "rss_2ec7a1d17e163ebc",
       "timestamp": 1785062936000,
@@ -11217,30 +11240,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-25T19:24:16.554Z"
-    },
-    {
-      "id": "rss_78854b2a32379dc9",
-      "timestamp": 1777121685000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Israel stokes fears of renewed strikes on Red Sea shipping - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgNBVV95cUxOLVNpOHFkYmUzYS0tZ0o3alJUTmpJMFM4YWJJemtlVmN3Nm9IcDhlMzBOOGdNRS1mTGVVZi1pUmllMXFzdU01YUF0ZklCVGMwc2tpbkhHaWd4QV9SQmlyLVVRUnVXYm14MWZscmpkdnQyTjBzQ05MRXM5OHprSXo1c3QyTE84c0R1MEszd01wZDVCa2ExVjZuQ2JVLWN0WmZ6ck03NFV0NnhjOEZMVFFBSzNaUlZzWVlIN2lfWk9OVkRSMnRsYVVvM1Z4Z1VMaWhKNW5GM0hCOVdGanBxYV9ZRlRjZUVPUGcwLTJjbWVKNm5ibzBNY0hRaEFTZDZVcDBiT3l4eFpLc1N6Rldscy1sRXZMSFJVNlc0ZWhZVjQ4blgxWGthd3RmMTI0cmF4M2VhUU9DOVpMWXh5SEtHX0N4X1c2VndBd2xCQkdHMWJ4LX",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgNBVV95cUxOLVNpOHFkYmUzYS0tZ0o3alJUTmpJMFM4YWJJemtlVmN3Nm9IcDhlMzBOOGdNRS1mTGVVZi1pUmllMXFzdU01YUF0ZklCVGMwc2tpbkhHaWd4QV9SQmlyLVVRUnVXYm14MWZscmpkdnQyTjBzQ05MRXM5OHprSXo1c3QyTE84c0R1MEszd01wZDVCa2ExVjZuQ2JVLWN0WmZ6ck03NFV0NnhjOEZMVFFBSzNaUlZzWVlIN2lfWk9OVkRSMnRsYVVvM1Z4Z1VMaWhKNW5GM0hCOVdGanBxYV9ZRlRjZUVPUGcwLTJjbWVKNm5ibzBNY0hRaEFTZDZVcDBiT3l4eFpLc1N6Rldscy1sRXZMSFJVNlc0ZWhZVjQ4blgxWGthd3RmMTI0cmF4M2VhUU9DOVpMWXh5SEtHX0N4X1c2VndBd2xCQkdHMWJ4LXFqcE9ncFpaTFIyQnpsQ3hodnpKUWtzeFdwYU5IWnpvdmM5QXNZNG9TaTJWbXFqNExSTTRBZzFqc0hzWjY3M1NzU0tabXln?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-26T16:03:58.507Z"
     }
   ]
 }
