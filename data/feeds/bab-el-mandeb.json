@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T06:01:42.277Z",
+  "last_fetch": "2026-07-26T07:22:11.070Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -1167,6 +1167,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T22:21:17.510Z"
+    },
+    {
+      "id": "rss_af7cba07f70f331d",
+      "timestamp": 1784838621000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Trump threatens to hit Iran over Houthi attacks as oil climbs back to $100 a barrel - as it happened - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOMlR2emdzUlpsdTUtcURaa0dVSWFUNUtPMlNaNU1hUkVCS2c4bnl6QjJ2cU9qUzFCOW53RmNUSWExMGpjd01hQmVUa0ZTaUxraGxpMEVxbTR2TG9mbWFyZGFPc3lRWExSZlcxUjdYVXR4LUxERVR6eXB5YWc1TzFBcFNlVVVRZFRIeEZNNC1kMTR2SjhLTGZLOHo5MWZtejVYQ3RHYW95Q0hTaDhEbXFtZGRnejkybzVpdTJ3NnJR?oc=5\" target=\"_blank\">Trump threatens to hit Iran over Houthi attacks as oil climbs back to $100 a barrel - as it happened</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMlR2emdzUlpsdTUtcURaa0dVSWFUNUtPMlNaNU1hUkVCS2c4bnl6QjJ2cU9qUzFCOW53RmNUSWExMGpjd01hQmVUa0ZTaUxraGxpMEVxbTR2TG9mbWFyZGFPc3lRWExSZlcxUjdYVXR4LUxERVR6eXB5YWc1TzFBcFNlVVVRZFRIeEZNNC1kMTR2SjhLTGZLOHo5MWZtejVYQ3RHYW95Q0hTaDhEbXFtZGRnejkybzVpdTJ3NnJR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-26T07:22:09.838Z"
     },
     {
       "id": "rss_fd3480a4d2a2408e",
@@ -11219,27 +11242,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-26T15:06:58.247Z"
-    },
-    {
-      "id": "rss_1015c7f6b96216c9",
-      "timestamp": 1777020080000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Gold falls as Houthi attack lifts oil, Fed rate-cut hopes dim - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigNBVV95cUxQUnBFWXRSZXphQTFtc0g2NzFvc0s3VDBOWExlaVFoRlJENEtMMDFUWExRNHMtWVNmSkYxOUViVHkxZHA4NzlVaW40QkdXeV9XaTRxMExlN1BKWUZRekZrdzV3YTJhd29wbXVHUDJJdU8zTUtoWjBOM19VWlBPZlc0dmdqSWY0SVBmUm9fZ2lYME1aUkd0R1J3LUE2LUxpRkthVEdLWXVmX1FLN1NwS1QzQS05djFhWUFlX0ZZZXp2WHZZclphc01yZGI2bHdDcUVqZ0djSzN3UXhnZy1IenI1VVgzQ1ZNV3AwQUtQUVFZcUk3YWEtNl82amdrbzJKM3p1MGNncV9Ub2xYTWI3RW95dGJ0UnRIbEtoWXROTVFvNkhZTTNOMjlSZFYxYXZSQnZaRTRzZ0t2T2NZZ0pBa3VOZ3p6em9jOUxBUHczM2VWbk",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigNBVV95cUxQUnBFWXRSZXphQTFtc0g2NzFvc0s3VDBOWExlaVFoRlJENEtMMDFUWExRNHMtWVNmSkYxOUViVHkxZHA4NzlVaW40QkdXeV9XaTRxMExlN1BKWUZRekZrdzV3YTJhd29wbXVHUDJJdU8zTUtoWjBOM19VWlBPZlc0dmdqSWY0SVBmUm9fZ2lYME1aUkd0R1J3LUE2LUxpRkthVEdLWXVmX1FLN1NwS1QzQS05djFhWUFlX0ZZZXp2WHZZclphc01yZGI2bHdDcUVqZ0djSzN3UXhnZy1IenI1VVgzQ1ZNV3AwQUtQUVFZcUk3YWEtNl82amdrbzJKM3p1MGNncV9Ub2xYTWI3RW95dGJ0UnRIbEtoWXROTVFvNkhZTTNOMjlSZFYxYXZSQnZaRTRzZ0t2T2NZZ0pBa3VOZ3p6em9jOUxBUHczM2VWbk43aTNINlk5X1lTMjB0ZWdkZE1lQmJXQzRhRWFNRUZkX29ZWklfNkptOWVIMVMxRWFOa2tBb3pSTkJn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-26T17:08:16.993Z"
     }
   ]
 }
