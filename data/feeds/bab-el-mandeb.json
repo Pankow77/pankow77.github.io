@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T18:48:01.759Z",
+  "last_fetch": "2026-07-26T19:27:14.104Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T17:21:47.559Z"
+    },
+    {
+      "id": "rss_0ece56d3a1300305",
+      "timestamp": 1785077105000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Video Houthis attack ships in the Red Sea, raising concerns over widening conflict - ABC News - Breaking News, Latest News and Videos",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTFA5Mk5wYjV4c1pEZUJLTjJFWURkeXh2bHlxZmFYaC1ZdHhRRzR4YWZuUlR0VGlZMTE0S180eDNBNVhXWUI4V2xXTndrR0U?oc=5\" target=\"_blank\">Video Houthis attack ships in the Red Sea, raising concerns over widening conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC News - Breaking News, Latest News and Videos</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA5Mk5wYjV4c1pEZUJLTjJFWURkeXh2bHlxZmFYaC1ZdHhRRzR4YWZuUlR0VGlZMTE0S180eDNBNVhXWUI4V2xXTndrR0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T19:27:12.773Z"
     },
     {
       "id": "rss_2ec7a1d17e163ebc",
@@ -11217,29 +11240,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-30T08:13:43.066Z"
-    },
-    {
-      "id": "rss_79f057843e36fb35",
-      "timestamp": 1777140751000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "2 Soldiers Killed in Houthi Drone Attack on Shabwa Defense Forces in Marib - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TVHU0ZmRVWllrLURBTEptckFMMDlTZ2h5OHVOOVkzYjg0SW1BM2ktZDUtR2daRnZXb1ZwN3JpSVlxc0pLTXBKSFZCSzJrZVhJcnRQWGN2RGNxWnVQODRB?oc=5\" target=\"_blank\">2 Soldiers Killed in Houthi Drone Attack on Shabwa Defense Forces in Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1TVHU0ZmRVWllrLURBTEptckFMMDlTZ2h5OHVOOVkzYjg0SW1BM2ktZDUtR2daRnZXb1ZwN3JpSVlxc0pLTXBKSFZCSzJrZVhJcnRQWGN2RGNxWnVQODRB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-25T19:24:16.554Z"
     }
   ]
 }
