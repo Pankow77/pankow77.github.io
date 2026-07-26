@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T04:38:57.417Z",
+  "last_fetch": "2026-07-26T06:01:42.277Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_80202cac7d7c9f7f",
+      "timestamp": 1785044624000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Kuwait condemns Houthi attacks on Red Sea shipping, reaffirms support for Saudi Arabia - Times Kuwait",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPV2pLUTVmU2lPUzdsV3d4QXVWczV0emlRbG8zUXc1aV9MZV9JT1BaaDJGQ21nYzBlMVU2d3V3Q1ROWnE5dU4wb19rODhERklsYk14OWFRVjhXSE5iS3lPMGhQRzJnYzJfb0RoY2szZ0JJbWNZLTMydnhZTDIwbmllbWRVZnppZzN6UGh5empJY0UwZU03OFFyUU8wNE1lQmM0NHptbmpOblNOc1lhdlg4?oc=5\" target=\"_blank\">Kuwait condemns Houthi attacks on Red Sea shipping, reaffirms support for Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Times Kuwait</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPV2pLUTVmU2lPUzdsV3d4QXVWczV0emlRbG8zUXc1aV9MZV9JT1BaaDJGQ21nYzBlMVU2d3V3Q1ROWnE5dU4wb19rODhERklsYk14OWFRVjhXSE5iS3lPMGhQRzJnYzJfb0RoY2szZ0JJbWNZLTMydnhZTDIwbmllbWRVZnppZzN6UGh5empJY0UwZU03OFFyUU8wNE1lQmM0NHptbmpOblNOc1lhdlg4?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T06:01:42.271Z"
+    },
+    {
+      "id": "rss_e9d9c3251d65b493",
+      "timestamp": 1785041427000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "New front in US-Iran war escalates as Houthis fire at Saudi oil facilities - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOcTQ5MF9vNGN3SlotSkQ1VmF0MWNuZmo2aFRZMS1VQVN3X21DZ1dVbDJLeXMxZGJ2M2JGQ1NUeWh6SmRnMXgzZEtOa0Z6RGM5REN0WHhuaXFGVC1UdVZUa09xazd1dnpLT3RSbUZSZTdCMG1TLWE5Rl9QVlN3WGY1S0lCcEQyTV9QMk92YU1hNi11a0dsLTdoTlBFWEZCZEtjckxxTXJSVFpXcHNCd0NoZTcxbG9HUdIBuwFBVV95cUxQZTBuUlVXbEljQUJ4WEVac2JtNExTeU53UDNzNDNLZUhTUGhNdTljTkRBX29hQnNPR1FzZUg1Vi1wUVBPcFhoRjlPOVl4b2t5X3ZKNWVTNlNUQ1dvNDQwNWdITUpnWllVLTNzNFR5bFJnRWRzTkRjTjlvMEZKY19lb0FlMnN4eVp5S0FmTUp6SThvZ0VzUV",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOcTQ5MF9vNGN3SlotSkQ1VmF0MWNuZmo2aFRZMS1VQVN3X21DZ1dVbDJLeXMxZGJ2M2JGQ1NUeWh6SmRnMXgzZEtOa0Z6RGM5REN0WHhuaXFGVC1UdVZUa09xazd1dnpLT3RSbUZSZTdCMG1TLWE5Rl9QVlN3WGY1S0lCcEQyTV9QMk92YU1hNi11a0dsLTdoTlBFWEZCZEtjckxxTXJSVFpXcHNCd0NoZTcxbG9HUdIBuwFBVV95cUxQZTBuUlVXbEljQUJ4WEVac2JtNExTeU53UDNzNDNLZUhTUGhNdTljTkRBX29hQnNPR1FzZUg1Vi1wUVBPcFhoRjlPOVl4b2t5X3ZKNWVTNlNUQ1dvNDQwNWdITUpnWllVLTNzNFR5bFJnRWRzTkRjTjlvMEZKY19lb0FlMnN4eVp5S0FmTUp6SThvZ0VzUVFiakdBdkRyRVp3MjVnMkFnMlJoOEZHNjFZZy1MUnJ0ZDBRZ09j?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-26T06:01:40.947Z"
+    },
     {
       "id": "rss_92cb67ea6d31a179",
       "timestamp": 1785032591000,
@@ -11194,48 +11240,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-26T17:08:16.993Z"
-    },
-    {
-      "id": "rss_636864fcd4c1e2b7",
-      "timestamp": 1777019256000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil prices surge 4% after Houthi attack on Israel, head for third straight monthly gain. What’s the near-term outlook? - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gNBVV95cUxNUDJtMTRqdGF6ZkliNVZQeVVNSUw5VkNTMnFWbmhydVNZNEhBT2JvSUtpY0tnR2o2d1MwUEtxbXJuc1ZxdUw5bzY4a05ITkd5R0R4c1kzbEU4SnpwT2ZvT05kWmF3bjBOcVZRVlJKTmpELURoNXFDT3JRcHh2SjZZR3FVRE1NTFVkeURybVFYSldyaHc4ZWp5eGZkcW5tZlAzM0IwOFhaaENLOFBhd21RZm9QcThxY1pZZXB6NHVrbkd5S1lKdGZMWGVacmhTSVFvcWZZMFUwODRDQ095R2E2Z3cxdDNWTFQyb3ZGVkFrZTZQV2dpeGtiV2Juak8xZmI4ZVJwcmF2WEtsZDJlYlpNd092RmF2XzVreTFzYzZoQ3VhTFpQSFRDdDYzOVZhUjhVdmVEYzMyY2QwSmFtMUFJdkxSd3FXUlNINFFGNWxNWE",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gNBVV95cUxNUDJtMTRqdGF6ZkliNVZQeVVNSUw5VkNTMnFWbmhydVNZNEhBT2JvSUtpY0tnR2o2d1MwUEtxbXJuc1ZxdUw5bzY4a05ITkd5R0R4c1kzbEU4SnpwT2ZvT05kWmF3bjBOcVZRVlJKTmpELURoNXFDT3JRcHh2SjZZR3FVRE1NTFVkeURybVFYSldyaHc4ZWp5eGZkcW5tZlAzM0IwOFhaaENLOFBhd21RZm9QcThxY1pZZXB6NHVrbkd5S1lKdGZMWGVacmhTSVFvcWZZMFUwODRDQ095R2E2Z3cxdDNWTFQyb3ZGVkFrZTZQV2dpeGtiV2Juak8xZmI4ZVJwcmF2WEtsZDJlYlpNd092RmF2XzVreTFzYzZoQ3VhTFpQSFRDdDYzOVZhUjhVdmVEYzMyY2QwSmFtMUFJdkxSd3FXUlNINFFGNWxNWExKYnNQckRyczh5VEw3Y0R5M3BocFFoRHIyaTZLNGVRYmQtYkJsakxxSUo3WnU5Mmt6TG41S0xRUFh1UDNHUWwyVkx6dGc2NFZCUUZobTdXY2xyeWdJRmVZc3FHSWRKM2xydDlIXzRGaEM1TmE0Z1hDM2E2UnY2V2xQOFZWYXpMZkNn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-25T03:38:12.508Z"
-    },
-    {
-      "id": "rss_6b52aecf4d21a0c0",
-      "timestamp": 1776873525000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis Threaten to Close Bab el-Mandeb - theTrumpet.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE05ZkJ4SkprZ015SlJZNkNwelNGTXhWd0wydXNYTWhrTlR5Wmpfd3BBR0hVTEdIZXl2dDdkY3N2RzlGaWs4bGl6eEdwRHpCbnExT2pPZDA5OUZiNnBmMFZvVXg3aGpaWkNVUEJsZUFDZWV4blpwcnV5RFNlRHo?oc=5\" target=\"_blank\">Houthis Threaten to Close Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">theTrumpet.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE05ZkJ4SkprZ015SlJZNkNwelNGTXhWd0wydXNYTWhrTlR5Wmpfd3BBR0hVTEdIZXl2dDdkY3N2RzlGaWs4bGl6eEdwRHpCbnExT2pPZDA5OUZiNnBmMFZvVXg3aGpaWkNVUEJsZUFDZWV4blpwcnV5RFNlRHo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-22T16:36:33.110Z"
     }
   ]
 }
