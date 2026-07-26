@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T03:03:37.854Z",
+  "last_fetch": "2026-07-26T04:38:57.417Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_92cb67ea6d31a179",
+      "timestamp": 1785032591000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Attack Saudi Oil Site, US Holds Back Strike On Iran For 1st Time In 2 Weeks - NDTV",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaDVPMnhjOEdNUGl6QUZCa2hPazFZOGVFa2diaFRFUUhhdWxpdUJnT3ZoQ0NYX2FoTnNsTVlFMUdZWEVrMXdsRmhlcjBTVU4waWhOdk9WSnkzaVlCZmh5dGxGMWRpSkhHU2ZiZUpBUUcyTERzN1VnVHVyRThGNnp5X3gwaFhZMmpTeHZpWHNzVHA2UV9YV0x1TWxlMkFQM0YzQlRDVjl3MEZ0eDNSTjd1Y05jRUhPMUlnbzhIell4ajNjdHltUW1CLXJXeGVscnVOLUlVdTloa3ltOXpIemxlZERmaFJkNU5ENGfSAfIBQVVfeXFMTVFJWm1oUmU1VERHNFI4V2dVM3hIU04zVUZLWDlNNzZvdE9qRXFXMDRWQWx0azBJMzdvenl3eG94SHBqZC1qeDdEWTMtUU9Nb0VlWThONlVLWWVDdFc3SVpGcH",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaDVPMnhjOEdNUGl6QUZCa2hPazFZOGVFa2diaFRFUUhhdWxpdUJnT3ZoQ0NYX2FoTnNsTVlFMUdZWEVrMXdsRmhlcjBTVU4waWhOdk9WSnkzaVlCZmh5dGxGMWRpSkhHU2ZiZUpBUUcyTERzN1VnVHVyRThGNnp5X3gwaFhZMmpTeHZpWHNzVHA2UV9YV0x1TWxlMkFQM0YzQlRDVjl3MEZ0eDNSTjd1Y05jRUhPMUlnbzhIell4ajNjdHltUW1CLXJXeGVscnVOLUlVdTloa3ltOXpIemxlZERmaFJkNU5ENGfSAfIBQVVfeXFMTVFJWm1oUmU1VERHNFI4V2dVM3hIU04zVUZLWDlNNzZvdE9qRXFXMDRWQWx0azBJMzdvenl3eG94SHBqZC1qeDdEWTMtUU9Nb0VlWThONlVLWWVDdFc3SVpGcHpZR1R4dGc1ckg3MnAwN29CTWRxQ3JuMDlTeHNoWnZvM041aTN0SGQtcG82eE9FM3VQeVFXSEpOcGR6aVBCMnNfTVhZZnp3dWIzU3RLZTllRVdTR0RxdFVLZ04wUTBkZlhnQVBNRE9XWEh2QUIwOXFhU1Rsb2VYNGlvUzJsOHYwU2FOdG9NVmNZRlJ2RVR2T3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T04:38:56.294Z"
+    },
     {
       "id": "rss_480e4f68ce378acb",
       "timestamp": 1785009255000,
@@ -984,6 +1007,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-24T03:39:31.727Z"
+    },
+    {
+      "id": "rss_9983270d58c593d0",
+      "timestamp": 1784851716000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UN envoy for Yemen ‘alarmed’ by Houthis’ Red Sea attacks, calls for talks - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQenZXWGxHM1k5OUZtVW1xajk4TzhvRVN4Si1PZDFmakZFeXI0TnRSRGpMNnJLN1lCaURveU1hQ05EcWZNLTJHU2hybEtpYkpuZE9Gc2lHcEQ2ZzNhWXdZUWVXdXdFaXhLWGRmZ3d0b2J0YTdfSERZOVJ2S3ZlNy1XM0N2Yy1pZklWZlNJdFRxQndzTmdVaFV6TWZISXdNZWlYTGo1TUhBakdteVdrM0Fn0gG0AUFVX3lxTE1oaW12Y29veWlURGRzOWRGSnNkamY1b1VDdkZUY1BGS0pTa2RtZGo0STlBb0hGT09kcElSU2JTdEdLVnRNS2JsTkxWanBYN21WdG9OSVlPR3hVZFpaLVBOQWNwaHM3d2FfdmxraC1BVy0xUzRpZFNKQXJOdERNTWF2dDNabmJrUnMxcHRjeVJHZVVtQ2FQSmJoN3BxOU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQenZXWGxHM1k5OUZtVW1xajk4TzhvRVN4Si1PZDFmakZFeXI0TnRSRGpMNnJLN1lCaURveU1hQ05EcWZNLTJHU2hybEtpYkpuZE9Gc2lHcEQ2ZzNhWXdZUWVXdXdFaXhLWGRmZ3d0b2J0YTdfSERZOVJ2S3ZlNy1XM0N2Yy1pZklWZlNJdFRxQndzTmdVaFV6TWZISXdNZWlYTGo1TUhBakdteVdrM0Fn0gG0AUFVX3lxTE1oaW12Y29veWlURGRzOWRGSnNkamY1b1VDdkZUY1BGS0pTa2RtZGo0STlBb0hGT09kcElSU2JTdEdLVnRNS2JsTkxWanBYN21WdG9OSVlPR3hVZFpaLVBOQWNwaHM3d2FfdmxraC1BVy0xUzRpZFNKQXJOdERNTWF2dDNabmJrUnMxcHRjeVJHZVVtQ2FQSmJoN3BxOUw4RDQzVm5OeGxvSTVDdWs3RU1fRGZVZw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-26T04:38:57.411Z"
     },
     {
       "id": "rss_648759391029600f",
@@ -11192,50 +11236,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-22T16:36:33.110Z"
-    },
-    {
-      "id": "rss_d6b31e7bd45a1ec2",
-      "timestamp": 1776785331000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tajani: “Italy is on its own when it comes to security in the Red Sea; we must increase the military presence of Aspides” - Eunews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQa3NhNVBmTzFwRm5ZQzFMTW0yX3o5MzlHOXo5UmY1LVh5b25RVl83YkNUYVN6QTY5bEViTzZLbzVUR2VtS0V4MkhiTmtpQ01Fc1IybnZ1M1pkdVE2WjJOVkVneHNYNkpTQUFPTGxqblBvQ3NNdF9YbXF1ZVBBZ2swSTh0WThNOUJRdnFWcy00M1YtNC1oRkxPUjRESGdwbWs0dFlIay1mQnE4LXJIbWZYOHA1MUc3V1d5RXpFYmUtTTB1a2dGOGtPbUM4QnlnT1NoLXR1WXZIcWoydFlQM2ZOc3BMcWVGSDJXeFE?oc=5\" target=\"_blank\">Tajani: “Italy is on its own when it comes to security in the Red Sea; we must increase the military presence of",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQa3NhNVBmTzFwRm5ZQzFMTW0yX3o5MzlHOXo5UmY1LVh5b25RVl83YkNUYVN6QTY5bEViTzZLbzVUR2VtS0V4MkhiTmtpQ01Fc1IybnZ1M1pkdVE2WjJOVkVneHNYNkpTQUFPTGxqblBvQ3NNdF9YbXF1ZVBBZ2swSTh0WThNOUJRdnFWcy00M1YtNC1oRkxPUjRESGdwbWs0dFlIay1mQnE4LXJIbWZYOHA1MUc3V1d5RXpFYmUtTTB1a2dGOGtPbUM4QnlnT1NoLXR1WXZIcWoydFlQM2ZOc3BMcWVGSDJXeFE?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-22T03:34:21.161Z"
-    },
-    {
-      "id": "rss_5fe85cf8acd3cc0c",
-      "timestamp": 1776699186000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis Threaten to Block Red Sea Oil Exports as the Iran War Escalates - Energy News Beat",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPN3E5dHNYVzhsc2JtMTRWTDRtbW1JSWZDRGE0TmstVmxoQlNIVHJ2Wlktc0pMRkVNWmttLS0wa3FfSEVMX1doLUItdllwZnRPMkxsSVdSTVh2a1RyUDk1V2Jqd1R1U295TDJpQkpVTUdzSEpmdVhRRTRlOTI5OU5SUEl6aHhaRW10bTJieW9RTVpDNm1mNzdaQkZ5eDhIcWx5SXRteTNiNElWWUZ2?oc=5\" target=\"_blank\">Houthis Threaten to Block Red Sea Oil Exports as the Iran War Escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Energy News Beat</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPN3E5dHNYVzhsc2JtMTRWTDRtbW1JSWZDRGE0TmstVmxoQlNIVHJ2Wlktc0pMRkVNWmttLS0wa3FfSEVMX1doLUItdllwZnRPMkxsSVdSTVh2a1RyUDk1V2Jqd1R1U295TDJpQkpVTUdzSEpmdVhRRTRlOTI5OU5SUEl6aHhaRW10bTJieW9RTVpDNm1mNzdaQkZ5eDhIcWx5SXRteTNiNElWWUZ2?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-20T16:04:07.228Z"
     }
   ]
 }
