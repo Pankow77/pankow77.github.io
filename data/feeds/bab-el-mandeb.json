@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T19:27:14.104Z",
+  "last_fetch": "2026-07-26T19:55:02.559Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -48,6 +48,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T19:27:12.773Z"
+    },
+    {
+      "id": "rss_19b7c1da7715f4cd",
+      "timestamp": 1785067110000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi rebels in Yemen attack Saudi Arabia - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxORUNsOGxjMHBVbG16WHBuTnlYX3N5OTlsQVRWekc5MUtBTTdwQjhjQll3UXF3VkJOM1JVUHd2NENHaW1hd0xBcVk5eVVqdmpFbFNEdnZHcmlUeUZaNlk5M2xWcUhtakZCS0FkYWV3TDJ6enJBZGF0dnMxaUc0S2x2WkZQMERXc2lOc0JXRUQyOW4?oc=5\" target=\"_blank\">Houthi rebels in Yemen attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORUNsOGxjMHBVbG16WHBuTnlYX3N5OTlsQVRWekc5MUtBTTdwQjhjQll3UXF3VkJOM1JVUHd2NENHaW1hd0xBcVk5eVVqdmpFbFNEdnZHcmlUeUZaNlk5M2xWcUhtakZCS0FkYWV3TDJ6enJBZGF0dnMxaUc0S2x2WkZQMERXc2lOc0JXRUQyOW4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T19:55:01.173Z"
     },
     {
       "id": "rss_2ec7a1d17e163ebc",
@@ -11217,29 +11238,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-27T15:43:47.294Z"
-    },
-    {
-      "id": "rss_2be61964cfe79106",
-      "timestamp": 1777159908000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Two injured, two missing after suspected Houthi attack on ship in the Red Sea - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gJBVV95cUxNSWphUzZUZGlGSmVWeUt5TGhBdU1GdnJfSkJQdEwwbHVCMXBCSk8tS2dQcmx3S2d0eTc0Vmt2aUViQ3hydWxFaXpTRHlYMENqaEhrY0tiUTFvWjJFTTc5OEdGZDloSHR0aE1xdTY5WUY5Mk1pTmxlR1daZjBGSkt3WjNrN0J5Q2tOUjY1WjdFVlpRYTBDX2JpeC13YU54a05RXzF2cWlTaFhzcFA4eGtmSnNlTmZPUDgtYjFSbWtVTmJTSzgxbnZpbnRlOS1IN2JtY1dnb3lucDdmVWZaeFR4ejMyWURzUDdJd3Qxb1U5Z1NEOVB2TlpVQjdvQkhLcmhYbmtrbDZXNVQzb09NUEtBN0o0YUtDZTN5YVJQYUtpVjQ5bkxrOVJvaEZONXIzM3JnMWxqWVFzN2RXWFJMZjZiZE1KRjF1RnBtQnJLa1AwTH",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxNSWphUzZUZGlGSmVWeUt5TGhBdU1GdnJfSkJQdEwwbHVCMXBCSk8tS2dQcmx3S2d0eTc0Vmt2aUViQ3hydWxFaXpTRHlYMENqaEhrY0tiUTFvWjJFTTc5OEdGZDloSHR0aE1xdTY5WUY5Mk1pTmxlR1daZjBGSkt3WjNrN0J5Q2tOUjY1WjdFVlpRYTBDX2JpeC13YU54a05RXzF2cWlTaFhzcFA4eGtmSnNlTmZPUDgtYjFSbWtVTmJTSzgxbnZpbnRlOS1IN2JtY1dnb3lucDdmVWZaeFR4ejMyWURzUDdJd3Qxb1U5Z1NEOVB2TlpVQjdvQkhLcmhYbmtrbDZXNVQzb09NUEtBN0o0YUtDZTN5YVJQYUtpVjQ5bkxrOVJvaEZONXIzM3JnMWxqWVFzN2RXWFJMZjZiZE1KRjF1RnBtQnJLa1AwTHV3WW5EV0VtdnpB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-30T08:13:43.066Z"
     }
   ]
 }
