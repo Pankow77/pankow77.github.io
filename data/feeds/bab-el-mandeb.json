@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T01:34:04.391Z",
+  "last_fetch": "2026-07-26T03:03:37.854Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_480e4f68ce378acb",
+      "timestamp": 1785009255000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition strikes Houthis as Yemen tensions rise - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PTkNGRmV0VnZoQlIxaVRfNWRzUGR6RkV2VlJxSVpfWXNiay1pczNucUw3S1NySEpGcEwzSTZOTlk2azEwdmJDZHF0T3BUd1J1VE1faE1icm1kWWdz?oc=5\" target=\"_blank\">Saudi-led coalition strikes Houthis as Yemen tensions rise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PTkNGRmV0VnZoQlIxaVRfNWRzUGR6RkV2VlJxSVpfWXNiay1pczNucUw3S1NySEpGcEwzSTZOTlk2azEwdmJDZHF0T3BUd1J1VE1faE1icm1kWWdz?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T03:03:37.844Z"
+    },
     {
       "id": "rss_1f325ae9ff120cdc",
       "timestamp": 1785008286000,
@@ -845,6 +868,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T07:20:39.177Z"
+    },
+    {
+      "id": "rss_c71e410989902171",
+      "timestamp": 1784868232000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "US Vows to Punish Iran After Houthis Strike Tankers - The Defense Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1lU0JpNnM4ZWJUUnc5cW1vaDlLLS1PX2FBdEtkNUU0MVRVVlktUUZzaHNQUWFWb3Rvcjh0TmIyMmQwbkhpZS14d0JPLVhnME85ZFFFcDZTRVAyLTdlUlNhOXBRa2NFZTJ2TjNMaU9B0gFzQVVfeXFMTl9OdnBpMldnZUtrdm90QzRldG14Vy1YbUtKV21lVTFkdHlaYzZGenZGcW45NGdBUTFZeHZfdkRaY3FQNko5QUV6alJMR0drSC1nTnJYQlpLdzN1UVlOaFlHbF9YWlVJc1h4RnVjSlJ3SUl2MA?oc=5\" target=\"_blank\">US Vows to Punish Iran After Houthis Strike Tankers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Defense Post</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1lU0JpNnM4ZWJUUnc5cW1vaDlLLS1PX2FBdEtkNUU0MVRVVlktUUZzaHNQUWFWb3Rvcjh0TmIyMmQwbkhpZS14d0JPLVhnME85ZFFFcDZTRVAyLTdlUlNhOXBRa2NFZTJ2TjNMaU9B0gFzQVVfeXFMTl9OdnBpMldnZUtrdm90QzRldG14Vy1YbUtKV21lVTFkdHlaYzZGenZGcW45NGdBUTFZeHZfdkRaY3FQNko5QUV6alJMR0drSC1nTnJYQlpLdzN1UVlOaFlHbF9YWlVJc1h4RnVjSlJ3SUl2MA?oc=5",
+      "feed_id": "gn-centcom-yemen",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-26T03:03:36.860Z"
     },
     {
       "id": "rss_7ac5077f8bd24c14",
@@ -11189,50 +11236,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-20T16:04:07.228Z"
-    },
-    {
-      "id": "rss_23eb3c151ac02ff5",
-      "timestamp": 1776656552000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran war escalates as Houthis threaten to sever Saudi oil exports - South China Morning Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNa2MzelJaUFFvM1ZKSU5acXBZMnJGZW9jRFlHMEFQN3ZHNDJsU2s5UC1Rb3Z2NlNhTVFVTkFQS2N6Zk15UDFPVzF2MHBsdVlXd21UN3BvWVVWdnJOU0JlQWd5YUV4eVN5aXVJMHlsLTNFOGFOZVgwZkVlQW4ycVBkYW5FQlJhaHdfc1NDdU9MVHRJYzd4RnVnZ0dtMFBadVF2VlFsQWF4SFFGMW94OG9oQzVtdm9FZ9IBtgFBVV95cUxPOWk3M050WkVULTB1UU5jTDc0TTNzTHFPMHVONkJCYUVxWGV0YkNKVmJPOWNxenVmZFFsV25hMWNDYnVGSVVFLUhHNG1KdUVMZ3U0Ym4tRC1uY3c4R28zX3RPNlQyNDRCZFdYbVB0SlhNVE9pejZobUJ6aXlheGloUHNoSlhOa201XzdtN2VHLVBxMDQ2b3",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa2MzelJaUFFvM1ZKSU5acXBZMnJGZW9jRFlHMEFQN3ZHNDJsU2s5UC1Rb3Z2NlNhTVFVTkFQS2N6Zk15UDFPVzF2MHBsdVlXd21UN3BvWVVWdnJOU0JlQWd5YUV4eVN5aXVJMHlsLTNFOGFOZVgwZkVlQW4ycVBkYW5FQlJhaHdfc1NDdU9MVHRJYzd4RnVnZ0dtMFBadVF2VlFsQWF4SFFGMW94OG9oQzVtdm9FZ9IBtgFBVV95cUxPOWk3M050WkVULTB1UU5jTDc0TTNzTHFPMHVONkJCYUVxWGV0YkNKVmJPOWNxenVmZFFsV25hMWNDYnVGSVVFLUhHNG1KdUVMZ3U0Ym4tRC1uY3c4R28zX3RPNlQyNDRCZFdYbVB0SlhNVE9pejZobUJ6aXlheGloUHNoSlhOa201XzdtN2VHLVBxMDQ2b3oyRlRkczZ6Z2FlRlQ0QTN3Zk40MDRhZkFwaDRfemFIUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-20T09:25:07.367Z"
-    },
-    {
-      "id": "rss_6566abdbf4d3e538",
-      "timestamp": 1776601588000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthi movement threaten to close Bab el-Mandeb Strait - Caliber.Az",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQbW04UXh4WE92T1gzdEZVaFRZSGQ2Vk5rNE5aSWtzcnEyRWYwMlZZQ0JmaGJwbjdnR3J3dXd5Y2Y1TDE2RUZkdzVUbTluelBHdC1Ray1IRXZCY1FlMTVrSFhCSk1OS0dYRTNsWF9HYVY4MTZTR2dtZFdGcTZUQVZOTGttbUNIT0p1ODdBZkkwM19qcTA?oc=5\" target=\"_blank\">Yemen’s Houthi movement threaten to close Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Caliber.Az</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbW04UXh4WE92T1gzdEZVaFRZSGQ2Vk5rNE5aSWtzcnEyRWYwMlZZQ0JmaGJwbjdnR3J3dXd5Y2Y1TDE2RUZkdzVUbTluelBHdC1Ray1IRXZCY1FlMTVrSFhCSk1OS0dYRTNsWF9HYVY4MTZTR2dtZFdGcTZUQVZOTGttbUNIT0p1ODdBZkkwM19qcTA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-19T12:53:46.986Z"
     }
   ]
 }
