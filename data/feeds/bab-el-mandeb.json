@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T00:33:20.694Z",
+  "last_fetch": "2026-07-27T01:34:53.052Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0e2e9f3df1c8cf7f",
+      "timestamp": 1785114883000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Ship traffic plunges through Bab el-Mandeb after Houthi strikes on Saudi oil sites - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XaU1qVDlZeDBQVFF4RlZfVV9KV0V0dTZUYm16U1dzUG9DZ2dzQmR1dUdFTUpLaXRJRzY0aU1xYjVPX0I5c0JUdW1iUWw3b0N0UHY4ZGJB?oc=5\" target=\"_blank\">Ship traffic plunges through Bab el-Mandeb after Houthi strikes on Saudi oil sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XaU1qVDlZeDBQVFF4RlZfVV9KV0V0dTZUYm16U1dzUG9DZ2dzQmR1dUdFTUpLaXRJRzY0aU1xYjVPX0I5c0JUdW1iUWw3b0N0UHY4ZGJB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T01:34:51.694Z"
+    },
     {
       "id": "rss_e4839e5fa688876a",
       "timestamp": 1785110983000,
@@ -1211,6 +1234,30 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-26T04:38:57.411Z"
+    },
+    {
+      "id": "rss_5e2cdca9da716a51",
+      "timestamp": 1784847803000,
+      "source": "Reuters",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EXCLUSIVE: Iran flew IRGC commanders, missile gear to Yemen's Houthis, sources say - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX0VBOVcxX1BiZmZ6M1VfVkNSVmg1bGREUzRDNWdjYWFQeXR3TXUyVm1aQURfb3ZpNlpuVVd2LXk0YTFhV3AtTW1HZzBoYjFFMGhpY0J5X1JUM3MtTmJaYmI5cExla1VOSTAzdi1CZVdGb0RXckdQU2hDSlVCMXd4eVZPalltOGQzQnE2M0w0SVYzdUNmYy0xRzFUNWRUSXZHeF9rWkY1UzI1LVpsN0NBUjdDZlJRT3oyWnpB?oc=5\" target=\"_blank\">EXCLUSIVE: Iran flew IRGC commanders, missile gear to Yemen's Houthis, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX0VBOVcxX1BiZmZ6M1VfVkNSVmg1bGREUzRDNWdjYWFQeXR3TXUyVm1aQURfb3ZpNlpuVVd2LXk0YTFhV3AtTW1HZzBoYjFFMGhpY0J5X1JUM3MtTmJaYmI5cExla1VOSTAzdi1CZVdGb0RXckdQU2hDSlVCMXd4eVZPalltOGQzQnE2M0w0SVYzdUNmYy0xRzFUNWRUSXZHeF9rWkY1UzI1LVpsN0NBUjdDZlJRT3oyWnpB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-27T01:34:53.046Z"
     },
     {
       "id": "rss_648759391029600f",
@@ -11199,50 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-01T08:28:05.644Z"
-    },
-    {
-      "id": "rss_bab2bff42eac1389",
-      "timestamp": 1777486328000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Houthi “Military Expert”: The Deployment Of The “Zionist” Iron Dome Battery And Its Operators In The UAE Turns Those Assets Into A Target; Israel Is The “Primary Enemy”; We Will Confront It Everywhere - MEMRI | Middle East Media Research Institute",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTXNHZm51S094ZUxVX21ZLTFOTjlrYVlzVmlxM2tKa2VJNHZkMjdlVzF1YkRTS09LYVhCdk12MU9vZVVQVUR3azNDLV9DUXNqRFQxZUNxbnJhS1FQUVBOVVNIWnNQeThFWUhfd0ppeHR6M1gwaFZ4blI1V1dvdmhVMWJlN3duZmFJVjBTRWlPVkJSeEJMWFN3M0hVN3NiVWhzRlpNOUVOc2xGUEhNWXQ5dXp0NEE1c01vaFdYcXl6aUtTYWttSkIwUkFfT0g3UGllSnlieFlFMTRMeUo0dDVmQjRvVkM?oc=5\" target=\"_blank\">Houthi “Military Expert”: The Deployment Of The “Zionist” Iron Dome Battery And Its Operators In The UAE Turns Those Ass",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTXNHZm51S094ZUxVX21ZLTFOTjlrYVlzVmlxM2tKa2VJNHZkMjdlVzF1YkRTS09LYVhCdk12MU9vZVVQVUR3azNDLV9DUXNqRFQxZUNxbnJhS1FQUVBOVVNIWnNQeThFWUhfd0ppeHR6M1gwaFZ4blI1V1dvdmhVMWJlN3duZmFJVjBTRWlPVkJSeEJMWFN3M0hVN3NiVWhzRlpNOUVOc2xGUEhNWXQ5dXp0NEE1c01vaFdYcXl6aUtTYWttSkIwUkFfT0g3UGllSnlieFlFMTRMeUo0dDVmQjRvVkM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-29T19:19:38.066Z"
-    },
-    {
-      "id": "rss_1aabd8ad8e0b7673",
-      "timestamp": 1777445435000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Three U.S. Navy Carriers Now in Middle East - Warrior Maven",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPbERRUzk2TGh3S2Ixb3hhVU5oRDJ3LUpxclRvYVU1aDVyRG85bEJPVTc4V3JCTGg5aHFGSDZoUEU2c3FGalZCdG1MYTdlNGxWa0xyaHV3MHRzaUoyOEVtSHhaZ0huaW1mSFhRSzlTSjBrN1hxcHdmb0xOMlVWNlJoeVRB?oc=5\" target=\"_blank\">Three U.S. Navy Carriers Now in Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Warrior Maven</font>",
-      "tags": [
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbERRUzk2TGh3S2Ixb3hhVU5oRDJ3LUpxclRvYVU1aDVyRG85bEJPVTc4V3JCTGg5aHFGSDZoUEU2c3FGalZCdG1MYTdlNGxWa0xyaHV3MHRzaUoyOEVtSHhaZ0huaW1mSFhRSzlTSjBrN1hxcHdmb0xOMlVWNlJoeVRB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-29T08:09:16.596Z"
     }
   ]
 }
