@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T13:26:33.748Z",
+  "last_fetch": "2026-07-27T14:18:51.140Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5870b481cfae6de3",
+      "timestamp": 1785160980000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea shipping slows after Houthi attacks on Saudi Arabia: Data - The Hill",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUJ1SDBUemI2cWFuY1JIaGJRLXctbFJwaXotNTQwTGtEZXNjVWloZVRPLUJHWUppUlBXUkNRZzRrVDRBVEF0VXE3RnZ1VVhWLTZfVjgyakhRRXNTaU9EMkRqUTJmMDhjQW5vWFNkZll4WkdxRWg4S1h1dXZNX0ZCZUJPUkV5TEczaWtJTk1Jb1N0ejBKXzlMaEhVTjN0Y2fSAaQBQVVfeXFMTnVGZGlCekdzNlVsc3VnN19POFY4c0tnQXZja0xMVTQxa1NfWEY4NjBnN0l3N2lUMjBUWDRjNW5vUG5NSDNPWUlER0puUlhJb1NIUDBtc1pGLWxsNDBueHEzaWlYSWNBMFQxOG5DUzZBZzJhdVRNeDN6Ui1sUkVQcWVfOUJUQ2tYOTJLV1Q0M0VDY0tfNjdPQ253QkhDX2xfSl9idGQ?oc=5\" targ",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUJ1SDBUemI2cWFuY1JIaGJRLXctbFJwaXotNTQwTGtEZXNjVWloZVRPLUJHWUppUlBXUkNRZzRrVDRBVEF0VXE3RnZ1VVhWLTZfVjgyakhRRXNTaU9EMkRqUTJmMDhjQW5vWFNkZll4WkdxRWg4S1h1dXZNX0ZCZUJPUkV5TEczaWtJTk1Jb1N0ejBKXzlMaEhVTjN0Y2fSAaQBQVVfeXFMTnVGZGlCekdzNlVsc3VnN19POFY4c0tnQXZja0xMVTQxa1NfWEY4NjBnN0l3N2lUMjBUWDRjNW5vUG5NSDNPWUlER0puUlhJb1NIUDBtc1pGLWxsNDBueHEzaWlYSWNBMFQxOG5DUzZBZzJhdVRNeDN6Ui1sUkVQcWVfOUJUQ2tYOTJLV1Q0M0VDY0tfNjdPQ253QkhDX2xfSl9idGQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T14:18:49.592Z"
+    },
+    {
+      "id": "rss_012d1d6fa7c42a72",
+      "timestamp": 1785156987000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Red Sea Ship Traffic Drops Sharply After Houthi Attack On Saudi Oil Facilities - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPNm5sM09IcFVMVFZWbHFxaHJWWGg0WDdTczl5RDJ3T0J3WmxreUdtSXZQZ3V4QUFYeWNKVHdLVlBqU3RCTnd4LVFwV3JoVWphOXN6dXdJNWoydlZSa1Y3NHpmUnczYmY1dEREVEtlWXFfUUplSlJDR1pwdlRvc0dOdlA4UWtwMXhsNVVvVkF0c3REY0dDUFZROXlOV1MxZjBIOFA0b3JrR3BOYWFNRVE?oc=5\" target=\"_blank\">Red Sea Ship Traffic Drops Sharply After Houthi Attack On Saudi Oil Facilities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNm5sM09IcFVMVFZWbHFxaHJWWGg0WDdTczl5RDJ3T0J3WmxreUdtSXZQZ3V4QUFYeWNKVHdLVlBqU3RCTnd4LVFwV3JoVWphOXN6dXdJNWoydlZSa1Y3NHpmUnczYmY1dEREVEtlWXFfUUplSlJDR1pwdlRvc0dOdlA4UWtwMXhsNVVvVkF0c3REY0dDUFZROXlOV1MxZjBIOFA0b3JrR3BOYWFNRVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T14:18:49.593Z"
+    },
     {
       "id": "rss_2efc853953b81de4",
       "timestamp": 1785152321000,
@@ -11205,48 +11251,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-11T16:29:02.600Z"
-    },
-    {
-      "id": "rss_fc3b713e2a55a573",
-      "timestamp": 1778043600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Civil War - Britannica",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE5nNGFkMjBUdUhBTHpIbm1aVm8xdjZOd21uSXEtdklGSVZWN1NLWjUzSFN1QWtrSEdQdDMyU29nQjd3dUFxNFNtRjhOeUhJMzF5cW1hZkFsVVRRWm00dWc?oc=5\" target=\"_blank\">Yemeni Civil War</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Britannica</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5nNGFkMjBUdUhBTHpIbm1aVm8xdjZOd21uSXEtdklGSVZWN1NLWjUzSFN1QWtrSEdQdDMyU29nQjd3dUFxNFNtRjhOeUhJMzF5cW1hZkFsVVRRWm00dWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-10T09:52:19.831Z"
-    },
-    {
-      "id": "rss_3eb0baf7a276d297",
-      "timestamp": 1777994584000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Somali terror groups could tighten Hormuz chokehold through Bab-el-Mandeb piracy, experts say - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9IWDBVek5yRy1UTmNNOVViYzdNd0JXdlNmTTl4RVRKLWFRVFpjc0JGbXdNVncwRXZYLUgyRjR2Y1FtSVhZbWZmSDM1TmU0Vk5pOVhVekltYXpOZDY1?oc=5\" target=\"_blank\">Somali terror groups could tighten Hormuz chokehold through Bab-el-Mandeb piracy, experts say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9IWDBVek5yRy1UTmNNOVViYzdNd0JXdlNmTTl4RVRKLWFRVFpjc0JGbXdNVncwRXZYLUgyRjR2Y1FtSVhZbWZmSDM1TmU0Vk5pOVhVekltYXpOZDY1?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-05T17:03:05.760Z"
     }
   ]
 }
