@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T16:18:09.121Z",
+  "last_fetch": "2026-07-27T17:08:09.287Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -165,6 +165,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T12:03:25.409Z"
+    },
+    {
+      "id": "rss_46f335233095f8dc",
+      "timestamp": 1785146880000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Red Sea crossings slow after Houthi attack on Saudi Arabia | Daily Sabah - Daily Sabah",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzd9IBqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSz",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzd9IBqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T17:08:07.962Z"
     },
     {
       "id": "rss_4356d5f6d7456020",
@@ -11227,30 +11248,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-13T12:00:15.383Z"
-    },
-    {
-      "id": "rss_05fdc795c53b528c",
-      "timestamp": 1778583499000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 3,
-      "text_summary": "IDF intercepts apparent Houthi drone near Eilat in first attack on city since Iran ceasefire - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZlR4SkNXdHZCTXFUbFVMLWhSeFJDLVlWYjNNdzFySmlsUm9la2VHUjNsWlpDN0tSX3NFa3BnYWVqQ2dvS0VsWFM3bnZaRUpLTHJrdE9VMm1JNUlBUEZuWVFUQWVqVVZPdEhURUZ2UExkb1Jad0xyN19lRzc4YzhHRk4tTFFuLThnU0t4VUpEX091QUhjM2xmaDlzYUYyN1VxUWZJekp1RUZyaGQyOExkUVRib3pYRHY4dVBHMzhpekJObk1lZXZlMm1abWxWX2dXWmxXWQ?oc=5\" target=\"_blank\">IDF intercepts apparent Houthi drone near Eilat in first attack on city since Iran ceasefire</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times o",
-      "tags": [
-        "iran-proxy",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZlR4SkNXdHZCTXFUbFVMLWhSeFJDLVlWYjNNdzFySmlsUm9la2VHUjNsWlpDN0tSX3NFa3BnYWVqQ2dvS0VsWFM3bnZaRUpLTHJrdE9VMm1JNUlBUEZuWVFUQWVqVVZPdEhURUZ2UExkb1Jad0xyN19lRzc4YzhHRk4tTFFuLThnU0t4VUpEX091QUhjM2xmaDlzYUYyN1VxUWZJekp1RUZyaGQyOExkUVRib3pYRHY4dVBHMzhpekJObk1lZXZlMm1abWxWX2dXWmxXWQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-12T11:29:25.254Z"
     }
   ]
 }
