@@ -1,8 +1,33 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T10:45:03.020Z",
+  "last_fetch": "2026-07-27T12:03:26.701Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1bfa8ab08d460dc7",
+      "timestamp": 1785149854000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Asia-Bound Tanker Exits Red Sea Via Suez as Others Risk Strait - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQcWlWS3gyMWtiSDYxQm5xLThhY2ZvTEhWaV84YzdlRHc4TmdjQ3NTVy1FSzROamNoWWpDUndUVk16WGdjS2xWSWR4VmRYVkoxZ0VzYkNVTGpHcmhKeGhCQlhfdmZ2WFJXS1BXbGh5cElzdE1TTEpJUXAyNmlNQkdlMGFKRV96MGdvdThNYg?oc=5\" target=\"_blank\">Asia-Bound Tanker Exits Red Sea Via Suez as Others Risk Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping",
+        "suez",
+        "cape-route"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcWlWS3gyMWtiSDYxQm5xLThhY2ZvTEhWaV84YzdlRHc4TmdjQ3NTVy1FSzROamNoWWpDUndUVk16WGdjS2xWSWR4VmRYVkoxZ0VzYkNVTGpHcmhKeGhCQlhfdmZ2WFJXS1BXbGh5cElzdE1TTEpJUXAyNmlNQkdlMGFKRV96MGdvdThNYg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T12:03:25.409Z"
+    },
     {
       "id": "rss_4356d5f6d7456020",
       "timestamp": 1785145179000,
@@ -11222,29 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-08T18:06:36.160Z"
-    },
-    {
-      "id": "rss_a7c28dc4ade28a33",
-      "timestamp": 1777904911000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "UAE condemns attack on ADNOC-linked vessel - Pakistan Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmo0clJiR0dKYm1PZERhc29lLThoMDJLX2FVeTZzRXFRODFWanU3eUhBcjdaSHgzVVh0VGZOYnBLdFBEd010Q3BTdHp0dFgwOUNXQ3JheC1tblowT3RONmlXUTZrdHlDZGx1MTFxQ29CZklWUWl4RC1QMXYtb21JZkVrOGhDYWQ1OFVBcWdTTFhERU5CeWdXNU0wR3h0dW5FMGEtZEdSOWVjbXM3TGMtZ1hxa2dXaHlKMzh2VUtR?oc=5\" target=\"_blank\">UAE condemns attack on ADNOC-linked vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pakistan Today</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmo0clJiR0dKYm1PZERhc29lLThoMDJLX2FVeTZzRXFRODFWanU3eUhBcjdaSHgzVVh0VGZOYnBLdFBEd010Q3BTdHp0dFgwOUNXQ3JheC1tblowT3RONmlXUTZrdHlDZGx1MTFxQ29CZklWUWl4RC1QMXYtb21JZkVrOGhDYWQ1OFVBcWdTTFhERU5CeWdXNU0wR3h0dW5FMGEtZEdSOWVjbXM3TGMtZ1hxa2dXaHlKMzh2VUtR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-04T15:28:17.758Z"
     }
   ]
 }
