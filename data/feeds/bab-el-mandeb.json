@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T07:42:52.193Z",
+  "last_fetch": "2026-07-27T09:06:45.857Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a0c1b12236a67880",
+      "timestamp": 1785142883000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis reignite tensions with red sea shipping attack - Moneycontrol.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOaHpTQ2ZYcjE5Z2cxZVNWbWQ3Q0tmU0hFYjUyclU0Y2lTYl9NaUdYVVFNd2xldGRCOGV0ek1fRW9yc3lPQ1pNekxiNXZGOGQzZGVoWUtXVW1ndkZYOWJnanhfN0Nva3Q1VnpBLWlzSDZ0Ylo5dEMzUnNuWjRfRWhSa2VBcUt3REJJTkJqdG1YTDIzVHFDS2w3NVlBZzlHVFhaRG5hWklGOXdyTmVfN1RXRNIBtgFBVV95cUxNZ2Z4UmJFVDVuRVc0aWY2RXphVGw5MVFWX3ZMdTRfbmYwWEhtR0NVWTZvSlhoanI4TUdEa250dm9Xa3otUEdKeDlTU1d6TVJYN1Y3bERVaTB1eE1DQzQ3aEZtNXp1d21feG45Sjc1anNOS2M1Z1RsblltblBYZFpIRUxPSHhjemU2OWYyckczUVlPRFBlZEkwOUlOYW",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaHpTQ2ZYcjE5Z2cxZVNWbWQ3Q0tmU0hFYjUyclU0Y2lTYl9NaUdYVVFNd2xldGRCOGV0ek1fRW9yc3lPQ1pNekxiNXZGOGQzZGVoWUtXVW1ndkZYOWJnanhfN0Nva3Q1VnpBLWlzSDZ0Ylo5dEMzUnNuWjRfRWhSa2VBcUt3REJJTkJqdG1YTDIzVHFDS2w3NVlBZzlHVFhaRG5hWklGOXdyTmVfN1RXRNIBtgFBVV95cUxNZ2Z4UmJFVDVuRVc0aWY2RXphVGw5MVFWX3ZMdTRfbmYwWEhtR0NVWTZvSlhoanI4TUdEa250dm9Xa3otUEdKeDlTU1d6TVJYN1Y3bERVaTB1eE1DQzQ3aEZtNXp1d21feG45Sjc1anNOS2M1Z1RsblltblBYZFpIRUxPSHhjemU2OWYyckczUVlPRFBlZEkwOUlOYW02dGxLS1l5YWxZU1hxbFRuanpZTWNoa3l1QQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T09:06:45.850Z"
+    },
     {
       "id": "rss_bbd122bdd5beeab8",
       "timestamp": 1785121323000,
@@ -3446,6 +3469,30 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-22T17:29:28.386Z"
+    },
+    {
+      "id": "rss_2b8168d41fb48503",
+      "timestamp": 1784690790000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis claim attacks on Saudi tankers in Red Sea, raising risk of new chokepoint in Iran war - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxONHRSTEdBY3l6NGhsLTFvUDRHeThEZkgzQzdzeDVSOWk1NzJ3R3dCT1JZWkE0VWoycVhEaG0wdmtWTnFyWElMbklkcFRUMW9qTkdqWGFfVHpDaDgyTnFNWGF4clVQSENtY2x5OS14dDBYX3JjYTdXRkV1SUZlcDU3eTduYXp3VndEMzlWZmpvZjY5S3dhVmdMdk5JVFhvNzNCQmJBRjBRX1daQ2ZB?oc=5\" target=\"_blank\">Houthis claim attacks on Saudi tankers in Red Sea, raising risk of new chokepoint in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONHRSTEdBY3l6NGhsLTFvUDRHeThEZkgzQzdzeDVSOWk1NzJ3R3dCT1JZWkE0VWoycVhEaG0wdmtWTnFyWElMbklkcFRUMW9qTkdqWGFfVHpDaDgyTnFNWGF4clVQSENtY2x5OS14dDBYX3JjYTdXRkV1SUZlcDU3eTduYXp3VndEMzlWZmpvZjY5S3dhVmdMdk5JVFhvNzNCQmJBRjBRX1daQ2ZB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-27T09:06:45.850Z"
     },
     {
       "id": "rss_689bfa3d384ff735",
@@ -11200,52 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-03T05:54:44.000Z"
-    },
-    {
-      "id": "rss_0d4cbe328d480b46",
-      "timestamp": 1777714200000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "How The Red Sea Shipping Crisis Affects Global Trade - WorldAtlas",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQdGxIdEEwcl9Qc0Y1czcyM0lXY0hpLXdLc0NKZnMyVXJ1QTN1SU5QR2xna25jUjhXOUxhRWFRck1fUWw2elZPS2Q0Q3FXYUxqOFp2bkhMdUVSY0gwaDM1emI1VTlGTG9fOGdxVGRYNkJPN3VNbHBibEVfYVMyakJjYjJTV0hwY2xESE9HWE1OdHlfN1lWRUhDaXRR?oc=5\" target=\"_blank\">How The Red Sea Shipping Crisis Affects Global Trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WorldAtlas</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdGxIdEEwcl9Qc0Y1czcyM0lXY0hpLXdLc0NKZnMyVXJ1QTN1SU5QR2xna25jUjhXOUxhRWFRck1fUWw2elZPS2Q0Q3FXYUxqOFp2bkhMdUVSY0gwaDM1emI1VTlGTG9fOGdxVGRYNkJPN3VNbHBibEVfYVMyakJjYjJTV0hwY2xESE9HWE1OdHlfN1lWRUhDaXRR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-02T10:45:42.039Z"
-    },
-    {
-      "id": "rss_6b7dff7af7127d00",
-      "timestamp": 1777672683000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen : Houthi Drone Attack Kills Soldier, Wounds 2 in Southern Marib - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WQXM4LUMyN3M1X0llMzhSM2M4SC1peGpZMExmOFpncFYxRm1oMl96cGM1VDB2RDFKNHVzSElMUmEzQTlPRW5MVlZLUkY5M2NEaVFydFRDXzFaQQ?oc=5\" target=\"_blank\">Yemen : Houthi Drone Attack Kills Soldier, Wounds 2 in Southern Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1WQXM4LUMyN3M1X0llMzhSM2M4SC1peGpZMExmOFpncFYxRm1oMl96cGM1VDB2RDFKNHVzSElMUmEzQTlPRW5MVlZLUkY5M2NEaVFydFRDXzFaQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-01T22:10:47.948Z"
     }
   ]
 }
