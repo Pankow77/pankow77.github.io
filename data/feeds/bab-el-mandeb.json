@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T14:18:51.140Z",
+  "last_fetch": "2026-07-27T15:26:54.397Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d65ec792e74a75c1",
+      "timestamp": 1785164100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQQVdVczhwSnNKSzdFZVhYQUZmZXJXaDdBS2RBVEtOVmx5VXg3dzNDdTV6b2EtRC1DazNUVXp1bkhyaThLUDAySTBHbWg5aXVfU2hoMVU1S1B2aGdrbm0xVjFoREwtRlZScHMyaE9uTTRWaVVvWGRKYWZtTi1mWFNTRGRDTDhkeUVPOUVTUTVMYml3enpZODI5RGRSMzgtRDhWal9rUHE1NnRqT1Q2eFhsWA?oc=5\" target=\"_blank\">live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AnewZ</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQVdVczhwSnNKSzdFZVhYQUZmZXJXaDdBS2RBVEtOVmx5VXg3dzNDdTV6b2EtRC1DazNUVXp1bkhyaThLUDAySTBHbWg5aXVfU2hoMVU1S1B2aGdrbm0xVjFoREwtRlZScHMyaE9uTTRWaVVvWGRKYWZtTi1mWFNTRGRDTDhkeUVPOUVTUTVMYml3enpZODI5RGRSMzgtRDhWal9rUHE1NnRqT1Q2eFhsWA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T15:26:52.985Z"
+    },
     {
       "id": "rss_5870b481cfae6de3",
       "timestamp": 1785160980000,
@@ -25,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T14:18:49.592Z"
+    },
+    {
+      "id": "rss_13d510699a38e50a",
+      "timestamp": 1785160656000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim drone attack on oil supply, transport points in Saudi Arabia - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQRWdLM0QzNTFuNGdRSGVRVWl6TWN4TWoya2VvUDFlOVNfVVJTWXJnOHkxWWozdlhOYl8xYVVxMTN5NHlHSHJTZGI4VDg1aEVCNlVOanlFNEJHaWU1UFFha2JGNFc3c2Z5cXJfYUhRRDdHZ29BUFZzalotS1RYTHlYLXBOcWZOU1ZkRkFxWkRmVjMtb1Y1NkdwWFZQc0xBT0tmTEs3SXo0ay1CSjY0Wm5pMVRUWUxTaXlsamJHbkNmN0FzbmlE?oc=5\" target=\"_blank\">Yemen’s Houthis claim drone attack on oil supply, transport points in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRWdLM0QzNTFuNGdRSGVRVWl6TWN4TWoya2VvUDFlOVNfVVJTWXJnOHkxWWozdlhOYl8xYVVxMTN5NHlHSHJTZGI4VDg1aEVCNlVOanlFNEJHaWU1UFFha2JGNFc3c2Z5cXJfYUhRRDdHZ29BUFZzalotS1RYTHlYLXBOcWZOU1ZkRkFxWkRmVjMtb1Y1NkdwWFZQc0xBT0tmTEs3SXo0ay1CSjY0Wm5pMVRUWUxTaXlsamJHbkNmN0FzbmlE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T15:26:52.985Z"
     },
     {
       "id": "rss_012d1d6fa7c42a72",
@@ -11205,52 +11251,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-13T09:40:49.936Z"
-    },
-    {
-      "id": "rss_72a6eec9401528c6",
-      "timestamp": 1778221567000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "4th Korean oil tanker successfully transits through Red Sea - The Korea Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPakpHWDJnQVQydDhPWlhJbTB3eXE2Z0FzcTAtMUx0T3kyYW43UFFHN0xIVTludjZlY2pUckFyM1UtMnYzNnBPaVFqNFBtUzFuQUhNekttN1FjdkxrNTZuWmtjUnNGTkd4UUlST3VlOXZvUENNekRPRXpkUmRqcE5hRV9UMWtVQldhb1VMbVBuRjBMNFZrMXg4SzlIWXFvYWRieDVsZlhLRWRKcEFF0gGyAUFVX3lxTE5mT1doOEdkbVZwNEhPTkZiMnhNR2IzU1EtbWlsQS0yX3A5cHVlODJCUjRBdWJrZnRJMC01Z0hQSmxMX09rcGJCVUJRMjZWSGM3ektsMGFZbThiN1hJSmFJd1VJYzItY0hlWHg0Z0JMNGoxQkhYb2xiYmhVTTdBUUFlTWVhejIzc1lycXE1VHBVV2lqVzR0RXVQZnVFUUZLbk",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPakpHWDJnQVQydDhPWlhJbTB3eXE2Z0FzcTAtMUx0T3kyYW43UFFHN0xIVTludjZlY2pUckFyM1UtMnYzNnBPaVFqNFBtUzFuQUhNekttN1FjdkxrNTZuWmtjUnNGTkd4UUlST3VlOXZvUENNekRPRXpkUmRqcE5hRV9UMWtVQldhb1VMbVBuRjBMNFZrMXg4SzlIWXFvYWRieDVsZlhLRWRKcEFF0gGyAUFVX3lxTE5mT1doOEdkbVZwNEhPTkZiMnhNR2IzU1EtbWlsQS0yX3A5cHVlODJCUjRBdWJrZnRJMC01Z0hQSmxMX09rcGJCVUJRMjZWSGM3ektsMGFZbThiN1hJSmFJd1VJYzItY0hlWHg0Z0JMNGoxQkhYb2xiYmhVTTdBUUFlTWVhejIzc1lycXE1VHBVV2lqVzR0RXVQZnVFUUZLbkNyVE1ral9nNDYxZGZvRzVpQUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-09T10:31:15.957Z"
-    },
-    {
-      "id": "rss_1a0c5294906ed583",
-      "timestamp": 1778061327000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "How Houthi attack on Israel may shape Iran war – and push Trump to a ceasefire - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_AJBVV95cUxOREh2b3N5NVNGTTRGSm1Id3IxRm9qN1M2eW9KcURHNV9SMjVqcjlwaTM1UVNlQktERmN5OTFzSlJ0aXlxRFhuZndSVm13Ny1tYVlMLThEOUctVFBLNGhXeTdJUktPNlpucEkxbkFGQnFpMF9RQlJzTjFqUEVYWmlnTG9EbXdsc3dycUdBVFpCMVJIaEIxM3Y1NHJGSUdRek5SUlBzTnVPY3NXckJtTW1kS0xOX0xzRmZJcnJjeHVPN0trNWtTX1V3bmhPUE9fdzkzX2xpeHBzY0cxVmZSVjVsNnF1SFlfMlhVX19YWHNSUjMxaFhjMnFIUUZIaURWSWE4S2dKWGJDdVpLUzdFQjFlRlZjVHB5YnhwOVBVWk9QNngtRU96bmd4YUc4WFhydjgxakVMVFZmVWRqOUhldnd2U3lrcVM2am5tS1lCM0pJUV",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxOREh2b3N5NVNGTTRGSm1Id3IxRm9qN1M2eW9KcURHNV9SMjVqcjlwaTM1UVNlQktERmN5OTFzSlJ0aXlxRFhuZndSVm13Ny1tYVlMLThEOUctVFBLNGhXeTdJUktPNlpucEkxbkFGQnFpMF9RQlJzTjFqUEVYWmlnTG9EbXdsc3dycUdBVFpCMVJIaEIxM3Y1NHJGSUdRek5SUlBzTnVPY3NXckJtTW1kS0xOX0xzRmZJcnJjeHVPN0trNWtTX1V3bmhPUE9fdzkzX2xpeHBzY0cxVmZSVjVsNnF1SFlfMlhVX19YWHNSUjMxaFhjMnFIUUZIaURWSWE4S2dKWGJDdVpLUzdFQjFlRlZjVHB5YnhwOVBVWk9QNngtRU96bmd4YUc4WFhydjgxakVMVFZmVWRqOUhldnd2U3lrcVM2am5tS1lCM0pJUVNBd0RlR2VSeV9FT0hFdHFHUFN0N3VtZV8tOGw3R0pzZHJrUWwxdVhiYV9fUg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-11T16:29:02.600Z"
     }
   ]
 }
