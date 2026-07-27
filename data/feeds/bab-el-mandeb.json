@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-26T23:48:10.440Z",
+  "last_fetch": "2026-07-27T00:33:20.694Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e4839e5fa688876a",
+      "timestamp": 1785110983000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Red Sea shipping slows after Houthi attack on Saudi Arabia, data shows - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQNWxxNDU1SHBqVXozbmd1VHRWYVpQWGVqVUVTUHVlakJjS2lKMHBCbDJCS1hucGROTV90dUhuNS1mUEdKVEtBZjR2b1FwSFZJejdVLWR3WFMxWGV6NVk5YWFOa2o3ZHdnX1R2enpyRm53YnBmRmZyS2trSjFiQ2VSbjZQZ2JhbTdRbnh0RVlleDhYTmtUUjJWN0JpTV9lNXU1X3cwazNYcHhzZkNic1hQdTdxMXZEaEM5MDhQZA?oc=5\" target=\"_blank\">Red Sea shipping slows after Houthi attack on Saudi Arabia, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNWxxNDU1SHBqVXozbmd1VHRWYVpQWGVqVUVTUHVlakJjS2lKMHBCbDJCS1hucGROTV90dUhuNS1mUEdKVEtBZjR2b1FwSFZJejdVLWR3WFMxWGV6NVk5YWFOa2o3ZHdnX1R2enpyRm53YnBmRmZyS2trSjFiQ2VSbjZQZ2JhbTdRbnh0RVlleDhYTmtUUjJWN0JpTV9lNXU1X3cwazNYcHhzZkNic1hQdTdxMXZEaEM5MDhQZA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-27T00:33:19.096Z"
+    },
     {
       "id": "rss_d7e57f4bdfa0516d",
       "timestamp": 1785087840000,
@@ -11220,27 +11243,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-04-29T08:09:16.596Z"
-    },
-    {
-      "id": "rss_be8646a49cdc7b15",
-      "timestamp": 1777385642000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Another Houthi attack in the Red Sea kills at least three - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAJBVV95cUxOc2RFb1BXWGYzaG1qTVdmRzFvSGJicERhNTFfUzBONnZXeDh6OEw5bnJudHRIN3pxTGpSd24zWDFMR2J3ZWtKTG90WFhwZzFEVFFGR3VJd3VsLVBld1I3YnNqUjZpNEkyckhxVFNjcjlMLXk4NVZRRlpwSVIxc2xoM3VwRWRsREhOV0dKakJ6STlIMjJNaFdGTldfMV9Wd1ZPZEp2WHg4dmRaMXcxVVVSdHZRRzJXU003MUkzWkZ2WDF3U3NZVlpOOS00ZnVrNFFjQVpmekpRTmZEdUFWUUxfanJ1SDQwQ3k3dVNETDZNX1c1eHNmRkc3OF9EWDdtZkVUQTNnM1BkeUdDTlIwbFdHajJ4Z0pQS0R3SV9palE4X0xuRy1idDg1WGZHeXpvMVkxalZoYlZRaDI4eFJMeVpMaw?oc=5\" target=\"_blan",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxOc2RFb1BXWGYzaG1qTVdmRzFvSGJicERhNTFfUzBONnZXeDh6OEw5bnJudHRIN3pxTGpSd24zWDFMR2J3ZWtKTG90WFhwZzFEVFFGR3VJd3VsLVBld1I3YnNqUjZpNEkyckhxVFNjcjlMLXk4NVZRRlpwSVIxc2xoM3VwRWRsREhOV0dKakJ6STlIMjJNaFdGTldfMV9Wd1ZPZEp2WHg4dmRaMXcxVVVSdHZRRzJXU003MUkzWkZ2WDF3U3NZVlpOOS00ZnVrNFFjQVpmekpRTmZEdUFWUUxfanJ1SDQwQ3k3dVNETDZNX1c1eHNmRkc3OF9EWDdtZkVUQTNnM1BkeUdDTlIwbFdHajJ4Z0pQS0R3SV9palE4X0xuRy1idDg1WGZHeXpvMVkxalZoYlZRaDI4eFJMeVpMaw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-04-29T22:54:57.290Z"
     }
   ]
 }
