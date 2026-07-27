@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T21:50:53.453Z",
+  "last_fetch": "2026-07-27T22:23:12.226Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_052ddc2e1c1a5b24",
+      "timestamp": 1785190420000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis pushing to model Iran's Hormuz control in Red Sea, Yemeni FM says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUENSU3cxZnhXQWVEQ0VlbUlCX2U4V05HS1RqcTNqSjN3dHhVc3duLW9lNzdMSWhsWHFXSWEybzhOOU1GVUxqeHBISVUzVUFVbE9DNmNqYS01SlV0bmtYTmQ3dXBIVXFKMWZJdkpua0xZUmxWd3NqcFBHSGtDM0tILVN6b2lDZzFnTk1tY1IwWFRpTElycEwwLVpGQ2I5WVhDdHhFN1NaMV9RMXdPbmxIYmFsbzRGSzlFNWZJ?oc=5\" target=\"_blank\">Houthis pushing to model Iran's Hormuz control in Red Sea, Yemeni FM says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUENSU3cxZnhXQWVEQ0VlbUlCX2U4V05HS1RqcTNqSjN3dHhVc3duLW9lNzdMSWhsWHFXSWEybzhOOU1GVUxqeHBISVUzVUFVbE9DNmNqYS01SlV0bmtYTmQ3dXBIVXFKMWZJdkpua0xZUmxWd3NqcFBHSGtDM0tILVN6b2lDZzFnTk1tY1IwWFRpTElycEwwLVpGQ2I5WVhDdHhFN1NaMV9RMXdPbmxIYmFsbzRGSzlFNWZJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-27T22:23:10.694Z"
+    },
     {
       "id": "rss_4f1e90d623a58f33",
       "timestamp": 1785168274000,
@@ -11227,27 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-13T15:22:08.764Z"
-    },
-    {
-      "id": "rss_2eb3a1dc9808889c",
-      "timestamp": 1778671218000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Official: We Will Not Hesitate To Attack Saudi Aramco Facilities - MEMRI | Middle East Media Research Institute",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQVHVxbERiTEVNeDVfZmdzRG5nUXN2YlRfUVEybUtVcHdvb3JBUC1xN19FUlZJeWo5dnZ6cElZRi1IYlpLUGhSQVk1cmMxeGtYVnFsaDZLOG5VMlhUaUk0bGlJVmlZV1h6UjNXbFZjTkd4bXYzclFRaVptc3Q4QTNEQXNFLS1jR2lDMXd0RWF6Z0s2WURRSGhnSWRoWFZaUExfNC1JMnZKR2lzTktVamFKZWpsZmZCX1Vfa1Q4Qg?oc=5\" target=\"_blank\">Houthi Official: We Will Not Hesitate To Attack Saudi Aramco Facilities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MEMRI | Middle East Media Research Institute</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVHVxbERiTEVNeDVfZmdzRG5nUXN2YlRfUVEybUtVcHdvb3JBUC1xN19FUlZJeWo5dnZ6cElZRi1IYlpLUGhSQVk1cmMxeGtYVnFsaDZLOG5VMlhUaUk0bGlJVmlZV1h6UjNXbFZjTkd4bXYzclFRaVptc3Q4QTNEQXNFLS1jR2lDMXd0RWF6Z0s2WURRSGhnSWRoWFZaUExfNC1JMnZKR2lzTktVamFKZWpsZmZCX1Vfa1Q4Qg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-13T12:00:15.383Z"
     }
   ]
 }
