@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T01:34:53.052Z",
+  "last_fetch": "2026-07-27T03:04:28.161Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bbd122bdd5beeab8",
+      "timestamp": 1785121323000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tanker rates set to soar on Houthi attack fears in Red Sea - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQWDNRMW9EVkVnamJvSlhxeUtabFVfT3ZETVVtcnhBZFJ2WnlQVzcyQVQ1UDY4YktxMXNPWmZRUmlTd1diMUNfc2ttNDZESnhIVUd6dmlSdFB1MllCNTYyUVQ3a3hBN0VzQ2ZxZXJDN1VrUnJWa19zUlVqZHpUOWsyMzBYMGwtNmcyNWd5T094ZjRzU18xOVhkMjBJRDNtVlRlU0E?oc=5\" target=\"_blank\">Tanker rates set to soar on Houthi attack fears in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWDNRMW9EVkVnamJvSlhxeUtabFVfT3ZETVVtcnhBZFJ2WnlQVzcyQVQ1UDY4YktxMXNPWmZRUmlTd1diMUNfc2ttNDZESnhIVUd6dmlSdFB1MllCNTYyUVQ3a3hBN0VzQ2ZxZXJDN1VrUnJWa19zUlVqZHpUOWsyMzBYMGwtNmcyNWd5T094ZjRzU18xOVhkMjBJRDNtVlRlU0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T03:04:26.808Z"
+    },
+    {
+      "id": "rss_4b6249e4a2a651d5",
+      "timestamp": 1785118293000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Red Sea shipping falls after Houthi attack on Saudi Arabia - Dawn",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2o2TGU5eTZTMjF1anZrMTUzamVnX0NKZkd5LTZaV0lheGVBc3NnbmlfdGxJVmNuNEZHSWpCbzZ6R0tUdnNQRFgxQThKR2I3aDVkV3FYbTlNVTdYWHF1eGtrSE05SU9JOExWYkRUN2UxTHZzeExOb2c5QXN3dlVLY014cmlsck43aWdqNFNEU3JzLVQyQ0Jn0gFOQVVfeXFMTVA2VWQtOXdJYTdkTzlfS3A1RUVOTlRSb2RHVE41UHZyZFd1MzVjanVONE5hOXEtcU41clVpNmNmYkdwQ3djT0duVDZ0Q293?oc=5\" target=\"_blank\">Red Sea shipping falls after Houthi attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2o2TGU5eTZTMjF1anZrMTUzamVnX0NKZkd5LTZaV0lheGVBc3NnbmlfdGxJVmNuNEZHSWpCbzZ6R0tUdnNQRFgxQThKR2I3aDVkV3FYbTlNVTdYWHF1eGtrSE05SU9JOExWYkRUN2UxTHZzeExOb2c5QXN3dlVLY014cmlsck43aWdqNFNEU3JzLVQyQ0Jn0gFOQVVfeXFMTVA2VWQtOXdJYTdkTzlfS3A1RUVOTlRSb2RHVE41UHZyZFd1MzVjanVONE5hOXEtcU41clVpNmNmYkdwQ3djT0duVDZ0Q293?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T03:04:28.154Z"
+    },
     {
       "id": "rss_0e2e9f3df1c8cf7f",
       "timestamp": 1785114883000,
@@ -11200,52 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-01T22:10:47.948Z"
-    },
-    {
-      "id": "rss_254fa7a4a597193c",
-      "timestamp": 1777632093000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea tanker transits surpass pre-Houthi crisis levels in rush to secure Saudi barrels - Lloyd's List",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMGdnb1VQQ3RVenVmbmlkRVdzaFdfaVFsdjJ4MEt5UlM5bzdNR09WTzE0eWRoaFRHREJwcnBCMlJOMXRiX3lHNVYtdW9QWHlRM2ctSzZ6UkxGRG84dmFfdjQxUlNVMWV5YUpNS0ZKVVF4V0p4UllhVjVqVTBiQmlFWS01Yi14a0tiWF9zckFxSVp2WTJCeGJNUU91NzlrRURCMjlXbTdTSjR0MUtfT0VILU04SUx1Y2FRT2YyT0x6eVlEd0E?oc=5\" target=\"_blank\">Red Sea tanker transits surpass pre-Houthi crisis levels in rush to secure Saudi barrels</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMGdnb1VQQ3RVenVmbmlkRVdzaFdfaVFsdjJ4MEt5UlM5bzdNR09WTzE0eWRoaFRHREJwcnBCMlJOMXRiX3lHNVYtdW9QWHlRM2ctSzZ6UkxGRG84dmFfdjQxUlNVMWV5YUpNS0ZKVVF4V0p4UllhVjVqVTBiQmlFWS01Yi14a0tiWF9zckFxSVp2WTJCeGJNUU91NzlrRURCMjlXbTdTSjR0MUtfT0VILU04SUx1Y2FRT2YyT0x6eVlEd0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-02T08:05:10.896Z"
-    },
-    {
-      "id": "rss_56472ba02e7ea46a",
-      "timestamp": 1777617330000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Shipping reroutes around Africa as Houthis threaten to close Bab el-Mandeb - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNQVNoTjN6TWJzQXFOaDFPTzQwdm4wZ3ZNRjByZjlVc216NkNtb2FSSHJnOUdrS2VWd1M3MV9YUkIzYm5oQ1g3VTBadXRQNmpoMENwWkNCS2FTWERIVDc4dkZJQ2w3RkhET00teVJwV0dVaVFfQkk3dmx4aVhKVm52R0MwWmtHNmEwWVJWemxBNHJPTjZOUkFLbW1vMGZEZldWUV90cDRGTFRqNEc1eDVKcXJhVC1oRXA4VFZabw?oc=5\" target=\"_blank\">Shipping reroutes around Africa as Houthis threaten to close Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNQVNoTjN6TWJzQXFOaDFPTzQwdm4wZ3ZNRjByZjlVc216NkNtb2FSSHJnOUdrS2VWd1M3MV9YUkIzYm5oQ1g3VTBadXRQNmpoMENwWkNCS2FTWERIVDc4dkZJQ2w3RkhET00teVJwV0dVaVFfQkk3dmx4aVhKVm52R0MwWmtHNmEwWVJWemxBNHJPTjZOUkFLbW1vMGZEZldWUV90cDRGTFRqNEc1eDVKcXJhVC1oRXA4VFZabw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-01T08:28:05.644Z"
     }
   ]
 }
