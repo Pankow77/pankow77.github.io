@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-27T09:06:45.857Z",
+  "last_fetch": "2026-07-27T10:45:03.020Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4356d5f6d7456020",
+      "timestamp": 1785145179000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis attack Red Sea oil facilities; Saudi-backed forces strike Yemeni port - Baird Maritime",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQN2tGRUhwUnAwdWpGZGc2Z0RETGQ4akRfdUZzZGdUNEZvZ3VVVW1iODVpc1JEQk05Z2piQkRMUkgxRm9Dalc5QVJ3dklyZS1IZ0FRMjh0VUl5Nmwxai1SWHlPUTdRSFQ1RXVJeVBBbzVPZFJKVjZVWjJYX2ZqdjFKQXVlVDZUZWNDODJzWlQyOTdyclJOTk9VdnBodEhKcm5ETGJTZlgzdTJ6MFNONzQ3V2E1YkdoanJaTnNPVEJiUlZST0NwWFpmRTdnZVhtZ2NBb1800gHgAUFVX3lxTE9tRkZsM0FsejJGWklCUnZhSms1R00tQjQ0c21BOGxaS241YjV1Q0R6VFp1Z1l2X3dnS1FhdGtHYlNwLV9BQU01XzZva09qaXJzX2QtM0dBaUdwcnNRRDVSZjlGS3NueEFfM3B1bHdmOVRYRG1kT09UNk",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQN2tGRUhwUnAwdWpGZGc2Z0RETGQ4akRfdUZzZGdUNEZvZ3VVVW1iODVpc1JEQk05Z2piQkRMUkgxRm9Dalc5QVJ3dklyZS1IZ0FRMjh0VUl5Nmwxai1SWHlPUTdRSFQ1RXVJeVBBbzVPZFJKVjZVWjJYX2ZqdjFKQXVlVDZUZWNDODJzWlQyOTdyclJOTk9VdnBodEhKcm5ETGJTZlgzdTJ6MFNONzQ3V2E1YkdoanJaTnNPVEJiUlZST0NwWFpmRTdnZVhtZ2NBb1800gHgAUFVX3lxTE9tRkZsM0FsejJGWklCUnZhSms1R00tQjQ0c21BOGxaS241YjV1Q0R6VFp1Z1l2X3dnS1FhdGtHYlNwLV9BQU01XzZva09qaXJzX2QtM0dBaUdwcnNRRDVSZjlGS3NueEFfM3B1bHdmOVRYRG1kT09UNk00ZzZhOHNCRTBkdU12Mkt5cVFSTm84YWJqU3J4eTgzQk9wRmtTT3lfV3IyUDdGR3BtVk5fb0xHRFJleTNia3FMVGhfcEJtWnU4c2lhVndiNUg2OWlQc2RmRGwtNW5aU0psWGZNaWNq?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-27T10:45:01.409Z"
+    },
     {
       "id": "rss_a0c1b12236a67880",
       "timestamp": 1785142883000,
@@ -11224,29 +11245,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-04T15:28:17.758Z"
-    },
-    {
-      "id": "rss_4c44aa64d4ce7cd2",
-      "timestamp": 1777774765000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Tanker Hijacking Stokes Fear of Links Between Houthi Rebels and Somali Pirates - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOdkdUNTVMeVFuU2c0QjU3UWxBVmxaeVpwTUZ4UDNGQTY2akdJOGg0X3pBSU1hNXVqZ0hTZndxcVBpY0QxQXNnTFBhc1VXNDZzSkQ5aVNtbG42YlpJelFEVi1kMkpEbXktUGhzUjBCckx6LVRnYnRoV2VUTldTYzNWaWNOWVlNZTZEN0dJdDlSVVFyZi05b3V6dTNEVDVKQQ?oc=5\" target=\"_blank\">Oil Tanker Hijacking Stokes Fear of Links Between Houthi Rebels and Somali Pirates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdkdUNTVMeVFuU2c0QjU3UWxBVmxaeVpwTUZ4UDNGQTY2akdJOGg0X3pBSU1hNXVqZ0hTZndxcVBpY0QxQXNnTFBhc1VXNDZzSkQ5aVNtbG42YlpJelFEVi1kMkpEbXktUGhzUjBCckx6LVRnYnRoV2VUTldTYzNWaWNOWVlNZTZEN0dJdDlSVVFyZi05b3V6dTNEVDVKQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-03T05:54:44.000Z"
     }
   ]
 }
