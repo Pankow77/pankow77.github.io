@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T21:50:08.433Z",
+  "last_fetch": "2026-07-28T22:21:52.911Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_44e7f9a837aaf8c5",
+      "timestamp": 1785267259000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Bought off the Houthis. Now They Are Blockading Its Ports - Middle East Forum",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNWWdCclFhalUyZ1NScUtYcTVTRU9kOVdVZ2RBS1JsTERjbm5QTU5jb0lkc0VrR3hMeUNlRXd2ekx5YVJRNUhsRGZBNmhtTWJBMzJXQ1NfUzlycXk2c3JmSGVOVktjRk15ZUJtdi1jN3gybDk2XzdzY2E1SmpVdHo0NnJON2EtbG1rOEtqMldGM0xpOS1CdVJmTWRzSDY2WF9oT0NYN2lBZw?oc=5\" target=\"_blank\">Saudi Arabia Bought off the Houthis. Now They Are Blockading Its Ports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Forum</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNWWdCclFhalUyZ1NScUtYcTVTRU9kOVdVZ2RBS1JsTERjbm5QTU5jb0lkc0VrR3hMeUNlRXd2ekx5YVJRNUhsRGZBNmhtTWJBMzJXQ1NfUzlycXk2c3JmSGVOVktjRk15ZUJtdi1jN3gybDk2XzdzY2E1SmpVdHo0NnJON2EtbG1rOEtqMldGM0xpOS1CdVJmTWRzSDY2WF9oT0NYN2lBZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T22:21:51.118Z"
+    },
     {
       "id": "rss_8924f4619b2f1aee",
       "timestamp": 1785266508000,
@@ -49,6 +70,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T19:35:42.595Z"
+    },
+    {
+      "id": "rss_b649b99542276c39",
+      "timestamp": 1785264780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Tanker Hit by Houthi Missiles in the Red Sea - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQdWpWRjhMdFlhYzhDajVzdFdULUxJTjRBX0dzRDdHNnl4cElnOXQ2RlVjOXlVNmpMTEN0QzRPYXU1YnlEZHNQNEhuZTM0SUJyVWx2TkpaYUxScFV2a2JTRTNScXdvU1BCY1VZMEVxWURXcWIySlgyS2JsVVkzeWhoM29WRlA2RzUyTWNKWmR0dVV3Vnc?oc=5\" target=\"_blank\">Saudi Tanker Hit by Houthi Missiles in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdWpWRjhMdFlhYzhDajVzdFdULUxJTjRBX0dzRDdHNnl4cElnOXQ2RlVjOXlVNmpMTEN0QzRPYXU1YnlEZHNQNEhuZTM0SUJyVWx2TkpaYUxScFV2a2JTRTNScXdvU1BCY1VZMEVxWURXcWIySlgyS2JsVVkzeWhoM29WRlA2RzUyTWNKWmR0dVV3Vnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T22:21:51.118Z"
     },
     {
       "id": "rss_843f1253c37e7ab9",
@@ -886,6 +931,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T21:17:47.901Z"
+    },
+    {
+      "id": "rss_9e6e076718110663",
+      "timestamp": 1785007018000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fYWF4MjVtNkdORS1vWGZOTWZRU0FiVzZkY2pGemJ0eURvM0FZT056M2FFOGpqN3lYdEoxT2Rxd0RjUEpRb3M4ZDQwRnB0N0dUa0pZVmtn?oc=5\" target=\"_blank\">Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fYWF4MjVtNkdORS1vWGZOTWZRU0FiVzZkY2pGemJ0eURvM0FZT056M2FFOGpqN3lYdEoxT2Rxd0RjUEpRb3M4ZDQwRnB0N0dUa0pZVmtn?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T22:21:52.905Z"
     },
     {
       "id": "rss_08665beb3ec721c7",
@@ -11200,72 +11268,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-26T21:03:26.869Z"
-    },
-    {
-      "id": "rss_d9dc274a1942027f",
-      "timestamp": 1779752083000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel - News On AIR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5\" target=\"_blank\">Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News On AIR</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-27T18:18:08.508Z"
-    },
-    {
-      "id": "rss_c28ad57c64fd5bb3",
-      "timestamp": 1779730141000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "From Protecting Chokepoints To Breaking Their Grip: Why The ASTRA Corridor Debate Matters – Analysis - Eurasia Review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOeVo3UjFiZ204MDNReTB4NDZ6SUhHRVpHVXFDSm4zVXNUMnliMFdLdDhLbTFXQ0FFZXJRaml3R1NlUVVIN2FWS2RrS3FTS2dUdzBUek95U25kLTJJWFZrb05ESU1yZ3FNa1pKeXZpWXhzTHk3cVBzWTNRUllNMHZjeVV2a250cWs3N0t0ZEZlb1Fnd25oaUFSXzhlVUM2OWl6a29oZGFMN09ZdTJwYmhwMzBtSEF0aThNa0xKWjB0d250T3BWNS1JQXRGM1JiTjAwMkhv?oc=5\" target=\"_blank\">From Protecting Chokepoints To Breaking Their Grip: Why The ASTRA Corridor Debate Matters – Analysis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euras",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOeVo3UjFiZ204MDNReTB4NDZ6SUhHRVpHVXFDSm4zVXNUMnliMFdLdDhLbTFXQ0FFZXJRaml3R1NlUVVIN2FWS2RrS3FTS2dUdzBUek95U25kLTJJWFZrb05ESU1yZ3FNa1pKeXZpWXhzTHk3cVBzWTNRUllNMHZjeVV2a250cWs3N0t0ZEZlb1Fnd25oaUFSXzhlVUM2OWl6a29oZGFMN09ZdTJwYmhwMzBtSEF0aThNa0xKWjB0d250T3BWNS1JQXRGM1JiTjAwMkhv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-25T18:03:28.870Z"
-    },
-    {
-      "id": "rss_df28d3ea53e4c430",
-      "timestamp": 1779480665000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Israel Pulls Somaliland Into Red Sea Rivalries - الحرة",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTFBkdlptMG4ydDhSc2J4b21nWjBZb2Z1MjBISVVXTTl5VWpVRDdjRnB1MXBHdGdnMEdRZnFuOTZXeDBuQQ?oc=5\" target=\"_blank\">Israel Pulls Somaliland Into Red Sea Rivalries</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBkdlptMG4ydDhSc2J4b21nWjBZb2Z1MjBISVVXTTl5VWpVRDdjRnB1MXBHdGdnMEdRZnFuOTZXeDBuQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-23T04:44:50.445Z"
     }
   ]
 }
