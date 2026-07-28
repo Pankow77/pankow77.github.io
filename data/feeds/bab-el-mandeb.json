@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T18:58:02.177Z",
+  "last_fetch": "2026-07-28T19:35:44.120Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_663478d90c8cc01f",
+      "timestamp": 1785266225000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Tankers keep sailing Red Sea despite Houthi threats as Saudi oil lifeline faces strains - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNanhNbzZNbTU5LUFpM1J3dmZJXzlGSVdodUNGeXVKTF9SbEFZOEJscGZRWEZfNWlwbEhKY1RYdXcxZ19mWmRDc2FTNUNhTEZVbGs1VlRNYUhQbThhYlppc0psdTFMc0xUN0ZrU2NPQThEcXZwTTVYb0FjLWJGVmFsYlgyb0tSUkh1enQxTXdGYWVvYUE3cWo4UmdYcFFsZjJtM0dZLU5sZFZfZG9iRU9NU19UeWhuci14MmZEQ2RR?oc=5\" target=\"_blank\">Tankers keep sailing Red Sea despite Houthi threats as Saudi oil lifeline faces strains</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNanhNbzZNbTU5LUFpM1J3dmZJXzlGSVdodUNGeXVKTF9SbEFZOEJscGZRWEZfNWlwbEhKY1RYdXcxZ19mWmRDc2FTNUNhTEZVbGs1VlRNYUhQbThhYlppc0psdTFMc0xUN0ZrU2NPQThEcXZwTTVYb0FjLWJGVmFsYlgyb0tSUkh1enQxTXdGYWVvYUE3cWo4UmdYcFFsZjJtM0dZLU5sZFZfZG9iRU9NU19UeWhuci14MmZEQ2RR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T19:35:42.595Z"
+    },
     {
       "id": "rss_843f1253c37e7ab9",
       "timestamp": 1785261600000,
@@ -11240,27 +11263,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T17:42:53.275Z"
-    },
-    {
-      "id": "rss_9b35c31fcba8e902",
-      "timestamp": 1778939540000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Arab League Secretary-General condemns Houthi attack that claimed lives of Bahraini soldiers - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UeGV0dHp5MDQ5anJkM25oUXJYMzVUWHpMclpTYjF4UzU3eU81Q3RDZlpsZTRsMlYtOXM5aW16ZGdPQXpFS2RkOVFmTFozenM?oc=5\" target=\"_blank\">Arab League Secretary-General condemns Houthi attack that claimed lives of Bahraini soldiers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1UeGV0dHp5MDQ5anJkM25oUXJYMzVUWHpMclpTYjF4UzU3eU81Q3RDZlpsZTRsMlYtOXM5aW16ZGdPQXpFS2RkOVFmTFozenM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-18T21:27:47.003Z"
     }
   ]
 }
