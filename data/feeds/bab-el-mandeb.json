@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T09:23:51.731Z",
+  "last_fetch": "2026-07-28T11:15:59.105Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ecdde251ae24892c",
+      "timestamp": 1785231860000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Fresh Red Sea attacks threaten Egypt’s Suez Canal recovery as oil tanker traffic slumps - Business Insider Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPbzNQWFpFNlhrRFBLX1NHdTdMQl81T3VhTWxRU1Y0YU1rcGNvMlRyMGs5V202WGwxQW91aEFlaWtoWnpCVDFQenFPOWpyWnBMY0FQSTNxYktUOENkdF9NMmpkZ0VVNjdILTRhOGhlZmQ1UDFfdWU4YjdvYXNONHRhRjZwMS0tdWZnSmlST0NyQldzUTZuZjM1cG5iSjRhbjhialBWbjJrU2hudnFDNV8yQmFNcGVYaDhXVjd5TVJrNDlyRlFIVlBpQ1RMOHJKeGtxUXc?oc=5\" target=\"_blank\">Fresh Red Sea attacks threaten Egypt’s Suez Canal recovery as oil tanker traffic slumps</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Business Insider Af",
+      "tags": [
+        "shipping",
+        "suez",
+        "cape-route"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPbzNQWFpFNlhrRFBLX1NHdTdMQl81T3VhTWxRU1Y0YU1rcGNvMlRyMGs5V202WGwxQW91aEFlaWtoWnpCVDFQenFPOWpyWnBMY0FQSTNxYktUOENkdF9NMmpkZ0VVNjdILTRhOGhlZmQ1UDFfdWU4YjdvYXNONHRhRjZwMS0tdWZnSmlST0NyQldzUTZuZjM1cG5iSjRhbjhialBWbjJrU2hudnFDNV8yQmFNcGVYaDhXVjd5TVJrNDlyRlFIVlBpQ1RMOHJKeGtxUXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T11:15:57.753Z"
+    },
+    {
+      "id": "rss_d89fb878469be211",
+      "timestamp": 1785198900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "With Houthi blockade on Saudi Arabia, Bab el-Mandeb returns to centre stage | Explained - The Hindu",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNV1ZnZzJtVG9jVXBxZHJsZV9jSHFEZXBMZkhEbTRIZEtFQU4tLW9DTTZqem9SdHFERWdueXloSVhiRnpja3p4RDVPY2FXdU1FQXE4amgwWjFCUkUyUDc0bW90VmVWRXd0b2dybHZQbUFfZHhBaE1BM2VuekpXQnhmeXM4QjRfZXVvQTBoVmJ4VDhYOVNaV0tSb3BzUFdtWHBXS3oxd0M3RWNiakkwU2YtVnI3OVE1WEpyUFN1azNldnM1Nk5hWGItalktc1ItV2JtQjZ2UdIB2wFBVV95cUxNRWQ2VE5keWJpSXZvR0Fvc3ltM3l0VGdHR0F5Vm8zNHJMZGVEQ0dHUHRMLUF3SnlXbUJTS2xXZllINkM3Qk5kWnlzVlNCTzN1VmRJODdONWY0SnlqZWFKT2JYVFFBMExzc3J1UmVPTlFDaFE4enE1S3",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNV1ZnZzJtVG9jVXBxZHJsZV9jSHFEZXBMZkhEbTRIZEtFQU4tLW9DTTZqem9SdHFERWdueXloSVhiRnpja3p4RDVPY2FXdU1FQXE4amgwWjFCUkUyUDc0bW90VmVWRXd0b2dybHZQbUFfZHhBaE1BM2VuekpXQnhmeXM4QjRfZXVvQTBoVmJ4VDhYOVNaV0tSb3BzUFdtWHBXS3oxd0M3RWNiakkwU2YtVnI3OVE1WEpyUFN1azNldnM1Nk5hWGItalktc1ItV2JtQjZ2UdIB2wFBVV95cUxNRWQ2VE5keWJpSXZvR0Fvc3ltM3l0VGdHR0F5Vm8zNHJMZGVEQ0dHUHRMLUF3SnlXbUJTS2xXZllINkM3Qk5kWnlzVlNCTzN1VmRJODdONWY0SnlqZWFKT2JYVFFBMExzc3J1UmVPTlFDaFE4enE1S3dFU1l2dk1JVjRmdFlWNFVGRTcwbHVnajBWVWlGN3VQQkFYZUdTaVJkV0R1Q2lMSFFGU0hkUTczQS1OTnRhaVllU3h4VmpmZDRFZDh4aVkzaFlPTkdjUDFHWlV5aDc1MndtRTg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T11:15:57.754Z"
+    },
     {
       "id": "rss_3ca0d171d4f1c299",
       "timestamp": 1785197100000,
@@ -11211,48 +11257,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-16T17:52:50.357Z"
-    },
-    {
-      "id": "rss_5d703925e9aff9ec",
-      "timestamp": 1778918080000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Washington denounces Houthi attack on Bahrain Defense Forces - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JODFTSzl6WWlSM0h4TWQzMVpNUTc4ZWZLdTJnb1hLa21YbV9oZ2I1MkpyakRjOTRfbHNYR1E4ZmVzQzlzd0dSelVWajFrN1k?oc=5\" target=\"_blank\">Washington denounces Houthi attack on Bahrain Defense Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JODFTSzl6WWlSM0h4TWQzMVpNUTc4ZWZLdTJnb1hLa21YbV9oZ2I1MkpyakRjOTRfbHNYR1E4ZmVzQzlzd0dSelVWajFrN1k?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-17T01:36:47.351Z"
-    },
-    {
-      "id": "rss_19c9c09736909603",
-      "timestamp": 1778916427000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen Government Condemns Houthi Attack on UN Offices, Humanitarian Work - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE43WVIwX01wT203ZTlxY21FWmltM1FRS0M5TjU5ZmNmaVRuYjUwQzd3QWhoRTBzWThjcVliNUN5ZnJwb1pXSDh3bTc4aw?oc=5\" target=\"_blank\">Yemen Government Condemns Houthi Attack on UN Offices, Humanitarian Work</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE43WVIwX01wT203ZTlxY21FWmltM1FRS0M5TjU5ZmNmaVRuYjUwQzd3QWhoRTBzWThjcVliNUN5ZnJwb1pXSDh3bTc4aw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-18T17:42:53.274Z"
     }
   ]
 }
