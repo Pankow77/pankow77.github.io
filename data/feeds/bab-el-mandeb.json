@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T14:15:13.459Z",
+  "last_fetch": "2026-07-28T15:16:25.981Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -44,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T12:09:50.611Z"
+    },
+    {
+      "id": "rss_f49bfbbcef64b365",
+      "timestamp": 1785235917000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "News Liners defy Houthi blockade with 54 Bab el-Mandeb transits in a week - The Loadstar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQWlhIUU85dnVBUGV4RkJreU5FVGNZQXRBdE1ndmlXRVFCVGU4Qm50OTh6ZHZRekVnUDVzNkQ5bzlNMks2OEpEWlpTSmtXd1ZqTC1qbUJFOG1lNlBDZURvREVLaHZoN29DMjI5M1pqSHhpRVFROEt2ZF9nZnA4WlpOZjc5UVhGYmZWUjI0eGNTSkVKckM5X1pQbg?oc=5\" target=\"_blank\">News Liners defy Houthi blockade with 54 Bab el-Mandeb transits in a week</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Loadstar</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWlhIUU85dnVBUGV4RkJreU5FVGNZQXRBdE1ndmlXRVFCVGU4Qm50OTh6ZHZRekVnUDVzNkQ5bzlNMks2OEpEWlpTSmtXd1ZqTC1qbUJFOG1lNlBDZURvREVLaHZoN29DMjI5M1pqSHhpRVFROEt2ZF9nZnA4WlpOZjc5UVhGYmZWUjI0eGNTSkVKckM5X1pQbg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T15:16:24.514Z"
     },
     {
       "id": "rss_b21a3a09b4ffbdc7",
@@ -11235,27 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T23:24:23.959Z"
-    },
-    {
-      "id": "rss_9c4525e751ffc433",
-      "timestamp": 1778933360000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Bulgaria condemns the terrorist Houthi attack on Al-Dhabba seaport - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBRT3c4Q19HZjdWRFl2MGoyRWZfV1NkZ0w2OUJXOE9GOEEwalI1VFNRaEd0dXB2ZzlpSGdZQVZZa2hibmllM2RjRmNMcm1tQQ?oc=5\" target=\"_blank\">Bulgaria condemns the terrorist Houthi attack on Al-Dhabba seaport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBRT3c4Q19HZjdWRFl2MGoyRWZfV1NkZ0w2OUJXOE9GOEEwalI1VFNRaEd0dXB2ZzlpSGdZQVZZa2hibmllM2RjRmNMcm1tQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-19T22:27:48.215Z"
     }
   ]
 }
