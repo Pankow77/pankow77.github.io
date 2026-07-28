@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T18:29:50.512Z",
+  "last_fetch": "2026-07-28T18:58:02.177Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_843f1253c37e7ab9",
+      "timestamp": 1785261600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Aramco Shuts 400,000-Bpd Refinery After Houthi Strike - Crude Oil Prices Today | OilPrice.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPcUdCZHI5VmNmaHN3ZjFHc2std04zWFIzd3EzbVN4ekhrOWl6cVV3aVF3eGtGZTVUcUtnelhaM1lZYnFzZXZpamhmaE5LWVB4WkRJN1dNd3hlTElHZ0RvZkUtLXRaTmo2czF4WTZNZFdUd3ZvTy0wMlpQdFZOdnFoa0otT1ctOU5PNk5wSUFPQjRpOGRyZ3NZV2lia2EwQ2NBYTA3eDVERXFYSTBVZlVBQzBJVVDSAboBQVVfeXFMTWNGRTl2ME9NckUzMHo1djNPNjJ5ZVp4ZTYyM3dFdEZlMlcta3I3dGNweUNpSk1lVGkzOXZSWk5xaVRrb0RrV1ZxeEpmdkQ1LUpfQXN6eXcyb08zVDRaeS1xbzZURXJoTzRjUVZPOFhuSXNVcmVOQWx6QndnSGJwdVZLV2d4NXNZX195dUp3eGs2dTNLSGZETU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcUdCZHI5VmNmaHN3ZjFHc2std04zWFIzd3EzbVN4ekhrOWl6cVV3aVF3eGtGZTVUcUtnelhaM1lZYnFzZXZpamhmaE5LWVB4WkRJN1dNd3hlTElHZ0RvZkUtLXRaTmo2czF4WTZNZFdUd3ZvTy0wMlpQdFZOdnFoa0otT1ctOU5PNk5wSUFPQjRpOGRyZ3NZV2lia2EwQ2NBYTA3eDVERXFYSTBVZlVBQzBJVVDSAboBQVVfeXFMTWNGRTl2ME9NckUzMHo1djNPNjJ5ZVp4ZTYyM3dFdEZlMlcta3I3dGNweUNpSk1lVGkzOXZSWk5xaVRrb0RrV1ZxeEpmdkQ1LUpfQXN6eXcyb08zVDRaeS1xbzZURXJoTzRjUVZPOFhuSXNVcmVOQWx6QndnSGJwdVZLV2d4NXNZX195dUp3eGs2dTNLSGZETUFRdzRnVjBLbUVFaWpiMGZkRTd6bVZHaXBvRmRqaElVQUZB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T18:58:00.889Z"
+    },
     {
       "id": "rss_d6fe8a51e72f6707",
       "timestamp": 1785260775000,
@@ -11240,27 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-18T21:27:47.003Z"
-    },
-    {
-      "id": "rss_5f805869fa47e153",
-      "timestamp": 1778935176000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen condemns Houthi terror attack on Saudi oil field - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTFBkMzNRMk1lU0dfTU5pVThta245M3RoeHI0aGxuTENjS0twZ2xScXpfZWdyT1EwVjFVb2xwczNobmRQWEJaTXZkOHJ4Mmhwdw?oc=5\" target=\"_blank\">Yemen condemns Houthi terror attack on Saudi oil field</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBkMzNRMk1lU0dfTU5pVThta245M3RoeHI0aGxuTENjS0twZ2xScXpfZWdyT1EwVjFVb2xwczNobmRQWEJaTXZkOHJ4Mmhwdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-20T01:42:08.530Z"
     }
   ]
 }
