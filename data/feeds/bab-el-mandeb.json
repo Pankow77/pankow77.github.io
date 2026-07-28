@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T23:21:12.173Z",
+  "last_fetch": "2026-07-28T23:47:47.909Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0f5525e5f09dc875",
+      "timestamp": 1785280627000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOeXdUQWdOYmRjRG9CX2NuY1ZpV2JGOXJabW01SXkzNnVGN3BRQ2o2cWNBeEcxdlJHOWhpZDdubXpZOTVid2JrbUFaSDRIaDNNTGlYN1JkckQxV1BaTXluOW5NRkRFdlU2bGFlbTBRQjBTS2lqcVl0LWN2SkR5R0k1VjdKOWlrRDZ5TWwzVVpMODl0YndhN1BqM2ZnX2Q4MjNVOGk2aS130gGrAUFVX3lxTE5YUmZiY1FvNzBYcE9TUUk5MHg5VnI2aW5rTmF6TFVCaDVtSm52MXpOUGFXQnF3UUFoQWVPSklPWGRpV21xQ3dYZlZtNHVERHp2RzZZNVVLV0hmWlgwUi0tU013YXNkYl9CVVhWTS1JQ2FSeDBiY2VyTFR6WG92UTRwVTFXSWNLVWNpOWRpTC15Q3BTLWJQTUE5NzY3bzljelJ0N1dOMG",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeXdUQWdOYmRjRG9CX2NuY1ZpV2JGOXJabW01SXkzNnVGN3BRQ2o2cWNBeEcxdlJHOWhpZDdubXpZOTVid2JrbUFaSDRIaDNNTGlYN1JkckQxV1BaTXluOW5NRkRFdlU2bGFlbTBRQjBTS2lqcVl0LWN2SkR5R0k1VjdKOWlrRDZ5TWwzVVpMODl0YndhN1BqM2ZnX2Q4MjNVOGk2aS130gGrAUFVX3lxTE5YUmZiY1FvNzBYcE9TUUk5MHg5VnI2aW5rTmF6TFVCaDVtSm52MXpOUGFXQnF3UUFoQWVPSklPWGRpV21xQ3dYZlZtNHVERHp2RzZZNVVLV0hmWlgwUi0tU013YXNkYl9CVVhWTS1JQ2FSeDBiY2VyTFR6WG92UTRwVTFXSWNLVWNpOWRpTC15Q3BTLWJQTUE5NzY3bzljelJ0N1dOMGRVNTExRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-28T23:47:46.473Z"
+    },
     {
       "id": "rss_0e81631cdc1d9457",
       "timestamp": 1785276424000,
@@ -11249,27 +11273,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-27T12:35:35.520Z"
-    },
-    {
-      "id": "rss_eb974746e0c02fc7",
-      "timestamp": 1779837091000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Technology Transfer Fuels Violence In Somalia - Eurasia Review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQMzBKaXZ0V29ZSmYyQThJSXF0ZVFhdklVRENtOWthRGZGVk80d0V3SGlyRUFxZDdYRnVYUmJPUUdsbmhsM0VjZG1DRVI0bUszTUF6YkhoN3RJTTl6YU1YcWpITXpsblJ1N3JDUWh4Y3NMQ0lEa1laZ2hEd09XMXpHbG5aVnZmcmZVMEs0YzMyS1JkQnZPZkE0?oc=5\" target=\"_blank\">Houthi Technology Transfer Fuels Violence In Somalia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMzBKaXZ0V29ZSmYyQThJSXF0ZVFhdklVRENtOWthRGZGVk80d0V3SGlyRUFxZDdYRnVYUmJPUUdsbmhsM0VjZG1DRVI0bUszTUF6YkhoN3RJTTl6YU1YcWpITXpsblJ1N3JDUWh4Y3NMQ0lEa1laZ2hEd09XMXpHbG5aVnZmcmZVMEs0YzMyS1JkQnZPZkE0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-26T23:25:57.799Z"
     }
   ]
 }
