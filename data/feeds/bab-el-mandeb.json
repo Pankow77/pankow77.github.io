@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T11:15:59.105Z",
+  "last_fetch": "2026-07-28T12:09:51.940Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_805206322fdbca6e",
+      "timestamp": 1785236945000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Aramco shuts Jazan refinery after Houthi attack - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQcUVxSG5rS3FldElSaEJBdUczLTVHZ1lEN01BT3dDV0YwUjJqbm1La1BuazUwVDNhSmMtQ3J4WjM1bUtwaUJId0llTDRna01STk03RmFfYkFCd1hIbkt6MF92akREWXkzSWNXY0FZd0JuUG5KYld1MmIzRHhrU194ZmxUcnM3TlZNaElqLU9tb0VqbmdOVFhLOWYwUzR3b1Bx?oc=5\" target=\"_blank\">Saudi Aramco shuts Jazan refinery after Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcUVxSG5rS3FldElSaEJBdUczLTVHZ1lEN01BT3dDV0YwUjJqbm1La1BuazUwVDNhSmMtQ3J4WjM1bUtwaUJId0llTDRna01STk03RmFfYkFCd1hIbkt6MF92akREWXkzSWNXY0FZd0JuUG5KYld1MmIzRHhrU194ZmxUcnM3TlZNaElqLU9tb0VqbmdOVFhLOWYwUzR3b1Bx?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T12:09:50.611Z"
+    },
     {
       "id": "rss_ecdde251ae24892c",
       "timestamp": 1785231860000,
@@ -11236,27 +11257,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-21T23:23:39.993Z"
-    },
-    {
-      "id": "rss_231f8e35eaaf6613",
-      "timestamp": 1778918570000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 3,
-      "text_summary": "UAE: Houthi attack on Saudi border represents disregard for all international laws - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiT0FVX3lxTFA1eXA3UC1leHVrdXZGTzFycWQyeEV4TV9wbGZJTFc2MDZOaXFTZmpEMzRPb3RuVHZIUXczS3dpLTVJRjJPVzdrOGVpQkZvNlE?oc=5\" target=\"_blank\">UAE: Houthi attack on Saudi border represents disregard for all international laws</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA1eXA3UC1leHVrdXZGTzFycWQyeEV4TV9wbGZJTFc2MDZOaXFTZmpEMzRPb3RuVHZIUXczS3dpLTVJRjJPVzdrOGVpQkZvNlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-16T17:52:50.357Z"
     }
   ]
 }
