@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T22:47:52.864Z",
+  "last_fetch": "2026-07-28T23:21:12.173Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0e81631cdc1d9457",
+      "timestamp": 1785276424000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Fourth Attack on Saudi Tanker as Red Sea Blockade Intensifies - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOa1BVTEhzZkxRLW1XV2dSbmRjRjBuQl82QklfTWVSVlBhVE1YYVhJOEtscFY4UTZ6c2hHTHRXZ2FwT3ByeHpMeGkyOEtoaDIyc0NoX1hWRFRXNFZHVFFKTHlyNmVSaWd2QW4zWUJvZnEzREVzQnVwdGgwVFdwc1NyZ0NpNEF2QlFBaWRSZlk1TzJQa09odXlyakU4clV3QQ?oc=5\" target=\"_blank\">Houthis Claim Fourth Attack on Saudi Tanker as Red Sea Blockade Intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOa1BVTEhzZkxRLW1XV2dSbmRjRjBuQl82QklfTWVSVlBhVE1YYVhJOEtscFY4UTZ6c2hHTHRXZ2FwT3ByeHpMeGkyOEtoaDIyc0NoX1hWRFRXNFZHVFFKTHlyNmVSaWd2QW4zWUJvZnEzREVzQnVwdGgwVFdwc1NyZ0NpNEF2QlFBaWRSZlk1TzJQa09odXlyakU4clV3QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T23:21:10.609Z"
+    },
     {
       "id": "rss_44e7f9a837aaf8c5",
       "timestamp": 1785267259000,
@@ -11247,27 +11270,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-26T23:25:57.799Z"
-    },
-    {
-      "id": "rss_7d6cebfc8bcff035",
-      "timestamp": 1779822826000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Technology Transfer Fuels Violence in Somalia - Africa Defense Forum",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQTTdBR1RkZlVvNWlURjE2TzJOam00NGpYckhMYk82YkNtaGI0UkVIb19PTlBLa0tKUGRHMUllbW00dk5xTXdLdWVJNWY1eXJGM01RTlkwSWVQQ3o1NkFRbDhiMnhFdXRGUFVSWEFJcl90NWttZ1R6QjhhYTk4c2F6VGxfclhZZGVnX0ZOQ0I2VQ?oc=5\" target=\"_blank\">Houthi Technology Transfer Fuels Violence in Somalia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Africa Defense Forum</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTTdBR1RkZlVvNWlURjE2TzJOam00NGpYckhMYk82YkNtaGI0UkVIb19PTlBLa0tKUGRHMUllbW00dk5xTXdLdWVJNWY1eXJGM01RTlkwSWVQQ3o1NkFRbDhiMnhFdXRGUFVSWEFJcl90NWttZ1R6QjhhYTk4c2F6VGxfclhZZGVnX0ZOQ0I2VQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-26T21:03:26.869Z"
     }
   ]
 }
