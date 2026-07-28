@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T20:51:40.121Z",
+  "last_fetch": "2026-07-28T21:24:53.880Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8924f4619b2f1aee",
+      "timestamp": 1785266508000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim ballistic missile attack on Saudi oil tanker - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNV1k4aFh3ZFBJeG9EXzd4NEgwcEpjV09EenByYzN6RmtYYjBPSUpfQVZDX21aMkw3eUg5MGJwUjNDZHNyZ3Y5dWdJclpCREVFajVfWFI1T0xvRk5VVTF6NHQxMEVKYks2R2RCeFVsN3JZUFlaSjhjWUIyeGlaOEVNaU5wR0hvMUJaaXVwaVlDVmQxbDlreDR2RzVfR1FVazdoZWZTYzZBaWU0Rm9jN3AySA?oc=5\" target=\"_blank\">Yemen’s Houthis claim ballistic missile attack on Saudi oil tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNV1k4aFh3ZFBJeG9EXzd4NEgwcEpjV09EenByYzN6RmtYYjBPSUpfQVZDX21aMkw3eUg5MGJwUjNDZHNyZ3Y5dWdJclpCREVFajVfWFI1T0xvRk5VVTF6NHQxMEVKYks2R2RCeFVsN3JZUFlaSjhjWUIyeGlaOEVNaU5wR0hvMUJaaXVwaVlDVmQxbDlreDR2RzVfR1FVazdoZWZTYzZBaWU0Rm9jN3AySA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T21:24:52.317Z"
+    },
     {
       "id": "rss_663478d90c8cc01f",
       "timestamp": 1785266225000,
@@ -11242,27 +11266,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-23T04:44:50.445Z"
-    },
-    {
-      "id": "rss_b8717caa95f5bd6e",
-      "timestamp": 1778945990000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Marib: army repels Houthi attack, kills at least 30 militants - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE82bm45TUk5Q0YzNFNUMUVGR0l4M0ZYa2h5UjNjWDhXb0x1S1hmUXB5eHM3anE4R2pmWnVxT0tSejJOU0Q2Vm5OZVFLMndWUQ?oc=5\" target=\"_blank\">Marib: army repels Houthi attack, kills at least 30 militants</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE82bm45TUk5Q0YzNFNUMUVGR0l4M0ZYa2h5UjNjWDhXb0x1S1hmUXB5eHM3anE4R2pmWnVxT0tSejJOU0Q2Vm5OZVFLMndWUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-18T17:42:53.275Z"
     }
   ]
 }
