@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-28T17:36:50.712Z",
+  "last_fetch": "2026-07-28T18:29:50.512Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d6fe8a51e72f6707",
+      "timestamp": 1785260775000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthi group claims missile attack forced Saudi oil tanker to turn back in Red Sea - Xinhua",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5RSHpVUXJEYTFJRU5jUDQ5RHp6UVBZTWJpV1o5eDJGMHUtaG1rb0VuNkx3U1pQeFUxNmhTeUxQMEM1MGNUQlZvdHg5QVIxZjNqWmtHTUR6SW1oblRYUzVwVjRhS2pocUpEVjBldU1LX3JnNTVWTHNKWk9FSGI?oc=5\" target=\"_blank\">Houthi group claims missile attack forced Saudi oil tanker to turn back in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Xinhua</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5RSHpVUXJEYTFJRU5jUDQ5RHp6UVBZTWJpV1o5eDJGMHUtaG1rb0VuNkx3U1pQeFUxNmhTeUxQMEM1MGNUQlZvdHg5QVIxZjNqWmtHTUR6SW1oblRYUzVwVjRhS2pocUpEVjBldU1LX3JnNTVWTHNKWk9FSGI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-28T18:29:49.196Z"
+    },
+    {
+      "id": "rss_fb4e9599c89fa924",
+      "timestamp": 1785259802000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "China in touch with Yemen's Houthis to allow ships to sail through Red Sea, sources say - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPR3VlbkFfZi10TlpkWGNLYUJ4d0NISk5JVlg4VGI2MmNma0xDUkdyX3NNalg4SDNQRkJWOWRqT0o1VkxuTS1xXzFVZi1fSTBoRnRORGxZdUZDdVN0dVNCaUo3eVBVenNpUnRWaUtpOHlCbGk3M3E1NXJaSzJ3cUszd05mWjVrQWYwX1ZuSGE2aWliVkZIeHJmdGN4T29LUUtVcEdxYnh3dHNQVTg5ZS1SdlNKaDhVeG9BT0tXdnJtYnN2UQ?oc=5\" target=\"_blank\">China in touch with Yemen's Houthis to allow ships to sail through Red Sea, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPR3VlbkFfZi10TlpkWGNLYUJ4d0NISk5JVlg4VGI2MmNma0xDUkdyX3NNalg4SDNQRkJWOWRqT0o1VkxuTS1xXzFVZi1fSTBoRnRORGxZdUZDdVN0dVNCaUo3eVBVenNpUnRWaUtpOHlCbGk3M3E1NXJaSzJ3cUszd05mWjVrQWYwX1ZuSGE2aWliVkZIeHJmdGN4T29LUUtVcEdxYnh3dHNQVTg5ZS1SdlNKaDhVeG9BT0tXdnJtYnN2UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-28T18:29:49.196Z"
+    },
     {
       "id": "rss_53e93d8f201c6fd6",
       "timestamp": 1785246300000,
@@ -11214,48 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-20T01:42:08.530Z"
-    },
-    {
-      "id": "rss_3af080fcb0c8a2b4",
-      "timestamp": 1778934080000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Poland condemns Houthi attack on civilians, IDPs in Marib - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTkFVX3lxTE9ZajV6blliVDVscDIyZHBWMjRvTkJCQkZtSG5DYVYyS3pQUUlxdHNYajhwcExheFhpRU9EajI3VUlNWC1nSzZQN0t2OElwUQ?oc=5\" target=\"_blank\">Poland condemns Houthi attack on civilians, IDPs in Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9ZajV6blliVDVscDIyZHBWMjRvTkJCQkZtSG5DYVYyS3pQUUlxdHNYajhwcExheFhpRU9EajI3VUlNWC1nSzZQN0t2OElwUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-17T22:47:22.938Z"
-    },
-    {
-      "id": "rss_6d6d2ba3d2ca9752",
-      "timestamp": 1778934016000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah - sabanew.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTFBVVkEwLXN0QlZEdnJvYUxuajJSN29SR3REd2VDWnNOT0FIVWI3ZF9PUllVU1lKc0doZ1hvcGlEZzJHVGhxdmFhYlE3Zw?oc=5\" target=\"_blank\">Human Rights Orgs. Condemn Houthi Attack That Killed, Injured More Than 30 Civilians in Hajjah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">sabanew.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBVVkEwLXN0QlZEdnJvYUxuajJSN29SR3REd2VDWnNOT0FIVWI3ZF9PUllVU1lKc0doZ1hvcGlEZzJHVGhxdmFhYlE3Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-18T23:24:23.959Z"
     }
   ]
 }
