@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T20:49:14.809Z",
+  "last_fetch": "2026-07-29T21:18:47.726Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_af74d3edae34bd32",
+      "timestamp": 1785358519000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia seeks international coalition to protect Red Sea shipping from Houthis, sources say - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdE5TWUJUaEd4QndCVnFrY2hva1NPZUVIVmZROEcwYkhPWVR0Q3gxdzVIZjFDVFVTZWIyNGwxV1dPb1luWmpveTV0cHl4cmFQbXB5bWgzUHBhenR1UFhYZWVoSGdJVjluZEx5TmYyYllqOEQtLS1UZ3VMemtWSHlHOHlvQjlpams0bGVSRjMxQzBFRmdOUEJBUVROZlZZOU5Dd2JFdldTTnRpWUFYSm5hSWdVWmhETkVTTXhPMFc0OTNCVi1DdXhxTA?oc=5\" target=\"_blank\">Saudi Arabia seeks international coalition to protect Red Sea shipping from Houthis, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdE5TWUJUaEd4QndCVnFrY2hva1NPZUVIVmZROEcwYkhPWVR0Q3gxdzVIZjFDVFVTZWIyNGwxV1dPb1luWmpveTV0cHl4cmFQbXB5bWgzUHBhenR1UFhYZWVoSGdJVjluZEx5TmYyYllqOEQtLS1UZ3VMemtWSHlHOHlvQjlpams0bGVSRjMxQzBFRmdOUEJBUVROZlZZOU5Dd2JFdldTTnRpWUFYSm5hSWdVWmhETkVTTXhPMFc0OTNCVi1DdXhxTA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-29T21:18:46.159Z"
+    },
     {
       "id": "rss_eec8bf42331c69ff",
       "timestamp": 1785351960000,
@@ -11261,29 +11285,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
-    },
-    {
-      "id": "rss_ac0560ed3d10385e",
-      "timestamp": 1780899421000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis vow to blockade 'enemy ships' in Red Sea - The National",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaWFPbFJhLWFFOWFOSUlyNHdKWjk1T2JjOTZOZWlhZzBoekJVenVuQUNyQVJjU0s5eS1hWDhsUVYwYlRGeVZLMkwzY2pPMlR0YkFVeFNLZEoyZ1gxelBFZVFxWEhTZE84MDBCRE9CRkxhMUpPc0xTdmlROVdmaTBSb0VFTmZ1WmtKVEhxQ1RCNnA3VXJhd2Qyb0pwVXdvSjAySGVPOC1JcGJTUQ?oc=5\" target=\"_blank\">Yemen's Houthis vow to blockade 'enemy ships' in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOaWFPbFJhLWFFOWFOSUlyNHdKWjk1T2JjOTZOZWlhZzBoekJVenVuQUNyQVJjU0s5eS1hWDhsUVYwYlRGeVZLMkwzY2pPMlR0YkFVeFNLZEoyZ1gxelBFZVFxWEhTZE84MDBCRE9CRkxhMUpPc0xTdmlROVdmaTBSb0VFTmZ1WmtKVEhxQ1RCNnA3VXJhd2Qyb0pwVXdvSjAySGVPOC1JcGJTUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-10T03:45:51.348Z"
     }
   ]
 }
