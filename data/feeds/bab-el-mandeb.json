@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T18:22:03.854Z",
+  "last_fetch": "2026-07-29T18:47:59.420Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_69e3b84225b07a0d",
+      "timestamp": 1785346352000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The U.S. Should Embrace Somaliland to Break Iranian and the Houthi Trade Chokeholds - Middle East Forum",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTGNoS1BrUHlQdzJHQUF6NnFqa0lLRDA0RlFYVGkyTWE4eVcyUThuT3o1MjRxWlI3YUk3MEtpampqYzBib1RRdlNqNWRsbEpIcy05NHA3NFFDYjBwR2JzYmx5VUp5NnVKVDZwSG9Dbjd5VWZaRlR5WnBYNXV4d2ttZC1TN0pHb2FVLThpZVQxWmlhaUFsVUJLTTc5Y1FPSUVpamNRVXAwRUVISlhxNmdhVjRyUldVb2Vr?oc=5\" target=\"_blank\">The U.S. Should Embrace Somaliland to Break Iranian and the Houthi Trade Chokeholds</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Forum</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTGNoS1BrUHlQdzJHQUF6NnFqa0lLRDA0RlFYVGkyTWE4eVcyUThuT3o1MjRxWlI3YUk3MEtpampqYzBib1RRdlNqNWRsbEpIcy05NHA3NFFDYjBwR2JzYmx5VUp5NnVKVDZwSG9Dbjd5VWZaRlR5WnBYNXV4d2ttZC1TN0pHb2FVLThpZVQxWmlhaUFsVUJLTTc5Y1FPSUVpamNRVXAwRUVISlhxNmdhVjRyUldVb2Vr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T18:47:57.871Z"
+    },
     {
       "id": "rss_4b26c504e9374863",
       "timestamp": 1785344991000,
@@ -11264,29 +11287,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T07:06:53.272Z"
-    },
-    {
-      "id": "rss_4da6de8eb91fe375",
-      "timestamp": 1780892616000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Israel and Iran trade strikes, threatening to drag region back to full-scale war - NPR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFBTNHQ1RXBOWlhKdEhLUHd2V2x0WTU1YWFtZzNmbVN0X0laSjlPT0Q3ZXBWWlVTZ2pubHVYUWI1X0otMDZnSDV4QnVtQ1hxVjI1ZHVsVFVYVlFsZDhfMnQwblFrejRBU3J5QTNZ?oc=5\" target=\"_blank\">Israel and Iran trade strikes, threatening to drag region back to full-scale war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBTNHQ1RXBOWlhKdEhLUHd2V2x0WTU1YWFtZzNmbVN0X0laSjlPT0Q3ZXBWWlVTZ2pubHVYUWI1X0otMDZnSDV4QnVtQ1hxVjI1ZHVsVFVYVlFsZDhfMnQwblFrejRBU3J5QTNZ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T09:06:11.893Z"
     }
   ]
 }
