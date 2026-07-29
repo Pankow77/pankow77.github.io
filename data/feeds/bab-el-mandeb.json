@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T18:47:59.420Z",
+  "last_fetch": "2026-07-29T19:29:30.790Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_eec8bf42331c69ff",
+      "timestamp": 1785351960000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Report: Houthis May Attempt to Impose Fees on Red Sea Transits - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPeTNhX2lZb0hVVldMRnNBOXB3RFFKRXBkeHl3RTAwUGptQ1ItUGZXUmRVMUEtcTNrWVpLTGtIQm5GaUFDa2ZPY0RYTzhhMzc3Zjctc1FZZ0VNaHlyN2syYUtDb29HUWQzbzJmNHFKUDRxTUVtRVNnUkZWUXpSS3BVV0dMOExNSGVfYUlSd1pBc0VOWlBwdHdINEQxYVRQYXhTN3c?oc=5\" target=\"_blank\">Report: Houthis May Attempt to Impose Fees on Red Sea Transits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeTNhX2lZb0hVVldMRnNBOXB3RFFKRXBkeHl3RTAwUGptQ1ItUGZXUmRVMUEtcTNrWVpLTGtIQm5GaUFDa2ZPY0RYTzhhMzc3Zjctc1FZZ0VNaHlyN2syYUtDb29HUWQzbzJmNHFKUDRxTUVtRVNnUkZWUXpSS3BVV0dMOExNSGVfYUlSd1pBc0VOWlBwdHdINEQxYVRQYXhTN3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T19:29:29.050Z"
+    },
     {
       "id": "rss_69e3b84225b07a0d",
       "timestamp": 1785346352000,
@@ -212,6 +233,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T10:20:49.129Z"
+    },
+    {
+      "id": "rss_604e0dc22c87aeb8",
+      "timestamp": 1785312660000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi Attack on Tanker NCC Ghazal Escalates Red Sea Shipping Crisis - News and Statistics - IndexBox",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPMGNoM3Rqd1Itdk9Ec1RQWEMzOE8tRGpYYmZmSkxIV0pxY1NUOXBhRFJOeDVfb29MMHE4NURnRUg3NDIyVjJzMXBoV3pKZVVHLTIzYnI0R2R5U0J3R1hCTXlHZDhwTU15MnBfc0lnNHg2bGF1M1hBVHFkMmxUd2FPUmdnY0hjMzl4NmpyaGpSdHhodw?oc=5\" target=\"_blank\">Houthi Attack on Tanker NCC Ghazal Escalates Red Sea Shipping Crisis - News and Statistics</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IndexBox</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMGNoM3Rqd1Itdk9Ec1RQWEMzOE8tRGpYYmZmSkxIV0pxY1NUOXBhRFJOeDVfb29MMHE4NURnRUg3NDIyVjJzMXBoV3pKZVVHLTIzYnI0R2R5U0J3R1hCTXlHZDhwTU15MnBfc0lnNHg2bGF1M1hBVHFkMmxUd2FPUmdnY0hjMzl4NmpyaGpSdHhodw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T19:29:30.783Z"
     },
     {
       "id": "rss_a39df79afb07e97c",
@@ -11240,53 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T03:45:51.348Z"
-    },
-    {
-      "id": "rss_2f6e1fa7db64cd15",
-      "timestamp": 1780898940000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen hits Israel, closes Red Sea to Israeli ships - Mehr News Agency",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxOQ2tXQzlUZVVRZ1hMa080cXVhUWZOckR3SW5iSzJELVhoNEJvUUVGZnFxRnpIeUNuT0Jmcll0MTNYNWZuRldZUWZSWXdMUkRodEFVaEJDYTRMd00xOU5JdDNDWHY5bDU3allsR1RHQ19SQk0wMExVbGwwcjUxRGhpWXctamJuci1CdHc?oc=5\" target=\"_blank\">Yemen hits Israel, closes Red Sea to Israeli ships</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mehr News Agency</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQ2tXQzlUZVVRZ1hMa080cXVhUWZOckR3SW5iSzJELVhoNEJvUUVGZnFxRnpIeUNuT0Jmcll0MTNYNWZuRldZUWZSWXdMUkRodEFVaEJDYTRMd00xOU5JdDNDWHY5bDU3allsR1RHQ19SQk0wMExVbGwwcjUxRGhpWXctamJuci1CdHc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
-    },
-    {
-      "id": "rss_3314b637c86578fc",
-      "timestamp": 1780898700000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi rebels claim missile attack on Israel and say Israel-affiliated vessels are a target again in Red Sea - WKYC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAJBVV95cUxPdThKSnRDNnBGalBhTzZvclVPaTJRZmp4c1hYak5kMUNEWmM0WkFxd1cwYW9tNlRoNXRraDZpNnE3cjM0b0c4RDRVUm9vc3NIel9Wc0FHV0FtZnhUSHR6d2pucVFULTZpbllNOVJEUnkwb2hNRVc4blBNaUNBSWF3NTNla2FwTERDQUZGYTk1WmtpaFBUN0lSZzV1VEMwcTNjaDhBX3ZELXRoUVBWM2RueC1WNTVPVTlia2puaWM5RHlPNkRPbnhIckFHc0RUYU5SdDhHQjMtZGV5bm9IVEQtTWZwcG4wR2pHaHpjZm4ybDh4ajRyWFFnd2xRcm52em1LSjdNZXJzdm8ySEIxMmxqZ0lUMlRDVU1mSi1GeGp0NDNiSzIxUVZKMHhKVENqRlAtMkRQZkJDdjg?oc=5\" target=\"_blank\">Yemen's ",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxPdThKSnRDNnBGalBhTzZvclVPaTJRZmp4c1hYak5kMUNEWmM0WkFxd1cwYW9tNlRoNXRraDZpNnE3cjM0b0c4RDRVUm9vc3NIel9Wc0FHV0FtZnhUSHR6d2pucVFULTZpbllNOVJEUnkwb2hNRVc4blBNaUNBSWF3NTNla2FwTERDQUZGYTk1WmtpaFBUN0lSZzV1VEMwcTNjaDhBX3ZELXRoUVBWM2RueC1WNTVPVTlia2puaWM5RHlPNkRPbnhIckFHc0RUYU5SdDhHQjMtZGV5bm9IVEQtTWZwcG4wR2pHaHpjZm4ybDh4ajRyWFFnd2xRcm52em1LSjdNZXJzdm8ySEIxMmxqZ0lUMlRDVU1mSi1GeGp0NDNiSzIxUVZKMHhKVENqRlAtMkRQZkJDdjg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T07:06:53.272Z"
     }
   ]
 }
