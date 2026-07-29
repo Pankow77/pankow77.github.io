@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T17:27:15.244Z",
+  "last_fetch": "2026-07-29T17:55:49.428Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4b26c504e9374863",
+      "timestamp": 1785344991000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "US-Iran war: Egypt's difficult balancing act - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFAweUQ3cGRnZWV6WTktc1AwX1FEQTFqSVlKcmt1djVHNm1neTdmaTR2NTdCYVdXWTFEMVNLaFdmVlRYckZRaHVGOXhKOFNubm4yeElkMm11czgwckRheTR0RkdlOTNNT0FQTjM2Z3otY3h3QmxUSUQzZ0pvcFTSAXxBVV95cUxQc04xZUVFLXZndzhMMm4wNnUzLWJiUExNc3JVLUNwS2ZwektBVTN0c2pBbW0yVGhyb3JpSVZpVTNmWmxEZ3haNTNQbG9paW9RZ2tyb3BzMjVfLW5Pc3I5ZmV2cm5rMHVOYU1DRXUyMzF6SUM1NmlzWjJqNmlk?oc=5\" target=\"_blank\">US-Iran war: Egypt's difficult balancing act</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</f",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAweUQ3cGRnZWV6WTktc1AwX1FEQTFqSVlKcmt1djVHNm1neTdmaTR2NTdCYVdXWTFEMVNLaFdmVlRYckZRaHVGOXhKOFNubm4yeElkMm11czgwckRheTR0RkdlOTNNT0FQTjM2Z3otY3h3QmxUSUQzZ0pvcFTSAXxBVV95cUxQc04xZUVFLXZndzhMMm4wNnUzLWJiUExNc3JVLUNwS2ZwektBVTN0c2pBbW0yVGhyb3JpSVZpVTNmWmxEZ3haNTNQbG9paW9RZ2tyb3BzMjVfLW5Pc3I5ZmV2cm5rMHVOYU1DRXUyMzF6SUM1NmlzWjJqNmlk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T17:55:47.788Z"
+    },
     {
       "id": "rss_ae1ada2b8539032f",
       "timestamp": 1785339635000,
@@ -96,6 +119,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T14:15:20.100Z"
+    },
+    {
+      "id": "rss_dee285edd5be164b",
+      "timestamp": 1785325665000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Saudi vessels turn dark as Houthis claim third Red Sea attack - Quantum Commodity Intelligence",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNdm1ySUxabGF2eE5VOFVEcjgyaHhVYURQWnNCeE81bFdNU0lHQTA1ZjJ1NUgtMUdKaTVPSzc5SXp2TEJVcnZqdVQ1czlFMVpQakgyUFhfWW55X2IwMWFRQXljTkpISG5xOFhoWjFwdG82dmU4OXhvM29Ka3pNcXpBWUs3ZzlPMG8xdktNWUsybWRYSVRhaDJCU3l2R1VMVFhqT3I0LUlCcw?oc=5\" target=\"_blank\">Saudi vessels turn dark as Houthis claim third Red Sea attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNdm1ySUxabGF2eE5VOFVEcjgyaHhVYURQWnNCeE81bFdNU0lHQTA1ZjJ1NUgtMUdKaTVPSzc5SXp2TEJVcnZqdVQ1czlFMVpQakgyUFhfWW55X2IwMWFRQXljTkpISG5xOFhoWjFwdG82dmU4OXhvM29Ka3pNcXpBWUs3ZzlPMG8xdktNWUsybWRYSVRhaDJCU3l2R1VMVFhqT3I0LUlCcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T17:55:47.788Z"
     },
     {
       "id": "rss_a3674dbebbe2f4f9",
@@ -11241,50 +11287,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
-    },
-    {
-      "id": "rss_bbeab311b479ce5f",
-      "timestamp": 1780888205000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "No injuries reported in Houthi attack; man hurt while running to bomb shelter - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxObG9femNGNWdoNmNBd0pRNnBGMENjQWdLSWFxRG9jeHJPa3pZemRUOEpqUl9qdTFqUmw4azJtV1dJZUxkWHJrSjc5aXdqVkJ2d21Xak5HRHQ1dC16QVVUbVUwS2tqSVlTcTNOQktjMzhSSGYxSUhNMGVmSUVkbFNqUy1xcUFPY0FjRWoxejBYdEYtUC1LZ3FxbElZVHh3MDU1dHh3NXpyMERZMEdUVDRfTlJNdWlqNkdyTHVpZUNXOA?oc=5\" target=\"_blank\">No injuries reported in Houthi attack; man hurt while running to bomb shelter</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObG9femNGNWdoNmNBd0pRNnBGMENjQWdLSWFxRG9jeHJPa3pZemRUOEpqUl9qdTFqUmw4azJtV1dJZUxkWHJrSjc5aXdqVkJ2d21Xak5HRHQ1dC16QVVUbVUwS2tqSVlTcTNOQktjMzhSSGYxSUhNMGVmSUVkbFNqUy1xcUFPY0FjRWoxejBYdEYtUC1LZ3FxbElZVHh3MDU1dHh3NXpyMERZMEdUVDRfTlJNdWlqNkdyTHVpZUNXOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T05:05:36.250Z"
-    },
-    {
-      "id": "rss_1e34830c223187cb",
-      "timestamp": 1780888132000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Four houses in West Bank damaged in direct hit as Iran launches waves of attacks - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTFBOSTRDcjBaTjlHSm9zcFFJc0xWeEd0QUNzdHF0UTFCcTBsZU1VTzVkNzB2YWdOaDNEWHVzRkxQZ2FuOFd5VmxsWUJrLXVSQkNGemdZM0ZvMTdyUGRqb0hOUFBXRVJlQ01aZmhIZlp3?oc=5\" target=\"_blank\">Four houses in West Bank damaged in direct hit as Iran launches waves of attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBOSTRDcjBaTjlHSm9zcFFJc0xWeEd0QUNzdHF0UTFCcTBsZU1VTzVkNzB2YWdOaDNEWHVzRkxQZ2FuOFd5VmxsWUJrLXVSQkNGemdZM0ZvMTdyUGRqb0hOUFBXRVJlQ01aZmhIZlp3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T11:14:22.989Z"
     }
   ]
 }
