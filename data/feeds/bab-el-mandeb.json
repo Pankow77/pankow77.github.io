@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T15:13:54.048Z",
+  "last_fetch": "2026-07-29T16:00:57.197Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ae1ada2b8539032f",
+      "timestamp": 1785339635000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Preventing Iran’s Weaponization of the Bab el-Mandeb Strait - JINSA",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQUEJRakNSNDV4M1hIS3gyV2hhakdpVkhleUpfQnV3NXNGeHE4eGwwNE5DTVZtQ1dkb2FnNDhDRHhuVzRJRWxFTlUtUzlwekp5MkZOdkJDeEE1dGJLVE1YZDZjNUNhUVNKX0pUMDF4LTJFd21LMzJDdEd6ci1STHFxUUZRdGxCTVBMWE56cmMwbnhCb0Nf?oc=5\" target=\"_blank\">Preventing Iran’s Weaponization of the Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">JINSA</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUEJRakNSNDV4M1hIS3gyV2hhakdpVkhleUpfQnV3NXNGeHE4eGwwNE5DTVZtQ1dkb2FnNDhDRHhuVzRJRWxFTlUtUzlwekp5MkZOdkJDeEE1dGJLVE1YZDZjNUNhUVNKX0pUMDF4LTJFd21LMzJDdEd6ci1STHFxUUZRdGxCTVBMWE56cmMwbnhCb0Nf?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T16:00:55.993Z"
+    },
     {
       "id": "rss_a886bb77fb389330",
       "timestamp": 1785328478000,
@@ -11262,27 +11285,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T11:14:22.989Z"
-    },
-    {
-      "id": "rss_62b16feb22480b8f",
-      "timestamp": 1780731719000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Egypt condemns attempted Houthi attack on Saudi oil facility near Yemen - Ahram Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOcHRXejJmY3hiWTZmQUItRkdvMlRMa2RROS1EU0JLdFA3cVV2dWE5V1hQN204OHBmM3pQdkhqT3pmODA1dFdpRkxJcmlkcjVFX0E5WXNzWjM5ZlRkSGluVHIyMFFObkYwaWJkalhxa3VuamtyYkd3U1FzV3dLc3JBUXoyYkRMZw?oc=5\" target=\"_blank\">Egypt condemns attempted Houthi attack on Saudi oil facility near Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcHRXejJmY3hiWTZmQUItRkdvMlRMa2RROS1EU0JLdFA3cVV2dWE5V1hQN204OHBmM3pQdkhqT3pmODA1dFdpRkxJcmlkcjVFX0E5WXNzWjM5ZlRkSGluVHIyMFFObkYwaWJkalhxa3VuamtyYkd3U1FzV3dLc3JBUXoyYkRMZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-06T20:26:11.034Z"
     }
   ]
 }
