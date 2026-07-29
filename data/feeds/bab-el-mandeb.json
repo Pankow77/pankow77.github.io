@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T21:18:47.726Z",
+  "last_fetch": "2026-07-29T21:47:35.547Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e49560065ac64677",
+      "timestamp": 1785359961000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "What the Houthi Red Sea Blockade Means for the Middle East - The National Interest",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxObzYtd3BnVFhCWHljNU1pUkRfamZQMUh2c0FkRFlfNFM4WnJFS1NvUFdkSklQc0ZsNnowSTlCeEYtV19TT25hR1cwOHNCMlZXZGRPVm5ZTTZzbEd3WlZacWlIUlE1aEUtSW5qRVFkS216NU9xTENFM3BuWEdsWVc1b2xmV0xYaVgzN0FRSEpKSGJrdjhGcUFVSnB1T3ZJOXJjY0UtaW9MTjA1S04yeThr?oc=5\" target=\"_blank\">What the Houthi Red Sea Blockade Means for the Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National Interest</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObzYtd3BnVFhCWHljNU1pUkRfamZQMUh2c0FkRFlfNFM4WnJFS1NvUFdkSklQc0ZsNnowSTlCeEYtV19TT25hR1cwOHNCMlZXZGRPVm5ZTTZzbEd3WlZacWlIUlE1aEUtSW5qRVFkS216NU9xTENFM3BuWEdsWVc1b2xmV0xYaVgzN0FRSEpKSGJrdjhGcUFVSnB1T3ZJOXJjY0UtaW9MTjA1S04yeThr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T21:47:34.214Z"
+    },
     {
       "id": "rss_af74d3edae34bd32",
       "timestamp": 1785358519000,
@@ -116,6 +137,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T16:00:55.993Z"
+    },
+    {
+      "id": "rss_cd6f38e109b718ef",
+      "timestamp": 1785338787000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Fire Ballistic Missiles At Saudi Oil Tanker In Escalating Red Sea Blockade - International Business Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVWtzT21SYUNHYjE0X05VLTE2TEtPcmV6eE9TTjlCQkx5bXhsdmpTODl0VEZWRDNKOENJYWcwUnp2U3lpZXdrMURxZ1lsUzEtRmVSY21JWUVyelloQVpiNFlDWjVNckdmQ1lLdC1LNGZlRjFVdTNuOTBXMFM4bVppcUI3V3d6WkFPcGZRcXZJNnJfaFdZWVRnMXE0TWlaUkVnclpTcUJJZjZoQQ?oc=5\" target=\"_blank\">Houthis Fire Ballistic Missiles At Saudi Oil Tanker In Escalating Red Sea Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Business Times</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVWtzT21SYUNHYjE0X05VLTE2TEtPcmV6eE9TTjlCQkx5bXhsdmpTODl0VEZWRDNKOENJYWcwUnp2U3lpZXdrMURxZ1lsUzEtRmVSY21JWUVyelloQVpiNFlDWjVNckdmQ1lLdC1LNGZlRjFVdTNuOTBXMFM4bVppcUI3V3d6WkFPcGZRcXZJNnJfaFdZWVRnMXE0TWlaUkVnclpTcUJJZjZoQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T21:47:34.214Z"
     },
     {
       "id": "rss_a886bb77fb389330",
@@ -11238,53 +11283,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T07:06:53.272Z"
-    },
-    {
-      "id": "rss_f772b3ed1738bbf5",
-      "timestamp": 1780900200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis declare ban on Israeli shipping in Red Sea: Statement - Al Arabiya English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ29uRUZwU0tDSnltc0d4UGpEOEt0QWF4M2JMb0NPZzVWMm5ER3d1TDc2T3loVHRJcUNoeDZGdUQySzY1YmhTNWViVWU3eGxwdXc3ZDlUWUx4Vk9FUmhubXN3TWRlMUVxV3lqRzhOTjVFTmU5TEhLSnVJRmhLb2FPVUc5aGlzVnFTNmlxWWNaX2ZLc0xuazJLV3NTU2Y4MnB4aExFTmd3ZXBNdlRUUGhZQ2poZ2NKZDBGOWxGX2hIRzd3ZEtI0gHKAUFVX3lxTE52VDBzN2dCeGZpbVVMSXAwN2M0MHZXUEhHSmhzOVdhU1MtXzJ6ZTlydlUybkNNUDlEeDd1TFItODY1M01QWkxsWEtYb0t1aWtaQlpMa2RObFRQQ2xJM0EzeG84OFFraGJ6RVFweGZuczU0NjJPQ3RDdWdvdHhRSEVjZEJrSDZYd2",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ29uRUZwU0tDSnltc0d4UGpEOEt0QWF4M2JMb0NPZzVWMm5ER3d1TDc2T3loVHRJcUNoeDZGdUQySzY1YmhTNWViVWU3eGxwdXc3ZDlUWUx4Vk9FUmhubXN3TWRlMUVxV3lqRzhOTjVFTmU5TEhLSnVJRmhLb2FPVUc5aGlzVnFTNmlxWWNaX2ZLc0xuazJLV3NTU2Y4MnB4aExFTmd3ZXBNdlRUUGhZQ2poZ2NKZDBGOWxGX2hIRzd3ZEtI0gHKAUFVX3lxTE52VDBzN2dCeGZpbVVMSXAwN2M0MHZXUEhHSmhzOVdhU1MtXzJ6ZTlydlUybkNNUDlEeDd1TFItODY1M01QWkxsWEtYb0t1aWtaQlpMa2RObFRQQ2xJM0EzeG84OFFraGJ6RVFweGZuczU0NjJPQ3RDdWdvdHhRSEVjZEJrSDZYd2ROZFI0U0JpZ0Z4Q1E5SFdYSjlQLXd6eTZvcDVaOU42T1hjMWRJNU16a0RGNC1SUF9PdXdoMVFSd3R0NHNkOFhQRlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T07:06:53.272Z"
-    },
-    {
-      "id": "rss_9c5a5edbf3a6f6bd",
-      "timestamp": 1780899645000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Iran-backed Houthis vow to block Israeli ships from traversing Red Sea - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rZ004MVVEdTRFUHRaTkJuY3FmTjExSnEzM3ZRbUZsc3JNSHJBYThwbV9CeXhpODJsajR2c0hlUHNBOVh3YzBhTW91elhBU29FNTRHX1p0MGlOSlJm?oc=5\" target=\"_blank\">Yemen’s Iran-backed Houthis vow to block Israeli ships from traversing Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1rZ004MVVEdTRFUHRaTkJuY3FmTjExSnEzM3ZRbUZsc3JNSHJBYThwbV9CeXhpODJsajR2c0hlUHNBOVh3YzBhTW91elhBU29FNTRHX1p0MGlOSlJm?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
     }
   ]
 }
