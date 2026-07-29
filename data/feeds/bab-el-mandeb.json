@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T00:28:29.998Z",
+  "last_fetch": "2026-07-29T01:02:32.969Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6002b3d917824434",
+      "timestamp": 1785285043000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis claim missile strike on Saudi oil tanker amid Red Sea blockade - Firstpost",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZEVjdmNHZms0VzM1OVMzcmNnek5ORWxRWlBBZE82Y28xb2ZrU1pCTDhUa3NrNHBtOEtJUEhBMlhZTVlYZW5uVlJ0X3NjS2hTZmtVVERqdmhOQlBWcEw5Tm04bG9ab3lmYm1BOUhpTGJMd2ducmR3QWpROWVDYnUzUXkySVJqaGVtNHVkVXYzZXFBMHdSV3c1dVRKX2pVZU9wLS1GZDdmT0RKQjRKakxlYl9yblJwTVHSAbwBQVVfeXFMUHYyRGVxNThHdENkQ09iUUxtN3FkUGJMY0xDcmo4U0FNUFl4MjF4bWMtZVFLSDMtdVg2VmZqTnhBS1AwMC1mVnFhMURVdVU0YXd4ZkxEakxreFlqRjBVSHF6dnA2YzhYNlp3OVoyWEtSbFpwbnZKSldJd1A1MXpSdDZBLWRLMVRLdFRpSjFRWlR5Zk5McU",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZEVjdmNHZms0VzM1OVMzcmNnek5ORWxRWlBBZE82Y28xb2ZrU1pCTDhUa3NrNHBtOEtJUEhBMlhZTVlYZW5uVlJ0X3NjS2hTZmtVVERqdmhOQlBWcEw5Tm04bG9ab3lmYm1BOUhpTGJMd2ducmR3QWpROWVDYnUzUXkySVJqaGVtNHVkVXYzZXFBMHdSV3c1dVRKX2pVZU9wLS1GZDdmT0RKQjRKakxlYl9yblJwTVHSAbwBQVVfeXFMUHYyRGVxNThHdENkQ09iUUxtN3FkUGJMY0xDcmo4U0FNUFl4MjF4bWMtZVFLSDMtdVg2VmZqTnhBS1AwMC1mVnFhMURVdVU0YXd4ZkxEakxreFlqRjBVSHF6dnA2YzhYNlp3OVoyWEtSbFpwbnZKSldJd1A1MXpSdDZBLWRLMVRLdFRpSjFRWlR5Zk5McU4wLUNONzc1SEdsakxialhXU1BIelJwenNMWjdHYUFqVDM1d2tXMlo?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T01:02:32.963Z"
+    },
     {
       "id": "rss_0f5525e5f09dc875",
       "timestamp": 1785280627000,
@@ -26,6 +50,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-28T23:47:46.473Z"
+    },
+    {
+      "id": "rss_e1ef774e3df2e932",
+      "timestamp": 1785280291000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "US, Saudi militaries attack Iranian-backed militias in Iraq following Iranian strikes on US bases - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1nXzRkdm9XbzVUQTk4dDRqdXVFZ1kwcEZkQ21fOXVzWlFPbWZTeXF3UWlVUTJMYmc3X2FUUlNDeWh2NmRhSGxpUzhZNFg2SjBGT0d0czNWNjh3eVZYM2ZEeWhnSzJqakpiMWc?oc=5\" target=\"_blank\">US, Saudi militaries attack Iranian-backed militias in Iraq following Iranian strikes on US bases</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1nXzRkdm9XbzVUQTk4dDRqdXVFZ1kwcEZkQ21fOXVzWlFPbWZTeXF3UWlVUTJMYmc3X2FUUlNDeWh2NmRhSGxpUzhZNFg2SjBGT0d0czNWNjh3eVZYM2ZEeWhnSzJqakpiMWc?oc=5",
+      "feed_id": "gn-centcom-yemen",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T01:02:32.002Z"
     },
     {
       "id": "rss_0e81631cdc1d9457",
@@ -11227,52 +11274,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-05-31T12:29:31.680Z"
-    },
-    {
-      "id": "rss_d0c69a38f58389ce",
-      "timestamp": 1779892054000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran and Houthi terror proxy facing Red Sea threat from pro-US African nation - wwbl.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ01KNWhJQ0FqR3BzT3pEOGVxSG1lSEpJcC05MUo0Zl9DU0o2Snp6TmtxbVNnaDZ4al9oZFJMMTloUFVFUjdoX3FRazFPRXQtYlpjMEYteEItaUZmVEFOSnV2RkFyMnliOTgxcmRHVGN1SWRaVUNDNm1xQUI0M1hMQS02OERxODhjajdTYV8zZ0hRTWhUVllKQ1phemFLRnJCMFU3SXh0ak52ZFowbEdj?oc=5\" target=\"_blank\">Iran and Houthi terror proxy facing Red Sea threat from pro-US African nation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">wwbl.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQ01KNWhJQ0FqR3BzT3pEOGVxSG1lSEpJcC05MUo0Zl9DU0o2Snp6TmtxbVNnaDZ4al9oZFJMMTloUFVFUjdoX3FRazFPRXQtYlpjMEYteEItaUZmVEFOSnV2RkFyMnliOTgxcmRHVGN1SWRaVUNDNm1xQUI0M1hMQS02OERxODhjajdTYV8zZ0hRTWhUVllKQ1phemFLRnJCMFU3SXh0ak52ZFowbEdj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-28T01:36:00.012Z"
-    },
-    {
-      "id": "rss_22a428013c60a45a",
-      "timestamp": 1779883352000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran and Houthi terror proxy facing Red Sea threat from pro-US African nation - 930 WFMD Free Talk",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQdW9paXBHQVpabEhRYVM3VVdfYjRUSFNUcnZSQlhtTzVJRkpjUUk5VC1jU3F2VWo0ZVRkWUhROHd5clhzTmxtTkNoQXZ2djRrOUl2ZkhCQVJlYnFGRUxJajFiMERyX1FuSHFYOVdLN19KaUNiM0VxU282alZmNjBSa0QtT2FueHpKRjhkNEwxZ044X3htR1RESGNZb2RrU2RYaldjQVFaWmdOU3R3UzRF?oc=5\" target=\"_blank\">Iran and Houthi terror proxy facing Red Sea threat from pro-US African nation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">930 WFMD Free Talk</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdW9paXBHQVpabEhRYVM3VVdfYjRUSFNUcnZSQlhtTzVJRkpjUUk5VC1jU3F2VWo0ZVRkWUhROHd5clhzTmxtTkNoQXZ2djRrOUl2ZkhCQVJlYnFGRUxJajFiMERyX1FuSHFYOVdLN19KaUNiM0VxU282alZmNjBSa0QtT2FueHpKRjhkNEwxZ044X3htR1RESGNZb2RrU2RYaldjQVFaWmdOU3R3UzRF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-05-27T12:35:35.520Z"
     }
   ]
 }
