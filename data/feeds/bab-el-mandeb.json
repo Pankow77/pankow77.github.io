@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T12:12:18.812Z",
+  "last_fetch": "2026-07-29T13:07:43.893Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a886bb77fb389330",
+      "timestamp": 1785328478000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Consider Imposing Fees on Ships Sailing Through Red Sea: Sources - Insurance Journal",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE51VUNtZUZEdkdnekZjaDdEMHlSb0ZnTnUxbGRaZ0pubW9ZS3RUeFlRekF5RkNONjBuUWlQVUVWS2Fsblk1dWUySnFmTWxEaHhvZ3preHNPQzFVbEFCd29jMlVmejV0bzBnblhjWUpfTzdUN2dENF9fc0htY09Odw?oc=5\" target=\"_blank\">Yemen’s Houthis Consider Imposing Fees on Ships Sailing Through Red Sea: Sources</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Insurance Journal</font>",
+      "tags": [
+        "shipping",
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE51VUNtZUZEdkdnekZjaDdEMHlSb0ZnTnUxbGRaZ0pubW9ZS3RUeFlRekF5RkNONjBuUWlQVUVWS2Fsblk1dWUySnFmTWxEaHhvZ3preHNPQzFVbEFCd29jMlVmejV0bzBnblhjWUpfTzdUN2dENF9fc0htY09Odw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T13:07:41.896Z"
+    },
     {
       "id": "rss_a3674dbebbe2f4f9",
       "timestamp": 1785321000000,
@@ -11256,29 +11280,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-06T09:42:06.869Z"
-    },
-    {
-      "id": "rss_c25d70bf9130edab",
-      "timestamp": 1780689300000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran's threats against this Red Sea chokepoint are a big vulnerability for the oil market - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOTnBLWWpVNnVHUHhYR29iaHVOekM2a1laaWgyczBhMjF5bldEc2xQQ0lRc21vNEZBQUU0cHlzUHY0T2Q0TjlyeFowNWtibmNCRko3UlJLdWxJZjJkX19KZXloaU9oejBYY0JxdURKbkhwOTJjOHRDR1pGSWpHc29jOWwyLU9MUVdDNGVmSWVURzFkV3N2QjdzNnJB0gGfAUFVX3lxTFBFTGwyVUtGcXhvbkpMYk16R2d0eGZQWWhzcDM5dThmaXFXQ0Z3cEVnWFJJeE1SVGU5SDVtSXRMNTNuOFlKaTVqdGdvS0pHSzAtWGxPSDV4WURPOWdsOS1UMjFvbURVTVJVN1k3Z2F4R19hdGJhbzVZZ0FzOXUtRG5vd2VtZWRBT0RGUHlXbW12NUJrYTBkcVA0eXJWU2ZBVQ?oc=5\" target=\"_blank\">I",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOTnBLWWpVNnVHUHhYR29iaHVOekM2a1laaWgyczBhMjF5bldEc2xQQ0lRc21vNEZBQUU0cHlzUHY0T2Q0TjlyeFowNWtibmNCRko3UlJLdWxJZjJkX19KZXloaU9oejBYY0JxdURKbkhwOTJjOHRDR1pGSWpHc29jOWwyLU9MUVdDNGVmSWVURzFkV3N2QjdzNnJB0gGfAUFVX3lxTFBFTGwyVUtGcXhvbkpMYk16R2d0eGZQWWhzcDM5dThmaXFXQ0Z3cEVnWFJJeE1SVGU5SDVtSXRMNTNuOFlKaTVqdGdvS0pHSzAtWGxPSDV4WURPOWdsOS1UMjFvbURVTVJVN1k3Z2F4R19hdGJhbzVZZ0FzOXUtRG5vd2VtZWRBT0RGUHlXbW12NUJrYTBkcVA0eXJWU2ZBVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-05T20:09:33.686Z"
     }
   ]
 }
