@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-29T13:07:43.893Z",
+  "last_fetch": "2026-07-29T14:15:21.638Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -26,6 +26,53 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T13:07:41.896Z"
+    },
+    {
+      "id": "rss_35ed44cab780620b",
+      "timestamp": 1785328448000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Ballistic Missile Attack On Saudi Oil Tanker In Red Sea - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWGlERkd0aUhnWGNQaUNqR1pzdENZOGRnRzlfVFJka0x3VWYzVkZZelZjajJHeFhTMERGb2NpUUdLVHFEOUVQdVgySG5hdDNvQWJtNTE3UF9WVjRJcEZqczlzRFEzaVl4eXNRaGFXWGVva21HRTdsV0VKeEk5TUJsZElkZWtGci1RSU5pd1lKVFhKT2w0di00VHdobkpVazRtUEE?oc=5\" target=\"_blank\">Houthis Claim Ballistic Missile Attack On Saudi Oil Tanker In Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWGlERkd0aUhnWGNQaUNqR1pzdENZOGRnRzlfVFJka0x3VWYzVkZZelZjajJHeFhTMERGb2NpUUdLVHFEOUVQdVgySG5hdDNvQWJtNTE3UF9WVjRJcEZqczlzRFEzaVl4eXNRaGFXWGVva21HRTdsV0VKeEk5TUJsZElkZWtGci1RSU5pd1lKVFhKT2w0di00VHdobkpVazRtUEE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T14:15:20.100Z"
+    },
+    {
+      "id": "rss_bf9855f635900495",
+      "timestamp": 1785326861000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Commodity ship traffic rises in Bab el-Mandeb, remains low in Hormuz - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE01Qk05M0NpTHExUFFzQmktVVNFVEVzV3pVZzNpR1ZXMzdrTnhLZ0Y5ZTlwQmxQVHphZmZBNlA5TlJ3OC1nWThhT3k3Ni05cWJVZEZValRLWVBLcHBt?oc=5\" target=\"_blank\">Commodity ship traffic rises in Bab el-Mandeb, remains low in Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE01Qk05M0NpTHExUFFzQmktVVNFVEVzV3pVZzNpR1ZXMzdrTnhLZ0Y5ZTlwQmxQVHphZmZBNlA5TlJ3OC1nWThhT3k3Ni05cWJVZEZValRLWVBLcHBt?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-29T14:15:20.100Z"
     },
     {
       "id": "rss_a3674dbebbe2f4f9",
@@ -11236,50 +11283,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-06T20:26:11.034Z"
-    },
-    {
-      "id": "rss_7e1f4a95cd7c0e9f",
-      "timestamp": 1780699139000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "UAE, US intercept Houthi missile attack targeting Abu Dhabi - Ahram Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPVmdIRlpleHJ1SzQwdkhLcUZycmRwVlZkNS1KbFNvelZzMlRYa29BaHAzWkp3czdSMk5mSk10VG1FZVhmSXZheHNnelNpLVJPVTJ4RkVxV0JtVXdCMzBMYk94YnFqeVByanduUGpSNWtLNnNCazZlOVJMUEc0WDJpNzAzODJQQQ?oc=5\" target=\"_blank\">UAE, US intercept Houthi missile attack targeting Abu Dhabi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVmdIRlpleHJ1SzQwdkhLcUZycmRwVlZkNS1KbFNvelZzMlRYa29BaHAzWkp3czdSMk5mSk10VG1FZVhmSXZheHNnelNpLVJPVTJ4RkVxV0JtVXdCMzBMYk94YnFqeVByanduUGpSNWtLNnNCazZlOVJMUEc0WDJpNzAzODJQQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-06T00:43:00.551Z"
-    },
-    {
-      "id": "rss_fdc7c302c906aeea",
-      "timestamp": 1780697417000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Army Repels Houthi Attack in Marib, Eastern Yemen - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBiZk9jaC1rTlBHS1MtNHVaUlMzZ09GN1pzSG4xV044cmdDY0hZaHZpNk9oc2JjYnlVVTNSbDNVRGNCYTFId0hsZVVOSC01eGpvdXVmcnBrX0NqME01OWxCZmlKd19QV1pkNWlrSmNrM1JwdHlMMHc?oc=5\" target=\"_blank\">Yemeni Army Repels Houthi Attack in Marib, Eastern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBiZk9jaC1rTlBHS1MtNHVaUlMzZ09GN1pzSG4xV044cmdDY0hZaHZpNk9oc2JjYnlVVTNSbDNVRGNCYTFId0hsZVVOSC01eGpvdXVmcnBrX0NqME01OWxCZmlKd19QV1pkNWlrSmNrM1JwdHlMMHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-06T09:42:06.869Z"
     }
   ]
 }
