@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T01:00:24.594Z",
+  "last_fetch": "2026-07-30T02:16:13.018Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -47,6 +47,29 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-29T21:18:46.159Z"
+    },
+    {
+      "id": "rss_4c56617602dfa7f8",
+      "timestamp": 1785355975000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks, Iran uncertainty rattle oil markets - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOSkl0Q1JmNjk2Z3R6T1B5QmFRSmFFMFd2ME0zcXItcGppaEZ1RE52S0lweV8wYjJwM1VmQW1ia1hBRVFFa1hSVkhVRnd4TW1jU0JRemhNMzhtbXBFOGNXSVhEWlg2OGZDQUNVdTVJdlhCWEVFVlowNVF0X3VuQzhORm9BRkRMMjl5dHpvWDczdXhURXMwLVpvTDIzQXJvTkFQ?oc=5\" target=\"_blank\">Houthi attacks, Iran uncertainty rattle oil markets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSkl0Q1JmNjk2Z3R6T1B5QmFRSmFFMFd2ME0zcXItcGppaEZ1RE52S0lweV8wYjJwM1VmQW1ia1hBRVFFa1hSVkhVRnd4TW1jU0JRemhNMzhtbXBFOGNXSVhEWlg2OGZDQUNVdTVJdlhCWEVFVlowNVF0X3VuQzhORm9BRkRMMjl5dHpvWDczdXhURXMwLVpvTDIzQXJvTkFQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-30T02:16:11.537Z"
     },
     {
       "id": "rss_eec8bf42331c69ff",
@@ -11255,29 +11278,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNlJsblp6UEREYUtyelRLaGhBckREZFdGbUcwNkFTYVJ6Q09KRmJ1bHVZUWRsdzJySUFtMGoyVENlSElJbXI4Q1pabzZGb0lnYVdzN3JJSTY3WmJKaDFYWF95YVFrNF9zUGtEUy1YYzRzWEJlREFHaDlaWGlpaXE2NGg0TlpCT0g1Q21uY1loMlBGTzNlcXUxQnpHdkNMdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T07:06:53.272Z"
-    },
-    {
-      "id": "rss_f512d4bd85ceeb5f",
-      "timestamp": 1780900332000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Attack Israel, Declare Ban on Israeli Shipping in Red Sea - Asharq Al-Awsat | Explore World News Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVU5dmNvM0hva3ZlVmdocTR4aXhDQkltbW54NEQ3ODN5VldGTmU2UjFwNnozZ1NFdXRPcjdBWVZyVWRnb2Q2cWZ6cWR6eTlWZ1V4T01wNkRvVkw1T2NhSTlqcU5ObDRyTnpNb3hlb2Y2MFVoWnFzeFZkVWdpVEFITWNSQkZXUHJxY1FXWW0teWRZbDJXd2VKb1dYbTVINmN3VzRveU9zaw?oc=5\" target=\"_blank\">Houthis Attack Israel, Declare Ban on Israeli Shipping in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asharq Al-Awsat | Explore World News Today</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOLVU5dmNvM0hva3ZlVmdocTR4aXhDQkltbW54NEQ3ODN5VldGTmU2UjFwNnozZ1NFdXRPcjdBWVZyVWRnb2Q2cWZ6cWR6eTlWZ1V4T01wNkRvVkw1T2NhSTlqcU5ObDRyTnpNb3hlb2Y2MFVoWnFzeFZkVWdpVEFITWNSQkZXUHJxY1FXWW0teWRZbDJXd2VKb1dYbTVINmN3VzRveU9zaw?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
