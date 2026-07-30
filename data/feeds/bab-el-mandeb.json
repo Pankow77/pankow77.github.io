@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T02:16:13.018Z",
+  "last_fetch": "2026-07-30T03:35:22.030Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1bdb1aff0f0e6a76",
+      "timestamp": 1785380040000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Iran war updates: United States military launches strikes on Iranian targets a day after it foiled missile attack on US forces - ABC7 Chicago",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPa05ZZVpJU3dNU2IxZzJyeHFSVTNCbGl5a0J4RTNQdU1BanVyandqMUF1dGVXa3drQnNfRTR1TnRDV0l3ckYzbGo3RDBWT2FDVDhvZ0U2eExFcXdGY3BNVTgwX3FuYUdSYVRpUmZxNXB0ODRyQ2tsRkhpUE1RZV9xMTlTQ19YSzM5aUk5djA4bWNvSUczZ1FYOThmWWk2QVNNLWdFdUtGYkhKYkU5VVJhSEdEcTBDZjFVZXfSAb8BQVVfeXFMT3pnVXI4NzFYOFo2RlZCUGE1SkxkVm9xZHZrOTdpWmxFVENzUHE5d3NNVlZpRUlQX2MyTzFGeWVlbmd6MlUwcWhTdGg0VlFfS1ZLOWF2MS1PTk5UOFpVVlBDQmhxZS1wMWpCUkdmWEZVSk9BZnNscGt3WWNyNFg0NEtBWVZoVWVSM25McURoXzBOWC",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPa05ZZVpJU3dNU2IxZzJyeHFSVTNCbGl5a0J4RTNQdU1BanVyandqMUF1dGVXa3drQnNfRTR1TnRDV0l3ckYzbGo3RDBWT2FDVDhvZ0U2eExFcXdGY3BNVTgwX3FuYUdSYVRpUmZxNXB0ODRyQ2tsRkhpUE1RZV9xMTlTQ19YSzM5aUk5djA4bWNvSUczZ1FYOThmWWk2QVNNLWdFdUtGYkhKYkU5VVJhSEdEcTBDZjFVZXfSAb8BQVVfeXFMT3pnVXI4NzFYOFo2RlZCUGE1SkxkVm9xZHZrOTdpWmxFVENzUHE5d3NNVlZpRUlQX2MyTzFGeWVlbmd6MlUwcWhTdGg0VlFfS1ZLOWF2MS1PTk5UOFpVVlBDQmhxZS1wMWpCUkdmWEZVSk9BZnNscGt3WWNyNFg0NEtBWVZoVWVSM25McURoXzBOWC1WNnFKWFY4WWQ0dXI4RXBFYUF4Q0tCMFhvYWEzYkhuanlrVmdLYWNWcVVSLXM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-30T03:35:20.661Z"
+    },
     {
       "id": "rss_e49560065ac64677",
       "timestamp": 1785359961000,
@@ -11260,29 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
-    },
-    {
-      "id": "rss_047a22190e611478",
-      "timestamp": 1780901420000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi threaten to attack Israeli ships in the Red Sea - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNNlJsblp6UEREYUtyelRLaGhBckREZFdGbUcwNkFTYVJ6Q09KRmJ1bHVZUWRsdzJySUFtMGoyVENlSElJbXI4Q1pabzZGb0lnYVdzN3JJSTY3WmJKaDFYWF95YVFrNF9zUGtEUy1YYzRzWEJlREFHaDlaWGlpaXE2NGg0TlpCT0g1Q21uY1loMlBGTzNlcXUxQnpHdkNMdw?oc=5\" target=\"_blank\">Houthi threaten to attack Israeli ships in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNNlJsblp6UEREYUtyelRLaGhBckREZFdGbUcwNkFTYVJ6Q09KRmJ1bHVZUWRsdzJySUFtMGoyVENlSElJbXI4Q1pabzZGb0lnYVdzN3JJSTY3WmJKaDFYWF95YVFrNF9zUGtEUy1YYzRzWEJlREFHaDlaWGlpaXE2NGg0TlpCT0g1Q21uY1loMlBGTzNlcXUxQnpHdkNMdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T07:06:53.272Z"
     }
   ]
 }
