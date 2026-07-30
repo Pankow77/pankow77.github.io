@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T14:14:50.000Z",
+  "last_fetch": "2026-07-30T15:14:50.996Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_21caef84abf08dd2",
+      "timestamp": 1785412436000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Egypt says drone hit two ships at Mediterranean port as attacks on energy infrastructure widen - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ0wtekFEem9MQU53U0Vrcmdsb180aExoTFpJelRrdWZ2VFVZbGoyMkhYYXEyLW9aWWdkSk5LSXB0NmdmNkVPeVZFSl92YjZLcWI1VENJX1Nva2E2NkpMN1FDVUF2a2s0bXl5SVJ2SjU0MmxDQU9ZeXduWmUyVjdfbmxsUnJSM2vSAYwBQVVfeXFMT0FaaThLVGlKUXJRQzJUX3dCdHpFSk5DeWZaOF9zdnpmeTVsQ09NeWI0emUwdW01MElEUUUybHRWQjdJVTJOYllJMUk1OXZEQXJsaXZ6dGlqMDYyd2tGVXZLRUx6MWR2N1JEdmFrQ1pHNlZKc05nVDR6SFJlUW9zOVBqaXpMdkhZQmtnYlk?oc=5\" target=\"_blank\">Egypt says drone hit two ships at Mediterranean port",
+      "tags": [
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ0wtekFEem9MQU53U0Vrcmdsb180aExoTFpJelRrdWZ2VFVZbGoyMkhYYXEyLW9aWWdkSk5LSXB0NmdmNkVPeVZFSl92YjZLcWI1VENJX1Nva2E2NkpMN1FDVUF2a2s0bXl5SVJ2SjU0MmxDQU9ZeXduWmUyVjdfbmxsUnJSM2vSAYwBQVVfeXFMT0FaaThLVGlKUXJRQzJUX3dCdHpFSk5DeWZaOF9zdnpmeTVsQ09NeWI0emUwdW01MElEUUUybHRWQjdJVTJOYllJMUk1OXZEQXJsaXZ6dGlqMDYyd2tGVXZLRUx6MWR2N1JEdmFrQ1pHNlZKc05nVDR6SFJlUW9zOVBqaXpMdkhZQmtnYlk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-30T15:14:49.489Z"
+    },
     {
       "id": "rss_4ef49dc6e721a1d6",
       "timestamp": 1785412327000,
@@ -11268,27 +11292,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
-    },
-    {
-      "id": "rss_06e3fcc39fa093b1",
-      "timestamp": 1780901895000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Could Bab el-Mandeb Become the Next Strait of Hormuz? - horn review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNWkFBWDFGaUxDZHdmOWNPNjBVRVVqU1A1OWxSTXljQ1BMMGZrYnRSS0UxdFVKbi1qbWticjZMaUhrMlV0VTE3SUZVU3FoaFZiRkNrV29HTGYxakhtQzlTZnhGU0lVbkZQMGlRX1hMcEUyZ2UwUENMTjBEeE9rM2IwT016N1dtdHVDa1JITUN4eXM?oc=5\" target=\"_blank\">Could Bab el-Mandeb Become the Next Strait of Hormuz?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWkFBWDFGaUxDZHdmOWNPNjBVRVVqU1A1OWxSTXljQ1BMMGZrYnRSS0UxdFVKbi1qbWticjZMaUhrMlV0VTE3SUZVU3FoaFZiRkNrV29HTGYxakhtQzlTZnhGU0lVbkZQMGlRX1hMcEUyZ2UwUENMTjBEeE9rM2IwT016N1dtdHVDa1JITUN4eXM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T11:14:22.988Z"
     }
   ]
 }
