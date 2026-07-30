@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T10:16:50.414Z",
+  "last_fetch": "2026-07-30T11:14:20.148Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a7dfbe9d076b168a",
+      "timestamp": 1785408098000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Two tankers carrying Saudi oil for India exit Red Sea by going 'dark' - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNc1c5eUo4aHBKOEVJOU1KYTE0ZzhwdHBtUzNlbDJaaFhiTDJjY0xiSWN3Vm8yY2VzX2ZjUEFkR1k5ZkxKWVR5REZVUmZWUkZ0dEVBRDd3eDlIVDRLM0NBQjJES3JuTzRqYVFCMDFmZllzcDc3bFdBU3FNYVB3Wkd0c2k4WlplZEtxNV9zcF9QM3h0ZzdRNFFpWVZBWTF3Q1FKaHNXY2JyVEphSUFC?oc=5\" target=\"_blank\">Two tankers carrying Saudi oil for India exit Red Sea by going 'dark'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNc1c5eUo4aHBKOEVJOU1KYTE0ZzhwdHBtUzNlbDJaaFhiTDJjY0xiSWN3Vm8yY2VzX2ZjUEFkR1k5ZkxKWVR5REZVUmZWUkZ0dEVBRDd3eDlIVDRLM0NBQjJES3JuTzRqYVFCMDFmZllzcDc3bFdBU3FNYVB3Wkd0c2k4WlplZEtxNV9zcF9QM3h0ZzdRNFFpWVZBWTF3Q1FKaHNXY2JyVEphSUFC?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-07-30T11:14:18.829Z"
+    },
     {
       "id": "rss_1bdb1aff0f0e6a76",
       "timestamp": 1785380040000,
@@ -11263,27 +11286,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T03:45:51.348Z"
-    },
-    {
-      "id": "rss_994d2399ab16c7d2",
-      "timestamp": 1780901705000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they’ll block Israeli sailing in Red Sea - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQek5sOUNaYlR4Yi1xZm82cS1kcTB6b2l0Tm5QNTJNRFBUZ1ZEVER4anMtN09KM0syVm5fLWZJZ1NSMHhRQTFYS01pUVF6MzduR0tnY2NaSEpNdHRYdjNudDN4U0dUdmxhV3VNOXBQcDhlMmdpaXFhSkVQQ2VxYmI1bktXTU9INm5yU2F0ZWlCZV9OTVJzdl9lNGw1ZF85Zw?oc=5\" target=\"_blank\">Houthis say they’ll block Israeli sailing in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQek5sOUNaYlR4Yi1xZm82cS1kcTB6b2l0Tm5QNTJNRFBUZ1ZEVER4anMtN09KM0syVm5fLWZJZ1NSMHhRQTFYS01pUVF6MzduR0tnY2NaSEpNdHRYdjNudDN4U0dUdmxhV3VNOXBQcDhlMmdpaXFhSkVQQ2VxYmI1bktXTU9INm5yU2F0ZWlCZV9OTVJzdl9lNGw1ZF85Zw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
     }
   ]
 }
