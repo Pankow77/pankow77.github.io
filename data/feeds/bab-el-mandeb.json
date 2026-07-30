@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T13:01:51.383Z",
+  "last_fetch": "2026-07-30T14:14:50.000Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4ef49dc6e721a1d6",
+      "timestamp": 1785412327000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi seeks international coalition for Red Sea shipping safeguards - Quantum Commodity Intelligence",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNMkMtc1lQM0hFdnItOHhnUTJJV1JZYTJCWEZRUF9qYkF0SWlENWo4QUEtM0xkaUF1SHdQNGFtRFlwejd3UUI1Yll1enZYQjRNZGtTNzF3eTExRUdkU0pMOGxteURFbVloLURwcWRJOTdiZ1lXel96d0RIcWJRMWUzRU1FRVVmRHB3VzNYc1pfcXNkOEpUTFpNQkRWOV8yNUVoenl2TWlJNDFuNHlNNmdr?oc=5\" target=\"_blank\">Saudi seeks international coalition for Red Sea shipping safeguards</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
+      "tags": [
+        "shipping",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMkMtc1lQM0hFdnItOHhnUTJJV1JZYTJCWEZRUF9qYkF0SWlENWo4QUEtM0xkaUF1SHdQNGFtRFlwejd3UUI1Yll1enZYQjRNZGtTNzF3eTExRUdkU0pMOGxteURFbVloLURwcWRJOTdiZ1lXel96d0RIcWJRMWUzRU1FRVVmRHB3VzNYc1pfcXNkOEpUTFpNQkRWOV8yNUVoenl2TWlJNDFuNHlNNmdr?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-30T14:14:49.994Z"
+    },
     {
       "id": "rss_a7dfbe9d076b168a",
       "timestamp": 1785408098000,
@@ -11265,27 +11289,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T11:14:22.988Z"
-    },
-    {
-      "id": "rss_71eb4ecadc20ce3e",
-      "timestamp": 1780901868000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis declare 'total' ban on Israeli maritime navigation in Red Sea - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQYTBFR3ZhbmFja0dJTGdaYXNGQ294MENVNk9KTHdsR09MNWhrWXlwcG5mSEkwRGw0OFFCSnZQX05KWkxIeU40c2s5N0JlVUJpal9IbmtKVU9HTHgwYk15VkZVOHptcEhKU1B1bEFHT3NjN3UwcXNmekF4R1Y3dWZPX2hYR3dyaE9oM19DQjg5ZkRyTHlIak13cGNXMG12c2xGcWhseE9LczJ5V2VESXlOVGZB?oc=5\" target=\"_blank\">Houthis declare 'total' ban on Israeli maritime navigation in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYTBFR3ZhbmFja0dJTGdaYXNGQ294MENVNk9KTHdsR09MNWhrWXlwcG5mSEkwRGw0OFFCSnZQX05KWkxIeU40c2s5N0JlVUJpal9IbmtKVU9HTHgwYk15VkZVOHptcEhKU1B1bEFHT3NjN3UwcXNmekF4R1Y3dWZPX2hYR3dyaE9oM19DQjg5ZkRyTHlIak13cGNXMG12c2xGcWhseE9LczJ5V2VESXlOVGZB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-10T03:45:51.348Z"
     }
   ]
 }
