@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-30T16:02:43.425Z",
+  "last_fetch": "2026-07-30T17:00:11.191Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_946f2ab573b04952",
+      "timestamp": 1785430579000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Under Houthi attack, Saudi Arabia hosts meeting on new maritime defense alliance - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVXgwZFd3R000Sm1UaVF0YmpjVXcwUXl2eFllTWgwOUJXM3FLeHNCNm5mOFFORWV6NlkxNUc2ejN6cTZadnhkTGJvdTBlXzlha2o5Tnh3TS1ZWGk5MmhaVkN6Q3Zfa0J4bFdfRTJrTkxWckllM0dmckd3S1ltc1hnNE5uQ2JldG9Hbk4zMDdtRE50TWtCOHFReUNqcW5FN2pvYkVhLWRPLUJzazZLRE9TVVdFT2EzaDJKbmVkcUs3bVYzdkU?oc=5\" target=\"_blank\">Under Houthi attack, Saudi Arabia hosts meeting on new maritime defense alliance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVXgwZFd3R000Sm1UaVF0YmpjVXcwUXl2eFllTWgwOUJXM3FLeHNCNm5mOFFORWV6NlkxNUc2ejN6cTZadnhkTGJvdTBlXzlha2o5Tnh3TS1ZWGk5MmhaVkN6Q3Zfa0J4bFdfRTJrTkxWckllM0dmckd3S1ltc1hnNE5uQ2JldG9Hbk4zMDdtRE50TWtCOHFReUNqcW5FN2pvYkVhLWRPLUJzazZLRE9TVVdFT2EzaDJKbmVkcUs3bVYzdkU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-30T17:00:09.721Z"
+    },
     {
       "id": "rss_21caef84abf08dd2",
       "timestamp": 1785412436000,
@@ -11271,27 +11292,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T11:14:22.989Z"
-    },
-    {
-      "id": "rss_c3658e31ec67e90c",
-      "timestamp": 1780902680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis renew Red Sea blockade on Israel - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9uR1ZKRnQ2dTRRZDRwY1lzeEVBeWlkVU5GWmp2SmctOFRibGNMU0hUM1ljZXB5a1RUcDJwNUJ0ZlAxNXhPN2FndVljaEYyYVBQdkozbW1n?oc=5\" target=\"_blank\">Houthis renew Red Sea blockade on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9uR1ZKRnQ2dTRRZDRwY1lzeEVBeWlkVU5GWmp2SmctOFRibGNMU0hUM1ljZXB5a1RUcDJwNUJ0ZlAxNXhPN2FndVljaEYyYVBQdkozbW1n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T09:06:11.893Z"
     }
   ]
 }
