@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-31T21:50:08.007Z",
+  "last_fetch": "2026-07-31T22:20:58.776Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-31T21:23:45.715Z"
+    },
+    {
+      "id": "rss_8d349cc2d7a9a81b",
+      "timestamp": 1785503820000,
+      "source": "BBC",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi builds maritime coalition to protect Red Sea trading routes - Semafor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOV1llYXFpM1FYdm50QkxUdmVTakRHVTE4SU5WallXY0VkUWdmQzlmdU1IZGw4V1NRaUxSUXRsWDQ0SjZGSW1tck8zMVhuTmQ2YWhiSzUzdGpXdzNIb2oyTWVSLTVxWW9iX01BVUc2dUY4c2xFMU9oWm44Z0NYZ1JpdDJJbTFGTmlVVjlRT3gycDNrdG8tdlBBcHM1amNCTHY1cV9obw?oc=5\" target=\"_blank\">Saudi builds maritime coalition to protect Red Sea trading routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOV1llYXFpM1FYdm50QkxUdmVTakRHVTE4SU5WallXY0VkUWdmQzlmdU1IZGw4V1NRaUxSUXRsWDQ0SjZGSW1tck8zMVhuTmQ2YWhiSzUzdGpXdzNIb2oyTWVSLTVxWW9iX01BVUc2dUY4c2xFMU9oWm44Z0NYZ1JpdDJJbTFGTmlVVjlRT3gycDNrdG8tdlBBcHM1amNCTHY1cV9obw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-07-31T22:20:57.176Z"
     },
     {
       "id": "rss_958e6a9e3496c51c",
@@ -11254,29 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T01:38:18.626Z"
-    },
-    {
-      "id": "rss_95c87324aa3b70e1",
-      "timestamp": 1780919889000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Explainer: Why are the Houthis threatening to attack Red Sea shipping and what does it mean for oil markets? - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5\" target=\"_blank\">Explainer: Why are the Houthis threatening to attack Red Sea shipping and what does it mean for oil markets?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZndSZ05Ec0xibk5xQ0JPWjFrM2ZzOGhyTDgtR01HOVhuY3J6THhKMVU3UXZxbnlKOUJma041dUJmcTlTNlJ2Q19PREcxWmc3b2pyV2dXVGFNSTJ5aXVTMG9RdDVEUk5CU0luTE9Hc19ESnBBMm5KWVZOblR6NzU0ejdJX1JPSzNQS0tlUzZLYXh3c1FRMjdYbUZ2dmJ5ajE0UU16eTBtYW9vQm9pQXJvM213RWVhLWpURkxPSDNkd1lmUEE1TXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-06-08T12:51:18.714Z"
     }
   ]
 }
