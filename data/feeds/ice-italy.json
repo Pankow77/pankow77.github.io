@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-07-31T16:09:33.123Z",
-  "epoch_count": 64,
+  "last_fetch": "2026-07-31T17:01:31.572Z",
+  "epoch_count": 65,
   "epochs": [
     {
       "id": "rss_b6175df180544aff",
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-31T15:16:18.967Z"
+    },
+    {
+      "id": "rss_2240298bb1ec67a1",
+      "timestamp": 1785437693000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "agreement",
+      "intensity": 2,
+      "text_summary": "Ceuta, Italia sospende accordo di Schengen con la Spagna - Il Sole 24 ORE",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNcWVvR3ZHVlpBZ2JqQkhtQ2kzRUpDLXhOSmhwdEtvb1FQVEZudXdyWHlPNEs3MzlLVk5tTHBWTWdxX0FPT0VJTmhWdHBPVm9JT0tLSy1hbHFHQVBIQlQxMHloS3p0VllaX0NhVlotNDM0OEJvQVRMOGRkbEVqV3ZOR1lRWV9la2ktaXRyaW5SQXNhdVRuUFQ0QmVSZ3JtQ2JsTkF3eW9tdW5iU1czSFJLenpNV3lUdmhyMkhUM082aUZyMkZ4ekU2ZnlB?oc=5\" target=\"_blank\">Ceuta, Italia sospende accordo di Schengen con la Spagna</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Il Sole 24 ORE</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNcWVvR3ZHVlpBZ2JqQkhtQ2kzRUpDLXhOSmhwdEtvb1FQVEZudXdyWHlPNEs3MzlLVk5tTHBWTWdxX0FPT0VJTmhWdHBPVm9JT0tLSy1hbHFHQVBIQlQxMHloS3p0VllaX0NhVlotNDM0OEJvQVRMOGRkbEVqV3ZOR1lRWV9la2ktaXRyaW5SQXNhdVRuUFQ0QmVSZ3JtQ2JsTkF3eW9tdW5iU1czSFJLenpNV3lUdmhyMkhUM082aUZyMkZ4ekU2ZnlB?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-31T17:01:31.571Z"
     },
     {
       "id": "rss_87f5f41f4ee675f3",
