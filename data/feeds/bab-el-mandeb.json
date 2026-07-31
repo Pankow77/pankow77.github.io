@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-31T04:38:31.284Z",
+  "last_fetch": "2026-07-31T06:01:54.466Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -93,6 +93,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-30T20:50:48.684Z"
+    },
+    {
+      "id": "rss_ca6c5e42e6d78240",
+      "timestamp": 1785433795000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Aims to Deter Red Sea Attacks With New Coalition - nytimes.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOT2NHYUJHM2N3dWJwWllZbzB3c1FKVGRBWU5jSTdReEs1LTY0UXdMNW5zOHJPbWE3UEQ1a3ExOXFqZ0FkNDZ1TDB3S2xNTERVLUFiODcwZlJtT1Mzd2JBT0taS05JeFdCdGF5empjYmhTbVJSd2hRSnd0Y2QtYkFNMkFoTWU5b3NOUDdhY3Zn?oc=5\" target=\"_blank\">Saudi Arabia Aims to Deter Red Sea Attacks With New Coalition</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">nytimes.com</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOT2NHYUJHM2N3dWJwWllZbzB3c1FKVGRBWU5jSTdReEs1LTY0UXdMNW5zOHJPbWE3UEQ1a3ExOXFqZ0FkNDZ1TDB3S2xNTERVLUFiODcwZlJtT1Mzd2JBT0taS05JeFdCdGF5empjYmhTbVJSd2hRSnd0Y2QtYkFNMkFoTWU5b3NOUDdhY3Zn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-31T06:01:53.039Z"
     },
     {
       "id": "rss_82018d0bf2c17429",
@@ -11263,30 +11286,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T04:53:03.632Z"
-    },
-    {
-      "id": "rss_8f47d1ace420400a",
-      "timestamp": 1780905780000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iranian-backed Houthi rebels vow to block Israeli ships sailing in Red Sea - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOV0V3cDZ4N3FkenBjWXl0dkpKUzBNajVEOXNhdU1qbkFxRWEzQlN4SUZsMHhJcDE4VkU4d2E3WUd3bXhYOFZPa1pwcWJEMTVDU09ObmlRVlBJcnVySHRkODhkLTdnRW5KemFmVmZfdExmelNrTUFOZ2VDX0o1djY5SmpXQVFQTTdRZThuSUZNNm51SUZmYVViVzMwRThwZC1OZDZydDd1cjJhb3JPdG5n?oc=5\" target=\"_blank\">Iranian-backed Houthi rebels vow to block Israeli ships sailing in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOV0V3cDZ4N3FkenBjWXl0dkpKUzBNajVEOXNhdU1qbkFxRWEzQlN4SUZsMHhJcDE4VkU4d2E3WUd3bXhYOFZPa1pwcWJEMTVDU09ObmlRVlBJcnVySHRkODhkLTdnRW5KemFmVmZfdExmelNrTUFOZ2VDX0o1djY5SmpXQVFQTTdRZThuSUZNNm51SUZmYVViVzMwRThwZC1OZDZydDd1cjJhb3JPdG5n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T12:51:18.714Z"
     }
   ]
 }
