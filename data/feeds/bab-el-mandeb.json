@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-31T14:15:00.095Z",
+  "last_fetch": "2026-07-31T15:16:16.991Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -383,6 +383,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-30T03:35:20.661Z"
+    },
+    {
+      "id": "rss_819f868751870f1e",
+      "timestamp": 1785367408000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthis Are Hitting Saudi Arabia’s Energy Pipeline — and Here’s Why That Matters - Foundation for Defense of Democracies",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNakdsdDVQTVBRRUxDMjgwRnhyV2dhOUhHWml3UUdXNVBIVmVnRE43Z0VNdzVJZmdXUW51amYyME5zZ0w1MGFfNW05eF8tNVdPY1oyMXFhNnV4cWZqVXBqMmoyUGM1SzNac0thajlLUWQ0T1VhNmt1LXdweWFwZkJTYnhmcFpMSDltUWVseFF6ckF5dTN2RkRsMWZuc1JaUTlKcnJTem10Qk9QYW5RMUltMlpYMW5LRmp1TF9KOUl3?oc=5\" target=\"_blank\">The Houthis Are Hitting Saudi Arabia’s Energy Pipeline — and Here’s Why That Matters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foundation for Defense of Democracies</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNakdsdDVQTVBRRUxDMjgwRnhyV2dhOUhHWml3UUdXNVBIVmVnRE43Z0VNdzVJZmdXUW51amYyME5zZ0w1MGFfNW05eF8tNVdPY1oyMXFhNnV4cWZqVXBqMmoyUGM1SzNac0thajlLUWQ0T1VhNmt1LXdweWFwZkJTYnhmcFpMSDltUWVseFF6ckF5dTN2RkRsMWZuc1JaUTlKcnJTem10Qk9QYW5RMUltMlpYMW5LRmp1TF9KOUl3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-31T15:16:15.504Z"
     },
     {
       "id": "rss_e49560065ac64677",
@@ -11259,30 +11280,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-06-08T12:51:18.713Z"
-    },
-    {
-      "id": "rss_80bfdbeac8e774fe",
-      "timestamp": 1780916768000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Join Iran War: Yemeni Rebels Attack Israel, Impose Ban On Israeli Ships In Red Sea - News18",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdFczdjJWVURhNnUwbHZNelFyMEJpSlEwN1FGdzhxYVdIMGVIY1BoVWVYZUxNZjhHTVhjUmZ1RUd4TENvR3NfM0N5SjY2TFpfRmhxNE5QQmpYTnVERGtMN3duQUQwRWJkRE5lR2t5UUE4QWZ3ZnU0TEEwNVdMZ1JmYjZqV0p3b0d6cHMzREMxNUVzVUFBLWRZdE13QUJjNlZPNFVGQ0JiaDNrNXN0VXh0N1cxbTJhY1RCdHhYT1RLblBoSjE0WUJ2dXZXODdCNUtubmfSAdcBQVVfeXFMT3RPaTFoZVN6MGROc2paY1g2ZzFGNVpJWWNZbE1RTHdxZ1hMUW4tZTFTbWtTUjBOWVA0bGNXRHNKZVhZV25haDhsaGhhVHFPYUhPMTJEZVR3ajRUdHMzSlVFZXdSamVHVHFYNGlBZEdycFdWZE54WHhpSD",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOdFczdjJWVURhNnUwbHZNelFyMEJpSlEwN1FGdzhxYVdIMGVIY1BoVWVYZUxNZjhHTVhjUmZ1RUd4TENvR3NfM0N5SjY2TFpfRmhxNE5QQmpYTnVERGtMN3duQUQwRWJkRE5lR2t5UUE4QWZ3ZnU0TEEwNVdMZ1JmYjZqV0p3b0d6cHMzREMxNUVzVUFBLWRZdE13QUJjNlZPNFVGQ0JiaDNrNXN0VXh0N1cxbTJhY1RCdHhYT1RLblBoSjE0WUJ2dXZXODdCNUtubmfSAdcBQVVfeXFMT3RPaTFoZVN6MGROc2paY1g2ZzFGNVpJWWNZbE1RTHdxZ1hMUW4tZTFTbWtTUjBOWVA0bGNXRHNKZVhZV25haDhsaGhhVHFPYUhPMTJEZVR3ajRUdHMzSlVFZXdSamVHVHFYNGlBZEdycFdWZE54WHhpSDF4VW5hRmJOQ2JVUk83MVZRSTB4OTZHNVp3b0dMdXJIZHI0eDhNbnljOXhicDdjV0t4dHo0cDhGbVFSaE1zN3pZMnhpM0tycThRMHRjbWZNeGllemJtZ0oyd3g2alU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T14:25:16.514Z"
     }
   ]
 }
