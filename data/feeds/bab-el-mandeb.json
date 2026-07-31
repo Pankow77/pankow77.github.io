@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-31T00:32:21.608Z",
+  "last_fetch": "2026-07-31T01:34:45.266Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_279d98aa9b843265",
+      "timestamp": 1785458753000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudis Form Military Alliance to Protect Red Sea Shipping - nytimes.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5FNnhfRkxNbzUxMlF3M3lzaGhiakEzZ2tEOGF3eFVwWHRWaVJSY0JkYkJTOFVsSl9Iclh2Ui1YLTJMci1JR2V2NFZUWmVpd3ZMc2lyMmdHQ3FZS3pxWHdGeXlRMU1ZaDhCTi11UXBrZ1J5eWVyNkxn?oc=5\" target=\"_blank\">Saudis Form Military Alliance to Protect Red Sea Shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">nytimes.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5FNnhfRkxNbzUxMlF3M3lzaGhiakEzZ2tEOGF3eFVwWHRWaVJSY0JkYkJTOFVsSl9Iclh2Ui1YLTJMci1JR2V2NFZUWmVpd3ZMc2lyMmdHQ3FZS3pxWHdGeXlRMU1ZaDhCTi11UXBrZ1J5eWVyNkxn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-31T01:34:43.725Z"
+    },
     {
       "id": "rss_1db3ddc18e060f22",
       "timestamp": 1785437447000,
@@ -11263,29 +11286,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T09:06:11.893Z"
-    },
-    {
-      "id": "rss_e284388e33e58aac",
-      "timestamp": 1780904280000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthi rebels declare Red Sea navigation ban, claim responsibility for missile attack on Israel - Balkanweb.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTHBKTHFkOEpyZUl6emJUbjhkVDYxUElHMVZzN3VyV3dsaUhlLXFqWjBvaXktM2lSWnp5eEZxZ3hORUNfUDJTZi1mdC0zWVNmekdGUG1OeFhpRktKYUxOb2dlbGNzSnJRanhYOUtiMWFaTVg0Y2kteUZoRElMYm5FZmN5M2k3d3M3Z0thVW56aHBKbXpHb2tNQnI1ZTZQNGdvRm1taFI0a2dSd3hLN0Q0S0Z1RW9tbkRaeDh4WUIxUU5waHc2dnoxOWZYXzMtd3NlbDBj?oc=5\" target=\"_blank\">Houthi rebels declare Red Sea navigation ban, claim responsibility for missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Balkanweb.",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTHBKTHFkOEpyZUl6emJUbjhkVDYxUElHMVZzN3VyV3dsaUhlLXFqWjBvaXktM2lSWnp5eEZxZ3hORUNfUDJTZi1mdC0zWVNmekdGUG1OeFhpRktKYUxOb2dlbGNzSnJRanhYOUtiMWFaTVg0Y2kteUZoRElMYm5FZmN5M2k3d3M3Z0thVW56aHBKbXpHb2tNQnI1ZTZQNGdvRm1taFI0a2dSd3hLN0Q0S0Z1RW9tbkRaeDh4WUIxUU5waHc2dnoxOWZYXzMtd3NlbDBj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T09:06:11.894Z"
     }
   ]
 }
