@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-07-31T20:52:54.438Z",
+  "last_fetch": "2026-07-31T21:23:46.183Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a83ff4f9fcbb3444",
+      "timestamp": 1785531413000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea Maritime Security Task Force Commander Talks Major Jump In Escort Requests - TWZ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQNEJhSjl6VU94RlhHMFI4LTctZTA3U1ExbU4wV0o0R01GZzBERkl4Zk1wMVI2bl9ZTzJqYjZ3emtiQ25veDROTVgyOTIwN2ZtSmlnbjBDcjktVklvVVJ5VlNIb2NMR1NhN0tZNzZZUEZENHZBdU96UFJzWXUzblBaQVR6bmVhSTNsbjFHYjNKamVteGxZNGwxaUZKY051VXIydFYtckRnOXFLZkpSOTVUX2tIU2Qyejg?oc=5\" target=\"_blank\">Red Sea Maritime Security Task Force Commander Talks Major Jump In Escort Requests</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TWZ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNEJhSjl6VU94RlhHMFI4LTctZTA3U1ExbU4wV0o0R01GZzBERkl4Zk1wMVI2bl9ZTzJqYjZ3emtiQ25veDROTVgyOTIwN2ZtSmlnbjBDcjktVklvVVJ5VlNIb2NMR1NhN0tZNzZZUEZENHZBdU96UFJzWXUzblBaQVR6bmVhSTNsbjFHYjNKamVteGxZNGwxaUZKY051VXIydFYtckRnOXFLZkpSOTVUX2tIU2Qyejg?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-07-31T21:23:45.715Z"
+    },
     {
       "id": "rss_958e6a9e3496c51c",
       "timestamp": 1785498505000,
@@ -11256,30 +11277,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-06-08T12:51:18.714Z"
-    },
-    {
-      "id": "rss_498311e6abe0f76d",
-      "timestamp": 1780918689000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen's Iran-backed Houthis threaten Israeli shipping in the Red Sea - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxJeXJBNklmZEtETkg1d3ZTRkY2NUh4dlNXcy11Y0FYXzVoXzZ2anNoSHhuUTdSSUFvN2V4TzdfTlAwc0NLWEFYZFRuLWx3cUtUNEJmN1dkMVE1bHJhYXJJOW1VVEJZZFRtTTMzUUExNHlKNmtyQWlGbHAxY24xd0ptRnk5MWh5UHNNVmFaRUppckQ0WjlteHFPTHNVa0cxdll4cjdiVmE0dzVwWkhERXFONzM?oc=5\" target=\"_blank\">Yemen's Iran-backed Houthis threaten Israeli shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxJeXJBNklmZEtETkg1d3ZTRkY2NUh4dlNXcy11Y0FYXzVoXzZ2anNoSHhuUTdSSUFvN2V4TzdfTlAwc0NLWEFYZFRuLWx3cUtUNEJmN1dkMVE1bHJhYXJJOW1VVEJZZFRtTTMzUUExNHlKNmtyQWlGbHAxY24xd0ptRnk5MWh5UHNNVmFaRUppckQ0WjlteHFPTHNVa0cxdll4cjdiVmE0dzVwWkhERXFONzM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-06-08T12:51:18.713Z"
     }
   ]
 }
