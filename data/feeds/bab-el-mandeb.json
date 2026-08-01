@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T01:34:37.145Z",
+  "last_fetch": "2026-08-01T03:03:14.156Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0e14280ea5bd50c7",
+      "timestamp": 1785548444000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis say no plans to tax vessels in Red Sea despite blockade - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBSUpRYjl6bnRuaWtvVnVUdDRNWi16TVJXc0UzQTJGYzhDS28wclA3enBlT0k0UjN4dVdZNmxtMm9sOVpyalVyMGJMVE1vY0ZTUjBoMHE3THlDUmtk?oc=5\" target=\"_blank\">Yemen's Houthis say no plans to tax vessels in Red Sea despite blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBSUpRYjl6bnRuaWtvVnVUdDRNWi16TVJXc0UzQTJGYzhDS28wclA3enBlT0k0UjN4dVdZNmxtMm9sOVpyalVyMGJMVE1vY0ZTUjBoMHE3THlDUmtk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T03:03:12.816Z"
+    },
     {
       "id": "rss_c7275468d41c2c37",
       "timestamp": 1785541267000,
@@ -11255,30 +11278,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
-    },
-    {
-      "id": "rss_90d0e894b9dd94ad",
-      "timestamp": 1780925520000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis join Iran war fight, threatening Red Sea shipping amid Hormuz closure - Inbox.eu",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUWUyWnZWeGdrX1lITzZWRmEtWlpvTTh5cFYwaHRYb19MWG8wYnY4X0FYcjNOYXFUNDZ5dXpnRVJ6YXBqSFk1Zld4LTJ3NGliRjVyS2xZQUpadWxnYTBUM0tocmE2LVp3d1N1c1cyVzl1VkNZV0NXNkx0N24yWWhGcXd2UVVlVkRHWmZHN0gtaFYwRXhUeC1Qa0U5T1pDX1I0NTd6ckVIaE1rVDNmc0pNY3JLQTBWcmpkNlE?oc=5\" target=\"_blank\">Houthis join Iran war fight, threatening Red Sea shipping amid Hormuz closure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Inbox.eu</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUWUyWnZWeGdrX1lITzZWRmEtWlpvTTh5cFYwaHRYb19MWG8wYnY4X0FYcjNOYXFUNDZ5dXpnRVJ6YXBqSFk1Zld4LTJ3NGliRjVyS2xZQUpadWxnYTBUM0tocmE2LVp3d1N1c1cyVzl1VkNZV0NXNkx0N24yWWhGcXd2UVVlVkRHWmZHN0gtaFYwRXhUeC1Qa0U5T1pDX1I0NTd6ckVIaE1rVDNmc0pNY3JLQTBWcmpkNlE?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T14:25:18.086Z"
     }
   ]
 }
