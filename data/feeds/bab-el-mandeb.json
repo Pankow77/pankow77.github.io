@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T06:59:45.892Z",
+  "last_fetch": "2026-08-01T07:49:34.132Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -69,6 +69,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-31T21:23:45.715Z"
+    },
+    {
+      "id": "rss_688a9b80beb89299",
+      "timestamp": 1785523817000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia’s Red Sea Shipping Coalition: A New Security Era - discoveryalert.com.au",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPS01ER1E5bFlJUVpPYXJWLXZIYmpPOVhQS1V1Y0VkanlMMndjYlBBZUdhZWxxYzJUTmM2RTdMZ3AzcGk0Y3dCc2FxT09TSkZRZGhIaWdzcWxSdW5wYm1EbmtvSmcyR0RxRktielV0bXVpREZmVHNqSnVRXzljQ1JuQURQZUZlbkdkS2stR0N2UDRGYWZqMGNv?oc=5\" target=\"_blank\">Saudi Arabia’s Red Sea Shipping Coalition: A New Security Era</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">discoveryalert.com.au</font>",
+      "tags": [
+        "shipping",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS01ER1E5bFlJUVpPYXJWLXZIYmpPOVhQS1V1Y0VkanlMMndjYlBBZUdhZWxxYzJUTmM2RTdMZ3AzcGk0Y3dCc2FxT09TSkZRZGhIaWdzcWxSdW5wYm1EbmtvSmcyR0RxRktielV0bXVpREZmVHNqSnVRXzljQ1JuQURQZUZlbkdkS2stR0N2UDRGYWZqMGNv?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T07:49:34.126Z"
     },
     {
       "id": "rss_8d349cc2d7a9a81b",
@@ -11255,29 +11279,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T14:25:16.514Z"
-    },
-    {
-      "id": "rss_f7e5b6cc62b0f669",
-      "timestamp": 1780926098000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Israeli Counter Attacks Across Iran with Red Sea Transits at Risk - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQblRZdXVBYXNvWXhGX1BTQklyWV9pbnFqemUtemJSUjJsZ1lield5OEthOVNwYmFkWUY1OVBpamRpZi1LeDRJN20zUlhyUW9yZHl3ZUpCRjBabmdYbGtpRTZVN1ZJcGQyUkFJbE9KdGFadGdkU1lzRFdiWUFYenVzNWlUX1dwNThJMjFZSTZsa1U4TzZlM01QeEx1LXd1QUY3NUlCelB4cw?oc=5\" target=\"_blank\">Israeli Counter Attacks Across Iran with Red Sea Transits at Risk</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQblRZdXVBYXNvWXhGX1BTQklyWV9pbnFqemUtemJSUjJsZ1lield5OEthOVNwYmFkWUY1OVBpamRpZi1LeDRJN20zUlhyUW9yZHl3ZUpCRjBabmdYbGtpRTZVN1ZJcGQyUkFJbE9KdGFadGdkU1lzRFdiWUFYenVzNWlUX1dwNThJMjFZSTZsa1U4TzZlM01QeEx1LXd1QUY3NUlCelB4cw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
     }
   ]
 }
