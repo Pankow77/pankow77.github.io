@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T00:31:31.633Z",
+  "last_fetch": "2026-08-01T01:34:37.145Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -69,6 +69,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-31T22:20:57.176Z"
+    },
+    {
+      "id": "rss_51d1c41509a6168e",
+      "timestamp": 1785499277000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthis vow 'full escalation' as Saudi Arabia launches Red Sea coalition - Euronews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVWs3Ujg5U09XYkh1aFRtWDVfdERPemM5UmhpTFNDUDdZOXVvcTM2YjFqR3RPRElraFBKajYwMUNNaTU1eUF3YkhGYXBiV2hVY2lWYlVxS29TT2RhWURlZ1daZmJoUC1RN3J5WnZ1SG1zaDNFekt0Z3EybWtJZm1YbDFLeW1zR1RPQnQwQXViaE5kTzhzUUNiOGpveGVLQWQ4MEFJZzZDOUlKQQ?oc=5\" target=\"_blank\">Houthis vow 'full escalation' as Saudi Arabia launches Red Sea coalition</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVWs3Ujg5U09XYkh1aFRtWDVfdERPemM5UmhpTFNDUDdZOXVvcTM2YjFqR3RPRElraFBKajYwMUNNaTU1eUF3YkhGYXBiV2hVY2lWYlVxS29TT2RhWURlZ1daZmJoUC1RN3J5WnZ1SG1zaDNFekt0Z3EybWtJZm1YbDFLeW1zR1RPQnQwQXViaE5kTzhzUUNiOGpveGVLQWQ4MEFJZzZDOUlKQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T01:34:35.564Z"
     },
     {
       "id": "rss_958e6a9e3496c51c",
@@ -11256,29 +11279,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T14:25:18.086Z"
-    },
-    {
-      "id": "rss_c11900eae5c6eb51",
-      "timestamp": 1780923215000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Ansar Allah Movement Claims Missile Attack On Israel - MEMRI | Middle East Media Research Institute",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ29pZmM0UGxCZ2NDY0VRZDJsa2tEMWhHMEVjREt4RnpHa1J2X0JmbFlWM21Kd3lsT3BReHBhSUIxc0s1dzN4UEliS2hBenZQenJZSXpVQVMxSm0yWVpZWHpDaDZxZVp1M1kxQWZlcEhWa3VVVE5OZ2ZKenFqWV9Eazh4a3ZNRjFNa2JwZF8tMTlpak1rSGs1ZS0yc1MzN21PYTdxdUJYMFltcVRIclN6bDhFN3B5RTZ1UGZ3?oc=5\" target=\"_blank\">Ansar Allah Movement Claims Missile Attack On Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MEMRI | Middle East Media Research Institute</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ29pZmM0UGxCZ2NDY0VRZDJsa2tEMWhHMEVjREt4RnpHa1J2X0JmbFlWM21Kd3lsT3BReHBhSUIxc0s1dzN4UEliS2hBenZQenJZSXpVQVMxSm0yWVpZWHpDaDZxZVp1M1kxQWZlcEhWa3VVVE5OZ2ZKenFqWV9Eazh4a3ZNRjFNa2JwZF8tMTlpak1rSGs1ZS0yc1MzN21PYTdxdUJYMFltcVRIclN6bDhFN3B5RTZ1UGZ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T17:07:36.153Z"
     }
   ]
 }
