@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T16:20:36.642Z",
+  "last_fetch": "2026-08-01T16:47:28.701Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-01T15:48:13.269Z"
+    },
+    {
+      "id": "rss_6e3cb5903189a1c1",
+      "timestamp": 1785596637000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Italian Frigate Escorts Merchant Vessel Safely Through Red Sea - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOTTFjY3F3ZWdzNC1OMEVyaVduMnVDREg0Qk5XYk1laFZlS3JUZC02Ym1Mcm1EMHFkTDdKR0cxRENJeERtbkdkNUNvYmNLVzV5MC1SNEhJZDgwaEdQZFN6alVBVGI3amxZeGZXTEFTMXNCRE5aSEx6eEZqcThMOVFvS0FWa29MbEh5Zkp6Uw?oc=5\" target=\"_blank\">Italian Frigate Escorts Merchant Vessel Safely Through Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTTFjY3F3ZWdzNC1OMEVyaVduMnVDREg0Qk5XYk1laFZlS3JUZC02Ym1Mcm1EMHFkTDdKR0cxRENJeERtbkdkNUNvYmNLVzV5MC1SNEhJZDgwaEdQZFN6alVBVGI3amxZeGZXTEFTMXNCRE5aSEx6eEZqcThMOVFvS0FWa29MbEh5Zkp6Uw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T16:47:28.346Z"
     },
     {
       "id": "rss_458732b733b83495",
@@ -11248,30 +11271,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T17:07:36.154Z"
-    },
-    {
-      "id": "rss_638fa1f79510bd39",
-      "timestamp": 1780935073000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Why the Iran-aligned Houthis Threatening Red Sea Shipping Could Mean More for the Oil Market This Time - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeEZmQ1lwRDhscjhyUTY3WmJUTXBnNzFEMVd3NXlzd2RKakg1Mk1XeGhGaGFGcENlNHNSUFpCNE9jZ3oyWW9vbXJ1S2FFWUI1Nlp6WUlzZzJCUzcwcERaMlcxOHNZR3VFTkc3X0pvdHA5Nkx0QVh6dXg3ck5vbmprWTUtd2cteXNqTXRvTUlTcExaMWpfNy12dXhtaFByMVlHbGN1N2V4QkJSREJLUlBGTEZjTWl3bklZQmhRcV9uWUV4QQ?oc=5\" target=\"_blank\">Why the Iran-aligned Houthis Threatening Red Sea Shipping Could Mean More for the Oil Market This Time</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQeEZmQ1lwRDhscjhyUTY3WmJUTXBnNzFEMVd3NXlzd2RKakg1Mk1XeGhGaGFGcENlNHNSUFpCNE9jZ3oyWW9vbXJ1S2FFWUI1Nlp6WUlzZzJCUzcwcERaMlcxOHNZR3VFTkc3X0pvdHA5Nkx0QVh6dXg3ck5vbmprWTUtd2cteXNqTXRvTUlTcExaMWpfNy12dXhtaFByMVlHbGN1N2V4QkJSREJLUlBGTEZjTWl3bklZQmhRcV9uWUV4QQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T17:07:37.463Z"
     }
   ]
 }
