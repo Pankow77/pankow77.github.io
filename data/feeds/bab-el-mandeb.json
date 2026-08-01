@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T10:32:25.816Z",
+  "last_fetch": "2026-08-01T11:27:56.510Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d8935b887d12c08a",
+      "timestamp": 1785578570000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Deny Plans To Impose Fees On Ships Transiting Bab el-Mandeb Strait - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOWWYzQjVVN2ZDb2daUGJGc1VFdExpeEtHM0lmek95dDFNTHhLb2thSGdkWUhMX1MzTXd1TmVaU2ZXQ25OV0lDdG9WYk1lUi1nbURoRkZsQ3I3RUktaWJmOUw0clI3dG1YQ3BlZkhxYm9YMmN1ZDY4STkwSGlTTGF3d1o4THNXaENtYTd0NkV6Tk92ZFN5YkN6SlpHaTdsbm5TMmNIamxyT1N1T0FuWW9sN1hB?oc=5\" target=\"_blank\">Yemen’s Houthis Deny Plans To Impose Fees On Ships Transiting Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWWYzQjVVN2ZDb2daUGJGc1VFdExpeEtHM0lmek95dDFNTHhLb2thSGdkWUhMX1MzTXd1TmVaU2ZXQ25OV0lDdG9WYk1lUi1nbURoRkZsQ3I3RUktaWJmOUw0clI3dG1YQ3BlZkhxYm9YMmN1ZDY4STkwSGlTTGF3d1o4THNXaENtYTd0NkV6Tk92ZFN5YkN6SlpHaTdsbm5TMmNIamxyT1N1T0FuWW9sN1hB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T11:27:55.343Z"
+    },
     {
       "id": "rss_598904f89bbc80ad",
       "timestamp": 1785568243000,
@@ -11255,30 +11278,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T17:07:37.463Z"
-    },
-    {
-      "id": "rss_70acffe32c7eb44a",
-      "timestamp": 1780927786000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Explainer-Why the Iran-aligned Houthis threatening Red Sea shipping could mean more for the oil market this time - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPcVRLc0RuUElhVkpxbnp4R2F4cnBVVU9CM3VQNXRmTnhaVDhpNW5pSko1WlZycERBTGxZWXl0V005dm1YNHFuX2s4dGxwUHZvT19menZva2tFbWRuVWFHWVV0X1RYeGt1YlBDYVEyTjdQT3kxQ0xvTG9RUXJBV3JIaWlRbHJ4U1Q3WlJTR2JsZDA1OHI2dnhxajNndVNuZw?oc=5\" target=\"_blank\">Explainer-Why the Iran-aligned Houthis threatening Red Sea shipping could mean more for the oil market this time</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcVRLc0RuUElhVkpxbnp4R2F4cnBVVU9CM3VQNXRmTnhaVDhpNW5pSko1WlZycERBTGxZWXl0V005dm1YNHFuX2s4dGxwUHZvT19menZva2tFbWRuVWFHWVV0X1RYeGt1YlBDYVEyTjdQT3kxQ0xvTG9RUXJBV3JIaWlRbHJ4U1Q3WlJTR2JsZDA1OHI2dnhxajNndVNuZw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
     }
   ]
 }
