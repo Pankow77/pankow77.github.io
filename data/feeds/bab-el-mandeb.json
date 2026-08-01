@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T13:30:28.760Z",
+  "last_fetch": "2026-08-01T15:23:05.320Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_458732b733b83495",
+      "timestamp": 1785592841000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "War nightmare continues as conflicts in Ukraine and Middle East threaten to coalesce - Counterfire",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNTWxBUWVBVXRZYzhHS182UWhuY0l6bVdKd1FNNFRuZXJISVQ0dGlWUDc1RmhWbVFNcDBKOUVoN2RTS09zeWEwTlYwakNWbHJ5XzZYUFpIR3lvTXBHZ3p1ZDRSNHpocjBfaGZORnlhQXdMQXdNR0NxUzdnS3dIQXYyWEpKdkNjWnhyb3ZwX2xtb3lDeTV2b1hjWmpmdEE2a2o5UmJoaWJKbk1POEhwNWo5RGhsV3lhUUc3dUJINTdB?oc=5\" target=\"_blank\">War nightmare continues as conflicts in Ukraine and Middle East threaten to coalesce</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Counterfire</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTWxBUWVBVXRZYzhHS182UWhuY0l6bVdKd1FNNFRuZXJISVQ0dGlWUDc1RmhWbVFNcDBKOUVoN2RTS09zeWEwTlYwakNWbHJ5XzZYUFpIR3lvTXBHZ3p1ZDRSNHpocjBfaGZORnlhQXdMQXdNR0NxUzdnS3dIQXYyWEpKdkNjWnhyb3ZwX2xtb3lDeTV2b1hjWmpmdEE2a2o5UmJoaWJKbk1POEhwNWo5RGhsV3lhUUc3dUJINTdB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T15:23:03.865Z"
+    },
     {
       "id": "rss_e98585e3ac70c64e",
       "timestamp": 1785584345000,
@@ -11254,29 +11275,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.524Z"
-    },
-    {
-      "id": "rss_16dd7e13be11b09b",
-      "timestamp": 1780928743000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Latest: Israel and Iran trade fire in most serious confrontation since April truce - NewsNation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOVnIwRnhHY3VaZDBHY2tUQm5OOV9xTEpzTnI4Z1RLY21rZy1hcTZGYWpvWHVPb0tmRGx1VXJhaUpFZWliZk0yVUFqVWJqLVluSWdaM1VFd1FtM0Y2eFlpdEFnLXRpNWctNUR4OFpIc0RCbUFnb1Fwam9yQWl2YUQ0eGhUM2R2T3hoSEFmaDVRUE9FOWxfbFJtY1BlcWkzbTJnUS1tbWQ0d3ZWc3FNY1NCbEhLV0xpRGVmUE5WSTZuVGhSd0ZpR3RkQlJJc1hFUTjSAdQBQVVfeXFMT3k4cU43bmZTcF8zVFB0VTQwS1Q1dGhoMXJxZ0QzbkVIa0R1aEEtQzhlVld4ZkNhWlVGUmdxaWdRTEhOZlF2cGctZ3RNN09jUVBvOXRqbXliUk80NFpmLU9QS1dJanFtcjVvd1pUcWVTNFZuU0FSOUE5ZFVFdm",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOVnIwRnhHY3VaZDBHY2tUQm5OOV9xTEpzTnI4Z1RLY21rZy1hcTZGYWpvWHVPb0tmRGx1VXJhaUpFZWliZk0yVUFqVWJqLVluSWdaM1VFd1FtM0Y2eFlpdEFnLXRpNWctNUR4OFpIc0RCbUFnb1Fwam9yQWl2YUQ0eGhUM2R2T3hoSEFmaDVRUE9FOWxfbFJtY1BlcWkzbTJnUS1tbWQ0d3ZWc3FNY1NCbEhLV0xpRGVmUE5WSTZuVGhSd0ZpR3RkQlJJc1hFUTjSAdQBQVVfeXFMT3k4cU43bmZTcF8zVFB0VTQwS1Q1dGhoMXJxZ0QzbkVIa0R1aEEtQzhlVld4ZkNhWlVGUmdxaWdRTEhOZlF2cGctZ3RNN09jUVBvOXRqbXliUk80NFpmLU9QS1dJanFtcjVvd1pUcWVTNFZuU0FSOUE5ZFVFdmtQRWFFcmJoalpIVUNudDZvOFlHMFJ3eVVlSGNNQzBXdXhidGxPS0dpQTYzMkFocDdHSHFIR0tlbmxXdXdhZXR0WW1BcFBMdVFkYXZIcm52MkRWLXlIMks?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T18:17:52.742Z"
     }
   ]
 }
