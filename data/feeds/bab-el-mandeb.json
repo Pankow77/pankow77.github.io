@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-01T22:46:52.405Z",
+  "last_fetch": "2026-08-01T23:19:04.713Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a9f9a00135ac67ea",
+      "timestamp": 1785618348000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia forms Red Sea security bloc with five African countries amid rising maritime tensions - Business Insider Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMHFmNEowaUN0ejRaT1d5NEJvYXo2eXI4VDVIN3ZWdUprX1lCMlFJbW9rQ0xub21ucW5NdXZNd2RjMWFScmt2VHVDVGUxU3NhQVhPem1wZTI4TzA1OEV3ckdDa0d0bGh6ZlI2WXNkRGlqakxIV3h6SWVGVzlQazd1Y3M4SDZqNjRnOW1WN1VtTFk5bXJQbE93UmROUVRIeTl5eXk5U1M4aXhBa1VxTjVEZUR4UVNUeGM5MTRkN1I2MHlOQVF6YnptNHZvUFVWaWM2bkpz?oc=5\" target=\"_blank\">Saudi Arabia forms Red Sea security bloc with five African countries amid rising maritime tensions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Busines",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOMHFmNEowaUN0ejRaT1d5NEJvYXo2eXI4VDVIN3ZWdUprX1lCMlFJbW9rQ0xub21ucW5NdXZNd2RjMWFScmt2VHVDVGUxU3NhQVhPem1wZTI4TzA1OEV3ckdDa0d0bGh6ZlI2WXNkRGlqakxIV3h6SWVGVzlQazd1Y3M4SDZqNjRnOW1WN1VtTFk5bXJQbE93UmROUVRIeTl5eXk5U1M4aXhBa1VxTjVEZUR4UVNUeGM5MTRkN1I2MHlOQVF6YnptNHZvUFVWaWM2bkpz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-01T23:19:03.242Z"
+    },
     {
       "id": "rss_fb3c6870356fcdfa",
       "timestamp": 1785598550000,
@@ -11248,29 +11269,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T10:26:23.996Z"
-    },
-    {
-      "id": "rss_b199c6b783047737",
-      "timestamp": 1780936539000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis have targeted shipping in the Red Sea: Why Bab el-Mandeb could become the next Hormuz - Moneycontrol.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxQSEZobEJwYTVMdjZNSlRRZ1kweng4aWZNWU43eGp4ZWpUYXUxUVJIWVNPRGpBTjNOQnpialltUnJ3cjdlY3ZjWkhqSVIyQ1FQNDFkQzlqdVZVQ3o3bE5VNG5ja0RMQjBKS2RpbWdQVE9mQUJfZ2ZCZnRDc0RtZ0tpOVNfS3JRN2ZSVzZOWDZXR3hYS0Vma2s5MW0tRFhudDVDTXRVR3B5NUZqb3JCcFRGeExvOER4SjVza2E4XzlkQ0FkUlpoTEpGMm1xWUNxREYzWUxBLWcyR2hCNjJwaTk0b29yd9IB6AFBVV95cUxOTmIycFJURG9RSzNIMEs4SzhTbTVxZ1JqRzZjNEFKYlF1TERVMExjUXAwdnoxcWVPMmRTaG9CU19GR1lrTlFkdXlMMkNjQkJZay15OFZhS0FEa3o5YTlkZEx2dXVMZ3FJVE",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQSEZobEJwYTVMdjZNSlRRZ1kweng4aWZNWU43eGp4ZWpUYXUxUVJIWVNPRGpBTjNOQnpialltUnJ3cjdlY3ZjWkhqSVIyQ1FQNDFkQzlqdVZVQ3o3bE5VNG5ja0RMQjBKS2RpbWdQVE9mQUJfZ2ZCZnRDc0RtZ0tpOVNfS3JRN2ZSVzZOWDZXR3hYS0Vma2s5MW0tRFhudDVDTXRVR3B5NUZqb3JCcFRGeExvOER4SjVza2E4XzlkQ0FkUlpoTEpGMm1xWUNxREYzWUxBLWcyR2hCNjJwaTk0b29yd9IB6AFBVV95cUxOTmIycFJURG9RSzNIMEs4SzhTbTVxZ1JqRzZjNEFKYlF1TERVMExjUXAwdnoxcWVPMmRTaG9CU19GR1lrTlFkdXlMMkNjQkJZay15OFZhS0FEa3o5YTlkZEx2dXVMZ3FJVENTNUxJOTB4RTVhSmxHTkkzVms2LVF6VW5JX0dPMXBONTExQ0ZFUGpvak9zX0xnTGtmTlJVU01lQ1VaeFVhN0xsWThCT2ZYNWFBdTFsaUJBNnBJdENWSFFXSGtHY195eTExbmhpdE5fM2txeTBPdDlLWVh3Q1NfWTVuSm1GWE8w?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T17:07:36.154Z"
     }
   ]
 }
