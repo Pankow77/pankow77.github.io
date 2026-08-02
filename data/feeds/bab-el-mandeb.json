@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-02T03:03:34.823Z",
+  "last_fetch": "2026-08-02T04:38:05.638Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b1b26711cb391006",
+      "timestamp": 1785638640000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis push back on report of planned Red Sea shipping fees - The Hill",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOTVQdGNHWjhVYjFWWWJoeDRKU1RBQktiYlVOWlBBVEl6NkZpWTVyOXpOZDFSVkpHekRjcXBzQUhQalNpWlRyVFRmQUMxX0dhcEpzMDdqUHBuejJ6LTVVd2x3MWlaanE4RFVqXzQxdEFLbkNNanFSOGU2MXdXai1YNHRWa2xCVmJsNXUw0gGQAUFVX3lxTE9Ta1dPTE14Z1JvMU84Y3J3cmpKN3hzSFR6enRxeHNFSlptUEZxQ2Q1LUliNTV3Yi1JazI5VnZWWlVUb3ZaVVZ0YWd0amlNVjZTX0FWLWtrcy1QZmZQVFRXSGFLYU1yWEZqTFJsUW55dmdVUTBrcjFnZHk2MkdwRDg4MjA3bGVxS2lBSWFHWksycg?oc=5\" target=\"_blank\">Houthis push back on report of planned Re",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNOTVQdGNHWjhVYjFWWWJoeDRKU1RBQktiYlVOWlBBVEl6NkZpWTVyOXpOZDFSVkpHekRjcXBzQUhQalNpWlRyVFRmQUMxX0dhcEpzMDdqUHBuejJ6LTVVd2x3MWlaanE4RFVqXzQxdEFLbkNNanFSOGU2MXdXai1YNHRWa2xCVmJsNXUw0gGQAUFVX3lxTE9Ta1dPTE14Z1JvMU84Y3J3cmpKN3hzSFR6enRxeHNFSlptUEZxQ2Q1LUliNTV3Yi1JazI5VnZWWlVUb3ZaVVZ0YWd0amlNVjZTX0FWLWtrcy1QZmZQVFRXSGFLYU1yWEZqTFJsUW55dmdVUTBrcjFnZHk2MkdwRDg4MjA3bGVxS2lBSWFHWksycg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-02T04:38:04.275Z"
+    },
     {
       "id": "rss_a9f9a00135ac67ea",
       "timestamp": 1785618348000,
@@ -11246,29 +11269,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T13:27:47.313Z"
-    },
-    {
-      "id": "rss_e1720364e2647f08",
-      "timestamp": 1780937427000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis threaten Israeli shipping in the Red Sea, add to regional concerns - The Arab Weekly",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNQVVMY25GYk5OVXl3X2Fhb3Jxd21WdHlmUUp4MFVtNEJKR0NVTlNsdXEwakFRbW0zOFFoTVVaZmFHTDFMbDFhN0xRdlJnRVdEZ1pyNmlSaXJoM2NJZThwS2Z4ejRWbFJ5WG1nbDNwanp4cDR4Y0pCQ2ZDellpeVNaNmNuRVRCdXI2amw0cUU5bEJzX2c?oc=5\" target=\"_blank\">Houthis threaten Israeli shipping in the Red Sea, add to regional concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNQVVMY25GYk5OVXl3X2Fhb3Jxd21WdHlmUUp4MFVtNEJKR0NVTlNsdXEwakFRbW0zOFFoTVVaZmFHTDFMbDFhN0xRdlJnRVdEZ1pyNmlSaXJoM2NJZThwS2Z4ejRWbFJ5WG1nbDNwanp4cDR4Y0pCQ2ZDellpeVNaNmNuRVRCdXI2amw0cUU5bEJzX2c?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-10T10:26:23.996Z"
     }
   ]
 }
