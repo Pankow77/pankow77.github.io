@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-02T12:48:02.205Z",
+  "last_fetch": "2026-08-02T13:30:30.949Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-01T23:19:03.242Z"
+    },
+    {
+      "id": "rss_703aff5c3c1f05e0",
+      "timestamp": 1785615679000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Deny Plans To Impose Fees On Ships Sailing Through Red Sea - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPc3JyWDZFZW5WU0E5MVYzR2Z1TF9FVWNhY1lfTGt1RWFLLUpaenN2amNwa29FLXh3N081MUxpYmdXNzZaZzM4dkRkdC1BbENJdU9LX3VtVmx5cU5UQ2lRbURyNU9jYXU3MVZTY2tFcmQ0RHZuMVYta2t1bGFhOTMzR3UwUG9rMzdXRWhKUC1qb05KRlVlR2dCcW5zNA?oc=5\" target=\"_blank\">Yemen’s Houthis Deny Plans To Impose Fees On Ships Sailing Through Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPc3JyWDZFZW5WU0E5MVYzR2Z1TF9FVWNhY1lfTGt1RWFLLUpaenN2amNwa29FLXh3N081MUxpYmdXNzZaZzM4dkRkdC1BbENJdU9LX3VtVmx5cU5UQ2lRbURyNU9jYXU3MVZTY2tFcmQ0RHZuMVYta2t1bGFhOTMzR3UwUG9rMzdXRWhKUC1qb05KRlVlR2dCcW5zNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-02T13:30:29.658Z"
     },
     {
       "id": "rss_fb3c6870356fcdfa",
@@ -11245,30 +11268,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T22:04:44.163Z"
-    },
-    {
-      "id": "rss_f04e1681ff65ce6a",
-      "timestamp": 1780939443000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi rebels claim missile attack on Israel and say Israel-affiliated vessels are a target again in Red Sea - AOL.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPVVg2WUxpSktYUEdjVVRCcjUxbkQtTXhIUnExR0RYZ3U4RGdDa2JzN1QtTEhUM09GaHV2TGNXTWhuRTF2WWtLcEJFaVJfeFRXeVZ4ZXRqSnNpOUVkZ2xuRTNfUDJ2RmNTVmVGNEhTN2VSdWVLcUpWRmtBYXZWQnYtYnhGcDU?oc=5\" target=\"_blank\">Yemen's Houthi rebels claim missile attack on Israel and say Israel-affiliated vessels are a target again in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AOL.com</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVVg2WUxpSktYUEdjVVRCcjUxbkQtTXhIUnExR0RYZ3U4RGdDa2JzN1QtTEhUM09GaHV2TGNXTWhuRTF2WWtLcEJFaVJfeFRXeVZ4ZXRqSnNpOUVkZ2xuRTNfUDJ2RmNTVmVGNEhTN2VSdWVLcUpWRmtBYXZWQnYtYnhGcDU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T13:27:47.313Z"
     }
   ]
 }
