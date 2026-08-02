@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-02T16:47:19.400Z",
+  "last_fetch": "2026-08-02T17:21:40.303Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -409,6 +409,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-31T13:06:48.581Z"
+    },
+    {
+      "id": "rss_e42a6e1426ab8c85",
+      "timestamp": 1785496876000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tensions rise between Yemen's Houthis and Saudi Arabia - dw.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRXh2dHFaalZZS1h3X0lpUi1pcjBjd2RCOE1XVWdYd1pvU1p5Ti1hM1FEbU5tY0txQ3ozUVFZOENVXzdNNWoyczMtOTVvR3lfdDRDaTNpb2xtcHpTNW5OT3dnZ0FhemozbXFHWF9HWlNnbTVzNW5ZcEVOODRCWVRsVUdJUWhQbENFVVBnVzdtTW1ZSzFyZ3c2eDFfdU5mZVBLSjFDV0pRSHlPNENsUTBLRVpYMDhZeFJp0gG4AUFVX3lxTE9FQTRnb1Y2V0dpS3dtSkp1YTB3XzhnbzJBOHVjVHowd3Nza2RXT2NQSkRWZW55ejBSdWluMC10OFNSVEkyRlo0WkRpR1JDMzFGOUc4eUJiWjlyZXFwcWRrYlQ4R0JVZHVjNDFMQ1NXUmYxaE1rV2xHUkJBMkROZFdBYk1RdElpOFYyQ3FZN0kyZ0RPQW",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRXh2dHFaalZZS1h3X0lpUi1pcjBjd2RCOE1XVWdYd1pvU1p5Ti1hM1FEbU5tY0txQ3ozUVFZOENVXzdNNWoyczMtOTVvR3lfdDRDaTNpb2xtcHpTNW5OT3dnZ0FhemozbXFHWF9HWlNnbTVzNW5ZcEVOODRCWVRsVUdJUWhQbENFVVBnVzdtTW1ZSzFyZ3c2eDFfdU5mZVBLSjFDV0pRSHlPNENsUTBLRVpYMDhZeFJp0gG4AUFVX3lxTE9FQTRnb1Y2V0dpS3dtSkp1YTB3XzhnbzJBOHVjVHowd3Nza2RXT2NQSkRWZW55ejBSdWluMC10OFNSVEkyRlo0WkRpR1JDMzFGOUc4eUJiWjlyZXFwcWRrYlQ4R0JVZHVjNDFMQ1NXUmYxaE1rV2xHUkJBMkROZFdBYk1RdElpOFYyQ3FZN0kyZ0RPQWY5TjNlUDkyQU9MWE9FcEJUcE1UMENSMERLcEhSdGl0SmNxakQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-02T17:21:38.938Z"
     },
     {
       "id": "rss_781f89153999d56b",
@@ -11244,30 +11265,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T20:16:05.525Z"
-    },
-    {
-      "id": "rss_ead132b021fee35e",
-      "timestamp": 1780946150000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi missile attack Red Sea shipping ban - Daily Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5XdExxZWF6c0dfNFRReUR6aks1NENmbFYwbHFJWkhGZUF4czhuODdtcVI3RkFnZng4Y0wtdU9DbndRdldhZW5nRDJIVFpVU1NjeDNOT0p2cGhUTHV5X2hHZEs4UnZROTh1bW5QNm1PR0ZFVlRSeHRhQ2wwOA?oc=5\" target=\"_blank\">Houthi missile attack Red Sea shipping ban</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Tribune</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5XdExxZWF6c0dfNFRReUR6aks1NENmbFYwbHFJWkhGZUF4czhuODdtcVI3RkFnZng4Y0wtdU9DbndRdldhZW5nRDJIVFpVU1NjeDNOT0p2cGhUTHV5X2hHZEs4UnZROTh1bW5QNm1PR0ZFVlRSeHRhQ2wwOA?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T22:04:44.163Z"
     }
   ]
 }
