@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T01:35:07.294Z",
+  "last_fetch": "2026-08-03T03:04:05.680Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a418c53e02b87ad3",
+      "timestamp": 1785722365000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni forces hold key Taiz front after repelling Houthi attack - middle-east-online.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxORlQ0QWJoZHBYYTEwb2dXOVoySE9jWktpMXUzNWl1OHphTS1mLThsa1lyeDkwLTdxQU1ydzhOR240b21BczZ6Qlg1V2EtVFdsRkN3RFFXR2xxRldIbTZsYy1ndWxXazNINklBYk1OcWRHejQxVXpLOVI3RVd0WmZkeUo3M0JCVWpJdGdLbS0tQXlUN3k4UElKaFN4QnFKZw?oc=5\" target=\"_blank\">Yemeni forces hold key Taiz front after repelling Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middle-east-online.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORlQ0QWJoZHBYYTEwb2dXOVoySE9jWktpMXUzNWl1OHphTS1mLThsa1lyeDkwLTdxQU1ydzhOR240b21BczZ6Qlg1V2EtVFdsRkN3RFFXR2xxRldIbTZsYy1ndWxXazNINklBYk1OcWRHejQxVXpLOVI3RVd0WmZkeUo3M0JCVWpJdGdLbS0tQXlUN3k4UElKaFN4QnFKZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T03:04:04.110Z"
+    },
     {
       "id": "rss_b1b26711cb391006",
       "timestamp": 1785638640000,
@@ -11242,29 +11263,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T00:41:04.894Z"
-    },
-    {
-      "id": "rss_a37f0264f6073586",
-      "timestamp": 1780949023000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Latest Houthi Shipping Threat Is Blunted by Thin Red Sea Traffic - Bloomberg",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQakJaUkM0aTVJMEdla0V3aXhycXZVXzU3Z2lBVHRablM2LUl1ekEyRDZteWdObzlhTHVfM2U0VUtXYlRDUTM4MHpZYzkyWVpWTmVvcUI5cGF2dWJKcW13OGo4OUEtZ0xxOTJOQ0VxMXJmUUZkSFZudU1CLTVhSHExRGEwUWRCNVROQ0plSmNuMVZCcmhJUlJ0ZzRYTF9GRmwwSTVSeV9rNHcyUmVjY0s5NXBDT18tcGVSRnc?oc=5\" target=\"_blank\">Latest Houthi Shipping Threat Is Blunted by Thin Red Sea Traffic</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQakJaUkM0aTVJMEdla0V3aXhycXZVXzU3Z2lBVHRablM2LUl1ekEyRDZteWdObzlhTHVfM2U0VUtXYlRDUTM4MHpZYzkyWVpWTmVvcUI5cGF2dWJKcW13OGo4OUEtZ0xxOTJOQ0VxMXJmUUZkSFZudU1CLTVhSHExRGEwUWRCNVROQ0plSmNuMVZCcmhJUlJ0ZzRYTF9GRmwwSTVSeV9rNHcyUmVjY0s5NXBDT18tcGVSRnc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T20:16:05.525Z"
     }
   ]
 }
