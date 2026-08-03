@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T20:48:21.914Z",
+  "last_fetch": "2026-08-03T21:24:41.293Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_25708d8ae45c2af4",
+      "timestamp": 1785790601000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPY2l2cHlta0NEYnRmX1RKdFZsdUNWVHRPRll1Z0FlUlU1YVdrVk93bDVpWGFmWUhsd0dPUnd0cjhUTWRZY1dZOW4tZDlvcDc5eTcxS2xDSzRhY3EwVDRuejJGd19VSFlLNzV2SExnQkw0cUoya3pLNVBBZzh6cF82bllVY3Y2Znk5dFQ5SG4tb01mcWYyS1R3bkZ3?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPY2l2cHlta0NEYnRmX1RKdFZsdUNWVHRPRll1Z0FlUlU1YVdrVk93bDVpWGFmWUhsd0dPUnd0cjhUTWRZY1dZOW4tZDlvcDc5eTcxS2xDSzRhY3EwVDRuejJGd19VSFlLNzV2SExnQkw0cUoya3pLNVBBZzh6cF82bllVY3Y2Znk5dFQ5SG4tb01mcWYyS1R3bkZ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T21:24:40.037Z"
+    },
     {
       "id": "rss_12500a96b43e1a9b",
       "timestamp": 1785774445000,
@@ -11229,27 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T10:26:22.543Z"
-    },
-    {
-      "id": "rss_0cb25f97a5bbdb70",
-      "timestamp": 1781041588000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Citizen Critically Injured in Houthi Attack in Rada' - وكالة خبر للأنباء",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE1QNE9aRUxvYmM2U0hWZ05pU3Z3eFNHcGRZV3VDNTZhb3d6aFRBUV95V09JSDBnZHluaEFFQ3JEZzdONFJLS0xxQmRYVjlPdndOUXBkWUFGZw?oc=5\" target=\"_blank\">Citizen Critically Injured in Houthi Attack in Rada'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1QNE9aRUxvYmM2U0hWZ05pU3Z3eFNHcGRZV3VDNTZhb3d6aFRBUV95V09JSDBnZHluaEFFQ3JEZzdONFJLS0xxQmRYVjlPdndOUXBkWUFGZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T22:32:22.983Z"
     }
   ]
 }
