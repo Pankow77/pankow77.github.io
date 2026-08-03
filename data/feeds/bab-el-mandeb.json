@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T07:40:16.053Z",
+  "last_fetch": "2026-08-03T09:06:52.523Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9a4988b7b7229968",
+      "timestamp": 1785745836000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi oil port sees busiest day since Houthi blockade: Report - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQTUzUmVkaW56N212QVhEcjdPWGJYVmt4bWQwTHk1Y29uT3FFRkVKLXMzX2dTZXJnNmpHUTlrUE1tOWhpQjVwdElkbWY4NDhQTFQ5d0FaU25TdDBJc05HU0tCUndsV0I5dUJlU0JBMjZValZ3RFdUWGxGNTRKcWduclVGcjhoOXFycUJrOEwxbXdqbDV1dWtNZGpTZjdFbFV5WldBOG16bXg?oc=5\" target=\"_blank\">Saudi oil port sees busiest day since Houthi blockade: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQTUzUmVkaW56N212QVhEcjdPWGJYVmt4bWQwTHk1Y29uT3FFRkVKLXMzX2dTZXJnNmpHUTlrUE1tOWhpQjVwdElkbWY4NDhQTFQ5d0FaU25TdDBJc05HU0tCUndsV0I5dUJlU0JBMjZValZ3RFdUWGxGNTRKcWduclVGcjhoOXFycUJrOEwxbXdqbDV1dWtNZGpTZjdFbFV5WldBOG16bXg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T09:06:51.091Z"
+    },
     {
       "id": "rss_db29e0d7be85c63f",
       "timestamp": 1785737069000,
@@ -11240,27 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-13T20:55:47.931Z"
-    },
-    {
-      "id": "rss_0fad80213620d482",
-      "timestamp": 1780959600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Risks to Red Sea Oil Exports Could Roil Oil Market Further - Crude Oil Prices Today | OilPrice.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPQVhFNS1vYW8tQjhteW1iNmR1QURfYU5wd2ZJWHBZeEZ6cVI2YnpXeTdzd25nSEZzbEdyUmFTakM2clUxVFc2Tjkwd3k5OGNOb0ZoaFA3T3ZveVQ1ZlZDTVFqblozb0JLUjFPVElBUVF3LUs2eTNEYm1xQW5KSV9KaTlHdUQtR2hqbW42RXcyNUtnaUdhODhRVnBsb2ZFMjV2S0Vr0gGoAUFVX3lxTE0wZ0VXTFZUX0gxZWdKVXRIdTVsUnAyb2EzazRnTzZrU1hWbUo4WFFMX3ZrQ2ZEMHFWZWVISVRHY3FWWTh2aHNlYXlNeDRxcDFWSzBDY0ZqUlVlWFFiNlF6ZGh5VmpBQzZvM0d5R3dCejViY1ExcllXTFlBNVo3ekcwTGI0R19TTzhnRHVfNGNvRUNMVmdyZ1JQVUlfQ2RYS3luNWhSQ1hxeQ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQVhFNS1vYW8tQjhteW1iNmR1QURfYU5wd2ZJWHBZeEZ6cVI2YnpXeTdzd25nSEZzbEdyUmFTakM2clUxVFc2Tjkwd3k5OGNOb0ZoaFA3T3ZveVQ1ZlZDTVFqblozb0JLUjFPVElBUVF3LUs2eTNEYm1xQW5KSV9KaTlHdUQtR2hqbW42RXcyNUtnaUdhODhRVnBsb2ZFMjV2S0Vr0gGoAUFVX3lxTE0wZ0VXTFZUX0gxZWdKVXRIdTVsUnAyb2EzazRnTzZrU1hWbUo4WFFMX3ZrQ2ZEMHFWZWVISVRHY3FWWTh2aHNlYXlNeDRxcDFWSzBDY0ZqUlVlWFFiNlF6ZGh5VmpBQzZvM0d5R3dCejViY1ExcllXTFlBNVo3ekcwTGI0R19TTzhnRHVfNGNvRUNMVmdyZ1JQVUlfQ2RYS3luNWhSQ1hxeQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T19:41:41.662Z"
     }
   ]
 }
