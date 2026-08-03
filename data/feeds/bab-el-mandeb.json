@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T06:03:12.431Z",
+  "last_fetch": "2026-08-03T07:40:16.053Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_db29e0d7be85c63f",
+      "timestamp": 1785737069000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni army repels Houthi attack in Taiz, kills 5 fighters - Yeni Safak English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTRveVRJbEhEZ2Q2YlFuaTM2UEp3LThTZ0ZOd0RUNkpjV2NRUmVHU0Z6MUJFWThaRzhqcGc1THRZMmo3a3VwdWlEa2s0d3d1RlhsbjN1ZS1TTHJVcVpvWko5eDlYZG5IUV95azcxR1gyQXRNTnFJTm1GSlUxNzk4MUJ5OXFrS2lZY1BXaXJYc0FHQnNOR19DU2ZKYmE?oc=5\" target=\"_blank\">Yemeni army repels Houthi attack in Taiz, kills 5 fighters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Safak English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTRveVRJbEhEZ2Q2YlFuaTM2UEp3LThTZ0ZOd0RUNkpjV2NRUmVHU0Z6MUJFWThaRzhqcGc1THRZMmo3a3VwdWlEa2s0d3d1RlhsbjN1ZS1TTHJVcVpvWko5eDlYZG5IUV95azcxR1gyQXRNTnFJTm1GSlUxNzk4MUJ5OXFrS2lZY1BXaXJYc0FHQnNOR19DU2ZKYmE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T07:40:14.682Z"
+    },
     {
       "id": "rss_d42ad6c44f334268",
       "timestamp": 1785727782000,
@@ -11240,27 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T19:41:41.662Z"
-    },
-    {
-      "id": "rss_24f02179d2f065e1",
-      "timestamp": 1780954019000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis impose total naval blockade on Israel in Red Sea escalation - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPZTBzNElISGFDUkIxNFRwYWlydHhYaXJSVmdqRDU1OURBcTJad3BaSUJJTnREUEQtREVXWUNhQnVnMG5wMXNKWnI5VWtZNGFIbENEdXA5a09uNGZ0Tk4tZ0dfUjhFZjBXdFFSRy1Vd1haWU1XNUpzM25OYlV6WUVBUXhjLVhHVkc5U09rcjVCQVB1YUVaMTFwMlhDbw?oc=5\" target=\"_blank\">Houthis impose total naval blockade on Israel in Red Sea escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZTBzNElISGFDUkIxNFRwYWlydHhYaXJSVmdqRDU1OURBcTJad3BaSUJJTnREUEQtREVXWUNhQnVnMG5wMXNKWnI5VWtZNGFIbENEdXA5a09uNGZ0Tk4tZ0dfUjhFZjBXdFFSRy1Vd1haWU1XNUpzM25OYlV6WUVBUXhjLVhHVkc5U09rcjVCQVB1YUVaMTFwMlhDbw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-08T22:04:42.642Z"
     }
   ]
 }
