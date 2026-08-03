@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T03:04:05.680Z",
+  "last_fetch": "2026-08-03T04:41:26.088Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d42ad6c44f334268",
+      "timestamp": 1785727782000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi deny Bab el-Mandeb toll plans - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOM25CazRoc0VVTGxFWExEQTZNSExJTEJuVmZ1RkUwczR0cFRvZlkwQXRlaFdrRmVOTjR5bWNNMjVBWkQtUzhsR1dGenFZLWx4SUo5SlJ1LVpWbkhBQ3dBd1YzN1V1cERzX2NteF81VTZ2WWZvM0JpY19keE5VeHNXTzhPNnVEQQ?oc=5\" target=\"_blank\">Houthi deny Bab el-Mandeb toll plans</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOM25CazRoc0VVTGxFWExEQTZNSExJTEJuVmZ1RkUwczR0cFRvZlkwQXRlaFdrRmVOTjR5bWNNMjVBWkQtUzhsR1dGenFZLWx4SUo5SlJ1LVpWbkhBQ3dBd1YzN1V1cERzX2NteF81VTZ2WWZvM0JpY19keE5VeHNXTzhPNnVEQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T04:41:24.725Z"
+    },
     {
       "id": "rss_a418c53e02b87ad3",
       "timestamp": 1785722365000,
@@ -11240,29 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-08T22:04:42.642Z"
-    },
-    {
-      "id": "rss_bbb6e9d071fb2733",
-      "timestamp": 1780953504000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen announces ban on Israeli shipping in Red Sea - Muslim Network TV",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNSmRQbXFuTWpidkd0VXZ2VVowdW13T3VuS3ZaTl9hSldDOUZTaGtvOXV4cm1iNkJUenNwOWdKdzZhQ3NIYXAtT0htZ25yZXRuVTBlN2czd3dvOFdNMVRsczlXSENrOEJxbHZOTC1qVDhrT0FqaXF5aUp2N0JmbmMycWc5MXYyelk?oc=5\" target=\"_blank\">Yemen announces ban on Israeli shipping in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Muslim Network TV</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSmRQbXFuTWpidkd0VXZ2VVowdW13T3VuS3ZaTl9hSldDOUZTaGtvOXV4cm1iNkJUenNwOWdKdzZhQ3NIYXAtT0htZ25yZXRuVTBlN2czd3dvOFdNMVRsczlXSENrOEJxbHZOTC1qVDhrT0FqaXF5aUp2N0JmbmMycWc5MXYyelk?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T00:41:04.894Z"
     }
   ]
 }
