@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-03T13:26:53.336Z",
+  "last_fetch": "2026-08-03T14:19:29.458Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_db7cfe96120ec8c5",
+      "timestamp": 1785766464000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s army says several Houthi fighters killed, injured in Taiz attack - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ1dXOEZmdlNmXzNXbG0ybE5XaG9ZcWM1Z0k1UjJYN1NneXlqaW9JVFpvdjJ0UklFSUtJanNjX3NXSXpNYnhuYmtRb3FiWlRxazVEZ2loWjNKZGJkMUh3b2lMcXpuZXJWQjB2ZXFGbG5mbXZVOXprcXRXdXFGeUtleWRwSGJucFROZ2w5U2RuUFVjdFVqVDNEbXhvR1Q2NnllZ0t2bnhsYjlFamY2aXMtVUZHMHFOa28?oc=5\" target=\"_blank\">Yemen’s army says several Houthi fighters killed, injured in Taiz attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ1dXOEZmdlNmXzNXbG0ybE5XaG9ZcWM1Z0k1UjJYN1NneXlqaW9JVFpvdjJ0UklFSUtJanNjX3NXSXpNYnhuYmtRb3FiWlRxazVEZ2loWjNKZGJkMUh3b2lMcXpuZXJWQjB2ZXFGbG5mbXZVOXprcXRXdXFGeUtleWRwSGJucFROZ2w5U2RuUFVjdFVqVDNEbXhvR1Q2NnllZ0t2bnhsYjlFamY2aXMtVUZHMHFOa28?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-03T14:19:27.874Z"
+    },
     {
       "id": "rss_03a9655a56de785f",
       "timestamp": 1785750403000,
@@ -151,6 +172,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-03T03:04:04.110Z"
+    },
+    {
+      "id": "rss_6d558aedd985857b",
+      "timestamp": 1785714060000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Two tankers with Saudi oil exit Red Sea over weekend, data shows - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdEt0RUhnRlVGV0xuNmhOTDZaaVo3NVI3MWhXdERDQ3BaX19SMkh5bmlONEl5YjlRSEtyc0p0cVZGblYtd3FPdHRtX0V2RldWOVRpdzY1RTV3YnZOSk02X0gzNDhyeEpaclNaVHR1MlJVa1plZUM4a3FqOFVoYXdiY3lBYWU0MW0tcTVoSml1TFhKN0Q2aXhKQVFGNk16TnhYcGhxSXVaQlVISndNWDNyblhPM2xHajhD?oc=5\" target=\"_blank\">Two tankers with Saudi oil exit Red Sea over weekend, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdEt0RUhnRlVGV0xuNmhOTDZaaVo3NVI3MWhXdERDQ3BaX19SMkh5bmlONEl5YjlRSEtyc0p0cVZGblYtd3FPdHRtX0V2RldWOVRpdzY1RTV3YnZOSk02X0gzNDhyeEpaclNaVHR1MlJVa1plZUM4a3FqOFVoYXdiY3lBYWU0MW0tcTVoSml1TFhKN0Q2aXhKQVFGNk16TnhYcGhxSXVaQlVISndNWDNyblhPM2xHajhD?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-03T14:19:27.874Z"
     },
     {
       "id": "rss_b1b26711cb391006",
@@ -11207,53 +11251,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-09T15:33:14.607Z"
-    },
-    {
-      "id": "rss_86a7af279857031c",
-      "timestamp": 1781003991000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Israel and Iran trade missile strikes despite US warnings - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2pIWjU0aUdzTTgtVW50bGlmRnZ0OWxRRmotbFIxSGk5Z3BieWd6VEtXb3gtUHpWNTlBUFhIWGFUcUlaMndlYmhndDBQM2NkTXhEZ0wyT2U5bUtxenlOOE9aaDBxWTJhS1c1SzRJQmg0dThmVThOc2VTNTE4VEdrbzlsQzNjU3lUOTcyM2phRXphWVFuRVl4Rmo5dm9JcklDTktsS0NyTmVHN1E?oc=5\" target=\"_blank\">Israel and Iran trade missile strikes despite US warnings</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2pIWjU0aUdzTTgtVW50bGlmRnZ0OWxRRmotbFIxSGk5Z3BieWd6VEtXb3gtUHpWNTlBUFhIWGFUcUlaMndlYmhndDBQM2NkTXhEZ0wyT2U5bUtxenlOOE9aaDBxWTJhS1c1SzRJQmg0dThmVThOc2VTNTE4VEdrbzlsQzNjU3lUOTcyM2phRXphWVFuRVl4Rmo5dm9JcklDTktsS0NyTmVHN1E?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T12:01:24.111Z"
-    },
-    {
-      "id": "rss_8737221e1c7ba89c",
-      "timestamp": 1780996667000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Israel and announce ban on Israeli vessels in the Red Sea - Long War Journal",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5\" target=\"_blank\">Houthis attack Israel and announce ban on Israeli vessels in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Long War Journal</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcjlrVndDd1AtejBFU1draFNqWmlNNG90cVlqZXZtUUMxcVI0TC1Zd0trOUtueGZtdGJXQW9lTTBOTUhWNlVUZjkweGNSd2lYYjE5ci1ZbTJybXNnMENOeXBnQVRyV2xSam5MQzdaSU9fcW5MdnFDZ3BtLWhGWU5OeXFYSUxOcEZBdXBIeG8tODB3UXVCMzRTQkVCWTZKZFg2WDA1SFlBTnRrRXlQWmdLRmNnVm40WFZyclFhQV9GMkszQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-09T10:39:55.001Z"
     }
   ]
 }
