@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T17:05:47.830Z",
+  "last_fetch": "2026-08-04T18:06:02.008Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fd6671bd4970244e",
+      "timestamp": 1785865103000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Indian-flagged vessel comes under attack in Red Sea - Rediff",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOeTJTTnB5NGloN09ZWlhhX3o1WENvUHhzUUxRSFl2a0RHdjd3WnUwUmNCR2dxMzlOOUZ6cUtPUlJzWVlMZlpKOEU1UkhOM3VrdXNhQzZIbDB3RDBfanJobWtpalhXRkxzZGpiWjROWFlIUUMtdS1QZGRRejBqRWpTeTd5UjdHeEZxcEc1WDdXV2xSQ1hoS0p2cXE2NWhWdVRZcUlPZW9JWFVMa21WQ0MwZU1BcEVfWEFSZjAwbkhUaHNHV1hCd0ozUjNBYmxYWDA?oc=5\" target=\"_blank\">Indian-flagged vessel comes under attack in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Rediff</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOeTJTTnB5NGloN09ZWlhhX3o1WENvUHhzUUxRSFl2a0RHdjd3WnUwUmNCR2dxMzlOOUZ6cUtPUlJzWVlMZlpKOEU1UkhOM3VrdXNhQzZIbDB3RDBfanJobWtpalhXRkxzZGpiWjROWFlIUUMtdS1QZGRRejBqRWpTeTd5UjdHeEZxcEc1WDdXV2xSQ1hoS0p2cXE2NWhWdVRZcUlPZW9JWFVMa21WQ0MwZU1BcEVfWEFSZjAwbkhUaHNHV1hCd0ozUjNBYmxYWDA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T18:06:00.700Z"
+    },
     {
       "id": "rss_737d8d2e037167a1",
       "timestamp": 1785859632000,
@@ -46,6 +69,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T16:14:43.235Z"
+    },
+    {
+      "id": "rss_4a6cfb951b831720",
+      "timestamp": 1785854830000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Warns of Houthi Red Sea Tolls - IranWire",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5GMlppU0ZWclhJZTUwRWRuczZHT1hFZXl4VzVvNE1ta2ZxN1ppSDJKM3lsNkp3cTdmeFdhMEE0a1VZeXFEZ01Ga3gwOG51bk9aVkZtQm9LNGtZV0dTa1dQSU9EbWZJS2MtbDB0dUZYdDVyUkNNNGVRYVJZRGE?oc=5\" target=\"_blank\">Yemen Warns of Houthi Red Sea Tolls</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IranWire</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5GMlppU0ZWclhJZTUwRWRuczZHT1hFZXl4VzVvNE1ta2ZxN1ppSDJKM3lsNkp3cTdmeFdhMEE0a1VZeXFEZ01Ga3gwOG51bk9aVkZtQm9LNGtZV0dTa1dQSU9EbWZJS2MtbDB0dUZYdDVyUkNNNGVRYVJZRGE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T18:06:00.699Z"
     },
     {
       "id": "rss_3fb3d6bac1a11312",
@@ -11204,52 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-19T09:11:15.880Z"
-    },
-    {
-      "id": "rss_e4f06fe7bf0096ca",
-      "timestamp": 1781353807000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Thirteen Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in Iraq on June 1, 2026. - facebook.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZUFwZm4zYnpLUzlfYl80a2doRTRid091V2pxUzBZSWRwR1VXUy1pV3Z4RktPa0R0cjY5enIxWnFPb0p6ZFgwUmtlVFRkdUZNcUdfQ2xKZVFhM2paSjhvZ19TZWpxNF9IZVdwNFB1UnUzUHpEQUxVS0pmLVJjeTBsakxHUDNYbDhnYW5DRUlhUWw0bnlYYTRUNzBRWTVKVHRCNlJBSzhWaXFHdTlZdnQ3Vy1COWFER2o2ZHh3eVVHaHltMDhMcVR0T1BnaGtuVTVhMnV6VmV2ZHdqXzNSenZ3?oc=5\" target=\"_blank\">Thirteen Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in I",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZUFwZm4zYnpLUzlfYl80a2doRTRid091V2pxUzBZSWRwR1VXUy1pV3Z4RktPa0R0cjY5enIxWnFPb0p6ZFgwUmtlVFRkdUZNcUdfQ2xKZVFhM2paSjhvZ19TZWpxNF9IZVdwNFB1UnUzUHpEQUxVS0pmLVJjeTBsakxHUDNYbDhnYW5DRUlhUWw0bnlYYTRUNzBRWTVKVHRCNlJBSzhWaXFHdTlZdnQ3Vy1COWFER2o2ZHh3eVVHaHltMDhMcVR0T1BnaGtuVTVhMnV6VmV2ZHdqXzNSenZ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-13T18:58:31.614Z"
-    },
-    {
-      "id": "rss_f669f9fbb89ab611",
-      "timestamp": 1781247600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU strengthens naval missions in Red Sea and Indian Ocean - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEVEeGhLWU9wTDVYMDFPU21nd0JYSkg2eW1vZG5YdExBTG9ZODlvdUFXdnU0ekI0UDNLWEt4UzBvdFBKUDFNc0ZxSTZUM0VEV3E5cjM4YVZrVlF2eEE2WmozUlJvRWJVNE9tNlNRZ0M5TnEyRERpNVpaeXE2TUF4bkRCOThTM3F0WlZaOFlRaklWU3N2MjNGT2xHR2N1c1ZwX2FjOHg2elI?oc=5\" target=\"_blank\">EU strengthens naval missions in Red Sea and Indian Ocean</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQVEVEeGhLWU9wTDVYMDFPU21nd0JYSkg2eW1vZG5YdExBTG9ZODlvdUFXdnU0ekI0UDNLWEt4UzBvdFBKUDFNc0ZxSTZUM0VEV3E5cjM4YVZrVlF2eEE2WmozUlJvRWJVNE9tNlNRZ0M5TnEyRERpNVpaeXE2TUF4bkRCOThTM3F0WlZaOFlRaklWU3N2MjNGT2xHR2N1c1ZwX2FjOHg2elI?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-15T01:51:29.740Z"
     }
   ]
 }
