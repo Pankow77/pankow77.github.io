@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T12:11:53.749Z",
+  "last_fetch": "2026-08-04T13:08:13.485Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3fb3d6bac1a11312",
+      "timestamp": 1785845268000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi Strike on Saudi Airport, Vessel Attack in Hormuz Deepen Regional Tensions Amid Diplomatic Push - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxPalc1T283RHpEYXFHb3lYdEEtSFFsSjRNZElnQmRSRG12STdxLWdaMmoxT3JIdXMtNGp3aWNQU3lGRnFTOUlGQXg4cFZvM3M3RVNGNExSUk5KOTlSZVhDd08zS2k2LXd3YXF5ZXNJTmVHRmtJTVAwcTB5U010eTNrU1RhNTFzM21BdXY2dlZRT0ZkcExoSU95cV9paGVCbVdNYy1MTDhjd04tbWFsRlRhbl9vdnpWeTNtMWkxVEFsbzVUVk9kdFAtS05EbUdEX2t0RGg4VVBmMWp4TTFM?oc=5\" target=\"_blank\">Houthi Strike on Saudi Airport, Vessel Attack in Hormuz Deepen Regional Tensions Amid Diplomatic Push</a>&nbsp;&nbsp;<font color=\"#",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPalc1T283RHpEYXFHb3lYdEEtSFFsSjRNZElnQmRSRG12STdxLWdaMmoxT3JIdXMtNGp3aWNQU3lGRnFTOUlGQXg4cFZvM3M3RVNGNExSUk5KOTlSZVhDd08zS2k2LXd3YXF5ZXNJTmVHRmtJTVAwcTB5U010eTNrU1RhNTFzM21BdXY2dlZRT0ZkcExoSU95cV9paGVCbVdNYy1MTDhjd04tbWFsRlRhbl9vdnpWeTNtMWkxVEFsbzVUVk9kdFAtS05EbUdEX2t0RGg4VVBmMWp4TTFM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T13:08:12.204Z"
+    },
     {
       "id": "rss_c595d2cac6ec4c15",
       "timestamp": 1785840059000,
@@ -11225,30 +11248,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-12T05:06:39.741Z"
-    },
-    {
-      "id": "rss_0dfd649c22249890",
-      "timestamp": 1781171340000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "How Iran-linked Houthis’ Red Sea shipping threat risks bigger oil shock - The Straits Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOczk1OTRMOTJOR0R5QkRUNVFNR2JqLUpCUG1PSnpldjA4YThFUlFGZk56UkJPMGNCV3hNcDJ6NGVENUlRYW5NX0tzOVJuTDBKU0RuOVBTZHdGRFY5Q2ZWajhCWDRoTVJzMUs3WkxhZ2pGQkE1Szl3Y1JGOGpXeVo0UXpDOGZ3ZXZ0RDJ6R3RyNnRxaHBUS3l5TGFGRlBDSzdnUENMdWhIS2NhSnJzeTMxTmhlV2V6UXFK?oc=5\" target=\"_blank\">How Iran-linked Houthis’ Red Sea shipping threat risks bigger oil shock</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOczk1OTRMOTJOR0R5QkRUNVFNR2JqLUpCUG1PSnpldjA4YThFUlFGZk56UkJPMGNCV3hNcDJ6NGVENUlRYW5NX0tzOVJuTDBKU0RuOVBTZHdGRFY5Q2ZWajhCWDRoTVJzMUs3WkxhZ2pGQkE1Szl3Y1JGOGpXeVo0UXpDOGZ3ZXZ0RDJ6R3RyNnRxaHBUS3l5TGFGRlBDSzdnUENMdWhIS2NhSnJzeTMxTmhlV2V6UXFK?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-11T11:03:18.432Z"
     }
   ]
 }
