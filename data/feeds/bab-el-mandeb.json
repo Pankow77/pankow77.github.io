@@ -1,8 +1,78 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T18:06:02.008Z",
+  "last_fetch": "2026-08-04T20:07:40.410Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_86514337ea8d1adf",
+      "timestamp": 1785873619000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Indian ship sinks in Red Sea off Yemen after attack - Region - World - Ahram Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNLXZyZm9WUkhuWW9GSEcyUEtCTlNWY2JocXBzaWlQU24weVQyMzdFZ2JwcFJaMGFjVHF4YV9jSHI0SnkwaHI0SDlYRGhpLVZUNFVNNGMtRFp6LXl5X09FTVB2OXFKYm4xMjhoR3pGTDQ3YkFEY0x2WjR3VG0tOXAxWXN1S3BBUDhoLU5TMnBQVE9KTUNSNjdDd1FCdmoxdmN4RXlKdGY1Z1JsTkpkcFc1N1Jrb0doUzdaRENlRg?oc=5\" target=\"_blank\">Indian ship sinks in Red Sea off Yemen after attack - Region - World</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLXZyZm9WUkhuWW9GSEcyUEtCTlNWY2JocXBzaWlQU24weVQyMzdFZ2JwcFJaMGFjVHF4YV9jSHI0SnkwaHI0SDlYRGhpLVZUNFVNNGMtRFp6LXl5X09FTVB2OXFKYm4xMjhoR3pGTDQ3YkFEY0x2WjR3VG0tOXAxWXN1S3BBUDhoLU5TMnBQVE9KTUNSNjdDd1FCdmoxdmN4RXlKdGY1Z1JsTkpkcFc1N1Jrb0doUzdaRENlRg?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T20:07:40.404Z"
+    },
+    {
+      "id": "rss_c89d6df8df440bf6",
+      "timestamp": 1785871408000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "India Condemns Attack After Indian-Flagged Ship Sinks in Red Sea - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQZXRzX01ERmlaUFRkS2gxNGRpdDZPcURObGtFQkRXOFhCMXppTzlqN0FKYTdBeTd5c3FhaHlmZmZmZUtFVVBpc2xTN2EyeVNnZGdRRTdlTzFFX2pBcnJ5YWlzcmlIamxMNWMtWjkweFVJMW5TMUdReldUZ3VRRlE0aGU0ZkxtcGFlajFja19SMnF0eEpES3VMdWh0bzludTE3VndBZ3FNcGl3WWlu?oc=5\" target=\"_blank\">India Condemns Attack After Indian-Flagged Ship Sinks in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZXRzX01ERmlaUFRkS2gxNGRpdDZPcURObGtFQkRXOFhCMXppTzlqN0FKYTdBeTd5c3FhaHlmZmZmZUtFVVBpc2xTN2EyeVNnZGdRRTdlTzFFX2pBcnJ5YWlzcmlIamxMNWMtWjkweFVJMW5TMUdReldUZ3VRRlE0aGU0ZkxtcGFlajFja19SMnF0eEpES3VMdWh0bzludTE3VndBZ3FNcGl3WWlu?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T20:07:38.964Z"
+    },
+    {
+      "id": "rss_de9a2c9e15eb1133",
+      "timestamp": 1785867750000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "PARTLY FALSE: This image does not show Iran’s attack on an American ship in 2026 - PesaCheck",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOeF9wUG5HRUFaNkFSNVA5Q1BLLWNBbFprVnB2UTRfWjV0ZWppT0dTUGJRVnc2X0hycFF2VEJ4X2l3TmdXN3ZmWVZrdnVoOU1sMm9yOU9FNUt2NXZBNElFQ3hIT2lodzY1Mks5T3o5UEVBMDBsV3B3cVR2ZzBCektHam5CWWVxaHFENkkxQWFMSDB5enlrSERMYnVVVnRUNl9JcDVj?oc=5\" target=\"_blank\">PARTLY FALSE: This image does not show Iran’s attack on an American ship in 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PesaCheck</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeF9wUG5HRUFaNkFSNVA5Q1BLLWNBbFprVnB2UTRfWjV0ZWppT0dTUGJRVnc2X0hycFF2VEJ4X2l3TmdXN3ZmWVZrdnVoOU1sMm9yOU9FNUt2NXZBNElFQ3hIT2lodzY1Mks5T3o5UEVBMDBsV3B3cVR2ZzBCektHam5CWWVxaHFENkkxQWFMSDB5enlrSERMYnVVVnRUNl9JcDVj?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T20:07:38.964Z"
+    },
     {
       "id": "rss_fd6671bd4970244e",
       "timestamp": 1785865103000,
@@ -46,6 +116,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T16:14:43.235Z"
+    },
+    {
+      "id": "rss_e59ee342b0967f80",
+      "timestamp": 1785858607000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Saudi airport suspends operations after Houthi attack claim - nst.com.my",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPVHVLeWZlcmJIbUQ5cEJYeDFWa3JaenJYUTJCTUxPeDZnQkotZDhGdEs5bURXQXd1QU9tUXc2T0VoSmN4T3Y1ZVV6WFB2UzRkMkliZmY4ZkxDRFlpUVdBZzUxRlN1MllGR0xpaTVZWmZkUTNDZHdONlJrdlpqdnFEeDNqQkhodnlPSm01TXhyU0V3YnQzdHlQQjdTOFg5RFBQeElwTG5TTGxHU1p6WnJn0gG0AUFVX3lxTE43Q2VOZW05Rl9sbU9LZnBjX0Z3eEgxZ1N0Y2FqZnZTczR3aVlPYkxFZGJ0S0p5T0REMGExZEd3T0RFZmNfTjhCQlNWUmNLVXFFR21UX3FzelRKSWZobVJXN3dBMG5PdnFMRnhWdTRkU2ZESlI3c19Vbm41bEdrRzJ6c1BGcUhnUnpzbE4wcURtYkl4dlA2cmFGNUhWdz",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPVHVLeWZlcmJIbUQ5cEJYeDFWa3JaenJYUTJCTUxPeDZnQkotZDhGdEs5bURXQXd1QU9tUXc2T0VoSmN4T3Y1ZVV6WFB2UzRkMkliZmY4ZkxDRFlpUVdBZzUxRlN1MllGR0xpaTVZWmZkUTNDZHdONlJrdlpqdnFEeDNqQkhodnlPSm01TXhyU0V3YnQzdHlQQjdTOFg5RFBQeElwTG5TTGxHU1p6WnJn0gG0AUFVX3lxTE43Q2VOZW05Rl9sbU9LZnBjX0Z3eEgxZ1N0Y2FqZnZTczR3aVlPYkxFZGJ0S0p5T0REMGExZEd3T0RFZmNfTjhCQlNWUmNLVXFFR21UX3FzelRKSWZobVJXN3dBMG5PdnFMRnhWdTRkU2ZESlI3c19Vbm41bEdrRzJ6c1BGcUhnUnpzbE4wcURtYkl4dlA2cmFGNUhWdzNwYThKUTU5bjUwUEIwVGJoWFd5VW5Ccg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T20:07:38.965Z"
     },
     {
       "id": "rss_69ec311eae47e0e1",
@@ -92,6 +183,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T18:06:00.699Z"
+    },
+    {
+      "id": "rss_bd1bdb0b42d90274",
+      "timestamp": 1785854640000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "6 Saudi-flagged oil carriers reroute around Africa, avoiding Bab el-Mandeb - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNFFlSWpYejViMkRlb2RWVndOeTNpUlA1cFlpWDNzeXVTTUFjSXQxXzRoLWV4bDRhRDdKcjF3OHI1STFFUmdGNW9COGZyWVlLX3ZJNW04aHgyUWxHX0tMMFJ5OWhfbFZXbDBZNnVrTGZQZnBsZm5QZWtMQ1I4WDk3N2k2aXk4N0NabnRTZ2hxSXk2TzZLUER4SnhOVEphdVluVi1nQmU5YmN0cnRHUGN2QXM2T0RDaHJs0gG-AUFVX3lxTE5iNjl5QW9Qckx2eDR3ZWNCcFFVNXNYc2FHRVd6TkRycVNmZmxLVUJPZGJxaFhvTHVINHhHMk83TDAxc3hPbWFnZ1lPdDFmVzd5TDZ3S2NwdVJMZlc4djZ4aFRfaHoyLVBBSzNBWlZURHBGYXoyTTh6TjN5c1N0VHJKVEhvX3RPZVV2UkVRMnRwVUI3aW",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNFFlSWpYejViMkRlb2RWVndOeTNpUlA1cFlpWDNzeXVTTUFjSXQxXzRoLWV4bDRhRDdKcjF3OHI1STFFUmdGNW9COGZyWVlLX3ZJNW04aHgyUWxHX0tMMFJ5OWhfbFZXbDBZNnVrTGZQZnBsZm5QZWtMQ1I4WDk3N2k2aXk4N0NabnRTZ2hxSXk2TzZLUER4SnhOVEphdVluVi1nQmU5YmN0cnRHUGN2QXM2T0RDaHJs0gG-AUFVX3lxTE5iNjl5QW9Qckx2eDR3ZWNCcFFVNXNYc2FHRVd6TkRycVNmZmxLVUJPZGJxaFhvTHVINHhHMk83TDAxc3hPbWFnZ1lPdDFmVzd5TDZ3S2NwdVJMZlc4djZ4aFRfaHoyLVBBSzNBWlZURHBGYXoyTTh6TjN5c1N0VHJKVEhvX3RPZVV2UkVRMnRwVUI3aWVxX1VzM083LThBdGJocnVTOHZsY09aTlpsbkxDaHAwdldnZ25rNUZBSGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T20:07:38.964Z"
     },
     {
       "id": "rss_3fb3d6bac1a11312",
@@ -11137,119 +11249,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-18T20:17:04.421Z"
-    },
-    {
-      "id": "rss_e4e0542b8879feeb",
-      "timestamp": 1781657528000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Joint Forces Foil Houthi Attack in Al Dhaleh - وكالة خبر للأنباء",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTFBOLWEyQ180X1BGZ3VLRG5SLUZrU1EyaHhKSUxSSUMyTC1FUXdVTktJUlJtNVdZWUtpWUdVZ0pCa0V2VVZCd2lTbnJmcUF5cGtETUhybGNVVQ?oc=5\" target=\"_blank\">Joint Forces Foil Houthi Attack in Al Dhaleh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBOLWEyQ180X1BGZ3VLRG5SLUZrU1EyaHhKSUxSSUMyTC1FUXdVTktJUlJtNVdZWUtpWUdVZ0pCa0V2VVZCd2lTbnJmcUF5cGtETUhybGNVVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-17T01:23:35.385Z"
-    },
-    {
-      "id": "rss_3c4139a1651f615d",
-      "timestamp": 1781553581000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Explosive Second Clash In Hours Rocks Red Sea As Another Vessel Comes Under Attack; Big Alert Issued - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAJBVV95cUxPWHVtV05CN2FCdlE0WFR6RmF6cnJwakJQbWJNdE5qQ1R4WGZEQXlUMldrWUFhYnBOaDlIdGY5cnEzUGI3TTVoajdvbHRWQnhmNTFPV1RaTzl2M0RYenpVWTcxNjNaMllzWTBVb1JEMVgyRndkX3EtcEMxQ0tEdTlib0VZUl9RRngwM2hHUUJJN0M3dXVBZFdVLTJEdnp4bHNuaGhnUDAycjQtYUgxc24wbEE5cXhVWmE5TFZDNVQ3cFJRdzNnTXNfWkRUNWNZcThRVDFTdkVhWUkybGJ2MC1NNDgxM2FNMVhhbnFwUkRKbnJrZFN4c3hmNEQyVlRxTV9wREEwTkFGYmU4c0hK0gGSAkFVX3lxTE9QcEVadkJsaUZ6M2pOZ1pKenZWVmU2bVRnZjJESEFmTnlPWXVNWTZQME1Xcmw2eXpCZVhVRWxrbH",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPWHVtV05CN2FCdlE0WFR6RmF6cnJwakJQbWJNdE5qQ1R4WGZEQXlUMldrWUFhYnBOaDlIdGY5cnEzUGI3TTVoajdvbHRWQnhmNTFPV1RaTzl2M0RYenpVWTcxNjNaMllzWTBVb1JEMVgyRndkX3EtcEMxQ0tEdTlib0VZUl9RRngwM2hHUUJJN0M3dXVBZFdVLTJEdnp4bHNuaGhnUDAycjQtYUgxc24wbEE5cXhVWmE5TFZDNVQ3cFJRdzNnTXNfWkRUNWNZcThRVDFTdkVhWUkybGJ2MC1NNDgxM2FNMVhhbnFwUkRKbnJrZFN4c3hmNEQyVlRxTV9wREEwTkFGYmU4c0hK0gGSAkFVX3lxTE9QcEVadkJsaUZ6M2pOZ1pKenZWVmU2bVRnZjJESEFmTnlPWXVNWTZQME1Xcmw2eXpCZVhVRWxrbHlBZ01oM0tyTVNQdmFabC14UmFJdXhwY3BTQmpITHlTQ1lvTkdNRHpwaTBfdVFwYXljMzhVOXE4Mnp2TlltbEVIOGdOUWIwaFpjbXlLbmVKeE1rdVNJN0Z5YUNFY3k4cGpta25Vc1BUX01qM1ZfYnFRUGx3cWxiS09XVEtLR1RlQVJOYXNRREhKTGZRaXJKcnVZWnpXY1lKZ2tXTjdIQ0duVG1UQVQ4R252ZWQzX2JZTzgyd1ltcjR6X1lRMVV1TGpua1l1NnpBVTIwcFltdjRqWlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-15T21:31:13.068Z"
-    },
-    {
-      "id": "rss_4bd5e535370fe7fa",
-      "timestamp": 1781541539000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Armed Skiffs Attack Two Ships Off Yemen in Separate Gulf of Aden Incidents - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNdjhtZU1OUkoxcmQ5WEx6Yk9jcUh5VkxMc0VOa3d1TTVXZGZfYzBWVGZXQ1lVemw4MTF5RHZoY3gzQ09aOXpVS3BuUm1BamthTHZLa0xsOW5kSTlvSTdfTUx5aWZJSk1HMG1pdUI0V25lZXJfZFRfT3BjQmNPTFh3aU5OZFJITjVxZ2s3SWQzZG5hS3ZkcldvOVRGXzc?oc=5\" target=\"_blank\">Armed Skiffs Attack Two Ships Off Yemen in Separate Gulf of Aden Incidents</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNdjhtZU1OUkoxcmQ5WEx6Yk9jcUh5VkxMc0VOa3d1TTVXZGZfYzBWVGZXQ1lVemw4MTF5RHZoY3gzQ09aOXpVS3BuUm1BamthTHZLa0xsOW5kSTlvSTdfTUx5aWZJSk1HMG1pdUI0V25lZXJfZFRfT3BjQmNPTFh3aU5OZFJITjVxZ2s3SWQzZG5hS3ZkcldvOVRGXzc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-15T18:31:22.582Z"
-    },
-    {
-      "id": "rss_24410b536a932d4f",
-      "timestamp": 1781430929000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "THIRTEEN Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in Iraq on June 1, 2026. - facebook.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNExRUjZvNWJTMnlKZlJ4WFRRZGx6Z29xUXFQcFZxYmVEaUdvWjEyNURhQWpVbXNPUDIyMkFFSzAxbDNTLVVfOUxJSkE2VURNbWNhVS1LbXUyd0Q4dGpNM3FOcWtqclpTaU51R2pNVFZXcndwcFljSlI0SEd6UjdReDVmLS1QbVZ6cDZpVlBVVVRfSk5mbDlXUXVIVkN5NGozLVZxbWxhaEdHQnlNU09rZGhoWHd1MFk2M08zYy04dUw0RGRxaDc0T0NnNnJEVUozRjA3NC1vTWlkX2pVQzZV?oc=5\" target=\"_blank\">THIRTEEN Filipino seafarers have been safely repatriated after surviving an attack on their vessel in the Port of Umm Qasr in I",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPNExRUjZvNWJTMnlKZlJ4WFRRZGx6Z29xUXFQcFZxYmVEaUdvWjEyNURhQWpVbXNPUDIyMkFFSzAxbDNTLVVfOUxJSkE2VURNbWNhVS1LbXUyd0Q4dGpNM3FOcWtqclpTaU51R2pNVFZXcndwcFljSlI0SEd6UjdReDVmLS1QbVZ6cDZpVlBVVVRfSk5mbDlXUXVIVkN5NGozLVZxbWxhaEdHQnlNU09rZGhoWHd1MFk2M08zYy04dUw0RGRxaDc0T0NnNnJEVUozRjA3NC1vTWlkX2pVQzZV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-14T16:02:00.064Z"
-    },
-    {
-      "id": "rss_36bbba7907de3242",
-      "timestamp": 1781430607000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis threaten Israeli shipping in the Red Sea - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEY1MHVIMTFDZGw3SkhVNUE2MU9La1d3MzE3ZzJmeDd3Rk1MbWhidy1LV3I0UFFCSFBJbWFIZTBraWtWdHhZVUw4M3lScVVJbmZxRGR0YXdFVVd1bXN1Qm5jNExudkFTaXdoejF5RWFoU1F0c1dKWjE5aG9rTGlkYno5bUxsUFg0eTFNVTA1LWI4OFZTMjUxQ2JycDAtN1BDTTNMVWR4WXlreUFN?oc=5\" target=\"_blank\">Yemen's Houthis threaten Israeli shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTEY1MHVIMTFDZGw3SkhVNUE2MU9La1d3MzE3ZzJmeDd3Rk1MbWhidy1LV3I0UFFCSFBJbWFIZTBraWtWdHhZVUw4M3lScVVJbmZxRGR0YXdFVVd1bXN1Qm5jNExudkFTaXdoejF5RWFoU1F0c1dKWjE5aG9rTGlkYno5bUxsUFg0eTFNVTA1LWI4OFZTMjUxQ2JycDAtN1BDTTNMVWR4WXlreUFN?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-19T09:11:15.880Z"
     }
   ]
 }
