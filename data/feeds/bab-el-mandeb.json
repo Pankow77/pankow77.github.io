@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T05:57:41.315Z",
+  "last_fetch": "2026-08-04T07:02:32.627Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -159,6 +159,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-03T14:19:27.874Z"
+    },
+    {
+      "id": "rss_86b95b150a5657fc",
+      "timestamp": 1785755137000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "The Second Chokepoint: Why the Red Sea is No Longer Calm - Asia Sentinel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE1ZUWIxV2xNVVRiblVIdF83WUt1UmkySWphSTlvb2dTX28wNGxrWHdoNFA0SUc3NU5LaHZMZGRodXZ4aGNYRkx0SnVZQWRlODRLbTYxdXNySHc2SnU3azBFallqX3hsakR5QzY3ZGtoazJiUQ?oc=5\" target=\"_blank\">The Second Chokepoint: Why the Red Sea is No Longer Calm</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asia Sentinel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ZUWIxV2xNVVRiblVIdF83WUt1UmkySWphSTlvb2dTX28wNGxrWHdoNFA0SUc3NU5LaHZMZGRodXZ4aGNYRkx0SnVZQWRlODRLbTYxdXNySHc2SnU3azBFallqX3hsakR5QzY3ZGtoazJiUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T07:02:31.349Z"
     },
     {
       "id": "rss_03a9655a56de785f",
@@ -11225,30 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-13T09:36:50.933Z"
-    },
-    {
-      "id": "rss_8fe89a6d30674abd",
-      "timestamp": 1781096219000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis ‘Attack’ Cargo Vessel In Red Sea Amid Fresh Iran-US Clashes | Watch - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSDRoR0tTQ2NuMnFUUDRUd2dVMXI1eWlvMzlkYmJKTkFNbjgtMmt4Qkl4RDRzVWJicllNaHJIeUw4b0RJZWIzNXQyTWgwaG9LeFppUGNsUmtFdEpsZ2xaR2xQbkJ6bVVZNG1uM2ZqNlp0V25pYjZFY2lId21aUTF2UUdPVU5QNTUxMmV3dzg3OXRnclVyakhRZ1pkQ29QN3V2LXl2alh4d1Rob0NKZ2JHeFVkQ1g3bEt1TXhFTE5qMnlFc3NuUW1PSVZOVDJmV1JLWFhPOU5qc09Yc2E4ZHhxYzNoYnB6dXPSAewBQVVfeXFMTy1IUVlqYjlhZG1jVXRXcklhZl9UellrNmJYdURlWlppSVlIclBVMzNHUmtzcXc4b3Z2cnB6SWlwd1R6Yk93S3lSMHU4aHMzUkE1MldlQ29XUWVNNFFWUllNYktFQ2",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQSDRoR0tTQ2NuMnFUUDRUd2dVMXI1eWlvMzlkYmJKTkFNbjgtMmt4Qkl4RDRzVWJicllNaHJIeUw4b0RJZWIzNXQyTWgwaG9LeFppUGNsUmtFdEpsZ2xaR2xQbkJ6bVVZNG1uM2ZqNlp0V25pYjZFY2lId21aUTF2UUdPVU5QNTUxMmV3dzg3OXRnclVyakhRZ1pkQ29QN3V2LXl2alh4d1Rob0NKZ2JHeFVkQ1g3bEt1TXhFTE5qMnlFc3NuUW1PSVZOVDJmV1JLWFhPOU5qc09Yc2E4ZHhxYzNoYnB6dXPSAewBQVVfeXFMTy1IUVlqYjlhZG1jVXRXcklhZl9UellrNmJYdURlWlppSVlIclBVMzNHUmtzcXc4b3Z2cnB6SWlwd1R6Yk93S3lSMHU4aHMzUkE1MldlQ29XUWVNNFFWUllNYktFQ2JwY2FFMFFHZTFidE9QMkxvVFhmTFNrdlhzRkotQW5WcE85U0RIck85a2NjTUNLWGZOM0taNXNGVlprVkdsWXhHci1DTENiWlQ4b2lCRWRJZ2hYN0lVU05fQlA2WW1lVGpXM2ZnQnJ0ZnE2ZzhBYjhBWkp3LUVfMkhENW9uUjVqamFheFlZQmM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-10T14:32:25.331Z"
     }
   ]
 }
