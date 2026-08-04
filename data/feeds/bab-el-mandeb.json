@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T20:07:40.410Z",
+  "last_fetch": "2026-08-04T21:46:45.133Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T20:07:40.404Z"
+    },
+    {
+      "id": "rss_ea4290b54d0808e0",
+      "timestamp": 1785872091000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Indian ship sinks in Red Sea after attack near Yemen - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdEdSREdHdEdUbElYZXcwV1FJRDBRYlBES0FsbXJ0SXJlYTNDMnd3YlBFaVgtTlVsZkNGZlRJT0IxYU5mblpSa25DQ0ZCdjcwTVBxcURqVG1CdGVtek81Zzl4ZTFQOWRGYkJWeHJYSlh5MlR0U2lhSTByY3I0SFJWM1hEUmpGd2lsdkV4WDQycEx3bkFnblVNQl9Sdmp0Wl9iQTR1MmFqMkw0SzDSAasBQVVfeXFMUHRHUkRHR3RHVGxJWGV3MFdRSUQwUWJQREtBbG1ydElyZWEzQzJ3d2JQRWlYLU5VbGZDRmZUSU9CMWFOZm5aUmtuQ0NGQnY3ME1QcXFEalRtQnRlbXpPNWc5eGUxUDlkRmJCVnhyWEpYeTJUdFNpYUkwcmNyNEhSVjNYRFJqRndpbHZFeFg0MnBMd25BZ25VTUJfUnZqdFpfYk",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdEdSREdHdEdUbElYZXcwV1FJRDBRYlBES0FsbXJ0SXJlYTNDMnd3YlBFaVgtTlVsZkNGZlRJT0IxYU5mblpSa25DQ0ZCdjcwTVBxcURqVG1CdGVtek81Zzl4ZTFQOWRGYkJWeHJYSlh5MlR0U2lhSTByY3I0SFJWM1hEUmpGd2lsdkV4WDQycEx3bkFnblVNQl9Sdmp0Wl9iQTR1MmFqMkw0SzDSAasBQVVfeXFMUHRHUkRHR3RHVGxJWGV3MFdRSUQwUWJQREtBbG1ydElyZWEzQzJ3d2JQRWlYLU5VbGZDRmZUSU9CMWFOZm5aUmtuQ0NGQnY3ME1QcXFEalRtQnRlbXpPNWc5eGUxUDlkRmJCVnhyWEpYeTJUdFNpYUkwcmNyNEhSVjNYRFJqRndpbHZFeFg0MnBMd25BZ25VTUJfUnZqdFpfYkE0dTJhajJMNEsw?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T21:46:45.127Z"
     },
     {
       "id": "rss_c89d6df8df440bf6",
@@ -95,6 +118,52 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T18:06:00.700Z"
+    },
+    {
+      "id": "rss_533cc803b6d3f2f6",
+      "timestamp": 1785864760000,
+      "source": "BBC",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Indian vessel sinks after projectile attack in Red Sea; all 13 Indian crew rescued - The Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxOT3dnVWdhd2JtNmxpZmdIZGgtel9ERkxENExUZUNCQnlXU0lRWkozaHpwQlM0dW9jYXgtRjZmaldnWmJEME83R3drd0hlMnF4d2tyYXk0U2I0M2JMY3ZIZEhTY0tITm95VmY1UUphdmVYbTM1b2FIOV9nUGp3OWh1X0RJYlE1U0liRUlqaUx6SFdiUk9QRW9xbWhVWWdiLXphTGcyVEMtLVBBcUoza3JjdlFRdTdaTXpLelRVdGNHRdIBwwFBVV95cUxQODkzdDBoQW1OcEdDU1hSWk9kR2FOZlc1dzNwMDRuWXMxajF5ZTh5cmRPYlNBb3lkTldqaGFhckktNDJkMW9xdXF0TzBNb3lUc3ppUWV3aXFXcmQwM2VKejNVSVFVdW5SRjFYSzJYRlNxZmxYRzJDSkxsM2gyRndzSUtCbTFQbzd5UkhqR1",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOT3dnVWdhd2JtNmxpZmdIZGgtel9ERkxENExUZUNCQnlXU0lRWkozaHpwQlM0dW9jYXgtRjZmaldnWmJEME83R3drd0hlMnF4d2tyYXk0U2I0M2JMY3ZIZEhTY0tITm95VmY1UUphdmVYbTM1b2FIOV9nUGp3OWh1X0RJYlE1U0liRUlqaUx6SFdiUk9QRW9xbWhVWWdiLXphTGcyVEMtLVBBcUoza3JjdlFRdTdaTXpLelRVdGNHRdIBwwFBVV95cUxQODkzdDBoQW1OcEdDU1hSWk9kR2FOZlc1dzNwMDRuWXMxajF5ZTh5cmRPYlNBb3lkTldqaGFhckktNDJkMW9xdXF0TzBNb3lUc3ppUWV3aXFXcmQwM2VKejNVSVFVdW5SRjFYSzJYRlNxZmxYRzJDSkxsM2gyRndzSUtCbTFQbzd5UkhqR19IRHg1alJrZWtrbWJsRmlYSWozN2FrVnJKZHhvUjZzai10OWNaZ0hUVFdMcXFhVFI2a0hkNGM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-04T21:46:43.395Z"
+    },
+    {
+      "id": "rss_ab15f69f8e569455",
+      "timestamp": 1785862866000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "First Indian Ship Attacked In Red Sea: India Condemns 'Unprovoked' Strike, All 14 Crew Members Rescued - News18",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUXVETHM5dV9NOXZXTFBEOXdGNVc1WndUMXF3MGduaUNObWdmQXJYZkJQY2pybnFyU01ZNzlKLVRMQ2ZTQ1hCazFSQlN0TTJvNVN2dnotaFd2TTZSVE5SVFd5a3dMN3pLd0luN241UWpKX2puNzBINWhFcHd1ZEVwcXhXNzg3U0tROGVVMUUwWkhUblZUOXZRUC00UlZ2MGJMbjg3bmdqVXpkeGRLQmp2bGx2VmIyWUF5UTBR0gHAAUFVX3lxTE5VQmgxaDM4TlJqM1JVcXpkRnR4bklNWW9lMXFwM01ZTkljT0pEVHlCZmZZSHRVR3JBdFN1clhtbEFpTEtrOXMzWlhjTENWTFR3N0p2aUd5QzhPZEZRSDhTUjlqSGZ5V1JSOFJwcy1fTFlJQ0lPVTdxNGluMWw4UWlUcWtwS2tCZkd4Nl9OZERERk",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUXVETHM5dV9NOXZXTFBEOXdGNVc1WndUMXF3MGduaUNObWdmQXJYZkJQY2pybnFyU01ZNzlKLVRMQ2ZTQ1hCazFSQlN0TTJvNVN2dnotaFd2TTZSVE5SVFd5a3dMN3pLd0luN241UWpKX2puNzBINWhFcHd1ZEVwcXhXNzg3U0tROGVVMUUwWkhUblZUOXZRUC00UlZ2MGJMbjg3bmdqVXpkeGRLQmp2bGx2VmIyWUF5UTBR0gHAAUFVX3lxTE5VQmgxaDM4TlJqM1JVcXpkRnR4bklNWW9lMXFwM01ZTkljT0pEVHlCZmZZSHRVR3JBdFN1clhtbEFpTEtrOXMzWlhjTENWTFR3N0p2aUd5QzhPZEZRSDhTUjlqSGZ5V1JSOFJwcy1fTFlJQ0lPVTdxNGluMWw4UWlUcWtwS2tCZkd4Nl9OZERERk5TYnNtbnF3dWpPVkN0dFZPY2tLajNFQ2lfUDhSM2xkVzhKSzVUYWIxMjlURjhUcA?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T21:46:45.128Z"
     },
     {
       "id": "rss_737d8d2e037167a1",
@@ -11184,71 +11253,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-25T09:06:37.739Z"
-    },
-    {
-      "id": "rss_35450cbcb9c6c638",
-      "timestamp": 1782127317000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Egypt attacks Sudanese mining sites in Red Sea State, records casualities - The Guardian Nigeria News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0hQcVZNa05JdzN4aWxRSmtQelk1SlZGU2JNZ0N2NTBvd2ZIRHcyYnpLOHE1WTluQ0FHSXIteFhqVW1aWkx2MS1xU3FEdGxfbldWYm0xUi1VMnlTNUl5eU5OcU91VGZwcXVhOURaNC1GMFJZSjllcnNmZ1FQSk5kcDNlRXJCUHNIenZEQUNSd3pqcmtESm13X3dibkZoN0E?oc=5\" target=\"_blank\">Egypt attacks Sudanese mining sites in Red Sea State, records casualities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian Nigeria News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS0hQcVZNa05JdzN4aWxRSmtQelk1SlZGU2JNZ0N2NTBvd2ZIRHcyYnpLOHE1WTluQ0FHSXIteFhqVW1aWkx2MS1xU3FEdGxfbldWYm0xUi1VMnlTNUl5eU5OcU91VGZwcXVhOURaNC1GMFJZSjllcnNmZ1FQSk5kcDNlRXJCUHNIenZEQUNSd3pqcmtESm13X3dibkZoN0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-22T11:25:05.733Z"
-    },
-    {
-      "id": "rss_7e295122de65f220",
-      "timestamp": 1782032409000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU's Aspides Mission Secures Over 120 Ships in Red Sea Transit Last Month - وكالة خبر للأنباء",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTFB1OExvTUthWWpUSjVzLWJuNUJ3bEV0ZFNFTVVYT1FfQ2JuRXh0TGR0cWVRaXdoM2dBdDE2THVva2NxWUlBcFdwY3k3V1RoNDVZTkYtVmc3cw?oc=5\" target=\"_blank\">EU's Aspides Mission Secures Over 120 Ships in Red Sea Transit Last Month</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB1OExvTUthWWpUSjVzLWJuNUJ3bEV0ZFNFTVVYT1FfQ2JuRXh0TGR0cWVRaXdoM2dBdDE2THVva2NxWUlBcFdwY3k3V1RoNDVZTkYtVmc3cw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-21T10:15:08.562Z"
-    },
-    {
-      "id": "rss_fe1af7b52265c080",
-      "timestamp": 1781732112000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Washington-Tehran Understandings Stimulate Houthi Desire for Military Escalation - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE9NR0g3MnhrTGFWVkRCZE0tNDMtT2dKY3dFVWR0dUtxb19vbHBzRzVYMWFpclkxdm5zeGM5eGxlSzJocGlVWXFCMG1MckRkS3o4eWk4UkNUVjhqMnM5XzJ5ckFIbHo4T0NxWVdiRHNfTXQwd1dNbXc?oc=5\" target=\"_blank\">Washington-Tehran Understandings Stimulate Houthi Desire for Military Escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9NR0g3MnhrTGFWVkRCZE0tNDMtT2dKY3dFVWR0dUtxb19vbHBzRzVYMWFpclkxdm5zeGM5eGxlSzJocGlVWXFCMG1MckRkS3o4eWk4UkNUVjhqMnM5XzJ5ckFIbHo4T0NxWVdiRHNfTXQwd1dNbXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-18T20:17:04.421Z"
     }
   ]
 }
