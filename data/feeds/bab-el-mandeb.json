@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T03:03:05.652Z",
+  "last_fetch": "2026-08-04T04:33:56.451Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5668c41404077f0f",
+      "timestamp": 1785817665000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UAE Business: Fresh ship attack, Red Sea diversions deepen Gulf shipping risks - Gulf Daily News (Bahrain)",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdXpMOVZ6V2RoTFpraW5fU2pJdlZUZVI2ZlhGdmRTRllxelFTV1dOZ0JsN0lJeElCUWNBTXR2VWl5QXV4S3hPSEdNempmM2NxamlRS2tjbG93amNld1FaT190T1pDSWpqbVRNYzFPdGltR2t3amhoT2dSLVVNdEZRTzFfVHoxeWlMUnpFVW90N1RqZXM1dXQwd0VKQ2RyUzNzSmVPcTFCMFVmMGs?oc=5\" target=\"_blank\">UAE Business: Fresh ship attack, Red Sea diversions deepen Gulf shipping risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf Daily News (Bahrain)</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdXpMOVZ6V2RoTFpraW5fU2pJdlZUZVI2ZlhGdmRTRllxelFTV1dOZ0JsN0lJeElCUWNBTXR2VWl5QXV4S3hPSEdNempmM2NxamlRS2tjbG93amNld1FaT190T1pDSWpqbVRNYzFPdGltR2t3amhoT2dSLVVNdEZRTzFfVHoxeWlMUnpFVW90N1RqZXM1dXQwd0VKQ2RyUzNzSmVPcTFCMFVmMGs?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T04:33:56.446Z"
+    },
+    {
+      "id": "rss_37f640c49c352a41",
+      "timestamp": 1785809907000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shipping traffic at key Gulf waterways little changed on uncertain peace talks - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUJTODg3dW1ZWmNmR3Qyd2dmUC10ZHRicERHVE83ZUdyU19Cbkl4SU8wcHFPUTh4WXFyTWYwNUpFZTNETU5TMkNzZUIzNlJ2VVA0NVllajd3b0RKRmstRUFOZTVGeGpfLUktcDIxdVdVVU5rc0JSSnExbHRhTlJDR090ZnZLMWg0QTU1c2dwQnFaSWpPT3ZOY0RzNEJDTjRTRE1IZGVhbW41VzBKRkl6dUJJdmpLMHJo?oc=5\" target=\"_blank\">Shipping traffic at key Gulf waterways little changed on uncertain peace talks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUJTODg3dW1ZWmNmR3Qyd2dmUC10ZHRicERHVE83ZUdyU19Cbkl4SU8wcHFPUTh4WXFyTWYwNUpFZTNETU5TMkNzZUIzNlJ2VVA0NVllajd3b0RKRmstRUFOZTVGeGpfLUktcDIxdVdVVU5rc0JSSnExbHRhTlJDR090ZnZLMWg0QTU1c2dwQnFaSWpPT3ZOY0RzNEJDTjRTRE1IZGVhbW41VzBKRkl6dUJJdmpLMHJo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T04:33:55.054Z"
+    },
     {
       "id": "rss_25708d8ae45c2af4",
       "timestamp": 1785790601000,
@@ -11203,53 +11249,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-10T14:32:25.331Z"
-    },
-    {
-      "id": "rss_408f9c1010ea43b1",
-      "timestamp": 1781090753000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis ban Israeli ships in Red Sea after missile strike - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDNmZ05OU0JXcEQ3S3FROXRQS1BqbGhpRVpraDk1VG1zLWVxdmFNNlBfNlp5Ymlxc0huSFNENG1uT2xERWFBdFJjNWxMMnUxaWltWHBibkJZRndQZGJYYkZDYlRmRHRBWFpYeTVnQVhfcEE3b2gzQUxHVTR3anBheC0xZThzemFPempLbW1qSGFpekRCaGJwQk1XeDNOQmRNRE5mWDJrQTROUQ?oc=5\" target=\"_blank\">Houthis ban Israeli ships in Red Sea after missile strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTDNmZ05OU0JXcEQ3S3FROXRQS1BqbGhpRVpraDk1VG1zLWVxdmFNNlBfNlp5Ymlxc0huSFNENG1uT2xERWFBdFJjNWxMMnUxaWltWHBibkJZRndQZGJYYkZDYlRmRHRBWFpYeTVnQVhfcEE3b2gzQUxHVTR3anBheC0xZThzemFPempLbW1qSGFpekRCaGJwQk1XeDNOQmRNRE5mWDJrQTROUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-13T21:55:02.235Z"
-    },
-    {
-      "id": "rss_26cf62836d7acd95",
-      "timestamp": 1781073676000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Cargo vessel targeted off Yemen near Bab al-Mandeb Strait after Houthi threat - The National",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPRmR2WXRHeHJmUi1nV2JWMlhqN1BUWEdKZWduYVVYc2d2SzZzcVhZODgta05RbGJjaHFHUHVGTjJKUlA3WWRGeVoxRkpmYVdSU2pJMW5lWjRMMjlaamlna0IxRDF4dXdfZjU4Z18zQmk4MXZ0UVJwTVoxWWRDcTFCVjdZa2RyQWZXVnZrQXZNbnhoWU5zd0JSSmRtRWh6eERIdTBZVjRBN0R4S0JWd3RUaEtDSVFWUWpsc0wtNmRFY1dNcGQ5?oc=5\" target=\"_blank\">Cargo vessel targeted off Yemen near Bab al-Mandeb Strait after Houthi threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRmR2WXRHeHJmUi1nV2JWMlhqN1BUWEdKZWduYVVYc2d2SzZzcVhZODgta05RbGJjaHFHUHVGTjJKUlA3WWRGeVoxRkpmYVdSU2pJMW5lWjRMMjlaamlna0IxRDF4dXdfZjU4Z18zQmk4MXZ0UVJwTVoxWWRDcTFCVjdZa2RyQWZXVnZrQXZNbnhoWU5zd0JSSmRtRWh6eERIdTBZVjRBN0R4S0JWd3RUaEtDSVFWUWpsc0wtNmRFY1dNcGQ5?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-10T10:26:22.543Z"
     }
   ]
 }
