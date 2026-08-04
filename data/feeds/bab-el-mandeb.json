@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-04T10:20:50.414Z",
+  "last_fetch": "2026-08-04T11:16:57.626Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c595d2cac6ec4c15",
+      "timestamp": 1785840059000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim drone attack on Saudi airport - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPVFNHZEFYMFd6N1FrTmd4dFFkdGl0WEVfNHZpdzVLT3RzWmhmVzFMWEhqWlJMeUFEOFNaVDlYdXp5NktscktFM0ZEQ0JRS1J6LUpwNnZPT3FyRnVib0JIVkJNVnJCWXhMUnNYR3FOV0dtX1dCSHM1SF9mTVV0UjlKWm5vcWZkaF84dHF6Q2lhNjBYTXFNLVFwTXk3UHM?oc=5\" target=\"_blank\">Yemen’s Houthis claim drone attack on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVFNHZEFYMFd6N1FrTmd4dFFkdGl0WEVfNHZpdzVLT3RzWmhmVzFMWEhqWlJMeUFEOFNaVDlYdXp5NktscktFM0ZEQ0JRS1J6LUpwNnZPT3FyRnVib0JIVkJNVnJCWXhMUnNYR3FOV0dtX1dCSHM1SF9mTVV0UjlKWm5vcWZkaF84dHF6Q2lhNjBYTXFNLVFwTXk3UHM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T11:16:56.414Z"
+    },
+    {
+      "id": "rss_a61b028ea5cd841d",
+      "timestamp": 1785838820000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "PARTLY FALSE: This image does not depict Iran's strike on ships in the Strait of Hormuz - PesaCheck",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPRE91bnZIU1BZMG0yUlZHLW1LT0s1NDUxc2gySG40amtOV2JJczExV2dVV0szMmlvMll2MFJlV3lWXzFsYTY3eFRtRWtyUUpfZzdBWGtUdHhpaHdQc1U1Q0xrN2lEQ1ZwU3NER1RyV3dVd0dqbU55LUpPWTFDSkQyZzgxMVpGVkZSYUgyZDRna3FtTjBDaVpXOVp1eVJfSWpKTTBRT24tT1RqRXJf?oc=5\" target=\"_blank\">PARTLY FALSE: This image does not depict Iran's strike on ships in the Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PesaCheck</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPRE91bnZIU1BZMG0yUlZHLW1LT0s1NDUxc2gySG40amtOV2JJczExV2dVV0szMmlvMll2MFJlV3lWXzFsYTY3eFRtRWtyUUpfZzdBWGtUdHhpaHdQc1U1Q0xrN2lEQ1ZwU3NER1RyV3dVd0dqbU55LUpPWTFDSkQyZzgxMVpGVkZSYUgyZDRna3FtTjBDaVpXOVp1eVJfSWpKTTBRT24tT1RqRXJf?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-04T11:16:56.414Z"
+    },
     {
       "id": "rss_5668c41404077f0f",
       "timestamp": 1785817665000,
@@ -11202,50 +11249,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-06-11T11:03:18.432Z"
-    },
-    {
-      "id": "rss_14eb717b8e335509",
-      "timestamp": 1781170397000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Egypt working around the clock for US-Iran deal to end war - Egypt Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVlnNFlaRWlwVU9vcXczaXo5aGtHd3pzeVVITEFXVnk1NnA2TW1TUUJ6ekh4YmZXcDFmZEgyYnR2M1BSbEFTbm1acFZhV2REY3NxZkFaSzBSb2ZmSUdQd3pxLTJmQkNha3prN0tsQmlUd2JzNGgwa0c2ckljeFRFY0JNOElONkF2XzZfeURHVEMyMGpFSGc4?oc=5\" target=\"_blank\">Egypt working around the clock for US-Iran deal to end war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egypt Independent</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVlnNFlaRWlwVU9vcXczaXo5aGtHd3pzeVVITEFXVnk1NnA2TW1TUUJ6ekh4YmZXcDFmZEgyYnR2M1BSbEFTbm1acFZhV2REY3NxZkFaSzBSb2ZmSUdQd3pxLTJmQkNha3prN0tsQmlUd2JzNGgwa0c2ckljeFRFY0JNOElONkF2XzZfeURHVEMyMGpFSGc4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-11T11:03:18.432Z"
-    },
-    {
-      "id": "rss_518aea2a2c76cad2",
-      "timestamp": 1781115142000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Armed Security Team Repels Suspected Pirate Attack Off Yemen - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQTjVyTGEwMFFxV25ReVV1WEhaWFdpdzZGRW93ZDNySm5nR01rMm1DSFlnd2pnbkNLX2IzUjBPTFFIVFZ4RGtzZEppN192WXczVHY3MHYxdTJvbHlIZHJDSmwtOHRCRUNrX09TemFEZnpwRURiVVJNZFJVaUlmREFYa2xVN2dxQUtOMVE?oc=5\" target=\"_blank\">Armed Security Team Repels Suspected Pirate Attack Off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQTjVyTGEwMFFxV25ReVV1WEhaWFdpdzZGRW93ZDNySm5nR01rMm1DSFlnd2pnbkNLX2IzUjBPTFFIVFZ4RGtzZEppN192WXczVHY3MHYxdTJvbHlIZHJDSmwtOHRCRUNrX09TemFEZnpwRURiVVJNZFJVaUlmREFYa2xVN2dxQUtOMVE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-06-13T09:36:50.933Z"
     }
   ]
 }
