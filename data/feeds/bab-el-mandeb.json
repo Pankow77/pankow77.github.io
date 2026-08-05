@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-05T18:01:36.528Z",
+  "last_fetch": "2026-08-05T20:06:07.427Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T18:01:35.108Z"
+    },
+    {
+      "id": "rss_2e463621530848ce",
+      "timestamp": 1785948556000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen : Houthis Claim Attack on Saudi Oil Tanker in Red Sea - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE9WM2ozcTFHU1BGRWZQU3hxbFpKQm5qU0JWX0d5ZE1EUU9fUTY4VEtXc3pGRTNYWnIzVzBfeTAycVVzajFKVE9xWlJjQkJLeVdTNWFweUduaW02UFlPOEdV?oc=5\" target=\"_blank\">Yemen : Houthis Claim Attack on Saudi Oil Tanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9WM2ozcTFHU1BGRWZQU3hxbFpKQm5qU0JWX0d5ZE1EUU9fUTY4VEtXc3pGRTNYWnIzVzBfeTAycVVzajFKVE9xWlJjQkJLeVdTNWFweUduaW02UFlPOEdV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T20:06:05.913Z"
     },
     {
       "id": "rss_6d1ddbd2bf914c8e",
@@ -300,6 +323,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T09:17:42.627Z"
+    },
+    {
+      "id": "rss_18648bec7e4e1f8c",
+      "timestamp": 1785917969000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Say They’ll Target Tankers in Northern Red Sea - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPUUNKUDZsdVQ4MkEyTngwQTVHRGVNVnlmYXBLNUszWGtXc0szbmVOWmM0WGtvWElJZm0zaDBHQVZyUTZMSVVHQk03WXNXWFBST3F1dWdHSEpRUkFFV0JDYXV0Z3ZOMUZOaXNCMnEydVlGX3NQWXROUG5fd2RLV2dwQkZ1WkRDU05BZmNnT05EWU1jQlFQUGdCRVRyZGRTMzdDaFdEbW9MMGIzNFhDSGtMYVU5MA?oc=5\" target=\"_blank\">Yemen’s Houthis Say They’ll Target Tankers in Northern Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPUUNKUDZsdVQ4MkEyTngwQTVHRGVNVnlmYXBLNUszWGtXc0szbmVOWmM0WGtvWElJZm0zaDBHQVZyUTZMSVVHQk03WXNXWFBST3F1dWdHSEpRUkFFV0JDYXV0Z3ZOMUZOaXNCMnEydVlGX3NQWXROUG5fd2RLV2dwQkZ1WkRDU05BZmNnT05EWU1jQlFQUGdCRVRyZGRTMzdDaFdEbW9MMGIzNFhDSGtMYVU5MA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T20:06:05.913Z"
     },
     {
       "id": "rss_ebd968bac8af7b63",
@@ -11236,52 +11282,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T14:32:22.627Z"
-    },
-    {
-      "id": "rss_1806da08ab698fe7",
-      "timestamp": 1783254299000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Armed assailants attack cargo ship in Red Sea off Yemen, UK military says - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEdmOEMxLVFocW1mMEFUQnB2d2N6TWJ1SXNTZ21Sa0hDQ0FRVmVwODlDUU9KT1hwSDhvcXNrcHh2Z20zdTQyX0RMekR4eWhONlVBMC1JMUdobEpDblZ4bXVsYzVwbE9aMjNJZzc3d29fWlpHOVUxY2dmcmtpUTIwV0RGVkNDM28xQ2VxbVF1OFlZdi1QNnNrWTNnTUotMzBJc0VEa1FoRnVyWFhZdUt6dkJEbU9aOWZaRkxmazZMNTnSAcYBQVVfeXFMUDdEYzZjdEJ1UUNrQTluU0NXdDdKUjYzYkstUG1wZUI5U0xjZUV1TFlWbmdZZkVpS21OUHNuTHE1ZklmN1J5bHNWUHpQTk9rcGtoMGZmOW1rc3dIcm5wNDRBaHA0X2RnMzIzSmJRdWJFX1I4UUczeFV2QlYtNFozY3I0dWVkYjBOWm1zdU",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeEdmOEMxLVFocW1mMEFUQnB2d2N6TWJ1SXNTZ21Sa0hDQ0FRVmVwODlDUU9KT1hwSDhvcXNrcHh2Z20zdTQyX0RMekR4eWhONlVBMC1JMUdobEpDblZ4bXVsYzVwbE9aMjNJZzc3d29fWlpHOVUxY2dmcmtpUTIwV0RGVkNDM28xQ2VxbVF1OFlZdi1QNnNrWTNnTUotMzBJc0VEa1FoRnVyWFhZdUt6dkJEbU9aOWZaRkxmazZMNTnSAcYBQVVfeXFMUDdEYzZjdEJ1UUNrQTluU0NXdDdKUjYzYkstUG1wZUI5U0xjZUV1TFlWbmdZZkVpS21OUHNuTHE1ZklmN1J5bHNWUHpQTk9rcGtoMGZmOW1rc3dIcm5wNDRBaHA0X2RnMzIzSmJRdWJFX1I4UUczeFV2QlYtNFozY3I0dWVkYjBOWm1zdURyZlR0aGVxTGJjaGtETmZFWWFQWlg3b2pLdXg0Z2tjQjFxM3dUVVZ2ZWxOWlVBS2o4LXNRVkhDcGt3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T12:37:48.623Z"
-    },
-    {
-      "id": "rss_fe5103feb2829d28",
-      "timestamp": 1783251060000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "'Under attack by unknown assailants': British military reports fresh cargo ship attack off Yemen - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxNbEpHdVE0QTA2amZIdldmcGFSTW1FRzNabEFsX0NVejlnUXVNVGR0RmFWeldsVEpJai1XcEVHcXdTOG9xdVBtNThFYmZ0cFkteHJFTUE5R1FFU0h3eWVGOWRNR3h1TWpOVEZiT2dRZ05VTmhiUi00d0h0a1ZyeU9VNG8teTQ0NV9oT1VUN244ZVNobTlLNWVET2dDRFBxSXdjdFpoazNZSGF3V0x4enctRHUyQ0RKR0ptMllNalVJUVpmT0QxaTBDajBfM0wzYXN0bjgtWU9HQkNKTUpSTjB1VjhmcE51a0pRaE5kbURDcXAyZmlqRU5wNVN1eFE5YnNvc29Z0gGIAkFVX3lxTFB0amZ0X3hDQ2wyNHdJOXlQZzdpZ19FNUcwV3NFc25HQlVuNUQxblVsNnlXeGstZms3cnNsTkxTeGliWEtmMmlZdU",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNbEpHdVE0QTA2amZIdldmcGFSTW1FRzNabEFsX0NVejlnUXVNVGR0RmFWeldsVEpJai1XcEVHcXdTOG9xdVBtNThFYmZ0cFkteHJFTUE5R1FFU0h3eWVGOWRNR3h1TWpOVEZiT2dRZ05VTmhiUi00d0h0a1ZyeU9VNG8teTQ0NV9oT1VUN244ZVNobTlLNWVET2dDRFBxSXdjdFpoazNZSGF3V0x4enctRHUyQ0RKR0ptMllNalVJUVpmT0QxaTBDajBfM0wzYXN0bjgtWU9HQkNKTUpSTjB1VjhmcE51a0pRaE5kbURDcXAyZmlqRU5wNVN1eFE5YnNvc29Z0gGIAkFVX3lxTFB0amZ0X3hDQ2wyNHdJOXlQZzdpZ19FNUcwV3NFc25HQlVuNUQxblVsNnlXeGstZms3cnNsTkxTeGliWEtmMmlZdUdBSDhWVzhGSkwzT3FUb2FxNGJwXzVLMkFfVl9BdDNTX3lBMU16Vk1kLXEwVm53QWVvaVo2YWIwaW5zelBNTkhMZmVYSDJkRzVQRnVZNEZBNFF1Mkt5MGhNX0tyUkFLV3dFN1lQbjZNcHNvTG55WVo0YmFDSGprUFhZdzd6Yjdva1ZlaUZWbGhYc1p5dnhucGtNaXA5bVE2Z2J4ckhRSkZVaEJrZkhaSHFLcGdFc21BeWRkYkEyYUV3b25lY2lqZg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T11:57:58.052Z"
     }
   ]
 }
