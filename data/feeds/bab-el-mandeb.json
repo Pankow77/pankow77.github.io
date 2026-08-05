@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-05T13:57:13.392Z",
+  "last_fetch": "2026-08-05T16:00:47.882Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b3a6db7d48ac93b4",
+      "timestamp": 1785937579000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Threaten to Expand Red Sea Attacks, and Claim Strike on Saudi Tanker - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQSjFwTmw3TUV6ZjFERWpnYl9xVTIyNms3WjNqeHZtc3ZjYXc2cjRKVEJIRHBNQjV2UG0tUk1XYTBTMTF6aGRPclVkajBsS1dabE8wUlcxZkdkeHRfUEJLYVZqblRGeU5rUTVsSGlJUXRJbFAxMnRnTi1tYnlHQ3JPNXVhWnV1c21qWm85VDhVdEo1NFkyUmdUUEdUbklOdw?oc=5\" target=\"_blank\">Houthis Threaten to Expand Red Sea Attacks, and Claim Strike on Saudi Tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQSjFwTmw3TUV6ZjFERWpnYl9xVTIyNms3WjNqeHZtc3ZjYXc2cjRKVEJIRHBNQjV2UG0tUk1XYTBTMTF6aGRPclVkajBsS1dabE8wUlcxZkdkeHRfUEJLYVZqblRGeU5rUTVsSGlJUXRJbFAxMnRnTi1tYnlHQ3JPNXVhWnV1c21qWm85VDhVdEo1NFkyUmdUUEdUbklOdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T16:00:46.332Z"
+    },
+    {
+      "id": "rss_5a51c0c260cb1110",
+      "timestamp": 1785933000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis Claim Ballistic Missile Hit on Saudi Oil Tanker in Red Sea - Crude Oil Prices Today | OilPrice.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPWjRCUU14RWZPOFNsZnY3cmViVGNYQ1lmb1hvSnpMdlhSYmxfa2RMYjRCNlVOTHVIeFFraVg0c2VnNDN5UzdPWC10OHc5ZFp0UDcwZG9LbnFPLTAyc1JIU3RCVFMyUlJheGEzUTRkVVhpWVFJNDhKWVNSVnBkZHFNTmhINkQ5UTVHRDRkVlF3M2NQMnVDRTZ5ZHFaU1FaNmtoNC1EZjhxTjRBZEMxdkozV2VVTFB6SHU0U1J4ZVc4WdIBxAFBVV95cUxPTEh3OVBtNmpjT3R5dkxIRDctLVNMUkhBSTVHSEZEb3drWG1uZjdDa3paTWt1aFQzR1dxZHhUTnBUUm5SeVpIU0RRcXVXZHd6cTZnZDhUSzI5cmZQUEJDci1VelZrR2hvUHUwUXdMLVZkUkhzME9PZ2VwNUR0bi1BYzZ2T0ZZTjNzeEV6YW",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWjRCUU14RWZPOFNsZnY3cmViVGNYQ1lmb1hvSnpMdlhSYmxfa2RMYjRCNlVOTHVIeFFraVg0c2VnNDN5UzdPWC10OHc5ZFp0UDcwZG9LbnFPLTAyc1JIU3RCVFMyUlJheGEzUTRkVVhpWVFJNDhKWVNSVnBkZHFNTmhINkQ5UTVHRDRkVlF3M2NQMnVDRTZ5ZHFaU1FaNmtoNC1EZjhxTjRBZEMxdkozV2VVTFB6SHU0U1J4ZVc4WdIBxAFBVV95cUxPTEh3OVBtNmpjT3R5dkxIRDctLVNMUkhBSTVHSEZEb3drWG1uZjdDa3paTWt1aFQzR1dxZHhUTnBUUm5SeVpIU0RRcXVXZHd6cTZnZDhUSzI5cmZQUEJDci1VelZrR2hvUHUwUXdMLVZkUkhzME9PZ2VwNUR0bi1BYzZ2T0ZZTjNzeEV6YWFlS196MHd2akxraHBIcm5aUVRfWVhrZG1STVlUbWxDNlphYmwwa19Fdm9pQm9ya0YtVEtxR2FN?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T16:00:46.334Z"
+    },
     {
       "id": "rss_97dae555fa621806",
       "timestamp": 1785932705000,
@@ -11232,52 +11279,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T12:37:48.623Z"
-    },
-    {
-      "id": "rss_d0309fbfe9308db6",
-      "timestamp": 1783244700000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo vessel attacked by armed assailants off Yemen - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPanVFQXppb0c5ME1sMHFzU3ZmMlBKeXM1dk4yQkVsSXpxYVZSMzZsdlFaa3FFUEpqcEtyX1BqVzk2Z0ktLVI1aFFkMklQeUJxcm5HQ2lxaE4tVG13cWhxNW5tX1E0SGcwQS11dGZWT2NsYmlmUVlWejJya0RiSmZDYVJiUlYzSFkwaHo2eFJEYWhVb0xucUZ2Um8teHlzeGpzVlI1Tk1pMWJ0dEliVTRRUTRDQm51V1ljSmFxZlUtZw?oc=5\" target=\"_blank\">Cargo vessel attacked by armed assailants off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPanVFQXppb0c5ME1sMHFzU3ZmMlBKeXM1dk4yQkVsSXpxYVZSMzZsdlFaa3FFUEpqcEtyX1BqVzk2Z0ktLVI1aFFkMklQeUJxcm5HQ2lxaE4tVG13cWhxNW5tX1E0SGcwQS11dGZWT2NsYmlmUVlWejJya0RiSmZDYVJiUlYzSFkwaHo2eFJEYWhVb0xucUZ2Um8teHlzeGpzVlI1Tk1pMWJ0dEliVTRRUTRDQm51V1ljSmFxZlUtZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T11:10:56.862Z"
-    },
-    {
-      "id": "rss_6237ff27284f589b",
-      "timestamp": 1783244254000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "UKMTO reports attack on cargo vessel off Yemen's Red Sea coast - The Peninsula Qatar",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPQXI1Q0t2NXhQcWtYU2pqdFJ0UTJwTmFEUEY1VjVLRGlnU01CUEU1WHB1LUoxcHhOWWMtM3E2ME9NVkhuRmpvYy1WNnJDNTQyYkVXNlhRR0paQVY1NmF3MEtPNmRZSXl2aWx2NjhZcjF4N1IySGFjWkVicGpWQ0t3SXNfWC1lNVlJamg2WnFRV2JheTFCQXNteDl4VW9kZC1pOFpIZHFmS09Uc24xUDJB?oc=5\" target=\"_blank\">UKMTO reports attack on cargo vessel off Yemen's Red Sea coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Peninsula Qatar</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQXI1Q0t2NXhQcWtYU2pqdFJ0UTJwTmFEUEY1VjVLRGlnU01CUEU1WHB1LUoxcHhOWWMtM3E2ME9NVkhuRmpvYy1WNnJDNTQyYkVXNlhRR0paQVY1NmF3MEtPNmRZSXl2aWx2NjhZcjF4N1IySGFjWkVicGpWQ0t3SXNfWC1lNVlJamg2WnFRV2JheTFCQXNteDl4VW9kZC1pOFpIZHFmS09Uc24xUDJB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T11:10:56.863Z"
     }
   ]
 }
