@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-05T03:42:09.564Z",
+  "last_fetch": "2026-08-05T06:23:12.611Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1d89cc670e1af2bd",
+      "timestamp": 1785906000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Can Break the Houthis’ Grip on the Red Sea - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdXREN002c3Foa2RSNXBFRWpvazl4Y2VUTjd0SU1ibko3eWg2MXcwT0doOWtzWEJuX2I2Mzh2UU00MjMzdDh6ZGtVdFlXWUV3OEhhSVRZdlNBUUJreDFfdmlNaVI3YmZLNWVDeTZhNjhLQmIzRVExUDBIdWlkZG1rYm1wdFdadUJqZFBhbUhXSjVmZFcxVjlGSGx5Wm1fa1pYZkhfSzM1NG4?oc=5\" target=\"_blank\">Saudi Arabia Can Break the Houthis’ Grip on the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdXREN002c3Foa2RSNXBFRWpvazl4Y2VUTjd0SU1ibko3eWg2MXcwT0doOWtzWEJuX2I2Mzh2UU00MjMzdDh6ZGtVdFlXWUV3OEhhSVRZdlNBUUJreDFfdmlNaVI3YmZLNWVDeTZhNjhLQmIzRVExUDBIdWlkZG1rYm1wdFdadUJqZFBhbUhXSjVmZFcxVjlGSGx5Wm1fa1pYZkhfSzM1NG4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T06:23:11.263Z"
+    },
+    {
+      "id": "rss_35d276f857683d60",
+      "timestamp": 1785905100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Suspends Najran Airport Operations After Houthis Claim Drone Strike - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWEhPZXA0eXNzUXZrNGZ0eWlmeVhOQVFIck1WM2x2NjFkMGxVMVlKMWFTUEF4ZE9QaWZlbXptLUpOcWM1eGdrSjFXeXJqMFRZbDRZbFJRZ29VTFl6Z1hfWFEteUNycDJUdlFsaGdxUDN6RENMVUN1UmJwZ2wzVjZOWDFEVVhfaUg2RHBtUHFxN3BXS0FWYjUzdFZaLWtndmZteXR4bWpjRHpxcDdXczZnN2RrZWtoamVyWENWclJTNWVZdw?oc=5\" target=\"_blank\">Saudi Arabia Suspends Najran Airport Operations After Houthis Claim Drone Strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWEhPZXA0eXNzUXZrNGZ0eWlmeVhOQVFIck1WM2x2NjFkMGxVMVlKMWFTUEF4ZE9QaWZlbXptLUpOcWM1eGdrSjFXeXJqMFRZbDRZbFJRZ29VTFl6Z1hfWFEteUNycDJUdlFsaGdxUDN6RENMVUN1UmJwZ2wzVjZOWDFEVVhfaUg2RHBtUHFxN3BXS0FWYjUzdFZaLWtndmZteXR4bWpjRHpxcDdXczZnN2RrZWtoamVyWENWclJTNWVZdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T06:23:11.265Z"
+    },
     {
       "id": "rss_22f02bc6400e24b7",
       "timestamp": 1785895973000,
@@ -11217,50 +11261,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-06T00:37:10.510Z"
-    },
-    {
-      "id": "rss_d079314c35661406",
-      "timestamp": 1783134516000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 3,
-      "text_summary": "Saudi-led Coalition vows forceful response to Houthi escalation and regional threats - Gulf News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNZkdQM1cwZmhqOU9BRXhUZDV6ZnRNZXRQbXJDVXExcWt3R1E3MXljU2I0bEN0Q1NRWWhsVzFxTEFQS2RxZFppQXBTU2JtN3RoZUpraUpTdzVrbzhlaE1lMXgzdHZCR1JvM1BfZ0pIRkZzM1pXRjJxc2poU3IzdGJPM0EwMDV2YjRTVXRRd0tqbmVyY1owWnE4eERYczRURnlpWTBSZ1FUNlJqZmNCSE1VdjllTTM2Zm1oekVjRXJiTnJrLWRyaGVXdS0yQVRGUGM?oc=5\" target=\"_blank\">Saudi-led Coalition vows forceful response to Houthi escalation and regional threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf News</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZkdQM1cwZmhqOU9BRXhUZDV6ZnRNZXRQbXJDVXExcWt3R1E3MXljU2I0bEN0Q1NRWWhsVzFxTEFQS2RxZFppQXBTU2JtN3RoZUpraUpTdzVrbzhlaE1lMXgzdHZCR1JvM1BfZ0pIRkZzM1pXRjJxc2poU3IzdGJPM0EwMDV2YjRTVXRRd0tqbmVyY1owWnE4eERYczRURnlpWTBSZ1FUNlJqZmNCSE1VdjllTTM2Zm1oekVjRXJiTnJrLWRyaGVXdS0yQVRGUGM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-04T04:43:10.246Z"
-    },
-    {
-      "id": "rss_66c6385b0c68e8d3",
-      "timestamp": 1783099331000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis threaten Saudi Arabia after alleged airspace intrusion - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPVTBGcWdZSnBGOE1PY2ZHSm5UN3pfT1BXWldnTXNKZmg0clh5QVE2SGViVk52MWIxaTkyNktEQWNwMVJqdWZPbFdKMzJlbE1jUUY3dnBZVV9icHAzby1zRXk1NjJhcEZhVWhySkdidnhCVXJUZVpsR1dOblpRNUV6Tm1PY0J2UlluQ1hZX2FPcExObENiZk9IRGdaSW1iQ05LWG9OWTdrM0JBTXJ3Y3fSAbMBQVVfeXFMTlRERlY3ZkZzSmFNR0lNdlJfSU9vX2lZWDlyZnYxczhYdmhQVHpWcnZGNjFuSzlFQUJpandRU1lwbEtMNXkwVGFKTnBTSTBvSUdCNVYxdjdzdlRZM1EyS0tETkhienZQSGNQMldkZ0kxemdkVExSRUlhVTFXaEF2VjJ1eUJSX1NxeVQxMnhHTTVkNkJMSWlneEQwSnl2QT",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVTBGcWdZSnBGOE1PY2ZHSm5UN3pfT1BXWldnTXNKZmg0clh5QVE2SGViVk52MWIxaTkyNktEQWNwMVJqdWZPbFdKMzJlbE1jUUY3dnBZVV9icHAzby1zRXk1NjJhcEZhVWhySkdidnhCVXJUZVpsR1dOblpRNUV6Tm1PY0J2UlluQ1hZX2FPcExObENiZk9IRGdaSW1iQ05LWG9OWTdrM0JBTXJ3Y3fSAbMBQVVfeXFMTlRERlY3ZkZzSmFNR0lNdlJfSU9vX2lZWDlyZnYxczhYdmhQVHpWcnZGNjFuSzlFQUJpandRU1lwbEtMNXkwVGFKTnBTSTBvSUdCNVYxdjdzdlRZM1EyS0tETkhienZQSGNQMldkZ0kxemdkVExSRUlhVTFXaEF2VjJ1eUJSX1NxeVQxMnhHTTVkNkJMSWlneEQwSnl2QTdBMUhzUy01YnhONVBBT21zVWJSLTg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-03T20:25:30.177Z"
     }
   ]
 }
