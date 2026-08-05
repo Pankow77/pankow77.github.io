@@ -1,8 +1,99 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-05T20:06:07.427Z",
+  "last_fetch": "2026-08-05T21:43:33.655Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_56d28291b3bdb3bd",
+      "timestamp": 1785962071000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why did oil prices rise above $80 after the reported Houthi attack? - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQc2NfU2g2S0llNlNRUE1YenhqUUhtXzhxZEY5a1pDY3RNVV9yNFNiY3RsV3llbW5MWWIyM01tR3BlbFlwZ3ZxM1BQUjBJWHgyTDVTSmMwaGxUaTJsczRCWUotYkZCeEVkV0I4bUhkdkpxb2RZRjkxdVZaWHhJVEFwOHRsbl9MM0JnTU5ybzBtUQ?oc=5\" target=\"_blank\">Why did oil prices rise above $80 after the reported Houthi attack?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQc2NfU2g2S0llNlNRUE1YenhqUUhtXzhxZEY5a1pDY3RNVV9yNFNiY3RsV3llbW5MWWIyM01tR3BlbFlwZ3ZxM1BQUjBJWHgyTDVTSmMwaGxUaTJsczRCWUotYkZCeEVkV0I4bUhkdkpxb2RZRjkxdVZaWHhJVEFwOHRsbl9MM0JnTU5ybzBtUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T21:43:32.453Z"
+    },
+    {
+      "id": "rss_9cf6675924047ba8",
+      "timestamp": 1785961446000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Missile Attack on Saudi Oil Tanker in Red Sea - Marine News Magazine",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPQWthRHFzbmpwV1g2cjlPb25ENWNEVkpJSlVkbU1ScUc1N0pxbDlaaHVuaHp3ZlNvSWROTjRXWnlRRHZKeG1jSW5jamh0YUg0UjJuUXkwR2ZqUm5UdFdNZUpCQURrN3hPNFZ3Z2lGQmgxdGN1WWpJLVdFdWZmMjZSYldiYw?oc=5\" target=\"_blank\">Houthis Claim Missile Attack on Saudi Oil Tanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQWthRHFzbmpwV1g2cjlPb25ENWNEVkpJSlVkbU1ScUc1N0pxbDlaaHVuaHp3ZlNvSWROTjRXWnlRRHZKeG1jSW5jamh0YUg0UjJuUXkwR2ZqUm5UdFdNZUpCQURrN3hPNFZ3Z2lGQmgxdGN1WWpJLVdFdWZmMjZSYldiYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T21:43:32.453Z"
+    },
+    {
+      "id": "rss_ac27cb601b5faa0b",
+      "timestamp": 1785960135000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack Saudi tanker amid Red Sea blockade - Santa Clarita Valley Signal",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNSjdGRkRCZHNvLVhySml0d2c3aFEwRTRNZGttcWFSV0czcDU5T2J4WlhhNHdoODhpUllTa0xmNG9xMXlzQWg1dE9BaTJpRlZnVkMtTmxmLUZyaTF6dzNqY1RNVHdlVlZ4UHZFTTlWTktYZHZsRzJSSzZGVDJiejZDZGdoYXlIOWM?oc=5\" target=\"_blank\">Houthis attack Saudi tanker amid Red Sea blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Santa Clarita Valley Signal</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSjdGRkRCZHNvLVhySml0d2c3aFEwRTRNZGttcWFSV0czcDU5T2J4WlhhNHdoODhpUllTa0xmNG9xMXlzQWg1dE9BaTJpRlZnVkMtTmxmLUZyaTF6dzNqY1RNVHdlVlZ4UHZFTTlWTktYZHZsRzJSSzZGVDJiejZDZGdoYXlIOWM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T21:43:32.453Z"
+    },
+    {
+      "id": "rss_f0f517a9e13d9dc1",
+      "timestamp": 1785954855000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis say they attacked Saudi oil tankers in Red Sea, Gulf of Aden - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNWEQwU2pxeTRYSXhNQWtrT3hmNFhmOUx6eVUzUUt4aVBtOEpub01Fa3U5S0ZOYXRmU2oyb0t4WEpRRXZ3VmwxWksyYkNRcF9GbFJvbEpkMGxWWVY5alo2NS1LdDFzMWVPdmYtV082T3JOaVpoYW5NTFNncUxHZndSdnUzMXdWWHNXQWQ3NXZXMy02MDloQ3dWTHJhWHBfS2pNVnZoUXBEcVZKQm1HZXl5Ug?oc=5\" target=\"_blank\">Yemen's Houthis say they attacked Saudi oil tankers in Red Sea, Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWEQwU2pxeTRYSXhNQWtrT3hmNFhmOUx6eVUzUUt4aVBtOEpub01Fa3U5S0ZOYXRmU2oyb0t4WEpRRXZ3VmwxWksyYkNRcF9GbFJvbEpkMGxWWVY5alo2NS1LdDFzMWVPdmYtV082T3JOaVpoYW5NTFNncUxHZndSdnUzMXdWWHNXQWQ3NXZXMy02MDloQ3dWTHJhWHBfS2pNVnZoUXBEcVZKQm1HZXl5Ug?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-05T21:43:32.453Z"
+    },
     {
       "id": "rss_80830d2f68ec04f4",
       "timestamp": 1785951350000,
@@ -138,6 +229,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T16:00:46.332Z"
+    },
+    {
+      "id": "rss_bb40f0977dfaa5d9",
+      "timestamp": 1785934633000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Indian Ship Sunk Off Yemen As Israel Ramps Up Red Sea Readiness - i24NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOSUNETFFYcXlHb3lPcHh3MjBaSlBTTVpkUXdId2pGQjVUWHpfOUtScDdTcnphRW1nM0NGVThBVEFEVHZxdHo4SEpjUW9wU1FkYmVTMjlPMkY1bTRBOTlkbVk3ZGM2cEtXUzNTaml1ZUJLaFViTEhyaWRhQnA2V05pUUNOMlZXWm9aVE1FWVJVZFh6QkdZQWFxcGswYUtvRzFlQXFOSzFRa09nR2NRVVFfTw?oc=5\" target=\"_blank\">Indian Ship Sunk Off Yemen As Israel Ramps Up Red Sea Readiness</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSUNETFFYcXlHb3lPcHh3MjBaSlBTTVpkUXdId2pGQjVUWHpfOUtScDdTcnphRW1nM0NGVThBVEFEVHZxdHo4SEpjUW9wU1FkYmVTMjlPMkY1bTRBOTlkbVk3ZGM2cEtXUzNTaml1ZUJLaFViTEhyaWRhQnA2V05pUUNOMlZXWm9aVE1FWVJVZFh6QkdZQWFxcGswYUtvRzFlQXFOSzFRa09nR2NRVVFfTw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-05T21:43:32.454Z"
     },
     {
       "id": "rss_5a51c0c260cb1110",
@@ -11169,119 +11283,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T14:32:22.628Z"
-    },
-    {
-      "id": "rss_a26935b3a187fa92",
-      "timestamp": 1783260527000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo ship reportedly attacked in Red Sea off Yemen - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE5LYVN4aG9KdndKaXA5clE3LTVXcHRPVHVjVjNadmlpUWJDRXFOUUhXand3eTE1b3RQWE1YMTdVd3gwXzhzdmxlQmlWZXlUQmlHVzduNTdDbUhVdDBCWjVmNkNZNmlvLTA2VDRuR01wN0d4N1pCZVNvbWFlRFbSAXxBVV95cUxQWURHdGgtM0RiS3ZIa3VoZ3hCSW5Zd1JLVHRaLTI5WnYyNExScjBaNnNuNFFRY0VyOHgyZzAxTEFkMzg5T05xQXdfb3BGU0U5YTNRZFV3dW5OUzRqVXlqMVdoRjNrVUlJNUltRmVWOV9VU0V1YVhZVTZrWDBm?oc=5\" target=\"_blank\">Cargo ship reportedly attacked in Red Sea off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5LYVN4aG9KdndKaXA5clE3LTVXcHRPVHVjVjNadmlpUWJDRXFOUUhXand3eTE1b3RQWE1YMTdVd3gwXzhzdmxlQmlWZXlUQmlHVzduNTdDbUhVdDBCWjVmNkNZNmlvLTA2VDRuR01wN0d4N1pCZVNvbWFlRFbSAXxBVV95cUxQWURHdGgtM0RiS3ZIa3VoZ3hCSW5Zd1JLVHRaLTI5WnYyNExScjBaNnNuNFFRY0VyOHgyZzAxTEFkMzg5T05xQXdfb3BGU0U5YTNRZFV3dW5OUzRqVXlqMVdoRjNrVUlJNUltRmVWOV9VU0V1YVhZVTZrWDBm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T14:32:22.627Z"
-    },
-    {
-      "id": "rss_a7cf70b619b07398",
-      "timestamp": 1783256880000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo ship comes under fire off coast of Houthi-controlled Yemen - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2E2QW1zZ3JUcFVWWWRjZ0NFUFpab0hQSFdRUkNlSm1lQmVmTGVrQjU3YXNlVkdTUHdLYlhsNmE2M2d3cUJldEpqUld5a1RtY0p0UjVFajloLXZpU3RmNllraDBnM1dtTVlBcWxZem5pcnRfc1J5R3FGWS1hQTZnQ2lId3E2dGF3cmhENjNVLWdOUDlGWkhxVEFBTdIBoAFBVV95cUxNQlVxUzBjSUhzc2NBWGpXQndUN2RLNTdFYklpT1U1V1VpV2xmZk9NVVhpSlJPa3RIcU1zRTRIckxVaUpoWEUyaGNXMUpmN2pMSE1JamROMUZZSDhsaGNPcnZ1YV9UNE1NSUY4MUJJR181ZWRlOFpRZDBvWXhQX3JuNmY1NjhKeDhxbGhGV2M1SXNuMXFuMXFqRGtmcWFCeXp5?oc=5\" target=\"_blank\"",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNU2E2QW1zZ3JUcFVWWWRjZ0NFUFpab0hQSFdRUkNlSm1lQmVmTGVrQjU3YXNlVkdTUHdLYlhsNmE2M2d3cUJldEpqUld5a1RtY0p0UjVFajloLXZpU3RmNllraDBnM1dtTVlBcWxZem5pcnRfc1J5R3FGWS1hQTZnQ2lId3E2dGF3cmhENjNVLWdOUDlGWkhxVEFBTdIBoAFBVV95cUxNQlVxUzBjSUhzc2NBWGpXQndUN2RLNTdFYklpT1U1V1VpV2xmZk9NVVhpSlJPa3RIcU1zRTRIckxVaUpoWEUyaGNXMUpmN2pMSE1JamROMUZZSDhsaGNPcnZ1YV9UNE1NSUY4MUJJR181ZWRlOFpRZDBvWXhQX3JuNmY1NjhKeDhxbGhGV2M1SXNuMXFuMXFqRGtmcWFCeXp5?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-08T07:01:22.885Z"
-    },
-    {
-      "id": "rss_9f0f36dd6a556a5f",
-      "timestamp": 1783256513000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis launch major offensive in western Yemen, raising fears of wider escalation - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5CdjY3eTlQY1UwQjZ3U1E5Z2V5elhyQ1F4V2IydHNpY1dDZXBzcWg1OVFjaW9Sbkl3UURDcjJQN3pqYmlUc1BLV1Q1aklvdGdFQlFkbi1Md19pdnpwUlFsaDNXYXFLUlYtTFE?oc=5\" target=\"_blank\">Houthis launch major offensive in western Yemen, raising fears of wider escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5CdjY3eTlQY1UwQjZ3U1E5Z2V5elhyQ1F4V2IydHNpY1dDZXBzcWg1OVFjaW9Sbkl3UURDcjJQN3pqYmlUc1BLV1Q1aklvdGdFQlFkbi1Md19pdnpwUlFsaDNXYXFLUlYtTFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T18:23:09.690Z"
-    },
-    {
-      "id": "rss_a6a90e10d8c2820e",
-      "timestamp": 1783256222000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo vessel in Red Sea reports coming under attack, UK maritime body says - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOU2pnNmNzUTctOHVzeDVQdDZCZHBfZFlHUEhzcmN5c3BpUWVzaTlxQm5UNkZ1NC1SYkd3MkRaNFdSWkRSTXVFXzhpNXFjcWhqd0FVSEFFUG1MdTdfeUlLOVhDenh3UUt5N0NVTHRyLUFzbGFHVnpxY2xCZlFxZ204b3lJNUJyLUFGcjFleU5mOTlVak16MXl5cmVQTjBCd9IBowFBVV95cUxOWkhoQTlPVm1JU1RDQmkzc2UxdHZpZEY4U0pBSWdVUTdOcV9nVzBvQnB6eWhvSDhfWnA4REZvOFNsOGk3YXBCdHVMWHd6SlZ2MzhKdkpERm1EaW9OWjdVRFFZaS03SXpldGM4TjhHN0ZiN3paYnNuWGxISmFlckFVd24tYlhzUV9oSU1odTJOTUdGdU9ZSlJXT216b3BxVk43WDRV?oc=5\" target=",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOU2pnNmNzUTctOHVzeDVQdDZCZHBfZFlHUEhzcmN5c3BpUWVzaTlxQm5UNkZ1NC1SYkd3MkRaNFdSWkRSTXVFXzhpNXFjcWhqd0FVSEFFUG1MdTdfeUlLOVhDenh3UUt5N0NVTHRyLUFzbGFHVnpxY2xCZlFxZ204b3lJNUJyLUFGcjFleU5mOTlVak16MXl5cmVQTjBCd9IBowFBVV95cUxOWkhoQTlPVm1JU1RDQmkzc2UxdHZpZEY4U0pBSWdVUTdOcV9nVzBvQnB6eWhvSDhfWnA4REZvOFNsOGk3YXBCdHVMWHd6SlZ2MzhKdkpERm1EaW9OWjdVRFFZaS03SXpldGM4TjhHN0ZiN3paYnNuWGxISmFlckFVd24tYlhzUV9oSU1odTJOTUdGdU9ZSlJXT216b3BxVk43WDRV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T13:31:36.875Z"
-    },
-    {
-      "id": "rss_326dee6356a39b54",
-      "timestamp": 1783255269000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "British military says cargo ship reports being under attack in the Red Sea off the coast of Yemen - Scripps News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMEVDWFRSODh6ZUtILVpHdmdYMEROeVV0dkpyYURZSkFuOXBRaFNCdzdiY0JMMmtfNWFSaGhQakJBZnV2bjFhMEJKTUJ4dGRBV0dqNzJoVGx2dXB3TXQ2ck5VTmdjS2xOb1VmQXcxcGFNNERGVWhNUW1zTkFkR20zaThiVkxYNnYxMmtZdWNlc25pckJtSHVHVllRRTdxREZCY29yWFR0bzZOUHNaaWpJUEZmd3FHRER6Y05SMFZHMWZvT0FYSFUtNGozblVHZWpkckE?oc=5\" target=\"_blank\">British military says cargo ship reports being under attack in the Red Sea off the coast of Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Scripps N",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQMEVDWFRSODh6ZUtILVpHdmdYMEROeVV0dkpyYURZSkFuOXBRaFNCdzdiY0JMMmtfNWFSaGhQakJBZnV2bjFhMEJKTUJ4dGRBV0dqNzJoVGx2dXB3TXQ2ck5VTmdjS2xOb1VmQXcxcGFNNERGVWhNUW1zTkFkR20zaThiVkxYNnYxMmtZdWNlc25pckJtSHVHVllRRTdxREZCY29yWFR0bzZOUHNaaWpJUEZmd3FHRER6Y05SMFZHMWZvT0FYSFUtNGozblVHZWpkckE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T14:32:22.627Z"
     }
   ]
 }
