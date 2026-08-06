@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-06T05:31:02.646Z",
+  "last_fetch": "2026-08-06T08:26:52.204Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bc2d0989a68e840f",
+      "timestamp": 1785996970000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Gulf and Red Sea crossings plummet after latest tanker attack - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQMXRVYkl1dWU2TE5KckNzRk00RUJIN0l5Mmh2MFlZM3J5QjRSVUNKaFpTZlpvdk12RHM0VlVHa3BWYVB4QUsydWYtYkF1aE1VSlNTS1NIZDJ6T2dkbkhHSTh1Mk5IOFdVR1hyd0lMd0RXckxMTWFzd2NHQUZZQ19GdVVtbF8wQ2xocmRFTXFOem9GZHJ1MnBDN1RJY2lLNHhRdWNra3RHakJKVkN5ZlhUdnNR?oc=5\" target=\"_blank\">Gulf and Red Sea crossings plummet after latest tanker attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMXRVYkl1dWU2TE5KckNzRk00RUJIN0l5Mmh2MFlZM3J5QjRSVUNKaFpTZlpvdk12RHM0VlVHa3BWYVB4QUsydWYtYkF1aE1VSlNTS1NIZDJ6T2dkbkhHSTh1Mk5IOFdVR1hyd0lMd0RXckxMTWFzd2NHQUZZQ19GdVVtbF8wQ2xocmRFTXFOem9GZHJ1MnBDN1RJY2lLNHhRdWNra3RHakJKVkN5ZlhUdnNR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-06T08:26:50.940Z"
+    },
+    {
+      "id": "rss_2fbe81d05048cf92",
+      "timestamp": 1785995341000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Is Gulf Shipping Traffic Collapsing After Houthi Attacks on Saudi Tankers? - Modern Diplomacy",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQaW9WcDlaZk5sbVk2aFcza05zaTh6Qjk3X01nZEtvQnhNYUY4NmF5ZlRHclJSRHpteFJmVDJhczdiOVNwaEszb2p0ZnY5OXd3X0NNVHhJZWViVFpUcjUtVUlJTW5ma2ZOLUJGbm96Wi1pcFY0VEM5VjN6cG5reFZLR2RCLUpDdWxKSkstN01qYi1vVTQzaXliX1J2ejBEdkV0anVlMVF6N0pieTN5UzQtU25R?oc=5\" target=\"_blank\">Is Gulf Shipping Traffic Collapsing After Houthi Attacks on Saudi Tankers?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Modern Diplomacy</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaW9WcDlaZk5sbVk2aFcza05zaTh6Qjk3X01nZEtvQnhNYUY4NmF5ZlRHclJSRHpteFJmVDJhczdiOVNwaEszb2p0ZnY5OXd3X0NNVHhJZWViVFpUcjUtVUlJTW5ma2ZOLUJGbm96Wi1pcFY0VEM5VjN6cG5reFZLR2RCLUpDdWxKSkstN01qYi1vVTQzaXliX1J2ejBEdkV0anVlMVF6N0pieTN5UzQtU25R?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-06T08:26:50.940Z"
+    },
     {
       "id": "rss_30a2bff3273c667c",
       "timestamp": 1785986427000,
@@ -11244,48 +11290,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T19:59:08.535Z"
-    },
-    {
-      "id": "rss_1aa7e0b442abd416",
-      "timestamp": 1783272996000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "14 Yemeni soldiers killed in Houthi rebel attack - Ekantipur",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPNzhKbS1NTkl1dDFmN1pndm04MjZpbVVWZUZMWmFlWXU3ZTZEQWJMWmtUNVRROW41akUyWEZXeWRJN3RCRHhTcFd4WGlDRVlkV294cmtlb2t5LTNWckk2SnRtMU1fSDE3NVlyNV9Zdm9oVlhPWkY3NjRtb3hMN21PYXByZExONF92eWFfXzlVckUycUtlOWVyREFMcHY3QXVUc1Rz?oc=5\" target=\"_blank\">14 Yemeni soldiers killed in Houthi rebel attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ekantipur</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNzhKbS1NTkl1dDFmN1pndm04MjZpbVVWZUZMWmFlWXU3ZTZEQWJMWmtUNVRROW41akUyWEZXeWRJN3RCRHhTcFd4WGlDRVlkV294cmtlb2t5LTNWckk2SnRtMU1fSDE3NVlyNV9Zdm9oVlhPWkY3NjRtb3hMN21PYXByZExONF92eWFfXzlVckUycUtlOWVyREFMcHY3QXVUc1Rz?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T19:29:46.851Z"
-    },
-    {
-      "id": "rss_065a8254acbc7cff",
-      "timestamp": 1783269539000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi rebels kill 16 Yemeni government troops in fiercest clashes in years - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY1",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPay13NkpNUTB5ZlBER1ktQ0dRN3Q3dkg5UWpyekd3VnNOTjFZclF2cjZjQS1PZktnU0VWUEpQeWdGbnUzRjlwMUFUN3BmUU9KdGtnR2RvVlREaTROVHpnTzMtNFR0OFA4MVhsdTIxYkk5VGdLQTJkcWNrQnNQZ0hnQ3BGUmNIVlVtM29rcjlVdkt4eGt0QVNQOWs2RnkyZnlOUnhXTUZWWdIBrAFBVV95cUxPR0NidUhFOXNUVG9jS3JiaTJIOUoxNHhhb1RHcTdiRVJzYTB6NFFlS3lHZG1lSy1YRG9nVGFVX2FpTFVaT0tFVU1DQVc4R1dsM0N0MXZ6LU9kT0ZaZ2oyN3JQOTZTTWVUd1pyWUN4RXN5allNVnZrWU1peWl5Xy1SRkVoQUVaR0gya3psN2doanRJal9rM2ZxRlF3T3FiSjJnc2ZjY182YUQ3clVR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-05T17:26:24.161Z"
     }
   ]
 }
