@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-06T02:17:32.179Z",
+  "last_fetch": "2026-08-06T05:31:02.646Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_30a2bff3273c667c",
+      "timestamp": 1785986427000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim missile attack on Saudi oil tanker in Gulf of Aden - chinadailyasia.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE50Qnc3UWZyOUZGeHotLXFLR1cxUjlWS2laRGFmRlRCck5NRnR3LUFFWTZrZkV4NF92N2IzSEJoWWN3M3FVMjhsQThuRjNsckRqUTNubDdYV2M?oc=5\" target=\"_blank\">Houthis claim missile attack on Saudi oil tanker in Gulf of Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyasia.com</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE50Qnc3UWZyOUZGeHotLXFLR1cxUjlWS2laRGFmRlRCck5NRnR3LUFFWTZrZkV4NF92N2IzSEJoWWN3M3FVMjhsQThuRjNsckRqUTNubDdYV2M?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-06T05:31:01.222Z"
+    },
     {
       "id": "rss_2d210533b60bb3c3",
       "timestamp": 1785978224000,
@@ -11262,29 +11286,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-05T17:26:24.161Z"
-    },
-    {
-      "id": "rss_56304487fbe84e29",
-      "timestamp": 1783263901000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "British military says cargo ship reports attack in the Red Sea off Yemen - Toronto Star",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwJBVV95cUxNSTltUlNqeWptWkpxbTFvQWVTSnd3UkR0MDRUbVhUTUZQbzQ3ZmNER21PSGJsSnhBS2RyNVBjaXZ2NFJjUC0tZDF1Qmt5UGljZ1JOQ3Fkd2hVLU9wVHRpR245YTFsNktmdEc4NEJZMTZqYWRmMGMxdjFIOU1mTURWLXhfY2o0M2E1NFI3QW5tMDdySWRMTzBVSEdnQTNBTzFjVDBkVE1sSU9GMTJ0cUNBeVBIUER3ZzA2R0FEbUZuRUp6ckgyVmRpUjE5T3IyeTJ2ZUFHSlZITEx1emZQWWNITmJsZk5vRHJFTjZPTGxZb2Eza1RCbUl0a29UdkVjOVdkR3ROSDU2Q1p6RVJNVERjNmJFUWJ6R2ZLOEw2S0liZw?oc=5\" target=\"_blank\">British military says cargo ship reports ",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNSTltUlNqeWptWkpxbTFvQWVTSnd3UkR0MDRUbVhUTUZQbzQ3ZmNER21PSGJsSnhBS2RyNVBjaXZ2NFJjUC0tZDF1Qmt5UGljZ1JOQ3Fkd2hVLU9wVHRpR245YTFsNktmdEc4NEJZMTZqYWRmMGMxdjFIOU1mTURWLXhfY2o0M2E1NFI3QW5tMDdySWRMTzBVSEdnQTNBTzFjVDBkVE1sSU9GMTJ0cUNBeVBIUER3ZzA2R0FEbUZuRUp6ckgyVmRpUjE5T3IyeTJ2ZUFHSlZITEx1emZQWWNITmJsZk5vRHJFTjZPTGxZb2Eza1RCbUl0a29UdkVjOVdkR3ROSDU2Q1p6RVJNVERjNmJFUWJ6R2ZLOEw2S0liZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T15:53:44.468Z"
     }
   ]
 }
