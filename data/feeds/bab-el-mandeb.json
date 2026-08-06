@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-06T11:00:53.888Z",
+  "last_fetch": "2026-08-06T13:08:09.536Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a15478f6f1a5502a",
+      "timestamp": 1786015733000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Gulf shipping traffic down after Houthi attack on Saudi tanker - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQV1ZsXzdncWNYVEJaWEhXTVRWV0JlZ2RvR3dHeUJ4aXZrRDFuSmpnbUxaR2haVEpiSUJybmdteDVJZkpFcUpxM0oxZDZKN20xSl92SVhnSThBdmRxaHFZMTN3WXBORWVEZjN6YXhUbFNnQWY5UHZvZ2hib1B3QVNFbWRmd2RqdHNKSTdwWFJ3?oc=5\" target=\"_blank\">Gulf shipping traffic down after Houthi attack on Saudi tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQV1ZsXzdncWNYVEJaWEhXTVRWV0JlZ2RvR3dHeUJ4aXZrRDFuSmpnbUxaR2haVEpiSUJybmdteDVJZkpFcUpxM0oxZDZKN20xSl92SVhnSThBdmRxaHFZMTN3WXBORWVEZjN6YXhUbFNnQWY5UHZvZ2hib1B3QVNFbWRmd2RqdHNKSTdwWFJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-06T13:08:08.355Z"
+    },
     {
       "id": "rss_bc2d0989a68e840f",
       "timestamp": 1785996970000,
@@ -11267,29 +11290,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-05T18:23:09.689Z"
-    },
-    {
-      "id": "rss_541fb0043632a3f8",
-      "timestamp": 1783273561000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo Ship Attacked in Red Sea off Yemen, Crew Safe - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNd0hpTHUwWi1JNFJpUll3cjBQMnM1M1JvaHNPSV9PdTlZN0VBVlVxam5XcFBjU2tGRUFLa184TURCcTBIVUpzRlVHbndDWklQTnphRm5PaG9XUDBFVnM2cWxsZGVZNFVPOEs0WXBUSTl4LV95Z19UdkR0LTVNeUY3dWNKalN3U3NzNHBZQ2xfd0FaV1BKYU9YWjln?oc=5\" target=\"_blank\">Cargo Ship Attacked in Red Sea off Yemen, Crew Safe</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNd0hpTHUwWi1JNFJpUll3cjBQMnM1M1JvaHNPSV9PdTlZN0VBVlVxam5XcFBjU2tGRUFLa184TURCcTBIVUpzRlVHbndDWklQTnphRm5PaG9XUDBFVnM2cWxsZGVZNFVPOEs0WXBUSTl4LV95Z19UdkR0LTVNeUY3dWNKalN3U3NzNHBZQ2xfd0FaV1BKYU9YWjln?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-05T19:59:08.535Z"
     }
   ]
 }
