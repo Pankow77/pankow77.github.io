@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-08-06T23:53:46.592Z",
-  "epoch_count": 67,
+  "last_fetch": "2026-08-07T02:26:23.090Z",
+  "epoch_count": 68,
   "epochs": [
     {
       "id": "rss_66ff55646b67f39b",
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-31T18:56:22.254Z"
+    },
+    {
+      "id": "rss_5e50e4bb5e974876",
+      "timestamp": 1785512880000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "legal_action",
+      "intensity": 2,
+      "text_summary": "Usa, 'da Spagna sforzi deliberati per incoraggiare l'immigrazione illegale' - Gazzetta di Parma",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNS0x5ckZnTDFVb1hkeDhhMlpua0VNblRFbi1HR2hjM2o4d01Wc3BMMnNOMWxHTFB4OURob1BTdVk1Y2R0azNDaFhISV9WVXVDQUlxN1VRMUlGdjBNeGNmd3BqN3gwbXg3blhFSjBxWWlNYnQwWG1WV1luRm4yaHRZOGVPM1NyU0hhWWQtZkNHZUttTV9jaFhWWUxiRjF5WWNmMGYzRzdaalQwOGxJYnJUQ0xVQm51ZHFKTHM1aFk0eEtKTHRIcXVKN3JMZHRfejZVaTNMYnNnaw?oc=5\" target=\"_blank\">Usa, 'da Spagna sforzi deliberati per incoraggiare l'immigrazione illegale'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gazzetta di Parma</font>",
+      "tags": [
+        "immigration"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNS0x5ckZnTDFVb1hkeDhhMlpua0VNblRFbi1HR2hjM2o4d01Wc3BMMnNOMWxHTFB4OURob1BTdVk1Y2R0azNDaFhISV9WVXVDQUlxN1VRMUlGdjBNeGNmd3BqN3gwbXg3blhFSjBxWWlNYnQwWG1WV1luRm4yaHRZOGVPM1NyU0hhWWQtZkNHZUttTV9jaFhWWUxiRjF5WWNmMGYzRzdaalQwOGxJYnJUQ0xVQm51ZHFKTHM1aFk0eEtKTHRIcXVKN3JMZHRfejZVaTNMYnNnaw?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:23.090Z"
     },
     {
       "id": "rss_b6175df180544aff",

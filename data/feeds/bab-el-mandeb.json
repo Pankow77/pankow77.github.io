@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-06T23:53:44.411Z",
+  "last_fetch": "2026-08-07T02:26:21.432Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2c8df7be5ba627a6",
+      "timestamp": 1786062780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Yemen says Houthi attack killed 18 soldiers - Breakingthenews.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNWHNpQm5nSlVVRG1hcEM0d19zX19kTTYyN1I3X1FuOWFOXzUteFlhSDlWT3phajROcHpJdHlCOVZkYXh4SHZoWXF2Ml9BWk5BTDdrcGVZR1BxbjhSZkh5OFlEZ3hIVUlUVjhiNlZNREwxcF9RQnI5eVdoN19PVlRUQ2VXTV83RWpLSFg2aWRNVU9DZw?oc=5\" target=\"_blank\">Yemen says Houthi attack killed 18 soldiers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWHNpQm5nSlVVRG1hcEM0d19zX19kTTYyN1I3X1FuOWFOXzUteFlhSDlWT3phajROcHpJdHlCOVZkYXh4SHZoWXF2Ml9BWk5BTDdrcGVZR1BxbjhSZkh5OFlEZ3hIVUlUVjhiNlZNREwxcF9RQnI5eVdoN19PVlRUQ2VXTV83RWpLSFg2aWRNVU9DZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.964Z"
+    },
+    {
+      "id": "rss_2850b7ba1ad242c5",
+      "timestamp": 1786062016000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia warns of imminent Iran-backed attacks after Houthi strike injures civilians - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Hb2JXRWJqeVVSb1EyUllrdkhFdU5DQ2c1QTFGUFRnbV8wNXhXVUJzZHdHV3pDY2tCdzJ6LUdzWjFpRGgtUnZCMnpkV2xZbmZmWmFiRWFB?oc=5\" target=\"_blank\">Saudi Arabia warns of imminent Iran-backed attacks after Houthi strike injures civilians</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1Hb2JXRWJqeVVSb1EyUllrdkhFdU5DQ2c1QTFGUFRnbV8wNXhXVUJzZHdHV3pDY2tCdzJ6LUdzWjFpRGgtUnZCMnpkV2xZbmZmWmFiRWFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.963Z"
+    },
+    {
+      "id": "rss_8aba5713abaa34b1",
+      "timestamp": 1786059900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "At least 17 soldiers, officer killed in Houthi attacks in Yemen - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNS2psTTlHY2tZblgtaEtMWmJaRTFoWWVBTUo5OUhZUXBqdGdick9sb0twMUFCRGYxS0w4NTA1VEZBa0VxOE5Gb0E5MmF0UGQzM201MkFYdE52cWJENHJWcjZnZFhvanRKeEVlVVoyN0hxVUp0cjZrT3hoeDlEV0gwR3FvSjl4YVJfZE5oSFY4ZnhpalJyOEFwd20zVUZPWnFkMDFoVVpoUnhHV2c4YVE?oc=5\" target=\"_blank\">At least 17 soldiers, officer killed in Houthi attacks in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNS2psTTlHY2tZblgtaEtMWmJaRTFoWWVBTUo5OUhZUXBqdGdick9sb0twMUFCRGYxS0w4NTA1VEZBa0VxOE5Gb0E5MmF0UGQzM201MkFYdE52cWJENHJWcjZnZFhvanRKeEVlVVoyN0hxVUp0cjZrT3hoeDlEV0gwR3FvSjl4YVJfZE5oSFY4ZnhpalJyOEFwd20zVUZPWnFkMDFoVVpoUnhHV2c4YVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.963Z"
+    },
     {
       "id": "rss_28369b706368f53a",
       "timestamp": 1786059494000,
@@ -44,6 +109,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-06T23:53:42.941Z"
+    },
+    {
+      "id": "rss_93273e4b4ceae9bd",
+      "timestamp": 1786056069000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks reportedly kill at least 30 Yemeni government forces - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XdVllVF9tQ1VqR3RqWW15aE05d1NlQW45ODN3cldPQ3g3S0c2b1RhSzVlSHdRWllGMjdyOGNrV2l0LUcwenJxQXRiVU1LRFhjRjFydS1GU3d0QQ?oc=5\" target=\"_blank\">Houthi attacks reportedly kill at least 30 Yemeni government forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XdVllVF9tQ1VqR3RqWW15aE05d1NlQW45ODN3cldPQ3g3S0c2b1RhSzVlSHdRWllGMjdyOGNrV2l0LUcwenJxQXRiVU1LRFhjRjFydS1GU3d0QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.962Z"
     },
     {
       "id": "rss_fb0a04f2cc01011b",
@@ -158,6 +244,27 @@
       "fetched_at": "2026-08-06T23:53:42.941Z"
     },
     {
+      "id": "rss_5585de364376c378",
+      "timestamp": 1786040661000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis kill at least 45 soldiers in deadliest Yemen attack since 2022 - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMcWlLaWx6VkVSd0pNeExGMGlodlRhNWpoVlhveHBPTTJEbjVFV3BJbHZXUC15azI4dkNWdHdBT0o3N05jbkFvSzFlLWZ4YldCdWZYSkJn?oc=5\" target=\"_blank\">Houthis kill at least 45 soldiers in deadliest Yemen attack since 2022</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMcWlLaWx6VkVSd0pNeExGMGlodlRhNWpoVlhveHBPTTJEbjVFV3BJbHZXUC15azI4dkNWdHdBT0o3N05jbkFvSzFlLWZ4YldCdWZYSkJn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.963Z"
+    },
+    {
       "id": "rss_ac8a2afada1e9fbf",
       "timestamp": 1786031471000,
       "source": "OSINT",
@@ -263,6 +370,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-06T23:53:42.942Z"
+    },
+    {
+      "id": "rss_adfd263bb845e771",
+      "timestamp": 1786017739000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hormuz, Gulf shipping slows after Houthis attack Saudi tanker - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE8wNnBRS01YVTE4c0ZQenBKSElIc1pOSXJpdkFMQWZNcF8yLTB2ZGgzakRXRkN0MGVMXzM5RVNWOXQtbmNyMGQ2MG9OVE0zaXp5V1ZnQ2NIcjMtd2xQakNJ?oc=5\" target=\"_blank\">Hormuz, Gulf shipping slows after Houthis attack Saudi tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8wNnBRS01YVTE4c0ZQenBKSElIc1pOSXJpdkFMQWZNcF8yLTB2ZGgzakRXRkN0MGVMXzM5RVNWOXQtbmNyMGQ2MG9OVE0zaXp5V1ZnQ2NIcjMtd2xQakNJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T02:26:19.964Z"
     },
     {
       "id": "rss_a15478f6f1a5502a",
@@ -11159,138 +11289,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-08T07:01:22.884Z"
-    },
-    {
-      "id": "rss_2dd4223aba8c706d",
-      "timestamp": 1783480617000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea, Gulf of Aden and Caribbean Yacht Crime: Maritime Risk is Becoming More Complex - channel16.dryadglobal.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxORW80dmxnUndiX0JDVEVRc09xRzlZYWdWU3hPZ3RCWDVzaC1QN3U0MU1oV05zS2NpSDBnLTdHLThhSjVsQ1V4UVdfQjZ1VlJXa0FWbkdES3N1cW85eDVsRTdqRjlNMjBEazhsTkwtSU0xTy0wMjZmVmRCQWlnTVlnd3RsVXh0cTZWbHVvSjM5UnN4RkR2SjQtNlhHY2paQlNsVjhuak9ZLW00aGZQam45Mm9yOGQ1WUotelZB0gHLAUFVX3lxTE5aQWlXUEdUczJNazBBZGVEdFo4eDhMYlc3Mm1kWVJQRzhrNzRHWTFTMS00RjR2WXR1TXFBdHY4VXY0ck5qTTlIdmczSHlCdzRJWlhoaGxwSHF6Y0twd0VTd3ctTjBCODlURURtREQ3T0QxZGd4OGZsM1dSXzY5NnNZNTVEaFRYQzEwdFNva3RnOG",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORW80dmxnUndiX0JDVEVRc09xRzlZYWdWU3hPZ3RCWDVzaC1QN3U0MU1oV05zS2NpSDBnLTdHLThhSjVsQ1V4UVdfQjZ1VlJXa0FWbkdES3N1cW85eDVsRTdqRjlNMjBEazhsTkwtSU0xTy0wMjZmVmRCQWlnTVlnd3RsVXh0cTZWbHVvSjM5UnN4RkR2SjQtNlhHY2paQlNsVjhuak9ZLW00aGZQam45Mm9yOGQ1WUotelZB0gHLAUFVX3lxTE5aQWlXUEdUczJNazBBZGVEdFo4eDhMYlc3Mm1kWVJQRzhrNzRHWTFTMS00RjR2WXR1TXFBdHY4VXY0ck5qTTlIdmczSHlCdzRJWlhoaGxwSHF6Y0twd0VTd3ctTjBCODlURURtREQ3T0QxZGd4OGZsM1dSXzY5NnNZNTVEaFRYQzEwdFNva3RnOG1kY0otSEtfNUl3V0dKVDB4SEp5ME9vMlByektJdUM5NzR2amNac3JMZ0NmMUFyWkJsaEtza0I0eEl3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-08T07:01:22.884Z"
-    },
-    {
-      "id": "rss_229a3271da84f410",
-      "timestamp": 1783455594000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "British military says attack on cargo ship in Red Sea off coast of Yemen - News On AIR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQUktHLVc2QjBfQWlIUkg5Mm55SlVRT3VzdlA5d0Vpd1V4SnR3Z1c1MnNTYlZaY1dMUHpiUV9NRy1vbDk5bzJ1OTNDZWdjU1ZjQTVCZmZPQ28tSElDNW9ybVQ0QTBlYlBsNFRPdHIyd25xVDhwNXdHVFJTN09Sa1EwVFdwUVdaN2xmY0pmd1RySnQ0Y3g0STBabXJhOE1Bdzg?oc=5\" target=\"_blank\">British military says attack on cargo ship in Red Sea off coast of Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News On AIR</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUktHLVc2QjBfQWlIUkg5Mm55SlVRT3VzdlA5d0Vpd1V4SnR3Z1c1MnNTYlZaY1dMUHpiUV9NRy1vbDk5bzJ1OTNDZWdjU1ZjQTVCZmZPQ28tSElDNW9ybVQ0QTBlYlBsNFRPdHIyd25xVDhwNXdHVFJTN09Sa1EwVFdwUVdaN2xmY0pmd1RySnQ0Y3g0STBabXJhOE1Bdzg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-07T21:02:11.349Z"
-    },
-    {
-      "id": "rss_71828f6c5469c72a",
-      "timestamp": 1783450792000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pirate Attacks Spike Off The Horn Of Africa - TWZ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQV3ZmZ1ZzcUdPM284OV9GbTl5VDE4LXBpREYxeHBqRy00OHV5cTVBU3JpQ1pRaWRiemFXd2F2QXlvSlVsWE56MFVGbF9DQUJGbkQ5VHU4RWxnWWNuVEJOYm1ma1d1NVp4SlhJaV9fdWRFREdwLXY0R1czb2hYemFVdmlPZlNLYi1saGZ4VW1lbVRkbGc?oc=5\" target=\"_blank\">Pirate Attacks Spike Off The Horn Of Africa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TWZ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQV3ZmZ1ZzcUdPM284OV9GbTl5VDE4LXBpREYxeHBqRy00OHV5cTVBU3JpQ1pRaWRiemFXd2F2QXlvSlVsWE56MFVGbF9DQUJGbkQ5VHU4RWxnWWNuVEJOYm1ma1d1NVp4SlhJaV9fdWRFREdwLXY0R1czb2hYemFVdmlPZlNLYi1saGZ4VW1lbVRkbGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-11T12:47:56.291Z"
-    },
-    {
-      "id": "rss_4fe607efd14f1343",
-      "timestamp": 1783432763000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "News Content Hub - Qatar confirms attack on LNG carrier as ships come under fire in Hormuz and Red Sea - rivieramm.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWUJhSnNpN0tqQmNRSEpsd1d2NkVBSGpidktHdmVnLVBsdGZWRjRTOVR1dFpuUTQ3azQ5SkItdnNtbUVEWTJMbFE1bXdhcFk4UTlTZXFfc0ZSVm1rU09kOS0xYmtnVUthSVR1Y2JhVUZ3cGFJOTFlUVktNGpNcmxDWWxSVWlfUWU3VkRKX0lsVTduTFNEY0VRMnRNa0dwNFRuVDdVNXRTUktwNmdSbFVQRzUyZ2FEaFYwZDB0UnNrV1I5RDU0UUZSLUVMX205R2VYRFA2eklZUmNHLVQ1TjNLaGlwQQ?oc=5\" target=\"_blank\">News Content Hub - Qatar confirms attack on LNG carrier as ships come under fire in Hormuz and Red Sea</a>&nbsp;&nbsp;<fo",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNWUJhSnNpN0tqQmNRSEpsd1d2NkVBSGpidktHdmVnLVBsdGZWRjRTOVR1dFpuUTQ3azQ5SkItdnNtbUVEWTJMbFE1bXdhcFk4UTlTZXFfc0ZSVm1rU09kOS0xYmtnVUthSVR1Y2JhVUZ3cGFJOTFlUVktNGpNcmxDWWxSVWlfUWU3VkRKX0lsVTduTFNEY0VRMnRNa0dwNFRuVDdVNXRTUktwNmdSbFVQRzUyZ2FEaFYwZDB0UnNrV1I5RDU0UUZSLUVMX205R2VYRFA2eklZUmNHLVQ1TjNLaGlwQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-07T21:02:11.348Z"
-    },
-    {
-      "id": "rss_06f96cb5dc1f0c3d",
-      "timestamp": 1783406850000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The crushing Navy response that followed a Houthi attack at sea - MSN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNamZvOVRQa3ZaTXotWFVLdWRUbm4tOFNtYXNFUHpQYTMzbllBNzJQZHBHaklFZGs1TFQyTFZ6YjhUR3N6QlVhZnpXQm90dHBlRWlzd0huRkg3MkJtRFJIVF9xZ3NIUjRkSGdXYzdLWTNvWFRRaFBhWFRJYTFJYjNfWnRYOG1DaTlvU25zTmNfVU8tYnlGTkNyckcwZjRONlBMN2FaQnUtZmd5QlJOdU5JQ2dZSUNsTDg0RkFGZDNBMDVYdw?oc=5\" target=\"_blank\">The crushing Navy response that followed a Houthi attack at sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MSN</font>",
-      "tags": [
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNamZvOVRQa3ZaTXotWFVLdWRUbm4tOFNtYXNFUHpQYTMzbllBNzJQZHBHaklFZGs1TFQyTFZ6YjhUR3N6QlVhZnpXQm90dHBlRWlzd0huRkg3MkJtRFJIVF9xZ3NIUjRkSGdXYzdLWTNvWFRRaFBhWFRJYTFJYjNfWnRYOG1DaTlvU25zTmNfVU8tYnlGTkNyckcwZjRONlBMN2FaQnUtZmd5QlJOdU5JQ2dZSUNsTDg0RkFGZDNBMDVYdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-07T15:00:34.106Z"
-    },
-    {
-      "id": "rss_58062fefcc8a88d2",
-      "timestamp": 1783388472000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Fighters Kill 16 Government Troops South Of Hodeidah In Yemen Attack: 33 Sources (West Asian: 19) - NewsCord",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUmFhdHNsUVlBakpLeWxWSzdpTmR4bGl4R19xM01pM19RQXB3MzJLS1BPaTNaTXlmcF8xbUp2Qms1N1l1aU1kN1IwVUptcW1VRllaNVBhS1VKbzc2cWF3VjkybE83TnVUS2h0dDhkcTE1Y0RPUGJoa1k1OVg4LUQtMll6ODZVSUlrWVpEZ3ZlU0lsRzl1RFBxOVBHSS1xazBXR0hHUnJDb1c3WmZ6VVVzeFdTeGdWTy1pWE1xX1A3a3ZldkhzQldxbktzNUVtTkpSTmtTa2lDQTh4cjF6WVdpYnlqZw?oc=5\" target=\"_blank\">Houthi Fighters Kill 16 Government Troops South Of Hodeidah In Yemen Attack: 33 Sources (West Asian: 19)</a>&nbsp;&nbsp;<",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNUmFhdHNsUVlBakpLeWxWSzdpTmR4bGl4R19xM01pM19RQXB3MzJLS1BPaTNaTXlmcF8xbUp2Qms1N1l1aU1kN1IwVUptcW1VRllaNVBhS1VKbzc2cWF3VjkybE83TnVUS2h0dDhkcTE1Y0RPUGJoa1k1OVg4LUQtMll6ODZVSUlrWVpEZ3ZlU0lsRzl1RFBxOVBHSS1xazBXR0hHUnJDb1c3WmZ6VVVzeFdTeGdWTy1pWE1xX1A3a3ZldkhzQldxbktzNUVtTkpSTmtTa2lDQTh4cjF6WVdpYnlqZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-07T03:05:50.428Z"
     }
   ]
 }
