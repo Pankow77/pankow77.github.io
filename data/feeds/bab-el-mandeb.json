@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T12:52:36.207Z",
+  "last_fetch": "2026-08-07T14:09:04.319Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4fa02bf75179d0eb",
+      "timestamp": 1786109283000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "How the Iran-backed Houthis’ claims of deadly attacks are stoking fears of a wider regional conflict - Boston Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNc3VTZ1o5T192NHYxU2RIYjNZTjdjZ0thQWgyanlFNGZIa3piREg5OWxubVVVUU1LR1FLemp3ZzlIMVFXVllLNWMtd1VuMVo3YllScjd1OHVmWmdoNkNnVl92dThCcGdGand2b3pVVmVESXd3WHV1UlVzRHd1ZE9qVF9PSTJndnpX?oc=5\" target=\"_blank\">How the Iran-backed Houthis’ claims of deadly attacks are stoking fears of a wider regional conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston Herald</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNc3VTZ1o5T192NHYxU2RIYjNZTjdjZ0thQWgyanlFNGZIa3piREg5OWxubVVVUU1LR1FLemp3ZzlIMVFXVllLNWMtd1VuMVo3YllScjd1OHVmWmdoNkNnVl92dThCcGdGand2b3pVVmVESXd3WHV1UlVzRHd1ZE9qVF9PSTJndnpX?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T14:09:03.005Z"
+    },
+    {
+      "id": "rss_7ed6ccf6d31158e6",
+      "timestamp": 1786108287000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills three members of Yemen govt forces: military source - Macau Business",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPcDBJd0JWNUFLcEVVVjk4RkZKMmQ2c29sZ0VxckMwODRoaDlqZ1U2RzBIeHFESkdlOU5hUXdXWTNlc1lsR2NkRm5keUt4cGp1dTlCUElDOVdEeFZLUnp1STZlbFZKNk1ZWEw1ZDZxTnZtUVdySGNyUmVwR0UyVzFpalI1VmRMQVJmMl8xS3FlTTRHQ2MtdE1WcE5FUHFnQQ?oc=5\" target=\"_blank\">Houthi attack kills three members of Yemen govt forces: military source</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Macau Business</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcDBJd0JWNUFLcEVVVjk4RkZKMmQ2c29sZ0VxckMwODRoaDlqZ1U2RzBIeHFESkdlOU5hUXdXWTNlc1lsR2NkRm5keUt4cGp1dTlCUElDOVdEeFZLUnp1STZlbFZKNk1ZWEw1ZDZxTnZtUVdySGNyUmVwR0UyVzFpalI1VmRMQVJmMl8xS3FlTTRHQ2MtdE1WcE5FUHFnQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T14:09:03.006Z"
+    },
     {
       "id": "rss_2048e91d8f0447ad",
       "timestamp": 1786100199000,
@@ -11240,50 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T00:27:55.252Z"
-    },
-    {
-      "id": "rss_ee889b2d169bf64e",
-      "timestamp": 1783966799000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 4,
-      "text_summary": "KSA foils Houthi strike attempt - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5hdUVPTlQtajViS2tZb1pBemFfOUFJVWt4UnJaX19GblU2UUZwRVYzSjNaZ2RHbWE5bjQzVmc0ZHVwalU0cWd5Ty1UQkpiWmFvbEtob0VrWHBMOG1tNV80UFp4TVpXNlhCYktpaXN2SEtZYjA?oc=5\" target=\"_blank\">KSA foils Houthi strike attempt - Shafaq News | Latest breaking news in Iraq and the world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5hdUVPTlQtajViS2tZb1pBemFfOUFJVWt4UnJaX19GblU2UUZwRVYzSjNaZ2RHbWE5bjQzVmc0ZHVwalU0cWd5Ty1UQkpiWmFvbEtob0VrWHBMOG1tNV80UFp4TVpXNlhCYktpaXN2SEtZYjA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:58:13.196Z"
-    },
-    {
-      "id": "rss_62a20b526cd180c4",
-      "timestamp": 1783966200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "🇾🇪 Wild footage released by Houthi media reportedly shows an attack on Sanaa International Airport’s runway, forcing an Iranian aircraft to divert and land at Hodeidah instead. Yemen’s Defense Ministry says the strike was triggered because the Houthis were - x.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE5jNVIzbFlVdE9UclFKR0Y4Z1RvSENQVXUtSWJKTjZhN3pTbXpQLWpWRm55LUlmSGRBQW1Gb3hoR3NGNlRFVm1RSWk0c1ZwOWhvVFdvQmNOY1hyQnl3X3NkZFpn?oc=5\" target=\"_blank\">🇾🇪 Wild footage released by Houthi media reportedly shows an attack on Sanaa International Airport’s runway, forcing an Iranian aircraft to divert and land at Hodeidah instead. Yemen’s Defense Ministry says the strike was triggered because the Houthis were</a>&nbsp;&nbsp;<font color=\"#6f6f6f\"",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5jNVIzbFlVdE9UclFKR0Y4Z1RvSENQVXUtSWJKTjZhN3pTbXpQLWpWRm55LUlmSGRBQW1Gb3hoR3NGNlRFVm1RSWk0c1ZwOWhvVFdvQmNOY1hyQnl3X3NkZFpn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:58:13.196Z"
     }
   ]
 }
