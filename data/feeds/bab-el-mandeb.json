@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T14:09:04.319Z",
+  "last_fetch": "2026-08-07T15:22:35.918Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_04e587ea4519be34",
+      "timestamp": 1786112683000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Two civilians killed in Houthi strike on Marib, says Yemen’s government - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQVjZvRG11V01QUFpUZkw0VnR2WmlxNVBMaW5XVEt2SUJxR0ZZM19lQ0Y3b1BEUFF0SnZkbUs5NmNLRU5uejFVU0V3U1hMVVFfTVE5Vk9HcDRVMzZRUGtfVXp0TDNaVHNURndqaVlHNHU3dmJuV0p2aEhCN0NIUEJ2YzJMaWxUSFEyNkNqeEd0V2RoYWJRM0tGRXRrWkVQdVRhSjRtUzRvUlJwTTVEaEHSAbMBQVVfeXFMUEFVbC1wYWxseXhqaS0zZzdIY0xua3FkZEdoZVBUMDB2QTRrS2J1RnlySXNnaDhXR2VoVExMME1Ea2tVT2V6WUF4YnJqRFZ4RlFXNlczcF9vUHo1dTExWFFxUnBPSzQxVU5FbEhrcExNTVdsa0xiRU45aWZqaVB5a0hzV2J1dElwZjRLS3RtTGkyU0F6U21kWjZ4OFBhSX",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVjZvRG11V01QUFpUZkw0VnR2WmlxNVBMaW5XVEt2SUJxR0ZZM19lQ0Y3b1BEUFF0SnZkbUs5NmNLRU5uejFVU0V3U1hMVVFfTVE5Vk9HcDRVMzZRUGtfVXp0TDNaVHNURndqaVlHNHU3dmJuV0p2aEhCN0NIUEJ2YzJMaWxUSFEyNkNqeEd0V2RoYWJRM0tGRXRrWkVQdVRhSjRtUzRvUlJwTTVEaEHSAbMBQVVfeXFMUEFVbC1wYWxseXhqaS0zZzdIY0xua3FkZEdoZVBUMDB2QTRrS2J1RnlySXNnaDhXR2VoVExMME1Ea2tVT2V6WUF4YnJqRFZ4RlFXNlczcF9vUHo1dTExWFFxUnBPSzQxVU5FbEhrcExNTVdsa0xiRU45aWZqaVB5a0hzV2J1dElwZjRLS3RtTGkyU0F6U21kWjZ4OFBhSXhGa2pWOGVBdGtRcXhKNWtfOFA5MFU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-07T15:22:34.526Z"
+    },
     {
       "id": "rss_4fa02bf75179d0eb",
       "timestamp": 1786109283000,
@@ -11260,30 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T20:26:50.060Z"
-    },
-    {
-      "id": "rss_f2ebdb63e68b1e16",
-      "timestamp": 1783968780000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis fire missile at Saudi Arabia, vow revenge after airport strike - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNQkRrSUFGMWJicDBUUFdBNmZBVFZNdjY4dkFoYmluMkdpOHJBdFpNa1J2Q28wU3BxalZEWWxodTdJTXBIU2tpTWtnSlU4WjNJYWxfRVFUVS05SEx5aHFYWVdOTkdvVm93UWR3Q0ZjQUIzQ3p6bEtULWRxaTV1Vld5REJ1MTIwT1pBRTFRODdjRFQ1SnNVZlA3N1JwbVR2SHE4bk5wUmtmY2Z2TXlNQ0RpcA?oc=5\" target=\"_blank\">Iran-backed Houthis fire missile at Saudi Arabia, vow revenge after airport strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQkRrSUFGMWJicDBUUFdBNmZBVFZNdjY4dkFoYmluMkdpOHJBdFpNa1J2Q28wU3BxalZEWWxodTdJTXBIU2tpTWtnSlU4WjNJYWxfRVFUVS05SEx5aHFYWVdOTkdvVm93UWR3Q0ZjQUIzQ3p6bEtULWRxaTV1Vld5REJ1MTIwT1pBRTFRODdjRFQ1SnNVZlA3N1JwbVR2SHE4bk5wUmtmY2Z2TXlNQ0RpcA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T00:27:55.252Z"
     }
   ]
 }
