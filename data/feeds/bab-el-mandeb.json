@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T08:53:20.743Z",
+  "last_fetch": "2026-08-07T09:56:42.175Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_98aa8250d331bfc3",
+      "timestamp": 1786094510000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia Reports Civilian Injuries in Houthi Attack on Najran - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTFA4VzI3aHFZREsxdWFDZ3BmNVh1ZUdpUGFxYXBzakdRMGN5dG9mTkMxN3c1cUJ3Z2tBSWl2M1R6dDRFM0J3SE1ScjQteG5oU1NkVXI2bWkwWXlFYkhhc2pv?oc=5\" target=\"_blank\">Saudi Arabia Reports Civilian Injuries in Houthi Attack on Najran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA4VzI3aHFZREsxdWFDZ3BmNVh1ZUdpUGFxYXBzakdRMGN5dG9mTkMxN3c1cUJ3Z2tBSWl2M1R6dDRFM0J3SE1ScjQteG5oU1NkVXI2bWkwWXlFYkhhc2pv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T09:56:40.922Z"
+    },
+    {
+      "id": "rss_8ae7d2187a6eed2b",
+      "timestamp": 1786093912000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni forces shoot down Houthi drones over Marib amid latest attack - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WZ3NxQWJFaXFvc0tScDVfaTIyeUg2OTBwZWVYT2FfWlJMVUZScDZSOEhFUWJWTUhnVndibnZLcEpUOVpfdlVjeWo3YnRGb01Qd1R3WTRicGs?oc=5\" target=\"_blank\">Yemeni forces shoot down Houthi drones over Marib amid latest attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WZ3NxQWJFaXFvc0tScDVfaTIyeUg2OTBwZWVYT2FfWlJMVUZScDZSOEhFUWJWTUhnVndibnZLcEpUOVpfdlVjeWo3YnRGb01Qd1R3WTRicGs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T09:56:40.922Z"
+    },
     {
       "id": "rss_02845e340a20fb51",
       "timestamp": 1786091580000,
@@ -46,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T08:53:19.647Z"
+    },
+    {
+      "id": "rss_ae4ca14f58ce3078",
+      "timestamp": 1786088839000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "U.S. jobs report ahead; Houthi attack on Saudi Arabia - what’s moving markets - Investing.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRGFJODBFZWRza0NfU3EwTFZNTk5GZlJ2U3VGVi1ObkNfMjFZa3p6T1BIWHNfTWVrOS10QVRPN1hEVXJJek1uQ0xmRFlqa3cyTE5WNkRfQVFLdkhiSklZb09YUTVRTTlDaldMXzZBVE5qMGdQNU5mYWxRc05lU2xTOWNJaDFiT0FBekZOQ0ZaOFJoUjZzbmxHT3pON0xrY2FuTEdJLVNfbkg2d1VKT293RjMyVjhKS014a0VZdmJRSTUxdw?oc=5\" target=\"_blank\">U.S. jobs report ahead; Houthi attack on Saudi Arabia - what’s moving markets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRGFJODBFZWRza0NfU3EwTFZNTk5GZlJ2U3VGVi1ObkNfMjFZa3p6T1BIWHNfTWVrOS10QVRPN1hEVXJJek1uQ0xmRFlqa3cyTE5WNkRfQVFLdkhiSklZb09YUTVRTTlDaldMXzZBVE5qMGdQNU5mYWxRc05lU2xTOWNJaDFiT0FBekZOQ0ZaOFJoUjZzbmxHT3pON0xrY2FuTEdJLVNfbkg2d1VKT293RjMyVjhKS014a0VZdmJRSTUxdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T09:56:40.922Z"
     },
     {
       "id": "rss_5e9b2d5c684151eb",
@@ -11219,73 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T18:58:13.196Z"
-    },
-    {
-      "id": "rss_3f86ad88bde4867c",
-      "timestamp": 1783964250000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis fire at Saudi Arabia after attack on Yemeni airport, Saudi officials say - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxNajI5RE51bDV0eXZHcEJwOW1rbjc4R09MTmdWQkhVRnRuVXh5c3oyUllsRVU2YkFDeng3dkk3dVE0SzU2X1VKNmFqOHNpNldwVmhqS0FjMVowWnFHZUJFQ3hwMFdJTWp5SDFEMmNmdkkxLVotTXczZGh5ejRNREhuMHRxMjMtMUpUb3dISnFNMnQ1Qnc4N3ZnVlF0dnVaYm9GWUhFcUZUWjRkWms5SXM3M2pPclJYWHhBNnZkZVFxT0Npbmc?oc=5\" target=\"_blank\">Houthis fire at Saudi Arabia after attack on Yemeni airport, Saudi officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNajI5RE51bDV0eXZHcEJwOW1rbjc4R09MTmdWQkhVRnRuVXh5c3oyUllsRVU2YkFDeng3dkk3dVE0SzU2X1VKNmFqOHNpNldwVmhqS0FjMVowWnFHZUJFQ3hwMFdJTWp5SDFEMmNmdkkxLVotTXczZGh5ejRNREhuMHRxMjMtMUpUb3dISnFNMnQ1Qnc4N3ZnVlF0dnVaYm9GWUhFcUZUWjRkWms5SXM3M2pPclJYWHhBNnZkZVFxT0Npbmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:07:53.940Z"
-    },
-    {
-      "id": "rss_8bbf111294662b22",
-      "timestamp": 1783963665000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Houthis fire missiles at Saudi Arabia, reportedly intercepted by air defenses - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDWTdVdnREMDJhblU4ZGUweGFDd0ZYNEVuZU5mNDVoZF9ISXh3X1Z2emRZWGdrclU1ZGNrQ3Jjc3Y3aW9kamhzcUJqcjlKZmF6VGpiUmJBV05yWXVo?oc=5\" target=\"_blank\">Houthis fire missiles at Saudi Arabia, reportedly intercepted by air defenses</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBDWTdVdnREMDJhblU4ZGUweGFDd0ZYNEVuZU5mNDVoZF9ISXh3X1Z2emRZWGdrclU1ZGNrQ3Jjc3Y3aW9kamhzcUJqcjlKZmF6VGpiUmJBV05yWXVo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:07:53.940Z"
-    },
-    {
-      "id": "rss_9ce25597847136ac",
-      "timestamp": 1783963640000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Houthis target Saudi airports as ballistic missiles intercepted - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1BSkRReWJRSkJ4QktCYzgxVGJjSEhkV05TTUV3ZVdwbXVpMTluUEJNVTdUUG90WGUybFBnM21rT0VKWFpJM3owSFo2QllMcXhCVDNGZUJn?oc=5\" target=\"_blank\">Houthis target Saudi airports as ballistic missiles intercepted</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1BSkRReWJRSkJ4QktCYzgxVGJjSEhkV05TTUV3ZVdwbXVpMTluUEJNVTdUUG90WGUybFBnM21rT0VKWFpJM3owSFo2QllMcXhCVDNGZUJn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T20:26:50.060Z"
     }
   ]
 }
