@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T20:05:02.437Z",
+  "last_fetch": "2026-08-07T22:04:08.443Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T20:05:01.081Z"
+    },
+    {
+      "id": "rss_ce9ca3d6d704464c",
+      "timestamp": 1786127001000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes kill civilians in Yemen's Marib as forces thwart Red Sea tanker attack - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPN0ZEalRjcEJYbWdENjJ0MWp3MGlvbm5YZHE1ZWczNkJYOHNwTHFkMjNIZ0JlWXl0TWFTM2EtT3VsQWRzNHpMMms5TERSc292MVZlYk0wUW5BdE81ME4yZTFuNzNGUWJMMkg3bzhhSHJlZVdXdmFKdDc1VnI5ZkEwQ3FwenhuSHNDR2xRcmcwU1BZSFRfQmhKYjhvdHVGdktEQ09UUTBjcEhmcThyMEZiZGFRNmNkWXctZWVLZUpqbFk2SS05RG9j?oc=5\" target=\"_blank\">Houthi strikes kill civilians in Yemen's Marib as forces thwart Red Sea tanker attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPN0ZEalRjcEJYbWdENjJ0MWp3MGlvbm5YZHE1ZWczNkJYOHNwTHFkMjNIZ0JlWXl0TWFTM2EtT3VsQWRzNHpMMms5TERSc292MVZlYk0wUW5BdE81ME4yZTFuNzNGUWJMMkg3bzhhSHJlZVdXdmFKdDc1VnI5ZkEwQ3FwenhuSHNDR2xRcmcwU1BZSFRfQmhKYjhvdHVGdktEQ09UUTBjcEhmcThyMEZiZGFRNmNkWXctZWVLZUpqbFk2SS05RG9j?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T22:04:07.050Z"
     },
     {
       "id": "rss_cf70217efe3c5cc2",
@@ -11262,29 +11285,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T00:56:50.653Z"
-    },
-    {
-      "id": "rss_1a5bca272888d8e7",
-      "timestamp": 1783983043000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Announces Thwarting Houthi Attack and Intercepting Ballistic Missiles in Its Airspace - صوت الإمارات",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNU3diMkNYaUlnUWNCeGdFcnJHSTdvby1MaWtRSVpvVjZnUkJDbmtUZ3hYY0hSbEhTXzJndHo0eEZSUzZ5akRSSC0zNG92dnlDVUxyaWdkczJCTHBHcTBYNi1QM0Fza3lrQ01rdzlic0U5NTdxTlRDNlJTNnU1emxqbFRxTWZ4Y3FtTmxzNU96M0RKNHB6LWlzLURCLW8yRjZ0aHJvMU5tSWxsNy1Mak56WVRTNjhTZ3M3bmpUQ3lSc1E3Z1EyYk03UHBvbjlrVTJWdGlEYjNkR1hwRHc4RXJLU3Y3RS0?oc=5\" target=\"_blank\">Saudi Arabia Announces Thwarting Houthi Attack and Intercepting Ballistic Missiles in Its Airspace</a>&nbsp;&nbsp;<font ",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNU3diMkNYaUlnUWNCeGdFcnJHSTdvby1MaWtRSVpvVjZnUkJDbmtUZ3hYY0hSbEhTXzJndHo0eEZSUzZ5akRSSC0zNG92dnlDVUxyaWdkczJCTHBHcTBYNi1QM0Fza3lrQ01rdzlic0U5NTdxTlRDNlJTNnU1emxqbFRxTWZ4Y3FtTmxzNU96M0RKNHB6LWlzLURCLW8yRjZ0aHJvMU5tSWxsNy1Mak56WVRTNjhTZ3M3bmpUQ3lSc1E3Z1EyYk03UHBvbjlrVTJWdGlEYjNkR1hwRHc4RXJLU3Y3RS0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T23:19:18.491Z"
     }
   ]
 }
