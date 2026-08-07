@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T10:50:56.168Z",
+  "last_fetch": "2026-08-07T11:41:17.591Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2048e91d8f0447ad",
+      "timestamp": 1786100199000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes in Yemen as Saudi Arabia braces for attacks: What we know - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOVy1aejJVOTJEdzhFTzNTUV80eUpJUnh1ZjRzcE1BMm1ueDF3XzZOMmVDTWVWVzc2S29kTDdBVUhoQTE0Mm1OTkdDYmpnUVBGT3h1MFkwQWFuM3pVcW9xOW9YSGJweklEMTdEM0hnSFBKQTI0RXpRUWRxNHdLYkxhZWhaaTFWRkxycDlvUmhIOXlseTQ4ZkdJbzFmWEtVcWVELTBmV2NlOU85TXE4NW5SSzVB0gG3AUFVX3lxTE5CTGxzYlNCcC1aMTA2Qk1RYTBaVjlNZnRKdWs5QWJMbDMyR3A2SWo3NmhOaXBHbkFfZUxFSXVOMm9CNU5KYmNBZUw0dmRua0NFTnhJdkZYMzBEXzJfWmpKWnF0dktQTnU0OUFYbnA5S0FTQjFzaDlacG1NNi1xOENqVVBUYXYwQmNZeEVMRUZHYVJ5OE5hWGRyX2",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVy1aejJVOTJEdzhFTzNTUV80eUpJUnh1ZjRzcE1BMm1ueDF3XzZOMmVDTWVWVzc2S29kTDdBVUhoQTE0Mm1OTkdDYmpnUVBGT3h1MFkwQWFuM3pVcW9xOW9YSGJweklEMTdEM0hnSFBKQTI0RXpRUWRxNHdLYkxhZWhaaTFWRkxycDlvUmhIOXlseTQ4ZkdJbzFmWEtVcWVELTBmV2NlOU85TXE4NW5SSzVB0gG3AUFVX3lxTE5CTGxzYlNCcC1aMTA2Qk1RYTBaVjlNZnRKdWs5QWJMbDMyR3A2SWo3NmhOaXBHbkFfZUxFSXVOMm9CNU5KYmNBZUw0dmRua0NFTnhJdkZYMzBEXzJfWmpKWnF0dktQTnU0OUFYbnA5S0FTQjFzaDlacG1NNi1xOENqVVBUYXYwQmNZeEVMRUZHYVJ5OE5hWGRyX24zLVo4WUNtWU9TbE91NVJYcVdrYmhJLVhiUG9qOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-07T11:41:16.333Z"
+    },
+    {
+      "id": "rss_0338d92b01201478",
+      "timestamp": 1786097132000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia on high alert over coordinated Iran-backed attack warnings - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBhZV9iM1paUVA2c3FfSTdoNnR2aG9PS3dwTVRQMFM2emxxd1NKRmVzZF95WnViVWZJMjFoQXAyQnpWTW4tb19QQmNaa2dsNzFYN3BqWUNR?oc=5\" target=\"_blank\">Saudi Arabia on high alert over coordinated Iran-backed attack warnings</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBhZV9iM1paUVA2c3FfSTdoNnR2aG9PS3dwTVRQMFM2emxxd1NKRmVzZF95WnViVWZJMjFoQXAyQnpWTW4tb19QQmNaa2dsNzFYN3BqWUNR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T11:41:16.334Z"
+    },
     {
       "id": "rss_98aa8250d331bfc3",
       "timestamp": 1786094510000,
@@ -11240,50 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T18:58:13.196Z"
-    },
-    {
-      "id": "rss_37c22cee67a61a56",
-      "timestamp": 1783965763000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Iran condemns attack on Yemen’s Houthi-held Sanaa airport - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjFKLXgySllqTjZZWHRxa1hINFl0UjNNaktCcXdEYlNzSFpWVXc0NlQ4XzQ2ejAydE1rSG4wWUsyYmZ3eW8zdzlnWVRYbTA4TE5LZm91OEdqR0xQRF9OOV94QlgxWl93c29CVGc4dlljTnhQVWVWOGtfRVEtRDlBVU5xRDZsb2Vmd243MkhkeDJVUVkwZHFWb2NzVC1WVTRnS3l6Uw?oc=5\" target=\"_blank\">Iran condemns attack on Yemen’s Houthi-held Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMjFKLXgySllqTjZZWHRxa1hINFl0UjNNaktCcXdEYlNzSFpWVXc0NlQ4XzQ2ejAydE1rSG4wWUsyYmZ3eW8zdzlnWVRYbTA4TE5LZm91OEdqR0xQRF9OOV94QlgxWl93c29CVGc4dlljTnhQVWVWOGtfRVEtRDlBVU5xRDZsb2Vmd243MkhkeDJVUVkwZHFWb2NzVC1WVTRnS3l6Uw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:07:53.941Z"
-    },
-    {
-      "id": "rss_b2ddf8c5531168ab",
-      "timestamp": 1783964966000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict - Dawn",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVVqbjBoRGEyVU1sUEEzNjFuOHprbE9zX2MxOThIVmRFTHVuZFNsdDI2WGQ0dkNWMG5fbEMzUWtzR0tKUGJuX0ZkaW1tS1d3YU1Jd0VCd2NLdDBDZWE0cVFWWTVlaE1idmdCdTN4V3Q5SU81UGMyelFLcTFIQ2V4WHlEakJ4RW9xd0NDNXNaZGdHbjVZS0tUbDVUY3dPbDRlbTlOeDJhZnZnY2FjNThGclhrRlJHaTl0UXdBNVlSSlRlTnc?oc=5\" target=\"_blank\">Yemen government says it attacked Houthi-controlled Sanaa airport, reviving dormant conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORVVqbjBoRGEyVU1sUEEzNjFuOHprbE9zX2MxOThIVmRFTHVuZFNsdDI2WGQ0dkNWMG5fbEMzUWtzR0tKUGJuX0ZkaW1tS1d3YU1Jd0VCd2NLdDBDZWE0cVFWWTVlaE1idmdCdTN4V3Q5SU81UGMyelFLcTFIQ2V4WHlEakJ4RW9xd0NDNXNaZGdHbjVZS0tUbDVUY3dPbDRlbTlOeDJhZnZnY2FjNThGclhrRlJHaTl0UXdBNVlSSlRlTnc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:58:13.197Z"
     }
   ]
 }
