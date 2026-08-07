@@ -1,8 +1,92 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T02:26:21.432Z",
+  "last_fetch": "2026-08-07T04:35:45.464Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_db5981b2ed43576c",
+      "timestamp": 1786074631000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Saudi Arabia injures 11 civilians - thenationalnews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNUUh0STQ4MGN3Y0xqYnFKbDJZdG0tZGdmNDVQbU92Z1lBNXJPVmlzTGpRdTJHak9fTGFZUXVrTlYxRlV5ZHptTE1NbHlvTEcyM0VSSE5vUk1oSkhCbFZkTjBQeTlmdXlWRFo5VTFLbWZKSVN5TlprUmtzLTVxS2c2b2cweUZnQXk5a2VIUGJZMFNFOE9LZHl5UUFIUTMxUGVKbUtPaFI1RQ?oc=5\" target=\"_blank\">Houthi attack on Saudi Arabia injures 11 civilians</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNUUh0STQ4MGN3Y0xqYnFKbDJZdG0tZGdmNDVQbU92Z1lBNXJPVmlzTGpRdTJHak9fTGFZUXVrTlYxRlV5ZHptTE1NbHlvTEcyM0VSSE5vUk1oSkhCbFZkTjBQeTlmdXlWRFo5VTFLbWZKSVN5TlprUmtzLTVxS2c2b2cweUZnQXk5a2VIUGJZMFNFOE9LZHl5UUFIUTMxUGVKbUtPaFI1RQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T04:35:44.201Z"
+    },
+    {
+      "id": "rss_771eb03ed07d9fa1",
+      "timestamp": 1786073640000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says 11 civilians, including a child, injured after overnight Houthi attack | LIVE BLOG - i24NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVExEQTh1Wll5NlNjaHhHZGhVV1pWRjRRcUxUbVN1Y0RTWTlLMlJMX0p5dDhnY19iaTlSRlc5ZlRLYUM2Y0t5M2JQY1hDam41MkN2dDhQZTN0Mm96Wmlxa0VCQ1F3TDEzSWtrQ2FCNEo5QnVDXzRFZ0JMRGQtbUlpNDhWUjUzTDA3UFdjWGJYTFVMLUJOT3VNUXBYN2huLWNtNmFyUEp3NF9URHgzTmF6QlpDQ3BCU3BaaG5yeXJKM2k0SG5FRUtSOUZZUzVNRVNZeFBqWGJDUGNMYVI1?oc=5\" target=\"_blank\">Saudi Arabia says 11 civilians, including a child, injured after overnight Houthi attack | LIVE BLOG</a>&nbsp;&nbsp;<font color=\"#6",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQVExEQTh1Wll5NlNjaHhHZGhVV1pWRjRRcUxUbVN1Y0RTWTlLMlJMX0p5dDhnY19iaTlSRlc5ZlRLYUM2Y0t5M2JQY1hDam41MkN2dDhQZTN0Mm96Wmlxa0VCQ1F3TDEzSWtrQ2FCNEo5QnVDXzRFZ0JMRGQtbUlpNDhWUjUzTDA3UFdjWGJYTFVMLUJOT3VNUXBYN2huLWNtNmFyUEp3NF9URHgzTmF6QlpDQ3BCU3BaaG5yeXJKM2k0SG5FRUtSOUZZUzVNRVNZeFBqWGJDUGNMYVI1?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T04:35:44.201Z"
+    },
+    {
+      "id": "rss_d7ccae4524288c4f",
+      "timestamp": 1786072800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes kill dozens in Yemen, officials say, as Saudi Arabia warns of further attacks - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQaTlOU0hRaHlJSm01eDh2elJCZFpfSHpGTS10V2plRmpuV21keW1hLXZDX0NVN01BM0ZRYXdGSzNwTU1XVjdkR1hJT3lEa3pjdGFjZVF1czI5aXBCemlNT2ZLbUxZdW1RODdLeHlsZXdKR2NRbWhPMnJNbEFJTU80RDVubWhlbzRqWFJwVEVNZ1o4cFBUS1VtS3B1R0N6Zjh0Y0NKczNDTkxNWXFhbmI5c2pISlNYQQ?oc=5\" target=\"_blank\">Houthi strikes kill dozens in Yemen, officials say, as Saudi Arabia warns of further attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQaTlOU0hRaHlJSm01eDh2elJCZFpfSHpGTS10V2plRmpuV21keW1hLXZDX0NVN01BM0ZRYXdGSzNwTU1XVjdkR1hJT3lEa3pjdGFjZVF1czI5aXBCemlNT2ZLbUxZdW1RODdLeHlsZXdKR2NRbWhPMnJNbEFJTU80RDVubWhlbzRqWFJwVEVNZ1o4cFBUS1VtS3B1R0N6Zjh0Y0NKczNDTkxNWXFhbmI5c2pISlNYQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T04:35:44.200Z"
+    },
+    {
+      "id": "rss_229f84059377c9d9",
+      "timestamp": 1786065660000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Saudi Arabia wounds 11 civilians as kingdom warns of wider threat - The Japan Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQQUhCSDdRY0N3WUw1VXJoN1cxZXNIUUtjRUpIaXZaODhkcDcxeXVsUUx4SUtZSTFqZmg3MnBVdXA5VC1yQTZKcHRUWXJXQTh4QXJMenhKTmV0SDZGTElQR3lFSXNUSEZla0dXYTZOb2MtN3JZeXhGaUhqOUtpczB1dFRuZW13ZUpEN0tRWm94VGN6UQ?oc=5\" target=\"_blank\">Houthi attack on Saudi Arabia wounds 11 civilians as kingdom warns of wider threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQQUhCSDdRY0N3WUw1VXJoN1cxZXNIUUtjRUpIaXZaODhkcDcxeXVsUUx4SUtZSTFqZmg3MnBVdXA5VC1yQTZKcHRUWXJXQTh4QXJMenhKTmV0SDZGTElQR3lFSXNUSEZla0dXYTZOb2MtN3JZeXhGaUhqOUtpczB1dFRuZW13ZUpEN0tRWm94VGN6UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T04:35:44.200Z"
+    },
     {
       "id": "rss_2c8df7be5ba627a6",
       "timestamp": 1786062780000,
@@ -197,6 +281,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-06T23:53:42.941Z"
+    },
+    {
+      "id": "rss_fe754e2c71ded9f5",
+      "timestamp": 1786049812000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "At least 58 Yemeni troops killed in Houthi missile and drone strikes - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPM3B6TDVzbjhGa2ZqMHk2MnRiVy02RHg4SEtTSlhzVmVrYlZia3p2NThkLTR2bldlOXBLSTBvM0VTWFpNcW40dml3eTBiMkdrSlk0WjBxNjE1cEltSWxjWUxYNkpUdnpMN3VfNnZVVWpQbzJIRm9xeWJEalctU1ZlUlRpT1hlVVJ0bEhlN0F4N0JQWHd6V1FTamFTNXVJdmZabnNMNU1FZ2trRF9TSm9fakd3?oc=5\" target=\"_blank\">At least 58 Yemeni troops killed in Houthi missile and drone strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPM3B6TDVzbjhGa2ZqMHk2MnRiVy02RHg4SEtTSlhzVmVrYlZia3p2NThkLTR2bldlOXBLSTBvM0VTWFpNcW40dml3eTBiMkdrSlk0WjBxNjE1cEltSWxjWUxYNkpUdnpMN3VfNnZVVWpQbzJIRm9xeWJEalctU1ZlUlRpT1hlVVJ0bEhlN0F4N0JQWHd6V1FTamFTNXVJdmZabnNMNU1FZ2trRF9TSm9fakd3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T04:35:44.202Z"
     },
     {
       "id": "rss_27e83e31c58cdeeb",
@@ -11180,115 +11288,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T19:34:23.415Z"
-    },
-    {
-      "id": "rss_a542ea5d8ed8a4d4",
-      "timestamp": 1783941177000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis accuse Saudi Arabia of striking Sanaa airport to block Iranian plane - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OODFzQktJaWRPQ1lHcGlqdTBFTFlqOU5EaHJuTm5hTWlyNHRJMGVpc01tRGtqOTA2ZU1fX21xTGZPSlJmY3J0UHVGZEp5Um15VUhrSUF3?oc=5\" target=\"_blank\">Houthis accuse Saudi Arabia of striking Sanaa airport to block Iranian plane</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1OODFzQktJaWRPQ1lHcGlqdTBFTFlqOU5EaHJuTm5hTWlyNHRJMGVpc01tRGtqOTA2ZU1fX21xTGZPSlJmY3J0UHVGZEp5Um15VUhrSUF3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T12:01:04.697Z"
-    },
-    {
-      "id": "rss_2d8da60a97e429ef",
-      "timestamp": 1783597525000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran’s Hormuz Playbook Could Be Coming to the Red Sea - The Media Line",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPNkZ4SW8wdVlUSXVPZXhFNHRhbUh2b3lGbDgtSnFPLVFkSGNQTmVXb2hPQ3NIRFpaUDhjdW4zTHJ3MWtvaGNoelRIM202WVhKY3hibWNaT0ZxeXRGcHE3X1N4MjladmlqeGhOTkllR0ZnZS1fYzg4UEl6ZFZXeWNQYzhvTmVadHRsaF9DaE82UFhFRHpLeTdqTnBUcGFFZw?oc=5\" target=\"_blank\">Iran’s Hormuz Playbook Could Be Coming to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNkZ4SW8wdVlUSXVPZXhFNHRhbUh2b3lGbDgtSnFPLVFkSGNQTmVXb2hPQ3NIRFpaUDhjdW4zTHJ3MWtvaGNoelRIM202WVhKY3hibWNaT0ZxeXRGcHE3X1N4MjladmlqeGhOTkllR0ZnZS1fYzg4UEl6ZFZXeWNQYzhvTmVadHRsaF9DaE82UFhFRHpLeTdqTnBUcGFFZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-09T12:00:37.540Z"
-    },
-    {
-      "id": "rss_1d7f7f0f83b3a9f9",
-      "timestamp": 1783532681000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Officials: We'll Set Saudi Arabia Back To 1930 - MEMRI | Middle East Media Research Institute",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcU93LW9tQ19sRklPU2M4NHEtZkhRc2tvMUdMbXJ1NFdvZ29SZzNDSHdiWnBOQUZxcTlCQ3Z3ZXJ4d2gyUmdXeGh5aUNyM2x3QzllNUFOSjRzZzNhLWVlSnprSXNUbm4yVlI3cUtGMXFKRk9sREd5YkJvYzN0c2duY18tbzk3TTlxLVZ2blprN2sxMDlGTWdwRk53eE1Ka29zbmhBM2RxLTh4OUM5X0w5OS1PbTIwclVS?oc=5\" target=\"_blank\">Houthi Officials: We'll Set Saudi Arabia Back To 1930</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MEMRI | Middle East Media Research Institute</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcU93LW9tQ19sRklPU2M4NHEtZkhRc2tvMUdMbXJ1NFdvZ29SZzNDSHdiWnBOQUZxcTlCQ3Z3ZXJ4d2gyUmdXeGh5aUNyM2x3QzllNUFOSjRzZzNhLWVlSnprSXNUbm4yVlI3cUtGMXFKRk9sREd5YkJvYzN0c2duY18tbzk3TTlxLVZ2blprN2sxMDlGTWdwRk53eE1Ka29zbmhBM2RxLTh4OUM5X0w5OS1PbTIwclVS?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-09T00:34:42.118Z"
-    },
-    {
-      "id": "rss_21ca045485b725b3",
-      "timestamp": 1783524357000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "From Hormuz to Bab el Mandeb: The Lesson the World Must Not Ignore - The Media Line",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNS2xiTC04TFRUZWZKOUlYbVk2Y3NlcTF6aVhPTmtfODlNYm05QWNXZjR0dXlob2dnMXF2blgyUVZYWER0dC10VXpEVWZRZFJCN0MwSVNzYkRnbXNlcTRhSnRPSWV0TWVQYUdDaXZ2ajhHTk5rd3VMNVVnVzludUFONU5zYWxhRlBWS3UzOXVuUGdYWnVaNnQwRUNrWWV0OXRMV2dpc0N3UQ?oc=5\" target=\"_blank\">From Hormuz to Bab el Mandeb: The Lesson the World Must Not Ignore</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNS2xiTC04TFRUZWZKOUlYbVk2Y3NlcTF6aVhPTmtfODlNYm05QWNXZjR0dXlob2dnMXF2blgyUVZYWER0dC10VXpEVWZRZFJCN0MwSVNzYkRnbXNlcTRhSnRPSWV0TWVQYUdDaXZ2ajhHTk5rd3VMNVVnVzludUFONU5zYWxhRlBWS3UzOXVuUGdYWnVaNnQwRUNrWWV0OXRMV2dpc0N3UQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-08T21:25:04.219Z"
-    },
-    {
-      "id": "rss_42ecf010851c368a",
-      "timestamp": 1783492349000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Alarm over potential Eilat attack met with skepticism, though not toward Houthi threat - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPc1l2VTJUQkE2TkJCLS05Z3QzaDNlWlRxLWp3VUhUNkt0R0YyaDlDSzRRQjJoSm05NlpCNzBrTjVtNEFpU3d4cW1YV0RBaGpHWG4tTTBPWHVNdF9ZblBpVEFNa0lvYTFZVEFjOXNsOHhZTWF1RWpiMHJKR2Q1d0daN0UxMXRWdE1yVjFfTm5ueGM3cUJRSW9WX3E1ZmRFLW5WNi1hYmlLQ0lLRWdETFAtVW5YcC0wQjjSAbwBQVVfeXFMT1dGemFrSE5kdmczNVJsNXRsLWtER3NuMWVKVGVPekpaLUlmd04xZHlfZUF2eUh5VTVGVVl1R05RQktkRVJMbENIX19iSWZhY0syVGRGd0tQNlFxUnV2WlZFTWtsVXduZmtIcWk4RG9oUmxlenVMQkNDTlM0Zko0UDVDOU1BdUVFdTQyX2NiMS1FeUh3en",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPc1l2VTJUQkE2TkJCLS05Z3QzaDNlWlRxLWp3VUhUNkt0R0YyaDlDSzRRQjJoSm05NlpCNzBrTjVtNEFpU3d4cW1YV0RBaGpHWG4tTTBPWHVNdF9ZblBpVEFNa0lvYTFZVEFjOXNsOHhZTWF1RWpiMHJKR2Q1d0daN0UxMXRWdE1yVjFfTm5ueGM3cUJRSW9WX3E1ZmRFLW5WNi1hYmlLQ0lLRWdETFAtVW5YcC0wQjjSAbwBQVVfeXFMT1dGemFrSE5kdmczNVJsNXRsLWtER3NuMWVKVGVPekpaLUlmd04xZHlfZUF2eUh5VTVGVVl1R05RQktkRVJMbENIX19iSWZhY0syVGRGd0tQNlFxUnV2WlZFTWtsVXduZmtIcWk4RG9oUmxlenVMQkNDTlM0Zko0UDVDOU1BdUVFdTQyX2NiMS1FeUh3enpfTEtISU5ra2lNb0g5djdvOEVOTWZvYWRfTkVvekhEaldCcVc0Q0Y?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-08T07:01:22.884Z"
     }
   ]
 }
