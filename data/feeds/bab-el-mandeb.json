@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T16:22:11.224Z",
+  "last_fetch": "2026-08-07T17:20:46.516Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_494a13c45a856426",
+      "timestamp": 1786122137000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen says Houthi attack on oil tanker thwarted in the Red Sea - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM0pIeFB5Sk5GcnJMXzNpbGNNdnRSZ2xFZkd3aV92ZEk3WjhEV3FfN2VfeldJMThHZnpxQV9pMG5aNUN1WHc2SXZUa3A1WGQ2QTd1c2JmaUdFczluYzJLU3VrMzBwV0UxSUJLZ3FwemdDRnlPNE1sU3Z6ekRreE42VjRoYnBHbWphdnN3?oc=5\" target=\"_blank\">Yemen says Houthi attack on oil tanker thwarted in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM0pIeFB5Sk5GcnJMXzNpbGNNdnRSZ2xFZkd3aV92ZEk3WjhEV3FfN2VfeldJMThHZnpxQV9pMG5aNUN1WHc2SXZUa3A1WGQ2QTd1c2JmaUdFczluYzJLU3VrMzBwV0UxSUJLZ3FwemdDRnlPNE1sU3Z6ekRreE42VjRoYnBHbWphdnN3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T17:20:45.071Z"
+    },
+    {
+      "id": "rss_24413077a46a4a4e",
+      "timestamp": 1786122005000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Live Updates: Latest from Israel, Iran, and Middle East - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9FTWE4TWRhUjhlbHpZdUJKVERKV2p4X1E1N29XcllYRXktZHczbkgzck8tM1paa3VhalMwbXRUdWZlVHo2Z3hIbnNJbFNlaElpMnlZVzdYcFZRM3FiYlZiMGRBT0VoVTM4Y3NIb08zR094NXBsVi1TZ21iVEdjbE0?oc=5\" target=\"_blank\">Live Updates: Latest from Israel, Iran, and Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FTWE4TWRhUjhlbHpZdUJKVERKV2p4X1E1N29XcllYRXktZHczbkgzck8tM1paa3VhalMwbXRUdWZlVHo2Z3hIbnNJbFNlaElpMnlZVzdYcFZRM3FiYlZiMGRBT0VoVTM4Y3NIb08zR094NXBsVi1TZ21iVEdjbE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T17:20:45.070Z"
+    },
     {
       "id": "rss_f5aec3a74426a47d",
       "timestamp": 1786118160000,
@@ -11235,48 +11281,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T06:14:50.227Z"
-    },
-    {
-      "id": "rss_1c132a5c27ac7874",
-      "timestamp": 1783976505000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why there may be a renewed war between Houthis, Saudia Arabia - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uYTZJbjl0UmMtQ1V0NzR4VU1pdFYxVzBUTXQyb0VPR1ZSU05KNnpwek1PSTNReXQ1NTBKWTJCb2laQm5pWFJtY0diU21FaUFTWUtlRGRnUGdFTUhE?oc=5\" target=\"_blank\">Why there may be a renewed war between Houthis, Saudia Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5uYTZJbjl0UmMtQ1V0NzR4VU1pdFYxVzBUTXQyb0VPR1ZSU05KNnpwek1PSTNReXQ1NTBKWTJCb2laQm5pWFJtY0diU21FaUFTWUtlRGRnUGdFTUhE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T09:12:59.725Z"
-    },
-    {
-      "id": "rss_da95cb7b1823d240",
-      "timestamp": 1783974021000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis hit Abha airport after Saudi strike on Sanaa fuels escalation - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUmc1MEU2SEdiVUpzNWRhb0x3V0pqNjVSVms4OGY3aDU1UW9rVVptMVJZYmpNSURITDY0WU8xeEdzYzVxX0d6ZTY1Z2ZLUXBRcllHRVZIbUNtZXdoTFJhQTAxb3dMa09HaXNIUm1yOEQxZXdmQ3pMQ1VqTlhWN3EydExfRmI2VVV1OHZObWdPQnNud0hLSjNtQ3liOTB0a04zSldJSDRybVhpZHNHLS1EN21kRC1NanNrWUN2aWlqZTPSAcYBQVVfeXFMTTV4aUNseDc4QW83UURSMTFuZDdta2pYNkEwQnVoYklfNDZOQk9lYlMzRGRpUjlwZ1pxenVVdE04OEwwWUItV3lVQjFxajNEYk5JNXdDT0FndnpOOVZqMjV0dU5RM0E2UDZ0UVZvR3hCZlpzZWpUNFdENzA5eTFhNkZMSzhoT3VqMUlTZT",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUmc1MEU2SEdiVUpzNWRhb0x3V0pqNjVSVms4OGY3aDU1UW9rVVptMVJZYmpNSURITDY0WU8xeEdzYzVxX0d6ZTY1Z2ZLUXBRcllHRVZIbUNtZXdoTFJhQTAxb3dMa09HaXNIUm1yOEQxZXdmQ3pMQ1VqTlhWN3EydExfRmI2VVV1OHZObWdPQnNud0hLSjNtQ3liOTB0a04zSldJSDRybVhpZHNHLS1EN21kRC1NanNrWUN2aWlqZTPSAcYBQVVfeXFMTTV4aUNseDc4QW83UURSMTFuZDdta2pYNkEwQnVoYklfNDZOQk9lYlMzRGRpUjlwZ1pxenVVdE04OEwwWUItV3lVQjFxajNEYk5JNXdDT0FndnpOOVZqMjV0dU5RM0E2UDZ0UVZvR3hCZlpzZWpUNFdENzA5eTFhNkZMSzhoT3VqMUlTZTZRVWwzc1o3ZU55NG9xV2MwX2REODBwMVlqNk9NZW5pYTN0RzdTZHFNS0VKSzdDTldzdEpFVUFaY3Zn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T20:26:50.060Z"
     }
   ]
 }
