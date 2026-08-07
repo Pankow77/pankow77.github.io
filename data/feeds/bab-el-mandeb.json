@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T07:50:33.800Z",
+  "last_fetch": "2026-08-07T08:53:20.743Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_02845e340a20fb51",
+      "timestamp": 1786091580000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Three members of Yemen government forces dead in Houthi attack - Naharnet",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUW9CcWhhWHRqVUNvaWJBanh0RHlnb0F5emZPQVI0UTRBcFFFT2FDTVlUWktMYjlFUHpmSFRsLXBHTGpyUTR6Y1Qyb2FkcDRhdEZuM2EycVE3amhrS3UxYi1IdV8zeGNZSWFTOHViWVJDWkh3QTFndVlEODJjQVJIM3NWOXFrTEgxcUw3alV0LURLYzd4VzU1RlFGOGFUQi1LV3BaTk4zY2c?oc=5\" target=\"_blank\">Three members of Yemen government forces dead in Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Naharnet</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUW9CcWhhWHRqVUNvaWJBanh0RHlnb0F5emZPQVI0UTRBcFFFT2FDTVlUWktMYjlFUHpmSFRsLXBHTGpyUTR6Y1Qyb2FkcDRhdEZuM2EycVE3amhrS3UxYi1IdV8zeGNZSWFTOHViWVJDWkh3QTFndVlEODJjQVJIM3NWOXFrTEgxcUw3alV0LURLYzd4VzU1RlFGOGFUQi1LV3BaTk4zY2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T08:53:19.648Z"
+    },
+    {
+      "id": "rss_7dc0b7cc1805bbdc",
+      "timestamp": 1786089419000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis Escalate Red Sea Campaign, Claim Eighth Saudi Tanker Attack - Homeland Security Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVTVra2ZQbXpYZlY2Y1FfbWFLZmVPRTgxWUVDYi1oSWtVOFpUbzlEbGkyWl9DOG9pVW5WeS1ibFZ3RjlOZ0NkOVJTLVduNUd0ZW9LVGU5SlcxRUVLbHNEUzdWV0ltbFVIUG5xV3M4MGdmbmNkbEZCOVpGdFdBU0l2TlZpTTZrZHdoNlNkZk9DZFRMS0djTU5Uaksxc1pfck55dThabHFnYnd2cHdaSldsN3FRSzJDV3RyajJFWmlaMnk0Ty1URS0tMw?oc=5\" target=\"_blank\">Houthis Escalate Red Sea Campaign, Claim Eighth Saudi Tanker Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Homeland Security Today</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVTVra2ZQbXpYZlY2Y1FfbWFLZmVPRTgxWUVDYi1oSWtVOFpUbzlEbGkyWl9DOG9pVW5WeS1ibFZ3RjlOZ0NkOVJTLVduNUd0ZW9LVGU5SlcxRUVLbHNEUzdWV0ltbFVIUG5xV3M4MGdmbmNkbEZCOVpGdFdBU0l2TlZpTTZrZHdoNlNkZk9DZFRMS0djTU5Uaksxc1pfck55dThabHFnYnd2cHdaSldsN3FRSzJDV3RyajJFWmlaMnk0Ty1URS0tMw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T08:53:19.647Z"
+    },
     {
       "id": "rss_5e9b2d5c684151eb",
       "timestamp": 1786081632000,
@@ -11242,50 +11286,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T20:26:50.060Z"
-    },
-    {
-      "id": "rss_251aebde7f5054d1",
-      "timestamp": 1783963075000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen’s Fragile Peace in Peril as Houthis Accuse Saudi Arabia of Bombing - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQeU1aYkhtQXBvbE9lYVYxclNqWk5wemR0VVhHUUtVU1NkQzN3ZTdabGZVZ2NVNmF5Q21Db195Q0ZDRGl1VUl0ZTN0LUE0RzdkMFhudEVISmpueWxjQ3ZobTlVUkZPRjFIZXppSEoxdzNQUkM3QllTSWF5TXZoeXZoMHlyUWhHZ1ZHLWF0WmdUUHRNZE5UakUw?oc=5\" target=\"_blank\">Yemen’s Fragile Peace in Peril as Houthis Accuse Saudi Arabia of Bombing</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeU1aYkhtQXBvbE9lYVYxclNqWk5wemR0VVhHUUtVU1NkQzN3ZTdabGZVZ2NVNmF5Q21Db195Q0ZDRGl1VUl0ZTN0LUE0RzdkMFhudEVISmpueWxjQ3ZobTlVUkZPRjFIZXppSEoxdzNQUkM3QllTSWF5TXZoeXZoMHlyUWhHZ1ZHLWF0WmdUUHRNZE5UakUw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T21:20:17.231Z"
-    },
-    {
-      "id": "rss_487b947f9892a30d",
-      "timestamp": 1783962315000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis fire missiles at Saudi Arabia after blast at Sanaa airport - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPcWJfYUF2S1hsYjBCNzN1Q3FiSmpTVTNwTTFiY2dMYXNGTy16d1h6aTZJdVdrTG9fOHZqQ1RzVEhQYUFyTDlQalN2WWxPaU13TlJfd0JIVTcyeDNuczRGanQ1dnhZYVFCN0VDUjBnQkhCb3dyQ2dHdG14ZGRLR0dMTXY0Nlp4aG05bzNhQUhEQnJtTFAtOFRKUU1UUnFpc0syZm1tc2liOGlRdzNzZTk2WE5acHF2WWV0QldQMFp0YUZOSV9jdzE3WWh3?oc=5\" target=\"_blank\">Houthis fire missiles at Saudi Arabia after blast at Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcWJfYUF2S1hsYjBCNzN1Q3FiSmpTVTNwTTFiY2dMYXNGTy16d1h6aTZJdVdrTG9fOHZqQ1RzVEhQYUFyTDlQalN2WWxPaU13TlJfd0JIVTcyeDNuczRGanQ1dnhZYVFCN0VDUjBnQkhCb3dyQ2dHdG14ZGRLR0dMTXY0Nlp4aG05bzNhQUhEQnJtTFAtOFRKUU1UUnFpc0syZm1tc2liOGlRdzNzZTk2WE5acHF2WWV0QldQMFp0YUZOSV9jdzE3WWh3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T03:36:54.395Z"
     }
   ]
 }
