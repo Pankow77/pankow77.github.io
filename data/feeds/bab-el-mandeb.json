@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T17:20:46.516Z",
+  "last_fetch": "2026-08-07T18:09:08.139Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_cf70217efe3c5cc2",
+      "timestamp": 1786123854000,
+      "source": "Reuters",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Reuters: Saudi Official Warns of Potential Two-Front Attack from Iran-Backed Groups - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPc2xYSC1YU2w1X2ZvNHlGQUs3a080QXNScS05SHFxTjlUc0JhYjdjUENzcjY1THhzaTR3b2ROY0lmZmNBZEVkaWtVSVRReHdKd2VkNE9WcUxQdGZoc2M0YWpONy0yMXJLWF81VTVYX1BiSlRodkgxd0JHeDkxcVlZOEdoYXpYSUdibGQyVzltWUUxd3VMMnRjUnVTUF9MQTdnLXJBQ3piVnpyMk40VUhDcVE0QVNoMFhEdnRnVzFOaWJ1bnU5?oc=5\" target=\"_blank\">Reuters: Saudi Official Warns of Potential Two-Front Attack from Iran-Backed Groups</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPc2xYSC1YU2w1X2ZvNHlGQUs3a080QXNScS05SHFxTjlUc0JhYjdjUENzcjY1THhzaTR3b2ROY0lmZmNBZEVkaWtVSVRReHdKd2VkNE9WcUxQdGZoc2M0YWpONy0yMXJLWF81VTVYX1BiSlRodkgxd0JHeDkxcVlZOEdoYXpYSUdibGQyVzltWUUxd3VMMnRjUnVTUF9MQTdnLXJBQ3piVnpyMk40VUhDcVE0QVNoMFhEdnRnVzFOaWJ1bnU5?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-07T18:09:06.748Z"
+    },
     {
       "id": "rss_494a13c45a856426",
       "timestamp": 1786122137000,
@@ -11260,27 +11283,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T02:16:24.186Z"
-    },
-    {
-      "id": "rss_0a319ead22fe6837",
-      "timestamp": 1783980467000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "In major escalation, Yemen’s Houthis target Saudi Arabia’s Abha airport - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUxDWDVUY0kyZzFRQnI1UFBoSDRXc0IyNG1oaG1ndmlzalNxR1ZXck91RnpRcENocmx2UlhXQk00YklCUzVNQVJteUFscnFibWZHbHFvclprMVU3Z0ZTT0Zxc0ZKYnpXaHEzVjZvcVRoTEJLOUMyM3lyWnUxV01pSEtJZDBRV05JVVpmaTZzazRNTU1td3ZJeVF3Q0RHeVhD0gGmAUFVX3lxTE1waFN5emhjWWFSS1NKRlFnUXZtU2pUb0FDRzUtOXRvZ3hpczZlMmN6a1UzbGhpX1BYYkZSOTZMc1hDdlM5bHozaWE0ZHc1a2FQSGFaVnVuY1MteGN3SDdJek5NZi1ORE5va2JMUEVLYWtnU3VFUTBYZTRwT1FxRXJfbTJJZENvTnVCWlFmb3RFNmlNc2V6VXg2M05sV2VzSGpyOW1tNkE?oc=5\" ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZUxDWDVUY0kyZzFRQnI1UFBoSDRXc0IyNG1oaG1ndmlzalNxR1ZXck91RnpRcENocmx2UlhXQk00YklCUzVNQVJteUFscnFibWZHbHFvclprMVU3Z0ZTT0Zxc0ZKYnpXaHEzVjZvcVRoTEJLOUMyM3lyWnUxV01pSEtJZDBRV05JVVpmaTZzazRNTU1td3ZJeVF3Q0RHeVhD0gGmAUFVX3lxTE1waFN5emhjWWFSS1NKRlFnUXZtU2pUb0FDRzUtOXRvZ3hpczZlMmN6a1UzbGhpX1BYYkZSOTZMc1hDdlM5bHozaWE0ZHc1a2FQSGFaVnVuY1MteGN3SDdJek5NZi1ORE5va2JMUEVLYWtnU3VFUTBYZTRwT1FxRXJfbTJJZENvTnVCWlFmb3RFNmlNc2V6VXg2M05sV2VzSGpyOW1tNkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T06:14:50.227Z"
     }
   ]
 }
