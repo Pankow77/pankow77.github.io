@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T09:56:42.175Z",
+  "last_fetch": "2026-08-07T10:50:56.168Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -67,6 +67,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T08:53:19.648Z"
+    },
+    {
+      "id": "rss_15e83dad5eb8c1bd",
+      "timestamp": 1786091580000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Three Yemeni soldiers killed in Houthi attack, says military source - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkZmcmttV2dHWWNRMjMwckRlWXNnYkR6ZG5mYjRFZzNhZnVtVkJPVWlTbTJLZ0picUJWYUJSQVdsakRVVE1zZDZhZW02R0tlcFYxZm5JTWtWR2JROGR2akhuWEpHTHF2MHVpUThqQTFJanY3UjJoTk0ydEc3N0lPeVpIcGhlODZvc2hRcXpLWHVBTzBPeVdFVTR5SjJ1bXlQOEp2cG1jc0VrOHNrODN0SDdlemR6OTBoTmtEbQ?oc=5\" target=\"_blank\">Three Yemeni soldiers killed in Houthi attack, says military source</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkZmcmttV2dHWWNRMjMwckRlWXNnYkR6ZG5mYjRFZzNhZnVtVkJPVWlTbTJLZ0picUJWYUJSQVdsakRVVE1zZDZhZW02R0tlcFYxZm5JTWtWR2JROGR2akhuWEpHTHF2MHVpUThqQTFJanY3UjJoTk0ydEc3N0lPeVpIcGhlODZvc2hRcXpLWHVBTzBPeVdFVTR5SjJ1bXlQOEp2cG1jc0VrOHNrODN0SDdlemR6OTBoTmtEbQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T10:50:54.937Z"
     },
     {
       "id": "rss_7dc0b7cc1805bbdc",
@@ -495,6 +516,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-06T23:53:42.941Z"
+    },
+    {
+      "id": "rss_89ef0f82feef5f76",
+      "timestamp": 1786052580000,
+      "source": "Reuters",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi expects imminent two-pronged attack from Iran's allies, official says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPa3M0RkZsT0JHNHhwVXVvVURQZWs0R1hMbHFpa0RsdXE4MjNaME9lUXc4bXc1M1J4em93djJwZ3U4bS1UczdEaVJDRENsYXlYS2xJQ19ZeTVmRU1mLTBxWHFySVIzRjh3OG5JWFU5b1BpNjYtUlFDNzllUG56Tm9VcTgyYUExX1FzZ3ltLWxXNEE2R3NYZ2I4bTRRUFZtbm5WQUo2UDc2X2hUb3ZaOUpvdVVFWFdQdmx0NXFaeHl3XzdjQQ?oc=5\" target=\"_blank\">Saudi expects imminent two-pronged attack from Iran's allies, official says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPa3M0RkZsT0JHNHhwVXVvVURQZWs0R1hMbHFpa0RsdXE4MjNaME9lUXc4bXc1M1J4em93djJwZ3U4bS1UczdEaVJDRENsYXlYS2xJQ19ZeTVmRU1mLTBxWHFySVIzRjh3OG5JWFU5b1BpNjYtUlFDNzllUG56Tm9VcTgyYUExX1FzZ3ltLWxXNEE2R3NYZ2I4bTRRUFZtbm5WQUo2UDc2X2hUb3ZaOUpvdVVFWFdQdmx0NXFaeHl3XzdjQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-07T10:50:54.936Z"
     },
     {
       "id": "rss_fe754e2c71ded9f5",
@@ -11240,50 +11284,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T18:58:13.197Z"
-    },
-    {
-      "id": "rss_1025c6d0ea69cdb7",
-      "timestamp": 1783964966000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia - Dawn",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiSEFVX3lxTFBMczB4RmwtTzBYTDM2X1AtbWc5Z0xqZGk4dTJrWjdic0NaMU9va2ZJQ1hLTTNWNWlyU0VCdUJiLWtOcHQ5MkVtYw?oc=5\" target=\"_blank\">Yemen govt says hit Sanaa airport, Houthis attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBMczB4RmwtTzBYTDM2X1AtbWc5Z0xqZGk4dTJrWjdic0NaMU9va2ZJQ1hLTTNWNWlyU0VCdUJiLWtOcHQ5MkVtYw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T00:27:55.252Z"
-    },
-    {
-      "id": "rss_8908d6e9a735ef62",
-      "timestamp": 1783964581000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi air defenses intercept Houthi ballistic missiles amid Yemen tensions - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLWhmLVphNWRMckZXbTdidFVVRFJ5R1dGMUROWGpENlZNTDM1V2pYQTYyRGdqcU55ZGd0V0V2U0UxaklsN0l2bEdjTUk4Ynp5SlR4QTBSY2Qxelg0ZDlVRjFqYkVnQ1RKWnY2bElEM3dpY1dQSTQwenA4M1RrZEFLc2MxZ2hFSjhaVVhBNV9ZQ2xuSTJPQWZpd3JZaDhaQVNNanhvRXk1TTJJZDFEdm9JMExFcklCRjV2MEVJ?oc=5\" target=\"_blank\">Saudi air defenses intercept Houthi ballistic missiles amid Yemen tensions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLWhmLVphNWRMckZXbTdidFVVRFJ5R1dGMUROWGpENlZNTDM1V2pYQTYyRGdqcU55ZGd0V0V2U0UxaklsN0l2bEdjTUk4Ynp5SlR4QTBSY2Qxelg0ZDlVRjFqYkVnQ1RKWnY2bElEM3dpY1dQSTQwenA4M1RrZEFLc2MxZ2hFSjhaVVhBNV9ZQ2xuSTJPQWZpd3JZaDhaQVNNanhvRXk1TTJJZDFEdm9JMExFcklCRjV2MEVJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-13T18:58:13.196Z"
     }
   ]
 }
