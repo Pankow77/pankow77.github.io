@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T19:26:51.065Z",
+  "last_fetch": "2026-08-07T20:05:02.437Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e7cb23c7a11ebc80",
+      "timestamp": 1786130160000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks kill civilians in Yemen’s Marib, target vessel in Red Sea: Report - middleeastmonitor.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3ZqVU13M1ZaTnNFLWttQkVSU1BtbkJ3NHotSy1jLWdJUWZqZkVXMTZXdlk4dHQ2VUN6QzhLOWhwc1RlRm16eE84MDM1RnoxVXVySm9aR1JnQ2ptUFJ4UktiYWtZNkR6cllRYUt0bEY5akRJbkI4N0RIVEY3eTRhSVNOT2VDRmVEYzNSY1p3eUJYUzBjbS04Zm5JSGM3Ukl1cFUwSllKejM4Q0M2OTJ6OFA4MUFjNjBYa0tIc0lB0gHDAUFVX3lxTE5sMDg2VHQ3LUxWajd4ckdmaVptRTR2RnhjZC14bzNVaXl2azhXU2UydGEtMFU2WXJLTy1hODF4QTJaOVZTNnRfUmZzbUk2a1I3ei1pc0ZPcVZrNHZJc2tJbzh3ejRKV005M3p2ems0c0tCZ1U1ZUlRcHRIaC1JTXp3LVFRbDBUNnhkbnZpdk",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQR3ZqVU13M1ZaTnNFLWttQkVSU1BtbkJ3NHotSy1jLWdJUWZqZkVXMTZXdlk4dHQ2VUN6QzhLOWhwc1RlRm16eE84MDM1RnoxVXVySm9aR1JnQ2ptUFJ4UktiYWtZNkR6cllRYUt0bEY5akRJbkI4N0RIVEY3eTRhSVNOT2VDRmVEYzNSY1p3eUJYUzBjbS04Zm5JSGM3Ukl1cFUwSllKejM4Q0M2OTJ6OFA4MUFjNjBYa0tIc0lB0gHDAUFVX3lxTE5sMDg2VHQ3LUxWajd4ckdmaVptRTR2RnhjZC14bzNVaXl2azhXU2UydGEtMFU2WXJLTy1hODF4QTJaOVZTNnRfUmZzbUk2a1I3ei1pc0ZPcVZrNHZJc2tJbzh3ejRKV005M3p2ems0c0tCZ1U1ZUlRcHRIaC1JTXp3LVFRbDBUNnhkbnZpdktyQ1czX1ZsNVhsMUlmVDdYbFRGTnRnMlNXVTNDMjkzNktjRVZmaXJ0cXhnZzVvZ2I3NkIyVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-07T20:05:01.081Z"
+    },
     {
       "id": "rss_cf70217efe3c5cc2",
       "timestamp": 1786123854000,
@@ -11262,27 +11285,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-13T23:19:18.491Z"
-    },
-    {
-      "id": "rss_8ab3fbc96dc92dfa",
-      "timestamp": 1783980558000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi Arabia after Sanaa airport hit - Free Malaysia Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYnJHQW11U1hIRi1pVG5nOWVwRzF2TG9wcnZYOTcxZmo3ckV0WFVvTk9VWUtfVW9DOVAtSm5CNjhsdUhiMkthc3drc1hRR1htN3JYckZoY3lab3RfeEtGNWYzTEd5WmNjN2Zua0lyQjBYWndpR0Y2MVRBbVhZeFJXQXdiWFdNTnNiMGE5VHNCcmx4bDZ6LXhwZ29abHN5QzRtYnpHX3MxN0gwNHRXOFgycXNZNHllSlhKY0lMME5CYTZheUE?oc=5\" target=\"_blank\">Houthis attack Saudi Arabia after Sanaa airport hit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Free Malaysia Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYnJHQW11U1hIRi1pVG5nOWVwRzF2TG9wcnZYOTcxZmo3ckV0WFVvTk9VWUtfVW9DOVAtSm5CNjhsdUhiMkthc3drc1hRR1htN3JYckZoY3lab3RfeEtGNWYzTEd5WmNjN2Zua0lyQjBYWndpR0Y2MVRBbVhZeFJXQXdiWFdNTnNiMGE5VHNCcmx4bDZ6LXhwZ29abHN5QzRtYnpHX3MxN0gwNHRXOFgycXNZNHllSlhKY0lMME5CYTZheUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T02:16:24.186Z"
     }
   ]
 }
