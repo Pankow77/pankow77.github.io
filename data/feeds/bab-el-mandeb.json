@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-08T09:32:22.411Z",
+  "last_fetch": "2026-08-08T10:26:41.652Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_67d842e582075efc",
+      "timestamp": 1786181370000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "An attack by Yemeni Houthi rebels late on Thursday wounded 11 people in southern Saudi Arabia, a Riyadh-led coalition said, the highest toll in the kingdom in more than four years of conflict. | via ANC 24/7 Check the comments section for the full story. - facebook.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdVpOdVNvLVNGTWFGaEUycUQzTmp5RUhTSkZSeWswSkpzbzFObTd5ZVFLODF0bDdmT1E3eXR5d3IxcTJSZnpNSEg4WERybGRtZmk0TGhEUk1HMkNkZGZSbVJoWlo4MW81dnloaFBmbG5SRmxXVnF5NXJnRmZveFdzNmx3VWVVdDRwU3hOcGtjTnhfbl9Ock4tOVB0SVNOZmJ1WG8yVXpCQ0VBVDdMRll5cUk5YTM4eEFDcTdyNnRzVk5FYUdTbmhKZFB4ckMxbVFWck9RMUJLbw?oc=5\" target=\"_blank\">An attack by Yemeni Houthi rebels late on Thursday wounded 11 people in southern Saudi Arabia, a Riyadh-led coalition said, the highest t",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOdVpOdVNvLVNGTWFGaEUycUQzTmp5RUhTSkZSeWswSkpzbzFObTd5ZVFLODF0bDdmT1E3eXR5d3IxcTJSZnpNSEg4WERybGRtZmk0TGhEUk1HMkNkZGZSbVJoWlo4MW81dnloaFBmbG5SRmxXVnF5NXJnRmZveFdzNmx3VWVVdDRwU3hOcGtjTnhfbl9Ock4tOVB0SVNOZmJ1WG8yVXpCQ0VBVDdMRll5cUk5YTM4eEFDcTdyNnRzVk5FYUdTbmhKZFB4ckMxbVFWck9RMUJLbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T10:26:40.590Z"
+    },
     {
       "id": "rss_e6f8b1ae63d8669a",
       "timestamp": 1786165611000,
@@ -11257,29 +11280,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T09:12:59.725Z"
-    },
-    {
-      "id": "rss_e8fbf5288111a9b4",
-      "timestamp": 1784015499000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Iran-Backed Houthis Strike Saudi Arabia in Major Escalation - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPNE1NcmVmaDhWbHFrQ2xJeGVlak1jQnUzY3IzTklINUV2NXN2RnBqdVZyVUNLX295NWZDN1dYS3RweXhEZXBoZDZxbDh0TjVMcHpxaXlJOHU4Mi05dHpJQ2k3MnJMbmdNRFRIbUViMGxYNFM5bklvSThNUnNrUmh3S0FDbzVpRGs1ZDdfXzRoTUI5bWEybnkxLTcwaHNPMU9oMEJjelh3bmhHR1VlUnNj?oc=5\" target=\"_blank\">Iran-Backed Houthis Strike Saudi Arabia in Major Escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPNE1NcmVmaDhWbHFrQ2xJeGVlak1jQnUzY3IzTklINUV2NXN2RnBqdVZyVUNLX295NWZDN1dYS3RweXhEZXBoZDZxbDh0TjVMcHpxaXlJOHU4Mi05dHpJQ2k3MnJMbmdNRFRIbUViMGxYNFM5bklvSThNUnNrUmh3S0FDbzVpRGs1ZDdfXzRoTUI5bWEybnkxLTcwaHNPMU9oMEJjelh3bmhHR1VlUnNj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T03:02:55.264Z"
     }
   ]
 }
