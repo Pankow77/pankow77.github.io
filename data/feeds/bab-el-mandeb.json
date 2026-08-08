@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-07T23:56:41.246Z",
+  "last_fetch": "2026-08-08T01:28:52.072Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a45d2e8511fc3cbb",
+      "timestamp": 1786147560000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Arab League secretary-general condemns Houthi attack on Saudi Arabia - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNNlkyeEVuczR6YjJiSE9HcFlTcXBqNGJ4WnA0RFUtLXNzd1hYeGc4SXp2UFh0enE3cnIwN1BmTkZwVG1Za2x3S1lzT0RKWTc0cmFYd1V6S2FlU1ZWSkxpMTdwWXNPWTZaRW10VXR4dWRtN3FPc2pLcUo0NFJLVGlXQ1RIbDBMUlFxZE1pRHpSOHp0c0stTDdzdXdkRTc2MV81R2o4TVlIUnVKN2pqendIbUdFcGxFVkh5UjY3cDdYYw?oc=5\" target=\"_blank\">Arab League secretary-general condemns Houthi attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNlkyeEVuczR6YjJiSE9HcFlTcXBqNGJ4WnA0RFUtLXNzd1hYeGc4SXp2UFh0enE3cnIwN1BmTkZwVG1Za2x3S1lzT0RKWTc0cmFYd1V6S2FlU1ZWSkxpMTdwWXNPWTZaRW10VXR4dWRtN3FPc2pLcUo0NFJLVGlXQ1RIbDBMUlFxZE1pRHpSOHp0c0stTDdzdXdkRTc2MV81R2o4TVlIUnVKN2pqendIbUdFcGxFVkh5UjY3cDdYYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T01:28:50.628Z"
+    },
     {
       "id": "rss_f6412606acce0179",
       "timestamp": 1786135486000,
@@ -69,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T22:04:07.050Z"
+    },
+    {
+      "id": "rss_8c5cab3bc3b3cb86",
+      "timestamp": 1786125378000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis say they struck Saudi-backed forces in Yemen's Marib city, killing 2 - cbc.ca",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOVTFucnhmUG9JNnlSc2M5QWZBWDYzWmR1TERjTlZGMGgwbng0MkFBcDFLSHFxa2s1c0U5Zm1xR3RIeHZCcmc0OGJZNFd0MGVkdWxUZFc4VWdRMUVKcEVnTmZOcmg5S3MwSVhTLWlEc2o2LUN3ODkwMEVHVXBYZzUwU2hB?oc=5\" target=\"_blank\">Houthis say they struck Saudi-backed forces in Yemen's Marib city, killing 2</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">cbc.ca</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVTFucnhmUG9JNnlSc2M5QWZBWDYzWmR1TERjTlZGMGgwbng0MkFBcDFLSHFxa2s1c0U5Zm1xR3RIeHZCcmc0OGJZNFd0MGVkdWxUZFc4VWdRMUVKcEVnTmZOcmg5S3MwSVhTLWlEc2o2LUN3ODkwMEVHVXBYZzUwU2hB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T01:28:50.629Z"
     },
     {
       "id": "rss_cf70217efe3c5cc2",
@@ -11240,48 +11282,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T05:00:24.506Z"
-    },
-    {
-      "id": "rss_763a9f2a43d1e00e",
-      "timestamp": 1783991625000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthi Rebels Attack Saudi Airport... Middle East Conflict Expands to Three Fronts - 아시아경제",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9udnJPWEY5ekxUbDV0NGNNeFZrMDhmRlBKZnhKMUlrem5iaFNVa2Nmd0kxbk5ONkk3NnVQYTl5bTQ1bUtWZ1dHWGlVTTBMTFpMMGV4b2NhZXNJVmU3aEhQRWt2ZkZtRFpFTGtWWTRJTllCcVJ6eXhz?oc=5\" target=\"_blank\">Yemen's Houthi Rebels Attack Saudi Airport... Middle East Conflict Expands to Three Fronts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">아시아경제</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9udnJPWEY5ekxUbDV0NGNNeFZrMDhmRlBKZnhKMUlrem5iaFNVa2Nmd0kxbk5ONkk3NnVQYTl5bTQ1bUtWZ1dHWGlVTTBMTFpMMGV4b2NhZXNJVmU3aEhQRWt2ZkZtRFpFTGtWWTRJTllCcVJ6eXhz?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T02:16:24.185Z"
-    },
-    {
-      "id": "rss_663fec35afcafcd6",
-      "timestamp": 1783988312000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on Saudi condemned - Gulf Daily News (Bahrain)",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTFBGWEx6MmlOWmx2TWF2VkM3LWJVcl9FdkJPbVVBQkhfSk5FSzl6Njd1bVNBUmFzYUlZSnN6Yl9aUnZHVU02dWVyQ2ljWHZRalZMVmtMU2tVd0thYVcyWmFxd3NhcVNvLXV0M2tLUlhscmN6RHdSNXBjZnczQVpqMnc?oc=5\" target=\"_blank\">Houthi attack on Saudi condemned</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf Daily News (Bahrain)</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGWEx6MmlOWmx2TWF2VkM3LWJVcl9FdkJPbVVBQkhfSk5FSzl6Njd1bVNBUmFzYUlZSnN6Yl9aUnZHVU02dWVyQ2ljWHZRalZMVmtMU2tVd0thYVcyWmFxd3NhcVNvLXV0M2tLUlhscmN6RHdSNXBjZnczQVpqMnc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T00:27:55.253Z"
     }
   ]
 }
