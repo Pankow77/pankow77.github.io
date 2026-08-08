@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-08T18:31:58.752Z",
+  "last_fetch": "2026-08-08T19:24:27.801Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0bb9c467155b16b5",
+      "timestamp": 1786214700000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s government forces attack Houthis amid renewed shelling of Marib - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1AzREREQzR3M0QwQzdkemNKOV9YQ3V5aFhZcllaMGNWaE1TV0VlVnFiUkltT0FMX1BJYmU4VDFMcUxCZ3FBSWFjYy1CeG1QYXZVUHZRaFRZYnR3a01JOFVjejh4U0liN1Y2V2dvUEpCWDNJbkVjaUlmVDFCQkRCdkJrMWJsYndDTENqN0x3cUQ2V1V2ZjJFc1VWYjJBSTBoRG52THVNbEdFYVgwVTZj0gG0AUFVX3lxTE5hS184eDhSSlIzenRlR25Fcy1ZNmQ1b3J6eEY0SHhycFBCVEFIdEdhdlFycFFhSGFPWlU4enZWT1AtdVJRTV8xdnpMU2F3VEhXQThkanhGQXdKQ2dhLUhMYThFRUpkWV9pSzFBb2dHRmNPMUlqWnJ4VDZvT1FtbEZ6WUdDSlZLOG1zZ29BNkNZTGJYVl9RM2JpV2JyWU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQY1AzREREQzR3M0QwQzdkemNKOV9YQ3V5aFhZcllaMGNWaE1TV0VlVnFiUkltT0FMX1BJYmU4VDFMcUxCZ3FBSWFjYy1CeG1QYXZVUHZRaFRZYnR3a01JOFVjejh4U0liN1Y2V2dvUEpCWDNJbkVjaUlmVDFCQkRCdkJrMWJsYndDTENqN0x3cUQ2V1V2ZjJFc1VWYjJBSTBoRG52THVNbEdFYVgwVTZj0gG0AUFVX3lxTE5hS184eDhSSlIzenRlR25Fcy1ZNmQ1b3J6eEY0SHhycFBCVEFIdEdhdlFycFFhSGFPWlU4enZWT1AtdVJRTV8xdnpMU2F3VEhXQThkanhGQXdKQ2dhLUhMYThFRUpkWV9pSzFBb2dHRmNPMUlqWnJ4VDZvT1FtbEZ6WUdDSlZLOG1zZ29BNkNZTGJYVl9RM2JpV2JyWU03WWFscGpoM2FZMWplQjMwaURUUERKSg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-08T19:24:26.521Z"
+    },
     {
       "id": "rss_67d842e582075efc",
       "timestamp": 1786181370000,
@@ -11253,29 +11274,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T16:27:40.677Z"
-    },
-    {
-      "id": "rss_6f427980f50af14d",
-      "timestamp": 1784039277000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran's next chokehold? Red Sea gateway emerges as new battleground after Hormuz - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRTBzNjVHSVNHd201eGEtbkw4XzdVeTc2WkdZeTVNcTJVckdQQUpGRkNTZGFGTEpENWgycTBkazhzQ3FlMW5WTFFPbGRteVI4N25UQnpwalJNdHpCSHNBb05Lc1lRN05nMldacl9BRmlkOGE5M1lHeXpHTFQ2MFk4SHFRN2IyM0cySGVZWXFvQ2N3V25ZN3ZmeXZBdTIwRnlueVdpR0FXUlF0dDBibkR1VHdObnppQ0U0NnV0bVN3WDdITVU5U2h0cdIBzgFBVV95cUxQTkU0S1NPR0FUR3dENXZvZmo3RTFQS016dTFLS0NLSnJidnQ5QXBsY25ZODdGLXJKNTdySUY3dzZtaWJMbFJkVkNUNExBaUM5dTE3WWFVMXJ2bGlOQVAzZnU4RldobWxUbHlGVms3aE5RUXpYaTBwVnV2cTVXdHZPMUtMM0",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRTBzNjVHSVNHd201eGEtbkw4XzdVeTc2WkdZeTVNcTJVckdQQUpGRkNTZGFGTEpENWgycTBkazhzQ3FlMW5WTFFPbGRteVI4N25UQnpwalJNdHpCSHNBb05Lc1lRN05nMldacl9BRmlkOGE5M1lHeXpHTFQ2MFk4SHFRN2IyM0cySGVZWXFvQ2N3V25ZN3ZmeXZBdTIwRnlueVdpR0FXUlF0dDBibkR1VHdObnppQ0U0NnV0bVN3WDdITVU5U2h0cdIBzgFBVV95cUxQTkU0S1NPR0FUR3dENXZvZmo3RTFQS016dTFLS0NLSnJidnQ5QXBsY25ZODdGLXJKNTdySUY3dzZtaWJMbFJkVkNUNExBaUM5dTE3WWFVMXJ2bGlOQVAzZnU4RldobWxUbHlGVms3aE5RUXpYaTBwVnV2cTVXdHZPMUtMM0tXZVpXYUxjaFNqWk4wYXFkdzdJLUNwbFJMVUtubVVkY1pPc0wyQ1N0MFBTemRVUHhNS09KXy1Cbms0RFZUMXJOcWVLREVIVTVOQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T14:34:25.939Z"
     }
   ]
 }
