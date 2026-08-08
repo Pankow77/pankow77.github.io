@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-08T16:27:08.253Z",
+  "last_fetch": "2026-08-08T17:02:22.707Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-08T10:26:40.590Z"
+    },
+    {
+      "id": "rss_5e729fb7a88214a0",
+      "timestamp": 1786178361000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks kill 10 in Yemen as UN warns of return to full-scale civil war - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQVGNQOXc4blVWRTRKd0FIOE5YUlVtUGd1N3hVdWNPUjZDXzNPUEJQN3RwZjQ1SlI5OHdJTFFseW41Z3g5NXJvMlo1bURsdGJwUHIzdEtwMlB0dlhOcUhhTkh0aUVKR3VuUHFEMG9YT3I1Y1ZuT0pJblJpV1JKaFpsaHF5NkNwdkJXbHJQd0trejVfV1lJYUVGNG9odEZ2clhaaURwX3ZnZGc2ejNH0gGyAUFVX3lxTE9oWFRvVTduLUVmaXdSVXUyQWg2OWlmcHNHeFRYelhMWTJQdGgtSDVQTTRFNHBfZXJlVGpJdVIwLWQtZnFlNjlfUnlEclBjUjNsLUpTWWlReE1Gb2JCUk42bUE4N1NndHg2ZFJfMlE4SnJvdjREc3BMMWUtRVc1dlFiMWVmVmx4RW9FLU15MHJPSkMyOGdUel9MTzd4eDZuTG",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVGNQOXc4blVWRTRKd0FIOE5YUlVtUGd1N3hVdWNPUjZDXzNPUEJQN3RwZjQ1SlI5OHdJTFFseW41Z3g5NXJvMlo1bURsdGJwUHIzdEtwMlB0dlhOcUhhTkh0aUVKR3VuUHFEMG9YT3I1Y1ZuT0pJblJpV1JKaFpsaHF5NkNwdkJXbHJQd0trejVfV1lJYUVGNG9odEZ2clhaaURwX3ZnZGc2ejNH0gGyAUFVX3lxTE9oWFRvVTduLUVmaXdSVXUyQWg2OWlmcHNHeFRYelhMWTJQdGgtSDVQTTRFNHBfZXJlVGpJdVIwLWQtZnFlNjlfUnlEclBjUjNsLUpTWWlReE1Gb2JCUk42bUE4N1NndHg2ZFJfMlE4SnJvdjREc3BMMWUtRVc1dlFiMWVmVmx4RW9FLU15MHJPSkMyOGdUel9MTzd4eDZuTGhJTGxFSGY0SndIOWpqYm8wcGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T17:02:21.553Z"
     },
     {
       "id": "rss_e6f8b1ae63d8669a",
@@ -11256,30 +11277,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T11:02:11.850Z"
-    },
-    {
-      "id": "rss_365c44f7017b14b2",
-      "timestamp": 1784017612000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi missiles, drones strike Saudi Arabia in worst attack in years - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQYldab05WckNpVFJuRVdodkExdGZRdXdhdURVYmpRRE5PVkoxWVFmdThoeWl4YUpxUU1KOEtYcTEtYnZidk9ILWlNUGViLTJaeFFleUJHS1BHdXhueVdERktWdS1UTUx6Z3ZURHFFU2ZsVG40dFdiaDJVU0IwNlZKd3lsdjA4SE9kZDhNX1NkUzZaa1oxUHdQV2E2NA?oc=5\" target=\"_blank\">Houthi missiles, drones strike Saudi Arabia in worst attack in years</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYldab05WckNpVFJuRVdodkExdGZRdXdhdURVYmpRRE5PVkoxWVFmdThoeWl4YUpxUU1KOEtYcTEtYnZidk9ILWlNUGViLTJaeFFleUJHS1BHdXhueVdERktWdS1UTUx6Z3ZURHFFU2ZsVG40dFdiaDJVU0IwNlZKd3lsdjA4SE9kZDhNX1NkUzZaa1oxUHdQV2E2NA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T09:12:59.725Z"
     }
   ]
 }
