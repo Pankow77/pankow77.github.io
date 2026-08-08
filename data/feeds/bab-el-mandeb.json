@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-08T17:02:22.707Z",
+  "last_fetch": "2026-08-08T17:55:41.557Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -27,6 +27,27 @@
       "fetched_at": "2026-08-08T10:26:40.590Z"
     },
     {
+      "id": "rss_02625b936c56d2e0",
+      "timestamp": 1786178373000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Fears of wider escalation in Yemen after Houthi attack on Marib - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQTUNGTVFzb2NBRVpsWmJ0dkNySTViaU5kbVg1WTREWVpicEpNSGp0cXZhVmVvUkdLXzBnS1JBMHEwVGlCMTFPVEJqTFRsYnFoa0FsT3lKQjRHOU5YcW9sSmJXWUpEbkNkYVpBQ0NlWlpoOE91OVFXeDVaOWtjbDNHVTB2MGlOVE0?oc=5\" target=\"_blank\">Fears of wider escalation in Yemen after Houthi attack on Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTUNGTVFzb2NBRVpsWmJ0dkNySTViaU5kbVg1WTREWVpicEpNSGp0cXZhVmVvUkdLXzBnS1JBMHEwVGlCMTFPVEJqTFRsYnFoa0FsT3lKQjRHOU5YcW9sSmJXWUpEbkNkYVpBQ0NlWlpoOE91OVFXeDVaOWtjbDNHVTB2MGlOVE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T17:55:40.211Z"
+    },
+    {
       "id": "rss_5e729fb7a88214a0",
       "timestamp": 1786178361000,
       "source": "OSINT",
@@ -46,6 +67,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-08T17:02:21.553Z"
+    },
+    {
+      "id": "rss_cb2f535afb77076d",
+      "timestamp": 1786167640000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's armed forces launch operation against Houthis - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPZFdwOXNSN0JsdzRGY1ljcjVVaXlDWFdORHZ6YmZnR25Vckc0U3VEUk95cDhvc1JYS1hNR0dHc1NMXzl0QS1PT1JkVWFoMHZUY3FNdEx1U25TUHMwSTJMWXhRdmFhVUowYmhvek9Gb1IzQTV1RXNvdUo3Y0k1ZjdfUXpub0Y5UmcwQWhHWEJacndwd2FNNTJlaW0xMjlDQQ?oc=5\" target=\"_blank\">Yemen's armed forces launch operation against Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZFdwOXNSN0JsdzRGY1ljcjVVaXlDWFdORHZ6YmZnR25Vckc0U3VEUk95cDhvc1JYS1hNR0dHc1NMXzl0QS1PT1JkVWFoMHZUY3FNdEx1U25TUHMwSTJMWXhRdmFhVUowYmhvek9Gb1IzQTV1RXNvdUo3Y0k1ZjdfUXpub0Y5UmcwQWhHWEJacndwd2FNNTJlaW0xMjlDQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T17:55:40.212Z"
     },
     {
       "id": "rss_e6f8b1ae63d8669a",
@@ -1170,6 +1212,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-06T23:53:42.941Z"
+    },
+    {
+      "id": "rss_b183535944700c28",
+      "timestamp": 1786023120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis join Iran war fight, threatening Red Sea shipping amid Hormuz closure - Euronews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNeXV1WGQxWGhVeFBtNi1GZFRINFJzMEEzYWQtTmc2bS12cS1jVHFXazRuenprem9tdzZjVmxVWjdHMnJ1eTBvT1pyUFhLRi1HekxxaE5QT1Bra3VSRjhPc0s0bWliUlFSMWFQc0ZJUzQ1cElMQlMwWEc4cmJQR3FBdUdQRXlvTzVrZVBrLWdHXzhIZVY2RHhRRHBVZktJd2ljMXdFVHNEY1hlemVNYzFpa2F3?oc=5\" target=\"_blank\">Houthis join Iran war fight, threatening Red Sea shipping amid Hormuz closure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeXV1WGQxWGhVeFBtNi1GZFRINFJzMEEzYWQtTmc2bS12cS1jVHFXazRuenprem9tdzZjVmxVWjdHMnJ1eTBvT1pyUFhLRi1HekxxaE5QT1Bra3VSRjhPc0s0bWliUlFSMWFQc0ZJUzQ1cElMQlMwWEc4cmJQR3FBdUdQRXlvTzVrZVBrLWdHXzhIZVY2RHhRRHBVZktJd2ljMXdFVHNEY1hlemVNYzFpa2F3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-08T17:55:40.212Z"
     },
     {
       "id": "rss_256e70415ccda609",
@@ -11210,73 +11276,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T14:34:25.939Z"
-    },
-    {
-      "id": "rss_383ee2e800dfe76c",
-      "timestamp": 1784038631000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Analysis-After Hormuz, Iran turns to Red Sea gateway as new pressure point - Internazionale",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWG1BVlBjV1k0dEJ1ZlBqcG5UVWdNOGVRTWdUazJheGx3c0duSWt0YVRKcjFtcUNVYTN2ZDZpYmlVRHZOMWhndi1HcmZ4OUJqY0tTaFNlV0tvZ29abVh0My1uT25ZOXVRTXozazl5VkNPNjhORFZtS21vd2lBb3FQanRYQmNjUk9JU0x4NWc1NEppMFJyV1g5emxBdnpqV3JzeEJ6WXM1alFGVVg1bi1xZTNvdnB0RUlpTnBhaWs4YncxcGdhaDYwUkdBZlV1WTdNNmlF?oc=5\" target=\"_blank\">Analysis-After Hormuz, Iran turns to Red Sea gateway as new pressure point</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Internazionale</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWG1BVlBjV1k0dEJ1ZlBqcG5UVWdNOGVRTWdUazJheGx3c0duSWt0YVRKcjFtcUNVYTN2ZDZpYmlVRHZOMWhndi1HcmZ4OUJqY0tTaFNlV0tvZ29abVh0My1uT25ZOXVRTXozazl5VkNPNjhORFZtS21vd2lBb3FQanRYQmNjUk9JU0x4NWc1NEppMFJyV1g5emxBdnpqV3JzeEJ6WXM1alFGVVg1bi1xZTNvdnB0RUlpTnBhaWs4YncxcGdhaDYwUkdBZlV1WTdNNmlF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T14:34:25.940Z"
-    },
-    {
-      "id": "rss_6c26271a95350f9d",
-      "timestamp": 1784030938000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Fact check: Viral video does not show Houthi attack on Saudi's Abha International Airport amid current Mideast tensions - The Express Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNdHpWWEUtOExnMzcwMXpCQ24xaE8zdUgtTlloREdhQjBDVTZ0cTdyNWRCR1dhVWlxT3NfNTdqUFNfaGJ2Nk1JdjJ5YjItQS1UTVBsQ3BqNTE4WGdzSlRkaXpmYmc4bTFrTm5pRHV3UUVBQVRITnZGeWZjQXoxS2FKbFhPNzEzVUJNN3FoSXJyRVA1Q0VINW9NTmhBZU81bVNQRDVnV3F2ZDlBdFVPRWVvYVM1emI5TkE1RFFuWnZWSkdZVVprNGRIX9IB0AFBVV95cUxNV1V4VURlblFpMFJ4ejVka25ydGhsSk1RTnJQeDJrMktBTDJUdVZZbHp6ai1tWjBhV1NlUTdMQ1hKZ090MkRHVV96dndKQ3pGTEFrQl9XWGdSMnRkZFZXY2kwSGZjWnJXRkJHYjgyV1U0VERmWGtPUFNUWWJRYV9UWmVtdW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNdHpWWEUtOExnMzcwMXpCQ24xaE8zdUgtTlloREdhQjBDVTZ0cTdyNWRCR1dhVWlxT3NfNTdqUFNfaGJ2Nk1JdjJ5YjItQS1UTVBsQ3BqNTE4WGdzSlRkaXpmYmc4bTFrTm5pRHV3UUVBQVRITnZGeWZjQXoxS2FKbFhPNzEzVUJNN3FoSXJyRVA1Q0VINW9NTmhBZU81bVNQRDVnV3F2ZDlBdFVPRWVvYVM1emI5TkE1RFFuWnZWSkdZVVprNGRIX9IB0AFBVV95cUxNV1V4VURlblFpMFJ4ejVka25ydGhsSk1RTnJQeDJrMktBTDJUdVZZbHp6ai1tWjBhV1NlUTdMQ1hKZ090MkRHVV96dndKQ3pGTEFrQl9XWGdSMnRkZFZXY2kwSGZjWnJXRkJHYjgyV1U0VERmWGtPUFNUWWJRYV9UWmVtdW52TkJGSnZWUXN1VXRkdlRvOTlfMjRTaUhVQ2w1N1F4aUFwVmpvSnZEeVVwN2JscnRMQ1g5d2NVTkNQNEJ2REtkNGZOWWU3cnN4enN6?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T12:36:46.411Z"
-    },
-    {
-      "id": "rss_8ce2c652a93d46ce",
-      "timestamp": 1784023363000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JUUEybW1MMS1kY2M5X1pTSHJhQURuNXpMUVlsN1lOcm94cWN6ZEZxVHdNd3djM0RxcWpIdlpKQTVHUnlYLUVXTlRNdWhMQk8wOF9YVS1zQ1dwUQ?oc=5\" target=\"_blank\">Yemen's Houthis launch missiles at Saudi Arabia after strikes on Sanaa airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JUUEybW1MMS1kY2M5X1pTSHJhQURuNXpMUVlsN1lOcm94cWN6ZEZxVHdNd3djM0RxcWpIdlpKQTVHUnlYLUVXTlRNdWhMQk8wOF9YVS1zQ1dwUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T11:02:11.850Z"
     }
   ]
 }
