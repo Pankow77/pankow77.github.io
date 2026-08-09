@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T11:54:19.470Z",
+  "last_fetch": "2026-08-09T12:39:41.321Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_70f067ec69422c5a",
+      "timestamp": 1786278306000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen says seven killed in Houthi attack on port city - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOT1NVa3FScnYyRkZmQl9zRHd5c01qa1JnOUN3dmJRZC1taDJ4VVhJV2NuelFxUXNlNUtjZ2Q5TlVZR1AzV2R3WG8xajVGSE9vb0NkbWFldV81Wi1EdVJkMjRUZTZ5Yk1GQUYybFNCVUYwT2dJSDh2QkU3dWdwYS1xV19CVHZheFA5U2lyRllBQ3QzVkJvdENCdWZ0U3lDWTVs?oc=5\" target=\"_blank\">Yemen says seven killed in Houthi attack on port city</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOT1NVa3FScnYyRkZmQl9zRHd5c01qa1JnOUN3dmJRZC1taDJ4VVhJV2NuelFxUXNlNUtjZ2Q5TlVZR1AzV2R3WG8xajVGSE9vb0NkbWFldV81Wi1EdVJkMjRUZTZ5Yk1GQUYybFNCVUYwT2dJSDh2QkU3dWdwYS1xV19CVHZheFA5U2lyRllBQ3QzVkJvdENCdWZ0U3lDWTVs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T12:39:40.097Z"
+    },
+    {
+      "id": "rss_d090dbd115ec2888",
+      "timestamp": 1786274580000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Saudi Aramco extinguishes fire at refinery as Houthis claim responsibility - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQazZuYlhScWdna0IzWTBUSzQzbG0tVFVHU2VyeFZmTDdVRmNvRS1uR24yamI0R2U0X0ZlX2dLMEYxMGRtclFXbEhNaVpYRDAzRGNqRDNaS01pQllHbWtGa3lSN2FXZVhWMVdFZGlsdFBZc2Y3REdHakF4SEVKNHFnVlF4Wm13eU9hQ2IzRFVncEZqemJhUVNCMVV2eGhHUdIBowFBVV95cUxOWXpUWkE5VlRXTG1NMFdBRTZjVGVDc0FlbUU4SGs0bmIxVno3VmpqdHNUa2N5ZGhHcHlMWmVxUmgwZE1vVTh1N2NLSVFDV3dPdS1Rdmk0TzMybk91OHFHV1FjSXR6bTV0WDBmWjVZTmI4ZmRNVlJnUzVxZjRVQUtZLUI5NGU4amQ4UVhSUGl5eERUOVo2UUU4VUY3bXEtYmFhNVVj?oc=5\" target=",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQazZuYlhScWdna0IzWTBUSzQzbG0tVFVHU2VyeFZmTDdVRmNvRS1uR24yamI0R2U0X0ZlX2dLMEYxMGRtclFXbEhNaVpYRDAzRGNqRDNaS01pQllHbWtGa3lSN2FXZVhWMVdFZGlsdFBZc2Y3REdHakF4SEVKNHFnVlF4Wm13eU9hQ2IzRFVncEZqemJhUVNCMVV2eGhHUdIBowFBVV95cUxOWXpUWkE5VlRXTG1NMFdBRTZjVGVDc0FlbUU4SGs0bmIxVno3VmpqdHNUa2N5ZGhHcHlMWmVxUmgwZE1vVTh1N2NLSVFDV3dPdS1Rdmk0TzMybk91OHFHV1FjSXR6bTV0WDBmWjVZTmI4ZmRNVlJnUzVxZjRVQUtZLUI5NGU4amQ4UVhSUGl5eERUOVo2UUU4VUY3bXEtYmFhNVVj?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T12:39:40.097Z"
+    },
     {
       "id": "rss_be4b155410644dd6",
       "timestamp": 1786271620000,
@@ -11225,48 +11267,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T05:23:29.867Z"
-    },
-    {
-      "id": "rss_1f7ac719050e7abc",
-      "timestamp": 1784091562000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Arab, Islamic Countries Slam Terrorist Houthi Attack against Saudi Arabia - ASHARQ AL-AWSAT English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPcVd3UF9CeHNHM1hSSXVyUmNPd0F5UXNPSWFZc3V2ajNHa3ppSWx3S2ltUThlQlMwSU55WnByaGFSYThiZWlBcFhCVWlXcjNTczBhV01ySll5T1p6UnhSVjdlekgyZHFrdS1qUVRxMjVFMUtxLWhVYkdBMjBpNUpKeGdNWDRQai11Mm50eHFrMWJyczVLdXdXc3ViYjNSQ09SYjRMY3Z4UFhQQTBXSEZvTkhn?oc=5\" target=\"_blank\">Arab, Islamic Countries Slam Terrorist Houthi Attack against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcVd3UF9CeHNHM1hSSXVyUmNPd0F5UXNPSWFZc3V2ajNHa3ppSWx3S2ltUThlQlMwSU55WnByaGFSYThiZWlBcFhCVWlXcjNTczBhV01ySll5T1p6UnhSVjdlekgyZHFrdS1qUVRxMjVFMUtxLWhVYkdBMjBpNUpKeGdNWDRQai11Mm50eHFrMWJyczVLdXdXc3ViYjNSQ09SYjRMY3Z4UFhQQTBXSEZvTkhn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T05:23:29.866Z"
-    },
-    {
-      "id": "rss_4b11c86c6a59d1d0",
-      "timestamp": 1784090051000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "UN extends monitoring of Houthi attacks in Red Sea for six months - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPREtsYXo5VTN5V2UxOUFJbGY2UVNfbmdfdTVJblRuRm01UFhEaDJ0b0xYbXVhS3FPdHhMNGdwNHZKTHU4cXBwSFFqZFBoVV9rVzNTRjVxdlFjQjl1aTlmR3ZPRmxkVXRwa0hWb2pzMnlrbVFwd24wQ1FlamhqM3cyM3cwM2I5V29FVlJvZUZvWHFod2NScWc5Yg?oc=5\" target=\"_blank\">UN extends monitoring of Houthi attacks in Red Sea for six months</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPREtsYXo5VTN5V2UxOUFJbGY2UVNfbmdfdTVJblRuRm01UFhEaDJ0b0xYbXVhS3FPdHhMNGdwNHZKTHU4cXBwSFFqZFBoVV9rVzNTRjVxdlFjQjl1aTlmR3ZPRmxkVXRwa0hWb2pzMnlrbVFwd24wQ1FlamhqM3cyM3cwM2I5V29FVlJvZUZvWHFod2NScWc5Yg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T06:15:24.918Z"
     }
   ]
 }
