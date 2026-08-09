@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T18:46:40.663Z",
+  "last_fetch": "2026-08-09T19:28:48.420Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4d5b1f8388cfc1d9",
+      "timestamp": 1786300843000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "11 killed in Houthi attacks in Yemen, including 8 military personnel - The Express Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY1JFa0NXTEIxT3piWGRwc3RQY0d5VmZhSDk3d0w1ZWNHRjh6c3VqWmpXMFEzdkVGRV8xaTJURU4wdUo4ZkVjd2l1d1FLdHlmM2FYOEg4WkhKZEJkTWpDVHE5X2V4UmxHd1pGdVZneWJXbUpSX1NIQ0lCb2hFTGc5TXJObWZTVVpQM2tqWWVSRUNlcjItSFJKQzNuWTYxVDFfRnBsZzBLM2gtZw?oc=5\" target=\"_blank\">11 killed in Houthi attacks in Yemen, including 8 military personnel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Express Tribune</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY1JFa0NXTEIxT3piWGRwc3RQY0d5VmZhSDk3d0w1ZWNHRjh6c3VqWmpXMFEzdkVGRV8xaTJURU4wdUo4ZkVjd2l1d1FLdHlmM2FYOEg4WkhKZEJkTWpDVHE5X2V4UmxHd1pGdVZneWJXbUpSX1NIQ0lCb2hFTGc5TXJObWZTVVpQM2tqWWVSRUNlcjItSFJKQzNuWTYxVDFfRnBsZzBLM2gtZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T19:28:47.023Z"
+    },
     {
       "id": "rss_5ce4cd00c4e48a2e",
       "timestamp": 1786299057000,
@@ -11237,27 +11258,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-16T06:15:55.325Z"
-    },
-    {
-      "id": "rss_5e29df97eae2586d",
-      "timestamp": 1784151766000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni army repels Houthi attack in Al-Jawf province - Yeni Safak English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQaTI5enc5MWllM0JqalR4b3R4N0R5QllhdVlKWDAxMzc3NC1GYm80UllMM3FUTnI3NngzRGdMNzFUMUY0R1JnSmlDQ0V1YkZNNzRJZmoxNFZrbEJGZDc4bXljVy1tYi1Sc0w1aGYwSmhEQnpGd2MtYkwzdDI5cDNLVnJoYUFUVFlyNE5MWFFObTAzcUUwNmc?oc=5\" target=\"_blank\">Yemeni army repels Houthi attack in Al-Jawf province</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Safak English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaTI5enc5MWllM0JqalR4b3R4N0R5QllhdVlKWDAxMzc3NC1GYm80UllMM3FUTnI3NngzRGdMNzFUMUY0R1JnSmlDQ0V1YkZNNzRJZmoxNFZrbEJGZDc4bXljVy1tYi1Sc0w1aGYwSmhEQnpGd2MtYkwzdDI5cDNLVnJoYUFUVFlyNE5MWFFObTAzcUUwNmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T21:47:28.802Z"
     }
   ]
 }
