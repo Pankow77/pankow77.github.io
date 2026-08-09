@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T16:32:32.934Z",
+  "last_fetch": "2026-08-09T17:26:38.523Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -216,6 +216,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T12:39:40.097Z"
+    },
+    {
+      "id": "rss_1484bc68388e73b4",
+      "timestamp": 1786274161000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "7 killed, 35 injured as Houthis bomb Yemen’s Mokha port near Bab al-Mandeb Strait - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNWmJUTWpTZktmaFFzLWdveXp2empQUnQ1LWRPWUFqWFY5RDI2S2x2V2lsWVM0eEFucUJXWkVwc1pacGN0ei0zRlpvQWxkc0UzTTFQUmlTM2lvdmhNQU5Ca0Z3ZTBIR056UzBZckpZZHZZYzFMZmtVaTluUVNmOFYxTVZ6QVlDSTAzaUszemtoZ1hET21HeHl2aGVIUWdIeEtkSW5WWA?oc=5\" target=\"_blank\">7 killed, 35 injured as Houthis bomb Yemen’s Mokha port near Bab al-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWmJUTWpTZktmaFFzLWdveXp2empQUnQ1LWRPWUFqWFY5RDI2S2x2V2lsWVM0eEFucUJXWkVwc1pacGN0ei0zRlpvQWxkc0UzTTFQUmlTM2lvdmhNQU5Ca0Z3ZTBIR056UzBZckpZZHZZYzFMZmtVaTluUVNmOFYxTVZ6QVlDSTAzaUszemtoZ1hET21HeHl2aGVIUWdIeEtkSW5WWA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T17:26:37.251Z"
     },
     {
       "id": "rss_be4b155410644dd6",
@@ -11235,27 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T18:29:49.579Z"
-    },
-    {
-      "id": "rss_c6f31a389ac0f26d",
-      "timestamp": 1784134382000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Yemeni militia intercepts boat with Houthi weapon-making gear in Bab al-Mandeb - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ3JjX2hUNmNKVllmRjdqVUFrdjl3TExJSXBnZFRGZkczOTU1YVkyNlFsQk1hYU1HVmZtSDdwcVFrUndydHJPR1RsUnRMQnhMaVJ3VWFUaHROVzQzQTNDRUpjYkZodkhWa0VFN0VDT0JOR3BtVS1TX0NVTG1vVmdDSkpuand5QWU3Q3FFaE41Z2RwVW8ybW5aSnpqWC1fendBYVJVSUUxSHc2Zw?oc=5\" target=\"_blank\">Yemeni militia intercepts boat with Houthi weapon-making gear in Bab al-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQ3JjX2hUNmNKVllmRjdqVUFrdjl3TExJSXBnZFRGZkczOTU1YVkyNlFsQk1hYU1HVmZtSDdwcVFrUndydHJPR1RsUnRMQnhMaVJ3VWFUaHROVzQzQTNDRUpjYkZodkhWa0VFN0VDT0JOR3BtVS1TX0NVTG1vVmdDSkpuand5QWU3Q3FFaE41Z2RwVW8ybW5aSnpqWC1fendBYVJVSUUxSHc2Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T17:28:43.787Z"
     }
   ]
 }
