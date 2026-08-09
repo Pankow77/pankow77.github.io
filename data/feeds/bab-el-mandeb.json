@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T21:57:18.986Z",
+  "last_fetch": "2026-08-09T22:31:39.906Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7e1ac90efd080314",
+      "timestamp": 1786312604000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Kills 11 in Saudi Forces' Mocha Base - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNOW83VVBpa3lKaGR5M3Fxd19sbl8tT1JTYTVFYV9rZkFsZUxXaDh3dm83UWR5Slg4YWE4VHYzU25jNUlMdnJfelVIUzI4MjItTDNvY0J3azNFVWc1eEVGMnlzenctaFB2UmNobjk1c2ctWjlzZV9DQWgyZ3dXZVhJYThydG0?oc=5\" target=\"_blank\">Houthi Attack Kills 11 in Saudi Forces' Mocha Base</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNOW83VVBpa3lKaGR5M3Fxd19sbl8tT1JTYTVFYV9rZkFsZUxXaDh3dm83UWR5Slg4YWE4VHYzU25jNUlMdnJfelVIUzI4MjItTDNvY0J3azNFVWc1eEVGMnlzenctaFB2UmNobjk1c2ctWjlzZV9DQWgyZ3dXZVhJYThydG0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T22:31:37.875Z"
+    },
     {
       "id": "rss_4d5b1f8388cfc1d9",
       "timestamp": 1786300843000,
@@ -11235,29 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T17:29:29.767Z"
-    },
-    {
-      "id": "rss_b6044c13eb59f86b",
-      "timestamp": 1784173835000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Riyadh Strikes Houthi-Controlled Airport To Block Flight From Iran - Foundation for Defense of Democracies",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbFlidlJYc0J4SGNfMWJBTllRVlVhQ3VmUHQyN3pfelZjRlJoQmQ2RkR3NjV2TGZsLTVrX0l5TGR0eXRwWDdXYzRHUmZ5QXQ4S1l2UGhBaHpOLUlwS1VWZDdGTF9lVnNNaEdGV3J6MFA3c2JBYU1yaXQ3WmZZaWd0UGZPUFJ3VTBscmNFbTZEMEJWNXl2VjlvLURuZnVvWGtKQXg3eXJlU2UwQ28?oc=5\" target=\"_blank\">Riyadh Strikes Houthi-Controlled Airport To Block Flight From Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foundation for Defense of Democracies</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbFlidlJYc0J4SGNfMWJBTllRVlVhQ3VmUHQyN3pfelZjRlJoQmQ2RkR3NjV2TGZsLTVrX0l5TGR0eXRwWDdXYzRHUmZ5QXQ4S1l2UGhBaHpOLUlwS1VWZDdGTF9lVnNNaEdGV3J6MFA3c2JBYU1yaXQ3WmZZaWd0UGZPUFJ3VTBscmNFbTZEMEJWNXl2VjlvLURuZnVvWGtKQXg3eXJlU2UwQ28?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T18:28:12.970Z"
     }
   ]
 }
