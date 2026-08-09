@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T17:26:38.523Z",
+  "last_fetch": "2026-08-09T17:58:25.266Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -132,6 +132,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T14:29:12.139Z"
+    },
+    {
+      "id": "rss_ec7915d61e011b84",
+      "timestamp": 1786284732000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Allies Yet to Respond to Houthi Attack on Saudi Arabia After Defense Pact - Мілітарний",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeWNCU0otTEM4MnM5SGdiYkdBR0ZBc3pTV2RyVWVmdHBvM3I0aEhna2hZSHhlU1VzM3NHaDZnZUZlVHJZOEVWLTVXTXA2dml4Q0pyNWNxeVkweWhOVERBNTFpVlpsQmFyNlVHZWlSZzBrQjZocFIyaFVnQU8ycEFnZG40ZWhzdWc3dlpBaC04aWxmc1dtSUJ2NmdwMm5KaUVqSm0xYWdKNk4?oc=5\" target=\"_blank\">Allies Yet to Respond to Houthi Attack on Saudi Arabia After Defense Pact</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Мілітарний</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOeWNCU0otTEM4MnM5SGdiYkdBR0ZBc3pTV2RyVWVmdHBvM3I0aEhna2hZSHhlU1VzM3NHaDZnZUZlVHJZOEVWLTVXTXA2dml4Q0pyNWNxeVkweWhOVERBNTFpVlpsQmFyNlVHZWlSZzBrQjZocFIyaFVnQU8ycEFnZG40ZWhzdWc3dlpBaC04aWxmc1dtSUJ2NmdwMm5KaUVqSm0xYWdKNk4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T17:58:23.967Z"
     },
     {
       "id": "rss_6f35ed5d93e03478",
@@ -11235,27 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T20:47:43.775Z"
-    },
-    {
-      "id": "rss_df4f108b80e24bef",
-      "timestamp": 1784139496000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "EU Mission in Yemen Condemns Latest Houthi Attack on Saudi Arabia - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1EVW92Zzdmb3NYZFg4eUFZSEpzZUdUcWZwNVRFcEV5NkY3NGlfY3IyN3N6NkdhZEc4UW03UlFpUnRhUS1qRm9UcTNiT1pyeTVQZUdQQWgzdUVYdw?oc=5\" target=\"_blank\">EU Mission in Yemen Condemns Latest Houthi Attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1EVW92Zzdmb3NYZFg4eUFZSEpzZUdUcWZwNVRFcEV5NkY3NGlfY3IyN3N6NkdhZEc4UW03UlFpUnRhUS1qRm9UcTNiT1pyeTVQZUdQQWgzdUVYdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T18:29:49.579Z"
     }
   ]
 }
