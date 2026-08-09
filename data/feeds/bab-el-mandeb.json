@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T19:28:48.420Z",
+  "last_fetch": "2026-08-09T19:58:37.030Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -260,6 +260,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T15:01:59.411Z"
+    },
+    {
+      "id": "rss_27290c91dccff126",
+      "timestamp": 1786278540000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Iran-aligned Houthis claim they attacked oil refinery in Saudi Arabia - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxONUczZGxpN3lGb084MkNINGQtY1FfSDNZM1NpZk9La2xSbVB5VkpuMEVJTm03X0JpWElISU11Q1JaM1lTOHkzZGRYUl9DVWNCbnJCVXlCMzlXRjNkbGU0UUJwODF3dHU5OGFJNFFBMi1razRnQ0FEVzZXR1dsbHVqaE13dTRQRmlkZ0NfWEppa0lxeTlUeVNOWTM3Z2JmM1pPNUpXbkVTSUFzZWRfUmhiOS11TQ?oc=5\" target=\"_blank\">Iran-aligned Houthis claim they attacked oil refinery in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONUczZGxpN3lGb084MkNINGQtY1FfSDNZM1NpZk9La2xSbVB5VkpuMEVJTm03X0JpWElISU11Q1JaM1lTOHkzZGRYUl9DVWNCbnJCVXlCMzlXRjNkbGU0UUJwODF3dHU5OGFJNFFBMi1razRnQ0FEVzZXR1dsbHVqaE13dTRQRmlkZ0NfWEppa0lxeTlUeVNOWTM3Z2JmM1pPNUpXbkVTSUFzZWRfUmhiOS11TQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T19:58:35.719Z"
     },
     {
       "id": "rss_70f067ec69422c5a",
@@ -11235,29 +11258,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T18:28:12.970Z"
-    },
-    {
-      "id": "rss_6db64b7ee0033ec5",
-      "timestamp": 1784159123000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Explainer: Who are the Houthis, Iran’s allies in Yemen? - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNUlNacW1UNG02N1NsaVBTOTItamQweS1QSk1uRGdYZXNsOERtOXJubEYtMEF6Yk9FcEZEeDFTWXQzdDkxUENUck05ZjJqLXVJRklDQS1jcEd5dXNObFhkUmQtTTNZRU1DTU5CUExram84anBsTGhvVVJnSVZuaGlmMUNPWmt5NTloVXhWOS1fZ1JfQkRsdmpqWUVQR1prbHdoak9qQ2pyLXRtSUZY?oc=5\" target=\"_blank\">Explainer: Who are the Houthis, Iran’s allies in Yemen?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUlNacW1UNG02N1NsaVBTOTItamQweS1QSk1uRGdYZXNsOERtOXJubEYtMEF6Yk9FcEZEeDFTWXQzdDkxUENUck05ZjJqLXVJRklDQS1jcEd5dXNObFhkUmQtTTNZRU1DTU5CUExram84anBsTGhvVVJnSVZuaGlmMUNPWmt5NTloVXhWOS1fZ1JfQkRsdmpqWUVQR1prbHdoak9qQ2pyLXRtSUZY?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-16T06:15:55.325Z"
     }
   ]
 }
