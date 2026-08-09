@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T10:28:29.805Z",
+  "last_fetch": "2026-08-09T11:02:23.579Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_be4b155410644dd6",
+      "timestamp": 1786271620000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen: Houthi Militias Claim Attack on Aramco Refinery in Jazan - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LblJDYkpyZlpxY05JMjFfbWNtUlBvRHF5cU9aOGdaRC1tcUdlT2s4Smg1SDBvTUxOVTZqc0Izdnhla29jRmRMb0VrX214Nm5PQXN0bDA5RFRVZHN4RzJ3?oc=5\" target=\"_blank\">Yemen: Houthi Militias Claim Attack on Aramco Refinery in Jazan</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LblJDYkpyZlpxY05JMjFfbWNtUlBvRHF5cU9aOGdaRC1tcUdlT2s4Smg1SDBvTUxOVTZqc0Izdnhla29jRmRMb0VrX214Nm5PQXN0bDA5RFRVZHN4RzJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T11:02:22.128Z"
+    },
+    {
+      "id": "rss_404319e9da149d7b",
+      "timestamp": 1786270320000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi refinery on Red Sea coast hit by reported Houthi attack | Daily Sabah - Daily Sabah",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPMWxyelRrT2hJUFNya1MtUmQ2bGV5RDl2R2RaaER4RXQ5VmM5OExUZlFEdXlnTmlJVFFkbU9zYkhBT3lUVlhxX0l3bmtKcWt1YTZaLTl1UnE2NGlpUnVDS3VwZXo2bHdoaTNmSHRvTXVrR0xYUWdndnpBWnZNZmlRRktyclNFYlBzdWtHdjFVZTQwbFlsWFpodzc4dUozQ21sSEdVVldR0gGrAUFVX3lxTFBLQTRDbEZMVGNRcVFQem53b2l3V0Q0dTNSR2lBOTAxREtsbk9FUVlub2NZT2N0Vzk5eGtYNmhEVFJQZi1icURBN3pDSjdwcmg1Z0g4V3JibHVOOEszVGM5YnZMZFo5SW0zb0pnZUZjMjBrSkN4SVZEelN1Z2lnQmpXS2xaUVZMempPa0M0NDBRcnRzZHphVmwwcEx1MlFtcldfaDZMeH",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPMWxyelRrT2hJUFNya1MtUmQ2bGV5RDl2R2RaaER4RXQ5VmM5OExUZlFEdXlnTmlJVFFkbU9zYkhBT3lUVlhxX0l3bmtKcWt1YTZaLTl1UnE2NGlpUnVDS3VwZXo2bHdoaTNmSHRvTXVrR0xYUWdndnpBWnZNZmlRRktyclNFYlBzdWtHdjFVZTQwbFlsWFpodzc4dUozQ21sSEdVVldR0gGrAUFVX3lxTFBLQTRDbEZMVGNRcVFQem53b2l3V0Q0dTNSR2lBOTAxREtsbk9FUVlub2NZT2N0Vzk5eGtYNmhEVFJQZi1icURBN3pDSjdwcmg1Z0g4V3JibHVOOEszVGM5YnZMZFo5SW0zb0pnZUZjMjBrSkN4SVZEelN1Z2lnQmpXS2xaUVZMempPa0M0NDBRcnRzZHphVmwwcEx1MlFtcldfaDZMeHpxVjF1bw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T11:02:22.127Z"
+    },
     {
       "id": "rss_bfd0004f3f46cec8",
       "timestamp": 1786268642000,
@@ -11225,52 +11267,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T06:15:24.918Z"
-    },
-    {
-      "id": "rss_46080b57d7dc327f",
-      "timestamp": 1784081686000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "CENTCOM says new strike wave hit dozens of targets in Iran - ایران اینترنشنال",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3MFAzYnZzVjV5eWs3VXRaNWhJT3FMRWtZckE1MlgyTGh1dzlsSDlhX3VCVkxFWE9WWHBUaHRBOWVZbjJZYnB5RTZidDE0WGlhdGc?oc=5\" target=\"_blank\">CENTCOM says new strike wave hit dozens of targets in Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ایران اینترنشنال</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB3MFAzYnZzVjV5eWs3VXRaNWhJT3FMRWtZckE1MlgyTGh1dzlsSDlhX3VCVkxFWE9WWHBUaHRBOWVZbjJZYnB5RTZidDE0WGlhdGc?oc=5",
-      "feed_id": "gn-centcom-yemen",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T16:31:19.215Z"
-    },
-    {
-      "id": "rss_803c96c83a774916",
-      "timestamp": 1784081266000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iranian plane lands in Yemen, raising Red Sea strategic concerns - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQNnBrLWF0LUpBUzhTaDVNMUlQOVVwWHp2bVEwc0NUTGxZRkQ2VEhpbkNqaE1EVkRnbFA5Q010SGs2SGgxVkNONzJDNVBDVC04NFNkbHN4d2FlY3FjWVJ1aUwyUVdGUm83TzJ2YlozX0dvdVVtMTNCZ2tTdDBrX291WjlxU2Z6SmdtU2I0T2R2VEVBUFhJamc?oc=5\" target=\"_blank\">Iranian plane lands in Yemen, raising Red Sea strategic concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNnBrLWF0LUpBUzhTaDVNMUlQOVVwWHp2bVEwc0NUTGxZRkQ2VEhpbkNqaE1EVkRnbFA5Q010SGs2SGgxVkNONzJDNVBDVC04NFNkbHN4d2FlY3FjWVJ1aUwyUVdGUm83TzJ2YlozX0dvdVVtMTNCZ2tTdDBrX291WjlxU2Z6SmdtU2I0T2R2VEVBUFhJamc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T03:02:55.264Z"
     }
   ]
 }
