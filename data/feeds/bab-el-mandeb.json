@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T15:56:17.893Z",
+  "last_fetch": "2026-08-09T16:32:32.934Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8ed77d190035fff4",
+      "timestamp": 1786291963000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack Saudi refinery, Yemeni Red Sea port at Mokha - Yahoo News Canada",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPYWVDS1JWNmVHSW9CLTJnTGhZdDRMX1kyZHdWQ00tY3VGQ05TX2R6OHYwMUU3RHZxQzdyU0hzLU5NcmF3RkV3ZW5hcTBHRndMQ2lFdHFoT3JMWFM3MlE5Vm5DaUdHTW5lM0paS25wZGpWTjBiTHJPdnJacUxSV2RoeDloQQ?oc=5\" target=\"_blank\">Houthis attack Saudi refinery, Yemeni Red Sea port at Mokha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News Canada</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYWVDS1JWNmVHSW9CLTJnTGhZdDRMX1kyZHdWQ00tY3VGQ05TX2R6OHYwMUU3RHZxQzdyU0hzLU5NcmF3RkV3ZW5hcTBHRndMQ2lFdHFoT3JMWFM3MlE5Vm5DaUdHTW5lM0paS25wZGpWTjBiTHJPdnJacUxSV2RoeDloQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T16:32:31.571Z"
+    },
+    {
+      "id": "rss_3a3d5e79313639bc",
+      "timestamp": 1786290660000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis attack Aramco refinery in Saudi Arabia, Red Sea port - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPbERTYjhiemlGZ0xmamllMzJ4S2JFVU1yV1Z4ZUtiT3B2RG14MmlaNlNpbHRjRWFZa19fZVhLWWRPbFRhZk5rX2lIQUxma2ZDQlE5endBa091X3JERHJ5cExNaE1ZOXN5WWl5NlVrZmE4bHFoajFwVGhwTjBOcldOQk9vZGV2QUhEazdBWFpDSE5KRk5EZGpmOXkzZ1AxOW0tOGtGSXhPQ1d1bVBmbFcyV1NBWQ?oc=5\" target=\"_blank\">Iran-backed Houthis attack Aramco refinery in Saudi Arabia, Red Sea port</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbERTYjhiemlGZ0xmamllMzJ4S2JFVU1yV1Z4ZUtiT3B2RG14MmlaNlNpbHRjRWFZa19fZVhLWWRPbFRhZk5rX2lIQUxma2ZDQlE5endBa091X3JERHJ5cExNaE1ZOXN5WWl5NlVrZmE4bHFoajFwVGhwTjBOcldOQk9vZGV2QUhEazdBWFpDSE5KRk5EZGpmOXkzZ1AxOW0tOGtGSXhPQ1d1bVBmbFcyV1NBWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T16:32:31.570Z"
+    },
     {
       "id": "rss_2a653a045b5432a3",
       "timestamp": 1786290606000,
@@ -11212,48 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T17:28:43.787Z"
-    },
-    {
-      "id": "rss_fc0a0e8b3332e5e1",
-      "timestamp": 1784128889000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Trump Signals Support for Saudi Action Against Houthis - الحرة",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTFBzOUZpVy01YUdhamZXWU1SY2h3SGxRQWlqUnlNWXZHUkxWeWRnRWlZRUFEUmNVOWE2QklFbWZSa01DUQ?oc=5\" target=\"_blank\">Trump Signals Support for Saudi Action Against Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBzOUZpVy01YUdhamZXWU1SY2h3SGxRQWlqUnlNWXZHUkxWeWRnRWlZRUFEUmNVOWE2QklFbWZSa01DUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T17:56:48.005Z"
-    },
-    {
-      "id": "rss_f17e4bd2d9802516",
-      "timestamp": 1784122048000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 3,
-      "text_summary": "Houthis attack on Saudi’s Abha airport triggers fresh travel warnings as flights cancelled again - The Indian Express",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxNNmVpcGxwQWloUHFqMWNvWEx5TkdablI4bjJPZmxhbHY3ZTZaVHhRelZuVTFEYlR5Q1dtemozaC1aa2gxZklwMkhkdlZNd1BSTVR5UjFfZ280bHBNTUtrMW9Mekg4OTVwUi1icHVMazlZaTNITThWTlRWUDQ3U1lTMFdqOEY2TW1jaGp2ajM3cFRDdHFNNVJqNXdOLVA1dHI2XzVrT2RxVF81MTBueGV3Z3dKS1U0anQySnJlR29IMkFqMzR6SXp4eThRNS05dkwtMjFVSEtCbV8telMyc2tr0gHmAUFVX3lxTFBZb19pSXBEWFZ4cDFaTF9OMVNzR1V3Qk5ZN01vamFVNHpONW45SzVCc1hwaUR4bEoycFJiMWswZlpuY0Z4enVrMGVQWnlWb2tNZXRDVkEzbTRDaTNwZFFEODUzZExYdURwTDFGTU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNNmVpcGxwQWloUHFqMWNvWEx5TkdablI4bjJPZmxhbHY3ZTZaVHhRelZuVTFEYlR5Q1dtemozaC1aa2gxZklwMkhkdlZNd1BSTVR5UjFfZ280bHBNTUtrMW9Mekg4OTVwUi1icHVMazlZaTNITThWTlRWUDQ3U1lTMFdqOEY2TW1jaGp2ajM3cFRDdHFNNVJqNXdOLVA1dHI2XzVrT2RxVF81MTBueGV3Z3dKS1U0anQySnJlR29IMkFqMzR6SXp4eThRNS05dkwtMjFVSEtCbV8telMyc2tr0gHmAUFVX3lxTFBZb19pSXBEWFZ4cDFaTF9OMVNzR1V3Qk5ZN01vamFVNHpONW45SzVCc1hwaUR4bEoycFJiMWswZlpuY0Z4enVrMGVQWnlWb2tNZXRDVkEzbTRDaTNwZFFEODUzZExYdURwTDFGTU1PUGFYMnlyTzh0aXdpN1JDNkZLT3JQa01zY09nMWZfbHEwSkg2a0pZZGVxQTNsV05Nb2o4dHh3Wm1RYTlCTzV1NTVzVlR2ZkNQWTU3UWptRnNZeDZMVW1sMU02MVREZXpmamd5cHNLZHJfb2c3c3QwSGR2aW9PWXlB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T13:32:55.261Z"
     }
   ]
 }
