@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T07:50:07.323Z",
+  "last_fetch": "2026-08-09T08:35:46.687Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -46,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T07:50:05.826Z"
+    },
+    {
+      "id": "rss_18899bebae12a1ef",
+      "timestamp": 1786240080000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis say they attacked Saudi Aramco Jazan refinery, fire extinguished - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNVzBVeVBiZENRc3B0WldHbXZqbXBjLU5ucDVuODRNY3pIWFRKaWlES0lzRDVoWEFjOFBLQVkxeGVHd0pHWWV6Y0V0OFphUk81YksyX3BHQ0I2MVY2RHdfNDY1dE9XdGozaVQ0RWsyaXNieWlRT2RYdHNRNEp4ZHptOHBBTVFST2pfZXVIbkJZUlIteElMRTlQWEt5eGZ6RU9JMjRtUmdCYWVXUUM0TUE?oc=5\" target=\"_blank\">Yemen's Houthis say they attacked Saudi Aramco Jazan refinery, fire extinguished</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNVzBVeVBiZENRc3B0WldHbXZqbXBjLU5ucDVuODRNY3pIWFRKaWlES0lzRDVoWEFjOFBLQVkxeGVHd0pHWWV6Y0V0OFphUk81YksyX3BHQ0I2MVY2RHdfNDY1dE9XdGozaVQ0RWsyaXNieWlRT2RYdHNRNEp4ZHptOHBBTVFST2pfZXVIbkJZUlIteElMRTlQWEt5eGZ6RU9JMjRtUmdCYWVXUUM0TUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-09T08:35:45.593Z"
     },
     {
       "id": "rss_2edd338b516d4c21",
@@ -11255,27 +11276,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T17:27:17.890Z"
-    },
-    {
-      "id": "rss_23f8c51b3abd9387",
-      "timestamp": 1784043535000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Lebanese PM condemns Houthi retaliatory attack on Saudi airport - VOI.ID",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQ0FVX3lxTE16RWZfTGJpZDBmTHl4WGFpcFAtdE1FMmh2TWI3dFMzeG5xVmFQdEN4NkpqMVFJTkVreFBDOGY4ZmJUNVnSAUJBVV95cUxQQk13YVVuUjU0dklXZlk5aHNwWGkxQlQ4Zk5zSlJmMXA2Rk1xLVgwTU9PdHlteWhpbGpDc1RjSGlJQUE?oc=5\" target=\"_blank\">Lebanese PM condemns Houthi retaliatory attack on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOI.ID</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE16RWZfTGJpZDBmTHl4WGFpcFAtdE1FMmh2TWI3dFMzeG5xVmFQdEN4NkpqMVFJTkVreFBDOGY4ZmJUNVnSAUJBVV95cUxQQk13YVVuUjU0dklXZlk5aHNwWGkxQlQ4Zk5zSlJmMXA2Rk1xLVgwTU9PdHlteWhpbGpDc1RjSGlJQUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T16:27:40.679Z"
     }
   ]
 }
