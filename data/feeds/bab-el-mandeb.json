@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T17:58:25.266Z",
+  "last_fetch": "2026-08-09T18:46:40.663Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5ce4cd00c4e48a2e",
+      "timestamp": 1786299057000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Yemen: Houthi attack kills 7, wounds 30 - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5wNEhRZ1VEVTFsSENERHNWSmlvalhXZkNfcXFTYmx6S29BVUE0b1Z2cWxoNUhhc3V1eWFxQjFOby1USGNlajRGT1JZbUsyTGJIbm83Znc3SHk1YmJabGUtN2pySlRORFVtMGtIcktqRzc0dE82ektNSHFiNA?oc=5\" target=\"_blank\">Yemen: Houthi attack kills 7, wounds 30 - Shafaq News | Latest breaking news in Iraq and the world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5wNEhRZ1VEVTFsSENERHNWSmlvalhXZkNfcXFTYmx6S29BVUE0b1Z2cWxoNUhhc3V1eWFxQjFOby1USGNlajRGT1JZbUsyTGJIbm83Znc3SHk1YmJabGUtN2pySlRORFVtMGtIcktqRzc0dE82ektNSHFiNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T18:46:39.452Z"
+    },
+    {
+      "id": "rss_53c4ba7ff1e5bc7d",
+      "timestamp": 1786298404000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Rebels Attack Saudi Aramco Jazan Refinery With Drone, Saudi Fire Extinguished: who 24 outlets blamed - NewsCord",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYk5leWFnakhuQUR5YUZmUkpETmR3cndwTE5HNVBUSFdkTHQxMFhjZUlONENzSGJZNzQwSVFrWHFqMkJNREx6VktjUGUtcVI4Z2tBTXVZNExwZWRkcjNKR001VE1LOWhtMlc5ME00U0JGWHdycTlncUEzUFBSa2M1VE5kZU15RlJCbDl2TEJ5NEpvRWZwN1hhdTc1M3J5MFNGUXc2bzlJRjBtMFBiaUctdXRpRmwzdzdBbk44MnBaa1A3YlZiQ2owek4wWWpNT1U4TkVhTTlxVXNna0NWbnhWT1g5WkZPR0FEYXc?oc=5\" target=\"_blank\">Houthi Rebels Attack Saudi Aramco Jazan Refinery With Drone, Saudi Fire Extinguished: who 24 outlets blamed</a>&",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYk5leWFnakhuQUR5YUZmUkpETmR3cndwTE5HNVBUSFdkTHQxMFhjZUlONENzSGJZNzQwSVFrWHFqMkJNREx6VktjUGUtcVI4Z2tBTXVZNExwZWRkcjNKR001VE1LOWhtMlc5ME00U0JGWHdycTlncUEzUFBSa2M1VE5kZU15RlJCbDl2TEJ5NEpvRWZwN1hhdTc1M3J5MFNGUXc2bzlJRjBtMFBiaUctdXRpRmwzdzdBbk44MnBaa1A3YlZiQ2owek4wWWpNT1U4TkVhTTlxVXNna0NWbnhWT1g5WkZPR0FEYXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T18:46:39.452Z"
+    },
     {
       "id": "rss_8ed77d190035fff4",
       "timestamp": 1786291963000,
@@ -11214,48 +11258,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T21:47:28.802Z"
-    },
-    {
-      "id": "rss_3aa7fd836f1e12df",
-      "timestamp": 1784148784000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis say Sanaa airport fully operational after airstrike - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQd3VuUndoUk5BWXFXaFRUX29IaVkzaUNUUFV6OGdxakNjcXNoTWFabVU3VTQ5N1F1eS1QbVdLeXdkMk5QS0FtcC1qUTE4ckdYWU16eS16NzVOVk9ZVGFRM1k0cDJrdlM5WGJpZWxPNjRSMy1XUWVhT3VFNUF5QzVYTXVwWUJRWm05V09ad21icnZUZXJPUVhFTVJ0UU9ESGNpWmI1cnFRQVVvdGMxbFNjektB?oc=5\" target=\"_blank\">Yemen’s Houthis say Sanaa airport fully operational after airstrike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQd3VuUndoUk5BWXFXaFRUX29IaVkzaUNUUFV6OGdxakNjcXNoTWFabVU3VTQ5N1F1eS1QbVdLeXdkMk5QS0FtcC1qUTE4ckdYWU16eS16NzVOVk9ZVGFRM1k0cDJrdlM5WGJpZWxPNjRSMy1XUWVhT3VFNUF5QzVYTXVwWUJRWm05V09ad21icnZUZXJPUVhFTVJ0UU9ESGNpWmI1cnFRQVVvdGMxbFNjektB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T08:15:27.714Z"
-    },
-    {
-      "id": "rss_e30510625c8ca442",
-      "timestamp": 1784147135000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni army says it foiled Houthi attack in northern Yemen - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxORUNUeHZBOEJhYWQwMmF1TkZ1Vy04NUpCYURFQTFOUHcyQ2x4TmM4QXpmQnFycE5nb2tWaGs3N0VpOHJiNUlET3J2cy1IWmtSQTZsbHp1MVNUbjA4Um5rQmVZSXBWbWdnVldvRlZ6Ujdick50SWdzNkR3cDJBZGlyOXVnSHVXcHV0TGNNWjlmbWRRbXRlTFBscEhPZzNzcHN5U0U3Rm1n?oc=5\" target=\"_blank\">Yemeni army says it foiled Houthi attack in northern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORUNUeHZBOEJhYWQwMmF1TkZ1Vy04NUpCYURFQTFOUHcyQ2x4TmM4QXpmQnFycE5nb2tWaGs3N0VpOHJiNUlET3J2cy1IWmtSQTZsbHp1MVNUbjA4Um5rQmVZSXBWbWdnVldvRlZ6Ujdick50SWdzNkR3cDJBZGlyOXVnSHVXcHV0TGNNWjlmbWRRbXRlTFBscEhPZzNzcHN5U0U3Rm1n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T20:47:43.775Z"
     }
   ]
 }
