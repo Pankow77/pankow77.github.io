@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T15:02:00.903Z",
+  "last_fetch": "2026-08-09T15:56:17.893Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2a653a045b5432a3",
+      "timestamp": 1786290606000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen calls Houthi attack on Mokha port ‘extension of Iranian escalation’ - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMjdEbzVXMXN5OUc4LVkwNmFXUjd5ZkJ1V0ZRVWotVGpwU0pwbHV6LWtSYm1ERV9yM1Q1Q204a0c1X2M0YXdtWUUzQ01aZ2JaOEtVa2J3MnE3VEFieXR0M0pZXzlaZnVVY0ZZSWpHQzg0TklVMnVsSC1lc3lvWUhrcWRpazl1SUNBTjJRWVB6clN6WUdrYjBOSG1hMGpKbVFVMTJOZ19yZlB1dE1OWklKdDY0SGZOdE1F?oc=5\" target=\"_blank\">Yemen calls Houthi attack on Mokha port ‘extension of Iranian escalation’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMjdEbzVXMXN5OUc4LVkwNmFXUjd5ZkJ1V0ZRVWotVGpwU0pwbHV6LWtSYm1ERV9yM1Q1Q204a0c1X2M0YXdtWUUzQ01aZ2JaOEtVa2J3MnE3VEFieXR0M0pZXzlaZnVVY0ZZSWpHQzg0TklVMnVsSC1lc3lvWUhrcWRpazl1SUNBTjJRWVB6clN6WUdrYjBOSG1hMGpKbVFVMTJOZ19yZlB1dE1OWklKdDY0SGZOdE1F?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T15:56:16.602Z"
+    },
     {
       "id": "rss_9207295c360cc8ed",
       "timestamp": 1786286925000,
@@ -11231,27 +11254,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-15T13:32:55.261Z"
-    },
-    {
-      "id": "rss_31e7523c9d6a2be0",
-      "timestamp": 1784120799000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Old Video Of An Attack On The Aramco Storage Facility In Jeddah Is Going Viral As A Recent Attack On The Abha Airport. - english.factcrescendo.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQUHNuN2dYMmFKUGN0TE03UjhaeWhOQXRVclJjVDVRVUR0NXBRU0RZd2tJOGIxMWFMSkNRUHF2Y0hJTEctQmpoNXlKblA4MVVReWQ0V3JvRTNTV3lrR3NQQnRZQV9aN2NJUHlrVVJCZEw3cFVPbXBUdndSVUxzZHFSRzBfMjc5STNVREFmWm9WNGtjV1VyYktKYzJLNzZXaHBrRnR3SlNR?oc=5\" target=\"_blank\">Old Video Of An Attack On The Aramco Storage Facility In Jeddah Is Going Viral As A Recent Attack On The Abha Airport.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">english.factcrescendo.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUHNuN2dYMmFKUGN0TE03UjhaeWhOQXRVclJjVDVRVUR0NXBRU0RZd2tJOGIxMWFMSkNRUHF2Y0hJTEctQmpoNXlKblA4MVVReWQ0V3JvRTNTV3lrR3NQQnRZQV9aN2NJUHlrVVJCZEw3cFVPbXBUdndSVUxzZHFSRzBfMjc5STNVREFmWm9WNGtjV1VyYktKYzJLNzZXaHBrRnR3SlNR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-15T13:32:55.262Z"
     }
   ]
 }
