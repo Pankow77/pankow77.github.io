@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T06:47:56.381Z",
+  "last_fetch": "2026-08-09T07:50:07.323Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b7659ac1affefdf3",
+      "timestamp": 1786261433000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Claim Drone Strike on Aramco Refinery on Saudi Arabia's Red Sea Coast - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQNkRkUmQzaXpkYzlnVlZJenNBSnhmN0JmVVc5eEI3VlN6djBaYldlcXlQb19VbldZT0VlREd1NFhySGc5bEFkeGtnOHNjMzhPWlROV3FXUGYxOHN3bUJwYXJSS2t3MzFQdG9hSHZNMUlLWWZMN3FhZERyendXaUstRzZ4cXFDX3MwODFZTDlSRG1DRW5lZTB2Y05rMUs0WVNCMWRmemJvbU42RkpFbHptWVRET1FWTTVjNWVnYQ?oc=5\" target=\"_blank\">Houthis Claim Drone Strike on Aramco Refinery on Saudi Arabia's Red Sea Coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNkRkUmQzaXpkYzlnVlZJenNBSnhmN0JmVVc5eEI3VlN6djBaYldlcXlQb19VbldZT0VlREd1NFhySGc5bEFkeGtnOHNjMzhPWlROV3FXUGYxOHN3bUJwYXJSS2t3MzFQdG9hSHZNMUlLWWZMN3FhZERyendXaUstRzZ4cXFDX3MwODFZTDlSRG1DRW5lZTB2Y05rMUs0WVNCMWRmemJvbU42RkpFbHptWVRET1FWTTVjNWVnYQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T07:50:05.826Z"
+    },
+    {
+      "id": "rss_a273017800faff2a",
+      "timestamp": 1786261197000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis claim attack on Aramco oil facility in Saudi Arabia, and other Middle East news - The Edwardsville Intelligencer",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZFF0SDJ1UVVKRG9jMFhjMEFjR2d0RElpWXdoaUt4dE8zTm5zTFpLaUd6VzlDeDZtMXA5MjZtMDhKOWp3QmJlSFdIdnQ2QTVzQWJuR3RFaGVqdkhMX2M2Z3B6cVRiLUlJdzdaQ2RhT3ZRb3UzcGUweTFSMXVzSHVfTk1OelFQZG84dzBnU1R0T0lvYkVrVjZfNmd5clFycGN0NDlKaGpLM1g?oc=5\" target=\"_blank\">Yemen’s Houthis claim attack on Aramco oil facility in Saudi Arabia, and other Middle East news</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Edwardsville Intelligencer</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZFF0SDJ1UVVKRG9jMFhjMEFjR2d0RElpWXdoaUt4dE8zTm5zTFpLaUd6VzlDeDZtMXA5MjZtMDhKOWp3QmJlSFdIdnQ2QTVzQWJuR3RFaGVqdkhMX2M2Z3B6cVRiLUlJdzdaQ2RhT3ZRb3UzcGUweTFSMXVzSHVfTk1OelFQZG84dzBnU1R0T0lvYkVrVjZfNmd5clFycGN0NDlKaGpLM1g?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-09T07:50:05.826Z"
+    },
     {
       "id": "rss_2edd338b516d4c21",
       "timestamp": 1786227420000,
@@ -11232,48 +11276,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-14T16:27:40.679Z"
-    },
-    {
-      "id": "rss_f0e6b40b5403e667",
-      "timestamp": 1784042550000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Leading Houthi threatens ‘siege’ on Saudi Arabia after Yemen airport attack - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPV0dzUVFKcENEN291dnpfS2lncGg4bWpRV0FNbWt1X2ItdHZLNjJfYnhvOUlaOGx1UG1EQmlGRGFQblRVUjc5ZjBkRVF6ZUtJaGdCY0dkSTQxZTZrcFp2TEplTFQ4Mlc2a1hBM256akc4RDltTFlnbEl2Vy1vVFhfbzYtRnJNbW1iUUpLN3RXS2lYU2t0ZUIxMjFiTTlreS1mWmw1SVVyaC1zYWJQRmNralcxXzLSAboBQVVfeXFMTm1kVVhaSThQYWRyY050TUh3UFJCU2FJTnRIOWRCY0I4STNnY3o5dWV3VVZvdWZJSjBLTGFEUC1UamlwOXhLSVVDMEUwRkV6Z21RM2x3WTE1YV9fMktFOXJ1em03MHRZZWc4eEg0S3ZDc2hQTkJXZll2aUNZdEt3LU5SdzkyM1BRbWgxMEJCdHVHSzJ1VklaRX",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPV0dzUVFKcENEN291dnpfS2lncGg4bWpRV0FNbWt1X2ItdHZLNjJfYnhvOUlaOGx1UG1EQmlGRGFQblRVUjc5ZjBkRVF6ZUtJaGdCY0dkSTQxZTZrcFp2TEplTFQ4Mlc2a1hBM256akc4RDltTFlnbEl2Vy1vVFhfbzYtRnJNbW1iUUpLN3RXS2lYU2t0ZUIxMjFiTTlreS1mWmw1SVVyaC1zYWJQRmNralcxXzLSAboBQVVfeXFMTm1kVVhaSThQYWRyY050TUh3UFJCU2FJTnRIOWRCY0I4STNnY3o5dWV3VVZvdWZJSjBLTGFEUC1UamlwOXhLSVVDMEUwRkV6Z21RM2x3WTE1YV9fMktFOXJ1em03MHRZZWc4eEg0S3ZDc2hQTkJXZll2aUNZdEt3LU5SdzkyM1BRbWgxMEJCdHVHSzJ1VklaRXpCcVJfaDFpQ2U3V01OWmV6VWRwSkdwRFAwOHpIa0tLcl9R?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-14T15:30:27.964Z"
-    },
-    {
-      "id": "rss_bf3cd4c2a3568167",
-      "timestamp": 1784041583000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Arab Interior Ministers Council Condemns Houthi Terrorist Attack on Saudi Arabia's Southern Region - ASHARQ AL-AWSAT English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPM1p3b1dxWGxTUEtQNVdHcWZVaVUxMV96ZzVWM1l5QlRmZ0xYaXZ2SlZiZXVOSDc1QU5UdHRmVEl0UmNkUW1taW5pZXFZOTZ1MHJoM0RORkdDYmg1WFk1ekxRTER6dmhMa0l0azZ1SlpyeFpISE9kdWpzOWZpeHp2VjdWMTNPMU5QeWF3YnRpWjYwUjBOTVkzVlh6dXRaWlFmclR0NU8yOFQydzdJR3haVWo3TVd4WVdJM2c?oc=5\" target=\"_blank\">Arab Interior Ministers Council Condemns Houthi Terrorist Attack on Saudi Arabia's Southern Region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPM1p3b1dxWGxTUEtQNVdHcWZVaVUxMV96ZzVWM1l5QlRmZ0xYaXZ2SlZiZXVOSDc1QU5UdHRmVEl0UmNkUW1taW5pZXFZOTZ1MHJoM0RORkdDYmg1WFk1ekxRTER6dmhMa0l0azZ1SlpyeFpISE9kdWpzOWZpeHp2VjdWMTNPMU5QeWF3YnRpWjYwUjBOTVkzVlh6dXRaWlFmclR0NU8yOFQydzdJR3haVWo3TVd4WVdJM2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-14T15:30:27.964Z"
     }
   ]
 }
