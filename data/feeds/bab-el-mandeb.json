@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T08:23:47.176Z",
+  "last_fetch": "2026-08-10T09:55:52.863Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_30e9dcc0151f034e",
+      "timestamp": 1786351923000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military says Houthi attack on Mocha kills 7, wounds 30 - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQQV8tRkl5Q0ZDcHNGX21uZTF2UDd1cFAxV00yaklxVEk0RHhkYTUyRjlQMF9oZXM1dDMwWlp1V3dkSFFadVRaaU0ySXk5WVlTSUkyUU53N1FPeFM1Ml9XZDlHcG1RODNuRUU0YXFnOG5RblB0aHJfLWdFMDdNaXlWdDQyRm80OHFtNkhiYjctZ0E3d1ZaZkoxVTE3YmlBMWVjOFo4a3pZOA?oc=5\" target=\"_blank\">Yemeni military says Houthi attack on Mocha kills 7, wounds 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQV8tRkl5Q0ZDcHNGX21uZTF2UDd1cFAxV00yaklxVEk0RHhkYTUyRjlQMF9oZXM1dDMwWlp1V3dkSFFadVRaaU0ySXk5WVlTSUkyUU53N1FPeFM1Ml9XZDlHcG1RODNuRUU0YXFnOG5RblB0aHJfLWdFMDdNaXlWdDQyRm80OHFtNkhiYjctZ0E3d1ZaZkoxVTE3YmlBMWVjOFo4a3pZOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T09:55:51.443Z"
+    },
+    {
+      "id": "rss_0e3b3ddf1a7a14aa",
+      "timestamp": 1786350317000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen vows response after deadly Houthi attack on Mocha - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQUFJGR21zX3pSRWFYQWU2V1J1aERpcFV1eTVMUUFQXzZLaFNYcUpramJQdGFvTmJfRXBoTmgzZUh1aTBCUWh5Z0tOOW5McmxmTWpaN0ptdGJEWkVIUlVrOUI0aVFZYkgxakxnWmtIamdEU3pqUEN6cWM3R2t4RWtsMzhDMVc?oc=5\" target=\"_blank\">Yemen vows response after deadly Houthi attack on Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUFJGR21zX3pSRWFYQWU2V1J1aERpcFV1eTVMUUFQXzZLaFNYcUpramJQdGFvTmJfRXBoTmgzZUh1aTBCUWh5Z0tOOW5McmxmTWpaN0ptdGJEWkVIUlVrOUI0aVFZYkgxakxnWmtIamdEU3pqUEN6cWM3R2t4RWtsMzhDMVc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T09:55:51.442Z"
+    },
     {
       "id": "rss_b69ac73fbb64add8",
       "timestamp": 1786344985000,
@@ -44,6 +86,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T06:50:00.358Z"
+    },
+    {
+      "id": "rss_544d9070bd3d8f7f",
+      "timestamp": 1786338391000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military vows response after Houthi attack on Mocha - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTFBtOWNiUmNvODhkV3JuaERwMncxRW1wOWZjWjVHR2tpbHlaOGlNaEpTbVU4WW5sTEE5bDFfTHEwdUFqZjJaUEhoaWJveTJPVkdfVC1DbzREemgxZGs5ZGc?oc=5\" target=\"_blank\">Yemeni military vows response after Houthi attack on Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBtOWNiUmNvODhkV3JuaERwMncxRW1wOWZjWjVHR2tpbHlaOGlNaEpTbVU4WW5sTEE5bDFfTHEwdUFqZjJaUEhoaWJveTJPVkdfVC1DbzREemgxZGs5ZGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T09:55:51.442Z"
     },
     {
       "id": "rss_13bd429608201d74",
@@ -107,6 +170,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T06:50:00.357Z"
+    },
+    {
+      "id": "rss_c5a68555dce1b530",
+      "timestamp": 1786322880000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran says strait won't open until the U.S. \"corrects\" behavior - CBS News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOMVhleVdzazZyT0ZHcXV5aWJxa3FZaGtTelNHdUJ5cm4tNXNlLU5PYUM3Tk40cVRLQjdWY2Job2NyM0hNTnhKN1diQkkzN0Y0a0lOWmtCaGxxdU5GTUFxZW9IODM0MjI4aU5sS2YzREFrODBHV0pocFpGMkpPWHhla1JaXzRzclYtb085WFhMOFcxaXVfWWh1SXQzSmpJNUU5TzR3?oc=5\" target=\"_blank\">Iran says strait won't open until the U.S. \"corrects\" behavior</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOMVhleVdzazZyT0ZHcXV5aWJxa3FZaGtTelNHdUJ5cm4tNXNlLU5PYUM3Tk40cVRLQjdWY2Job2NyM0hNTnhKN1diQkkzN0Y0a0lOWmtCaGxxdU5GTUFxZW9IODM0MjI4aU5sS2YzREFrODBHV0pocFpGMkpPWHhla1JaXzRzclYtb085WFhMOFcxaXVfWWh1SXQzSmpJNUU5TzR3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T09:55:51.442Z"
     },
     {
       "id": "rss_b437221cbbaa9daf",
@@ -347,6 +433,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T15:01:59.410Z"
+    },
+    {
+      "id": "rss_b323e4e4f09b5b29",
+      "timestamp": 1786285680000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels attack crucial Red Sea port and Saudi Aramco refinery as fighting escalates - fortune.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQMDVlUUN2QlE3OXJjZG15OVRsOUYxMkExc0thWDJvZjhpNkt1X1huZ1NhN3FrSlpyU3F5WVVyLUFRZzVodmlpd3NQSkpHcTItcU1UdW5GYWxiSnlhcVRiczltdUdSeE9zSEZNM285X21iOUVVeVFyb2hITHhnV1dPbnJEcy0yQk81aFNJUk51ZXFUd3FFVEE?oc=5\" target=\"_blank\">Iran-backed Houthi rebels attack crucial Red Sea port and Saudi Aramco refinery as fighting escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fortune.com</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMDVlUUN2QlE3OXJjZG15OVRsOUYxMkExc0thWDJvZjhpNkt1X1huZ1NhN3FrSlpyU3F5WVVyLUFRZzVodmlpd3NQSkpHcTItcU1UdW5GYWxiSnlhcVRiczltdUdSeE9zSEZNM285X21iOUVVeVFyb2hITHhnV1dPbnJEcy0yQk81aFNJUk51ZXFUd3FFVEE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T09:55:51.443Z"
     },
     {
       "id": "rss_3b209309d4147c0c",
@@ -11128,121 +11237,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T16:35:37.989Z"
-    },
-    {
-      "id": "rss_8c54b8dce536b726",
-      "timestamp": 1784213546000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Will Iran Target Another Maritime Chokepoint? The Bab El-Mandeb Strait Is Under Threat - Time Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPWGpRTUlveDFyaVJnZmpsa1kzeEk2dHg1UUtxd0Zra29mS0Z6VzRwTTVnb0NoTldOZ3NpRDMxbmNzQm5vYVEyZVc2QkZ1bkg5NkF0U28yV2FJa0F4ano0QVFFa0tNT250djFZRzdFbzhuWGxmc2tZb09nNzdWbnJEeHpHSDJHOG1PTUJJVDRKVUtSTVFGRHljRw?oc=5\" target=\"_blank\">Will Iran Target Another Maritime Chokepoint? The Bab El-Mandeb Strait Is Under Threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Time Magazine</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWGpRTUlveDFyaVJnZmpsa1kzeEk2dHg1UUtxd0Zra29mS0Z6VzRwTTVnb0NoTldOZ3NpRDMxbmNzQm5vYVEyZVc2QkZ1bkg5NkF0U28yV2FJa0F4ano0QVFFa0tNT250djFZRzdFbzhuWGxmc2tZb09nNzdWbnJEeHpHSDJHOG1PTUJJVDRKVUtSTVFGRHljRw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T15:10:53.953Z"
-    },
-    {
-      "id": "rss_883e14e48f2ab0c2",
-      "timestamp": 1784212400000,
-      "source": "Reuters",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran asked the Houthis to be ready to block the Red Sea in case of a US strike - Reuters - Українські Національні Новини (УНН)",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQdi1oUkMzaTFVMlQzbjRrYU5NeEVqcjdSWjhkUkRQY2FJUl8tZF9aTXk0MnFnMERnLXczUGRqWkt4T0RzX2VXUmtsbUkxYmNsUHJUZE1xZmNHSTFEZXRkZ1FibDVoLVlUU1kteEJkSFAzaHNLYlJLRGh2RVFnT1NVaExOSHg1SllFQUdyU0J0U0VJQ0t2eEhBeVBXeUh6eTlENGd5SHFKSFl5NjJmRXfSAawBQVVfeXFMT0pfbUt3a2xNNmRxVjFqWWlpV2lWTUpOVDFmMXo5NFRIN0s3QzgxZkRzcGxKRXRqWGVQN2hqYm1FcGlPZGJHcy0td1M5X19lbVY3d0dPTGU2OGtnR3AzczJrYjExcE1LQXlwQjQ1UjJtSzZZeFpvMWEzd0ZOZEZCbWc2dlg4bnEtT3B4T1BNUnVIcEJvYXFoNXVkeDJTR2",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdi1oUkMzaTFVMlQzbjRrYU5NeEVqcjdSWjhkUkRQY2FJUl8tZF9aTXk0MnFnMERnLXczUGRqWkt4T0RzX2VXUmtsbUkxYmNsUHJUZE1xZmNHSTFEZXRkZ1FibDVoLVlUU1kteEJkSFAzaHNLYlJLRGh2RVFnT1NVaExOSHg1SllFQUdyU0J0U0VJQ0t2eEhBeVBXeUh6eTlENGd5SHFKSFl5NjJmRXfSAawBQVVfeXFMT0pfbUt3a2xNNmRxVjFqWWlpV2lWTUpOVDFmMXo5NFRIN0s3QzgxZkRzcGxKRXRqWGVQN2hqYm1FcGlPZGJHcy0td1M5X19lbVY3d0dPTGU2OGtnR3AzczJrYjExcE1LQXlwQjQ1UjJtSzZZeFpvMWEzd0ZOZEZCbWc2dlg4bnEtT3B4T1BNUnVIcEJvYXFoNXVkeDJTR2RaN05LVHhlVllqWW4wLQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-16T15:10:53.953Z"
-    },
-    {
-      "id": "rss_b6848fefdc171af2",
-      "timestamp": 1784212118000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Shut down Red Sea's Bab El Mandeb Strait if Trump...: Iran's big move amid Hormuz tensions - theweek.in",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxOQVFrb0pkNnpGYTRtdzMxU3JvTUlFR0JxU2NXUU5IMFhIbUNIR1lJUzFjdm1TQ25SbkNhYXkwTWRWZ1NwY1ZNaXl1aWM4YS1lQWwtWV9yWFpMc3N6aGlmQzJEZ2l3SjhGeFp4SUN5TTVGN1NPLUJNTTZqSjFPb3MtMzREWnhZVlIxRUdocFRzU2tKRFhxQmlfSmpJNklHSTgxc2w2eWhkbHl6MW5Qd2o3YmdqUE1wSEpEM3BVMzRINlF4M1AtMmg0YUY2N2hKbkpkN2x4LWpMeUZ0QdIB3wFBVV95cUxOSlBUYjRONTdMMmROci0tc0tzeVpLLXc5bnlmcGdqM0dHbDI3dE1Oc3RkQ2hxWGU2U3phRGdDTjc4RzNaSHlhcG1vODRWck1BZXI2T1M1SHRNVTJzV3VHZ1BKN2U1U2k3ZlF0SW42TjJ5WT",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOQVFrb0pkNnpGYTRtdzMxU3JvTUlFR0JxU2NXUU5IMFhIbUNIR1lJUzFjdm1TQ25SbkNhYXkwTWRWZ1NwY1ZNaXl1aWM4YS1lQWwtWV9yWFpMc3N6aGlmQzJEZ2l3SjhGeFp4SUN5TTVGN1NPLUJNTTZqSjFPb3MtMzREWnhZVlIxRUdocFRzU2tKRFhxQmlfSmpJNklHSTgxc2w2eWhkbHl6MW5Qd2o3YmdqUE1wSEpEM3BVMzRINlF4M1AtMmg0YUY2N2hKbkpkN2x4LWpMeUZ0QdIB3wFBVV95cUxOSlBUYjRONTdMMmROci0tc0tzeVpLLXc5bnlmcGdqM0dHbDI3dE1Oc3RkQ2hxWGU2U3phRGdDTjc4RzNaSHlhcG1vODRWck1BZXI2T1M1SHRNVTJzV3VHZ1BKN2U1U2k3ZlF0SW42TjJ5WTJ4cXJJV1ZQb2cwWm5FTGQxS1NJRXV3NXpPbFVvQ3o2Mm00LWtvbFVkVVlRMmU0aURzbWxTRUZST05vbmJLc3M1YldiN1RxMGNrNlRINkcxOGg5bmJGSDNjSVlnYUwwMVFKenhNczF2TWRMWFN3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T15:10:53.953Z"
-    },
-    {
-      "id": "rss_bd8dea4dfef02dc7",
-      "timestamp": 1784211914000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan worries about being drawn into US-Iran conflict after Houthis attack Saudi Arabia - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFhQU183WFFqVnZ6Z2VtXzc2LUk0eW9kSzZ4d3Y2Mk9fMkFmQTYteGFkeGZKMW1LYzFOclEzWWRQdDFZVFUxcDYzd1hGanh3WWJoZ0tDc2ljNmZ4aVN2cURsMFVtbXh1YnhaeG9pU0hscWFYclR3QWVDRUtobUhGQ2Q4ZkVfV1Y1STVsdk5QYnhHUy16UjFpMmhFRWV1V1FQRXhuTXdNOXdIVXB6b0tGV2dyMkNTVUJZVDNSeWR5VGdidFYwWGQ0cm5Eb1I?oc=5\" target=\"_blank\">Pakistan worries about being drawn into US-Iran conflict after Houthis attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSFhQU183WFFqVnZ6Z2VtXzc2LUk0eW9kSzZ4d3Y2Mk9fMkFmQTYteGFkeGZKMW1LYzFOclEzWWRQdDFZVFUxcDYzd1hGanh3WWJoZ0tDc2ljNmZ4aVN2cURsMFVtbXh1YnhaeG9pU0hscWFYclR3QWVDRUtobUhGQ2Q4ZkVfV1Y1STVsdk5QYnhHUy16UjFpMmhFRWV1V1FQRXhuTXdNOXdIVXB6b0tGV2dyMkNTVUJZVDNSeWR5VGdidFYwWGQ0cm5Eb1I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-16T20:18:42.557Z"
-    },
-    {
-      "id": "rss_cd90a24d70ffb278",
-      "timestamp": 1784208462000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran turns to Houthis for Red Sea blockade if US hits its power network - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxNT3dZZVRMbGR4b3JCc0JHbTBHQUlJQ0pjcmxhOXdPcW1HVzY2OUJsSWtCSnZrTTJYTEM3bndFUHZXVTZLbjRTelRUTHZPOGRGQmFjNzNWQ0JWQ0dFZkxTR3hHZUlfNFJhYnRubzNDQjdMQ19RejFIaG5tYmZMT1ZuODEwT2NwOTZWeEF1WkFLYk1HamFiWnBxcDRLX041Q0pGVTFHNXh2WUZaT2VVc2tHTjhMd3pYZ0FZMEtvdmV0TzJITHlTNnlmWE5ZUWg0eFp2Q1FBaTdBdmMwQQ?oc=5\" target=\"_blank\">Iran turns to Houthis for Red Sea blockade if US hits its power network</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">India Today</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNT3dZZVRMbGR4b3JCc0JHbTBHQUlJQ0pjcmxhOXdPcW1HVzY2OUJsSWtCSnZrTTJYTEM3bndFUHZXVTZLbjRTelRUTHZPOGRGQmFjNzNWQ0JWQ0dFZkxTR3hHZUlfNFJhYnRubzNDQjdMQ19RejFIaG5tYmZMT1ZuODEwT2NwOTZWeEF1WkFLYk1HamFiWnBxcDRLX041Q0pGVTFHNXh2WUZaT2VVc2tHTjhMd3pYZ0FZMEtvdmV0TzJITHlTNnlmWE5ZUWg0eFp2Q1FBaTdBdmMwQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T14:13:29.793Z"
     }
   ]
 }
