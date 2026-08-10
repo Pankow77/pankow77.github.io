@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T11:05:02.955Z",
+  "last_fetch": "2026-08-10T13:53:02.411Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3af66ffad744c021",
+      "timestamp": 1786366705000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Attack Red Sea Port Of Mokha And Saudi Oil Facility, Killing 7 And Injuring 15 - Marine Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxNT0FuZ3Q5SjkzU0NPeGRnZmtYZy1za3RZdFZ5X0VMWE96a1RtNWRJTTVTLTRpSGRseVlWN1Nyb0wzVFJ6SGZ1TEs1UlJrV21FZ2F2a1NLbUEtdXlfNFR1UzdqMHVtQldLai1nQXJheDhDRXJYNl9hVWozWGJKRENoMG93STUzYXl6NzVMcmF6SW5IYm1fcmc0TDVMR0o4TjRQbFRMNFFPQTdEWjhiNGZFTXhFUm9sS3c?oc=5\" target=\"_blank\">Houthis Attack Red Sea Port Of Mokha And Saudi Oil Facility, Killing 7 And Injuring 15</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNT0FuZ3Q5SjkzU0NPeGRnZmtYZy1za3RZdFZ5X0VMWE96a1RtNWRJTTVTLTRpSGRseVlWN1Nyb0wzVFJ6SGZ1TEs1UlJrV21FZ2F2a1NLbUEtdXlfNFR1UzdqMHVtQldLai1nQXJheDhDRXJYNl9hVWozWGJKRENoMG93STUzYXl6NzVMcmF6SW5IYm1fcmc0TDVMR0o4TjRQbFRMNFFPQTdEWjhiNGZFTXhFUm9sS3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T13:53:01.076Z"
+    },
     {
       "id": "rss_a35053decc776799",
       "timestamp": 1786359313000,
@@ -11215,29 +11236,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T17:29:48.952Z"
-    },
-    {
-      "id": "rss_6f89ba44f25406f6",
-      "timestamp": 1784215200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran tells Yemen's Houthis to close Red Sea oil route if U.S. strikes power grid - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxNaHJtQ3V1anczR21CZTRTV0lMQk1FSktocXJCaHJpSjBSOWhRZkx6ZXRmVFVqbVJ4NDhFRDVfc0VuVFNjb2x5WmlFQ1RQOXhyZmJiTndNT21NWmVMNUROdTQycy1HbVdlSmJJSkVEODZUVDZBcjdOLWVzeUdmNVZDNVBrbmRELUREM3RsbUZfY0gxYnp1OWxJaUFlSjYxR3dnSXcwcEJVOE55b3Vsc3hjT28yZ2xEeGpKei1nSjJFV3J3ZmNRSVIzU002a2I4N3RnV1gtRzRUVXBsOUZWbkVoeU1QRWsyeEZmNnRFeUMtNlB5X1ZUQVNfR1ZfZ3NJWWExV0xjalg5MDduRExMcnBSdA?oc=5\" target=\"_blank\">Iran tells Yemen's Houthis to close Red Sea oil route if U.S.",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNaHJtQ3V1anczR21CZTRTV0lMQk1FSktocXJCaHJpSjBSOWhRZkx6ZXRmVFVqbVJ4NDhFRDVfc0VuVFNjb2x5WmlFQ1RQOXhyZmJiTndNT21NWmVMNUROdTQycy1HbVdlSmJJSkVEODZUVDZBcjdOLWVzeUdmNVZDNVBrbmRELUREM3RsbUZfY0gxYnp1OWxJaUFlSjYxR3dnSXcwcEJVOE55b3Vsc3hjT28yZ2xEeGpKei1nSjJFV3J3ZmNRSVIzU002a2I4N3RnV1gtRzRUVXBsOUZWbkVoeU1QRWsyeEZmNnRFeUMtNlB5X1ZUQVNfR1ZfZ3NJWWExV0xjalg5MDduRExMcnBSdA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T15:58:50.551Z"
     }
   ]
 }
