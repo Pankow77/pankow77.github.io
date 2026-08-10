@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T05:21:26.255Z",
+  "last_fetch": "2026-08-10T06:50:01.694Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4bbe031346f1e17d",
+      "timestamp": 1786343375000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "US reaffirms Yemen support after Houthi attacks near Bab el-Mandab - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQYWRzbHdDcWh6SU51bG15MWdKTGhCSDVuUzZOQ1dTSXlMeG1PRy0tQ09SSnk5a24ybmdBMzlqUFROSDBxTGZoSjVacS1Pb0h3T3RWbjducGxBUjlqWVoycS1oZ2Zud3lISEtfVUV1SlJLYV9ndVBYLWVOWGtzSkFGOFNxSXUtM0ttUFlCTHVNZGRCUlpwQVBrbmhuTFZLcEQtbkphVDlHMHpadlhQclk4?oc=5\" target=\"_blank\">US reaffirms Yemen support after Houthi attacks near Bab el-Mandab</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQYWRzbHdDcWh6SU51bG15MWdKTGhCSDVuUzZOQ1dTSXlMeG1PRy0tQ09SSnk5a24ybmdBMzlqUFROSDBxTGZoSjVacS1Pb0h3T3RWbjducGxBUjlqWVoycS1oZ2Zud3lISEtfVUV1SlJLYV9ndVBYLWVOWGtzSkFGOFNxSXUtM0ttUFlCTHVNZGRCUlpwQVBrbmhuTFZLcEQtbkphVDlHMHpadlhQclk4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T06:50:00.358Z"
+    },
     {
       "id": "rss_13bd429608201d74",
       "timestamp": 1786331363000,
@@ -44,6 +65,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T03:48:43.273Z"
+    },
+    {
+      "id": "rss_ff3519fd6222d985",
+      "timestamp": 1786327696000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military vows response after Houthi attack on Mocha - arabnews.jp",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE9nLWxKSFk4TEVhek0xdjR6Ulk0TGp4VERiSURLMkNrZkV0bERkaVZMMWd3RTJ5Um1IR3FPcFEySzloU2J6NVRVRjdFdTFGNGYxM3kwNXo5bW5ieE01a21IZjVjSnc?oc=5\" target=\"_blank\">Yemeni military vows response after Houthi attack on Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">arabnews.jp</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9nLWxKSFk4TEVhek0xdjR6Ulk0TGp4VERiSURLMkNrZkV0bERkaVZMMWd3RTJ5Um1IR3FPcFEySzloU2J6NVRVRjdFdTFGNGYxM3kwNXo5bW5ieE01a21IZjVjSnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T06:50:00.357Z"
     },
     {
       "id": "rss_b437221cbbaa9daf",
@@ -11201,52 +11243,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T14:13:29.792Z"
-    },
-    {
-      "id": "rss_e667eb751c8aa754",
-      "timestamp": 1784207762000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran warns it could use Houthi allies to block Bab el Mandeb Strait - Межа. Новини України.",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE14X3N4eTVCUWJFMjFLQzlaZXI3N1VOemdtMG1wOHkxZVZUU0k5UjY0bmhha3NjeEpMYmFOa0tHZXRabXMzTmNPWFhFTE41WmxUdngxVVMzc2lDak85eWJCTg?oc=5\" target=\"_blank\">Iran warns it could use Houthi allies to block Bab el Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Межа. Новини України.</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE14X3N4eTVCUWJFMjFLQzlaZXI3N1VOemdtMG1wOHkxZVZUU0k5UjY0bmhha3NjeEpMYmFOa0tHZXRabXMzTmNPWFhFTE41WmxUdngxVVMzc2lDak85eWJCTg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T14:13:29.793Z"
-    },
-    {
-      "id": "rss_a86c012ef9886679",
-      "timestamp": 1784206020000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran threatens to close Red Sea gateway if US strikes power grid: Report - The News International",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEVaT0l5akNMaktFWVFHUThFbFNXdDFmTHQ2bUQ0aTZfOHJUTkY0aHRnMGdtUTNacTZjWFVnNkU2VmswWmNYSWgxMm9mWXo1TlJtQUxtcVFtRU44U3hoSEYwV2xEMkp6UGc2NEJfNzdyeDlrb1YtU3NQQkxsT3lWeGk3YU9TRVlFSjlvUjhUeFBwYldGNEpiOUhtaXF0TDgwOW5LWXdLSi1xNU43OU1OaGVZZw?oc=5\" target=\"_blank\">Iran threatens to close Red Sea gateway if US strikes power grid: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The News International</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPWEVaT0l5akNMaktFWVFHUThFbFNXdDFmTHQ2bUQ0aTZfOHJUTkY0aHRnMGdtUTNacTZjWFVnNkU2VmswWmNYSWgxMm9mWXo1TlJtQUxtcVFtRU44U3hoSEYwV2xEMkp6UGc2NEJfNzdyeDlrb1YtU3NQQkxsT3lWeGk3YU9TRVlFSjlvUjhUeFBwYldGNEpiOUhtaXF0TDgwOW5LWXdLSi1xNU43OU1OaGVZZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T13:00:22.291Z"
     }
   ]
 }
