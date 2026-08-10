@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T01:51:29.068Z",
+  "last_fetch": "2026-08-10T03:48:44.776Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_13bd429608201d74",
+      "timestamp": 1786331363000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen Army Says Houthi Attack on Red Sea Port of Mocha Killed Seven and Wounded 30 - Межа. Новини України.",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE1heGVrcE5ZQlpBVTZSbEFSY0FXWWZzSzRBQ2MxRUlsVDZCYmhRdjcxTWVLbTdlU0xRb05KZEpiaFNYS3hnRFN4RXBTLVVaUUlNNUd3bE9GclU0T1Y5T3Q3ZFFzdw?oc=5\" target=\"_blank\">Yemen Army Says Houthi Attack on Red Sea Port of Mocha Killed Seven and Wounded 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Межа. Новини України.</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1heGVrcE5ZQlpBVTZSbEFSY0FXWWZzSzRBQ2MxRUlsVDZCYmhRdjcxTWVLbTdlU0xRb05KZEpiaFNYS3hnRFN4RXBTLVVaUUlNNUd3bE9GclU0T1Y5T3Q3ZFFzdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T03:48:43.273Z"
+    },
+    {
+      "id": "rss_b00a052b81d256e0",
+      "timestamp": 1786329326000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military says Houthi attack on Mocha kills 7, wounds 30 - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRzFNbDd4bFRNQmlITFltSWRlWmZERElYRDVQUWRCcEdYZTFhdkJmM3ZTWWE2d0o3c01Nb3RZOWowMTUtR2lFb29yRjZsYlUyVDhPd0RueXJsTmJmZGZBSDF1YTRQVkNkdlRXVjBLa0U0ZHhLUmxqMnQzTzllSjhjbDRabG1HT2xBTXR0Mnh2b2ZDeHQwR1BfVXFtRGIxbVhNTW43NkhzTkh2MGs?oc=5\" target=\"_blank\">Yemeni military says Houthi attack on Mocha kills 7, wounds 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRzFNbDd4bFRNQmlITFltSWRlWmZERElYRDVQUWRCcEdYZTFhdkJmM3ZTWWE2d0o3c01Nb3RZOWowMTUtR2lFb29yRjZsYlUyVDhPd0RueXJsTmJmZGZBSDF1YTRQVkNkdlRXVjBLa0U0ZHhLUmxqMnQzTzllSjhjbDRabG1HT2xBTXR0Mnh2b2ZDeHQwR1BfVXFtRGIxbVhNTW43NkhzTkh2MGs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T03:48:43.273Z"
+    },
     {
       "id": "rss_633a2b039e456a4c",
       "timestamp": 1786320180000,
@@ -44,6 +86,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T22:31:37.875Z"
+    },
+    {
+      "id": "rss_9f925343bd0be999",
+      "timestamp": 1786306680000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military says Houthi attack on Mocha kills 7, wounds 30 - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxQY1pLdDR5UUhyOFl0d1dQNFFWV3lPV1RkNVg0TFgtSjVidElQVlpTcmt1cFQ0QmI4bTNsOXdjNlozM1RWLU9DUThrNmNjTURRZV9sSjJPbTVIYTR2ZUZQYzQ2NGdFbVRsSVlzeno5NWhiajhucW8ySmYwc1B6cENtOHg1RVhBY0pKUUFHSENiM0w5dU1lNkNJNTB0S0FLSFNKZnpZRHJLaGZHSVk2OFg1X3B0TEUyT0R4V2EtWHoxY2pjVF9IOHl4ZEpZZGF3QQ?oc=5\" target=\"_blank\">Yemeni military says Houthi attack on Mocha kills 7, wounds 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQY1pLdDR5UUhyOFl0d1dQNFFWV3lPV1RkNVg0TFgtSjVidElQVlpTcmt1cFQ0QmI4bTNsOXdjNlozM1RWLU9DUThrNmNjTURRZV9sSjJPbTVIYTR2ZUZQYzQ2NGdFbVRsSVlzeno5NWhiajhucW8ySmYwc1B6cENtOHg1RVhBY0pKUUFHSENiM0w5dU1lNkNJNTB0S0FLSFNKZnpZRHJLaGZHSVk2OFg1X3B0TEUyT0R4V2EtWHoxY2pjVF9IOHl4ZEpZZGF3QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-10T03:48:43.272Z"
     },
     {
       "id": "rss_4d5b1f8388cfc1d9",
@@ -11184,75 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T13:00:22.290Z"
-    },
-    {
-      "id": "rss_e461b4dcf9aab948",
-      "timestamp": 1784202965000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran instructs Houthis to close Bab el-Mandeb if US targets power network - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQcDdTcFhhNWkxRGI4OUh0bVRCLXhmMFZqNVRkYUJBY2puS3RYQ0VTemlmOXUtSGdHN05IdFpIcE5ZRzJLbzNVMzdYeHluYjhLZE10UWk1Z2dhTFluRjF5dEVoZHNEZ3AxNTNnUERLekhCNGZiMmNlVkV2OHNVVkloc3NJUDRuXzAtVnN4blh5MlY1TmNyR3ZxMVhuMGhiY0ZtMzE0?oc=5\" target=\"_blank\">Iran instructs Houthis to close Bab el-Mandeb if US targets power network</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcDdTcFhhNWkxRGI4OUh0bVRCLXhmMFZqNVRkYUJBY2puS3RYQ0VTemlmOXUtSGdHN05IdFpIcE5ZRzJLbzNVMzdYeHluYjhLZE10UWk1Z2dhTFluRjF5dEVoZHNEZ3AxNTNnUERLekhCNGZiMmNlVkV2OHNVVkloc3NJUDRuXzAtVnN4blh5MlY1TmNyR3ZxMVhuMGhiY0ZtMzE0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T12:00:38.799Z"
-    },
-    {
-      "id": "rss_970728cc97c99e30",
-      "timestamp": 1784202898000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EXCLUSIVE: Iran tells Houthis to close Red Sea gateway if US hits power network, sources say - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQNnlkS245LVFESkFHd2V1MjVwTjdoSm9ZZmRWTlRUZ0dBdkN1VlRPUHU0ZXZLbjNVWGVIdGxldS1uVi1TOFctd2VXQy1jeXRmLWhyOVczWmpaRVY1Ml9sVWQ2N3ktdE5iRUNOcTdaWnZmNzdzT1M4NG1jMkNIeFVaa05YSHhRdHZYQ3BDS3lnb2pkYmFpYS1NR2E5WHBuOEFsTWljaDNsWGVqZ1VKSFlaNmd2UkU4aE1Xa29XeDNVcFdZZnh4bjFSQ1NuUQ?oc=5\" target=\"_blank\">EXCLUSIVE: Iran tells Houthis to close Red Sea gateway if US hits power network, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQNnlkS245LVFESkFHd2V1MjVwTjdoSm9ZZmRWTlRUZ0dBdkN1VlRPUHU0ZXZLbjNVWGVIdGxldS1uVi1TOFctd2VXQy1jeXRmLWhyOVczWmpaRVY1Ml9sVWQ2N3ktdE5iRUNOcTdaWnZmNzdzT1M4NG1jMkNIeFVaa05YSHhRdHZYQ3BDS3lnb2pkYmFpYS1NR2E5WHBuOEFsTWljaDNsWGVqZ1VKSFlaNmd2UkU4aE1Xa29XeDNVcFdZZnh4bjFSQ1NuUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-16T12:00:38.798Z"
-    },
-    {
-      "id": "rss_92bdb28290b37fe3",
-      "timestamp": 1784187480000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran eyes the Red Sea: How it can control the vital maritime chokepoint - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbXFyc2VFWXdNanMyUXFJNUR6QlhnMTVsTWRXWGtDU1pJTkFCQ0ItR0JNUEVLZFl3eldrOG0tRlNOSWtLZFNlekpIRXlQcjV4RXZicUdoMzhXZ196RWRpYmVudjg2S3ZiRlVWUTI2LTloSlk5NDVLSHRKVk5EcFRwdnFfb29oSnZrRDRsZW5PaE50U3ZaSVB4cGpBdENQb24tSjZpQlRSd04tbzF5MGh1eWlqb1lCZnpGWmNXeVV2OXY4MHFNOEdtaU5sSW92VmpLYndrMWl5SG5vZ0RHQ3drd0duSdIB6AFBVV95cUxOd29oSFAzM0hCQVk5TThIMTZHbW81VWNVZTlKSm9MMkVqVTZpeXBoczlidjU1azhaRXJJN2lfeXl5WWk3SFRwV2c3Sk54QnR2N2dZRzhqMUJjSHh5eFYtUEdrQUhjYkRVTW",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPbXFyc2VFWXdNanMyUXFJNUR6QlhnMTVsTWRXWGtDU1pJTkFCQ0ItR0JNUEVLZFl3eldrOG0tRlNOSWtLZFNlekpIRXlQcjV4RXZicUdoMzhXZ196RWRpYmVudjg2S3ZiRlVWUTI2LTloSlk5NDVLSHRKVk5EcFRwdnFfb29oSnZrRDRsZW5PaE50U3ZaSVB4cGpBdENQb24tSjZpQlRSd04tbzF5MGh1eWlqb1lCZnpGWmNXeVV2OXY4MHFNOEdtaU5sSW92VmpLYndrMWl5SG5vZ0RHQ3drd0duSdIB6AFBVV95cUxOd29oSFAzM0hCQVk5TThIMTZHbW81VWNVZTlKSm9MMkVqVTZpeXBoczlidjU1azhaRXJJN2lfeXl5WWk3SFRwV2c3Sk54QnR2N2dZRzhqMUJjSHh5eFYtUEdrQUhjYkRVTWFXb1lRc1RKQWdLVG80d1JNaUlSS2hGeEgzYXh0X0dtNlFkMUlEb0NNZlF6NzI2Wmk1ZGhOa1VvVno4LUl6c3NibmhIcC13SC1QMk9SODhPcEc4eUlFckVXQk1OQURuZDFtZVVsbkRZYktPU0tLSEs4NVBzQ2FLT3hUQS13WXdZ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T08:15:27.714Z"
     }
   ]
 }
