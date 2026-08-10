@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T19:51:54.130Z",
+  "last_fetch": "2026-08-10T20:36:24.154Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0106c546c107da41",
+      "timestamp": 1786393579000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ2lQcjJnWEdBSWcxR0xXODhzOEZlTnJPdEZUeDVlcFFJQ0tHS1ZrYWJ6bEY1T2JDT0UtWmZnMTFwV1d5NVZsQkwwYWlmWkVkR3ZMeFAyelFBYW1ibzRub0xMYzYwYXB5aFVyVXhib0l2bHpXVFEzWEJDWnNBZzZBS1hYa1lGak54b0JvOTRFUGx4cmZBdUFkT1RWQ1ZnLUpjb2FTZFVaalQxMEpINmFWN21FMHRNTU1EdWxhLW9DempSbzA?oc=5\" target=\"_blank\">Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ2lQcjJnWEdBSWcxR0xXODhzOEZlTnJPdEZUeDVlcFFJQ0tHS1ZrYWJ6bEY1T2JDT0UtWmZnMTFwV1d5NVZsQkwwYWlmWkVkR3ZMeFAyelFBYW1ibzRub0xMYzYwYXB5aFVyVXhib0l2bHpXVFEzWEJDWnNBZzZBS1hYa1lGak54b0JvOTRFUGx4cmZBdUFkT1RWQ1ZnLUpjb2FTZFVaalQxMEpINmFWN21FMHRNTU1EdWxhLW9DempSbzA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T20:36:23.092Z"
+    },
     {
       "id": "rss_3dddd0ff3c17edde",
       "timestamp": 1786381372000,
@@ -11207,27 +11231,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T17:29:48.952Z"
-    },
-    {
-      "id": "rss_402348c646ce7cf0",
-      "timestamp": 1784219010000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis threaten to attack oil facilities in Saudi Arabia amid Yemen tensions - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPMGdaS2oycnh5S1A3SGliYzZvYzA5WlcxMFlfb0NqVUR5TWZwLXJjTnlCa0hXREJTbFJKYkRFZzhEUDNJa3EySldIMkY0Rmh6VVFwVWkyZzdnUURhRDM0MmJ4QTVldE1UV1l4WVhVQmpDbEF4NFJTeTVBektkcW1xSHFySkZ4YW9jVExRX2paNjZkTnNBenFZNkRzcVZSaVdYcW9tRjVIZHhpQndPRXJQX21feXl5LVcwTGlETktQMA?oc=5\" target=\"_blank\">Houthis threaten to attack oil facilities in Saudi Arabia amid Yemen tensions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMGdaS2oycnh5S1A3SGliYzZvYzA5WlcxMFlfb0NqVUR5TWZwLXJjTnlCa0hXREJTbFJKYkRFZzhEUDNJa3EySldIMkY0Rmh6VVFwVWkyZzdnUURhRDM0MmJ4QTVldE1UV1l4WVhVQmpDbEF4NFJTeTVBektkcW1xSHFySkZ4YW9jVExRX2paNjZkTnNBenFZNkRzcVZSaVdYcW9tRjVIZHhpQndPRXJQX21feXl5LVcwTGlETktQMA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T18:28:12.970Z"
     }
   ]
 }
