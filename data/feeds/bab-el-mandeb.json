@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T06:50:01.694Z",
+  "last_fetch": "2026-08-10T08:23:47.176Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b69ac73fbb64add8",
+      "timestamp": 1786344985000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "7 Killed, 30 Wounded in Houthi Attack on Yemen’s Mokha - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPYkFhd1V4b2RUeUVjcGRIdTFkN2xYS0tjZWVmUV9WdXhlQ3lpYWk0dllPV0E3dFNNcjc2TmJpZE5idlFoMnlLWW1Gd2x2bHFad0xhQVp4SVE3a3Y1bDVtWlRkQmFxRnYxa09rN3pBOWY5STNrcW5Xa1h6TUNUU3hvbVowXzZzT3ZlZWc0aWhLSkpXUQ?oc=5\" target=\"_blank\">7 Killed, 30 Wounded in Houthi Attack on Yemen’s Mokha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYkFhd1V4b2RUeUVjcGRIdTFkN2xYS0tjZWVmUV9WdXhlQ3lpYWk0dllPV0E3dFNNcjc2TmJpZE5idlFoMnlLWW1Gd2x2bHFad0xhQVp4SVE3a3Y1bDVtWlRkQmFxRnYxa09rN3pBOWY5STNrcW5Xa1h6TUNUU3hvbVowXzZzT3ZlZWc0aWhLSkpXUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T08:23:45.747Z"
+    },
     {
       "id": "rss_4bbe031346f1e17d",
       "timestamp": 1786343375000,
@@ -11222,27 +11243,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T14:13:29.793Z"
-    },
-    {
-      "id": "rss_240b1e88b5bde7a3",
-      "timestamp": 1784208403000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Saudi Houthi Confrontation and Somaliland as a Southern Flank Partner - horn review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxORllyYlBEaEtrT2FoMVNrMzF1eWVyZ1NMdGlNNlNZUnRSTGdsOVFUUXdteGIwMEpNenpUV1AySmlLTUtya3BBN3A2ZU1PTV8xbzJ2dHJ3RktYMV92b292V3pJZGdsbVh4T21uSU05WFZOb1JrZjBXVUM1MmxWY0JoMjhjLTItUUlpaENSaUNpMGpFWWZwNml5YktHdEpDdUNjT0dsMHE1S3Ztd3JU?oc=5\" target=\"_blank\">The Saudi Houthi Confrontation and Somaliland as a Southern Flank Partner</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxORllyYlBEaEtrT2FoMVNrMzF1eWVyZ1NMdGlNNlNZUnRSTGdsOVFUUXdteGIwMEpNenpUV1AySmlLTUtya3BBN3A2ZU1PTV8xbzJ2dHJ3RktYMV92b292V3pJZGdsbVh4T21uSU05WFZOb1JrZjBXVUM1MmxWY0JoMjhjLTItUUlpaENSaUNpMGpFWWZwNml5YktHdEpDdUNjT0dsMHE1S3Ztd3JU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T14:13:29.792Z"
     }
   ]
 }
