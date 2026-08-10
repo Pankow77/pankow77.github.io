@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T09:55:52.863Z",
+  "last_fetch": "2026-08-10T11:05:02.955Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a35053decc776799",
+      "timestamp": 1786359313000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran won't reopen Strait of Hormuz without US concessions and other Mideast developments - WRAL",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxObmZQeWVoZ1FkOXNJbi05WXpDSlhfQWExSUNaUmFabFB3US1JMTlFdURteS1MT0ZDNm5lR2UwTkN5RERqTnJTNkVld1pzanNFNTduT0ZHbXA2WnFxX3lzdXhyWXBveHlTeTZva2dPQk5tUmVzR2Y1QzFuVFE1NDRfeENuSF8wdGhFU3YzRENEb3NiY24tMWQtOUdQZ2FlLVZNUUM5SjNfbXJGQmFnRnFuNU9rdC1faXMzaC1lV3BWYkE?oc=5\" target=\"_blank\">Iran won't reopen Strait of Hormuz without US concessions and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WRAL</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObmZQeWVoZ1FkOXNJbi05WXpDSlhfQWExSUNaUmFabFB3US1JMTlFdURteS1MT0ZDNm5lR2UwTkN5RERqTnJTNkVld1pzanNFNTduT0ZHbXA2WnFxX3lzdXhyWXBveHlTeTZva2dPQk5tUmVzR2Y1QzFuVFE1NDRfeENuSF8wdGhFU3YzRENEb3NiY24tMWQtOUdQZ2FlLVZNUUM5SjNfbXJGQmFnRnFuNU9rdC1faXMzaC1lV3BWYkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T11:05:01.599Z"
+    },
     {
       "id": "rss_30e9dcc0151f034e",
       "timestamp": 1786351923000,
@@ -65,6 +88,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T08:23:45.747Z"
+    },
+    {
+      "id": "rss_cdee28ab0806c724",
+      "timestamp": 1786344819000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Launch Missile And Drone Attacks On Yemen’s Al-Makha, Killing At Least Seven: 14 outlets compared - NewsCord",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxNcEF1VEdtQVI0U1N1QkpXOGUzcUJoTzJTeDhaLWRteGVOZTdZclFYcGNfRWNpcWlncVVuZ1lucEFQR2tNNzFpTGdQMW1hRFRzTGdlNEtrTWo3c3ZzbDFZMjRPLTJjX3hGR1BvNzh6YnFUYi11X3M0VktnendRTXR3blZ0YndxUV9RU214V1RLRmFBVk4zcG5RUUFuMFczdVdGY3NhN0V4NHl4YW9FdmJBbU5wMUs4R1U3aGw5NmE2U1lUdVRjQlhOa3ZsLW94a01nME5ySGl5cVhNamRwTzFVMC1DZ0lLeG5BeXc?oc=5\" target=\"_blank\">Houthis Launch Missile And Drone Attacks On Yemen’s Al-Makha, Killing At Least Seven: 14 outlets compared</a>&nb",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNcEF1VEdtQVI0U1N1QkpXOGUzcUJoTzJTeDhaLWRteGVOZTdZclFYcGNfRWNpcWlncVVuZ1lucEFQR2tNNzFpTGdQMW1hRFRzTGdlNEtrTWo3c3ZzbDFZMjRPLTJjX3hGR1BvNzh6YnFUYi11X3M0VktnendRTXR3blZ0YndxUV9RU214V1RLRmFBVk4zcG5RUUFuMFczdVdGY3NhN0V4NHl4YW9FdmJBbU5wMUs4R1U3aGw5NmE2U1lUdVRjQlhOa3ZsLW94a01nME5ySGl5cVhNamRwTzFVMC1DZ0lLeG5BeXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T11:05:01.599Z"
     },
     {
       "id": "rss_4bbe031346f1e17d",
@@ -11191,52 +11238,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T15:58:50.551Z"
-    },
-    {
-      "id": "rss_db498c396e728741",
-      "timestamp": 1784215140000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran asks Houthis to block Red Sea if US hits energy sites: Reports - The Hill",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOS1hwVGU5ZkYtU1M0dG5sUVROZEJsNGk5Z012Nm1HZklIdENiWmEwRU51TGNrV3V3d2ItbTl0ZTVncWQwdlI3SUQ4cDlVRTVreDVTNEItQ2JMOWpEX2VnR2VITWF1S1FLQnJleXY4SUdiOXc4VUotQlVWQ2dBbURpbXNkTHZfSy1jOEZCV2N6OTUwVzdGMXFaU0h0c01uUmlTaGluaDN30gGrAUFVX3lxTE9KT1JpMkx3SzVYc3plaERRZlgtYzd2WFV0SnFuWkJqZUdlSlhMbndtZ0dPcVNHLWlITTFBaW0zbmUxR1RVT1o5UnNqb1lqWVFlUE9WdXp0M1RtS0lHVzVOM1hJd2x0WVBETnlleGM0bHBCaFlXSTU4ZU95bS0yaExYS1dWNDV3UkRvaFZYOWVnYTlXSktXQjFZSUJfUW5vamRFVnhkLW",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOS1hwVGU5ZkYtU1M0dG5sUVROZEJsNGk5Z012Nm1HZklIdENiWmEwRU51TGNrV3V3d2ItbTl0ZTVncWQwdlI3SUQ4cDlVRTVreDVTNEItQ2JMOWpEX2VnR2VITWF1S1FLQnJleXY4SUdiOXc4VUotQlVWQ2dBbURpbXNkTHZfSy1jOEZCV2N6OTUwVzdGMXFaU0h0c01uUmlTaGluaDN30gGrAUFVX3lxTE9KT1JpMkx3SzVYc3plaERRZlgtYzd2WFV0SnFuWkJqZUdlSlhMbndtZ0dPcVNHLWlITTFBaW0zbmUxR1RVT1o5UnNqb1lqWVFlUE9WdXp0M1RtS0lHVzVOM1hJd2x0WVBETnlleGM0bHBCaFlXSTU4ZU95bS0yaExYS1dWNDV3UkRvaFZYOWVnYTlXSktXQjFZSUJfUW5vamRFVnhkLWhXam9GUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-17T01:34:26.890Z"
-    },
-    {
-      "id": "rss_d555290d401b8f56",
-      "timestamp": 1784213700000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Bab al-Mandeb: The next strait Iran is threatening to shut down - Newsweek",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOd1NkSGJlNXJiZUdfM3dPSDFuR1JfUUNzV1ptVzg1T2NOVzM2R2IyR0tZX0htTjJvUE5LRDB3ZDdVeDBzRTlWeDZnOTRSbXZYeUpOYV9PRnBScW1GMHlESS1rN0JxeTliTERtN1ptLUNnS2R4VjhRU0c0NDlFTl9MaXFDdm1GOVBnRll0R1BBd1ZLOXo1VHFPU0F4ZEc?oc=5\" target=\"_blank\">Bab al-Mandeb: The next strait Iran is threatening to shut down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsweek</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd1NkSGJlNXJiZUdfM3dPSDFuR1JfUUNzV1ptVzg1T2NOVzM2R2IyR0tZX0htTjJvUE5LRDB3ZDdVeDBzRTlWeDZnOTRSbXZYeUpOYV9PRnBScW1GMHlESS1rN0JxeTliTERtN1ptLUNnS2R4VjhRU0c0NDlFTl9MaXFDdm1GOVBnRll0R1BBd1ZLOXo1VHFPU0F4ZEc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T16:35:37.989Z"
     }
   ]
 }
