@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T13:53:02.411Z",
+  "last_fetch": "2026-08-10T14:52:56.247Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,48 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T13:53:01.076Z"
+    },
+    {
+      "id": "rss_1b6175ea3f19aa4a",
+      "timestamp": 1786363862000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills 2 soldiers, injures 7 in Yemen's Shabwa - Yeni Safak English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQQUdRYm03cXVQNEN6Y1R5aUQ5VmxnWjQta2piVEVGREplS1BOM1lyUjBmZWdUQnMyUmZJWmdWSmtGZk1tdUFrYXNNT0NXV0ZXOWRZYTh6YzByYV9VZVV1b3J3bGtCbDE4T01nbGJXczVzTko2RXM5aHRDTUtIQWg2T3NXSWVTRjZLNEQ4Z0hrbw?oc=5\" target=\"_blank\">Houthi attack kills 2 soldiers, injures 7 in Yemen's Shabwa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Safak English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQUdRYm03cXVQNEN6Y1R5aUQ5VmxnWjQta2piVEVGREplS1BOM1lyUjBmZWdUQnMyUmZJWmdWSmtGZk1tdUFrYXNNT0NXV0ZXOWRZYTh6YzByYV9VZVV1b3J3bGtCbDE4T01nbGJXczVzTko2RXM5aHRDTUtIQWg2T3NXSWVTRjZLNEQ4Z0hrbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T14:52:54.872Z"
+    },
+    {
+      "id": "rss_8486a0f454744516",
+      "timestamp": 1786362137000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi shelling kills 2 soldiers, injures 7 in southern Yemen - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGFvblhQcWEyNHE1bWJleFdYNzBqb2x1U0FWRFdSRU5DYXBVYVVrdzduYVBvYk1Jd3liRXJLbkxpR2pMSVlDNmVyV3lLb1AzZC1SN2FyWXRkUTJ6R09UWm0tUUtMbFNxYUZ3RVZZMXBBUDBBTmliWUpTc01kZVY1cWlMY25aMFZfVmgxalRqNmQ4Sm5EQUFROVNYWUlTX0ZucmVoR2haT3g?oc=5\" target=\"_blank\">Houthi shelling kills 2 soldiers, injures 7 in southern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGFvblhQcWEyNHE1bWJleFdYNzBqb2x1U0FWRFdSRU5DYXBVYVVrdzduYVBvYk1Jd3liRXJLbkxpR2pMSVlDNmVyV3lLb1AzZC1SN2FyWXRkUTJ6R09UWm0tUUtMbFNxYUZ3RVZZMXBBUDBBTmliWUpTc01kZVY1cWlMY25aMFZfVmgxalRqNmQ4Sm5EQUFROVNYWUlTX0ZucmVoR2haT3g?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T14:52:54.872Z"
     },
     {
       "id": "rss_a35053decc776799",
@@ -11190,52 +11232,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T17:29:49.891Z"
-    },
-    {
-      "id": "rss_cf58127558caa9d7",
-      "timestamp": 1784217219000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran calls on Houthis to prepare to cut off Red Sea gateway — can the terror group do it? - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPLTJuNGxpLXA2aUlIVjUtUU1YWW54UHBfbVo1ZENFRkdXWTBDV19QNHBqM1FlOXJUZndLd1d2bDRkVWJ5WmdvNEdYWEFVeHpOdkhYS19qeVVkZjc0NmpaYUFJZjJNQ3I5YlFXQlNaVmxoemxNdGFaNG1oQXQ0WWlwVG50Q0I1T0ltdkctMGRPUnFPVHNQVjBtb3FzaHk5OFA1OGd1S2pB0gGrAUFVX3lxTE00U2stelBNc0RsV0tqWllLelBGR2p0TlYyaW9tT0dvLVRnV05pdm1nVTh0S3hNMUJ1SURzcjUyd1RtcjMtSmV3NE85N1d4YmpsQkhWLS1abFEtR0NTTE5YdHJPLTBfMUZzRW9iUkJsdU0yaHJUSUgwT1JOODlWSXNSakg3ZWhlZ1RvckxISHJ3cmNSTkFndV9GVnJuRHJWNlZTWTl0bz",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLTJuNGxpLXA2aUlIVjUtUU1YWW54UHBfbVo1ZENFRkdXWTBDV19QNHBqM1FlOXJUZndLd1d2bDRkVWJ5WmdvNEdYWEFVeHpOdkhYS19qeVVkZjc0NmpaYUFJZjJNQ3I5YlFXQlNaVmxoemxNdGFaNG1oQXQ0WWlwVG50Q0I1T0ltdkctMGRPUnFPVHNQVjBtb3FzaHk5OFA1OGd1S2pB0gGrAUFVX3lxTE00U2stelBNc0RsV0tqWllLelBGR2p0TlYyaW9tT0dvLVRnV05pdm1nVTh0S3hNMUJ1SURzcjUyd1RtcjMtSmV3NE85N1d4YmpsQkhWLS1abFEtR0NTTE5YdHJPLTBfMUZzRW9iUkJsdU0yaHJUSUgwT1JOODlWSXNSakg3ZWhlZ1RvckxISHJ3cmNSTkFndV9GVnJuRHJWNlZTWTl0bzhWQUV1MA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T16:35:37.989Z"
-    },
-    {
-      "id": "rss_118ee6b031025be1",
-      "timestamp": 1784215260000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Could Bab-el-Mandeb be shut? Report says Iran has Houthis on standby - WION",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOdDRkZmIyWFZjWXlrZ3lWWmcyNEtOaFk1OWVjZV84X2xrREJfSlJpYXBoWERDekgxTzdQX3BwVk9mMzE2YnFJV0NOeUxwU19xcTlBalp6MlVoNXVhdklNcmNoZ3hERG5WTTlnbGFYWW5ndnI1RVRoQnU4Y3BHVFU2cERXbS1TMGFCTTFxcFF3X29iejBoZXE2ZlQ2UdIBoAFBVV95cUxPTkIxNEJOTVZlZkZaREtDR0lKeC04TlVXZVhWZkR6UWdpeEhwQ0dFc0ZnN2h3ZW4yU2oxbEdUREdvdG9sUVdaVnhucldXWHhGekdHazBkSU5XcTBxNnJneWNOQUhIc21IN2RQU2U2RWJ2a01PZXVNZFZtM1IwNXFuckp5WFJudl82QzI3MkJZQzlOVy1OV0s2QnowV2ZvRUpV?oc=5\" target=\"_blank\"",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdDRkZmIyWFZjWXlrZ3lWWmcyNEtOaFk1OWVjZV84X2xrREJfSlJpYXBoWERDekgxTzdQX3BwVk9mMzE2YnFJV0NOeUxwU19xcTlBalp6MlVoNXVhdklNcmNoZ3hERG5WTTlnbGFYWW5ndnI1RVRoQnU4Y3BHVFU2cERXbS1TMGFCTTFxcFF3X29iejBoZXE2ZlQ2UdIBoAFBVV95cUxPTkIxNEJOTVZlZkZaREtDR0lKeC04TlVXZVhWZkR6UWdpeEhwQ0dFc0ZnN2h3ZW4yU2oxbEdUREdvdG9sUVdaVnhucldXWHhGekdHazBkSU5XcTBxNnJneWNOQUhIc21IN2RQU2U2RWJ2a01PZXVNZFZtM1IwNXFuckp5WFJudl82QzI3MkJZQzlOVy1OV0s2QnowV2ZvRUpV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T17:29:48.952Z"
     }
   ]
 }
