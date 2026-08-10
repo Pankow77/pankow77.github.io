@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T03:48:44.776Z",
+  "last_fetch": "2026-08-10T05:21:26.255Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -44,6 +44,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-10T03:48:43.273Z"
+    },
+    {
+      "id": "rss_b437221cbbaa9daf",
+      "timestamp": 1786321408000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis renew missile and drone attacks on Yemen’s port of al-Makha - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbXBnNnBjc3d5Vzk1aDRaV1hyNFRwYk81RWFWWEc4SHA4Rk53M0ZoMXNoQ2dkeEVKU0RLYktnbUJKYzZpZXhuS3NXUEZMY0VUOHp4YUkxdGg0UUI0bDJJN2E2b3VaQkRmWnlPbXpsV1hPS3hxel84a1N3UUV5NzExcG5ZTXREdlZhQk9XaS1EdlI4MmQ4M29aSGhWbnYtY1FaSV9XZ0thN2VMbk3SAbABQVVfeXFMTUpDUWZjMVBTU0UtX01sOEtHd0VmY2lGakF5eTk1empsc2h6bzhDTWVQOTJyTk1Tampkb1BjOUlKQnpSRVVPbkllY0JSWlNZV1NEdWp1bm9hUllWelE3MDhkcXVUTllhUVlWQkJiTVZ6dWc4WlZ2c1U2QlZ1cVFmb2RrUkxCN1RVd3FFUEVyUl9tV3F5SnJvMDB1bHB6OThnUH",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbXBnNnBjc3d5Vzk1aDRaV1hyNFRwYk81RWFWWEc4SHA4Rk53M0ZoMXNoQ2dkeEVKU0RLYktnbUJKYzZpZXhuS3NXUEZMY0VUOHp4YUkxdGg0UUI0bDJJN2E2b3VaQkRmWnlPbXpsV1hPS3hxel84a1N3UUV5NzExcG5ZTXREdlZhQk9XaS1EdlI4MmQ4M29aSGhWbnYtY1FaSV9XZ0thN2VMbk3SAbABQVVfeXFMTUpDUWZjMVBTU0UtX01sOEtHd0VmY2lGakF5eTk1empsc2h6bzhDTWVQOTJyTk1Tampkb1BjOUlKQnpSRVVPbkllY0JSWlNZV1NEdWp1bm9hUllWelE3MDhkcXVUTllhUVlWQkJiTVZ6dWc4WlZ2c1U2QlZ1cVFmb2RrUkxCN1RVd3FFUEVyUl9tV3F5SnJvMDB1bHB6OThnUHhSSmQ4TzJMOW9YSFN0MTU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-10T05:21:24.940Z"
     },
     {
       "id": "rss_633a2b039e456a4c",
@@ -11223,30 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T13:00:22.291Z"
-    },
-    {
-      "id": "rss_966a93f503e65dc0",
-      "timestamp": 1784204964000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran threatens Red Sea shipping, tells Houthis to ready Bab el-Mandeb blockade - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ZaVgyTEhNMWFaQ2wzaERhSWcwTFlvcHdIb2o1ZE9ZVTg5NGQ1Z1VNbk1yRTdhVE43SkY0QUJ0cmxlSVpGOUhMaFZzWnZrejh1QVExV0lB?oc=5\" target=\"_blank\">Iran threatens Red Sea shipping, tells Houthis to ready Bab el-Mandeb blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ZaVgyTEhNMWFaQ2wzaERhSWcwTFlvcHdIb2o1ZE9ZVTg5NGQ1Z1VNbk1yRTdhVE43SkY0QUJ0cmxlSVpGOUhMaFZzWnZrejh1QVExV0lB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T13:00:22.290Z"
     }
   ]
 }
