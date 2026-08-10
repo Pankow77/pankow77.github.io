@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-10T16:50:21.821Z",
+  "last_fetch": "2026-08-10T17:47:24.109Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_932704f6fbdad61a",
+      "timestamp": 1786379240000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni military says Houthi attack on Mocha kills 7, wounds 30 - Dubai Eye 103.8",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQeHpCYTluN1RpUUUxc3dqVXVjb1pNWG0yTkFLRTdUY1YwQjN1dVh5Z0lWYXNyUGJYVXNfR2JEQlQ3QWhfM19pY1prd2I2SjFURHFrTE00RXBKS3l1c3YzTEpER096YlcwNFpDaUQ3NVZsQ3dlSXJGcTRaX0ROREFEQ1lYcmZwWTlYTi1PaHprZnhmT3o1bUxIQXhvcnJEZy02QzMxQTJZTTJHZFRLaHFj?oc=5\" target=\"_blank\">Yemeni military says Houthi attack on Mocha kills 7, wounds 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dubai Eye 103.8</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeHpCYTluN1RpUUUxc3dqVXVjb1pNWG0yTkFLRTdUY1YwQjN1dVh5Z0lWYXNyUGJYVXNfR2JEQlQ3QWhfM19pY1prd2I2SjFURHFrTE00RXBKS3l1c3YzTEpER096YlcwNFpDaUQ3NVZsQ3dlSXJGcTRaX0ROREFEQ1lYcmZwWTlYTi1PaHprZnhmT3o1bUxIQXhvcnJEZy02QzMxQTJZTTJHZFRLaHFj?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T17:47:22.731Z"
+    },
     {
       "id": "rss_3af66ffad744c021",
       "timestamp": 1786366705000,
@@ -11209,29 +11230,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T16:35:37.989Z"
-    },
-    {
-      "id": "rss_783063e58e4ae5a2",
-      "timestamp": 1784217719000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran Tells Houthis to Close Red Sea Gateway if U.S. Hits Power Network - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxONFc2WHhRMmxGYnJnN2hhVzNsY1VMRVRMeFhya3RIa2ZQQ2NqZ0ZqWGcya0RiT2NnNGYxMHF4SGVoLVlmUTBXRV9OazMzOUNZTkZaMVN5eUpEZXN5OFpNUnBKd19zLTZYbVhtc2FsblFiNU8tMTUya1RjMm9NYjVoNmQwZnVicFBYU2pOU1c2U0ZGNU5fN3c?oc=5\" target=\"_blank\">Iran Tells Houthis to Close Red Sea Gateway if U.S. Hits Power Network</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONFc2WHhRMmxGYnJnN2hhVzNsY1VMRVRMeFhya3RIa2ZQQ2NqZ0ZqWGcya0RiT2NnNGYxMHF4SGVoLVlmUTBXRV9OazMzOUNZTkZaMVN5eUpEZXN5OFpNUnBKd19zLTZYbVhtc2FsblFiNU8tMTUya1RjMm9NYjVoNmQwZnVicFBYU2pOU1c2U0ZGNU5fN3c?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T17:29:49.891Z"
     }
   ]
 }
