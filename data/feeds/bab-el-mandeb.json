@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-09T23:57:21.785Z",
+  "last_fetch": "2026-08-10T01:51:29.068Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_633a2b039e456a4c",
+      "timestamp": 1786320180000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis launch fresh attack on Yemen's Mokha after deadly strike - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQYk00MDZxajhWZ2pfRFZHbm5mMWt2cC1fdmREMDlnWmhtd2xCZ0hJTHYwLXZFZUd3UTBEVy1XdHpadzRqMGxGRDlRMnR3aVREX283ckNsQ0pBc2FxWWFpRUMtMWJ6RG9MTVdZRnZrZzhsaG9IX1BWS002aWNyUUlyMHl3TmFIRGtQYnphUXV5ckZqR0ZXQ2c?oc=5\" target=\"_blank\">Houthis launch fresh attack on Yemen's Mokha after deadly strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYk00MDZxajhWZ2pfRFZHbm5mMWt2cC1fdmREMDlnWmhtd2xCZ0hJTHYwLXZFZUd3UTBEVy1XdHpadzRqMGxGRDlRMnR3aVREX283ckNsQ0pBc2FxWWFpRUMtMWJ6RG9MTVdZRnZrZzhsaG9IX1BWS002aWNyUUlyMHl3TmFIRGtQYnphUXV5ckZqR0ZXQ2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-10T01:51:27.794Z"
+    },
     {
       "id": "rss_7e1ac90efd080314",
       "timestamp": 1786312604000,
@@ -11232,30 +11253,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T08:15:27.714Z"
-    },
-    {
-      "id": "rss_3e61ba96727cd3c4",
-      "timestamp": 1784185200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5\" target=\"_blank\">Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T17:29:29.767Z"
     }
   ]
 }
