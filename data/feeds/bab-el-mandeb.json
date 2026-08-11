@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T18:55:53.339Z",
+  "last_fetch": "2026-08-11T19:59:10.226Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -49,6 +49,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T18:55:52.076Z"
+    },
+    {
+      "id": "rss_67c400b4abe83411",
+      "timestamp": 1786470187000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 4,
+      "text_summary": "Four crew killed in Red Sea attack while missile strike reported in Gulf - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPWXg2TDlnMzVlaTc1d1hoaFVFTG91b29XZzlBMC1hNGZ1REtpdDlTLXZFcGF5Mjg0N1ZvaVpSZlpEYkR6TUM1Mktja1k2TDdIVGlBZHBrMEFGdHNXSFFQV0s0eEY3aHRBcXNxa3FKUkR6Y1RmSVZOS0lwbGVZTVFKX3VUMzU5c2wwZ2VjZ1pqWU1PeDNhb0lOeFlzcDFnN1lS?oc=5\" target=\"_blank\">Four crew killed in Red Sea attack while missile strike reported in Gulf</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPWXg2TDlnMzVlaTc1d1hoaFVFTG91b29XZzlBMC1hNGZ1REtpdDlTLXZFcGF5Mjg0N1ZvaVpSZlpEYkR6TUM1Mktja1k2TDdIVGlBZHBrMEFGdHNXSFFQV0s0eEY3aHRBcXNxa3FKUkR6Y1RmSVZOS0lwbGVZTVFKX3VUMzU5c2wwZ2VjZ1pqWU1PeDNhb0lOeFlzcDFnN1lS?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-11T19:59:08.733Z"
     },
     {
       "id": "rss_f7ecd938b489a090",
@@ -11230,27 +11253,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T00:30:37.315Z"
-    },
-    {
-      "id": "rss_fa210f0748dc5b2c",
-      "timestamp": 1784583019000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis announce 'maritime embargo' against Saudi Arabia - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaQ0tfRjhLY0N3N094a25WcVZLMkNrOTZlaWJCS2ZTb3ZTSGRTRkNKR05yd01HZkhFdENYSzFuNXlyQ2hvLVZ1ZTRDbjd1WTV3UWZWWnltbzBRQQ?oc=5\" target=\"_blank\">Yemen's Houthis announce 'maritime embargo' against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBaQ0tfRjhLY0N3N094a25WcVZLMkNrOTZlaWJCS2ZTb3ZTSGRTRkNKR05yd01HZkhFdENYSzFuNXlyQ2hvLVZ1ZTRDbjd1WTV3UWZWWnltbzBRQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T12:06:00.884Z"
     }
   ]
 }
