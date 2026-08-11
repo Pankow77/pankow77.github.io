@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T17:54:18.959Z",
+  "last_fetch": "2026-08-11T18:55:53.339Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6b07b774df9e786f",
+      "timestamp": 1786472565000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis attacked Saudi ship in Bab el-Mandeb, Houthi-run news agency says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxQUExFQktvY2cyS2RZZW1TRzFEWkY2ZnR1VGVCM1FZei1ueVZ5UFJvWjNybWlVdy1NdWUtOXVnS2w2NWpoZ1JKZ1dKam8zQ2pISlZYTGxlVnVBcUZubW85RnloSXNxMXNmcktDMjZIUVZpZTl2TlgzX3A5Q0N5Ul92NlhsT2RrZDNZOUc2RDh0VHBXNWFoa29KczBzQnR2SjBFVS1ZV1VsVklzZkZUSXpQbkpzcTNSSnJMTDJvOG1PN3lNMmhYOWUtLW5B?oc=5\" target=\"_blank\">Yemen's Houthis attacked Saudi ship in Bab el-Mandeb, Houthi-run news agency says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQUExFQktvY2cyS2RZZW1TRzFEWkY2ZnR1VGVCM1FZei1ueVZ5UFJvWjNybWlVdy1NdWUtOXVnS2w2NWpoZ1JKZ1dKam8zQ2pISlZYTGxlVnVBcUZubW85RnloSXNxMXNmcktDMjZIUVZpZTl2TlgzX3A5Q0N5Ul92NlhsT2RrZDNZOUc2RDh0VHBXNWFoa29KczBzQnR2SjBFVS1ZV1VsVklzZkZUSXpQbkpzcTNSSnJMTDJvOG1PN3lNMmhYOWUtLW5B?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-11T18:55:52.077Z"
+    },
+    {
+      "id": "rss_4b43fc1f3a43bcf0",
+      "timestamp": 1786472340000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Iranian-backed Houthis kill 6 in attack on vessel, and other developments in the Mideast - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxORXhISUZDNXVZTlFMeWpOeGVEUDVsYWZKYkFQV2tmaXVSSW45SW5RZmtyeGQtaVIxMlVGdVZVNm5vemI5Rm9yMS1xMFc4Q0kzcTN4UThPTnF1anVDd1FSdWlIdEY2SWM2bkRiZ0VQQVQxOUJ4dXl2U2pIZFZOWVJyQ0NrelJvSlJsUWlpOHhxeFBSa0V6Y1BYb3dvaXQ?oc=5\" target=\"_blank\">Iranian-backed Houthis kill 6 in attack on vessel, and other developments in the Mideast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxORXhISUZDNXVZTlFMeWpOeGVEUDVsYWZKYkFQV2tmaXVSSW45SW5RZmtyeGQtaVIxMlVGdVZVNm5vemI5Rm9yMS1xMFc4Q0kzcTN4UThPTnF1anVDd1FSdWlIdEY2SWM2bkRiZ0VQQVQxOUJ4dXl2U2pIZFZOWVJyQ0NrelJvSlJsUWlpOHhxeFBSa0V6Y1BYb3dvaXQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T18:55:52.076Z"
+    },
     {
       "id": "rss_f7ecd938b489a090",
       "timestamp": 1786469526000,
@@ -96,6 +143,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T15:56:00.964Z"
+    },
+    {
+      "id": "rss_ecaa99b8f4b19665",
+      "timestamp": 1786462873000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis reportedly kill four in first deadly attack since start of Iran war - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qV0V6Z08tZ1RuOVlBTzZXRWQ5UzZqcFBOZlVNZnB6VE9KN2VGT29aQzhxYnh0aE9SWWNSN0szaWVZQklMeXY1a29IaklsY3dhQU5Wa1JZblRKQQ?oc=5\" target=\"_blank\">Houthis reportedly kill four in first deadly attack since start of Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qV0V6Z08tZ1RuOVlBTzZXRWQ5UzZqcFBOZlVNZnB6VE9KN2VGT29aQzhxYnh0aE9SWWNSN0szaWVZQklMeXY1a29IaklsY3dhQU5Wa1JZblRKQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T18:55:52.076Z"
     },
     {
       "id": "rss_cc61c629c8c77485",
@@ -11181,71 +11251,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T12:06:00.884Z"
-    },
-    {
-      "id": "rss_b66e65dcd52b95d9",
-      "timestamp": 1784580373000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "How Houthis’ Red Sea Threat Risks Bigger Oil Shock - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0Q0STg2bEtVUUVGT2llY0hjb0J5Mmw5N1I5d2RXUE9vcUNGZVBlYmN0M19GZVNhUVVKSXVJbkFOU1UyVGRwWFdnN0dVbUtSamI3NXZsWXpZaXpIWlV3UEtoUFF1OTZRajN2YlIwYW5TM25BY3MybkJyQUM5UlFsS3dneFZxUGlDSURkWmZiYmVBQ0ZGMlFIbTZ4ekFvMnd3WGc?oc=5\" target=\"_blank\">How Houthis’ Red Sea Threat Risks Bigger Oil Shock</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX0Q0STg2bEtVUUVGT2llY0hjb0J5Mmw5N1I5d2RXUE9vcUNGZVBlYmN0M19GZVNhUVVKSXVJbkFOU1UyVGRwWFdnN0dVbUtSamI3NXZsWXpZaXpIWlV3UEtoUFF1OTZRajN2YlIwYW5TM25BY3MybkJyQUM5UlFsS3dneFZxUGlDSURkWmZiYmVBQ0ZGMlFIbTZ4ekFvMnd3WGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T16:30:31.641Z"
-    },
-    {
-      "id": "rss_0283eefb9244a6a2",
-      "timestamp": 1784574571000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "As Houthis declare Red Sea blockade on Saudi Arabia, oil markets brace for impact - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOaWpoSy02TnRiY0NkZUJFMWlLR2N4MjIxMW1XSHdpRFFaSGpuYkZ3a1VZdEFZVUlNSnlpVFNUazBZNmI0blNlUHZlZ2RBdktMa0tGUUVnd2lsUHYtdUJHb1ZDNDVxTVpWU3dyTlFLdGRkeEdHUWpLVTNGcFhhVklEa25VT05lbG5fVUFNLTBjUmktdllHdlBVVVBOa0lCX1MyVHY5bWhLdWdtbUZYZVNFc09NNnRNUQ?oc=5\" target=\"_blank\">As Houthis declare Red Sea blockade on Saudi Arabia, oil markets brace for impact</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaWpoSy02TnRiY0NkZUJFMWlLR2N4MjIxMW1XSHdpRFFaSGpuYkZ3a1VZdEFZVUlNSnlpVFNUazBZNmI0blNlUHZlZ2RBdktMa0tGUUVnd2lsUHYtdUJHb1ZDNDVxTVpWU3dyTlFLdGRkeEdHUWpLVTNGcFhhVklEa25VT05lbG5fVUFNLTBjUmktdllHdlBVVVBOa0lCX1MyVHY5bWhLdWdtbUZYZVNFc09NNnRNUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T19:32:04.434Z"
-    },
-    {
-      "id": "rss_e893b66b223ff1ed",
-      "timestamp": 1784569323000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "U.S., Iran trade strikes as Houthis declare blockade of Red Sea oil route - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNZFJMZEJZcVVXSEt3ZE1Dek9HTFpvNkZEZWdESTg1ZW8tWjFuZFZUeUlQTjFoOWlUamVMcTNNc3JpZVhxa0x1dFctOVVEc2FEWmJiT2gtS09DMDZkSkZPTUF4cHNUTzZab2dTSi1kc2VSVXhPSkxGRDAwQ1VkU3RCU1NHYXY4TkpQakVEOXFvaTFPVWtLX3pWNmhhLVo1OGRkR2JwdU1iVQ?oc=5\" target=\"_blank\">U.S., Iran trade strikes as Houthis declare blockade of Red Sea oil route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZFJMZEJZcVVXSEt3ZE1Dek9HTFpvNkZEZWdESTg1ZW8tWjFuZFZUeUlQTjFoOWlUamVMcTNNc3JpZVhxa0x1dFctOVVEc2FEWmJiT2gtS09DMDZkSkZPTUF4cHNUTzZab2dTSi1kc2VSVXhPSkxGRDAwQ1VkU3RCU1NHYXY4TkpQakVEOXFvaTFPVWtLX3pWNmhhLVo1OGRkR2JwdU1iVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T17:49:04.925Z"
     }
   ]
 }
