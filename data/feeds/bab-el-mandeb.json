@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T05:33:31.178Z",
+  "last_fetch": "2026-08-11T06:58:03.046Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fcceef54e5d8f3b6",
+      "timestamp": 1786426233000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Video shows damage to Red Sea port town after Houthi attack kills 7 - The Lufkin Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQ3FqWGctd2NDTllkcGR2cml5Q3ZxQlozZEJicnY0QVlMRXZXRlI4VUE1QnpiRWlvbmhjSUdhYm9YeFZGVnFYVEZNUFZpV29KNFBHOHNuZWtONTl2Z0VmLVBfS21McnVjWlJldm1ndzlXOEZ0Z3hIXzg2YmdHWG84aUVmaEljbmkxUGJ0SWpZcE5jR0I0bEhLTzNmbXZxZ0NmTjN3a2RlcTVrX3lEMlJ4UFlzb2tXQ0ZQMEh1eUlRMGNZb3EyTWxVQ1MwZzNyNFMzX3ptNlZoSEZZZnNoZ3JpZW1DNGxjM0U?oc=5\" target=\"_blank\">Video shows damage to Red Sea port town after Houthi attack kills 7</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Lufkin ",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQ3FqWGctd2NDTllkcGR2cml5Q3ZxQlozZEJicnY0QVlMRXZXRlI4VUE1QnpiRWlvbmhjSUdhYm9YeFZGVnFYVEZNUFZpV29KNFBHOHNuZWtONTl2Z0VmLVBfS21McnVjWlJldm1ndzlXOEZ0Z3hIXzg2YmdHWG84aUVmaEljbmkxUGJ0SWpZcE5jR0I0bEhLTzNmbXZxZ0NmTjN3a2RlcTVrX3lEMlJ4UFlzb2tXQ0ZQMEh1eUlRMGNZb3EyTWxVQ1MwZzNyNFMzX3ptNlZoSEZZZnNoZ3JpZW1DNGxjM0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T06:58:01.832Z"
+    },
     {
       "id": "rss_4380346a501825bd",
       "timestamp": 1786416360000,
@@ -11206,29 +11227,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-16T23:47:35.512Z"
-    },
-    {
-      "id": "rss_fc332475407d8df2",
-      "timestamp": 1784238722000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran Tells Yemen’s Houthis to Close Bab El-Mandeb If U.S. Strikes Power Infrastructure - NewsCord",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPQkVOOUZqUjl1U0dTSjJXRGNmNUZGdHNVUXhCVU1waktZQ1NUSUtyU0h2RnF5RlQtNS1mOVhja3FSdXBQWHJhSE01VTBrbmhrengtcGV2VVBYOUFxTExBejdZOUY5WnRrVHBCUEJMZktRZmRLbTg5N2pJb3RFckVXdDJDYS1VWVBsUV9DMXRISENWdEphbjhOZlJQbTlTOGxDdG9jOUdxRHFfeDBqT1E5aE5YR2o5WHVhZE9oZ0pYbFRJVUplUXZaSW9qeUFPczhIWUNrVUY0WGlMR3ZFaHZHVmVla3FuLW81cVE?oc=5\" target=\"_blank\">Iran Tells Yemen’s Houthis to Close Bab El-Mandeb If U.S. Strikes Power Infrastructure</a>&nbsp;&nbsp;<font colo",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPQkVOOUZqUjl1U0dTSjJXRGNmNUZGdHNVUXhCVU1waktZQ1NUSUtyU0h2RnF5RlQtNS1mOVhja3FSdXBQWHJhSE01VTBrbmhrengtcGV2VVBYOUFxTExBejdZOUY5WnRrVHBCUEJMZktRZmRLbTg5N2pJb3RFckVXdDJDYS1VWVBsUV9DMXRISENWdEphbjhOZlJQbTlTOGxDdG9jOUdxRHFfeDBqT1E5aE5YR2o5WHVhZE9oZ0pYbFRJVUplUXZaSW9qeUFPczhIWUNrVUY0WGlMR3ZFaHZHVmVla3FuLW81cVE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-16T22:20:49.905Z"
     }
   ]
 }
