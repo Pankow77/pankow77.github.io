@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T15:56:02.518Z",
+  "last_fetch": "2026-08-11T16:54:49.333Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -1184,6 +1184,27 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-08-10T03:48:43.272Z"
+    },
+    {
+      "id": "rss_42da46c7ef40b533",
+      "timestamp": 1786303295000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi attacks kill seven in Yemen, refinery targeted in Saudi Arabia - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQTUZxOWROQkhqU0lHQ25IUWpWc2lwNmFPSUNWSTRGN2tDTFBwRlBXWlpXeEZLaGpGQi14RkFWVzZMdUlxSWVvNWxUdE0wa01hcUU1elJRamNBdEtQdXVSSVIyNVVyeV9tZTlyakdWTW5fYVlKdHNlbzJENHpGOFNaa2lUcXRtejdsNXRNcWpWRlNWVW0wQ1ZiaVVmN1BpQjdVV1ktQVJB?oc=5\" target=\"_blank\">Houthi attacks kill seven in Yemen, refinery targeted in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al Jazeera</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTUZxOWROQkhqU0lHQ25IUWpWc2lwNmFPSUNWSTRGN2tDTFBwRlBXWlpXeEZLaGpGQi14RkFWVzZMdUlxSWVvNWxUdE0wa01hcUU1elJRamNBdEtQdXVSSVIyNVVyeV9tZTlyakdWTW5fYVlKdHNlbzJENHpGOFNaa2lUcXRtejdsNXRNcWpWRlNWVW0wQ1ZiaVVmN1BpQjdVV1ktQVJB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-11T16:54:47.995Z"
     },
     {
       "id": "rss_4d5b1f8388cfc1d9",
@@ -11224,29 +11245,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T17:49:04.924Z"
-    },
-    {
-      "id": "rss_f527b4a40f286335",
-      "timestamp": 1784559221000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNQVpqS3lQb1otWHpES1JjWjRsVWZRN0FGVmIzMUxOQTBfSDg2NzUydEFDY2xIWU5UTWdMNTdnUVRsQU5hc21VaXNOZzFudmY3emxPOVZyUGJOTm45T0huVWh5NnlGa3dZMld2QUgtVV9GS0tScWFSVy1aT01OM2k1OV8teWdJU1IySloyNmM3WVBnNFlkTVY4X0VoZGtYdUljcDFYUE8weXlRZXY1RDdUQ3FhQQ?oc=5\" target=\"_blank\">Yemen's Iranian-backed Houthis announce a maritime embargo against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PBS</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQVpqS3lQb1otWHpES1JjWjRsVWZRN0FGVmIzMUxOQTBfSDg2NzUydEFDY2xIWU5UTWdMNTdnUVRsQU5hc21VaXNOZzFudmY3emxPOVZyUGJOTm45T0huVWh5NnlGa3dZMld2QUgtVV9GS0tScWFSVy1aT01OM2k1OV8teWdJU1IySloyNmM3WVBnNFlkTVY4X0VoZGtYdUljcDFYUE8weXlRZXY1RDdUQ3FhQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T16:59:20.270Z"
     }
   ]
 }
