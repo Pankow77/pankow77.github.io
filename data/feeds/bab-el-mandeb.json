@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T20:53:24.500Z",
+  "last_fetch": "2026-08-11T21:40:47.987Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T20:53:23.038Z"
+    },
+    {
+      "id": "rss_74fd3b6773487376",
+      "timestamp": 1786473214000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Six killed in Houthi attack on Yemeni commercial vessel - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxORExYQXlRMG1ZVnlOTWVTT3I2TGRYaUNuRmFLQnJROHFYRlpleFFYS1dlbDVMQ0NTcTJvREM1WXo0bGdBLXMtZUtXUmFhUl8zXzlyd2lHV0sxOG1KRmw0YXp5ZVhrcW9ZLWZXODRJRjhkc0FTcnlONzBTVjkzVlcyc080Mk5aWkRVV3IxUTMtakpQdw?oc=5\" target=\"_blank\">Six killed in Houthi attack on Yemeni commercial vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORExYQXlRMG1ZVnlOTWVTT3I2TGRYaUNuRmFLQnJROHFYRlpleFFYS1dlbDVMQ0NTcTJvREM1WXo0bGdBLXMtZUtXUmFhUl8zXzlyd2lHV0sxOG1KRmw0YXp5ZVhrcW9ZLWZXODRJRjhkc0FTcnlONzBTVjkzVlcyc080Mk5aWkRVV3IxUTMtakpQdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T21:40:46.433Z"
     },
     {
       "id": "rss_49e4cc250fc51d33",
@@ -11234,27 +11257,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T03:03:22.339Z"
-    },
-    {
-      "id": "rss_99bf29455d36b150",
-      "timestamp": 1784593211000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis just announced a blockade on Saudi Arabia. What does it mean for the global economy? - Atlantic Council",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxOM3JYTXhrM0R5YlREY1dLdjFYbU8xZVUycHZEOExJSnJfa21ac2UzLVE0a21BME5MTnd4aFFpR1VjdnFkSDloODlySWZnSkR2Tm5hX0YwMXdGbVZ3OVpVZmQ2SmdJbUZKalhQX1o3S3JRRlZ6VnNPMkdGbGtiRE10TFdlZDN2RkNQelVwcGdpNlIza0swUHlieW9OaHJpdGRPMHl0RUt6QVRFbGtKU2RzR25yeTNDbnJBYzFOZEI1RFNkOHZ6b01yZlBQNVhhMU9YT20xNA?oc=5\" target=\"_blank\">The Houthis just announced a blockade on Saudi Arabia. What does it mean for the global economy?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Atlanti",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOM3JYTXhrM0R5YlREY1dLdjFYbU8xZVUycHZEOExJSnJfa21ac2UzLVE0a21BME5MTnd4aFFpR1VjdnFkSDloODlySWZnSkR2Tm5hX0YwMXdGbVZ3OVpVZmQ2SmdJbUZKalhQX1o3S3JRRlZ6VnNPMkdGbGtiRE10TFdlZDN2RkNQelVwcGdpNlIza0swUHlieW9OaHJpdGRPMHl0RUt6QVRFbGtKU2RzR25yeTNDbnJBYzFOZEI1RFNkOHZ6b01yZlBQNVhhMU9YT20xNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T14:41:24.395Z"
     }
   ]
 }
