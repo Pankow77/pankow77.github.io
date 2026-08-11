@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T14:52:53.025Z",
+  "last_fetch": "2026-08-11T15:56:02.518Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_adfd5ca8bd2f10c1",
+      "timestamp": 1786463160000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels renew attacks on key port city - The Hill",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOVnJMaHJJdVFxakctdkVCN0VYcC1GajVKVlBpNGM1MXI2bW85bjVPUDg4SFZyeU95REZqWE12N2RIaWQ2UE9sSjgzQnlMcUdwLWNVMzRlWjhfTm9ETUJmRER0dHlLWkc2aXhJcmtlWmtNdWVnRjdVSWpVb3plTUhHNUx30gGHAUFVX3lxTE5ZQ1hWOU5HQndVaWloc3RjX2l4aEdVVzRJenVKZzdmMHc4N2x5WFJMdmh1TkRfdXhUaDZrWUVSUG1CMDdwZzBnVkRYLWVkaVhfT0NFM08xU2RuVnRWWVFTNWd6aXRWM25oT0JZM050aXNGSXlUSENFaG9iOE1TWnhlcmFqWnVvdw?oc=5\" target=\"_blank\">Iran-backed Houthi rebels renew attacks on key port city</a>&nbsp",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVnJMaHJJdVFxakctdkVCN0VYcC1GajVKVlBpNGM1MXI2bW85bjVPUDg4SFZyeU95REZqWE12N2RIaWQ2UE9sSjgzQnlMcUdwLWNVMzRlWjhfTm9ETUJmRER0dHlLWkc2aXhJcmtlWmtNdWVnRjdVSWpVb3plTUhHNUx30gGHAUFVX3lxTE5ZQ1hWOU5HQndVaWloc3RjX2l4aEdVVzRJenVKZzdmMHc4N2x5WFJMdmh1TkRfdXhUaDZrWUVSUG1CMDdwZzBnVkRYLWVkaVhfT0NFM08xU2RuVnRWWVFTNWd6aXRWM25oT0JZM050aXNGSXlUSENFaG9iOE1TWnhlcmFqWnVvdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.964Z"
+    },
+    {
+      "id": "rss_cc61c629c8c77485",
+      "timestamp": 1786461075000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "US missile strike reportedly hits container ship off Pakistan - NewsNation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQRHFrRUdwdTRkajMzeEp3RUlPbjNsVXRhWDFqc3ROUjdYTlBIc2NMSkU5M3RtMjhzVWxFdEE4aUppLWNjbkdKNzN3NURIZlpjLXctUkt2bmI3SUJXMjBUNUg0QW1pblhKUGRtanVNYUdjYkZmUFU2SDE1QUFfOUdOb3NGQzBNc3E2bGcyXzZwc9IBlAFBVV95cUxQUGpVYUdqTjlyMlNZTHdUSXVmelNRTVk3bnl1bTA2SWRPbUs2SDBzZ0dvWFg0TTRrX1J5UWFuV2RQZlVaeGdwVXdpZ0RoWmk4eklEVE1OVFoxYUFNaHMwRVprZWFUYkptMzJmWWxRNktHZFV2X0F4Y245c08wSlREcWd2TkJpNTlBMmdNRE1uZlNvd01M?oc=5\" target=\"_blank\">US missile strike reportedly hi",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRHFrRUdwdTRkajMzeEp3RUlPbjNsVXRhWDFqc3ROUjdYTlBIc2NMSkU5M3RtMjhzVWxFdEE4aUppLWNjbkdKNzN3NURIZlpjLXctUkt2bmI3SUJXMjBUNUg0QW1pblhKUGRtanVNYUdjYkZmUFU2SDE1QUFfOUdOb3NGQzBNc3E2bGcyXzZwc9IBlAFBVV95cUxQUGpVYUdqTjlyMlNZTHdUSXVmelNRTVk3bnl1bTA2SWRPbUs2SDBzZ0dvWFg0TTRrX1J5UWFuV2RQZlVaeGdwVXdpZ0RoWmk4eklEVE1OVFoxYUFNaHMwRVprZWFUYkptMzJmWWxRNktHZFV2X0F4Y245c08wSlREcWd2TkJpNTlBMmdNRE1uZlNvd01M?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.964Z"
+    },
     {
       "id": "rss_a127645810bdf352",
       "timestamp": 1786459871000,
@@ -25,6 +72,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T14:52:51.642Z"
+    },
+    {
+      "id": "rss_2469c9264b2bdb62",
+      "timestamp": 1786458808000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Four crew members killed in Houthi attack on Yemeni commercial vessel - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNV1VXTlJPcWRjc3BDU2dMUTlDTGNmazNyVEt0Sk83OTBZUDE4ZzdRZ2VXTGFmNUdUaWh2dXZwLVpOWV80TlN2bG5YVFpsTTk0ekN0aEhzOTZuVUFPMlMtNEQ3cFI1ZVgtMUhTdTRGX09GelllYkpMa3haMzFWRzNWbDVSa1hBZzc4M1hVV1dtRkFBZw?oc=5\" target=\"_blank\">Four crew members killed in Houthi attack on Yemeni commercial vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNV1VXTlJPcWRjc3BDU2dMUTlDTGNmazNyVEt0Sk83OTBZUDE4ZzdRZ2VXTGFmNUdUaWh2dXZwLVpOWV80TlN2bG5YVFpsTTk0ekN0aEhzOTZuVUFPMlMtNEQ3cFI1ZVgtMUhTdTRGX09GelllYkpMa3haMzFWRzNWbDVSa1hBZzc4M1hVV1dtRkFBZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.965Z"
     },
     {
       "id": "rss_d5eed54b760aeeea",
@@ -69,6 +139,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T14:52:51.643Z"
+    },
+    {
+      "id": "rss_419140b7ae9cd1e4",
+      "timestamp": 1786457092000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on small cargo ship in Red Sea kills 4, Yemeni authorities say - CBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE9nQXRhLTRvbWdTMjZmS3lLdWM5dkVtSjNDQld0TTRwRTM5bHg4ejJ3NEQ3dDhPZVRPaUNidVR2YnFXZUhraERlNEQ0bXhpZFktR25aRzMwQV9SaGhKV0Y0eUtKMnJXS1FrMTc0?oc=5\" target=\"_blank\">Houthi attack on small cargo ship in Red Sea kills 4, Yemeni authorities say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBC</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9nQXRhLTRvbWdTMjZmS3lLdWM5dkVtSjNDQld0TTRwRTM5bHg4ejJ3NEQ3dDhPZVRPaUNidVR2YnFXZUhraERlNEQ0bXhpZFktR25aRzMwQV9SaGhKV0Y0eUtKMnJXS1FrMTc0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.964Z"
     },
     {
       "id": "rss_2b6553b566ab1b36",
@@ -162,6 +255,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T13:52:00.514Z"
+    },
+    {
+      "id": "rss_2263bd441ff59961",
+      "timestamp": 1786454880000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Here are the latest updates in the Middle East as the US-Iran war impacts the region - 13newsnow.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMEpyaXU0NzBXRUtsOG1FRkJ1c0U3cS1jNjA4X2taMUZCRm53Z1YweS10aHU3WUVrSm1tbGtYd29aeF9NalhMSFozbnl6c05KN2FwR0FHZXhNQzdwcHdXN2VsQnMtM1hvRVhHeWgwaHI1V25lcV95VDdXV2loSzRKcS1mZE5FSURJLWp4a1V4Nm5rbHFvOVNsbWY2eXNiWTFKUzBTWm1VVGQxeFhxX3hpZjBsUzVfeklBWUE5N2ZpVldIQnVldUM0VnVoYm5HYnY0VHN4d1ZR?oc=5\" target=\"_blank\">Here are the latest updates in the Middle East as the US-Iran war impacts the region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">13newsnow.com</fo",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMEpyaXU0NzBXRUtsOG1FRkJ1c0U3cS1jNjA4X2taMUZCRm53Z1YweS10aHU3WUVrSm1tbGtYd29aeF9NalhMSFozbnl6c05KN2FwR0FHZXhNQzdwcHdXN2VsQnMtM1hvRVhHeWgwaHI1V25lcV95VDdXV2loSzRKcS1mZE5FSURJLWp4a1V4Nm5rbHFvOVNsbWY2eXNiWTFKUzBTWm1VVGQxeFhxX3hpZjBsUzVfeklBWUE5N2ZpVldIQnVldUM0VnVoYm5HYnY0VHN4d1ZR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.965Z"
     },
     {
       "id": "rss_d5906cb08d259ee9",
@@ -371,6 +487,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T12:06:51.805Z"
+    },
+    {
+      "id": "rss_2729ea499b6ed037",
+      "timestamp": 1786446522000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strike on ship near Bab El-Mandeb kills 4 - arabnews.jp",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBrUEJDTnpFSWxPSGxZWjhrLTFYT3ozNlM3eDZrLVZhLUUzZUFLQ3IxVFpyZ0JnN1hzb0tZQXZuVWRyR1huWmNOVWJadUhWZEZ4SC14V0pjUEV4bWNvZWx6ekVTWlM?oc=5\" target=\"_blank\">Houthi strike on ship near Bab El-Mandeb kills 4</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">arabnews.jp</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBrUEJDTnpFSWxPSGxZWjhrLTFYT3ozNlM3eDZrLVZhLUUzZUFLQ3IxVFpyZ0JnN1hzb0tZQXZuVWRyR1huWmNOVWJadUhWZEZ4SC14V0pjUEV4bWNvZWx6ekVTWlM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T15:56:00.965Z"
     },
     {
       "id": "rss_d84d70038ca07952",
@@ -11108,134 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T16:59:20.270Z"
-    },
-    {
-      "id": "rss_6f1710f30fb609dc",
-      "timestamp": 1784558455000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis threaten Bab el-Mandeb closure in Saudi Arabia embargo - Euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPR3hwcmFhcDYxTFJGUlZiX2JSMU5oM2FXNURVcThFVWlEd3ctX0taZXVQRWV6WkdSRGU2YlVnQl80R2pCMFREM2VBdlRXaktIekkwdEZfRDlrNWxPRUY2Q1ItbXQ1MjZZV3VjcUFMQVFiNFp0QVh5MTlGNTJ6VkZjYnVtajk0VnhCdVpoRHZZR09IM0c0bEVqLTRtX1pDZnhoVjdaejd0YlVCTG5W?oc=5\" target=\"_blank\">Yemen’s Houthis threaten Bab el-Mandeb closure in Saudi Arabia embargo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPR3hwcmFhcDYxTFJGUlZiX2JSMU5oM2FXNURVcThFVWlEd3ctX0taZXVQRWV6WkdSRGU2YlVnQl80R2pCMFREM2VBdlRXaktIekkwdEZfRDlrNWxPRUY2Q1ItbXQ1MjZZV3VjcUFMQVFiNFp0QVh5MTlGNTJ6VkZjYnVtajk0VnhCdVpoRHZZR09IM0c0bEVqLTRtX1pDZnhoVjdaejd0YlVCTG5W?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T16:04:07.159Z"
-    },
-    {
-      "id": "rss_38a0e2e8bb825624",
-      "timestamp": 1784558144000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis declare naval blockade against Saudi Arabia - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQcUowRTU0M2hEUzRtdXAxY1FENjh0OWdXcEJlb2h4VlpBOVdGM2YzZ1BQSVhLMFQwOXhRN01aQ1poMVd5TTNRUHBZbV9jNWZRaGFaejU2ckpkNW5HUlZSdlJXWU5GNTlFU0NFUU9DYkJ1LXVFNHZBanlSemdrb3M1Vm80azBhNlRmTGRWbjQ2dEtkQVNfbTVNMUVReDIwYXB6aDNjN0pReHQ5S1BBUFl1NUc4Z1VyVHB4MWNnQ09JZw?oc=5\" target=\"_blank\">Yemen's Houthis declare naval blockade against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcUowRTU0M2hEUzRtdXAxY1FENjh0OWdXcEJlb2h4VlpBOVdGM2YzZ1BQSVhLMFQwOXhRN01aQ1poMVd5TTNRUHBZbV9jNWZRaGFaejU2ckpkNW5HUlZSdlJXWU5GNTlFU0NFUU9DYkJ1LXVFNHZBanlSemdrb3M1Vm80azBhNlRmTGRWbjQ2dEtkQVNfbTVNMUVReDIwYXB6aDNjN0pReHQ5S1BBUFl1NUc4Z1VyVHB4MWNnQ09JZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-20T16:04:07.159Z"
-    },
-    {
-      "id": "rss_9f0d44d2175e2a9b",
-      "timestamp": 1784557805000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "How a Houthi blockade in the Red Sea threatens global energy supplies - The Globe and Mail",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQMDEwNXZTVnBDZ0x1dTJlcEZvWG5QWUkzS3lOdGJFcDByYlB2N2E0WDRDOWlzUUoxMHl0c0tXcEFlQXRDY0FSWl95NTRZRm9TUlBrUFhQamc3bFR0bTA5cGdEMm1hVUFOTk5DS1c2MWZ0VXg1bjE2VjA0aHF4X0ZzcUlBd2lfXzhjYml4Y09LUUU1N2NpU3oydm5GU2FYVkwtNXdWS2ROal94TW44eEow?oc=5\" target=\"_blank\">How a Houthi blockade in the Red Sea threatens global energy supplies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Globe and Mail</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQMDEwNXZTVnBDZ0x1dTJlcEZvWG5QWUkzS3lOdGJFcDByYlB2N2E0WDRDOWlzUUoxMHl0c0tXcEFlQXRDY0FSWl95NTRZRm9TUlBrUFhQamc3bFR0bTA5cGdEMm1hVUFOTk5DS1c2MWZ0VXg1bjE2VjA0aHF4X0ZzcUlBd2lfXzhjYml4Y09LUUU1N2NpU3oydm5GU2FYVkwtNXdWS2ROal94TW44eEow?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T15:14:31.645Z"
-    },
-    {
-      "id": "rss_2d5b2b0bf672e012",
-      "timestamp": 1784556811000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi embargo puts Saudi Red Sea oil route at risk - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNX0ktSlRBelY2NldnZThyS2hGNWlCX0N4WUk1aXVhNTVTSUdtS1NsRTlBaWlaRXczeXVsRVJVS3c2Nkx5MXRUdVpNbmJwZTgtaTNBSzhTRzFULXBlZUxsMjRoX3k2MXQ5eV9ocFFhV25zdlFEdkVSQWpiZkY0NTY2cjViajAybW9VeFotcGJhSXBTWUNvaUFPSDZn?oc=5\" target=\"_blank\">Houthi embargo puts Saudi Red Sea oil route at risk</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX0ktSlRBelY2NldnZThyS2hGNWlCX0N4WUk1aXVhNTVTSUdtS1NsRTlBaWlaRXczeXVsRVJVS3c2Nkx5MXRUdVpNbmJwZTgtaTNBSzhTRzFULXBlZUxsMjRoX3k2MXQ5eV9ocFFhV25zdlFEdkVSQWpiZkY0NTY2cjViajAybW9VeFotcGJhSXBTWUNvaUFPSDZn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T19:32:04.434Z"
-    },
-    {
-      "id": "rss_a6075af168f2b776",
-      "timestamp": 1784556137000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis impose Saudi naval blockade, opening new front in US-Iran war - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPbmtOemhMR1UtaVNoMENBMHltNEpKTWJNekRXUEtSa3hidndTM0VZVnRoTEJlV2ZENWtkYVFCUkJtSk8zdFhPeEJQSXRNMS1vWC03N2NJek14WklXdzhNZWkzMnZRUFpGcHg2OXotaHpyVW9jblFTYUM4U2lGcXFWa1NFbnZSQnpreVF6OXVhMW1oeHdIdkFNMjBJa09UZGgycjRkMjZ6Z1dxNC10enJIVDZJdlVSQjRxQlBZc05Tdw?oc=5\" target=\"_blank\">Houthis impose Saudi naval blockade, opening new front in US-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbmtOemhMR1UtaVNoMENBMHltNEpKTWJNekRXUEtSa3hidndTM0VZVnRoTEJlV2ZENWtkYVFCUkJtSk8zdFhPeEJQSXRNMS1vWC03N2NJek14WklXdzhNZWkzMnZRUFpGcHg2OXotaHpyVW9jblFTYUM4U2lGcXFWa1NFbnZSQnpreVF6OXVhMW1oeHdIdkFNMjBJa09UZGgycjRkMjZ6Z1dxNC10enJIVDZJdlVSQjRxQlBZc05Tdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-20T15:14:31.645Z"
-    },
-    {
-      "id": "rss_c9c0bff01295380a",
-      "timestamp": 1784553467000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis declare naval blockade on Saudi Arabia, widening threat to global oil supplies - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPcjI5akdYQ2J6TTNjVlN4VmVROEZIbnZqdWJna3cxMllyUkEzNERtVjJlRmUyNnlyQmZDX2hNSFhEbnRPNXJDbzdqcDAwWmMza1pBbXNHV2pSV05OQnZkTjB2NlNyV3A0a1pJRFZmcEE5eVNaZUpldFB6U2UyZ1pBcm1wVFh5WEFtdFFRSUxoekhHYVgwN3NCUHNReEg4Q1llSkE?oc=5\" target=\"_blank\">Yemen’s Houthis declare naval blockade on Saudi Arabia, widening threat to global oil supplies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcjI5akdYQ2J6TTNjVlN4VmVROEZIbnZqdWJna3cxMllyUkEzNERtVjJlRmUyNnlyQmZDX2hNSFhEbnRPNXJDbzdqcDAwWmMza1pBbXNHV2pSV05OQnZkTjB2NlNyV3A0a1pJRFZmcEE5eVNaZUpldFB6U2UyZ1pBcm1wVFh5WEFtdFFRSUxoekhHYVgwN3NCUHNReEg4Q1llSkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T15:14:31.645Z"
     }
   ]
 }
