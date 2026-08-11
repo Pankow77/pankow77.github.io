@@ -1,8 +1,79 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T16:54:49.333Z",
+  "last_fetch": "2026-08-11T17:54:18.959Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f7ecd938b489a090",
+      "timestamp": 1786469526000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Deadly Red Sea ship attack threatens to muddy return of Suez transits - Journal of Commerce",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQWUxM2hnMHdSQWRJS3VTdndaNXktN3o2cV9uVmRIVjZYRXpnOFhVSDBnRC1xRkdhZTBBYUZDakNuTkItYl85dWhZclpEenBfU0FtcUZWRDBqS0ppNWRwZ012c0V5Z0ZiTk1ycGZmYjJqVmtRRVhWX2xVYm5QNFFOdjF5VVg4a0thZGFUNmFSUHhpM0p2Z0JpcGdScldjeU16TTJ1MUowOGs?oc=5\" target=\"_blank\">Deadly Red Sea ship attack threatens to muddy return of Suez transits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Journal of Commerce</font>",
+      "tags": [
+        "shipping",
+        "suez",
+        "cape-route"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQWUxM2hnMHdSQWRJS3VTdndaNXktN3o2cV9uVmRIVjZYRXpnOFhVSDBnRC1xRkdhZTBBYUZDakNuTkItYl85dWhZclpEenBfU0FtcUZWRDBqS0ppNWRwZ012c0V5Z0ZiTk1ycGZmYjJqVmtRRVhWX2xVYm5QNFFOdjF5VVg4a0thZGFUNmFSUHhpM0p2Z0JpcGdScldjeU16TTJ1MUowOGs?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T17:54:18.954Z"
+    },
+    {
+      "id": "rss_29eab86fef621d4f",
+      "timestamp": 1786467886000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Four Killed as Houthis Attack Egyptian Ship Supporting Yemen’s Government - maritime-executive.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ1dmdVg1c1J1a2hMZmxiOGQtQnZ4TG9MUzNETDFKOXBFaUtjaHRQOUhnMHNqcnlzSFlZTV81QU1OUnB5NUktMkZmMW5kWnN4b0RfdmVwdTNJSG0yY0o2REp4bTdtUklfYmFOMGJJQnVRQjVlZFhPNkJTMjNLNjRXUEpNZm5kbXFkTzFpVDlwcl9vbWllcjNuTGhHWHF1c3dIWjM1V2ZkWjliSjJuZF9iWGJB?oc=5\" target=\"_blank\">Four Killed as Houthis Attack Egyptian Ship Supporting Yemen’s Government</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">maritime-executive.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ1dmdVg1c1J1a2hMZmxiOGQtQnZ4TG9MUzNETDFKOXBFaUtjaHRQOUhnMHNqcnlzSFlZTV81QU1OUnB5NUktMkZmMW5kWnN4b0RfdmVwdTNJSG0yY0o2REp4bTdtUklfYmFOMGJJQnVRQjVlZFhPNkJTMjNLNjRXUEpNZm5kbXFkTzFpVDlwcl9vbWllcjNuTGhHWHF1c3dIWjM1V2ZkWjliSjJuZF9iWGJB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T17:54:17.644Z"
+    },
+    {
+      "id": "rss_22cca8fbba55868c",
+      "timestamp": 1786467060000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Death toll of Houthi attack on cargo ship rises to six: Yemeni coastguard - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_AFBVV95cUxPQm5ZUFJmY3pqLVdhSENkbjQ1MUZ3RnFFeHB5RkxFZ3cyVXJsb1FiSHVOc2I2UTI1Z3BwaGRPMUlWX1UtT2ZLdHhzR0FtejJKeG4wUWluT0NzdXhXNWg1UVhhbmVWZE96ZVpHV2U0OXJCajNTTGxWckxfZGNlUy1LeDc0ckJaV3FBN3BDTWFGcnZodkJsd0JCY3B3VG5kNkQwV2toRGRVSGFkTVFocF9XdGpfQVhNbm9waTdsd1RuazhzNE8yWWpFdUQ3MHp5X2UzS2U5aENRT0NIYTdXX2NXMWFsUjNXYVJYQzY3YkJyWTBUT09renlUaE45cng?oc=5\" target=\"_blank\">Death toll of Houthi attack on cargo ship rises to six: Yemeni coastguard</a>&nbsp;&nbsp",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxPQm5ZUFJmY3pqLVdhSENkbjQ1MUZ3RnFFeHB5RkxFZ3cyVXJsb1FiSHVOc2I2UTI1Z3BwaGRPMUlWX1UtT2ZLdHhzR0FtejJKeG4wUWluT0NzdXhXNWg1UVhhbmVWZE96ZVpHV2U0OXJCajNTTGxWckxfZGNlUy1LeDc0ckJaV3FBN3BDTWFGcnZodkJsd0JCY3B3VG5kNkQwV2toRGRVSGFkTVFocF9XdGpfQVhNbm9waTdsd1RuazhzNE8yWWpFdUQ3MHp5X2UzS2U5aENRT0NIYTdXX2NXMWFsUjNXYVJYQzY3YkJyWTBUT09renlUaE45cng?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T17:54:17.645Z"
+    },
     {
       "id": "rss_adfd5ca8bd2f10c1",
       "timestamp": 1786463160000,
@@ -11175,76 +11246,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-20T17:49:04.925Z"
-    },
-    {
-      "id": "rss_e63d455c93581b0e",
-      "timestamp": 1784568716000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea war insurance costs rise after Houthi blockade, sources say - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcFBRdmdXSFFsMHF5ZnI4dVNpbDRtLWVHbGtWXzRfZUVJLUhRdE9oYjN4V05jdmE4SDE5UmN6TXVJRmk1V3cxM182bTlOMnhHdlVIUW43UENkckdvcHhUeHRsSDJYWTU4cTlFOV9KR0VkaF9ORmNUeUhlak80NVJxdXc5SXZBXzNmV2pYWVo4V1VKVndWYk1DeFJ0UjRnZUtwWmd2ejVjcTMzN2RuU252Y2hnS01SVTlJRWRJ?oc=5\" target=\"_blank\">Red Sea war insurance costs rise after Houthi blockade, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "insurance"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcFBRdmdXSFFsMHF5ZnI4dVNpbDRtLWVHbGtWXzRfZUVJLUhRdE9oYjN4V05jdmE4SDE5UmN6TXVJRmk1V3cxM182bTlOMnhHdlVIUW43UENkckdvcHhUeHRsSDJYWTU4cTlFOV9KR0VkaF9ORmNUeUhlak80NVJxdXc5SXZBXzNmV2pYWVo4V1VKVndWYk1DeFJ0UjRnZUtwWmd2ejVjcTMzN2RuU252Y2hnS01SVTlJRWRJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-20T17:49:04.924Z"
-    },
-    {
-      "id": "rss_e27422bb2f2ec286",
-      "timestamp": 1784562600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran’s Houthi Allies Threaten to Block the Other Main Oil Route - Newsweek",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQMlU4U0QzTGlVT0hhT2g1WHYzWUxsYXZ6amtaYnZ5UEFKdlZsSVhKclMwZFBkRUtYcV8tOEl2TXhsQ05CaW9LeFpmdXJzTXl2RVA0Vks5VjFvcW1ibnVPSDN4UGwtNjU1ci1TbjNLSk1LOWszbl9zeko0dVplNmFsNnBsa3Q0SFl3b0RLOA?oc=5\" target=\"_blank\">Iran’s Houthi Allies Threaten to Block the Other Main Oil Route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsweek</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMlU4U0QzTGlVT0hhT2g1WHYzWUxsYXZ6amtaYnZ5UEFKdlZsSVhKclMwZFBkRUtYcV8tOEl2TXhsQ05CaW9LeFpmdXJzTXl2RVA0Vks5VjFvcW1ibnVPSDN4UGwtNjU1ci1TbjNLSk1LOWszbl9zeko0dVplNmFsNnBsa3Q0SFl3b0RLOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T16:59:20.271Z"
-    },
-    {
-      "id": "rss_792273b6cd3ad53d",
-      "timestamp": 1784562313000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Yemen's Iranian-backed Houthis say they will block Saudi shipping at Red Sea gateway - ABC News - Breaking News, Latest News and Videos",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVnJSbldfQVlZN29WaHdaSkl1VnJTLWRfazR1WENzNy1OYXdieVJhX3gwUl9vVWw4TkoyN2Q5MEVNYWZnZkJJMm51QUloMTFSN2NMWEtaRE9vdXhobjI3OG9zalBEUjJzcEhvVDRSSEtfb2dlSkFHRVc0NTUtNjRlYzdKbVQzNjNLVnFYX1ZmdGozYmRKM3BuRzJCVTBTVmhldURiRzRlb2x2OWvSAbABQVVfeXFMTlBxc1JqeEFiWmxFbGQ0OFF3VTZmR05tdDNtcDFmeWVzZDU5bWNIZHAyLWdJNUwyQmE1TS1yQ3FQTzFCbFE4R0U0Y0JmeU5mdk9PMGRwVExnS2J3dE1MbDdJbFBKWkttbHVKRnlqTW1Hc25QTTNndW1qbC1WMXF6X0IxRmVkLVFMcTVhTGRuX3dVUTRjT2VGTTVkZjlEdGlEY1",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVnJSbldfQVlZN29WaHdaSkl1VnJTLWRfazR1WENzNy1OYXdieVJhX3gwUl9vVWw4TkoyN2Q5MEVNYWZnZkJJMm51QUloMTFSN2NMWEtaRE9vdXhobjI3OG9zalBEUjJzcEhvVDRSSEtfb2dlSkFHRVc0NTUtNjRlYzdKbVQzNjNLVnFYX1ZmdGozYmRKM3BuRzJCVTBTVmhldURiRzRlb2x2OWvSAbABQVVfeXFMTlBxc1JqeEFiWmxFbGQ0OFF3VTZmR05tdDNtcDFmeWVzZDU5bWNIZHAyLWdJNUwyQmE1TS1yQ3FQTzFCbFE4R0U0Y0JmeU5mdk9PMGRwVExnS2J3dE1MbDdJbFBKWkttbHVKRnlqTW1Hc25QTTNndW1qbC1WMXF6X0IxRmVkLVFMcTVhTGRuX3dVUTRjT2VGTTVkZjlEdGlEY1d0TEhXSm1iNFFuTUpISWs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T17:49:04.924Z"
     }
   ]
 }
