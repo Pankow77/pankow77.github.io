@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-11T19:59:10.226Z",
+  "last_fetch": "2026-08-11T20:53:24.500Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8c6b632781e12298",
+      "timestamp": 1786479137000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack ship in Red Sea, kill 6 including 2 rescuers - upi.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPTkM2eGFfUmtvaXY0M2FaczBRVkRRWk5rOEZmV0hHU1VZTDdFYUVZdXRJV2dZYkpOUzl6VEhhVEpwNXZRbmhZOXBaVXI3SXBGVGlDdHpya1dZTEJ4M3BpSlRlTUtDTXd3UWhyY0JmdW4zUTdZT2lIQjZQMDZsV1BoeXRUZTFvVnctd0FlZjZhdnV1cHhkcUpnSDlGdWLSAaIBQVVfeXFMTzJQRGFNek5xU2NJN0lwcXBXVVYzUkNNbXhjd056c2pOdkRZTjhOY1M2Q3F1cmt2V0RfU2VPOUZlT0l1a0FIRzJGdVNBaWs2NEw3ck1Jd1ZpU3lycFBZR21YaWxWOENkcWR3UXdWUHp2am1EYV9JNXV6bDZkTW9HTmtTZ3R2YmFteW5wdGMzcVdGUFZCYUxiOW9kR1A1RDQyOG1R?oc=5\" target=\"_bl",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTkM2eGFfUmtvaXY0M2FaczBRVkRRWk5rOEZmV0hHU1VZTDdFYUVZdXRJV2dZYkpOUzl6VEhhVEpwNXZRbmhZOXBaVXI3SXBGVGlDdHpya1dZTEJ4M3BpSlRlTUtDTXd3UWhyY0JmdW4zUTdZT2lIQjZQMDZsV1BoeXRUZTFvVnctd0FlZjZhdnV1cHhkcUpnSDlGdWLSAaIBQVVfeXFMTzJQRGFNek5xU2NJN0lwcXBXVVYzUkNNbXhjd056c2pOdkRZTjhOY1M2Q3F1cmt2V0RfU2VPOUZlT0l1a0FIRzJGdVNBaWs2NEw3ck1Jd1ZpU3lycFBZR21YaWxWOENkcWR3UXdWUHp2am1EYV9JNXV6bDZkTW9HTmtTZ3R2YmFteW5wdGMzcVdGUFZCYUxiOW9kR1A1RDQyOG1R?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T20:53:23.038Z"
+    },
+    {
+      "id": "rss_49e4cc250fc51d33",
+      "timestamp": 1786472959000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Six Killed in Houthi Strikes on Red Sea Ship, Yemeni Government Says - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPaWR5R2hWY2dqVGNRUWoxbEJrUW12dzBVeklyZU50ZkJUU2FERkkyeWI4WjFnbHZnc0tsWDAzanl0RzQ1aTZFZG5wMm42WFMtM2Q3eG51aThGVGlLU2N6TVNhUnhqc2pwdE9wV21ZdXV5cHpta0FCSHFiN1Z4V1RvckFPT3VHeDR2ekNOaUp3?oc=5\" target=\"_blank\">Six Killed in Houthi Strikes on Red Sea Ship, Yemeni Government Says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaWR5R2hWY2dqVGNRUWoxbEJrUW12dzBVeklyZU50ZkJUU2FERkkyeWI4WjFnbHZnc0tsWDAzanl0RzQ1aTZFZG5wMm42WFMtM2Q3eG51aThGVGlLU2N6TVNhUnhqc2pwdE9wV21ZdXV5cHpta0FCSHFiN1Z4V1RvckFPT3VHeDR2ekNOaUp3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T20:53:23.039Z"
+    },
     {
       "id": "rss_6b07b774df9e786f",
       "timestamp": 1786472565000,
@@ -72,6 +118,29 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-08-11T19:59:08.733Z"
+    },
+    {
+      "id": "rss_33415169a83247ff",
+      "timestamp": 1786469820000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "4 crew members killed after Houthi attack on commercial vessel in Bab al-Mandeb - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbGJqeXdZZ3dNcHpKZ2R3dmhUaEYxTlNwNFo1d2tIcll0ZVRsNFNaZ2tEa19ldmV2YnZ3SjNZSGliYnNpQ1M2aXBIX3IzQkRHTUxCZlJ5aHZTQ1FOYnZyRVp3eXJ1X0w4Q1Z5NVFERmVoSFA2aFNXZEE4RDROaFJOdGRMTTVQUzJMS0RnOFloMl9fYzJ1ZjBFQk13WHJlMFhLYnJ3T1l2MlMzMmJQZlg2Z3F0aWpNN29uTS1naTdkcULSAcYBQVVfeXFMTnRzQUgzYlgxcU5RbkFyTEJaV0FFa0ZCamVLSGlkcUU4am1Sb01zUXV5TE5CVy1CTmp3NDZodmlyckZPcmxIVElLMFpEUmtjclVMU0dzbmZlb0drLUJTY0x0eW9WTUpzaENYRTRhZHJMOHU4alMzcWFIWVpOaGRBS1ZiMlJiOEV6QXdGQ0",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbGJqeXdZZ3dNcHpKZ2R3dmhUaEYxTlNwNFo1d2tIcll0ZVRsNFNaZ2tEa19ldmV2YnZ3SjNZSGliYnNpQ1M2aXBIX3IzQkRHTUxCZlJ5aHZTQ1FOYnZyRVp3eXJ1X0w4Q1Z5NVFERmVoSFA2aFNXZEE4RDROaFJOdGRMTTVQUzJMS0RnOFloMl9fYzJ1ZjBFQk13WHJlMFhLYnJ3T1l2MlMzMmJQZlg2Z3F0aWpNN29uTS1naTdkcULSAcYBQVVfeXFMTnRzQUgzYlgxcU5RbkFyTEJaV0FFa0ZCamVLSGlkcUU4am1Sb01zUXV5TE5CVy1CTmp3NDZodmlyckZPcmxIVElLMFpEUmtjclVMU0dzbmZlb0drLUJTY0x0eW9WTUpzaENYRTRhZHJMOHU4alMzcWFIWVpOaGRBS1ZiMlJiOEV6QXdGQ0JtcDN1Zm9JSkF5ZzA0UlFtdnduNjVJNHpfR3pmN0xjV1hQam4zX0ZCLWhEYjgxdjVDZnRhbUxFOXN3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T20:53:23.039Z"
     },
     {
       "id": "rss_f7ecd938b489a090",
@@ -11186,73 +11255,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T14:41:24.395Z"
-    },
-    {
-      "id": "rss_2af177bc90fce549",
-      "timestamp": 1784587998000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Red Sea blockade would lift oil prices, but workarounds could limit impact - Forth.News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DSk9aTTc5eVBjSTFNOERHLXBOOWZBdC1NNFdtVDc5UVIzb0lmaDFOS2xnakdxdU9KWVlqSm1fbl94LVg1TFdqVGFJZzBCZWpIVktQYlVDbmpwQXdtSWlkTmdpOA?oc=5\" target=\"_blank\">Houthi Red Sea blockade would lift oil prices, but workarounds could limit impact</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Forth.News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9DSk9aTTc5eVBjSTFNOERHLXBOOWZBdC1NNFdtVDc5UVIzb0lmaDFOS2xnakdxdU9KWVlqSm1fbl94LVg1TFdqVGFJZzBCZWpIVktQYlVDbmpwQXdtSWlkTmdpOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T23:21:27.340Z"
-    },
-    {
-      "id": "rss_b644c2003c4a7b33",
-      "timestamp": 1784586908000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea crisis redux: Could Bab el Mandeb be the next tanker chokepoint? - Lloyd's List",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdGFRQTNhQ2Q3TWpaYmYtNlhJc0FSc3JuUExQaXp4Q1pGblhrRERmOEtjU2E5YlhWckdkVHJJOXhNaHNtQld5NXJyelBfWmQ1X05vSHB3VXBzYVFZbHZvY2JqVmRjQWJrU182R0g4Y09uSDAwTXlReHdIZGUzT2lMSk93VWJKSEliT3ZOTjJrVE4yZ2VHaWUzRUR0MDdkX3UtUnpwcGdXaWgyU2s?oc=5\" target=\"_blank\">Red Sea crisis redux: Could Bab el Mandeb be the next tanker chokepoint?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdGFRQTNhQ2Q3TWpaYmYtNlhJc0FSc3JuUExQaXp4Q1pGblhrRERmOEtjU2E5YlhWckdkVHJJOXhNaHNtQld5NXJyelBfWmQ1X05vSHB3VXBzYVFZbHZvY2JqVmRjQWJrU182R0g4Y09uSDAwTXlReHdIZGUzT2lMSk93VWJKSEliT3ZOTjJrVE4yZ2VHaWUzRUR0MDdkX3UtUnpwcGdXaWgyU2s?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-20T22:47:17.343Z"
-    },
-    {
-      "id": "rss_95a994697af8a2cf",
-      "timestamp": 1784584330000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "U.S. Airstrikes on Iran Continue, Conflict Expands Beyond Hormuz - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxObnZNUlVtTE95MkxUazU5ZFp3T180QWw2SzU0WmZzWk14N1dWZ3M2RTlpdmY2eXRnRFYwSG9rdzE3WERUaTY0UkNQaXBpazB2ZndFZTRQR09DSGVrOTE3VExzdnFOYXhGeloxaWhseHBPcDNuV2Jxb2JKbzBzQVo3RzRSbkI?oc=5\" target=\"_blank\">U.S. Airstrikes on Iran Continue, Conflict Expands Beyond Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObnZNUlVtTE95MkxUazU5ZFp3T180QWw2SzU0WmZzWk14N1dWZ3M2RTlpdmY2eXRnRFYwSG9rdzE3WERUaTY0UkNQaXBpazB2ZndFZTRQR09DSGVrOTE3VExzdnFOYXhGeloxaWhseHBPcDNuV2Jxb2JKbzBzQVo3RzRSbkI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T00:30:37.315Z"
     }
   ]
 }
