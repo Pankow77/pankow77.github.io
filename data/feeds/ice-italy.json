@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-08-11T11:13:42.627Z",
-  "epoch_count": 69,
+  "last_fetch": "2026-08-11T12:06:55.188Z",
+  "epoch_count": 70,
   "epochs": [
     {
       "id": "rss_bc1f247f4d2b591a",
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T08:35:47.435Z"
+    },
+    {
+      "id": "rss_66cb82c92a8a74c9",
+      "timestamp": 1785999481000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "L’immigrazione e gli errori che oggi pesano sull’Ue - Il Roma",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOTTBfOXlTV1E0dThYNkFfUUVFTk1ON3ZicWlPUWNCQk96NkdNTk1iWFhUS2Z3U0lWYXJiWS11cmhEcUxoWmVaOGxPQWQwMTA1VktuM0xldm81d0I0OWtqVzBsdVdMbjNmM1VFRGswdE9fVVk3WldvTlFYZk9HWG5NNE1tbHN2VFlpOXRNWHBFRElKOVgtSkd0Yi04UEhmR1k?oc=5\" target=\"_blank\">L’immigrazione e gli errori che oggi pesano sull’Ue</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Il Roma</font>",
+      "tags": [
+        "immigration"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOTTBfOXlTV1E0dThYNkFfUUVFTk1ON3ZicWlPUWNCQk96NkdNTk1iWFhUS2Z3U0lWYXJiWS11cmhEcUxoWmVaOGxPQWQwMTA1VktuM0xldm81d0I0OWtqVzBsdVdMbjNmM1VFRGswdE9fVVk3WldvTlFYZk9HWG5NNE1tbHN2VFlpOXRNWHBFRElKOVgtSkd0Yi04UEhmR1k?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-11T12:06:55.187Z"
     },
     {
       "id": "rss_66ff55646b67f39b",
