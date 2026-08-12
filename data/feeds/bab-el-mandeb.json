@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T15:28:02.293Z",
+  "last_fetch": "2026-08-12T16:26:12.871Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a735e48b113f8558",
+      "timestamp": 1786549920000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Pakistan says 3 citizens killed in Houthi attack on ship, and other developments in the Mideast - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQLWZuZFpUQ0JKbW5uc3dBdFd0WUxfSlpDR3FTUElnWXJ0YjE2WFc3SWFLM29sRi1hX2J5WU94WTBhS3RvWl9vMFFWbzd4bF81QnZ3X19Ic04yLXgzbzBlQVZuX0JrRzh3UUJ1V1pQdld1R1pHc1duSWlkWXNkb3BSOUhCRXJPMmhMSmJYYVdsbDlsaU42cnN6dkVCdzhITHdabEZJXy1UbmFsdE5ZNUE?oc=5\" target=\"_blank\">Pakistan says 3 citizens killed in Houthi attack on ship, and other developments in the Mideast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLWZuZFpUQ0JKbW5uc3dBdFd0WUxfSlpDR3FTUElnWXJ0YjE2WFc3SWFLM29sRi1hX2J5WU94WTBhS3RvWl9vMFFWbzd4bF81QnZ3X19Ic04yLXgzbzBlQVZuX0JrRzh3UUJ1V1pQdld1R1pHc1duSWlkWXNkb3BSOUhCRXJPMmhMSmJYYVdsbDlsaU42cnN6dkVCdzhITHdabEZJXy1UbmFsdE5ZNUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T16:26:11.421Z"
+    },
     {
       "id": "rss_80d7f369445b7da5",
       "timestamp": 1786546309000,
@@ -136,6 +159,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T14:20:12.242Z"
+    },
+    {
+      "id": "rss_99ca121541dfc368",
+      "timestamp": 1786535894000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attacks and Escalating Tehran-Washington Row over the Strait of Hormuz - IranWire",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnU3M3pEZ24zVlRVN0dIa0xWeVk1TUVIQzQ1cmsyZm5YMTIxZVlIMV9fM2J6bTZNamYwV0NGX0ZNclF0LUtnRTB1QXZ4YzBZVWpMaHZRNW82VFpkSVBtUG52MXE5ZmljY1MzNVJQS1c4cUM1bER4S3Z1a0FETUhfeWRqVm1DUTJIQzYzZWgtNDJ3Sm9ObXZMRTlYUVJGd0FLUE9OVGVuTXFMcU9LNDBqMTJkT00?oc=5\" target=\"_blank\">Houthi Attacks and Escalating Tehran-Washington Row over the Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IranWire</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNYnU3M3pEZ24zVlRVN0dIa0xWeVk1TUVIQzQ1cmsyZm5YMTIxZVlIMV9fM2J6bTZNamYwV0NGX0ZNclF0LUtnRTB1QXZ4YzBZVWpMaHZRNW82VFpkSVBtUG52MXE5ZmljY1MzNVJQS1c4cUM1bER4S3Z1a0FETUhfeWRqVm1DUTJIQzYzZWgtNDJ3Sm9ObXZMRTlYUVJGd0FLUE9OVGVuTXFMcU9LNDBqMTJkT00?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T16:26:11.421Z"
     },
     {
       "id": "rss_ed77a03d4a37af49",
@@ -11204,54 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T10:17:09.426Z"
-    },
-    {
-      "id": "rss_25e224069c200353",
-      "timestamp": 1784710702000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi missiles and drones ready to attack shipping near Bab el-Mandeb Strait, military warns - TradeWinds News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbDFMSkQ0OUMtdHJsZWtwc1c2Uy1lVFF2YjRLUXl0Rl83a3k4U1Z6dmJmZ0tPRGhUMmxrT3dzZFp5VDczaEp3eHBOSkxxbEFmNVJiSVVMS1NDWEN1VjA0YkhpU1NmRVNZdjh6STVTeEgwamU3THZab1l6bmJVSzYxcDQxTlBRWmJHaUM0dEFGV3MzNGFZbFJrNl84YTdoTEFiSV8zSWUyLWJaaGhCbm03WTZaU0tPQXh1QmsxbFdUWkhFZWp5bkw2NTlOR3hEOVdpYVViNktIRzI3ck0?oc=5\" target=\"_blank\">Houthi missiles and drones ready to attack shipping near Bab el-Mandeb Strait, military warns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">T",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQbDFMSkQ0OUMtdHJsZWtwc1c2Uy1lVFF2YjRLUXl0Rl83a3k4U1Z6dmJmZ0tPRGhUMmxrT3dzZFp5VDczaEp3eHBOSkxxbEFmNVJiSVVMS1NDWEN1VjA0YkhpU1NmRVNZdjh6STVTeEgwamU3THZab1l6bmJVSzYxcDQxTlBRWmJHaUM0dEFGV3MzNGFZbFJrNl84YTdoTEFiSV8zSWUyLWJaaGhCbm03WTZaU0tPQXh1QmsxbFdUWkhFZWp5bkw2NTlOR3hEOVdpYVViNktIRzI3ck0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T09:18:14.906Z"
-    },
-    {
-      "id": "rss_4e5afa7a504aeb4b",
-      "timestamp": 1784706328000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi militants poised to attack shipping near Bab el-Mandeb strait - Crypto Briefing",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVBuQWdYOEdIYVFfWWFndEZrNUNySEdMUnBuSy01R09lVGlGTHJlZTN4VEpldm9ReDFRTFBpU0tXTjNicWdHaGxFUjBpc1h4akRVM2JNVng2RHk5ejRVOEVYNjAtNk1IQ0hueV9TVWE2TENBWGNIS3V3RnF0RGh4bzJ5TU5PUXAwc3RIcE5HZTFzd0pBNTNqbHowY28?oc=5\" target=\"_blank\">Houthi militants poised to attack shipping near Bab el-Mandeb strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Crypto Briefing</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVBuQWdYOEdIYVFfWWFndEZrNUNySEdMUnBuSy01R09lVGlGTHJlZTN4VEpldm9ReDFRTFBpU0tXTjNicWdHaGxFUjBpc1h4akRVM2JNVng2RHk5ejRVOEVYNjAtNk1IQ0hueV9TVWE2TENBWGNIS3V3RnF0RGh4bzJ5TU5PUXAwc3RIcE5HZTFzd0pBNTNqbHowY28?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T08:16:50.098Z"
     }
   ]
 }
