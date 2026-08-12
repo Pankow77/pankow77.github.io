@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T05:26:58.842Z",
+  "last_fetch": "2026-08-12T06:52:46.372Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a1f5132a0a90004a",
+      "timestamp": 1786514657000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Four crew members and two rescuers dead in Red Sea ship attack, Yemen says - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPREExVEdTNVBURklzNDEzU3hLcktFU0V1N2FKaklkTy01ZjhscVJ0V3hXc2JENFhiLXNoNzRoWUtxRWQzTERyZl9qeFJrX3NEdl84SWhveEFHS05MVC1lVTdVbmxsSmk1LXAtRERSaTZUSXk0RHlRQzJScVRRMlB1SEFxYmVTQnlrSXZSVGRZQUZ1aUVhY3hWNkNKaFJuWVRfV3g3cHRHbG1OTHhpVGc4RDlodTRyaTNJQ2tteUNhRzc4X0t1MEE?oc=5\" target=\"_blank\">Four crew members and two rescuers dead in Red Sea ship attack, Yemen says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPREExVEdTNVBURklzNDEzU3hLcktFU0V1N2FKaklkTy01ZjhscVJ0V3hXc2JENFhiLXNoNzRoWUtxRWQzTERyZl9qeFJrX3NEdl84SWhveEFHS05MVC1lVTdVbmxsSmk1LXAtRERSaTZUSXk0RHlRQzJScVRRMlB1SEFxYmVTQnlrSXZSVGRZQUZ1aUVhY3hWNkNKaFJuWVRfV3g3cHRHbG1OTHhpVGc4RDlodTRyaTNJQ2tteUNhRzc4X0t1MEE?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T06:52:46.366Z"
+    },
+    {
+      "id": "rss_aa6e03e6ce024ead",
+      "timestamp": 1786513692000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels kill 6 in Red Sea att... - Pluang",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTFlCRmdBb2k5Z0R3UWR1dmsyUXBpdnVBNjFOWXA2WFYxa3FYUkhXMEZ1S2dwdUJoajlvSHdUUkItX3I4WGRhZVlzX0U2al80dDRTTFJqcHNyQkE5WVByRXVTSEVNYmt1U0E0QVJ0Qkk4Zm4zbTJZNngwTjczZFFlaUF5NU13dE9VT3RSaHlOREk1RG9oelpyb2VOZEY0RjBxOVdUNHh1MWFVQQ?oc=5\" target=\"_blank\">Iran-backed Houthi rebels kill 6 in Red Sea att...</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pluang</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTFlCRmdBb2k5Z0R3UWR1dmsyUXBpdnVBNjFOWXA2WFYxa3FYUkhXMEZ1S2dwdUJoajlvSHdUUkItX3I4WGRhZVlzX0U2al80dDRTTFJqcHNyQkE5WVByRXVTSEVNYmt1U0E0QVJ0Qkk4Zm4zbTJZNngwTjczZFFlaUF5NU13dE9VT3RSaHlOREk1RG9oelpyb2VOZEY0RjBxOVdUNHh1MWFVQQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T06:52:46.366Z"
+    },
     {
       "id": "rss_80668dde500a1ce8",
       "timestamp": 1786511409000,
@@ -11210,52 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T13:37:23.910Z"
-    },
-    {
-      "id": "rss_8c662aedbb3db723",
-      "timestamp": 1784632603000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis warn shipping companies to avoid Saudi ports, email shows - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQZFE2MFI3R2M4S2lDTDFZMGZtNnJ0cm5FMThZT1pYVldXUzUwVUdFQTd0RUprcjhzbVB3OFl5NTFLMk5MX3NSV3U0UWxTempZdGJLaXdKU09VS3ZGaXo1b0hLdWJPN0JkRFplalkwNXM5SFJfLXNKTl83Tm9ZNmlJTjJRMVJ1clRETy1SOWpIYmN0cXd0WnZEYVZ0VXN4OWpMN0V4X2RaeGpvc3RyTFpRa2drYWhtQQ?oc=5\" target=\"_blank\">Houthis warn shipping companies to avoid Saudi ports, email shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZFE2MFI3R2M4S2lDTDFZMGZtNnJ0cm5FMThZT1pYVldXUzUwVUdFQTd0RUprcjhzbVB3OFl5NTFLMk5MX3NSV3U0UWxTempZdGJLaXdKU09VS3ZGaXo1b0hLdWJPN0JkRFplalkwNXM5SFJfLXNKTl83Tm9ZNmlJTjJRMVJ1clRETy1SOWpIYmN0cXd0WnZEYVZ0VXN4OWpMN0V4X2RaeGpvc3RyTFpRa2drYWhtQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-21T12:58:14.161Z"
-    },
-    {
-      "id": "rss_acd527b2e2dc1794",
-      "timestamp": 1784629303000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Amid U.S.-Iran war, Houthi rebels threaten to blockade another key strait - NPR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTE9rdGFHaTIzbU5aV0JvNTAzWkVTbVpsVlZZZzFjalpVSmtuUmd1UHFvYVl3clVkQnR6bVAxV2tHNXhQNG5DN3JHdmpsbjQ0RnFTb1hub0I1TjlzUS1RY3gtNlpkMGtYc0lsR055UA?oc=5\" target=\"_blank\">Amid U.S.-Iran war, Houthi rebels threaten to blockade another key strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rdGFHaTIzbU5aV0JvNTAzWkVTbVpsVlZZZzFjalpVSmtuUmd1UHFvYVl3clVkQnR6bVAxV2tHNXhQNG5DN3JHdmpsbjQ0RnFTb1hub0I1TjlzUS1RY3gtNlpkMGtYc0lsR055UA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T15:33:20.016Z"
     }
   ]
 }
