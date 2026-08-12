@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T03:37:01.564Z",
+  "last_fetch": "2026-08-12T05:26:58.842Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_80668dde500a1ce8",
+      "timestamp": 1786511409000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills six in first fatalities in Red Sea in over a year; U.S. strikes containership - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOSGtLT21UUTZ1QlQ3UVd6akpNcnhtNzI0aFNidjRHeWExendmSDhoT3VNZmt0VHVkdFk4LS1YVGdveE9uY1VYdUJrWnV2ZGlRanVTZmxmUTB1dzNCNnRDOUg1R2hUS3ZXeHdEMkcwdWZodzNOam9qOTN2TjJlMkNCY25PbzRVNG81RVFMd1NR0gGTAUFVX3lxTE5YekViUjgwbV9GLWVWUmplY0d3Nm9ka1lxQmRFMHVrNzFTWHhiSU1JMVpDbllZRGF2MGtkNW4yakJidmF5LTJsbUk2YVRSQ214ZHQyQzRwczRzYVRTZFJUWk5pNHRMZzZpcXRvX2cwbF9PYzByQlNLNUpvOE1lSGQ3Zk9rUFJsMkdBVFo4ZkMtZnQ1TQ?oc=5\" target=\"_blank\">Houthi attack kills six in first ",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSGtLT21UUTZ1QlQ3UVd6akpNcnhtNzI0aFNidjRHeWExendmSDhoT3VNZmt0VHVkdFk4LS1YVGdveE9uY1VYdUJrWnV2ZGlRanVTZmxmUTB1dzNCNnRDOUg1R2hUS3ZXeHdEMkcwdWZodzNOam9qOTN2TjJlMkNCY25PbzRVNG81RVFMd1NR0gGTAUFVX3lxTE5YekViUjgwbV9GLWVWUmplY0d3Nm9ka1lxQmRFMHVrNzFTWHhiSU1JMVpDbllZRGF2MGtkNW4yakJidmF5LTJsbUk2YVRSQ214ZHQyQzRwczRzYVRTZFJUWk5pNHRMZzZpcXRvX2cwbF9PYzByQlNLNUpvOE1lSGQ3Zk9rUFJsMkdBVFo4ZkMtZnQ1TQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T05:26:57.620Z"
+    },
     {
       "id": "rss_5c14e48879e579eb",
       "timestamp": 1786504436000,
@@ -48,6 +71,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T03:37:01.559Z"
+    },
+    {
+      "id": "rss_f6913b1657f903de",
+      "timestamp": 1786498500000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Four crew, two rescuers killed in Red Sea attack; US strikes ship in Gulf of Oman - Red Lake Nation News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSXNsQWx2U1d6Z0lsQ0JKaGVoRGc4djQtX1Y1VHBnMVoxVVFBb0EzZEg2WElvYnh2RF9BWDU3ZkFCaUtGUF9MeHlMUWFPQU83c1FBeUN0WS1IampoNnFHajJVdDk1c1NUbFFhTldJX3picnNEQ2NGYTVrZC0zUzV4eTRhLWtUbWFoZjNsTGxPTXRhekRHVXZ6YUFmcVNXU3l3aWhqdWcxUHZLVG9fcFFsTGpNNnB3VS1Sa29tOVZpWnphVXZYakEwOVR0R0NJTzBfTWVWR3g4cG9GSzV3djRUcw?oc=5\" target=\"_blank\">Four crew, two rescuers killed in Red Sea attack; US strikes ship in Gulf of Oman</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Red La",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSXNsQWx2U1d6Z0lsQ0JKaGVoRGc4djQtX1Y1VHBnMVoxVVFBb0EzZEg2WElvYnh2RF9BWDU3ZkFCaUtGUF9MeHlMUWFPQU83c1FBeUN0WS1IampoNnFHajJVdDk1c1NUbFFhTldJX3picnNEQ2NGYTVrZC0zUzV4eTRhLWtUbWFoZjNsTGxPTXRhekRHVXZ6YUFmcVNXU3l3aWhqdWcxUHZLVG9fcFFsTGpNNnB3VS1Sa29tOVZpWnphVXZYakEwOVR0R0NJTzBfTWVWR3g4cG9GSzV3djRUcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T05:26:57.621Z"
     },
     {
       "id": "rss_92cfc12a2db2a631",
@@ -11210,53 +11256,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-21T15:33:20.016Z"
-    },
-    {
-      "id": "rss_d1fe5f62cf7d1741",
-      "timestamp": 1784628120000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition starts ship protection measures after Houthi Bab el-Mandeb threat - PortNews IAA",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE5sX1lrZkhoZjZZRkJ5LXUwMkRockZtRXlTVmx3a2RnTXVnZV9qdG91MzhtcXdvcTBYamdGZ3JQbG40bkNITW5FV2NYbw?oc=5\" target=\"_blank\">Saudi-led coalition starts ship protection measures after Houthi Bab el-Mandeb threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PortNews IAA</font>",
-      "tags": [
-        "shipping",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5sX1lrZkhoZjZZRkJ5LXUwMkRockZtRXlTVmx3a2RnTXVnZV9qdG91MzhtcXdvcTBYamdGZ3JQbG40bkNITW5FV2NYbw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T11:13:44.676Z"
-    },
-    {
-      "id": "rss_be226018f9294251",
-      "timestamp": 1784627378000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "A Red Sea blockade threatens a new front in U.S.-Iran war - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOMEtLcUJfSEVjZ1I4WTU2cnNYenZrVVlBUEFHLXJSVTJZUjg5UzBuT094dVlYV1A1bjlVQXZDek91ZzlkelRvLWhOd1MwX3kwR3ZCOS1XbWF2M2xITHRtV0w2bVVnMmkyWkpQd2ZxWFJIcGVoN3dtNU9ndi1VOEo0Z2s5cE5BOW9KRktySHBvN0xGUlg4d2JGWlpJWmNVQQ?oc=5\" target=\"_blank\">A Red Sea blockade threatens a new front in U.S.-Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEtLcUJfSEVjZ1I4WTU2cnNYenZrVVlBUEFHLXJSVTJZUjg5UzBuT094dVlYV1A1bjlVQXZDek91ZzlkelRvLWhOd1MwX3kwR3ZCOS1XbWF2M2xITHRtV0w2bVVnMmkyWkpQd2ZxWFJIcGVoN3dtNU9ndi1VOEo0Z2s5cE5BOW9KRktySHBvN0xGUlg4d2JGWlpJWmNVQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-21T10:17:09.134Z"
     }
   ]
 }
