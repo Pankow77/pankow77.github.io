@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T14:20:13.651Z",
+  "last_fetch": "2026-08-12T15:28:02.293Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_80d7f369445b7da5",
+      "timestamp": 1786546309000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hormuz traffic sinks to one-week low as ships attacked, talks stagnate - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQbFBiSmNzdDhSRVN2aUJoZGZFbDgtTVpsbUg3TmJRVVF1TzdIWTNoV3pULVMtci1CdU5YME1lSGZHQy03Vl9STXB1Skd1U1RBM3lDb1ZjTU5fSXluU2tYWnFoWlhTejlpU3FDLXd0cFVlQ2JKNVNKLURPc0JINmNldzhlRTE1dzlRZkRmREtUNnVzWHB4WHcwUVdWT1dMVjZTNzFGUERqWVJBaGJv?oc=5\" target=\"_blank\">Hormuz traffic sinks to one-week low as ships attacked, talks stagnate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbFBiSmNzdDhSRVN2aUJoZGZFbDgtTVpsbUg3TmJRVVF1TzdIWTNoV3pULVMtci1CdU5YME1lSGZHQy03Vl9STXB1Skd1U1RBM3lDb1ZjTU5fSXluU2tYWnFoWlhTejlpU3FDLXd0cFVlQ2JKNVNKLURPc0JINmNldzhlRTE1dzlRZkRmREtUNnVzWHB4WHcwUVdWT1dMVjZTNzFGUERqWVJBaGJv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T15:28:00.949Z"
+    },
     {
       "id": "rss_22fff9e38a364e42",
       "timestamp": 1786543800000,
@@ -11229,29 +11252,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T08:16:50.098Z"
-    },
-    {
-      "id": "rss_9afea365dfa25caa",
-      "timestamp": 1784703785000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Rubio: US still open to Iran talks, but Tehran is not serious - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DSVRfaDlGSm9WUzFFdElwOHJtU1BYMDhTZEpMSlZ5Sm1fcGRaX3lFV29waGl3VlFYVWxldW01ZlJab3hZM2puSzVpb204M2hVRDdTaVJ3?oc=5\" target=\"_blank\">Rubio: US still open to Iran talks, but Tehran is not serious</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5DSVRfaDlGSm9WUzFFdElwOHJtU1BYMDhTZEpMSlZ5Sm1fcGRaX3lFV29waGl3VlFYVWxldW01ZlJab3hZM2puSzVpb204M2hVRDdTaVJ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T09:18:14.907Z"
     }
   ]
 }
