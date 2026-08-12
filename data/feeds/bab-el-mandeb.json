@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T16:26:12.871Z",
+  "last_fetch": "2026-08-12T17:27:11.029Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3839968e36de0929",
+      "timestamp": 1786554795000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen: Death Toll Rises to 16 in Houthi Attack on ‘Tihama’ Vessel - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE80TnZaQmkxclVRZ0tZU3lvUFhQZjlYbVRvOW1XTHI1WHdOTHBtSGcxc253N2tTWHZsTWtVdmdWczRqMDItUVFfd3VDY0xRTVBGcGg3dEJheUZQQVItemVR?oc=5\" target=\"_blank\">Yemen: Death Toll Rises to 16 in Houthi Attack on ‘Tihama’ Vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80TnZaQmkxclVRZ0tZU3lvUFhQZjlYbVRvOW1XTHI1WHdOTHBtSGcxc253N2tTWHZsTWtVdmdWczRqMDItUVFfd3VDY0xRTVBGcGg3dEJheUZQQVItemVR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T17:27:09.516Z"
+    },
     {
       "id": "rss_a735e48b113f8558",
       "timestamp": 1786549920000,
@@ -25,6 +48,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T16:26:11.421Z"
+    },
+    {
+      "id": "rss_50f5064ad376f120",
+      "timestamp": 1786549884000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fighting in Yemen escalates, raising concern of a return to civil war - Long War Journal",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQSlliYUs5dFZqUHc0aW82Q0ozRVAwUnllRFBEV0VCNi05QUY0ck5YQmF6cWhwTVQtak5MelB5MGZPd3ZnbWZpbHNkM085STJyd01XQVFMaWJRZlpBZDZTcjJHMXhNQl9JQXh0SV9ZVGNRQ1pmRVRHemhhanhueEFOY29mbEpjTTV5ckxQdHJzZzdXZHB1b0p4YUs0dDJwaloweUF3ZWVwQW95NmlXUW1uZkNEa05LNkZrQkN6dw?oc=5\" target=\"_blank\">Fighting in Yemen escalates, raising concern of a return to civil war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Long War Journal</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQSlliYUs5dFZqUHc0aW82Q0ozRVAwUnllRFBEV0VCNi05QUY0ck5YQmF6cWhwTVQtak5MelB5MGZPd3ZnbWZpbHNkM085STJyd01XQVFMaWJRZlpBZDZTcjJHMXhNQl9JQXh0SV9ZVGNRQ1pmRVRHemhhanhueEFOY29mbEpjTTV5ckxQdHJzZzdXZHB1b0p4YUs0dDJwaloweUF3ZWVwQW95NmlXUW1uZkNEa05LNkZrQkN6dw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T17:27:09.515Z"
     },
     {
       "id": "rss_80d7f369445b7da5",
@@ -11206,50 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T12:59:58.016Z"
-    },
-    {
-      "id": "rss_eeeca6dfaf07a374",
-      "timestamp": 1784715283000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "What is the Bab el-Mandeb Strait, and why does the Houthi ‘blockade’ threat against Saudi Arabia matter? - The Indian Express",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTGgyakJmNEhNVUFMbWpNeWVZSnlhTFhhNG12UFdfcjBZWFBTRHFPenpLaEQyMnBFejhVaG4yWWtScEhVTk9qcWhXNUtLRWhZbDhtMEcxcXRrNlRvVHFORkFPeDRGZkVDc2loZnRpNzAtUmxIbzJEUjYtamItbGNIc1JnNDlaYXFha2ZScElNOHVjZF9sel9DQVhHMTJzZ1pqTFpQZE9qd2RrR1lYdlRhTVdkbThENlVOS29wR0x6V2bSAccBQVVfeXFMUGd5ZUpEY3hGX3ZKOGVMc1NXZTFRZnF2RWg3UHJHd0F2bTgwbkxjaWJJWjAxemJkMlFxRzB0R0YwQ2pZZEVoaF9DaTZjVU5ERWNpWHVMZXZPUUlIeTMxd2VmMWR4WWE1aE1hYjg0NWM3a2RBZ0k1QzNPTFRrZE5hdk9DWXctLURWWGtGZF",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNTGgyakJmNEhNVUFMbWpNeWVZSnlhTFhhNG12UFdfcjBZWFBTRHFPenpLaEQyMnBFejhVaG4yWWtScEhVTk9qcWhXNUtLRWhZbDhtMEcxcXRrNlRvVHFORkFPeDRGZkVDc2loZnRpNzAtUmxIbzJEUjYtamItbGNIc1JnNDlaYXFha2ZScElNOHVjZF9sel9DQVhHMTJzZ1pqTFpQZE9qd2RrR1lYdlRhTVdkbThENlVOS29wR0x6V2bSAccBQVVfeXFMUGd5ZUpEY3hGX3ZKOGVMc1NXZTFRZnF2RWg3UHJHd0F2bTgwbkxjaWJJWjAxemJkMlFxRzB0R0YwQ2pZZEVoaF9DaTZjVU5ERWNpWHVMZXZPUUlIeTMxd2VmMWR4WWE1aE1hYjg0NWM3a2RBZ0k1QzNPTFRrZE5hdk9DWXctLURWWGtGZFpaWVdtV2QtSEl0dHY0Zk8tR0xhX2hoSUJKZ3oybDN2Q1dXQ2ptNkt4dHVOSjlWZWt4ZXNGMjhETF9kUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T11:14:11.375Z"
-    },
-    {
-      "id": "rss_2eba9d7c91f7274f",
-      "timestamp": 1784712446000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Oil Rises on Dual Shipping Threat in Hormuz and Red Sea - Offshore Engineer Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPX0N3d0UtUXVNVlBhRExaMVNYX1BtZlVCNzdrcWloc3FNcTFxUkc4VTUtYktuaURZZzNyaUdmTGNhbXRVX2RqRFNvYTRqd3JFZ1ZWLWVsUEJTTncxM1NPTUtnU3RxNFh3dnh3X0M1akpQZnRCMUpOT01ZcXBhNTBSREE5T2NYLUJtNll0V05HaVBMVlNaVEhsMg?oc=5\" target=\"_blank\">Oil Rises on Dual Shipping Threat in Hormuz and Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Offshore Engineer Magazine</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPX0N3d0UtUXVNVlBhRExaMVNYX1BtZlVCNzdrcWloc3FNcTFxUkc4VTUtYktuaURZZzNyaUdmTGNhbXRVX2RqRFNvYTRqd3JFZ1ZWLWVsUEJTTncxM1NPTUtnU3RxNFh3dnh3X0M1akpQZnRCMUpOT01ZcXBhNTBSREE5T2NYLUJtNll0V05HaVBMVlNaVEhsMg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T10:17:09.426Z"
     }
   ]
 }
