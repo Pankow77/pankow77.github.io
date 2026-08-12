@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T17:27:11.029Z",
+  "last_fetch": "2026-08-12T18:25:42.766Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5e54e0cadd350805",
+      "timestamp": 1786557049000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea Shipping Risks Return With Deadly Houthi Attack - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPb20wMloyNERubkc1ZF9hZ3BoYlhIRUhIcllfbUR0cXROMVR1MzFESlFmd0hKN0RpeHl5UmFSQ3ZNQVVxX1pIRVFnajh3dTk3WENLM3loemRYdExBM1lwYW5Ldnc5MF9JZ21oZFJuZS1xRmZ5cllVVVNOSTZGSmpBNWZZVUFUUWg2cjQtR3VsSQ?oc=5\" target=\"_blank\">Red Sea Shipping Risks Return With Deadly Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPb20wMloyNERubkc1ZF9hZ3BoYlhIRUhIcllfbUR0cXROMVR1MzFESlFmd0hKN0RpeHl5UmFSQ3ZNQVVxX1pIRVFnajh3dTk3WENLM3loemRYdExBM1lwYW5Ldnc5MF9JZ21oZFJuZS1xRmZ5cllVVVNOSTZGSmpBNWZZVUFUUWg2cjQtR3VsSQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T18:25:41.285Z"
+    },
     {
       "id": "rss_3839968e36de0929",
       "timestamp": 1786554795000,
@@ -25,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T17:27:09.516Z"
+    },
+    {
+      "id": "rss_e1245a2cb5ac1742",
+      "timestamp": 1786554321000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shipowners could rethink Red Sea after deadly Houthi attack - Arabian Gulf Business Insight | AGBI",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOREhOMmhhZVlMM2QtUDFTZkE0RzEySHpKMzI5US1hWjJVNzk1YVhJb09PeHF0NjFJUWxSaUdWU3lZaWhYWWVwUVNsamRrMGg3VGtnVF9YQXZrQmEzRnJMZllmNHlxbnNHczFud2hMZkpyeERuaDdVVUtUNnpSanBGQXBTM2tQdHBKZkZuWmpSR1Z4T0daaXBiZUgtUFB4bkk?oc=5\" target=\"_blank\">Shipowners could rethink Red Sea after deadly Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arabian Gulf Business Insight | AGBI</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOREhOMmhhZVlMM2QtUDFTZkE0RzEySHpKMzI5US1hWjJVNzk1YVhJb09PeHF0NjFJUWxSaUdWU3lZaWhYWWVwUVNsamRrMGg3VGtnVF9YQXZrQmEzRnJMZllmNHlxbnNHczFud2hMZkpyeERuaDdVVUtUNnpSanBGQXBTM2tQdHBKZkZuWmpSR1Z4T0daaXBiZUgtUFB4bkk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T18:25:41.286Z"
     },
     {
       "id": "rss_a735e48b113f8558",
@@ -11204,52 +11250,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T12:06:00.885Z"
-    },
-    {
-      "id": "rss_2bfab8c02c07da2a",
-      "timestamp": 1784719200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea - chinadailyhk",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IbDJodjJfc3lEcFFJZGY2UGdFbWxNc1pha0c5OTBKcXV3ZlJ3STVPdnp0Nmw4THBEU3ZYenZkd3lEUXFyUUM5QkRrTTFlU0pYSGpyUlltTHRmUQ?oc=5\" target=\"_blank\">Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyhk</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IbDJodjJfc3lEcFFJZGY2UGdFbWxNc1pha0c5OTBKcXV3ZlJ3STVPdnp0Nmw4THBEU3ZYenZkd3lEUXFyUUM5QkRrTTFlU0pYSGpyUlltTHRmUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T08:16:56.386Z"
-    },
-    {
-      "id": "rss_a4309d4215de5179",
-      "timestamp": 1784717161000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "U.S. and Iranian attacks continue as tensions mount on a key waterway in the Red Sea - NPR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibEFVX3lxTFBmVHBOV1ItYWFfdHBVZmEyQnRtTnlvVVozMjA3UnMzbFBZWDh0YmpwTHZXM2k3SUtJcGZDSlpNWklVNzhkMkxNRnQ4emZRR2VWdm1CbXo0QkR3M2ZVeEpDM1RsTjExanBVdHJqcw?oc=5\" target=\"_blank\">U.S. and Iranian attacks continue as tensions mount on a key waterway in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBmVHBOV1ItYWFfdHBVZmEyQnRtTnlvVVozMjA3UnMzbFBZWDh0YmpwTHZXM2k3SUtJcGZDSlpNWklVNzhkMkxNRnQ4emZRR2VWdm1CbXo0QkR3M2ZVeEpDM1RsTjExanBVdHJqcw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T12:59:58.016Z"
     }
   ]
 }
