@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T18:25:42.766Z",
+  "last_fetch": "2026-08-12T19:35:29.162Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1ea507c7c934b418",
+      "timestamp": 1786562325000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Israel says Gaza drone strike targeted a Hamas commander, an... - seMissourian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQWhuaHVoaG8yODNCZFZabWsxc21aeFAxWHZjVkZKd1NMYTFTSU5ES2pTQzNvMmx6S082M3p6czdFXy12MEwyaHg0SUd3UjB4OEdSRjNGRkpsUkNtT211TVRJRW9wNEtpc2txb0NOMmZ3YWFxVUwxR1EyTmJxMGI1dUJ2UExmTWMxRlhDMmpEeU9NWTdKYTdyTlRNc1BDZ2hhSTRMVmJWSjgyX1JxN0RSdTk0eFA0VGNmLXd4dWJuVXhwSU5kaVdyYWRxcEE2VjB2T2FvLQ?oc=5\" target=\"_blank\">Israel says Gaza drone strike targeted a Hamas commander, an...</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">seMissourian</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQWhuaHVoaG8yODNCZFZabWsxc21aeFAxWHZjVkZKd1NMYTFTSU5ES2pTQzNvMmx6S082M3p6czdFXy12MEwyaHg0SUd3UjB4OEdSRjNGRkpsUkNtT211TVRJRW9wNEtpc2txb0NOMmZ3YWFxVUwxR1EyTmJxMGI1dUJ2UExmTWMxRlhDMmpEeU9NWTdKYTdyTlRNc1BDZ2hhSTRMVmJWSjgyX1JxN0RSdTk0eFA0VGNmLXd4dWJuVXhwSU5kaVdyYWRxcEE2VjB2T2FvLQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T19:35:27.627Z"
+    },
+    {
+      "id": "rss_bebc2296967b41fb",
+      "timestamp": 1786559040000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iranian-backed Houthi rebels attack ship in Red Sea, sparking fears of wider Middle East war - thehill.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxOR01pc3kxcERLQ2M5S0E0azRobnE0c05kLXJzcXpZbG9NSzZXXzJsV1VSSnhKNkJKUHBmdFNheUxMd1pWS3dtQkgyUk1HQUdqTlJjUHFaTnduM19Fc254SW8tTXh2OFU1UzBDQ29FRUhyT3ZpekttOGJRM3VIUWdiOHlGcS1yZmhQV0w5ajZLa1FBTWJHS3Nab0ZpUW4wQTR6RjdnOXRCYU5jbHN6ek9XWFFTdExna3VGY0lEZ3pyMFp6Z1c4UkE?oc=5\" target=\"_blank\">Iranian-backed Houthi rebels attack ship in Red Sea, sparking fears of wider Middle East war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thehill.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOR01pc3kxcERLQ2M5S0E0azRobnE0c05kLXJzcXpZbG9NSzZXXzJsV1VSSnhKNkJKUHBmdFNheUxMd1pWS3dtQkgyUk1HQUdqTlJjUHFaTnduM19Fc254SW8tTXh2OFU1UzBDQ29FRUhyT3ZpekttOGJRM3VIUWdiOHlGcS1yZmhQV0w5ajZLa1FBTWJHS3Nab0ZpUW4wQTR6RjdnOXRCYU5jbHN6ek9XWFFTdExna3VGY0lEZ3pyMFp6Z1c4UkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T19:35:27.627Z"
+    },
     {
       "id": "rss_5e54e0cadd350805",
       "timestamp": 1786557049000,
@@ -203,6 +250,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T14:20:12.242Z"
+    },
+    {
+      "id": "rss_3e8c378c3e1d67b3",
+      "timestamp": 1786539600000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Six killed in Red Sea cargo ship attack - Freight News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOeDk4XzB3cno2SFNrME9UMGRxUzZkVmlMRTBucUhqa1hzazdJbnBUbXdaanVRejhNSHlVendmRHdFUE1jNkRfOFIybTlYRXE0REd6U2J4WXYwd0ExZ0ViZXpLLV9wRlpWNV9UYkxzZVFMQk1aUnAwUllzc3hNV1g1Ql9sVQ?oc=5\" target=\"_blank\">Six killed in Red Sea cargo ship attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Freight News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeDk4XzB3cno2SFNrME9UMGRxUzZkVmlMRTBucUhqa1hzazdJbnBUbXdaanVRejhNSHlVendmRHdFUE1jNkRfOFIybTlYRXE0REd6U2J4WXYwd0ExZ0ViZXpLLV9wRlpWNV9UYkxzZVFMQk1aUnAwUllzc3hNV1g1Ql9sVQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T19:35:29.155Z"
     },
     {
       "id": "rss_30ffc8a113902af8",
@@ -11181,75 +11251,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-22T16:30:48.312Z"
-    },
-    {
-      "id": "rss_9a8f1c4c0c4685cc",
-      "timestamp": 1784724599000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "EU's Aspides mission advises some ships to avoid Red Sea - Over Houthi threats - Caliber.Az",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2lpckZGMUR0R05WajdsZDlNSWV6TWVsb1dyb29icENrUlJWYzVpZTlFMkVUeUhiSzZmRXkzd0tDWi13QXVjSDZ6ZC02RFdaNnRpdVlGRGRnWHRSRU5EMkhnbDh2ZGtNcWYxakt6ZjdzamI1T0thd1J1aVhXVjU1M3ZoQ3VkTUdsNndmRzVpVmlQWWFKdmRMQ3MwWUwzVkc0aEFVUXBRQUVEd3c?oc=5\" target=\"_blank\">EU's Aspides mission advises some ships to avoid Red Sea - Over Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Caliber.Az</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNR2lpckZGMUR0R05WajdsZDlNSWV6TWVsb1dyb29icENrUlJWYzVpZTlFMkVUeUhiSzZmRXkzd0tDWi13QXVjSDZ6ZC02RFdaNnRpdVlGRGRnWHRSRU5EMkhnbDh2ZGtNcWYxakt6ZjdzamI1T0thd1J1aVhXVjU1M3ZoQ3VkTUdsNndmRzVpVmlQWWFKdmRMQ3MwWUwzVkc0aEFVUXBRQUVEd3c?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T13:38:55.041Z"
-    },
-    {
-      "id": "rss_657b3a991b17b167",
-      "timestamp": 1784723768000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Oil tankers turn around in the Red Sea as Houthis threaten merchant ships - media - Українські Національні Новини (УНН)",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPMjNfUzU4SHdvTDltTjlLeC1DZWE0VXVoTWl0bDdOSDBSSHhSbV8xdmlBS2hGTW1iR1RiN1FFZDB0RDdUbWFyelJ4Qk55TnJ2dzVJM0MtQklsc2ZEQzNYSXA0R1JzVGlQLVFzdERQQ2dIV0VBWHJyMnR2TE1qX1JIRm5yZnhxb2otUFFDNnRRSlE2YXR4Y3dnS09lVWJKRk9KMEVaalNkWdIBpgFBVV95cUxNUFl2MGQzaDVMUVNsVHd4TmVzb2Z1WENXMTdhTHZuS0h6LTY1d0ZqbWdZZXJwLVVkNW90bG1ib0pCM3Zla21aNEx2VWs2eTVYcmtVNDhlSGFmVFlKN3pIZmYyMlZEVGtZZkJPTWRFRFZ3SS1QaGF1enI5SjdJT29CeENjVmJLTkdqSktQTm96eF9OaUtKU1kzVG0ycjFiUlZRRlRCQW",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMjNfUzU4SHdvTDltTjlLeC1DZWE0VXVoTWl0bDdOSDBSSHhSbV8xdmlBS2hGTW1iR1RiN1FFZDB0RDdUbWFyelJ4Qk55TnJ2dzVJM0MtQklsc2ZEQzNYSXA0R1JzVGlQLVFzdERQQ2dIV0VBWHJyMnR2TE1qX1JIRm5yZnhxb2otUFFDNnRRSlE2YXR4Y3dnS09lVWJKRk9KMEVaalNkWdIBpgFBVV95cUxNUFl2MGQzaDVMUVNsVHd4TmVzb2Z1WENXMTdhTHZuS0h6LTY1d0ZqbWdZZXJwLVVkNW90bG1ib0pCM3Zla21aNEx2VWs2eTVYcmtVNDhlSGFmVFlKN3pIZmYyMlZEVGtZZkJPTWRFRFZ3SS1QaGF1enI5SjdJT29CeENjVmJLTkdqSktQTm96eF9OaUtKU1kzVG0ycjFiUlZRRlRCQWhn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T12:59:58.017Z"
-    },
-    {
-      "id": "rss_2f8d288bb82a4e87",
-      "timestamp": 1784720354000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea traffic turns cautious as Houthis prepare to attack shipping - Quantum Commodity Intelligence",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNbW10Y0RORl82eGgxczk2WjNhR1FQVFExdEhiMGZ4eGowQUpuRk5sUWZtVHlQYXhFN2hINnpYMno3cWJBUXVDNjZuN3FlVWZXTWpOa28zM1gzR0NWRHlBYmdMNlZYUmJYWFlwRTBEbHJZcXcxekxyekhBMk9TakkwVHB0ejNZTmREbFJQYl9rRHJuX0xFcUhYbkxVMmtUYmstcTRMSlRUZGk4X2xoMV9INw?oc=5\" target=\"_blank\">Red Sea traffic turns cautious as Houthis prepare to attack shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbW10Y0RORl82eGgxczk2WjNhR1FQVFExdEhiMGZ4eGowQUpuRk5sUWZtVHlQYXhFN2hINnpYMno3cWJBUXVDNjZuN3FlVWZXTWpOa28zM1gzR0NWRHlBYmdMNlZYUmJYWFlwRTBEbHJZcXcxekxyekhBMk9TakkwVHB0ejNZTmREbFJQYl9rRHJuX0xFcUhYbkxVMmtUYmstcTRMSlRUZGk4X2xoMV9INw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T12:06:00.885Z"
     }
   ]
 }
