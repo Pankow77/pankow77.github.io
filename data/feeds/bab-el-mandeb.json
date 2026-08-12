@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T20:37:51.128Z",
+  "last_fetch": "2026-08-12T21:39:38.012Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3316ee0e1b7f9f1e",
+      "timestamp": 1786570574000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "As Houthi Attacks Spread, Saudi Arabia Weighs a New Yemen Campaign - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPVk9VejF6alloV1N2NlRnTVJXWlR6TjNSeUdDVFFHREQ2NlAyWnVBeHhBcTljRzdtM3BpSnoxQ1VtQWc4cjcwQWU0RUNNb2dGUFNFWU1Za25ub2d2bmZXSjRYN28tMC03N0drQUJaRUNVNUFLTmlQRTYxU2xJS0hqYVJjakpwWTFJN0tWSVlwUy05RUZjTjVuSzJXUGxnNmRBeTNqOVBn?oc=5\" target=\"_blank\">As Houthi Attacks Spread, Saudi Arabia Weighs a New Yemen Campaign</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVk9VejF6alloV1N2NlRnTVJXWlR6TjNSeUdDVFFHREQ2NlAyWnVBeHhBcTljRzdtM3BpSnoxQ1VtQWc4cjcwQWU0RUNNb2dGUFNFWU1Za25ub2d2bmZXSjRYN28tMC03N0drQUJaRUNVNUFLTmlQRTYxU2xJS0hqYVJjakpwWTFJN0tWSVlwUy05RUZjTjVuSzJXUGxnNmRBeTNqOVBn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T21:39:36.490Z"
+    },
     {
       "id": "rss_45e28cd8267b4584",
       "timestamp": 1786564256000,
@@ -11224,29 +11245,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T14:40:38.353Z"
-    },
-    {
-      "id": "rss_2d7eb1a841af27f7",
-      "timestamp": 1784728351000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Warns Israeli- and U.S.-Linked Ships to Avoid Red Sea Amid Houthi Saudi Embargo - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUF5NDRSaHBtenFaZmVDRHlWeThiV05oRGI5VUV5UGI3RmtfV1JqNGF2c2hRbWJiQkZBazhvMW9UbWp5alplWS1KT1czekFtTTZiZGp6ZGhjdFk2SWNlX2NkOEtiNkFFQlJrVkFVSUowbVhib25BTHFoMm5GNjk4clFhRmN4YnpQM24xWTB6RU9yd3ZaQjBDOHNNdzRZenl2cE5ZSw?oc=5\" target=\"_blank\">EU Warns Israeli- and U.S.-Linked Ships to Avoid Red Sea Amid Houthi Saudi Embargo</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdUF5NDRSaHBtenFaZmVDRHlWeThiV05oRGI5VUV5UGI3RmtfV1JqNGF2c2hRbWJiQkZBazhvMW9UbWp5alplWS1KT1czekFtTTZiZGp6ZGhjdFk2SWNlX2NkOEtiNkFFQlJrVkFVSUowbVhib25BTHFoMm5GNjk4clFhRmN4YnpQM24xWTB6RU9yd3ZaQjBDOHNNdzRZenl2cE5ZSw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T16:30:49.184Z"
     }
   ]
 }
