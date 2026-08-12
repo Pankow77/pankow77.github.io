@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-12T19:35:29.162Z",
+  "last_fetch": "2026-08-12T20:37:51.128Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_45e28cd8267b4584",
+      "timestamp": 1786564256000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills at least six - Foundation for Defense of Democracies",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQTUZnOWFZeXg3d2dSc1EwSXI1UzlyLWkwOTJra1Q3RkpndjlCRVR3d2VnOGstd3VqSFBaX2tfX1BmRG1Dd1JhQ3VfMWpua2ZFRm1zNDZlNzE4emljd3lSMlRWeWFKQm1LRUstbzBaYVZBUDNfblRNd1JSMHU2V2MxRlh3?oc=5\" target=\"_blank\">Houthi attack kills at least six</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foundation for Defense of Democracies</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTUZnOWFZeXg3d2dSc1EwSXI1UzlyLWkwOTJra1Q3RkpndjlCRVR3d2VnOGstd3VqSFBaX2tfX1BmRG1Dd1JhQ3VfMWpua2ZFRm1zNDZlNzE4emljd3lSMlRWeWFKQm1LRUstbzBaYVZBUDNfblRNd1JSMHU2V2MxRlh3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T20:37:49.621Z"
+    },
+    {
+      "id": "rss_ecd3426fdf8c11a7",
+      "timestamp": 1786563581000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia ramps up oil exports through Mediterranean pipeline to avoid attacks in Red Sea - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxORDlpS0ZwT3UtcTZ6NldxNWFBOFlDa20wVWpsYk51d1RaQzlEcm5leGphRDdSZEdrcm5hMHZVcXNVaHJycm5IQVk3NmdqdTkyQXk0NlhSTWFFelVHMGlhLTJwZEZqZGgzd25kRHFueXpCVjhxVWJycHpBZlkwRnJySDF4Tlh0T3NZMlZlWVFlVktWblR5UmNfU05ZR0x0SW_SAaQBQVVfeXFMUEtKYTRWckg5Zk93eHBlbTE5d0hxX2pwaTY1aGJLUUtUZUlublFtelRxVzgwRTU0U1ZJeDJfdmVQYTVJN3ZydDBndjJROGV3VjE3YlFHYzUxSnU1eWhJSHlQOE44eGlheHRVVm1wZy1SZ19sdFNTQzluX2o4UzNNMzFFa3JPX2VGUEFDaHh3bEVHVDR0ekdHeGxGeDl4YmJDQllvUzY?oc=5\" targ",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxORDlpS0ZwT3UtcTZ6NldxNWFBOFlDa20wVWpsYk51d1RaQzlEcm5leGphRDdSZEdrcm5hMHZVcXNVaHJycm5IQVk3NmdqdTkyQXk0NlhSTWFFelVHMGlhLTJwZEZqZGgzd25kRHFueXpCVjhxVWJycHpBZlkwRnJySDF4Tlh0T3NZMlZlWVFlVktWblR5UmNfU05ZR0x0SW_SAaQBQVVfeXFMUEtKYTRWckg5Zk93eHBlbTE5d0hxX2pwaTY1aGJLUUtUZUlublFtelRxVzgwRTU0U1ZJeDJfdmVQYTVJN3ZydDBndjJROGV3VjE3YlFHYzUxSnU1eWhJSHlQOE44eGlheHRVVm1wZy1SZ19sdFNTQzluX2o4UzNNMzFFa3JPX2VGUEFDaHh3bEVHVDR0ekdHeGxGeDl4YmJDQllvUzY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T20:37:49.621Z"
+    },
     {
       "id": "rss_1ea507c7c934b418",
       "timestamp": 1786562325000,
@@ -208,6 +250,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T14:20:12.242Z"
+    },
+    {
+      "id": "rss_cd7db7e3d7e1a957",
+      "timestamp": 1786542570000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Statement on deadly ship attack in the Red Sea - International Maritime Organization",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxObkpJTWk5LWYxREpvcm1RVEYxWWV0QWtYVzZZSnpCNlFTb0RJZm8tQ0RISVNxS0NEZERCaWRhNkdrc1FCRWRCa3l0V0pnY3ctY0JXbGtQWU1jekJXNW16REFtdWtDanJwTUlvVWk4UkZoeXZGVUlqOUw0a2JDMUJsVGhQaXozQkJtYzlSMmdjZHE1V2RUaWsxdWlkeDg4V1UwdUlNT0lzcU44anM?oc=5\" target=\"_blank\">Statement on deadly ship attack in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Maritime Organization</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObkpJTWk5LWYxREpvcm1RVEYxWWV0QWtYVzZZSnpCNlFTb0RJZm8tQ0RISVNxS0NEZERCaWRhNkdrc1FCRWRCa3l0V0pnY3ctY0JXbGtQWU1jekJXNW16REFtdWtDanJwTUlvVWk4UkZoeXZGVUlqOUw0a2JDMUJsVGhQaXozQkJtYzlSMmdjZHE1V2RUaWsxdWlkeDg4V1UwdUlNT0lzcU44anM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-12T20:37:49.621Z"
     },
     {
       "id": "rss_34de45c44ed4c509",
@@ -11182,75 +11247,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T16:30:49.184Z"
-    },
-    {
-      "id": "rss_6299bc5bd6864534",
-      "timestamp": 1784727547000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Türkiye condemns Houthi threat to blockade Saudi Arabia - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPQVM0V3FWQjA2UnNIR0ZJSGlpWEJoM3VrY2xfQ1g5ZDRKVGI0YUtyNmllcnNYZ2JCcUNnbml2MGJBcmhMUnNlUG1mNmhDeEprUFpKX2RUeUJwSmc4eEt2M3Z1TVRTeDBnaW9NMV8tazFTLVVDSnVKSW9meGtDWXNPdVc5ZFVFZ0NVVlh3aXdCMUIzanFUVG1hZ3FEZjBkZWNE?oc=5\" target=\"_blank\">Türkiye condemns Houthi threat to blockade Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQVM0V3FWQjA2UnNIR0ZJSGlpWEJoM3VrY2xfQ1g5ZDRKVGI0YUtyNmllcnNYZ2JCcUNnbml2MGJBcmhMUnNlUG1mNmhDeEprUFpKX2RUeUJwSmc4eEt2M3Z1TVRTeDBnaW9NMV8tazFTLVVDSnVKSW9meGtDWXNPdVc5ZFVFZ0NVVlh3aXdCMUIzanFUVG1hZ3FEZjBkZWNE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T14:40:38.354Z"
-    },
-    {
-      "id": "rss_55ae7af299529a8d",
-      "timestamp": 1784727214000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Houthis deploy missiles and drones to attack ships in southern Red Sea, naval group says - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdUZmU0NNWkJ4dWdsLVV3LVZBMzFkTjh2cTBFZmNRRDVHczFkZHJVdWFmWFMxMUZ2N3ZlczFUbHBtSGk1QXdTTGVXTFZPVlF0cmh5RUlJbUdTM0FMYmxTUjNxQURpaGk1QlZEWWxkaER1LUhKNFNzSTFwRFljX25nYnh3UGp0MkEx0gGOAUFVX3lxTE5PNnJudUJ5aUFST0EyYy1vX3FWVnhZWE9DRXRCS0VRenhhQ1pXMWRuMFhIb0ZHSktjOHI0ZnV3azMyRVBjVkRxbktYY3k4dWhueUFncmd2MzE0YU1tVnQtVlRRNFcwSnE5alpmRnR6dkRyd3BvS3FiQmY1RFhuUzVFTk13RHczT1FtUUhmM0E?oc=5\" target=\"_blank\">Houthis deploy missiles and drones to attack shi",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdUZmU0NNWkJ4dWdsLVV3LVZBMzFkTjh2cTBFZmNRRDVHczFkZHJVdWFmWFMxMUZ2N3ZlczFUbHBtSGk1QXdTTGVXTFZPVlF0cmh5RUlJbUdTM0FMYmxTUjNxQURpaGk1QlZEWWxkaER1LUhKNFNzSTFwRFljX25nYnh3UGp0MkEx0gGOAUFVX3lxTE5PNnJudUJ5aUFST0EyYy1vX3FWVnhZWE9DRXRCS0VRenhhQ1pXMWRuMFhIb0ZHSktjOHI0ZnV3azMyRVBjVkRxbktYY3k4dWhueUFncmd2MzE0YU1tVnQtVlRRNFcwSnE5alpmRnR6dkRyd3BvS3FiQmY1RFhuUzVFTk13RHczT1FtUUhmM0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T14:40:38.352Z"
-    },
-    {
-      "id": "rss_81b1481c7a2bf4d5",
-      "timestamp": 1784726465000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "More ships change course in Red Sea after Houthi threats, data shows - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVpnSVhMeHp3ZE5RTlFFUEF6OW5PaUZsWGtoM3J2eUh1eGczY0hsVkt5MzRLY2s5YnJqaUxmVU13bG5QYmVrZmZoYzFNbXpRbVhkSHpVWkQtOGJ2UnNNdHh4YnU0V3hvRS1WcTd4UGJ5V0M0c21CRG5CdS1ZenVKNkJ2V2pwSEt5NWNBOEg2UkZmOVJFd3JZSXZOV3hyeW9SQjE2dTZQbzBZOVRBcHVwZ3ZpTWdOeGJoX3JRTkpNTHc5eGhsbUE?oc=5\" target=\"_blank\">More ships change course in Red Sea after Houthi threats, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQeVpnSVhMeHp3ZE5RTlFFUEF6OW5PaUZsWGtoM3J2eUh1eGczY0hsVkt5MzRLY2s5YnJqaUxmVU13bG5QYmVrZmZoYzFNbXpRbVhkSHpVWkQtOGJ2UnNNdHh4YnU0V3hvRS1WcTd4UGJ5V0M0c21CRG5CdS1ZenVKNkJ2V2pwSEt5NWNBOEg2UkZmOVJFd3JZSXZOV3hyeW9SQjE2dTZQbzBZOVRBcHVwZ3ZpTWdOeGJoX3JRTkpNTHc5eGhsbUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-22T16:30:48.312Z"
     }
   ]
 }
