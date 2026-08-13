@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T16:51:57.108Z",
+  "last_fetch": "2026-08-13T17:53:49.186Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -71,6 +71,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-13T13:54:54.483Z"
+    },
+    {
+      "id": "rss_9d1c5b8a17eaa5e5",
+      "timestamp": 1786622400000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Deadly Attack On Red Sea Ship Adds To Global Supply Chain Uncertainty - RTTNews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZjdxV0pqa0NBS1N4YjJ1S2w3Wm43aWpEZjBLQnFxb0otWGhqb1ZNcmRCOE9FYkdUdDNwWUFYV2hRbndWTXJ4cE5xYnRLRkdCOHVBTFZHT0h4Uld1Qjc1N2dTM2MzOHpDM1EtYkNOajB2empoOTFfZjFYUXdJRHBVM1l3QTlBTVVEeU9uTVotZVdEaTZIVEQ1MHBqTkhYOXRpeGlVLWdtc0RJUQ?oc=5\" target=\"_blank\">Deadly Attack On Red Sea Ship Adds To Global Supply Chain Uncertainty</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RTTNews</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZjdxV0pqa0NBS1N4YjJ1S2w3Wm43aWpEZjBLQnFxb0otWGhqb1ZNcmRCOE9FYkdUdDNwWUFYV2hRbndWTXJ4cE5xYnRLRkdCOHVBTFZHT0h4Uld1Qjc1N2dTM2MzOHpDM1EtYkNOajB2empoOTFfZjFYUXdJRHBVM1l3QTlBTVVEeU9uTVotZVdEaTZIVEQ1MHBqTkhYOXRpeGlVLWdtc0RJUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T17:53:47.921Z"
     },
     {
       "id": "rss_2bd629abecd3d548",
@@ -11210,29 +11233,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T01:34:55.195Z"
-    },
-    {
-      "id": "rss_d4d55e9050bf3fd3",
-      "timestamp": 1784767878000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim responsibility for attack on two Saudi oil tankers in Red Sea as a new chokepoint emerges - Firstpost",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQ0N2aTM3V2ZjM0hiYk1BbVZ3WGxEX2wxdC1IaXFKNGNraVlFa1lXamJkcXVpYmQ5akZqdW85bVdXX0xkdnVSUUVsZVljREtyeWlzMGwxNGhEaW1qMEhaOWxoUUJFdEY5VjJxdWxKS2lKYU9XdHlkRHlZc2dKdUQzS0czclNma1Q3a2JROVlQeXR1dkptTTJFcmpXZFJqYy1Fb3FCb3NmNWFwYkVid2VPM09tdDVNTWZrYjBJaXBqanM3N1NESkpCaU1wZUVyZ2tubjdacVVsdnYwVWpuZDI1V055d9IB6AFBVV95cUxNYWlZVXRoM1U3ZmI4U1Y2c18yRTRORmplY2h6d05ZbV95Rl9lQlpTWERJcU1RYnNhSllQaXVoSkxHdnNNQkU2elpVMUl2b1I1SWZicy1KMHB6UjN6STlIc0hyV200Tlc3Rj",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOQ0N2aTM3V2ZjM0hiYk1BbVZ3WGxEX2wxdC1IaXFKNGNraVlFa1lXamJkcXVpYmQ5akZqdW85bVdXX0xkdnVSUUVsZVljREtyeWlzMGwxNGhEaW1qMEhaOWxoUUJFdEY5VjJxdWxKS2lKYU9XdHlkRHlZc2dKdUQzS0czclNma1Q3a2JROVlQeXR1dkptTTJFcmpXZFJqYy1Fb3FCb3NmNWFwYkVid2VPM09tdDVNTWZrYjBJaXBqanM3N1NESkpCaU1wZUVyZ2tubjdacVVsdnYwVWpuZDI1V055d9IB6AFBVV95cUxNYWlZVXRoM1U3ZmI4U1Y2c18yRTRORmplY2h6d05ZbV95Rl9lQlpTWERJcU1RYnNhSllQaXVoSkxHdnNNQkU2elpVMUl2b1I1SWZicy1KMHB6UjN6STlIc0hyV200Tlc3RjBqclpKcVFjUkJZV19DWGtaX3BDcDRIcDY5RFhWWUpqWk1JYnE5cVFQazBmTTFPSzZVYjdraEpOOVZsd0lwVm9Dd0l2eGZPRGlVRUY3VkI4ZzZkQ2Z5MnlYLUUzeVNvc1hmajM5ckhUWHNkdmdBMy05TDVZb1Q1NVZENm9lQWFp?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T01:34:54.281Z"
     }
   ]
 }
