@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T12:07:29.847Z",
+  "last_fetch": "2026-08-13T13:54:55.871Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_78348687ed96fac4",
+      "timestamp": 1786625040000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "2 killed, 15 injured in Houthi drone attack in eastern Yemen - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPMl95NE9nanFIMDdYcjBJX0dUd0lLMzhFTkNZZzRYTHhBQzJ4QWdISE1iM1YwNVlZWEhTTHZCSXpXZ25wVUc4bGhLNEMzMWlHaXhHLWltaTdNZC1rUXBQR2VJeDdPbThvUkNQQUhETzBXMjhHV0lHWlpYb0xsV0doVTdrWXlTZ0UwRXVMWXB4TGlONDVNTGlFWWF1N3lITlViWFFxVElOTQ?oc=5\" target=\"_blank\">2 killed, 15 injured in Houthi drone attack in eastern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMl95NE9nanFIMDdYcjBJX0dUd0lLMzhFTkNZZzRYTHhBQzJ4QWdISE1iM1YwNVlZWEhTTHZCSXpXZ25wVUc4bGhLNEMzMWlHaXhHLWltaTdNZC1rUXBQR2VJeDdPbThvUkNQQUhETzBXMjhHV0lHWlpYb0xsV0doVTdrWXlTZ0UwRXVMWXB4TGlONDVNTGlFWWF1N3lITlViWFFxVElOTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T13:54:54.483Z"
+    },
     {
       "id": "rss_2bd629abecd3d548",
       "timestamp": 1786621080000,
@@ -11212,29 +11235,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T00:31:05.853Z"
-    },
-    {
-      "id": "rss_9b8f7482f440cd30",
-      "timestamp": 1784759717000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim attack on two Saudi oil tankers - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbdIBngFBVV95cUxQX2piN0J0Q2YwOUcyOTZBc2lFdkJpR3Q4SGJwMjhmVHlvZzJjM0pKUzgzWWZwMzRDdXhQWGRveG9NTTFwT1ZHX1ozYTdWcmlfa2J4STdFWXhuQ0U0azRaVEdIcDV3elJnRklrYWNUOHV2Z3ZrWDBEVC1DY3ZqWGRWTXpzYTJZNlZGWVlpaDIxb1R3ZFd5clItcE1VMDYtUQ?oc=5\" target=\"_blank\">Yemen",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbdIBngFBVV95cUxQX2piN0J0Q2YwOUcyOTZBc2lFdkJpR3Q4SGJwMjhmVHlvZzJjM0pKUzgzWWZwMzRDdXhQWGRveG9NTTFwT1ZHX1ozYTdWcmlfa2J4STdFWXhuQ0U0azRaVEdIcDV3elJnRklrYWNUOHV2Z3ZrWDBEVC1DY3ZqWGRWTXpzYTJZNlZGWVlpaDIxb1R3ZFd5clItcE1VMDYtUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-22T22:47:54.854Z"
     }
   ]
 }
