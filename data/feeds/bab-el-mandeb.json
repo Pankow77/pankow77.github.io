@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T18:56:22.438Z",
+  "last_fetch": "2026-08-13T19:54:09.803Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ff5e2db5768592c6",
+      "timestamp": 1786648680000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missiles target Yemen’s Bab el-Mandeb Strait - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUjVvdGZDYkVpZGxCTU1BLUZtS1djUFRjeTFCdmlxNGxwUTMxM0tOOEQwRnZXcDdPTnA3V3JhVXVWRGZLWVNhME1OUVprWDN2OGsydGxoRmZoajBwS2ZJX2FGa1g3Q0NfV1B4OUhYcHZVMHFhMExLaDZ0ZWJOX3lLdTZYcVZjQnhXWkJPalRaVDQ1ZWluTTY2YWJFbHJWTThxbUhERTRXVmJSR3c?oc=5\" target=\"_blank\">Houthi missiles target Yemen’s Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUjVvdGZDYkVpZGxCTU1BLUZtS1djUFRjeTFCdmlxNGxwUTMxM0tOOEQwRnZXcDdPTnA3V3JhVXVWRGZLWVNhME1OUVprWDN2OGsydGxoRmZoajBwS2ZJX2FGa1g3Q0NfV1B4OUhYcHZVMHFhMExLaDZ0ZWJOX3lLdTZYcVZjQnhXWkJPalRaVDQ1ZWluTTY2YWJFbHJWTThxbUhERTRXVmJSR3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T19:54:08.462Z"
+    },
+    {
+      "id": "rss_e1240a799cd902ff",
+      "timestamp": 1786635751000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Will all-out war in Yemen reignite as the Houthis escalate attacks? - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQNUx1NlFUQ0lkSkpES0NkeXpmYlQ3anlWLVQtSi1CSTNaTUJRVGlpM3F0RFdTX0U0c19QNGFqZlE1Y1g0Z2FjZnRCSVIzYklRYTZfcUMyWjBRbHltY0w3WUxrSXJZX3RUaGNyRUkwZmhGNnpXM21DTG5naWs0WEFvM01EcFZpaEllSFdpeGwtTHU4LV8ySWF6U25iNlduVDZ5WWVRSF930gGrAUFVX3lxTE5wd1RXTmdZalhXRHlxQXd0TXNyR1NwaGdkR0xLb3pQUmRYYlhQZnEzNXVzVDZpVm1hSENhQnVzTFhrU1daeVQtUkY3ZmNGTzlkV2E3X2VROEVRWWVKNjZhTXFTZGRyYjNOczVvT3VIanJNLTdfU3VBUy1GcDNORGp4ZVRYVXRxX2hrVVhlbzIyaHVCWUxDOENNdEtGSVFsam9JUzJSQV",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNUx1NlFUQ0lkSkpES0NkeXpmYlQ3anlWLVQtSi1CSTNaTUJRVGlpM3F0RFdTX0U0c19QNGFqZlE1Y1g0Z2FjZnRCSVIzYklRYTZfcUMyWjBRbHltY0w3WUxrSXJZX3RUaGNyRUkwZmhGNnpXM21DTG5naWs0WEFvM01EcFZpaEllSFdpeGwtTHU4LV8ySWF6U25iNlduVDZ5WWVRSF930gGrAUFVX3lxTE5wd1RXTmdZalhXRHlxQXd0TXNyR1NwaGdkR0xLb3pQUmRYYlhQZnEzNXVzVDZpVm1hSENhQnVzTFhrU1daeVQtUkY3ZmNGTzlkV2E3X2VROEVRWWVKNjZhTXFTZGRyYjNOczVvT3VIanJNLTdfU3VBUy1GcDNORGp4ZVRYVXRxX2hrVVhlbzIyaHVCWUxDOENNdEtGSVFsam9JUzJSQVNSbTl2dw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-13T19:54:08.461Z"
+    },
     {
       "id": "rss_3e744db0f27618bd",
       "timestamp": 1786634627000,
@@ -11187,52 +11231,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T03:03:37.931Z"
-    },
-    {
-      "id": "rss_942acf8c2429bc0f",
-      "timestamp": 1784770336000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi tanker on fire after Houthi strike in Red Sea - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNWHFUNklqeVVVa2ZkRHo4UkRSVWZnSlpJUGRkMU5BRzJtMll0c3lERUhEUkVSdG1ybDA0Vllla1l2ZmdDcEJ3VmptT0M0eGt0OHVRc0RzZjJZRlZ6Z19QaEg4Y1MxcXY3R2xaUWVaUVA4T2o5dnZXNE5fUVJJWm5ZS2VqNVZ6WGdNLW1sODVNa2RxWjFobHcwc1ln?oc=5\" target=\"_blank\">Saudi tanker on fire after Houthi strike in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWHFUNklqeVVVa2ZkRHo4UkRSVWZnSlpJUGRkMU5BRzJtMll0c3lERUhEUkVSdG1ybDA0Vllla1l2ZmdDcEJ3VmptT0M0eGt0OHVRc0RzZjJZRlZ6Z19QaEg4Y1MxcXY3R2xaUWVaUVA4T2o5dnZXNE5fUVJJWm5ZS2VqNVZ6WGdNLW1sODVNa2RxWjFobHcwc1ln?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T03:03:37.931Z"
-    },
-    {
-      "id": "rss_f0ce354aebea5e94",
-      "timestamp": 1784770114000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "EU raises threat assessment for transiting North Red Sea to medium - Shipping Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5\" target=\"_blank\">EU raises threat assessment for transiting North Red Sea to medium</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T01:34:55.195Z"
     }
   ]
 }
