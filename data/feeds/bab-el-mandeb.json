@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T19:54:09.803Z",
+  "last_fetch": "2026-08-13T20:36:45.745Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c0eb094fddd2d185",
+      "timestamp": 1786651443000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Surviving crew members devastated after deadly Houthi attack off Yemen - Yahoo News Canada",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTEtad1NjN2lCS3daOHdYUnlfa0hyZ2ktSURIWURuejYzR3JsdFl0QmFPVXFLYmdkTS00aE16blNTa3NHUndTZ01TVGY3R29LS3RnMGx6YVRUSmJ0cGNCVzdGeUFvWlBIa09qTHd1THdvWEpDeEhfMWMwTEhMZDl4VDFCNE03TnpR?oc=5\" target=\"_blank\">Surviving crew members devastated after deadly Houthi attack off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News Canada</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQTEtad1NjN2lCS3daOHdYUnlfa0hyZ2ktSURIWURuejYzR3JsdFl0QmFPVXFLYmdkTS00aE16blNTa3NHUndTZ01TVGY3R29LS3RnMGx6YVRUSmJ0cGNCVzdGeUFvWlBIa09qTHd1THdvWEpDeEhfMWMwTEhMZDl4VDFCNE03TnpR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T20:36:44.384Z"
+    },
     {
       "id": "rss_ff5e2db5768592c6",
       "timestamp": 1786648680000,
@@ -11207,29 +11228,6 @@
       "origin": "rss",
       "confidence": 0.51,
       "source_weight": 0.85,
-      "fetched_at": "2026-07-23T03:03:37.931Z"
-    },
-    {
-      "id": "rss_85d4bc69afb4f1d9",
-      "timestamp": 1784770552000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Claim Strikes on 2 Saudi Oil Tankers in Red Sea - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOUnVaX2NCcGJoU01vZ3k5ZWltZUx0Q1hKdDduNUZ0TXlrOVkyNE5abVBGS0hEN3E3ejlHYmZJQ2lpNHdrV3UwLXRvTEpZTHN6YmJCSFNNQ0d1T3A5NlgzY3hyQkRqX1FyUDNTRUxXQU94WV9MWV9UZk9GX0VEb2w5WVNTUVdDU2JZT2RhRmd5VVdsaFpm?oc=5\" target=\"_blank\">Houthis Claim Strikes on 2 Saudi Oil Tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUnVaX2NCcGJoU01vZ3k5ZWltZUx0Q1hKdDduNUZ0TXlrOVkyNE5abVBGS0hEN3E3ejlHYmZJQ2lpNHdrV3UwLXRvTEpZTHN6YmJCSFNNQ0d1T3A5NlgzY3hyQkRqX1FyUDNTRUxXQU94WV9MWV9UZk9GX0VEb2w5WVNTUVdDU2JZT2RhRmd5VVdsaFpm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
       "fetched_at": "2026-07-23T03:03:37.931Z"
     }
   ]
