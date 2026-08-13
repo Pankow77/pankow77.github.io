@@ -1,8 +1,75 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T07:19:05.811Z",
+  "last_fetch": "2026-08-13T09:58:33.538Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9304e14aca8360d6",
+      "timestamp": 1786614780000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Attack on Red Sea ship adds to global supply chain uncertainty, UN warns - VOV World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQcGtiNVpPMWFsSmxnWDB4UklIZGp0Nnp2VlphcDVab0VpNEFnUDdCajlsc1ctNFd4dTB6MGVwcEV6SldiZHZlbmFMRFNIMFpYeVZGdjlIN3ZHaFFtUll5cjVfVjZQQTZZc2x1Q3ZlSWRyUlNjd2FjRW5rWmhyY29PeXdSNVluVVlSb18zS3dycnlmMERoWWs3QWNjOFFXN1AyZElJRTFPMmY3R2pISHc?oc=5\" target=\"_blank\">Attack on Red Sea ship adds to global supply chain uncertainty, UN warns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOV World</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcGtiNVpPMWFsSmxnWDB4UklIZGp0Nnp2VlphcDVab0VpNEFnUDdCajlsc1ctNFd4dTB6MGVwcEV6SldiZHZlbmFMRFNIMFpYeVZGdjlIN3ZHaFFtUll5cjVfVjZQQTZZc2x1Q3ZlSWRyUlNjd2FjRW5rWmhyY29PeXdSNVluVVlSb18zS3dycnlmMERoWWs3QWNjOFFXN1AyZElJRTFPMmY3R2pISHc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T09:58:33.530Z"
+    },
+    {
+      "id": "rss_2179d4f6b3669fe2",
+      "timestamp": 1786614151000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 3,
+      "text_summary": "Yemeni forces say Houthi attack repelled in Taiz amid escalation - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxObG1mck84WmVJcXVfRFQ3M2pxMU9YLVNaaUd3dTdZQ2djQWo0TWJyS0lSUW80c2lzUmJaZnJqdUhuREdVR2hZMkJQdlJHZVF1NTMzQWhTRTNSRTdNTzhmQU91amNkR0JPLVlOVVFCcFBlemlBeTNHclRTaE9WT2VEcmJqaFVyMml1Ylk3WktiV3VJOUdQVzJiZXEzbERDMkFHU2d4dHJPU0XSAa4BQVVfeXFMTWthMFhZcFFuYVZUZktxRGdjTTBCSFFNaXhzXzh5dzlLNkdZblg4c2w5WW9RTllxMWx4MTlUSDdFUFlncjZLT3k1YTVHb0Fha0lLQ29LTlBhYUVuay1IbTRid2s3V3VORzV0bGJJRVRKWXo1bW9OT1RBdktkaUMzdGFhbmlZZEdIUGNRbDNmX1JMNlhydGVha0tEblV2bXZ1UE9iT2",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObG1mck84WmVJcXVfRFQ3M2pxMU9YLVNaaUd3dTdZQ2djQWo0TWJyS0lSUW80c2lzUmJaZnJqdUhuREdVR2hZMkJQdlJHZVF1NTMzQWhTRTNSRTdNTzhmQU91amNkR0JPLVlOVVFCcFBlemlBeTNHclRTaE9WT2VEcmJqaFVyMml1Ylk3WktiV3VJOUdQVzJiZXEzbERDMkFHU2d4dHJPU0XSAa4BQVVfeXFMTWthMFhZcFFuYVZUZktxRGdjTTBCSFFNaXhzXzh5dzlLNkdZblg4c2w5WW9RTllxMWx4MTlUSDdFUFlncjZLT3k1YTVHb0Fha0lLQ29LTlBhYUVuay1IbTRid2s3V3VORzV0bGJJRVRKWXo1bW9OT1RBdktkaUMzdGFhbmlZZEdIUGNRbDNmX1JMNlhydGVha0tEblV2bXZ1UE9iT2ZiOTlCc1locXJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-13T09:58:32.240Z"
+    },
+    {
+      "id": "rss_0dc816640b0ebc74",
+      "timestamp": 1786610821000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea ship attack leaves three citizens dead: Pakistani Foreign Minister - Egypt Independent",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUJvWHRtLW1qNW4wbWlnQW1aT3QtQjVCSFJpN01ya05pNmgtdDdGNVpGbDVzSDNlMFEzVTFQM2E3S1JCRDlUOUtoY2drREVKVDQyLXowMVYwdEJRRjhwV3JrUmZhMTBZZ3VZNS1VVjF2MHo0WFdCVmdVaUhrS2JoSldXTWJ5X3AzOUMwZUlWa3dMcGJEMENNQmtiN2RFTzdheFUwR3RTWk5adU0?oc=5\" target=\"_blank\">Red Sea ship attack leaves three citizens dead: Pakistani Foreign Minister</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egypt Independent</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUJvWHRtLW1qNW4wbWlnQW1aT3QtQjVCSFJpN01ya05pNmgtdDdGNVpGbDVzSDNlMFEzVTFQM2E3S1JCRDlUOUtoY2drREVKVDQyLXowMVYwdEJRRjhwV3JrUmZhMTBZZ3VZNS1VVjF2MHo0WFdCVmdVaUhrS2JoSldXTWJ5X3AzOUMwZUlWa3dMcGJEMENNQmtiN2RFTzdheFUwR3RTWk5adU0?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T09:58:33.530Z"
+    },
     {
       "id": "rss_7440e727139b6902",
       "timestamp": 1786577685000,
@@ -11174,75 +11241,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T19:29:55.692Z"
-    },
-    {
-      "id": "rss_631b83811578b088",
-      "timestamp": 1784739600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi blockade of Saudi Arabia opens second front in widening Iran war - Northeast Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDFHanZlVENZNVNDOFI0QS1YQjRGQWFCMmVCTWphc3Blam9vTXNuVEZlNEhSM1k2UGx1WDQzd2xEanJDMjNnMXgzWE5BemdnaWpIbUtCWHFReHg4RGFOTi1NNTM0TzhOSEVIZ3hLeU1HWFVEWGh0a0NCRVpLNlE0RHRkTDlDTEdHaXNGM2dueThfSTBtRTNNRzd4WnFQZHVjMmwyQU0tdlY4MVpXRXlF?oc=5\" target=\"_blank\">Houthi blockade of Saudi Arabia opens second front in widening Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Northeast Times</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUDFHanZlVENZNVNDOFI0QS1YQjRGQWFCMmVCTWphc3Blam9vTXNuVEZlNEhSM1k2UGx1WDQzd2xEanJDMjNnMXgzWE5BemdnaWpIbUtCWHFReHg4RGFOTi1NNTM0TzhOSEVIZ3hLeU1HWFVEWGh0a0NCRVpLNlE0RHRkTDlDTEdHaXNGM2dueThfSTBtRTNNRzd4WnFQZHVjMmwyQU0tdlY4MVpXRXlF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T22:21:39.092Z"
-    },
-    {
-      "id": "rss_d30b019500055346",
-      "timestamp": 1784737017000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi Threats Give Oil Markets a ‘Two Chokepoint Problem’ - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQdVgzSko3eE05OEJna0lDb243ZnN0TTBtTUNWUzB3aXlFM2hFeDdPc2JvVTBLdURwZm9VOXFQd2tVel9JOFJHSjJjY3pFbFRYOEVSZ3dJQVgwZVRya1FNZTU0QmtPNmF1QVFmU1hOQzJ0QWRTVWhXY1FmVEcxVHJJUUV0N24?oc=5\" target=\"_blank\">Houthi Threats Give Oil Markets a ‘Two Chokepoint Problem’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdVgzSko3eE05OEJna0lDb243ZnN0TTBtTUNWUzB3aXlFM2hFeDdPc2JvVTBLdURwZm9VOXFQd2tVel9JOFJHSjJjY3pFbFRYOEVSZ3dJQVgwZVRya1FNZTU0QmtPNmF1QVFmU1hOQzJ0QWRTVWhXY1FmVEcxVHJJUUV0N24?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T21:24:37.280Z"
-    },
-    {
-      "id": "rss_688b4ca958924e77",
-      "timestamp": 1784736317000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Houthis deploy missiles and drones to attack ships in southern Red Sea, naval group says - oodaloop.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOaDZ2OU5qV2JuTXdxQ3dINDNjbExaLUhra3BEMUFIQkFjUklPdjUzTmZTaFYwUWNZQnluQXU2LWtTRzkxR2g3bW96NVF5VUtvWmk0NjRSNHRCNUV1NVZNa29nRERwa2hvU1A1YUFtaUQ2Z2FZS2h4MlB0UHZIdVZ3N0RoemlhZ0U4WnlGZXpoYjN0UnE5UDlmUzBLckgwYUNoU3lCYkwweU1LWEc3UWQxd1pXLVVMeDRXdHpwT18tMS1hX0o1VXdF?oc=5\" target=\"_blank\">Houthis deploy missiles and drones to attack ships in southern Red Sea, naval group says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">oodaloop.com</font>",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaDZ2OU5qV2JuTXdxQ3dINDNjbExaLUhra3BEMUFIQkFjUklPdjUzTmZTaFYwUWNZQnluQXU2LWtTRzkxR2g3bW96NVF5VUtvWmk0NjRSNHRCNUV1NVZNa29nRERwa2hvU1A1YUFtaUQ2Z2FZS2h4MlB0UHZIdVZ3N0RoemlhZ0U4WnlGZXpoYjN0UnE5UDlmUzBLckgwYUNoU3lCYkwweU1LWEc3UWQxd1pXLVVMeDRXdHpwT18tMS1hX0o1VXdF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T16:30:48.313Z"
     }
   ]
 }
