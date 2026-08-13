@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T13:54:55.871Z",
+  "last_fetch": "2026-08-13T14:52:05.240Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_cf0ff125f2003ffb",
+      "timestamp": 1786630999000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels clash with Yemeni government forces and other Mideast developments - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb2MxRTJRTzg2NllNWmJxMGRBWWpWRWRQX0tzYU9SQUJnS09ya29rYWwtRWxkOTA3WjhObzVwQ1NLeVU4dHNQWTZ3YjFsQnJGaGNnMFNNallUNUZGVUZMU0RJcXE1Qi1nSjZvQ0VJNmVHLWphOVlKZzZNaEFVVGpKTVA0S0k2T3JjU3BxY1hRSTd5OGZObWlheVhUWk5UZmpGUHFLTWU1QnJKUk9fcmxoMnhfcGdVSTNJTjhDOUNXNmZkTjVIMGdXejBrX1U5TktVSjNFV1RRZlNYQ1MzS2JZQ29B?oc=5\" target=\"_blank\">Iran-backed Houthi rebels clash with Yemeni government forces and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb2MxRTJRTzg2NllNWmJxMGRBWWpWRWRQX0tzYU9SQUJnS09ya29rYWwtRWxkOTA3WjhObzVwQ1NLeVU4dHNQWTZ3YjFsQnJGaGNnMFNNallUNUZGVUZMU0RJcXE1Qi1nSjZvQ0VJNmVHLWphOVlKZzZNaEFVVGpKTVA0S0k2T3JjU3BxY1hRSTd5OGZObWlheVhUWk5UZmpGUHFLTWU1QnJKUk9fcmxoMnhfcGdVSTNJTjhDOUNXNmZkTjVIMGdXejBrX1U5TktVSjNFV1RRZlNYQ1MzS2JZQ29B?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T14:52:03.794Z"
+    },
     {
       "id": "rss_78348687ed96fac4",
       "timestamp": 1786625040000,
@@ -11212,29 +11235,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-23T16:59:13.605Z"
-    },
-    {
-      "id": "rss_e59ec0444f3786f6",
-      "timestamp": 1784763934000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Crude oil adds to gains after Houthis attack two Saudi tankers in the Red Sea (USO:NYSEARCA) - Seeking Alpha",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPYjBwNndRWVBRdWkyckFEUjZBVVdCaU1OV0NQS1pmbUR3WWRxVGdVQjZ4SHdMXzl0c3U5d2s0c3hHbFBIUmNUZFNIelFMb2xJRG8xNVBFT2Jaa3FWNzZJM0RWOUtSU29zaVE0NjV0eUViamxCbDhILTZkRTNOVGhlUTl6dF9ZSVQ0T3ZSM2hhQ3pPT3R1WjRFZnlpdXZwNDhNcy10Y2pDdEY2RUtCQXhYdA?oc=5\" target=\"_blank\">Crude oil adds to gains after Houthis attack two Saudi tankers in the Red Sea (USO:NYSEARCA)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYjBwNndRWVBRdWkyckFEUjZBVVdCaU1OV0NQS1pmbUR3WWRxVGdVQjZ4SHdMXzl0c3U5d2s0c3hHbFBIUmNUZFNIelFMb2xJRG8xNVBFT2Jaa3FWNzZJM0RWOUtSU29zaVE0NjV0eUViamxCbDhILTZkRTNOVGhlUTl6dF9ZSVQ0T3ZSM2hhQ3pPT3R1WjRFZnlpdXZwNDhNcy10Y2pDdEY2RUtCQXhYdA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T00:31:05.853Z"
     }
   ]
 }
