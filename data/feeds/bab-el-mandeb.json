@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-13T01:28:55.892Z",
+  "last_fetch": "2026-08-13T03:42:25.130Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7440e727139b6902",
+      "timestamp": 1786577685000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Kills Six in Red Sea - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOY3BLZUNJXzVjNkRBNXJleVhHQ2drOTFONjlVZ1J5R1hacjYyZGxIaE5KaHZ3OUlIRk94T3NZOXBTeTdraHlJWG9HcS0yYld5Q1pUaHRkWldSbFVpUG5RU0dlalBLU2hNcXdWZnNsQk1RX3ktZUVxWWo2NEoyTHQ3WGppaTE?oc=5\" target=\"_blank\">Houthi Attack Kills Six in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOY3BLZUNJXzVjNkRBNXJleVhHQ2drOTFONjlVZ1J5R1hacjYyZGxIaE5KaHZ3OUlIRk94T3NZOXBTeTdraHlJWG9HcS0yYld5Q1pUaHRkWldSbFVpUG5RU0dlalBLU2hNcXdWZnNsQk1RX3ktZUVxWWo2NEoyTHQ3WGppaTE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T03:42:23.841Z"
+    },
     {
       "id": "rss_3316ee0e1b7f9f1e",
       "timestamp": 1786570574000,
@@ -541,6 +562,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T10:56:43.095Z"
+    },
+    {
+      "id": "rss_008f7258c91db0c4",
+      "timestamp": 1786528140000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Four killed in the Red Sea as Houthis claim ship attack - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQQjIyZWszNnRZcExma3NrXzRkTE9EUzBwYmlVYU9fb24wcVI2dkkzREhhbTRjeFljNXlaZm5KQzJ6aWprcUxiYmdjWTBWdTVrNVhKa0pYMWJRZE1rVGwyXzAwenRCVDNLMnJwRXRhYW93ZEN0NENFck16bnpfd3Y5eXJpSm1PU2ZGdVZFV1dSUWJfNXpYUHV2a0ZoaGNUbThneVBFRQ?oc=5\" target=\"_blank\">Four killed in the Red Sea as Houthis claim ship attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQjIyZWszNnRZcExma3NrXzRkTE9EUzBwYmlVYU9fb24wcVI2dkkzREhhbTRjeFljNXlaZm5KQzJ6aWprcUxiYmdjWTBWdTVrNVhKa0pYMWJRZE1rVGwyXzAwenRCVDNLMnJwRXRhYW93ZEN0NENFck16bnpfd3Y5eXJpSm1PU2ZGdVZFV1dSUWJfNXpYUHV2a0ZoaGNUbThneVBFRQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-13T03:42:25.123Z"
     },
     {
       "id": "rss_896ddbe453b7764b",
@@ -11199,52 +11243,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-22T16:30:48.313Z"
-    },
-    {
-      "id": "rss_39884fc8be429c02",
-      "timestamp": 1784729737000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Markets Are Bracing for a Second Chokepoint Crisis as Tankers Begin to Turn Around in the Red Sea - 24/7 Wall St.",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3gFBVV95cUxNM2NuRENVQVhPZFZSb0F5WkxucTQ1c3ZSaEh6Mi1BUUNMLTk5REpEdXRoZ0s0M1hxYUtBUmFSZGhWY19EWEpKeUlkbmRIOFFOcXJheUZ3QThsQjA3VDhDemRkaUtsUUlRTUVRby1QY0NoRDlpTDBnT1czYU44LUhpN0tKeHl3RHpjaktock8zeHoybks2RE1YR1BmcEVFR2lRVnM4U1hkRnpFNWRjdzlHZExQRmNvSGdDSzV3ak5wakozVW5ib0FpT0ptMmpxQWFEUUJ5OTA2d096eGFkR1E?oc=5\" target=\"_blank\">Oil Markets Are Bracing for a Second Chokepoint Crisis as Tankers Begin to Turn Around in the Red Sea</a>&nbsp;&nbsp;<font color",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNM2NuRENVQVhPZFZSb0F5WkxucTQ1c3ZSaEh6Mi1BUUNMLTk5REpEdXRoZ0s0M1hxYUtBUmFSZGhWY19EWEpKeUlkbmRIOFFOcXJheUZ3QThsQjA3VDhDemRkaUtsUUlRTUVRby1QY0NoRDlpTDBnT1czYU44LUhpN0tKeHl3RHpjaktock8zeHoybks2RE1YR1BmcEVFR2lRVnM4U1hkRnpFNWRjdzlHZExQRmNvSGdDSzV3ak5wakozVW5ib0FpT0ptMmpxQWFEUUJ5OTA2d096eGFkR1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T14:40:38.353Z"
-    },
-    {
-      "id": "rss_59366ba0c2f9413b",
-      "timestamp": 1784729454000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Tankers keep avoiding Red Sea as Yemen's Houthis threaten shipping lanes - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XR1h1OVlxR2xlekxQeDN6Wk93bWxpVG1pYkVPRVkzTUUtVzM4ODN4bzAtMV9HUVMxOEk3QUphdjVBdnZhcXlITnM4eDVNT2FISHhkWFMyREljaWls?oc=5\" target=\"_blank\">Tankers keep avoiding Red Sea as Yemen's Houthis threaten shipping lanes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1XR1h1OVlxR2xlekxQeDN6Wk93bWxpVG1pYkVPRVkzTUUtVzM4ODN4bzAtMV9HUVMxOEk3QUphdjVBdnZhcXlITnM4eDVNT2FISHhkWFMyREljaWls?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-22T14:40:38.353Z"
     }
   ]
 }
