@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T05:27:47.108Z",
+  "last_fetch": "2026-08-14T08:10:32.655Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2d08e0b7f180b807",
+      "timestamp": 1786679553000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Crew of Yemeni vessel recount their chaotic rescue after Houthis’ deadly attack - fox5sandiego.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZnlJenBrOV96MklKakZLTjYxcldWYVRvN0pZR293RzB5bHpuU2psNzM5NFJZcGoxM1VpbThGSXNjcE9QWFpWUTFTWWxUaEt6bHZrYWFfandGSU9WN0R6cWppS2lxb0JnQ1ljVE1vRnppdUJFZnViVkVPSVlCbjlpdGRFMU8tTm5ZZ2NYYkw5ZnlSOU5DRXIzNTdMV002YTBPbEoycXdFMTZCSjNlVjhCdTljVENfd2hRZDFJQVZJVXV0OXUzMnV6bGtmbHBXa29WUkZuU0VfWdIB3AFBVV95cUxQNENxLXVQRXpPSG54eE14V000X1FiSGk4cDNSbF9mQkNaaUFQQThnZDBRdEl4akYySVBHTnJuNkRiRWRvRlB2XzZLbXpnUHhFWS1kSjB1MmROelhkY0FzSUprakpEbEFPSnZ6N0VvZUtVeU1fTV",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZnlJenBrOV96MklKakZLTjYxcldWYVRvN0pZR293RzB5bHpuU2psNzM5NFJZcGoxM1VpbThGSXNjcE9QWFpWUTFTWWxUaEt6bHZrYWFfandGSU9WN0R6cWppS2lxb0JnQ1ljVE1vRnppdUJFZnViVkVPSVlCbjlpdGRFMU8tTm5ZZ2NYYkw5ZnlSOU5DRXIzNTdMV002YTBPbEoycXdFMTZCSjNlVjhCdTljVENfd2hRZDFJQVZJVXV0OXUzMnV6bGtmbHBXa29WUkZuU0VfWdIB3AFBVV95cUxQNENxLXVQRXpPSG54eE14V000X1FiSGk4cDNSbF9mQkNaaUFQQThnZDBRdEl4akYySVBHTnJuNkRiRWRvRlB2XzZLbXpnUHhFWS1kSjB1MmROelhkY0FzSUprakpEbEFPSnZ6N0VvZUtVeU1fTVJQQUVnd0J3RWZrV2k3RTdMcEtoT05PTTd4UFhXcXliczQtSUJRNzNRRjhNTy1CeWl6Vzh0Sk1ZRktzUFk1ck1LVmpUUGt2a3d6dDdyOENGNEVEMnZ5SFkxckYyaWVETzZFTG9fOFA4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T08:10:31.327Z"
+    },
     {
       "id": "rss_0e1458097f4f5099",
       "timestamp": 1786666275000,
@@ -11203,30 +11226,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T03:03:37.931Z"
-    },
-    {
-      "id": "rss_f264941d448b9111",
-      "timestamp": 1784774340000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis claim attack on oil tankers after US launches more strikes on Iran - Yahoo News Canada",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE0yQTRYM0FRcXdPMFB2RlQ5LUZfamJEdnJ0Smlha090TVFPVk1HMmphR0RVUlo2eTB3TEJqUENpV0lVZFFCZEE4LXpSb2stZGt6bk1xU3I1a1FJZk5ON3J0a19sSTN5RnRlRE12bThnUHdyay16TmJQY0YzT2d3QQ?oc=5\" target=\"_blank\">Houthis claim attack on oil tankers after US launches more strikes on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News Canada</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0yQTRYM0FRcXdPMFB2RlQ5LUZfamJEdnJ0Smlha090TVFPVk1HMmphR0RVUlo2eTB3TEJqUENpV0lVZFFCZEE4LXpSb2stZGt6bk1xU3I1a1FJZk5ON3J0a19sSTN5RnRlRE12bThnUHdyay16TmJQY0YzT2d3QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T06:00:09.653Z"
     }
   ]
 }
