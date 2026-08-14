@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T10:53:58.329Z",
+  "last_fetch": "2026-08-14T11:40:36.864Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c4ec5dcfaff09248",
+      "timestamp": 1786707288000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Critical News &amp; Insights on European Politics, Economy, Foreign Affairs, Business &amp; Technology - europeansting.com Deadly attack on Red Sea ship adds to global supply chain uncertainty - The European Sting",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQN2lONGpKVzhFYmJSUTNQSlQtTFZFejJodkVEMzBhTXQzUUpSSlIwY3JLb0tUR3E2NXRvanVkRlVzWjVyNmtGUDEzaDRiYVdlNlJqR1B3YjExNzRsUEg3Rm01V3ZDMGVBN0xiWXh1ck5IcENYMTZDUzF5TjZvVjAwLVRBZzJtdnhCazRnSWpMSVlXOEVkbUpfU0Zhd0tOVmVjYkE?oc=5\" target=\"_blank\">Critical News & Insights on European Politics, Economy, Foreign Affairs, Business & Technology - europeansting.com Deadly attack on Red Sea ship adds to global supply chain uncertainty</a>&nbsp;&nbsp;<font co",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQN2lONGpKVzhFYmJSUTNQSlQtTFZFejJodkVEMzBhTXQzUUpSSlIwY3JLb0tUR3E2NXRvanVkRlVzWjVyNmtGUDEzaDRiYVdlNlJqR1B3YjExNzRsUEg3Rm01V3ZDMGVBN0xiWXh1ck5IcENYMTZDUzF5TjZvVjAwLVRBZzJtdnhCazRnSWpMSVlXOEVkbUpfU0Zhd0tOVmVjYkE?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T11:40:36.857Z"
+    },
+    {
+      "id": "rss_f6bc436afe14faf9",
+      "timestamp": 1786706470000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis Claim Drone Attack On Saudi Aramco Refinery As Tensions With Riyadh Rise - i24NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPaHFTZVpUOE1oZnk1aGltejMwMnVDWDZvZkhDSDVSTEtGd25vUW5xUDVGYTY4aXJZY1VIbGJVal90UmU4N1ZuWlZQRHJiT0xWNUJkLXNybW9sQU9HR3AwUUhTSHJMczl6cGtRRlpLc2ZCbXdYb0V0MVR6Q01ETlJ1THd4SmZrajhDSl9sU2hNSV9NeHdMVmhTNnROaDB1LTlJT2VCWlVzNElGTXVjRFpJWVJ5cm5pVFIxTkVKQm9KTHh5eGVKTVZZ?oc=5\" target=\"_blank\">Houthis Claim Drone Attack On Saudi Aramco Refinery As Tensions With Riyadh Rise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPaHFTZVpUOE1oZnk1aGltejMwMnVDWDZvZkhDSDVSTEtGd25vUW5xUDVGYTY4aXJZY1VIbGJVal90UmU4N1ZuWlZQRHJiT0xWNUJkLXNybW9sQU9HR3AwUUhTSHJMczl6cGtRRlpLc2ZCbXdYb0V0MVR6Q01ETlJ1THd4SmZrajhDSl9sU2hNSV9NeHdMVmhTNnROaDB1LTlJT2VCWlVzNElGTXVjRFpJWVJ5cm5pVFIxTkVKQm9KTHh5eGVKTVZZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T11:40:35.675Z"
+    },
     {
       "id": "rss_2d08e0b7f180b807",
       "timestamp": 1786679553000,
@@ -11180,52 +11226,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T06:00:09.653Z"
-    },
-    {
-      "id": "rss_17a3ec29a0a45e2b",
-      "timestamp": 1784778507000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim attack on Saudi tankers in Red Sea - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NYkF5b3JJS0stVWZxYS05X2tzQm8yNDFIUnktWjlmYUg2MFVfT3dlZEVhX2t1YkpGQTNEVUQ0OU9vUXRsc2k0eENXUUJuOFU0Z1pQUEhWenlwZw?oc=5\" target=\"_blank\">Houthis claim attack on Saudi tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NYkF5b3JJS0stVWZxYS05X2tzQm8yNDFIUnktWjlmYUg2MFVfT3dlZEVhX2t1YkpGQTNEVUQ0OU9vUXRsc2k0eENXUUJuOFU0Z1pQUEhWenlwZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T09:17:32.874Z"
-    },
-    {
-      "id": "rss_7307c38464034439",
-      "timestamp": 1784775029000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea - chinadailyasia.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE8xUzRkU2wxOU5TcG12SExRZUlQN0hmcGNHVGdXVkxxTXl2Y3c3QnFvNFVCSmhBZVgtTDdObVpaV3FCNjB0enhwYzhuMjFQbmFjZXVwX3dxYzA?oc=5\" target=\"_blank\">Yemen's Houthi group claims attack on 2 Saudi oil tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyasia.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8xUzRkU2wxOU5TcG12SExRZUlQN0hmcGNHVGdXVkxxTXl2Y3c3QnFvNFVCSmhBZVgtTDdObVpaV3FCNjB0enhwYzhuMjFQbmFjZXVwX3dxYzA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T03:03:37.931Z"
     }
   ]
 }
