@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T14:13:25.145Z",
+  "last_fetch": "2026-08-14T15:15:08.784Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2c82a09bd20c15ef",
+      "timestamp": 1786719480000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea traffic holds firm despite Houthi blockade as UN warns Yemen on brink of renewed war - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbXA4bUhhMUtiUHRCaFBDSTNEX2N1S3lJaUh4dUpUUGR3SzdTZGlaUDd1Z1FUaXc5OFZheW5BNUlhTUZ0Vlg2azk1bDBFU1VIUHBzTkNUOW9TWFMtVWRSekgzRDd1S2xTbXItM0ZjZEhrZVZNVW9OcmhRUDFjQ29KbWFsNS1EVWR0RlA4Nks2V2VVS1VydDk4dHZOejZwU3pzeEY5dERnbURvUDlwUXNDRFRBLXpfTlpaMkM4ZVM2Q2pFWU1leTBrYQ?oc=5\" target=\"_blank\">Red Sea traffic holds firm despite Houthi blockade as UN warns Yemen on brink of renewed war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPbXA4bUhhMUtiUHRCaFBDSTNEX2N1S3lJaUh4dUpUUGR3SzdTZGlaUDd1Z1FUaXc5OFZheW5BNUlhTUZ0Vlg2azk1bDBFU1VIUHBzTkNUOW9TWFMtVWRSekgzRDd1S2xTbXItM0ZjZEhrZVZNVW9OcmhRUDFjQ29KbWFsNS1EVWR0RlA4Nks2V2VVS1VydDk4dHZOejZwU3pzeEY5dERnbURvUDlwUXNDRFRBLXpfTlpaMkM4ZVM2Q2pFWU1leTBrYQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T15:15:07.430Z"
+    },
     {
       "id": "rss_c4ec5dcfaff09248",
       "timestamp": 1786707288000,
@@ -11203,29 +11224,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T05:04:01.978Z"
-    },
-    {
-      "id": "rss_c4d18c02f01e0453",
-      "timestamp": 1784779200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Nigeria's LNG shipment becomes first to cross key Red Sea route in four months amid Houthi threats - Business Insider Africa",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa2dvN0FFQ2JWdVp0Q055M3VNYjd6MDJQNlM0Qk9XNndqQ2Z1Yi02LXFsREYtRmJqZW55b3FUb0M3S1pXbGtCWmRnVXlVSDZPcHlKRWk3UFhpQmFua0RRWlBBQ3lzNnFSOE1Ea2VXOXFaLVRiU1U5X1pTWVg0S3F4RG9fX0ZkQmZQSlBpVXlvaFRhR3d4OS0yQzJ6UzBhNDFXei14RmZnT1ZUTndzbXJfSE51SjFCbnpsNWkxZjE3VUZOTUVtWGgwNjFXbTdkRnZUSkxXWnln?oc=5\" target=\"_blank\">Nigeria's LNG shipment becomes first to cross key Red Sea route in four months amid Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bus",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOa2dvN0FFQ2JWdVp0Q055M3VNYjd6MDJQNlM0Qk9XNndqQ2Z1Yi02LXFsREYtRmJqZW55b3FUb0M3S1pXbGtCWmRnVXlVSDZPcHlKRWk3UFhpQmFua0RRWlBBQ3lzNnFSOE1Ea2VXOXFaLVRiU1U5X1pTWVg0S3F4RG9fX0ZkQmZQSlBpVXlvaFRhR3d4OS0yQzJ6UzBhNDFXei14RmZnT1ZUTndzbXJfSE51SjFCbnpsNWkxZjE3VUZOTUVtWGgwNjFXbTdkRnZUSkxXWnln?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T06:00:09.653Z"
     }
   ]
 }
