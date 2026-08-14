@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T20:02:39.422Z",
+  "last_fetch": "2026-08-14T20:54:10.353Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -159,6 +159,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-14T11:40:35.675Z"
+    },
+    {
+      "id": "rss_ecc72f62431e8d9c",
+      "timestamp": 1786695478000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Crew of Yemeni vessel recounts their chaotic rescue after Houthis’ deadly attack - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOZEpQRU5WOXJSZUVpUjdlODNDbjREcERHZ09zR3RYYk0xUGgwYzJIMVpWU0FQN0lKQ2xwTVlGZ3NrVGpmYk9Jb0lGR2NLNEw5ajY2ZGhxTkR4RFhUc1VCY1lPMnpzQktYbW5EVHNfTkRYd2J0LTNrOHR2LUlXcnJGTjJhU2ZTVl9hMjhGWlRXUjJ0aGctV1lSWW9KOGpOQQ?oc=5\" target=\"_blank\">Crew of Yemeni vessel recounts their chaotic rescue after Houthis’ deadly attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOZEpQRU5WOXJSZUVpUjdlODNDbjREcERHZ09zR3RYYk0xUGgwYzJIMVpWU0FQN0lKQ2xwTVlGZ3NrVGpmYk9Jb0lGR2NLNEw5ajY2ZGhxTkR4RFhUc1VCY1lPMnpzQktYbW5EVHNfTkRYd2J0LTNrOHR2LUlXcnJGTjJhU2ZTVl9hMjhGWlRXUjJ0aGctV1lSWW9KOGpOQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T20:54:09.139Z"
     },
     {
       "id": "rss_2d08e0b7f180b807",
@@ -11196,29 +11219,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T06:00:09.652Z"
-    },
-    {
-      "id": "rss_cb294e1713de5640",
-      "timestamp": 1784783892000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack two Saudi oil tankers, set one ablaze in Red Sea - mediaselangor.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9DZXNzVldqaTZxdDE5aFJwYUVacHJuTTdqdlZEVEZxcThtcXpSazRlbERwUGdsei1odVFLY09HclU2SV9vYWtjeldZc2gwSDZHRGNyMHJB?oc=5\" target=\"_blank\">Houthis attack two Saudi oil tankers, set one ablaze in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">mediaselangor.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9DZXNzVldqaTZxdDE5aFJwYUVacHJuTTdqdlZEVEZxcThtcXpSazRlbERwUGdsei1odVFLY09HclU2SV9vYWtjeldZc2gwSDZHRGNyMHJB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T06:00:09.653Z"
     }
   ]
 }
