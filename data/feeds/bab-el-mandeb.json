@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T19:27:02.557Z",
+  "last_fetch": "2026-08-14T20:02:39.422Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a682611719a64b8",
+      "timestamp": 1786736091000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "4 civilians killed in Houthi missile attack on Yemen’s Mocha: Report - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNaG1tQ18yV09hRVIzQzhrX3JjYlRnczhnV1ZjS09WTkczVVR4R1JOMzVZOGRwTkpWRURKaTRNa194cUtKV3FDNHB4eEh6dEJKY25JTmNMYWJZVE9PanNZT2VkMzN5ZkJnZzY4SkpNNkdZdUtnVWdxck9HeU03UVVWY1Qway1FWWRzeXJqVHJTQ3NjU3NPYjN2WTQ3Qkt4SkdObU44U0RfNERkZE5EY0ZEMWZn?oc=5\" target=\"_blank\">4 civilians killed in Houthi missile attack on Yemen’s Mocha: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNaG1tQ18yV09hRVIzQzhrX3JjYlRnczhnV1ZjS09WTkczVVR4R1JOMzVZOGRwTkpWRURKaTRNa194cUtKV3FDNHB4eEh6dEJKY25JTmNMYWJZVE9PanNZT2VkMzN5ZkJnZzY4SkpNNkdZdUtnVWdxck9HeU03UVVWY1Qway1FWWRzeXJqVHJTQ3NjU3NPYjN2WTQ3Qkt4SkdObU44U0RfNERkZE5EY0ZEMWZn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T20:02:38.091Z"
+    },
     {
       "id": "rss_5ecc97eb3ea73758",
       "timestamp": 1786733894000,
@@ -11196,29 +11219,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T06:00:09.653Z"
-    },
-    {
-      "id": "rss_c2966a1de221ea9a",
-      "timestamp": 1784781002000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim attack on two Saudi oil tankers - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbQ?oc=5\" target=\"_blank\">Yemen’s Houthis claim attack on two Saudi oil tankers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al Jazeera</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRkQ3bDFHdEZrQjNEQmtHZkRSUk1Ydnp4YXNDbHF2V0lDSkFmaEVrcmcxd3NPNVU5aXA3TnlWSFF0LW54cXBMcDcyS3ptOXlLaEl2ZVBITjN0T0Vra2llVjNBZUFTY0Z1N0FXQ0RNSnR1ZGI2MHN1bXJqdUZsdWxLNXA2dWdXVnhBejZYZEgzZnJwb2R3TTFTbQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-24T18:30:33.711Z"
     }
   ]
 }
