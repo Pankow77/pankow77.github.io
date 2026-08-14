@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T15:15:08.784Z",
+  "last_fetch": "2026-08-14T17:26:24.686Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-14T15:15:07.430Z"
+    },
+    {
+      "id": "rss_b6a1b9ae6f6fa83b",
+      "timestamp": 1786712634000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 4,
+      "text_summary": "Four crew killed in Red Sea attack while missile strike reported in Gulf - The Business Standard",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOUHhadlNzU1hFNllHUG1qZ21zSk8tdHRZbWttcnV0bzBfaHBuUkFxcjhGazUyTG96eXIxNUU1UVl1MzNsTVQ0RnFlWFQteTgtdVdBR1FPWFV4eXJMOHJzdFl4NWxpTzMwNUItbFFaR19HdVRFcWoyX0ZwVy1HUXFjVEU3eEh0Rno2Z1pTaFVXQXZpRTk2ZV9rLW1pTHZEM3Vqd0hhX0ZUNNIBrAFBVV95cUxQSlhJYlo0TVNSYW9aMUUtUmlRMERMbWx1dnJ5dlRYTUgtUG1uZzQtY2dwNFItMmhZRDItVVpkeFh5dTZMMzY5cjd0VkszV1pLRTA2ajJKSE5HZmlGaHI3bmgxSEwyeFplcW5xOFhIYzJTRTVxVTMtUkd1QkZfaWh1Ykdwb1BrWjJhYVVqeFJ0QmYtSzRfR2ZOV1ZESTBGZ2dveS0tLT",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUHhadlNzU1hFNllHUG1qZ21zSk8tdHRZbWttcnV0bzBfaHBuUkFxcjhGazUyTG96eXIxNUU1UVl1MzNsTVQ0RnFlWFQteTgtdVdBR1FPWFV4eXJMOHJzdFl4NWxpTzMwNUItbFFaR19HdVRFcWoyX0ZwVy1HUXFjVEU3eEh0Rno2Z1pTaFVXQXZpRTk2ZV9rLW1pTHZEM3Vqd0hhX0ZUNNIBrAFBVV95cUxQSlhJYlo0TVNSYW9aMUUtUmlRMERMbWx1dnJ5dlRYTUgtUG1uZzQtY2dwNFItMmhZRDItVVpkeFh5dTZMMzY5cjd0VkszV1pLRTA2ajJKSE5HZmlGaHI3bmgxSEwyeFplcW5xOFhIYzJTRTVxVTMtUkd1QkZfaWh1Ykdwb1BrWjJhYVVqeFJ0QmYtSzRfR2ZOV1ZESTBGZ2dveS0tLTd0UjYzb0pK?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T17:26:23.194Z"
     },
     {
       "id": "rss_c4ec5dcfaff09248",
@@ -11200,30 +11223,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-23T07:02:01.710Z"
-    },
-    {
-      "id": "rss_ba85713c294a8248",
-      "timestamp": 1784779320000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis target Red Sea shipping as US hits Iran - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNeHZwekhOV1R4UlJnUXEzaS14OGR6UHFHSWRVdi1lZF8yT2xiYVZ6SkRRbDNMcUQtYUtZa1lxa2oyblVvaVR6TzEydXZVbk9KQ3VVUHlPeVJWUlRFNWdhUFgtMWFkWmNuS3RGbGRsZFNuV2RRSGwta0VrZmN3aUhibEpJTHZ0YmthUDR5d244aGc?oc=5\" target=\"_blank\">Houthis target Red Sea shipping as US hits Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNeHZwekhOV1R4UlJnUXEzaS14OGR6UHFHSWRVdi1lZF8yT2xiYVZ6SkRRbDNMcUQtYUtZa1lxa2oyblVvaVR6TzEydXZVbk9KQ3VVUHlPeVJWUlRFNWdhUFgtMWFkWmNuS3RGbGRsZFNuV2RRSGwta0VrZmN3aUhibEpJTHZ0YmthUDR5d244aGc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T05:04:01.978Z"
     }
   ]
 }
