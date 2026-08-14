@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T18:23:25.384Z",
+  "last_fetch": "2026-08-14T19:27:02.557Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5ecc97eb3ea73758",
+      "timestamp": 1786733894000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Yemen’s Mokha reportedly kills six - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOaDF3Vld4RzE3MEdfODlWeVhMelUybjl6NnEwYXg3bWYwSF84MHp5VGp4OGdBTGt1NHdSc2dWemhjd3d4SWZoSmdLcjV2ZWV1MDdzWG5KM0NLbHVIWVR3NEtGWS16cWFqM1lkNEFmZ1h5S3YzN1FwcU15cE92S3VEemFzbE93RnM2S2ZyMm4yQ3NRT1RsUHZXYTZFMTQ?oc=5\" target=\"_blank\">Houthi attack on Yemen’s Mokha reportedly kills six</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaDF3Vld4RzE3MEdfODlWeVhMelUybjl6NnEwYXg3bWYwSF84MHp5VGp4OGdBTGt1NHdSc2dWemhjd3d4SWZoSmdLcjV2ZWV1MDdzWG5KM0NLbHVIWVR3NEtGWS16cWFqM1lkNEFmZ1h5S3YzN1FwcU15cE92S3VEemFzbE93RnM2S2ZyMm4yQ3NRT1RsUHZXYTZFMTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T19:27:01.096Z"
+    },
     {
       "id": "rss_637a1119f728c143",
       "timestamp": 1786729035000,
@@ -11198,30 +11219,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-24T18:30:33.711Z"
-    },
-    {
-      "id": "rss_f173993704ba47db",
-      "timestamp": 1784780340000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis claim strikes on two Saudi tankers as US attacks on Iran widen - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ1JsblNHaHJYUGZkamxpRE45THVhZ1htLVhaczA3VVJla3ZOWHhjVGtESVljTjRKTFZPSmhpY0lvTndkdlk4QU9uVi13Z3BQRG9CYVNsLWh2OGl4QmM3V2g3VWRnNnp1MGNUMzhEOXp2VTFMUjBiX1cxbXhzb0doNy1BNGZGdF9CWThfbGIwREtxekh5bGdCY0QzbXVod2k0?oc=5\" target=\"_blank\">Houthis claim strikes on two Saudi tankers as US attacks on Iran widen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNZ1JsblNHaHJYUGZkamxpRE45THVhZ1htLVhaczA3VVJla3ZOWHhjVGtESVljTjRKTFZPSmhpY0lvTndkdlk4QU9uVi13Z3BQRG9CYVNsLWh2OGl4QmM3V2g3VWRnNnp1MGNUMzhEOXp2VTFMUjBiX1cxbXhzb0doNy1BNGZGdF9CWThfbGIwREtxekh5bGdCY0QzbXVod2k0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T06:00:09.653Z"
     }
   ]
 }
