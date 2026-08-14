@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-14T21:20:14.041Z",
+  "last_fetch": "2026-08-14T21:48:06.035Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_326185784e0b8da8",
+      "timestamp": 1786740159000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Yemeni port city kills 8, government official says amid strained truce - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQVXBsbHJKenlrWmNYWHQ1UmE3a3BhZVVDcVY4Z3FwbE8zOGRuSmx1ZUwzSXowUFRtZ25CMjhFem93YXhPWHhPd1M2NU1WUXBfLUg3S0pHeE1JTm15R1hqS3JfTjE2RU9xUW9NdXJRTWVSaG9ybzFrUElBb0F2cTRyc1h6ajN3bVBzODdJUGd4SFB0aVJycThQZ0J6akZFd0FqcVZlajJ2Tk40UVhoZC0yddIBtgFBVV95cUxQYTQxdE9RQjBlU0lGTGxFTVdpR2dtaExFbXZCUTM3eWVkclZQUkxpMHpKQzE3aUhsOWJSUWFidDhjSWpRd1l4TzZERkxiQWtlTTg4MEVJWDNYZDFMVVBGNEhBcUxfRkFOc2QzUkp4NFZnRTVXX2FtSlhqMWk0UjJoSkFRU0luMzhvMXFMYkdVWFNmcGxpMjNMQkR6SU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVXBsbHJKenlrWmNYWHQ1UmE3a3BhZVVDcVY4Z3FwbE8zOGRuSmx1ZUwzSXowUFRtZ25CMjhFem93YXhPWHhPd1M2NU1WUXBfLUg3S0pHeE1JTm15R1hqS3JfTjE2RU9xUW9NdXJRTWVSaG9ybzFrUElBb0F2cTRyc1h6ajN3bVBzODdJUGd4SFB0aVJycThQZ0J6akZFd0FqcVZlajJ2Tk40UVhoZC0yddIBtgFBVV95cUxQYTQxdE9RQjBlU0lGTGxFTVdpR2dtaExFbXZCUTM3eWVkclZQUkxpMHpKQzE3aUhsOWJSUWFidDhjSWpRd1l4TzZERkxiQWtlTTg4MEVJWDNYZDFMVVBGNEhBcUxfRkFOc2QzUkp4NFZnRTVXX2FtSlhqMWk0UjJoSkFRU0luMzhvMXFMYkdVWFNmcGxpMjNMQkR6SURpUzk4ekNHM0ZpUExuaUVrNkR1RDVBZWw3QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-14T21:48:04.613Z"
+    },
     {
       "id": "rss_1a682611719a64b8",
       "timestamp": 1786736091000,
@@ -11195,30 +11216,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-23T07:02:01.710Z"
-    },
-    {
-      "id": "rss_b38acfa139442d3a",
-      "timestamp": 1784785857000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack tankers in Red Sea, Iran blocks Strait of Hormuz, oil prices soar - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QMkFoYmNhRkwxaFNUZk5Gc3J4RzZMQXdFd1R6N1dBaUd1eGIzV3hMSDJVY0h0STRMRF9PVGNEWmVrM01NQkxVV2dlSDd4WmZmM2hvRHNRN2M5X0hL?oc=5\" target=\"_blank\">Houthis attack tankers in Red Sea, Iran blocks Strait of Hormuz, oil prices soar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9QMkFoYmNhRkwxaFNUZk5Gc3J4RzZMQXdFd1R6N1dBaUd1eGIzV3hMSDJVY0h0STRMRF9PVGNEWmVrM01NQkxVV2dlSDd4WmZmM2hvRHNRN2M5X0hL?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T06:00:09.652Z"
     }
   ]
 }
