@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T16:48:11.348Z",
+  "last_fetch": "2026-08-15T17:15:54.381Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4d11f826a9600b30",
+      "timestamp": 1786813707000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "4 Yemeni pro-government soldiers killed in clashes, Houthi attacks in Tais, Saada - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjZWbjJhWjN5OW8xVlBxdEN5YUQ5M3BUUXhzQkJ0YUZ4RFkySjhaZXdfR2NuT0IxTFNwWWFGbDNqb2xqdVVIV1FlTERkSnNHLTZLOTJtLXJ3QW5pU1RoT0ZCVVhtRXZzM21tMzNNdkNBOGhkZWZvYUxLaEhrLVN2ZjBjTUR6eGpMdmlpLUN6aUNRZ1lSWmNkSmJ5anlhc184TDVBQXBiNzVfODJYX2F5Vm5vZGFiVFViNG5oOTRkRmhJdw?oc=5\" target=\"_blank\">4 Yemeni pro-government soldiers killed in clashes, Houthi attacks in Tais, Saada</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjZWbjJhWjN5OW8xVlBxdEN5YUQ5M3BUUXhzQkJ0YUZ4RFkySjhaZXdfR2NuT0IxTFNwWWFGbDNqb2xqdVVIV1FlTERkSnNHLTZLOTJtLXJ3QW5pU1RoT0ZCVVhtRXZzM21tMzNNdkNBOGhkZWZvYUxLaEhrLVN2ZjBjTUR6eGpMdmlpLUN6aUNRZ1lSWmNkSmJ5anlhc184TDVBQXBiNzVfODJYX2F5Vm5vZGFiVFViNG5oOTRkRmhJdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T17:15:53.267Z"
+    },
     {
       "id": "rss_a502106e5cb3661a",
       "timestamp": 1786804650000,
@@ -11183,29 +11204,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T10:16:23.768Z"
-    },
-    {
-      "id": "rss_bc1b5dba65a1daff",
-      "timestamp": 1784796531000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis Claim Attack On Saudi Tankers In Red Sea - Marine News Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQR0YtQnZTcnpCSDc5VVFCN09rMmlMYVgwem1qUW1iVjlvR0NxakZSOGJlR29oVHNETGRuZVJicURwTUtCVmd2WWZDZEN3MWc0eDVnZEpRSHpqcy1KMjhsc1lOUTk4QVFoUmpTTXRfU3dPeWJVU3RsZ0QxTWk3cHZwZDF2aw?oc=5\" target=\"_blank\">Houthis Claim Attack On Saudi Tankers In Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine News Magazine</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQR0YtQnZTcnpCSDc5VVFCN09rMmlMYVgwem1qUW1iVjlvR0NxakZSOGJlR29oVHNETGRuZVJicURwTUtCVmd2WWZDZEN3MWc0eDVnZEpRSHpqcy1KMjhsc1lOUTk4QVFoUmpTTXRfU3dPeWJVU3RsZ0QxTWk3cHZwZDF2aw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T14:15:03.427Z"
     }
   ]
 }
