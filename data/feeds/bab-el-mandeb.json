@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T08:21:13.201Z",
+  "last_fetch": "2026-08-15T08:52:57.793Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_845e64b1b89cde94",
+      "timestamp": 1786783607000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis attack Red Sea port in Yemen with ballistic missiles; at least 1 dead - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQZ1NkOHVIdi16N2JaaDU2X3BHMWYybndYakk3S19fMURCa3hpdUlwa185U0Y0OEtiZ3RIdEFYSGd4Mk80bm9tS0Q5N1B0aGdGdGNVLU1ma0JtMWgxMkhidmxVbFIzVktEaEw3OEFzbW5DQV9laTI4bUcxSG1Yc1MycE5XQjZneV9JbEVhOVVuZjhGNlVjY3dFRThocWNYUV9TSm5RNjhSTE5IVEd1dVM0Y0xoMVlMNmhqQ2QwWVh3ZGNpR0NNajVjLTZGQTBlMmc?oc=5\" target=\"_blank\">Iran-backed Houthis attack Red Sea port in Yemen with ballistic missiles; at least 1 dead</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZ1NkOHVIdi16N2JaaDU2X3BHMWYybndYakk3S19fMURCa3hpdUlwa185U0Y0OEtiZ3RIdEFYSGd4Mk80bm9tS0Q5N1B0aGdGdGNVLU1ma0JtMWgxMkhidmxVbFIzVktEaEw3OEFzbW5DQV9laTI4bUcxSG1Yc1MycE5XQjZneV9JbEVhOVVuZjhGNlVjY3dFRThocWNYUV9TSm5RNjhSTE5IVEd1dVM0Y0xoMVlMNmhqQ2QwWVh3ZGNpR0NNajVjLTZGQTBlMmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T08:52:56.434Z"
+    },
     {
       "id": "rss_1d307167cfd0574b",
       "timestamp": 1786779000000,
@@ -11190,29 +11214,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T07:02:03.206Z"
-    },
-    {
-      "id": "rss_dbb0eb825bf36af6",
-      "timestamp": 1784788380000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "China Tankers Head to Red Sea Chokepoint Despite Houthi Attacks - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPVkFfMXY3VE5HUHpmVWFaUEJtemRCUVM3R2lIUlNtVG1PNXZjLU1jM2ZIdlhEdGF6QUpTbVNSVjRUeXpXdEE4WExteTFzcjhWc19RblNsX3VkZkdfTUJFYmh3cVhyWTJXckxTZGMxOUFTOVE3aHFHTzRyaTFZNWFFMi0tSS1YVXJZTGptX05GUHVnU2VNM1NNTjVCRzRtZmQ0cnNiaFNjV2JGWXlTYncyVzlEOVQ?oc=5\" target=\"_blank\">China Tankers Head to Red Sea Chokepoint Despite Houthi Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVkFfMXY3VE5HUHpmVWFaUEJtemRCUVM3R2lIUlNtVG1PNXZjLU1jM2ZIdlhEdGF6QUpTbVNSVjRUeXpXdEE4WExteTFzcjhWc19RblNsX3VkZkdfTUJFYmh3cVhyWTJXckxTZGMxOUFTOVE3aHFHTzRyaTFZNWFFMi0tSS1YVXJZTGptX05GUHVnU2VNM1NNTjVCRzRtZmQ0cnNiaFNjV2JGWXlTYncyVzlEOVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T08:16:55.127Z"
     }
   ]
 }
