@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T00:57:34.590Z",
+  "last_fetch": "2026-08-15T02:13:45.263Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1bd7589c5a109781",
+      "timestamp": 1786748361000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on port kills four eroding truce with Yemen’s government - aljazeera.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPaThDTlI0Q2gxMndJOHd1c1IxWHYzVUNrOWFnRzUtYXIzV2xZRUQ3SDhQT3l1dnp0WGFDTU1LOUpzTzUwdGVHNmZ0QUdUX3VXUTlwc1M0LVIya1dwTnNCTWFCdWtRUEVLRmtwdERlY1l2MVplRXUwdTR4aGRNdm5hRk1pX2o4dnF1ZkFpeXdPeFI3YXRVc2tRU0dVMGFjZGlJN3lEY040ZzFIVTFBQnVNTlN6VVpBUFlQNHBwRNIBwgFBVV95cUxQUkQwRE5aY3lkY0Rkc1JLekFGazNVZDBhQ0o5SnB3WGNkVDFKdEVOaERpU2NuX2QxU042UU9hZEZsb3laVldSQkh4dVZfRGdGaTFXaDNEcUdoLWF1SG54TXJlaTVxelRXSGZmMlJ5MVRFazN4blk5dFJIdGdwVnRiSGNnNjhxd2RQV2VoQVo2eF",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaThDTlI0Q2gxMndJOHd1c1IxWHYzVUNrOWFnRzUtYXIzV2xZRUQ3SDhQT3l1dnp0WGFDTU1LOUpzTzUwdGVHNmZ0QUdUX3VXUTlwc1M0LVIya1dwTnNCTWFCdWtRUEVLRmtwdERlY1l2MVplRXUwdTR4aGRNdm5hRk1pX2o4dnF1ZkFpeXdPeFI3YXRVc2tRU0dVMGFjZGlJN3lEY040ZzFIVTFBQnVNTlN6VVpBUFlQNHBwRNIBwgFBVV95cUxQUkQwRE5aY3lkY0Rkc1JLekFGazNVZDBhQ0o5SnB3WGNkVDFKdEVOaERpU2NuX2QxU042UU9hZEZsb3laVldSQkh4dVZfRGdGaTFXaDNEcUdoLWF1SG54TXJlaTVxelRXSGZmMlJ5MVRFazN4blk5dFJIdGdwVnRiSGNnNjhxd2RQV2VoQVo2eFVkNE9UdGFtVFRyTmdfbHZ6dWdMemVoay0zMXpnUU5BZGE0UENUQUhsV2JxRE9naUxtUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T02:13:43.997Z"
+    },
     {
       "id": "rss_9a4d794d36d5842f",
       "timestamp": 1786747709000,
@@ -11192,30 +11213,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T07:02:01.711Z"
-    },
-    {
-      "id": "rss_10e97db2fa6b6d9c",
-      "timestamp": 1784787022000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis target Red Sea shipping as US hits Iran - The New Indian Express",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPUFFEejlaZWxZTEpkZEY1eDU0bE1wSXRwWXplaEstQ3dMdk9GdkwwZ0NDcmdGYUNic3ozUTVLSnJlS21tS01Ra2N4RWpaTEctazg5RlhMM0lzVjhNT05MTkRkamNGQU1jUkxqNXF1c0dwelRFVXRGNHBvMTE1TUVFRXViU3pPdjcwa3NnSHVwR3VrSU1Xem94TGlMUFZrdGfSAawBQVVfeXFMT0xJS2RVNzdvNENiQ3VFQ0JLZGdmLU94SG1VbTNQQXQyWFEzakdoX1g4RWJ0dHlKTzdYY1Jvb0ZtMWd3SmZEUU9YV1k1M0ZIM29RS0FJXy1MbHVnV0YxV00wN2xfcGZWM1BCcVc4SG53NGFydURvb3A1Ykl6ZndscllJOXZYNUF4OTNMdDhkbUo3OUxmQ0Y0ZFBBYndXQWQtMXZqaGFOREJNS1BCaQ",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUFFEejlaZWxZTEpkZEY1eDU0bE1wSXRwWXplaEstQ3dMdk9GdkwwZ0NDcmdGYUNic3ozUTVLSnJlS21tS01Ra2N4RWpaTEctazg5RlhMM0lzVjhNT05MTkRkamNGQU1jUkxqNXF1c0dwelRFVXRGNHBvMTE1TUVFRXViU3pPdjcwa3NnSHVwR3VrSU1Xem94TGlMUFZrdGfSAawBQVVfeXFMT0xJS2RVNzdvNENiQ3VFQ0JLZGdmLU94SG1VbTNQQXQyWFEzakdoX1g4RWJ0dHlKTzdYY1Jvb0ZtMWd3SmZEUU9YV1k1M0ZIM29RS0FJXy1MbHVnV0YxV00wN2xfcGZWM1BCcVc4SG53NGFydURvb3A1Ykl6ZndscllJOXZYNUF4OTNMdDhkbUo3OUxmQ0Y0ZFBBYndXQWQtMXZqaGFOREJNS1BCaQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T10:16:23.768Z"
     }
   ]
 }
