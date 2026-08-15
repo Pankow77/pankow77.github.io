@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T23:14:50.644Z",
+  "last_fetch": "2026-08-15T23:42:40.876Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0b74de209c444f94",
+      "timestamp": 1786836589000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen’s government says Houthi strikes hit residential areas in Marib - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNUGkyeXBGZXFwVzZ5bVJnRlI1UlMwcXozOWxKOWdrcGVGWVQzUm5HUEw1SlppMUo0RHA2WHhlaGRUc2hMUXZmcU1wMkF0YkxmTUJoeUdCdEdRbUtrUnNUb3l3Ukw4UURFbGJxYlRud3RocFF6VWdRSXNNb3h4Tk45eUxQaF9uVmtlUzVsc2lUSlVVSk4zT2VfLTVkeXpQUmtrTlR2YUc5RldMQ1NKb1HSAbMBQVVfeXFMTmtUcm9jc01tSU4xNUEyQUhnN2MtZlI0SzRwUDg0UUdhalRzZFRrZXRJMDVOTWdSOVR3VEdfWXZuX2ZDdVRwNHBZX1hNalZiUGNsWUJnWjV3YWJnTzI1dTIzbWxia2hLdzlrbWpNTkVsS1FtWUwtV3IyenVRZ3BDa0pKMnRXLVRpUEpZZVhMZDExWGx0TWY2X0p5QUc2ZC",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNUGkyeXBGZXFwVzZ5bVJnRlI1UlMwcXozOWxKOWdrcGVGWVQzUm5HUEw1SlppMUo0RHA2WHhlaGRUc2hMUXZmcU1wMkF0YkxmTUJoeUdCdEdRbUtrUnNUb3l3Ukw4UURFbGJxYlRud3RocFF6VWdRSXNNb3h4Tk45eUxQaF9uVmtlUzVsc2lUSlVVSk4zT2VfLTVkeXpQUmtrTlR2YUc5RldMQ1NKb1HSAbMBQVVfeXFMTmtUcm9jc01tSU4xNUEyQUhnN2MtZlI0SzRwUDg0UUdhalRzZFRrZXRJMDVOTWdSOVR3VEdfWXZuX2ZDdVRwNHBZX1hNalZiUGNsWUJnWjV3YWJnTzI1dTIzbWxia2hLdzlrbWpNTkVsS1FtWUwtV3IyenVRZ3BDa0pKMnRXLVRpUEpZZVhMZDExWGx0TWY2X0p5QUc2ZC01MWtjVFA0YWxuMDVfVVNTaFZJRWs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-15T23:42:39.605Z"
+    },
     {
       "id": "rss_4d11f826a9600b30",
       "timestamp": 1786813707000,
@@ -11175,29 +11196,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRkJKVWFoWEl3NG02VG5ZNFBDNl9BdDZ4YnNKVVpzMkhUdTItWUJpMFJkQ2FiOV9Rd0Z3SVozNVYxbnItZnRtT1JIRS0zVmN6X0UtSjVvanEtMEFNTFNaNVJkS0NOcXNJb2o1bW51ZG5LOE5wNVB1bk41S1lqZXYtcV9uLWZhLXkwVW5icEFwdXJmbUp2TGpJNXRvZ1ZQODdlQUY5bUtidnBiQVFuVjdRUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T11:14:39.513Z"
-    },
-    {
-      "id": "rss_3d8d49623080879d",
-      "timestamp": 1784801844000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "At least one Saudi oil tanker is attacked in the Red Sea as war risks widen - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNajJaYmtVVnhKcFM1ay1QQy05ZDZhS2swdzFsTUQ1bExuMllEbFJKX2l0OHVjV25XWUtMUTVRNUVNMUdRdm5od202VDJXbkpsbFhQU3pwNmtjbG1IWlJWOTZMa1NSX1FuV3AzM1IxRVo2Q1NQa0ZmSWZ6QnpyVFVwcEw2N3ptNjBoTHdWNElaYnFDUWxZUi1PbGtZbFRxczJEN1VSUV9MeldGMnd2Si1LWQ?oc=5\" target=\"_blank\">At least one Saudi oil tanker is attacked in the Red Sea as war risks widen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNajJaYmtVVnhKcFM1ay1QQy05ZDZhS2swdzFsTUQ1bExuMllEbFJKX2l0OHVjV25XWUtMUTVRNUVNMUdRdm5od202VDJXbkpsbFhQU3pwNmtjbG1IWlJWOTZMa1NSX1FuV3AzM1IxRVo2Q1NQa0ZmSWZ6QnpyVFVwcEw2N3ptNjBoTHdWNElaYnFDUWxZUi1PbGtZbFRxczJEN1VSUV9MeldGMnd2Si1LWQ?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
