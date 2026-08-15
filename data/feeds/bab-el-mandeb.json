@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T14:16:35.519Z",
+  "last_fetch": "2026-08-15T14:46:37.656Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a502106e5cb3661a",
+      "timestamp": 1786804650000,
+      "source": "Al Jazeera",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The next Yemen war might be different - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxOb25qMGNZZUxmNGswOGlMRXdzbXJwT3NTTFU0SGRIcE1kcVdnb0RoWDJSeUFrbmFYenNTVXB5aEl5cFY0R3N1UTd6QnE3akNUcUxETDJKZ21XemNwVUdwd1hvOVhUNGM4V2kwRExSMFY2QU4zQUVzN1NWYmgtVHVENGpVQ1VFRWRZVWfSAY8BQVVfeXFMT2JUOXlvUHVpZmxmN1I3WVRfdm41VXhrNEQ0eHZNZUhJYmNGMFdxYnNRQVZQMDhOQmxiNU5BU2l2N3hja0JLWW01X1dfcUxybEJmeC1CcW9HZXF0MG5WRkk3MmUzSkFOakJKX1dnM0VhM0Z2WGM4RFNSTi1zSFRyLWNNeHVaTG1fZDdEWkQtN0U?oc=5\" target=\"_blank\">The next Yemen war might be different</a>&nb",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOb25qMGNZZUxmNGswOGlMRXdzbXJwT3NTTFU0SGRIcE1kcVdnb0RoWDJSeUFrbmFYenNTVXB5aEl5cFY0R3N1UTd6QnE3akNUcUxETDJKZ21XemNwVUdwd1hvOVhUNGM4V2kwRExSMFY2QU4zQUVzN1NWYmgtVHVENGpVQ1VFRWRZVWfSAY8BQVVfeXFMT2JUOXlvUHVpZmxmN1I3WVRfdm41VXhrNEQ0eHZNZUhJYmNGMFdxYnNRQVZQMDhOQmxiNU5BU2l2N3hja0JLWW01X1dfcUxybEJmeC1CcW9HZXF0MG5WRkk3MmUzSkFOakJKX1dnM0VhM0Z2WGM4RFNSTi1zSFRyLWNNeHVaTG1fZDdEWkQtN0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-15T14:46:36.367Z"
+    },
     {
       "id": "rss_ab7c70ef3714a695",
       "timestamp": 1786797521000,
@@ -68,6 +89,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-15T08:52:56.434Z"
+    },
+    {
+      "id": "rss_330daa50608dbb2d",
+      "timestamp": 1786780758000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi ballistic missile attack kills four in Yemen’s Mocha - Iran International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9fdlZIdzRkMEYxWlcteWx0VUMzZjFTX0czcExXNTl0X01oalo2R0wzN1NPTjVwSnllbU4yNjZNb1FJTU5KOXhwOGNnR2dHOHF6VGc?oc=5\" target=\"_blank\">Houthi ballistic missile attack kills four in Yemen’s Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9fdlZIdzRkMEYxWlcteWx0VUMzZjFTX0czcExXNTl0X01oalo2R0wzN1NPTjVwSnllbU4yNjZNb1FJTU5KOXhwOGNnR2dHOHF6VGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T14:46:36.367Z"
     },
     {
       "id": "rss_1d307167cfd0574b",
@@ -11161,54 +11206,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T14:15:03.427Z"
-    },
-    {
-      "id": "rss_362a7a60e539b60e",
-      "timestamp": 1784796345000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi tankers in Red Sea, threatening new choke point in Iran war - The Straits Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxOWk1XOVdETjBwZ2ZmRGMzeTJDTXRvSmhEUUhvOHJUUW9vcXZrWTNuQWZrREpZR0RTSHlONmpIVG9jSTFnaTRvV21tcFBvT3pKS09BV2J2aUU0WGttQnpFeU1XekxBX1JzV0hseGxUSEJZVWg5ZHZ4eXk4QXEzVnlPdmFkQTlMZlRyX01USjFDQUN6TVlxRmJpbUprQXhWLV8tNElYQlpuaWU3cDcwOEpKbXpmZnl3c2JIRWpvVzJnYV9RbTFMS0NGTlBCa20?oc=5\" target=\"_blank\">Houthis attack Saudi tankers in Red Sea, threatening new choke point in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOWk1XOVdETjBwZ2ZmRGMzeTJDTXRvSmhEUUhvOHJUUW9vcXZrWTNuQWZrREpZR0RTSHlONmpIVG9jSTFnaTRvV21tcFBvT3pKS09BV2J2aUU0WGttQnpFeU1XekxBX1JzV0hseGxUSEJZVWg5ZHZ4eXk4QXEzVnlPdmFkQTlMZlRyX01USjFDQUN6TVlxRmJpbUprQXhWLV8tNElYQlpuaWU3cDcwOEpKbXpmZnl3c2JIRWpvVzJnYV9RbTFMS0NGTlBCa20?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T09:17:34.198Z"
-    },
-    {
-      "id": "rss_eb02a33480d7b4cc",
-      "timestamp": 1784795839000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil tankers attacked in the Red Sea as U.S.-Iran war widens and fuel prices spike - NBC Los Angeles",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOFVMWkRXbzVvV3ZLX3JPYmJyV3dKcU9RV2lWTkFSOVo1Vl9qaG44V2ZEODdNYmlXWnhjNE5qQXZkaEtkTlhWZUV4SWUxTko4VENDOHdCT2xiZkxvM0NPSHoxOUVQLWpUZ29TLWFIZmg0MWNUem13aHBwcDY5QmpmaWV0NXpTLVJxa1dRSnY2Y2NBakxhZXhPZHBhQThYaFFxOWtjUXlSejlyRDdBZHM3ZlJlWjNFQXdyeFo3cWJfbldzZ2vSAcsBQVVfeXFMTjIyZVN0RzBYOHFFY0lNeDBPS0E5d1ZCenVweFpNemNCZGRMS2IzYjVUTS1oUEdVU2pmOG5pTWxlY3B2NWdkcFpYa3NOc0NzaC12T3ZweFRPNE1aSU12TnpTWVFDY21HMGJ3a0NDeVR0YnhCSnlyVFZmT2pjRDJOR1d2WXNzcVRxd1",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOFVMWkRXbzVvV3ZLX3JPYmJyV3dKcU9RV2lWTkFSOVo1Vl9qaG44V2ZEODdNYmlXWnhjNE5qQXZkaEtkTlhWZUV4SWUxTko4VENDOHdCT2xiZkxvM0NPSHoxOUVQLWpUZ29TLWFIZmg0MWNUem13aHBwcDY5QmpmaWV0NXpTLVJxa1dRSnY2Y2NBakxhZXhPZHBhQThYaFFxOWtjUXlSejlyRDdBZHM3ZlJlWjNFQXdyeFo3cWJfbldzZ2vSAcsBQVVfeXFMTjIyZVN0RzBYOHFFY0lNeDBPS0E5d1ZCenVweFpNemNCZGRMS2IzYjVUTS1oUEdVU2pmOG5pTWxlY3B2NWdkcFpYa3NOc0NzaC12T3ZweFRPNE1aSU12TnpTWVFDY21HMGJ3a0NDeVR0YnhCSnlyVFZmT2pjRDJOR1d2WXNzcVRxd1AtSkc5YXhiNDRYYjFKcEVmSl8wZUx1aVA3ejJ5QXQ2UVlZNUFreWpJUlJmX01GMzF4emtGQ3Z4d0xkZHlNWEduWE0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T19:30:23.765Z"
     }
   ]
 }
