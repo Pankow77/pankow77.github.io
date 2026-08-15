@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T06:29:03.078Z",
+  "last_fetch": "2026-08-15T07:07:24.061Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5436eaa8726c5c3c",
+      "timestamp": 1786777140000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Saudi-backed gov't says Houthi missiles kill four civilians in port city - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAJBVV95cUxNT2JnWklJbjg4RWNkT1pMdmQycGRQZnpzZ0owTEhoamJKYkViMXkyU2ZZa19fd2dUYkdocjUwQjYzVFZPWk9nVmF1dlo3cURGQ1VaMXZSVm9aR3kzTWZhWnN0QVRONEdpNHc0aFI4T2lKdFFVNDBWUHFFLU9VaHpGdEpQWG42REdNWk5kS1kwb3p4M0NOdlJKRHdrNVZBRWpxZjJQRzMtVXpFT200QWZfSHFwaDdmRHV3NWE0VjJDVDBvdTJsTGhCaWotY0xkeV9EVU1ucHZENDhrN1JaSWxJS0hYQURTWEFUbW45dEthdVRDbHQ2NFpVVEMxYlc2dzdWYXItVU03Z2Y?oc=5\" target=\"_blank\">Yemen Saudi-backed gov't says Houthi missiles kill four civilians in por",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNT2JnWklJbjg4RWNkT1pMdmQycGRQZnpzZ0owTEhoamJKYkViMXkyU2ZZa19fd2dUYkdocjUwQjYzVFZPWk9nVmF1dlo3cURGQ1VaMXZSVm9aR3kzTWZhWnN0QVRONEdpNHc0aFI4T2lKdFFVNDBWUHFFLU9VaHpGdEpQWG42REdNWk5kS1kwb3p4M0NOdlJKRHdrNVZBRWpxZjJQRzMtVXpFT200QWZfSHFwaDdmRHV3NWE0VjJDVDBvdTJsTGhCaWotY0xkeV9EVU1ucHZENDhrN1JaSWxJS0hYQURTWEFUbW45dEthdVRDbHQ2NFpVVEMxYlc2dzdWYXItVU03Z2Y?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T07:07:22.731Z"
+    },
     {
       "id": "rss_1bd7589c5a109781",
       "timestamp": 1786748361000,
@@ -11190,29 +11213,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T07:02:01.709Z"
-    },
-    {
-      "id": "rss_b1dff1ce231f40ee",
-      "timestamp": 1784787231000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack two Saudi vessels in Red Sea in first enforcement of blockade - The New Region",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiS0FVX3lxTE0wZWFwd2lrWUFOelItMEc1eUtFX1IyZ0h1NVNTS3U3YnFTenlRQ1JZSVI3Zng2UXZjYV9TTk8wdWRpV2wyOE1GZmZ4Yw?oc=5\" target=\"_blank\">Houthis attack two Saudi vessels in Red Sea in first enforcement of blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Region</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE0wZWFwd2lrWUFOelItMEc1eUtFX1IyZ0h1NVNTS3U3YnFTenlRQ1JZSVI3Zng2UXZjYV9TTk8wdWRpV2wyOE1GZmZ4Yw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T07:02:01.711Z"
     }
   ]
 }
