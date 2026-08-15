@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T07:07:24.061Z",
+  "last_fetch": "2026-08-15T07:51:01.194Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1d307167cfd0574b",
+      "timestamp": 1786779000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen Conflict: Shipping industry concerned after new Houthi attack on Mocha - news.cgtn.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTFBXcF9LZTFzcHEzbzItOE1KeDJQdElaZDN5QXQ4NVdwYlRhX2dySHBYWm9rYzdsWHUyT0h2ZEZyY1BNMFVoNFZ1RGt3aFd0ZG9jODhrYk53UTJLXzN0YkFTSG1jaXR4Wks1VHRJV29HSzJpY21zdXljVQ?oc=5\" target=\"_blank\">Yemen Conflict: Shipping industry concerned after new Houthi attack on Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBXcF9LZTFzcHEzbzItOE1KeDJQdElaZDN5QXQ4NVdwYlRhX2dySHBYWm9rYzdsWHUyT0h2ZEZyY1BNMFVoNFZ1RGt3aFd0ZG9jODhrYk53UTJLXzN0YkFTSG1jaXR4Wks1VHRJV29HSzJpY21zdXljVQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T07:51:00.091Z"
+    },
     {
       "id": "rss_5436eaa8726c5c3c",
       "timestamp": 1786777140000,
@@ -11190,29 +11213,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T08:16:55.127Z"
-    },
-    {
-      "id": "rss_ba6ec11dc810a59c",
-      "timestamp": 1784788285000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Attack Saudi Tankers as Red Sea Tensions Escalate - Modern Diplomacy",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPaTN2WENBTVVIcV91RXJsSjFjM0VGSFIwZHpVV3ZnZ1BfN0IwMFlmdGpITkNOSEhqQ1RkRmc0clZldXRRbU91Qm9MM2dKNFNpNFNlcW5ZYTYtaTNBdGJGaEN3akM5dWMwQlRDVFNmYjFTbkF4WldIVU9wS2VQcEFKd0RWcEY4SDFTODk1MnAyQkEzQ2o3dWN3ZWc2VEk?oc=5\" target=\"_blank\">Houthis Attack Saudi Tankers as Red Sea Tensions Escalate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Modern Diplomacy</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaTN2WENBTVVIcV91RXJsSjFjM0VGSFIwZHpVV3ZnZ1BfN0IwMFlmdGpITkNOSEhqQ1RkRmc0clZldXRRbU91Qm9MM2dKNFNpNFNlcW5ZYTYtaTNBdGJGaEN3akM5dWMwQlRDVFNmYjFTbkF4WldIVU9wS2VQcEFKd0RWcEY4SDFTODk1MnAyQkEzQ2o3dWN3ZWc2VEk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T07:02:01.709Z"
     }
   ]
 }
