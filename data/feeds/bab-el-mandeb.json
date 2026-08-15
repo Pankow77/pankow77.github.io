@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-15T20:16:27.217Z",
+  "last_fetch": "2026-08-15T20:46:21.132Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -1314,6 +1314,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T16:26:11.421Z"
+    },
+    {
+      "id": "rss_d96ddd87e2315d26",
+      "timestamp": 1786535261000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Four crew, two rescuers killed in Red Sea attack, US strikes ship in Gulf of Oman - TimesLIVE",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxQeENEbDc4dFFXZEVXd2c1aVpPemUtdEJwbTlFQi1lRkxhVFhQendudzROTXpnSlJkdDNJZng2X0V5MlE1MlVWQXpmVkVHdnRaalY3SmRTTHhBRndXaklBS0EtTFBVUDhEaWF0Rzhrbi1FRS1PUWl6amVtQTBTcVpRc0NxS1FNNVZqSVFBTDdLRnZaVXhQZHd4RU16OUpuVDJEU05sRml4enAxWWFHNkIxdjhBRW9ldUhPUVhXVTlHMXMzQ0VCMm5hNVdR?oc=5\" target=\"_blank\">Four crew, two rescuers killed in Red Sea attack, US strikes ship in Gulf of Oman</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TimesLIVE</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQeENEbDc4dFFXZEVXd2c1aVpPemUtdEJwbTlFQi1lRkxhVFhQendudzROTXpnSlJkdDNJZng2X0V5MlE1MlVWQXpmVkVHdnRaalY3SmRTTHhBRndXaklBS0EtTFBVUDhEaWF0Rzhrbi1FRS1PUWl6amVtQTBTcVpRc0NxS1FNNVZqSVFBTDdLRnZaVXhQZHd4RU16OUpuVDJEU05sRml4enAxWWFHNkIxdjhBRW9ldUhPUVhXVTlHMXMzQ0VCMm5hNVdR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-15T20:46:19.837Z"
     },
     {
       "id": "rss_ed77a03d4a37af49",
@@ -11180,30 +11203,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T11:14:39.513Z"
-    },
-    {
-      "id": "rss_6cb631dd019339ae",
-      "timestamp": 1784799770000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran vows to keep up strikes as Houthis attack Saudi shipping in Red Sea - The New Indian Express",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZWhCbjBZdkVZczZJWXNHSzRUdkY0TzhoYlJzOU5hbWFlZ091VnNnU1JNV1JfRldJeDhSdWRfYlBkVjA4VlFTU2tLUngwVHpsZndiZHk2UjQ3U09TaGFrMDFEcFdueWp0VzhHQnRZdjVTZ2xtMzh3eXZDMG0wNGp1OW8tWDJJNFFsNUFpbVN2NVZ6RV9VWTJYWkcwVkUtOU1CVXV6d29TSWN1MjRYS2RrQmkzMzUwaThHdFdnWVdBVjPSAc4BQVVfeXFMTWk4eGVYZXh0VjhtVk94Um1UR3ZUTmVRNk5ZZEN3TTBJOWgtR1VUbTFFT25ON1ZBTHRZU3hhcktlTzJTQlhBWFFDOWRpS3E0RGFpVzZ5azFUWU03VTNhaEtlVTlhS0p2WUhOVUtSM2lxTHBQU2g0c0s2dU9lRDk5ellUMXc2S3hTbjRfNG",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZWhCbjBZdkVZczZJWXNHSzRUdkY0TzhoYlJzOU5hbWFlZ091VnNnU1JNV1JfRldJeDhSdWRfYlBkVjA4VlFTU2tLUngwVHpsZndiZHk2UjQ3U09TaGFrMDFEcFdueWp0VzhHQnRZdjVTZ2xtMzh3eXZDMG0wNGp1OW8tWDJJNFFsNUFpbVN2NVZ6RV9VWTJYWkcwVkUtOU1CVXV6d29TSWN1MjRYS2RrQmkzMzUwaThHdFdnWVdBVjPSAc4BQVVfeXFMTWk4eGVYZXh0VjhtVk94Um1UR3ZUTmVRNk5ZZEN3TTBJOWgtR1VUbTFFT25ON1ZBTHRZU3hhcktlTzJTQlhBWFFDOWRpS3E0RGFpVzZ5azFUWU03VTNhaEtlVTlhS0p2WUhOVUtSM2lxTHBQU2g0c0s2dU9lRDk5ellUMXc2S3hTbjRfNGZSLUxjN2VFcTBNMTllMGpTSFpuNVBIaGEzdjByN1Zma2ZYQVNLMVg4UWp4emdaZXFUOEhvTGNZNGJKTGp3WEZjN1E?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T10:16:23.768Z"
     }
   ]
 }
