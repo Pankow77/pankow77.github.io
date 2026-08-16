@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-16T20:15:57.060Z",
+  "last_fetch": "2026-08-16T20:45:22.652Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4c3ac37a98e3ec24",
+      "timestamp": 1786911308000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why Houthi attacks on Mokha raise the stakes for Red Sea shipping - Arab News PK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tYjFjRVFJSEF4eVBKYzJxNlVjeC02Tjl4NGhyTEQ3NWZ0Tjc3OGR6WTk0TmJwS1pILVJNcEY0bDlGX2RYZ1ZPUTFLel9VOEFqZzVxaXl3ek5zUl9N?oc=5\" target=\"_blank\">Why Houthi attacks on Mokha raise the stakes for Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tYjFjRVFJSEF4eVBKYzJxNlVjeC02Tjl4NGhyTEQ3NWZ0Tjc3OGR6WTk0TmJwS1pILVJNcEY0bDlGX2RYZ1ZPUTFLel9VOEFqZzVxaXl3ek5zUl9N?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-16T20:45:22.644Z"
+    },
     {
       "id": "rss_843d11ba26f29c92",
       "timestamp": 1786895717000,
@@ -11170,29 +11193,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T13:00:28.838Z"
-    },
-    {
-      "id": "rss_012298db98a6394d",
-      "timestamp": 1784807872000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "EU calls Houthi attack on Red Sea oil tanker 'unacceptable,' warns against further escalation - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOVXpLaVJqS3o5VjhTRkNKQVNzQmRDZ05GSGpfb29qVGRwOEdrd2N4Y1hHTTFLcG5kVGoyVE0xNTh1M3dNRnU1UV9YRW02eDBJVWJSY2M2cXc0dE9iZUhnZjU0dlZWTDU1S2VxZmdiSF94ajRQRHpzYmZOQzN2T1VNcG9tS1ljblFwS2lZdmUzNFdWR1lPaUJybmZ2aVdGMFE3UjlBa2wtUk4yamtMeVlZSzY3TnR0UWdZMFZrM2JNbzJFUElDZkFDakVR?oc=5\" target=\"_blank\">EU calls Houthi attack on Red Sea oil tanker 'unacceptable,' warns against further escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOVXpLaVJqS3o5VjhTRkNKQVNzQmRDZ05GSGpfb29qVGRwOEdrd2N4Y1hHTTFLcG5kVGoyVE0xNTh1M3dNRnU1UV9YRW02eDBJVWJSY2M2cXc0dE9iZUhnZjU0dlZWTDU1S2VxZmdiSF94ajRQRHpzYmZOQzN2T1VNcG9tS1ljblFwS2lZdmUzNFdWR1lPaUJybmZ2aVdGMFE3UjlBa2wtUk4yamtMeVlZSzY3TnR0UWdZMFZrM2JNbzJFUElDZkFDakVR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T12:05:03.408Z"
     }
   ]
 }
