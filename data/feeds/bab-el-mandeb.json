@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-16T13:51:14.654Z",
+  "last_fetch": "2026-08-16T14:17:04.918Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_515ecb3f32b99756",
+      "timestamp": 1786888418000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Bab el-Mandeb Strait faces growing threat as Houthi attacks raise fears of a second Hormuz - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPcWZ4Y3pCY2JPd1Q3NDhQem9ueXlmOVFzX05Rb20zcVNacTdSRHd0REU1LUJiUlJ3MW5qWlNtOVlOOU8yZmd5UHRESE1odm5NMkFqWFlPdlZ2YXowdl80TGZ1d0VRc0l5OHRjMnVnQlFZSkwtajBZZFFISFNaNmpISDNWd2N0bVVhNnY1M1IxOWstWGpKb1ZOcFJOTFk0UUNJYWJQclhhZG8yNFdfN205TFpn0gG3AUFVX3lxTFBMbVBaay1Kal9NaTNkb0p3MlU5eWY1YVNOSjlERXl2ckxqZHNuU3h1a0JzUjFXUzRWSVdrbzRYd2RJaGpWNU9uSnhGYmVtZVFkVUk2TVpjRGRZbDRFNkpnWUttTmV1MkhhU2JZb1JvRlYtRXdtSEtfUU9QRWduaUIxVU5TR25IaG1YS0xqaGMtZVJveFRUUVlDbn",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcWZ4Y3pCY2JPd1Q3NDhQem9ueXlmOVFzX05Rb20zcVNacTdSRHd0REU1LUJiUlJ3MW5qWlNtOVlOOU8yZmd5UHRESE1odm5NMkFqWFlPdlZ2YXowdl80TGZ1d0VRc0l5OHRjMnVnQlFZSkwtajBZZFFISFNaNmpISDNWd2N0bVVhNnY1M1IxOWstWGpKb1ZOcFJOTFk0UUNJYWJQclhhZG8yNFdfN205TFpn0gG3AUFVX3lxTFBMbVBaay1Kal9NaTNkb0p3MlU5eWY1YVNOSjlERXl2ckxqZHNuU3h1a0JzUjFXUzRWSVdrbzRYd2RJaGpWNU9uSnhGYmVtZVFkVUk2TVpjRGRZbDRFNkpnWUttTmV1MkhhU2JZb1JvRlYtRXdtSEtfUU9QRWduaUIxVU5TR25IaG1YS0xqaGMtZVJveFRUUVlDbnE3T0pxQW9ZZV9rSnI3d0NuRXJYY0Qxc1IxQWFLMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-16T14:17:03.521Z"
+    },
     {
       "id": "rss_17f0a3f815e5a465",
       "timestamp": 1786843232000,
@@ -11174,29 +11195,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T12:05:03.408Z"
-    },
-    {
-      "id": "rss_af9e1a393d7ce533",
-      "timestamp": 1784805240000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they attacked 2 Saudi oil tankers in Red Sea - Spectrum News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNNDNvQ0xzcmp2OXBqQXpORDVORzV0S1lhVlZhVUVrUnp4VWlKZENnbDBXbGZpMmZxZGhiSmlWYXNXTFVBTWFPYjdIN3ZxbzJIUWlHdi1LTFd6R1c4dThkbVpMU2tZQkZNcXR6VGpOcFdSc2MxTGNCbkFZS3B6VmVOZGNPR1RncF9NcUpqRWwxdXlXR2ZGQTdzMHZDNnR1WnN5VEw3Y2Y1Q2FzS2Z6bnN3NUJKbjBuWHNqVEV6SVYxQQ?oc=5\" target=\"_blank\">Houthis say they attacked 2 Saudi oil tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Spectrum News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNDNvQ0xzcmp2OXBqQXpORDVORzV0S1lhVlZhVUVrUnp4VWlKZENnbDBXbGZpMmZxZGhiSmlWYXNXTFVBTWFPYjdIN3ZxbzJIUWlHdi1LTFd6R1c4dThkbVpMU2tZQkZNcXR6VGpOcFdSc2MxTGNCbkFZS3B6VmVOZGNPR1RncF9NcUpqRWwxdXlXR2ZGQTdzMHZDNnR1WnN5VEw3Y2Y1Q2FzS2Z6bnN3NUJKbjBuWHNqVEV6SVYxQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T12:05:03.407Z"
     }
   ]
 }
