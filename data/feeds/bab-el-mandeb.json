@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-16T02:39:14.798Z",
+  "last_fetch": "2026-08-16T03:42:53.449Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_17f0a3f815e5a465",
+      "timestamp": 1786843232000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "A 5,000-Ton Royal Navy Nuclear Attack Submarine Hit a Charted Red Sea Pinnacle and Was Left Unable to Dive - 19FortyFive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYktLUDdJVHlJWnFRaWVuWTFfbGUza2U0bFk0c2N4TFhtcHBsR0JqZnF6Y013aXozV2c1ZVdfSWM2UFRLQl9MTjlpM2R5Tk0xVFJNNUNfNWhCRmoxV0N2X1hGUE5rOTRtTWRGTWNFbDFpTlhSN3AwMW9qc3h5QWRUOWhSNzV1ZjZSVU9xSW9DZmd4ODAyU01NUUpQeE4wczMzTHV0dU5yQ0c0STdrYndmMGcxalg1Z1FCaHlCVk5uWS1IcFpzdklfVDdodDFhQ0Z6alozOTZpaHZ0Zw?oc=5\" target=\"_blank\">A 5,000-Ton Royal Navy Nuclear Attack Submarine Hit a Charted Red Sea Pinnacle and Was Left Unable to Dive</a>&nbsp;&nbsp;<font color",
+      "tags": [
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYktLUDdJVHlJWnFRaWVuWTFfbGUza2U0bFk0c2N4TFhtcHBsR0JqZnF6Y013aXozV2c1ZVdfSWM2UFRLQl9MTjlpM2R5Tk0xVFJNNUNfNWhCRmoxV0N2X1hGUE5rOTRtTWRGTWNFbDFpTlhSN3AwMW9qc3h5QWRUOWhSNzV1ZjZSVU9xSW9DZmd4ODAyU01NUUpQeE4wczMzTHV0dU5yQ0c0STdrYndmMGcxalg1Z1FCaHlCVk5uWS1IcFpzdklfVDdodDFhQ0Z6alozOTZpaHZ0Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-16T03:42:52.099Z"
+    },
     {
       "id": "rss_0b74de209c444f94",
       "timestamp": 1786836589000,
@@ -11177,30 +11200,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:27:16.037Z"
-    },
-    {
-      "id": "rss_0110ddd46d6bd767",
-      "timestamp": 1784804856000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Oil tankers attacked as Iran threatens to turn new trade route into a ‘Gate of Tears’ - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPRkJKVWFoWEl3NG02VG5ZNFBDNl9BdDZ4YnNKVVpzMkhUdTItWUJpMFJkQ2FiOV9Rd0Z3SVozNVYxbnItZnRtT1JIRS0zVmN6X0UtSjVvanEtMEFNTFNaNVJkS0NOcXNJb2o1bW51ZG5LOE5wNVB1bk41S1lqZXYtcV9uLWZhLXkwVW5icEFwdXJmbUp2TGpJNXRvZ1ZQODdlQUY5bUtidnBiQVFuVjdRUQ?oc=5\" target=\"_blank\">Oil tankers attacked as Iran threatens to turn new trade route into a ‘Gate of Tears’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRkJKVWFoWEl3NG02VG5ZNFBDNl9BdDZ4YnNKVVpzMkhUdTItWUJpMFJkQ2FiOV9Rd0Z3SVozNVYxbnItZnRtT1JIRS0zVmN6X0UtSjVvanEtMEFNTFNaNVJkS0NOcXNJb2o1bW51ZG5LOE5wNVB1bk41S1lqZXYtcV9uLWZhLXkwVW5icEFwdXJmbUp2TGpJNXRvZ1ZQODdlQUY5bUtidnBiQVFuVjdRUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T11:14:39.513Z"
     }
   ]
 }
