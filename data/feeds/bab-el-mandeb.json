@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T10:55:42.287Z",
+  "last_fetch": "2026-08-17T11:21:11.948Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-17T10:55:41.140Z"
+    },
+    {
+      "id": "rss_4779bc672bb88afe",
+      "timestamp": 1786960175000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Houthi Ship Attack - gazettextra.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNVlVpd2ZkUVhrTkxlTEYzTGRRM1RSZVB4Y3RMbnNzZVZaaEFaaFdDb1hINnpPcTFzS2dhNXZYcTNFZkVGNVFMRHJzbldYcndfVTVLaklNeEJYQkd0MWxQYk0tMUhWX2NISDFyTXVkbzVNc0ZnUkd3bjB3V3FRU25HbjhUOURJa2FHd3ZTUkFIdFd1ekNWNExWMEVNTmNZa09CcC03UlRnNWZKQjVPcGZlSFRwd3FuT082WGc?oc=5\" target=\"_blank\">Yemen Houthi Ship Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gazettextra.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVlVpd2ZkUVhrTkxlTEYzTGRRM1RSZVB4Y3RMbnNzZVZaaEFaaFdDb1hINnpPcTFzS2dhNXZYcTNFZkVGNVFMRHJzbldYcndfVTVLaklNeEJYQkd0MWxQYk0tMUhWX2NISDFyTXVkbzVNc0ZnUkd3bjB3V3FRU25HbjhUOURJa2FHd3ZTUkFIdFd1ekNWNExWMEVNTmNZa09CcC03UlRnNWZKQjVPcGZlSFRwd3FuT082WGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T11:21:10.734Z"
     },
     {
       "id": "rss_1e052a273ac439d1",
@@ -11165,30 +11188,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPOWc1cGNrV0VOQVdUYnNUejVaRmZnSm9CZHIweHlBejQ3dUt5MkY3TnktYmtEb2U4SFBNOG9pRmFFNEJqN1hDWFFfMjR5TkNkYjVWUVNJUWlkdFJoMy1HRnlPankzeVRyT0xYNV9wRlVwTkVyVnpvZkxKUVBFRjFjaHhwbzVxYjdodkZkb05yX2hTekpONGlNWHRSZVhZTzVHMVhEV0pOblh3M05SNS1EY3MwZ1NEQjBac1h0bDRIUWJ0UmV1RzJsajExc0hqeFY1MENiTDdoNDc3Y0o0Rm9v?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T15:14:35.686Z"
-    },
-    {
-      "id": "rss_4c2508741a1e65d9",
-      "timestamp": 1784812657000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they attacked Saudi tankers as Iran war expands to Red Sea - NewsNation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLVhtbDUtSlJxeWZTWlFZS2dkYWkwTHdJc0V1WWpHc2kwQWNzWVNPNHVvVG56dFBac2N3WXJheDVqMEZFeDhoT2kzbVZkbGgwT3hZV2xQcElsTlRWamZyOHlINUFWa3QwMEgyTTFyeUZxQTFjclYyRDNrSXc5cjFoVFV5LXpnczBy0gGOAUFVX3lxTFB4RE5CTjBVZlZtQ25vRUZnYlNjbktMVURZajM5MXJyUEt4cWhXSVZ5R185LUJZV2Fqd21yYVU5cU9LMGVicXh2SnhRWG5aY2JUazd2LUU3ZlhqV25jcnpsTDc1UG1GSndpSFN5VWEyRy1CM2pOYTFsNlMweE1PdENBSkU3RWFjOVVKRGMwbUE?oc=5\" target=\"_blank\">Houthis say they attacked Saudi tankers as Iran ",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLVhtbDUtSlJxeWZTWlFZS2dkYWkwTHdJc0V1WWpHc2kwQWNzWVNPNHVvVG56dFBac2N3WXJheDVqMEZFeDhoT2kzbVZkbGgwT3hZV2xQcElsTlRWamZyOHlINUFWa3QwMEgyTTFyeUZxQTFjclYyRDNrSXc5cjFoVFV5LXpnczBy0gGOAUFVX3lxTFB4RE5CTjBVZlZtQ25vRUZnYlNjbktMVURZajM5MXJyUEt4cWhXSVZ5R185LUJZV2Fqd21yYVU5cU9LMGVicXh2SnhRWG5aY2JUazd2LUU3ZlhqV25jcnpsTDc1UG1GSndpSFN5VWEyRy1CM2pOYTFsNlMweE1PdENBSkU3RWFjOVVKRGMwbUE?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
