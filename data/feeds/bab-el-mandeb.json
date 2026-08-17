@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T18:31:39.711Z",
+  "last_fetch": "2026-08-17T19:23:28.765Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_125f2a4ad7c5ba18",
+      "timestamp": 1786992437000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say missiles hit Saudi military ship and four escort vessels - Baird Maritime",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOWldHWXpJYUJvbElBdHdVcU85WTBvbGZ2bkZxQkdVZFFiMFdNWlk4dHNUUmVmYnFuV0pOSWVmNUlEZTJWYzFwTXhDVmw3NUJoX2pjSGRzcXJwem14VkxURUNtY1lDMUc5SDJKYU03ZmhlMzhpUEtxYWJHMS1ic2VjeUV4UlNqc1I5SWpoalI1N0JPWHBFSndqalloS1VzdUk5VFVoZWJIeXlTZlhnbFc5c1FBeFBCV01RSHpZU2JkUGpJX3lNZmdiWNIB1gFBVV95cUxPbDVHNUdJRWoyUjJGdFdoRXkzeXkxTmR3Rzl1aldXY3ZPVnY5bHFZUmV2MmNETFg4MEpadmMwMUJZN2E2bHh4SlJwS3psYmswZlRJOFpOajdWSlR0a0MzNkpXVk1UOFpEQTd4a0hYS1drdTZsdl9CSGRlZWNNN19RQ3M1Z1",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOWldHWXpJYUJvbElBdHdVcU85WTBvbGZ2bkZxQkdVZFFiMFdNWlk4dHNUUmVmYnFuV0pOSWVmNUlEZTJWYzFwTXhDVmw3NUJoX2pjSGRzcXJwem14VkxURUNtY1lDMUc5SDJKYU03ZmhlMzhpUEtxYWJHMS1ic2VjeUV4UlNqc1I5SWpoalI1N0JPWHBFSndqalloS1VzdUk5VFVoZWJIeXlTZlhnbFc5c1FBeFBCV01RSHpZU2JkUGpJX3lNZmdiWNIB1gFBVV95cUxPbDVHNUdJRWoyUjJGdFdoRXkzeXkxTmR3Rzl1aldXY3ZPVnY5bHFZUmV2MmNETFg4MEpadmMwMUJZN2E2bHh4SlJwS3psYmswZlRJOFpOajdWSlR0a0MzNkpXVk1UOFpEQTd4a0hYS1drdTZsdl9CSGRlZWNNN19RQ3M1Z1pCNnZNQklReDFEdi1WbVM5UElyNTA3eWF3ZXdyejBvMjl1V09IVGxtdmtLMkdKTUVFUUN4X0dLTFAtQ1BUSTVkR0tyQVMtR2VhbURmRl8tb2p3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T19:23:27.267Z"
+    },
+    {
+      "id": "rss_99c3667d53d749a4",
+      "timestamp": 1786991546000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen : Houthi Attack Damages Ship, Pier at Al‑Aradhi Port in Bab al‑Mandeb - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFA3V3BiOUF0UHlWZmNCcDNZbWNtOWU3Q1VPWlptdzJ3eV92ZFh4YW1QS2ZHd3NpQXFjWEtRZVhFUWpPaFk4bWpGSTlkVlNCbE5SbW4xNHpqc1p5dw?oc=5\" target=\"_blank\">Yemen : Houthi Attack Damages Ship, Pier at Al‑Aradhi Port in Bab al‑Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA3V3BiOUF0UHlWZmNCcDNZbWNtOWU3Q1VPWlptdzJ3eV92ZFh4YW1QS2ZHd3NpQXFjWEtRZVhFUWpPaFk4bWpGSTlkVlNCbE5SbW4xNHpqc1p5dw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T19:23:27.267Z"
+    },
     {
       "id": "rss_053159f11d21991a",
       "timestamp": 1786979771000,
@@ -11150,50 +11197,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:27:16.037Z"
-    },
-    {
-      "id": "rss_04207d473f56b213",
-      "timestamp": 1784826368000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks raise fears of wider Middle East conflict and more global economic damage - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oVlRJbjJ3d1BLRjJGR2hrclg2ckp6YVZ3Z25oa3dScWVfcTAxN0YtRi1EZE9yck1yeGp4X2VxRldBeE9wSGQ2SThfSWs0MzdvUmZ5ZEFQX1hUUQ?oc=5\" target=\"_blank\">Houthi attacks raise fears of wider Middle East conflict and more global economic damage</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5oVlRJbjJ3d1BLRjJGR2hrclg2ckp6YVZ3Z25oa3dScWVfcTAxN0YtRi1EZE9yck1yeGp4X2VxRldBeE9wSGQ2SThfSWs0MzdvUmZ5ZEFQX1hUUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T19:30:23.764Z"
-    },
-    {
-      "id": "rss_3b960baaa949fd12",
-      "timestamp": 1784826071000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Global oil prices cross $100 a barrel as Iran war sends fuel prices surging - ABC7 New York",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPSElaUndhZ2xoOXRLNi1UdkxHTGlJUUNsWktNODZTM2JObjBIVVlJcWhQYzN0SVNPbUJxXy15RS0wVTN3ZzRKMXBwOUtZRS1KM19fcjBJN2tBTzJ0OGM3eXZrSXRselp2ZTFBVXhhVEhJaVpwR3RDdjZOdDlJRG9sdkZjYjlSeTQ5d191YTNTX1ByTmxoWXlnUHJhdExCUQ?oc=5\" target=\"_blank\">Global oil prices cross $100 a barrel as Iran war sends fuel prices surging</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC7 New York</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSElaUndhZ2xoOXRLNi1UdkxHTGlJUUNsWktNODZTM2JObjBIVVlJcWhQYzN0SVNPbUJxXy15RS0wVTN3ZzRKMXBwOUtZRS1KM19fcjBJN2tBTzJ0OGM3eXZrSXRselp2ZTFBVXhhVEhJaVpwR3RDdjZOdDlJRG9sdkZjYjlSeTQ5d191YTNTX1ByTmxoWXlnUHJhdExCUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T17:35:40.209Z"
     }
   ]
 }
