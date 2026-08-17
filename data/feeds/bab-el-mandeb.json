@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T14:52:10.353Z",
+  "last_fetch": "2026-08-17T15:19:56.946Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -48,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-17T14:21:44.107Z"
+    },
+    {
+      "id": "rss_dcdcaf2aa75c83d7",
+      "timestamp": 1786970766000,
+      "source": "Al Jazeera",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s drone war: Rivals flex growing aerial muscle - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEZPanl2RHZFR21fa2llRTRITHo0TnFBMFBsUVBOd2pnTGI4RXpMMzlSY2lBYUNtb2Q0V2ZmS3VmdkIyaEMxRGF5NzlmRjZMVWh6VklzeHd2LXFwUko4c3JKNkdSelEtYkZsLTBlXzZoUnV6WV9HQzJGWEcxSW5vZW1VVUhVMk1LREdpdV9jcklQOXJGR0HSAZsBQVVfeXFMTWtSVUtvSGtwTUkwLXp2UG1GdzVvb3Jnb3prRG1PTE9ONXQ4LTl4VmJ2QW5HT2VlYUFIVk5oWU1WekpTckhtS2lTMTd2SEhCZUVHVmNXWGdhZDFYSk0yWmNLTzdsN2RGdU8xSGdqVTNqcU5GYWRMaUFBUW1jMEExRmxMWmpkUXpTN2NSUUhtT2RqYmtqX0RyRVRoUTA?oc=5\" target=\"_blank\">Yemen’s dron",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEZPanl2RHZFR21fa2llRTRITHo0TnFBMFBsUVBOd2pnTGI4RXpMMzlSY2lBYUNtb2Q0V2ZmS3VmdkIyaEMxRGF5NzlmRjZMVWh6VklzeHd2LXFwUko4c3JKNkdSelEtYkZsLTBlXzZoUnV6WV9HQzJGWEcxSW5vZW1VVUhVMk1LREdpdV9jcklQOXJGR0HSAZsBQVVfeXFMTWtSVUtvSGtwTUkwLXp2UG1GdzVvb3Jnb3prRG1PTE9ONXQ4LTl4VmJ2QW5HT2VlYUFIVk5oWU1WekpTckhtS2lTMTd2SEhCZUVHVmNXWGdhZDFYSk0yWmNLTzdsN2RGdU8xSGdqVTNqcU5GYWRMaUFBUW1jMEExRmxMWmpkUXpTN2NSUUhtT2RqYmtqX0RyRVRoUTA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-17T15:19:55.524Z"
     },
     {
       "id": "rss_72d6eb95e9ced396",
@@ -11172,27 +11195,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T16:59:13.604Z"
-    },
-    {
-      "id": "rss_75d0e6210a8e0449",
-      "timestamp": 1784821599000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "‘Rogue’ AI Drama Spurs Safety Debate, Oil up 5% on Houthi Attack - Asia Financial",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOZm8wbG5Kcl8wM0RWcUVWOGdMeVVkVXo5Q01sNWRDR0k2Q1Z3RTcteHowSHhoVFR4QU9ZcGdHdlZDYmNYS3AyYzQ2RGZVS19FQWlXWHJUMUg3WnRpS1Fsb0MyOTNhdWxyOFpzejVrSTBzcDhwVklYNy1tVmFqYk5HOFVkWnhCQkhxSzQ4VkktajhaZXNY?oc=5\" target=\"_blank\">‘Rogue’ AI Drama Spurs Safety Debate, Oil up 5% on Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asia Financial</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZm8wbG5Kcl8wM0RWcUVWOGdMeVVkVXo5Q01sNWRDR0k2Q1Z3RTcteHowSHhoVFR4QU9ZcGdHdlZDYmNYS3AyYzQ2RGZVS19FQWlXWHJUMUg3WnRpS1Fsb0MyOTNhdWxyOFpzejVrSTBzcDhwVklYNy1tVmFqYk5HOFVkWnhCQkhxSzQ4VkktajhaZXNY?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T16:04:12.477Z"
     }
   ]
 }
