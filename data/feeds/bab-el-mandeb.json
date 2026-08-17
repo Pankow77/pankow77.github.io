@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T09:07:16.719Z",
+  "last_fetch": "2026-08-17T10:03:39.756Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1e052a273ac439d1",
+      "timestamp": 1786958669000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Ships reported hit as Houthi strikes close Red Sea port of Mokha - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNcGNyNXBpS1BSWEtIdWFocERXVl9USDdEVXp5MkVmWUFjalE5ZUVrcU9la2FqN0tuaHN5S19uckNqMnoyVk9lMnFib0dhRTZOcEpsci1EckphZkxzSUtZaU5ibEROclZ6T1RaOC1UODVRQ05ueGpPbnE5cTRKb0lwakRsa044M01BWU5BYzVuWHZPNlRlbXlWellrYVVkSEZ1UjJPSTJiMDBnbXBPdm1SWFBONA?oc=5\" target=\"_blank\">Ships reported hit as Houthi strikes close Red Sea port of Mokha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcGNyNXBpS1BSWEtIdWFocERXVl9USDdEVXp5MkVmWUFjalE5ZUVrcU9la2FqN0tuaHN5S19uckNqMnoyVk9lMnFib0dhRTZOcEpsci1EckphZkxzSUtZaU5ibEROclZ6T1RaOC1UODVRQ05ueGpPbnE5cTRKb0lwakRsa044M01BWU5BYzVuWHZPNlRlbXlWellrYVVkSEZ1UjJPSTJiMDBnbXBPdm1SWFBONA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T10:03:38.439Z"
+    },
     {
       "id": "rss_76e68bfe1d263c6d",
       "timestamp": 1786918116000,
@@ -11169,30 +11192,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T16:04:12.477Z"
-    },
-    {
-      "id": "rss_aaff811580e7dbbc",
-      "timestamp": 1784809978000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthis attack 2 Saudi oil tankers in the Red Sea, threatening to open a new front in the Iran war - Baltimore Sun",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE9PaE5jVVVVb0pOYmh0eTVMbEo3VUJHSkUzZ0t0UnJFWUpIV3UzMWllUzB2dE8wY0ZLT29INUFCZEpjZ2xfWklYWksxeFFYdjZUWmVhYl9JVVV2NkNWMndwWDdkV2s4LUZrYjdPdWVfV3NhaUU1OExXMERNVQ?oc=5\" target=\"_blank\">Houthis attack 2 Saudi oil tankers in the Red Sea, threatening to open a new front in the Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Baltimore Sun</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9PaE5jVVVVb0pOYmh0eTVMbEo3VUJHSkUzZ0t0UnJFWUpIV3UzMWllUzB2dE8wY0ZLT29INUFCZEpjZ2xfWklYWksxeFFYdjZUWmVhYl9JVVV2NkNWMndwWDdkV2s4LUZrYjdPdWVfV3NhaUU1OExXMERNVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T13:00:28.837Z"
     }
   ]
 }
