@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T10:03:39.756Z",
+  "last_fetch": "2026-08-17T10:55:42.287Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6c87c3783238c929",
+      "timestamp": 1786960175000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Houthi Ship Attack - Dayton Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNamtaei01YjlTZnJFUGdIYjdOSWNoT0gyZll0YXVjV2doU1hveW9yblFFR01LNkxEem9pblUtXzE0Nm93UkY5UDdHcm92R2ZWMFpid2tSNmhkem1hbzdaZGV2NVBJZGhkVmFVS3lyVEV0N1dyRFV0NUFQNjhiNWRkTFFOWS1CbksxbDI5VzR0Vmt0c3RrU0I0WmV5RnhxR2JLRVlBQ2MzRjcwV0Z4MUpwWVVQRmNPSS02?oc=5\" target=\"_blank\">Yemen Houthi Ship Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dayton Daily News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNamtaei01YjlTZnJFUGdIYjdOSWNoT0gyZll0YXVjV2doU1hveW9yblFFR01LNkxEem9pblUtXzE0Nm93UkY5UDdHcm92R2ZWMFpid2tSNmhkem1hbzdaZGV2NVBJZGhkVmFVS3lyVEV0N1dyRFV0NUFQNjhiNWRkTFFOWS1CbksxbDI5VzR0Vmt0c3RrU0I0WmV5RnhxR2JLRVlBQ2MzRjcwV0Z4MUpwWVVQRmNPSS02?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T10:55:41.140Z"
+    },
     {
       "id": "rss_1e052a273ac439d1",
       "timestamp": 1786958669000,
@@ -11171,27 +11194,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T15:14:35.686Z"
-    },
-    {
-      "id": "rss_4cbb1e67a805997e",
-      "timestamp": 1784812155000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil surges to $100 per barrel after Red Sea attacks - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOMHdMaXlYMmdiMllLaVZGYnpYUVpNNkUzRVJVY3VkcXhWU3RFY0VRX29Zel9taHRSejBKQmZWc2pRSVMxMjlPM05tdVJpeFozM2x4SVptdlpZVzJCSVFkNVIxOEZCUFZkY0o4Zk45UHR5WTVvZGROVjV1Rmh4eFV3ZW9iSDA0eVQ1aUJhWFJ0cWV0TENnbXJXMmlSTi1wMUZaZUJJd2RrV01YcUx2bmdhdk1R?oc=5\" target=\"_blank\">Oil surges to $100 per barrel after Red Sea attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMHdMaXlYMmdiMllLaVZGYnpYUVpNNkUzRVJVY3VkcXhWU3RFY0VRX29Zel9taHRSejBKQmZWc2pRSVMxMjlPM05tdVJpeFozM2x4SVptdlpZVzJCSVFkNVIxOEZCUFZkY0o4Zk45UHR5WTVvZGROVjV1Rmh4eFV3ZW9iSDA0eVQ1aUJhWFJ0cWV0TENnbXJXMmlSTi1wMUZaZUJJd2RrV01YcUx2bmdhdk1R?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T16:04:12.477Z"
     }
   ]
 }
