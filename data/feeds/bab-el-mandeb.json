@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T13:34:53.895Z",
+  "last_fetch": "2026-08-17T14:21:45.445Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5aacf6602342d511",
+      "timestamp": 1786972918000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis fire missile salvo toward Bab al-Mandab, Red Sea, government says - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaGVraElLSzV0aTdHbE1rVzdsMHBSUUcyLWkydDJwYUpyQmxLZkZvYmg3WFBobkhUaXU4NWFTV2JUb24xYlhKSXE5ZkNYYUlMOVlxVGNDVnlnc0FXZ0tEekZadEtiS0xXOEVpNUpqMzgzZHVWNm03bjE0aUxuZm5fSV8zeXRXSnQwYTJaLWN4WTh1MU0tUG5TSEEzSjdpS3Q3R1FldHkzS3J1alVOb3R4Nkk0VXlJNUhTbnhUNzFxdDM?oc=5\" target=\"_blank\">Yemen's Houthis fire missile salvo toward Bab al-Mandab, Red Sea, government says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaGVraElLSzV0aTdHbE1rVzdsMHBSUUcyLWkydDJwYUpyQmxLZkZvYmg3WFBobkhUaXU4NWFTV2JUb24xYlhKSXE5ZkNYYUlMOVlxVGNDVnlnc0FXZ0tEekZadEtiS0xXOEVpNUpqMzgzZHVWNm03bjE0aUxuZm5fSV8zeXRXSnQwYTJaLWN4WTh1MU0tUG5TSEEzSjdpS3Q3R1FldHkzS3J1alVOb3R4Nkk0VXlJNUhTbnhUNzFxdDM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T14:21:44.107Z"
+    },
     {
       "id": "rss_72d6eb95e9ced396",
       "timestamp": 1786970100000,
@@ -11172,27 +11195,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T16:04:12.477Z"
-    },
-    {
-      "id": "rss_abfb83827321531c",
-      "timestamp": 1784818762000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Red Sea tensions boost oil prices after Houthis claim attack - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQRjExTkRlSmdVQWtqS0Vaa1p4TS1uZVgyLXdxODQ2UVNrN3I2cGtXd3Vfb0RybDV3U2R3Y0M5SWVVaU9RM01oc09faDVkay1RTmZXeTZSenF0R3RtZ085LU5LSGgzNXNLY3Y2b0xCNEY4clBlMzhaNWthcHh3ZkkzRFNfcnd1RTNZTGFZYlg0WWFrcVFldUxTQzVaZHRNSXdHUFZob2V3?oc=5\" target=\"_blank\">Red Sea tensions boost oil prices after Houthis claim attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRjExTkRlSmdVQWtqS0Vaa1p4TS1uZVgyLXdxODQ2UVNrN3I2cGtXd3Vfb0RybDV3U2R3Y0M5SWVVaU9RM01oc09faDVkay1RTmZXeTZSenF0R3RtZ085LU5LSGgzNXNLY3Y2b0xCNEY4clBlMzhaNWthcHh3ZkkzRFNfcnd1RTNZTGFZYlg0WWFrcVFldUxTQzVaZHRNSXdHUFZob2V3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T15:14:35.686Z"
     }
   ]
 }
