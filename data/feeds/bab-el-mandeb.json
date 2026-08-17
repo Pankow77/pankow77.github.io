@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T16:20:57.581Z",
+  "last_fetch": "2026-08-17T16:53:23.632Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -71,6 +71,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-08-17T15:19:55.524Z"
+    },
+    {
+      "id": "rss_3016a697b395c197",
+      "timestamp": 1786970187000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they attacked Saudi vessels off Yemen’s Mocha - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOTEViWjVJeVRDNlYyWjhiN2VaLVltUW9OcUJLRGJfU055NkVreDRrUHNxUDlZS3VFVVVDMUhJZk1tNE9JMlhUeGctaWlzY0VtSFo0ekZrRGFfYWU3elI3dVNNX0J1b0k4NTRsQzdTOHlvZEtrTFBvUXRBa1dIaHlONUNjY0NmUjlKV19FRDh6TTl6R0FqbGZpWHJXRDFFZzBBaDJpUE5wS3lDSDlHQUZB?oc=5\" target=\"_blank\">Houthis say they attacked Saudi vessels off Yemen’s Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTEViWjVJeVRDNlYyWjhiN2VaLVltUW9OcUJLRGJfU055NkVreDRrUHNxUDlZS3VFVVVDMUhJZk1tNE9JMlhUeGctaWlzY0VtSFo0ekZrRGFfYWU3elI3dVNNX0J1b0k4NTRsQzdTOHlvZEtrTFBvUXRBa1dIaHlONUNjY0NmUjlKV19FRDh6TTl6R0FqbGZpWHJXRDFFZzBBaDJpUE5wS3lDSDlHQUZB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-08-17T16:53:22.259Z"
     },
     {
       "id": "rss_72d6eb95e9ced396",
@@ -11171,30 +11194,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-25T06:47:11.624Z"
-    },
-    {
-      "id": "rss_3d47fb6cdfeb495c",
-      "timestamp": 1784822400000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack oil tankers in Red Sea; US hits Iran - Taipei Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5iMVJJeWZXSDJEUFQ0Ym44N183QWZRNmhPczZBMTE4d1NIb1kzc1RKYm1DVUJmVXpPWjd6eENFaDQyWFVxaTUtQjlaOEY2LWtyWHFFNmJtVVB4MXRldzFucHhaUDY2dnQ3dWl3V0FqM0xxeTRfNDZSWg?oc=5\" target=\"_blank\">Houthis attack oil tankers in Red Sea; US hits Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Taipei Times</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5iMVJJeWZXSDJEUFQ0Ym44N183QWZRNmhPczZBMTE4d1NIb1kzc1RKYm1DVUJmVXpPWjd6eENFaDQyWFVxaTUtQjlaOEY2LWtyWHFFNmJtVVB4MXRldzFucHhaUDY2dnQ3dWl3V0FqM0xxeTRfNDZSWg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T16:59:13.604Z"
     }
   ]
 }
