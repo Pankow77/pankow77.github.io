@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T03:26:14.492Z",
+  "last_fetch": "2026-08-17T04:10:40.831Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_76e68bfe1d263c6d",
+      "timestamp": 1786918116000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "An Eye for an Eye at Sea: The Houthi Blockade of Saudi Arabia - The Organization for World Peace",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNME1fRmFwVFh3TExiYmpDdklJQ0p6Q3NUWG15S1dHaVJjenZkSndrYmVnZHowQlF5eVFmOGZ1RGJpTHpPdjRhM0gyMDdLUmRPWGQ2RjRIWmd5TFRtTERfZ2NibTdQQ0cyTkNSbDlyMUdRUnNPZmNWN29PY0FxeC1LaXZ5bUZHclU?oc=5\" target=\"_blank\">An Eye for an Eye at Sea: The Houthi Blockade of Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Organization for World Peace</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNME1fRmFwVFh3TExiYmpDdklJQ0p6Q3NUWG15S1dHaVJjenZkSndrYmVnZHowQlF5eVFmOGZ1RGJpTHpPdjRhM0gyMDdLUmRPWGQ2RjRIWmd5TFRtTERfZ2NibTdQQ0cyTkNSbDlyMUdRUnNPZmNWN29PY0FxeC1LaXZ5bUZHclU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T04:10:39.591Z"
+    },
     {
       "id": "rss_4c3ac37a98e3ec24",
       "timestamp": 1786911308000,
@@ -11172,27 +11193,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T13:00:28.837Z"
-    },
-    {
-      "id": "rss_e79e800dff7a0324",
-      "timestamp": 1784808548000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Will the Houthis escalate attacks on the Bab el-Mandeb Strait? - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFA2Y01INVJhVXlsb25XTk1GaWphaENXd1ctTkxneGZtRlBCVlRQMEhLRU44WWRoOVRab05sVWgtVVU2QVdwTzV5NWptYl93dEdTNnlhTGtiS2Q4N2F6?oc=5\" target=\"_blank\">Will the Houthis escalate attacks on the Bab el-Mandeb Strait?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA2Y01INVJhVXlsb25XTk1GaWphaENXd1ctTkxneGZtRlBCVlRQMEhLRU44WWRoOVRab05sVWgtVVU2QVdwTzV5NWptYl93dEdTNnlhTGtiS2Q4N2F6?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T13:00:28.838Z"
     }
   ]
 }
