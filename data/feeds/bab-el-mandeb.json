@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-17T12:34:11.116Z",
+  "last_fetch": "2026-08-17T13:34:53.895Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_72d6eb95e9ced396",
+      "timestamp": 1786970100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis say they targeted Saudi military ship in Red Sea - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTGN3U3VUTGdJVlN3Yk85Rk9IOUhJd1Q0QUdEWHJhcnJJWjBkc3lPOEhQcjdsOThmRnRHNVZfcjBOV0w3LVN6ZmR1V2JDMkdycVJ0WjFHc3NPT0NrQTh3bFJCb0s0MWRMb0pralkzZndaT0VxR2ZvdWdaRnRKN1lPVC0tMGNLMExub05mNUtGMDYyZ3RPYmxkcXlhWml5YVpZaHRZd3lqRUlZTTk2cm0yQUhNQ21QS0ZwTXJkZjVHSDA5Y3gzVEZ0dmFWci1EYnRyZUtMVTNpT2JhVW1NU1JNLWZyZGV3el9vdGZpcUdNQQ?oc=5\" target=\"_blank\">Houthis say they targeted Saudi military ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTGN3U3VUTGdJVlN3Yk85Rk9IOUhJd1Q0QUdEWHJhcnJJWjBkc3lPOEhQcjdsOThmRnRHNVZfcjBOV0w3LVN6ZmR1V2JDMkdycVJ0WjFHc3NPT0NrQTh3bFJCb0s0MWRMb0pralkzZndaT0VxR2ZvdWdaRnRKN1lPVC0tMGNLMExub05mNUtGMDYyZ3RPYmxkcXlhWml5YVpZaHRZd3lqRUlZTTk2cm0yQUhNQ21QS0ZwTXJkZjVHSDA5Y3gzVEZ0dmFWci1EYnRyZUtMVTNpT2JhVW1NU1JNLWZyZGV3el9vdGZpcUdNQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T13:34:52.398Z"
+    },
+    {
+      "id": "rss_1faf1b1716afba93",
+      "timestamp": 1786968925000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim missile attack on Saudi ship in Red Sea - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5sX3NQYnJ0QnJZTWZ4b1dnMnlYUlFDLTZERWxLNWlPLUIyUDJ2VWw3NkkzVGZuck9Tdml1YkpnNXRiUWd0eWhuNXFoNTUzcHVfTTBpTGtxaXhQUUs2?oc=5\" target=\"_blank\">Houthis claim missile attack on Saudi ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5sX3NQYnJ0QnJZTWZ4b1dnMnlYUlFDLTZERWxLNWlPLUIyUDJ2VWw3NkkzVGZuck9Tdml1YkpnNXRiUWd0eWhuNXFoNTUzcHVfTTBpTGtxaXhQUUs2?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-17T13:34:52.397Z"
+    },
     {
       "id": "rss_6c87c3783238c929",
       "timestamp": 1786960175000,
@@ -11141,53 +11188,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQRjExTkRlSmdVQWtqS0Vaa1p4TS1uZVgyLXdxODQ2UVNrN3I2cGtXd3Vfb0RybDV3U2R3Y0M5SWVVaU9RM01oc09faDVkay1RTmZXeTZSenF0R3RtZ085LU5LSGgzNXNLY3Y2b0xCNEY4clBlMzhaNWthcHh3ZkkzRFNfcnd1RTNZTGFZYlg0WWFrcVFldUxTQzVaZHRNSXdHUFZob2V3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T15:14:35.686Z"
-    },
-    {
-      "id": "rss_3a70e9a466776759",
-      "timestamp": 1784815860000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran ally makes exception for Chinese oil tankers after Red Sea strikes - Newsweek",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOWTVvN0RaYmkydTZLRWZTV1Y2Vi0wSFFWUktjNVlmbDA5d3plLUFGM203UnRkNXJsWTFKUUUxOVY4NHNWbmprTktJd2FJZWV5WTRYSVhrTWxMbjB1VEkyWEFXcXlDcEtKWnE1WGVnVl95U0N1a3JNTWwwclNDUlFob2VMM1F0Q1h1TFdtc2ZDVDJWNDZzNTZR?oc=5\" target=\"_blank\">Iran ally makes exception for Chinese oil tankers after Red Sea strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newsweek</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWTVvN0RaYmkydTZLRWZTV1Y2Vi0wSFFWUktjNVlmbDA5d3plLUFGM203UnRkNXJsWTFKUUUxOVY4NHNWbmprTktJd2FJZWV5WTRYSVhrTWxMbjB1VEkyWEFXcXlDcEtKWnE1WGVnVl95U0N1a3JNTWwwclNDUlFob2VMM1F0Q1h1TFdtc2ZDVDJWNDZzNTZR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T21:49:22.867Z"
-    },
-    {
-      "id": "rss_0268ae2494759569",
-      "timestamp": 1784814420000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Qatar condemns Houthi attack on Saudi vessel - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxPOWc1cGNrV0VOQVdUYnNUejVaRmZnSm9CZHIweHlBejQ3dUt5MkY3TnktYmtEb2U4SFBNOG9pRmFFNEJqN1hDWFFfMjR5TkNkYjVWUVNJUWlkdFJoMy1HRnlPankzeVRyT0xYNV9wRlVwTkVyVnpvZkxKUVBFRjFjaHhwbzVxYjdodkZkb05yX2hTekpONGlNWHRSZVhZTzVHMVhEV0pOblh3M05SNS1EY3MwZ1NEQjBac1h0bDRIUWJ0UmV1RzJsajExc0hqeFY1MENiTDdoNDc3Y0o0Rm9v?oc=5\" target=\"_blank\">Qatar condemns Houthi attack on Saudi vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPOWc1cGNrV0VOQVdUYnNUejVaRmZnSm9CZHIweHlBejQ3dUt5MkY3TnktYmtEb2U4SFBNOG9pRmFFNEJqN1hDWFFfMjR5TkNkYjVWUVNJUWlkdFJoMy1HRnlPankzeVRyT0xYNV9wRlVwTkVyVnpvZkxKUVBFRjFjaHhwbzVxYjdodkZkb05yX2hTekpONGlNWHRSZVhZTzVHMVhEV0pOblh3M05SNS1EY3MwZ1NEQjBac1h0bDRIUWJ0UmV1RzJsajExc0hqeFY1MENiTDdoNDc3Y0o0Rm9v?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
