@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T07:32:59.399Z",
+  "last_fetch": "2026-08-18T08:30:12.480Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0975113fd99fa974",
+      "timestamp": 1787039966000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Woman, child injured in Houthi mortar attack on populated areas in Yemen: Report - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaklrM2xSLWlTR0JPZFcyNkdVZzAyUFRUNTVxWXE2ellSTGRhb2d6dFh2cjJCVXhSbEtBNmlaMDM3d2EyZUlyTXFBWENpYWNlN2JGM3FSUnFhVnN1SGtBdnRtUDVxOGFxd0NzOXhERVRmM2FvNWl4WkFjVm5Lc2t0MXFiaFJIdDJnQjNSbHlnbTRPUDVzd25SV1ZIQnBUWGtLalgwcV9IWkN1SUVrbGpFZnFoc3JYdkNBQW5EbThEUjY?oc=5\" target=\"_blank\">Woman, child injured in Houthi mortar attack on populated areas in Yemen: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaklrM2xSLWlTR0JPZFcyNkdVZzAyUFRUNTVxWXE2ellSTGRhb2d6dFh2cjJCVXhSbEtBNmlaMDM3d2EyZUlyTXFBWENpYWNlN2JGM3FSUnFhVnN1SGtBdnRtUDVxOGFxd0NzOXhERVRmM2FvNWl4WkFjVm5Lc2t0MXFiaFJIdDJnQjNSbHlnbTRPUDVzd25SV1ZIQnBUWGtLalgwcV9IWkN1SUVrbGpFZnFoc3JYdkNBQW5EbThEUjY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T08:30:11.027Z"
+    },
     {
       "id": "rss_3dc1f4bd28ba23ff",
       "timestamp": 1787028398000,
@@ -11174,29 +11195,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:27:16.037Z"
-    },
-    {
-      "id": "rss_efe45fbf652f0538",
-      "timestamp": 1784829367000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Attacks on Saudi Tankers Constrict Crude Trade - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNN0Qzc2dpdldWR1hnN0c4UUptTmticFFCRnZUeGEtUXdTTEd0V0o4U2pyZ3l0WGlTWlN0YXFhaG9tc0RZV0pUMDJfMlBmanNpbmM2ejI2TmlDejNQZFc2M0psdmZJZ0pFRF9YWEFLaU9zc0FsVHgxNTNSVlFGRXRBTw?oc=5\" target=\"_blank\">Houthi Attacks on Saudi Tankers Constrict Crude Trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN0Qzc2dpdldWR1hnN0c4UUptTmticFFCRnZUeGEtUXdTTEd0V0o4U2pyZ3l0WGlTWlN0YXFhaG9tc0RZV0pUMDJfMlBmanNpbmM2ejI2TmlDejNQZFc2M0psdmZJZ0pFRF9YWEFLaU9zc0FsVHgxNTNSVlFGRXRBTw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T18:27:17.035Z"
     }
   ]
 }
