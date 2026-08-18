@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T04:05:31.115Z",
+  "last_fetch": "2026-08-18T05:00:55.345Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3dc1f4bd28ba23ff",
+      "timestamp": 1787028398000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Fire 5 Ballistic Missiles at Bab el-Mandeb - ASHARQ AL-AWSAT English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPZjBncVU5TDVyZGVyNUxTUEVOYmc0bmNQNkRxSXNSVmVrWmpoZ1kwYzg3UjNPaW5fNFVCQ1MxRFNBUDRBcEtqZDR1clZJR3hKTS1GUkl3TXk0ZzY5bW0xTjJvaG9qeGpnOVAtTnhrZXR6NHBUcWt5aFJnNEdXZldhR25JT1JMUUZFcW1rbFVWbDd3RS1GNTFPNA?oc=5\" target=\"_blank\">Houthis Fire 5 Ballistic Missiles at Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPZjBncVU5TDVyZGVyNUxTUEVOYmc0bmNQNkRxSXNSVmVrWmpoZ1kwYzg3UjNPaW5fNFVCQ1MxRFNBUDRBcEtqZDR1clZJR3hKTS1GUkl3TXk0ZzY5bW0xTjJvaG9qeGpnOVAtTnhrZXR6NHBUcWt5aFJnNEdXZldhR25JT1JMUUZFcW1rbFVWbDd3RS1GNTFPNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T05:00:53.891Z"
+    },
     {
       "id": "rss_125f2a4ad7c5ba18",
       "timestamp": 1786992437000,
@@ -11174,29 +11197,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T18:27:17.035Z"
-    },
-    {
-      "id": "rss_b4ee3ba9946fb38d",
-      "timestamp": 1784828231000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "EU, Canada calls Houthi attack on Red Sea oil tanker 'unacceptable,' warns against further escalation - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcldEV0RreE9BbkFJekF0M205OXg3UVBYSHZ1MEVUcEh3Z0VLci1jTDRtaldTVGlGOUtCYVVSRVNYZ0JVaVRaM1VDSkE3R2RBNTl3WFpxblQ2aU42V0gzRlI0bUEzaWdTM2gxTGNBb3UzSTN4ejliZ3Y5dmVLN0pXYkQwZm4xd1kwcC04djNqMVpMMHA2Y2w2RUVDcmJmS1IybkUwLVBjT2VRYTBTaW1VM3EzbVV4NVA1M2RuTUxROWNqSzdUUUpabllaM0RzWGxiTXBR?oc=5\" target=\"_blank\">EU, Canada calls Houthi attack on Red Sea oil tanker 'unacceptable,' warns against further escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anad",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOcldEV0RreE9BbkFJekF0M205OXg3UVBYSHZ1MEVUcEh3Z0VLci1jTDRtaldTVGlGOUtCYVVSRVNYZ0JVaVRaM1VDSkE3R2RBNTl3WFpxblQ2aU42V0gzRlI0bUEzaWdTM2gxTGNBb3UzSTN4ejliZ3Y5dmVLN0pXYkQwZm4xd1kwcC04djNqMVpMMHA2Y2w2RUVDcmJmS1IybkUwLVBjT2VRYTBTaW1VM3EzbVV4NVA1M2RuTUxROWNqSzdUUUpabllaM0RzWGxiTXBR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T18:27:16.037Z"
     }
   ]
 }
