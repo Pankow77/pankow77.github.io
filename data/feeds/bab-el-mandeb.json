@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T13:37:55.893Z",
+  "last_fetch": "2026-08-18T14:27:44.789Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -67,6 +67,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T11:23:11.490Z"
+    },
+    {
+      "id": "rss_6e7192f05d796b44",
+      "timestamp": 1787050500000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Threat to Red Sea Shipping Rises - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOQVo2MUJRemZfRUxrMUF4Mkc4YngzQS01RnpySlhETXZ3bkp0U09jZHduLV9pcElYdjhTR3hjUl9HR2Q0aV91QXMyRVhzamNpR0NIQWNnSFdZT2s3VE40TXhKTnJ0MlgyelJJRkQ5RDVockRud2F2TTcxZVZqTlpudlNmbDIyeE92UXdCTEJB?oc=5\" target=\"_blank\">Houthi Threat to Red Sea Shipping Rises</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQVo2MUJRemZfRUxrMUF4Mkc4YngzQS01RnpySlhETXZ3bkp0U09jZHduLV9pcElYdjhTR3hjUl9HR2Q0aV91QXMyRVhzamNpR0NIQWNnSFdZT2s3VE40TXhKTnJ0MlgyelJJRkQ5RDVockRud2F2TTcxZVZqTlpudlNmbDIyeE92UXdCTEJB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T14:27:44.783Z"
     },
     {
       "id": "rss_42844c44f4d899b1",
@@ -11167,29 +11190,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-26T07:22:09.838Z"
-    },
-    {
-      "id": "rss_fd3480a4d2a2408e",
-      "timestamp": 1784838360000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia takes center stage as oil hits $100 and the Iran war escalates amid Houthi attacks and nuclear expansion - Fortune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQM0RPVGhGaDFuc2UtUW82VzlHbml5bG16UVR5RElqLU9ZMF9FX3hYUWJvVGZIUGFQT3lBeGRGOWNiRXRZRDZwLVhzbklET2RjVFJyWmpwX2FvX0JodFNLTFUxeFFtYWhteGVSNmJZTVlQOXFnbEpnd3VuMW9fZ2tmYktkSDIxd1RNaWhKbEZ0SGgwemEwRk02dnctWkR2VXQtSGdCcmtn?oc=5\" target=\"_blank\">Saudi Arabia takes center stage as oil hits $100 and the Iran war escalates amid Houthi attacks and nuclear expansion</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQM0RPVGhGaDFuc2UtUW82VzlHbml5bG16UVR5RElqLU9ZMF9FX3hYUWJvVGZIUGFQT3lBeGRGOWNiRXRZRDZwLVhzbklET2RjVFJyWmpwX2FvX0JodFNLTFUxeFFtYWhteGVSNmJZTVlQOXFnbEpnd3VuMW9fZ2tmYktkSDIxd1RNaWhKbEZ0SGgwemEwRk02dnctWkR2VXQtSGdCcmtn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T20:48:02.268Z"
     }
   ]
 }
