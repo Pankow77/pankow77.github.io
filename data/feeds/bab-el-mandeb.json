@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T17:53:27.258Z",
+  "last_fetch": "2026-08-18T18:30:24.520Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b9e070749283d52a",
+      "timestamp": 1787077550000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Death toll from Houthi missile attack in Yemen's Hodeidah rises to 3: Yemeni forces - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGJHeGdKUmIzWUhXTjlTM0tGTEFBa3E0WC04M29kSG0tNmJxR05aTm5fUEpCR2xVdmZoNk1uc1NmU0hCWUJYckJ6MXMtX1BKc0JWSGo1VmdkaUJiRGYxQk02d3V5aXZUcUU2WkdVcnlFallTNFBsaE1DRFJGVUhUYmpqSGp0eVhZVko5UDQ5bGxfRTctNFRkUXNta0pGSWwwbGpNRncyczdob1U1TjY2MFJMV1VQSklEb3pnczVjVndkMGV3?oc=5\" target=\"_blank\">Death toll from Houthi missile attack in Yemen's Hodeidah rises to 3: Yemeni forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGJHeGdKUmIzWUhXTjlTM0tGTEFBa3E0WC04M29kSG0tNmJxR05aTm5fUEpCR2xVdmZoNk1uc1NmU0hCWUJYckJ6MXMtX1BKc0JWSGo1VmdkaUJiRGYxQk02d3V5aXZUcUU2WkdVcnlFallTNFBsaE1DRFJGVUhUYmpqSGp0eVhZVko5UDQ5bGxfRTctNFRkUXNta0pGSWwwbGpNRncyczdob1U1TjY2MFJMV1VQSklEb3pnczVjVndkMGV3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T18:30:22.959Z"
+    },
     {
       "id": "rss_ca877f3a215209dc",
       "timestamp": 1787067255000,
@@ -23,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T16:25:40.242Z"
+    },
+    {
+      "id": "rss_f7b2acfecde22e99",
+      "timestamp": 1787065444000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Three Pakistanis killed in Houthi attack on commercial vessel - aol.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNmZpLXU5Q0lXZG1JNW5oZzNaaGl0WHNmTWZ2Tm15ZFpzNnJBOV9aX0NHRWVkaHlqRlpBQWlKdXJEVTYwdmZNMHZkZVdwMlVYZHdNTFJicVllWGpfRnRzREdLSmxicjFTZjZTeG1BUDl1NldFZENuckJPS0FRRFl1dlNtTkhIT3Zp?oc=5\" target=\"_blank\">Three Pakistanis killed in Houthi attack on commercial vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aol.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPNmZpLXU5Q0lXZG1JNW5oZzNaaGl0WHNmTWZ2Tm15ZFpzNnJBOV9aX0NHRWVkaHlqRlpBQWlKdXJEVTYwdmZNMHZkZVdwMlVYZHdNTFJicVllWGpfRnRzREdLSmxicjFTZjZTeG1BUDl1NldFZENuckJPS0FRRFl1dlNtTkhIT3Zp?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T18:30:22.959Z"
     },
     {
       "id": "rss_980811980b780909",
@@ -46,6 +92,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T15:02:05.895Z"
+    },
+    {
+      "id": "rss_7b1b69e1faa8f4a4",
+      "timestamp": 1787061855000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni government escalates attacks against Houthis: What’s next? - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQN3p1ak1tV3dnUEVxNVpKd0VlSTJuUDNmN0dDbnBBYkc3aDh4ZU9IQjNqMzVBdHBuQjRVd3FJYTM5Ui15a0ZOUUdaWEpaYnRfVnFpSEszR1g3LXI0QjZyWG0xc0RsN0tzbmluMEFqLUNLaE02ZFUyWWJUR3AwMlRscnRia0gwT043dTg1M2lKcVNlbTVQb3JTWWRmN1lYYzRZY1BEcVJn0gGrAUFVX3lxTE5FNU1jQ0Z4cTVGZUd6bnAwS1VCRDc5QW9RNWI2WDJ6dmZSTjREdi1vUUJxT1RnRmtnU0VEZmtXYVQtejNXemY1Z1N5V0VvdmZpQmVZdlV3Z0s1UGZsVU1UckxuUGJBY0tHUjVyLWhSZzdPQjZpTC11bEZVTzFnaXNib19uQmpUZzdGZDFaY09pRzlFU1RmUFBORXRKSGx1MHRRYWdLaj",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQN3p1ak1tV3dnUEVxNVpKd0VlSTJuUDNmN0dDbnBBYkc3aDh4ZU9IQjNqMzVBdHBuQjRVd3FJYTM5Ui15a0ZOUUdaWEpaYnRfVnFpSEszR1g3LXI0QjZyWG0xc0RsN0tzbmluMEFqLUNLaE02ZFUyWWJUR3AwMlRscnRia0gwT043dTg1M2lKcVNlbTVQb3JTWWRmN1lYYzRZY1BEcVJn0gGrAUFVX3lxTE5FNU1jQ0Z4cTVGZUd6bnAwS1VCRDc5QW9RNWI2WDJ6dmZSTjREdi1vUUJxT1RnRmtnU0VEZmtXYVQtejNXemY1Z1N5V0VvdmZpQmVZdlV3Z0s1UGZsVU1UckxuUGJBY0tHUjVyLWhSZzdPQjZpTC11bEZVTzFnaXNib19uQmpUZzdGZDFaY09pRzlFU1RmUFBORXRKSGx1MHRRYWdLajZsbmVZRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-18T18:30:22.959Z"
     },
     {
       "id": "rss_92354e7731007cfd",
@@ -11118,76 +11185,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-27T01:34:53.046Z"
-    },
-    {
-      "id": "rss_648759391029600f",
-      "timestamp": 1784847329000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Trump threatens 'major military punishment' after Houthi attacks on tankers in Red Sea - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNQ1l5SUY2elBtblhXVHpmaUc2MWotQlJoQzZwWHZZakZ0ckxueTVUeFBiNWM3ZUxtS0w4bmtYZG9TM1hqWnRuNWFxME9IUkxDSGJ2VzNweFZKY3RrN1Y2UjBEM3V1ZWp3amdQdWZpQk9XWUxFVFFFS1BsbndBMUlaZFJpdkdMRzFWRFpGbm5hei1YdVRPSEZlQUdYMFZ0SkVCT0VrMXFOUWtNZVRjb1FOTXlMV1RNajhxUVE?oc=5\" target=\"_blank\">Trump threatens 'major military punishment' after Houthi attacks on tankers in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PBS</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNQ1l5SUY2elBtblhXVHpmaUc2MWotQlJoQzZwWHZZakZ0ckxueTVUeFBiNWM3ZUxtS0w4bmtYZG9TM1hqWnRuNWFxME9IUkxDSGJ2VzNweFZKY3RrN1Y2UjBEM3V1ZWp3amdQdWZpQk9XWUxFVFFFS1BsbndBMUlaZFJpdkdMRzFWRFpGbm5hei1YdVRPSEZlQUdYMFZ0SkVCT0VrMXFOUWtNZVRjb1FOTXlMV1RNajhxUVE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T07:20:39.177Z"
-    },
-    {
-      "id": "rss_ad66dbc2a5e2a62a",
-      "timestamp": 1784847180000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi tankers in the Red Sea as US escalates attacks on Iran - WQAD",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwJBVV95cUxNejh4T2YzMVlhejJ4bXlVRWRZQnZGaWFtZ3gwOF85bFFSVTBnQlUzcG9sUG9JYldWRjlMTFZ3UWs5dklPS0NUTGdRaXVFYjJPNGM2dVo2a1AxUlU4YkpiQVZ2SEtENHFpWC1BXzB4VkVPdmx2Y1FWNHU4RExBVk9BcndTb01kNE5IbFU5WVM1RGVLQ1lOVTRqYWF5UW1VMjZyaFpDXzNpbkx3d0pCdkpjNmxBdkNFZFFfM1QwcElxbUVnejJfSTVObExVSWVVSHBDcmx1MUltb19QOEFCQ3hTTWNEMHN3Y0hCSmZuM08xM2JDcU9kVmZZdlFRUjB1REtVWTBXUkFQVQ?oc=5\" target=\"_blank\">Houthis attack Saudi tankers in the Red Sea as US escalates attacks on Ir",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNejh4T2YzMVlhejJ4bXlVRWRZQnZGaWFtZ3gwOF85bFFSVTBnQlUzcG9sUG9JYldWRjlMTFZ3UWs5dklPS0NUTGdRaXVFYjJPNGM2dVo2a1AxUlU4YkpiQVZ2SEtENHFpWC1BXzB4VkVPdmx2Y1FWNHU4RExBVk9BcndTb01kNE5IbFU5WVM1RGVLQ1lOVTRqYWF5UW1VMjZyaFpDXzNpbkx3d0pCdkpjNmxBdkNFZFFfM1QwcElxbUVnejJfSTVObExVSWVVSHBDcmx1MUltb19QOEFCQ3hTTWNEMHN3Y0hCSmZuM08xM2JDcU9kVmZZdlFRUjB1REtVWTBXUkFQVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T23:19:26.807Z"
-    },
-    {
-      "id": "rss_fee7e91925b955df",
-      "timestamp": 1784845197000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan Warns Houthi Attacks on Its Ships Would Trigger Military Response - The Media Line",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOTWNSQ1kyVUtkNW1JQUJRTkdBMHQ4M1pyRUk4Vzl0XzIxWWN3ZzNCQjUyVGtuanZ0R3VjUEhnVkYtclFKRktZemdzMmJjRTlLaHNUMG1vWGs2b2ItSjc5WUMtQ0Y3Z2JjZ1hoZEVWNWw5U1dEOXZMTFpNTm0ydXhEQ09zVDVQMVAydElxU2p5MTFFQkplc2Y0eVkxZUZHd0wtd3NnRmRtQ3cyWTJjVlNR?oc=5\" target=\"_blank\">Pakistan Warns Houthi Attacks on Its Ships Would Trigger Military Response</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTWNSQ1kyVUtkNW1JQUJRTkdBMHQ4M1pyRUk4Vzl0XzIxWWN3ZzNCQjUyVGtuanZ0R3VjUEhnVkYtclFKRktZemdzMmJjRTlLaHNUMG1vWGs2b2ItSjc5WUMtQ0Y3Z2JjZ1hoZEVWNWw5U1dEOXZMTFpNTm0ydXhEQ09zVDVQMVAydElxU2p5MTFFQkplc2Y0eVkxZUZHd0wtd3NnRmRtQ3cyWTJjVlNR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T22:21:17.510Z"
     }
   ]
 }
