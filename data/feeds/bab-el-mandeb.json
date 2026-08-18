@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T19:23:09.996Z",
+  "last_fetch": "2026-08-18T19:47:16.730Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a347a20f4ebcb766",
+      "timestamp": 1787082132000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Several Houthi members killed in drone strikes in southeastern Yemen: Government-aligned forces - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcm02VzBoTllrendEa21DOWpHN05BeHpPTzJsWVlleTVoTzlyUHhRWDNXekJ3RVJkejRRa3RMVkFjaXQ1bXA2UmVQS3JQWjlITU96ZDlLRjZVVS12QzZJaFRjZDdTYXdyRUpCSzNvbXlaS0tlREgyZDUwY3NQLURINVVLQTBSbm5WYjBqMFJyMy1FNkpNRXI0bjRXQWVRRHlFXy11NWRmMzh2Ymx1UjJkSndleEQ4Z3M4Sk42ODIzSFVGdjhiVHdzcDR0cDdzUUhOeVozWm53?oc=5\" target=\"_blank\">Several Houthi members killed in drone strikes in southeastern Yemen: Government-aligned forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadol",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcm02VzBoTllrendEa21DOWpHN05BeHpPTzJsWVlleTVoTzlyUHhRWDNXekJ3RVJkejRRa3RMVkFjaXQ1bXA2UmVQS3JQWjlITU96ZDlLRjZVVS12QzZJaFRjZDdTYXdyRUpCSzNvbXlaS0tlREgyZDUwY3NQLURINVVLQTBSbm5WYjBqMFJyMy1FNkpNRXI0bjRXQWVRRHlFXy11NWRmMzh2Ymx1UjJkSndleEQ4Z3M4Sk42ODIzSFVGdjhiVHdzcDR0cDdzUUhOeVozWm53?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T19:47:15.657Z"
+    },
     {
       "id": "rss_b9e070749283d52a",
       "timestamp": 1787077550000,
@@ -11161,30 +11184,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-26T04:38:57.411Z"
-    },
-    {
-      "id": "rss_5e2cdca9da716a51",
-      "timestamp": 1784847803000,
-      "source": "Reuters",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EXCLUSIVE: Iran flew IRGC commanders, missile gear to Yemen's Houthis, sources say - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX0VBOVcxX1BiZmZ6M1VfVkNSVmg1bGREUzRDNWdjYWFQeXR3TXUyVm1aQURfb3ZpNlpuVVd2LXk0YTFhV3AtTW1HZzBoYjFFMGhpY0J5X1JUM3MtTmJaYmI5cExla1VOSTAzdi1CZVdGb0RXckdQU2hDSlVCMXd4eVZPalltOGQzQnE2M0w0SVYzdUNmYy0xRzFUNWRUSXZHeF9rWkY1UzI1LVpsN0NBUjdDZlJRT3oyWnpB?oc=5\" target=\"_blank\">EXCLUSIVE: Iran flew IRGC commanders, missile gear to Yemen's Houthis, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNX0VBOVcxX1BiZmZ6M1VfVkNSVmg1bGREUzRDNWdjYWFQeXR3TXUyVm1aQURfb3ZpNlpuVVd2LXk0YTFhV3AtTW1HZzBoYjFFMGhpY0J5X1JUM3MtTmJaYmI5cExla1VOSTAzdi1CZVdGb0RXckdQU2hDSlVCMXd4eVZPalltOGQzQnE2M0w0SVYzdUNmYy0xRzFUNWRUSXZHeF9rWkY1UzI1LVpsN0NBUjdDZlJRT3oyWnpB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-27T01:34:53.046Z"
     }
   ]
 }
