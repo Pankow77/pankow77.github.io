@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T21:18:21.725Z",
+  "last_fetch": "2026-08-18T21:45:56.642Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7568e8b786ca4bf7",
+      "timestamp": 1787086269000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Cargo Ship Destroyed in New Attack Off Yemen - gCaptain",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE9rd2ZRMjdmX3czNkliUlZVSV9VbGpES3RDYWp6QmZ0aUYyV2Y5OXpYcFZ0ZV8wcWxOeEQ3aFRjTlBpX3JJaFM0SS1mWnRDUDQ0RTRzNElyNnFOV2dPVFRKcklwNy1udHNIQmhqY0pWU3VUNU8x?oc=5\" target=\"_blank\">Cargo Ship Destroyed in New Attack Off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9rd2ZRMjdmX3czNkliUlZVSV9VbGpES3RDYWp6QmZ0aUYyV2Y5OXpYcFZ0ZV8wcWxOeEQ3aFRjTlBpX3JJaFM0SS1mWnRDUDQ0RTRzNElyNnFOV2dPVFRKcklwNy1udHNIQmhqY0pWU3VUNU8x?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T21:45:55.365Z"
+    },
     {
       "id": "rss_a347a20f4ebcb766",
       "timestamp": 1787082132000,
@@ -11163,27 +11186,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T08:17:14.780Z"
-    },
-    {
-      "id": "rss_9983270d58c593d0",
-      "timestamp": 1784851716000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "UN envoy for Yemen ‘alarmed’ by Houthis’ Red Sea attacks, calls for talks - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQenZXWGxHM1k5OUZtVW1xajk4TzhvRVN4Si1PZDFmakZFeXI0TnRSRGpMNnJLN1lCaURveU1hQ05EcWZNLTJHU2hybEtpYkpuZE9Gc2lHcEQ2ZzNhWXdZUWVXdXdFaXhLWGRmZ3d0b2J0YTdfSERZOVJ2S3ZlNy1XM0N2Yy1pZklWZlNJdFRxQndzTmdVaFV6TWZISXdNZWlYTGo1TUhBakdteVdrM0Fn0gG0AUFVX3lxTE1oaW12Y29veWlURGRzOWRGSnNkamY1b1VDdkZUY1BGS0pTa2RtZGo0STlBb0hGT09kcElSU2JTdEdLVnRNS2JsTkxWanBYN21WdG9OSVlPR3hVZFpaLVBOQWNwaHM3d2FfdmxraC1BVy0xUzRpZFNKQXJOdERNTWF2dDNabmJrUnMxcHRjeVJHZVVtQ2FQSmJoN3BxOU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQenZXWGxHM1k5OUZtVW1xajk4TzhvRVN4Si1PZDFmakZFeXI0TnRSRGpMNnJLN1lCaURveU1hQ05EcWZNLTJHU2hybEtpYkpuZE9Gc2lHcEQ2ZzNhWXdZUWVXdXdFaXhLWGRmZ3d0b2J0YTdfSERZOVJ2S3ZlNy1XM0N2Yy1pZklWZlNJdFRxQndzTmdVaFV6TWZISXdNZWlYTGo1TUhBakdteVdrM0Fn0gG0AUFVX3lxTE1oaW12Y29veWlURGRzOWRGSnNkamY1b1VDdkZUY1BGS0pTa2RtZGo0STlBb0hGT09kcElSU2JTdEdLVnRNS2JsTkxWanBYN21WdG9OSVlPR3hVZFpaLVBOQWNwaHM3d2FfdmxraC1BVy0xUzRpZFNKQXJOdERNTWF2dDNabmJrUnMxcHRjeVJHZVVtQ2FQSmJoN3BxOUw4RDQzVm5OeGxvSTVDdWs3RU1fRGZVZw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-26T04:38:57.411Z"
     }
   ]
 }
