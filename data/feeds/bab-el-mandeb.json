@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T11:49:50.780Z",
+  "last_fetch": "2026-08-18T12:35:14.043Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2d81d5c2af62ad47",
+      "timestamp": 1787052588000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthis Claim Strike on Saudi Landing Ship in Red Sea - Defensemirror.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOMGpxX0c4UFR4dUdZclJvSVUzTGZWZmxQbU9oZ0RTcXFEejF5dW1GemZVa05zQ3ZLYTNza0Z0d3A1NzY1SkVYbHdBb2s0WktORkx1SUNJa3JzWDF3aDJmYmZXNWt2U3c4SUt5RzF2X1diYlFIUk5sUHZIY09DUW1UamV6TmhPSWZZb1dib1h1ODBqcmFjdjl5c213QkFDeGEydVE?oc=5\" target=\"_blank\">Yemen’s Houthis Claim Strike on Saudi Landing Ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Defensemirror.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMGpxX0c4UFR4dUdZclJvSVUzTGZWZmxQbU9oZ0RTcXFEejF5dW1GemZVa05zQ3ZLYTNza0Z0d3A1NzY1SkVYbHdBb2s0WktORkx1SUNJa3JzWDF3aDJmYmZXNWt2U3c4SUt5RzF2X1diYlFIUk5sUHZIY09DUW1UamV6TmhPSWZZb1dib1h1ODBqcmFjdjl5c213QkFDeGEydVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T12:35:12.635Z"
+    },
     {
       "id": "rss_3d35020c846cb65f",
       "timestamp": 1787050872000,
@@ -11167,29 +11190,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T21:49:22.868Z"
-    },
-    {
-      "id": "rss_67acd32aff8a75b5",
-      "timestamp": 1784834805000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil hits $100 after Houthi attack on Saudi tankers worsens oil supply disruption - KSL.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPY21JeGFyd2hDc3U0X01pT1IzOVQtNzkxQUNwX2FwdTVjckZ0blpDbTVvVzlVaDAyZHFINURXRlZXSVZucGFGZkN5OTNCMFRvMFRidDZNWHIyYlZKQlBadWxRdURYZ2J2UGk4c3Z3dERfX3p5c2tLcXJ1UEpZNHgxUFhyUFNEdmVJRWRqbnl3T3hKZ2paZmVEa3c2b0FvczY1TzRlLWJmV2wySDluZzZVWkJLTXF6M28?oc=5\" target=\"_blank\">Oil hits $100 after Houthi attack on Saudi tankers worsens oil supply disruption</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KSL.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPY21JeGFyd2hDc3U0X01pT1IzOVQtNzkxQUNwX2FwdTVjckZ0blpDbTVvVzlVaDAyZHFINURXRlZXSVZucGFGZkN5OTNCMFRvMFRidDZNWHIyYlZKQlBadWxRdURYZ2J2UGk4c3Z3dERfX3p5c2tLcXJ1UEpZNHgxUFhyUFNEdmVJRWRqbnl3T3hKZ2paZmVEa3c2b0FvczY1TzRlLWJmV2wySDluZzZVWkJLTXF6M28?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T20:48:02.267Z"
     }
   ]
 }
