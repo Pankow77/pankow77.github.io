@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T10:56:24.865Z",
+  "last_fetch": "2026-08-18T11:23:12.830Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3d35020c846cb65f",
+      "timestamp": 1787050872000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Mocha port suspends operations following Houthi attack - safety4sea",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHFUQTJydTFkNFFTaEJpc2tWM2hHMHJFM0Rubkt1RzRYUkJ4U0dnTUh5OGotazJRVHAydWJMLWFEdmNYdlVKNWIzRVFTaTI0TFlEOE1NMlUtQzZacEZidjlrblNFSWc2M0dMalM5YmtoNU0xTnM1SUh0ZjFSYmxzcnBYX0U?oc=5\" target=\"_blank\">Mocha port suspends operations following Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">safety4sea</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHFUQTJydTFkNFFTaEJpc2tWM2hHMHJFM0Rubkt1RzRYUkJ4U0dnTUh5OGotazJRVHAydWJMLWFEdmNYdlVKNWIzRVFTaTI0TFlEOE1NMlUtQzZacEZidjlrblNFSWc2M0dMalM5YmtoNU0xTnM1SUh0ZjFSYmxzcnBYX0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T11:23:11.490Z"
+    },
     {
       "id": "rss_42844c44f4d899b1",
       "timestamp": 1787049000000,
@@ -11169,30 +11190,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T20:48:02.267Z"
-    },
-    {
-      "id": "rss_421ed70c5d9277b9",
-      "timestamp": 1784832960000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis attack Saudi tankers in the Red Sea, threatening to widen Iran war - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHFrc1BFd1MyNGJEdWFibkJiY1dGVjRNY2tOWUNTbEZTaEw5Z3liZFUxOWExS3ZhdExIZGpjRUFsSW9WWVcyZC1aRmdaRWtVSUFyVHBxeU5wOWZfYTBYbFpZZ25uYUVxUE8tRzQ0d2VOYVk2bTZlUW8yY0RZdnFmQnVqQjRkc2RoQ2Nya19n?oc=5\" target=\"_blank\">Yemen’s Houthis attack Saudi tankers in the Red Sea, threatening to widen Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOZHFrc1BFd1MyNGJEdWFibkJiY1dGVjRNY2tOWUNTbEZTaEw5Z3liZFUxOWExS3ZhdExIZGpjRUFsSW9WWVcyZC1aRmdaRWtVSUFyVHBxeU5wOWZfYTBYbFpZZ25uYUVxUE8tRzQ0d2VOYVk2bTZlUW8yY0RZdnFmQnVqQjRkc2RoQ2Nya19n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T19:30:23.765Z"
     }
   ]
 }
