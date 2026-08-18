@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T12:35:14.043Z",
+  "last_fetch": "2026-08-18T13:37:55.893Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_92354e7731007cfd",
+      "timestamp": 1787058116000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen : Woman , Child Injured in Houthi Mortar Attack on Al-Dhalea - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE42XzE4SmhGeGcyMm93Y0tXX2M4N0tta2lSdm1ZV3lZSXJVWFhUeHNYN0NXQXBCWWFBZDg4akhlOXhGOXUtQklkMzVZRmJMdW4xSjFBdXhkRmI5R3pvNW1J?oc=5\" target=\"_blank\">Yemen : Woman , Child Injured in Houthi Mortar Attack on Al-Dhalea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE42XzE4SmhGeGcyMm93Y0tXX2M4N0tta2lSdm1ZV3lZSXJVWFhUeHNYN0NXQXBCWWFBZDg4akhlOXhGOXUtQklkMzVZRmJMdW4xSjFBdXhkRmI5R3pvNW1J?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T13:37:54.661Z"
+    },
     {
       "id": "rss_2d81d5c2af62ad47",
       "timestamp": 1787052588000,
@@ -11169,27 +11190,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T20:48:02.268Z"
-    },
-    {
-      "id": "rss_0c4649b719d57ad5",
-      "timestamp": 1784836137000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "US threatens 'major military punishment' for Houthi attacks - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ0VGUjE0ZWFqSU93YnFhVmppdnM4RGQ1S3hBLWt6dGJyLU1UWS1XekdHNTIyMEsyR25fVmxWd1BSdHhMa1VLWTRsV0pLcEpScEEzQ05IOGFLRkp0N3MwdEZFQUVUV3RmQ0g3VUNvQ2cwdEFSNzlRUEpBV1JwT055ZFVHQ0dnR1B3VUFfVnJjcnNiQW1QeHpRXw?oc=5\" target=\"_blank\">US threatens 'major military punishment' for Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNQ0VGUjE0ZWFqSU93YnFhVmppdnM4RGQ1S3hBLWt6dGJyLU1UWS1XekdHNTIyMEsyR25fVmxWd1BSdHhMa1VLWTRsV0pLcEpScEEzQ05IOGFLRkp0N3MwdEZFQUVUV3RmQ0g3VUNvQ2cwdEFSNzlRUEpBV1JwT055ZFVHQ0dnR1B3VUFfVnJjcnNiQW1QeHpRXw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-23T21:49:22.868Z"
     }
   ]
 }
