@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-18T14:27:44.789Z",
+  "last_fetch": "2026-08-18T15:02:07.255Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_980811980b780909",
+      "timestamp": 1787063264000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis Claim Another Attack on Saudi Ship in Red Sea - Democracy Now!",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQUDdsbGZqQ1NFemlNNFpuRHV0TVN6S2dBZXg5T0ZIUHBHWkhJSTB3UFE4bDdIQlBvX3lCdXR3ZlRsTVB4Q2hPQWpEX2tDdE1FVnU2NG5HSkdsZy03ZXo5Z2tNa2lSSm9IblJ5VkFtWDVSNkRRRkNGOXZidHlPM0k4MTBWYTc1YnNqRTdlTlBGeHlRZS1hNDgtcG82XzhLODhCTnA5TDVycUpqWDN0a1E?oc=5\" target=\"_blank\">Yemen’s Houthis Claim Another Attack on Saudi Ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Democracy Now!</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUDdsbGZqQ1NFemlNNFpuRHV0TVN6S2dBZXg5T0ZIUHBHWkhJSTB3UFE4bDdIQlBvX3lCdXR3ZlRsTVB4Q2hPQWpEX2tDdE1FVnU2NG5HSkdsZy03ZXo5Z2tNa2lSSm9IblJ5VkFtWDVSNkRRRkNGOXZidHlPM0k4MTBWYTc1YnNqRTdlTlBGeHlRZS1hNDgtcG82XzhLODhCTnA5TDVycUpqWDN0a1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-18T15:02:05.895Z"
+    },
     {
       "id": "rss_92354e7731007cfd",
       "timestamp": 1787058116000,
@@ -11167,29 +11190,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-23T22:21:17.510Z"
-    },
-    {
-      "id": "rss_af7cba07f70f331d",
-      "timestamp": 1784838621000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Trump threatens to hit Iran over Houthi attacks as oil climbs back to $100 a barrel - as it happened - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOMlR2emdzUlpsdTUtcURaa0dVSWFUNUtPMlNaNU1hUkVCS2c4bnl6QjJ2cU9qUzFCOW53RmNUSWExMGpjd01hQmVUa0ZTaUxraGxpMEVxbTR2TG9mbWFyZGFPc3lRWExSZlcxUjdYVXR4LUxERVR6eXB5YWc1TzFBcFNlVVVRZFRIeEZNNC1kMTR2SjhLTGZLOHo5MWZtejVYQ3RHYW95Q0hTaDhEbXFtZGRnejkybzVpdTJ3NnJR?oc=5\" target=\"_blank\">Trump threatens to hit Iran over Houthi attacks as oil climbs back to $100 a barrel - as it happened</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOMlR2emdzUlpsdTUtcURaa0dVSWFUNUtPMlNaNU1hUkVCS2c4bnl6QjJ2cU9qUzFCOW53RmNUSWExMGpjd01hQmVUa0ZTaUxraGxpMEVxbTR2TG9mbWFyZGFPc3lRWExSZlcxUjdYVXR4LUxERVR6eXB5YWc1TzFBcFNlVVVRZFRIeEZNNC1kMTR2SjhLTGZLOHo5MWZtejVYQ3RHYW95Q0hTaDhEbXFtZGRnejkybzVpdTJ3NnJR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-26T07:22:09.838Z"
     }
   ]
 }
