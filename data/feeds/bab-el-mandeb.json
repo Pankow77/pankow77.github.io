@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-19T07:33:20.011Z",
+  "last_fetch": "2026-08-19T08:30:45.308Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9a7c5c4ab751d906",
+      "timestamp": 1787120665000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Red Sea: Critical maritime corridor faces security challenges - Credendo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNU2gwdlYyS2t1MDNnZGlrZ2JTcTlzNHVpei1wSTZUc2pya2NqejRuTmduTy0xcmRrU01UcVk0N2J2WERSNklpamRhUnQzWjI2NVliX3dnNkNwS3FkNFNNY2xjTXZ4d3otcHFyZkFGMlpBemh2M0g4THZNQ0d4RnVzUWxfTXZGNzNVT2FqVXZKQWVJcFhzV3JNMGZYTHFsbDA?oc=5\" target=\"_blank\">Red Sea: Critical maritime corridor faces security challenges</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Credendo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNU2gwdlYyS2t1MDNnZGlrZ2JTcTlzNHVpei1wSTZUc2pya2NqejRuTmduTy0xcmRrU01UcVk0N2J2WERSNklpamRhUnQzWjI2NVliX3dnNkNwS3FkNFNNY2xjTXZ4d3otcHFyZkFGMlpBemh2M0g4THZNQ0d4RnVzUWxfTXZGNzNVT2FqVXZKQWVJcFhzV3JNMGZYTHFsbDA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-19T08:30:44.103Z"
+    },
     {
       "id": "rss_7568e8b786ca4bf7",
       "timestamp": 1787086269000,
@@ -11162,30 +11183,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-24T03:39:31.727Z"
-    },
-    {
-      "id": "rss_f6782ae807117c26",
-      "timestamp": 1784857140000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran flew IRGC commanders and missile gear to Yemen’s Houthis, sources say - The Japan Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPWG5FN3dOd0s2aWU4Vy1WSmpsTjhMSlhBMnhnQzBiSHhDMzBiSnROZ1NsSVZIX00wU29HcjJza0d4X09iclNmNC1kdnhUaU00MklVeGZrV281ME9qTUhqaHVHQXV2aV9HRVY2NGFKQlE3NzBFYjdFRm5XUjVWdmFJelVCdnRWeFB3WmlneDhKWmtRSlpfNDRJNQ?oc=5\" target=\"_blank\">Iran flew IRGC commanders and missile gear to Yemen’s Houthis, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPWG5FN3dOd0s2aWU4Vy1WSmpsTjhMSlhBMnhnQzBiSHhDMzBiSnROZ1NsSVZIX00wU29HcjJza0d4X09iclNmNC1kdnhUaU00MklVeGZrV281ME9qTUhqaHVHQXV2aV9HRVY2NGFKQlE3NzBFYjdFRm5XUjVWdmFJelVCdnRWeFB3WmlneDhKWmtRSlpfNDRJNQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T08:17:14.780Z"
     }
   ]
 }
