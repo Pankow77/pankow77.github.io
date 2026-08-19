@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-19T14:27:20.344Z",
+  "last_fetch": "2026-08-19T15:01:48.721Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6b141408a61cba0d",
+      "timestamp": 1787149562000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Bodies of 4 sailors killed in Houthi Red Sea attack flown to Jeddah - Arab News PK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE9hODVVVUxDV0xBcmw2SHFpRlF4Tk5XVHFNNVRveE1ObEc4aWh2UmtmelZzVEtVVjdkcXhJQmx4RHBLYlhhajhXVkFmZll6Mkt2WDVtWFdRV19KUzl1T1E?oc=5\" target=\"_blank\">Bodies of 4 sailors killed in Houthi Red Sea attack flown to Jeddah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9hODVVVUxDV0xBcmw2SHFpRlF4Tk5XVHFNNVRveE1ObEc4aWh2UmtmelZzVEtVVjdkcXhJQmx4RHBLYlhhajhXVkFmZll6Mkt2WDVtWFdRV19KUzl1T1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-19T15:01:47.131Z"
+    },
     {
       "id": "rss_744b2317b27ee926",
       "timestamp": 1787134128000,
@@ -11160,29 +11181,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-24T11:09:31.006Z"
-    },
-    {
-      "id": "rss_b7463a578aefee34",
-      "timestamp": 1784865049000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil set for weekly rise amid Red Sea shipping attacks, Kazakhstan output cuts - Investment Guru India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQ2RwSlJIZHd0N0Fid1NQZE5LaGgyN2tFbzhUOHRnSk9UZ0tXUjU2aDVXWnZUTDl4cnJvZFNQclYtazJzaV82clFTdVFWa0lqcEZDZVU0QV9wVmxsdk9UcDZENFgtVHY0Q2ZBemJUdTh1VEZITlo4X3RIakhGZ1RoWTZ3Qjdrb2d6Z2s3YVZqWVBRcnZJSnNWdnZNVXQxdTJwek5fc3Axek84SjRTMG50Uy1QSmRzdlI5dllpb2RpWEg0cG8?oc=5\" target=\"_blank\">Oil set for weekly rise amid Red Sea shipping attacks, Kazakhstan output cuts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investment Guru India</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPQ2RwSlJIZHd0N0Fid1NQZE5LaGgyN2tFbzhUOHRnSk9UZ0tXUjU2aDVXWnZUTDl4cnJvZFNQclYtazJzaV82clFTdVFWa0lqcEZDZVU0QV9wVmxsdk9UcDZENFgtVHY0Q2ZBemJUdTh1VEZITlo4X3RIakhGZ1RoWTZ3Qjdrb2d6Z2s3YVZqWVBRcnZJSnNWdnZNVXQxdTJwek5fc3Axek84SjRTMG50Uy1QSmRzdlI5dllpb2RpWEg0cG8?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T07:20:40.470Z"
     }
   ]
 }
