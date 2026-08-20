@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T09:28:24.885Z",
+  "last_fetch": "2026-08-20T10:00:38.805Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1eba17e3eeda8b59",
+      "timestamp": 1787219457000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "What happened to the Pakistani sailors killed in the Houthi Red Sea attack? - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPMjhFNzZ0a3l1SVhxTXl1WWFJN1RjLXB5NUh5b2lsbXdUWnRZejZ6NEViRFhVRkdSSExJd0Q5S1ozRy0wdDB1WmZPM29md2xIaUFPeFoycFhYMHdrdWpjbFloQmg1dEh5OHNnRlpRVGNpOXpuX2ozSjN0XzhQbURSUXZXcEt3NmZ4SnU4cU81b1k4OERObzA4S294QQ?oc=5\" target=\"_blank\">What happened to the Pakistani sailors killed in the Houthi Red Sea attack?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMjhFNzZ0a3l1SVhxTXl1WWFJN1RjLXB5NUh5b2lsbXdUWnRZejZ6NEViRFhVRkdSSExJd0Q5S1ozRy0wdDB1WmZPM29md2xIaUFPeFoycFhYMHdrdWpjbFloQmg1dEh5OHNnRlpRVGNpOXpuX2ozSjN0XzhQbURSUXZXcEt3NmZ4SnU4cU81b1k4OERObzA4S294QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T10:00:37.332Z"
+    },
     {
       "id": "rss_0e02b3d0ebd59410",
       "timestamp": 1787215180000,
@@ -11142,30 +11163,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T12:00:41.007Z"
-    },
-    {
-      "id": "rss_21d2c38f05f77eb4",
-      "timestamp": 1784887275000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea shipping insurance costs double overnight after Houthi attack - Baird Maritime",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQNkQ1Skl2T0I1YnRDOUJHYThiRXJHS3BwS2ZPVEdySWdnWjVwaEk1MDNzcEZ6VzdsNHhOWDJNTTY0T0w4N1FBX3o1a2NQRlhrRTRRUl9SM1lVTzMtV0RibmpXcDdOcElTUTJEb0ZMcUdpM0lpcHF6WFhKMkZOSnJwV2xESVBmWWk4eDFmUndMMHd3UlIzY0VQUDAzbjBtdzBBTFo2V2hNVVR1aHNnVDhHRG1tVHJYeDN0cXfSAboBQVVfeXFMUDZENUpJdk9CNWJ0QzlCR2E4YkVyR0twcEtmT1RHcklnZ1o1cGhJNTAzc3BGelc3bDR4TlgyTU02NE9MODdRQV96NWtjUEZYa0U0UVJfUjNZVU8zLVdEYm5qV3A3TnBJU1EyRG9GTHFHaTNJaXBxelhYSjJGTkpycFdsRElQZllpOHgxZlJ3TDB3d1",
-      "tags": [
-        "shipping",
-        "insurance"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNkQ1Skl2T0I1YnRDOUJHYThiRXJHS3BwS2ZPVEdySWdnWjVwaEk1MDNzcEZ6VzdsNHhOWDJNTTY0T0w4N1FBX3o1a2NQRlhrRTRRUl9SM1lVTzMtV0RibmpXcDdOcElTUTJEb0ZMcUdpM0lpcHF6WFhKMkZOSnJwV2xESVBmWWk4eDFmUndMMHd3UlIzY0VQUDAzbjBtdzBBTFo2V2hNVVR1aHNnVDhHRG1tVHJYeDN0cXfSAboBQVVfeXFMUDZENUpJdk9CNWJ0QzlCR2E4YkVyR0twcEtmT1RHcklnZ1o1cGhJNTAzc3BGelc3bDR4TlgyTU02NE9MODdRQV96NWtjUEZYa0U0UVJfUjNZVU8zLVdEYm5qV3A3TnBJU1EyRG9GTHFHaTNJaXBxelhYSjJGTkpycFdsRElQZllpOHgxZlJ3TDB3d1JSM2NFUFAwM24wbXcwQUxaNldoTVVUdWhzZ1Q4R0RtbVRyWHgzdHF3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T16:32:30.369Z"
     }
   ]
 }
