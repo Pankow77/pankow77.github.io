@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T21:52:02.517Z",
+  "last_fetch": "2026-08-20T22:20:53.059Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ad50ca595b4a0328",
+      "timestamp": 1787241978000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Shafaq News..Houthis claim drone strikes on Najran airport, Aramco facility - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOQVlRTEhyWkJRYVNXaVlzb0RrSG1zejVvSVpmTUxYT2t2QXB1Z2ZybXpEUUFWTnJuVGJIWC1aV3piQUI4YTk5N1N2R0hXTHNWX1hZYWVlRmVMYldzXzhfOE4ySUdSQ3hUXzB5NjM2VTRnZ1h6U3pCQWRXWmtGNEU0d3M5eERUanI2QWZtLTNSTGZWdmJ5eDNoWTZ3Zw?oc=5\" target=\"_blank\">Shafaq News..Houthis claim drone strikes on Najran airport, Aramco facility</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQVlRTEhyWkJRYVNXaVlzb0RrSG1zejVvSVpmTUxYT2t2QXB1Z2ZybXpEUUFWTnJuVGJIWC1aV3piQUI4YTk5N1N2R0hXTHNWX1hZYWVlRmVMYldzXzhfOE4ySUdSQ3hUXzB5NjM2VTRnZ1h6U3pCQWRXWmtGNEU0d3M5eERUanI2QWZtLTNSTGZWdmJ5eDNoWTZ3Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T22:20:51.578Z"
+    },
     {
       "id": "rss_46dfbef7ba497206",
       "timestamp": 1787236344000,
@@ -11138,27 +11161,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T19:30:22.789Z"
-    },
-    {
-      "id": "rss_dc48a4ead0d1cd16",
-      "timestamp": 1784899980000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi spokesperson says naval blockade in Bab el-Mandeb is only against Saudi Arabia - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMnUxakpyQlJBTm9tRWYxMkFZQ3VObGlNcmU3UjJZYjRiMHh6ZU9uSVI5OGJuNndmaHRiUzNaU1JxNTEtaFJyTVFQeEh6M0hfOUotQWJITHd6M2o3VmNpOElMbVFPLTNIZE43cnM3QVJmbUpVcnhnc04zNGF3dmhCNXJIbm1HdGRHWU92TG9iaG94YXRzVm5UcE9saWQ3U2pmOUlNUXV5a2tJaDF2UC1wTmdQN0FGWHYwNVNBeTdrX0ZlRWk4UWcwUQ?oc=5\" target=\"_blank\">Houthi spokesperson says naval blockade in Bab el-Mandeb is only against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMnUxakpyQlJBTm9tRWYxMkFZQ3VObGlNcmU3UjJZYjRiMHh6ZU9uSVI5OGJuNndmaHRiUzNaU1JxNTEtaFJyTVFQeEh6M0hfOUotQWJITHd6M2o3VmNpOElMbVFPLTNIZE43cnM3QVJmbUpVcnhnc04zNGF3dmhCNXJIbm1HdGRHWU92TG9iaG94YXRzVm5UcE9saWQ3U2pmOUlNUXV5a2tJaDF2UC1wTmdQN0FGWHYwNVNBeTdrX0ZlRWk4UWcwUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T16:32:30.369Z"
     }
   ]
 }
