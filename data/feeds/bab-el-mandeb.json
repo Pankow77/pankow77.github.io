@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T05:02:46.257Z",
+  "last_fetch": "2026-08-20T05:54:57.453Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_094e549c3708d781",
+      "timestamp": 1787204299000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Report: Houthis plan to escalate tensions with Saudi Arabia - Israel National News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fNmFsaXFXZmhJcDJnaUhZTzhZdkljenhzZ1FHR1F1eFZQWXVCUWhYZTB2NHFxZFNJbzJDS0hoZjhsVEk1aDUxRUJNVXJBWHJfbHJ2RVhORFhQZw?oc=5\" target=\"_blank\">Report: Houthis plan to escalate tensions with Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Israel National News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fNmFsaXFXZmhJcDJnaUhZTzhZdkljenhzZ1FHR1F1eFZQWXVCUWhYZTB2NHFxZFNJbzJDS0hoZjhsVEk1aDUxRUJNVXJBWHJfbHJ2RVhORFhQZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T05:54:56.123Z"
+    },
     {
       "id": "rss_471e337eb857c77c",
       "timestamp": 1787153771000,
@@ -11156,29 +11177,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T03:03:36.860Z"
-    },
-    {
-      "id": "rss_7ac5077f8bd24c14",
-      "timestamp": 1784866914000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Pakistan PM condemns Houthi attack on Saudi vessel in call with crown prince - arabnews.jp",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sM3djbGV6QU1LeDJDSkJtT1JLejZLQ25JYVg4cXZUZ21NeDhmSzFHMm5WX2hBQ1RjcXV3Q25lSVdxSlpEeFF2Yko4YkstQXd0MnE4SEZ4eWZ0OUUxR1p6Vkl3V2s0Zw?oc=5\" target=\"_blank\">Pakistan PM condemns Houthi attack on Saudi vessel in call with crown prince</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">arabnews.jp</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sM3djbGV6QU1LeDJDSkJtT1JLejZLQ25JYVg4cXZUZ21NeDhmSzFHMm5WX2hBQ1RjcXV3Q25lSVdxSlpEeFF2Yko4YkstQXd0MnE4SEZ4eWZ0OUUxR1p6Vkl3V2s0Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T05:04:00.682Z"
     }
   ]
 }
