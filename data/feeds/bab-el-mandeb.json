@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T08:31:24.874Z",
+  "last_fetch": "2026-08-20T09:28:24.885Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0e02b3d0ebd59410",
+      "timestamp": 1787215180000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Bodies of 2 Pakistanis killed in Houthi attacks repatriated - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVROclRONnFJWlFCN2FFbDlmMl9xQzYxWVFUdFg3WmlmWTB0bk1Id2tKU3dLU1AtTlpJRHdXZm1ZWEZwRi1UQm1waWNETnpzWkJBWmRrSXl1SjBvaHFhc0tvVXVCbDRfQWhqanF3SDFJVENiV0hBbmhUdEVTaHNSWEJWa1VKaWhZWURSWGJtUmVFVWROUzlmNXVyQ1JjaTdva1ptaXFKc1Y?oc=5\" target=\"_blank\">Bodies of 2 Pakistanis killed in Houthi attacks repatriated</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVROclRONnFJWlFCN2FFbDlmMl9xQzYxWVFUdFg3WmlmWTB0bk1Id2tKU3dLU1AtTlpJRHdXZm1ZWEZwRi1UQm1waWNETnpzWkJBWmRrSXl1SjBvaHFhc0tvVXVCbDRfQWhqanF3SDFJVENiV0hBbmhUdEVTaHNSWEJWa1VKaWhZWURSWGJtUmVFVWROUzlmNXVyQ1JjaTdva1ptaXFKc1Y?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T09:28:23.670Z"
+    },
     {
       "id": "rss_7ddb1f88ad7157f8",
       "timestamp": 1787212102000,
@@ -11145,29 +11166,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T16:32:30.369Z"
-    },
-    {
-      "id": "rss_56079b5431e41dfd",
-      "timestamp": 1784885447000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tanker Exits Red Sea Dark as Another China Ship Heads to Strait - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnYyUTZ2R1JSQ2RVWE9ac0RxUWR6Q2czWk1tMXllWVZsUlhDcXhNTmczX2NnVFFPVTJzRHpEeVZSRnJZUG5QWDJpdW14Nk1RdzdMeGNhLVd1clRJb1NlUUZILV9fOTdCVUxMRjUtcVI3OVJQdHZkb1hsdFE4RWNLSW1HT0xvcXFhUGxjOER1M2FvSEMwN3NqZWNSZEFldHVlT3pibHllTE91eXVRYUtiNlozaWM?oc=5\" target=\"_blank\">Tanker Exits Red Sea Dark as Another China Ship Heads to Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnYyUTZ2R1JSQ2RVWE9ac0RxUWR6Q2czWk1tMXllWVZsUlhDcXhNTmczX2NnVFFPVTJzRHpEeVZSRnJZUG5QWDJpdW14Nk1RdzdMeGNhLVd1clRJb1NlUUZILV9fOTdCVUxMRjUtcVI3OVJQdHZkb1hsdFE4RWNLSW1HT0xvcXFhUGxjOER1M2FvSEMwN3NqZWNSZEFldHVlT3pibHllTE91eXVRYUtiNlozaWM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T10:15:40.183Z"
     }
   ]
 }
