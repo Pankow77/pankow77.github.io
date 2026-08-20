@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T19:26:03.208Z",
+  "last_fetch": "2026-08-20T19:54:35.629Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_46dfbef7ba497206",
+      "timestamp": 1787236344000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthi Ansar Allah Movement Threatens 'Fifth Stage' Of War Against Saudi Arabia; Pro-Hizbullah Daily Claims Houthis Are Preparing Large-Scale Ground Campaign On Saudi Border - MEMRI | Middle East Media Research Institute",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPN1RMV0RYNUZiRy04YXZ2bUZ6UFh4SWZ2MnIteUptQW44ODd1bXZlRmpfMlhqSmx2VThOMEZUdTBOSEFkc2puRlU5SF9zdENLRFlncDM0cXZubWthNVJmS2VoaDh5Nms4dHQtazZ5elRzc1F0SGI4XzRhdFJHdHZnN0MxNTQ3bHJPTU1RSmJQV2RwQmM2WmhIUzdJUzZYQVJVOG5taFN0aXdkUjZlSmV0S2ZlZEZCVVgyWFE?oc=5\" target=\"_blank\">Houthi Ansar Allah Movement Threatens 'Fifth Stage' Of War Against Saudi Arabia; Pro-Hizbullah Daily Claims Houthis Are Preparing Large-Scale Ground Campaign On Saudi Border</a",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN1RMV0RYNUZiRy04YXZ2bUZ6UFh4SWZ2MnIteUptQW44ODd1bXZlRmpfMlhqSmx2VThOMEZUdTBOSEFkc2puRlU5SF9zdENLRFlncDM0cXZubWthNVJmS2VoaDh5Nms4dHQtazZ5elRzc1F0SGI4XzRhdFJHdHZnN0MxNTQ3bHJPTU1RSmJQV2RwQmM2WmhIUzdJUzZYQVJVOG5taFN0aXdkUjZlSmV0S2ZlZEZCVVgyWFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T19:54:34.418Z"
+    },
     {
       "id": "rss_91e045cdfd2e2207",
       "timestamp": 1787226506000,
@@ -11138,31 +11159,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T16:32:30.369Z"
-    },
-    {
-      "id": "rss_97c2e9ec71f9cb45",
-      "timestamp": 1784896284000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "US Strikes Iran From South to North After Trump Threats Over Red Sea Shipping - Insurance Journal",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9rbThPSlNIV0hoYVZnaTBHb2U3cTFOdjNOVDkzdWdYMk5ONWlmeXhzUXhvV0N1ZjF4Z0g4dnlaMklQYnpqQ1hKX3c5WDI3V0JMVlUtYzh0UXBsVkRoSW5PWFhuTEIwbnlDUjZpY2FEZlgwb3lKcUg3czBXQlpoUQ?oc=5\" target=\"_blank\">US Strikes Iran From South to North After Trump Threats Over Red Sea Shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Insurance Journal</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping",
-        "insurance"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rbThPSlNIV0hoYVZnaTBHb2U3cTFOdjNOVDkzdWdYMk5ONWlmeXhzUXhvV0N1ZjF4Z0g4dnlaMklQYnpqQ1hKX3c5WDI3V0JMVlUtYzh0UXBsVkRoSW5PWFhuTEIwbnlDUjZpY2FEZlgwb3lKcUg3czBXQlpoUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T12:59:55.071Z"
     }
   ]
 }
