@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-20T23:20:25.711Z",
+  "last_fetch": "2026-08-20T23:48:50.699Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -725,6 +725,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T05:00:53.891Z"
+    },
+    {
+      "id": "rss_7a713c8c6617a581",
+      "timestamp": 1787022000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran-Backed Houthis Threaten Coast Along Red Sea Chokepoint - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxON3RjcUZiSE1rcVpmQVJhMUhCMU1NWjJEazY3bUtBdV9neXpoYzJjUGdmWlZNQlhMTGEzbEd4NmhoS3lLeTNlMC12THR3eGk2bkZaTzV1a2J0UDB2UFZMdjc4dGJRV3ZsSTNPT2pJOWtDZUc5bnV6RHlYNDZxTDVpcldCRGd4akZ4cTFtWWtiRU1UYTBqN0paLXBYTUxfcFpOS1RfV2RURkVFZw?oc=5\" target=\"_blank\">Iran-Backed Houthis Threaten Coast Along Red Sea Chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxON3RjcUZiSE1rcVpmQVJhMUhCMU1NWjJEazY3bUtBdV9neXpoYzJjUGdmWlZNQlhMTGEzbEd4NmhoS3lLeTNlMC12THR3eGk2bkZaTzV1a2J0UDB2UFZMdjc4dGJRV3ZsSTNPT2pJOWtDZUc5bnV6RHlYNDZxTDVpcldCRGd4akZ4cTFtWWtiRU1UYTBqN0paLXBYTUxfcFpOS1RfV2RURkVFZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-20T23:48:49.397Z"
     },
     {
       "id": "rss_125f2a4ad7c5ba18",
@@ -11138,29 +11161,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T19:30:22.788Z"
-    },
-    {
-      "id": "rss_2e412002f9a9b2c1",
-      "timestamp": 1784909580000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Donald Trump says decision on ‘massive attack’ against Iran is close - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOX080UG13UG5QNjJFR3RYaFRSc1dzSWxvNFRkYkdJZkYxcWNDaDRwSEtOd205MnpMZFVWYVpLd1FvM1hVdGFWV2RHc0pUSWd0M2JXQTZOVm5ZQTAxWnhfOHZ6TE1DaFl3NVNrNE43aURsb0pGSXVTWjJoSVpNUEY3MDh0cE9STXdkUjZIeHpSdnZEX1N6NmJBbE4tcDlST01zUWJRT2ZSSjNEdDBMdkpF?oc=5\" target=\"_blank\">Donald Trump says decision on ‘massive attack’ against Iran is close</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX080UG13UG5QNjJFR3RYaFRSc1dzSWxvNFRkYkdJZkYxcWNDaDRwSEtOd205MnpMZFVWYVpLd1FvM1hVdGFWV2RHc0pUSWd0M2JXQTZOVm5ZQTAxWnhfOHZ6TE1DaFl3NVNrNE43aURsb0pGSXVTWjJoSVpNUEY3MDh0cE9STXdkUjZIeHpSdnZEX1N6NmJBbE4tcDlST01zUWJRT2ZSSjNEdDBMdkpF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T19:30:22.789Z"
     }
   ]
 }
