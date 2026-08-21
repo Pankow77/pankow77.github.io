@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-21T09:31:04.253Z",
+  "last_fetch": "2026-08-21T10:23:59.187Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e83bf40b5a01a9cd",
+      "timestamp": 1787248753000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis claim new strikes on Saudi Arabia after IRGC warning: What to know - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNWnF1ckNxMGl5bFZNRzNxSHViOEdCQ19CNUNtNkdtQVIxdy1tMGttOGZ4S0dNVk9jY3VBR0FTLXVqdnloeFlhOXk1S0xfZEVXTFJuYURTU2ljWENEdllENzUxdmtKR3dnYm1VUkJLZEw3T0VKbnVyclVoTjdEV0l4aGJpblM1VTJLRjdDSTN3VWI5U0kyT1JBZ1JFenlhR2dXRDhCR3BMOFpZVXliN2RLVXpn?oc=5\" target=\"_blank\">Houthis claim new strikes on Saudi Arabia after IRGC warning: What to know</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWnF1ckNxMGl5bFZNRzNxSHViOEdCQ19CNUNtNkdtQVIxdy1tMGttOGZ4S0dNVk9jY3VBR0FTLXVqdnloeFlhOXk1S0xfZEVXTFJuYURTU2ljWENEdllENzUxdmtKR3dnYm1VUkJLZEw3T0VKbnVyclVoTjdEV0l4aGJpblM1VTJLRjdDSTN3VWI5U0kyT1JBZ1JFenlhR2dXRDhCR3BMOFpZVXliN2RLVXpn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-21T10:23:57.862Z"
+    },
     {
       "id": "rss_ad50ca595b4a0328",
       "timestamp": 1787241978000,
@@ -11137,30 +11158,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T19:30:22.787Z"
-    },
-    {
-      "id": "rss_3f7f00a414dbaedd",
-      "timestamp": 1784915472000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "US strikes Iran from south to north after Trump threats over Red Sea shipping - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQaDBzcWROanlhQ1RGUVowWmpPcklHTEhnMUNNMkZiRW9TVlVIWFVHZ0hZWXM1UjFVMlhRT2xhTThEb19yekFkeDUyU3F1Qi1QdWx4X3NtcTk3elZiempDbnhKVWJhWm92cDMzX2FjMEZMQmVhaExTRFlwb3VNU0l0c3JjT29nQjRZOVQzbUJSa2pRX3daU1dBNXFmaUpNVzhPSG51WnNWQzNrOFhQbk4wRjJrVGE?oc=5\" target=\"_blank\">US strikes Iran from south to north after Trump threats over Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaDBzcWROanlhQ1RGUVowWmpPcklHTEhnMUNNMkZiRW9TVlVIWFVHZ0hZWXM1UjFVMlhRT2xhTThEb19yekFkeDUyU3F1Qi1QdWx4X3NtcTk3elZiempDbnhKVWJhWm92cDMzX2FjMEZMQmVhaExTRFlwb3VNU0l0c3JjT29nQjRZOVQzbUJSa2pRX3daU1dBNXFmaUpNVzhPSG51WnNWQzNrOFhQbk4wRjJrVGE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T19:30:22.788Z"
     }
   ]
 }
