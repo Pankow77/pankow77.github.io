@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-21T16:35:11.686Z",
+  "last_fetch": "2026-08-21T17:23:11.563Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d38b296e9f96be91",
+      "timestamp": 1787275513000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "DPM Dar says Pakistanis injured in Houthi attack in Red Sea have returned safely - Asia News Network",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZnUxM29ISlNBLU9IUlgwVTFwMXNYN20zTlR1dW5aRkxMTXNlQmNCT1JHUlh4b282djBGZ3Fldy1RcTRUaVZHbkxNRURUTWpoam9qdk93em5ZV2lnLVZwSk9yODVjR2FJSEVHY1ZPR0s4aVpkLU5VQ3p0SHMzNUZObC1EbkhDbmNSaXhqMTUxdGdEdE5TRDVXbHlvS3NhM2R1cmdqQjlXbHRhdw?oc=5\" target=\"_blank\">DPM Dar says Pakistanis injured in Houthi attack in Red Sea have returned safely</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Asia News Network</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZnUxM29ISlNBLU9IUlgwVTFwMXNYN20zTlR1dW5aRkxMTXNlQmNCT1JHUlh4b282djBGZ3Fldy1RcTRUaVZHbkxNRURUTWpoam9qdk93em5ZV2lnLVZwSk9yODVjR2FJSEVHY1ZPR0s4aVpkLU5VQ3p0SHMzNUZObC1EbkhDbmNSaXhqMTUxdGdEdE5TRDVXbHlvS3NhM2R1cmdqQjlXbHRhdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-21T17:23:10.167Z"
+    },
     {
       "id": "rss_e83bf40b5a01a9cd",
       "timestamp": 1787248753000,
@@ -11135,29 +11156,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T19:30:22.788Z"
-    },
-    {
-      "id": "rss_061f00444826d3f8",
-      "timestamp": 1784918861000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil shipments are under attack on multiple fronts as fighting escalates in Red Sea, Hormuz and Black Sea - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOYnZkSnE3cjdkVWpBWnVkQi1qUndVbHZkb2Q3amhCWEdibTlJNVRzcEt5OUNnQTd3QnBfUjlwV2Q5SVJ4cTlVelpQLXpva0l6allVSDVEOTRJc2I5R2ZJclk5Ukc1VzhkQ2hNQkdNeVllaEZMWlJ6d25KelM0RURFdFhjcGQ1ZkpkeDVia0Jn0gGTAUFVX3lxTE16dkxjTHEtc0Yzc1lhYkw5aEVVMG9aYlczbnFrSS1lY3EyNWpPSWw4bVpGMlQ0cGdOVnFNYjJUTHg3cW1VMkFZaHJHUl9uMEJVZlhOY1Bqc0FHQ3JHTUxjLW1jWEZqX0F3YWZ3clJyU2l2RDNQOXBHVXhwa3dscDFyaDVHUXdWN2xYV3dUNE5JTVg4Yw?oc=5\" target=\"_blank\">Oil shipments are under attack on",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYnZkSnE3cjdkVWpBWnVkQi1qUndVbHZkb2Q3amhCWEdibTlJNVRzcEt5OUNnQTd3QnBfUjlwV2Q5SVJ4cTlVelpQLXpva0l6allVSDVEOTRJc2I5R2ZJclk5Ukc1VzhkQ2hNQkdNeVllaEZMWlJ6d25KelM0RURFdFhjcGQ1ZkpkeDVia0Jn0gGTAUFVX3lxTE16dkxjTHEtc0Yzc1lhYkw5aEVVMG9aYlczbnFrSS1lY3EyNWpPSWw4bVpGMlQ0cGdOVnFNYjJUTHg3cW1VMkFZaHJHUl9uMEJVZlhOY1Bqc0FHQ3JHTUxjLW1jWEZqX0F3YWZ3clJyU2l2RDNQOXBHVXhwa3dscDFyaDVHUXdWN2xYV3dUNE5JTVg4Yw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T19:30:22.787Z"
     }
   ]
 }
