@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T12:28:55.130Z",
+  "last_fetch": "2026-08-22T13:09:39.449Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2d110c9dda97c1d2",
+      "timestamp": 1787402643000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran war latest: Iraqi oil tankers given permission to pass through Hormuz - thenationalnews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNOGhLcXVlSk1ra05MV2ljYWJIWU4zSkF5djlycnZpMS12RE5CNW9Ia3JybF9pejdUQk14dHppRlg3OU1kM0hpbUpEMm1yVDBNd1dneWF1dVZ5Z1lpV2tUY2ZBTm5tb3J2SDdNN1dOUTNlUWVKc0U3RzNZdk4tQ3ZlYk83QkRVclMtYTNqQ0NHTHNRRnc?oc=5\" target=\"_blank\">Iran war latest: Iraqi oil tankers given permission to pass through Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNOGhLcXVlSk1ra05MV2ljYWJIWU4zSkF5djlycnZpMS12RE5CNW9Ia3JybF9pejdUQk14dHppRlg3OU1kM0hpbUpEMm1yVDBNd1dneWF1dVZ5Z1lpV2tUY2ZBTm5tb3J2SDdNN1dOUTNlUWVKc0U3RzNZdk4tQ3ZlYk83QkRVclMtYTNqQ0NHTHNRRnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T13:09:38.137Z"
+    },
     {
       "id": "rss_1f99eb5efed04e12",
       "timestamp": 1787390230000,
@@ -11133,29 +11157,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-25T13:31:06.412Z"
-    },
-    {
-      "id": "rss_255818503bf08f76",
-      "timestamp": 1784925120000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQdzZFa3VzTlNqLWhTRHR1eVBRa1EwOUlPbnI0Q1ZYTFNDX1NvRjF3dS1sQ3Q0aV9DV084dkY5cXRzX0wxRFhlVUZYRGt1eHVrYzlNVDBvU1VaVHVjUUxibDNhb3dTV1B2VGR5Q29qYTR5dTB6UkZSRGJBTHM2RkhhY1M4NVZqaGkxc3pRVHk1cWtoTjYxbWlYNVRhMHpWemhZUGNGZDR6OVcyUzM4MUd6Yml3YjRmdw?oc=5\" target=\"_blank\">Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQdzZFa3VzTlNqLWhTRHR1eVBRa1EwOUlPbnI0Q1ZYTFNDX1NvRjF3dS1sQ3Q0aV9DV084dkY5cXRzX0wxRFhlVUZYRGt1eHVrYzlNVDBvU1VaVHVjUUxibDNhb3dTV1B2VGR5Q29qYTR5dTB6UkZSRGJBTHM2RkhhY1M4NVZqaGkxc3pRVHk1cWtoTjYxbWlYNVRhMHpWemhZUGNGZDR6OVcyUzM4MUd6Yml3YjRmdw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T06:47:13.048Z"
     }
   ]
 }
