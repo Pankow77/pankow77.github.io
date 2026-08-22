@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T17:16:06.295Z",
+  "last_fetch": "2026-08-22T17:44:00.693Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -70,6 +70,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-22T08:22:29.438Z"
+    },
+    {
+      "id": "rss_907d12e250c8b4a7",
+      "timestamp": 1787329682000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis release footage of drone attack on Abrams tank - The Defence Blog",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPV2VGM2w2VHc3c0N2MHRPN0cyRGRreGpKdEhnNGZyS0VmYWVGaTJYS3VaN05YMjg5ekQ1MVhsQ3JPTmpHQUlNSWdVMDF3LVZtRzdNMG1RbUY0TnZYVXM4OFNiVHYxSE93QVYtMS1HbTk0NFZCUWVwdFVfU3VTdXh1endBS1JGRU3SAYwBQVVfeXFMT2hyMldvSF9rVzlRSi00T3BmTDBMOW80VUF0c3pKVVNmVkhiV09GaXd2QTJRSW9Bdl83c2ZCWFJQOGNPQkg1LWdkQWNNNmlKZXhmLVJEZ3ZDV01tR3lPZllWMWRzbE1GVC1DNjFqU090dXIxWmVZekVuYWowRlV0dU5qektTNW9nSFdnWGg?oc=5\" target=\"_blank\">Houthis release footage of drone attack on Abrams ta",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV2VGM2w2VHc3c0N2MHRPN0cyRGRreGpKdEhnNGZyS0VmYWVGaTJYS3VaN05YMjg5ekQ1MVhsQ3JPTmpHQUlNSWdVMDF3LVZtRzdNMG1RbUY0TnZYVXM4OFNiVHYxSE93QVYtMS1HbTk0NFZCUWVwdFVfU3VTdXh1endBS1JGRU3SAYwBQVVfeXFMT2hyMldvSF9rVzlRSi00T3BmTDBMOW80VUF0c3pKVVNmVkhiV09GaXd2QTJRSW9Bdl83c2ZCWFJQOGNPQkg1LWdkQWNNNmlKZXhmLVJEZ3ZDV01tR3lPZllWMWRzbE1GVC1DNjFqU090dXIxWmVZekVuYWowRlV0dU5qektTNW9nSFdnWGg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T17:43:59.315Z"
     },
     {
       "id": "rss_d38b296e9f96be91",
@@ -11136,27 +11159,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T23:48:50.805Z"
-    },
-    {
-      "id": "rss_c957366f3bab293a",
-      "timestamp": 1784926620000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 3,
-      "text_summary": "Saudi Arabia and Houthis exchange fire as air defences intercept attack on oil refinery - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPZXJqVTM2Sjk5OGw4TnB5SWw2S0xRNG03eE5JLVFfZnp1NXluaGlpU3hHa2o2NHVCTERuOEpHeEliODNVblllcG1FTzdINTZVRUFSLWg2dXphTVphTVRtR0tSYVdKaTJPTEpwN1B3TFZZVnBNRjJvLWV4U3BvYUZud0RzNVpCLUJxRjBYU0U4SkVNbnRwNlhVRTZVS0p1TjlOczBLTG8zNG5nSHFZMzY4WFNZSGIyMlFKMmRJUg?oc=5\" target=\"_blank\">Saudi Arabia and Houthis exchange fire as air defences intercept attack on oil refinery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZXJqVTM2Sjk5OGw4TnB5SWw2S0xRNG03eE5JLVFfZnp1NXluaGlpU3hHa2o2NHVCTERuOEpHeEliODNVblllcG1FTzdINTZVRUFSLWg2dXphTVphTVRtR0tSYVdKaTJPTEpwN1B3TFZZVnBNRjJvLWV4U3BvYUZud0RzNVpCLUJxRjBYU0U4SkVNbnRwNlhVRTZVS0p1TjlOczBLTG8zNG5nSHFZMzY4WFNZSGIyMlFKMmRJUg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-25T13:31:06.412Z"
     }
   ]
 }
