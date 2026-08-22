@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T19:44:16.591Z",
+  "last_fetch": "2026-08-22T20:16:36.278Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e2850b7577b5990b",
+      "timestamp": 1787427541000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni forces disable Houthi naval mine in Bab al-Mandab - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPUUlCMWh6T1FfamJmcnlfWUNZRlFJLVpCZTVQd2QteExBLWlTNGJHQUtRVUpyckNQd0Q0T250bHFZUlFobFlYMUM2a3VBSVFBUUpiTF8wSm5tblpQZHp6YkdwYWFpaHhLSE13RmRTZE1mZ2liUDNEeFU4MmFLZWpWeUhua0VpWFBkV1RCTEdWYjY4LWc5YWVkYjU0NEM5SG9senc?oc=5\" target=\"_blank\">Yemeni forces disable Houthi naval mine in Bab al-Mandab</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUUlCMWh6T1FfamJmcnlfWUNZRlFJLVpCZTVQd2QteExBLWlTNGJHQUtRVUpyckNQd0Q0T250bHFZUlFobFlYMUM2a3VBSVFBUUpiTF8wSm5tblpQZHp6YkdwYWFpaHhLSE13RmRTZE1mZ2liUDNEeFU4MmFLZWpWeUhua0VpWFBkV1RCTEdWYjY4LWc5YWVkYjU0NEM5SG9senc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T20:16:35.002Z"
+    },
     {
       "id": "rss_2d110c9dda97c1d2",
       "timestamp": 1787402643000,
@@ -11138,27 +11159,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-24T23:22:13.284Z"
-    },
-    {
-      "id": "rss_b5cc5995388d74f6",
-      "timestamp": 1784930116000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia strikes Houthi military sites in Yemen's Hodeidah - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5xMTRmZXNKSU9ILVZJRGNwV2pyMTJUb3c3ZmhHSGNBTDFHVTBYTjdBYmhpNURWcnJmTUdKTFhGZmtLWTR4U1JjWlF1ZEVWblNNYUFXWmsyanZ0N19P?oc=5\" target=\"_blank\">Saudi Arabia strikes Houthi military sites in Yemen's Hodeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5xMTRmZXNKSU9ILVZJRGNwV2pyMTJUb3c3ZmhHSGNBTDFHVTBYTjdBYmhpNURWcnJmTUdKTFhGZmtLWTR4U1JjWlF1ZEVWblNNYUFXWmsyanZ0N19P?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T23:48:50.805Z"
     }
   ]
 }
