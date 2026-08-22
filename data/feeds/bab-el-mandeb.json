@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T08:55:44.599Z",
+  "last_fetch": "2026-08-22T09:22:52.998Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1f99eb5efed04e12",
+      "timestamp": 1787390230000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Naval Mission Aspides Successfully Escorts Fifth Convoy Through Red Sea - وكالة خبر للأنباء",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE1pdWdRa1BCbjFfeDBfcFZjWUtWUHBoRUhKVnMwM0dXMGVBanNYNXRGSDk2bEloOVdNRklWcTJYN1c5RVVWT3JfSjc2YVVIVzJoSENkamZkNA?oc=5\" target=\"_blank\">EU Naval Mission Aspides Successfully Escorts Fifth Convoy Through Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1pdWdRa1BCbjFfeDBfcFZjWUtWUHBoRUhKVnMwM0dXMGVBanNYNXRGSDk2bEloOVdNRklWcTJYN1c5RVVWT3JfSjc2YVVIVzJoSENkamZkNA?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T09:22:52.552Z"
+    },
     {
       "id": "rss_bb52bd1ef8eef4dd",
       "timestamp": 1787361388000,
@@ -11135,27 +11156,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T06:47:13.048Z"
-    },
-    {
-      "id": "rss_8f94c38a2f07bb21",
-      "timestamp": 1784925116000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi’s strike Yemen’s Houthi-held Hodeidah: Rebel media - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNYnhheEFDTVVVMU0tbFY1aGRvQUsyTHpUeUY3MWxheDI3a2Y4ZXFBMFlac3lpMEtmdFlzd2JFWUtPOFRRbHlLTEtoZkN5V0hkeEZkalRid21TSGozaDRaVWxWM2ZSdEQySFItVlRKWE5HLV9FS0FlZXoxMlczZkZCNTlaMWtrLU1hNVJIbTIzNzVJWWRFQ2kxR9IBngFBVV95cUxPc2xmbldyM2NZMUdPV1pCVEoteU82dkFlbUN2NHh6MUFBbXV2YVVuczdSMVE1Njg0eUJCLUNmMWZZUmtMMTItZ1MzTUQ1cXBSSkpxemoxR0JDaXBIREhRVFF3czd4eHZQZVRPQ0F4Ry1TNmtnRHlOT0FqV1dWWXhXRGZZdVR1WEFXb19VWXREc1NFWDlwejMxTFdxTFdudw?oc=5\" target=\"_blank\">Saudi",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYnhheEFDTVVVMU0tbFY1aGRvQUsyTHpUeUY3MWxheDI3a2Y4ZXFBMFlac3lpMEtmdFlzd2JFWUtPOFRRbHlLTEtoZkN5V0hkeEZkalRid21TSGozaDRaVWxWM2ZSdEQySFItVlRKWE5HLV9FS0FlZXoxMlczZkZCNTlaMWtrLU1hNVJIbTIzNzVJWWRFQ2kxR9IBngFBVV95cUxPc2xmbldyM2NZMUdPV1pCVEoteU82dkFlbUN2NHh6MUFBbXV2YVVuczdSMVE1Njg0eUJCLUNmMWZZUmtMMTItZ1MzTUQ1cXBSSkpxemoxR0JDaXBIREhRVFF3czd4eHZQZVRPQ0F4Ry1TNmtnRHlOT0FqV1dWWXhXRGZZdVR1WEFXb19VWXREc1NFWDlwejMxTFdxTFdudw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-24T21:24:00.050Z"
     }
   ]
 }
