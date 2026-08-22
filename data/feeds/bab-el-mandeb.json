@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T00:57:23.162Z",
+  "last_fetch": "2026-08-22T02:15:16.926Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -390,6 +390,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-19T11:19:53.806Z"
+    },
+    {
+      "id": "rss_80ea61a3ba8ed1af",
+      "timestamp": 1787133485000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthis ramp up activity in Yemen and Saudi Arabia, but avoid reigniting the civil war so far - ACLED",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1Y1S0NjWEpkWkF5MnNER3IxZTJOUkR0VFExaXNkTExQUUd1SG9kNEpENjFtdWVra3JQNzNTNjhQQW1LdlBsdDVKaGlSMVZXalNiSWY5N1hySDlxZ1EwYjNRT3E3bzlWQTRLMmE1anR1azdiSTdJc3J3SzBaVThkdnI2RGp4anpLNUVoZVVxOTZxLWNWdmNzdDZDa2Q1MFMwelhkRzJSb2xheDQ?oc=5\" target=\"_blank\">The Houthis ramp up activity in Yemen and Saudi Arabia, but avoid reigniting the civil war so far</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ACLED</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1Y1S0NjWEpkWkF5MnNER3IxZTJOUkR0VFExaXNkTExQUUd1SG9kNEpENjFtdWVra3JQNzNTNjhQQW1LdlBsdDVKaGlSMVZXalNiSWY5N1hySDlxZ1EwYjNRT3E3bzlWQTRLMmE1anR1azdiSTdJc3J3SzBaVThkdnI2RGp4anpLNUVoZVVxOTZxLWNWdmNzdDZDa2Q1MFMwelhkRzJSb2xheDQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T02:15:15.626Z"
     },
     {
       "id": "rss_9a7c5c4ab751d906",
@@ -11135,27 +11156,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-24T20:29:36.877Z"
-    },
-    {
-      "id": "rss_499372b8372035af",
-      "timestamp": 1784920562000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis deny they closed Bab al-Mandeb Strait - dw.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOcjFxNUY0LTJUX2FHZDFfclI2U0xVc0ZydmNVUlFGOXdoMmRLdFVKZTlMMlNPQjA1ODMwS2FGSkoyLWl4UFlSSFlIUTNVTkc3V3JicHNzNmZWeXI0RHNxeVNkXzI4MFg5Y21lQ1VUM3hZMDkwSjBUdHE5VnlJTlBxTGR3cHB4eHdUaU85SUJ2bnhYdw?oc=5\" target=\"_blank\">Yemen's Houthis deny they closed Bab al-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dw.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcjFxNUY0LTJUX2FHZDFfclI2U0xVc0ZydmNVUlFGOXdoMmRLdFVKZTlMMlNPQjA1ODMwS2FGSkoyLWl4UFlSSFlIUTNVTkc3V3JicHNzNmZWeXI0RHNxeVNkXzI4MFg5Y21lQ1VUM3hZMDkwSjBUdHE5VnlJTlBxTGR3cHB4eHdUaU85SUJ2bnhYdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-24T19:30:22.788Z"
     }
   ]
 }
