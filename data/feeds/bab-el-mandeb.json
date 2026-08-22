@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-22T07:54:14.907Z",
+  "last_fetch": "2026-08-22T08:22:30.789Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bb52bd1ef8eef4dd",
+      "timestamp": 1787361388000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi Drone Footage Shows Saudi M1A2S Abrams Engulfed in Marib Strike - SOFX",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOSVVwLUplcnpUWW5kNl9BbW5SYlVOYkVMa1VWV3hlRnlQalROYXFzZUM4MHc0VmtmU3FVamRIZ1l1ek9YbEh2ckw2ZXBSdkRZbTVQOVFvcWNmNXJiY1JlN29iWnVLR1JsZ3hGSmZ3TlBCdTZuVk1zZzQ1MXZKTHRLbVJEd3RrYVBic1cxZFN4SUQtOWNnQmtv?oc=5\" target=\"_blank\">Houthi Drone Footage Shows Saudi M1A2S Abrams Engulfed in Marib Strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SOFX</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSVVwLUplcnpUWW5kNl9BbW5SYlVOYkVMa1VWV3hlRnlQalROYXFzZUM4MHc0VmtmU3FVamRIZ1l1ek9YbEh2ckw2ZXBSdkRZbTVQOVFvcWNmNXJiY1JlN29iWnVLR1JsZ3hGSmZ3TlBCdTZuVk1zZzQ1MXZKTHRLbVJEd3RrYVBic1cxZFN4SUQtOWNnQmtv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-22T08:22:29.438Z"
+    },
     {
       "id": "rss_d38b296e9f96be91",
       "timestamp": 1787275513000,
@@ -11133,29 +11156,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-24T21:24:00.050Z"
-    },
-    {
-      "id": "rss_d813da77f28731c0",
-      "timestamp": 1784922649000,
-      "source": "Reuters",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi vessel sustains minor hull damage after Red Sea attack, state news agency says - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNZmVnQzBKdENLU1Y5aXhpcVVpZVNtbDJyUGhJNWdlMF9zaVBRSmc4a0FFLUN1QjRVcFNvZDNjZFQwcWx6YWRNWEFOaVZoS0ZjWjFoMXlwQjN0bGk3d1lZSnVTYUNQZl9YenZOUk1ZZXMxX1RxTGhzR3VrclI2YXY5OWRWNVRpNGthOVFackVyQUpwTFlQVzh4S1M2cDM2MjdKWjRJX2R2QXpPSWpwa2hJdFBNRjhXdjhoeXJBaTczMUVrckxiU2ZPZ0hBNGc?oc=5\" target=\"_blank\">Saudi vessel sustains minor hull damage after Red Sea attack, state news agency says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZmVnQzBKdENLU1Y5aXhpcVVpZVNtbDJyUGhJNWdlMF9zaVBRSmc4a0FFLUN1QjRVcFNvZDNjZFQwcWx6YWRNWEFOaVZoS0ZjWjFoMXlwQjN0bGk3d1lZSnVTYUNQZl9YenZOUk1ZZXMxX1RxTGhzR3VrclI2YXY5OWRWNVRpNGthOVFackVyQUpwTFlQVzh4S1M2cDM2MjdKWjRJX2R2QXpPSWpwa2hJdFBNRjhXdjhoeXJBaTczMUVrckxiU2ZPZ0hBNGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-24T20:29:36.877Z"
     }
   ]
 }
