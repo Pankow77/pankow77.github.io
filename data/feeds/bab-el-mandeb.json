@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-23T09:31:55.493Z",
+  "last_fetch": "2026-08-23T10:18:05.490Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_913e1630d835e34a",
+      "timestamp": 1787477598000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen : 2 Civilians Injured in Houthi Mortar Attack on Al-Hayma, South Hodeidah - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Rd0NMblExN2lXX3NfUG03eGhZTHo2NFc4MVV4cjROM1l1M2RfM01OWktFZTUtYmFiSGJKVjNtVFlZOElqbTNjTFZTYzVIRjJCbk9WZUdySTFxUVZKS3JJ?oc=5\" target=\"_blank\">Yemen : 2 Civilians Injured in Houthi Mortar Attack on Al-Hayma, South Hodeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Rd0NMblExN2lXX3NfUG03eGhZTHo2NFc4MVV4cjROM1l1M2RfM01OWktFZTUtYmFiSGJKVjNtVFlZOElqbTNjTFZTYzVIRjJCbk9WZUdySTFxUVZKS3JJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-23T10:18:04.202Z"
+    },
     {
       "id": "rss_239650a618f60505",
       "timestamp": 1787433766000,
@@ -11134,29 +11155,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T05:52:57.382Z"
-    },
-    {
-      "id": "rss_457d791ad8c2a341",
-      "timestamp": 1784937911000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Saudi strike targets Yemen's Hodeidah after attack on Saudi vessel - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxObG1pTXlHMjhuNFlZTVJDblVYMjRDRzBJYW1jbHcxODRWaVFfQmVQNXFMOXNQT2U2dkxod3JsTWhlM3ZVNjA3WEpKNVdOblhsQjEyVUJpN3lZdjNtXzU3bDdSOU1adktzaWxSalZnV2ltbkl2X0hlNWF1N1VLQzVfWF9CcEJDcXpIZkp1U2VPYVFVYmpzT190YWZmZVJoRXJ3MWp4Tms4TTladER5UTU1aXlyYzdjX0RLRVVSLTV4ZlBIYXpwS0lYbncydUNnUQ?oc=5\" target=\"_blank\">Saudi strike targets Yemen's Hodeidah after attack on Saudi vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObG1pTXlHMjhuNFlZTVJDblVYMjRDRzBJYW1jbHcxODRWaVFfQmVQNXFMOXNQT2U2dkxod3JsTWhlM3ZVNjA3WEpKNVdOblhsQjEyVUJpN3lZdjNtXzU3bDdSOU1adktzaWxSalZnV2ltbkl2X0hlNWF1N1VLQzVfWF9CcEJDcXpIZkp1U2VPYVFVYmpzT190YWZmZVJoRXJ3MWp4Tms4TTladER5UTU1aXlyYzdjX0RLRVVSLTV4ZlBIYXpwS0lYbncydUNnUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T01:34:02.099Z"
     }
   ]
 }
