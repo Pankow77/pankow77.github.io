@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-23T14:47:51.274Z",
+  "last_fetch": "2026-08-23T15:16:46.467Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c7815e0dd903d982",
+      "timestamp": 1787496623000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "3 civilians injuredin Houthi shelling in southwestern Yemen - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNb2JxVDNieHBRYlJmSTkySF9ITlBNaFptYlhVZm5wYkpXd0VIMmV1Um1SRjA5SmlSeHkzRlptVUI3LWc5WFdnYWFiYUNGTl9iX0p1RFdjRkF6ZGRQSjFhM1V0SF9YY1JHdHZjei1TU1JROFZMYzBaZmxjczBDT1otOGFQeGRHNTIyUWlQeFJ2eWVJSjJfbkFnOHF6d0F1RUU3RGlTLXBnTQ?oc=5\" target=\"_blank\">3 civilians injuredin Houthi shelling in southwestern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNb2JxVDNieHBRYlJmSTkySF9ITlBNaFptYlhVZm5wYkpXd0VIMmV1Um1SRjA5SmlSeHkzRlptVUI3LWc5WFdnYWFiYUNGTl9iX0p1RFdjRkF6ZGRQSjFhM1V0SF9YY1JHdHZjei1TU1JROFZMYzBaZmxjczBDT1otOGFQeGRHNTIyUWlQeFJ2eWVJSjJfbkFnOHF6d0F1RUU3RGlTLXBnTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-23T15:16:45.303Z"
+    },
     {
       "id": "rss_913e1630d835e34a",
       "timestamp": 1787477598000,
@@ -11131,30 +11152,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T04:33:38.960Z"
-    },
-    {
-      "id": "rss_a6714836dc62c415",
-      "timestamp": 1784947380000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Iran-backed Houthis claim missile attack on Saudi Arabia as Middle East war widens - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxONGtzUUVWZzk5bHlYMW50bFg3QW94RFZwbXN6ZEY4eVVTVG5pdlRjd2F1V3gySEd3NVZVbHpFbVExQ2ZjMVBVcS1WMUduM3lSNWkxRzVJWGt3Q0huTW51SmdYQTYtY3RJYXVLUnpKUkZLb3c0aHpYQk9SSUNVLXhzQnY4TTFYOE1vbVQwS0h3clplUkpKenY0WVJpUkU?oc=5\" target=\"_blank\">Iran-backed Houthis claim missile attack on Saudi Arabia as Middle East war widens</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONGtzUUVWZzk5bHlYMW50bFg3QW94RFZwbXN6ZEY4eVVTVG5pdlRjd2F1V3gySEd3NVZVbHpFbVExQ2ZjMVBVcS1WMUduM3lSNWkxRzVJWGt3Q0huTW51SmdYQTYtY3RJYXVLUnpKUkZLb3c0aHpYQk9SSUNVLXhzQnY4TTFYOE1vbVQwS0h3clplUkpKenY0WVJpUkU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T05:52:57.382Z"
     }
   ]
 }
