@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-23T03:45:19.826Z",
+  "last_fetch": "2026-08-23T04:31:13.366Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_239650a618f60505",
+      "timestamp": 1787433766000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "\"Aspides\" Secures the Transit of a New Group of Commercial Vessels in the Red Sea - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1iYV83SUFIV2RnVERsNzZHel9ZcjZnM3VJQUZxOGpaYmhfcHpCVWJoVDdaWVk0dmNpNXJIN2lBVXUwRnpfdVN0TXpPYUVkRTJIMXA2TGE3ci1hWWlfUUFzV1RLWHVub0Z4ZkE2UjNHQzhpTzdMNnc?oc=5\" target=\"_blank\">\"Aspides\" Secures the Transit of a New Group of Commercial Vessels in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1iYV83SUFIV2RnVERsNzZHel9ZcjZnM3VJQUZxOGpaYmhfcHpCVWJoVDdaWVk0dmNpNXJIN2lBVXUwRnpfdVN0TXpPYUVkRTJIMXA2TGE3ci1hWWlfUUFzV1RLWHVub0Z4ZkE2UjNHQzhpTzdMNnc?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-23T04:31:12.950Z"
+    },
     {
       "id": "rss_e2850b7577b5990b",
       "timestamp": 1787427541000,
@@ -11134,29 +11157,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T01:34:02.099Z"
-    },
-    {
-      "id": "rss_b8d3c8f680d21786",
-      "timestamp": 1784934215000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Attack Saudi Oil Tankers in the Red Sea - The Institute for Energy Research",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNcmdvcndaQnUySnVZMnc5VFJnV0UtaFduY1BBb3Z5aW1SYWRTLWVSMDhlUlVLTUU2RFpKUjVHS1RuaEJ4WVZ0Q0lNN3FpWHhRQVkyUmxoN0xTSkRpbGszeFdhRXh2X016enh2akQ5WWt2UUl4RUgxRExyN2xzbTdpeVpHbmtUcmJvSGViemdPdGR2ZkF4M3l6djhUV24zSHN4akNfY3cyY1lEaXgtT1gySEVR?oc=5\" target=\"_blank\">Houthis Attack Saudi Oil Tankers in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Institute for Energy Research</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcmdvcndaQnUySnVZMnc5VFJnV0UtaFduY1BBb3Z5aW1SYWRTLWVSMDhlUlVLTUU2RFpKUjVHS1RuaEJ4WVZ0Q0lNN3FpWHhRQVkyUmxoN0xTSkRpbGszeFdhRXh2X016enh2akQ5WWt2UUl4RUgxRExyN2xzbTdpeVpHbmtUcmJvSGViemdPdGR2ZkF4M3l6djhUV24zSHN4akNfY3cyY1lEaXgtT1gySEVR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T11:25:58.757Z"
     }
   ]
 }
