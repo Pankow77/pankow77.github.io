@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-08-23T06:32:33.209Z",
-  "epoch_count": 74,
+  "last_fetch": "2026-08-23T07:28:50.323Z",
+  "epoch_count": 75,
   "epochs": [
     {
       "id": "rss_98c4bc316b0e1755",
@@ -46,6 +46,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-19T22:19:03.716Z"
+    },
+    {
+      "id": "rss_94c39e24c28413b6",
+      "timestamp": 1787044587000,
+      "source": "OSINT",
+      "actor": "gov_it",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Il sovranismo di Giorgia Meloni dopo Ceuta indebolisce l’Europa e rende l’Italia più sola - Fanpage",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOSWRGWWs4c0xaaHUyUVphWWxxbC1DRnRTWGw0eGxpLWpHekJJMkl6a1Z6QkRteXhPakpiWElFVHhvLVlCVG8zaTZKWFBSUmpBQjZNamVPSlFFb0pPV2xwOEpVaDVySG1jdlUtQV8tcV93S3I2cnFhWG93aGYzQ1FNai1WX0p4QzAwVGxKTVZNZ1J0ZS1wQUpsNUNMODZJYXFwSU0zUk9BZGlQMDZDUEFoUVZQLUhScERvMmw3bA?oc=5\" target=\"_blank\">Il sovranismo di Giorgia Meloni dopo Ceuta indebolisce l’Europa e rende l’Italia più sola</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fanpage</font>",
+      "tags": [
+        "meloni-trump"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSWRGWWs4c0xaaHUyUVphWWxxbC1DRnRTWGw0eGxpLWpHekJJMkl6a1Z6QkRteXhPakpiWElFVHhvLVlCVG8zaTZKWFBSUmpBQjZNamVPSlFFb0pPV2xwOEpVaDVySG1jdlUtQV8tcV93S3I2cnFhWG93aGYzQ1FNai1WX0p4QzAwVGxKTVZNZ1J0ZS1wQUpsNUNMODZJYXFwSU0zUk9BZGlQMDZDUEFoUVZQLUhScERvMmw3bA?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-23T07:28:50.322Z"
     },
     {
       "id": "rss_c8f7e953a06297dd",
