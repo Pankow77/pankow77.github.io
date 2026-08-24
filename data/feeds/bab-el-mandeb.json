@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T13:46:20.313Z",
+  "last_fetch": "2026-08-24T15:33:56.320Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_954fb8d7bef367b5",
+      "timestamp": 1787583943000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthis claim attack on Saudi oil tanker in Red Sea - Region - World - Ahram Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KOWpFeVdINTlmMU8xWlVYX09QSUY3TkhtWVlIQUZBQzZIWElBM0FBcTFzSTlzNWNaZ1cxX29LNllab1ZfZ0ZsY1NncDJuR1pPbXpIUGZ4cTE?oc=5\" target=\"_blank\">Yemen's Houthis claim attack on Saudi oil tanker in Red Sea - Region - World</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ahram Online</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9KOWpFeVdINTlmMU8xWlVYX09QSUY3TkhtWVlIQUZBQzZIWElBM0FBcTFzSTlzNWNaZ1cxX29LNllab1ZfZ0ZsY1NncDJuR1pPbXpIUGZ4cTE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T15:33:55.070Z"
+    },
+    {
+      "id": "rss_43d1e59b9617e368",
+      "timestamp": 1787576404000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOSTZxVGZmNFNCc3lBMHo2alVQYzhKR1JpQmI1QTc5TDZWUl8zd0JCd3dKVTluTzlYSS0zbDU4RzFSclZyZzR3aFo1cm9pSnBPblFrWDhGX2x3ai13eVhzWVBmT1BvOW5WTjNwZXJHWnZ4S3lqcC1NMFpHNWppRE9QcEs1LUZ1S2NwTTFKOEpkYnRUTFpoUnVSYzZ2aUlOMUVTMEdqVE1jRnFGT1VoZWlj?oc=5\" target=\"_blank\">Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSTZxVGZmNFNCc3lBMHo2alVQYzhKR1JpQmI1QTc5TDZWUl8zd0JCd3dKVTluTzlYSS0zbDU4RzFSclZyZzR3aFo1cm9pSnBPblFrWDhGX2x3ai13eVhzWVBmT1BvOW5WTjNwZXJHWnZ4S3lqcC1NMFpHNWppRE9QcEs1LUZ1S2NwTTFKOEpkYnRUTFpoUnVSYzZ2aUlOMUVTMEdqVE1jRnFGT1VoZWlj?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T15:33:55.069Z"
+    },
     {
       "id": "rss_d74f4798afd55e06",
       "timestamp": 1787571535000,
@@ -11106,51 +11152,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T14:31:29.631Z"
-    },
-    {
-      "id": "rss_86c0a0d054bfa99b",
-      "timestamp": 1784985525000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi Aramco sites – with Yemen at risk of renewed war - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQT091R3hvNGZCd2h2eHpPRzhBWG9ETEQwa3MwNmNXQS02UkJCOG1kaFdJRXVpUE5YcG5CMGZnemJrOWFxdi13ZDNhVDlVcEItUHF4VHUzMGVONXRwS0RJdXlOejhIb3ZzeWw1Y01DZEZ2SjlsR1dFcS1qSWItRUVVRldmSHNpMGxSOXdXemVuNWtWS1gxQlB1MEtKWFdXVmo4MnBUZmphdGxuMHVocDNpWGxWYW45WTBvOHl5ZWZB?oc=5\" target=\"_blank\">Houthis attack Saudi Aramco sites – with Yemen at risk of renewed war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQT091R3hvNGZCd2h2eHpPRzhBWG9ETEQwa3MwNmNXQS02UkJCOG1kaFdJRXVpUE5YcG5CMGZnemJrOWFxdi13ZDNhVDlVcEItUHF4VHUzMGVONXRwS0RJdXlOejhIb3ZzeWw1Y01DZEZ2SjlsR1dFcS1qSWItRUVVRldmSHNpMGxSOXdXemVuNWtWS1gxQlB1MEtKWFdXVmo4MnBUZmphdGxuMHVocDNpWGxWYW45WTBvOHl5ZWZB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T14:31:28.297Z"
-    },
-    {
-      "id": "rss_7525213d02e059db",
-      "timestamp": 1784974978000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi military strikes Houthi targets in Yemen after the Iran-backed militia attacked Red Sea shipping - CNBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPczRiQmJ3SUp1TUJNbnNVa2I4ME5TeWFON3BtaGVySWFXdExrUkI5RnB6VDJIWGpZdmVOcUZCcDY4ZVY4eDktT3JVQXhqNklPUjFYdUhyQXRTV1R3NG1SSVEycHpJeFJaYWNaNElqb3JsUXVEY2xTOXVzV1dkV184T21zU09Ca2NZV0ZSSm1PclNmQWxXVnJj0gGcAUFVX3lxTE9BNXJWRGsyeE1Ta1FqT3RqdklsQWo1TFZrSTExWDBGaDluY0NFdzZJZFEwSHp3VWFtNmFaV19xVmJ1YkM0REhmVDhGcmFwQkVMYzd0UVRxQVZFOGNjWHFFczNhelNheUpqT3RpVVBYbzJMRGNuR1ZsRzZ6SkVpTkRib2VlbGhBeG5hbGhmdEYtUkQ4OUc5LTJoRGJVUQ?oc=5\" target=\"_blank\">Saudi mil",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPczRiQmJ3SUp1TUJNbnNVa2I4ME5TeWFON3BtaGVySWFXdExrUkI5RnB6VDJIWGpZdmVOcUZCcDY4ZVY4eDktT3JVQXhqNklPUjFYdUhyQXRTV1R3NG1SSVEycHpJeFJaYWNaNElqb3JsUXVEY2xTOXVzV1dkV184T21zU09Ca2NZV0ZSSm1PclNmQWxXVnJj0gGcAUFVX3lxTE9BNXJWRGsyeE1Ta1FqT3RqdklsQWo1TFZrSTExWDBGaDluY0NFdzZJZFEwSHp3VWFtNmFaV19xVmJ1YkM0REhmVDhGcmFwQkVMYzd0UVRxQVZFOGNjWHFFczNhelNheUpqT3RpVVBYbzJMRGNuR1ZsRzZ6SkVpTkRib2VlbGhBeG5hbGhmdEYtUkQ4OUc5LTJoRGJVUQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T11:26:00.007Z"
     }
   ]
 }
