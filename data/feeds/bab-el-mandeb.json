@@ -1,8 +1,33 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T21:54:23.690Z",
+  "last_fetch": "2026-08-24T22:19:58.876Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4534fb90347e7388",
+      "timestamp": 1787609064000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack, and Oil Goes Down - Energy News Beat",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQenNTaktkYS1PNktjaXdWWkJqWVRfYW03VG0zNmdMSEVJemRpaFZVSTdJVUY5TXhhRDVVVzJnT0dzb2tnZXNyblVMZ2VlZ3BhaFUzRThqZlVDc0ZrbnJfMllkcGdvNEFNenJSV1U2Yi1kU1pva1Y3NnNvd1N4UXFnMjNldWxqd09qOVJtRTBocno2UjczUjlrcXRXQkZKTnNRQnh1YW1LUXBGODJrRl9TSTJjczd4UFU2QmYtNEROZw?oc=5\" target=\"_blank\">Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack, and Oil Goes Down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Energy News Beat</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQenNTaktkYS1PNktjaXdWWkJqWVRfYW03VG0zNmdMSEVJemRpaFZVSTdJVUY5TXhhRDVVVzJnT0dzb2tnZXNyblVMZ2VlZ3BhaFUzRThqZlVDc0ZrbnJfMllkcGdvNEFNenJSV1U2Yi1kU1pva1Y3NnNvd1N4UXFnMjNldWxqd09qOVJtRTBocno2UjczUjlrcXRXQkZKTnNRQnh1YW1LUXBGODJrRl9TSTJjczd4UFU2QmYtNEROZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T22:19:57.466Z"
+    },
     {
       "id": "rss_06ffd5e06c73d947",
       "timestamp": 1787601600000,
@@ -11132,29 +11157,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T21:17:47.901Z"
-    },
-    {
-      "id": "rss_9e6e076718110663",
-      "timestamp": 1785007018000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fYWF4MjVtNkdORS1vWGZOTWZRU0FiVzZkY2pGemJ0eURvM0FZT056M2FFOGpqN3lYdEoxT2Rxd0RjUEpRb3M4ZDQwRnB0N0dUa0pZVmtn?oc=5\" target=\"_blank\">Houthis Claim Missile Strike on Saudi Arabia as Red Sea Tensions Deepen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fYWF4MjVtNkdORS1vWGZOTWZRU0FiVzZkY2pGemJ0eURvM0FZT056M2FFOGpqN3lYdEoxT2Rxd0RjUEpRb3M4ZDQwRnB0N0dUa0pZVmtn?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T22:21:52.905Z"
     }
   ]
 }
