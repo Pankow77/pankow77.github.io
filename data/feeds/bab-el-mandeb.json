@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T10:32:10.886Z",
+  "last_fetch": "2026-08-24T11:52:16.075Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d74f4798afd55e06",
+      "timestamp": 1787571535000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tanker comes under attack in Red Sea near Saudi Arabia - AzerNews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTFB4Q05FeGpDTDRqdWFFX2pVb0lmemVLa3hLa1pBaERsRGh6RFFzSjVuQTgtS0dCakJ5b1RpNDNEV3Vna3NBdExoSm1GbVNLdVBNYVlVTQ?oc=5\" target=\"_blank\">Tanker comes under attack in Red Sea near Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AzerNews</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB4Q05FeGpDTDRqdWFFX2pVb0lmemVLa3hLa1pBaERsRGh6RFFzSjVuQTgtS0dCakJ5b1RpNDNEV3Vna3NBdExoSm1GbVNLdVBNYVlVTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T11:52:14.776Z"
+    },
+    {
+      "id": "rss_1be48764abdbffa7",
+      "timestamp": 1787569289000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Bahri-owned tanker hit in Red Sea - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE0tekExY3U4VmplaGRpbGFMTVRoWXR2OERYM185Um81SVVjZmlHLUdDYTJmd2tiYVk4c3RMUWt0Y1lFaDY2S25OZHVEbUZuMFc4LTBtNkZBSkU3eDcxX0dfQjc0NGpPSUl1S2lPV1lnQWJXLVJoemJ6bGNR?oc=5\" target=\"_blank\">Bahri-owned tanker hit in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0tekExY3U4VmplaGRpbGFMTVRoWXR2OERYM185Um81SVVjZmlHLUdDYTJmd2tiYVk4c3RMUWt0Y1lFaDY2S25OZHVEbUZuMFc4LTBtNkZBSkU3eDcxX0dfQjc0NGpPSUl1S2lPV1lnQWJXLVJoemJ6bGNR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T11:52:14.776Z"
+    },
     {
       "id": "rss_8de05915c0071e6c",
       "timestamp": 1787560085000,
@@ -11104,52 +11150,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T08:41:04.641Z"
-    },
-    {
-      "id": "rss_dd2dd958f3d31995",
-      "timestamp": 1784954920000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia and Houthis trade fire as US fires on tanker in Hormuz Strait - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXMFN4NE9tTE1Ub0dqX2ZDNVh1RzVNUmhMZGdhbUlfd3VZSi1KcmNYMmM4dm1acGlMLWt0TEpUX214WXBaV0JCRnZEdC1jWklyZ0J2YzltQkFmZw?oc=5\" target=\"_blank\">Saudi Arabia and Houthis trade fire as US fires on tanker in Hormuz Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBXMFN4NE9tTE1Ub0dqX2ZDNVh1RzVNUmhMZGdhbUlfd3VZSi1KcmNYMmM4dm1acGlMLWt0TEpUX214WXBaV0JCRnZEdC1jWklyZ0J2YzltQkFmZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T07:38:48.206Z"
-    },
-    {
-      "id": "rss_70d4fcef5817662f",
-      "timestamp": 1784952999000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim missile attack on southern Saudi Arabia - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNYWU0YmVCSklOeTQ5d1hoNUtlNlRrbWMtNGpoTm9jNGlKMWowYTVjVXlNendIZE5WN290WDFqcVRqdVZwWi1YZ0k3NEdFZXB0WXZUNE15eU1ZdElIVTlLVUNvSEJCY3RGYTBPTG5zcW0zVFlaTnAxVGI4aDl3ZkJLbXRNUzk2RGp3MVF6WTQzWGhtXzlOeXlpcFl2S0ptR3VP?oc=5\" target=\"_blank\">Houthis claim missile attack on southern Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYWU0YmVCSklOeTQ5d1hoNUtlNlRrbWMtNGpoTm9jNGlKMWowYTVjVXlNendIZE5WN290WDFqcVRqdVZwWi1YZ0k3NEdFZXB0WXZUNE15eU1ZdElIVTlLVUNvSEJCY3RGYTBPTG5zcW0zVFlaTnAxVGI4aDl3ZkJLbXRNUzk2RGp3MVF6WTQzWGhtXzlOeXlpcFl2S0ptR3VP?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T05:52:57.382Z"
     }
   ]
 }
