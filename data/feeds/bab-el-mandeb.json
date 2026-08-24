@@ -1,8 +1,56 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T19:53:08.330Z",
+  "last_fetch": "2026-08-24T20:23:49.914Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_06ffd5e06c73d947",
+      "timestamp": 1787601600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack - Crude Oil Prices Today | OilPrice.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3lfY3BBYjhOdTRNRlpDdm5uLTJPXzlBTGdzUlJFRFVxbWlEMGpQazE5UTN5R05SZlRBODNFU3BwWnZrYTh0ZnUwRUNBSFhOVEMwd2NMSUdaY2NMbnA2ZDZ1U3l2Z3NxMzV1Z1ZlU3JoUmpudDBTZkpmN1BCdDU3cEczQlMwdDZpT0pGMV8xU3ZIOGVtMmJDcXhPSDREajdQNmRWSmVtcG1NYU95NEJFM29wR2o1NGhh0gG-AUFVX3lxTE0zQXZMd1JuRXptc1ljOFV4N1prWlpnTFdvbDVieVdEcjBIYWNYdlBFWHpkdTYxOFF1RTJMTEF2a3ZqYVZUbmpzLVFUY0xIMGlRVFBZd20tcTdZTERhMFJEOXVrb3V4Yi1lczd3b2xqd0Q1VHFtWFE0NGFfOHIyMnNSS1Z2Sk01RjVuM0lkazJPUWFDMH",
+      "tags": [
+        "missile",
+        "drone",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3lfY3BBYjhOdTRNRlpDdm5uLTJPXzlBTGdzUlJFRFVxbWlEMGpQazE5UTN5R05SZlRBODNFU3BwWnZrYTh0ZnUwRUNBSFhOVEMwd2NMSUdaY2NMbnA2ZDZ1U3l2Z3NxMzV1Z1ZlU3JoUmpudDBTZkpmN1BCdDU3cEczQlMwdDZpT0pGMV8xU3ZIOGVtMmJDcXhPSDREajdQNmRWSmVtcG1NYU95NEJFM29wR2o1NGhh0gG-AUFVX3lxTE0zQXZMd1JuRXptc1ljOFV4N1prWlpnTFdvbDVieVdEcjBIYWNYdlBFWHpkdTYxOFF1RTJMTEF2a3ZqYVZUbmpzLVFUY0xIMGlRVFBZd20tcTdZTERhMFJEOXVrb3V4Yi1lczd3b2xqd0Q1VHFtWFE0NGFfOHIyMnNSS1Z2Sk01RjVuM0lkazJPUWFDMHRVaTg0TVB2WDhmX09QOG5DTFkwUllUVXpRdGZuTldXWGFTNFRRQldtT2c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T20:23:48.344Z"
+    },
+    {
+      "id": "rss_e8f08ec0e84b7298",
+      "timestamp": 1787601150000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen’s Houthis report attack on Saudi ship - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdkNmMGllenFfdWxNVTJYWTF5b3h1Y3lVSmlhSmEwUHZjUC1jRTVQRUZCZ1p2SDFaaWZSRTdVOHNta2JwaFpTSjZyUHgzVUJ4WDdHUjJYeGdXR3Vycm1sdnRjSmdUdmwxQjVuU0tLTURmWXU4S2RRWmlVc3FfNTBzajUwQ0tNX1Z1WWZ30gGQAUFVX3lxTE9nNGYwUkF5QTdrZmVZSnEzSUdXLUt0YURGSFRiTXNQcHZEUXlkemFzTFBxX3JXRzRwQmViNHJJZjdvR0dyNFdvd3piWlpmbVZhNzVaZ1BUTUVUckNmNVpYeW9SQVA4eGtIZHcxc0xiRXMyeGhaOFgwbC1TUG9kX1VaNWU1MTFwbUQ1dFZFVE0ydA?oc=5\" target=\"_blank\">Yemen’s Houthis report attack on Saudi sh",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdkNmMGllenFfdWxNVTJYWTF5b3h1Y3lVSmlhSmEwUHZjUC1jRTVQRUZCZ1p2SDFaaWZSRTdVOHNta2JwaFpTSjZyUHgzVUJ4WDdHUjJYeGdXR3Vycm1sdnRjSmdUdmwxQjVuU0tLTURmWXU4S2RRWmlVc3FfNTBzajUwQ0tNX1Z1WWZ30gGQAUFVX3lxTE9nNGYwUkF5QTdrZmVZSnEzSUdXLUt0YURGSFRiTXNQcHZEUXlkemFzTFBxX3JXRzRwQmViNHJJZjdvR0dyNFdvd3piWlpmbVZhNzVaZ1BUTUVUckNmNVpYeW9SQVA4eGtIZHcxc0xiRXMyeGhaOFgwbC1TUG9kX1VaNWU1MTFwbUQ1dFZFVE0ydA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-08-24T20:23:48.343Z"
+    },
     {
       "id": "rss_3f552ab56c1a21f9",
       "timestamp": 1787591780000,
@@ -11107,50 +11155,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T22:21:52.905Z"
-    },
-    {
-      "id": "rss_08665beb3ec721c7",
-      "timestamp": 1784996374000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Keeps Flowing From Red Sea As Hormuz Bypass Stays Open - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHo3YlF3UGRRUmZBdHNoZ1N1ODZUaldPbmhxQTBBZXF5alRHdXYzLURnQ21vcHVoYTZTdXhaTWJqZ3dUYmpkWXZ4ODRSMnpwa0N4RGhPNGI5cWZFdS15QjdWYlFXN2xFZE10ZmFSbG9tcmdCN3U2ZnNfaTZCelo2S2hhZ2UtQjA?oc=5\" target=\"_blank\">Oil Keeps Flowing From Red Sea As Hormuz Bypass Stays Open</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNeHo3YlF3UGRRUmZBdHNoZ1N1ODZUaldPbmhxQTBBZXF5alRHdXYzLURnQ21vcHVoYTZTdXhaTWJqZ3dUYmpkWXZ4ODRSMnpwa0N4RGhPNGI5cWZFdS15QjdWYlFXN2xFZE10ZmFSbG9tcmdCN3U2ZnNfaTZCelo2S2hhZ2UtQjA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T19:26:23.908Z"
-    },
-    {
-      "id": "rss_7be0b7e0e042f723",
-      "timestamp": 1784993962000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim attack on Saudi oil refinery as Iran war widens to Red Sea - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOOVpNZ2psN29sT085Yy0tT0xweWpLcTBRbUxaVlRGS1hJVFRHc3R0QjdlSWEybjlnNmtKYXM4WjQxaG9neGFqZkNrUEthVHJsQ2VEM0VEX2hJc2tIcHNZT0tEV3JQRUtrbk9YT0dGOGo0T0VVbUVkOVZaS29hWHRBcUw0QkJ4VjlSc2h6czhXWGRkT2xiMkJJUlBkcENSX0VjQndrSjJlT25vS2FFSVA4WE5B?oc=5\" target=\"_blank\">Houthis claim attack on Saudi oil refinery as Iran war widens to Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOOVpNZ2psN29sT085Yy0tT0xweWpLcTBRbUxaVlRGS1hJVFRHc3R0QjdlSWEybjlnNmtKYXM4WjQxaG9neGFqZkNrUEthVHJsQ2VEM0VEX2hJc2tIcHNZT0tEV3JQRUtrbk9YT0dGOGo0T0VVbUVkOVZaS29hWHRBcUw0QkJ4VjlSc2h6czhXWGRkT2xiMkJJUlBkcENSX0VjQndrSjJlT25vS2FFSVA4WE5B?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T15:50:03.609Z"
     }
   ]
 }
