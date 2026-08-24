@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T15:33:56.320Z",
+  "last_fetch": "2026-08-24T17:25:53.673Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4f7171b64eecccd8",
+      "timestamp": 1787587055000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthi Rebels Attack Saudi Oil Supertanker in Red Sea - Bloomberg",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPOFpOMTMtRVhBa1p3ZUwycXlZTWQ1dzlGc1Q4Q1BzaF9zV0FuOVY3SWpxa0loNWFoWEVsODQ2N0kxS1AzSTlUSHpSWlR5czk4QmVMeTRBTllxc3dpazRkM2FTSkJhdGJ5bzNuZDUwbXZKTXpxcG1LczJtM2NCNW85SWFSU2x5Y05penNBbk9oLWFjVTRVNFFRNzhhLUMxT0Q3aFdMVk9uQTRnMzF5R2VDc0NB?oc=5\" target=\"_blank\">Yemen’s Houthi Rebels Attack Saudi Oil Supertanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOFpOMTMtRVhBa1p3ZUwycXlZTWQ1dzlGc1Q4Q1BzaF9zV0FuOVY3SWpxa0loNWFoWEVsODQ2N0kxS1AzSTlUSHpSWlR5czk4QmVMeTRBTllxc3dpazRkM2FTSkJhdGJ5bzNuZDUwbXZKTXpxcG1LczJtM2NCNW85SWFSU2x5Y05penNBbk9oLWFjVTRVNFFRNzhhLUMxT0Q3aFdMVk9uQTRnMzF5R2VDc0NB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T17:25:51.836Z"
+    },
+    {
+      "id": "rss_46d936ba086af558",
+      "timestamp": 1787586948000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea Bloodshed And The Case For Protecting Commercial Shipping – OpEd - Eurasia Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3QtS0Nlc09pc0ZOUWx2UDZuLWJEUmhkYXByNXVmbEZWSnRLbURhX19idzl5Q0xLempGSmpnRFZLdkxuZUhQcUZHb3hZeEFnbEhHLWZfalFXcmhic3hDcUpIakxyWDBiT3RfWmpiMFJyanJGZ2owQXlEcjVTdGplaExodi04SmlaR0NFOVZKWDZXNy1Zb2JuTU5YQndGdjVPYUUtVFZWaEtkOGFSSGRJ?oc=5\" target=\"_blank\">Red Sea Bloodshed And The Case For Protecting Commercial Shipping – OpEd</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3QtS0Nlc09pc0ZOUWx2UDZuLWJEUmhkYXByNXVmbEZWSnRLbURhX19idzl5Q0xLempGSmpnRFZLdkxuZUhQcUZHb3hZeEFnbEhHLWZfalFXcmhic3hDcUpIakxyWDBiT3RfWmpiMFJyanJGZ2owQXlEcjVTdGplaExodi04SmlaR0NFOVZKWDZXNy1Zb2JuTU5YQndGdjVPYUUtVFZWaEtkOGFSSGRJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T17:25:51.836Z"
+    },
     {
       "id": "rss_954fb8d7bef367b5",
       "timestamp": 1787583943000,
@@ -11105,53 +11151,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T15:23:13.992Z"
-    },
-    {
-      "id": "rss_4255bafa53f2ba58",
-      "timestamp": 1784988392000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis fire missiles, drones at Saudi Arabia in response to strikes on Hodeida - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnhqRWFaNEdOSkwzb0NUdkR4RDlEdmY5aWE5VFh5LUlld21TV2FvSXZfWS1jYldFdFcwS2R5aEFaWjlGeEt5aEhzeEpDQ3d4ZUhFQVp5Y3hXUjFhR0cyZUhtQ3N3Q2dXWVBuSndMYnZ3cHZMNmxYQlBXVlJlTld1T3l0OTZLSWdwWE42dHoyZHlVNXlSOWJCSll6UEZGWXdRQWZ4ZXVVbExjWTgwbzFlZzc4TlJFREQyVXc?oc=5\" target=\"_blank\">Yemen’s Houthis fire missiles, drones at Saudi Arabia in response to strikes on Hodeida</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdnhqRWFaNEdOSkwzb0NUdkR4RDlEdmY5aWE5VFh5LUlld21TV2FvSXZfWS1jYldFdFcwS2R5aEFaWjlGeEt5aEhzeEpDQ3d4ZUhFQVp5Y3hXUjFhR0cyZUhtQ3N3Q2dXWVBuSndMYnZ3cHZMNmxYQlBXVlJlTld1T3l0OTZLSWdwWE42dHoyZHlVNXlSOWJCSll6UEZGWXdRQWZ4ZXVVbExjWTgwbzFlZzc4TlJFREQyVXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T15:23:12.592Z"
-    },
-    {
-      "id": "rss_0114dc89aa6fc7fb",
-      "timestamp": 1784988324000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Reported Houthi attack on Saudi Aramco site renews Red Sea shipping concerns (videos) - Philenews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2xDLVhMTS12QjN1NGoxd1QtWG9ZMmVPTmdLcTU2bllTVXk1MG5PV3lZRVpFLXFLTmlHLXh2OGt0WUZ4SFBxdlR6YXBpTUVGejVVRXFEYWI0LUV1a2pvVUhnNFBkLXU3UzVycGpWVVdXclh5MTV3ZEs5NEFFalpudzIxVU52SGxDMEdaZ2o1cjJZamZw?oc=5\" target=\"_blank\">Reported Houthi attack on Saudi Aramco site renews Red Sea shipping concerns (videos)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Philenews</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOY2xDLVhMTS12QjN1NGoxd1QtWG9ZMmVPTmdLcTU2bllTVXk1MG5PV3lZRVpFLXFLTmlHLXh2OGt0WUZ4SFBxdlR6YXBpTUVGejVVRXFEYWI0LUV1a2pvVUhnNFBkLXU3UzVycGpWVVdXclh5MTV3ZEs5NEFFalpudzIxVU52SGxDMEdaZ2o1cjJZamZw?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T14:31:29.631Z"
     }
   ]
 }
