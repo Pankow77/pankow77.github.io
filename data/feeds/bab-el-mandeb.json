@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T12:38:53.624Z",
+  "last_fetch": "2026-08-24T13:46:20.313Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T11:52:14.776Z"
+    },
+    {
+      "id": "rss_8e028a20de86015e",
+      "timestamp": 1787570709000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi-flagged tanker hit by missile in Red Sea - Seatrade Maritime News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQZDRIc1I3Y1l5eTNEdGRGMFl0TllEdUVjMlRYZ0hGSTJwX1RxeENXSnBkdkdaOHpoWnhUX2xNVEN3REFNRVJqOWd2Si04cGRJbFgzZzdHemM4alpDLUJENWFUekt0bWNVVjdpazFab2dhd2ZyWkFVLUJWaDNYZWxkWVRiN29ObThQempUMTVYZnJ5XzA?oc=5\" target=\"_blank\">Saudi-flagged tanker hit by missile in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZDRIc1I3Y1l5eTNEdGRGMFl0TllEdUVjMlRYZ0hGSTJwX1RxeENXSnBkdkdaOHpoWnhUX2xNVEN3REFNRVJqOWd2Si04cGRJbFgzZzdHemM4alpDLUJENWFUekt0bWNVVjdpazFab2dhd2ZyWkFVLUJWaDNYZWxkWVRiN29ObThQempUMTVYZnJ5XzA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T13:46:18.933Z"
     },
     {
       "id": "rss_1be48764abdbffa7",
@@ -11127,29 +11151,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T11:26:00.007Z"
-    },
-    {
-      "id": "rss_64bd04b44caa0042",
-      "timestamp": 1784966634000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis Claim Missile Attack On Saudi City After Kingdom Strikes Yemen Targets - i24NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxNRVNqd2ttQXFNbzZ4ZUlRQmhtcFdTQzBnRGNnS1NOY0NXLWlDS0xla2dQYTBwd0s2d0VJT1RObWgxNDhEOFQxR3d4LUUyOXBTaHBJcFk5X0lIVmNzUExKbVRFbW1YM21tSUxNRUlmQ01PWW1wS2hBZXVjYS10Tm1sMDZCUm56NDFYLTJVZ2x4Mzc4NFJjTDJZMjdEM3R0bkNGZmJQTE1LTlQwbXFKbl9Cc1FEektGR1lFcUlVR2dBaGV6TzJK?oc=5\" target=\"_blank\">Houthis Claim Missile Attack On Saudi City After Kingdom Strikes Yemen Targets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNRVNqd2ttQXFNbzZ4ZUlRQmhtcFdTQzBnRGNnS1NOY0NXLWlDS0xla2dQYTBwd0s2d0VJT1RObWgxNDhEOFQxR3d4LUUyOXBTaHBJcFk5X0lIVmNzUExKbVRFbW1YM21tSUxNRUlmQ01PWW1wS2hBZXVjYS10Tm1sMDZCUm56NDFYLTJVZ2x4Mzc4NFJjTDJZMjdEM3R0bkNGZmJQTE1LTlQwbXFKbl9Cc1FEektGR1lFcUlVR2dBaGV6TzJK?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T08:41:04.641Z"
     }
   ]
 }
