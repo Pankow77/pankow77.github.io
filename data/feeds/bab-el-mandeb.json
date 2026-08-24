@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T22:19:58.876Z",
+  "last_fetch": "2026-08-24T22:51:58.794Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -98,6 +98,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T19:24:12.096Z"
+    },
+    {
+      "id": "rss_e353f8370688a0b6",
+      "timestamp": 1787588337000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi tanker Amzan struck by Houthi missile - Marine Log",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOQVlrSFJPUHV1RVd6czdrX1hzQ3JnU19qR2huRWp2X3hjNEhFRWN3UWVYOXhsZ1psTHp3RTlzWmhGNUtObTU5clJ0MzBWQnVZa01kTjZBLVpkRzBkaDNidDJmYzY4bWo4RjJPb0EtWV9tSDZMOVZSZlBtRk9pc1Z4MmRqRk1UaFdEZGZxN3lPSjZiNW80ODFjS09FSTQ?oc=5\" target=\"_blank\">Saudi tanker Amzan struck by Houthi missile</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Log</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQVlrSFJPUHV1RVd6czdrX1hzQ3JnU19qR2huRWp2X3hjNEhFRWN3UWVYOXhsZ1psTHp3RTlzWmhGNUtObTU5clJ0MzBWQnVZa01kTjZBLVpkRzBkaDNidDJmYzY4bWo4RjJPb0EtWV9tSDZMOVZSZlBtRk9pc1Z4MmRqRk1UaFdEZGZxN3lPSjZiNW80ODFjS09FSTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T22:51:57.581Z"
     },
     {
       "id": "rss_4f7171b64eecccd8",
@@ -11133,30 +11157,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T03:03:37.844Z"
-    },
-    {
-      "id": "rss_1f325ae9ff120cdc",
-      "timestamp": 1785008286000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition targets Houthi positions as Red Sea shipping comes under renewed attack - Times Kuwait",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZlNmT3VoQW04YXpvclZrdzRCM3VsVDRiU1RPcmdLLVR2dTlqWTBoWFZTY0oxalpLdjJqVE5Xb2xHa040Y3AzVk0xcWk2ZXBGT0U4NXVLc1VnQTJFTVNNSnktdTNja1JzYU1QdFN6bkRXTXdLLWtVZ1daYWp5M3BlaWVFc2l3UklPLTBzOGpwdTBZMkI4RjZkRC16QTdJdXBzSHpZcDJRcGM3SVFTaTBKUHJ1WmxlaHM?oc=5\" target=\"_blank\">Saudi-led coalition targets Houthi positions as Red Sea shipping comes under renewed attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Times Kuwait</font>",
-      "tags": [
-        "shipping",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZlNmT3VoQW04YXpvclZrdzRCM3VsVDRiU1RPcmdLLVR2dTlqWTBoWFZTY0oxalpLdjJqVE5Xb2xHa040Y3AzVk0xcWk2ZXBGT0U4NXVLc1VnQTJFTVNNSnktdTNja1JzYU1QdFN6bkRXTXdLLWtVZ1daYWp5M3BlaWVFc2l3UklPLTBzOGpwdTBZMkI4RjZkRC16QTdJdXBzSHpZcDJRcGM3SVFTaTBKUHJ1WmxlaHM?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T21:17:47.901Z"
     }
   ]
 }
