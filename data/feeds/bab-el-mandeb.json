@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T07:53:23.623Z",
+  "last_fetch": "2026-08-24T08:41:28.726Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8de05915c0071e6c",
+      "timestamp": 1787560085000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub - TradeWinds News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPQ09MOERXWHBYMlJIa2lnQnRMOTBKU3lYZWk3VVZMYXJwNnpUbVRDVllTcG9JaW1icjFubzItdEN4c0dCQnhjSjV3bERTQ3dZc0h6MmNKak9IX28xN0VuRW5md1BXcC1Sbzhyeko5TlRmRklpYkQ2aWdvX04xU2VyeTZLOXlfMHhySUhiRXpiWUI0SnFzR0dnR1JkblA4TXM0dTZRWFlyMUhTNXNSSnZKaTh4bU00WXM1Vnc?oc=5\" target=\"_blank\">Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPQ09MOERXWHBYMlJIa2lnQnRMOTBKU3lYZWk3VVZMYXJwNnpUbVRDVllTcG9JaW1icjFubzItdEN4c0dCQnhjSjV3bERTQ3dZc0h6MmNKak9IX28xN0VuRW5md1BXcC1Sbzhyeko5TlRmRklpYkQ2aWdvX04xU2VyeTZLOXlfMHhySUhiRXpiWUI0SnFzR0dnR1JkblA4TXM0dTZRWFlyMUhTNXNSSnZKaTh4bU00WXM1Vnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T08:41:27.580Z"
+    },
     {
       "id": "rss_8dfa5f8e852db8cb",
       "timestamp": 1787531527000,
@@ -11122,29 +11145,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYWU0YmVCSklOeTQ5d1hoNUtlNlRrbWMtNGpoTm9jNGlKMWowYTVjVXlNendIZE5WN290WDFqcVRqdVZwWi1YZ0k3NEdFZXB0WXZUNE15eU1ZdElIVTlLVUNvSEJCY3RGYTBPTG5zcW0zVFlaTnAxVGI4aDl3ZkJLbXRNUzk2RGp3MVF6WTQzWGhtXzlOeXlpcFl2S0ptR3VP?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T05:52:57.382Z"
-    },
-    {
-      "id": "rss_caaef111a0c5d0d1",
-      "timestamp": 1784951762000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran war: Houthis vow response to Saudi strikes on Hodeida - dw.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3UyYUFFQ05TNV9MQVluVExzcjZnSXVTQ1hOdzBWSFlJYzl1MERhZllGMUZQYk5mUVJNWlk3Mzl1Ul9LMzFlb3NUQTZpWWpOS3pCYjlVQlhzTWZleTNBTXhPRjBpOGlVTngxUnZBdjRvdnBxX1BTRjNnTGZuRWx2aHB6QlYtdWtNSFNjVWFhTmhTVmVkVzFwZDJ4SmsyZ0FiYlJmQzJSNXc?oc=5\" target=\"_blank\">Iran war: Houthis vow response to Saudi strikes on Hodeida</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">dw.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOV3UyYUFFQ05TNV9MQVluVExzcjZnSXVTQ1hOdzBWSFlJYzl1MERhZllGMUZQYk5mUVJNWlk3Mzl1Ul9LMzFlb3NUQTZpWWpOS3pCYjlVQlhzTWZleTNBTXhPRjBpOGlVTngxUnZBdjRvdnBxX1BTRjNnTGZuRWx2aHB6QlYtdWtNSFNjVWFhTmhTVmVkVzFwZDJ4SmsyZ0FiYlJmQzJSNXc?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
