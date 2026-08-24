@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-24T18:38:20.622Z",
+  "last_fetch": "2026-08-24T19:24:13.528Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3f552ab56c1a21f9",
+      "timestamp": 1787591780000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tanker hit near Saudi Arabia's Yanbu as Gulf loadings weighed - Quantum Commodity Intelligence",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPQVlDaUVsR0I5RE1iOTBHb2d2ZHVPSmQwMjNNb1ZraTVOOWNFNGhLU2JtLWs5dXgwRm5rVHh0ZVd4LWd4X3pyM1N6RXU0aUtzb1NNa2pldGwtUFdkOUdJQXBBQldqaG1TNnVJeEJFS1FieWNUNUlhbXFZeUc0ZlpIZ2tVY081R3ZrN3R5aDk3ZHp5MjRRVmp3Z0dJRDlUem92M2hibGdlbw?oc=5\" target=\"_blank\">Tanker hit near Saudi Arabia's Yanbu as Gulf loadings weighed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQVlDaUVsR0I5RE1iOTBHb2d2ZHVPSmQwMjNNb1ZraTVOOWNFNGhLU2JtLWs5dXgwRm5rVHh0ZVd4LWd4X3pyM1N6RXU0aUtzb1NNa2pldGwtUFdkOUdJQXBBQldqaG1TNnVJeEJFS1FieWNUNUlhbXFZeUc0ZlpIZ2tVY081R3ZrN3R5aDk3ZHp5MjRRVmp3Z0dJRDlUem92M2hibGdlbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-24T19:24:12.096Z"
+    },
     {
       "id": "rss_4f7171b64eecccd8",
       "timestamp": 1787587055000,
@@ -11128,29 +11151,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-25T15:50:03.609Z"
-    },
-    {
-      "id": "rss_699590981ab1f2a8",
-      "timestamp": 1784989718000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis strike Saudi cities after Hodeida raids raise Red Sea shipping fears - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVERDcWxsajBfamcwWHFzLV9NSVByRHRHWnBDS0ZlTndaUXc5RV80dVd4WFpZbW9HWUt3ZzQxSTRNTlE0ZHU1QXJlZmhNSFdreV9SWVdqMU40QWtkSXFvaUlJcFlZTmZYM0xrZEtQOVBfNklKU3FKWjRWcFVBUkJVSTE2MzlYcG05X21wdjhWZzc0Sm1nMm0yM1Vxd0thWWppUGpjdXNiLWdaZHBCOGdOaXpVMXY5RmgwSjhwa2R3Y1lVbVV5ZGhWTTViUGxuQVNMZ2o1cG5B?oc=5\" target=\"_blank\">Houthis strike Saudi cities after Hodeida raids raise Red Sea shipping fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">India Today</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQVERDcWxsajBfamcwWHFzLV9NSVByRHRHWnBDS0ZlTndaUXc5RV80dVd4WFpZbW9HWUt3ZzQxSTRNTlE0ZHU1QXJlZmhNSFdreV9SWVdqMU40QWtkSXFvaUlJcFlZTmZYM0xrZEtQOVBfNklKU3FKWjRWcFVBUkJVSTE2MzlYcG05X21wdjhWZzc0Sm1nMm0yM1Vxd0thWWppUGpjdXNiLWdaZHBCOGdOaXpVMXY5RmgwSjhwa2R3Y1lVbVV5ZGhWTTViUGxuQVNMZ2o1cG5B?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-25T15:23:13.992Z"
     }
   ]
 }
