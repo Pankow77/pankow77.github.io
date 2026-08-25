@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T05:56:40.645Z",
+  "last_fetch": "2026-08-25T06:44:25.800Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -191,6 +191,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T17:25:51.836Z"
+    },
+    {
+      "id": "rss_b43760402e40a729",
+      "timestamp": 1787583951000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Saudi vessel attacked in Red Sea, national shipping company confirms following Houthi claims - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5jbkN3dGZiMHJJbXdfWmx5ME5OOGFGU0Z6U2FUTFRycHBfTFE1cHN6bWVHLVFxRDRwQ0NuSHBTMU5XcjI3WlZnQUFSdzhBNllUbmtjVzBPZnBJa1F3?oc=5\" target=\"_blank\">Saudi vessel attacked in Red Sea, national shipping company confirms following Houthi claims</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5jbkN3dGZiMHJJbXdfWmx5ME5OOGFGU0Z6U2FUTFRycHBfTFE1cHN6bWVHLVFxRDRwQ0NuSHBTMU5XcjI3WlZnQUFSdzhBNllUbmtjVzBPZnBJa1F3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T06:44:24.301Z"
     },
     {
       "id": "rss_954fb8d7bef367b5",
@@ -11134,29 +11157,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-26T06:01:40.947Z"
-    },
-    {
-      "id": "rss_92cb67ea6d31a179",
-      "timestamp": 1785032591000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Attack Saudi Oil Site, US Holds Back Strike On Iran For 1st Time In 2 Weeks - NDTV",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaDVPMnhjOEdNUGl6QUZCa2hPazFZOGVFa2diaFRFUUhhdWxpdUJnT3ZoQ0NYX2FoTnNsTVlFMUdZWEVrMXdsRmhlcjBTVU4waWhOdk9WSnkzaVlCZmh5dGxGMWRpSkhHU2ZiZUpBUUcyTERzN1VnVHVyRThGNnp5X3gwaFhZMmpTeHZpWHNzVHA2UV9YV0x1TWxlMkFQM0YzQlRDVjl3MEZ0eDNSTjd1Y05jRUhPMUlnbzhIell4ajNjdHltUW1CLXJXeGVscnVOLUlVdTloa3ltOXpIemxlZERmaFJkNU5ENGfSAfIBQVVfeXFMTVFJWm1oUmU1VERHNFI4V2dVM3hIU04zVUZLWDlNNzZvdE9qRXFXMDRWQWx0azBJMzdvenl3eG94SHBqZC1qeDdEWTMtUU9Nb0VlWThONlVLWWVDdFc3SVpGcH",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaDVPMnhjOEdNUGl6QUZCa2hPazFZOGVFa2diaFRFUUhhdWxpdUJnT3ZoQ0NYX2FoTnNsTVlFMUdZWEVrMXdsRmhlcjBTVU4waWhOdk9WSnkzaVlCZmh5dGxGMWRpSkhHU2ZiZUpBUUcyTERzN1VnVHVyRThGNnp5X3gwaFhZMmpTeHZpWHNzVHA2UV9YV0x1TWxlMkFQM0YzQlRDVjl3MEZ0eDNSTjd1Y05jRUhPMUlnbzhIell4ajNjdHltUW1CLXJXeGVscnVOLUlVdTloa3ltOXpIemxlZERmaFJkNU5ENGfSAfIBQVVfeXFMTVFJWm1oUmU1VERHNFI4V2dVM3hIU04zVUZLWDlNNzZvdE9qRXFXMDRWQWx0azBJMzdvenl3eG94SHBqZC1qeDdEWTMtUU9Nb0VlWThONlVLWWVDdFc3SVpGcHpZR1R4dGc1ckg3MnAwN29CTWRxQ3JuMDlTeHNoWnZvM041aTN0SGQtcG82eE9FM3VQeVFXSEpOcGR6aVBCMnNfTVhZZnp3dWIzU3RLZTllRVdTR0RxdFVLZ04wUTBkZlhnQVBNRE9XWEh2QUIwOXFhU1Rsb2VYNGlvUzJsOHYwU2FOdG9NVmNZRlJ2RVR2T3c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T04:38:56.294Z"
     }
   ]
 }
