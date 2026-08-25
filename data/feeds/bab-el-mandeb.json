@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T15:37:05.963Z",
+  "last_fetch": "2026-08-25T16:30:33.947Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_49a2c58307910f8e",
+      "timestamp": 1787672303000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes threaten to pull Yemen into Middle East war - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPNjE2cjRRWXZnby04QVl3VWtPenA4X2NGZkNMTWJfSVlNeExNU3RZQXdJX3hXbXlXdlc0M05yYm1MSG1aZmVIYVVXY0ZuOWJUS1c1cVBsNnJOaF9TRGVWRWlTeEpheVRHSGxUSzhTN3pyVUVNcm5DM2JKblVweWotdU5RQUFJMElEN0ZadXNKcl9DSlF1eEZGR20zY9IBmwFBVV95cUxQbThtMElvUmV2WE5leV9hNWZCSVQ1ODBoQjR4MXNjWnBaMmJESGNGY0syWTY2MlJBQXo1STZScXgxN3J2WmdVbjYwbmpXRlAzQ3ZsOXJrRlRRWHN2QUxGWkVHY1FucDFKRUdfS21aX09KTUdmZkJ0akdmMXVhQzFhZ1JCX2RLOHg2SUgyMnN4QlZqeGwxMUs3bVQ3QQ?oc=5\" target=\"_blank\">Houth",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNjE2cjRRWXZnby04QVl3VWtPenA4X2NGZkNMTWJfSVlNeExNU3RZQXdJX3hXbXlXdlc0M05yYm1MSG1aZmVIYVVXY0ZuOWJUS1c1cVBsNnJOaF9TRGVWRWlTeEpheVRHSGxUSzhTN3pyVUVNcm5DM2JKblVweWotdU5RQUFJMElEN0ZadXNKcl9DSlF1eEZGR20zY9IBmwFBVV95cUxQbThtMElvUmV2WE5leV9hNWZCSVQ1ODBoQjR4MXNjWnBaMmJESGNGY0syWTY2MlJBQXo1STZScXgxN3J2WmdVbjYwbmpXRlAzQ3ZsOXJrRlRRWHN2QUxGWkVHY1FucDFKRUdfS21aX09KTUdmZkJ0akdmMXVhQzFhZ1JCX2RLOHg2SUgyMnN4QlZqeGwxMUs3bVQ3QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T16:30:32.590Z"
+    },
     {
       "id": "rss_8ceda5e10c1f2045",
       "timestamp": 1787647422000,
@@ -11134,27 +11155,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T19:27:12.773Z"
-    },
-    {
-      "id": "rss_19b7c1da7715f4cd",
-      "timestamp": 1785067110000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi rebels in Yemen attack Saudi Arabia - NPR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxORUNsOGxjMHBVbG16WHBuTnlYX3N5OTlsQVRWekc5MUtBTTdwQjhjQll3UXF3VkJOM1JVUHd2NENHaW1hd0xBcVk5eVVqdmpFbFNEdnZHcmlUeUZaNlk5M2xWcUhtakZCS0FkYWV3TDJ6enJBZGF0dnMxaUc0S2x2WkZQMERXc2lOc0JXRUQyOW4?oc=5\" target=\"_blank\">Houthi rebels in Yemen attack Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORUNsOGxjMHBVbG16WHBuTnlYX3N5OTlsQVRWekc5MUtBTTdwQjhjQll3UXF3VkJOM1JVUHd2NENHaW1hd0xBcVk5eVVqdmpFbFNEdnZHcmlUeUZaNlk5M2xWcUhtakZCS0FkYWV3TDJ6enJBZGF0dnMxaUc0S2x2WkZQMERXc2lOc0JXRUQyOW4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T19:55:01.173Z"
     }
   ]
 }
