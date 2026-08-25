@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T18:32:57.317Z",
+  "last_fetch": "2026-08-25T19:26:51.553Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-25T16:30:32.590Z"
+    },
+    {
+      "id": "rss_1d9cdd4252a8e7ec",
+      "timestamp": 1787665579000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Strike Saudi Oil Tanker, Threaten Wider Red Sea Blockade - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPYlBQRWxsLWJLS2tkNDduNjhTYURNUkxQZmRybVpSbUdLZVBMYmdYQzUzUzdXcW9vNWJYMVUyR1dyVFNmMDlXbnVPVllsWE03Q3VjT2JJNjlmWG1wTHhsUzBFWjNtWHF4ZkUxUTFCNkk4XzI4R1lmS1dGZlV4M3JKZkN5UERLaTJVQTdmMUJpa0NHV1pHc1Q1ajk4WmVFR0JT?oc=5\" target=\"_blank\">Houthis Strike Saudi Oil Tanker, Threaten Wider Red Sea Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYlBQRWxsLWJLS2tkNDduNjhTYURNUkxQZmRybVpSbUdLZVBMYmdYQzUzUzdXcW9vNWJYMVUyR1dyVFNmMDlXbnVPVllsWE03Q3VjT2JJNjlmWG1wTHhsUzBFWjNtWHF4ZkUxUTFCNkk4XzI4R1lmS1dGZlV4M3JKZkN5UERLaTJVQTdmMUJpa0NHV1pHc1Q1ajk4WmVFR0JT?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T19:26:50.195Z"
     },
     {
       "id": "rss_908ec29b9cf089b8",
@@ -11130,29 +11153,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T21:47:37.088Z"
-    },
-    {
-      "id": "rss_64a2198d67eb88c7",
-      "timestamp": 1785085200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Analysis • Red Sea rupture: Will the Houthis bring Trump and Iran back to the table? - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxPQTRJUG9yRVJIMG1sZFlPUmFVaGpaLUNtaGx4RzFUQ19Ca3ZPd1FOWV9LakJUVUx2MVZJTFNRYURvOC1ubk9penM4MmdEUUZycXlqNjZod0RoWmNtN3Q5UHZYSm5RZ2JlRTloVjRTRDlfOU42N2plaEs0emx6RWlBM2laZXpzZi1nQ0txMHZDZDFJLTFTWGF0LWkxZElQdzlqNWpET2I4c1JDQm9WdzJTRjdzU2loN2FJMnByWi1VOXZJbmh2TmYwWUxOMXNrVzFITW5OWndfc2wxWExQejJtT0dnXzlNWlJvcHRlRE1RMFFFT25JN0tnWTNRMGkySmFjOGFqLUdnNDVNRUJtaGppOV8tdw?oc=5\" target=\"_blank\">Analysis • Red Sea rupture: Will the Houthis bring Trump ",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxPQTRJUG9yRVJIMG1sZFlPUmFVaGpaLUNtaGx4RzFUQ19Ca3ZPd1FOWV9LakJUVUx2MVZJTFNRYURvOC1ubk9penM4MmdEUUZycXlqNjZod0RoWmNtN3Q5UHZYSm5RZ2JlRTloVjRTRDlfOU42N2plaEs0emx6RWlBM2laZXpzZi1nQ0txMHZDZDFJLTFTWGF0LWkxZElQdzlqNWpET2I4c1JDQm9WdzJTRjdzU2loN2FJMnByWi1VOXZJbmh2TmYwWUxOMXNrVzFITW5OWndfc2wxWExQejJtT0dnXzlNWlJvcHRlRE1RMFFFT25JN0tnWTNRMGkySmFjOGFqLUdnNDVNRUJtaGppOV8tdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T17:21:47.559Z"
     }
   ]
 }
