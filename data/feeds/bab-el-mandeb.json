@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T17:26:28.850Z",
+  "last_fetch": "2026-08-25T17:55:15.373Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-25T16:30:32.590Z"
+    },
+    {
+      "id": "rss_908ec29b9cf089b8",
+      "timestamp": 1787657123000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz - RealClearDefense",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRHgzelJHclU1b0Z4VDN6ZUFNelB0bXpSb0hkSWp2bWNBajU2NGY3SDQ2THdKSlNkWS03RzU4clpyZF9RRE50UlRHMW45Q1I5dHZKNi1ydFo0ZDBLeGZmVmkwMlFwdDRIMzZDMnZGUmt2N2pqaVdEQmhvMUpyX3pLZnN2YXBTcUt3X0c1NHBLczFuTGtQc1FtdU1TV2tWa2Rjb2NCdm1IR1R0ZkktdVA5WHliQllPZXYzMnY1bnNualZtMTA?oc=5\" target=\"_blank\">Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RealClearDefense</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRHgzelJHclU1b0Z4VDN6ZUFNelB0bXpSb0hkSWp2bWNBajU2NGY3SDQ2THdKSlNkWS03RzU4clpyZF9RRE50UlRHMW45Q1I5dHZKNi1ydFo0ZDBLeGZmVmkwMlFwdDRIMzZDMnZGUmt2N2pqaVdEQmhvMUpyX3pLZnN2YXBTcUt3X0c1NHBLczFuTGtQc1FtdU1TV2tWa2Rjb2NCdm1IR1R0ZkktdVA5WHliQllPZXYzMnY1bnNualZtMTA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T17:55:13.941Z"
     },
     {
       "id": "rss_8ceda5e10c1f2045",
@@ -11132,29 +11153,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T17:21:47.559Z"
-    },
-    {
-      "id": "rss_0ece56d3a1300305",
-      "timestamp": 1785077105000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Video Houthis attack ships in the Red Sea, raising concerns over widening conflict - ABC News - Breaking News, Latest News and Videos",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTFA5Mk5wYjV4c1pEZUJLTjJFWURkeXh2bHlxZmFYaC1ZdHhRRzR4YWZuUlR0VGlZMTE0S180eDNBNVhXWUI4V2xXTndrR0U?oc=5\" target=\"_blank\">Video Houthis attack ships in the Red Sea, raising concerns over widening conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABC News - Breaking News, Latest News and Videos</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA5Mk5wYjV4c1pEZUJLTjJFWURkeXh2bHlxZmFYaC1ZdHhRRzR4YWZuUlR0VGlZMTE0S180eDNBNVhXWUI4V2xXTndrR0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T19:27:12.773Z"
     }
   ]
 }
