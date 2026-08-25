@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T11:30:48.466Z",
+  "last_fetch": "2026-08-25T12:37:58.243Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -376,6 +376,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T11:52:14.776Z"
+    },
+    {
+      "id": "rss_bc98b57db128ae8d",
+      "timestamp": 1787565608000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "The Silent Threat : Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz - Center for International Maritime Security",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcVNEbTAtZHpRaGlXNXVIczBnaUxPUXNndjd5MGhNdmNIWHoxM00ta2JpNFB2RGhvUUR5cHlpMXprQVlBaGJiLVdpRmFhR0pkMjBNVmI1MU1obEpaZUhITkJFY0N2M211cmZiMlQ2ZUZId0REV0xSdzJkYkhsWS0tb1RsQU9fa05MdG1KTlEzWFpqeGhRVWYzeWxuVXozekMzb3JOTXNwVUtrQQ?oc=5\" target=\"_blank\">The Silent Threat : Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Center for International Maritime Security</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcVNEbTAtZHpRaGlXNXVIczBnaUxPUXNndjd5MGhNdmNIWHoxM00ta2JpNFB2RGhvUUR5cHlpMXprQVlBaGJiLVdpRmFhR0pkMjBNVmI1MU1obEpaZUhITkJFY0N2M211cmZiMlQ2ZUZId0REV0xSdzJkYkhsWS0tb1RsQU9fa05MdG1KTlEzWFpqeGhRVWYzeWxuVXozekMzb3JOTXNwVUtrQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T12:37:56.807Z"
     },
     {
       "id": "rss_8de05915c0071e6c",
@@ -11134,29 +11155,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T19:55:01.173Z"
-    },
-    {
-      "id": "rss_2ec7a1d17e163ebc",
-      "timestamp": 1785062936000,
-      "source": "Al Jazeera",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "After Strait of Hormuz and Red Sea, has Iran war now reached Caspian Sea? - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNYVJOMi1WeW1fWUJrYWxJU2FRVzAxNFAxZnVFNkFJQVZ2eFhBMkotWWJrdllOdmk3dlBXVjg4ZGF1bUVXZmJXQnRpUUVhVWE0aWVxbGpTbnJ5cTZwV3ZUNU9zWkNLQ0FhdV9YY1NMNUVncXBlcVZVTVhWUXFpWDZDdlFIMzBZQ05FcTNyWGQ4eFBJTDczVjdvcTd2YWxha2V3T1hUR3BGMVlFSHF6alU2VXNR0gG3AUFVX3lxTFB5U1Q4bVYxNUhuQ3U2eF93azRtb242VndfeVNwVk50cDl5SnRza2NSWUVMa1RDemswTzNnc2htdmYtbjBVa2FiOVlDN1BfaXRYbWlZWWRBSFlESWQzakVWYnYzdWg3UWdZYUYtSEV4QXFoWlQ3eGdtaWtTNlhMVjJNUDVhN05TN205QnZEUGhNTnlQYmhUMXZORG",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYVJOMi1WeW1fWUJrYWxJU2FRVzAxNFAxZnVFNkFJQVZ2eFhBMkotWWJrdllOdmk3dlBXVjg4ZGF1bUVXZmJXQnRpUUVhVWE0aWVxbGpTbnJ5cTZwV3ZUNU9zWkNLQ0FhdV9YY1NMNUVncXBlcVZVTVhWUXFpWDZDdlFIMzBZQ05FcTNyWGQ4eFBJTDczVjdvcTd2YWxha2V3T1hUR3BGMVlFSHF6alU2VXNR0gG3AUFVX3lxTFB5U1Q4bVYxNUhuQ3U2eF93azRtb242VndfeVNwVk50cDl5SnRza2NSWUVMa1RDemswTzNnc2htdmYtbjBVa2FiOVlDN1BfaXRYbWlZWWRBSFlESWQzakVWYnYzdWg3UWdZYUYtSEV4QXFoWlQ3eGdtaWtTNlhMVjJNUDVhN05TN205QnZEUGhNTnlQYmhUMXZORGE3SU5tZTBjQlJjYnVBeUtqWTYxU1FOSXp0QzBOZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-26T11:49:34.774Z"
     }
   ]
 }
