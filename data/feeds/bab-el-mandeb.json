@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T05:03:21.752Z",
+  "last_fetch": "2026-08-25T05:56:40.645Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8f406dfdd178522d",
+      "timestamp": 1787635451000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthis claim attack on Saudi oil tanker in Red Sea - daily-sun.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNMmltTW1TbmRNODUzeWhCaWwxT0FyeERwR1E4Z2M0Y3l0ZDlmQVFMa0ZORHlWSWZ2MGFvUUdnZ3dWREFkZGNvYkdMd3hqTDlfakp5NmV3YjEwSy1yQ1JPQlRnWi1ILVBQRS1jckJLYml6T1BzZ2gwN1J5TVNSbHZkOE0xdFFLakZtbHpkaDFxc01uQ29i?oc=5\" target=\"_blank\">Houthis claim attack on Saudi oil tanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">daily-sun.com</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNMmltTW1TbmRNODUzeWhCaWwxT0FyeERwR1E4Z2M0Y3l0ZDlmQVFMa0ZORHlWSWZ2MGFvUUdnZ3dWREFkZGNvYkdMd3hqTDlfakp5NmV3YjEwSy1yQ1JPQlRnWi1ILVBQRS1jckJLYml6T1BzZ2gwN1J5TVNSbHZkOE0xdFFLakZtbHpkaDFxc01uQ29i?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T05:56:39.389Z"
+    },
     {
       "id": "rss_4534fb90347e7388",
       "timestamp": 1787609064000,
@@ -11134,29 +11157,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-26T04:38:56.294Z"
-    },
-    {
-      "id": "rss_480e4f68ce378acb",
-      "timestamp": 1785009255000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition strikes Houthis as Yemen tensions rise - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PTkNGRmV0VnZoQlIxaVRfNWRzUGR6RkV2VlJxSVpfWXNiay1pczNucUw3S1NySEpGcEwzSTZOTlk2azEwdmJDZHF0T3BUd1J1VE1faE1icm1kWWdz?oc=5\" target=\"_blank\">Saudi-led coalition strikes Houthis as Yemen tensions rise</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5PTkNGRmV0VnZoQlIxaVRfNWRzUGR6RkV2VlJxSVpfWXNiay1pczNucUw3S1NySEpGcEwzSTZOTlk2azEwdmJDZHF0T3BUd1J1VE1faE1icm1kWWdz?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T03:03:37.844Z"
     }
   ]
 }
