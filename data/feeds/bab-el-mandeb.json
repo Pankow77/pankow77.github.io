@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-25T23:20:27.142Z",
+  "last_fetch": "2026-08-25T23:47:16.917Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3624eda9efee84c4",
+      "timestamp": 1787698974000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemeni government forces claim to repel Houthi attack in Taiz, kill 8 fighters - reports - news.cgtn.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1WU2FFaFEwcF9mWm1KbGc0dm9LdVpIQWcxZVAxMVRWNVZzX1MtdTI0WFZWZXE4M2tvTU9VZ3F3Q04tdjN2UXh6c3JqSVBmMmNJZTJfT0hXZzhFN2tSQWl3dWJmVGdKUll6U1kzd3Rn?oc=5\" target=\"_blank\">Yemeni government forces claim to repel Houthi attack in Taiz, kill 8 fighters - reports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WU2FFaFEwcF9mWm1KbGc0dm9LdVpIQWcxZVAxMVRWNVZzX1MtdTI0WFZWZXE4M2tvTU9VZ3F3Q04tdjN2UXh6c3JqSVBmMmNJZTJfT0hXZzhFN2tSQWl3dWJmVGdKUll6U1kzd3Rn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-25T23:47:15.322Z"
+    },
     {
       "id": "rss_49a2c58307910f8e",
       "timestamp": 1787672303000,
@@ -11129,30 +11150,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-27T00:33:19.096Z"
-    },
-    {
-      "id": "rss_d7e57f4bdfa0516d",
-      "timestamp": 1785087840000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Ukraine's attack on an Iranian ship in the Caspian Sea could signal new battlefront in U.S. war - Fortune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGx6dlBfYlU1SmNIUHVMZjZKeWU3ZXo1V0pERkpBQlVqSmptM292MXV4UzI3SG1JYW1FWXhFbXpta1RHUC1HcDg0NlpGZUlvdGlGX2pFWDF6QzhaN3NWRHNaWXFURFJxdXR6ZDFMamMyWTBrbnVpemJxa1NrS2phTXc5RVNQZjl5Z1lXOGdNdGFudTdmMzZwZUd5dGZsdHl0ZlE?oc=5\" target=\"_blank\">Ukraine's attack on an Iranian ship in the Caspian Sea could signal new battlefront in U.S. war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fortune</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOGx6dlBfYlU1SmNIUHVMZjZKeWU3ZXo1V0pERkpBQlVqSmptM292MXV4UzI3SG1JYW1FWXhFbXpta1RHUC1HcDg0NlpGZUlvdGlGX2pFWDF6QzhaN3NWRHNaWXFURFJxdXR6ZDFMamMyWTBrbnVpemJxa1NrS2phTXc5RVNQZjl5Z1lXOGdNdGFudTdmMzZwZUd5dGZsdHl0ZlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-26T21:47:37.088Z"
     }
   ]
 }
