@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-26T07:23:54.328Z",
+  "last_fetch": "2026-08-26T08:06:23.090Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_98ddf4e11b20fdd8",
+      "timestamp": 1787729401000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "8 Houthi fighters killed in clashes in Yemen’s Taiz - A News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZWI2NEM2cWk1V3VkdEtiejhVVmZWVzBPdlR0NXpjSi1HVXFEb0c2RWNJNVdQaVBKQ3JTZ2FRVGNOWkw4NWxSeXhKNUtMWWFwVldVbWdVVlotaUEyeEdVb3FTRWM3dDZVYjdYejFDTEJNLWdzWlkxRFJTaUVoNVEtZ2FVTl9xTGFycV8xRkF3MU52R3VreXVJ0gGcAUFVX3lxTE95ZFF5WUZ4YzZpTXp3SjJ1OHEzRFpzQURFNUU4dzlzTkp4Ul81WFh2Qi1ESDRUbWU5Mzh3TUJ6clcySUhSYjJKV2pOeDNSNTlQeGdWSDYzZ2k0N05zbVhiZDc2ZGN2ZTNPVVZ1dkpHUUdDaE00Xy15cFJVSUU2d2ZpbzY1TGM0UGNIV2dCZHYtdkZteWlTWXVOVnU5NQ?oc=5\" target=\"_blank\">8 Houthi ",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZWI2NEM2cWk1V3VkdEtiejhVVmZWVzBPdlR0NXpjSi1HVXFEb0c2RWNJNVdQaVBKQ3JTZ2FRVGNOWkw4NWxSeXhKNUtMWWFwVldVbWdVVlotaUEyeEdVb3FTRWM3dDZVYjdYejFDTEJNLWdzWlkxRFJTaUVoNVEtZ2FVTl9xTGFycV8xRkF3MU52R3VreXVJ0gGcAUFVX3lxTE95ZFF5WUZ4YzZpTXp3SjJ1OHEzRFpzQURFNUU4dzlzTkp4Ul81WFh2Qi1ESDRUbWU5Mzh3TUJ6clcySUhSYjJKV2pOeDNSNTlQeGdWSDYzZ2k0N05zbVhiZDc2ZGN2ZTNPVVZ1dkpHUUdDaE00Xy15cFJVSUU2d2ZpbzY1TGM0UGNIV2dCZHYtdkZteWlTWXVOVnU5NQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-26T08:06:21.857Z"
+    },
     {
       "id": "rss_3624eda9efee84c4",
       "timestamp": 1787698974000,
@@ -11125,29 +11146,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T03:04:28.154Z"
-    },
-    {
-      "id": "rss_0e2e9f3df1c8cf7f",
-      "timestamp": 1785114883000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Ship traffic plunges through Bab el-Mandeb after Houthi strikes on Saudi oil sites - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XaU1qVDlZeDBQVFF4RlZfVV9KV0V0dTZUYm16U1dzUG9DZ2dzQmR1dUdFTUpLaXRJRzY0aU1xYjVPX0I5c0JUdW1iUWw3b0N0UHY4ZGJB?oc=5\" target=\"_blank\">Ship traffic plunges through Bab el-Mandeb after Houthi strikes on Saudi oil sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5XaU1qVDlZeDBQVFF4RlZfVV9KV0V0dTZUYm16U1dzUG9DZ2dzQmR1dUdFTUpLaXRJRzY0aU1xYjVPX0I5c0JUdW1iUWw3b0N0UHY4ZGJB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T01:34:51.694Z"
     }
   ]
 }
