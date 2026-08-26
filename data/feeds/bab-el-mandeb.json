@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-26T04:34:12.108Z",
+  "last_fetch": "2026-08-26T05:29:12.711Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -253,6 +253,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T19:24:12.096Z"
+    },
+    {
+      "id": "rss_9a14c0c8a0bd5725",
+      "timestamp": 1787589870000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Bahri VLCC Struck as Houthis Continue Attacks Against Saudi Interests - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOYnhEak0ybUpyZFZoenpINUViai0waHY1R2NraWQ3dFJqUzQyVlh0eWtzT043NE83UDgxSFVVb2Z4ZU9pbVloT3dSTjQyZ2VwM3lEZzl1WkVjeW9EZi1BLWx4ZVk0d3libFg0V3czclZHZHRqbkhGbG9vRzRLRmNONXRJVzZCVDdTQjBFNVZpWnRZODJIaHl2bTJUNVNoR1JKUWJyMnpMUWNsRWpt?oc=5\" target=\"_blank\">Bahri VLCC Struck as Houthis Continue Attacks Against Saudi Interests</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYnhEak0ybUpyZFZoenpINUViai0waHY1R2NraWQ3dFJqUzQyVlh0eWtzT043NE83UDgxSFVVb2Z4ZU9pbVloT3dSTjQyZ2VwM3lEZzl1WkVjeW9EZi1BLWx4ZVk0d3libFg0V3czclZHZHRqbkhGbG9vRzRLRmNONXRJVzZCVDdTQjBFNVZpWnRZODJIaHl2bTJUNVNoR1JKUWJyMnpMUWNsRWpt?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-26T05:29:11.474Z"
     },
     {
       "id": "rss_e353f8370688a0b6",
@@ -11127,29 +11148,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T01:34:51.694Z"
-    },
-    {
-      "id": "rss_e4839e5fa688876a",
-      "timestamp": 1785110983000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Red Sea shipping slows after Houthi attack on Saudi Arabia, data shows - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQNWxxNDU1SHBqVXozbmd1VHRWYVpQWGVqVUVTUHVlakJjS2lKMHBCbDJCS1hucGROTV90dUhuNS1mUEdKVEtBZjR2b1FwSFZJejdVLWR3WFMxWGV6NVk5YWFOa2o3ZHdnX1R2enpyRm53YnBmRmZyS2trSjFiQ2VSbjZQZ2JhbTdRbnh0RVlleDhYTmtUUjJWN0JpTV9lNXU1X3cwazNYcHhzZkNic1hQdTdxMXZEaEM5MDhQZA?oc=5\" target=\"_blank\">Red Sea shipping slows after Houthi attack on Saudi Arabia, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNWxxNDU1SHBqVXozbmd1VHRWYVpQWGVqVUVTUHVlakJjS2lKMHBCbDJCS1hucGROTV90dUhuNS1mUEdKVEtBZjR2b1FwSFZJejdVLWR3WFMxWGV6NVk5YWFOa2o3ZHdnX1R2enpyRm53YnBmRmZyS2trSjFiQ2VSbjZQZ2JhbTdRbnh0RVlleDhYTmtUUjJWN0JpTV9lNXU1X3cwazNYcHhzZkNic1hQdTdxMXZEaEM5MDhQZA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-27T00:33:19.096Z"
     }
   ]
 }
