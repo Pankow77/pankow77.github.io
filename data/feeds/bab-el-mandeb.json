@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-26T14:38:45.627Z",
+  "last_fetch": "2026-08-26T18:12:17.215Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0508a45654d54976",
+      "timestamp": 1787762388000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen : Gov’t Forces Repel Houthi Attack in Taiz, Killing 8 - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FdThtQjc4OVJiQXlZdWdRYzN4U25UWmRGLWpITHY5U1FaN0ZYeG9rOE1iMkhNOHJCdU5HYjRDSGJLOVdTYlRxbDlxMjNMSkZ2R28tbDdkVUxqUQ?oc=5\" target=\"_blank\">Yemen : Gov’t Forces Repel Houthi Attack in Taiz, Killing 8</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FdThtQjc4OVJiQXlZdWdRYzN4U25UWmRGLWpITHY5U1FaN0ZYeG9rOE1iMkhNOHJCdU5HYjRDSGJLOVdTYlRxbDlxMjNMSkZ2R28tbDdkVUxqUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-26T18:12:12.058Z"
+    },
     {
       "id": "rss_98ddf4e11b20fdd8",
       "timestamp": 1787729401000,
@@ -11123,29 +11144,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T03:04:26.808Z"
-    },
-    {
-      "id": "rss_4b6249e4a2a651d5",
-      "timestamp": 1785118293000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Red Sea shipping falls after Houthi attack on Saudi Arabia - Dawn",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2o2TGU5eTZTMjF1anZrMTUzamVnX0NKZkd5LTZaV0lheGVBc3NnbmlfdGxJVmNuNEZHSWpCbzZ6R0tUdnNQRFgxQThKR2I3aDVkV3FYbTlNVTdYWHF1eGtrSE05SU9JOExWYkRUN2UxTHZzeExOb2c5QXN3dlVLY014cmlsck43aWdqNFNEU3JzLVQyQ0Jn0gFOQVVfeXFMTVA2VWQtOXdJYTdkTzlfS3A1RUVOTlRSb2RHVE41UHZyZFd1MzVjanVONE5hOXEtcU41clVpNmNmYkdwQ3djT0duVDZ0Q293?oc=5\" target=\"_blank\">Red Sea shipping falls after Houthi attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dawn</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2o2TGU5eTZTMjF1anZrMTUzamVnX0NKZkd5LTZaV0lheGVBc3NnbmlfdGxJVmNuNEZHSWpCbzZ6R0tUdnNQRFgxQThKR2I3aDVkV3FYbTlNVTdYWHF1eGtrSE05SU9JOExWYkRUN2UxTHZzeExOb2c5QXN3dlVLY014cmlsck43aWdqNFNEU3JzLVQyQ0Jn0gFOQVVfeXFMTVA2VWQtOXdJYTdkTzlfS3A1RUVOTlRSb2RHVE41UHZyZFd1MzVjanVONE5hOXEtcU41clVpNmNmYkdwQ3djT0duVDZ0Q293?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T03:04:28.154Z"
     }
   ]
 }
