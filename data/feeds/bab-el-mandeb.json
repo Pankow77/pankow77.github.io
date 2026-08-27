@@ -1,8 +1,55 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-27T00:00:16.037Z",
+  "last_fetch": "2026-08-27T10:05:05.307Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_28a0eb3976aee829",
+      "timestamp": 1787823167000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Navy Foils Houthi Attack in the Red Sea - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE50cUtHQl9xWmNmbkVmYTBFZGRHWlZQUFZUUDJ3b1NTQmRzbzY4ZDVoSlhzSGU5V2Z3T3Q3Mll6MmxiUkFscVUxSXp2c0FZS255djVSblZiUERLUDZHRk4w?oc=5\" target=\"_blank\">Yemeni Navy Foils Houthi Attack in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE50cUtHQl9xWmNmbkVmYTBFZGRHWlZQUFZUUDJ3b1NTQmRzbzY4ZDVoSlhzSGU5V2Z3T3Q3Mll6MmxiUkFscVUxSXp2c0FZS255djVSblZiUERLUDZHRk4w?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-27T10:05:04.070Z"
+    },
+    {
+      "id": "rss_0b97f50e071a6621",
+      "timestamp": 1787793474000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Naval Forces Thwart Houthi Attack and Seize Iranian Military Equipment Shipment - وكالة خبر للأنباء",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE04aEw1STMyRlliTUdrbFI1RjZ1M2ctUGV4MDFaVkI3bWF2YmM0S3NLOUN1N1B6NTkxZ1pmLVRaZUIyRVVDMDJnSFN1U2VhM2lSbmxUM1dyWQ?oc=5\" target=\"_blank\">Yemeni Naval Forces Thwart Houthi Attack and Seize Iranian Military Equipment Shipment</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة خبر للأنباء</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE04aEw1STMyRlliTUdrbFI1RjZ1M2ctUGV4MDFaVkI3bWF2YmM0S3NLOUN1N1B6NTkxZ1pmLVRaZUIyRVVDMDJnSFN1U2VhM2lSbmxUM1dyWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-27T10:05:04.071Z"
+    },
     {
       "id": "rss_3a0334881202efeb",
       "timestamp": 1787784386000,
@@ -11100,50 +11147,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T17:08:07.962Z"
-    },
-    {
-      "id": "rss_4356d5f6d7456020",
-      "timestamp": 1785145179000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis attack Red Sea oil facilities; Saudi-backed forces strike Yemeni port - Baird Maritime",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQN2tGRUhwUnAwdWpGZGc2Z0RETGQ4akRfdUZzZGdUNEZvZ3VVVW1iODVpc1JEQk05Z2piQkRMUkgxRm9Dalc5QVJ3dklyZS1IZ0FRMjh0VUl5Nmwxai1SWHlPUTdRSFQ1RXVJeVBBbzVPZFJKVjZVWjJYX2ZqdjFKQXVlVDZUZWNDODJzWlQyOTdyclJOTk9VdnBodEhKcm5ETGJTZlgzdTJ6MFNONzQ3V2E1YkdoanJaTnNPVEJiUlZST0NwWFpmRTdnZVhtZ2NBb1800gHgAUFVX3lxTE9tRkZsM0FsejJGWklCUnZhSms1R00tQjQ0c21BOGxaS241YjV1Q0R6VFp1Z1l2X3dnS1FhdGtHYlNwLV9BQU01XzZva09qaXJzX2QtM0dBaUdwcnNRRDVSZjlGS3NueEFfM3B1bHdmOVRYRG1kT09UNk",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQN2tGRUhwUnAwdWpGZGc2Z0RETGQ4akRfdUZzZGdUNEZvZ3VVVW1iODVpc1JEQk05Z2piQkRMUkgxRm9Dalc5QVJ3dklyZS1IZ0FRMjh0VUl5Nmwxai1SWHlPUTdRSFQ1RXVJeVBBbzVPZFJKVjZVWjJYX2ZqdjFKQXVlVDZUZWNDODJzWlQyOTdyclJOTk9VdnBodEhKcm5ETGJTZlgzdTJ6MFNONzQ3V2E1YkdoanJaTnNPVEJiUlZST0NwWFpmRTdnZVhtZ2NBb1800gHgAUFVX3lxTE9tRkZsM0FsejJGWklCUnZhSms1R00tQjQ0c21BOGxaS241YjV1Q0R6VFp1Z1l2X3dnS1FhdGtHYlNwLV9BQU01XzZva09qaXJzX2QtM0dBaUdwcnNRRDVSZjlGS3NueEFfM3B1bHdmOVRYRG1kT09UNk00ZzZhOHNCRTBkdU12Mkt5cVFSTm84YWJqU3J4eTgzQk9wRmtTT3lfV3IyUDdGR3BtVk5fb0xHRFJleTNia3FMVGhfcEJtWnU4c2lhVndiNUg2OWlQc2RmRGwtNW5aU0psWGZNaWNq?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T10:45:01.409Z"
-    },
-    {
-      "id": "rss_a0c1b12236a67880",
-      "timestamp": 1785142883000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis reignite tensions with red sea shipping attack - Moneycontrol.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOaHpTQ2ZYcjE5Z2cxZVNWbWQ3Q0tmU0hFYjUyclU0Y2lTYl9NaUdYVVFNd2xldGRCOGV0ek1fRW9yc3lPQ1pNekxiNXZGOGQzZGVoWUtXVW1ndkZYOWJnanhfN0Nva3Q1VnpBLWlzSDZ0Ylo5dEMzUnNuWjRfRWhSa2VBcUt3REJJTkJqdG1YTDIzVHFDS2w3NVlBZzlHVFhaRG5hWklGOXdyTmVfN1RXRNIBtgFBVV95cUxNZ2Z4UmJFVDVuRVc0aWY2RXphVGw5MVFWX3ZMdTRfbmYwWEhtR0NVWTZvSlhoanI4TUdEa250dm9Xa3otUEdKeDlTU1d6TVJYN1Y3bERVaTB1eE1DQzQ3aEZtNXp1d21feG45Sjc1anNOS2M1Z1RsblltblBYZFpIRUxPSHhjemU2OWYyckczUVlPRFBlZEkwOUlOYW",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaHpTQ2ZYcjE5Z2cxZVNWbWQ3Q0tmU0hFYjUyclU0Y2lTYl9NaUdYVVFNd2xldGRCOGV0ek1fRW9yc3lPQ1pNekxiNXZGOGQzZGVoWUtXVW1ndkZYOWJnanhfN0Nva3Q1VnpBLWlzSDZ0Ylo5dEMzUnNuWjRfRWhSa2VBcUt3REJJTkJqdG1YTDIzVHFDS2w3NVlBZzlHVFhaRG5hWklGOXdyTmVfN1RXRNIBtgFBVV95cUxNZ2Z4UmJFVDVuRVc0aWY2RXphVGw5MVFWX3ZMdTRfbmYwWEhtR0NVWTZvSlhoanI4TUdEa250dm9Xa3otUEdKeDlTU1d6TVJYN1Y3bERVaTB1eE1DQzQ3aEZtNXp1d21feG45Sjc1anNOS2M1Z1RsblltblBYZFpIRUxPSHhjemU2OWYyckczUVlPRFBlZEkwOUlOYW02dGxLS1l5YWxZU1hxbFRuanpZTWNoa3l1QQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T09:06:45.850Z"
     }
   ]
 }
