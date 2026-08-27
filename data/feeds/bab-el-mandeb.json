@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-26T20:29:52.521Z",
+  "last_fetch": "2026-08-27T00:00:16.037Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3a0334881202efeb",
+      "timestamp": 1787784386000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen’s Gov’t Forces Report Houthi Ballistic Missile Attack on Mokha Port - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ORmFoNkpaaFNmSUhjZC1SaHJEbmtMTFdDOWdweTlNQWd0UTdCUldFWEhuRmgzUVZocnU5cktHSEVMWnFhNWJOSThnYUY5RlRZWXFrUlkzTWFmdw?oc=5\" target=\"_blank\">Yemen’s Gov’t Forces Report Houthi Ballistic Missile Attack on Mokha Port</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ORmFoNkpaaFNmSUhjZC1SaHJEbmtMTFdDOWdweTlNQWd0UTdCUldFWEhuRmgzUVZocnU5cktHSEVMWnFhNWJOSThnYUY5RlRZWXFrUlkzTWFmdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-27T00:00:14.624Z"
+    },
     {
       "id": "rss_0508a45654d54976",
       "timestamp": 1787762388000,
@@ -11121,29 +11144,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T09:06:45.850Z"
-    },
-    {
-      "id": "rss_bbd122bdd5beeab8",
-      "timestamp": 1785121323000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tanker rates set to soar on Houthi attack fears in Red Sea - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQWDNRMW9EVkVnamJvSlhxeUtabFVfT3ZETVVtcnhBZFJ2WnlQVzcyQVQ1UDY4YktxMXNPWmZRUmlTd1diMUNfc2ttNDZESnhIVUd6dmlSdFB1MllCNTYyUVQ3a3hBN0VzQ2ZxZXJDN1VrUnJWa19zUlVqZHpUOWsyMzBYMGwtNmcyNWd5T094ZjRzU18xOVhkMjBJRDNtVlRlU0E?oc=5\" target=\"_blank\">Tanker rates set to soar on Houthi attack fears in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWDNRMW9EVkVnamJvSlhxeUtabFVfT3ZETVVtcnhBZFJ2WnlQVzcyQVQ1UDY4YktxMXNPWmZRUmlTd1diMUNfc2ttNDZESnhIVUd6dmlSdFB1MllCNTYyUVQ3a3hBN0VzQ2ZxZXJDN1VrUnJWa19zUlVqZHpUOWsyMzBYMGwtNmcyNWd5T094ZjRzU18xOVhkMjBJRDNtVlRlU0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T03:04:26.808Z"
     }
   ]
 }
