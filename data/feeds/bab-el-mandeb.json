@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-27T10:05:05.307Z",
+  "last_fetch": "2026-08-27T20:38:37.384Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ead5000762783b11",
+      "timestamp": 1787824894000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni naval forces seize alleged 'Iran-supplied' military equipment in Red Sea - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQWm5Vc195QkRReVRjMXEwSXRyWmFHd25ibi02QWs2MUthR3c3S3dhM2kxdUh6R0ROSHh2d2pnQmNJaVFGaU1kSDRkWmxRTHNFNHo4MFBiQjhoRUh2MWQzcmJNMVF2Y0hZMFdZYUhzc2ZrT29YOXhpZC1fMmVDMVcxMkl2OFFyWTdXd2dLOExZQ0hBSGlfQVhZMEtUUU1zTnkyOVFkWnk0VUdRaGl5MzFIRlRkbGUxeGNLdU5BWmp1OA?oc=5\" target=\"_blank\">Yemeni naval forces seize alleged 'Iran-supplied' military equipment in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWm5Vc195QkRReVRjMXEwSXRyWmFHd25ibi02QWs2MUthR3c3S3dhM2kxdUh6R0ROSHh2d2pnQmNJaVFGaU1kSDRkWmxRTHNFNHo4MFBiQjhoRUh2MWQzcmJNMVF2Y0hZMFdZYUhzc2ZrT29YOXhpZC1fMmVDMVcxMkl2OFFyWTdXd2dLOExZQ0hBSGlfQVhZMEtUUU1zTnkyOVFkWnk0VUdRaGl5MzFIRlRkbGUxeGNLdU5BWmp1OA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-27T20:38:35.997Z"
+    },
     {
       "id": "rss_28a0eb3976aee829",
       "timestamp": 1787823167000,
@@ -11126,27 +11149,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T12:03:25.409Z"
-    },
-    {
-      "id": "rss_46f335233095f8dc",
-      "timestamp": 1785146880000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Red Sea crossings slow after Houthi attack on Saudi Arabia | Daily Sabah - Daily Sabah",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzd9IBqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSz",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzd9IBqgFBVV95cUxQeHBoT1NLa1NQZ3pIWms2djZKNW12R2UtSEJhY2xtLWV6S2ZlNVhRdmJNTkdCNDZYOFRaYnpzeGh1VXBUdEwtekRGVU9Pa1B3a0xkZVBaNlJyX1d5TjdGWW03Y1ZhandmUThVaGVOYTV4STkxMU8zcHV1UkpfYnFtTmxIenp2c050ZkpvMXdmSnd4SFpvMTc5YzNEUXJrdkFQSzVYbUU2QmYzdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T17:08:07.962Z"
     }
   ]
 }
