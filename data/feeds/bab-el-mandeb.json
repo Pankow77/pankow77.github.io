@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-30T12:05:36.808Z",
+  "last_fetch": "2026-08-30T16:52:52.886Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -162,6 +162,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-26T18:12:12.058Z"
+    },
+    {
+      "id": "rss_6443147a4ad05470",
+      "timestamp": 1787729942000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "8 Houthis, 3 members of government-backed forces killed in Yemen clashes - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOSk4tUnRXTHA1bzQzUGtiYlJxd0o1b2pFQUxGZUVOUl9TYzUxLVR2YkdLTkFkQTNrQXk0dmg5czhjMzd3QldzS3psYzBDcnpIMDlNT0o4T2RzQVlHckxRcm92eXdNSjZxV19PU1NaWDYwQ1JHSHc2UGtEQWE1dGFmRThTcW00YmxVOHZBajc5S25qQU5OM2dsRFQxTzQweU9xRk52MFo1VFRWcUZmbXBhN0YtSi1PSnM?oc=5\" target=\"_blank\">8 Houthis, 3 members of government-backed forces killed in Yemen clashes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSk4tUnRXTHA1bzQzUGtiYlJxd0o1b2pFQUxGZUVOUl9TYzUxLVR2YkdLTkFkQTNrQXk0dmg5czhjMzd3QldzS3psYzBDcnpIMDlNT0o4T2RzQVlHckxRcm92eXdNSjZxV19PU1NaWDYwQ1JHSHc2UGtEQWE1dGFmRThTcW00YmxVOHZBajc5S25qQU5OM2dsRFQxTzQweU9xRk52MFo1VFRWcUZmbXBhN0YtSi1PSnM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-30T16:52:51.563Z"
     },
     {
       "id": "rss_98ddf4e11b20fdd8",
@@ -11124,29 +11145,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T14:18:49.592Z"
-    },
-    {
-      "id": "rss_13d510699a38e50a",
-      "timestamp": 1785160656000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim drone attack on oil supply, transport points in Saudi Arabia - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQRWdLM0QzNTFuNGdRSGVRVWl6TWN4TWoya2VvUDFlOVNfVVJTWXJnOHkxWWozdlhOYl8xYVVxMTN5NHlHSHJTZGI4VDg1aEVCNlVOanlFNEJHaWU1UFFha2JGNFc3c2Z5cXJfYUhRRDdHZ29BUFZzalotS1RYTHlYLXBOcWZOU1ZkRkFxWkRmVjMtb1Y1NkdwWFZQc0xBT0tmTEs3SXo0ay1CSjY0Wm5pMVRUWUxTaXlsamJHbkNmN0FzbmlE?oc=5\" target=\"_blank\">Yemen’s Houthis claim drone attack on oil supply, transport points in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRWdLM0QzNTFuNGdRSGVRVWl6TWN4TWoya2VvUDFlOVNfVVJTWXJnOHkxWWozdlhOYl8xYVVxMTN5NHlHSHJTZGI4VDg1aEVCNlVOanlFNEJHaWU1UFFha2JGNFc3c2Z5cXJfYUhRRDdHZ29BUFZzalotS1RYTHlYLXBOcWZOU1ZkRkFxWkRmVjMtb1Y1NkdwWFZQc0xBT0tmTEs3SXo0ay1CSjY0Wm5pMVRUWUxTaXlsamJHbkNmN0FzbmlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T15:26:52.985Z"
     }
   ]
 }
