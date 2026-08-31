@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-08-31T06:35:18.739Z",
-  "epoch_count": 80,
+  "last_fetch": "2026-08-31T14:46:26.478Z",
+  "epoch_count": 81,
   "epochs": [
     {
       "id": "rss_06950001615fa24b",
@@ -25,6 +25,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-29T01:24:02.029Z"
+    },
+    {
+      "id": "rss_2f7dfbf8223b022a",
+      "timestamp": 1787748212000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Altro che Futuro (Nazionale): Vannacci guarda al passato e vuole toglierci i diritti - Quotidiano Nazionale",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUFQzYmI5MjVYQkw2U3ctOGVYeFFpNDhIX1V1U3pRY01fS3EtYmNWSDYtbUsyRmVoSFNBamt2NUsxS2pIeXFjMEtCaTk5V2M4ZFFBNy1vZHJlT2dINXAwZ2pqekRTcU41LTZfd1JNUms1ZjJQeW53eTNCcWU1Wlp5UHUzaGxzTEk2czU0?oc=5\" target=\"_blank\">Altro che Futuro (Nazionale): Vannacci guarda al passato e vuole toglierci i diritti</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quotidiano Nazionale</font>",
+      "tags": [
+        "civil-rights"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUFQzYmI5MjVYQkw2U3ctOGVYeFFpNDhIX1V1U3pRY01fS3EtYmNWSDYtbUsyRmVoSFNBamt2NUsxS2pIeXFjMEtCaTk5V2M4ZFFBNy1vZHJlT2dINXAwZ2pqekRTcU41LTZfd1JNUms1ZjJQeW53eTNCcWU1Wlp5UHUzaGxzTEk2czU0?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-31T14:46:26.475Z"
     },
     {
       "id": "rss_400531810bad9ba4",
