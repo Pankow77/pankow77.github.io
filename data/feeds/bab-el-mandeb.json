@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-31T00:43:32.773Z",
+  "last_fetch": "2026-08-31T06:35:17.060Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-31T00:43:31.389Z"
+    },
+    {
+      "id": "rss_04a661a7e15d6fa3",
+      "timestamp": 1787911200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - Council on Foreign Relations",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-31T06:35:17.055Z"
     },
     {
       "id": "rss_812c9c447ffb0f71",
@@ -11120,29 +11141,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T16:18:07.937Z"
-    },
-    {
-      "id": "rss_d65ec792e74a75c1",
-      "timestamp": 1785164100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites - AnewZ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQQVdVczhwSnNKSzdFZVhYQUZmZXJXaDdBS2RBVEtOVmx5VXg3dzNDdTV6b2EtRC1DazNUVXp1bkhyaThLUDAySTBHbWg5aXVfU2hoMVU1S1B2aGdrbm0xVjFoREwtRlZScHMyaE9uTTRWaVVvWGRKYWZtTi1mWFNTRGRDTDhkeUVPOUVTUTVMYml3enpZODI5RGRSMzgtRDhWal9rUHE1NnRqT1Q2eFhsWA?oc=5\" target=\"_blank\">live Bab el-Mandeb shipping slumps after Houthi attacks on Saudi oil sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AnewZ</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQQVdVczhwSnNKSzdFZVhYQUZmZXJXaDdBS2RBVEtOVmx5VXg3dzNDdTV6b2EtRC1DazNUVXp1bkhyaThLUDAySTBHbWg5aXVfU2hoMVU1S1B2aGdrbm0xVjFoREwtRlZScHMyaE9uTTRWaVVvWGRKYWZtTi1mWFNTRGRDTDhkeUVPOUVTUTVMYml3enpZODI5RGRSMzgtRDhWal9rUHE1NnRqT1Q2eFhsWA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T15:26:52.985Z"
     }
   ]
 }
