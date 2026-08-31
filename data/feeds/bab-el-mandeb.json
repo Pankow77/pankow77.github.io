@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-08-30T19:36:23.930Z",
+  "last_fetch": "2026-08-31T00:43:32.773Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7ae3ce8681173f3f",
+      "timestamp": 1788127603000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi's Unmanned Attack Boat Base Destroyed by Yemeni Forces - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQRjN1M1hMTDgyVXhlWDltQzlmaTVBZVZ4Tm8wTEdEVFRVS2RzNTZxUE41N0FkZEJIdGQtU2ZVNHo3MzFTR3phS2FCWW9SY1V0Y3FQT2hVRnhxbFZxMTVDa2Jsa21TaGZOVklLWkFWMVcxTzJ0cjgyRGE4NFE4dTA1TjhJa1JrRTNOcUNiUl8wM3cxcmpaUlpGYVgzWUQ1UG9fQ1E?oc=5\" target=\"_blank\">Houthi's Unmanned Attack Boat Base Destroyed by Yemeni Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRjN1M1hMTDgyVXhlWDltQzlmaTVBZVZ4Tm8wTEdEVFRVS2RzNTZxUE41N0FkZEJIdGQtU2ZVNHo3MzFTR3phS2FCWW9SY1V0Y3FQT2hVRnhxbFZxMTVDa2Jsa21TaGZOVklLWkFWMVcxTzJ0cjgyRGE4NFE4dTA1TjhJa1JrRTNOcUNiUl8wM3cxcmpaUlpGYVgzWUQ1UG9fQ1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-08-31T00:43:31.389Z"
+    },
     {
       "id": "rss_812c9c447ffb0f71",
       "timestamp": 1787894459000,
@@ -11122,29 +11143,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-27T15:26:52.985Z"
-    },
-    {
-      "id": "rss_5870b481cfae6de3",
-      "timestamp": 1785160980000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea shipping slows after Houthi attacks on Saudi Arabia: Data - The Hill",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUJ1SDBUemI2cWFuY1JIaGJRLXctbFJwaXotNTQwTGtEZXNjVWloZVRPLUJHWUppUlBXUkNRZzRrVDRBVEF0VXE3RnZ1VVhWLTZfVjgyakhRRXNTaU9EMkRqUTJmMDhjQW5vWFNkZll4WkdxRWg4S1h1dXZNX0ZCZUJPUkV5TEczaWtJTk1Jb1N0ejBKXzlMaEhVTjN0Y2fSAaQBQVVfeXFMTnVGZGlCekdzNlVsc3VnN19POFY4c0tnQXZja0xMVTQxa1NfWEY4NjBnN0l3N2lUMjBUWDRjNW5vUG5NSDNPWUlER0puUlhJb1NIUDBtc1pGLWxsNDBueHEzaWlYSWNBMFQxOG5DUzZBZzJhdVRNeDN6Ui1sUkVQcWVfOUJUQ2tYOTJLV1Q0M0VDY0tfNjdPQ253QkhDX2xfSl9idGQ?oc=5\" targ",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUJ1SDBUemI2cWFuY1JIaGJRLXctbFJwaXotNTQwTGtEZXNjVWloZVRPLUJHWUppUlBXUkNRZzRrVDRBVEF0VXE3RnZ1VVhWLTZfVjgyakhRRXNTaU9EMkRqUTJmMDhjQW5vWFNkZll4WkdxRWg4S1h1dXZNX0ZCZUJPUkV5TEczaWtJTk1Jb1N0ejBKXzlMaEhVTjN0Y2fSAaQBQVVfeXFMTnVGZGlCekdzNlVsc3VnN19POFY4c0tnQXZja0xMVTQxa1NfWEY4NjBnN0l3N2lUMjBUWDRjNW5vUG5NSDNPWUlER0puUlhJb1NIUDBtc1pGLWxsNDBueHEzaWlYSWNBMFQxOG5DUzZBZzJhdVRNeDN6Ui1sUkVQcWVfOUJUQ2tYOTJLV1Q0M0VDY0tfNjdPQ253QkhDX2xfSl9idGQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T14:18:49.592Z"
     }
   ]
 }
