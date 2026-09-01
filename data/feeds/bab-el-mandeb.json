@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-01T00:19:48.831Z",
+  "last_fetch": "2026-09-01T05:25:20.752Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e0b2c88e7a0771fd",
+      "timestamp": 1788232561000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni army says it foiled Houthi boat attack near Red Sea islands - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOeUVoNk1yUXBNT2d3OTJvdmxjdGpMemhHaFgtSjRVVXd3cF9CQ180ak9vbUdQak1IWVFlcnhON2QzVGJocDlMcTI1dFB5d3Y0Q3dyd2pxZ0FPTTBoNFIzckhQOEROWnVTcEpaNDhNbUhTNU1fbkZGVF83d01lTjcxU2lXdnNaemQtWHVPQm9jSks5b0p5ZHQteV9QQWR2cGFUUHhjZVdXWDRHSWpUMDJ5Ng?oc=5\" target=\"_blank\">Yemeni army says it foiled Houthi boat attack near Red Sea islands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeUVoNk1yUXBNT2d3OTJvdmxjdGpMemhHaFgtSjRVVXd3cF9CQ180ak9vbUdQak1IWVFlcnhON2QzVGJocDlMcTI1dFB5d3Y0Q3dyd2pxZ0FPTTBoNFIzckhQOEROWnVTcEpaNDhNbUhTNU1fbkZGVF83d01lTjcxU2lXdnNaemQtWHVPQm9jSks5b0p5ZHQteV9QQWR2cGFUUHhjZVdXWDRHSWpUMDJ5Ng?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-01T05:25:19.586Z"
+    },
     {
       "id": "rss_7ae3ce8681173f3f",
       "timestamp": 1788127603000,
@@ -11118,29 +11139,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-07-27T22:23:10.694Z"
-    },
-    {
-      "id": "rss_4f1e90d623a58f33",
-      "timestamp": 1785168274000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Bab-el-Mandeb Strait: The Red Sea New Crisis and Iran's Playing Card - IranWire",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVVowZnRFX2RXRUlHWmF5STk2SWdNaDlmX3FVUFBXcnl6aEJPanloSGZBaTIwRVlzeVRqajdaYWU1RWYzOWotTDN1RWwyTl9fb0k1dzVWOUtQTTZSdXpJUmhLdFBpMTZjRlJIZEdxWHYybWFCZ1REZTR5M050VC1XSEhpdTB6UlJsbUdrZUw2NElYOGJrTEpBcVd6NzUxQ1JqXzFUdWpTZ2oyUQ?oc=5\" target=\"_blank\">Bab-el-Mandeb Strait: The Red Sea New Crisis and Iran's Playing Card</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">IranWire</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVVowZnRFX2RXRUlHWmF5STk2SWdNaDlmX3FVUFBXcnl6aEJPanloSGZBaTIwRVlzeVRqajdaYWU1RWYzOWotTDN1RWwyTl9fb0k1dzVWOUtQTTZSdXpJUmhLdFBpMTZjRlJIZEdxWHYybWFCZ1REZTR5M050VC1XSEhpdTB6UlJsbUdrZUw2NElYOGJrTEpBcVd6NzUxQ1JqXzFUdWpTZ2oyUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-27T16:18:07.937Z"
     }
   ]
 }
