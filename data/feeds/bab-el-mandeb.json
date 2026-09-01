@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-01T05:25:20.752Z",
+  "last_fetch": "2026-09-01T10:18:25.650Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b077815b25f87bef",
+      "timestamp": 1788243963000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Clashes in Syria's Sweida with 'outlaw groups' wound four security personnel - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CY2dEVFV1Nl8ycV9oalpWYmRqSGg1bTBYQmx1ak96OW9sNExWbTR2T2NKajlUNDFkTmZXVGZDRzE0RTdmdER4Njc3a3dydkFUcm5ZVVhITmc?oc=5\" target=\"_blank\">Clashes in Syria's Sweida with 'outlaw groups' wound four security personnel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CY2dEVFV1Nl8ycV9oalpWYmRqSGg1bTBYQmx1ak96OW9sNExWbTR2T2NKajlUNDFkTmZXVGZDRzE0RTdmdER4Njc3a3dydkFUcm5ZVVhITmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-01T10:18:24.239Z"
+    },
     {
       "id": "rss_e0b2c88e7a0771fd",
       "timestamp": 1788232561000,
@@ -11116,29 +11137,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T00:29:59.894Z"
-    },
-    {
-      "id": "rss_052ddc2e1c1a5b24",
-      "timestamp": 1785190420000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis pushing to model Iran's Hormuz control in Red Sea, Yemeni FM says - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUENSU3cxZnhXQWVEQ0VlbUlCX2U4V05HS1RqcTNqSjN3dHhVc3duLW9lNzdMSWhsWHFXSWEybzhOOU1GVUxqeHBISVUzVUFVbE9DNmNqYS01SlV0bmtYTmQ3dXBIVXFKMWZJdkpua0xZUmxWd3NqcFBHSGtDM0tILVN6b2lDZzFnTk1tY1IwWFRpTElycEwwLVpGQ2I5WVhDdHhFN1NaMV9RMXdPbmxIYmFsbzRGSzlFNWZJ?oc=5\" target=\"_blank\">Houthis pushing to model Iran's Hormuz control in Red Sea, Yemeni FM says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUENSU3cxZnhXQWVEQ0VlbUlCX2U4V05HS1RqcTNqSjN3dHhVc3duLW9lNzdMSWhsWHFXSWEybzhOOU1GVUxqeHBISVUzVUFVbE9DNmNqYS01SlV0bmtYTmQ3dXBIVXFKMWZJdkpua0xZUmxWd3NqcFBHSGtDM0tILVN6b2lDZzFnTk1tY1IwWFRpTElycEwwLVpGQ2I5WVhDdHhFN1NaMV9RMXdPbmxIYmFsbzRGSzlFNWZJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-07-27T22:23:10.694Z"
     }
   ]
 }
