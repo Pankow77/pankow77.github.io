@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-02T02:34:23.111Z",
+  "last_fetch": "2026-09-02T07:33:08.273Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9e62e6cd408ad3f5",
+      "timestamp": 1788329014000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Israeli forces say interceptors launched at suspected aerial target from Lebanon - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9nOUxvT1ZOeW96aXFBVU9uZGFaX1BfVE02bjdIeGhqTWpCdjk3bTdKT09ZTmNxa3BUSUdjZGM4VnptcTNnM3ZnR0NoQkFuQU9vUUxLcl9fM1Q?oc=5\" target=\"_blank\">Israeli forces say interceptors launched at suspected aerial target from Lebanon</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9nOUxvT1ZOeW96aXFBVU9uZGFaX1BfVE02bjdIeGhqTWpCdjk3bTdKT09ZTmNxa3BUSUdjZGM4VnptcTNnM3ZnR0NoQkFuQU9vUUxLcl9fM1Q?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-02T07:33:05.365Z"
+    },
     {
       "id": "rss_b077815b25f87bef",
       "timestamp": 1788243963000,
@@ -11111,27 +11132,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZHMzSjBOVHFDWWZ2OUhKZ1dYOFFtc2N6SnVUaUl2YlhjdXlnYUFsTVA2cjBwdDA4OHdmRGxRMFdvZElwakRVVEpWMHA0dWE2NTdZTDBUQW5ZbHgxVlVyVmlRYWI2YTdwOUIycWdCX294VDI3N3ZjdTUzLVR1U2hPYkhhQi1mWHcyd2RjWjN3WVdYcHJzV3V4ZnhGd0dJRUxMS3BvRkp2b0VTVS15VzQyY2ZrOGJkOWlENEplWXZXQlpvUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T00:29:59.894Z"
-    },
-    {
-      "id": "rss_8727b51fa4561cde",
-      "timestamp": 1785196633000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi threat brings Bab El-Mandeb crossings down another 50% - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPeE8zQWJPYkZGbDVrX2RHTW9VOGdFZ1BtMjAza1EzUnd2MVZieWVDbndoOTNHTVVDN0o1TDBpa2VRelpxa2RKS19uZkp5VG1sNFN0bEdMeGxteWlUTWhHcXg1OU9JaGZMVXpELUJzUGZOaDhqdVMzcXJCLTdTNk40Zk9sckxZdlhRWm5oLS1sdzU5RkRTWE14NWtudWs3NW5uWUJMVzhEWQ?oc=5\" target=\"_blank\">Houthi threat brings Bab El-Mandeb crossings down another 50%</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeE8zQWJPYkZGbDVrX2RHTW9VOGdFZ1BtMjAza1EzUnd2MVZieWVDbndoOTNHTVVDN0o1TDBpa2VRelpxa2RKS19uZkp5VG1sNFN0bEdMeGxteWlUTWhHcXg1OU9JaGZMVXpELUJzUGZOaDhqdVMzcXJCLTdTNk40Zk9sckxZdlhRWm5oLS1sdzU5RkRTWE14NWtudWs3NW5uWUJMVzhEWQ?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
