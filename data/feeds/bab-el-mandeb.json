@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-03T00:27:41.121Z",
+  "last_fetch": "2026-09-03T04:52:56.037Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -44,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-01T10:18:24.239Z"
+    },
+    {
+      "id": "rss_29bbc6773df59a53",
+      "timestamp": 1788241672000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Yemeni army says it intercepted Houthi boat attack near Red Sea islands - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DWEhWcC1qb2tuWW1pV3FEcG9fX2RFYUh0Qm90UUtiOHEwRUpzbGRDNWxmV1p6U04xbFNtbmNlSkwxWHZuWGxfdXpPMC1JLTdxa0w0U3hyanA?oc=5\" target=\"_blank\">Yemeni army says it intercepted Houthi boat attack near Red Sea islands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DWEhWcC1qb2tuWW1pV3FEcG9fX2RFYUh0Qm90UUtiOHEwRUpzbGRDNWxmV1p6U04xbFNtbmNlSkwxWHZuWGxfdXpPMC1JLTdxa0w0U3hyanA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-03T04:52:54.613Z"
     },
     {
       "id": "rss_e0b2c88e7a0771fd",
@@ -11116,27 +11137,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T11:15:57.754Z"
-    },
-    {
-      "id": "rss_3ca0d171d4f1c299",
-      "timestamp": 1785197100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia halts operations at major oil facility after Houthi attack - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZHMzSjBOVHFDWWZ2OUhKZ1dYOFFtc2N6SnVUaUl2YlhjdXlnYUFsTVA2cjBwdDA4OHdmRGxRMFdvZElwakRVVEpWMHA0dWE2NTdZTDBUQW5ZbHgxVlVyVmlRYWI2YTdwOUIycWdCX294VDI3N3ZjdTUzLVR1U2hPYkhhQi1mWHcyd2RjWjN3WVdYcHJzV3V4ZnhGd0dJRUxMS3BvRkp2b0VTVS15VzQyY2ZrOGJkOWlENEplWXZXQlpvUQ?oc=5\" target=\"_blank\">Saudi Arabia halts operations at major oil facility after Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZHMzSjBOVHFDWWZ2OUhKZ1dYOFFtc2N6SnVUaUl2YlhjdXlnYUFsTVA2cjBwdDA4OHdmRGxRMFdvZElwakRVVEpWMHA0dWE2NTdZTDBUQW5ZbHgxVlVyVmlRYWI2YTdwOUIycWdCX294VDI3N3ZjdTUzLVR1U2hPYkhhQi1mWHcyd2RjWjN3WVdYcHJzV3V4ZnhGd0dJRUxMS3BvRkp2b0VTVS15VzQyY2ZrOGJkOWlENEplWXZXQlpvUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T00:29:59.894Z"
     }
   ]
 }
