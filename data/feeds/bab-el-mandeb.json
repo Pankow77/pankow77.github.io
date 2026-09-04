@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-04T13:57:01.608Z",
+  "last_fetch": "2026-09-04T17:22:55.334Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7892e82747b184b2",
+      "timestamp": 1788536454000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Civilian casualties reported after Houthi missile hit restaurant in Yemen - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9HN3dQNGMtQURTS0ZYZWJfT2I5QXFia1c4ckx5amxxZkl0RHk5YWVMVC1UZlJTOVFVTEQ2NnpxTVBXR3hhbkxKd0EtenBpX3h6TkVYVy15Unc?oc=5\" target=\"_blank\">Civilian casualties reported after Houthi missile hit restaurant in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9HN3dQNGMtQURTS0ZYZWJfT2I5QXFia1c4ckx5amxxZkl0RHk5YWVMVC1UZlJTOVFVTEQ2NnpxTVBXR3hhbkxKd0EtenBpX3h6TkVYVy15Unc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-04T17:22:53.967Z"
+    },
     {
       "id": "rss_484e873a6e8d6c32",
       "timestamp": 1788503617000,
@@ -11109,27 +11132,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T14:15:12.054Z"
-    },
-    {
-      "id": "rss_805206322fdbca6e",
-      "timestamp": 1785236945000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Aramco shuts Jazan refinery after Houthi attack - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQcUVxSG5rS3FldElSaEJBdUczLTVHZ1lEN01BT3dDV0YwUjJqbm1La1BuazUwVDNhSmMtQ3J4WjM1bUtwaUJId0llTDRna01STk03RmFfYkFCd1hIbkt6MF92akREWXkzSWNXY0FZd0JuUG5KYld1MmIzRHhrU194ZmxUcnM3TlZNaElqLU9tb0VqbmdOVFhLOWYwUzR3b1Bx?oc=5\" target=\"_blank\">Saudi Aramco shuts Jazan refinery after Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQcUVxSG5rS3FldElSaEJBdUczLTVHZ1lEN01BT3dDV0YwUjJqbm1La1BuazUwVDNhSmMtQ3J4WjM1bUtwaUJId0llTDRna01STk03RmFfYkFCd1hIbkt6MF92akREWXkzSWNXY0FZd0JuUG5KYld1MmIzRHhrU194ZmxUcnM3TlZNaElqLU9tb0VqbmdOVFhLOWYwUzR3b1Bx?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T12:09:50.611Z"
     }
   ]
 }
