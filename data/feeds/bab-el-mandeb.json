@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-04T00:40:25.572Z",
+  "last_fetch": "2026-09-04T05:23:55.708Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8fe62a1539fb42c5",
+      "timestamp": 1788484295000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 3,
+      "text_summary": "Wide-Scale Escalation West of Taiz... Houthi Attack on Several Fronts, Counterattack, And Reinforcements for Government Forces - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFBzeEcxb0YydGs1QnQxUGdtUFcwWlZ6RjFYcWJZdy14djhYMll3ajVTUGQ5MHVlbUhEZEYxMFAwWlRFOVIyTHI5M3lNel9OSmo4OUMteHNXQXJ5dk5CeW9SaHltSVpOMTRrR2VjbXd1UkZzRzNrTGc?oc=5\" target=\"_blank\">Wide-Scale Escalation West of Taiz... Houthi Attack on Several Fronts, Counterattack, And Reinforcements for Government Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBzeEcxb0YydGs1QnQxUGdtUFcwWlZ6RjFYcWJZdy14djhYMll3ajVTUGQ5MHVlbUhEZEYxMFAwWlRFOVIyTHI5M3lNel9OSmo4OUMteHNXQXJ5dk5CeW9SaHltSVpOMTRrR2VjbXd1UkZzRzNrTGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-04T05:23:54.299Z"
+    },
+    {
+      "id": "rss_de8351cbe3259ebb",
+      "timestamp": 1788483879000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemeni Army Claims 50 Houthis Killed, Injured After Thwarting Attack - Sarawak Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQanRVU1NSd3NpcVVyRGNxVGR0UXdYLTI5cDQ5RmZvdHVDMjM2Q2lpc0Z5NHZPQkhWdG1kTW9iLWJfa1Q4TDlqOENXZ1pYQ1ZHTnYzbU9xcDB4UXVfNE0wWmZDWjA0cmFqakViMUMyZFpJcG9ScWpPRk00YzZVc2oxMnJaMC1SU195b3ZPblNvOVlGVDMwR0xKQmhRclgzVnRr?oc=5\" target=\"_blank\">Yemeni Army Claims 50 Houthis Killed, Injured After Thwarting Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sarawak Tribune</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQanRVU1NSd3NpcVVyRGNxVGR0UXdYLTI5cDQ5RmZvdHVDMjM2Q2lpc0Z5NHZPQkhWdG1kTW9iLWJfa1Q4TDlqOENXZ1pYQ1ZHTnYzbU9xcDB4UXVfNE0wWmZDWjA0cmFqakViMUMyZFpJcG9ScWpPRk00YzZVc2oxMnJaMC1SU195b3ZPblNvOVlGVDMwR0xKQmhRclgzVnRr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-04T05:23:54.299Z"
+    },
     {
       "id": "rss_25fc037053ff1561",
       "timestamp": 1788455997000,
@@ -11088,52 +11130,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T15:16:24.514Z"
-    },
-    {
-      "id": "rss_b21a3a09b4ffbdc7",
-      "timestamp": 1785232231000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia under attack - commonspace.eu",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9CS3hmbW9pcVJzNEJINzczaWI3T1dyNWMyd0NLVXFzMnlyRmNuYU5WV2E4S045eE01bnE5QVJ3bVVBbUM0SlJLYVN1VUwyelBWYnVBVkZiRjA4SmVVdzhpNnYtckhVTngtdUZ5VEE0WE1wdw?oc=5\" target=\"_blank\">Saudi Arabia under attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">commonspace.eu</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9CS3hmbW9pcVJzNEJINzczaWI3T1dyNWMyd0NLVXFzMnlyRmNuYU5WV2E4S045eE01bnE5QVJ3bVVBbUM0SlJLYVN1VUwyelBWYnVBVkZiRjA4SmVVdzhpNnYtckhVTngtdUZ5VEE0WE1wdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T14:15:12.054Z"
-    },
-    {
-      "id": "rss_ecdde251ae24892c",
-      "timestamp": 1785231860000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Fresh Red Sea attacks threaten Egypt’s Suez Canal recovery as oil tanker traffic slumps - Business Insider Africa",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPbzNQWFpFNlhrRFBLX1NHdTdMQl81T3VhTWxRU1Y0YU1rcGNvMlRyMGs5V202WGwxQW91aEFlaWtoWnpCVDFQenFPOWpyWnBMY0FQSTNxYktUOENkdF9NMmpkZ0VVNjdILTRhOGhlZmQ1UDFfdWU4YjdvYXNONHRhRjZwMS0tdWZnSmlST0NyQldzUTZuZjM1cG5iSjRhbjhialBWbjJrU2hudnFDNV8yQmFNcGVYaDhXVjd5TVJrNDlyRlFIVlBpQ1RMOHJKeGtxUXc?oc=5\" target=\"_blank\">Fresh Red Sea attacks threaten Egypt’s Suez Canal recovery as oil tanker traffic slumps</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Business Insider Af",
-      "tags": [
-        "shipping",
-        "suez",
-        "cape-route"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPbzNQWFpFNlhrRFBLX1NHdTdMQl81T3VhTWxRU1Y0YU1rcGNvMlRyMGs5V202WGwxQW91aEFlaWtoWnpCVDFQenFPOWpyWnBMY0FQSTNxYktUOENkdF9NMmpkZ0VVNjdILTRhOGhlZmQ1UDFfdWU4YjdvYXNONHRhRjZwMS0tdWZnSmlST0NyQldzUTZuZjM1cG5iSjRhbjhialBWbjJrU2hudnFDNV8yQmFNcGVYaDhXVjd5TVJrNDlyRlFIVlBpQ1RMOHJKeGtxUXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T11:15:57.753Z"
     }
   ]
 }
