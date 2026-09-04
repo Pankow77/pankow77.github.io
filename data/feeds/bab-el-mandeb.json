@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-04T19:45:47.838Z",
+  "last_fetch": "2026-09-04T22:02:38.096Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -46,6 +46,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-04T19:45:46.441Z"
+    },
+    {
+      "id": "rss_d9dc274a1942027f",
+      "timestamp": 1788541230000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel - News On AIR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5\" target=\"_blank\">Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News On AIR</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-04T22:02:37.005Z"
     },
     {
       "id": "rss_7892e82747b184b2",
@@ -11105,30 +11129,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T19:35:42.595Z"
-    },
-    {
-      "id": "rss_b649b99542276c39",
-      "timestamp": 1785264780000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Saudi Tanker Hit by Houthi Missiles in the Red Sea - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQdWpWRjhMdFlhYzhDajVzdFdULUxJTjRBX0dzRDdHNnl4cElnOXQ2RlVjOXlVNmpMTEN0QzRPYXU1YnlEZHNQNEhuZTM0SUJyVWx2TkpaYUxScFV2a2JTRTNScXdvU1BCY1VZMEVxWURXcWIySlgyS2JsVVkzeWhoM29WRlA2RzUyTWNKWmR0dVV3Vnc?oc=5\" target=\"_blank\">Saudi Tanker Hit by Houthi Missiles in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdWpWRjhMdFlhYzhDajVzdFdULUxJTjRBX0dzRDdHNnl4cElnOXQ2RlVjOXlVNmpMTEN0QzRPYXU1YnlEZHNQNEhuZTM0SUJyVWx2TkpaYUxScFV2a2JTRTNScXdvU1BCY1VZMEVxWURXcWIySlgyS2JsVVkzeWhoM29WRlA2RzUyTWNKWmR0dVV3Vnc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T22:21:51.118Z"
     }
   ]
 }
