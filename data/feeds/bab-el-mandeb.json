@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-05T08:45:53.468Z",
+  "last_fetch": "2026-09-05T12:18:23.282Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7a0fd9f08fc5f152",
+      "timestamp": 1788609763000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "At least 4 civilians killed in Houthi missile attack in Yemen’s Taiz - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOdV96anRTRE1McXc3ZHJqd1M3NHJMeUJhb2FwY1hHUzVjcHkzTHVIaG1EN0xRQTN5elJlUkpJeWxKTmtucDVqNERoWkxjU290V1prM0dRQUU1ODFicExLaVNoamw0WVByUkRXNzZaeWUxaVhzZkVzRUFxaE40VW9SaFQ0ZTd6QUExaF9LMHg5T09qZw?oc=5\" target=\"_blank\">At least 4 civilians killed in Houthi missile attack in Yemen’s Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdV96anRTRE1McXc3ZHJqd1M3NHJMeUJhb2FwY1hHUzVjcHkzTHVIaG1EN0xRQTN5elJlUkpJeWxKTmtucDVqNERoWkxjU290V1prM0dRQUU1ODFicExLaVNoamw0WVByUkRXNzZaeWUxaVhzZkVzRUFxaE40VW9SaFQ0ZTd6QUExaF9LMHg5T09qZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-05T12:18:21.911Z"
+    },
+    {
+      "id": "rss_323b641d0b17b07e",
+      "timestamp": 1788608448000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "4 civilians killed, 9 injured in Houthi missile attack south of Taiz - Report.az",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOcl9udGRSeU02Yms1S2YtREJ4bGJSS3JLbkF1MjZkNTdwWjhXWTE1WnJzUHRoLVJPRndZNjl6R1V2X0YtSTM2N2VPVjdRUXo4a3JENEVNMUhLa3BNak54S2d1VGlWdDJIRVhQdG1QcXhPZmlrdkk4Mm9rTVZGdUtoTU1hb3NvNjMtSmhld0tTeDJjT20xZENyRDlrM1JyaXpwWFBrYnE5UdIBrAFBVV95cUxNek0zemc0Rkl1SFByLVRfaUdTd0xiT3RCWVJhVFNBYkJVeGNkOXpQc09ia0pMdDFJSTlWUEEtX0t3aDR1dkVIcGR5TzRxbG1iNmFURktDQlJLeGZTbGhVNlNsMWdkR3d2Q3ViX0p3RldocGpfWm1Bb0k3YVVRNkZxbHZEQmt1MkpTTnhNRlNxLTZEWTk1TDJUcVpFUjBrbmhiOWxCUj",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcl9udGRSeU02Yms1S2YtREJ4bGJSS3JLbkF1MjZkNTdwWjhXWTE1WnJzUHRoLVJPRndZNjl6R1V2X0YtSTM2N2VPVjdRUXo4a3JENEVNMUhLa3BNak54S2d1VGlWdDJIRVhQdG1QcXhPZmlrdkk4Mm9rTVZGdUtoTU1hb3NvNjMtSmhld0tTeDJjT20xZENyRDlrM1JyaXpwWFBrYnE5UdIBrAFBVV95cUxNek0zemc0Rkl1SFByLVRfaUdTd0xiT3RCWVJhVFNBYkJVeGNkOXpQc09ia0pMdDFJSTlWUEEtX0t3aDR1dkVIcGR5TzRxbG1iNmFURktDQlJLeGZTbGhVNlNsMWdkR3d2Q3ViX0p3RldocGpfWm1Bb0k3YVVRNkZxbHZEQmt1MkpTTnhNRlNxLTZEWTk1TDJUcVpFUjBrbmhiOWxCUjJ6Q00zS25D?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-05T12:18:21.912Z"
+    },
     {
       "id": "rss_c46fa22496b395f3",
       "timestamp": 1788590451000,
@@ -11078,52 +11124,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T23:21:10.609Z"
-    },
-    {
-      "id": "rss_ea9cf89459c09774",
-      "timestamp": 1785272955000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Claim Strike on Another Saudi Oil Tanker - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPWGtrSzI5WkxfcUtkYWZ3YlJUZTRaT2xFd3pqdmxLQVdXelgtcFNsYkpvanctY3E1bDF6cHFDSXV2TE1IeDZJWkk3T3k2QkUxM2V5WnhiV3FzR0pBQ2lLM1NCckVMT3p0NHhkOVpmTDlmekFZaDlIOHZQeWc2YWEzeVRONTgwWm43UjRPWA?oc=5\" target=\"_blank\">Houthis Claim Strike on Another Saudi Oil Tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWGtrSzI5WkxfcUtkYWZ3YlJUZTRaT2xFd3pqdmxLQVdXelgtcFNsYkpvanctY3E1bDF6cHFDSXV2TE1IeDZJWkk3T3k2QkUxM2V5WnhiV3FzR0pBQ2lLM1NCckVMT3p0NHhkOVpmTDlmekFZaDlIOHZQeWc2YWEzeVRONTgwWm43UjRPWA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-29T10:20:49.128Z"
-    },
-    {
-      "id": "rss_117a5f4023c75c53",
-      "timestamp": 1785269075000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Will Pakistan intervene amid Houthi attacks on Saudi ships? - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOeUluN3FFV2ZZRXRWcEk2V3dqR1NBQUFBYmszV0dxV2YxQjZKR2c2cW9ZZzZWYV9aX0dJVmtfT2hZc0V2bFBURF9nVXhyVnYxcENxRmtrbC1FZ1QyN2FOLU5fOGFKYVk5QUtPYUdxckJEbldiNVU4a0hNTkNVejRZWTZGTlQtNnJsSXE4YjRnUUVIbnozMWfSAZYBQVVfeXFMT0NrTVBZUy1Md1dSVVdxOWZYUEp0NmI0ZGtkRm4xdndrWWhuaklrWWw2Y2lmVFpYRnUwc3VjUnk5RVQwMWcxT2xBb0xhVE5LUGtnNzE4cW1BNXJwVjNyT3ktUkZzUFBMS2lJXzJjcjloMUtyakFueUVrVEY4bmxlYWdvVkdBTFlCa2lIaW9ncE1XV2FXcERn?oc=5\" target=\"_blank\">Will Pakistan inter",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeUluN3FFV2ZZRXRWcEk2V3dqR1NBQUFBYmszV0dxV2YxQjZKR2c2cW9ZZzZWYV9aX0dJVmtfT2hZc0V2bFBURF9nVXhyVnYxcENxRmtrbC1FZ1QyN2FOLU5fOGFKYVk5QUtPYUdxckJEbldiNVU4a0hNTkNVejRZWTZGTlQtNnJsSXE4YjRnUUVIbnozMWfSAZYBQVVfeXFMT0NrTVBZUy1Md1dSVVdxOWZYUEp0NmI0ZGtkRm4xdndrWWhuaklrWWw2Y2lmVFpYRnUwc3VjUnk5RVQwMWcxT2xBb0xhVE5LUGtnNzE4cW1BNXJwVjNyT3ktUkZzUFBMS2lJXzJjcjloMUtyakFueUVrVEY4bmxlYWdvVkdBTFlCa2lIaW9ncE1XV2FXcERn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-29T09:25:22.441Z"
     }
   ]
 }
