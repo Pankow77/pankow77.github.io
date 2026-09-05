@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-05T12:18:23.282Z",
+  "last_fetch": "2026-09-05T15:24:27.129Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b00cae197203e745",
+      "timestamp": 1788610543000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "4 killed, 9 wounded in Houthi missile attack in Yemen's Taiz - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQMzBFcWFFYUtvdldkbENhUVl4aEtxaFJXd2gzVEVDdkxVVm1xcnRDU0d3WjhxWTYxZXB0QVBoQXlOREpOVlNTZDhxSW1HX0dfSzFjMG51UmpkbGd1Vkw4RTkwM3Ffbng5ZUZvNVRVdDNmaG1adUlNanZ2Ti0ySVYyU2xvVGVfdzZvVUhVbDVqdHpoUm1uNUgxdzI3V0FhNDR6?oc=5\" target=\"_blank\">4 killed, 9 wounded in Houthi missile attack in Yemen's Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMzBFcWFFYUtvdldkbENhUVl4aEtxaFJXd2gzVEVDdkxVVm1xcnRDU0d3WjhxWTYxZXB0QVBoQXlOREpOVlNTZDhxSW1HX0dfSzFjMG51UmpkbGd1Vkw4RTkwM3Ffbng5ZUZvNVRVdDNmaG1adUlNanZ2Ti0ySVYyU2xvVGVfdzZvVUhVbDVqdHpoUm1uNUgxdzI3V0FhNDR6?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-05T15:24:25.707Z"
+    },
     {
       "id": "rss_7a0fd9f08fc5f152",
       "timestamp": 1788609763000,
@@ -11101,29 +11124,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T01:02:32.002Z"
-    },
-    {
-      "id": "rss_0e81631cdc1d9457",
-      "timestamp": 1785276424000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis Claim Fourth Attack on Saudi Tanker as Red Sea Blockade Intensifies - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOa1BVTEhzZkxRLW1XV2dSbmRjRjBuQl82QklfTWVSVlBhVE1YYVhJOEtscFY4UTZ6c2hHTHRXZ2FwT3ByeHpMeGkyOEtoaDIyc0NoX1hWRFRXNFZHVFFKTHlyNmVSaWd2QW4zWUJvZnEzREVzQnVwdGgwVFdwc1NyZ0NpNEF2QlFBaWRSZlk1TzJQa09odXlyakU4clV3QQ?oc=5\" target=\"_blank\">Houthis Claim Fourth Attack on Saudi Tanker as Red Sea Blockade Intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOa1BVTEhzZkxRLW1XV2dSbmRjRjBuQl82QklfTWVSVlBhVE1YYVhJOEtscFY4UTZ6c2hHTHRXZ2FwT3ByeHpMeGkyOEtoaDIyc0NoX1hWRFRXNFZHVFFKTHlyNmVSaWd2QW4zWUJvZnEzREVzQnVwdGgwVFdwc1NyZ0NpNEF2QlFBaWRSZlk1TzJQa09odXlyakU4clV3QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T23:21:10.609Z"
     }
   ]
 }
