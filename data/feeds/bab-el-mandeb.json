@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-05T00:14:45.791Z",
+  "last_fetch": "2026-09-05T04:46:04.268Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6d12927878c28486",
+      "timestamp": 1788572203000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen: Fighting Intensifies Amid Houthi Push in the West - Tempo.co English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNck5IRXlXa1BvcmxWMUU1RzVCVm5EUHBhOGJJZ1F6VFQyU1gwNHowYTZQQWp0cERfS0RBaGFROTFsbU9iSnRZMmxWMzBJNWIzLXc2RFZJeWc3YTlSUml3eV9Ka09INTFWZkhidUJyMThvSzBaWjJ1Sk5WT0xEWGo2bGd4MThjLWV1dVMySHNZOHlOdw?oc=5\" target=\"_blank\">Yemen: Fighting Intensifies Amid Houthi Push in the West</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tempo.co English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNck5IRXlXa1BvcmxWMUU1RzVCVm5EUHBhOGJJZ1F6VFQyU1gwNHowYTZQQWp0cERfS0RBaGFROTFsbU9iSnRZMmxWMzBJNWIzLXc2RFZJeWc3YTlSUml3eV9Ka09INTFWZkhidUJyMThvSzBaWjJ1Sk5WT0xEWGo2bGd4MThjLWV1dVMySHNZOHlOdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-05T04:46:03.037Z"
+    },
     {
       "id": "rss_8cd9ca8d58e85d6d",
       "timestamp": 1788542868000,
@@ -11103,30 +11124,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T22:21:51.118Z"
-    },
-    {
-      "id": "rss_8924f4619b2f1aee",
-      "timestamp": 1785266508000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim ballistic missile attack on Saudi oil tanker - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNV1k4aFh3ZFBJeG9EXzd4NEgwcEpjV09EenByYzN6RmtYYjBPSUpfQVZDX21aMkw3eUg5MGJwUjNDZHNyZ3Y5dWdJclpCREVFajVfWFI1T0xvRk5VVTF6NHQxMEVKYks2R2RCeFVsN3JZUFlaSjhjWUIyeGlaOEVNaU5wR0hvMUJaaXVwaVlDVmQxbDlreDR2RzVfR1FVazdoZWZTYzZBaWU0Rm9jN3AySA?oc=5\" target=\"_blank\">Yemen’s Houthis claim ballistic missile attack on Saudi oil tanker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNV1k4aFh3ZFBJeG9EXzd4NEgwcEpjV09EenByYzN6RmtYYjBPSUpfQVZDX21aMkw3eUg5MGJwUjNDZHNyZ3Y5dWdJclpCREVFajVfWFI1T0xvRk5VVTF6NHQxMEVKYks2R2RCeFVsN3JZUFlaSjhjWUIyeGlaOEVNaU5wR0hvMUJaaXVwaVlDVmQxbDlreDR2RzVfR1FVazdoZWZTYzZBaWU0Rm9jN3AySA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T21:24:52.317Z"
     }
   ]
 }
