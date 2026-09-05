@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-04T22:02:38.096Z",
+  "last_fetch": "2026-09-05T00:14:45.791Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -70,6 +70,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-04T22:02:37.005Z"
+    },
+    {
+      "id": "rss_0b6c9447c8b7b7c2",
+      "timestamp": 1788540286000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "129 killed in Yemen Houthi attack: Rebels target Bab al-Mandab Strait; Yemeni govt sends forces - Bhaskar English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOV1hDel9wUFFaZlI3b3BOSVdseWxjZUR4VnRnRDRMZXF3SXlJV3UzSXh2YTNfdDMwaFdGRVlacEdyYUE2dWZwZHNaS2EtVzI4bjFaUmFjeHVNSzhUYXdtNmtzdy14NzRheDl0NUZLTXVGU3JGYVlhSUpLTGZZamRoNHBMamwwcF82c2VrdE9NZmVZSGgtTlk4TnY4VC10R0xiQldxOWp2SHJHTXRxVE9DQTRfTldQRTFZbTdsajlwa1VvaDNDS0d6cNIBzgFBVV95cUxPYnJEX0REb1E2RjQ2TTJZc2pwN3BiVzZySUQyUXlrQVVfemk3V2dvNTJfcjVEWmRGTHVIRjlzM3ZDT0tqLXhCT05HQ3B4SWxQWDAzWHRJTng3VzhFNVMyV1I3ZWJQbGZ3czV1N0JPZUhMbHAwdEllUHJ5RTZPcFBBdjlEd2",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOV1hDel9wUFFaZlI3b3BOSVdseWxjZUR4VnRnRDRMZXF3SXlJV3UzSXh2YTNfdDMwaFdGRVlacEdyYUE2dWZwZHNaS2EtVzI4bjFaUmFjeHVNSzhUYXdtNmtzdy14NzRheDl0NUZLTXVGU3JGYVlhSUpLTGZZamRoNHBMamwwcF82c2VrdE9NZmVZSGgtTlk4TnY4VC10R0xiQldxOWp2SHJHTXRxVE9DQTRfTldQRTFZbTdsajlwa1VvaDNDS0d6cNIBzgFBVV95cUxPYnJEX0REb1E2RjQ2TTJZc2pwN3BiVzZySUQyUXlrQVVfemk3V2dvNTJfcjVEWmRGTHVIRjlzM3ZDT0tqLXhCT05HQ3B4SWxQWDAzWHRJTng3VzhFNVMyV1I3ZWJQbGZ3czV1N0JPZUhMbHAwdEllUHJ5RTZPcFBBdjlEd2NvdjFabmhuSmpGank5MC1tcXptN1ViYVZyNHA1ZlYybTNDcktHU2xlRHlSWXJHejZlWUNvVnVvb2RZZExxeUxnbjZZMHlEVFY4UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-05T00:14:44.539Z"
     },
     {
       "id": "rss_7892e82747b184b2",
@@ -11106,29 +11127,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-28T21:24:52.317Z"
-    },
-    {
-      "id": "rss_663478d90c8cc01f",
-      "timestamp": 1785266225000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Tankers keep sailing Red Sea despite Houthi threats as Saudi oil lifeline faces strains - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNanhNbzZNbTU5LUFpM1J3dmZJXzlGSVdodUNGeXVKTF9SbEFZOEJscGZRWEZfNWlwbEhKY1RYdXcxZ19mWmRDc2FTNUNhTEZVbGs1VlRNYUhQbThhYlppc0psdTFMc0xUN0ZrU2NPQThEcXZwTTVYb0FjLWJGVmFsYlgyb0tSUkh1enQxTXdGYWVvYUE3cWo4UmdYcFFsZjJtM0dZLU5sZFZfZG9iRU9NU19UeWhuci14MmZEQ2RR?oc=5\" target=\"_blank\">Tankers keep sailing Red Sea despite Houthi threats as Saudi oil lifeline faces strains</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNanhNbzZNbTU5LUFpM1J3dmZJXzlGSVdodUNGeXVKTF9SbEFZOEJscGZRWEZfNWlwbEhKY1RYdXcxZ19mWmRDc2FTNUNhTEZVbGs1VlRNYUhQbThhYlppc0psdTFMc0xUN0ZrU2NPQThEcXZwTTVYb0FjLWJGVmFsYlgyb0tSUkh1enQxTXdGYWVvYUE3cWo4UmdYcFFsZjJtM0dZLU5sZFZfZG9iRU9NU19UeWhuci14MmZEQ2RR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-28T19:35:42.595Z"
     }
   ]
 }
