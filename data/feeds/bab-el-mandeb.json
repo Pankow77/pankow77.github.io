@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-06T01:10:35.252Z",
+  "last_fetch": "2026-09-06T06:14:12.405Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5e711954da8ef670",
+      "timestamp": 1788660120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Analysis • Saudi Arabia's military alliances won't shield it from a Houthi Red Sea blockade - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxOOGZkRElwRDVFUnFxN0JQdGFwYmY2eDNhTlBudldJbUs5WW4tZTZMRnozSkpCWlNtX2xUWnZLVm1sS1Y4M1Q1RW1mSS1LeTA3MWM2aVB2ZTIya200OWNMVWIxTUlleENfNTc1SGI2czhIOWtSLXBMUm5DZTlLSmxhcXZfelhHdDhvS0hHdGZCbkJYcGRhTUFQYkJSNTAyZUJGcjdPa3dZS2pFUTN0NkZCUFl3T045UVNJMlZPQXVwTzRCd3QzTGF4eHJsRGNUS1JFN19mX3dTa2xNTG5HeVRiWG1nMmpzcWIzZExvcWJmYy1tNE1lRF9meG5XNlVsRURVZ3FwdUZSREtodENtdGVRdnlCSHR1Zw?oc=5\" target=\"_blank\">Analysis • Saudi Arabia's military alliances won't sh",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOOGZkRElwRDVFUnFxN0JQdGFwYmY2eDNhTlBudldJbUs5WW4tZTZMRnozSkpCWlNtX2xUWnZLVm1sS1Y4M1Q1RW1mSS1LeTA3MWM2aVB2ZTIya200OWNMVWIxTUlleENfNTc1SGI2czhIOWtSLXBMUm5DZTlLSmxhcXZfelhHdDhvS0hHdGZCbkJYcGRhTUFQYkJSNTAyZUJGcjdPa3dZS2pFUTN0NkZCUFl3T045UVNJMlZPQXVwTzRCd3QzTGF4eHJsRGNUS1JFN19mX3dTa2xNTG5HeVRiWG1nMmpzcWIzZExvcWJmYy1tNE1lRF9meG5XNlVsRURVZ3FwdUZSREtodENtdGVRdnlCSHR1Zw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-06T06:14:10.958Z"
+    },
     {
       "id": "rss_b00cae197203e745",
       "timestamp": 1788610543000,
@@ -11101,29 +11122,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-07-28T23:47:46.473Z"
-    },
-    {
-      "id": "rss_e1ef774e3df2e932",
-      "timestamp": 1785280291000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "US, Saudi militaries attack Iranian-backed militias in Iraq following Iranian strikes on US bases - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE1nXzRkdm9XbzVUQTk4dDRqdXVFZ1kwcEZkQ21fOXVzWlFPbWZTeXF3UWlVUTJMYmc3X2FUUlNDeWh2NmRhSGxpUzhZNFg2SjBGT0d0czNWNjh3eVZYM2ZEeWhnSzJqakpiMWc?oc=5\" target=\"_blank\">US, Saudi militaries attack Iranian-backed militias in Iraq following Iranian strikes on US bases</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1nXzRkdm9XbzVUQTk4dDRqdXVFZ1kwcEZkQ21fOXVzWlFPbWZTeXF3UWlVUTJMYmc3X2FUUlNDeWh2NmRhSGxpUzhZNFg2SjBGT0d0czNWNjh3eVZYM2ZEeWhnSzJqakpiMWc?oc=5",
-      "feed_id": "gn-centcom-yemen",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-29T01:02:32.002Z"
     }
   ]
 }
