@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-06T14:18:26.857Z",
+  "last_fetch": "2026-09-06T17:12:49.086Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -393,6 +393,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-04T19:45:46.443Z"
+    },
+    {
+      "id": "rss_3e61ba96727cd3c4",
+      "timestamp": 1788418800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5\" target=\"_blank\">Houthi missile attacks on Israel stokes fresh alarm over Red Sea trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "missile",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUFVsdlR0b2Q2X1FFeUdtMUhhNWJRTkNjNkhMX0VqbW5YcTAzTmxwX2FvcXVqMkU1SmhfOVFiRGpnTG5YY1ZhaHVsQ1RqN0VOMGtKOHd1VEIwQV9wVTdFd2NTaDhxTEZOTVJsVGFveWJ4Q2xiNGx0Z1ZJOTAwMXRWM0VzdXlIMWliLUowMlNRUTd4NlFyX2pVTkxCM3dDYUNqRjd3czRWblpjbkoxV0liai16eUhBaUt4QkE?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-06T17:12:49.081Z"
     },
     {
       "id": "rss_9e62e6cd408ad3f5",
@@ -11098,30 +11122,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T01:02:32.963Z"
-    },
-    {
-      "id": "rss_0f5525e5f09dc875",
-      "timestamp": 1785280627000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis claim missile attack on Saudi Arabia oil tanker - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxOeXdUQWdOYmRjRG9CX2NuY1ZpV2JGOXJabW01SXkzNnVGN3BRQ2o2cWNBeEcxdlJHOWhpZDdubXpZOTVid2JrbUFaSDRIaDNNTGlYN1JkckQxV1BaTXluOW5NRkRFdlU2bGFlbTBRQjBTS2lqcVl0LWN2SkR5R0k1VjdKOWlrRDZ5TWwzVVpMODl0YndhN1BqM2ZnX2Q4MjNVOGk2aS130gGrAUFVX3lxTE5YUmZiY1FvNzBYcE9TUUk5MHg5VnI2aW5rTmF6TFVCaDVtSm52MXpOUGFXQnF3UUFoQWVPSklPWGRpV21xQ3dYZlZtNHVERHp2RzZZNVVLV0hmWlgwUi0tU013YXNkYl9CVVhWTS1JQ2FSeDBiY2VyTFR6WG92UTRwVTFXSWNLVWNpOWRpTC15Q3BTLWJQTUE5NzY3bzljelJ0N1dOMG",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeXdUQWdOYmRjRG9CX2NuY1ZpV2JGOXJabW01SXkzNnVGN3BRQ2o2cWNBeEcxdlJHOWhpZDdubXpZOTVid2JrbUFaSDRIaDNNTGlYN1JkckQxV1BaTXluOW5NRkRFdlU2bGFlbTBRQjBTS2lqcVl0LWN2SkR5R0k1VjdKOWlrRDZ5TWwzVVpMODl0YndhN1BqM2ZnX2Q4MjNVOGk2aS130gGrAUFVX3lxTE5YUmZiY1FvNzBYcE9TUUk5MHg5VnI2aW5rTmF6TFVCaDVtSm52MXpOUGFXQnF3UUFoQWVPSklPWGRpV21xQ3dYZlZtNHVERHp2RzZZNVVLV0hmWlgwUi0tU013YXNkYl9CVVhWTS1JQ2FSeDBiY2VyTFR6WG92UTRwVTFXSWNLVWNpOWRpTC15Q3BTLWJQTUE5NzY3bzljelJ0N1dOMGRVNTExRQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-07-28T23:47:46.473Z"
     }
   ]
 }
