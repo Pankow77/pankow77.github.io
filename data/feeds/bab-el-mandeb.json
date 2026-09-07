@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-07T06:22:26.305Z",
+  "last_fetch": "2026-09-07T12:52:22.060Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c44b885ff460dcc1",
+      "timestamp": 1788702438000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis target Saudi forces, claim to strike vehicles using 'domestically manufactured' missiles - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VU3hOY1ItdWx4ZWt4d2p5Uk83djJJbndTX1UwTjVVTEt0aXlRcng3RjR3SnBfbXY3RFI4YmcxX3VQcHJPYmRpUERuMUllTzZudnc1X01DLVdnRGtk?oc=5\" target=\"_blank\">Houthis target Saudi forces, claim to strike vehicles using 'domestically manufactured' missiles</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VU3hOY1ItdWx4ZWt4d2p5Uk83djJJbndTX1UwTjVVTEt0aXlRcng3RjR3SnBfbXY3RFI4YmcxX3VQcHJPYmRpUERuMUllTzZudnc1X01DLVdnRGtk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-07T12:52:20.843Z"
+    },
     {
       "id": "rss_5e711954da8ef670",
       "timestamp": 1788660120000,
@@ -11098,29 +11121,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T19:29:30.783Z"
-    },
-    {
-      "id": "rss_a39df79afb07e97c",
-      "timestamp": 1785292200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "China in touch with Yemen’s Houthis to allow ships to sail through Red Sea, sources say - The Japan Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQWGgwNGNwcFFDb2NqYVB5a1AxcmJPRTFRMC1mQXRJNzNTTmhpMDNDUTZVZWpMUmZkSUdnOW1zNFhjQkIzX244eDFXbHQtcWMyOU90Z1dyR0dIV0Ixa1RLcDZBaDhlYTNTaGltZ0pRUl80QUFjUmxGNXEtTHBlakxXeFQtaU1IZw?oc=5\" target=\"_blank\">China in touch with Yemen’s Houthis to allow ships to sail through Red Sea, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWGgwNGNwcFFDb2NqYVB5a1AxcmJPRTFRMC1mQXRJNzNTTmhpMDNDUTZVZWpMUmZkSUdnOW1zNFhjQkIzX244eDFXbHQtcWMyOU90Z1dyR0dIV0Ixa1RLcDZBaDhlYTNTaGltZ0pRUl80QUFjUmxGNXEtTHBlakxXeFQtaU1IZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-29T10:20:49.129Z"
     }
   ]
 }
