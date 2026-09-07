@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-07T01:11:19.604Z",
+  "last_fetch": "2026-09-07T06:22:26.305Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -417,6 +417,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-06T17:12:49.081Z"
+    },
+    {
+      "id": "rss_f0ce354aebea5e94",
+      "timestamp": 1788418800000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EU raises threat assessment for transiting North Red Sea to medium - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5\" target=\"_blank\">EU raises threat assessment for transiting North Red Sea to medium</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-07T06:22:25.905Z"
     },
     {
       "id": "rss_9e62e6cd408ad3f5",
@@ -11098,30 +11121,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-07-29T10:20:49.129Z"
-    },
-    {
-      "id": "rss_6002b3d917824434",
-      "timestamp": 1785285043000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis claim missile strike on Saudi oil tanker amid Red Sea blockade - Firstpost",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZEVjdmNHZms0VzM1OVMzcmNnek5ORWxRWlBBZE82Y28xb2ZrU1pCTDhUa3NrNHBtOEtJUEhBMlhZTVlYZW5uVlJ0X3NjS2hTZmtVVERqdmhOQlBWcEw5Tm04bG9ab3lmYm1BOUhpTGJMd2ducmR3QWpROWVDYnUzUXkySVJqaGVtNHVkVXYzZXFBMHdSV3c1dVRKX2pVZU9wLS1GZDdmT0RKQjRKakxlYl9yblJwTVHSAbwBQVVfeXFMUHYyRGVxNThHdENkQ09iUUxtN3FkUGJMY0xDcmo4U0FNUFl4MjF4bWMtZVFLSDMtdVg2VmZqTnhBS1AwMC1mVnFhMURVdVU0YXd4ZkxEakxreFlqRjBVSHF6dnA2YzhYNlp3OVoyWEtSbFpwbnZKSldJd1A1MXpSdDZBLWRLMVRLdFRpSjFRWlR5Zk5McU",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZEVjdmNHZms0VzM1OVMzcmNnek5ORWxRWlBBZE82Y28xb2ZrU1pCTDhUa3NrNHBtOEtJUEhBMlhZTVlYZW5uVlJ0X3NjS2hTZmtVVERqdmhOQlBWcEw5Tm04bG9ab3lmYm1BOUhpTGJMd2ducmR3QWpROWVDYnUzUXkySVJqaGVtNHVkVXYzZXFBMHdSV3c1dVRKX2pVZU9wLS1GZDdmT0RKQjRKakxlYl9yblJwTVHSAbwBQVVfeXFMUHYyRGVxNThHdENkQ09iUUxtN3FkUGJMY0xDcmo4U0FNUFl4MjF4bWMtZVFLSDMtdVg2VmZqTnhBS1AwMC1mVnFhMURVdVU0YXd4ZkxEakxreFlqRjBVSHF6dnA2YzhYNlp3OVoyWEtSbFpwbnZKSldJd1A1MXpSdDZBLWRLMVRLdFRpSjFRWlR5Zk5McU4wLUNONzc1SEdsakxialhXU1BIelJwenNMWjdHYUFqVDM1d2tXMlo?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-29T01:02:32.963Z"
     }
   ]
 }
