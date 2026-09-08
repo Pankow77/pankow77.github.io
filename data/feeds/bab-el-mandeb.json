@@ -1,8 +1,94 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-08T12:34:18.829Z",
+  "last_fetch": "2026-09-08T17:01:56.923Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a50a5b74a3916cf",
+      "timestamp": 1788882456000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil rises to six-week high following Houthi attack on Saudi sites - The Lufkin Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNWRVh1Q1FrZXNjcnAxSHYwMEZGSjl4TFhITDlyOTRJTXEzLXZiaUtraGk4bVU4cTkwRi04MXZtcy1zSEZGcHFJTmRza19YbVV3MkE0Mm5idWFrVkRtczkwdkM0eTNvdE0yMTR5ZUZCeGtDNXZBSGxscnE3Y2hlYkpNLUtZb0xQRTNGV05hZU55d1dlMkJibnlVZzVHWmRQNzN0TmtsX2s1Q0xCVi1kNkVJT2hEYjNnUFFmS0M3Tm8xOXltcWZZQS1WcFJKeG5DUnpkdHhjeFotTlU1aUlvS0NFdFNNMGhfeWtnQVU3MXNwYWZ5aHFDbw?oc=5\" target=\"_blank\">Oil rises to six-week high following Houthi attack on Saudi sites</a>&nbsp;&nbsp;<font color=",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNWRVh1Q1FrZXNjcnAxSHYwMEZGSjl4TFhITDlyOTRJTXEzLXZiaUtraGk4bVU4cTkwRi04MXZtcy1zSEZGcHFJTmRza19YbVV3MkE0Mm5idWFrVkRtczkwdkM0eTNvdE0yMTR5ZUZCeGtDNXZBSGxscnE3Y2hlYkpNLUtZb0xQRTNGV05hZU55d1dlMkJibnlVZzVHWmRQNzN0TmtsX2s1Q0xCVi1kNkVJT2hEYjNnUFFmS0M3Tm8xOXltcWZZQS1WcFJKeG5DUnpkdHhjeFotTlU1aUlvS0NFdFNNMGhfeWtnQVU3MXNwYWZ5aHFDbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T17:01:55.462Z"
+    },
+    {
+      "id": "rss_5a24a5b1585c06e7",
+      "timestamp": 1788881902000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWS0tX1RjbFdjUHJfYlBROU1HbUgyYnNZVlAyeVhmQnRZNU5SeUZiLThhb1FGZVVOMHhiWjdZdTBydGplM0ZNbi0wb1hWUzFKeC12VzlmbGhoVzdBME51UEtuUnpuRWJRMGpHLWVhbmZ2OW1UbXgwU3RLOVQ5RVVLbms2dDMxNUhUS0NWSjc3Q1VFTDJZaDZWWmVyUE5SbFZOLVNJY0hEaVk2a1hNZG03bEV6WVdzY3A4TzZiMFh1a3A?oc=5\" target=\"_blank\">Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWS0tX1RjbFdjUHJfYlBROU1HbUgyYnNZVlAyeVhmQnRZNU5SeUZiLThhb1FGZVVOMHhiWjdZdTBydGplM0ZNbi0wb1hWUzFKeC12VzlmbGhoVzdBME51UEtuUnpuRWJRMGpHLWVhbmZ2OW1UbXgwU3RLOVQ5RVVLbms2dDMxNUhUS0NWSjc3Q1VFTDJZaDZWWmVyUE5SbFZOLVNJY0hEaVk2a1hNZG03bEV6WVdzY3A4TzZiMFh1a3A?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T17:01:55.462Z"
+    },
+    {
+      "id": "rss_20b214cdb58d1dd9",
+      "timestamp": 1788879750000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia strikes back after heaviest Houthi attack in years - Euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRW13UkpaWWRUZFkzamNMZUduanM3WGlDcVlCWVkwZ3FUaEV1ZXU1UlRkYlZDa1RUenpGWTlBcnN5M2Jiam5VLWF4M1hrajRCdW1pRkY5VjljS1lqT21BcWVXWXNGdmN4SVY5Y0JvLU8zTkVmV1ZrWlBlcmdqRFMyRUVRZ1RNalZ6N05OUk9fZ0pWN1ZWeHpRVmloN2l1QzRhU280RWQtbEVtTUpXeUxPTDlqb3U2T3Rv?oc=5\" target=\"_blank\">Saudi Arabia strikes back after heaviest Houthi attack in years</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRW13UkpaWWRUZFkzamNMZUduanM3WGlDcVlCWVkwZ3FUaEV1ZXU1UlRkYlZDa1RUenpGWTlBcnN5M2Jiam5VLWF4M1hrajRCdW1pRkY5VjljS1lqT21BcWVXWXNGdmN4SVY5Y0JvLU8zTkVmV1ZrWlBlcmdqRFMyRUVRZ1RNalZ6N05OUk9fZ0pWN1ZWeHpRVmloN2l1QzRhU280RWQtbEVtTUpXeUxPTDlqb3U2T3Rv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T17:01:55.462Z"
+    },
+    {
+      "id": "rss_9129ad602abef01c",
+      "timestamp": 1788878925000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi-Houthi fighting in Yemen escalates: What happened, and what’s next? - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxOTGJJcFNyd2Z6eE9wRGxCemdfZXplWVZwQk5zUUVfc0l1N2xMNjZCNWhrbnRrSkxWQ0Q0Rm1ZT2NPT0c4RE1SRnViNEp1enB5dDl0V3Q0cV9FcEhjY05FY3V5X2hZWXgwUG5Hek1kOUtUYUx0dVlEazJrSEIzT1hETUsyRTFGektfUEdSMUlhalhUamEtVXJUc1N6YldKSWZyMFNLTEJaR2dfbUNFZnfSAbMBQVVfeXFMUExvclV1S1NBeldfR21qV3JmTDJUcHpjLXhGRlczYnJoWGpndmx0UGpMbUZUNDdNVTM2R0kxRnhKQ3VKM2hMbkJxOVE4T2hJWUwwaVdzR2pkaW5RZkFwVGVPd2JKcXU2WDRXLUhBc3dxeXRUdkhZeTZiVlZIWll0MndrQWNMSmpzdFp5MFJSUXhBcnRzd1RzV2E3N0FCSD",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOTGJJcFNyd2Z6eE9wRGxCemdfZXplWVZwQk5zUUVfc0l1N2xMNjZCNWhrbnRrSkxWQ0Q0Rm1ZT2NPT0c4RE1SRnViNEp1enB5dDl0V3Q0cV9FcEhjY05FY3V5X2hZWXgwUG5Hek1kOUtUYUx0dVlEazJrSEIzT1hETUsyRTFGektfUEdSMUlhalhUamEtVXJUc1N6YldKSWZyMFNLTEJaR2dfbUNFZnfSAbMBQVVfeXFMUExvclV1S1NBeldfR21qV3JmTDJUcHpjLXhGRlczYnJoWGpndmx0UGpMbUZUNDdNVTM2R0kxRnhKQ3VKM2hMbkJxOVE4T2hJWUwwaVdzR2pkaW5RZkFwVGVPd2JKcXU2WDRXLUhBc3dxeXRUdkhZeTZiVlZIWll0MndrQWNMSmpzdFp5MFJSUXhBcnRzd1RzV2E3N0FCSDlUV283T01Ud2NGWERGSVVkb1FnOW8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-08T17:01:55.462Z"
+    },
     {
       "id": "rss_1c422577325e64d1",
       "timestamp": 1788870382000,
@@ -258,6 +344,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-08T12:34:17.514Z"
+    },
+    {
+      "id": "rss_8d417fd6c2df19bb",
+      "timestamp": 1788857324000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Saudi energy facilities hit by wave of Houthi strikes - Financial Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNV1dDYjJkWG5MY2htWjlReHVDZzlCenZTTldpcVlaZjZ2a2VMQXIzRW5yWW5tVkVCWXNZajVSS3R5c2Y1OWJXNVM1WTdHazJySTMtVXl5UXlqWHlZTEszRHVQVW9PeVBqV192QWdXOGJoajNGcWFtRGV2X0M3aFFqQjZCU0E?oc=5\" target=\"_blank\">Saudi energy facilities hit by wave of Houthi strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNV1dDYjJkWG5MY2htWjlReHVDZzlCenZTTldpcVlaZjZ2a2VMQXIzRW5yWW5tVkVCWXNZajVSS3R5c2Y1OWJXNVM1WTdHazJySTMtVXl5UXlqWHlZTEszRHVQVW9PeVBqV192QWdXOGJoajNGcWFtRGV2X0M3aFFqQjZCU0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T17:01:55.463Z"
     },
     {
       "id": "rss_0df5de1a3035d9e8",
@@ -10958,120 +11065,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-01T09:38:45.964Z"
-    },
-    {
-      "id": "rss_c6ca0a228a9012a8",
-      "timestamp": 1785567053000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU NAVAL FORCE ASPIDES SAYS MERCHANT VESSEL COMPLETED RED SEA TRANSIT SAFELY UNDER PROTECTION OF ITALIAN FRIGATE - news.cgtn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE5wZkV0YUlHZnhKNFNkWEVJVjVteHdTbDNBM2ZlN1c5TjdUOGhQcGJJNUR5a1pCN2p3X1dUTkt3Sm5fdUZCclBwd3pCTWZGRXlfMVh5QUVZWExnSlVQNUhxck5Lak44cl9sYjBqdkZn?oc=5\" target=\"_blank\">EU NAVAL FORCE ASPIDES SAYS MERCHANT VESSEL COMPLETED RED SEA TRANSIT SAFELY UNDER PROTECTION OF ITALIAN FRIGATE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5wZkV0YUlHZnhKNFNkWEVJVjVteHdTbDNBM2ZlN1c5TjdUOGhQcGJJNUR5a1pCN2p3X1dUTkt3Sm5fdUZCclBwd3pCTWZGRXlfMVh5QUVZWExnSlVQNUhxck5Lak44cl9sYjBqdkZn?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T13:30:28.291Z"
-    },
-    {
-      "id": "rss_0e14280ea5bd50c7",
-      "timestamp": 1785548444000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis say no plans to tax vessels in Red Sea despite blockade - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBSUpRYjl6bnRuaWtvVnVUdDRNWi16TVJXc0UzQTJGYzhDS28wclA3enBlT0k0UjN4dVdZNmxtMm9sOVpyalVyMGJMVE1vY0ZTUjBoMHE3THlDUmtk?oc=5\" target=\"_blank\">Yemen's Houthis say no plans to tax vessels in Red Sea despite blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBSUpRYjl6bnRuaWtvVnVUdDRNWi16TVJXc0UzQTJGYzhDS28wclA3enBlT0k0UjN4dVdZNmxtMm9sOVpyalVyMGJMVE1vY0ZTUjBoMHE3THlDUmtk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T03:03:12.816Z"
-    },
-    {
-      "id": "rss_c7275468d41c2c37",
-      "timestamp": 1785541267000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis deny plans to impose fees on ships sailing through Red Sea - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQcXFnemRGaWFpV3lfb2VYX1JWTkxKRndHU1prTTUzLWpuRGlpcDVucEFYeXRVME1kZmhLV0lJdjlnNk41c01LMzNUU0ZPVENYdjVMUDQ1bFAxZy1sdUJ1em9MZld0YXdFR2dxejJsZUliZWNzTkJGVmpxSWxYVkJZd0FLTXZkcnZVeGxSUFhsUF8zbnUtUTFsMGs4QUtCUTN2Y1dpYUI2WmtBTUloV2NhaTNiSmJGTmxvbGlrR1Vn?oc=5\" target=\"_blank\">Yemen's Houthis deny plans to impose fees on ships sailing through Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQcXFnemRGaWFpV3lfb2VYX1JWTkxKRndHU1prTTUzLWpuRGlpcDVucEFYeXRVME1kZmhLV0lJdjlnNk41c01LMzNUU0ZPVENYdjVMUDQ1bFAxZy1sdUJ1em9MZld0YXdFR2dxejJsZUliZWNzTkJGVmpxSWxYVkJZd0FLTXZkcnZVeGxSUFhsUF8zbnUtUTFsMGs4QUtCUTN2Y1dpYUI2WmtBTUloV2NhaTNiSmJGTmxvbGlrR1Vn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-08-01T00:31:30.019Z"
-    },
-    {
-      "id": "rss_a83ff4f9fcbb3444",
-      "timestamp": 1785531413000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea Maritime Security Task Force Commander Talks Major Jump In Escort Requests - TWZ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQNEJhSjl6VU94RlhHMFI4LTctZTA3U1ExbU4wV0o0R01GZzBERkl4Zk1wMVI2bl9ZTzJqYjZ3emtiQ25veDROTVgyOTIwN2ZtSmlnbjBDcjktVklvVVJ5VlNIb2NMR1NhN0tZNzZZUEZENHZBdU96UFJzWXUzblBaQVR6bmVhSTNsbjFHYjNKamVteGxZNGwxaUZKY051VXIydFYtckRnOXFLZkpSOTVUX2tIU2Qyejg?oc=5\" target=\"_blank\">Red Sea Maritime Security Task Force Commander Talks Major Jump In Escort Requests</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TWZ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNEJhSjl6VU94RlhHMFI4LTctZTA3U1ExbU4wV0o0R01GZzBERkl4Zk1wMVI2bl9ZTzJqYjZ3emtiQ25veDROTVgyOTIwN2ZtSmlnbjBDcjktVklvVVJ5VlNIb2NMR1NhN0tZNzZZUEZENHZBdU96UFJzWXUzblBaQVR6bmVhSTNsbjFHYjNKamVteGxZNGwxaUZKY051VXIydFYtckRnOXFLZkpSOTVUX2tIU2Qyejg?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-07-31T21:23:45.715Z"
-    },
-    {
-      "id": "rss_688a9b80beb89299",
-      "timestamp": 1785523817000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia’s Red Sea Shipping Coalition: A New Security Era - discoveryalert.com.au",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPS01ER1E5bFlJUVpPYXJWLXZIYmpPOVhQS1V1Y0VkanlMMndjYlBBZUdhZWxxYzJUTmM2RTdMZ3AzcGk0Y3dCc2FxT09TSkZRZGhIaWdzcWxSdW5wYm1EbmtvSmcyR0RxRktielV0bXVpREZmVHNqSnVRXzljQ1JuQURQZUZlbkdkS2stR0N2UDRGYWZqMGNv?oc=5\" target=\"_blank\">Saudi Arabia’s Red Sea Shipping Coalition: A New Security Era</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">discoveryalert.com.au</font>",
-      "tags": [
-        "shipping",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS01ER1E5bFlJUVpPYXJWLXZIYmpPOVhQS1V1Y0VkanlMMndjYlBBZUdhZWxxYzJUTmM2RTdMZ3AzcGk0Y3dCc2FxT09TSkZRZGhIaWdzcWxSdW5wYm1EbmtvSmcyR0RxRktielV0bXVpREZmVHNqSnVRXzljQ1JuQURQZUZlbkdkS2stR0N2UDRGYWZqMGNv?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T07:49:34.126Z"
     }
   ]
 }
