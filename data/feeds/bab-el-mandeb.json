@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-08T17:01:56.923Z",
+  "last_fetch": "2026-09-08T20:01:31.700Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -88,6 +88,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-08T17:01:55.462Z"
+    },
+    {
+      "id": "rss_bba62ac11ea2fc87",
+      "timestamp": 1788870816000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pakistan condemns Houthi attacks on Saudi Arabia - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNZjM5NzR6NkFVVnFLN2dCVm9WTGkxV2pSQy03SXYwczNJTkpUQzlWZlYwUWVuN1l5OEN3Qmo0VmFKT1M1WUpxcHM5UUstb0pOcnBJRW50RnBULTlJM2lEQWZlTmRCTnNJMmJKZ1hyRklBRHdFc2gtcnNBNXV6YlZwOHEwT3dXcFV1Zm5rN3ZJZEVSN1pXRm1wWA?oc=5\" target=\"_blank\">Pakistan condemns Houthi attacks on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZjM5NzR6NkFVVnFLN2dCVm9WTGkxV2pSQy03SXYwczNJTkpUQzlWZlYwUWVuN1l5OEN3Qmo0VmFKT1M1WUpxcHM5UUstb0pOcnBJRW50RnBULTlJM2lEQWZlTmRCTnNJMmJKZ1hyRklBRHdFc2gtcnNBNXV6YlZwOHEwT3dXcFV1Zm5rN3ZJZEVSN1pXRm1wWA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T20:01:30.054Z"
     },
     {
       "id": "rss_1c422577325e64d1",
@@ -705,6 +726,50 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-08T02:48:03.596Z"
+    },
+    {
+      "id": "rss_a1c2f269ad3d20ba",
+      "timestamp": 1788831120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Brent crude oil hits $98 after Iran's Houthi allies attack multiple Saudi energy facilities - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNdUhmamNMMjBBQ2d1THpZSmp2X3NORDdDUXVlWWx1c3N3dDJlS3ZsaWZrcWdXR0pTTzZqZHBDeFhsd2RicG9OTEdSV3FqTTNiTEl3Yjc1d1ZYaWV6b3F5cmlPQXpXU29ja0F5ZkY0Q3FnSUxEcGlleTNNMGh3SEpqNlZQRHQxUdIBiwFBVV95cUxNZ3llZW1uVXQ2bmhtM1VETXJjVmFkdFdDb09hT0NfNll0anVXakVGVjJHSDZRV2R5cGF2T0FIbHhkTE5maFZjUEc5VEhTdXVENjlsd2RMZGpENjNWR0xsZS1iTnpseUNrdkJQVEVaa0xnb1Y4aEtuMnl6UHdURC00WTFuY04tanhMNXVR?oc=5\" target=\"_blank\">Brent crude oil hits $98 after Iran's Houthi allies att",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNdUhmamNMMjBBQ2d1THpZSmp2X3NORDdDUXVlWWx1c3N3dDJlS3ZsaWZrcWdXR0pTTzZqZHBDeFhsd2RicG9OTEdSV3FqTTNiTEl3Yjc1d1ZYaWV6b3F5cmlPQXpXU29ja0F5ZkY0Q3FnSUxEcGlleTNNMGh3SEpqNlZQRHQxUdIBiwFBVV95cUxNZ3llZW1uVXQ2bmhtM1VETXJjVmFkdFdDb09hT0NfNll0anVXakVGVjJHSDZRV2R5cGF2T0FIbHhkTE5maFZjUEc5VEhTdXVENjlsd2RMZGpENjNWR0xsZS1iTnpseUNrdkJQVEVaa0xnb1Y4aEtuMnl6UHdURC00WTFuY04tanhMNXVR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-08T20:01:30.055Z"
+    },
+    {
+      "id": "rss_4653b48907f1d15b",
+      "timestamp": 1788828600000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil prices hit six-week high after Houthis attack Saudi sites - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNNTBHazRJMEhoZks2V2o5M2loY0UtV3pnUjMweXB6cXZuVjQtYmhTWV9oSnF0cDhRZGVybzBuNk9fYWRJU1diemp5VDFxZWdHYy16a0ctWG9ob0JfMUZqRTIwRnoyeHhxckI4NFZCVmM1MGVRaDFPeWh0MVFKTXYyVURKSWdJZGJ5ZWZWYzdHanhyQTBNTGYyRWF6bXVWSDRZdXdYN0pWdURYU0p6Z1lkVzlRWlF4UEIyY1E?oc=5\" target=\"_blank\">Oil prices hit six-week high after Houthis attack Saudi sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNTBHazRJMEhoZks2V2o5M2loY0UtV3pnUjMweXB6cXZuVjQtYmhTWV9oSnF0cDhRZGVybzBuNk9fYWRJU1diemp5VDFxZWdHYy16a0ctWG9ob0JfMUZqRTIwRnoyeHhxckI4NFZCVmM1MGVRaDFPeWh0MVFKTXYyVURKSWdJZGJ5ZWZWYzdHanhyQTBNTGYyRWF6bXVWSDRZdXdYN0pWdURYU0p6Z1lkVzlRWlF4UEIyY1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-08T20:01:30.054Z"
     },
     {
       "id": "rss_6f5d0cdd82a1f7ec",
@@ -10996,75 +11061,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-01T15:23:03.865Z"
-    },
-    {
-      "id": "rss_e98585e3ac70c64e",
-      "timestamp": 1785584345000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU naval mission escorts merchant vessel safely through Red Sea - Caliber.Az",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxNd3BMTGhhTmxrQ1ZnN3dSMnp2MklKS0JXV0JZbTA2ZUFNaWdGSHAtV2dHRVM1VlF1WWc4YXhVYW1taC1EdEhVZHRpY1dfbHJCT21DeTk5MmE3V3BnMDhoTUZ2NU5fdllSaUdESnFyMGZVempfWVh3SjktNkdtR0J0ZWpmRzVHUFQ4dkxndGx3c0oxeDdn?oc=5\" target=\"_blank\">EU naval mission escorts merchant vessel safely through Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Caliber.Az</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNd3BMTGhhTmxrQ1ZnN3dSMnp2MklKS0JXV0JZbTA2ZUFNaWdGSHAtV2dHRVM1VlF1WWc4YXhVYW1taC1EdEhVZHRpY1dfbHJCT21DeTk5MmE3V3BnMDhoTUZ2NU5fdllSaUdESnFyMGZVempfWVh3SjktNkdtR0J0ZWpmRzVHUFQ4dkxndGx3c0oxeDdn?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T13:30:28.291Z"
-    },
-    {
-      "id": "rss_d8935b887d12c08a",
-      "timestamp": 1785578570000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis Deny Plans To Impose Fees On Ships Transiting Bab el-Mandeb Strait - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOWWYzQjVVN2ZDb2daUGJGc1VFdExpeEtHM0lmek95dDFNTHhLb2thSGdkWUhMX1MzTXd1TmVaU2ZXQ25OV0lDdG9WYk1lUi1nbURoRkZsQ3I3RUktaWJmOUw0clI3dG1YQ3BlZkhxYm9YMmN1ZDY4STkwSGlTTGF3d1o4THNXaENtYTd0NkV6Tk92ZFN5YkN6SlpHaTdsbm5TMmNIamxyT1N1T0FuWW9sN1hB?oc=5\" target=\"_blank\">Yemen’s Houthis Deny Plans To Impose Fees On Ships Transiting Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOWWYzQjVVN2ZDb2daUGJGc1VFdExpeEtHM0lmek95dDFNTHhLb2thSGdkWUhMX1MzTXd1TmVaU2ZXQ25OV0lDdG9WYk1lUi1nbURoRkZsQ3I3RUktaWJmOUw0clI3dG1YQ3BlZkhxYm9YMmN1ZDY4STkwSGlTTGF3d1o4THNXaENtYTd0NkV6Tk92ZFN5YkN6SlpHaTdsbm5TMmNIamxyT1N1T0FuWW9sN1hB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T11:27:55.343Z"
-    },
-    {
-      "id": "rss_598904f89bbc80ad",
-      "timestamp": 1785568243000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU naval force says Italian frigate escorts merchant vessel safely through Red Sea - Devdiscourse",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaVc1dDl4c09XOUUycnVIRnRodWt1bmR2dV9qUlRXRXhIb1drdG9fWjJBNlF5eVFsd1FCc2RwNngwcjZZWHVic3hRbGtFSVBKRDJLSVNmMjdJdG5ETXNKeXVfVE9SaVRhWGtLRlNQZXM1UHlRNzRkd2tkZVFRdFNtQUZHT1lzYkhPa1FfVUxpMzN1TFpJdzZGSXNDZnNCUXRJN1JBZHBzN3VXWVAtOExOb2hXLUN6UWlGOVNuWWhvMUdOcDFDYkFGS2tfR1h5QmlIQzVVZVktVdIB1wFBVV95cUxOaVc1dDl4c09XOUUycnVIRnRodWt1bmR2dV9qUlRXRXhIb1drdG9fWjJBNlF5eVFsd1FCc2RwNngwcjZZWHVic3hRbGtFSVBKRDJLSVNmMjdJdG5ETXNKeXVfVE9SaVRhWGtLRlNQZXM1UHlRNz",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaVc1dDl4c09XOUUycnVIRnRodWt1bmR2dV9qUlRXRXhIb1drdG9fWjJBNlF5eVFsd1FCc2RwNngwcjZZWHVic3hRbGtFSVBKRDJLSVNmMjdJdG5ETXNKeXVfVE9SaVRhWGtLRlNQZXM1UHlRNzRkd2tkZVFRdFNtQUZHT1lzYkhPa1FfVUxpMzN1TFpJdzZGSXNDZnNCUXRJN1JBZHBzN3VXWVAtOExOb2hXLUN6UWlGOVNuWWhvMUdOcDFDYkFGS2tfR1h5QmlIQzVVZVktVdIB1wFBVV95cUxOaVc1dDl4c09XOUUycnVIRnRodWt1bmR2dV9qUlRXRXhIb1drdG9fWjJBNlF5eVFsd1FCc2RwNngwcjZZWHVic3hRbGtFSVBKRDJLSVNmMjdJdG5ETXNKeXVfVE9SaVRhWGtLRlNQZXM1UHlRNzRkd2tkZVFRdFNtQUZHT1lzYkhPa1FfVUxpMzN1TFpJdzZGSXNDZnNCUXRJN1JBZHBzN3VXWVAtOExOb2hXLUN6UWlGOVNuWWhvMUdOcDFDYkFGS2tfR1h5QmlIQzVVZVktVQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-01T09:38:45.964Z"
     }
   ]
 }
