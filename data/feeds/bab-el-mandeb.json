@@ -1,8 +1,115 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-09T05:51:39.858Z",
+  "last_fetch": "2026-09-09T10:39:51.465Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e9f25efdaa8cb134",
+      "timestamp": 1788948008000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi offensive on Bab el-Mandeb Strait threatens Red Sea shipping - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQN0thd0V5MjlpTGlDTHpkMTlreTJfazFRaGFQRmV4TTZ6U084LVNiTUhZOG9OUGtrWW8zLTJvTFBKUlpzV0lkMXY0SUhfMGFLazRwbHVReC1yMjJJekZqeW1xVzBxbEhLUGlOaDhsR1JVOUo2YmptOU1aM1laUHFpOW9hak51VXFya3hYWGh0clpDUVlyUlFzc1pIV0oxRDBPUDZfQm1JOGw2Y2l1VmFNWXBmTUN4bldlNFVwcTg4VWJiYnVVVHh6MzUyRdIBywFBVV95cUxQaUctaE8yYmZmQVVvdms4OWl4b0Z1S3lCNVBnNk11TEZERjBrcXBIVHA0bTFXdFY2SGUyblU4U1I2b1hHMng5dGZVaHBPNktHbWl1T2p4cS1EVUJBMk51YllLTDVib1lFS08wWGRRR1dKbEx0X1lTYXpOclFCT3d5dG",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQN0thd0V5MjlpTGlDTHpkMTlreTJfazFRaGFQRmV4TTZ6U084LVNiTUhZOG9OUGtrWW8zLTJvTFBKUlpzV0lkMXY0SUhfMGFLazRwbHVReC1yMjJJekZqeW1xVzBxbEhLUGlOaDhsR1JVOUo2YmptOU1aM1laUHFpOW9hak51VXFya3hYWGh0clpDUVlyUlFzc1pIV0oxRDBPUDZfQm1JOGw2Y2l1VmFNWXBmTUN4bldlNFVwcTg4VWJiYnVVVHh6MzUyRdIBywFBVV95cUxQaUctaE8yYmZmQVVvdms4OWl4b0Z1S3lCNVBnNk11TEZERjBrcXBIVHA0bTFXdFY2SGUyblU4U1I2b1hHMng5dGZVaHBPNktHbWl1T2p4cS1EVUJBMk51YllLTDVib1lFS08wWGRRR1dKbEx0X1lTYXpOclFCT3d5dGRzNGV4SWJoWHc0WElRSEJiQWlZcDJGNnFrTUZpeXJRcXNWNUJ1UEFpbWRPV1ZyaEw2N0cxN25LbUNPTFN5eXJTNkd0V1M1ZGF3bw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T10:39:50.189Z"
+    },
+    {
+      "id": "rss_3664b45c1e15811c",
+      "timestamp": 1788947259000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Oil hits $100 a barrel for first time since July after US and Houthi strikes - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YNWJtUDJmUXdQb2JLMUZpVFNTU3llRTdfSHkzQWVPMjdfb3lJM0RhaTJBWk51RDY4QWlQS3IzemgyeU1EcXBVMkRlVXlySHZzQWFRcFZ0eVFXdw?oc=5\" target=\"_blank\">Oil hits $100 a barrel for first time since July after US and Houthi strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YNWJtUDJmUXdQb2JLMUZpVFNTU3llRTdfSHkzQWVPMjdfb3lJM0RhaTJBWk51RDY4QWlQS3IzemgyeU1EcXBVMkRlVXlySHZzQWFRcFZ0eVFXdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T10:39:50.190Z"
+    },
+    {
+      "id": "rss_3e00101e2617af4e",
+      "timestamp": 1788942480000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why fighting between the Houthis and Saudis is a disaster for Trump - The Independent",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxORk95aVUxZExOSG1RY2JjZy10aFhpdHNMd3JxUGdoUk5LYURaNTI2c0FwZ2lQNmZiaDh2T1g0WlNERzBHZmZ6NXM2ZFJXaDc4RmQwWW5BWGRLNVFXNnVkTy1la1NJbDZENTgzYTVGWk0xZnRITGVYVHNHeHNmdXBPQ1hQaWZlWkxhazJCUmE1SFNqWEpLVUs4U0NtNWJSRXlFczZWM2pIa09GVTQ?oc=5\" target=\"_blank\">Why fighting between the Houthis and Saudis is a disaster for Trump</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Independent</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORk95aVUxZExOSG1RY2JjZy10aFhpdHNMd3JxUGdoUk5LYURaNTI2c0FwZ2lQNmZiaDh2T1g0WlNERzBHZmZ6NXM2ZFJXaDc4RmQwWW5BWGRLNVFXNnVkTy1la1NJbDZENTgzYTVGWk0xZnRITGVYVHNHeHNmdXBPQ1hQaWZlWkxhazJCUmE1SFNqWEpLVUs4U0NtNWJSRXlFczZWM2pIa09GVTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T10:39:50.190Z"
+    },
+    {
+      "id": "rss_b0aa8ec2397abc84",
+      "timestamp": 1788941542000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Trucks burn on Yemen-Saudi border after claimed Houthi attack - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBhY05xaTFmbGtob2tuendzUE5rWVl6Rmp6b3BnaHhPOUVlUDZ0VDJfQjVxMWswenRzcUZRS1o2b1lWc3dSTngxZVZTR3Y5S2tla2J6UVludE1QWFVS?oc=5\" target=\"_blank\">Trucks burn on Yemen-Saudi border after claimed Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBhY05xaTFmbGtob2tuendzUE5rWVl6Rmp6b3BnaHhPOUVlUDZ0VDJfQjVxMWswenRzcUZRS1o2b1lWc3dSTngxZVZTR3Y5S2tla2J6UVludE1QWFVS?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-09T10:39:50.190Z"
+    },
+    {
+      "id": "rss_ac5cf601ac02ed96",
+      "timestamp": 1788940627000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Vows Response After Worst Houthi Attack in Years - globalpost.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPUDVGOXhnal9fdWlnWmdSTmU1ei0wMWE0RmJIYl9uLXhDNjdCVEkyOXlnUGl5T3M1MktHc2pLcE5oSVlCV1RIT2IxNUxyU2RPUW5yaDkyajZUVi1PUTE1cUZpMkdLXzdoRy1sai12Z3ZyN3d5VVBLSmZTMDFUaHFvMFNkLW5IQUlURXkxcWNNU1RKUHo5bnBfNg?oc=5\" target=\"_blank\">Saudi Arabia Vows Response After Worst Houthi Attack in Years</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">globalpost.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUDVGOXhnal9fdWlnWmdSTmU1ei0wMWE0RmJIYl9uLXhDNjdCVEkyOXlnUGl5T3M1MktHc2pLcE5oSVlCV1RIT2IxNUxyU2RPUW5yaDkyajZUVi1PUTE1cUZpMkdLXzdoRy1sai12Z3ZyN3d5VVBLSmZTMDFUaHFvMFNkLW5IQUlURXkxcWNNU1RKUHo5bnBfNg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T10:39:50.189Z"
+    },
     {
       "id": "rss_af86fc34133b251c",
       "timestamp": 1788931895000,
@@ -25,6 +132,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-09T05:51:38.509Z"
+    },
+    {
+      "id": "rss_477641322c19332d",
+      "timestamp": 1788928140000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pakistan Pledges to Honor Security Pact If Saudi Arabia Attacked - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNRVQ5RWZYeXlQRHNzZWxtaXFfdVlGeVkwQWpXY0drbnBDaTJLSVBNRzNRVTNwTi03UVRqSUFmQU5JSWdDdUJENERtREdLTDVPZFhaZ0RTTDZPdzFmdGk4RzB6cnhaQ0tsT25IM3VmZ204RG82U1lXUXZJdWZ5YmR3SG9ha0ZYYkViZXp3LVJGWHJEd3FKNDJqQ1BZblN3Tm1mUEJaVHBMREd1YUs4bTFnSVNLWGhxZw?oc=5\" target=\"_blank\">Pakistan Pledges to Honor Security Pact If Saudi Arabia Attacked</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRVQ5RWZYeXlQRHNzZWxtaXFfdVlGeVkwQWpXY0drbnBDaTJLSVBNRzNRVTNwTi03UVRqSUFmQU5JSWdDdUJENERtREdLTDVPZFhaZ0RTTDZPdzFmdGk4RzB6cnhaQ0tsT25IM3VmZ204RG82U1lXUXZJdWZ5YmR3SG9ha0ZYYkViZXp3LVJGWHJEd3FKNDJqQ1BZblN3Tm1mUEJaVHBMREd1YUs4bTFnSVNLWGhxZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T10:39:50.190Z"
     },
     {
       "id": "rss_7516d3fddc05d252",
@@ -10929,134 +11057,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T07:02:31.349Z"
-    },
-    {
-      "id": "rss_03a9655a56de785f",
-      "timestamp": 1785750403000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Traffic slows and costs rise for Bab el-Mandeb and Hormuz transits - safety4sea",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOUUZpUjZabFJVT1hhVWs3UHZNUlJtdkNxOFBRUnFwZDBBSmk0WGVfYlBGWFZiS0hNVE8yOFhoSGJickVuVFNoaWh2MTdzVDFwdmtJaXF2WGVDS190Zk5iRldkdE83b01WR3pXSmowb1h1bUhtdlB2NV9GRkVBMHI2aGR6YzMzNjBEejhPQi1KMVZMWXVJ?oc=5\" target=\"_blank\">Traffic slows and costs rise for Bab el-Mandeb and Hormuz transits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">safety4sea</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUUZpUjZabFJVT1hhVWs3UHZNUlJtdkNxOFBRUnFwZDBBSmk0WGVfYlBGWFZiS0hNVE8yOFhoSGJickVuVFNoaWh2MTdzVDFwdmtJaXF2WGVDS190Zk5iRldkdE83b01WR3pXSmowb1h1bUhtdlB2NV9GRkVBMHI2aGR6YzMzNjBEejhPQi1KMVZMWXVJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T10:44:51.809Z"
-    },
-    {
-      "id": "rss_9a4988b7b7229968",
-      "timestamp": 1785745836000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi oil port sees busiest day since Houthi blockade: Report - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQTUzUmVkaW56N212QVhEcjdPWGJYVmt4bWQwTHk1Y29uT3FFRkVKLXMzX2dTZXJnNmpHUTlrUE1tOWhpQjVwdElkbWY4NDhQTFQ5d0FaU25TdDBJc05HU0tCUndsV0I5dUJlU0JBMjZValZ3RFdUWGxGNTRKcWduclVGcjhoOXFycUJrOEwxbXdqbDV1dWtNZGpTZjdFbFV5WldBOG16bXg?oc=5\" target=\"_blank\">Saudi oil port sees busiest day since Houthi blockade: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQTUzUmVkaW56N212QVhEcjdPWGJYVmt4bWQwTHk1Y29uT3FFRkVKLXMzX2dTZXJnNmpHUTlrUE1tOWhpQjVwdElkbWY4NDhQTFQ5d0FaU25TdDBJc05HU0tCUndsV0I5dUJlU0JBMjZValZ3RFdUWGxGNTRKcWduclVGcjhoOXFycUJrOEwxbXdqbDV1dWtNZGpTZjdFbFV5WldBOG16bXg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T09:06:51.091Z"
-    },
-    {
-      "id": "rss_65997161c6cfa9c3",
-      "timestamp": 1785742936000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Two tankers with Saudi oil exit Red Sea over weekend, data shows - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE1hZ2ZTVnBFVFJUdXk2RDA0R0pvcmY1VWhzb0gxdk0wMEdsMmQ4UGw3SnZROF9HeU90T3Y4MDZLSjlKWUh1WndDeFhuVUFObkhSbk5JeG9weTJHX01sQ0E?oc=5\" target=\"_blank\">Two tankers with Saudi oil exit Red Sea over weekend, data shows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1hZ2ZTVnBFVFJUdXk2RDA0R0pvcmY1VWhzb0gxdk0wMEdsMmQ4UGw3SnZROF9HeU90T3Y4MDZLSjlKWUh1WndDeFhuVUFObkhSbk5JeG9weTJHX01sQ0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T10:44:51.810Z"
-    },
-    {
-      "id": "rss_450a57c37f1b9828",
-      "timestamp": 1785737640000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Documents Reveal How Israel's Elbit Armed the United Arab Emirates - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwJBVV95cUxQS2t6YTFodzQ4blo3SHNSa0NtcnNuWldSYUNNYjdXSXJ6a1gyM1ZzS1B2NWRqdHJ6aGVvNDc0eFRWdFBtUzFjUnRtTl9kRXNuXzlsRXhpVTVwdW9obXhGcUU1UnZGYlJsOHk2T0tGc0Q2dzdqWjdURnlMS2Nzc0Z5REdTQ0pqVWE3UnBVX296RUxoSWhiVHh6bzg1RUhwYnNXekRUZmRBYXM3REFhemdqNWFUMFV2cDZQQV8teHZkTU95VTRqZzhaOHNHT2R5U2xSVHRrTjN6YTF3clU5Q05sQUc0NnNHOTViOUJ5cTBJZmMzLUI0WUlmU1BsR3NqcTNwenEteS1MZkg5RVU?oc=5\" target=\"_blank\">Documents Reveal How Israel's Elbit Armed the United Arab Emirates</",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQS2t6YTFodzQ4blo3SHNSa0NtcnNuWldSYUNNYjdXSXJ6a1gyM1ZzS1B2NWRqdHJ6aGVvNDc0eFRWdFBtUzFjUnRtTl9kRXNuXzlsRXhpVTVwdW9obXhGcUU1UnZGYlJsOHk2T0tGc0Q2dzdqWjdURnlMS2Nzc0Z5REdTQ0pqVWE3UnBVX296RUxoSWhiVHh6bzg1RUhwYnNXekRUZmRBYXM3REFhemdqNWFUMFV2cDZQQV8teHZkTU95VTRqZzhaOHNHT2R5U2xSVHRrTjN6YTF3clU5Q05sQUc0NnNHOTViOUJ5cTBJZmMzLUI0WUlmU1BsR3NqcTNwenEteS1MZkg5RVU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T10:44:51.810Z"
-    },
-    {
-      "id": "rss_db29e0d7be85c63f",
-      "timestamp": 1785737069000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni army repels Houthi attack in Taiz, kills 5 fighters - Yeni Safak English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTRveVRJbEhEZ2Q2YlFuaTM2UEp3LThTZ0ZOd0RUNkpjV2NRUmVHU0Z6MUJFWThaRzhqcGc1THRZMmo3a3VwdWlEa2s0d3d1RlhsbjN1ZS1TTHJVcVpvWko5eDlYZG5IUV95azcxR1gyQXRNTnFJTm1GSlUxNzk4MUJ5OXFrS2lZY1BXaXJYc0FHQnNOR19DU2ZKYmE?oc=5\" target=\"_blank\">Yemeni army repels Houthi attack in Taiz, kills 5 fighters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Safak English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTRveVRJbEhEZ2Q2YlFuaTM2UEp3LThTZ0ZOd0RUNkpjV2NRUmVHU0Z6MUJFWThaRzhqcGc1THRZMmo3a3VwdWlEa2s0d3d1RlhsbjN1ZS1TTHJVcVpvWko5eDlYZG5IUV95azcxR1gyQXRNTnFJTm1GSlUxNzk4MUJ5OXFrS2lZY1BXaXJYc0FHQnNOR19DU2ZKYmE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T07:40:14.682Z"
-    },
-    {
-      "id": "rss_d42ad6c44f334268",
-      "timestamp": 1785727782000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi deny Bab el-Mandeb toll plans - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOM25CazRoc0VVTGxFWExEQTZNSExJTEJuVmZ1RkUwczR0cFRvZlkwQXRlaFdrRmVOTjR5bWNNMjVBWkQtUzhsR1dGenFZLWx4SUo5SlJ1LVpWbkhBQ3dBd1YzN1V1cERzX2NteF81VTZ2WWZvM0JpY19keE5VeHNXTzhPNnVEQQ?oc=5\" target=\"_blank\">Houthi deny Bab el-Mandeb toll plans</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOM25CazRoc0VVTGxFWExEQTZNSExJTEJuVmZ1RkUwczR0cFRvZlkwQXRlaFdrRmVOTjR5bWNNMjVBWkQtUzhsR1dGenFZLWx4SUo5SlJ1LVpWbkhBQ3dBd1YzN1V1cERzX2NteF81VTZ2WWZvM0JpY19keE5VeHNXTzhPNnVEQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T04:41:24.725Z"
     }
   ]
 }
