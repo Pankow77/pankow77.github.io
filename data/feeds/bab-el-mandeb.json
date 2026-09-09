@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-09T18:27:09.663Z",
+  "last_fetch": "2026-09-09T21:04:25.172Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3479137a6c12e2de",
+      "timestamp": 1788981329000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack southern Saudi cities for second day, Saudi-led coalition says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkFZWWVmRkxOZ0dqSFdYQnh1dkpQTkZBbFdyU2Rydm1aMUo5eDFhNGpTaURVcmZLN25rS0s0ZUlEd1hFdEJ1TXJjT01mVzYtS1I1X2duVjhXTTFseHZOVGNWLURySnN3M0d1aGpVdUZLUXBDT0NMUjlhYXRHdGo4ekY0Q2stN3VyY09XSFRFZTdka1BhMDJnTFR2NzB2eVVzSW9ENV8wYi1jcWZhdEl0VjQxd1l2VXFI?oc=5\" target=\"_blank\">Houthis attack southern Saudi cities for second day, Saudi-led coalition says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVkFZWWVmRkxOZ0dqSFdYQnh1dkpQTkZBbFdyU2Rydm1aMUo5eDFhNGpTaURVcmZLN25rS0s0ZUlEd1hFdEJ1TXJjT01mVzYtS1I1X2duVjhXTTFseHZOVGNWLURySnN3M0d1aGpVdUZLUXBDT0NMUjlhYXRHdGo4ekY0Q2stN3VyY09XSFRFZTdka1BhMDJnTFR2NzB2eVVzSW9ENV8wYi1jcWZhdEl0VjQxd1l2VXFI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-09T21:04:23.729Z"
+    },
+    {
+      "id": "rss_e58ced7810fc585b",
+      "timestamp": 1788980830000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen Tilts Toward Full-Scale War as Saudi-Houthi Clashes Escalate - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOLU5yVkVDQ0YyVXZwNE1Md2kyOV9VSkN4VEhROUhlWExSMUFBS1puLWhtU240RGtWNTZDU3pIZzFnZVptVldyR1VkaG5rc056OWtXZXpxMFc1TEE0LUNIeFJBcmpMQjVVS1dDNDM3YjNhRjZHY2FiMVpsRWlxSktXUG9wWQ?oc=5\" target=\"_blank\">Yemen Tilts Toward Full-Scale War as Saudi-Houthi Clashes Escalate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOLU5yVkVDQ0YyVXZwNE1Md2kyOV9VSkN4VEhROUhlWExSMUFBS1puLWhtU240RGtWNTZDU3pIZzFnZVptVldyR1VkaG5rc056OWtXZXpxMFc1TEE0LUNIeFJBcmpMQjVVS1dDNDM3YjNhRjZHY2FiMVpsRWlxSktXUG9wWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T21:04:23.729Z"
+    },
+    {
+      "id": "rss_44f21afc5758cce8",
+      "timestamp": 1788978788000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks on Saudi Arabia could activate defence pact, Pakistan says - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPeHlQZlRhNnBNVkxCSzM4VkY4eVpZZWMxbUkweldlTkZDUk9oRjlHYVVSRnhQNHRMQ2pBcU43LXVSVXNDT0xnX1VDblJuc0lSVk0tYXNGNlo1M1FSaldIYnJ1OFhmWmpoOFJIQWgwV0E0N19OdTFZXzR0bVl6V0pLa0dGVjRyX292UlozdXo3eDBUSlM2bGhYcGpOb282N0JjS1NmSGo1ZHhzY3Zv0gGyAUFVX3lxTE9JcUFEUERnR2x6dndlTnNwc2RDcWxid2t5VVJGc3o1MHpLQlQ0Nkd4b1M2T3hMemg1WVFVYjJ4R2swV19kLVlRUFpYRkl1RHg1SlpwYkRsZTlYVEtYcHV0Vk11QVZNN3ZOby1NX1M1MklRbV9PQWlKQlZNWmxRZWFBVlZ2QV82b0EybmsxTEZKenI0cWZMM3BucG1UOThtcF",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPeHlQZlRhNnBNVkxCSzM4VkY4eVpZZWMxbUkweldlTkZDUk9oRjlHYVVSRnhQNHRMQ2pBcU43LXVSVXNDT0xnX1VDblJuc0lSVk0tYXNGNlo1M1FSaldIYnJ1OFhmWmpoOFJIQWgwV0E0N19OdTFZXzR0bVl6V0pLa0dGVjRyX292UlozdXo3eDBUSlM2bGhYcGpOb282N0JjS1NmSGo1ZHhzY3Zv0gGyAUFVX3lxTE9JcUFEUERnR2x6dndlTnNwc2RDcWxid2t5VVJGc3o1MHpLQlQ0Nkd4b1M2T3hMemg1WVFVYjJ4R2swV19kLVlRUFpYRkl1RHg1SlpwYkRsZTlYVEtYcHV0Vk11QVZNN3ZOby1NX1M1MklRbV9PQWlKQlZNWmxRZWFBVlZ2QV82b0EybmsxTEZKenI0cWZMM3BucG1UOThtcFZiZXRzNG9IOXJxbmVsZk9qSUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-09T21:04:23.729Z"
+    },
     {
       "id": "rss_5494066114e86454",
       "timestamp": 1788975497000,
@@ -10986,73 +11051,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T03:42:08.022Z"
-    },
-    {
-      "id": "rss_5668c41404077f0f",
-      "timestamp": 1785817665000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "UAE Business: Fresh ship attack, Red Sea diversions deepen Gulf shipping risks - Gulf Daily News (Bahrain)",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdXpMOVZ6V2RoTFpraW5fU2pJdlZUZVI2ZlhGdmRTRllxelFTV1dOZ0JsN0lJeElCUWNBTXR2VWl5QXV4S3hPSEdNempmM2NxamlRS2tjbG93amNld1FaT190T1pDSWpqbVRNYzFPdGltR2t3amhoT2dSLVVNdEZRTzFfVHoxeWlMUnpFVW90N1RqZXM1dXQwd0VKQ2RyUzNzSmVPcTFCMFVmMGs?oc=5\" target=\"_blank\">UAE Business: Fresh ship attack, Red Sea diversions deepen Gulf shipping risks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gulf Daily News (Bahrain)</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdXpMOVZ6V2RoTFpraW5fU2pJdlZUZVI2ZlhGdmRTRllxelFTV1dOZ0JsN0lJeElCUWNBTXR2VWl5QXV4S3hPSEdNempmM2NxamlRS2tjbG93amNld1FaT190T1pDSWpqbVRNYzFPdGltR2t3amhoT2dSLVVNdEZRTzFfVHoxeWlMUnpFVW90N1RqZXM1dXQwd0VKQ2RyUzNzSmVPcTFCMFVmMGs?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-04T04:33:56.446Z"
-    },
-    {
-      "id": "rss_37f640c49c352a41",
-      "timestamp": 1785809907000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Shipping traffic at key Gulf waterways little changed on uncertain peace talks - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUJTODg3dW1ZWmNmR3Qyd2dmUC10ZHRicERHVE83ZUdyU19Cbkl4SU8wcHFPUTh4WXFyTWYwNUpFZTNETU5TMkNzZUIzNlJ2VVA0NVllajd3b0RKRmstRUFOZTVGeGpfLUktcDIxdVdVVU5rc0JSSnExbHRhTlJDR090ZnZLMWg0QTU1c2dwQnFaSWpPT3ZOY0RzNEJDTjRTRE1IZGVhbW41VzBKRkl6dUJJdmpLMHJo?oc=5\" target=\"_blank\">Shipping traffic at key Gulf waterways little changed on uncertain peace talks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQLUJTODg3dW1ZWmNmR3Qyd2dmUC10ZHRicERHVE83ZUdyU19Cbkl4SU8wcHFPUTh4WXFyTWYwNUpFZTNETU5TMkNzZUIzNlJ2VVA0NVllajd3b0RKRmstRUFOZTVGeGpfLUktcDIxdVdVVU5rc0JSSnExbHRhTlJDR090ZnZLMWg0QTU1c2dwQnFaSWpPT3ZOY0RzNEJDTjRTRE1IZGVhbW41VzBKRkl6dUJJdmpLMHJo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-04T04:33:55.054Z"
-    },
-    {
-      "id": "rss_25708d8ae45c2af4",
-      "timestamp": 1785790601000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPY2l2cHlta0NEYnRmX1RKdFZsdUNWVHRPRll1Z0FlUlU1YVdrVk93bDVpWGFmWUhsd0dPUnd0cjhUTWRZY1dZOW4tZDlvcDc5eTcxS2xDSzRhY3EwVDRuejJGd19VSFlLNzV2SExnQkw0cUoya3pLNVBBZzh6cF82bllVY3Y2Znk5dFQ5SG4tb01mcWYyS1R3bkZ3?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPY2l2cHlta0NEYnRmX1RKdFZsdUNWVHRPRll1Z0FlUlU1YVdrVk93bDVpWGFmWUhsd0dPUnd0cjhUTWRZY1dZOW4tZDlvcDc5eTcxS2xDSzRhY3EwVDRuejJGd19VSFlLNzV2SExnQkw0cUoya3pLNVBBZzh6cF82bllVY3Y2Znk5dFQ5SG4tb01mcWYyS1R3bkZ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-03T21:24:40.037Z"
     }
   ]
 }
