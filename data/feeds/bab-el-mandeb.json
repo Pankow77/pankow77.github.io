@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-09T21:04:25.172Z",
+  "last_fetch": "2026-09-09T23:24:35.154Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9e955877fee6556b",
+      "timestamp": 1788992640000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hostilities between Saudi and Houthi rebels escalate in Yemen - Semafor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQNWxvWkpkTkRuc0VUbFo5b0RES1RWbHVWWmV5NHB6MGdEMy0wM3Z2ZmV3RmlJdC1aVmlJdEpvTTd4M3loVlU2OW5Makh6SXYxeXBGSjNBbFppOTBkWmdsQ1NOVm1JQmZma2ptRTVobHV3Umhyc3daYi1vQXRrNTNqWmJZWHF0VnVYZXY0Z1Z0TFBIU0lXdXM2VGlLRDN6VVBLaVBCb2lXdw?oc=5\" target=\"_blank\">Hostilities between Saudi and Houthi rebels escalate in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Semafor</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNWxvWkpkTkRuc0VUbFo5b0RES1RWbHVWWmV5NHB6MGdEMy0wM3Z2ZmV3RmlJdC1aVmlJdEpvTTd4M3loVlU2OW5Makh6SXYxeXBGSjNBbFppOTBkWmdsQ1NOVm1JQmZma2ptRTVobHV3Umhyc3daYi1vQXRrNTNqWmJZWHF0VnVYZXY0Z1Z0TFBIU0lXdXM2VGlLRDN6VVBLaVBCb2lXdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-09T23:24:33.742Z"
+    },
     {
       "id": "rss_3479137a6c12e2de",
       "timestamp": 1788981329000,
@@ -11030,27 +11051,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-04T11:16:56.414Z"
-    },
-    {
-      "id": "rss_b467bc30a6b8d8a9",
-      "timestamp": 1785838800000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Who really won Red Sea crisis? | Daily Sabah - Daily Sabah",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE1wU0FLaGVMOUVDbjdxNFZvb2ZfcC1oTExPMXVFX3M2VVJiMGVTa252amhwTFgySkFPUFZzRGpMY2tKVFpMV1d5SXREdUotREM0ODg3WE1Ub3oyZGFodE9sTW1xVF9wY3BjdTRLcGJxeThPcElSV0VQRzZ30gF_QVVfeXFMT2lyOExYSkZfaWxtc1U0MXZQOEVrQUhYWjg1dGdfOEtFSlgzVTdSSkMtWXpMNjB3bHpURjRvajJ3RmxxaDZ3NmFNVXlOQWZDZG1zNWp2SDB5cVBxU3pPeFVoS1VTTEFXTDhfRmpLdVJfZERWWXcwVk45bE1pdm04Yw?oc=5\" target=\"_blank\">Who really won Red Sea crisis? | Daily Sabah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily S",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1wU0FLaGVMOUVDbjdxNFZvb2ZfcC1oTExPMXVFX3M2VVJiMGVTa252amhwTFgySkFPUFZzRGpMY2tKVFpMV1d5SXREdUotREM0ODg3WE1Ub3oyZGFodE9sTW1xVF9wY3BjdTRLcGJxeThPcElSV0VQRzZ30gF_QVVfeXFMT2lyOExYSkZfaWxtc1U0MXZQOEVrQUhYWjg1dGdfOEtFSlgzVTdSSkMtWXpMNjB3bHpURjRvajJ3RmxxaDZ3NmFNVXlOQWZDZG1zNWp2SDB5cVBxU3pPeFVoS1VTTEFXTDhfRmpLdVJfZERWWXcwVk45bE1pdm04Yw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T03:42:08.022Z"
     }
   ]
 }
