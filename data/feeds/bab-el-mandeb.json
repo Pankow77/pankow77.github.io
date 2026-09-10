@@ -1,8 +1,94 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-10T18:53:56.260Z",
+  "last_fetch": "2026-09-10T21:20:42.031Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ae1f2795ca5dfdea",
+      "timestamp": 1789074725000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-aligned fighters capture Yemen port near vital global trade route - KRCR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPUjJ6SkJNOUhGUmRyZGV5bm4yODlHWEJCYTR0NFcwb0VSV0JUYndHOXFlc05YM1ppZ0l6cUI1TlNnc01OZGxiZk1SMFR3bk02dXJnN3Z4SkE5ekEtSEtydDIwZk9YVl9QQnhTVTJETzhZSEg4RVhZV2xMWVlEMEtDcGM3dFhLZFA4WGxIR1BYUUlmZUhPeEdNLS1aempDX2ZiMGZteTVzc1RMaTBBNXNNNVVYM3JoUFdnc0NoWDZkSC04RDJHUmdLUHA3RmpuWldkbjdQVXM1QkJkZw?oc=5\" target=\"_blank\">Iran-aligned fighters capture Yemen port near vital global trade route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KRCR</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPUjJ6SkJNOUhGUmRyZGV5bm4yODlHWEJCYTR0NFcwb0VSV0JUYndHOXFlc05YM1ppZ0l6cUI1TlNnc01OZGxiZk1SMFR3bk02dXJnN3Z4SkE5ekEtSEtydDIwZk9YVl9QQnhTVTJETzhZSEg4RVhZV2xMWVlEMEtDcGM3dFhLZFA4WGxIR1BYUUlmZUhPeEdNLS1aempDX2ZiMGZteTVzc1RMaTBBNXNNNVVYM3JoUFdnc0NoWDZkSC04RDJHUmdLUHA3RmpuWldkbjdQVXM1QkJkZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-10T21:20:40.581Z"
+    },
+    {
+      "id": "rss_60453bc40ffd579b",
+      "timestamp": 1789072857000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis eye 'full control' of Bab el-Mandeb, as Saudi-backed forces reel from offensive - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQbEtRUW1LaGpneU9hWU0tc2dJU2xqZG5fLXZJLWE1NG5FMFRDV01NVWM4Vl9DSmZ1cDlTN05HU0EwMDRXVkNJMklvamVuS1NtbjFkbDEzbnVLb0lXZ1NBVnQ5UDlpVHN1Ym9rcXRfQVF0aklCZ2JkbF9BaWJZUGE1Y1NOdEI4MExlcmZDWU1IcG5ESW9NVHNmU1hVU0NqS2FqSGJsOTZIQkFRaEpr?oc=5\" target=\"_blank\">Houthis eye 'full control' of Bab el-Mandeb, as Saudi-backed forces reel from offensive</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbEtRUW1LaGpneU9hWU0tc2dJU2xqZG5fLXZJLWE1NG5FMFRDV01NVWM4Vl9DSmZ1cDlTN05HU0EwMDRXVkNJMklvamVuS1NtbjFkbDEzbnVLb0lXZ1NBVnQ5UDlpVHN1Ym9rcXRfQVF0aklCZ2JkbF9BaWJZUGE1Y1NOdEI4MExlcmZDWU1IcG5ESW9NVHNmU1hVU0NqS2FqSGJsOTZIQkFRaEpr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-10T21:20:40.582Z"
+    },
+    {
+      "id": "rss_78fe57b1040418f4",
+      "timestamp": 1789072206000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Bab el-Mandeb Problem - Foreign Policy",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQT1dfT18yNUhjcHRqRzZCVldUT3YwZThrTUM1Q2dSeE9vSmNVTVlBYWJwamU4TnNiOE1CUnlnX19VMWEwVVpEdW9qNlkzMzhaRVdJV0hkeWpHcXEzTXpIMVBEVVVDM0x4aWFpNS1PQ3JmNFExWUxoQ3k4b1Znd1BfQVozSWdmNlVQU0UzMDhWVTQ3SHBia24wR09jNXVDZnZBM3ZhanJiemp1ZjM2R0doTGNFZUVkUk0?oc=5\" target=\"_blank\">The Bab el-Mandeb Problem</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foreign Policy</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQT1dfT18yNUhjcHRqRzZCVldUT3YwZThrTUM1Q2dSeE9vSmNVTVlBYWJwamU4TnNiOE1CUnlnX19VMWEwVVpEdW9qNlkzMzhaRVdJV0hkeWpHcXEzTXpIMVBEVVVDM0x4aWFpNS1PQ3JmNFExWUxoQ3k4b1Znd1BfQVozSWdmNlVQU0UzMDhWVTQ3SHBia24wR09jNXVDZnZBM3ZhanJiemp1ZjM2R0doTGNFZUVkUk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-10T21:20:40.582Z"
+    },
+    {
+      "id": "rss_3c092117a7d89a01",
+      "timestamp": 1789064916000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis seize port facing Africa as control of vital Red Sea route comes under threat - Business Insider Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQUF6dm1PQkg4U28tc2ZzWnJqZFNYVUhKSVNFUzlYXzA4cmwyTkhEMTM0Ym9zU1JnN1E4NjVRaHN1SUltOVhubnUxSC0wVVBmaEE4OWdQa1VzekpWY05xdXlqdm1HZ19tdGFwOFJyVDFwbDdlcGJtbk9GbWV3UktTWHlrbEx1by1PZmt5YVJlcGlOejRHSlUta3dwcDFpajNEQUVmOE41RGZDaU9DMGhkQWRaelBZLTNYb0FUV20zRHBFREpFQWR0Q1hqaXR1OG56RjBock15ajdyZw?oc=5\" target=\"_blank\">Houthis seize port facing Africa as control of vital Red Sea route comes under threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Business I",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQUF6dm1PQkg4U28tc2ZzWnJqZFNYVUhKSVNFUzlYXzA4cmwyTkhEMTM0Ym9zU1JnN1E4NjVRaHN1SUltOVhubnUxSC0wVVBmaEE4OWdQa1VzekpWY05xdXlqdm1HZ19tdGFwOFJyVDFwbDdlcGJtbk9GbWV3UktTWHlrbEx1by1PZmt5YVJlcGlOejRHSlUta3dwcDFpajNEQUVmOE41RGZDaU9DMGhkQWRaelBZLTNYb0FUV20zRHBFREpFQWR0Q1hqaXR1OG56RjBock15ajdyZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-10T21:20:40.583Z"
+    },
     {
       "id": "rss_4d80ec5dd6a2a265",
       "timestamp": 1789057856000,
@@ -10928,96 +11014,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T09:17:42.626Z"
-    },
-    {
-      "id": "rss_3596fd5fbdb08661",
-      "timestamp": 1785914160000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis strike Saudi oil tanker as Red Sea conflict escalates - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OT1RwT2hnRWZkTXdiT3UzZGhXYWNUVVBkUUE1cDZ4RndwQmYxUXJXQ1VGSm1Qeko0eXpMWHg2b25nR1hlWjJod3hPZ1pxVU1QNGpaSWRR?oc=5\" target=\"_blank\">Houthis strike Saudi oil tanker as Red Sea conflict escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OT1RwT2hnRWZkTXdiT3UzZGhXYWNUVVBkUUE1cDZ4RndwQmYxUXJXQ1VGSm1Qeko0eXpMWHg2b25nR1hlWjJod3hPZ1pxVU1QNGpaSWRR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T09:17:42.627Z"
-    },
-    {
-      "id": "rss_47a9394284058f44",
-      "timestamp": 1785913658000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Indian vessel sunk in suspected Houthi attack - Splash247",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFBYMWFWeDBHbURYNTMtbXl4WEZjVExpWGZfNFN1bW00cVJGSnhPcWRzc2tjQ1IzOEl5SXB6WGdJaWZlZ2hzdXBRSWJmbmZCMF80dHBRV2JLVUlma2RJclJwVTF0QWNwS3Z6SkJjQjZvajZVRVExMzJZ?oc=5\" target=\"_blank\">Indian vessel sunk in suspected Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Splash247</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBYMWFWeDBHbURYNTMtbXl4WEZjVExpWGZfNFN1bW00cVJGSnhPcWRzc2tjQ1IzOEl5SXB6WGdJaWZlZ2hzdXBRSWJmbmZCMF80dHBRV2JLVUlma2RJclJwVTF0QWNwS3Z6SkJjQjZvajZVRVExMzJZ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T09:17:42.626Z"
-    },
-    {
-      "id": "rss_1d89cc670e1af2bd",
-      "timestamp": 1785906000000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Can Break the Houthis’ Grip on the Red Sea - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdXREN002c3Foa2RSNXBFRWpvazl4Y2VUTjd0SU1ibko3eWg2MXcwT0doOWtzWEJuX2I2Mzh2UU00MjMzdDh6ZGtVdFlXWUV3OEhhSVRZdlNBUUJreDFfdmlNaVI3YmZLNWVDeTZhNjhLQmIzRVExUDBIdWlkZG1rYm1wdFdadUJqZFBhbUhXSjVmZFcxVjlGSGx5Wm1fa1pYZkhfSzM1NG4?oc=5\" target=\"_blank\">Saudi Arabia Can Break the Houthis’ Grip on the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdXREN002c3Foa2RSNXBFRWpvazl4Y2VUTjd0SU1ibko3eWg2MXcwT0doOWtzWEJuX2I2Mzh2UU00MjMzdDh6ZGtVdFlXWUV3OEhhSVRZdlNBUUJreDFfdmlNaVI3YmZLNWVDeTZhNjhLQmIzRVExUDBIdWlkZG1rYm1wdFdadUJqZFBhbUhXSjVmZFcxVjlGSGx5Wm1fa1pYZkhfSzM1NG4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T06:23:11.263Z"
-    },
-    {
-      "id": "rss_35d276f857683d60",
-      "timestamp": 1785905100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Suspends Najran Airport Operations After Houthis Claim Drone Strike - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWEhPZXA0eXNzUXZrNGZ0eWlmeVhOQVFIck1WM2x2NjFkMGxVMVlKMWFTUEF4ZE9QaWZlbXptLUpOcWM1eGdrSjFXeXJqMFRZbDRZbFJRZ29VTFl6Z1hfWFEteUNycDJUdlFsaGdxUDN6RENMVUN1UmJwZ2wzVjZOWDFEVVhfaUg2RHBtUHFxN3BXS0FWYjUzdFZaLWtndmZteXR4bWpjRHpxcDdXczZnN2RrZWtoamVyWENWclJTNWVZdw?oc=5\" target=\"_blank\">Saudi Arabia Suspends Najran Airport Operations After Houthis Claim Drone Strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNWEhPZXA0eXNzUXZrNGZ0eWlmeVhOQVFIck1WM2x2NjFkMGxVMVlKMWFTUEF4ZE9QaWZlbXptLUpOcWM1eGdrSjFXeXJqMFRZbDRZbFJRZ29VTFl6Z1hfWFEteUNycDJUdlFsaGdxUDN6RENMVUN1UmJwZ2wzVjZOWDFEVVhfaUg2RHBtUHFxN3BXS0FWYjUzdFZaLWtndmZteXR4bWpjRHpxcDdXczZnN2RrZWtoamVyWENWclJTNWVZdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T06:23:11.265Z"
     }
   ]
 }
