@@ -1,8 +1,77 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-11T01:18:05.368Z",
+  "last_fetch": "2026-09-11T06:20:39.159Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2e775f573fb2c9ee",
+      "timestamp": 1789105221000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels seize strategic Red Sea port in Yemen - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9TWk9Nd1hrUGtuUEZGdHVTSWtfWWtKTkxuWUlSUENHYnd6dy1acXBuM3diWU5SZTcwbFRYSjRGeG82SnV1NUw5eUVXMlFOcHhCcmNSWWEtZURFblB2RGdDQ2RKOFNOWTBUMkhTRjVKd1Y?oc=5\" target=\"_blank\">Iran-backed Houthi rebels seize strategic Red Sea port in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9TWk9Nd1hrUGtuUEZGdHVTSWtfWWtKTkxuWUlSUENHYnd6dy1acXBuM3diWU5SZTcwbFRYSjRGeG82SnV1NUw5eUVXMlFOcHhCcmNSWWEtZURFblB2RGdDQ2RKOFNOWTBUMkhTRjVKd1Y?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-11T06:20:37.731Z"
+    },
+    {
+      "id": "rss_e490fb7d6e44f029",
+      "timestamp": 1789080900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOUmhxMGpwcUp4ekxXQnBpSUMxazB5dnZfb2JVQThIb0c4Tk15TklsNDhyVmEwMHFTV3kwWm5JUExnbld4SkVIQ25jakVoRzNNR1UtLW80R3FfakwzVTVTRnZ3OGJCTGNYUWh0VzFHd1FQTUktQ1lPZEJUeWxDcWMyalBDazVXZGc?oc=5\" target=\"_blank\">Yemen's Iran-backed Houthi rebels seize strategic Red Sea port city of Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUmhxMGpwcUp4ekxXQnBpSUMxazB5dnZfb2JVQThIb0c4Tk15TklsNDhyVmEwMHFTV3kwWm5JUExnbld4SkVIQ25jakVoRzNNR1UtLW80R3FfakwzVTVTRnZ3OGJCTGNYUWh0VzFHd1FQTUktQ1lPZEJUeWxDcWMyalBDazVXZGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-11T06:20:37.732Z"
+    },
+    {
+      "id": "rss_d1dde9bff939b641",
+      "timestamp": 1789080002000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthis capture Red Sea port, putting more pressure on oil markets - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPX0NwRWk5d0hzV0h0N2VVeHhtS1ZIMVRyQkFyQjNUOUJhZVNocXVfTlJmSnBMcGlQbmdGTEtwa2VsUllqS2tBdjZOWkRIcXFoODVBZXlWdWIwaEN3TUI2dDhqS2VtU01nUkJKMV9MbThsS1puOUQxYV9aZFZjSEVxbFNlT2l1X0tQU010WGlGUjZILUFiQ1ZkeXJfQ0d2M3BrRFN6Z2EzSlFsT1RKSmZNQw?oc=5\" target=\"_blank\">Iran-backed Houthis capture Red Sea port, putting more pressure on oil markets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PBS</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPX0NwRWk5d0hzV0h0N2VVeHhtS1ZIMVRyQkFyQjNUOUJhZVNocXVfTlJmSnBMcGlQbmdGTEtwa2VsUllqS2tBdjZOWkRIcXFoODVBZXlWdWIwaEN3TUI2dDhqS2VtU01nUkJKMV9MbThsS1puOUQxYV9aZFZjSEVxbFNlT2l1X0tQU010WGlGUjZILUFiQ1ZkeXJfQ0d2M3BrRFN6Z2EzSlFsT1RKSmZNQw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-11T06:20:37.731Z"
+    },
     {
       "id": "rss_ae1f2795ca5dfdea",
       "timestamp": 1789074725000,
@@ -67,6 +136,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-10T21:20:40.582Z"
+    },
+    {
+      "id": "rss_962c2b88b12f028b",
+      "timestamp": 1789067036000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Iran-backed terror group’s latest territorial grab threatens second global shipping chokepoint - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUlIxdDYzYjIycGNaYXl1SGI4cTc4Vk1fNEo4TVFCMEtuMzNtQmI3SVo1X1FyOUdFaGJHb1ZMZld1TjJ0UlRtTlFhTmxvV3lKTU9qTTRmWURpNUg0WTl1NkNWY1ZnSGR3cUJVUTVtZEZndVZKdG1TNUZlQWtISlpHN2dzTWtLUzFWR0QxeXFMTU9pUW9zb1NaY0FkSDBlZkstdGFsSjgxNHZWUUV3YUpCeFRIbk5icmt5RDk0STRWbjjSAcYBQVVfeXFMUEstV0FXUlJKMmpIT2lWc1h4QWZSUW5sQjMtOTBLMUxtQldxN1JpVWREVXJnNFlvSkRrdnk0bjlTbzJ5OWM2MGNjQ0ZleEJkdk5Cak5OR18ya0Nkbk41MVo4Y0RSX2NKblZGMFhlaDIxelU0QTFzNXV5am9WTTdERmctdUU0RVVjd1JlYy",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUlIxdDYzYjIycGNaYXl1SGI4cTc4Vk1fNEo4TVFCMEtuMzNtQmI3SVo1X1FyOUdFaGJHb1ZMZld1TjJ0UlRtTlFhTmxvV3lKTU9qTTRmWURpNUg0WTl1NkNWY1ZnSGR3cUJVUTVtZEZndVZKdG1TNUZlQWtISlpHN2dzTWtLUzFWR0QxeXFMTU9pUW9zb1NaY0FkSDBlZkstdGFsSjgxNHZWUUV3YUpCeFRIbk5icmt5RDk0STRWbjjSAcYBQVVfeXFMUEstV0FXUlJKMmpIT2lWc1h4QWZSUW5sQjMtOTBLMUxtQldxN1JpVWREVXJnNFlvSkRrdnk0bjlTbzJ5OWM2MGNjQ0ZleEJkdk5Cak5OR18ya0Nkbk41MVo4Y0RSX2NKblZGMFhlaDIxelU0QTFzNXV5am9WTTdERmctdUU0RVVjd1JlYy1HTk1OenhSVlJyd2s3dTBrTmRidzZYVXJoUVFYSF9KbkxVM0lJamJ2ZzBmeTNITWwzQkU4OHJGQ3pB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-11T06:20:37.732Z"
     },
     {
       "id": "rss_3c092117a7d89a01",
@@ -10919,98 +11012,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-05T11:35:31.532Z"
-    },
-    {
-      "id": "rss_ce1d2e0eb1f222c2",
-      "timestamp": 1785920576000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen extends solidarity with India after Houthi attack sinks Indian merchant vessel in Red Sea - firstpost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVEZSRmMtTHV4dTBqTGZsaFRRbG9Cbm9jNjZwaktqZ0h1ME84dFBwQmx0Mk5XeDNZZEFQbExOM2pMNExqNFRsVjlrbE54b0k3cFFTVG9nYnc4aFhhTnFuamFmd0k1VENsZVhQRW5BQmd5LVBYV3JOR29pdEtjUDE5RXFNT3Vya0FJamprLWVrZXpNTnl6aFkxdXhLTDdVS0F3ZUZiMzdvM3JHVU9iRmF0RElMT2VRYXNrT0kxajVBdmFTTDRHaU5kMy1hVTZxSzUtdTlLNkp0ZTg2eUtGNHfSAd4BQVVfeXFMUFRGUkZjLUx1eHUwakxmbGhUUWxvQm5vYzY2cGpLamdIdTBPOHRQcEJsdDJOV3gzWWRBUGxMTjNqTDRMajRUbFY5a2xOeG9JN3BRU1RvZ2J3OGhYYU5xbmphZndJNVRDbGVYUEVuQU",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQVEZSRmMtTHV4dTBqTGZsaFRRbG9Cbm9jNjZwaktqZ0h1ME84dFBwQmx0Mk5XeDNZZEFQbExOM2pMNExqNFRsVjlrbE54b0k3cFFTVG9nYnc4aFhhTnFuamFmd0k1VENsZVhQRW5BQmd5LVBYV3JOR29pdEtjUDE5RXFNT3Vya0FJamprLWVrZXpNTnl6aFkxdXhLTDdVS0F3ZUZiMzdvM3JHVU9iRmF0RElMT2VRYXNrT0kxajVBdmFTTDRHaU5kMy1hVTZxSzUtdTlLNkp0ZTg2eUtGNHfSAd4BQVVfeXFMUFRGUkZjLUx1eHUwakxmbGhUUWxvQm5vYzY2cGpLamdIdTBPOHRQcEJsdDJOV3gzWWRBUGxMTjNqTDRMajRUbFY5a2xOeG9JN3BRU1RvZ2J3OGhYYU5xbmphZndJNVRDbGVYUEVuQUJneS1QWFdyTkdvaXRLY1AxOUVxTU91cmtBSWpqay1la2V6TU55emhZMXV4S0w3VUtBd2VGYjM3bzNyR1VPYkZhdERJTE9lUWFza09JMWo1QXZhU0w0R2lOZDMtYVU2cUs1LXU5SzZKdGU4NnlLRjR3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T11:35:31.532Z"
-    },
-    {
-      "id": "rss_88fe7490ab7dc8ce",
-      "timestamp": 1785919761000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "India condemns Red Sea attack after cargo ship sinks near Yemen; 13 Indian sailors rescued - connectedtoindia.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNklmV0ZWZnFQMmNnSHAzUmU0Rk9XeDFRRXR2Y1FRRkgtSUxNWjZtcXhiU3psaTlpMGdUTUxXNkNSTEZPaExOUldUd1hYSGxLUnJHTzBIUkw3TmtheFg1UmJCcjMzM0ZpOXl1UGJYQ3VfaENJU29xR2ZlQU5tckNUU3JMOHAtaDBFY3dkZ2g4ZUE0blphZ0JKd1lBTlpCbG80LWczeWZfVk9oVU1CRm5neHBfTHBWQWZadGVGanNodkM?oc=5\" target=\"_blank\">India condemns Red Sea attack after cargo ship sinks near Yemen; 13 Indian sailors rescued</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">connectedtoindia.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNklmV0ZWZnFQMmNnSHAzUmU0Rk9XeDFRRXR2Y1FRRkgtSUxNWjZtcXhiU3psaTlpMGdUTUxXNkNSTEZPaExOUldUd1hYSGxLUnJHTzBIUkw3TmtheFg1UmJCcjMzM0ZpOXl1UGJYQ3VfaENJU29xR2ZlQU5tckNUU3JMOHAtaDBFY3dkZ2g4ZUE0blphZ0JKd1lBTlpCbG80LWczeWZfVk9oVU1CRm5neHBfTHBWQWZadGVGanNodkM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T09:17:42.628Z"
-    },
-    {
-      "id": "rss_ff51bc5566da82ac",
-      "timestamp": 1785919619000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi claim strike on Saudi tanker in the Red Sea - Seatrade Maritime News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNUll3T25qT1A5bXR6WDR6SDVUbEdBTWRXYWdrRi1UTENHQ3U5ZjJSeWdnNUxyemR0anlaYkhSN3NGMzFLWDVRdU9uZkppbzRHWkR0QmRuSl9vSlZodUYtampFRV9qbURQblgtUTlVeDJYM3Q2STRLb1FPZktGeUVwZ1ZQd09kUmhhSEhJVHNXaC1FNk4wX2dn?oc=5\" target=\"_blank\">Houthi claim strike on Saudi tanker in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seatrade Maritime News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUll3T25qT1A5bXR6WDR6SDVUbEdBTWRXYWdrRi1UTENHQ3U5ZjJSeWdnNUxyemR0anlaYkhSN3NGMzFLWDVRdU9uZkppbzRHWkR0QmRuSl9vSlZodUYtampFRV9qbURQblgtUTlVeDJYM3Q2STRLb1FPZktGeUVwZ1ZQd09kUmhhSEhJVHNXaC1FNk4wX2dn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T18:01:35.107Z"
-    },
-    {
-      "id": "rss_ce03bb4c7c41684c",
-      "timestamp": 1785918569000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen : Houthis Claim Attack on Saudi Oil Tanker in Red Sea - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE84Z2tLeUhZR0kzRDZIamhBNlJlenJIOG0zMEs4MDdkZUJaUWx1Z1NMNXo4STNxN2JzT3FuR0dPbi1hQkotMDhYUW1HMkpkSHdmVDNSR2d2eGlQdw?oc=5\" target=\"_blank\">Yemen : Houthis Claim Attack on Saudi Oil Tanker in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE84Z2tLeUhZR0kzRDZIamhBNlJlenJIOG0zMEs4MDdkZUJaUWx1Z1NMNXo4STNxN2JzT3FuR0dPbi1hQkotMDhYUW1HMkpkSHdmVDNSR2d2eGlQdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-05T09:17:42.627Z"
     }
   ]
 }
