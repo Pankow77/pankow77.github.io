@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-12T20:05:40.232Z",
+  "last_fetch": "2026-09-12T22:26:39.394Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-12T20:05:38.133Z"
+    },
+    {
+      "id": "rss_c312bd2457762659",
+      "timestamp": 1789234080000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia has few options as it faces mounting threats from Iran and its allies - Politico",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlRPek9QeV9wQWVUcFBteFBDVmhpRlBNems1UGtBbGE1N25IeTJHY09adVcxV3BER2Fjc1VKV21fRmlLLThfbnhXNjE5a2FRSFRSVWxWellZeDZIb0RuOEU3cjNEbkZwRWcya0hHeWxDNXE3WlFwOFVNLWNoY3k3dmVwaUFHck1Ybk1RZDNfZWRwc3JQUWx5cHVNZ2lYTHhRN0ZfbHEzckFuU3dld2pxcEdPbkFuZUZWZUtUNktTSzhMYTZsQUpfMkd5MUw?oc=5\" target=\"_blank\">Saudi Arabia has few options as it faces mounting threats from Iran and its allies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNWlRPek9QeV9wQWVUcFBteFBDVmhpRlBNems1UGtBbGE1N25IeTJHY09adVcxV3BER2Fjc1VKV21fRmlLLThfbnhXNjE5a2FRSFRSVWxWellZeDZIb0RuOEU3cjNEbkZwRWcya0hHeWxDNXE3WlFwOFVNLWNoY3k3dmVwaUFHck1Ybk1RZDNfZWRwc3JQUWx5cHVNZ2lYTHhRN0ZfbHEzckFuU3dld2pxcEdPbkFuZUZWZUtUNktTSzhMYTZsQUpfMkd5MUw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T22:26:37.877Z"
     },
     {
       "id": "rss_9b5570bc24b32e83",
@@ -245,6 +268,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-12T11:55:35.158Z"
+    },
+    {
+      "id": "rss_e36118ca696d1fbe",
+      "timestamp": 1789205730000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis Seize Strategic Red Sea Island, Threatening Global Shipping, Saudi Oil Exports - NDTV Profit",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxPMlMxN0xwczd2T0NiMlVRSVBGdU9ySFBYcndmb25uQXJaNmhmbEx0c2xoMzRSYWI4NUxsQ09Mb1phbWFmMEMwSGFqWDM0bEJnU1R0eGVzQ1dlLTNIb1ZkT0hPTFhMUmFGT1dKS0VDT0FNbi1HQ3VqUFoyXzdTbFN6VE1ENWRGU1V2X25udnZVYXBnSmRNQmphZU9FN19FVk8yMkdpU1pxS05iTl9aRmRWSF9WVmlxQ0dHdkdjbmIyYjdoRUxE0gHMAUFVX3lxTE1EVjFfMklMTjFTVzh0cXV2RkxzS0hQWURiWnNuSVZTTF9XT3FubEpMZTBoZVJHODBmSzZ4cjF3Mk1pSEVNbWRCc2FYSDIzZUs1ZmJvWWV3eU1ySktSckdySlAwQzVhV2JRYzBNS1RwaWVyZE9INUk3clNacW5rTHN2RWJ4U3R6Mz",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMlMxN0xwczd2T0NiMlVRSVBGdU9ySFBYcndmb25uQXJaNmhmbEx0c2xoMzRSYWI4NUxsQ09Mb1phbWFmMEMwSGFqWDM0bEJnU1R0eGVzQ1dlLTNIb1ZkT0hPTFhMUmFGT1dKS0VDT0FNbi1HQ3VqUFoyXzdTbFN6VE1ENWRGU1V2X25udnZVYXBnSmRNQmphZU9FN19FVk8yMkdpU1pxS05iTl9aRmRWSF9WVmlxQ0dHdkdjbmIyYjdoRUxE0gHMAUFVX3lxTE1EVjFfMklMTjFTVzh0cXV2RkxzS0hQWURiWnNuSVZTTF9XT3FubEpMZTBoZVJHODBmSzZ4cjF3Mk1pSEVNbWRCc2FYSDIzZUs1ZmJvWWV3eU1ySktSckdySlAwQzVhV2JRYzBNS1RwaWVyZE9INUk3clNacW5rTHN2RWJ4U3R6MzZEUDVaMXV0UEpET2RJNF9SMmM0MU9NR2VnaU5oYjVVbFZtSktqaTZKbTZJTGJmem5aQzJxT0ZDalV3cWNWT3JaREM0YQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T22:26:39.388Z"
     },
     {
       "id": "rss_e03a5e7f52080a6d",
@@ -581,6 +627,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-11T21:32:04.950Z"
+    },
+    {
+      "id": "rss_f01c2988c0c59368",
+      "timestamp": 1789154714000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia shut down East-West pipeline as Houthis tighten grip on Red Sea shipping - The Indian Express",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOaUVMbmtSMGtCc2FvbjUyZ0gzLTkzUHBnYjBoZHVwaHdPaklua0lOalk1Uy0xNE1nNVdlZlFUNHNFT2x0WGQxaUZFcU5Sd1N6dlRLYXEydElIRFc4WGR5T2R1b2t5dnA1OFpVR1U5U19CUXF1MUtsMWlWamYtNmU5Rk5DMmwxcThQQkFwM0JqMWRlcWdtYlM5NU54TTTSAaMBQVVfeXFMTms4RE1XSzJ0ejg4VlpyaG9idjZ5VHRrY2FpYjhacWxOUV9LaWpKMWx0WlhFT3Jtb1NSSl9ncmp4ancwNHk3VXRxVFZzMkNhVEtVWlJlamRCT0tDYmlaQy1rRHhyaS1wLTlNd3gtQVZYQVc3U2RCd0dFSEpwUklYcjNKUDhaRGZ4VWRXSkdjVFF6NjBCUWxyY2l4dFdmRTJWZGZzMA?oc=5\" target=\"_",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaUVMbmtSMGtCc2FvbjUyZ0gzLTkzUHBnYjBoZHVwaHdPaklua0lOalk1Uy0xNE1nNVdlZlFUNHNFT2x0WGQxaUZFcU5Sd1N6dlRLYXEydElIRFc4WGR5T2R1b2t5dnA1OFpVR1U5U19CUXF1MUtsMWlWamYtNmU5Rk5DMmwxcThQQkFwM0JqMWRlcWdtYlM5NU54TTTSAaMBQVVfeXFMTms4RE1XSzJ0ejg4VlpyaG9idjZ5VHRrY2FpYjhacWxOUV9LaWpKMWx0WlhFT3Jtb1NSSl9ncmp4ancwNHk3VXRxVFZzMkNhVEtVWlJlamRCT0tDYmlaQy1rRHhyaS1wLTlNd3gtQVZYQVc3U2RCd0dFSEpwUklYcjNKUDhaRGZ4VWRXSkdjVFF6NjBCUWxyY2l4dFdmRTJWZGZzMA?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T22:26:39.388Z"
     },
     {
       "id": "rss_71244ff7e6379f76",
@@ -1180,6 +1249,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-11T06:20:37.731Z"
+    },
+    {
+      "id": "rss_96f265309f1734a9",
+      "timestamp": 1789103700000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Hits 4-Month High As Hormuz, Red Sea Risks Mount - Radio Free Europe/Radio Liberty",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE9OeTc1VE5lcEx0QzNhVlh6TnBVZUhfdi1MR0xZQnJOLWo2U3dHb09ucVhPNXctSTFXNTF6R3EwZEJXSl96SF9zS2FPUWFwcHpHeFVMaGtUckZiaGIydHc1SFMwT3U1R1h5WnMtY2RGUkdtYm1jV2VUMWFB?oc=5\" target=\"_blank\">Oil Hits 4-Month High As Hormuz, Red Sea Risks Mount</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Radio Free Europe/Radio Liberty</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9OeTc1VE5lcEx0QzNhVlh6TnBVZUhfdi1MR0xZQnJOLWo2U3dHb09ucVhPNXctSTFXNTF6R3EwZEJXSl96SF9zS2FPUWFwcHpHeFVMaGtUckZiaGIydHc1SFMwT3U1R1h5WnMtY2RGUkdtYm1jV2VUMWFB?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T22:26:39.388Z"
     },
     {
       "id": "rss_b8e428db822f93af",
@@ -10926,92 +11016,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WZ3NxQWJFaXFvc0tScDVfaTIyeUg2OTBwZWVYT2FfWlJMVUZScDZSOEhFUWJWTUhnVndibnZLcEpUOVpfdlVjeWo3YnRGb01Qd1R3WTRicGs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T09:56:40.922Z"
-    },
-    {
-      "id": "rss_02845e340a20fb51",
-      "timestamp": 1786091580000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Three members of Yemen government forces dead in Houthi attack - Naharnet",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUW9CcWhhWHRqVUNvaWJBanh0RHlnb0F5emZPQVI0UTRBcFFFT2FDTVlUWktMYjlFUHpmSFRsLXBHTGpyUTR6Y1Qyb2FkcDRhdEZuM2EycVE3amhrS3UxYi1IdV8zeGNZSWFTOHViWVJDWkh3QTFndVlEODJjQVJIM3NWOXFrTEgxcUw3alV0LURLYzd4VzU1RlFGOGFUQi1LV3BaTk4zY2c?oc=5\" target=\"_blank\">Three members of Yemen government forces dead in Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Naharnet</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUW9CcWhhWHRqVUNvaWJBanh0RHlnb0F5emZPQVI0UTRBcFFFT2FDTVlUWktMYjlFUHpmSFRsLXBHTGpyUTR6Y1Qyb2FkcDRhdEZuM2EycVE3amhrS3UxYi1IdV8zeGNZSWFTOHViWVJDWkh3QTFndVlEODJjQVJIM3NWOXFrTEgxcUw3alV0LURLYzd4VzU1RlFGOGFUQi1LV3BaTk4zY2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T08:53:19.648Z"
-    },
-    {
-      "id": "rss_15e83dad5eb8c1bd",
-      "timestamp": 1786091580000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Three Yemeni soldiers killed in Houthi attack, says military source - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkZmcmttV2dHWWNRMjMwckRlWXNnYkR6ZG5mYjRFZzNhZnVtVkJPVWlTbTJLZ0picUJWYUJSQVdsakRVVE1zZDZhZW02R0tlcFYxZm5JTWtWR2JROGR2akhuWEpHTHF2MHVpUThqQTFJanY3UjJoTk0ydEc3N0lPeVpIcGhlODZvc2hRcXpLWHVBTzBPeVdFVTR5SjJ1bXlQOEp2cG1jc0VrOHNrODN0SDdlemR6OTBoTmtEbQ?oc=5\" target=\"_blank\">Three Yemeni soldiers killed in Houthi attack, says military source</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdkZmcmttV2dHWWNRMjMwckRlWXNnYkR6ZG5mYjRFZzNhZnVtVkJPVWlTbTJLZ0picUJWYUJSQVdsakRVVE1zZDZhZW02R0tlcFYxZm5JTWtWR2JROGR2akhuWEpHTHF2MHVpUThqQTFJanY3UjJoTk0ydEc3N0lPeVpIcGhlODZvc2hRcXpLWHVBTzBPeVdFVTR5SjJ1bXlQOEp2cG1jc0VrOHNrODN0SDdlemR6OTBoTmtEbQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T10:50:54.937Z"
-    },
-    {
-      "id": "rss_7dc0b7cc1805bbdc",
-      "timestamp": 1786089419000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthis Escalate Red Sea Campaign, Claim Eighth Saudi Tanker Attack - Homeland Security Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVTVra2ZQbXpYZlY2Y1FfbWFLZmVPRTgxWUVDYi1oSWtVOFpUbzlEbGkyWl9DOG9pVW5WeS1ibFZ3RjlOZ0NkOVJTLVduNUd0ZW9LVGU5SlcxRUVLbHNEUzdWV0ltbFVIUG5xV3M4MGdmbmNkbEZCOVpGdFdBU0l2TlZpTTZrZHdoNlNkZk9DZFRMS0djTU5Uaksxc1pfck55dThabHFnYnd2cHdaSldsN3FRSzJDV3RyajJFWmlaMnk0Ty1URS0tMw?oc=5\" target=\"_blank\">Houthis Escalate Red Sea Campaign, Claim Eighth Saudi Tanker Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Homeland Security Today</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVTVra2ZQbXpYZlY2Y1FfbWFLZmVPRTgxWUVDYi1oSWtVOFpUbzlEbGkyWl9DOG9pVW5WeS1ibFZ3RjlOZ0NkOVJTLVduNUd0ZW9LVGU5SlcxRUVLbHNEUzdWV0ltbFVIUG5xV3M4MGdmbmNkbEZCOVpGdFdBU0l2TlZpTTZrZHdoNlNkZk9DZFRMS0djTU5Uaksxc1pfck55dThabHFnYnd2cHdaSldsN3FRSzJDV3RyajJFWmlaMnk0Ty1URS0tMw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T08:53:19.647Z"
-    },
-    {
-      "id": "rss_ae4ca14f58ce3078",
-      "timestamp": 1786088839000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "U.S. jobs report ahead; Houthi attack on Saudi Arabia - what’s moving markets - Investing.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRGFJODBFZWRza0NfU3EwTFZNTk5GZlJ2U3VGVi1ObkNfMjFZa3p6T1BIWHNfTWVrOS10QVRPN1hEVXJJek1uQ0xmRFlqa3cyTE5WNkRfQVFLdkhiSklZb09YUTVRTTlDaldMXzZBVE5qMGdQNU5mYWxRc05lU2xTOWNJaDFiT0FBekZOQ0ZaOFJoUjZzbmxHT3pON0xrY2FuTEdJLVNfbkg2d1VKT293RjMyVjhKS014a0VZdmJRSTUxdw?oc=5\" target=\"_blank\">U.S. jobs report ahead; Houthi attack on Saudi Arabia - what’s moving markets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPRGFJODBFZWRza0NfU3EwTFZNTk5GZlJ2U3VGVi1ObkNfMjFZa3p6T1BIWHNfTWVrOS10QVRPN1hEVXJJek1uQ0xmRFlqa3cyTE5WNkRfQVFLdkhiSklZb09YUTVRTTlDaldMXzZBVE5qMGdQNU5mYWxRc05lU2xTOWNJaDFiT0FBekZOQ0ZaOFJoUjZzbmxHT3pON0xrY2FuTEdJLVNfbkg2d1VKT293RjMyVjhKS014a0VZdmJRSTUxdw?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
