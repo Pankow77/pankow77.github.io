@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-12T17:40:48.993Z",
+  "last_fetch": "2026-09-12T20:05:40.232Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_47a80d828e32b206",
+      "timestamp": 1789241422000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia’s shutdown of key pipeline limits oil flow as Yemen hits back against Houthis - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTkhNMzZqVU5KTk1hMGJ5VFpOTTVsUU1PRjVNaU5DREtTLU9tTzlFUF9zNkRSWVIwOWpMVEhudEVYeUk4bnZtcEFSRVJDbHQ0eUlBVXdka1RWUVNyeXVYVXdGVENObE4zQXJfc2hlaDJUYUx2VkdCczIydndIQ0gxVmVSamxfZkdEWE5idHhrMXRIX2ZodXQ5Y002LXQwTDZHZjBVOVowMmpPa2xuZVJkajY5dFN0LVht?oc=5\" target=\"_blank\">Saudi Arabia’s shutdown of key pipeline limits oil flow as Yemen hits back against Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTkhNMzZqVU5KTk1hMGJ5VFpOTTVsUU1PRjVNaU5DREtTLU9tTzlFUF9zNkRSWVIwOWpMVEhudEVYeUk4bnZtcEFSRVJDbHQ0eUlBVXdka1RWUVNyeXVYVXdGVENObE4zQXJfc2hlaDJUYUx2VkdCczIydndIQ0gxVmVSamxfZkdEWE5idHhrMXRIX2ZodXQ5Y002LXQwTDZHZjBVOVowMmpPa2xuZVJkajY5dFN0LVht?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T20:05:38.133Z"
+    },
     {
       "id": "rss_9b5570bc24b32e83",
       "timestamp": 1789227065000,
@@ -10996,27 +11017,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T09:56:40.922Z"
-    },
-    {
-      "id": "rss_5e9b2d5c684151eb",
-      "timestamp": 1786081632000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Attack Wounds 11 in Southern Saudi Arabia as Yemen Conflict Escalates - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxObDNvemUzR2JEM21oRlNrRmp4MDhQMDdyVkNnOGJud21LUmxaNGJNZ2NsSGtkM1R6X0FWWkUwMG9QYWpjWHhsemEwQjFtYmtxNy1mNmgxSlRNSzJtQkF5OEZuYnpPa1FWMGhVTnVuUjd2R0p4OUF2bUdZZHRCUU5LeVlHd185ekxvOXpRdVBZN0FKTmZFbXZJeGZZZzhrMk12T0JPTkZLOGF6dm0zWm1EVXV4N1BYM2w4UXVQZw?oc=5\" target=\"_blank\">Houthi Attack Wounds 11 in Southern Saudi Arabia as Yemen Conflict Escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxObDNvemUzR2JEM21oRlNrRmp4MDhQMDdyVkNnOGJud21LUmxaNGJNZ2NsSGtkM1R6X0FWWkUwMG9QYWpjWHhsemEwQjFtYmtxNy1mNmgxSlRNSzJtQkF5OEZuYnpPa1FWMGhVTnVuUjd2R0p4OUF2bUdZZHRCUU5LeVlHd185ekxvOXpRdVBZN0FKTmZFbXZJeGZZZzhrMk12T0JPTkZLOGF6dm0zWm1EVXV4N1BYM2w4UXVQZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T06:06:18.818Z"
     }
   ]
 }
