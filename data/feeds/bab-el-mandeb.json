@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-12T02:51:26.344Z",
+  "last_fetch": "2026-09-12T07:38:09.868Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7ae55922c7a596a6",
+      "timestamp": 1789192628000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis capture a Red Sea island in threat to shipping - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQZW1oRU43TWZHOUU5T3dGZlNMSGV4NWZTLVpKbnRrU3JzTzllNFlUdFdYX3hGN0JCdEJrV2NrcUZJQk1GeHRXaTR3SUFFMU1XNVpxZFlib0xtbVZFQUp4b21zSUlNYVR6d19Pa0hpMkdNRVBGeEVYSUlNcmRaci04T2hJSUduR3c?oc=5\" target=\"_blank\">Yemen's Houthis capture a Red Sea island in threat to shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZW1oRU43TWZHOUU5T3dGZlNMSGV4NWZTLVpKbnRrU3JzTzllNFlUdFdYX3hGN0JCdEJrV2NrcUZJQk1GeHRXaTR3SUFFMU1XNVpxZFlib0xtbVZFQUp4b21zSUlNYVR6d19Pa0hpMkdNRVBGeEVYSUlNcmRaci04T2hJSUduR3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T07:38:08.391Z"
+    },
+    {
+      "id": "rss_40ca0087a79cc46e",
+      "timestamp": 1789189316000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Photos show Houthi rallies, fighters and daily life inside Yemen. - CTPost",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQdm1hcWtqU3VTbUlfcWFvbU8xYnJRcUEtUTRFN2l4NDgzUGxfckxvaF9sLWFkcVNJWk51Z3FTOEVvc0t3aXItMkUxWU9ZT29TNy10YkVKTU5xRUxaY3lTZHRlSFVHNDRfZGk1elN4akg3TmZDSHNCWVlTdDJSYkhNR2RFS24zVGNIMm1lTUpULWN0T1ZmekM4TjVJYVZIR0ZySlE?oc=5\" target=\"_blank\">Photos show Houthi rallies, fighters and daily life inside Yemen.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CTPost</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdm1hcWtqU3VTbUlfcWFvbU8xYnJRcUEtUTRFN2l4NDgzUGxfckxvaF9sLWFkcVNJWk51Z3FTOEVvc0t3aXItMkUxWU9ZT29TNy10YkVKTU5xRUxaY3lTZHRlSFVHNDRfZGk1elN4akg3TmZDSHNCWVlTdDJSYkhNR2RFS24zVGNIMm1lTUpULWN0T1ZmekM4TjVJYVZIR0ZySlE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T07:38:08.393Z"
+    },
     {
       "id": "rss_e3de89f70aea58f1",
       "timestamp": 1789174500000,
@@ -134,6 +178,31 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-11T23:50:01.061Z"
+    },
+    {
+      "id": "rss_971d9a7f04851966",
+      "timestamp": 1789163400000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Houthis Make Moves On Red Sea, U.S., Iran Go Tanker for Warship - USNI News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNXzJ2WDYzczh2eVdxUWxlRkFsUnNKOEl5Z2EtRk5ZRTR2cTRyNngyUG51czVpLWQzampXWEhyWm9SMW5vVzhKMXVwYlNqVzBpMzNfR0FQQmNLS0lNUF9TOW85Z3d3YVhfZUJJMTA2TENObDRnczFMa1A5Y3ZuTGNXdTF2X0lfSHhiQ2xRRzZlZW5ROVlJLXppVg?oc=5\" target=\"_blank\">Houthis Make Moves On Red Sea, U.S., Iran Go Tanker for Warship</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">USNI News</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNXzJ2WDYzczh2eVdxUWxlRkFsUnNKOEl5Z2EtRk5ZRTR2cTRyNngyUG51czVpLWQzampXWEhyWm9SMW5vVzhKMXVwYlNqVzBpMzNfR0FQQmNLS0lNUF9TOW85Z3d3YVhfZUJJMTA2TENObDRnczFMa1A5Y3ZuTGNXdTF2X0lfSHhiQ2xRRzZlZW5ROVlJLXppVg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T07:38:08.392Z"
     },
     {
       "id": "rss_22a2c0358e7fc02c",
@@ -359,6 +428,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-11T15:45:20.150Z"
+    },
+    {
+      "id": "rss_ecba9d65752dc8b4",
+      "timestamp": 1789132740000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis seize key Red Sea islands, complete takeover of vital Bab el-Mandeb shipping lane - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmJJMVJ0eXlNWkNmSk5ibk9vemQ1YkxmQ0NvVU9GV0Vjb25xSnFuWXlTVGJ4WmpvcGtDX19Wd2lISzVHOE1fSTNhWVFWblJFN1ZKVDZFRkptTW1sYWNKdDNaLXpZVjd4ZFdPOG44Nlo2ZlVmTnhwWGRheUh1cTZZd3pieklfTVpEakpYTzJQX3BzUDFncngyMldaVi13TVFJTWZrSzNWdEo4RFo1MmZHOEtvVXJZdVE3QXfSAb8BQVVfeXFMT25VSWN3VkNiUEtzWEpmMjZBUmpFbEdGbDc4aUtPZTVYbnpaU0REdU8xdnA4em1YRDNkOV9PQnhUV3hna2lwREFlTEtNU2JFNU1HSFFoNVJBTEhJUDg3S3FqM0s2c1lpY29UNWl3ZTk2X0RFQzRQU1RyTWoxUDByUEhjX1VadXJVc1o0RjZtX2NCbj",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcmJJMVJ0eXlNWkNmSk5ibk9vemQ1YkxmQ0NvVU9GV0Vjb25xSnFuWXlTVGJ4WmpvcGtDX19Wd2lISzVHOE1fSTNhWVFWblJFN1ZKVDZFRkptTW1sYWNKdDNaLXpZVjd4ZFdPOG44Nlo2ZlVmTnhwWGRheUh1cTZZd3pieklfTVpEakpYTzJQX3BzUDFncngyMldaVi13TVFJTWZrSzNWdEo4RFo1MmZHOEtvVXJZdVE3QXfSAb8BQVVfeXFMT25VSWN3VkNiUEtzWEpmMjZBUmpFbEdGbDc4aUtPZTVYbnpaU0REdU8xdnA4em1YRDNkOV9PQnhUV3hna2lwREFlTEtNU2JFNU1HSFFoNVJBTEhJUDg3S3FqM0s2c1lpY29UNWl3ZTk2X0RFQzRQU1RyTWoxUDByUEhjX1VadXJVc1o0RjZtX2NCbjNtdUJfVENKX09BUnF2RTFFeVd3eXFfSlUtTWZLQ0lVZGJaOUI4S3FzTWFsMlk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T07:38:08.393Z"
     },
     {
       "id": "rss_dc3d940b489a7e4c",
@@ -10904,94 +10996,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5wek5qRFh0YXJrV3FtZjRONy1KR1NSLWdfRC15bUF0MVIzUk9GRWR3Mmh3SnlEUTFpRDVCSlhZdGF4MHZmSTdJR1U3WkpKNTZKNGdmU0U1c1RvUEJWc19n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-06T23:53:42.941Z"
-    },
-    {
-      "id": "rss_93273e4b4ceae9bd",
-      "timestamp": 1786056069000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks reportedly kill at least 30 Yemeni government forces - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XdVllVF9tQ1VqR3RqWW15aE05d1NlQW45ODN3cldPQ3g3S0c2b1RhSzVlSHdRWllGMjdyOGNrV2l0LUcwenJxQXRiVU1LRFhjRjFydS1GU3d0QQ?oc=5\" target=\"_blank\">Houthi attacks reportedly kill at least 30 Yemeni government forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XdVllVF9tQ1VqR3RqWW15aE05d1NlQW45ODN3cldPQ3g3S0c2b1RhSzVlSHdRWllGMjdyOGNrV2l0LUcwenJxQXRiVU1LRFhjRjFydS1GU3d0QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T02:26:19.962Z"
-    },
-    {
-      "id": "rss_fb0a04f2cc01011b",
-      "timestamp": 1786054189000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia braces for attacks on ports and airports by Iraqi militias working with Iran-backed Houthis - cnn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQVURYeHlVRVhHVmZ4VTRrbEh2ZDRsWTZuUkFNbTRHS3ZZZlpsMXhVdUV3NU1LRkdHeFFqWGZmdUVDMEVzWmN3Vlc5aC1TQnpZNGwwSThkYXRGV3BUS3U2LWZ4ZjZvVzhIQmhoT25FQVIxLVU4YWZNanYtNHhIWFJuTXd1b3ZrSVk4T1E?oc=5\" target=\"_blank\">Saudi Arabia braces for attacks on ports and airports by Iraqi militias working with Iran-backed Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">cnn.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQVURYeHlVRVhHVmZ4VTRrbEh2ZDRsWTZuUkFNbTRHS3ZZZlpsMXhVdUV3NU1LRkdHeFFqWGZmdUVDMEVzWmN3Vlc5aC1TQnpZNGwwSThkYXRGV3BUS3U2LWZ4ZjZvVzhIQmhoT25FQVIxLVU4YWZNanYtNHhIWFJuTXd1b3ZrSVk4T1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-06T23:53:42.941Z"
-    },
-    {
-      "id": "rss_8c3692b842349d18",
-      "timestamp": 1786053002000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Saudi official warns of Iran-backed attack threat - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE0zdWIzUVhuYnVMTFdvRFJGdXJJVDdsdnU5YzZqRTJydDI5dHh0Z0dha3g2SzdjOXNuV2d2Q1hDaUZpLWxGQTZodl9IVGk3Rnktb3BScEtFNi1vcExU?oc=5\" target=\"_blank\">Saudi official warns of Iran-backed attack threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0zdWIzUVhuYnVMTFdvRFJGdXJJVDdsdnU5YzZqRTJydDI5dHh0Z0dha3g2SzdjOXNuV2d2Q1hDaUZpLWxGQTZodl9IVGk3Rnktb3BScEtFNi1vcExU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-06T23:53:42.942Z"
-    },
-    {
-      "id": "rss_62137d6bb75df2d7",
-      "timestamp": 1786053001000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "11 civilians said wounded in Houthi attack on Saudi border region - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQZG9xaEZmMG5pay0xSmhGTzlkSmpzNm9fUTNqeENhQ2FmS3F5TWRMcllQR3hTaTJvTWVwOHBGS3VEeERIMktZRll2UUo3TXAtaExIZHpoUDY4MnBxZmR2a29USXYyRW4xOEI5ZDJMOW8zcmw3NWNNWGV0REZqUV8tVGNrYkhsQW0wSUVWWS1hWDdQOVViQzVtQXZEVVpnQlBuSHE4S19TVG1nemQxRTFlZQ?oc=5\" target=\"_blank\">11 civilians said wounded in Houthi attack on Saudi border region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZG9xaEZmMG5pay0xSmhGTzlkSmpzNm9fUTNqeENhQ2FmS3F5TWRMcllQR3hTaTJvTWVwOHBGS3VEeERIMktZRll2UUo3TXAtaExIZHpoUDY4MnBxZmR2a29USXYyRW4xOEI5ZDJMOW8zcmw3NWNNWGV0REZqUV8tVGNrYkhsQW0wSUVWWS1hWDdQOVViQzVtQXZEVVpnQlBuSHE4S19TVG1nemQxRTFlZQ?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
