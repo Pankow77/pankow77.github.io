@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-12T14:56:21.883Z",
+  "last_fetch": "2026-09-12T17:40:48.993Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9b5570bc24b32e83",
+      "timestamp": 1789227065000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Attack on key Saudi pipeline is blamed on Iran-backed militias in Iraq - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOXJFU2dTMk5JWVljQ1lFSjh3eG00eTZKMV93VjNINVNzWFlUWEhYSXNXZEVmVS16WFlwN0o2ZW4wRGluby1aMEhkNm5QU1cwZEdjY2I2dS01LVNyQVpob05YX2hHX0NwSkN5WEhBMlg4OUdZMFY3V3VTSUVTaWxxdTVUdEUySUtveXJ0anp5ZVMwSHZoNDF0UGh5ZE5IMUh5aW5xUy1xTUjSAa4BQVVfeXFMTy15VFpWQWMtX2tNUllMbUxyd3hHNkJTNzFFN3VSQlRvaEFqb3oxM2FNQlIwZ2lEVHBrWlZSMS0xN0dkYzVtYmFYemtvUm9Qd1dxa3VYM0FOTGlDYXlNc2p0VUhvcUVPR25GQXl3RGUzS1IwQUxVVmY5am0tUHN2Y01wVWFWTVJURGFVTHl0SXdtUU45OVJIWXF4U2dmMU9OeGc1SG",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQOXJFU2dTMk5JWVljQ1lFSjh3eG00eTZKMV93VjNINVNzWFlUWEhYSXNXZEVmVS16WFlwN0o2ZW4wRGluby1aMEhkNm5QU1cwZEdjY2I2dS01LVNyQVpob05YX2hHX0NwSkN5WEhBMlg4OUdZMFY3V3VTSUVTaWxxdTVUdEUySUtveXJ0anp5ZVMwSHZoNDF0UGh5ZE5IMUh5aW5xUy1xTUjSAa4BQVVfeXFMTy15VFpWQWMtX2tNUllMbUxyd3hHNkJTNzFFN3VSQlRvaEFqb3oxM2FNQlIwZ2lEVHBrWlZSMS0xN0dkYzVtYmFYemtvUm9Qd1dxa3VYM0FOTGlDYXlNc2p0VUhvcUVPR25GQXl3RGUzS1IwQUxVVmY5am0tUHN2Y01wVWFWTVJURGFVTHl0SXdtUU45OVJIWXF4U2dmMU9OeGc1SG9fMWtDaXFlZG1B?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T17:40:47.516Z"
+    },
+    {
+      "id": "rss_48c023a91a55a873",
+      "timestamp": 1789225097000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Trump: Iran likely behind attack on Saudi pipeline, Houthis told us they don’t want to fight - timesofisrael.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOMkxYR05Hb1NfTndoTTVULVRHNUgyR2o3dngxV0FMWHBJLUVxV1R2Tk94SDZLandDTDI1cGprMzZuVktsTmJCd2d2V1I2MVVOdFYyRVA4alJnaVUtMThpVnZpdGVubGdZclpPM2RoT2hvMFhaUVdGTUlnQWZ4RFN1d19nZXhucWNJRjdKcTcyZXFScUt3YWlYbnZIU2JUaGpxX0xlV3R3OGtDY1BrWFNTTTFrTzBQUnQzRE9rZ9IBwgFBVV95cUxNbDJPUk0xV1lnRTJBNEFJTDI3NEQ5alBSSUhKakZFNWhQREpPZDZSaGotR0JUYUEyZ2JCbDduSFd0cFVQTEVWLWRjb3BiR1dXT2tMTjFLckR2d0tZd2xwLXBTQ2Nkd3V1M3ZNNjlRM2VfaUcyd2NCdkJ4eExlaW5qbXd4OThIR0phNTZhSUsxMT",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMkxYR05Hb1NfTndoTTVULVRHNUgyR2o3dngxV0FMWHBJLUVxV1R2Tk94SDZLandDTDI1cGprMzZuVktsTmJCd2d2V1I2MVVOdFYyRVA4alJnaVUtMThpVnZpdGVubGdZclpPM2RoT2hvMFhaUVdGTUlnQWZ4RFN1d19nZXhucWNJRjdKcTcyZXFScUt3YWlYbnZIU2JUaGpxX0xlV3R3OGtDY1BrWFNTTTFrTzBQUnQzRE9rZ9IBwgFBVV95cUxNbDJPUk0xV1lnRTJBNEFJTDI3NEQ5alBSSUhKakZFNWhQREpPZDZSaGotR0JUYUEyZ2JCbDduSFd0cFVQTEVWLWRjb3BiR1dXT2tMTjFLckR2d0tZd2xwLXBTQ2Nkd3V1M3ZNNjlRM2VfaUcyd2NCdkJ4eExlaW5qbXd4OThIR0phNTZhSUsxMTVwdGtEUzZhdFdweXQ3LWM1d0dqWXE3ZU5EeEtjMmV2UExHaWlGQ3BqbkhXNUpFZnJQQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T17:40:47.517Z"
+    },
     {
       "id": "rss_62406ba6f43647de",
       "timestamp": 1789221745000,
@@ -46,6 +92,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-12T14:56:20.481Z"
+    },
+    {
+      "id": "rss_031653531520fe43",
+      "timestamp": 1789216753000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Oil Pipeline Shut After Attack As Red Sea Shipping Threats Grow - Global Banking &amp; Finance Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOaWxzcDFwZ0ctQ2RzMzFFSlhjVDVpajU1VXRzVDF3V3lNaTdYd2NmRWxzSEh5WUtocnRxcHpHb0l1eGJuYkhudl9ocEtKY3FxUG4wRlktWm1fVDJaRnVDVHpHSVBZeEpRRExydFZqaE5pRTdpMmg4eE0tQkFEcnFaM1BsWmdUQlIwejc1VWtlRnJNUnRfTHdDWlBWcjRRTjhH?oc=5\" target=\"_blank\">Saudi Oil Pipeline Shut After Attack As Red Sea Shipping Threats Grow</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Global Banking & Finance Review</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaWxzcDFwZ0ctQ2RzMzFFSlhjVDVpajU1VXRzVDF3V3lNaTdYd2NmRWxzSEh5WUtocnRxcHpHb0l1eGJuYkhudl9ocEtKY3FxUG4wRlktWm1fVDJaRnVDVHpHSVBZeEpRRExydFZqaE5pRTdpMmg4eE0tQkFEcnFaM1BsWmdUQlIwejc1VWtlRnJNUnRfTHdDWlBWcjRRTjhH?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-12T17:40:48.986Z"
     },
     {
       "id": "rss_127b99c35e9b7ba3",
@@ -10948,69 +11017,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T06:06:18.818Z"
-    },
-    {
-      "id": "rss_f6d43a399a5e4a09",
-      "timestamp": 1786081085000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis Launch Broad Attack on Yemeni Forces, Ending Truce - ASHARQ AL-AWSAT English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQUmlwT2R3dHNYZl9Mc05JLW5VdDY5RHhQeEl5UWliNzRMdmNTRHBuVnJST25FWHI5VUt0NTJqTGphbkttVHA0ODBZUk44S2JjWU5EX2EyQVN0NmtiMUU5Z0Z1VFhaZC13R29vZ3FUUWZLSWsxbVJ4blFJV2xxSjcyWW9TcUhZcHFkR3NaV1FKeW4zbG1pcFFiaXFHcVp4clFZUlE?oc=5\" target=\"_blank\">Houthis Launch Broad Attack on Yemeni Forces, Ending Truce</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUmlwT2R3dHNYZl9Mc05JLW5VdDY5RHhQeEl5UWliNzRMdmNTRHBuVnJST25FWHI5VUt0NTJqTGphbkttVHA0ODBZUk44S2JjWU5EX2EyQVN0NmtiMUU5Z0Z1VFhaZC13R29vZ3FUUWZLSWsxbVJ4blFJV2xxSjcyWW9TcUhZcHFkR3NaV1FKeW4zbG1pcFFiaXFHcVp4clFZUlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T06:06:18.819Z"
-    },
-    {
-      "id": "rss_daf945bd8f25929f",
-      "timestamp": 1786079700000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis kill 58 troops in Yemen, wound 11 civilians in attack on Saudi Arabia - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNb0hZUWVhcDdhTTRUNXZLSGxreUpURVRSeWtPejR6dnVMX2hyRlM1NTVpUWg3VVFSQ3JpRlF0U0tmUHQ4SGk3cnA2ZUhiWTJHSmlWWmpLYXE5dXFZalBpUkhpNUcyRktOTDBzSklhU2NmVkFHYlp3eFdxNjVSZE9CaTQ3b1VDODNfem1LRk1LbEJYSW01X1JDOTlnNFhNN3IwR1FhaTlFdFVVQlMtUnhrc1VJY9IBuAFBVV95cUxPZVN5LXR5UGlXbmxUUDhoTmNrdFlJaGowZmVKeUlwTldVM3RRaHhPSTc3UDRteDBybmxHZDZvTkpoN1hNbHBRS2NHbVEzcWxVZGY3dmQxN0dhcFRfWTkwZmhkMmRRdkN3NG5UbUhVU1JZN1Jhai0xRXl6Q2F2c3JMZXJ6emh0U3FmV1RnVm5NS3B6SGRzdE81R0",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb0hZUWVhcDdhTTRUNXZLSGxreUpURVRSeWtPejR6dnVMX2hyRlM1NTVpUWg3VVFSQ3JpRlF0U0tmUHQ4SGk3cnA2ZUhiWTJHSmlWWmpLYXE5dXFZalBpUkhpNUcyRktOTDBzSklhU2NmVkFHYlp3eFdxNjVSZE9CaTQ3b1VDODNfem1LRk1LbEJYSW01X1JDOTlnNFhNN3IwR1FhaTlFdFVVQlMtUnhrc1VJY9IBuAFBVV95cUxPZVN5LXR5UGlXbmxUUDhoTmNrdFlJaGowZmVKeUlwTldVM3RRaHhPSTc3UDRteDBybmxHZDZvTkpoN1hNbHBRS2NHbVEzcWxVZGY3dmQxN0dhcFRfWTkwZmhkMmRRdkN3NG5UbUhVU1JZN1Jhai0xRXl6Q2F2c3JMZXJ6emh0U3FmV1RnVm5NS3B6SGRzdE81R0hVaXhkU245LXpwcWZ6SXNMTDlvSEM2aHRMcnNSWFBL?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T06:06:18.818Z"
-    },
-    {
-      "id": "rss_394617bdc25f2866",
-      "timestamp": 1786079100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 3,
-      "text_summary": "Houthi attack on Saudi Arabia wounds 11 civilians as kingdom warns of wider threat - The Business Standard",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaThqYy1lT3dDTmFTa0xpMHdQWTV5TTBjek9kbHRFREZzVVZFN3BCT0xldDJHSW1FMDJIUWh0Q2xfOFR6UW9VMTZvdkZvYXZ0dDJlV3Q4SW9pcnc2Q0M2S3JabDItbVVmdHFkMEtHVlhIdnZ0Q3h6cG1TVEhuajlqSmJKdkc1QTZRbE1fLTFVUW9SUE10TG5mWGttcWJ3NlhBTEV3cEN1LWVMTXo2bm11bkdOOTF1bW9QLTVjREZwY2nSAcABQVVfeXFMUGk4amMtZU93Q05hU2tMaTB3UFk1eU0wY3pPZGx0RURGc1VWRTdwQk9MZXQyR0ltRTAySFFodENsXzhUelFvVTE2b3ZGb2F2dHQyZVd0OElvaXJ3NkNDNktyWmwyLW1VZnRxZDBLR1ZYSHZ2dEN4enBtU1RIbmo5akpiSnZHNUE2UWxNXy",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaThqYy1lT3dDTmFTa0xpMHdQWTV5TTBjek9kbHRFREZzVVZFN3BCT0xldDJHSW1FMDJIUWh0Q2xfOFR6UW9VMTZvdkZvYXZ0dDJlV3Q4SW9pcnc2Q0M2S3JabDItbVVmdHFkMEtHVlhIdnZ0Q3h6cG1TVEhuajlqSmJKdkc1QTZRbE1fLTFVUW9SUE10TG5mWGttcWJ3NlhBTEV3cEN1LWVMTXo2bm11bkdOOTF1bW9QLTVjREZwY2nSAcABQVVfeXFMUGk4amMtZU93Q05hU2tMaTB3UFk1eU0wY3pPZGx0RURGc1VWRTdwQk9MZXQyR0ltRTAySFFodENsXzhUelFvVTE2b3ZGb2F2dHQyZVd0OElvaXJ3NkNDNktyWmwyLW1VZnRxZDBLR1ZYSHZ2dEN4enBtU1RIbmo5akpiSnZHNUE2UWxNXy0xVVFvUlBNdExuZlhrbXFidzZYQUxFd3BDdS1lTE16Nm5tdW5HTjkxdW1vUC01Y0RGcGNp?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T07:50:32.474Z"
     }
   ]
 }
