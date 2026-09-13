@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-13T20:12:06.703Z",
+  "last_fetch": "2026-09-13T22:31:04.283Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_fc57bcde0ab1e120",
+      "timestamp": 1789337824000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Caught Between 2 Chokepoints as Houthi Advance Reshapes Red Sea Front - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOeDdVREtlQVY5ZVh6cGZ6YXdWQzhrcXJZcmx0OVZ4UXVEQ3ZIRXI2X2U0emVNQXBkQ1VubF83U09nYnZ5amZCLWFQcFVJUHNtSmNSYmNPLUxUNG5kYzJ6NmNFcm1ubzQ4aVlBRDhneFhlck50MEZkMWlBSDNxNmZyY2VWWE96eUFock5obEdSTTVnZnp6QVZEbmRHX0YtN0tOc1R5ZDZBaF9sWTZ3TG9JVjVVWVMtTUM1U2VLeg?oc=5\" target=\"_blank\">Saudi Arabia Caught Between 2 Chokepoints as Houthi Advance Reshapes Red Sea Front</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeDdVREtlQVY5ZVh6cGZ6YXdWQzhrcXJZcmx0OVZ4UXVEQ3ZIRXI2X2U0emVNQXBkQ1VubF83U09nYnZ5amZCLWFQcFVJUHNtSmNSYmNPLUxUNG5kYzJ6NmNFcm1ubzQ4aVlBRDhneFhlck50MEZkMWlBSDNxNmZyY2VWWE96eUFock5obEdSTTVnZnp6QVZEbmRHX0YtN0tOc1R5ZDZBaF9sWTZ3TG9JVjVVWVMtTUM1U2VLeg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T22:31:02.750Z"
+    },
+    {
+      "id": "rss_f2cfd2924b7851a5",
+      "timestamp": 1789333800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pipeline Damage, Houthi Attack Pressure Global Oil Supply - Newser",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOSl96Tk90OHRGZXZpX3lPZ3BKMDFaUWJaX0VBSDA4QzcxVHZva1BFM1o1RFBhaXBpLWd5UnlYdUZncVF3aWZXa1FITzlYeUpWTkdlbUp1SVNXb3RuU0JZbjBRdXZOVlNOQVZvbkpqSnljLU5uS0N6dmJvZmtaRU42eGtsbEpZZXNLNlY1Z2M5V2VTaUo2T25hd0RxWVlJdw?oc=5\" target=\"_blank\">Pipeline Damage, Houthi Attack Pressure Global Oil Supply</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Newser</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSl96Tk90OHRGZXZpX3lPZ3BKMDFaUWJaX0VBSDA4QzcxVHZva1BFM1o1RFBhaXBpLWd5UnlYdUZncVF3aWZXa1FITzlYeUpWTkdlbUp1SVNXb3RuU0JZbjBRdXZOVlNOQVZvbkpqSnljLU5uS0N6dmJvZmtaRU42eGtsbEpZZXNLNlY1Z2M5V2VTaUo2T25hd0RxWVlJdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T22:31:02.750Z"
+    },
     {
       "id": "rss_3fc4c8169b6ea9b3",
       "timestamp": 1789319280000,
@@ -46,6 +88,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-13T17:52:58.473Z"
+    },
+    {
+      "id": "rss_0fc4e7efe0ae65d3",
+      "timestamp": 1789311711000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea nations watch as Houthis seize Bab al-Mandeb strait - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNcWdzVU1LTmNmR2czRnZCZXNXeDFGZURZc3BYVHZWLTA0djdpR2QyT3BpTktxMllPdklvSTl5bE96cWpyazBGVkNCYTVmeWZnMnpoQkx3elVtdnRSQVo2dTl1MlMtT3J1Q3lSVjJnbzJkTTZRNTZXVklJRk51YmdfMGZIVXpGT1J0eTdYTXJUS0cyakN0LVdzbjY0UjVKWUxDMG12RF9R0gGrAUFVX3lxTE1LNXdNYkFtSTdURUV4YUxIb2I5YlNVbDNTNXZlbF9sSEZ0amFxbUVUb0JpTTZVLWxNWTN3NVlta2V6YUphNVVkY2tqN2Y3aktxb2xvMmFjSWtUc0dXOEpIQ3ZoY1cyNnJpWEQtRVRQQ3lFR2dic2NuZVJncWMzYW1hb0g4RFZZQ3BTbDhERWozamNPWkQtbFZFSmRlZ0k4Wm5CbG0yVH",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcWdzVU1LTmNmR2czRnZCZXNXeDFGZURZc3BYVHZWLTA0djdpR2QyT3BpTktxMllPdklvSTl5bE96cWpyazBGVkNCYTVmeWZnMnpoQkx3elVtdnRSQVo2dTl1MlMtT3J1Q3lSVjJnbzJkTTZRNTZXVklJRk51YmdfMGZIVXpGT1J0eTdYTXJUS0cyakN0LVdzbjY0UjVKWUxDMG12RF9R0gGrAUFVX3lxTE1LNXdNYkFtSTdURUV4YUxIb2I5YlNVbDNTNXZlbF9sSEZ0amFxbUVUb0JpTTZVLWxNWTN3NVlta2V6YUphNVVkY2tqN2Y3aktxb2xvMmFjSWtUc0dXOEpIQ3ZoY1cyNnJpWEQtRVRQQ3lFR2dic2NuZVJncWMzYW1hb0g4RFZZQ3BTbDhERWozamNPWkQtbFZFSmRlZ0k4Wm5CbG0yVHlPcHByOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-13T22:31:02.749Z"
     },
     {
       "id": "rss_5b05079359ef07d2",
@@ -10969,69 +11032,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-08T17:55:40.211Z"
-    },
-    {
-      "id": "rss_5e729fb7a88214a0",
-      "timestamp": 1786178361000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks kill 10 in Yemen as UN warns of return to full-scale civil war - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQVGNQOXc4blVWRTRKd0FIOE5YUlVtUGd1N3hVdWNPUjZDXzNPUEJQN3RwZjQ1SlI5OHdJTFFseW41Z3g5NXJvMlo1bURsdGJwUHIzdEtwMlB0dlhOcUhhTkh0aUVKR3VuUHFEMG9YT3I1Y1ZuT0pJblJpV1JKaFpsaHF5NkNwdkJXbHJQd0trejVfV1lJYUVGNG9odEZ2clhaaURwX3ZnZGc2ejNH0gGyAUFVX3lxTE9oWFRvVTduLUVmaXdSVXUyQWg2OWlmcHNHeFRYelhMWTJQdGgtSDVQTTRFNHBfZXJlVGpJdVIwLWQtZnFlNjlfUnlEclBjUjNsLUpTWWlReE1Gb2JCUk42bUE4N1NndHg2ZFJfMlE4SnJvdjREc3BMMWUtRVc1dlFiMWVmVmx4RW9FLU15MHJPSkMyOGdUel9MTzd4eDZuTG",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVGNQOXc4blVWRTRKd0FIOE5YUlVtUGd1N3hVdWNPUjZDXzNPUEJQN3RwZjQ1SlI5OHdJTFFseW41Z3g5NXJvMlo1bURsdGJwUHIzdEtwMlB0dlhOcUhhTkh0aUVKR3VuUHFEMG9YT3I1Y1ZuT0pJblJpV1JKaFpsaHF5NkNwdkJXbHJQd0trejVfV1lJYUVGNG9odEZ2clhaaURwX3ZnZGc2ejNH0gGyAUFVX3lxTE9oWFRvVTduLUVmaXdSVXUyQWg2OWlmcHNHeFRYelhMWTJQdGgtSDVQTTRFNHBfZXJlVGpJdVIwLWQtZnFlNjlfUnlEclBjUjNsLUpTWWlReE1Gb2JCUk42bUE4N1NndHg2ZFJfMlE4SnJvdjREc3BMMWUtRVc1dlFiMWVmVmx4RW9FLU15MHJPSkMyOGdUel9MTzd4eDZuTGhJTGxFSGY0SndIOWpqYm8wcGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-08T17:02:21.553Z"
-    },
-    {
-      "id": "rss_cb2f535afb77076d",
-      "timestamp": 1786167640000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's armed forces launch operation against Houthis - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPZFdwOXNSN0JsdzRGY1ljcjVVaXlDWFdORHZ6YmZnR25Vckc0U3VEUk95cDhvc1JYS1hNR0dHc1NMXzl0QS1PT1JkVWFoMHZUY3FNdEx1U25TUHMwSTJMWXhRdmFhVUowYmhvek9Gb1IzQTV1RXNvdUo3Y0k1ZjdfUXpub0Y5UmcwQWhHWEJacndwd2FNNTJlaW0xMjlDQQ?oc=5\" target=\"_blank\">Yemen's armed forces launch operation against Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZFdwOXNSN0JsdzRGY1ljcjVVaXlDWFdORHZ6YmZnR25Vckc0U3VEUk95cDhvc1JYS1hNR0dHc1NMXzl0QS1PT1JkVWFoMHZUY3FNdEx1U25TUHMwSTJMWXhRdmFhVUowYmhvek9Gb1IzQTV1RXNvdUo3Y0k1ZjdfUXpub0Y5UmcwQWhHWEJacndwd2FNNTJlaW0xMjlDQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-08T17:55:40.212Z"
-    },
-    {
-      "id": "rss_e6f8b1ae63d8669a",
-      "timestamp": 1786165611000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attack: Pakistani among injured - The Express Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE05VS1rcDhQZFplNFlOOXhMMl9nQTRGUlhLbENTWlJVTGJSb0t2VnJPTnRRdDZwbUY4cm9DY0ZqejMzM0ZRR25sdm1zd3FZcTdJNWpXWmJHTG1YQU5XR0JnOTR6TS1UWGR3WjRoNV82NV8ycktEdnlsRXlTRUhQYmvSAYcBQVVfeXFMTklrU0pVbnlGbTVmZVZ6S1lZa2UzMWxnYlJoU3BFYk1QdlAzd1ZKemNBT09Md2hWWTJoYTdTc0hKRzRkdnpDcFdnNjZLX2NrNG9McFhiZ0hSYVVYOFZqd2pINVJoTDIyMWpDNmdVSktranY3bVQ1QXJlb0ZzMkRuNzlHSG9UbXVJ?oc=5\" target=\"_blank\">Houthi attack: Pakistani among injured</a>&nbsp;&nbsp;<font color=\"#6f6",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05VS1rcDhQZFplNFlOOXhMMl9nQTRGUlhLbENTWlJVTGJSb0t2VnJPTnRRdDZwbUY4cm9DY0ZqejMzM0ZRR25sdm1zd3FZcTdJNWpXWmJHTG1YQU5XR0JnOTR6TS1UWGR3WjRoNV82NV8ycktEdnlsRXlTRUhQYmvSAYcBQVVfeXFMTklrU0pVbnlGbTVmZVZ6S1lZa2UzMWxnYlJoU3BFYk1QdlAzd1ZKemNBT09Md2hWWTJoYTdTc0hKRzRkdnpDcFdnNjZLX2NrNG9McFhiZ0hSYVVYOFZqd2pINVJoTDIyMWpDNmdVSktranY3bVQ1QXJlb0ZzMkRuNzlHSG9UbXVJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-08T07:44:18.732Z"
     }
   ]
 }
