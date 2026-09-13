@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-12T22:26:39.394Z",
+  "last_fetch": "2026-09-13T00:07:45.868Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9d44f713a12cf249",
+      "timestamp": 1789254265000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says two injured in Houthi attack - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNU19CX2dlVjlsXzg4X1p6WEdRZ1BGemZ2NDdpdVVPWW53elNqcjJDeWdXTi0xelNtSFRtVFhXZEU5WkJIQ1dvdVhZOERQZW5kY25KcVpISC1KeHF6ZDVuU3hqTzRCQ0h3LW9JbWhlRm1FeWRwQU5qcXF3ajBxd2hwNzhHc0JGMkFOSUFjOTNNMA?oc=5\" target=\"_blank\">Saudi Arabia says two injured in Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNU19CX2dlVjlsXzg4X1p6WEdRZ1BGemZ2NDdpdVVPWW53elNqcjJDeWdXTi0xelNtSFRtVFhXZEU5WkJIQ1dvdVhZOERQZW5kY25KcVpISC1KeHF6ZDVuU3hqTzRCQ0h3LW9JbWhlRm1FeWRwQU5qcXF3ajBxd2hwNzhHc0JGMkFOSUFjOTNNMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T00:07:44.401Z"
+    },
     {
       "id": "rss_47a80d828e32b206",
       "timestamp": 1789241422000,
@@ -10993,29 +11014,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA4VzI3aHFZREsxdWFDZ3BmNVh1ZUdpUGFxYXBzakdRMGN5dG9mTkMxN3c1cUJ3Z2tBSWl2M1R6dDRFM0J3SE1ScjQteG5oU1NkVXI2bWkwWXlFYkhhc2pv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T09:56:40.922Z"
-    },
-    {
-      "id": "rss_8ae7d2187a6eed2b",
-      "timestamp": 1786093912000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni forces shoot down Houthi drones over Marib amid latest attack - TRT World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WZ3NxQWJFaXFvc0tScDVfaTIyeUg2OTBwZWVYT2FfWlJMVUZScDZSOEhFUWJWTUhnVndibnZLcEpUOVpfdlVjeWo3YnRGb01Qd1R3WTRicGs?oc=5\" target=\"_blank\">Yemeni forces shoot down Houthi drones over Marib amid latest attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1WZ3NxQWJFaXFvc0tScDVfaTIyeUg2OTBwZWVYT2FfWlJMVUZScDZSOEhFUWJWTUhnVndibnZLcEpUOVpfdlVjeWo3YnRGb01Qd1R3WTRicGs?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
