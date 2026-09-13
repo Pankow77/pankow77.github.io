@@ -1,8 +1,74 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-13T05:07:00.588Z",
+  "last_fetch": "2026-09-13T10:26:35.089Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ab8558e3838b8235",
+      "timestamp": 1789294050000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Houthis claim missile, drone attack on Saudi military base - chinadailyasia.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2T1ZXY1VZOUY0TUN5ZTlEcGxaaTloSHNsT3JvMU9jb2o1SzIzRklUMzFNa3NzN2tGQ3RZam9oNmhqTFNLOXU5Wl90SjZNN19lOG5ZSmRCY2g?oc=5\" target=\"_blank\">Houthis claim missile, drone attack on Saudi military base</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyasia.com</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB2T1ZXY1VZOUY0TUN5ZTlEcGxaaTloSHNsT3JvMU9jb2o1SzIzRklUMzFNa3NzN2tGQ3RZam9oNmhqTFNLOXU5Wl90SjZNN19lOG5ZSmRCY2g?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T10:26:33.600Z"
+    },
+    {
+      "id": "rss_7d0cf3eac9ef46d7",
+      "timestamp": 1789290192000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "How to Think About the Saudi Pipeline Attack - robinjbrooks.substack.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBsOWdIbV9tSU13LS1oZmw0Wms5Tnd5VnpSMm9pV0RGbjJHelN5WlVrQ0s3emVuQzR6bkpGa1JfTzNkR2xDRk5wYTJhMFd0UTdtUjFMQUhXOFJCRDRCM0ExbjRsNzd1RjR3ZzZrbEhzdHpJeDUza0QwZzBXN1hRZw?oc=5\" target=\"_blank\">How to Think About the Saudi Pipeline Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">robinjbrooks.substack.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBsOWdIbV9tSU13LS1oZmw0Wms5Tnd5VnpSMm9pV0RGbjJHelN5WlVrQ0s3emVuQzR6bkpGa1JfTzNkR2xDRk5wYTJhMFd0UTdtUjFMQUhXOFJCRDRCM0ExbjRsNzd1RjR3ZzZrbEhzdHpJeDUza0QwZzBXN1hRZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T10:26:33.599Z"
+    },
+    {
+      "id": "rss_474f35c4093d30ce",
+      "timestamp": 1789286676000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Mocha left vulnerable to Houthi attack by US-Saudi inaction - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvakduR3JfeDBqLTFCSFlkaGFyV3RJRHdaV2xzVU1WeHIyaktVQXVPYVBYYWxtYkpPVXpVZUd4M1NybTdqc09FT21DMkY0RHYyVDFxdGgzWnF1aU91?oc=5\" target=\"_blank\">Yemen's Mocha left vulnerable to Houthi attack by US-Saudi inaction</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvakduR3JfeDBqLTFCSFlkaGFyV3RJRHdaV2xzVU1WeHIyaktVQXVPYVBYYWxtYkpPVXpVZUd4M1NybTdqc09FT21DMkY0RHYyVDFxdGgzWnF1aU91?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-13T10:26:33.598Z"
+    },
     {
       "id": "rss_293435ab6b5c9575",
       "timestamp": 1789274432000,
@@ -10962,71 +11028,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-07T17:20:45.071Z"
-    },
-    {
-      "id": "rss_24413077a46a4a4e",
-      "timestamp": 1786122005000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Live Updates: Latest from Israel, Iran, and Middle East - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9FTWE4TWRhUjhlbHpZdUJKVERKV2p4X1E1N29XcllYRXktZHczbkgzck8tM1paa3VhalMwbXRUdWZlVHo2Z3hIbnNJbFNlaElpMnlZVzdYcFZRM3FiYlZiMGRBT0VoVTM4Y3NIb08zR094NXBsVi1TZ21iVEdjbE0?oc=5\" target=\"_blank\">Live Updates: Latest from Israel, Iran, and Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9FTWE4TWRhUjhlbHpZdUJKVERKV2p4X1E1N29XcllYRXktZHczbkgzck8tM1paa3VhalMwbXRUdWZlVHo2Z3hIbnNJbFNlaElpMnlZVzdYcFZRM3FiYlZiMGRBT0VoVTM4Y3NIb08zR094NXBsVi1TZ21iVEdjbE0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T17:20:45.070Z"
-    },
-    {
-      "id": "rss_f5aec3a74426a47d",
-      "timestamp": 1786118160000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Live updates • At least 300 children killed in Gaza since October cease-fire, UNICEF says - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwJBVV95cUxPZGN6NGNSZF8tZ1VyTkJTMkozb0Nqa2xOdm41cVBDbHhHX2NPb2pidmtqSzh5em1jTlBkajlBUEliUWhhTVlTZVFqd3pLcWFCZ1NkWXppNm9pcXhTOWRpUnVsMkR0RHRURDhOYWFnZnV6MmFIZWM0WnJEQWotUy0wQng0d04td3hkQi1fREQ3YUlPLWNBU3BUN3FDN01lYXhoU21tUG8yOFVRZUE5ZlpjMjBrbVlXWDdxcTNINktxS0FKYjI1X3Vnd3dZQkk4SGFBTWczSzZldkFvMEVzYzVCaEVtS18xdWZEbE5wVXIzamFZY0h6UjFNTm45RGlBQkJGc1UxWGdyeXpuR0dVa0RQN2hGWENyYlE?oc=5\" target=\"_blank\">Live updates • At least 300 children killed in Gaza ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPZGN6NGNSZF8tZ1VyTkJTMkozb0Nqa2xOdm41cVBDbHhHX2NPb2pidmtqSzh5em1jTlBkajlBUEliUWhhTVlTZVFqd3pLcWFCZ1NkWXppNm9pcXhTOWRpUnVsMkR0RHRURDhOYWFnZnV6MmFIZWM0WnJEQWotUy0wQng0d04td3hkQi1fREQ3YUlPLWNBU3BUN3FDN01lYXhoU21tUG8yOFVRZUE5ZlpjMjBrbVlXWDdxcTNINktxS0FKYjI1X3Vnd3dZQkk4SGFBTWczSzZldkFvMEVzYzVCaEVtS18xdWZEbE5wVXIzamFZY0h6UjFNTm45RGlBQkJGc1UxWGdyeXpuR0dVa0RQN2hGWENyYlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T16:22:09.734Z"
-    },
-    {
-      "id": "rss_66bfa80e7fb4e279",
-      "timestamp": 1786114338000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Saudi Arabia, Turkey and Pakistan agree to defense pact - NewsNation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNV054TXlQUll4VG1RX3BEbmd4WV9semtJNERnU1pSSUNKeWc3a3U0VmZSeDBHc2ROcVNrTmQ3MFBYbW5wZUNiblVKMVg1elNpdlhXV0tQaWtFLXR4QVBOMEFzbW9LdHFidnhjT3Z1OFA3R1JtR3RoSmxRV3lRTmRWMUtsdHJpS1YtN2xTZVI0c0RGQdIBlwFBVV95cUxNN1ZoZFFhNXkzb3ZzTU9XSEpMUTI3dUtDWV9rVlRlNVNlMWhla0lUaDVuZDBvNDlWWk9HQzJtci1VNlJyOWdYQ1FlR3BjUlg0cVJtdnVqRS00WDhwd3VXNmtBNGJ0NXg2Vm5PY2FOdEFMd2RSVWRab1pHaWU3OHNHTFlyOUdFUXhFa1Ezb3NvSnZDa1hsbmxr?oc=5\" target=\"_blank\">Saudi Arabia, Turkey an",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNV054TXlQUll4VG1RX3BEbmd4WV9semtJNERnU1pSSUNKeWc3a3U0VmZSeDBHc2ROcVNrTmQ3MFBYbW5wZUNiblVKMVg1elNpdlhXV0tQaWtFLXR4QVBOMEFzbW9LdHFidnhjT3Z1OFA3R1JtR3RoSmxRV3lRTmRWMUtsdHJpS1YtN2xTZVI0c0RGQdIBlwFBVV95cUxNN1ZoZFFhNXkzb3ZzTU9XSEpMUTI3dUtDWV9rVlRlNVNlMWhla0lUaDVuZDBvNDlWWk9HQzJtci1VNlJyOWdYQ1FlR3BjUlg0cVJtdnVqRS00WDhwd3VXNmtBNGJ0NXg2Vm5PY2FOdEFMd2RSVWRab1pHaWU3OHNHTFlyOUdFUXhFa1Ezb3NvSnZDa1hsbmxr?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-07T16:22:09.734Z"
     }
   ]
 }
