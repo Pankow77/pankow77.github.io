@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-13T22:31:04.283Z",
+  "last_fetch": "2026-09-14T00:38:25.548Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_40139c91d3b67743",
+      "timestamp": 1789345145000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi fighters have attacked Saudi military targets after seizing Yemen's Red Sea coast. Here’s a timeline of their ten-day, lightning-fast advance — from the initial offensive to their push toward the strategic Bab el-Mandeb Strait. #dwnews - facebook.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWFcxUHpIR1l5RzdTempvUHdTaU5LOG1NaF9Fa3N3cVp2OUFtRWJCeS1fdHpTRno3SXpfLVRnUHViMkRwX1FvcV9nU1FkOEtBTWRzenpoNy1ZUlVJd0hVSnFpcWo3TkljOVZZaG5OdzFZb0dLSmZBd1B6VmlyU25jMTVOVEVhSU9VQVpWeW54Q3Fpd0huSkYzV2pnOHhSRFdBSFZJU0RlS0xJVnVUQzRhTXUwa3N1QlI4N1hGb3g0TDFaY0R0MHh1dlNqNjBpOWdHTUZpUG9lc2ZuTDBOSlhMMQ?oc=5\" target=\"_blank\">Houthi fighters have attacked Saudi military targets after seizing Yemen's Red Sea coast. Here’s a timeline of their ten-day,",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWFcxUHpIR1l5RzdTempvUHdTaU5LOG1NaF9Fa3N3cVp2OUFtRWJCeS1fdHpTRno3SXpfLVRnUHViMkRwX1FvcV9nU1FkOEtBTWRzenpoNy1ZUlVJd0hVSnFpcWo3TkljOVZZaG5OdzFZb0dLSmZBd1B6VmlyU25jMTVOVEVhSU9VQVpWeW54Q3Fpd0huSkYzV2pnOHhSRFdBSFZJU0RlS0xJVnVUQzRhTXUwa3N1QlI4N1hGb3g0TDFaY0R0MHh1dlNqNjBpOWdHTUZpUG9lc2ZuTDBOSlhMMQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-14T00:38:23.902Z"
+    },
     {
       "id": "rss_fc57bcde0ab1e120",
       "timestamp": 1789337824000,
@@ -11011,27 +11032,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-08T10:26:40.590Z"
-    },
-    {
-      "id": "rss_02625b936c56d2e0",
-      "timestamp": 1786178373000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Fears of wider escalation in Yemen after Houthi attack on Marib - The Arab Weekly",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQTUNGTVFzb2NBRVpsWmJ0dkNySTViaU5kbVg1WTREWVpicEpNSGp0cXZhVmVvUkdLXzBnS1JBMHEwVGlCMTFPVEJqTFRsYnFoa0FsT3lKQjRHOU5YcW9sSmJXWUpEbkNkYVpBQ0NlWlpoOE91OVFXeDVaOWtjbDNHVTB2MGlOVE0?oc=5\" target=\"_blank\">Fears of wider escalation in Yemen after Houthi attack on Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTUNGTVFzb2NBRVpsWmJ0dkNySTViaU5kbVg1WTREWVpicEpNSGp0cXZhVmVvUkdLXzBnS1JBMHEwVGlCMTFPVEJqTFRsYnFoa0FsT3lKQjRHOU5YcW9sSmJXWUpEbkNkYVpBQ0NlWlpoOE91OVFXeDVaOWtjbDNHVTB2MGlOVE0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-08T17:55:40.211Z"
     }
   ]
 }
