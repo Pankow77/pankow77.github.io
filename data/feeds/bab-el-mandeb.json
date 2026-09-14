@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-14T21:21:37.338Z",
+  "last_fetch": "2026-09-14T23:55:47.196Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -25,6 +25,50 @@
       "fetched_at": "2026-09-14T21:21:35.906Z"
     },
     {
+      "id": "rss_54c3d53d71302650",
+      "timestamp": 1789417170000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis seize 2 strategic Red Sea islands, and other Mideast developments - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQd1ZuZndYc1dWZnZZeWFDdHRNNnZnc2RwS3ZkRUxZaVlrTFBURTZTY0xqV0oxdy1vUXhDYVA3Wmo4MF9hUXRScHpMVzExWldkVkxNWHZVUjJJQ2w3b1V1NEV2TnBjNEdWRVRjeklobnRNcElOVWRyckpTVzhZX05zdkI5dlhOMDUtaDZYWW9WaXJVZU04RVY5RVl4UUUtTktoMjBHbzRhU1BQclHSAbABQVVfeXFMTUYtSmItemFrTzNZYldLWllqS1hXTmxmSncyeTg3Z0thX1hOWHdkN3NvTVFuczhOVzUyNzZHUzFWdXFIakctYnAtUFVLX21JVWdXSVVlbk9KRzNfTkZyOEMzMWdVSzVsSFF5WU1WSFpWb1FlNUdWTVROSzZCSkJoczVYdGc5dTU2cVNHNkptMjJIdnczUHdhTkZDaVRSOE9hcl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQd1ZuZndYc1dWZnZZeWFDdHRNNnZnc2RwS3ZkRUxZaVlrTFBURTZTY0xqV0oxdy1vUXhDYVA3Wmo4MF9hUXRScHpMVzExWldkVkxNWHZVUjJJQ2w3b1V1NEV2TnBjNEdWRVRjeklobnRNcElOVWRyckpTVzhZX05zdkI5dlhOMDUtaDZYWW9WaXJVZU04RVY5RVl4UUUtTktoMjBHbzRhU1BQclHSAbABQVVfeXFMTUYtSmItemFrTzNZYldLWllqS1hXTmxmSncyeTg3Z0thX1hOWHdkN3NvTVFuczhOVzUyNzZHUzFWdXFIakctYnAtUFVLX21JVWdXSVVlbk9KRzNfTkZyOEMzMWdVSzVsSFF5WU1WSFpWb1FlNUdWTVROSzZCSkJoczVYdGc5dTU2cVNHNkptMjJIdnczUHdhTkZDaVRSOE9hclIxTEUtQUFnZ2kyc3VEbjU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-14T23:55:45.629Z"
+    },
+    {
+      "id": "rss_6ae0f9ab72a6c2d5",
+      "timestamp": 1789416900000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi pipeline hit by drones will be out of service for weeks, further restricting oil flow - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOOTlTdWlFZF9mNl9uX3pCWHd0QXVWb0dEaXlGaXhLa3l4ek9PbWFhRG02VXJDMW1BT3FxUkp3MzZtdEd2ZHQ4cUswbkpfX1ZnVkxuQ3pValFrY1BTRHlyZjdaLXJqTW1VcXhzajBuSUFIbXdxamdqOTcxeFp2MERjcU9lQWVXaHhETnJweXZRdWp6UWNHQUxjdWc2NA?oc=5\" target=\"_blank\">Saudi pipeline hit by drones will be out of service for weeks, further restricting oil flow</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOTlTdWlFZF9mNl9uX3pCWHd0QXVWb0dEaXlGaXhLa3l4ek9PbWFhRG02VXJDMW1BT3FxUkp3MzZtdEd2ZHQ4cUswbkpfX1ZnVkxuQ3pValFrY1BTRHlyZjdaLXJqTW1VcXhzajBuSUFIbXdxamdqOTcxeFp2MERjcU9lQWVXaHhETnJweXZRdWp6UWNHQUxjdWc2NA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-14T23:55:45.630Z"
+    },
+    {
       "id": "rss_3688bbe1c3343691",
       "timestamp": 1789416540000,
       "source": "OSINT",
@@ -46,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-14T21:21:35.905Z"
+    },
+    {
+      "id": "rss_34b6b1dc93e72a69",
+      "timestamp": 1789416240000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemeni forces say they struck Houthi positions near Bab el-Mandeb Strait - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSEtXbXVKRXo3dDd3RUcxS1ZhRlVTN0xIUDdHNElrb0NvT2pzeENIemJEdFhvTm5VbWpzNlBJVHQzTkI5cFZiVDZMamk5RHlYX1FWbmFmWlptaVA0Sk5pX2hEdmxIUFV4aUJDdjFOZUc5RmFreDNNcTFaRldoVE8wVjZDR3ZnOUotakkxc182TmZSYmxPYXJLMEItSHNhdEhhZ05kWTk3VnBJaU91OUFqV3BTNG93TWRXMDZwRHJTM3ZBSzExWjNFcg?oc=5\" target=\"_blank\">Yemeni forces say they struck Houthi positions near Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPSEtXbXVKRXo3dDd3RUcxS1ZhRlVTN0xIUDdHNElrb0NvT2pzeENIemJEdFhvTm5VbWpzNlBJVHQzTkI5cFZiVDZMamk5RHlYX1FWbmFmWlptaVA0Sk5pX2hEdmxIUFV4aUJDdjFOZUc5RmFreDNNcTFaRldoVE8wVjZDR3ZnOUotakkxc182TmZSYmxPYXJLMEItSHNhdEhhZ05kWTk3VnBJaU91OUFqV3BTNG93TWRXMDZwRHJTM3ZBSzExWjNFcg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-14T23:55:45.631Z"
     },
     {
       "id": "rss_7ec9f41b823ef57a",
@@ -10981,73 +11046,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-09T16:32:31.570Z"
-    },
-    {
-      "id": "rss_2a653a045b5432a3",
-      "timestamp": 1786290606000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen calls Houthi attack on Mokha port ‘extension of Iranian escalation’ - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMjdEbzVXMXN5OUc4LVkwNmFXUjd5ZkJ1V0ZRVWotVGpwU0pwbHV6LWtSYm1ERV9yM1Q1Q204a0c1X2M0YXdtWUUzQ01aZ2JaOEtVa2J3MnE3VEFieXR0M0pZXzlaZnVVY0ZZSWpHQzg0TklVMnVsSC1lc3lvWUhrcWRpazl1SUNBTjJRWVB6clN6WUdrYjBOSG1hMGpKbVFVMTJOZ19yZlB1dE1OWklKdDY0SGZOdE1F?oc=5\" target=\"_blank\">Yemen calls Houthi attack on Mokha port ‘extension of Iranian escalation’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMjdEbzVXMXN5OUc4LVkwNmFXUjd5ZkJ1V0ZRVWotVGpwU0pwbHV6LWtSYm1ERV9yM1Q1Q204a0c1X2M0YXdtWUUzQ01aZ2JaOEtVa2J3MnE3VEFieXR0M0pZXzlaZnVVY0ZZSWpHQzg0TklVMnVsSC1lc3lvWUhrcWRpazl1SUNBTjJRWVB6clN6WUdrYjBOSG1hMGpKbVFVMTJOZ19yZlB1dE1OWklKdDY0SGZOdE1F?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T15:56:16.602Z"
-    },
-    {
-      "id": "rss_9207295c360cc8ed",
-      "timestamp": 1786286925000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthis claim attacks on Saudi oil facility and Yemeni port, and other Mideast news - 102.3 KRMG",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxOb1dEdlZTMjJ2eTR6X1RjRTFhRnRzQnlGRWdoVlc0ajdTa2NvNkFvUHlSZFhXRE4yWjlZNU5JZTZEbjdwUG1MNnpqb284NFRQOGtUM2JRZWtTdDY4THlWeEtTMWhtSkJ6a3d1VXJ1bDItaVdMbVZCdE4waS1laEYtVGg2Q2todGNHeTZfQUoydmZlblR5OXo0alNSN2xMOTgzdFYtWUUxS1JnS05rX3UtdkVHZ0FjUktzQTJGUWFrcw?oc=5\" target=\"_blank\">Houthis claim attacks on Saudi oil facility and Yemeni port, and other Mideast news</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">102.3 KRMG</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOb1dEdlZTMjJ2eTR6X1RjRTFhRnRzQnlGRWdoVlc0ajdTa2NvNkFvUHlSZFhXRE4yWjlZNU5JZTZEbjdwUG1MNnpqb284NFRQOGtUM2JRZWtTdDY4THlWeEtTMWhtSkJ6a3d1VXJ1bDItaVdMbVZCdE4waS1laEYtVGg2Q2todGNHeTZfQUoydmZlblR5OXo0alNSN2xMOTgzdFYtWUUxS1JnS05rX3UtdkVHZ0FjUktzQTJGUWFrcw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T15:01:59.410Z"
-    },
-    {
-      "id": "rss_b323e4e4f09b5b29",
-      "timestamp": 1786285680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthi rebels attack crucial Red Sea port and Saudi Aramco refinery as fighting escalates - fortune.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQMDVlUUN2QlE3OXJjZG15OVRsOUYxMkExc0thWDJvZjhpNkt1X1huZ1NhN3FrSlpyU3F5WVVyLUFRZzVodmlpd3NQSkpHcTItcU1UdW5GYWxiSnlhcVRiczltdUdSeE9zSEZNM285X21iOUVVeVFyb2hITHhnV1dPbnJEcy0yQk81aFNJUk51ZXFUd3FFVEE?oc=5\" target=\"_blank\">Iran-backed Houthi rebels attack crucial Red Sea port and Saudi Aramco refinery as fighting escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fortune.com</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMDVlUUN2QlE3OXJjZG15OVRsOUYxMkExc0thWDJvZjhpNkt1X1huZ1NhN3FrSlpyU3F5WVVyLUFRZzVodmlpd3NQSkpHcTItcU1UdW5GYWxiSnlhcVRiczltdUdSeE9zSEZNM285X21iOUVVeVFyb2hITHhnV1dPbnJEcy0yQk81aFNJUk51ZXFUd3FFVEE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-10T09:55:51.443Z"
     }
   ]
 }
