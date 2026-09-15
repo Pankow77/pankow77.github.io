@@ -1,8 +1,92 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-14T23:55:47.196Z",
+  "last_fetch": "2026-09-15T03:18:39.500Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_aca95c089c37cfd6",
+      "timestamp": 1789439204000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Defeat Is Closer Than We Think - The Free Press",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFBIOXVxUU0xWFU0Zm05UVdRQXVETmtFY3RyUUNNVUZYWG5UOWRTWEhOZjljbHdIRDFFbk5VUGdJV0dvc0d1aXZYSHg5WWQ2TFljZjdTSkZSZ0Zxc3J5aFVYbzkwbXFodw?oc=5\" target=\"_blank\">Houthi Defeat Is Closer Than We Think</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Free Press</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBIOXVxUU0xWFU0Zm05UVdRQXVETmtFY3RyUUNNVUZYWG5UOWRTWEhOZjljbHdIRDFFbk5VUGdJV0dvc0d1aXZYSHg5WWQ2TFljZjdTSkZSZ0Zxc3J5aFVYbzkwbXFodw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T03:18:37.909Z"
+    },
+    {
+      "id": "rss_d14fdf71c30f059a",
+      "timestamp": 1789430640000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis strike Saudi targets anew as talks over Strait of Hormuz stall - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxOYjU2YnlvRExQZkwtRGlRN2ljVC10RTVQRGI4NUhLSEladjEzeGltZlcxWXByODRyZDlyM3pvWGdSYVBIZXctNVZvQ2ZOX09PZ2ZsN0pWU216ZFUwUDRRS0RjQXV2QVpMWkVXRFJiZGRaVVZENkFMN3hmUlBSWWxWVENnWnFYVEFHMGVMeWYyX2V0b09TMU9Bb2M4ZmZDWTU2YVVpYUFFOUJCcmVTeHhtdEVla2hMbGR1UGc?oc=5\" target=\"_blank\">Houthis strike Saudi targets anew as talks over Strait of Hormuz stall</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOYjU2YnlvRExQZkwtRGlRN2ljVC10RTVQRGI4NUhLSEladjEzeGltZlcxWXByODRyZDlyM3pvWGdSYVBIZXctNVZvQ2ZOX09PZ2ZsN0pWU216ZFUwUDRRS0RjQXV2QVpMWkVXRFJiZGRaVVZENkFMN3hmUlBSWWxWVENnWnFYVEFHMGVMeWYyX2V0b09TMU9Bb2M4ZmZDWTU2YVVpYUFFOUJCcmVTeHhtdEVla2hMbGR1UGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-15T03:18:37.908Z"
+    },
+    {
+      "id": "rss_2fc6eace27031904",
+      "timestamp": 1789430040000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi advances leave Trump with only bad choices - Politico",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOcElIdlZUSFlxdFlTemM4R0hHMkNrZkdBbl9wT0cyc2IySk5fNUZjUGRTT1llLTRRS1BGUDM1Yi1HcTRvUWJoeThTTkVqbVRLSnhFbFV0R3RIck8zNWRjaV9wU1lwSUpNOTZNUW1VandRY2Z3TEUyNG00UXQ5V2RQX1Awa3pEQ3JSb2pFMA?oc=5\" target=\"_blank\">Houthi advances leave Trump with only bad choices</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOcElIdlZUSFlxdFlTemM4R0hHMkNrZkdBbl9wT0cyc2IySk5fNUZjUGRTT1llLTRRS1BGUDM1Yi1HcTRvUWJoeThTTkVqbVRLSnhFbFV0R3RIck8zNWRjaV9wU1lwSUpNOTZNUW1VandRY2Z3TEUyNG00UXQ5V2RQX1Awa3pEQ3JSb2pFMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T03:18:37.909Z"
+    },
+    {
+      "id": "rss_3e6e99b051704c1f",
+      "timestamp": 1789425645000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi gains in Yemen, attack on Saudi pipeline compound pressure on oil markets - pbs.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNX1ZzcDVZWkp0ZjB1QVdPOEVINDZfQkp6bGNUN2htRzFIVzNpeDNkRkk2dWZQZ2dVR05GMnpLZl9tRVZmbHVKNXp1TW9NRVZqdkhLQldqQTdtS3AxZTdHQVZjdnowLXBZS3NJbXlicUZmejlHWmdPbXFKWUZ5VktENmRRSHQ1d0lQU3FPb1BpaG4zVlJ3b0lrdzl0OE1kSGtEZ2hfV2xXZEYtWnE5YjhMQzYtbw?oc=5\" target=\"_blank\">Houthi gains in Yemen, attack on Saudi pipeline compound pressure on oil markets</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">pbs.org</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNX1ZzcDVZWkp0ZjB1QVdPOEVINDZfQkp6bGNUN2htRzFIVzNpeDNkRkk2dWZQZ2dVR05GMnpLZl9tRVZmbHVKNXp1TW9NRVZqdkhLQldqQTdtS3AxZTdHQVZjdnowLXBZS3NJbXlicUZmejlHWmdPbXFKWUZ5VktENmRRSHQ1d0lQU3FPb1BpaG4zVlJ3b0lrdzl0OE1kSGtEZ2hfV2xXZEYtWnE5YjhMQzYtbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T03:18:37.908Z"
+    },
     {
       "id": "rss_c4d02541bf547f9c",
       "timestamp": 1789420230000,
@@ -291,6 +375,27 @@
       "fetched_at": "2026-09-14T17:31:17.319Z"
     },
     {
+      "id": "rss_8611a8cadde76316",
+      "timestamp": 1789388270000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthi Advance and the Changing Strategic Geography of Bab el-Mandeb - horn review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMHdWY0VqczVwUkJtczJFQ3c0ekxuVC1qZG5ncEs3U19rY0ppVllWNVZsczh4X2VQVEwyZktNOTJieU9tZ2hkTDFpZ1BLSnVOczl4bGY4MHYzRHV2eWtmNEkyQjI1SklCRG9seWVxWGlLeU4tVmZRcVloZjlFMlR3WkZtZmZ1cWQtNVI2djBUSlNnVFVrWEw2WTJMLXYwWmlyQTl1YUM4dzNkSU0?oc=5\" target=\"_blank\">The Houthi Advance and the Changing Strategic Geography of Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQMHdWY0VqczVwUkJtczJFQ3c0ekxuVC1qZG5ncEs3U19rY0ppVllWNVZsczh4X2VQVEwyZktNOTJieU9tZ2hkTDFpZ1BLSnVOczl4bGY4MHYzRHV2eWtmNEkyQjI1SklCRG9seWVxWGlLeU4tVmZRcVloZjlFMlR3WkZtZmZ1cWQtNVI2djBUSlNnVFVrWEw2WTJMLXYwWmlyQTl1YUM4dzNkSU0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T03:18:37.909Z"
+    },
+    {
       "id": "rss_033a6c874260a84f",
       "timestamp": 1789387980000,
       "source": "OSINT",
@@ -310,6 +415,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-14T17:31:17.320Z"
+    },
+    {
+      "id": "rss_c195aef3282ae0b0",
+      "timestamp": 1789386780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis seize more key islands in Red Sea, launch attacks into Saudi Arabia - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQTdHVjVyVUJvWWFVOWJLQ0IxdmJVZzlLRmRZd05iLWkzVHg1bVNFZFc3V2gyYms1bm9nRl82OHlNR0JVOUlWVzRIdUd6OFBGYUZkOWpKVDNKcHB3dElQMTVaLTFrd3M2VGNaWnVzNzFvcDZoWGo3SnR5V0JhUVhiVDlMcmEzTXdBV19ZRm9nWGlDeS1NSEtpMWNjSUR5anVQTGFWZ3NBaTPSAa4BQVVfeXFMTjhaRjh5T3JUTEMxeUxBZVlrRjJ3SDhwLVNyZndGbG1ucnZqdFRBSkZNYlhOTnpvRXl4UFM2SFdCaW9CeFhpWi1lc2lKUWNPVFhJbURWenVTZHVubWo3bE5XdE5PajhEZUVGaE9LbkgzVTlIM0ltR2paZ0U4MnEyeENEWTc2US1BeUNfX2tnX2JTN21JUkNzMDJmSGZnZ0hZbmRJWE",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQTdHVjVyVUJvWWFVOWJLQ0IxdmJVZzlLRmRZd05iLWkzVHg1bVNFZFc3V2gyYms1bm9nRl82OHlNR0JVOUlWVzRIdUd6OFBGYUZkOWpKVDNKcHB3dElQMTVaLTFrd3M2VGNaWnVzNzFvcDZoWGo3SnR5V0JhUVhiVDlMcmEzTXdBV19ZRm9nWGlDeS1NSEtpMWNjSUR5anVQTGFWZ3NBaTPSAa4BQVVfeXFMTjhaRjh5T3JUTEMxeUxBZVlrRjJ3SDhwLVNyZndGbG1ucnZqdFRBSkZNYlhOTnpvRXl4UFM2SFdCaW9CeFhpWi1lc2lKUWNPVFhJbURWenVTZHVubWo3bE5XdE5PajhEZUVGaE9LbkgzVTlIM0ltR2paZ0U4MnEyeENEWTc2US1BeUNfX2tnX2JTN21JUkNzMDJmSGZnZ0hZbmRJWE91SVlxQXdwYmNR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T03:18:37.909Z"
     },
     {
       "id": "rss_e3001242f0136be2",
@@ -10916,136 +11042,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-08-10T03:48:43.272Z"
-    },
-    {
-      "id": "rss_42da46c7ef40b533",
-      "timestamp": 1786303295000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi attacks kill seven in Yemen, refinery targeted in Saudi Arabia - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQTUZxOWROQkhqU0lHQ25IUWpWc2lwNmFPSUNWSTRGN2tDTFBwRlBXWlpXeEZLaGpGQi14RkFWVzZMdUlxSWVvNWxUdE0wa01hcUU1elJRamNBdEtQdXVSSVIyNVVyeV9tZTlyakdWTW5fYVlKdHNlbzJENHpGOFNaa2lUcXRtejdsNXRNcWpWRlNWVW0wQ1ZiaVVmN1BpQjdVV1ktQVJB?oc=5\" target=\"_blank\">Houthi attacks kill seven in Yemen, refinery targeted in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al Jazeera</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTUZxOWROQkhqU0lHQ25IUWpWc2lwNmFPSUNWSTRGN2tDTFBwRlBXWlpXeEZLaGpGQi14RkFWVzZMdUlxSWVvNWxUdE0wa01hcUU1elJRamNBdEtQdXVSSVIyNVVyeV9tZTlyakdWTW5fYVlKdHNlbzJENHpGOFNaa2lUcXRtejdsNXRNcWpWRlNWVW0wQ1ZiaVVmN1BpQjdVV1ktQVJB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-08-11T16:54:47.995Z"
-    },
-    {
-      "id": "rss_4d5b1f8388cfc1d9",
-      "timestamp": 1786300843000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "11 killed in Houthi attacks in Yemen, including 8 military personnel - The Express Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY1JFa0NXTEIxT3piWGRwc3RQY0d5VmZhSDk3d0w1ZWNHRjh6c3VqWmpXMFEzdkVGRV8xaTJURU4wdUo4ZkVjd2l1d1FLdHlmM2FYOEg4WkhKZEJkTWpDVHE5X2V4UmxHd1pGdVZneWJXbUpSX1NIQ0lCb2hFTGc5TXJObWZTVVpQM2tqWWVSRUNlcjItSFJKQzNuWTYxVDFfRnBsZzBLM2gtZw?oc=5\" target=\"_blank\">11 killed in Houthi attacks in Yemen, including 8 military personnel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Express Tribune</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQY1JFa0NXTEIxT3piWGRwc3RQY0d5VmZhSDk3d0w1ZWNHRjh6c3VqWmpXMFEzdkVGRV8xaTJURU4wdUo4ZkVjd2l1d1FLdHlmM2FYOEg4WkhKZEJkTWpDVHE5X2V4UmxHd1pGdVZneWJXbUpSX1NIQ0lCb2hFTGc5TXJObWZTVVpQM2tqWWVSRUNlcjItSFJKQzNuWTYxVDFfRnBsZzBLM2gtZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T19:28:47.023Z"
-    },
-    {
-      "id": "rss_5ce4cd00c4e48a2e",
-      "timestamp": 1786299057000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Yemen: Houthi attack kills 7, wounds 30 - Shafaq News | Latest breaking news in Iraq and the world - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE5wNEhRZ1VEVTFsSENERHNWSmlvalhXZkNfcXFTYmx6S29BVUE0b1Z2cWxoNUhhc3V1eWFxQjFOby1USGNlajRGT1JZbUsyTGJIbm83Znc3SHk1YmJabGUtN2pySlRORFVtMGtIcktqRzc0dE82ektNSHFiNA?oc=5\" target=\"_blank\">Yemen: Houthi attack kills 7, wounds 30 - Shafaq News | Latest breaking news in Iraq and the world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5wNEhRZ1VEVTFsSENERHNWSmlvalhXZkNfcXFTYmx6S29BVUE0b1Z2cWxoNUhhc3V1eWFxQjFOby1USGNlajRGT1JZbUsyTGJIbm83Znc3SHk1YmJabGUtN2pySlRORFVtMGtIcktqRzc0dE82ektNSHFiNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T18:46:39.452Z"
-    },
-    {
-      "id": "rss_53c4ba7ff1e5bc7d",
-      "timestamp": 1786298404000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Rebels Attack Saudi Aramco Jazan Refinery With Drone, Saudi Fire Extinguished: who 24 outlets blamed - NewsCord",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYk5leWFnakhuQUR5YUZmUkpETmR3cndwTE5HNVBUSFdkTHQxMFhjZUlONENzSGJZNzQwSVFrWHFqMkJNREx6VktjUGUtcVI4Z2tBTXVZNExwZWRkcjNKR001VE1LOWhtMlc5ME00U0JGWHdycTlncUEzUFBSa2M1VE5kZU15RlJCbDl2TEJ5NEpvRWZwN1hhdTc1M3J5MFNGUXc2bzlJRjBtMFBiaUctdXRpRmwzdzdBbk44MnBaa1A3YlZiQ2owek4wWWpNT1U4TkVhTTlxVXNna0NWbnhWT1g5WkZPR0FEYXc?oc=5\" target=\"_blank\">Houthi Rebels Attack Saudi Aramco Jazan Refinery With Drone, Saudi Fire Extinguished: who 24 outlets blamed</a>&",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPYk5leWFnakhuQUR5YUZmUkpETmR3cndwTE5HNVBUSFdkTHQxMFhjZUlONENzSGJZNzQwSVFrWHFqMkJNREx6VktjUGUtcVI4Z2tBTXVZNExwZWRkcjNKR001VE1LOWhtMlc5ME00U0JGWHdycTlncUEzUFBSa2M1VE5kZU15RlJCbDl2TEJ5NEpvRWZwN1hhdTc1M3J5MFNGUXc2bzlJRjBtMFBiaUctdXRpRmwzdzdBbk44MnBaa1A3YlZiQ2owek4wWWpNT1U4TkVhTTlxVXNna0NWbnhWT1g5WkZPR0FEYXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T18:46:39.452Z"
-    },
-    {
-      "id": "rss_8ed77d190035fff4",
-      "timestamp": 1786291963000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi refinery, Yemeni Red Sea port at Mokha - Yahoo News Canada",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPYWVDS1JWNmVHSW9CLTJnTGhZdDRMX1kyZHdWQ00tY3VGQ05TX2R6OHYwMUU3RHZxQzdyU0hzLU5NcmF3RkV3ZW5hcTBHRndMQ2lFdHFoT3JMWFM3MlE5Vm5DaUdHTW5lM0paS25wZGpWTjBiTHJPdnJacUxSV2RoeDloQQ?oc=5\" target=\"_blank\">Houthis attack Saudi refinery, Yemeni Red Sea port at Mokha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo News Canada</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYWVDS1JWNmVHSW9CLTJnTGhZdDRMX1kyZHdWQ00tY3VGQ05TX2R6OHYwMUU3RHZxQzdyU0hzLU5NcmF3RkV3ZW5hcTBHRndMQ2lFdHFoT3JMWFM3MlE5Vm5DaUdHTW5lM0paS25wZGpWTjBiTHJPdnJacUxSV2RoeDloQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T16:32:31.571Z"
-    },
-    {
-      "id": "rss_3a3d5e79313639bc",
-      "timestamp": 1786290660000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis attack Aramco refinery in Saudi Arabia, Red Sea port - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPbERTYjhiemlGZ0xmamllMzJ4S2JFVU1yV1Z4ZUtiT3B2RG14MmlaNlNpbHRjRWFZa19fZVhLWWRPbFRhZk5rX2lIQUxma2ZDQlE5endBa091X3JERHJ5cExNaE1ZOXN5WWl5NlVrZmE4bHFoajFwVGhwTjBOcldOQk9vZGV2QUhEazdBWFpDSE5KRk5EZGpmOXkzZ1AxOW0tOGtGSXhPQ1d1bVBmbFcyV1NBWQ?oc=5\" target=\"_blank\">Iran-backed Houthis attack Aramco refinery in Saudi Arabia, Red Sea port</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbERTYjhiemlGZ0xmamllMzJ4S2JFVU1yV1Z4ZUtiT3B2RG14MmlaNlNpbHRjRWFZa19fZVhLWWRPbFRhZk5rX2lIQUxma2ZDQlE5endBa091X3JERHJ5cExNaE1ZOXN5WWl5NlVrZmE4bHFoajFwVGhwTjBOcldOQk9vZGV2QUhEazdBWFpDSE5KRk5EZGpmOXkzZ1AxOW0tOGtGSXhPQ1d1bVBmbFcyV1NBWQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-09T16:32:31.570Z"
     }
   ]
 }
