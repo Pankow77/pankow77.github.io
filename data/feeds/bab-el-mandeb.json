@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-15T18:20:58.013Z",
+  "last_fetch": "2026-09-15T21:35:02.040Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_50573144b1295747",
+      "timestamp": 1789506939000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia has sought Israel’s help, say reports, as Houthi rebels attack Red Sea shipping route - connectedtoindia.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPclUwNkRtYnV2c09CVWlkdS12YUU5T0hvVVpQb2Y0ekFyZkVkUGctcGJnMjZxRXFhLUtZalJiWmg4Q3F6T3dZTlpUcGlsYS1kMVhHYmZmWU9Dd2lIN1NLTDlYUmgzRXozaHp6WXgxVFc1Ulo4TGJzbU9Gbl9MZWpvZnpGQjJzanc1SVdJa1c3aWFGc3FxWTU1bDBEbEI4MlVIUlVXdEE5RjdXdURRQlktRDgxRDVPLTJjOFRYR3lBdDNxd1ZVSGNuTQ?oc=5\" target=\"_blank\">Saudi Arabia has sought Israel’s help, say reports, as Houthi rebels attack Red Sea shipping route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">connectedtoindia.com<",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPclUwNkRtYnV2c09CVWlkdS12YUU5T0hvVVpQb2Y0ekFyZkVkUGctcGJnMjZxRXFhLUtZalJiWmg4Q3F6T3dZTlpUcGlsYS1kMVhHYmZmWU9Dd2lIN1NLTDlYUmgzRXozaHp6WXgxVFc1Ulo4TGJzbU9Gbl9MZWpvZnpGQjJzanc1SVdJa1c3aWFGc3FxWTU1bDBEbEI4MlVIUlVXdEE5RjdXdURRQlktRDgxRDVPLTJjOFRYR3lBdDNxd1ZVSGNuTQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T21:35:02.035Z"
+    },
+    {
+      "id": "rss_966691871fa14808",
+      "timestamp": 1789498440000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis threaten more Saudi strikes as UN warns of humanitarian crisis in Yemen - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOSmVSS0d4ekNlSEVvSWtYajNDcFN4SjBsZDhZU3VLdTc3eFBTV2g1ZTkweGZyaHpBRzB2Q2JaLTBxWEVGM1JYSVBWSUZyc193VXU2Q056di1CZmJ4cGZORVJ5eWZDSS1PWTRqTW1WSzBnUkVwUVRhUTZ4NnJSRjBjc3g1SU9YYWRPNkpjU2RRS1Yza1ZNWGhQNmQxSUFsMnJiRC1kRmtOamVWQlNQRjdoYmljVVpka3NLVHpLTw?oc=5\" target=\"_blank\">Houthis threaten more Saudi strikes as UN warns of humanitarian crisis in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSmVSS0d4ekNlSEVvSWtYajNDcFN4SjBsZDhZU3VLdTc3eFBTV2g1ZTkweGZyaHpBRzB2Q2JaLTBxWEVGM1JYSVBWSUZyc193VXU2Q056di1CZmJ4cGZORVJ5eWZDSS1PWTRqTW1WSzBnUkVwUVRhUTZ4NnJSRjBjc3g1SU9YYWRPNkpjU2RRS1Yza1ZNWGhQNmQxSUFsMnJiRC1kRmtOamVWQlNQRjdoYmljVVpka3NLVHpLTw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T21:35:00.429Z"
+    },
+    {
+      "id": "rss_4ac83a3e1655e206",
+      "timestamp": 1789496610000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi crown prince seeks Egypt’s backing as Houthi attacks rattle Red Sea oil routes - WTOP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQTURSeElRNmRLZjlXS255bllQTHNwMkxTZ21kYU44cVpWVk96MFgyS05SMldHc0J6RWE2TkVyTzBCNmJCMXp4UFBiSkJnMWxIVkYyS25PV1Vnb1cwZ2NaTFRhZ09MZHRPUkZ3Wnh1MTk0cFZxWjN5UGFlTG9JT1pXTGNYTEQ2MDdMV3pfeWw5RkdWVFE5ZzU0SkR3eHUta2RnZVcwNFpneHV0ZlBfWWxkXzdYOFFFZw?oc=5\" target=\"_blank\">Saudi crown prince seeks Egypt’s backing as Houthi attacks rattle Red Sea oil routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WTOP News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTURSeElRNmRLZjlXS255bllQTHNwMkxTZ21kYU44cVpWVk96MFgyS05SMldHc0J6RWE2TkVyTzBCNmJCMXp4UFBiSkJnMWxIVkYyS25PV1Vnb1cwZ2NaTFRhZ09MZHRPUkZ3Wnh1MTk0cFZxWjN5UGFlTG9JT1pXTGNYTEQ2MDdMV3pfeWw5RkdWVFE5ZzU0SkR3eHUta2RnZVcwNFpneHV0ZlBfWWxkXzdYOFFFZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T21:35:00.430Z"
+    },
     {
       "id": "rss_5a4ac997222ca103",
       "timestamp": 1789495200000,
@@ -25,6 +90,29 @@
       "fetched_at": "2026-09-15T18:20:56.433Z"
     },
     {
+      "id": "rss_2e545ec6b9f66153",
+      "timestamp": 1789495200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The New 'Mecca Alliance' Warns Iran Over Houthi Attacks on Saudi Arabia - Crude Oil Prices Today | OilPrice.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaDZGc0lOWnB5VG1pLWlOMVY4cEFQNjVUTWI5NGxCUHhXaUZOcDZNUllLbmNMRE5QU0ZrTTRDejJTSVJqeTJRbHhsMEU3bmJGaFlnWHNUZHZoZFJyclQyVHdHNERWYVlFZVdtN3A1OHgyT2w0WVd5NE04SjQyMlc3ajJ0clJXWlJrVW9WWnpkZURtWW12bVNqWVhCY3VqcGdTUE5sNzZZZFVxaHJBdnVZY0MtLUpTdUFBTTdv0gHAAUFVX3lxTE00WHphcmpBOThFTExVT2J4VXllVktUbHc2SGx2N05FQ2sxeF93MHlodmI2NWV3MjMxN2ljWl9MOXI2R1Q3aGVWLXVIa09FWkd4NWdlTE5Reml4U0JKS0t6Y2xZRDNUdE0tNVFfTE5ONU9PWVdWajk4NWhYZHhfU0Y3eHhFOF81b0dpOVBrY29seX",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQaDZGc0lOWnB5VG1pLWlOMVY4cEFQNjVUTWI5NGxCUHhXaUZOcDZNUllLbmNMRE5QU0ZrTTRDejJTSVJqeTJRbHhsMEU3bmJGaFlnWHNUZHZoZFJyclQyVHdHNERWYVlFZVdtN3A1OHgyT2w0WVd5NE04SjQyMlc3ajJ0clJXWlJrVW9WWnpkZURtWW12bVNqWVhCY3VqcGdTUE5sNzZZZFVxaHJBdnVZY0MtLUpTdUFBTTdv0gHAAUFVX3lxTE00WHphcmpBOThFTExVT2J4VXllVktUbHc2SGx2N05FQ2sxeF93MHlodmI2NWV3MjMxN2ljWl9MOXI2R1Q3aGVWLXVIa09FWkd4NWdlTE5Reml4U0JKS0t6Y2xZRDNUdE0tNVFfTE5ONU9PWVdWajk4NWhYZHhfU0Y3eHhFOF81b0dpOVBrY29seXZMVlhNMkhlaGZ4ZW5mSU5nTDJ5eU84R0MzVDhpU2p6MnFpR3YyQ0xmd2R0WjFjLQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T21:35:00.429Z"
+    },
+    {
       "id": "rss_379894b43170c73f",
       "timestamp": 1789483068000,
       "source": "Al Jazeera",
@@ -44,6 +132,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-15T18:20:56.432Z"
+    },
+    {
+      "id": "rss_95980725b12601cb",
+      "timestamp": 1789480946000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s Houthi Militants Are Learning to Arm Themselves - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOYW90Y19RMURaNUhiZHpNeFhSMkdHMTRNWG81UThHYWRyam1QTWVyRlU1VHlRMTI5dDFpNEdDeGh2eFRweHg3Ym9vZTJTemdOT2QtQ0pMV0lhXzUySnJnN1JLbkhvUWIyemFUbDBwazdaS2ZhRklMSnFfQmRhVnhuVUNlNm8?oc=5\" target=\"_blank\">Yemen’s Houthi Militants Are Learning to Arm Themselves</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOYW90Y19RMURaNUhiZHpNeFhSMkdHMTRNWG81UThHYWRyam1QTWVyRlU1VHlRMTI5dDFpNEdDeGh2eFRweHg3Ym9vZTJTemdOT2QtQ0pMV0lhXzUySnJnN1JLbkhvUWIyemFUbDBwazdaS2ZhRklMSnFfQmRhVnhuVUNlNm8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-15T21:35:00.430Z"
     },
     {
       "id": "rss_7493fac5add5ed07",
@@ -10931,114 +11040,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-11T04:15:13.818Z"
-    },
-    {
-      "id": "rss_c87747bba1a349ac",
-      "timestamp": 1786415851000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Mecca Joint Defense Agreement unresponsive to Houthi attack in Jizan - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xNDI5WEFhUE1PakR4VHJPbWN5RGE3MVFWNlVFdFZtUllUQjJHU0FXam51RjJSVHlxZ2VnTVdhTGJUX0ROal80VU92S1ktb24yRV8xREtiTFVtMVFu?oc=5\" target=\"_blank\">Mecca Joint Defense Agreement unresponsive to Houthi attack in Jizan</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xNDI5WEFhUE1PakR4VHJPbWN5RGE3MVFWNlVFdFZtUllUQjJHU0FXam51RjJSVHlxZ2VnTVdhTGJUX0ROal80VU92S1ktb24yRV8xREtiTFVtMVFu?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T04:15:13.818Z"
-    },
-    {
-      "id": "rss_0106c546c107da41",
-      "timestamp": 1786393579000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ2lQcjJnWEdBSWcxR0xXODhzOEZlTnJPdEZUeDVlcFFJQ0tHS1ZrYWJ6bEY1T2JDT0UtWmZnMTFwV1d5NVZsQkwwYWlmWkVkR3ZMeFAyelFBYW1ibzRub0xMYzYwYXB5aFVyVXhib0l2bHpXVFEzWEJDWnNBZzZBS1hYa1lGak54b0JvOTRFUGx4cmZBdUFkT1RWQ1ZnLUpjb2FTZFVaalQxMEpINmFWN21FMHRNTU1EdWxhLW9DempSbzA?oc=5\" target=\"_blank\">Iran-backed Houthis strike Red Sea port of Mocha, threatening shipping routes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ2lQcjJnWEdBSWcxR0xXODhzOEZlTnJPdEZUeDVlcFFJQ0tHS1ZrYWJ6bEY1T2JDT0UtWmZnMTFwV1d5NVZsQkwwYWlmWkVkR3ZMeFAyelFBYW1ibzRub0xMYzYwYXB5aFVyVXhib0l2bHpXVFEzWEJDWnNBZzZBS1hYa1lGak54b0JvOTRFUGx4cmZBdUFkT1RWQ1ZnLUpjb2FTZFVaalQxMEpINmFWN21FMHRNTU1EdWxhLW9DempSbzA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-10T20:36:23.092Z"
-    },
-    {
-      "id": "rss_3dddd0ff3c17edde",
-      "timestamp": 1786381372000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's presidential council says government will no longer allow Houthis to monopolize decisions on war, peace - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxNemk5ZGt4TUduVjNXUWdJN1p1U2lMN3ltMFFCSDRCSnRkMmh6Sng2ZkI5azRlVW9KRWxZa2JRS0JSeWJyMERqTU9WQmpudUsyWXhJNWlpWmZLNVQ5dE52Z1ZaVVFVVEVWWkUxejNyVkt2TWdJZ0VDTVJMZGhBZTdpUGVYVzRPNTI0eEFka2xlbkJHZTlPRmFQQzRZYnpyN0lhTTVQSG9iVHRONWpzSzZxLTlac0dvejlGQm5ubzBXS3dlbGZKeGx5RFo1NXVKV1k2WTQ5UGNrQ0Vuano4WVVvNmZjNzkzMFpWS1E?oc=5\" target=\"_blank\">Yemen's presidential council says government will no longer allow Houthis to monopolize decisions on war, peace<",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNemk5ZGt4TUduVjNXUWdJN1p1U2lMN3ltMFFCSDRCSnRkMmh6Sng2ZkI5azRlVW9KRWxZa2JRS0JSeWJyMERqTU9WQmpudUsyWXhJNWlpWmZLNVQ5dE52Z1ZaVVFVVEVWWkUxejNyVkt2TWdJZ0VDTVJMZGhBZTdpUGVYVzRPNTI0eEFka2xlbkJHZTlPRmFQQzRZYnpyN0lhTTVQSG9iVHRONWpzSzZxLTlac0dvejlGQm5ubzBXS3dlbGZKeGx5RFo1NXVKV1k2WTQ5UGNrQ0Vuano4WVVvNmZjNzkzMFpWS1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-10T18:50:18.143Z"
-    },
-    {
-      "id": "rss_932704f6fbdad61a",
-      "timestamp": 1786379240000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemeni military says Houthi attack on Mocha kills 7, wounds 30 - Dubai Eye 103.8",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQeHpCYTluN1RpUUUxc3dqVXVjb1pNWG0yTkFLRTdUY1YwQjN1dVh5Z0lWYXNyUGJYVXNfR2JEQlQ3QWhfM19pY1prd2I2SjFURHFrTE00RXBKS3l1c3YzTEpER096YlcwNFpDaUQ3NVZsQ3dlSXJGcTRaX0ROREFEQ1lYcmZwWTlYTi1PaHprZnhmT3o1bUxIQXhvcnJEZy02QzMxQTJZTTJHZFRLaHFj?oc=5\" target=\"_blank\">Yemeni military says Houthi attack on Mocha kills 7, wounds 30</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Dubai Eye 103.8</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeHpCYTluN1RpUUUxc3dqVXVjb1pNWG0yTkFLRTdUY1YwQjN1dVh5Z0lWYXNyUGJYVXNfR2JEQlQ3QWhfM19pY1prd2I2SjFURHFrTE00RXBKS3l1c3YzTEpER096YlcwNFpDaUQ3NVZsQ3dlSXJGcTRaX0ROREFEQ1lYcmZwWTlYTi1PaHprZnhmT3o1bUxIQXhvcnJEZy02QzMxQTJZTTJHZFRLaHFj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-10T17:47:22.731Z"
-    },
-    {
-      "id": "rss_d4950092e89dba58",
-      "timestamp": 1786378014000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Explosion heard in Mocha as Yemeni military reports Houthi attack - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBwM3ZTNkNfc1JUSTNoTUlNWDh3bkdoNnlqcVc3c04yTWZ1MkY5eVpBTGp3YmV6dmlyN3VlVHR5d0ZNZWRKWmlXSy1qUldxb3RtU25Kd2lWSkY5NE11UmhuOVk3dXoxRm8?oc=5\" target=\"_blank\">Explosion heard in Mocha as Yemeni military reports Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBwM3ZTNkNfc1JUSTNoTUlNWDh3bkdoNnlqcVc3c04yTWZ1MkY5eVpBTGp3YmV6dmlyN3VlVHR5d0ZNZWRKWmlXSy1qUldxb3RtU25Kd2lWSkY5NE11UmhuOVk3dXoxRm8?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-08-10T18:50:18.143Z"
     }
   ]
 }
