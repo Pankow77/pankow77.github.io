@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-16T21:29:49.902Z",
+  "last_fetch": "2026-09-16T23:45:55.349Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f9204cf836ff53ca",
+      "timestamp": 1789585717000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia accuses Houthis of targeting Mecca, warns of 'red line' - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNYk9qdnhxWVJaRlYtanNBLTRvRi1HYXM5MUpEeDd3SlpjSDF5V2pmTkFHZlRURzFCU2loOEJYMTlidVVlWXN6NFVoWDRtTndKQkpScnIxQ3VwNUt1Z2d6MmRNRVNMdnFacXhlbHluQV9PUjh2MTNEdnZ1dWI0emN1UkJNTmZfVVFiczRmejNHeXRiN0hSbTllZw?oc=5\" target=\"_blank\">Saudi Arabia accuses Houthis of targeting Mecca, warns of 'red line'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYk9qdnhxWVJaRlYtanNBLTRvRi1HYXM5MUpEeDd3SlpjSDF5V2pmTkFHZlRURzFCU2loOEJYMTlidVVlWXN6NFVoWDRtTndKQkpScnIxQ3VwNUt1Z2d6MmRNRVNMdnFacXhlbHluQV9PUjh2MTNEdnZ1dWI0emN1UkJNTmZfVVFiczRmejNHeXRiN0hSbTllZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-16T23:45:53.608Z"
+    },
     {
       "id": "rss_3d3d39b0bbd5ada3",
       "timestamp": 1789583484000,
@@ -130,6 +151,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-16T18:04:15.970Z"
+    },
+    {
+      "id": "rss_4862ea05458c48b6",
+      "timestamp": 1789578120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Türkiye condemns Houthi drone attack targeting Mecca - Daily Sabah",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOYmlfb1lVNldUSUtwUkhDMWVxMVMwa2p2QWVrVEJhU0xvUE40VEdPMHZnM3lOX0MzeV8yWS1xZWE4RHZrbHpWV3JaTXRfc2JjV0RxTkxjeXVYUm5xckhPaXJZdUM4OUdtUndZaUQxN1JWeGlGNDhYS0hIZF9UR0NHUklRTVM4bG9VUnNnanBsWU9yczlVcm1lUW9GelVpZVE?oc=5\" target=\"_blank\">Türkiye condemns Houthi drone attack targeting Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Sabah</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOYmlfb1lVNldUSUtwUkhDMWVxMVMwa2p2QWVrVEJhU0xvUE40VEdPMHZnM3lOX0MzeV8yWS1xZWE4RHZrbHpWV3JaTXRfc2JjV0RxTkxjeXVYUm5xckhPaXJZdUM4OUdtUndZaUQxN1JWeGlGNDhYS0hIZF9UR0NHUklRTVM4bG9VUnNnanBsWU9yczlVcm1lUW9GelVpZVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-16T23:45:53.609Z"
     },
     {
       "id": "rss_af39157fbb12fb52",
@@ -10954,54 +10998,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-08-11T19:59:08.733Z"
-    },
-    {
-      "id": "rss_33415169a83247ff",
-      "timestamp": 1786469820000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "4 crew members killed after Houthi attack on commercial vessel in Bab al-Mandeb - Middle East Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbGJqeXdZZ3dNcHpKZ2R3dmhUaEYxTlNwNFo1d2tIcll0ZVRsNFNaZ2tEa19ldmV2YnZ3SjNZSGliYnNpQ1M2aXBIX3IzQkRHTUxCZlJ5aHZTQ1FOYnZyRVp3eXJ1X0w4Q1Z5NVFERmVoSFA2aFNXZEE4RDROaFJOdGRMTTVQUzJMS0RnOFloMl9fYzJ1ZjBFQk13WHJlMFhLYnJ3T1l2MlMzMmJQZlg2Z3F0aWpNN29uTS1naTdkcULSAcYBQVVfeXFMTnRzQUgzYlgxcU5RbkFyTEJaV0FFa0ZCamVLSGlkcUU4am1Sb01zUXV5TE5CVy1CTmp3NDZodmlyckZPcmxIVElLMFpEUmtjclVMU0dzbmZlb0drLUJTY0x0eW9WTUpzaENYRTRhZHJMOHU4alMzcWFIWVpOaGRBS1ZiMlJiOEV6QXdGQ0",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbGJqeXdZZ3dNcHpKZ2R3dmhUaEYxTlNwNFo1d2tIcll0ZVRsNFNaZ2tEa19ldmV2YnZ3SjNZSGliYnNpQ1M2aXBIX3IzQkRHTUxCZlJ5aHZTQ1FOYnZyRVp3eXJ1X0w4Q1Z5NVFERmVoSFA2aFNXZEE4RDROaFJOdGRMTTVQUzJMS0RnOFloMl9fYzJ1ZjBFQk13WHJlMFhLYnJ3T1l2MlMzMmJQZlg2Z3F0aWpNN29uTS1naTdkcULSAcYBQVVfeXFMTnRzQUgzYlgxcU5RbkFyTEJaV0FFa0ZCamVLSGlkcUU4am1Sb01zUXV5TE5CVy1CTmp3NDZodmlyckZPcmxIVElLMFpEUmtjclVMU0dzbmZlb0drLUJTY0x0eW9WTUpzaENYRTRhZHJMOHU4alMzcWFIWVpOaGRBS1ZiMlJiOEV6QXdGQ0JtcDN1Zm9JSkF5ZzA0UlFtdnduNjVJNHpfR3pmN0xjV1hQam4zX0ZCLWhEYjgxdjVDZnRhbUxFOXN3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T20:53:23.039Z"
-    },
-    {
-      "id": "rss_f7ecd938b489a090",
-      "timestamp": 1786469526000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Deadly Red Sea ship attack threatens to muddy return of Suez transits - Journal of Commerce",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQWUxM2hnMHdSQWRJS3VTdndaNXktN3o2cV9uVmRIVjZYRXpnOFhVSDBnRC1xRkdhZTBBYUZDakNuTkItYl85dWhZclpEenBfU0FtcUZWRDBqS0ppNWRwZ012c0V5Z0ZiTk1ycGZmYjJqVmtRRVhWX2xVYm5QNFFOdjF5VVg4a0thZGFUNmFSUHhpM0p2Z0JpcGdScldjeU16TTJ1MUowOGs?oc=5\" target=\"_blank\">Deadly Red Sea ship attack threatens to muddy return of Suez transits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Journal of Commerce</font>",
-      "tags": [
-        "shipping",
-        "suez",
-        "cape-route"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQWUxM2hnMHdSQWRJS3VTdndaNXktN3o2cV9uVmRIVjZYRXpnOFhVSDBnRC1xRkdhZTBBYUZDakNuTkItYl85dWhZclpEenBfU0FtcUZWRDBqS0ppNWRwZ012c0V5Z0ZiTk1ycGZmYjJqVmtRRVhWX2xVYm5QNFFOdjF5VVg4a0thZGFUNmFSUHhpM0p2Z0JpcGdScldjeU16TTJ1MUowOGs?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T17:54:18.954Z"
     }
   ]
 }
