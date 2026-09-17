@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-17T08:48:47.215Z",
+  "last_fetch": "2026-09-17T14:03:20.182Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -27,6 +27,29 @@
       "fetched_at": "2026-09-17T08:48:45.923Z"
     },
     {
+      "id": "rss_22644e0779ebf937",
+      "timestamp": 1789624800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "World’s 9th strongest military backs Saudi Arabia after Houthi drone attack near Mecca as Yemen militants forge deeper ties with an African terror group - africa.businessinsider.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMG9Na0ptSEhBYWp0al9WaTF1bTUtbWdZYWY3MU1SV0Q3MkFNQ2JNSHBuTXhqb1MzaTVxNkFxYVJnTzdkdkF1NnpoeGFaa1o3SjcxWW9oUGJMMlZfNmJ6b1hCbnhFeUZvWFp3c1ZuRlhrcjJGMkwtajhZOHNfSlFlR3hoZkhFZ2l6V0k1VGtUcURuZ1lCOVlHZFdEYlh2VWZxU014enVlVlljYWdPT2pwNVdiZjhuQ1ZPR1QtOFF4eTRZMlFfT2lMRk9TN0puZjl5LVJWN2YwMHphUQ?oc=5\" target=\"_blank\">World’s 9th strongest military backs Saudi Arabia after Houthi drone attack near Mecca as Yemen militants forge deeper ties with an A",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMG9Na0ptSEhBYWp0al9WaTF1bTUtbWdZYWY3MU1SV0Q3MkFNQ2JNSHBuTXhqb1MzaTVxNkFxYVJnTzdkdkF1NnpoeGFaa1o3SjcxWW9oUGJMMlZfNmJ6b1hCbnhFeUZvWFp3c1ZuRlhrcjJGMkwtajhZOHNfSlFlR3hoZkhFZ2l6V0k1VGtUcURuZ1lCOVlHZFdEYlh2VWZxU014enVlVlljYWdPT2pwNVdiZjhuQ1ZPR1QtOFF4eTRZMlFfT2lMRk9TN0puZjl5LVJWN2YwMHphUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-17T14:03:18.317Z"
+    },
+    {
       "id": "rss_99a2cfb661e0b76b",
       "timestamp": 1789623516000,
       "source": "OSINT",
@@ -48,6 +71,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-17T08:48:45.922Z"
+    },
+    {
+      "id": "rss_dc57c0ea2a33d46b",
+      "timestamp": 1789617169000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni forces target Houthis as US rules out direct role - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVzdzQ25BRHRlMGRMZERRMDRkTmh3LTg1SERSZkpCRFEwMS1PZGhKbm02UUZKbC0zYUw1endPMXJyUWpEWFM5WXNIQmd1VS14VzdiMWt0Q0MxV0lLSmdXODA3RnNtS00zZ2oyNWpyR1lpMkt0b1NDcVBPUERjaWFCTi1kUVZSODFJNWZjZ0dyeUVsQXdHRnNrV0tGLTdqMENNLVlLVXdBR2VBNDhhX1VzaTlFdDLSAboBQVVfeXFMTTVXUndYbGpxaWEzZ2hJUC1mdWtZcWI5YkNHS3lWZ0lNMENDaHp3Z2oyVEoyM1NUNS0wN3hDc1B3cDlJSGNPSmNqTFllSlQwYTlIend4MjR6M2oyMzJPUXpVaHp4eHlKVEhFQ2IzbWpGc0xfMWNGbEoxM2hmSC1TY3hwSVNLM29CdG1SUEd1RnpObnI5UkFSdH",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVzdzQ25BRHRlMGRMZERRMDRkTmh3LTg1SERSZkpCRFEwMS1PZGhKbm02UUZKbC0zYUw1endPMXJyUWpEWFM5WXNIQmd1VS14VzdiMWt0Q0MxV0lLSmdXODA3RnNtS00zZ2oyNWpyR1lpMkt0b1NDcVBPUERjaWFCTi1kUVZSODFJNWZjZ0dyeUVsQXdHRnNrV0tGLTdqMENNLVlLVXdBR2VBNDhhX1VzaTlFdDLSAboBQVVfeXFMTTVXUndYbGpxaWEzZ2hJUC1mdWtZcWI5YkNHS3lWZ0lNMENDaHp3Z2oyVEoyM1NUNS0wN3hDc1B3cDlJSGNPSmNqTFllSlQwYTlIend4MjR6M2oyMzJPUXpVaHp4eHlKVEhFQ2IzbWpGc0xfMWNGbEoxM2hmSC1TY3hwSVNLM29CdG1SUEd1RnpObnI5UkFSdHNBWmdTMWVnSUZTRC1adFQ0cDBPZGlXZEpNSVVBR3dVdHhB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-17T14:03:18.317Z"
     },
     {
       "id": "rss_e8e9019352f7b7a0",
@@ -10943,52 +10987,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T05:26:57.621Z"
-    },
-    {
-      "id": "rss_ca7b48860f814f09",
-      "timestamp": 1786495017000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Attack Kills Six on Egyptian Ship - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQOTR6SkkzWHRyTjJSY2h1bWE4N1Jwcy1tcFlwOXZvVTBkYmFpWDNqUnI3bFU0VnR3b1NSUUtqWVh3MnVGZDhEdUlSTTBtcDhRTUMwUHJjQmN0UUdwUVFUU3pleHZEMG0teDh4NlRFNjJkMFJ0QW54OENJcmk3dmM5QTR4TFo?oc=5\" target=\"_blank\">Houthi Attack Kills Six on Egyptian Ship</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOTR6SkkzWHRyTjJSY2h1bWE4N1Jwcy1tcFlwOXZvVTBkYmFpWDNqUnI3bFU0VnR3b1NSUUtqWVh3MnVGZDhEdUlSTTBtcDhRTUMwUHJjQmN0UUdwUVFUU3pleHZEMG0teDh4NlRFNjJkMFJ0QW54OENJcmk3dmM5QTR4TFo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T09:38:36.529Z"
-    },
-    {
-      "id": "rss_92cfc12a2db2a631",
-      "timestamp": 1786492704000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo ship in flames after Houthi attack in Bab al-Mandeb strait - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNTEVkMUY4T013RzdZV2Q2aUpOSmVLMUJrQXFoOEJrVzBfZlpJMXZoV3ZqQVAtVy11ME5mZkc4TzgyejU3bTBnU3hkMXlzZDJPSGVNS29uT3hqdXpTd1MwUzRxTjhfVU05Y0pVNE1vN0xPUlFZSlJUV1h6RGdSMVVOU29vdEx1Vmo4WUd4ZUFNbVVXb2xJMTNISE5rMzYyalNUUlVqeHJwb3M2cEhHRy1XeVRZeTNHQdIBuwFBVV95cUxPTC1nM0RxcV9oaXcySjBGYTJSLXl5dGhpOU9OZGVmRWJjalNneUJtTUoxdXZib3pac0xOa0NCYXdoNjR0cWxFTnNyV2RmSlFEeEZ1OW5KRDMzc3ExRGRjX0o5eWxQSzZhZkVHRE1VZktYRk85TUZMWEo1b3FXWG1nY01aMFNfWVdkaW1iclZrQWxJd2wya2",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTEVkMUY4T013RzdZV2Q2aUpOSmVLMUJrQXFoOEJrVzBfZlpJMXZoV3ZqQVAtVy11ME5mZkc4TzgyejU3bTBnU3hkMXlzZDJPSGVNS29uT3hqdXpTd1MwUzRxTjhfVU05Y0pVNE1vN0xPUlFZSlJUV1h6RGdSMVVOU29vdEx1Vmo4WUd4ZUFNbVVXb2xJMTNISE5rMzYyalNUUlVqeHJwb3M2cEhHRy1XeVRZeTNHQdIBuwFBVV95cUxPTC1nM0RxcV9oaXcySjBGYTJSLXl5dGhpOU9OZGVmRWJjalNneUJtTUoxdXZib3pac0xOa0NCYXdoNjR0cWxFTnNyV2RmSlFEeEZ1OW5KRDMzc3ExRGRjX0o5eWxQSzZhZkVHRE1VZktYRk85TUZMWEo1b3FXWG1nY01aMFNfWVdkaW1iclZrQWxJd2wya25JTTV2WVQyZUZPU1hlN3dWS0t6UkstWHR2NnlfMXJ1REF6SGg4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-08-12T01:26:32.834Z"
     }
   ]
 }
