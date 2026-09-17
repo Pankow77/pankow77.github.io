@@ -1,8 +1,77 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-17T03:06:36.763Z",
+  "last_fetch": "2026-09-17T08:48:47.215Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4ffbfcdfe64de39d",
+      "timestamp": 1789628012000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi threats continue endangering future of Port of Eilat shipping - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBhTHBySzZ1MkNCbV9UOHFMR1p1U1VJZk9YMTlKZS1FNzJxSHY2Q2lKRmh0Wk9UMWpFZnd2RmxLczRqQlNtY3BUb0xmRGZUZjVldmZHVmQ0LXRnU1dX?oc=5\" target=\"_blank\">Houthi threats continue endangering future of Port of Eilat shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBhTHBySzZ1MkNCbV9UOHFMR1p1U1VJZk9YMTlKZS1FNzJxSHY2Q2lKRmh0Wk9UMWpFZnd2RmxLczRqQlNtY3BUb0xmRGZUZjVldmZHVmQ0LXRnU1dX?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-17T08:48:45.923Z"
+    },
+    {
+      "id": "rss_99a2cfb661e0b76b",
+      "timestamp": 1789623516000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis release video claiming to show downed Saudi F-15 fighter as Iran-backed rebels press their lightning advance - CNN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNVzlqeTZUN0Vtd1g3cjZKczlGcHc2QVJPak9lWVBvdGNrZjM4TWNZNzN3ZjREWjFtWDlMVnRmcTkxMjR0eXlIb0tfRF9iNjFYVElPX1ZSXzhOVkQ5bjh6VjdCM2JJTFlTM0lyZ1FpQ0gwc1lCTERxMXFaS3VVWHRLVWhiRUNCYlk?oc=5\" target=\"_blank\">Houthis release video claiming to show downed Saudi F-15 fighter as Iran-backed rebels press their lightning advance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVzlqeTZUN0Vtd1g3cjZKczlGcHc2QVJPak9lWVBvdGNrZjM4TWNZNzN3ZjREWjFtWDlMVnRmcTkxMjR0eXlIb0tfRF9iNjFYVElPX1ZSXzhOVkQ5bjh6VjdCM2JJTFlTM0lyZ1FpQ0gwc1lCTERxMXFaS3VVWHRLVWhiRUNCYlk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-17T08:48:45.922Z"
+    },
+    {
+      "id": "rss_e8e9019352f7b7a0",
+      "timestamp": 1789600404000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "US officials met Iran-backed Houthis in Oman over the weekend, sources say - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQNVlvS0o5eGw3QnFsN1NoVTdWbElpWFhDLS14WFpCb0duUUJMYzVoS2VZSHpqQUxQWXVtN0VadTJHNnNhYlNCZmlhMDVJQVl3Y2pqTjQ2bmRuVEdDR3FKY0VGQ1Uxc1pwVzcteUNJSTB0Mm9wZHRIWUdTUmVLTUVsTEpYMFRmN21ENmtrbnZvTm9XZjZsOU5DN2JHWUYtdm5OcFJiUzJzZTVBeUJ3a3NmSEJROEFxekl5RGlMNw?oc=5\" target=\"_blank\">US officials met Iran-backed Houthis in Oman over the weekend, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNVlvS0o5eGw3QnFsN1NoVTdWbElpWFhDLS14WFpCb0duUUJMYzVoS2VZSHpqQUxQWXVtN0VadTJHNnNhYlNCZmlhMDVJQVl3Y2pqTjQ2bmRuVEdDR3FKY0VGQ1Uxc1pwVzcteUNJSTB0Mm9wZHRIWUdTUmVLTUVsTEpYMFRmN21ENmtrbnZvTm9XZjZsOU5DN2JHWUYtdm5OcFJiUzJzZTVBeUJ3a3NmSEJROEFxekl5RGlMNw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-17T08:48:45.923Z"
+    },
     {
       "id": "rss_1af4d186009fc3c1",
       "timestamp": 1789592580000,
@@ -44,6 +113,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-16T23:45:53.608Z"
+    },
+    {
+      "id": "rss_c2a996a63cc52526",
+      "timestamp": 1789584004000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthis claim downing Saudi F-15 over Yemen, deny targeting Mecca - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yaDlUTkJvLWlxSnR0NGF2QWpJQmt2VkluT0lLQUlTM1NsM0loZjdONjRWM2ZEa0xDT0ZGVTNUS3VwdlFlUHVpeVhKaWd5Z2l1T294OEhBaWtJbzFD?oc=5\" target=\"_blank\">Houthis claim downing Saudi F-15 over Yemen, deny targeting Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8yaDlUTkJvLWlxSnR0NGF2QWpJQmt2VkluT0lLQUlTM1NsM0loZjdONjRWM2ZEa0xDT0ZGVTNUS3VwdlFlUHVpeVhKaWd5Z2l1T294OEhBaWtJbzFD?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-17T08:48:45.923Z"
     },
     {
       "id": "rss_3d3d39b0bbd5ada3",
@@ -10899,98 +10989,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-08-12T01:26:32.834Z"
-    },
-    {
-      "id": "rss_1739d07e53a249d3",
-      "timestamp": 1786490680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on commercial ship leaves four dead: Report - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fdnpjcXl6alJmZW5qdFJsd0RyQi1OWUxEUUdGazRjZG5XTFdVMXgyWnI5VzNlajJTa2tJTEM0ZXBuRlBzTkNLMGpfN25lbW5jbnhSdjR3?oc=5\" target=\"_blank\">Houthi attack on commercial ship leaves four dead: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fox News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1fdnpjcXl6alJmZW5qdFJsd0RyQi1OWUxEUUdGazRjZG5XTFdVMXgyWnI5VzNlajJTa2tJTEM0ZXBuRlBzTkNLMGpfN25lbW5jbnhSdjR3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T01:26:32.834Z"
-    },
-    {
-      "id": "rss_8c6b632781e12298",
-      "timestamp": 1786479137000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack ship in Red Sea, kill 6 including 2 rescuers - upi.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPTkM2eGFfUmtvaXY0M2FaczBRVkRRWk5rOEZmV0hHU1VZTDdFYUVZdXRJV2dZYkpOUzl6VEhhVEpwNXZRbmhZOXBaVXI3SXBGVGlDdHpya1dZTEJ4M3BpSlRlTUtDTXd3UWhyY0JmdW4zUTdZT2lIQjZQMDZsV1BoeXRUZTFvVnctd0FlZjZhdnV1cHhkcUpnSDlGdWLSAaIBQVVfeXFMTzJQRGFNek5xU2NJN0lwcXBXVVYzUkNNbXhjd056c2pOdkRZTjhOY1M2Q3F1cmt2V0RfU2VPOUZlT0l1a0FIRzJGdVNBaWs2NEw3ck1Jd1ZpU3lycFBZR21YaWxWOENkcWR3UXdWUHp2am1EYV9JNXV6bDZkTW9HTmtTZ3R2YmFteW5wdGMzcVdGUFZCYUxiOW9kR1A1RDQyOG1R?oc=5\" target=\"_bl",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPTkM2eGFfUmtvaXY0M2FaczBRVkRRWk5rOEZmV0hHU1VZTDdFYUVZdXRJV2dZYkpOUzl6VEhhVEpwNXZRbmhZOXBaVXI3SXBGVGlDdHpya1dZTEJ4M3BpSlRlTUtDTXd3UWhyY0JmdW4zUTdZT2lIQjZQMDZsV1BoeXRUZTFvVnctd0FlZjZhdnV1cHhkcUpnSDlGdWLSAaIBQVVfeXFMTzJQRGFNek5xU2NJN0lwcXBXVVYzUkNNbXhjd056c2pOdkRZTjhOY1M2Q3F1cmt2V0RfU2VPOUZlT0l1a0FIRzJGdVNBaWs2NEw3ck1Jd1ZpU3lycFBZR21YaWxWOENkcWR3UXdWUHp2am1EYV9JNXV6bDZkTW9HTmtTZ3R2YmFteW5wdGMzcVdGUFZCYUxiOW9kR1A1RDQyOG1R?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T20:53:23.038Z"
-    },
-    {
-      "id": "rss_74fd3b6773487376",
-      "timestamp": 1786473214000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Six killed in Houthi attack on Yemeni commercial vessel - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxORExYQXlRMG1ZVnlOTWVTT3I2TGRYaUNuRmFLQnJROHFYRlpleFFYS1dlbDVMQ0NTcTJvREM1WXo0bGdBLXMtZUtXUmFhUl8zXzlyd2lHV0sxOG1KRmw0YXp5ZVhrcW9ZLWZXODRJRjhkc0FTcnlONzBTVjkzVlcyc080Mk5aWkRVV3IxUTMtakpQdw?oc=5\" target=\"_blank\">Six killed in Houthi attack on Yemeni commercial vessel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxORExYQXlRMG1ZVnlOTWVTT3I2TGRYaUNuRmFLQnJROHFYRlpleFFYS1dlbDVMQ0NTcTJvREM1WXo0bGdBLXMtZUtXUmFhUl8zXzlyd2lHV0sxOG1KRmw0YXp5ZVhrcW9ZLWZXODRJRjhkc0FTcnlONzBTVjkzVlcyc080Mk5aWkRVV3IxUTMtakpQdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T21:40:46.433Z"
-    },
-    {
-      "id": "rss_49e4cc250fc51d33",
-      "timestamp": 1786472959000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Six Killed in Houthi Strikes on Red Sea Ship, Yemeni Government Says - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPaWR5R2hWY2dqVGNRUWoxbEJrUW12dzBVeklyZU50ZkJUU2FERkkyeWI4WjFnbHZnc0tsWDAzanl0RzQ1aTZFZG5wMm42WFMtM2Q3eG51aThGVGlLU2N6TVNhUnhqc2pwdE9wV21ZdXV5cHpta0FCSHFiN1Z4V1RvckFPT3VHeDR2ekNOaUp3?oc=5\" target=\"_blank\">Six Killed in Houthi Strikes on Red Sea Ship, Yemeni Government Says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaWR5R2hWY2dqVGNRUWoxbEJrUW12dzBVeklyZU50ZkJUU2FERkkyeWI4WjFnbHZnc0tsWDAzanl0RzQ1aTZFZG5wMm42WFMtM2Q3eG51aThGVGlLU2N6TVNhUnhqc2pwdE9wV21ZdXV5cHpta0FCSHFiN1Z4V1RvckFPT3VHeDR2ekNOaUp3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-11T20:53:23.039Z"
     }
   ]
 }
