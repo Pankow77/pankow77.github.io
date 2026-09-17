@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-17T21:34:55.756Z",
+  "last_fetch": "2026-09-17T23:51:35.045Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -69,6 +69,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-17T21:34:54.166Z"
+    },
+    {
+      "id": "rss_c14e8c48e5a7bc4a",
+      "timestamp": 1789674968000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Al-Houthi denies Mecca attack, claims ‘Zionist enemy’ is real threat - Israel National News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9yNlF4bWZqTjlubzg2R1J5bVdYQ0g5bEx2Nm0wS1RSUHBmaUF6QjJXenhOYXZqQ080SFJWUU1UR0N0MkFVNmpBU0F4OUtobEI3cFpBU2tlWl9iUQ?oc=5\" target=\"_blank\">Al-Houthi denies Mecca attack, claims ‘Zionist enemy’ is real threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Israel National News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9yNlF4bWZqTjlubzg2R1J5bVdYQ0g5bEx2Nm0wS1RSUHBmaUF6QjJXenhOYXZqQ080SFJWUU1UR0N0MkFVNmpBU0F4OUtobEI3cFpBU2tlWl9iUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-17T23:51:33.490Z"
     },
     {
       "id": "rss_636f8ee4e5b62b33",
@@ -10956,29 +10977,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T09:38:36.528Z"
-    },
-    {
-      "id": "rss_6a11703be7aa598b",
-      "timestamp": 1786517160000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Attack on ship in Red Sea kills three Pakistani nationals, wounds another - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUUJUTFNmTVlVMVF1azMxVlN5c3Btdy0xdXh2TWNqY202dG94bklycVVrcy1ZN1lEN0R0R0dKLUhPVFU0TXd3cml3ajJQU1VjczhWRzI2amxWX0tuWC1VQVBEVmZQM1lra2Jaa09HQlByTFNHdVRjbjdjMTlWLUd0Y3lRQVRLRHY2N1VnVEJLUVphOEFuUDZ6b3J5QWQ2czM4MW9od1FLREU3Z3ZkaGdvSmtsS2Y5Y0hROHJWTnpmaUg?oc=5\" target=\"_blank\">Attack on ship in Red Sea kills three Pakistani nationals, wounds another</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUUJUTFNmTVlVMVF1azMxVlN5c3Btdy0xdXh2TWNqY202dG94bklycVVrcy1ZN1lEN0R0R0dKLUhPVFU0TXd3cml3ajJQU1VjczhWRzI2amxWX0tuWC1VQVBEVmZQM1lra2Jaa09HQlByTFNHdVRjbjdjMTlWLUd0Y3lRQVRLRHY2N1VnVEJLUVphOEFuUDZ6b3J5QWQ2czM4MW9od1FLREU3Z3ZkaGdvSmtsS2Y5Y0hROHJWTnpmaUg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T08:12:16.125Z"
     }
   ]
 }
