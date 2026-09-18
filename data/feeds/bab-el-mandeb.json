@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-18T16:54:14.958Z",
+  "last_fetch": "2026-09-18T19:24:28.985Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_043531cb72c30058",
+      "timestamp": 1789751820000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "At least 112,000 people displaced in Yemen as Houthi fighting intensifies - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPbzdKWTBQZHBwU2ZHVm9xVmo1Nk5IZ3ZBSVFNdE9Fenl5Wkc0Qlc4cGpldG5UTk54VkRtcWd1dTBWbTIxT3Btd1NZWXNTZnl1b1pYWThqcFRDellvWGRJV18zLUQ5dTd4V08tRXgyVFVJTkkwR1BMb293c2lGa0JCdEdOUUlxMlJ2YVFtY1gzSWZfVG1FcUxJcGdLbTZnZE9udzVzenlQR3lBcjdBMllLeFNWdWQ?oc=5\" target=\"_blank\">At least 112,000 people displaced in Yemen as Houthi fighting intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbzdKWTBQZHBwU2ZHVm9xVmo1Nk5IZ3ZBSVFNdE9Fenl5Wkc0Qlc4cGpldG5UTk54VkRtcWd1dTBWbTIxT3Btd1NZWXNTZnl1b1pYWThqcFRDellvWGRJV18zLUQ5dTd4V08tRXgyVFVJTkkwR1BMb293c2lGa0JCdEdOUUlxMlJ2YVFtY1gzSWZfVG1FcUxJcGdLbTZnZE9udzVzenlQR3lBcjdBMllLeFNWdWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-18T19:24:27.393Z"
+    },
     {
       "id": "rss_7108b2a4bc82c09d",
       "timestamp": 1789741453000,
@@ -92,6 +113,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-18T16:54:14.289Z"
+    },
+    {
+      "id": "rss_bafddfbf8e8515d3",
+      "timestamp": 1789736285000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "As Houthis grab Bab al-Mandeb, US appears willing to watch from sidelines - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPRHBtUU5kYndPUnFFdUpNMmxNS0N2TEFZVGdoRFE3UXFBUVhFQ2djbDVBWkpfWXZFUFluTF9Ic2NwVFJSY3NabmFEWVlkcjhBY3FYMWhkcDZEY1FxQkFTZUxqX3V5dGVsWjI5QkhGMS1iZi05NnRCaDNLVnoyOVBrYzRLWXZsWFBIQURleUl2dGdvclN2TXZYdG5hbWtXWEVUVHdIbmQ3VU5QbVd2LW0zUW00RdIBuAFBVV95cUxQRnNvd0h3X2RPNDhuUGhpS1ctNVo2ZXRIekNYZmt6UlUzblphdGRvNm5IUU9KMzR1MWhILV9Pb3dVcm1FMUtWbEhaX28xb3RPd0p5Mlo0TFpncVN6OVM2QV9SaXRPTm1GVnhEaVNuZU02NkIyVDlLMDNvV0YyY0U1bzJZR2ZWZ2x5VWFLeVRvcHZGdU50YUs5ZW",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRHBtUU5kYndPUnFFdUpNMmxNS0N2TEFZVGdoRFE3UXFBUVhFQ2djbDVBWkpfWXZFUFluTF9Ic2NwVFJSY3NabmFEWVlkcjhBY3FYMWhkcDZEY1FxQkFTZUxqX3V5dGVsWjI5QkhGMS1iZi05NnRCaDNLVnoyOVBrYzRLWXZsWFBIQURleUl2dGdvclN2TXZYdG5hbWtXWEVUVHdIbmQ3VU5QbVd2LW0zUW00RdIBuAFBVV95cUxQRnNvd0h3X2RPNDhuUGhpS1ctNVo2ZXRIekNYZmt6UlUzblphdGRvNm5IUU9KMzR1MWhILV9Pb3dVcm1FMUtWbEhaX28xb3RPd0p5Mlo0TFpncVN6OVM2QV9SaXRPTm1GVnhEaVNuZU02NkIyVDlLMDNvV0YyY0U1bzJZR2ZWZ2x5VWFLeVRvcHZGdU50YUs5ZWN5YW9pSWJpYUNuNHlxZzdzOEJubC1PYm52UGNHMHAw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-18T19:24:27.392Z"
     },
     {
       "id": "rss_2352a2211eb098e5",
@@ -10922,50 +10964,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-15T20:46:19.837Z"
-    },
-    {
-      "id": "rss_ed77a03d4a37af49",
-      "timestamp": 1786535057000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi double-tap attack on Red Sea ship: How it unfolded - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ2VlOGFzZkNYS1BzNXVrMjAzblphWWx2dm5nUUpMT09HWC00LTZkUFdCX0xrVDNSNzNSWk5WbTJrSUp1QWdNZzFYSklQaEt5OFEwSXNsSzhNU3pQWWJHbkVRbzZ6VFplUFBGMHFzdUFsbW1mM1pyNjNGNV93RVR3TzZqNVZoRzhZT2E1LW5uWEpOS2hZTk8yRUh5N3pVMUhkRDFKLUxpME1ud2NRN0k4?oc=5\" target=\"_blank\">Houthi double-tap attack on Red Sea ship: How it unfolded</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ2VlOGFzZkNYS1BzNXVrMjAzblphWWx2dm5nUUpMT09HWC00LTZkUFdCX0xrVDNSNzNSWk5WbTJrSUp1QWdNZzFYSklQaEt5OFEwSXNsSzhNU3pQWWJHbkVRbzZ6VFplUFBGMHFzdUFsbW1mM1pyNjNGNV93RVR3TzZqNVZoRzhZT2E1LW5uWEpOS2hZTk8yRUh5N3pVMUhkRDFKLUxpME1ud2NRN0k4?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T14:20:13.646Z"
-    },
-    {
-      "id": "rss_5af5f4e413c5721d",
-      "timestamp": 1786534394000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan says 3 nationals killed in Houthi Red Sea attack - dw.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQb1dCaHhzSDdHaHN2WExnU0xpcWx2LXVpSDdJLUxaTW15UjFCYTdXVkhfclluVElHaXVfTXRwSHJpbTVSWTZvUXlEYWk2UHM0Zl9ZSWZDa1I5eTlReWJSUXJEVHVzT0ZUcXZSQVg5Q2lnUE9fNDFoSWw1VEV3b1hQaGxfYU9kN2V4aldZaGtHV3VCRWRj0gGUAUFVX3lxTFBvUlF2S0ZlLUI4UXdrR1pqekM5OGpwb3BNS3hELWZadVRlWjIzbWhURkVzMWc2R0xwb004NEdfMjQ0WnV6ODV0bloyQTFXTDdwSWp3RENVbVdwTVhQVzFEb2NHR180T203VWI3S1FNM09qMUpCWGpOU3lNMFRKVTRzNXhKSzhpRUNTcFdxbFlmanhJeWg?oc=5\" target=\"_blank\">Pakistan says 3 national",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb1dCaHhzSDdHaHN2WExnU0xpcWx2LXVpSDdJLUxaTW15UjFCYTdXVkhfclluVElHaXVfTXRwSHJpbTVSWTZvUXlEYWk2UHM0Zl9ZSWZDa1I5eTlReWJSUXJEVHVzT0ZUcXZSQVg5Q2lnUE9fNDFoSWw1VEV3b1hQaGxfYU9kN2V4aldZaGtHV3VCRWRj0gGUAUFVX3lxTFBvUlF2S0ZlLUI4UXdrR1pqekM5OGpwb3BNS3hELWZadVRlWjIzbWhURkVzMWc2R0xwb004NEdfMjQ0WnV6ODV0bloyQTFXTDdwSWp3RENVbVdwTVhQVzFEb2NHR180T203VWI3S1FNM09qMUpCWGpOU3lNMFRKVTRzNXhKSzhpRUNTcFdxbFlmanhJeWg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T14:20:12.242Z"
     }
   ]
 }
