@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-17T23:51:35.045Z",
+  "last_fetch": "2026-09-18T02:54:15.608Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c3379c61837b9bff",
+      "timestamp": 1789694403000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "ANALYSIS - Houthi escalation puts Bab el-Mandeb Strait at critical crossroads - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNd2IxMkZSVFc1R1ZjNDA4WlVTRjFZcU1BaGJjMWpwRDdCUUM1NDlvQ1FtOFZILTUwZm1kaU1NWkdjOGpqeTFpYk03aHl5UE1oanFWZ3VSZV82TmkySzlITHEyYzVFUUJEeEFidlJNR1d6MjB1TjRyRlBXOEJseDZpV1FZZjlkMnRDVjhSdWZ6bGUwVTh0WTRVbkxVY0pjekxjbkhKbXZhWk1xU3FzN0ZkbzNPUkg4MDM4cnMybQ?oc=5\" target=\"_blank\">ANALYSIS - Houthi escalation puts Bab el-Mandeb Strait at critical crossroads</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNd2IxMkZSVFc1R1ZjNDA4WlVTRjFZcU1BaGJjMWpwRDdCUUM1NDlvQ1FtOFZILTUwZm1kaU1NWkdjOGpqeTFpYk03aHl5UE1oanFWZ3VSZV82TmkySzlITHEyYzVFUUJEeEFidlJNR1d6MjB1TjRyRlBXOEJseDZpV1FZZjlkMnRDVjhSdWZ6bGUwVTh0WTRVbkxVY0pjekxjbkhKbXZhWk1xU3FzN0ZkbzNPUkg4MDM4cnMybQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-18T02:54:14.114Z"
+    },
     {
       "id": "rss_5cc687c7970f2e54",
       "timestamp": 1789679945000,
@@ -10954,29 +10975,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T08:12:16.124Z"
-    },
-    {
-      "id": "rss_cc4b345be66320d4",
-      "timestamp": 1786518192000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "US disables boxship while Red Sea attack kills six - Splash247",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1MZFpRbmJubzhFMWRkaVFJQ2FFZ1hlWVdPQ3VoTWJudXV2VmdNWkJLREd1NEd6azlRWHY3MnlYQ1IxNXRmNkh0YThJYnZCQWRhMUIyNlhJbDlwMHozWWlCaGJzakU0SWZZSE1Xd0JtMDZUWGxCUjBMR3ZpLWlfZw?oc=5\" target=\"_blank\">US disables boxship while Red Sea attack kills six</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Splash247</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1MZFpRbmJubzhFMWRkaVFJQ2FFZ1hlWVdPQ3VoTWJudXV2VmdNWkJLREd1NEd6azlRWHY3MnlYQ1IxNXRmNkh0YThJYnZCQWRhMUIyNlhJbDlwMHozWWlCaGJzakU0SWZZSE1Xd0JtMDZUWGxCUjBMR3ZpLWlfZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T09:38:36.528Z"
     }
   ]
 }
