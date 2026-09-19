@@ -1,8 +1,117 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-19T07:45:28.379Z",
+  "last_fetch": "2026-09-19T12:13:30.498Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_64e66a0ac68f2272",
+      "timestamp": 1789815031000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Italian Typhoon Hit at Ta’if: Houthi Strike Damages an F-2000 - MiGFlug",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOYzAzTHR6cERxTWhZYzBVVjlic2x0Y0o5MDBlVGJGTHRFNWRwenhPUFJpaHZpaVYtdVZWOE1jNXVxT2w3YWJwWlVTVS1NODhzTjJrRWZvd0sxOWVrS0lPWWRkNDM4ODRpRnJtU2xiRl91V1J2OFY0ZkRvTmFvWXN1RTJHS0pTVWRWd3R2QXJwQXVtcHJk?oc=5\" target=\"_blank\">Italian Typhoon Hit at Ta’if: Houthi Strike Damages an F-2000</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MiGFlug</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYzAzTHR6cERxTWhZYzBVVjlic2x0Y0o5MDBlVGJGTHRFNWRwenhPUFJpaHZpaVYtdVZWOE1jNXVxT2w3YWJwWlVTVS1NODhzTjJrRWZvd0sxOWVrS0lPWWRkNDM4ODRpRnJtU2xiRl91V1J2OFY0ZkRvTmFvWXN1RTJHS0pTVWRWd3R2QXJwQXVtcHJk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T12:13:29.030Z"
+    },
+    {
+      "id": "rss_20b8088afbefdbd4",
+      "timestamp": 1789812000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "How the Houthis Opened a Volatile New Front in the Iran War - The New Yorker",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSm5WdHY0RmhUYzdjQXoyTld5N01aTVNfQlBNZzdqTnFlUFZRQ3MxZ2ZGMnMzOE9nTEs0YTFZbl85RUYxU21FZ3lMLUJoNWFLVHh0ZHV6bU5kSTJPYkJyZXdWd0I1MkU5QnlKZzRPNk5BWnJaY0NCNng5ZTFrY3BaQ19WZkEwRV9x?oc=5\" target=\"_blank\">How the Houthis Opened a Volatile New Front in the Iran War</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Yorker</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSm5WdHY0RmhUYzdjQXoyTld5N01aTVNfQlBNZzdqTnFlUFZRQ3MxZ2ZGMnMzOE9nTEs0YTFZbl85RUYxU21FZ3lMLUJoNWFLVHh0ZHV6bU5kSTJPYkJyZXdWd0I1MkU5QnlKZzRPNk5BWnJaY0NCNng5ZTFrY3BaQ19WZkEwRV9x?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T12:13:29.028Z"
+    },
+    {
+      "id": "rss_1a381bcf42651573",
+      "timestamp": 1789810770000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Inside the Houthi advance: How Iran's allies are helping tighten Tehran's grip on the Red Sea - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE8tM2hzZXNVQVcyWTdvSGRGVEVBWTVFbUhFNjhBVTVHVjdaOWFKM1lyY0IxOWJxRVY3dndraHpSYVd1N2tPVjRCQzVSTjM4MEs4Y0ZPME5CYW01SmVC?oc=5\" target=\"_blank\">Inside the Houthi advance: How Iran's allies are helping tighten Tehran's grip on the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8tM2hzZXNVQVcyWTdvSGRGVEVBWTVFbUhFNjhBVTVHVjdaOWFKM1lyY0IxOWJxRVY3dndraHpSYVd1N2tPVjRCQzVSTjM4MEs4Y0ZPME5CYW01SmVC?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T12:13:29.029Z"
+    },
+    {
+      "id": "rss_90250bdbf59db8d1",
+      "timestamp": 1789801630000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Sirens sound in Saudi capital for first time since Houthi escalation: ‘Clashes have intensified’ - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HbjdXcS1KZWxyZWJ1Z2xscHNlU1QzbjhaMlUzc2NNOEVkbWdhZkRKRGdiOTB3Vjc2MVl3MzIwWGRIX3lVcE1hUU92aGVEWXJ5cGxqcTdB?oc=5\" target=\"_blank\">Sirens sound in Saudi capital for first time since Houthi escalation: ‘Clashes have intensified’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5HbjdXcS1KZWxyZWJ1Z2xscHNlU1QzbjhaMlUzc2NNOEVkbWdhZkRKRGdiOTB3Vjc2MVl3MzIwWGRIX3lVcE1hUU92aGVEWXJ5cGxqcTdB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T12:13:29.029Z"
+    },
+    {
+      "id": "rss_cb5850e0bb001660",
+      "timestamp": 1789796429000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis accuse Saudi Arabia of launching 26 attacks in 24 hours - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQVTFmd2JEaEdqNldCSV93dnNvdWxhZmJPR0o3RzRhUlF0YzFBcXBud05abHN5dVE5VUhxbU1yemhOWEFQVlB5aUlmVk1sbjUtZ0x3S0YySFo4RVduTWlmcWtBdUE1YXZnZ2pEdXIwejJjWER4di1NdmpkWksxejZrclZvV3JUenp0RlBGYW4xSURwd0wxcGZjY1FndlpuM0tYcVZ4bjE2Z9IBrAFBVV95cUxQc3RJVDZJM19CNWYxVm1FOC0tRGtzLUpVY1I4bS1wTzdBcGtFcHJ1Mm9kUFU3TW12NnpWR3FLYmdvT1RjMld4Mjg2dUlHZDZUVzBudmx1ZHZxdFF2bnJKbm11WmpJWXBzZEdfUkxDTkhfRHQzWW1CdmdRRTZCd1BFXzZuV3pWaTc3X3JIaFc3RmNVQkYyaW4zWXA1ZWkyWHk2RFQyYU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVTFmd2JEaEdqNldCSV93dnNvdWxhZmJPR0o3RzRhUlF0YzFBcXBud05abHN5dVE5VUhxbU1yemhOWEFQVlB5aUlmVk1sbjUtZ0x3S0YySFo4RVduTWlmcWtBdUE1YXZnZ2pEdXIwejJjWER4di1NdmpkWksxejZrclZvV3JUenp0RlBGYW4xSURwd0wxcGZjY1FndlpuM0tYcVZ4bjE2Z9IBrAFBVV95cUxQc3RJVDZJM19CNWYxVm1FOC0tRGtzLUpVY1I4bS1wTzdBcGtFcHJ1Mm9kUFU3TW12NnpWR3FLYmdvT1RjMld4Mjg2dUlHZDZUVzBudmx1ZHZxdFF2bnJKbm11WmpJWXBzZEdfUkxDTkhfRHQzWW1CdmdRRTZCd1BFXzZuV3pWaTc3X3JIaFc3RmNVQkYyaW4zWXA1ZWkyWHk2RFQyYUNKak54aVJI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-19T12:13:29.028Z"
+    },
     {
       "id": "rss_9c3f19af58e8f11e",
       "timestamp": 1789794154000,
@@ -10846,119 +10955,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T18:25:41.286Z"
-    },
-    {
-      "id": "rss_a735e48b113f8558",
-      "timestamp": 1786549920000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Pakistan says 3 citizens killed in Houthi attack on ship, and other developments in the Mideast - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQLWZuZFpUQ0JKbW5uc3dBdFd0WUxfSlpDR3FTUElnWXJ0YjE2WFc3SWFLM29sRi1hX2J5WU94WTBhS3RvWl9vMFFWbzd4bF81QnZ3X19Ic04yLXgzbzBlQVZuX0JrRzh3UUJ1V1pQdld1R1pHc1duSWlkWXNkb3BSOUhCRXJPMmhMSmJYYVdsbDlsaU42cnN6dkVCdzhITHdabEZJXy1UbmFsdE5ZNUE?oc=5\" target=\"_blank\">Pakistan says 3 citizens killed in Houthi attack on ship, and other developments in the Mideast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLWZuZFpUQ0JKbW5uc3dBdFd0WUxfSlpDR3FTUElnWXJ0YjE2WFc3SWFLM29sRi1hX2J5WU94WTBhS3RvWl9vMFFWbzd4bF81QnZ3X19Ic04yLXgzbzBlQVZuX0JrRzh3UUJ1V1pQdld1R1pHc1duSWlkWXNkb3BSOUhCRXJPMmhMSmJYYVdsbDlsaU42cnN6dkVCdzhITHdabEZJXy1UbmFsdE5ZNUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T16:26:11.421Z"
-    },
-    {
-      "id": "rss_50f5064ad376f120",
-      "timestamp": 1786549884000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Fighting in Yemen escalates, raising concern of a return to civil war - Long War Journal",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQSlliYUs5dFZqUHc0aW82Q0ozRVAwUnllRFBEV0VCNi05QUY0ck5YQmF6cWhwTVQtak5MelB5MGZPd3ZnbWZpbHNkM085STJyd01XQVFMaWJRZlpBZDZTcjJHMXhNQl9JQXh0SV9ZVGNRQ1pmRVRHemhhanhueEFOY29mbEpjTTV5ckxQdHJzZzdXZHB1b0p4YUs0dDJwaloweUF3ZWVwQW95NmlXUW1uZkNEa05LNkZrQkN6dw?oc=5\" target=\"_blank\">Fighting in Yemen escalates, raising concern of a return to civil war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Long War Journal</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQSlliYUs5dFZqUHc0aW82Q0ozRVAwUnllRFBEV0VCNi05QUY0ck5YQmF6cWhwTVQtak5MelB5MGZPd3ZnbWZpbHNkM085STJyd01XQVFMaWJRZlpBZDZTcjJHMXhNQl9JQXh0SV9ZVGNRQ1pmRVRHemhhanhueEFOY29mbEpjTTV5ckxQdHJzZzdXZHB1b0p4YUs0dDJwaloweUF3ZWVwQW95NmlXUW1uZkNEa05LNkZrQkN6dw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T17:27:09.515Z"
-    },
-    {
-      "id": "rss_80d7f369445b7da5",
-      "timestamp": 1786546309000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Hormuz traffic sinks to one-week low as ships attacked, talks stagnate - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQbFBiSmNzdDhSRVN2aUJoZGZFbDgtTVpsbUg3TmJRVVF1TzdIWTNoV3pULVMtci1CdU5YME1lSGZHQy03Vl9STXB1Skd1U1RBM3lDb1ZjTU5fSXluU2tYWnFoWlhTejlpU3FDLXd0cFVlQ2JKNVNKLURPc0JINmNldzhlRTE1dzlRZkRmREtUNnVzWHB4WHcwUVdWT1dMVjZTNzFGUERqWVJBaGJv?oc=5\" target=\"_blank\">Hormuz traffic sinks to one-week low as ships attacked, talks stagnate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbFBiSmNzdDhSRVN2aUJoZGZFbDgtTVpsbUg3TmJRVVF1TzdIWTNoV3pULVMtci1CdU5YME1lSGZHQy03Vl9STXB1Skd1U1RBM3lDb1ZjTU5fSXluU2tYWnFoWlhTejlpU3FDLXd0cFVlQ2JKNVNKLURPc0JINmNldzhlRTE1dzlRZkRmREtUNnVzWHB4WHcwUVdWT1dMVjZTNzFGUERqWVJBaGJv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T15:28:00.949Z"
-    },
-    {
-      "id": "rss_22fff9e38a364e42",
-      "timestamp": 1786543800000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Three Pakistanis killed in Houthi attack on commercial vessel - The Hill",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNNm1XSENyOHNzSXZ6NFdtVFlnUWt4bkVpU1BqbmE3NFExMTVWUnRRbFRrSGZoTFV0OHZlQTJCWWdKVUZoSGp4WFA4a2UwQmZzMlpnMDNtMjNBZTVrc1VTZE13ZEpzSmhZM0EzUmlNMlBoSThhcjNKTklQM0pxR2lTLW1kam5UcGN1YlRJbdIBkgFBVV95cUxPWmJNTUk3S2tRTkxWQ1Vac3F4d3hHcVJka0h1aU9FSWxFY01FeW92c1NZemtqWU5YcU5nck9OM1k2X1lnUW9xZHBBSnF0THFLdVlFbFJ4a2pKTkNiZHJXRm5OYWo2ZEVrNW5QUEJaZzhlT3hTYVdteHU1cVk1X0hjYzBJMktvNlI2b1hub1lWcDBMQQ?oc=5\" target=\"_blank\">Three Pakistanis killed in Houthi att",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNm1XSENyOHNzSXZ6NFdtVFlnUWt4bkVpU1BqbmE3NFExMTVWUnRRbFRrSGZoTFV0OHZlQTJCWWdKVUZoSGp4WFA4a2UwQmZzMlpnMDNtMjNBZTVrc1VTZE13ZEpzSmhZM0EzUmlNMlBoSThhcjNKTklQM0pxR2lTLW1kam5UcGN1YlRJbdIBkgFBVV95cUxPWmJNTUk3S2tRTkxWQ1Vac3F4d3hHcVJka0h1aU9FSWxFY01FeW92c1NZemtqWU5YcU5nck9OM1k2X1lnUW9xZHBBSnF0THFLdVlFbFJ4a2pKTkNiZHJXRm5OYWo2ZEVrNW5QUEJaZzhlT3hTYVdteHU1cVk1X0hjYzBJMktvNlI2b1hub1lWcDBMQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T14:20:12.242Z"
-    },
-    {
-      "id": "rss_cd7db7e3d7e1a957",
-      "timestamp": 1786542570000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Statement on deadly ship attack in the Red Sea - International Maritime Organization",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxObkpJTWk5LWYxREpvcm1RVEYxWWV0QWtYVzZZSnpCNlFTb0RJZm8tQ0RISVNxS0NEZERCaWRhNkdrc1FCRWRCa3l0V0pnY3ctY0JXbGtQWU1jekJXNW16REFtdWtDanJwTUlvVWk4UkZoeXZGVUlqOUw0a2JDMUJsVGhQaXozQkJtYzlSMmdjZHE1V2RUaWsxdWlkeDg4V1UwdUlNT0lzcU44anM?oc=5\" target=\"_blank\">Statement on deadly ship attack in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Maritime Organization</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObkpJTWk5LWYxREpvcm1RVEYxWWV0QWtYVzZZSnpCNlFTb0RJZm8tQ0RISVNxS0NEZERCaWRhNkdrc1FCRWRCa3l0V0pnY3ctY0JXbGtQWU1jekJXNW16REFtdWtDanJwTUlvVWk4UkZoeXZGVUlqOUw0a2JDMUJsVGhQaXozQkJtYzlSMmdjZHE1V2RUaWsxdWlkeDg4V1UwdUlNT0lzcU44anM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T20:37:49.621Z"
     }
   ]
 }
