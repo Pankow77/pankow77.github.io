@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-19T02:52:19.057Z",
+  "last_fetch": "2026-09-19T07:45:28.379Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_9c3f19af58e8f11e",
+      "timestamp": 1789794154000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Aspides mission raises readiness level of ships in the Red Sea — Asharq Al-Awsat - UA.NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPanVnVUVEN00zaUlEeUdMazVWcnBCdTBaSVZKbGF4b0k0dXdYSEZOYzZtZm5Kb1Rvc3IxSjRWSlY5TFlqRnVXVUlFMUk0aFp1enhJSmVCV1d4UWtsT0NiSlE2b1hPWXhrTTdOUHB0OUxwU1FjS1BncjRGeXU1V2syblVzODZjRjBjUEpFeEF0U051ajBNSENyTzNJV1FtTmJ2WEJJck85emRQczJQSVZiRXlrMzlPdw?oc=5\" target=\"_blank\">EU Aspides mission raises readiness level of ships in the Red Sea — Asharq Al-Awsat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPanVnVUVEN00zaUlEeUdMazVWcnBCdTBaSVZKbGF4b0k0dXdYSEZOYzZtZm5Kb1Rvc3IxSjRWSlY5TFlqRnVXVUlFMUk0aFp1enhJSmVCV1d4UWtsT0NiSlE2b1hPWXhrTTdOUHB0OUxwU1FjS1BncjRGeXU1V2syblVzODZjRjBjUEpFeEF0U051ajBNSENyTzNJV1FtTmJ2WEJJck85emRQczJQSVZiRXlrMzlPdw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T07:45:27.750Z"
+    },
+    {
+      "id": "rss_66816935fbf1483f",
+      "timestamp": 1789793094000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Operation Aspides Raises Alert Level South of Red Sea - شبكة تواصل الإخبارية",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVlRNNkFqVVV5d2R5dWJYTUtJbV91VmY4ZmRrbWh1NGRodjJyRW82UHZpaERaeDczakh4ano5b3RTZmxOaTJDejJEV2RNM0pta3JN?oc=5\" target=\"_blank\">EU Operation Aspides Raises Alert Level South of Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شبكة تواصل الإخبارية</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVlRNNkFqVVV5d2R5dWJYTUtJbV91VmY4ZmRrbWh1NGRodjJyRW82UHZpaERaeDczakh4ano5b3RTZmxOaTJDejJEV2RNM0pta3JN?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T07:45:27.750Z"
+    },
+    {
+      "id": "rss_ebf63693cf0946c3",
+      "timestamp": 1789791647000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks - bbc.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0YkZPQW9rR2RIWE52My1Bd0VVd0VKc2FORWhuVFJPQ0dFcmd0MTRlOVFrNmd0b200YUI2OFdrUzlXZGxzbWV3RXFCVm1ZZ1lCbVpXZ2ZxTDN2bHc?oc=5\" target=\"_blank\">Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bbc.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0YkZPQW9rR2RIWE52My1Bd0VVd0VKc2FORWhuVFJPQ0dFcmd0MTRlOVFrNmd0b200YUI2OFdrUzlXZGxzbWV3RXFCVm1ZZ1lCbVpXZ2ZxTDN2bHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T07:45:26.583Z"
+    },
     {
       "id": "rss_7b0c6dc328ae5d6d",
       "timestamp": 1789777740000,
@@ -10894,71 +10959,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-12T20:37:49.621Z"
-    },
-    {
-      "id": "rss_34de45c44ed4c509",
-      "timestamp": 1786541744000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Saudi Red Sea oil exports go dark as Houthi attack threat grows - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPRGFZQ2Vnb3RrVVF5MGpzQzlrckRvMHM2bmtQRFFEdUdra2QxdEcwMEVTQk1GUDFBS25MS2Rmb05uZkd4Znp4aElvSEtFVzNXY1dtYUNHNmpWODhUSTFVRDc1a0VMR3NTVTlmNndDRlBnVWlfOFpZSXFRY01EUDh6WGJQb2xHY0daZGIwbzI3VWpfallqckphSVpIcHl0VkdqM3VyaUJUS1B4QVM5MXJZY0Rn?oc=5\" target=\"_blank\">Saudi Red Sea oil exports go dark as Houthi attack threat grows</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRGFZQ2Vnb3RrVVF5MGpzQzlrckRvMHM2bmtQRFFEdUdra2QxdEcwMEVTQk1GUDFBS25MS2Rmb05uZkd4Znp4aElvSEtFVzNXY1dtYUNHNmpWODhUSTFVRDc1a0VMR3NTVTlmNndDRlBnVWlfOFpZSXFRY01EUDh6WGJQb2xHY0daZGIwbzI3VWpfallqckphSVpIcHl0VkdqM3VyaUJUS1B4QVM5MXJZY0Rn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-08-12T14:20:12.242Z"
-    },
-    {
-      "id": "rss_d7fb952df7e31134",
-      "timestamp": 1786540970000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Kill 6 in First Deadly Red Sea Attack in Over a Year - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxNOWFKeEEza2d4dWJLQkhXN0dLNGJwcjJzY1Z6eVhHLTJGQmVOcGhXSkYzcVc0WUtreG56Vm9tMFpyM2hpYlNoR3JuOTFidUFpS3NUWEZ4TWFpV0xRckcyOFliUWIxbDVtd09EWnRmWmdfVlhXYUE0RmhldE1GYm5oOFY4QVhRM0VFTlNkSA?oc=5\" target=\"_blank\">Houthis Kill 6 in First Deadly Red Sea Attack in Over a Year</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNOWFKeEEza2d4dWJLQkhXN0dLNGJwcjJzY1Z6eVhHLTJGQmVOcGhXSkYzcVc0WUtreG56Vm9tMFpyM2hpYlNoR3JuOTFidUFpS3NUWEZ4TWFpV0xRckcyOFliUWIxbDVtd09EWnRmWmdfVlhXYUE0RmhldE1GYm5oOFY4QVhRM0VFTlNkSA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T14:20:12.242Z"
-    },
-    {
-      "id": "rss_3e8c378c3e1d67b3",
-      "timestamp": 1786539600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Six killed in Red Sea cargo ship attack - Freight News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOeDk4XzB3cno2SFNrME9UMGRxUzZkVmlMRTBucUhqa1hzazdJbnBUbXdaanVRejhNSHlVendmRHdFUE1jNkRfOFIybTlYRXE0REd6U2J4WXYwd0ExZ0ViZXpLLV9wRlpWNV9UYkxzZVFMQk1aUnAwUllzc3hNV1g1Ql9sVQ?oc=5\" target=\"_blank\">Six killed in Red Sea cargo ship attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Freight News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeDk4XzB3cno2SFNrME9UMGRxUzZkVmlMRTBucUhqa1hzazdJbnBUbXdaanVRejhNSHlVendmRHdFUE1jNkRfOFIybTlYRXE0REd6U2J4WXYwd0ExZ0ViZXpLLV9wRlpWNV9UYkxzZVFMQk1aUnAwUllzc3hNV1g1Ql9sVQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-12T19:35:29.155Z"
     }
   ]
 }
