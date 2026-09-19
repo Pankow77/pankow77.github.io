@@ -1,8 +1,75 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-19T18:31:07.950Z",
+  "last_fetch": "2026-09-19T21:14:02.604Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a686607c00f118d2",
+      "timestamp": 1789850721000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia confirms Yemen's Houthi rebels tried to attack its capital with a ballistic missile - pbs.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPZFlEOTJXSU1FRHBHMkppbC1WTnR4anE5QXpEWEdwano4Z21tWGRZVmgwYW5TMU5TY2xuU0RCejBOUXlzQW82Z1FqeXA0R0RpdWx0OVNSM19pTnR2VF81WEI2cWFyUmtsQ0lWU21hVktWYjhqbG04MHhhR1hYd3MweGZOMHAzdFVaTHpBVUlQZlRnQXdhbWE3dC14MFd1YlpjY05Va1RTeVRiNF9ib2V0RG9KVnZ2MjU5cmxTcGMwYk9tLWhBT0ZEOEV30gHPAUFVX3lxTE9lSk9nV0t3bVFuSWoyTkw3LXBuN0lvTFYxaUwtMUtTMGdHWndKOEs5T0VJay0xT0gxYXAxWG1UWVpWUmNEV2Jld2lLWHh1WXlvYlpCMWRfVTQzaFl0c0JBb2ZCbHFYdWx1U0NiRUNzNk05X1lDblo4ZndtTlZsNW5ZNj",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZFlEOTJXSU1FRHBHMkppbC1WTnR4anE5QXpEWEdwano4Z21tWGRZVmgwYW5TMU5TY2xuU0RCejBOUXlzQW82Z1FqeXA0R0RpdWx0OVNSM19pTnR2VF81WEI2cWFyUmtsQ0lWU21hVktWYjhqbG04MHhhR1hYd3MweGZOMHAzdFVaTHpBVUlQZlRnQXdhbWE3dC14MFd1YlpjY05Va1RTeVRiNF9ib2V0RG9KVnZ2MjU5cmxTcGMwYk9tLWhBT0ZEOEV30gHPAUFVX3lxTE9lSk9nV0t3bVFuSWoyTkw3LXBuN0lvTFYxaUwtMUtTMGdHWndKOEs5T0VJay0xT0gxYXAxWG1UWVpWUmNEV2Jld2lLWHh1WXlvYlpCMWRfVTQzaFl0c0JBb2ZCbHFYdWx1U0NiRUNzNk05X1lDblo4ZndtTlZsNW5ZNjlDNnpZd0ZFdVAwSk9JU0pTYWVKaGpnRXVGWF9VUmFQQWprd2doUmI4VTdxUm9oTmFxMlFYOFRXS042N3p5Ny1ZS09pY3NyXzlfcDdROA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T21:14:00.817Z"
+    },
+    {
+      "id": "rss_5e01e393ee978659",
+      "timestamp": 1789848553000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Live - Iran says it wants Saudi-Yemen war to end after Houthis hit Riyadh airport - Iran International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXkFVX3lxTE9BcTVua29tT2VUc1Rjck5kUFhWS3VPZzJNY21Cako2S1NKTDh3b1R5ZlZhRlpUVURza3F1VURXY0Y1QUJkZzA2blktQWk2NlNTcGwzZWVmUnlOMm5aTGc?oc=5\" target=\"_blank\">Live - Iran says it wants Saudi-Yemen war to end after Houthis hit Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9BcTVua29tT2VUc1Rjck5kUFhWS3VPZzJNY21Cako2S1NKTDh3b1R5ZlZhRlpUVURza3F1VURXY0Y1QUJkZzA2blktQWk2NlNTcGwzZWVmUnlOMm5aTGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T21:14:00.819Z"
+    },
+    {
+      "id": "rss_a62887623454c84d",
+      "timestamp": 1789845617000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "In Significant Escalation, Houthis Claim Attacks on Saudi Capital - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPRWRVamhDNXpOdVREbjhlTFFEaTB1X3ZfWUtPMWRKZmZvYnFpdGdCMXkwLVBVMmZNLW81MjlBdGVsWFpMZXZHRld5M1BhOUNiREtMN0p3Y0VTUEJVRDZuR3hnVHA0SHM0b0RyNjR6R2xpeDg0UlNPZUVQeTh6Tzd5RmJHTk96MVFvb2pEdg?oc=5\" target=\"_blank\">In Significant Escalation, Houthis Claim Attacks on Saudi Capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRWRVamhDNXpOdVREbjhlTFFEaTB1X3ZfWUtPMWRKZmZvYnFpdGdCMXkwLVBVMmZNLW81MjlBdGVsWFpMZXZHRld5M1BhOUNiREtMN0p3Y0VTUEJVRDZuR3hnVHA0SHM0b0RyNjR6R2xpeDg0UlNPZUVQeTh6Tzd5RmJHTk96MVFvb2pEdg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T21:14:00.818Z"
+    },
     {
       "id": "rss_93b75a74f2d42703",
       "timestamp": 1789836180000,
@@ -23,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-19T18:31:06.487Z"
+    },
+    {
+      "id": "rss_c4ada7ef36eb825b",
+      "timestamp": 1789836000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Yemen's army says it stopped Houthi attack - Breakingthenews.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPa1VIMEZROE4xS1B6WVRaWjJBZjh3TjNlWl83QnowMkRvdktWYWhfVFExSGJfUUduamFwSThIeWtIN2ZXZk1HRG5fNm5HOWNvLVFkWjVRMUJYT3laVWduZkFTcUJsdW40S1pMNEJyUGhzbHlfd3dLZ0dac2EyLVBDSEhoT080dmJlTkFtWTNPb3U?oc=5\" target=\"_blank\">Yemen's army says it stopped Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPa1VIMEZROE4xS1B6WVRaWjJBZjh3TjNlWl83QnowMkRvdktWYWhfVFExSGJfUUduamFwSThIeWtIN2ZXZk1HRG5fNm5HOWNvLVFkWjVRMUJYT3laVWduZkFTcUJsdW40S1pMNEJyUGhzbHlfd3dLZ0dac2EyLVBDSEhoT080dmJlTkFtWTNPb3U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-19T21:14:00.819Z"
     },
     {
       "id": "rss_ebbd1c45419e682f",
@@ -10858,94 +10946,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-13T11:02:29.103Z"
-    },
-    {
-      "id": "rss_9304e14aca8360d6",
-      "timestamp": 1786614780000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Attack on Red Sea ship adds to global supply chain uncertainty, UN warns - VOV World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQcGtiNVpPMWFsSmxnWDB4UklIZGp0Nnp2VlphcDVab0VpNEFnUDdCajlsc1ctNFd4dTB6MGVwcEV6SldiZHZlbmFMRFNIMFpYeVZGdjlIN3ZHaFFtUll5cjVfVjZQQTZZc2x1Q3ZlSWRyUlNjd2FjRW5rWmhyY29PeXdSNVluVVlSb18zS3dycnlmMERoWWs3QWNjOFFXN1AyZElJRTFPMmY3R2pISHc?oc=5\" target=\"_blank\">Attack on Red Sea ship adds to global supply chain uncertainty, UN warns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">VOV World</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcGtiNVpPMWFsSmxnWDB4UklIZGp0Nnp2VlphcDVab0VpNEFnUDdCajlsc1ctNFd4dTB6MGVwcEV6SldiZHZlbmFMRFNIMFpYeVZGdjlIN3ZHaFFtUll5cjVfVjZQQTZZc2x1Q3ZlSWRyUlNjd2FjRW5rWmhyY29PeXdSNVluVVlSb18zS3dycnlmMERoWWs3QWNjOFFXN1AyZElJRTFPMmY3R2pISHc?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T09:58:33.530Z"
-    },
-    {
-      "id": "rss_2179d4f6b3669fe2",
-      "timestamp": 1786614151000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 3,
-      "text_summary": "Yemeni forces say Houthi attack repelled in Taiz amid escalation - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxObG1mck84WmVJcXVfRFQ3M2pxMU9YLVNaaUd3dTdZQ2djQWo0TWJyS0lSUW80c2lzUmJaZnJqdUhuREdVR2hZMkJQdlJHZVF1NTMzQWhTRTNSRTdNTzhmQU91amNkR0JPLVlOVVFCcFBlemlBeTNHclRTaE9WT2VEcmJqaFVyMml1Ylk3WktiV3VJOUdQVzJiZXEzbERDMkFHU2d4dHJPU0XSAa4BQVVfeXFMTWthMFhZcFFuYVZUZktxRGdjTTBCSFFNaXhzXzh5dzlLNkdZblg4c2w5WW9RTllxMWx4MTlUSDdFUFlncjZLT3k1YTVHb0Fha0lLQ29LTlBhYUVuay1IbTRid2s3V3VORzV0bGJJRVRKWXo1bW9OT1RBdktkaUMzdGFhbmlZZEdIUGNRbDNmX1JMNlhydGVha0tEblV2bXZ1UE9iT2",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObG1mck84WmVJcXVfRFQ3M2pxMU9YLVNaaUd3dTdZQ2djQWo0TWJyS0lSUW80c2lzUmJaZnJqdUhuREdVR2hZMkJQdlJHZVF1NTMzQWhTRTNSRTdNTzhmQU91amNkR0JPLVlOVVFCcFBlemlBeTNHclRTaE9WT2VEcmJqaFVyMml1Ylk3WktiV3VJOUdQVzJiZXEzbERDMkFHU2d4dHJPU0XSAa4BQVVfeXFMTWthMFhZcFFuYVZUZktxRGdjTTBCSFFNaXhzXzh5dzlLNkdZblg4c2w5WW9RTllxMWx4MTlUSDdFUFlncjZLT3k1YTVHb0Fha0lLQ29LTlBhYUVuay1IbTRid2s3V3VORzV0bGJJRVRKWXo1bW9OT1RBdktkaUMzdGFhbmlZZEdIUGNRbDNmX1JMNlhydGVha0tEblV2bXZ1UE9iT2ZiOTlCc1locXJ3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-08-13T09:58:32.240Z"
-    },
-    {
-      "id": "rss_8d1a05f8f474aa23",
-      "timestamp": 1786613562000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia considers supporting Yemeni ground push against Houthi forces - jpost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5xb0UzemNYYmNQR1VfYXdqVmtjUTRLQmVOZDE4VmNLTkxzQXhTc2VOenQyREQ4eVE5T29SYW5RWlM0WllvSFhQcXFKNHRRclg2VG5xM0xyU3RHcTVh?oc=5\" target=\"_blank\">Saudi Arabia considers supporting Yemeni ground push against Houthi forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">jpost.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5xb0UzemNYYmNQR1VfYXdqVmtjUTRLQmVOZDE4VmNLTkxzQXhTc2VOenQyREQ4eVE5T29SYW5RWlM0WllvSFhQcXFKNHRRclg2VG5xM0xyU3RHcTVh?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T11:02:29.103Z"
-    },
-    {
-      "id": "rss_0dc816640b0ebc74",
-      "timestamp": 1786610821000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea ship attack leaves three citizens dead: Pakistani Foreign Minister - Egypt Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUJvWHRtLW1qNW4wbWlnQW1aT3QtQjVCSFJpN01ya05pNmgtdDdGNVpGbDVzSDNlMFEzVTFQM2E3S1JCRDlUOUtoY2drREVKVDQyLXowMVYwdEJRRjhwV3JrUmZhMTBZZ3VZNS1VVjF2MHo0WFdCVmdVaUhrS2JoSldXTWJ5X3AzOUMwZUlWa3dMcGJEMENNQmtiN2RFTzdheFUwR3RTWk5adU0?oc=5\" target=\"_blank\">Red Sea ship attack leaves three citizens dead: Pakistani Foreign Minister</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egypt Independent</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdUJvWHRtLW1qNW4wbWlnQW1aT3QtQjVCSFJpN01ya05pNmgtdDdGNVpGbDVzSDNlMFEzVTFQM2E3S1JCRDlUOUtoY2drREVKVDQyLXowMVYwdEJRRjhwV3JrUmZhMTBZZ3VZNS1VVjF2MHo0WFdCVmdVaUhrS2JoSldXTWJ5X3AzOUMwZUlWa3dMcGJEMENNQmtiN2RFTzdheFUwR3RTWk5adU0?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T09:58:33.530Z"
     }
   ]
 }
