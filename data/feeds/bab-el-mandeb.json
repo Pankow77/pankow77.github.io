@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-19T23:17:54.818Z",
+  "last_fetch": "2026-09-20T01:21:22.015Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-19T23:17:53.342Z"
+    },
+    {
+      "id": "rss_42711f9858928694",
+      "timestamp": 1789855038000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Flames, smoke seen near Riyadh airport; Houthis claim attacks on Saudi capital - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQTXVoak5jQWh2Y3ZRV05LaEdyQ0hNS0xPbF9URW4zam5LbFlFR1BMWjAxNEptclUxQVhWUi1CY1JuU1FCMjJCNGFNSWpHUTRDa3lIY2xrS1Zxa1VycUl1UkxkS0FhSXExSlJKd3Fibkx1OEtCeHBIeUlMM3hoY2J6cTk4RG9ZMmY3eF9aWjQyYjJuUjJPeDJ5cjJEbELSAaIBQVVfeXFMUGNRR1UxcHc4X1h0WTdVb1RmbDlnUXAtZk95bkJDMXpaQjVDOWF5bGxCZENvVndLMnEwQVRSTE9GcVlRSmFiV1V2amNKV1BNeGpFMERiMEFRaGdhTmU2c2FWM09RVUNVQ1kzajF2OF9EeUFPQlFONDZIMU1jeUpYa2d2WXRKQXp0bVJGZlRScDZ4dXZEdGVuR3A5R0QtYTFKbjJn?oc=5\" target=\"_bl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTXVoak5jQWh2Y3ZRV05LaEdyQ0hNS0xPbF9URW4zam5LbFlFR1BMWjAxNEptclUxQVhWUi1CY1JuU1FCMjJCNGFNSWpHUTRDa3lIY2xrS1Zxa1VycUl1UkxkS0FhSXExSlJKd3Fibkx1OEtCeHBIeUlMM3hoY2J6cTk4RG9ZMmY3eF9aWjQyYjJuUjJPeDJ5cjJEbELSAaIBQVVfeXFMUGNRR1UxcHc4X1h0WTdVb1RmbDlnUXAtZk95bkJDMXpaQjVDOWF5bGxCZENvVndLMnEwQVRSTE9GcVlRSmFiV1V2amNKV1BNeGpFMERiMEFRaGdhTmU2c2FWM09RVUNVQ1kzajF2OF9EeUFPQlFONDZIMU1jeUpYa2d2WXRKQXp0bVJGZlRScDZ4dXZEdGVuR3A5R0QtYTFKbjJn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-20T01:21:20.591Z"
     },
     {
       "id": "rss_a686607c00f118d2",
@@ -260,6 +281,50 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-19T15:58:58.647Z"
+    },
+    {
+      "id": "rss_803ab0984306bcf5",
+      "timestamp": 1789816493000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Dozens killed in Houthi attack on camp in Yemen’s Marib - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNa0RmaTY5RGhNSGs0S05RaW16Q0dLU1NxVVhfTmFJSjJwb1R3Tm5XOEtVZUYxeElxajU0TmRCVVFrbUpFTEhDanBoR18yWmRqMUxVbHdLblJkMlMwNGo0YkRSbGdmaUZFeWFUUU9IR2lvbFIxTDhJemtIVG5PN3VFUzIxRUxTRnVNSzA4TV9Cc0IyMFItSzJrbGRFcTZUSmJC?oc=5\" target=\"_blank\">Dozens killed in Houthi attack on camp in Yemen’s Marib</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNa0RmaTY5RGhNSGs0S05RaW16Q0dLU1NxVVhfTmFJSjJwb1R3Tm5XOEtVZUYxeElxajU0TmRCVVFrbUpFTEhDanBoR18yWmRqMUxVbHdLblJkMlMwNGo0YkRSbGdmaUZFeWFUUU9IR2lvbFIxTDhJemtIVG5PN3VFUzIxRUxTRnVNSzA4TV9Cc0IyMFItSzJrbGRFcTZUSmJC?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-20T01:21:20.592Z"
+    },
+    {
+      "id": "rss_29b1b156b1673e14",
+      "timestamp": 1789815124000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia confirms Houthi missile attack on capital - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNaUVNUTFfc09yUUkzTHlpaUtuQjBhSG0xb0tPVllTamFucWJZVDBfT19EMVMtY1dRSG1mTGNGMy0xc0xlamFicE1peVlBQXphTW9MX2xqZzZselhPNzd6M2RoeVhhejVsSUZFZnlqckxPYU8zWEFkcTE1MWxaTHlaQ0hOZjZ3azdfWTNhcGdaUkRuelk?oc=5\" target=\"_blank\">Saudi Arabia confirms Houthi missile attack on capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNaUVNUTFfc09yUUkzTHlpaUtuQjBhSG0xb0tPVllTamFucWJZVDBfT19EMVMtY1dRSG1mTGNGMy0xc0xlamFicE1peVlBQXphTW9MX2xqZzZselhPNzd6M2RoeVhhejVsSUZFZnlqckxPYU8zWEFkcTE1MWxaTHlaQ0hOZjZ3azdfWTNhcGdaUkRuelk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-20T01:21:20.593Z"
     },
     {
       "id": "rss_64e66a0ac68f2272",
@@ -10881,71 +10946,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-13T12:07:29.840Z"
-    },
-    {
-      "id": "rss_8e0a2d5014296ef4",
-      "timestamp": 1786619952000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen Houthi Ship Attack - Bluefield Daily Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPYkFYWjNESzFlLWppVEdiVkhYcVlvRWhxeVJGZTVYaGw1bHVEcUxTMThUbUNGTGlndWtlT0wzS01MUmZhU1BUek1SSWNOXzhZNjZZbUZkbHZ3VHpsbzBKd3hoSDVGbU16clh2YThZdXQ0aEVRQjVsOFBENVJoeURfM2xWV2ZmVGdwQXZpV0VleXpudzRNN1BfWFM5SHZ0aFRCZDd6N0hiU01WVFZQUzFEaWw2czV6Zm9fZWNDMg?oc=5\" target=\"_blank\">Yemen Houthi Ship Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bluefield Daily Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYkFYWjNESzFlLWppVEdiVkhYcVlvRWhxeVJGZTVYaGw1bHVEcUxTMThUbUNGTGlndWtlT0wzS01MUmZhU1BUek1SSWNOXzhZNjZZbUZkbHZ3VHpsbzBKd3hoSDVGbU16clh2YThZdXQ0aEVRQjVsOFBENVJoeURfM2xWV2ZmVGdwQXZpV0VleXpudzRNN1BfWFM5SHZ0aFRCZDd6N0hiU01WVFZQUzFEaWw2czV6Zm9fZWNDMg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T12:07:28.576Z"
-    },
-    {
-      "id": "rss_c89ba9cf2c0001b7",
-      "timestamp": 1786617588000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Trump says U.S. has \"total control\" over Strait of Hormuz and might \"keep it\" - CBS News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQLTNOYzlIQUFzd2ZmNXU5eEJzS0g1ZHNwcVo0Nm1HeUExa2RJQzNQSGJpSWFfZWdoSmxYLVZBMlkzMG10T0R0WWN1dWM1VG5fbjFkcGlBQUZtSWxzVTd4dEJtVUwzdVBRTTNMZWhURWF1Ry1SLW93aGxVX25kcFZtNldkV1REcW91ZGZ3YzZkak9wZTJWOG9HVEx3UUg0RURheVZyZWpFZkpFV1dqUmdWZQ?oc=5\" target=\"_blank\">Trump says U.S. has \"total control\" over Strait of Hormuz and might \"keep it\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLTNOYzlIQUFzd2ZmNXU5eEJzS0g1ZHNwcVo0Nm1HeUExa2RJQzNQSGJpSWFfZWdoSmxYLVZBMlkzMG10T0R0WWN1dWM1VG5fbjFkcGlBQUZtSWxzVTd4dEJtVUwzdVBRTTNMZWhURWF1Ry1SLW93aGxVX25kcFZtNldkV1REcW91ZGZ3YzZkak9wZTJWOG9HVEx3UUg0RURheVZyZWpFZkpFV1dqUmdWZQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T15:54:29.767Z"
-    },
-    {
-      "id": "rss_ab1330fe6416dd4c",
-      "timestamp": 1786615680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni forces repel Houthi attack along southwest border - aa.com.tr",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNZmdjZTZBb3czNDd5T1hic2owVi1Vb2tlWC14Y0xaVVpJeGdPZExoaWVpcGszTktVeFh3V2tidmdFcW5LOEJQdGZaZEVvM3JGa2tlWWUtSW9ySkpORmlsZXkxcnp4SC1DYm1NWDhabldlT1V5M2NLRU1fUFFiSGhiWW5GbDZ3dXJFNWsxdHJNM3lrYTEyOWRjeUhzSFBWQ1VkS2hF?oc=5\" target=\"_blank\">Yemeni forces repel Houthi attack along southwest border</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aa.com.tr</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZmdjZTZBb3czNDd5T1hic2owVi1Vb2tlWC14Y0xaVVpJeGdPZExoaWVpcGszTktVeFh3V2tidmdFcW5LOEJQdGZaZEVvM3JGa2tlWWUtSW9ySkpORmlsZXkxcnp4SC1DYm1NWDhabldlT1V5M2NLRU1fUFFiSGhiWW5GbDZ3dXJFNWsxdHJNM3lrYTEyOWRjeUhzSFBWQ1VkS2hF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-13T11:02:29.103Z"
     }
   ]
 }
