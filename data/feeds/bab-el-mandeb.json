@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-20T18:26:39.140Z",
+  "last_fetch": "2026-09-20T20:58:57.033Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0a59854873b9bf4a",
+      "timestamp": 1789927461000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis tell US they will not attack its Red Sea ships — PBS - ua.news",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNand5bUZVZ1RaN3YtYVo2TU9fZXJmMTZ3Nm8tVmlkVlpmUGxQYWVQM3ZMVHRDSXlDNmNNY3padk9CeVBKakVWYWhqMUtMRlFURmtLOS1yMmhnVjAtVERoeE9aMVNWYjhVbXZLN19HUkQwNHh0OGtIRXlFdUR6THh2MUxmd1hJQjRRZjdYUmpCZF9TMllnT05vLVVMQUNBRGZfUjdvRUhkazR4QXRQNm1vQll3?oc=5\" target=\"_blank\">Houthis tell US they will not attack its Red Sea ships — PBS</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ua.news</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNand5bUZVZ1RaN3YtYVo2TU9fZXJmMTZ3Nm8tVmlkVlpmUGxQYWVQM3ZMVHRDSXlDNmNNY3padk9CeVBKakVWYWhqMUtMRlFURmtLOS1yMmhnVjAtVERoeE9aMVNWYjhVbXZLN19HUkQwNHh0OGtIRXlFdUR6THh2MUxmd1hJQjRRZjdYUmpCZF9TMllnT05vLVVMQUNBRGZfUjdvRUhkazR4QXRQNm1vQll3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-20T20:58:55.507Z"
+    },
     {
       "id": "rss_1dda1d32defd79da",
       "timestamp": 1789926796000,
@@ -10911,27 +10934,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-08-16T05:22:58.556Z"
-    },
-    {
-      "id": "rss_4d11f826a9600b30",
-      "timestamp": 1786813707000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "4 Yemeni pro-government soldiers killed in clashes, Houthi attacks in Tais, Saada - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjZWbjJhWjN5OW8xVlBxdEN5YUQ5M3BUUXhzQkJ0YUZ4RFkySjhaZXdfR2NuT0IxTFNwWWFGbDNqb2xqdVVIV1FlTERkSnNHLTZLOTJtLXJ3QW5pU1RoT0ZCVVhtRXZzM21tMzNNdkNBOGhkZWZvYUxLaEhrLVN2ZjBjTUR6eGpMdmlpLUN6aUNRZ1lSWmNkSmJ5anlhc184TDVBQXBiNzVfODJYX2F5Vm5vZGFiVFViNG5oOTRkRmhJdw?oc=5\" target=\"_blank\">4 Yemeni pro-government soldiers killed in clashes, Houthi attacks in Tais, Saada</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOYjZWbjJhWjN5OW8xVlBxdEN5YUQ5M3BUUXhzQkJ0YUZ4RFkySjhaZXdfR2NuT0IxTFNwWWFGbDNqb2xqdVVIV1FlTERkSnNHLTZLOTJtLXJ3QW5pU1RoT0ZCVVhtRXZzM21tMzNNdkNBOGhkZWZvYUxLaEhrLVN2ZjBjTUR6eGpMdmlpLUN6aUNRZ1lSWmNkSmJ5anlhc184TDVBQXBiNzVfODJYX2F5Vm5vZGFiVFViNG5oOTRkRmhJdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-15T17:15:53.267Z"
     }
   ]
 }
