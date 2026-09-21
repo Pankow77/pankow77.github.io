@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-21T19:01:01.968Z",
+  "last_fetch": "2026-09-21T22:41:40.341Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6c0a584512ee7deb",
+      "timestamp": 1790027526000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "UK to offer Saudi Arabia aerial refueling to counter Houthi attacks - ABC News - Breaking News, Latest News and Videos",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXpkaHFFQzFNaE9VREpOcUVDSEtHYTBpcjd1a1gtcjlSX2htOEEzZF9YYkVHRjBXbGlnVnU4amREbkJSNUgzNy1uU2pHcUtFTVFjajN4WjJmalB0OXUtUEhGWmlGQmR6QVlWT2xiTVhEVm5KQnNhZjBnWjg2dGVpLVo2TkFUdkJlaVB0VVEtd3lSNFJKek9Nblo2Ullqa1ExVC1OTXA1c01KZUXSAbABQVVfeXFMTUhXNVIyOWw5ZTQyNHZENkZnQkRKQWh1bWJzQjZkYk5PN2NNYTVhRVJUVFEtSFhXSTltMjJaOXdNTVhWNDlhQm0tbWQwcHF2WHB1dWNYUzJnbGFqNmdxNXRVaHdTN0hwR24zUEVFRi1hdXMzVzQyVGM4Z19xekFieXd5LW5sV0VXdjBmajY2Y0U5OG5MVnpYSnpIaEhOWk5ZQW",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXpkaHFFQzFNaE9VREpOcUVDSEtHYTBpcjd1a1gtcjlSX2htOEEzZF9YYkVHRjBXbGlnVnU4amREbkJSNUgzNy1uU2pHcUtFTVFjajN4WjJmalB0OXUtUEhGWmlGQmR6QVlWT2xiTVhEVm5KQnNhZjBnWjg2dGVpLVo2TkFUdkJlaVB0VVEtd3lSNFJKek9Nblo2Ullqa1ExVC1OTXA1c01KZUXSAbABQVVfeXFMTUhXNVIyOWw5ZTQyNHZENkZnQkRKQWh1bWJzQjZkYk5PN2NNYTVhRVJUVFEtSFhXSTltMjJaOXdNTVhWNDlhQm0tbWQwcHF2WHB1dWNYUzJnbGFqNmdxNXRVaHdTN0hwR24zUEVFRi1hdXMzVzQyVGM4Z19xekFieXd5LW5sV0VXdjBmajY2Y0U5OG5MVnpYSnpIaEhOWk5ZQWZkVUhMUzdUdHNNWnJPMDA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T22:41:38.660Z"
+    },
     {
       "id": "rss_e7ba70dbf5c7494d",
       "timestamp": 1790008980000,
@@ -10889,29 +10910,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T11:23:11.490Z"
-    },
-    {
-      "id": "rss_6e7192f05d796b44",
-      "timestamp": 1787050500000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi Threat to Red Sea Shipping Rises - WSJ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOQVo2MUJRemZfRUxrMUF4Mkc4YngzQS01RnpySlhETXZ3bkp0U09jZHduLV9pcElYdjhTR3hjUl9HR2Q0aV91QXMyRVhzamNpR0NIQWNnSFdZT2s3VE40TXhKTnJ0MlgyelJJRkQ5RDVockRud2F2TTcxZVZqTlpudlNmbDIyeE92UXdCTEJB?oc=5\" target=\"_blank\">Houthi Threat to Red Sea Shipping Rises</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQVo2MUJRemZfRUxrMUF4Mkc4YngzQS01RnpySlhETXZ3bkp0U09jZHduLV9pcElYdjhTR3hjUl9HR2Q0aV91QXMyRVhzamNpR0NIQWNnSFdZT2s3VE40TXhKTnJ0MlgyelJJRkQ5RDVockRud2F2TTcxZVZqTlpudlNmbDIyeE92UXdCTEJB?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-18T14:27:44.783Z"
     }
   ]
 }
