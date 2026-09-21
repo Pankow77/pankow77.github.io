@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-21T06:43:31.692Z",
+  "last_fetch": "2026-09-21T13:33:39.149Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_279a5fd0424feaa1",
+      "timestamp": 1789980818000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi Attack on Riyadh Opens New Front - chosun.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQOXlOQm52UnZoQy1aTmRGYjhHbFdPSC0wU3o0bUptRDV5MzRpS0VXM2R2NUhmT1JTZjBuT1l6WHlyV003dURjaXBMVnVWcjJ4bXdlQTNDUHBoc09TOUhyaVpkdHVhMm8xUUNRUmcwR2RFdFNMWHAxN1p1bWRxLUtrVkJEV0Q?oc=5\" target=\"_blank\">Houthi Attack on Riyadh Opens New Front</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chosun.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOXlOQm52UnZoQy1aTmRGYjhHbFdPSC0wU3o0bUptRDV5MzRpS0VXM2R2NUhmT1JTZjBuT1l6WHlyV003dURjaXBMVnVWcjJ4bXdlQTNDUHBoc09TOUhyaVpkdHVhMm8xUUNRUmcwR2RFdFNMWHAxN1p1bWRxLUtrVkJEV0Q?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:37.379Z"
+    },
+    {
+      "id": "rss_e919bb93ad9f4fe9",
+      "timestamp": 1789977600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they won't attack US vessels in Red Sea, and other Mideast developments - Temple Daily Telegram",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2ZFZDRidUpwTHZsQm1TM3VNa2ZzdGI5cV9HYVByOWxGaHZFZEMweTN3T2I3bTlEeXpXaG4wTEoydUVtNEJLeEp5LWgxTV9XbHZXR2NnVDRGSEVJZHRlT1k2UGhoMl9KUnZhT1NXUEJtNEd0QXhybEFJWmRzaFVlOEd5NEw?oc=5\" target=\"_blank\">Houthis say they won't attack US vessels in Red Sea, and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Temple Daily Telegram</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2ZFZDRidUpwTHZsQm1TM3VNa2ZzdGI5cV9HYVByOWxGaHZFZEMweTN3T2I3bTlEeXpXaG4wTEoydUVtNEJLeEp5LWgxTV9XbHZXR2NnVDRGSEVJZHRlT1k2UGhoMl9KUnZhT1NXUEJtNEd0QXhybEFJWmRzaFVlOEd5NEw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:37.379Z"
+    },
     {
       "id": "rss_f97e9165ad86d35c",
       "timestamp": 1789969549000,
@@ -111,6 +155,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-21T06:43:31.203Z"
+    },
+    {
+      "id": "rss_6bb3dc4035845ae1",
+      "timestamp": 1789958772000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil hits over 1-week low on hopes of boost to diplomacy in Iran war - The Mighty 790 KFGO",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNWkxyZDFvUEp1WGVuWHFTMUp2cEtGTEs1eEZaUXA3N2FNNUk1a1NGUk1BQlQzM05jekRSSnVBRGk5Mi0waWotM1RZQmZEMGNJWW1mbDk3LUQ2azl4WXE1VmgyT0pOa3BkUG0xc3AzanFPdksyVjNYWW9UVXRCS3JCNg?oc=5\" target=\"_blank\">Oil hits over 1-week low on hopes of boost to diplomacy in Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Mighty 790 KFGO</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWkxyZDFvUEp1WGVuWHFTMUp2cEtGTEs1eEZaUXA3N2FNNUk1a1NGUk1BQlQzM05jekRSSnVBRGk5Mi0waWotM1RZQmZEMGNJWW1mbDk3LUQ2azl4WXE1VmgyT0pOa3BkUG0xc3AzanFPdksyVjNYWW9UVXRCS3JCNg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:37.379Z"
     },
     {
       "id": "rss_9e2a745592dfc2c7",
@@ -403,6 +470,27 @@
       "fetched_at": "2026-09-20T15:44:22.353Z"
     },
     {
+      "id": "rss_f22e645d81065f45",
+      "timestamp": 1789914000000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "U.S. embassies across Middle East issue security alerts for Americans - CBS News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxON1ROYVJ6T0RNSzVUbXVHZTJTc0NDajFSSzB4VjdJcWVpX2JVVk9KcnpmZHNMZFZxS3pIaTFRMlUzSExKZHBiUlRYa2l2M0s1amg4aTd6alZNLW53cmZsWVhFZFRsUG91NnNLMXNSdnhGckhpTTlRTF9JV0xRS0dDNEh3cUhMcFl3NGNCdQ?oc=5\" target=\"_blank\">U.S. embassies across Middle East issue security alerts for Americans</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxON1ROYVJ6T0RNSzVUbXVHZTJTc0NDajFSSzB4VjdJcWVpX2JVVk9KcnpmZHNMZFZxS3pIaTFRMlUzSExKZHBiUlRYa2l2M0s1amg4aTd6alZNLW53cmZsWVhFZFRsUG91NnNLMXNSdnhGckhpTTlRTF9JV0xRS0dDNEh3cUhMcFl3NGNCdQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:37.379Z"
+    },
+    {
       "id": "rss_e993f189e8770de4",
       "timestamp": 1789911360000,
       "source": "OSINT",
@@ -636,6 +724,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T11:58:22.366Z"
+    },
+    {
+      "id": "rss_17075c601f2a4faf",
+      "timestamp": 1789897828000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis say they won’t attack US vessels in Red Sea, and other Mideast developments - Pioneer Press",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQdl9aM21nQzFRWWZtWlVBZkhOUW5VWnA1dDI5S05UQTlHTTBSVXFqeTdTbWpQRlhyR2lQRWdlMDlGajhsOTdLNVRpWVg5NnpHU3ZGV3hnN1RMbVlWUVQtVFFzQ05sMWJ1UVM4RUVFaHRzWFFTOWQ1bmo3QVpwclNvWDNqc2x5QjMxaVlzZEoyNE1uNjlmWFRUaTAtTEREV0NsMzZqeDRzVzZIVExQY3drZ0F6TnJmSGN1UTRlOA?oc=5\" target=\"_blank\">Houthis say they won’t attack US vessels in Red Sea, and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pioneer Press</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdl9aM21nQzFRWWZtWlVBZkhOUW5VWnA1dDI5S05UQTlHTTBSVXFqeTdTbWpQRlhyR2lQRWdlMDlGajhsOTdLNVRpWVg5NnpHU3ZGV3hnN1RMbVlWUVQtVFFzQ05sMWJ1UVM4RUVFaHRzWFFTOWQ1bmo3QVpwclNvWDNqc2x5QjMxaVlzZEoyNE1uNjlmWFRUaTAtTEREV0NsMzZqeDRzVzZIVExQY3drZ0F6TnJmSGN1UTRlOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:37.380Z"
     },
     {
       "id": "rss_36e6d26a82899708",
@@ -1176,6 +1287,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-19T15:58:58.647Z"
+    },
+    {
+      "id": "rss_064d8248c52ad631",
+      "timestamp": 1789822147000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea, Crosetto: ‘Italia is not at war’. Tajani: the Aspides mission must be strengthened - Il Sole 24 ORE",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWnRYWGdXUEUtLWxhR1FRdUpUUEphMExXWGJ3VTZZVFFhU3ZobHRxNDc0c3g5N2dYODdCUmZwcTczTzYzTElRYnptdy10MWxhS0NkZnV1NXBBTXY5Z2RkTEZvUUtIMVptTGJsaVMzaWtVSjB1MWNEQnY4UFRUTDNMN0FoR1BSc2p2aFFDWEdJZVM3bmQ2N2l2ejVkRHl3ZEQ4T1RQajlSeWMyVXZFX1ByUlREWFFJZGQ2SUxyeU5WazFwYjQ?oc=5\" target=\"_blank\">Red Sea, Crosetto: ‘Italia is not at war’. Tajani: the Aspides mission must be strengthened</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Il Sole 24 ORE</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWnRYWGdXUEUtLWxhR1FRdUpUUEphMExXWGJ3VTZZVFFhU3ZobHRxNDc0c3g5N2dYODdCUmZwcTczTzYzTElRYnptdy10MWxhS0NkZnV1NXBBTXY5Z2RkTEZvUUtIMVptTGJsaVMzaWtVSjB1MWNEQnY4UFRUTDNMN0FoR1BSc2p2aFFDWEdJZVM3bmQ2N2l2ejVkRHl3ZEQ4T1RQajlSeWMyVXZFX1ByUlREWFFJZGQ2SUxyeU5WazFwYjQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T13:33:38.437Z"
     },
     {
       "id": "rss_4d07f2018866b0f8",
@@ -10791,145 +10923,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-17T17:53:56.191Z"
-    },
-    {
-      "id": "rss_ad61482b86251731",
-      "timestamp": 1786978215000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen Houthi Ship Attack - Bluefield Daily Telegraph",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQYzlyRGxnNm9yb1ZpbkNxdlVfTVRudlJ1YzVqenoyRmpYdlFIYmhyaXotei1peHM3QnJmUTdQNlFia2lOSkVZc0JqZV9Oa1pBbGhfUy16VTM0bkQ3Q3NmUUZkMncyV0hIbTBlbkU1bVZjaXVMcUpCY2NoS3I1eFc3N19NeVdZSXFhX1dYTzNYNmpUOHVmMXQ2Nmt5YUVUM2VTbDlIa2ZmbjJZMVZtQjdoWC0wOXlGelB6cG5rMg?oc=5\" target=\"_blank\">Yemen Houthi Ship Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bluefield Daily Telegraph</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQYzlyRGxnNm9yb1ZpbkNxdlVfTVRudlJ1YzVqenoyRmpYdlFIYmhyaXotei1peHM3QnJmUTdQNlFia2lOSkVZc0JqZV9Oa1pBbGhfUy16VTM0bkQ3Q3NmUUZkMncyV0hIbTBlbkU1bVZjaXVMcUpCY2NoS3I1eFc3N19NeVdZSXFhX1dYTzNYNmpUOHVmMXQ2Nmt5YUVUM2VTbDlIa2ZmbjJZMVZtQjdoWC0wOXlGelB6cG5rMg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-17T14:52:09.041Z"
-    },
-    {
-      "id": "rss_5aacf6602342d511",
-      "timestamp": 1786972918000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis fire missile salvo toward Bab al-Mandab, Red Sea, government says - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaGVraElLSzV0aTdHbE1rVzdsMHBSUUcyLWkydDJwYUpyQmxLZkZvYmg3WFBobkhUaXU4NWFTV2JUb24xYlhKSXE5ZkNYYUlMOVlxVGNDVnlnc0FXZ0tEekZadEtiS0xXOEVpNUpqMzgzZHVWNm03bjE0aUxuZm5fSV8zeXRXSnQwYTJaLWN4WTh1MU0tUG5TSEEzSjdpS3Q3R1FldHkzS3J1alVOb3R4Nkk0VXlJNUhTbnhUNzFxdDM?oc=5\" target=\"_blank\">Yemen's Houthis fire missile salvo toward Bab al-Mandab, Red Sea, government says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaGVraElLSzV0aTdHbE1rVzdsMHBSUUcyLWkydDJwYUpyQmxLZkZvYmg3WFBobkhUaXU4NWFTV2JUb24xYlhKSXE5ZkNYYUlMOVlxVGNDVnlnc0FXZ0tEekZadEtiS0xXOEVpNUpqMzgzZHVWNm03bjE0aUxuZm5fSV8zeXRXSnQwYTJaLWN4WTh1MU0tUG5TSEEzSjdpS3Q3R1FldHkzS3J1alVOb3R4Nkk0VXlJNUhTbnhUNzFxdDM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-17T14:21:44.107Z"
-    },
-    {
-      "id": "rss_dcdcaf2aa75c83d7",
-      "timestamp": 1786970766000,
-      "source": "Al Jazeera",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s drone war: Rivals flex growing aerial muscle - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEZPanl2RHZFR21fa2llRTRITHo0TnFBMFBsUVBOd2pnTGI4RXpMMzlSY2lBYUNtb2Q0V2ZmS3VmdkIyaEMxRGF5NzlmRjZMVWh6VklzeHd2LXFwUko4c3JKNkdSelEtYkZsLTBlXzZoUnV6WV9HQzJGWEcxSW5vZW1VVUhVMk1LREdpdV9jcklQOXJGR0HSAZsBQVVfeXFMTWtSVUtvSGtwTUkwLXp2UG1GdzVvb3Jnb3prRG1PTE9ONXQ4LTl4VmJ2QW5HT2VlYUFIVk5oWU1WekpTckhtS2lTMTd2SEhCZUVHVmNXWGdhZDFYSk0yWmNLTzdsN2RGdU8xSGdqVTNqcU5GYWRMaUFBUW1jMEExRmxMWmpkUXpTN2NSUUhtT2RqYmtqX0RyRVRoUTA?oc=5\" target=\"_blank\">Yemen’s dron",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQUEZPanl2RHZFR21fa2llRTRITHo0TnFBMFBsUVBOd2pnTGI4RXpMMzlSY2lBYUNtb2Q0V2ZmS3VmdkIyaEMxRGF5NzlmRjZMVWh6VklzeHd2LXFwUko4c3JKNkdSelEtYkZsLTBlXzZoUnV6WV9HQzJGWEcxSW5vZW1VVUhVMk1LREdpdV9jcklQOXJGR0HSAZsBQVVfeXFMTWtSVUtvSGtwTUkwLXp2UG1GdzVvb3Jnb3prRG1PTE9ONXQ4LTl4VmJ2QW5HT2VlYUFIVk5oWU1WekpTckhtS2lTMTd2SEhCZUVHVmNXWGdhZDFYSk0yWmNLTzdsN2RGdU8xSGdqVTNqcU5GYWRMaUFBUW1jMEExRmxMWmpkUXpTN2NSUUhtT2RqYmtqX0RyRVRoUTA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-08-17T15:19:55.524Z"
-    },
-    {
-      "id": "rss_3016a697b395c197",
-      "timestamp": 1786970187000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they attacked Saudi vessels off Yemen’s Mocha - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOTEViWjVJeVRDNlYyWjhiN2VaLVltUW9OcUJLRGJfU055NkVreDRrUHNxUDlZS3VFVVVDMUhJZk1tNE9JMlhUeGctaWlzY0VtSFo0ekZrRGFfYWU3elI3dVNNX0J1b0k4NTRsQzdTOHlvZEtrTFBvUXRBa1dIaHlONUNjY0NmUjlKV19FRDh6TTl6R0FqbGZpWHJXRDFFZzBBaDJpUE5wS3lDSDlHQUZB?oc=5\" target=\"_blank\">Houthis say they attacked Saudi vessels off Yemen’s Mocha</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTEViWjVJeVRDNlYyWjhiN2VaLVltUW9OcUJLRGJfU055NkVreDRrUHNxUDlZS3VFVVVDMUhJZk1tNE9JMlhUeGctaWlzY0VtSFo0ekZrRGFfYWU3elI3dVNNX0J1b0k4NTRsQzdTOHlvZEtrTFBvUXRBa1dIaHlONUNjY0NmUjlKV19FRDh6TTl6R0FqbGZpWHJXRDFFZzBBaDJpUE5wS3lDSDlHQUZB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-08-17T16:53:22.259Z"
-    },
-    {
-      "id": "rss_72d6eb95e9ced396",
-      "timestamp": 1786970100000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis say they targeted Saudi military ship in Red Sea - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTGN3U3VUTGdJVlN3Yk85Rk9IOUhJd1Q0QUdEWHJhcnJJWjBkc3lPOEhQcjdsOThmRnRHNVZfcjBOV0w3LVN6ZmR1V2JDMkdycVJ0WjFHc3NPT0NrQTh3bFJCb0s0MWRMb0pralkzZndaT0VxR2ZvdWdaRnRKN1lPVC0tMGNLMExub05mNUtGMDYyZ3RPYmxkcXlhWml5YVpZaHRZd3lqRUlZTTk2cm0yQUhNQ21QS0ZwTXJkZjVHSDA5Y3gzVEZ0dmFWci1EYnRyZUtMVTNpT2JhVW1NU1JNLWZyZGV3el9vdGZpcUdNQQ?oc=5\" target=\"_blank\">Houthis say they targeted Saudi military ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPTGN3U3VUTGdJVlN3Yk85Rk9IOUhJd1Q0QUdEWHJhcnJJWjBkc3lPOEhQcjdsOThmRnRHNVZfcjBOV0w3LVN6ZmR1V2JDMkdycVJ0WjFHc3NPT0NrQTh3bFJCb0s0MWRMb0pralkzZndaT0VxR2ZvdWdaRnRKN1lPVC0tMGNLMExub05mNUtGMDYyZ3RPYmxkcXlhWml5YVpZaHRZd3lqRUlZTTk2cm0yQUhNQ21QS0ZwTXJkZjVHSDA5Y3gzVEZ0dmFWci1EYnRyZUtMVTNpT2JhVW1NU1JNLWZyZGV3el9vdGZpcUdNQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-17T13:34:52.398Z"
-    },
-    {
-      "id": "rss_1faf1b1716afba93",
-      "timestamp": 1786968925000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim missile attack on Saudi ship in Red Sea - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5sX3NQYnJ0QnJZTWZ4b1dnMnlYUlFDLTZERWxLNWlPLUIyUDJ2VWw3NkkzVGZuck9Tdml1YkpnNXRiUWd0eWhuNXFoNTUzcHVfTTBpTGtxaXhQUUs2?oc=5\" target=\"_blank\">Houthis claim missile attack on Saudi ship in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "missile",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5sX3NQYnJ0QnJZTWZ4b1dnMnlYUlFDLTZERWxLNWlPLUIyUDJ2VWw3NkkzVGZuck9Tdml1YkpnNXRiUWd0eWhuNXFoNTUzcHVfTTBpTGtxaXhQUUs2?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-17T13:34:52.397Z"
     }
   ]
 }
