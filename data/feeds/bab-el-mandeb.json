@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-20T23:05:50.502Z",
+  "last_fetch": "2026-09-21T01:19:55.223Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c8ca3ec8ffb2c16a",
+      "timestamp": 1789952510000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Riyadh targeted amid escalation concerns - global.chinadaily.com.cn",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxQZkg0Um1Fa1EwSGY1WDNsVThvQ3hTWkZXLUpxT3FsaTRib2pyMWZaNHpFV2FCOUVEdGRGeFY4X29Td29sR2VLQ09iS3lCYkRmNU1aYmU0R0dzbVNOSTNhYnN0VUtQQjRvdGNDSkZoTWtwcDh0bV9ZLW5adFFUeGVZZ2NB?oc=5\" target=\"_blank\">Riyadh targeted amid escalation concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">global.chinadaily.com.cn</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZkg0Um1Fa1EwSGY1WDNsVThvQ3hTWkZXLUpxT3FsaTRib2pyMWZaNHpFV2FCOUVEdGRGeFY4X29Td29sR2VLQ09iS3lCYkRmNU1aYmU0R0dzbVNOSTNhYnN0VUtQQjRvdGNDSkZoTWtwcDh0bV9ZLW5adFFUeGVZZ2NB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T01:19:53.656Z"
+    },
     {
       "id": "rss_66a2af730772c714",
       "timestamp": 1789943911000,
@@ -25,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T23:05:49.124Z"
+    },
+    {
+      "id": "rss_8a9dd9372ca1cbc2",
+      "timestamp": 1789943349000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil rises after Houthi attack on Saudi capital - Euronext Markets: Real-time Stock Market Data | live",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNX0ZocF9EQzFFVnNkQXFHaTdZa25YbnUwa1lIeDZDQl80V21IZjY2MjN6bVpCNm5CUTBDenNBZzh0eHctcHFVTWNmQy1sbVY1a1dMVlJwVk0xUVpPckkzT252bmpHbXNyaVBBRHFmdk1pc3FFNTY0Z0ZVbjU3NGtpV05QVWxMQ3VGcFRfTkxqcDI?oc=5\" target=\"_blank\">Oil rises after Houthi attack on Saudi capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronext Markets: Real-time Stock Market Data | live</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNX0ZocF9EQzFFVnNkQXFHaTdZa25YbnUwa1lIeDZDQl80V21IZjY2MjN6bVpCNm5CUTBDenNBZzh0eHctcHFVTWNmQy1sbVY1a1dMVlJwVk0xUVpPckkzT252bmpHbXNyaVBBRHFmdk1pc3FFNTY0Z0ZVbjU3NGtpV05QVWxMQ3VGcFRfTkxqcDI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-21T01:19:53.656Z"
     },
     {
       "id": "rss_a99120c6289109e1",
@@ -10890,50 +10932,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-16T20:45:22.644Z"
-    },
-    {
-      "id": "rss_843d11ba26f29c92",
-      "timestamp": 1786895717000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Fire Six Missiles Into Marib’s Displacement Camps as Yemen War Risk Peaks - International Business Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPdGdzd1QxTWV3Q0lXOElHblgySzhwblUzLUJHenBBRktqemJ5VGgzNVdBSU03cDdrSGtMVHhxdGF4VEI0ajg3S3FfZk1VUGpJYy00OHVEcXNXSUhfOUZBclh5TnlVclZNbzM1YlR3bVpyRFZEUHBoYkFOQ0k4bVh1LTRFR3FvM0U0TldnUU9fQ0lMWC1DOGQwQldKTjdnMzJNOTZfZw?oc=5\" target=\"_blank\">Houthis Fire Six Missiles Into Marib’s Displacement Camps as Yemen War Risk Peaks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Business Times</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdGdzd1QxTWV3Q0lXOElHblgySzhwblUzLUJHenBBRktqemJ5VGgzNVdBSU03cDdrSGtMVHhxdGF4VEI0ajg3S3FfZk1VUGpJYy00OHVEcXNXSUhfOUZBclh5TnlVclZNbzM1YlR3bVpyRFZEUHBoYkFOQ0k4bVh1LTRFR3FvM0U0TldnUU9fQ0lMWC1DOGQwQldKTjdnMzJNOTZfZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-16T16:48:47.814Z"
-    },
-    {
-      "id": "rss_515ecb3f32b99756",
-      "timestamp": 1786888418000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Bab el-Mandeb Strait faces growing threat as Houthi attacks raise fears of a second Hormuz - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPcWZ4Y3pCY2JPd1Q3NDhQem9ueXlmOVFzX05Rb20zcVNacTdSRHd0REU1LUJiUlJ3MW5qWlNtOVlOOU8yZmd5UHRESE1odm5NMkFqWFlPdlZ2YXowdl80TGZ1d0VRc0l5OHRjMnVnQlFZSkwtajBZZFFISFNaNmpISDNWd2N0bVVhNnY1M1IxOWstWGpKb1ZOcFJOTFk0UUNJYWJQclhhZG8yNFdfN205TFpn0gG3AUFVX3lxTFBMbVBaay1Kal9NaTNkb0p3MlU5eWY1YVNOSjlERXl2ckxqZHNuU3h1a0JzUjFXUzRWSVdrbzRYd2RJaGpWNU9uSnhGYmVtZVFkVUk2TVpjRGRZbDRFNkpnWUttTmV1MkhhU2JZb1JvRlYtRXdtSEtfUU9QRWduaUIxVU5TR25IaG1YS0xqaGMtZVJveFRUUVlDbn",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcWZ4Y3pCY2JPd1Q3NDhQem9ueXlmOVFzX05Rb20zcVNacTdSRHd0REU1LUJiUlJ3MW5qWlNtOVlOOU8yZmd5UHRESE1odm5NMkFqWFlPdlZ2YXowdl80TGZ1d0VRc0l5OHRjMnVnQlFZSkwtajBZZFFISFNaNmpISDNWd2N0bVVhNnY1M1IxOWstWGpKb1ZOcFJOTFk0UUNJYWJQclhhZG8yNFdfN205TFpn0gG3AUFVX3lxTFBMbVBaay1Kal9NaTNkb0p3MlU5eWY1YVNOSjlERXl2ckxqZHNuU3h1a0JzUjFXUzRWSVdrbzRYd2RJaGpWNU9uSnhGYmVtZVFkVUk2TVpjRGRZbDRFNkpnWUttTmV1MkhhU2JZb1JvRlYtRXdtSEtfUU9QRWduaUIxVU5TR25IaG1YS0xqaGMtZVJveFRUUVlDbnE3T0pxQW9ZZV9rSnI3d0NuRXJYY0Qxc1IxQWFLMA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-16T14:17:03.521Z"
     }
   ]
 }
