@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-21T22:41:40.341Z",
+  "last_fetch": "2026-09-22T01:24:00.396Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_37f10851cb028d7b",
+      "timestamp": 1790030548000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Houthis' escalating attacks on Saudi Arabia give Iran leverage in the Middle East - ABC News - Breaking News, Latest News and Videos",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEp0RkEzaUQ3QUZKNDZra0pOeXJudE5jc3BSSTZrRGxHUVgzelJrLTNrWGsxeHhIbFNRTU00ODJvbGxTRG9sMEVtbWYtNzhXQm10YWx3SllZQXg5VGU5bVUxRUVjM202bUw4NmxJY0g0TXAwclU2ejVZenRPUmx2RzFIbGpTT1VVNDRuZUdVTml6ZGEzR2hvV28tTWVRUGJ6Ny02c01DcUJTUdIBrwFBVV95cUxOazcySm5JUmxmVEFDV0U1TkRGbmhXZlhxMnA1UERQaEE5WllVbDl6WTlLbXRkZXZkZThxX3lZMXRBdEVRc0lMS2FNRURIbHJtMnZBeXFiUFpZSXhxNlZvWnNEaGhuXzhoUjFSRnJvM3BydUpwZG9JSTZqa0d1OGo1cGtLTWRWWVRhTkt6NG1Na083WU5XQ0xjUnNKd21yeUltTG",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEp0RkEzaUQ3QUZKNDZra0pOeXJudE5jc3BSSTZrRGxHUVgzelJrLTNrWGsxeHhIbFNRTU00ODJvbGxTRG9sMEVtbWYtNzhXQm10YWx3SllZQXg5VGU5bVUxRUVjM202bUw4NmxJY0g0TXAwclU2ejVZenRPUmx2RzFIbGpTT1VVNDRuZUdVTml6ZGEzR2hvV28tTWVRUGJ6Ny02c01DcUJTUdIBrwFBVV95cUxOazcySm5JUmxmVEFDV0U1TkRGbmhXZlhxMnA1UERQaEE5WllVbDl6WTlLbXRkZXZkZThxX3lZMXRBdEVRc0lMS2FNRURIbHJtMnZBeXFiUFpZSXhxNlZvWnNEaGhuXzhoUjFSRnJvM3BydUpwZG9JSTZqa0d1OGo1cGtLTWRWWVRhTkt6NG1Na083WU5XQ0xjUnNKd21yeUltTGlCUVRMa280UzlfdTlV?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T01:23:58.945Z"
+    },
     {
       "id": "rss_6c0a584512ee7deb",
       "timestamp": 1790027526000,
@@ -10889,27 +10912,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-18T12:35:12.635Z"
-    },
-    {
-      "id": "rss_3d35020c846cb65f",
-      "timestamp": 1787050872000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Mocha port suspends operations following Houthi attack - safety4sea",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHFUQTJydTFkNFFTaEJpc2tWM2hHMHJFM0Rubkt1RzRYUkJ4U0dnTUh5OGotazJRVHAydWJMLWFEdmNYdlVKNWIzRVFTaTI0TFlEOE1NMlUtQzZacEZidjlrblNFSWc2M0dMalM5YmtoNU0xTnM1SUh0ZjFSYmxzcnBYX0U?oc=5\" target=\"_blank\">Mocha port suspends operations following Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">safety4sea</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeHFUQTJydTFkNFFTaEJpc2tWM2hHMHJFM0Rubkt1RzRYUkJ4U0dnTUh5OGotazJRVHAydWJMLWFEdmNYdlVKNWIzRVFTaTI0TFlEOE1NMlUtQzZacEZidjlrblNFSWc2M0dMalM5YmtoNU0xTnM1SUh0ZjFSYmxzcnBYX0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-18T11:23:11.490Z"
     }
   ]
 }
