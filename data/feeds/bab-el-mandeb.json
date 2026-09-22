@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-22T20:19:51.716Z",
+  "last_fetch": "2026-09-22T23:07:34.797Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_949151fb9351366d",
+      "timestamp": 1790110167000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni forces thwart Houthi missile attack on Al-Dhalea, military says - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPbEhwNzRCaUM2dWpCLVVXZjBXdV9JdFRicl9qSkNIVEhaT3dwcWZwRjE5WU83VUZRVmZrbnVWQlRjREVIMFE0SVdieW9NZEVkSmdONGg2SENRYzVsRy1oZzc4dGVLck5zWFhfd0J0S19sUlhsbW54UjhCQXVIaXA2aTJoc2hNQkdpQkdGUkxwUDU2bVlldnhkSlhKTTUxNUVmTTRSSjdLUzA4V2wzQ3puMDgxelQ?oc=5\" target=\"_blank\">Yemeni forces thwart Houthi missile attack on Al-Dhalea, military says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbEhwNzRCaUM2dWpCLVVXZjBXdV9JdFRicl9qSkNIVEhaT3dwcWZwRjE5WU83VUZRVmZrbnVWQlRjREVIMFE0SVdieW9NZEVkSmdONGg2SENRYzVsRy1oZzc4dGVLck5zWFhfd0J0S19sUlhsbW54UjhCQXVIaXA2aTJoc2hNQkdpQkdGUkxwUDU2bVlldnhkSlhKTTUxNUVmTTRSSjdLUzA4V2wzQ3puMDgxelQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T23:07:33.269Z"
+    },
     {
       "id": "rss_3316f78d9e35073b",
       "timestamp": 1790106995000,
@@ -23,6 +46,48 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T20:19:50.064Z"
+    },
+    {
+      "id": "rss_f79408cb4551647b",
+      "timestamp": 1790099840000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Britain Expands Saudi Air Support as Red Sea Risks Test Europe’s Limits - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPNFJJdmdJa01LY056S0E5amYxdVdFZ3VuRWxXVG91UTVaU3UtNW5OOFd5ZGlxdndlNGM5b0s4bTZDSWdXZnBWd2E1RW05UGpHaUYyQVhLVlJRTjQ2VkJCQ0MyMTQ5Q281dzZ3NmktM0s3T2F4b1Rwb1RPa1FYUmFSel9Iek1ZSjFJLThieURyX0pRdGtsSFkwdUx2UEhZV2lrVEVvZEhmYVN3SlpH?oc=5\" target=\"_blank\">Britain Expands Saudi Air Support as Red Sea Risks Test Europe’s Limits</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNFJJdmdJa01LY056S0E5amYxdVdFZ3VuRWxXVG91UTVaU3UtNW5OOFd5ZGlxdndlNGM5b0s4bTZDSWdXZnBWd2E1RW05UGpHaUYyQVhLVlJRTjQ2VkJCQ0MyMTQ5Q281dzZ3NmktM0s3T2F4b1Rwb1RPa1FYUmFSel9Iek1ZSjFJLThieURyX0pRdGtsSFkwdUx2UEhZV2lrVEVvZEhmYVN3SlpH?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T23:07:33.269Z"
+    },
+    {
+      "id": "rss_adc28e970cdaa31c",
+      "timestamp": 1790095677000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Here's What the Houthi–Saudi Arabia Conflict Means for the United States - Council on Foreign Relations",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUU1IdmtFdFRYNFEzT1BuRVRpamQxZDh0N3czV01WWGFtbHVYYWZZYmdna3FTVVpFeXd2cjZtSVA1R0c2MEpUdWlXUHRqSzBqQ0MtQ1NsSG1mN2EyVmZtN1o5RDlvVkxGLU5mMVBENXU5ZHFpUWhxX2xRWXNkSEdFbzZraUctOThBMzBoX3VNVGtBYnVsMGRwb0dkRHZDaEsyZU1fZ041V2FjcHR4aThNTTF0LThLcHpKV0p6Z3hKT24?oc=5\" target=\"_blank\">Here's What the Houthi–Saudi Arabia Conflict Means for the United States</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUU1IdmtFdFRYNFEzT1BuRVRpamQxZDh0N3czV01WWGFtbHVYYWZZYmdna3FTVVpFeXd2cjZtSVA1R0c2MEpUdWlXUHRqSzBqQ0MtQ1NsSG1mN2EyVmZtN1o5RDlvVkxGLU5mMVBENXU5ZHFpUWhxX2xRWXNkSEdFbzZraUctOThBMzBoX3VNVGtBYnVsMGRwb0dkRHZDaEsyZU1fZ041V2FjcHR4aThNTTF0LThLcHpKV0p6Z3hKT24?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T23:07:33.268Z"
     },
     {
       "id": "rss_7d3365951c738bf4",
@@ -10849,69 +10914,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-20T10:55:37.331Z"
-    },
-    {
-      "id": "rss_1eba17e3eeda8b59",
-      "timestamp": 1787219457000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "What happened to the Pakistani sailors killed in the Houthi Red Sea attack? - Latest news from Azerbaijan",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPMjhFNzZ0a3l1SVhxTXl1WWFJN1RjLXB5NUh5b2lsbXdUWnRZejZ6NEViRFhVRkdSSExJd0Q5S1ozRy0wdDB1WmZPM29md2xIaUFPeFoycFhYMHdrdWpjbFloQmg1dEh5OHNnRlpRVGNpOXpuX2ozSjN0XzhQbURSUXZXcEt3NmZ4SnU4cU81b1k4OERObzA4S294QQ?oc=5\" target=\"_blank\">What happened to the Pakistani sailors killed in the Houthi Red Sea attack?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMjhFNzZ0a3l1SVhxTXl1WWFJN1RjLXB5NUh5b2lsbXdUWnRZejZ6NEViRFhVRkdSSExJd0Q5S1ozRy0wdDB1WmZPM29md2xIaUFPeFoycFhYMHdrdWpjbFloQmg1dEh5OHNnRlpRVGNpOXpuX2ozSjN0XzhQbURSUXZXcEt3NmZ4SnU4cU81b1k4OERObzA4S294QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T10:00:37.332Z"
-    },
-    {
-      "id": "rss_0e02b3d0ebd59410",
-      "timestamp": 1787215180000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Bodies of 2 Pakistanis killed in Houthi attacks repatriated - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVROclRONnFJWlFCN2FFbDlmMl9xQzYxWVFUdFg3WmlmWTB0bk1Id2tKU3dLU1AtTlpJRHdXZm1ZWEZwRi1UQm1waWNETnpzWkJBWmRrSXl1SjBvaHFhc0tvVXVCbDRfQWhqanF3SDFJVENiV0hBbmhUdEVTaHNSWEJWa1VKaWhZWURSWGJtUmVFVWROUzlmNXVyQ1JjaTdva1ptaXFKc1Y?oc=5\" target=\"_blank\">Bodies of 2 Pakistanis killed in Houthi attacks repatriated</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNMVROclRONnFJWlFCN2FFbDlmMl9xQzYxWVFUdFg3WmlmWTB0bk1Id2tKU3dLU1AtTlpJRHdXZm1ZWEZwRi1UQm1waWNETnpzWkJBWmRrSXl1SjBvaHFhc0tvVXVCbDRfQWhqanF3SDFJVENiV0hBbmhUdEVTaHNSWEJWa1VKaWhZWURSWGJtUmVFVWROUzlmNXVyQ1JjaTdva1ptaXFKc1Y?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T09:28:23.670Z"
-    },
-    {
-      "id": "rss_7ddb1f88ad7157f8",
-      "timestamp": 1787212102000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan repatriates 6 injured sailors, remains of 2 Houthi attack victims - Arab News PK",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9fTzJEVHdSSDdDblNBY3ZlaWdMMmdZTUNOSlRBOFZfZ1JsRFp1YS03SVotSGxZck1nbmk1M0ZoczB3T0w0Y0JxelFaSERSa3lyX3B2cXlxM1o?oc=5\" target=\"_blank\">Pakistan repatriates 6 injured sailors, remains of 2 Houthi attack victims</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News PK</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9fTzJEVHdSSDdDblNBY3ZlaWdMMmdZTUNOSlRBOFZfZ1JsRFp1YS03SVotSGxZck1nbmk1M0ZoczB3T0w0Y0JxelFaSERSa3lyX3B2cXlxM1o?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T08:31:23.868Z"
     }
   ]
 }
