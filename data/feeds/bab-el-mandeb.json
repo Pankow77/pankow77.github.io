@@ -1,8 +1,118 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-22T06:31:09.559Z",
+  "last_fetch": "2026-09-22T12:18:02.711Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0ac8541ac5600e20",
+      "timestamp": 1790077969000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Belgium set to send frigate to EU’s Aspides mission in late October - euractiv.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOUzlJbXkzZ29uTm1ZQXBSVFB5amRGR2RyUU1sbjJKSkc1YXVJZHFRa2RNM3B1VWxNS0I3TlU2N1J0MWF3U0ctdmtSMUxHclF6RnczQ2RZeUw3NlIxNmJGQ0hyYlhualo0UWRkSzlGVkVndFhVTm80SGszT1NId1JYMWJlQ2ExQmFlb2hWTWNRZF90SWwxc3gxYnJBOEN5Zw?oc=5\" target=\"_blank\">Belgium set to send frigate to EU’s Aspides mission in late October</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euractiv.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUzlJbXkzZ29uTm1ZQXBSVFB5amRGR2RyUU1sbjJKSkc1YXVJZHFRa2RNM3B1VWxNS0I3TlU2N1J0MWF3U0ctdmtSMUxHclF6RnczQ2RZeUw3NlIxNmJGQ0hyYlhualo0UWRkSzlGVkVndFhVTm80SGszT1NId1JYMWJlQ2ExQmFlb2hWTWNRZF90SWwxc3gxYnJBOEN5Zw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:02.234Z"
+    },
+    {
+      "id": "rss_56f127a8915e4174",
+      "timestamp": 1790067815000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen and its allies attack Iran-backed Houthi positions - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQc3VyRGdlNWhtX1MzQWdmWTlWWjA3QTFrbWk2RlRraDNPb18zSHJkaE5vYUZNRUstZDRRUFp4MzB4R3RPT1MzVTNfU0R4eHVLUXRkU0x2U3ZfVlRKUGFnTUduX3FBZVEwTk01WlFpVklTQTJMdkRpYmM0MV9YckVnTmFZSnMtSHdSUGNqbjBzclBGZw?oc=5\" target=\"_blank\">Yemen and its allies attack Iran-backed Houthi positions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQc3VyRGdlNWhtX1MzQWdmWTlWWjA3QTFrbWk2RlRraDNPb18zSHJkaE5vYUZNRUstZDRRUFp4MzB4R3RPT1MzVTNfU0R4eHVLUXRkU0x2U3ZfVlRKUGFnTUduX3FBZVEwTk01WlFpVklTQTJMdkRpYmM0MV9YckVnTmFZSnMtSHdSUGNqbjBzclBGZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:01.290Z"
+    },
+    {
+      "id": "rss_f73c60aa93ddae03",
+      "timestamp": 1790065507000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Red Sea Crisis | EU Aspides Mission | Kaja Kallas | Warships | Houthi Threats - aaj.tv",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MR1BLMWhLR0RmMi1Dc1lycVpScXVIdk1pWXJBQzl4d3hkUG5UVkhQRnNKZ1U5UXZ4aFJuZG4xVFJfMjhOcVM1RlU3cmU?oc=5\" target=\"_blank\">Red Sea Crisis | EU Aspides Mission | Kaja Kallas | Warships | Houthi Threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aaj.tv</font>",
+      "tags": [
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MR1BLMWhLR0RmMi1Dc1lycVpScXVIdk1pWXJBQzl4d3hkUG5UVkhQRnNKZ1U5UXZ4aFJuZG4xVFJfMjhOcVM1RlU3cmU?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:02.234Z"
+    },
+    {
+      "id": "rss_ae80dadf1973a3df",
+      "timestamp": 1790063356000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "AI-generated clip passed off as Houthi attack on Riyadh airport - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQb3NmdE9xcU1janFRdXIyNkRPN25WNmZvTjVRcEI3UHl5WktBQi03RnU5YlRYb0FxMy1TNEU0QTQxQlhPQ21Rd3ZVdERGaXhBSDVCOUpVNlJvTElqZmFCMDJtT0VBRWU2eExBRGU5VkViMWJnX3pNOGJ1dXg2aE1vQg?oc=5\" target=\"_blank\">AI-generated clip passed off as Houthi attack on Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQb3NmdE9xcU1janFRdXIyNkRPN25WNmZvTjVRcEI3UHl5WktBQi03RnU5YlRYb0FxMy1TNEU0QTQxQlhPQ21Rd3ZVdERGaXhBSDVCOUpVNlJvTElqZmFCMDJtT0VBRWU2eExBRGU5VkViMWJnX3pNOGJ1dXg2aE1vQg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:01.289Z"
+    },
+    {
+      "id": "rss_80a2e083efa83b82",
+      "timestamp": 1790059226000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "G7 leaders call on Yemen's Houthis to stop strikes on Saudi Arabia - euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQkVIaXowV2g3aFpNM0J4VklMQzdGVU9SbVV3Y3E1Rm1vRWI2R1dMZmRYNkxSbTFzRzA4czZ5WU9KLXRTX1dGOTR0WlFoNDBaVUNpQUpuOUtzWTdtNmh6U2hOWlZXa2I5czZnUzNrTmhyLWp0RmJGbXhmazhSdGN4azVpYTZXcmFjcFVsQ3ZoXzhtQjR1eGdZb0ZGOUxvZGlMOGhJamtjenp3dw?oc=5\" target=\"_blank\">G7 leaders call on Yemen's Houthis to stop strikes on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euronews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQkVIaXowV2g3aFpNM0J4VklMQzdGVU9SbVV3Y3E1Rm1vRWI2R1dMZmRYNkxSbTFzRzA4czZ5WU9KLXRTX1dGOTR0WlFoNDBaVUNpQUpuOUtzWTdtNmh6U2hOWlZXa2I5czZnUzNrTmhyLWp0RmJGbXhmazhSdGN4azVpYTZXcmFjcFVsQ3ZoXzhtQjR1eGdZb0ZGOUxvZGlMOGhJamtjenp3dw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:01.290Z"
+    },
     {
       "id": "rss_fc01314dbfcc6151",
       "timestamp": 1790056755000,
@@ -130,6 +240,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T06:31:07.859Z"
+    },
+    {
+      "id": "rss_8fec6f8779d0597c",
+      "timestamp": 1790028347000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Red Sea, Kallas: \"The Aspides mission would require more than 10 warships.\" - Agenzia Nova",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQX2Y0SkN4M1pQMXdzOE1kUk9mM1FiaVg4TFlKVUtmTHZUcnpKUGNsR2RPcktuUXdFN2JBZ0FHSnRoVXdlMFVWaFRocFZVRkM5bkxRT1pnZEFZMFlpSkJJZC0yWnZQZV81a2JjaVRTMTgzaDZnVmN5c0Fld2d2N21IZzB0UWlsWDQ2ZzBiNHNvaG1fUUlTNnVUZmI1LXY4LURrbkE?oc=5\" target=\"_blank\">Red Sea, Kallas: \"The Aspides mission would require more than 10 warships.\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agenzia Nova</font>",
+      "tags": [
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX2Y0SkN4M1pQMXdzOE1kUk9mM1FiaVg4TFlKVUtmTHZUcnpKUGNsR2RPcktuUXdFN2JBZ0FHSnRoVXdlMFVWaFRocFZVRkM5bkxRT1pnZEFZMFlpSkJJZC0yWnZQZV81a2JjaVRTMTgzaDZnVmN5c0Fld2d2N21IZzB0UWlsWDQ2ZzBiNHNvaG1fUUlTNnVUZmI1LXY4LURrbkE?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T12:18:02.234Z"
     },
     {
       "id": "rss_6c0a584512ee7deb",
@@ -10774,140 +10908,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-19T15:01:47.131Z"
-    },
-    {
-      "id": "rss_744b2317b27ee926",
-      "timestamp": 1787134128000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Unmanned Cargo Ship Declared Total Loss After Attack In Southern Red Sea Off Yemen - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ3RZUTllRExiOU4wWTlYQ3ZjX1VGdEJRSE1vWWlVXzNjVjVnbzZ6ei1ZNXBFNlNybDdEWTBXbTlpYnRPOXdlSmxzXzZJSm56Q3J1MXhqQ20tN2Zzdl9XT2ZYckFVazhNY3BFUU94ZUpIWHhXVFk1TXBBaFNXcEsyN3lvZ3otdldiVERyaUlYOFhQbEZ6SnRxb3lwMlZ1bVBEMGZSRXNOUkw3ODl1UlRkMmhKVQ?oc=5\" target=\"_blank\">Unmanned Cargo Ship Declared Total Loss After Attack In Southern Red Sea Off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPZ3RZUTllRExiOU4wWTlYQ3ZjX1VGdEJRSE1vWWlVXzNjVjVnbzZ6ei1ZNXBFNlNybDdEWTBXbTlpYnRPOXdlSmxzXzZJSm56Q3J1MXhqQ20tN2Zzdl9XT2ZYckFVazhNY3BFUU94ZUpIWHhXVFk1TXBBaFNXcEsyN3lvZ3otdldiVERyaUlYOFhQbEZ6SnRxb3lwMlZ1bVBEMGZSRXNOUkw3ODl1UlRkMmhKVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-19T11:19:53.806Z"
-    },
-    {
-      "id": "rss_80ea61a3ba8ed1af",
-      "timestamp": 1787133485000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis ramp up activity in Yemen and Saudi Arabia, but avoid reigniting the civil war so far - ACLED",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1Y1S0NjWEpkWkF5MnNER3IxZTJOUkR0VFExaXNkTExQUUd1SG9kNEpENjFtdWVra3JQNzNTNjhQQW1LdlBsdDVKaGlSMVZXalNiSWY5N1hySDlxZ1EwYjNRT3E3bzlWQTRLMmE1anR1azdiSTdJc3J3SzBaVThkdnI2RGp4anpLNUVoZVVxOTZxLWNWdmNzdDZDa2Q1MFMwelhkRzJSb2xheDQ?oc=5\" target=\"_blank\">The Houthis ramp up activity in Yemen and Saudi Arabia, but avoid reigniting the civil war so far</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ACLED</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOc1Y1S0NjWEpkWkF5MnNER3IxZTJOUkR0VFExaXNkTExQUUd1SG9kNEpENjFtdWVra3JQNzNTNjhQQW1LdlBsdDVKaGlSMVZXalNiSWY5N1hySDlxZ1EwYjNRT3E3bzlWQTRLMmE1anR1azdiSTdJc3J3SzBaVThkdnI2RGp4anpLNUVoZVVxOTZxLWNWdmNzdDZDa2Q1MFMwelhkRzJSb2xheDQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-22T02:15:15.626Z"
-    },
-    {
-      "id": "rss_9a7c5c4ab751d906",
-      "timestamp": 1787120665000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Red Sea: Critical maritime corridor faces security challenges - Credendo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNU2gwdlYyS2t1MDNnZGlrZ2JTcTlzNHVpei1wSTZUc2pya2NqejRuTmduTy0xcmRrU01UcVk0N2J2WERSNklpamRhUnQzWjI2NVliX3dnNkNwS3FkNFNNY2xjTXZ4d3otcHFyZkFGMlpBemh2M0g4THZNQ0d4RnVzUWxfTXZGNzNVT2FqVXZKQWVJcFhzV3JNMGZYTHFsbDA?oc=5\" target=\"_blank\">Red Sea: Critical maritime corridor faces security challenges</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Credendo</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNU2gwdlYyS2t1MDNnZGlrZ2JTcTlzNHVpei1wSTZUc2pya2NqejRuTmduTy0xcmRrU01UcVk0N2J2WERSNklpamRhUnQzWjI2NVliX3dnNkNwS3FkNFNNY2xjTXZ4d3otcHFyZkFGMlpBemh2M0g4THZNQ0d4RnVzUWxfTXZGNzNVT2FqVXZKQWVJcFhzV3JNMGZYTHFsbDA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-19T08:30:44.103Z"
-    },
-    {
-      "id": "rss_7568e8b786ca4bf7",
-      "timestamp": 1787086269000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Cargo Ship Destroyed in New Attack Off Yemen - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidEFVX3lxTE9rd2ZRMjdmX3czNkliUlZVSV9VbGpES3RDYWp6QmZ0aUYyV2Y5OXpYcFZ0ZV8wcWxOeEQ3aFRjTlBpX3JJaFM0SS1mWnRDUDQ0RTRzNElyNnFOV2dPVFRKcklwNy1udHNIQmhqY0pWU3VUNU8x?oc=5\" target=\"_blank\">Cargo Ship Destroyed in New Attack Off Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9rd2ZRMjdmX3czNkliUlZVSV9VbGpES3RDYWp6QmZ0aUYyV2Y5OXpYcFZ0ZV8wcWxOeEQ3aFRjTlBpX3JJaFM0SS1mWnRDUDQ0RTRzNElyNnFOV2dPVFRKcklwNy1udHNIQmhqY0pWU3VUNU8x?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-18T21:45:55.365Z"
-    },
-    {
-      "id": "rss_a347a20f4ebcb766",
-      "timestamp": 1787082132000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Several Houthi members killed in drone strikes in southeastern Yemen: Government-aligned forces - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcm02VzBoTllrendEa21DOWpHN05BeHpPTzJsWVlleTVoTzlyUHhRWDNXekJ3RVJkejRRa3RMVkFjaXQ1bXA2UmVQS3JQWjlITU96ZDlLRjZVVS12QzZJaFRjZDdTYXdyRUpCSzNvbXlaS0tlREgyZDUwY3NQLURINVVLQTBSbm5WYjBqMFJyMy1FNkpNRXI0bjRXQWVRRHlFXy11NWRmMzh2Ymx1UjJkSndleEQ4Z3M4Sk42ODIzSFVGdjhiVHdzcDR0cDdzUUhOeVozWm53?oc=5\" target=\"_blank\">Several Houthi members killed in drone strikes in southeastern Yemen: Government-aligned forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadol",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcm02VzBoTllrendEa21DOWpHN05BeHpPTzJsWVlleTVoTzlyUHhRWDNXekJ3RVJkejRRa3RMVkFjaXQ1bXA2UmVQS3JQWjlITU96ZDlLRjZVVS12QzZJaFRjZDdTYXdyRUpCSzNvbXlaS0tlREgyZDUwY3NQLURINVVLQTBSbm5WYjBqMFJyMy1FNkpNRXI0bjRXQWVRRHlFXy11NWRmMzh2Ymx1UjJkSndleEQ4Z3M4Sk42ODIzSFVGdjhiVHdzcDR0cDdzUUhOeVozWm53?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-18T19:47:15.657Z"
-    },
-    {
-      "id": "rss_b9e070749283d52a",
-      "timestamp": 1787077550000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Death toll from Houthi missile attack in Yemen's Hodeidah rises to 3: Yemeni forces - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGJHeGdKUmIzWUhXTjlTM0tGTEFBa3E0WC04M29kSG0tNmJxR05aTm5fUEpCR2xVdmZoNk1uc1NmU0hCWUJYckJ6MXMtX1BKc0JWSGo1VmdkaUJiRGYxQk02d3V5aXZUcUU2WkdVcnlFallTNFBsaE1DRFJGVUhUYmpqSGp0eVhZVko5UDQ5bGxfRTctNFRkUXNta0pGSWwwbGpNRncyczdob1U1TjY2MFJMV1VQSklEb3pnczVjVndkMGV3?oc=5\" target=\"_blank\">Death toll from Houthi missile attack in Yemen's Hodeidah rises to 3: Yemeni forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGJHeGdKUmIzWUhXTjlTM0tGTEFBa3E0WC04M29kSG0tNmJxR05aTm5fUEpCR2xVdmZoNk1uc1NmU0hCWUJYckJ6MXMtX1BKc0JWSGo1VmdkaUJiRGYxQk02d3V5aXZUcUU2WkdVcnlFallTNFBsaE1DRFJGVUhUYmpqSGp0eVhZVko5UDQ5bGxfRTctNFRkUXNta0pGSWwwbGpNRncyczdob1U1TjY2MFJMV1VQSklEb3pnczVjVndkMGV3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-18T18:30:22.959Z"
     }
   ]
 }
