@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-22T17:07:20.756Z",
+  "last_fetch": "2026-09-22T20:19:51.716Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3316f78d9e35073b",
+      "timestamp": 1790106995000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Civil Defence Issues Warning in Najran as Houthi Threat Continues - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOODVIdkhRYTA3Y2t2QmlfcXdubUVoc0NGelpPOU4yUEFpcjdMSHpCZWV2MERmSkMzemhTbHhETXE0VzBSR1Vhdm1GTGJtZDUyTGlLQmZtY0hkMVhGd0tfZElMVnN3MURYZjY2SC1jZWNUQTVaWXp1OVdkaVpxbzRzdzZvb2ZLVXlkbkR1OTA2NDAxV3VCZmNUck1EeVg0clg3c1NmS0ZXeGNYUGJXQ0h6ZHhSaVpxQQ?oc=5\" target=\"_blank\">Saudi Civil Defence Issues Warning in Najran as Houthi Threat Continues</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOODVIdkhRYTA3Y2t2QmlfcXdubUVoc0NGelpPOU4yUEFpcjdMSHpCZWV2MERmSkMzemhTbHhETXE0VzBSR1Vhdm1GTGJtZDUyTGlLQmZtY0hkMVhGd0tfZElMVnN3MURYZjY2SC1jZWNUQTVaWXp1OVdkaVpxbzRzdzZvb2ZLVXlkbkR1OTA2NDAxV3VCZmNUck1EeVg0clg3c1NmS0ZXeGNYUGJXQ0h6ZHhSaVpxQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T20:19:50.064Z"
+    },
     {
       "id": "rss_7d3365951c738bf4",
       "timestamp": 1790086170000,
@@ -46,6 +67,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T17:07:19.046Z"
+    },
+    {
+      "id": "rss_02b53ef2bd3508a0",
+      "timestamp": 1790084325000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU seeks to boost Red Sea mission to protect ‘European interests’ - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeFFSblFPMVplUko3NGtjanIzT2xMZEJkaGpGRTNldEM3RDN5YURNR3RlTVdob2pEVk0zS2hlRmVvWmU1ZFNYQWU1Zl9UWVc4ZEU3QlhOV2FnclZ3VXNHZmd6QXdxWnpCQlBUWUVzOHdqellzY2ZiczU4bFBzTzFSWHhDam5BWWtKRjVn?oc=5\" target=\"_blank\">EU seeks to boost Red Sea mission to protect ‘European interests’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeFFSblFPMVplUko3NGtjanIzT2xMZEJkaGpGRTNldEM3RDN5YURNR3RlTVdob2pEVk0zS2hlRmVvWmU1ZFNYQWU1Zl9UWVc4ZEU3QlhOV2FnclZ3VXNHZmd6QXdxWnpCQlBUWUVzOHdqellzY2ZiczU4bFBzTzFSWHhDam5BWWtKRjVn?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T20:19:51.132Z"
     },
     {
       "id": "rss_0ac8541ac5600e20",
@@ -1374,6 +1416,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-20T11:58:22.366Z"
+    },
+    {
+      "id": "rss_fc715119b62d82d3",
+      "timestamp": 1789887600000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea, Tajani: “Strengthen Aspides.” EU calls for more ships - AdriaPorts",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNTE8xTGFGUFprZW1IUnBlbGw4UE9Ka1ZXdjg1Zmxya2ExNUxFU0hRLW5VRUQyY1F2SVVpRmZFRmV6SjFJZ0ZLLWRCUVlGcE1ERHVjQnNMQ3hfRTNWOFpNeGo2SGpOSkoxd3ZyWmtBSjIzaE53M19UVU9ySXVJVjRmTGFMWGhSV1dvbTRMbEFpQTR5TUVzLWQ5RDFicFk?oc=5\" target=\"_blank\">Red Sea, Tajani: “Strengthen Aspides.” EU calls for more ships</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AdriaPorts</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTE8xTGFGUFprZW1IUnBlbGw4UE9Ka1ZXdjg1Zmxya2ExNUxFU0hRLW5VRUQyY1F2SVVpRmZFRmV6SjFJZ0ZLLWRCUVlGcE1ERHVjQnNMQ3hfRTNWOFpNeGo2SGpOSkoxd3ZyWmtBSjIzaE53M19UVU9ySXVJVjRmTGFMWGhSV1dvbTRMbEFpQTR5TUVzLWQ5RDFicFk?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-22T20:19:51.133Z"
     },
     {
       "id": "rss_0d874e4b18e8f7a3",
@@ -10847,69 +10912,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-20T08:31:23.868Z"
-    },
-    {
-      "id": "rss_ee1a335cb99b30c6",
-      "timestamp": 1787211695000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "FM Dar says six Pakistani sailors return safely after Houthi attack, two bodies repatriated - The Express Tribune",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHF0Zl9hbi1IY1o3QzQteWJKb1dKOWxKQXdlS1k0bXYzZVlMR2Z0SFNEbXNDMGlNU0paWHVaZVdLaWVDYzQ5STJLNl9mdE5xQk50WVpoaGh2Qm94VWk2RkxVMHc5dmJmWkdYcVJkTzliM1drSFI2azAwcW1rb1RuTzF3VFNtTkpqbWowTml2ejloX1h3a1lDTUd2Nlgxb2tqRGVpWlBhcGw1TU1jQUNLeS1FZFBrVXBoRDhibVdhSzEwQQ?oc=5\" target=\"_blank\">FM Dar says six Pakistani sailors return safely after Houthi attack, two bodies repatriated</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Express Tribune</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcHF0Zl9hbi1IY1o3QzQteWJKb1dKOWxKQXdlS1k0bXYzZVlMR2Z0SFNEbXNDMGlNU0paWHVaZVdLaWVDYzQ5STJLNl9mdE5xQk50WVpoaGh2Qm94VWk2RkxVMHc5dmJmWkdYcVJkTzliM1drSFI2azAwcW1rb1RuTzF3VFNtTkpqbWowTml2ejloX1h3a1lDTUd2Nlgxb2tqRGVpWlBhcGw1TU1jQUNLeS1FZFBrVXBoRDhibVdhSzEwQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T08:31:23.866Z"
-    },
-    {
-      "id": "rss_817fcd1666791af1",
-      "timestamp": 1787208940000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Dar says Pakistanis injured in Houthi attack in Red Sea have returned safely - Dawn",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNR1ZpZzdFcllCVWlaR0R6c2RnaU1UN1RoNUxkZ19WZVVJanFxNGdqSVlWVWpzY19RN0JlajM1VlpIdXBMd1pQczBwTzUxRzh1WTE2RXpUdWl4LWFwQUlHUU9LNVBqUUVFSkU0ZkFNM2N5MV9qbXBJZHZqazNGUlZnRjhid2hhek9oY3p2dWJMX3VRSzB6dFdEV3JnNThYd25kWE1UVzdyNTY5bmNUZHFN0gFOQVVfeXFMTlYwRVlJNG1OTTg3NzNmdFBKaDhiblgtQWVWT3Uxbi1pZUhKd1R5ZC14N05fZXhOaTJVNDNhb1JyN1ZnQ1hmTUlwNnU2bXp3?oc=5\" target=\"_blank\">Dar says Pakistanis injured in Houthi attack in Red Sea have returned safely</a>&nb",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNR1ZpZzdFcllCVWlaR0R6c2RnaU1UN1RoNUxkZ19WZVVJanFxNGdqSVlWVWpzY19RN0JlajM1VlpIdXBMd1pQczBwTzUxRzh1WTE2RXpUdWl4LWFwQUlHUU9LNVBqUUVFSkU0ZkFNM2N5MV9qbXBJZHZqazNGUlZnRjhid2hhek9oY3p2dWJMX3VRSzB6dFdEV3JnNThYd25kWE1UVzdyNTY5bmNUZHFN0gFOQVVfeXFMTlYwRVlJNG1OTTg3NzNmdFBKaDhiblgtQWVWT3Uxbi1pZUhKd1R5ZC14N05fZXhOaTJVNDNhb1JyN1ZnQ1hmTUlwNnU2bXp3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T08:31:23.867Z"
-    },
-    {
-      "id": "rss_094e549c3708d781",
-      "timestamp": 1787204299000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Report: Houthis plan to escalate tensions with Saudi Arabia - Israel National News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fNmFsaXFXZmhJcDJnaUhZTzhZdkljenhzZ1FHR1F1eFZQWXVCUWhYZTB2NHFxZFNJbzJDS0hoZjhsVEk1aDUxRUJNVXJBWHJfbHJ2RVhORFhQZw?oc=5\" target=\"_blank\">Report: Houthis plan to escalate tensions with Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Israel National News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9fNmFsaXFXZmhJcDJnaUhZTzhZdkljenhzZ1FHR1F1eFZQWXVCUWhYZTB2NHFxZFNJbzJDS0hoZjhsVEk1aDUxRUJNVXJBWHJfbHJ2RVhORFhQZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T05:54:56.123Z"
     }
   ]
 }
