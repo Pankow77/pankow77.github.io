@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-23T12:52:05.640Z",
+  "last_fetch": "2026-09-23T17:39:41.338Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_59889c26c9413c1b",
+      "timestamp": 1790180648000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iranian advisers helped Houthis seize Yemen's Red Sea coast in less than 48 hours: report - The Hindu",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVHVhWUpScFk5MTdpVTdmdXp6eEdvaU5KOUgxYXBzSG9MQVFSendpTjdyOFE0aDl1OGEwMFBlNlNWR3Btb05OdDZlYnNScTRDMUdFZndLN21waE0xUWp5RTdGSjdlejBZVzg4MjY2TlRDanFPbXQyd0g4dDgtSWxleXlpM2VNbU5XSFoxblFydkpEd29VbTV1VVUzakY0MjFhTjdfMm8tZVdlWnl6Um5FUEc3dmhLdk40TktheHd2eWFoWFllc3Q2M19fdi1Qd3NkaXRYU003WkpONHZEcWRqdGhIZm1Dd9IB7AFBVV95cUxPRHo2VXd0V3ZrdzAzclhDMUpYbzV1UDZfc0hKV29yM2pISkQ1RnBROVJ5djNZNU9faEZnYzV2d0tQRnhXbjVweFN1bUdoUmd6MXZxNzdNcHktQVp1a2dEZEl5U2NOR2",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVHVhWUpScFk5MTdpVTdmdXp6eEdvaU5KOUgxYXBzSG9MQVFSendpTjdyOFE0aDl1OGEwMFBlNlNWR3Btb05OdDZlYnNScTRDMUdFZndLN21waE0xUWp5RTdGSjdlejBZVzg4MjY2TlRDanFPbXQyd0g4dDgtSWxleXlpM2VNbU5XSFoxblFydkpEd29VbTV1VVUzakY0MjFhTjdfMm8tZVdlWnl6Um5FUEc3dmhLdk40TktheHd2eWFoWFllc3Q2M19fdi1Qd3NkaXRYU003WkpONHZEcWRqdGhIZm1Dd9IB7AFBVV95cUxPRHo2VXd0V3ZrdzAzclhDMUpYbzV1UDZfc0hKV29yM2pISkQ1RnBROVJ5djNZNU9faEZnYzV2d0tQRnhXbjVweFN1bUdoUmd6MXZxNzdNcHktQVp1a2dEZEl5U2NOR28wa0VfMTg2djRwMzVteUNReF9Bb3pZLWlJUlB3LVR5VGdJaFN2VDEzTTVIRXFiSEFFMUs2bm9DUWpPUTdHaVFSUlNzejZxN1V2c1gzSTBaT0Z1MWpBMkR3ODc5SmtBZTYyVVRZZ3hXU2pLaUhUcjhPQjdBZVlELWpmWGh6WlJXSUtZaTh3SQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-23T17:39:39.801Z"
+    },
     {
       "id": "rss_a0f870f8c564b7c8",
       "timestamp": 1790162041000,
@@ -23,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-23T12:52:03.932Z"
+    },
+    {
+      "id": "rss_a4d3a3a6a7e3fea3",
+      "timestamp": 1790156093000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "RAF Voyager Deployment Brings Britain Closer to the Red Sea Conflict - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNT2pxSzlYcTJPbVZyanlUM0JjdUNheFhCYnBrSEpLS2Q4dGFOOGN3UUNSWjgzS1hMRDRjZUs1akd6cUpDUHlaQ28xdGRiRC1Fc0hqWlZCUEt4VVNBamdrV2dmTlBmYWtuU08tLWpTQl9vNWVEMEN5T0QtSUFLcG5ObWUxRDZhcTVhcGVJRFpSMGdiNElqckVJQm9QeFY4Mjg3aWFIczZXR0cySnVPc3FiaGx1OA?oc=5\" target=\"_blank\">RAF Voyager Deployment Brings Britain Closer to the Red Sea Conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNT2pxSzlYcTJPbVZyanlUM0JjdUNheFhCYnBrSEpLS2Q4dGFOOGN3UUNSWjgzS1hMRDRjZUs1akd6cUpDUHlaQ28xdGRiRC1Fc0hqWlZCUEt4VVNBamdrV2dmTlBmYWtuU08tLWpTQl9vNWVEMEN5T0QtSUFLcG5ObWUxRDZhcTVhcGVJRFpSMGdiNElqckVJQm9QeFY4Mjg3aWFIczZXR0cySnVPc3FiaGx1OA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-23T17:39:39.801Z"
     },
     {
       "id": "rss_380d688b4a14d477",
@@ -88,6 +132,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T23:07:33.269Z"
+    },
+    {
+      "id": "rss_493674f14e1d17a4",
+      "timestamp": 1790109391000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthi Leverage over the Red Sea Escalates Threats for Africa - Africa Center for Strategic Studies",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5ja0x1Q0t3cmg1aVFDeHlXNVEwUmFwQW8wc0hpZkFFeHVzQmFsSFYxTkp5Sm9MQ3p6RE9hdy1CX0pWSWFaWEpsZGl1M2RaMTNEZjVHVEMyM3B3b3RDUUsyRXdCVnZyZWlSMktJVWFxUjc?oc=5\" target=\"_blank\">Houthi Leverage over the Red Sea Escalates Threats for Africa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Africa Center for Strategic Studies</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ja0x1Q0t3cmg1aVFDeHlXNVEwUmFwQW8wc0hpZkFFeHVzQmFsSFYxTkp5Sm9MQ3p6RE9hdy1CX0pWSWFaWEpsZGl1M2RaMTNEZjVHVEMyM3B3b3RDUUsyRXdCVnZyZWlSMktJVWFxUjc?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-23T17:39:41.333Z"
     },
     {
       "id": "rss_3d474ee8e110caeb",
@@ -10843,71 +10908,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-21T17:23:10.167Z"
-    },
-    {
-      "id": "rss_e83bf40b5a01a9cd",
-      "timestamp": 1787248753000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis claim new strikes on Saudi Arabia after IRGC warning: What to know - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNWnF1ckNxMGl5bFZNRzNxSHViOEdCQ19CNUNtNkdtQVIxdy1tMGttOGZ4S0dNVk9jY3VBR0FTLXVqdnloeFlhOXk1S0xfZEVXTFJuYURTU2ljWENEdllENzUxdmtKR3dnYm1VUkJLZEw3T0VKbnVyclVoTjdEV0l4aGJpblM1VTJLRjdDSTN3VWI5U0kyT1JBZ1JFenlhR2dXRDhCR3BMOFpZVXliN2RLVXpn?oc=5\" target=\"_blank\">Houthis claim new strikes on Saudi Arabia after IRGC warning: What to know</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNWnF1ckNxMGl5bFZNRzNxSHViOEdCQ19CNUNtNkdtQVIxdy1tMGttOGZ4S0dNVk9jY3VBR0FTLXVqdnloeFlhOXk1S0xfZEVXTFJuYURTU2ljWENEdllENzUxdmtKR3dnYm1VUkJLZEw3T0VKbnVyclVoTjdEV0l4aGJpblM1VTJLRjdDSTN3VWI5U0kyT1JBZ1JFenlhR2dXRDhCR3BMOFpZVXliN2RLVXpn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-21T10:23:57.862Z"
-    },
-    {
-      "id": "rss_ad50ca595b4a0328",
-      "timestamp": 1787241978000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Shafaq News..Houthis claim drone strikes on Najran airport, Aramco facility - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOQVlRTEhyWkJRYVNXaVlzb0RrSG1zejVvSVpmTUxYT2t2QXB1Z2ZybXpEUUFWTnJuVGJIWC1aV3piQUI4YTk5N1N2R0hXTHNWX1hZYWVlRmVMYldzXzhfOE4ySUdSQ3hUXzB5NjM2VTRnZ1h6U3pCQWRXWmtGNEU0d3M5eERUanI2QWZtLTNSTGZWdmJ5eDNoWTZ3Zw?oc=5\" target=\"_blank\">Shafaq News..Houthis claim drone strikes on Najran airport, Aramco facility</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOQVlRTEhyWkJRYVNXaVlzb0RrSG1zejVvSVpmTUxYT2t2QXB1Z2ZybXpEUUFWTnJuVGJIWC1aV3piQUI4YTk5N1N2R0hXTHNWX1hZYWVlRmVMYldzXzhfOE4ySUdSQ3hUXzB5NjM2VTRnZ1h6U3pCQWRXWmtGNEU0d3M5eERUanI2QWZtLTNSTGZWdmJ5eDNoWTZ3Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T22:20:51.578Z"
-    },
-    {
-      "id": "rss_46dfbef7ba497206",
-      "timestamp": 1787236344000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthi Ansar Allah Movement Threatens 'Fifth Stage' Of War Against Saudi Arabia; Pro-Hizbullah Daily Claims Houthis Are Preparing Large-Scale Ground Campaign On Saudi Border - MEMRI | Middle East Media Research Institute",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPN1RMV0RYNUZiRy04YXZ2bUZ6UFh4SWZ2MnIteUptQW44ODd1bXZlRmpfMlhqSmx2VThOMEZUdTBOSEFkc2puRlU5SF9zdENLRFlncDM0cXZubWthNVJmS2VoaDh5Nms4dHQtazZ5elRzc1F0SGI4XzRhdFJHdHZnN0MxNTQ3bHJPTU1RSmJQV2RwQmM2WmhIUzdJUzZYQVJVOG5taFN0aXdkUjZlSmV0S2ZlZEZCVVgyWFE?oc=5\" target=\"_blank\">Houthi Ansar Allah Movement Threatens 'Fifth Stage' Of War Against Saudi Arabia; Pro-Hizbullah Daily Claims Houthis Are Preparing Large-Scale Ground Campaign On Saudi Border</a",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPN1RMV0RYNUZiRy04YXZ2bUZ6UFh4SWZ2MnIteUptQW44ODd1bXZlRmpfMlhqSmx2VThOMEZUdTBOSEFkc2puRlU5SF9zdENLRFlncDM0cXZubWthNVJmS2VoaDh5Nms4dHQtazZ5elRzc1F0SGI4XzRhdFJHdHZnN0MxNTQ3bHJPTU1RSmJQV2RwQmM2WmhIUzdJUzZYQVJVOG5taFN0aXdkUjZlSmV0S2ZlZEZCVVgyWFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T19:54:34.418Z"
     }
   ]
 }
