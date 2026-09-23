@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-22T23:07:34.797Z",
+  "last_fetch": "2026-09-23T01:37:24.144Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a751491eb09692e",
+      "timestamp": 1790125215000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Riyadh under fire: How the Houthi attack is reshaping Gulf security | Interview - The Federal",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSmdpNDBRY3h6ZEliQmRKTlBhblZsbjhWQ1pYX2pvYTRKNDl3OUV0RUFuVXFObnpKbHhNUWZHN0p1bmdMNEYxc3F2VWZRcG1sNFhnT0lwdXNWQmhoRUxNNTJsaWpPaVVrX0MxdWhhcmRzSmhjZmNQRFNkWUltM25ZVlJ0UTB6N3dRbjgtVTAyNDJyQ0ZaYUVqQ29QbURRZUVvaUJnRVhXVnBldw?oc=5\" target=\"_blank\">Riyadh under fire: How the Houthi attack is reshaping Gulf security | Interview</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Federal</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSmdpNDBRY3h6ZEliQmRKTlBhblZsbjhWQ1pYX2pvYTRKNDl3OUV0RUFuVXFObnpKbHhNUWZHN0p1bmdMNEYxc3F2VWZRcG1sNFhnT0lwdXNWQmhoRUxNNTJsaWpPaVVrX0MxdWhhcmRzSmhjZmNQRFNkWUltM25ZVlJ0UTB6N3dRbjgtVTAyNDJyQ0ZaYUVqQ29QbURRZUVvaUJnRVhXVnBldw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-23T01:37:22.297Z"
+    },
     {
       "id": "rss_949151fb9351366d",
       "timestamp": 1790110167000,
@@ -25,6 +46,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T23:07:33.269Z"
+    },
+    {
+      "id": "rss_3d474ee8e110caeb",
+      "timestamp": 1790109364000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia’s King Salman slams targeting of Mecca by ‘terrorist’ Houthis - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxORFhVR29xQTIzMmxzM19mVTY0X1ZHMVQxYzF3d1lkaDJFV2VHUXZIUHVRNk9STkFmOF9lRXBHR2JzLTVHd0JkZUQ3NWJoa21sbm00VnR4Rzc3a1RCM2hIZGZrYkNSanpOUkZEem1SU2M0SDRQWUhKYmtwd0ZhSkxnYnV0SmpOMjNJeks0ZXRqRlQ4d0Q4T2lTU2tZTlZPMjlIRFhkVzFzOFjSAa4BQVVfeXFMTVY2ejlmemp0YXNuZTJ2QVVRTkZFX29BU3N3Sk9yUDNsSVdWRldkdWpxUk1nVXgzS0ZScVk4TXZOa3Fva0oxYXRWY1U1Y3lzNVV6NUtCdkRUenlJUmp0YzlxUl9FUmo4S0M3XzdmeVhNalM5a0RoRFJoc25yWHVTU1Vjd3UyY0xGWm9fTTI0aUx1eGNlZWpOZ0EybEdkWDhvUWs3SV",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORFhVR29xQTIzMmxzM19mVTY0X1ZHMVQxYzF3d1lkaDJFV2VHUXZIUHVRNk9STkFmOF9lRXBHR2JzLTVHd0JkZUQ3NWJoa21sbm00VnR4Rzc3a1RCM2hIZGZrYkNSanpOUkZEem1SU2M0SDRQWUhKYmtwd0ZhSkxnYnV0SmpOMjNJeks0ZXRqRlQ4d0Q4T2lTU2tZTlZPMjlIRFhkVzFzOFjSAa4BQVVfeXFMTVY2ejlmemp0YXNuZTJ2QVVRTkZFX29BU3N3Sk9yUDNsSVdWRldkdWpxUk1nVXgzS0ZScVk4TXZOa3Fva0oxYXRWY1U1Y3lzNVV6NUtCdkRUenlJUmp0YzlxUl9FUmo4S0M3XzdmeVhNalM5a0RoRFJoc25yWHVTU1Vjd3UyY0xGWm9fTTI0aUx1eGNlZWpOZ0EybEdkWDhvUWs3SV9RRW9nN01aWTVB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-23T01:37:22.296Z"
     },
     {
       "id": "rss_3316f78d9e35073b",
@@ -10870,50 +10912,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-20T12:37:26.692Z"
-    },
-    {
-      "id": "rss_aeb852059c71d376",
-      "timestamp": 1787224118000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Six injured Pakistani sailors return after Houthi attack in Red Sea - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNa3JJSGdJMGRDeDhfNThiWHpyM05IZUFjNmNTQ1RSOXAzOUIwUXY2cUJ6RjlfVnNvQjh3eTB3OUxuSHhST0REZHc1MWpzdGJlNHhrUm5lTm9WYU5FMXl2TGZqMVgwbV93RnQzWkFsQ2FWR0xZdHdqeWVqLVI4QTNDaThUR2hHc3FRNm1wbVQ0V3JjWnhkV3NoWFJsUFZNNWFscFVYUW5ZbUdWUTZ6dFM5Z2Y4R3BBM2NUVGJQQVZ5d0RqNi1reTFscTRHNkdqWEpmdXpz0gHYAUFVX3lxTE5FeGFWRFlUSEZPX2VObjBHTk9pVG1BOTRlb19xRHhwYkE3Rk5jV2tWZnhONU9XSWlOM01kd3ZJWEpOV2xTc2FEeHpQTF8ybmthQ1dhVExCWmNJZG9DcGtqMEYwemQxVUhReWFYQlF2bFV4ZFN0Tm9FS2",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNa3JJSGdJMGRDeDhfNThiWHpyM05IZUFjNmNTQ1RSOXAzOUIwUXY2cUJ6RjlfVnNvQjh3eTB3OUxuSHhST0REZHc1MWpzdGJlNHhrUm5lTm9WYU5FMXl2TGZqMVgwbV93RnQzWkFsQ2FWR0xZdHdqeWVqLVI4QTNDaThUR2hHc3FRNm1wbVQ0V3JjWnhkV3NoWFJsUFZNNWFscFVYUW5ZbUdWUTZ6dFM5Z2Y4R3BBM2NUVGJQQVZ5d0RqNi1reTFscTRHNkdqWEpmdXpz0gHYAUFVX3lxTE5FeGFWRFlUSEZPX2VObjBHTk9pVG1BOTRlb19xRHhwYkE3Rk5jV2tWZnhONU9XSWlOM01kd3ZJWEpOV2xTc2FEeHpQTF8ybmthQ1dhVExCWmNJZG9DcGtqMEYwemQxVUhReWFYQlF2bFV4ZFN0Tm9FS2NwV1JOYmlqLXdYd0lhRE96VmxIWjhPZkRVNEhYYVcwd3BBS1RDd1pfN0RhTnB3cGFEdktkZlp6NUE3R1NaTVNGU252Ykd4TGc2NjJ1SzFiamliQ1lSby0zWGhFbnMzTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T11:22:10.124Z"
-    },
-    {
-      "id": "rss_7004861de5cc7e1e",
-      "timestamp": 1787221745000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran dismisses U.S. economic threats and other developments in the Middle East - CP24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOMENIZTlNYmJRb1RmOFJ5c29lVE83ZWRuVDVzSFFpbUpQTzBfNGMxQVdQZ2cyTFc1aVU2T3NFRFZTSWZUMjl2OFdMRnNSbUxReV9WRVVpaHNENW9XYWt3emRhUUtLQlZjNk1xUm9DUTJDcERIdGFqbDRjb29Zd2wyM215QzJmdFBCUkhiTk45UllzZTRuRzhPUTRYemhWMjVGOWdsbW1BSVZIMGdWSXp4T2h5QUFhVVNwTG5TNQ?oc=5\" target=\"_blank\">Iran dismisses U.S. economic threats and other developments in the Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CP24</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMENIZTlNYmJRb1RmOFJ5c29lVE83ZWRuVDVzSFFpbUpQTzBfNGMxQVdQZ2cyTFc1aVU2T3NFRFZTSWZUMjl2OFdMRnNSbUxReV9WRVVpaHNENW9XYWt3emRhUUtLQlZjNk1xUm9DUTJDcERIdGFqbDRjb29Zd2wyM215QzJmdFBCUkhiTk45UllzZTRuRzhPUTRYemhWMjVGOWdsbW1BSVZIMGdWSXp4T2h5QUFhVVNwTG5TNQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-20T10:55:37.331Z"
     }
   ]
 }
