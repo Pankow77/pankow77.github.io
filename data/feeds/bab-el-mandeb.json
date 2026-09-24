@@ -1,8 +1,118 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-24T13:40:06.717Z",
+  "last_fetch": "2026-09-24T18:06:43.137Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d8d950071d46d892",
+      "timestamp": 1790271801000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen council chief says supporting army ‘investment’ in global trade, energy security - aa.com.tr",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxObDN4NkZEdzh6UW9lWUdpVEZ3MjhTZjZvaXh1cFZpd1BqRDhrdWIwYlY4Nmo1YzdsMFM0dTdfcmM4RHVPU0lNY3MxQnNxQmlwZlAybGhKRTNMWE9tYlRlS2R4YjNVR0NRUVFiaGhFdWVjdVp1UjVnRS0zdmhuQzVjWGJOcGp5MzVZTUZ0YVBaSGUyYzJYTENWSVJBLUVfaFlEQk5MbVAwZ0owU2ktZ3QwV2h6Z3hVSXFaemhQbDJRZE53UUtkR1ZJ?oc=5\" target=\"_blank\">Yemen council chief says supporting army ‘investment’ in global trade, energy security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aa.com.tr</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxObDN4NkZEdzh6UW9lWUdpVEZ3MjhTZjZvaXh1cFZpd1BqRDhrdWIwYlY4Nmo1YzdsMFM0dTdfcmM4RHVPU0lNY3MxQnNxQmlwZlAybGhKRTNMWE9tYlRlS2R4YjNVR0NRUVFiaGhFdWVjdVp1UjVnRS0zdmhuQzVjWGJOcGp5MzVZTUZ0YVBaSGUyYzJYTENWSVJBLUVfaFlEQk5MbVAwZ0owU2ktZ3QwV2h6Z3hVSXFaemhQbDJRZE53UUtkR1ZJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-24T18:06:41.301Z"
+    },
+    {
+      "id": "rss_3bb02e4a414ba02e",
+      "timestamp": 1790269385000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "AI video falsely shared as Houthi attack on Riyadh airport - AFP Fact Check",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE14dVlBVDNUX3pfaGZtR0JBNUdBdC1rcnhxR1VaUG9ndXU4VHFsUkpxVXBCWkU1WU43STJwYml5S2V6YjZyb2ZjbFJfc3BPUWl4YmlGZkdDNFA?oc=5\" target=\"_blank\">AI video falsely shared as Houthi attack on Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFP Fact Check</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE14dVlBVDNUX3pfaGZtR0JBNUdBdC1rcnhxR1VaUG9ndXU4VHFsUkpxVXBCWkU1WU43STJwYml5S2V6YjZyb2ZjbFJfc3BPUWl4YmlGZkdDNFA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-24T18:06:41.300Z"
+    },
+    {
+      "id": "rss_fec4805277336f84",
+      "timestamp": 1790265273000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia intercepts six missiles as Houthi attacks raise Red Sea fears - India Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNYWVuOXNKekFSZDJFOHVYS0paT2RlbGltSTVfWnJkSk9UV2x1S2NmSS1MWWVIVWF3cTZVZHlQbHVxYVl3YTZFeW1qTDJSZF9Pd1V4UjE1UDlSUzBBVVNMOUVuaTVhLWdzY1JSNElGNmhzVC1fRVNuYUMtb3JydW5UWlNqYjcyOFRvRTJELWMtSWpMemNHYUdYS0RSYS1XXzg4NEE1ZWVXLTVQdzQwZGZPQ2FwZEZacDVJR2E3UzJSQzhjM1BjLVpybGFR0gHPAUFVX3lxTFAwY1VaQmcwblNaTTRhbDFhZXBQSWRJNUs0d1hwS2haNDhSYUdobTI3WlZEUzVTUHZzTEpJdWxjd2swV21RR3k4UUNiMy1pajEtX2FnemJ5UVA4Um45VWtYUk9JUGhEaUdxX0pDY1Q0SXN0X2NpNUxFa2NBT2xCekZQMU",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYWVuOXNKekFSZDJFOHVYS0paT2RlbGltSTVfWnJkSk9UV2x1S2NmSS1MWWVIVWF3cTZVZHlQbHVxYVl3YTZFeW1qTDJSZF9Pd1V4UjE1UDlSUzBBVVNMOUVuaTVhLWdzY1JSNElGNmhzVC1fRVNuYUMtb3JydW5UWlNqYjcyOFRvRTJELWMtSWpMemNHYUdYS0RSYS1XXzg4NEE1ZWVXLTVQdzQwZGZPQ2FwZEZacDVJR2E3UzJSQzhjM1BjLVpybGFR0gHPAUFVX3lxTFAwY1VaQmcwblNaTTRhbDFhZXBQSWRJNUs0d1hwS2haNDhSYUdobTI3WlZEUzVTUHZzTEpJdWxjd2swV21RR3k4UUNiMy1pajEtX2FnemJ5UVA4Um45VWtYUk9JUGhEaUdxX0pDY1Q0SXN0X2NpNUxFa2NBT2xCekZQMU5wZk5Hd0xnREhfdDJyU2dBSWg0UWk5QzFCOExWMTNlc0ltU1ExU1d2aTRWUGV5THBLTnBiTmM4WXItbk9jWnBQS3FXQmJsdk9WaVc3VQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-24T18:06:43.131Z"
+    },
+    {
+      "id": "rss_3574b9b5151d84e2",
+      "timestamp": 1790264536000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia thwarts Houthi ballistic missiles, Yemen's Saudi-led coalition says - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQLW1IRmRaem1xSHEwTjd1VldSMmNqZk55VmdmZkh4QnNhU21SM0ZtWGg4RDdxSkNOM1F6ZUJ4LUYybUlzcWx6S01zbzd5N3BRSWRTc0N6eExNa2RFQXVTYlM3RmtXOFlDUk1Yc2Q0LXNkTEFPQlpCNjgzZHNlbkZXWGtXT1NRNFZ3a2lvWWNxVkk1Rng0Q2ZtNUk4TzZ0YXpNdDFaRUZQa2lBVHpnV05pV1QtZVlJSjJpTFFPTA?oc=5\" target=\"_blank\">Saudi Arabia thwarts Houthi ballistic missiles, Yemen's Saudi-led coalition says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQLW1IRmRaem1xSHEwTjd1VldSMmNqZk55VmdmZkh4QnNhU21SM0ZtWGg4RDdxSkNOM1F6ZUJ4LUYybUlzcWx6S01zbzd5N3BRSWRTc0N6eExNa2RFQXVTYlM3RmtXOFlDUk1Yc2Q0LXNkTEFPQlpCNjgzZHNlbkZXWGtXT1NRNFZ3a2lvWWNxVkk1Rng0Q2ZtNUk4TzZ0YXpNdDFaRUZQa2lBVHpnV05pV1QtZVlJSjJpTFFPTA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-24T18:06:41.299Z"
+    },
+    {
+      "id": "rss_d762d1538f30c468",
+      "timestamp": 1790261485000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "2025 Riyadh fire video falsely shared as Houthi attack on Saudi airport - AFP Fact Check",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FVVFqS3FnMmdHRThZaG1TUTRReG5sY2E1UlhxTXFYSnlPdmMxOC1DTm1pZG1VckVFYS16ajNwMXE4WjNlVnJ6MlNfMGlLWWgxMUZaaVlRdm8?oc=5\" target=\"_blank\">2025 Riyadh fire video falsely shared as Houthi attack on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFP Fact Check</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5FVVFqS3FnMmdHRThZaG1TUTRReG5sY2E1UlhxTXFYSnlPdmMxOC1DTm1pZG1VckVFYS16ajNwMXE4WjNlVnJ6MlNfMGlLWWgxMUZaaVlRdm8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-24T18:06:41.300Z"
+    },
     {
       "id": "rss_a781d2f9ec9c73ac",
       "timestamp": 1790254744000,
@@ -10798,113 +10908,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T08:41:27.580Z"
-    },
-    {
-      "id": "rss_8dfa5f8e852db8cb",
-      "timestamp": 1787531527000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Waterways Will Shape The Middle East’s Future – Analysis - Eurasia Review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQTmpOUFZ1a29Fb05ld0c1cmhMZnpWRk9DcC1NNUFUSE16Y2lzeEJlWldqTHNmOUdGZjBrdVhSeTU2emgwQmM4TXN0dGhKQlFNVXMyWEVpVGpmQlptRkxlWDl6YzEzaDR3dy1UeEZ2UG9qcEY4TmNWSFhYRFFuVnJSZ1EtWW9TMEpQOXpoVFgzd1Q4YTVSYnBRbw?oc=5\" target=\"_blank\">Waterways Will Shape The Middle East’s Future – Analysis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQTmpOUFZ1a29Fb05ld0c1cmhMZnpWRk9DcC1NNUFUSE16Y2lzeEJlWldqTHNmOUdGZjBrdVhSeTU2emgwQmM4TXN0dGhKQlFNVXMyWEVpVGpmQlptRkxlWDl6YzEzaDR3dy1UeEZ2UG9qcEY4TmNWSFhYRFFuVnJSZ1EtWW9TMEpQOXpoVFgzd1Q4YTVSYnBRbw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-24T06:47:07.504Z"
-    },
-    {
-      "id": "rss_c7815e0dd903d982",
-      "timestamp": 1787496623000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "3 civilians injuredin Houthi shelling in southwestern Yemen - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNb2JxVDNieHBRYlJmSTkySF9ITlBNaFptYlhVZm5wYkpXd0VIMmV1Um1SRjA5SmlSeHkzRlptVUI3LWc5WFdnYWFiYUNGTl9iX0p1RFdjRkF6ZGRQSjFhM1V0SF9YY1JHdHZjei1TU1JROFZMYzBaZmxjczBDT1otOGFQeGRHNTIyUWlQeFJ2eWVJSjJfbkFnOHF6d0F1RUU3RGlTLXBnTQ?oc=5\" target=\"_blank\">3 civilians injuredin Houthi shelling in southwestern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNb2JxVDNieHBRYlJmSTkySF9ITlBNaFptYlhVZm5wYkpXd0VIMmV1Um1SRjA5SmlSeHkzRlptVUI3LWc5WFdnYWFiYUNGTl9iX0p1RFdjRkF6ZGRQSjFhM1V0SF9YY1JHdHZjei1TU1JROFZMYzBaZmxjczBDT1otOGFQeGRHNTIyUWlQeFJ2eWVJSjJfbkFnOHF6d0F1RUU3RGlTLXBnTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-23T15:16:45.303Z"
-    },
-    {
-      "id": "rss_913e1630d835e34a",
-      "timestamp": 1787477598000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen : 2 Civilians Injured in Houthi Mortar Attack on Al-Hayma, South Hodeidah - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Rd0NMblExN2lXX3NfUG03eGhZTHo2NFc4MVV4cjROM1l1M2RfM01OWktFZTUtYmFiSGJKVjNtVFlZOElqbTNjTFZTYzVIRjJCbk9WZUdySTFxUVZKS3JJ?oc=5\" target=\"_blank\">Yemen : 2 Civilians Injured in Houthi Mortar Attack on Al-Hayma, South Hodeidah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9Rd0NMblExN2lXX3NfUG03eGhZTHo2NFc4MVV4cjROM1l1M2RfM01OWktFZTUtYmFiSGJKVjNtVFlZOElqbTNjTFZTYzVIRjJCbk9WZUdySTFxUVZKS3JJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-23T10:18:04.202Z"
-    },
-    {
-      "id": "rss_239650a618f60505",
-      "timestamp": 1787433766000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "\"Aspides\" Secures the Transit of a New Group of Commercial Vessels in the Red Sea - يمن مونيتور",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1iYV83SUFIV2RnVERsNzZHel9ZcjZnM3VJQUZxOGpaYmhfcHpCVWJoVDdaWVk0dmNpNXJIN2lBVXUwRnpfdVN0TXpPYUVkRTJIMXA2TGE3ci1hWWlfUUFzV1RLWHVub0Z4ZkE2UjNHQzhpTzdMNnc?oc=5\" target=\"_blank\">\"Aspides\" Secures the Transit of a New Group of Commercial Vessels in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1iYV83SUFIV2RnVERsNzZHel9ZcjZnM3VJQUZxOGpaYmhfcHpCVWJoVDdaWVk0dmNpNXJIN2lBVXUwRnpfdVN0TXpPYUVkRTJIMXA2TGE3ci1hWWlfUUFzV1RLWHVub0Z4ZkE2UjNHQzhpTzdMNnc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-23T04:31:12.950Z"
-    },
-    {
-      "id": "rss_e2850b7577b5990b",
-      "timestamp": 1787427541000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni forces disable Houthi naval mine in Bab al-Mandab - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPUUlCMWh6T1FfamJmcnlfWUNZRlFJLVpCZTVQd2QteExBLWlTNGJHQUtRVUpyckNQd0Q0T250bHFZUlFobFlYMUM2a3VBSVFBUUpiTF8wSm5tblpQZHp6YkdwYWFpaHhLSE13RmRTZE1mZ2liUDNEeFU4MmFLZWpWeUhua0VpWFBkV1RCTEdWYjY4LWc5YWVkYjU0NEM5SG9senc?oc=5\" target=\"_blank\">Yemeni forces disable Houthi naval mine in Bab al-Mandab</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUUlCMWh6T1FfamJmcnlfWUNZRlFJLVpCZTVQd2QteExBLWlTNGJHQUtRVUpyckNQd0Q0T250bHFZUlFobFlYMUM2a3VBSVFBUUpiTF8wSm5tblpQZHp6YkdwYWFpaHhLSE13RmRTZE1mZ2liUDNEeFU4MmFLZWpWeUhua0VpWFBkV1RCTEdWYjY4LWc5YWVkYjU0NEM5SG9senc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-22T20:16:35.002Z"
     }
   ]
 }
