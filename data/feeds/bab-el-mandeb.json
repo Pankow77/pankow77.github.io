@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-25T19:23:25.589Z",
+  "last_fetch": "2026-09-25T22:36:29.685Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8b5ae35a3dfc00de",
+      "timestamp": 1790370003000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Mecca, Medina would cross ‘red line’, Pakistan PM tells UN - aljazeera.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQUlQ2OUdEdmE0UXNkLU02aUFtejNhem5nTWd0U1RpRE12eXAzeEdwZnBZaDdxWjlDVmFNTHJuOGVuMFJxSjRiQU1yRXFsakNTRnhLRExaeEIwZ3JaQkZTUFF6T3JwTWtQYjctLUFaVVMwS1Z5MUpIcU1iRDVuM2tvdlh0Z0l3cHJ3Z25SQTVBdWNyaVpGRlRvdnZhZi1WSThDRGNMY0o1aGppVkZJekhpbHd30gG3AUFVX3lxTFB6Z3dhUTRSSERaWEg1ckhoRjJfZERIVWNJaTN3QTctZ1NmYjdZaDlweWtSdEZJcEdTSUVDbklKMVB5Z212YUhXTDdPMkdhSUk5aVhFbjVxRHE3aWphZ2I2bnEtT3dULTVEQkxhbGFfdFcwNndWdm13VkpIM3NwWlhVeVVheEVsbnB0aXFURTRDNzU5TDgtdWdNdj",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUlQ2OUdEdmE0UXNkLU02aUFtejNhem5nTWd0U1RpRE12eXAzeEdwZnBZaDdxWjlDVmFNTHJuOGVuMFJxSjRiQU1yRXFsakNTRnhLRExaeEIwZ3JaQkZTUFF6T3JwTWtQYjctLUFaVVMwS1Z5MUpIcU1iRDVuM2tvdlh0Z0l3cHJ3Z25SQTVBdWNyaVpGRlRvdnZhZi1WSThDRGNMY0o1aGppVkZJekhpbHd30gG3AUFVX3lxTFB6Z3dhUTRSSERaWEg1ckhoRjJfZERIVWNJaTN3QTctZ1NmYjdZaDlweWtSdEZJcEdTSUVDbklKMVB5Z212YUhXTDdPMkdhSUk5aVhFbjVxRHE3aWphZ2I2bnEtT3dULTVEQkxhbGFfdFcwNndWdm13VkpIM3NwWlhVeVVheEVsbnB0aXFURTRDNzU5TDgtdWdNdjR4clNSSUJacG03aHJnY3JRNC1CeWYtUHNFek5jZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T22:36:28.288Z"
+    },
     {
       "id": "rss_f47d0e5ff854607c",
       "timestamp": 1790350156000,
@@ -216,6 +237,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-25T00:13:15.091Z"
+    },
+    {
+      "id": "rss_263cd2feb8eb8568",
+      "timestamp": 1790285324000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says shot down 6 ballistic missiles launched by Houthis - aljazeera.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPYXBsVHBxNmVKcjlZbTVfR3hfVE1xclVoVlcyYjZKMm9talVQWTlOcFhhWHRjYVhKVHdCaXlMRFBwN0dqYVY4aDVLVE9McGxfWFJxMXBtejlNTnhZU2x3LUswbmVjZm1wSHhvVF9qaGVlaHhFdFplZ1dOYjIzQVJzZFlEd1dMWDI1U1FPMTlmclFQS0lDNmZ4R1ROM1k4VlpzY29lQ1NDeHZoQ09vOTJHbld5ek1NUWPSAbwBQVVfeXFMT25vSG53S2JsWnpLeE96WHVBWU54aEhPZlJqdXpYWmlpTHJXRG82a2Utak1WX2c5TWpoY0tyZEpQUTJSdkZMcE14dFpGdGZPUlFlSVZqS2ZkUlBScktjMDdZQ19GU29nSlBhMHVDdmFfVnNJY29ZQXFwRkxEaVVsakZUU3d1WXFmTmtHeW41ODE2UVBtbG",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYXBsVHBxNmVKcjlZbTVfR3hfVE1xclVoVlcyYjZKMm9talVQWTlOcFhhWHRjYVhKVHdCaXlMRFBwN0dqYVY4aDVLVE9McGxfWFJxMXBtejlNTnhZU2x3LUswbmVjZm1wSHhvVF9qaGVlaHhFdFplZ1dOYjIzQVJzZFlEd1dMWDI1U1FPMTlmclFQS0lDNmZ4R1ROM1k4VlpzY29lQ1NDeHZoQ09vOTJHbld5ek1NUWPSAbwBQVVfeXFMT25vSG53S2JsWnpLeE96WHVBWU54aEhPZlJqdXpYWmlpTHJXRG82a2Utak1WX2c5TWpoY0tyZEpQUTJSdkZMcE14dFpGdGZPUlFlSVZqS2ZkUlBScktjMDdZQ19GU29nSlBhMHVDdmFfVnNJY29ZQXFwRkxEaVVsakZUU3d1WXFmTmtHeW41ODE2UVBtbGxNNHJOa2dSanRNXzJSbTYtWlpfQTdzR3RfaTkxQjVXQnRxNXZoaDQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T22:36:28.290Z"
     },
     {
       "id": "rss_1fe6ad3be724adcc",
@@ -10835,50 +10880,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-25T23:47:15.322Z"
-    },
-    {
-      "id": "rss_49a2c58307910f8e",
-      "timestamp": 1787672303000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi strikes threaten to pull Yemen into Middle East war - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxPNjE2cjRRWXZnby04QVl3VWtPenA4X2NGZkNMTWJfSVlNeExNU3RZQXdJX3hXbXlXdlc0M05yYm1MSG1aZmVIYVVXY0ZuOWJUS1c1cVBsNnJOaF9TRGVWRWlTeEpheVRHSGxUSzhTN3pyVUVNcm5DM2JKblVweWotdU5RQUFJMElEN0ZadXNKcl9DSlF1eEZGR20zY9IBmwFBVV95cUxQbThtMElvUmV2WE5leV9hNWZCSVQ1ODBoQjR4MXNjWnBaMmJESGNGY0syWTY2MlJBQXo1STZScXgxN3J2WmdVbjYwbmpXRlAzQ3ZsOXJrRlRRWHN2QUxGWkVHY1FucDFKRUdfS21aX09KTUdmZkJ0akdmMXVhQzFhZ1JCX2RLOHg2SUgyMnN4QlZqeGwxMUs3bVQ3QQ?oc=5\" target=\"_blank\">Houth",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNjE2cjRRWXZnby04QVl3VWtPenA4X2NGZkNMTWJfSVlNeExNU3RZQXdJX3hXbXlXdlc0M05yYm1MSG1aZmVIYVVXY0ZuOWJUS1c1cVBsNnJOaF9TRGVWRWlTeEpheVRHSGxUSzhTN3pyVUVNcm5DM2JKblVweWotdU5RQUFJMElEN0ZadXNKcl9DSlF1eEZGR20zY9IBmwFBVV95cUxQbThtMElvUmV2WE5leV9hNWZCSVQ1ODBoQjR4MXNjWnBaMmJESGNGY0syWTY2MlJBQXo1STZScXgxN3J2WmdVbjYwbmpXRlAzQ3ZsOXJrRlRRWHN2QUxGWkVHY1FucDFKRUdfS21aX09KTUdmZkJ0akdmMXVhQzFhZ1JCX2RLOHg2SUgyMnN4QlZqeGwxMUs3bVQ3QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-25T16:30:32.590Z"
-    },
-    {
-      "id": "rss_1d9cdd4252a8e7ec",
-      "timestamp": 1787665579000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Strike Saudi Oil Tanker, Threaten Wider Red Sea Blockade - The Media Line",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPYlBQRWxsLWJLS2tkNDduNjhTYURNUkxQZmRybVpSbUdLZVBMYmdYQzUzUzdXcW9vNWJYMVUyR1dyVFNmMDlXbnVPVllsWE03Q3VjT2JJNjlmWG1wTHhsUzBFWjNtWHF4ZkUxUTFCNkk4XzI4R1lmS1dGZlV4M3JKZkN5UERLaTJVQTdmMUJpa0NHV1pHc1Q1ajk4WmVFR0JT?oc=5\" target=\"_blank\">Houthis Strike Saudi Oil Tanker, Threaten Wider Red Sea Blockade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPYlBQRWxsLWJLS2tkNDduNjhTYURNUkxQZmRybVpSbUdLZVBMYmdYQzUzUzdXcW9vNWJYMVUyR1dyVFNmMDlXbnVPVllsWE03Q3VjT2JJNjlmWG1wTHhsUzBFWjNtWHF4ZkUxUTFCNkk4XzI4R1lmS1dGZlV4M3JKZkN5UERLaTJVQTdmMUJpa0NHV1pHc1Q1ajk4WmVFR0JT?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-25T19:26:50.195Z"
     }
   ]
 }
