@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-24T21:38:55.959Z",
+  "last_fetch": "2026-09-25T00:13:16.756Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2602898625d57f5e",
+      "timestamp": 1790294225000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Brent crude jumps above $106 after Houthi attack against Saudi sites (USO:NYSEARCA) - Seeking Alpha",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNW02c0xTamtmemZuMTZ4akZrRHNMNUM4bFY4UFgzamZ6bjZNd25NamRHWkRYQ1RZQ1FqQTc4d21YTmlUT0NCV2FtX0g1eWo3Zldvc0h4Mm5SZURuMUhURk5MRThWek1OSlpndHlKbFZCNGdYVWd1YklIUFZveEJhc3dpMEJTUFVGdlozcmkxTTR3WkRicDFlT2NiTlU0OFdmakJmbFFVRGs?oc=5\" target=\"_blank\">Brent crude jumps above $106 after Houthi attack against Saudi sites (USO:NYSEARCA)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Seeking Alpha</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNW02c0xTamtmemZuMTZ4akZrRHNMNUM4bFY4UFgzamZ6bjZNd25NamRHWkRYQ1RZQ1FqQTc4d21YTmlUT0NCV2FtX0g1eWo3Zldvc0h4Mm5SZURuMUhURk5MRThWek1OSlpndHlKbFZCNGdYVWd1YklIUFZveEJhc3dpMEJTUFVGdlozcmkxTTR3WkRicDFlT2NiTlU0OFdmakJmbFFVRGs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T00:13:15.091Z"
+    },
     {
       "id": "rss_1fe6ad3be724adcc",
       "timestamp": 1790283240000,
@@ -10882,29 +10903,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-24T15:33:55.070Z"
-    },
-    {
-      "id": "rss_43d1e59b9617e368",
-      "timestamp": 1787576404000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub - TradeWinds News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOSTZxVGZmNFNCc3lBMHo2alVQYzhKR1JpQmI1QTc5TDZWUl8zd0JCd3dKVTluTzlYSS0zbDU4RzFSclZyZzR3aFo1cm9pSnBPblFrWDhGX2x3ai13eVhzWVBmT1BvOW5WTjNwZXJHWnZ4S3lqcC1NMFpHNWppRE9QcEs1LUZ1S2NwTTFKOEpkYnRUTFpoUnVSYzZ2aUlOMUVTMEdqVE1jRnFGT1VoZWlj?oc=5\" target=\"_blank\">Fire hits Saudi Arabian tanker after attack off key Red Sea oil hub</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TradeWinds News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSTZxVGZmNFNCc3lBMHo2alVQYzhKR1JpQmI1QTc5TDZWUl8zd0JCd3dKVTluTzlYSS0zbDU4RzFSclZyZzR3aFo1cm9pSnBPblFrWDhGX2x3ai13eVhzWVBmT1BvOW5WTjNwZXJHWnZ4S3lqcC1NMFpHNWppRE9QcEs1LUZ1S2NwTTFKOEpkYnRUTFpoUnVSYzZ2aUlOMUVTMEdqVE1jRnFGT1VoZWlj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-24T15:33:55.069Z"
     }
   ]
 }
