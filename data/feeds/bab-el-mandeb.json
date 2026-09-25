@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-25T15:23:21.663Z",
+  "last_fetch": "2026-09-25T19:23:25.589Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f47d0e5ff854607c",
+      "timestamp": 1790350156000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis told EU they have no intention to attack European ships: Report - middleeasteye.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQNm5hNkJJM0dKNTVjTHZLVzR0ckxzeVpYVm5HQU9ORVU1ZnRCRHlJU1BTWGlOYUxzb1BXRkU2dVgwRzgtWmJtdUMyX0FBVG9IWEtNcTFpR3RldXRIem5RbUJfNjEyZUliU1IxMXRVcjZubEV2bkdRODhERVFWa1E4OUhMY25xZjJ6alJudW9UTUFWS3ZzeVQ0OTE0RGF1bFNneDZFRQ?oc=5\" target=\"_blank\">Houthis told EU they have no intention to attack European ships: Report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middleeasteye.net</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNm5hNkJJM0dKNTVjTHZLVzR0ckxzeVpYVm5HQU9ORVU1ZnRCRHlJU1BTWGlOYUxzb1BXRkU2dVgwRzgtWmJtdUMyX0FBVG9IWEtNcTFpR3RldXRIem5RbUJfNjEyZUliU1IxMXRVcjZubEV2bkdRODhERVFWa1E4OUhMY25xZjJ6alJudW9UTUFWS3ZzeVQ0OTE0RGF1bFNneDZFRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T19:23:23.874Z"
+    },
     {
       "id": "rss_006aa5a7a704c57f",
       "timestamp": 1790333155000,
@@ -10856,27 +10879,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-25T19:26:50.195Z"
-    },
-    {
-      "id": "rss_908ec29b9cf089b8",
-      "timestamp": 1787657123000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz - RealClearDefense",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRHgzelJHclU1b0Z4VDN6ZUFNelB0bXpSb0hkSWp2bWNBajU2NGY3SDQ2THdKSlNkWS03RzU4clpyZF9RRE50UlRHMW45Q1I5dHZKNi1ydFo0ZDBLeGZmVmkwMlFwdDRIMzZDMnZGUmt2N2pqaVdEQmhvMUpyX3pLZnN2YXBTcUt3X0c1NHBLczFuTGtQc1FtdU1TV2tWa2Rjb2NCdm1IR1R0ZkktdVA5WHliQllPZXYzMnY1bnNualZtMTA?oc=5\" target=\"_blank\">Overlooked Radiological Risk in the Red Sea and the Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RealClearDefense</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRHgzelJHclU1b0Z4VDN6ZUFNelB0bXpSb0hkSWp2bWNBajU2NGY3SDQ2THdKSlNkWS03RzU4clpyZF9RRE50UlRHMW45Q1I5dHZKNi1ydFo0ZDBLeGZmVmkwMlFwdDRIMzZDMnZGUmt2N2pqaVdEQmhvMUpyX3pLZnN2YXBTcUt3X0c1NHBLczFuTGtQc1FtdU1TV2tWa2Rjb2NCdm1IR1R0ZkktdVA5WHliQllPZXYzMnY1bnNualZtMTA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-25T17:55:13.941Z"
     }
   ]
 }
