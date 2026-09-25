@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-25T05:09:55.789Z",
+  "last_fetch": "2026-09-25T10:21:54.170Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a81880c46fe8700",
+      "timestamp": 1790325717000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia allies line up support as Houthi attacks mount - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOU0JQNHBkcVluNkc0ZGM3RktERzltMnJIcHJydGpLdHlOUFEwWmhVYkQ2RXo4LXFlWmVvSlcwclV3N1ZWSlRmRFpwcTRyaDJBYjlEWmFJOGF0T0NqTnFacjd5cmRyVnNBNUk4U2xzQ2RhbWNnY3VlY1RUTTREX3JuSVZYQzBmQzJ5TW9QWnFnMnhOdmRleTRBUlpodlZvUF9JMVHSAacBQVVfeXFMT0RTUnMzT3NsXy1SRl90cmNtcS1WRVQyeUtMNjdwaXdSbTFSdVNBNVZiemtFckgwX1JLTm8xekpMZ2J4Sjg2MmlGTTJXYThYLVhROTBOVFBqZzlWWFE1b1ZTQnZhal80X2Z0ZmE5STBhMzdfVTRlTFk1djRlUC14OFJ6X005VjY1LTFNd1pIcWIyZXJYU0pvQW5wdEYwVjRvTTdmX2NZOE0?oc",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOU0JQNHBkcVluNkc0ZGM3RktERzltMnJIcHJydGpLdHlOUFEwWmhVYkQ2RXo4LXFlWmVvSlcwclV3N1ZWSlRmRFpwcTRyaDJBYjlEWmFJOGF0T0NqTnFacjd5cmRyVnNBNUk4U2xzQ2RhbWNnY3VlY1RUTTREX3JuSVZYQzBmQzJ5TW9QWnFnMnhOdmRleTRBUlpodlZvUF9JMVHSAacBQVVfeXFMT0RTUnMzT3NsXy1SRl90cmNtcS1WRVQyeUtMNjdwaXdSbTFSdVNBNVZiemtFckgwX1JLTm8xekpMZ2J4Sjg2MmlGTTJXYThYLVhROTBOVFBqZzlWWFE1b1ZTQnZhal80X2Z0ZmE5STBhMzdfVTRlTFk1djRlUC14OFJ6X005VjY1LTFNd1pIcWIyZXJYU0pvQW5wdEYwVjRvTTdmX2NZOE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-25T10:21:52.461Z"
+    },
+    {
+      "id": "rss_b897e0af0daaa0a7",
+      "timestamp": 1790323317000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia: Houthi attack on Riyadh and near Aramco refineries - Agenzia Nova",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNQzlOMEdfZ203OHZqdTU0NFJCMDJJOTlsWEJNR1ltMjNyS3ltLVFiOXVlaDNjZUJNV3M3YVZmOHE2c29CUzVuZEdUcUFjT2h1MmtzTmZ0NWdob0hGWTRsNkZ3dFZyYjJ0bko0aWRoaG1WM1I4WGFlYXNOTGNGaDJhU0dZazQxdWNIRGNDZkx3TW44dnJxWjIzMVNnTlBqbUdtZ3hWZXRn?oc=5\" target=\"_blank\">Saudi Arabia: Houthi attack on Riyadh and near Aramco refineries</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agenzia Nova</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNQzlOMEdfZ203OHZqdTU0NFJCMDJJOTlsWEJNR1ltMjNyS3ltLVFiOXVlaDNjZUJNV3M3YVZmOHE2c29CUzVuZEdUcUFjT2h1MmtzTmZ0NWdob0hGWTRsNkZ3dFZyYjJ0bko0aWRoaG1WM1I4WGFlYXNOTGNGaDJhU0dZazQxdWNIRGNDZkx3TW44dnJxWjIzMVNnTlBqbUdtZ3hWZXRn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T10:21:52.462Z"
+    },
     {
       "id": "rss_88c6ee30085ca816",
       "timestamp": 1790308980000,
@@ -130,6 +172,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-25T05:09:54.489Z"
+    },
+    {
+      "id": "rss_cab14270738026e3",
+      "timestamp": 1790282212000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "France to Deploy Forces to Protect Saudi Red Sea Oil Port - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOMVdValVham5Vb3dTTTc5eHRIS0liNy1MQTNjVjV5T1RBLXlWN3JfaW5vQjRjTWpqTWtkNUFwTS0wZ3dpQ25UeHY2NUMyOWpQbWRqbXpJQXpWRHA5NXROcEZHSHFCWlpCZEJndGRKUkpJaTBOOXFhNGNjblM1YzBobXhYMEpmYUVxUjVYY0xIX0trN2FKTTdQbGh3andkSGlqWndyYVUyWQ?oc=5\" target=\"_blank\">France to Deploy Forces to Protect Saudi Red Sea Oil Port</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMVdValVham5Vb3dTTTc5eHRIS0liNy1MQTNjVjV5T1RBLXlWN3JfaW5vQjRjTWpqTWtkNUFwTS0wZ3dpQ25UeHY2NUMyOWpQbWRqbXpJQXpWRHA5NXROcEZHSHFCWlpCZEJndGRKUkpJaTBOOXFhNGNjblM1YzBobXhYMEpmYUVxUjVYY0xIX0trN2FKTTdQbGh3andkSGlqWndyYVUyWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T10:21:52.461Z"
     },
     {
       "id": "rss_c28cd36c4b77b985",
@@ -331,6 +394,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-24T18:06:41.300Z"
+    },
+    {
+      "id": "rss_658abe601cc61c62",
+      "timestamp": 1790258326000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Who are the Houthis and what do they want? - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vR2dmcDNUcFVqQzVQVWQ5WFBsUDhkbWNPd1ROOFZpV3pOd184NFIyTnd0THdhNTd0M2RQWWxpdFVBSWJodWVXcms5czFSa1RldlhQZVRzSlRFb0E?oc=5\" target=\"_blank\">Who are the Houthis and what do they want?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vR2dmcDNUcFVqQzVQVWQ5WFBsUDhkbWNPd1ROOFZpV3pOd184NFIyTnd0THdhNTd0M2RQWWxpdFVBSWJodWVXcms5czFSa1RldlhQZVRzSlRFb0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-25T10:21:52.462Z"
     },
     {
       "id": "rss_a781d2f9ec9c73ac",
@@ -10799,102 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-25T10:02:21.841Z"
-    },
-    {
-      "id": "rss_4534fb90347e7388",
-      "timestamp": 1787609064000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack, and Oil Goes Down - Energy News Beat",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQenNTaktkYS1PNktjaXdWWkJqWVRfYW03VG0zNmdMSEVJemRpaFZVSTdJVUY5TXhhRDVVVzJnT0dzb2tnZXNyblVMZ2VlZ3BhaFUzRThqZlVDc0ZrbnJfMllkcGdvNEFNenJSV1U2Yi1kU1pva1Y3NnNvd1N4UXFnMjNldWxqd09qOVJtRTBocno2UjczUjlrcXRXQkZKTnNRQnh1YW1LUXBGODJrRl9TSTJjczd4UFU2QmYtNEROZw?oc=5\" target=\"_blank\">Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack, and Oil Goes Down</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Energy News Beat</font>",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQenNTaktkYS1PNktjaXdWWkJqWVRfYW03VG0zNmdMSEVJemRpaFZVSTdJVUY5TXhhRDVVVzJnT0dzb2tnZXNyblVMZ2VlZ3BhaFUzRThqZlVDc0ZrbnJfMllkcGdvNEFNenJSV1U2Yi1kU1pva1Y3NnNvd1N4UXFnMjNldWxqd09qOVJtRTBocno2UjczUjlrcXRXQkZKTnNRQnh1YW1LUXBGODJrRl9TSTJjczd4UFU2QmYtNEROZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-24T22:19:57.466Z"
-    },
-    {
-      "id": "rss_06ffd5e06c73d947",
-      "timestamp": 1787601600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis Target Saudi Oil Tanker in Red Sea Missile and Drone Attack - Crude Oil Prices Today | OilPrice.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3lfY3BBYjhOdTRNRlpDdm5uLTJPXzlBTGdzUlJFRFVxbWlEMGpQazE5UTN5R05SZlRBODNFU3BwWnZrYTh0ZnUwRUNBSFhOVEMwd2NMSUdaY2NMbnA2ZDZ1U3l2Z3NxMzV1Z1ZlU3JoUmpudDBTZkpmN1BCdDU3cEczQlMwdDZpT0pGMV8xU3ZIOGVtMmJDcXhPSDREajdQNmRWSmVtcG1NYU95NEJFM29wR2o1NGhh0gG-AUFVX3lxTE0zQXZMd1JuRXptc1ljOFV4N1prWlpnTFdvbDVieVdEcjBIYWNYdlBFWHpkdTYxOFF1RTJMTEF2a3ZqYVZUbmpzLVFUY0xIMGlRVFBZd20tcTdZTERhMFJEOXVrb3V4Yi1lczd3b2xqd0Q1VHFtWFE0NGFfOHIyMnNSS1Z2Sk01RjVuM0lkazJPUWFDMH",
-      "tags": [
-        "missile",
-        "drone",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPa3lfY3BBYjhOdTRNRlpDdm5uLTJPXzlBTGdzUlJFRFVxbWlEMGpQazE5UTN5R05SZlRBODNFU3BwWnZrYTh0ZnUwRUNBSFhOVEMwd2NMSUdaY2NMbnA2ZDZ1U3l2Z3NxMzV1Z1ZlU3JoUmpudDBTZkpmN1BCdDU3cEczQlMwdDZpT0pGMV8xU3ZIOGVtMmJDcXhPSDREajdQNmRWSmVtcG1NYU95NEJFM29wR2o1NGhh0gG-AUFVX3lxTE0zQXZMd1JuRXptc1ljOFV4N1prWlpnTFdvbDVieVdEcjBIYWNYdlBFWHpkdTYxOFF1RTJMTEF2a3ZqYVZUbmpzLVFUY0xIMGlRVFBZd20tcTdZTERhMFJEOXVrb3V4Yi1lczd3b2xqd0Q1VHFtWFE0NGFfOHIyMnNSS1Z2Sk01RjVuM0lkazJPUWFDMHRVaTg0TVB2WDhmX09QOG5DTFkwUllUVXpRdGZuTldXWGFTNFRRQldtT2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-24T20:23:48.344Z"
-    },
-    {
-      "id": "rss_e8f08ec0e84b7298",
-      "timestamp": 1787601150000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthis report attack on Saudi ship - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdkNmMGllenFfdWxNVTJYWTF5b3h1Y3lVSmlhSmEwUHZjUC1jRTVQRUZCZ1p2SDFaaWZSRTdVOHNta2JwaFpTSjZyUHgzVUJ4WDdHUjJYeGdXR3Vycm1sdnRjSmdUdmwxQjVuU0tLTURmWXU4S2RRWmlVc3FfNTBzajUwQ0tNX1Z1WWZ30gGQAUFVX3lxTE9nNGYwUkF5QTdrZmVZSnEzSUdXLUt0YURGSFRiTXNQcHZEUXlkemFzTFBxX3JXRzRwQmViNHJJZjdvR0dyNFdvd3piWlpmbVZhNzVaZ1BUTUVUckNmNVpYeW9SQVA4eGtIZHcxc0xiRXMyeGhaOFgwbC1TUG9kX1VaNWU1MTFwbUQ1dFZFVE0ydA?oc=5\" target=\"_blank\">Yemen’s Houthis report attack on Saudi sh",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPdkNmMGllenFfdWxNVTJYWTF5b3h1Y3lVSmlhSmEwUHZjUC1jRTVQRUZCZ1p2SDFaaWZSRTdVOHNta2JwaFpTSjZyUHgzVUJ4WDdHUjJYeGdXR3Vycm1sdnRjSmdUdmwxQjVuU0tLTURmWXU4S2RRWmlVc3FfNTBzajUwQ0tNX1Z1WWZ30gGQAUFVX3lxTE9nNGYwUkF5QTdrZmVZSnEzSUdXLUt0YURGSFRiTXNQcHZEUXlkemFzTFBxX3JXRzRwQmViNHJJZjdvR0dyNFdvd3piWlpmbVZhNzVaZ1BUTUVUckNmNVpYeW9SQVA4eGtIZHcxc0xiRXMyeGhaOFgwbC1TUG9kX1VaNWU1MTFwbUQ1dFZFVE0ydA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-08-24T20:23:48.343Z"
-    },
-    {
-      "id": "rss_3f552ab56c1a21f9",
-      "timestamp": 1787591780000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tanker hit near Saudi Arabia's Yanbu as Gulf loadings weighed - Quantum Commodity Intelligence",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPQVlDaUVsR0I5RE1iOTBHb2d2ZHVPSmQwMjNNb1ZraTVOOWNFNGhLU2JtLWs5dXgwRm5rVHh0ZVd4LWd4X3pyM1N6RXU0aUtzb1NNa2pldGwtUFdkOUdJQXBBQldqaG1TNnVJeEJFS1FieWNUNUlhbXFZeUc0ZlpIZ2tVY081R3ZrN3R5aDk3ZHp5MjRRVmp3Z0dJRDlUem92M2hibGdlbw?oc=5\" target=\"_blank\">Tanker hit near Saudi Arabia's Yanbu as Gulf loadings weighed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Quantum Commodity Intelligence</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPQVlDaUVsR0I5RE1iOTBHb2d2ZHVPSmQwMjNNb1ZraTVOOWNFNGhLU2JtLWs5dXgwRm5rVHh0ZVd4LWd4X3pyM1N6RXU0aUtzb1NNa2pldGwtUFdkOUdJQXBBQldqaG1TNnVJeEJFS1FieWNUNUlhbXFZeUc0ZlpIZ2tVY081R3ZrN3R5aDk3ZHp5MjRRVmp3Z0dJRDlUem92M2hibGdlbw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-24T19:24:12.096Z"
     }
   ]
 }
