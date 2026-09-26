@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-26T15:38:00.381Z",
+  "last_fetch": "2026-09-26T18:56:46.787Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e516ac53f5818950",
+      "timestamp": 1790438400000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi coalition says it halted Houthi attack - Taipei Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE5NNFpmYjE4c2laRUVfQzlrT3BWYkpuaGxSN0xONDJZODZpQV9rbmY3dVJHN3dlaHZXdGNXc0NBZ0toMkJDbm9tSlpLb2doRHRKV2psbFE0WTlFa1RPRFVobTJwQmd5M19QM2s4VDhETGZLZUMycjQ3cQ?oc=5\" target=\"_blank\">Saudi coalition says it halted Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Taipei Times</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5NNFpmYjE4c2laRUVfQzlrT3BWYkpuaGxSN0xONDJZODZpQV9rbmY3dVJHN3dlaHZXdGNXc0NBZ0toMkJDbm9tSlpLb2doRHRKV2psbFE0WTlFa1RPRFVobTJwQmd5M19QM2s4VDhETGZLZUMycjQ3cQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-26T18:56:45.393Z"
+    },
+    {
+      "id": "rss_3f6296508d8ca32b",
+      "timestamp": 1790435040000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 4,
+      "text_summary": "Pakistan condemns alleged Houthi drone attack on Mecca - Breakingthenews.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVpHd1d4WG1IRVQyaEJGdHJHZE4ySnB5VXhKQ21DaUdwdGYxbExza29pUVExNnEwdURhclVQTl9xZ3REVER6WmtwZDJYOTE1azB2d0FFcDBlbnpHWmpjTHhkdU04TnJaSUI2bS16NkRJZGxtVGY4TDEyX1JfbmUzeXhRY2xZeTJ0bTBZQzQ2WlFNVjFGcjBxajhXWGduM3Yy?oc=5\" target=\"_blank\">Pakistan condemns alleged Houthi drone attack on Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWVpHd1d4WG1IRVQyaEJGdHJHZE4ySnB5VXhKQ21DaUdwdGYxbExza29pUVExNnEwdURhclVQTl9xZ3REVER6WmtwZDJYOTE1azB2d0FFcDBlbnpHWmpjTHhkdU04TnJaSUI2bS16NkRJZGxtVGY4TDEyX1JfbmUzeXhRY2xZeTJ0bTBZQzQ2WlFNVjFGcjBxajhXWGduM3Yy?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-26T18:56:45.394Z"
+    },
     {
       "id": "rss_d90b134a2c84dd78",
       "timestamp": 1790420405000,
@@ -10841,52 +10887,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-27T20:38:35.997Z"
-    },
-    {
-      "id": "rss_28a0eb3976aee829",
-      "timestamp": 1787823167000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni Navy Foils Houthi Attack in the Red Sea - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE50cUtHQl9xWmNmbkVmYTBFZGRHWlZQUFZUUDJ3b1NTQmRzbzY4ZDVoSlhzSGU5V2Z3T3Q3Mll6MmxiUkFscVUxSXp2c0FZS255djVSblZiUERLUDZHRk4w?oc=5\" target=\"_blank\">Yemeni Navy Foils Houthi Attack in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE50cUtHQl9xWmNmbkVmYTBFZGRHWlZQUFZUUDJ3b1NTQmRzbzY4ZDVoSlhzSGU5V2Z3T3Q3Mll6MmxiUkFscVUxSXp2c0FZS255djVSblZiUERLUDZHRk4w?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-27T10:05:04.070Z"
-    },
-    {
-      "id": "rss_d927170bb534e393",
-      "timestamp": 1787821266000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Response to Houthis’ Attacks on Ships May Be a New War - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOR0g0alhqSHVReDNzRlFjZnFja2l1Q0w0OWZ5cDFCSU52T1pWdUdTaWVVOHJrYVd1dGRjdk12bV9JTG1BcTU4WjNzT0MwQmhqYnVrSGw0dHQ2T2Jfa1BFRUNxSTVkUnVpcVNXWFl5Q3A3N0h3UHRYdGRNYTBwdlhQYnRid29IZGFGWTJsNEp3elo?oc=5\" target=\"_blank\">Saudi Response to Houthis’ Attacks on Ships May Be a New War</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOR0g0alhqSHVReDNzRlFjZnFja2l1Q0w0OWZ5cDFCSU52T1pWdUdTaWVVOHJrYVd1dGRjdk12bV9JTG1BcTU4WjNzT0MwQmhqYnVrSGw0dHQ2T2Jfa1BFRUNxSTVkUnVpcVNXWFl5Q3A3N0h3UHRYdGRNYTBwdlhQYnRid29IZGFGWTJsNEp3elo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-28T17:33:28.458Z"
     }
   ]
 }
