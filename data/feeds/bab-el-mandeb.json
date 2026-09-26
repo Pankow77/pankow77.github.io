@@ -1,8 +1,58 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-25T22:36:29.685Z",
+  "last_fetch": "2026-09-26T06:20:39.898Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_71f8169fe98642d1",
+      "timestamp": 1790387370000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Coalition defenses thwart Houthi missile and drone attack on Riyadh, Khamis Mushayt - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNdUFsYmE5ZjZqdXNFLTMxT0Y1b1NQLVVDVUhSX19oSk5LbVhFamhCQURndkMxZ3R2WmRTaUpWTW1KZV9FZzVTWW55MW8zckdkdXE3M0RHMlN6d3ZYem43WGdDMTQzaEdLMW0wdlhkV0VZWkh6SnVVVnc3dWFVajBVUFNZX1dVdEh6SWVNWDRjWGhiM01RMmFfLTZLemw0NUVUSUxmTUE1N0R1TGhET2wwRGhFekZtY1BDNGNPd2NTWlhHbS0zY1pN?oc=5\" target=\"_blank\">Coalition defenses thwart Houthi missile and drone attack on Riyadh, Khamis Mushayt</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdUFsYmE5ZjZqdXNFLTMxT0Y1b1NQLVVDVUhSX19oSk5LbVhFamhCQURndkMxZ3R2WmRTaUpWTW1KZV9FZzVTWW55MW8zckdkdXE3M0RHMlN6d3ZYem43WGdDMTQzaEdLMW0wdlhkV0VZWkh6SnVVVnc3dWFVajBVUFNZX1dVdEh6SWVNWDRjWGhiM01RMmFfLTZLemw0NUVUSUxmTUE1N0R1TGhET2wwRGhFekZtY1BDNGNPd2NTWlhHbS0zY1pN?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-26T06:20:38.339Z"
+    },
+    {
+      "id": "rss_1e616bb8a79e2cef",
+      "timestamp": 1790385900000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi coalition says it intercepts Houthi missiles, drones - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdndqUFdtd2J6b19yZlhhZjlOZXVBYkNvYjVtTjQzYUxlRTVldkZHbjdQdDQtMGI0ZFEwSEY2MTc1OHNTcWJHUXJCbFJjSlpFb0o3blUxMTRBQWZncEVZaEZiMEdJbU9ZOGZIbUFxQzB3SGduZFZ2ZGFDYWNoZEtqVTd0QXRVZUc2UHRXMnpjUi1XM0d0a3dXcDg3ZFRqd2xsWHdzVXlhOXhMMDlQeHlpcEFXWjNncEZWbnBxZ0NaLXI?oc=5\" target=\"_blank\">Saudi coalition says it intercepts Houthi missiles, drones</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdndqUFdtd2J6b19yZlhhZjlOZXVBYkNvYjVtTjQzYUxlRTVldkZHbjdQdDQtMGI0ZFEwSEY2MTc1OHNTcWJHUXJCbFJjSlpFb0o3blUxMTRBQWZncEVZaEZiMEdJbU9ZOGZIbUFxQzB3SGduZFZ2ZGFDYWNoZEtqVTd0QXRVZUc2UHRXMnpjUi1XM0d0a3dXcDg3ZFRqd2xsWHdzVXlhOXhMMDlQeHlpcEFXWjNncEZWbnBxZ0NaLXI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-09-26T06:20:38.339Z"
+    },
     {
       "id": "rss_8b5ae35a3dfc00de",
       "timestamp": 1790370003000,
@@ -46,6 +96,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-25T19:23:23.874Z"
+    },
+    {
+      "id": "rss_d1932e234462ddb6",
+      "timestamp": 1790335623000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pakistan, Turkiye edge closer towards joining Saudi war against Houthis - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPMGk2TldwemI1R2RiNUJtbUZ3eFFCZjNXelhILVA2eDkxcXJZa3ZFaDVSMDdQVmpUTlZmM2ZfLU9mbUNQdlQ4UEQwUGVES2JFNWFwa2FuYkpzb2h1OHdLNWY3NTduWVN2ZkpGSEltSTBsVUVtSXJPX0Y3dlJ6dGNSRHRMcW9fc3FYYlF5aGtBVVNPT0FyRTZZdGFLUnpoT2lYYkQ5YlBCXzFvbG9pamU2UdIBtgFBVV95cUxNMGR6U1hYN29HMm5iUUctWGIySndQc3ZmSDVqSnVhaWhKSm4yUjZkUW5Wb0RyZFBlRGVpU2NhUEF0bEl1TWZHRkNYbjZBdzNuQzFpSkpSOW9EdUROeE5zeDFhSi0yN2VlLUNlbXFPZlZzck5NOEh1MjFFTjFoMTJfNW0zSlo1VlpVdkVNelNTTExxUGZ6RGFBZnYyTW",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMGk2TldwemI1R2RiNUJtbUZ3eFFCZjNXelhILVA2eDkxcXJZa3ZFaDVSMDdQVmpUTlZmM2ZfLU9mbUNQdlQ4UEQwUGVES2JFNWFwa2FuYkpzb2h1OHdLNWY3NTduWVN2ZkpGSEltSTBsVUVtSXJPX0Y3dlJ6dGNSRHRMcW9fc3FYYlF5aGtBVVNPT0FyRTZZdGFLUnpoT2lYYkQ5YlBCXzFvbG9pamU2UdIBtgFBVV95cUxNMGR6U1hYN29HMm5iUUctWGIySndQc3ZmSDVqSnVhaWhKSm4yUjZkUW5Wb0RyZFBlRGVpU2NhUEF0bEl1TWZHRkNYbjZBdzNuQzFpSkpSOW9EdUROeE5zeDFhSi0yN2VlLUNlbXFPZlZzck5NOEh1MjFFTjFoMTJfNW0zSlo1VlpVdkVNelNTTExxUGZ6RGFBZnYyTWExcGpHLTJHWVpYT2UwZm9ROTdCUGNObjJLdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-26T06:20:38.340Z"
     },
     {
       "id": "rss_006aa5a7a704c57f",
@@ -10817,69 +10888,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-26T18:12:12.058Z"
-    },
-    {
-      "id": "rss_6443147a4ad05470",
-      "timestamp": 1787729942000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "8 Houthis, 3 members of government-backed forces killed in Yemen clashes - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOSk4tUnRXTHA1bzQzUGtiYlJxd0o1b2pFQUxGZUVOUl9TYzUxLVR2YkdLTkFkQTNrQXk0dmg5czhjMzd3QldzS3psYzBDcnpIMDlNT0o4T2RzQVlHckxRcm92eXdNSjZxV19PU1NaWDYwQ1JHSHc2UGtEQWE1dGFmRThTcW00YmxVOHZBajc5S25qQU5OM2dsRFQxTzQweU9xRk52MFo1VFRWcUZmbXBhN0YtSi1PSnM?oc=5\" target=\"_blank\">8 Houthis, 3 members of government-backed forces killed in Yemen clashes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOSk4tUnRXTHA1bzQzUGtiYlJxd0o1b2pFQUxGZUVOUl9TYzUxLVR2YkdLTkFkQTNrQXk0dmg5czhjMzd3QldzS3psYzBDcnpIMDlNT0o4T2RzQVlHckxRcm92eXdNSjZxV19PU1NaWDYwQ1JHSHc2UGtEQWE1dGFmRThTcW00YmxVOHZBajc5S25qQU5OM2dsRFQxTzQweU9xRk52MFo1VFRWcUZmbXBhN0YtSi1PSnM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-30T16:52:51.563Z"
-    },
-    {
-      "id": "rss_98ddf4e11b20fdd8",
-      "timestamp": 1787729401000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "8 Houthi fighters killed in clashes in Yemen’s Taiz - A News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZWI2NEM2cWk1V3VkdEtiejhVVmZWVzBPdlR0NXpjSi1HVXFEb0c2RWNJNVdQaVBKQ3JTZ2FRVGNOWkw4NWxSeXhKNUtMWWFwVldVbWdVVlotaUEyeEdVb3FTRWM3dDZVYjdYejFDTEJNLWdzWlkxRFJTaUVoNVEtZ2FVTl9xTGFycV8xRkF3MU52R3VreXVJ0gGcAUFVX3lxTE95ZFF5WUZ4YzZpTXp3SjJ1OHEzRFpzQURFNUU4dzlzTkp4Ul81WFh2Qi1ESDRUbWU5Mzh3TUJ6clcySUhSYjJKV2pOeDNSNTlQeGdWSDYzZ2k0N05zbVhiZDc2ZGN2ZTNPVVZ1dkpHUUdDaE00Xy15cFJVSUU2d2ZpbzY1TGM0UGNIV2dCZHYtdkZteWlTWXVOVnU5NQ?oc=5\" target=\"_blank\">8 Houthi ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZWI2NEM2cWk1V3VkdEtiejhVVmZWVzBPdlR0NXpjSi1HVXFEb0c2RWNJNVdQaVBKQ3JTZ2FRVGNOWkw4NWxSeXhKNUtMWWFwVldVbWdVVlotaUEyeEdVb3FTRWM3dDZVYjdYejFDTEJNLWdzWlkxRFJTaUVoNVEtZ2FVTl9xTGFycV8xRkF3MU52R3VreXVJ0gGcAUFVX3lxTE95ZFF5WUZ4YzZpTXp3SjJ1OHEzRFpzQURFNUU4dzlzTkp4Ul81WFh2Qi1ESDRUbWU5Mzh3TUJ6clcySUhSYjJKV2pOeDNSNTlQeGdWSDYzZ2k0N05zbVhiZDc2ZGN2ZTNPVVZ1dkpHUUdDaE00Xy15cFJVSUU2d2ZpbzY1TGM0UGNIV2dCZHYtdkZteWlTWXVOVnU5NQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-26T08:06:21.857Z"
-    },
-    {
-      "id": "rss_3624eda9efee84c4",
-      "timestamp": 1787698974000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Yemeni government forces claim to repel Houthi attack in Taiz, kill 8 fighters - reports - news.cgtn.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE1WU2FFaFEwcF9mWm1KbGc0dm9LdVpIQWcxZVAxMVRWNVZzX1MtdTI0WFZWZXE4M2tvTU9VZ3F3Q04tdjN2UXh6c3JqSVBmMmNJZTJfT0hXZzhFN2tSQWl3dWJmVGdKUll6U1kzd3Rn?oc=5\" target=\"_blank\">Yemeni government forces claim to repel Houthi attack in Taiz, kill 8 fighters - reports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.cgtn.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1WU2FFaFEwcF9mWm1KbGc0dm9LdVpIQWcxZVAxMVRWNVZzX1MtdTI0WFZWZXE4M2tvTU9VZ3F3Q04tdjN2UXh6c3JqSVBmMmNJZTJfT0hXZzhFN2tSQWl3dWJmVGdKUll6U1kzd3Rn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-25T23:47:15.322Z"
     }
   ]
 }
