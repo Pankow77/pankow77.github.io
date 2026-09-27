@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-27T15:43:38.710Z",
+  "last_fetch": "2026-09-27T19:28:33.327Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a5eb81e3c1c3299",
+      "timestamp": 1790525892000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Airstrike Kills Seven, Injures 40 in Taiz Market, Houthi Health Ministry Says: who 13 outlets blamed - NewsCord",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdEtRSDZ1TDJwT0tfWDNFdmZXbHZHVVFfQVdYTUVyLWpYUGc3enFmdTJram9oYllkZml2aWhGVXVmeW0xZE5FS1AzRDhIaUM0c0llV3ZsbS1zUnZiQVEwRXJ1UWxEakY5dXRVZlZ3bXgxbFBZajNHTjZpVUR4MHJidXRSVzFRdHFfRXRzdGxoVkFLLUM5T2dycGFwX1FxZFZYb0N3cVNTVktJcGdjZXFxZFFlbWlKVVFqVm5Rb1UxVkx2SlpSQ2VycVdjbmthVEphTnJkaDdra2wzTG5GREhDME9sd0dZWElCVlE?oc=5\" target=\"_blank\">Saudi Airstrike Kills Seven, Injures 40 in Taiz Market, Houthi Health Ministry Says: who 13 outlets blamed</a>&n",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdEtRSDZ1TDJwT0tfWDNFdmZXbHZHVVFfQVdYTUVyLWpYUGc3enFmdTJram9oYllkZml2aWhGVXVmeW0xZE5FS1AzRDhIaUM0c0llV3ZsbS1zUnZiQVEwRXJ1UWxEakY5dXRVZlZ3bXgxbFBZajNHTjZpVUR4MHJidXRSVzFRdHFfRXRzdGxoVkFLLUM5T2dycGFwX1FxZFZYb0N3cVNTVktJcGdjZXFxZFFlbWlKVVFqVm5Rb1UxVkx2SlpSQ2VycVdjbmthVEphTnJkaDdra2wzTG5GREhDME9sd0dZWElCVlE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T19:28:31.592Z"
+    },
     {
       "id": "rss_271d50e9d739456d",
       "timestamp": 1790512263000,
@@ -10862,27 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-03T04:52:54.613Z"
-    },
-    {
-      "id": "rss_e0b2c88e7a0771fd",
-      "timestamp": 1788232561000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni army says it foiled Houthi boat attack near Red Sea islands - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOeUVoNk1yUXBNT2d3OTJvdmxjdGpMemhHaFgtSjRVVXd3cF9CQ180ak9vbUdQak1IWVFlcnhON2QzVGJocDlMcTI1dFB5d3Y0Q3dyd2pxZ0FPTTBoNFIzckhQOEROWnVTcEpaNDhNbUhTNU1fbkZGVF83d01lTjcxU2lXdnNaemQtWHVPQm9jSks5b0p5ZHQteV9QQWR2cGFUUHhjZVdXWDRHSWpUMDJ5Ng?oc=5\" target=\"_blank\">Yemeni army says it foiled Houthi boat attack near Red Sea islands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeUVoNk1yUXBNT2d3OTJvdmxjdGpMemhHaFgtSjRVVXd3cF9CQ180ak9vbUdQak1IWVFlcnhON2QzVGJocDlMcTI1dFB5d3Y0Q3dyd2pxZ0FPTTBoNFIzckhQOEROWnVTcEpaNDhNbUhTNU1fbkZGVF83d01lTjcxU2lXdnNaemQtWHVPQm9jSks5b0p5ZHQteV9QQWR2cGFUUHhjZVdXWDRHSWpUMDJ5Ng?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-01T05:25:19.586Z"
     }
   ]
 }
