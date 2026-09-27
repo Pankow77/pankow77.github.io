@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-27T11:16:20.181Z",
+  "last_fetch": "2026-09-27T15:43:38.710Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_271d50e9d739456d",
+      "timestamp": 1790512263000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Houthis and Bab El-Mandeb: the power of a strategic chokepoint - iari.site",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1RkdFRFZU9NbnlBMVduWHBaSU4xNjd4TGxjVms0N2l0R3VwdVJOUE5YRFpSNE5xc2E0WUwzbTRvODV2dklJd2RxSzNmUHY2M2tGdkVvUXhvR3drMFRVRUliNTJFYVRoX3JQRVFKRmVXVE84Y1lZSW00NFRKenlDRnRTR1BwdERDVTMwQ2lnY3Rid3IxdkwxQVU0MA?oc=5\" target=\"_blank\">The Houthis and Bab El-Mandeb: the power of a strategic chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">iari.site</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1RkdFRFZU9NbnlBMVduWHBaSU4xNjd4TGxjVms0N2l0R3VwdVJOUE5YRFpSNE5xc2E0WUwzbTRvODV2dklJd2RxSzNmUHY2M2tGdkVvUXhvR3drMFRVRUliNTJFYVRoX3JQRVFKRmVXVE84Y1lZSW00NFRKenlDRnRTR1BwdERDVTMwQ2lnY3Rid3IxdkwxQVU0MA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T15:43:37.220Z"
+    },
     {
       "id": "rss_69b2aa6adf13e1d4",
       "timestamp": 1790500954000,
@@ -10862,27 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-01T05:25:19.586Z"
-    },
-    {
-      "id": "rss_7ae3ce8681173f3f",
-      "timestamp": 1788127603000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi's Unmanned Attack Boat Base Destroyed by Yemeni Forces - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQRjN1M1hMTDgyVXhlWDltQzlmaTVBZVZ4Tm8wTEdEVFRVS2RzNTZxUE41N0FkZEJIdGQtU2ZVNHo3MzFTR3phS2FCWW9SY1V0Y3FQT2hVRnhxbFZxMTVDa2Jsa21TaGZOVklLWkFWMVcxTzJ0cjgyRGE4NFE4dTA1TjhJa1JrRTNOcUNiUl8wM3cxcmpaUlpGYVgzWUQ1UG9fQ1E?oc=5\" target=\"_blank\">Houthi's Unmanned Attack Boat Base Destroyed by Yemeni Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQRjN1M1hMTDgyVXhlWDltQzlmaTVBZVZ4Tm8wTEdEVFRVS2RzNTZxUE41N0FkZEJIdGQtU2ZVNHo3MzFTR3phS2FCWW9SY1V0Y3FQT2hVRnhxbFZxMTVDa2Jsa21TaGZOVklLWkFWMVcxTzJ0cjgyRGE4NFE4dTA1TjhJa1JrRTNOcUNiUl8wM3cxcmpaUlpGYVgzWUQ1UG9fQ1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-31T00:43:31.389Z"
     }
   ]
 }
