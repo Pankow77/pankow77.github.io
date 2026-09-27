@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-27T19:28:33.327Z",
+  "last_fetch": "2026-09-27T22:28:54.786Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_21bc9933dfbd3de2",
+      "timestamp": 1790544302000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shafaq News..Houthi official cites ‘private channels’ with Iraqi factions - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOUWF6ZnlBMFZIN3ZucmJ6MmNBbWkwbHlRNU9zQWxjb1Q0cEplaGlsbC00UVJkX29mX3VfeGlZX2JENG9kZldQcXNVN2RONjQ1cjE0MXZKUFRDZUlxdlZ1X0NKbERCamhrMVV0RmJud2Y3OVltc0dKNGljWEhsR0NvZlZLcHp6SUxMSzhINndESWQ?oc=5\" target=\"_blank\">Shafaq News..Houthi official cites ‘private channels’ with Iraqi factions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUWF6ZnlBMFZIN3ZucmJ6MmNBbWkwbHlRNU9zQWxjb1Q0cEplaGlsbC00UVJkX29mX3VfeGlZX2JENG9kZldQcXNVN2RONjQ1cjE0MXZKUFRDZUlxdlZ1X0NKbERCamhrMVV0RmJud2Y3OVltc0dKNGljWEhsR0NvZlZLcHp6SUxMSzhINndESWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T22:28:53.240Z"
+    },
     {
       "id": "rss_1a5eb81e3c1c3299",
       "timestamp": 1790525892000,
@@ -10862,27 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-01T10:18:24.239Z"
-    },
-    {
-      "id": "rss_29bbc6773df59a53",
-      "timestamp": 1788241672000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Yemeni army says it intercepted Houthi boat attack near Red Sea islands - TRT World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DWEhWcC1qb2tuWW1pV3FEcG9fX2RFYUh0Qm90UUtiOHEwRUpzbGRDNWxmV1p6U04xbFNtbmNlSkwxWHZuWGxfdXpPMC1JLTdxa0w0U3hyanA?oc=5\" target=\"_blank\">Yemeni army says it intercepted Houthi boat attack near Red Sea islands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DWEhWcC1qb2tuWW1pV3FEcG9fX2RFYUh0Qm90UUtiOHEwRUpzbGRDNWxmV1p6U04xbFNtbmNlSkwxWHZuWGxfdXpPMC1JLTdxa0w0U3hyanA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-03T04:52:54.613Z"
     }
   ]
 }
