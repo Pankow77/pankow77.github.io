@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-27T05:31:23.802Z",
+  "last_fetch": "2026-09-27T11:16:20.181Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_69b2aa6adf13e1d4",
+      "timestamp": 1790500954000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Morocco’s king expresses support for Riyadh after Houthi attacks - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdFYyNEtVXzZ3ZHRkREdfY0hCVDhGU19qQjJpQkl6alZBMVNQNV9vdFhtRFo5RThZV1ZHRGJHbzNrenZXN2hqRG1XUlJxbGhYZnA4OGc0MFl6c0R2bmljZmlXelhoZFh1RXd6cl9hc2FYQS0tYjN6TUcxRHREaEVvdjRXc2dTdy1RU0RBN1lJczUwckJnNTN6TV9HMzIzQUE0TzZ3TzBoUzNSUQ?oc=5\" target=\"_blank\">Morocco’s king expresses support for Riyadh after Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdFYyNEtVXzZ3ZHRkREdfY0hCVDhGU19qQjJpQkl6alZBMVNQNV9vdFhtRFo5RThZV1ZHRGJHbzNrenZXN2hqRG1XUlJxbGhYZnA4OGc0MFl6c0R2bmljZmlXelhoZFh1RXd6cl9hc2FYQS0tYjN6TUcxRHREaEVvdjRXc2dTdy1RU0RBN1lJczUwckJnNTN6TV9HMzIzQUE0TzZ3TzBoUzNSUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T11:16:18.561Z"
+    },
+    {
+      "id": "rss_86f6b0a6f5051a04",
+      "timestamp": 1790500008000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Morocco's king expresses solidarity with Saudi Arabia after Houthi attacks - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOUTU5aTVMYmpQZmdtSjFXYlZnS3ZJbERSaEdGZlFyQy1Cb29QQ0xFOEQwRlpwWEF2cmFSbVo4SW1HMDNmcDc2YTJVTEV0VFZtdGFqUWZaalNsQnpVSW52eDlpUmRCbGgzVDZqNld2RVBTcFNrc3VyR2J5c1lKaG5fTlRTYjc5blNYYkJIWnBVcjZzMWlUNmFsMEoyNnFGc29CcVlacVJGMEpOOEw1eWFQak40dUY?oc=5\" target=\"_blank\">Morocco's king expresses solidarity with Saudi Arabia after Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUTU5aTVMYmpQZmdtSjFXYlZnS3ZJbERSaEdGZlFyQy1Cb29QQ0xFOEQwRlpwWEF2cmFSbVo4SW1HMDNmcDc2YTJVTEV0VFZtdGFqUWZaalNsQnpVSW52eDlpUmRCbGgzVDZqNld2RVBTcFNrc3VyR2J5c1lKaG5fTlRTYjc5blNYYkJIWnBVcjZzMWlUNmFsMEoyNnFGc29CcVlacVJGMEpOOEw1eWFQak40dUY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T11:16:18.560Z"
+    },
     {
       "id": "rss_e516ac53f5818950",
       "timestamp": 1790438400000,
@@ -1377,6 +1419,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T06:31:07.859Z"
+    },
+    {
+      "id": "rss_ba5a20ec1f4421e9",
+      "timestamp": 1790054786000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU's Kallas urges more naval assets for Red Sea mission - Yeni Şafak English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQb3VmUHg0RXpBajR6bVBoQ0FZdWJDQzFweEdsaGVUQzR6a1gtaDh3TUx3UVlIdTU5UFlHME9FMWNzUUZrRXdnejZMWXB0dXZTYmFTQ1dpMkxqdGdMUjMwSUgwY0FIMUs2bWNtMzlfX0tndmFRX3hDUVl5cUF1dXVzNGJ3YUtkWl91ZDQtZXh4dWwtclh4S0dYdQ?oc=5\" target=\"_blank\">EU's Kallas urges more naval assets for Red Sea mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Şafak English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQb3VmUHg0RXpBajR6bVBoQ0FZdWJDQzFweEdsaGVUQzR6a1gtaDh3TUx3UVlIdTU5UFlHME9FMWNzUUZrRXdnejZMWXB0dXZTYmFTQ1dpMkxqdGdMUjMwSUgwY0FIMUs2bWNtMzlfX0tndmFRX3hDUVl5cUF1dXVzNGJ3YUtkWl91ZDQtZXh4dWwtclh4S0dYdQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-27T11:16:19.522Z"
     },
     {
       "id": "rss_763ffd97e1555f00",
@@ -10820,71 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-08-31T00:43:31.389Z"
-    },
-    {
-      "id": "rss_b5fb9f62d0ecc186",
-      "timestamp": 1788092520000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni govt says forces destroy Houthi explosive-laden boat in Red Sea - chinadailyhk",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE50STY0dXphVUtqX3pSVWxFRU1zTGNJS3U2SFUwYzJVd0docURKeXlrbk1UOVdnYnRjWml6Tk9udXdfSDVIb081bkJldGNrNndhM2FZUG5OYVpEdw?oc=5\" target=\"_blank\">Yemeni govt says forces destroy Houthi explosive-laden boat in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyhk</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE50STY0dXphVUtqX3pSVWxFRU1zTGNJS3U2SFUwYzJVd0docURKeXlrbk1UOVdnYnRjWml6Tk9udXdfSDVIb081bkJldGNrNndhM2FZUG5OYVpEdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-03T09:23:57.593Z"
-    },
-    {
-      "id": "rss_04a661a7e15d6fa3",
-      "timestamp": 1787911200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - Council on Foreign Relations",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-31T06:35:17.055Z"
-    },
-    {
-      "id": "rss_812c9c447ffb0f71",
-      "timestamp": 1787894459000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen Navy Thwarts Houthi Attack in Red Sea - ASHARQ AL-AWSAT English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOaTVjUnh6bXdsWS1iYndGa1c5U3puVGFwYUtuZjNtRy1nbUs4UzgzWnZpQUJwRzJvZjB2TWxaTHpmS29Oa1hjNmlhZWlJeVYxamFoa0RGLVU0bkNmMF9qYVdlUVlXYU5Cdy1yTDVSbGd3Y002NHFRRTc0ZUJnb25GM2xTdzFFa2xNeGxQc2dubw?oc=5\" target=\"_blank\">Yemen Navy Thwarts Houthi Attack in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
-      "tags": [
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaTVjUnh6bXdsWS1iYndGa1c5U3puVGFwYUtuZjNtRy1nbUs4UzgzWnZpQUJwRzJvZjB2TWxaTHpmS29Oa1hjNmlhZWlJeVYxamFoa0RGLVU0bkNmMF9qYVdlUVlXYU5Cdy1yTDVSbGd3Y002NHFRRTc0ZUJnb25GM2xTdzFFa2xNeGxQc2dubw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-08-28T17:33:28.458Z"
     }
   ]
 }
