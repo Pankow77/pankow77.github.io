@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-27T22:28:54.786Z",
+  "last_fetch": "2026-09-28T01:04:13.917Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-27T22:28:53.240Z"
+    },
+    {
+      "id": "rss_d68cc06b035e9981",
+      "timestamp": 1790534232000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen: Houthis report deadly Saudi strikes on Taiz market - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2tiTmtOT3NLUTZvN1hYZHlETHUySG5iMnRvU0ltVS03QXAzWmtocndacEhvVGViM2xnbnFFbkhQLWt6eDlkQVhoUWtMRHNrSVBoS2l3VzlCQzVJTXdPTTVNZVg5WHF5eGdSZzN0ZmNBQlRZeDhmSkNOd3VJRElmbDU4aFVCUFFBTDFVLXl2U01OemfSAZMBQVVfeXFMTVJmck1SdmphcTFYLXhiV1U5ZHI5TzZMcVFjZDBZMFk4NTQ5U1RJSHVyM3pFU3pFZTlsTmNiTUQyODU4VFNRU2FOMGZuSVBfVjlfOXpQZk8zZlJWUDBDZmtmVG1CUHhKamZEVnpuTUoyU253U1g3cS05cWZMWHdMZXBkYXEzUTZsT19lNjg0dW1EcVc0?oc=5\" target=\"_blank\">Yemen: Houthis report deadl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2tiTmtOT3NLUTZvN1hYZHlETHUySG5iMnRvU0ltVS03QXAzWmtocndacEhvVGViM2xnbnFFbkhQLWt6eDlkQVhoUWtMRHNrSVBoS2l3VzlCQzVJTXdPTTVNZVg5WHF5eGdSZzN0ZmNBQlRZeDhmSkNOd3VJRElmbDU4aFVCUFFBTDFVLXl2U01OemfSAZMBQVVfeXFMTVJmck1SdmphcTFYLXhiV1U5ZHI5TzZMcVFjZDBZMFk4NTQ5U1RJSHVyM3pFU3pFZTlsTmNiTUQyODU4VFNRU2FOMGZuSVBfVjlfOXpQZk8zZlJWUDBDZmtmVG1CUHhKamZEVnpuTUoyU253U1g3cS05cWZMWHdMZXBkYXEzUTZsT19lNjg0dW1EcVc0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-28T01:04:12.135Z"
     },
     {
       "id": "rss_1a5eb81e3c1c3299",
@@ -10862,27 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-02T07:33:05.365Z"
-    },
-    {
-      "id": "rss_b077815b25f87bef",
-      "timestamp": 1788243963000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Clashes in Syria's Sweida with 'outlaw groups' wound four security personnel - TRT World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CY2dEVFV1Nl8ycV9oalpWYmRqSGg1bTBYQmx1ak96OW9sNExWbTR2T2NKajlUNDFkTmZXVGZDRzE0RTdmdER4Njc3a3dydkFUcm5ZVVhITmc?oc=5\" target=\"_blank\">Clashes in Syria's Sweida with 'outlaw groups' wound four security personnel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9CY2dEVFV1Nl8ycV9oalpWYmRqSGg1bTBYQmx1ak96OW9sNExWbTR2T2NKajlUNDFkTmZXVGZDRzE0RTdmdER4Njc3a3dydkFUcm5ZVVhITmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-01T10:18:24.239Z"
     }
   ]
 }
