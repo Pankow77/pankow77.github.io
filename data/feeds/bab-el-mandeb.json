@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-28T01:04:13.917Z",
+  "last_fetch": "2026-09-28T07:15:02.192Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_00363928f9d2fdd2",
+      "timestamp": 1790575980000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Old Russian drone attack video falsely linked to Houthi strike on Saudi Arabia - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOTTZyVjdMUmZYdndfRWpkcGVCbm14a21jMWlUQU4tanJRWEtQU2ZUUGhKYlFib0h0UlpnTUV0MENOejB4UkFmd3QwbVllUHc1OEEtMTYwT1IxOTZhS184dEtCVzBoVlNUZW5iV21QZTRTbzZSdmUyWjBfNThnYUh2dWRNNA?oc=5\" target=\"_blank\">Old Russian drone attack video falsely linked to Houthi strike on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTTZyVjdMUmZYdndfRWpkcGVCbm14a21jMWlUQU4tanJRWEtQU2ZUUGhKYlFib0h0UlpnTUV0MENOejB4UkFmd3QwbVllUHc1OEEtMTYwT1IxOTZhS184dEtCVzBoVlNUZW5iV21QZTRTbzZSdmUyWjBfNThnYUh2dWRNNA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-28T07:15:00.788Z"
+    },
     {
       "id": "rss_21bc9933dfbd3de2",
       "timestamp": 1790544302000,
@@ -10862,27 +10885,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-07T06:22:25.905Z"
-    },
-    {
-      "id": "rss_9e62e6cd408ad3f5",
-      "timestamp": 1788329014000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Israeli forces say interceptors launched at suspected aerial target from Lebanon - TRT World",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9nOUxvT1ZOeW96aXFBVU9uZGFaX1BfVE02bjdIeGhqTWpCdjk3bTdKT09ZTmNxa3BUSUdjZGM4VnptcTNnM3ZnR0NoQkFuQU9vUUxLcl9fM1Q?oc=5\" target=\"_blank\">Israeli forces say interceptors launched at suspected aerial target from Lebanon</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9nOUxvT1ZOeW96aXFBVU9uZGFaX1BfVE02bjdIeGhqTWpCdjk3bTdKT09ZTmNxa3BUSUdjZGM4VnptcTNnM3ZnR0NoQkFuQU9vUUxLcl9fM1Q?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-02T07:33:05.365Z"
     }
   ]
 }
