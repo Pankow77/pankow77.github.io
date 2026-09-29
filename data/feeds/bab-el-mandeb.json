@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-29T14:11:45.703Z",
+  "last_fetch": "2026-09-29T19:32:07.227Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e51373c707382986",
+      "timestamp": 1790699362000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Tankers Are Loading Oil Again From a Vital Saudi Pipeline - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOdFNXVWJfZHpCT0NnS2t4MnRJMFNVbjlEb0xidV85S0xqVHRCc0JfczVydHFBVEhLc212OGpJRGhhS2NjWFZWN08zaHFGeG1Ta2plcFV3bWlUMUNYMk8wQlF4dGpGVG5rVGVVMy13VGpjVHpTTk5iR1ZudVkwbXlHUlN4OA?oc=5\" target=\"_blank\">Tankers Are Loading Oil Again From a Vital Saudi Pipeline</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdFNXVWJfZHpCT0NnS2t4MnRJMFNVbjlEb0xidV85S0xqVHRCc0JfczVydHFBVEhLc212OGpJRGhhS2NjWFZWN08zaHFGeG1Ta2plcFV3bWlUMUNYMk8wQlF4dGpGVG5rVGVVMy13VGpjVHpTTk5iR1ZudVkwbXlHUlN4OA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T19:32:05.602Z"
+    },
+    {
+      "id": "rss_3304f3c6aab128ab",
+      "timestamp": 1790695746000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen: Deadly Houthi Attack on Lahj Coast Leaves Casualties - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE93YkxrV1hyc1Zxc0JnVUw0NGlpbHc0OFR2Wi1NMGFTdk5QVjl3SnpxWDloWHFCS0JNeWxqMTRTMjZDdUlLSmRDM2RxSkdBMi11eHNTUW9SR0xDdw?oc=5\" target=\"_blank\">Yemen: Deadly Houthi Attack on Lahj Coast Leaves Casualties</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE93YkxrV1hyc1Zxc0JnVUw0NGlpbHc0OFR2Wi1NMGFTdk5QVjl3SnpxWDloWHFCS0JNeWxqMTRTMjZDdUlLSmRDM2RxSkdBMi11eHNTUW9SR0xDdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T19:32:05.602Z"
+    },
     {
       "id": "rss_488977db196cb33f",
       "timestamp": 1790685778000,
@@ -549,6 +593,30 @@
       "fetched_at": "2026-09-26T11:38:15.181Z"
     },
     {
+      "id": "rss_68cb03db6e0ce792",
+      "timestamp": 1790417700000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Gulf Cooperation Council condemns Houthi missile, drone attacks on Saudi Arabia - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQdG52TFdJaTBVZ1hKTnl2aVcxWUF3RW9oVk5zWHkzOFlhWmg3TGlnR2FyMjFfLUFnQ2J5eWVuelNNaF9DWUUwcmgxLTZja3RRaW0xd01WS204U3hxbXdmaXJBOXlsbkllOUVEcnhDRWl4ZnhMYzUwdU1MazEzZFplWmdsc1pxZV9mQ2lvcUZMb3VPM3JjcEprZnF1ZlRHY1E0LWVhX000a0JyRzJwdE9LVWFmSG9BSnNsc2hwdnlia9IBxAFBVV95cUxPbno0NTE5YW51bjhTOUQxcVdES0lEcnBlSWM0cFUwTVlEUktvbURvUGFSNTgyc0JiWU5xLTFVckgtVzIwTHg4VmljWGF3bU1zSWltSUllTGplQ1hOUEZkY3ZNbmRWdUdhc3dKSDFqQ2VPdGhlVWVWM3p5ckZybnBCRVhRdTljODBtVUpvV0",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdG52TFdJaTBVZ1hKTnl2aVcxWUF3RW9oVk5zWHkzOFlhWmg3TGlnR2FyMjFfLUFnQ2J5eWVuelNNaF9DWUUwcmgxLTZja3RRaW0xd01WS204U3hxbXdmaXJBOXlsbkllOUVEcnhDRWl4ZnhMYzUwdU1MazEzZFplWmdsc1pxZV9mQ2lvcUZMb3VPM3JjcEprZnF1ZlRHY1E0LWVhX000a0JyRzJwdE9LVWFmSG9BSnNsc2hwdnlia9IBxAFBVV95cUxPbno0NTE5YW51bjhTOUQxcVdES0lEcnBlSWM0cFUwTVlEUktvbURvUGFSNTgyc0JiWU5xLTFVckgtVzIwTHg4VmljWGF3bU1zSWltSUllTGplQ1hOUEZkY3ZNbmRWdUdhc3dKSDFqQ2VPdGhlVWVWM3p5ckZybnBCRVhRdTljODBtVUpvV0w3VlR4TTI0WV9LdlpXV1BYcExqSFBySkhYQjB5M0R2YnBVOHVWOGlzcjdtQ3IxYWxXOGVqOVNm?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T19:32:05.603Z"
+    },
+    {
       "id": "rss_576a4c0d06e3f3ba",
       "timestamp": 1790416197000,
       "source": "OSINT",
@@ -591,6 +659,31 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-26T11:38:15.181Z"
+    },
+    {
+      "id": "rss_06e6066ebbe00488",
+      "timestamp": 1790396483000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi coalition says it intercepts Houthi missiles, drones targeting Khamis Mushait, Riyadh - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hN3pyNlVuMThfeHcxd3BCVkdWU19FN2RkV1RXSmNYSnRLUENROTJlT0xfSXRDSnJ0WmJ5aklmUnVyZHYtOU5fTU5sOFV1cWl2ZFFfdkZ2eDAwVFhM?oc=5\" target=\"_blank\">Saudi coalition says it intercepts Houthi missiles, drones targeting Khamis Mushait, Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hN3pyNlVuMThfeHcxd3BCVkdWU19FN2RkV1RXSmNYSnRLUENROTJlT0xfSXRDSnJ0WmJ5aklmUnVyZHYtOU5fTU5sOFV1cWl2ZFFfdkZ2eDAwVFhM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T19:32:05.603Z"
     },
     {
       "id": "rss_71f8169fe98642d1",
@@ -10798,96 +10891,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-07T12:52:20.843Z"
-    },
-    {
-      "id": "rss_5e711954da8ef670",
-      "timestamp": 1788660120000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Analysis • Saudi Arabia's military alliances won't shield it from a Houthi Red Sea blockade - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxOOGZkRElwRDVFUnFxN0JQdGFwYmY2eDNhTlBudldJbUs5WW4tZTZMRnozSkpCWlNtX2xUWnZLVm1sS1Y4M1Q1RW1mSS1LeTA3MWM2aVB2ZTIya200OWNMVWIxTUlleENfNTc1SGI2czhIOWtSLXBMUm5DZTlLSmxhcXZfelhHdDhvS0hHdGZCbkJYcGRhTUFQYkJSNTAyZUJGcjdPa3dZS2pFUTN0NkZCUFl3T045UVNJMlZPQXVwTzRCd3QzTGF4eHJsRGNUS1JFN19mX3dTa2xNTG5HeVRiWG1nMmpzcWIzZExvcWJmYy1tNE1lRF9meG5XNlVsRURVZ3FwdUZSREtodENtdGVRdnlCSHR1Zw?oc=5\" target=\"_blank\">Analysis • Saudi Arabia's military alliances won't sh",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxOOGZkRElwRDVFUnFxN0JQdGFwYmY2eDNhTlBudldJbUs5WW4tZTZMRnozSkpCWlNtX2xUWnZLVm1sS1Y4M1Q1RW1mSS1LeTA3MWM2aVB2ZTIya200OWNMVWIxTUlleENfNTc1SGI2czhIOWtSLXBMUm5DZTlLSmxhcXZfelhHdDhvS0hHdGZCbkJYcGRhTUFQYkJSNTAyZUJGcjdPa3dZS2pFUTN0NkZCUFl3T045UVNJMlZPQXVwTzRCd3QzTGF4eHJsRGNUS1JFN19mX3dTa2xNTG5HeVRiWG1nMmpzcWIzZExvcWJmYy1tNE1lRF9meG5XNlVsRURVZ3FwdUZSREtodENtdGVRdnlCSHR1Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-06T06:14:10.958Z"
-    },
-    {
-      "id": "rss_b00cae197203e745",
-      "timestamp": 1788610543000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "4 killed, 9 wounded in Houthi missile attack in Yemen's Taiz - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQMzBFcWFFYUtvdldkbENhUVl4aEtxaFJXd2gzVEVDdkxVVm1xcnRDU0d3WjhxWTYxZXB0QVBoQXlOREpOVlNTZDhxSW1HX0dfSzFjMG51UmpkbGd1Vkw4RTkwM3Ffbng5ZUZvNVRVdDNmaG1adUlNanZ2Ti0ySVYyU2xvVGVfdzZvVUhVbDVqdHpoUm1uNUgxdzI3V0FhNDR6?oc=5\" target=\"_blank\">4 killed, 9 wounded in Houthi missile attack in Yemen's Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMzBFcWFFYUtvdldkbENhUVl4aEtxaFJXd2gzVEVDdkxVVm1xcnRDU0d3WjhxWTYxZXB0QVBoQXlOREpOVlNTZDhxSW1HX0dfSzFjMG51UmpkbGd1Vkw4RTkwM3Ffbng5ZUZvNVRVdDNmaG1adUlNanZ2Ti0ySVYyU2xvVGVfdzZvVUhVbDVqdHpoUm1uNUgxdzI3V0FhNDR6?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-05T15:24:25.707Z"
-    },
-    {
-      "id": "rss_7a0fd9f08fc5f152",
-      "timestamp": 1788609763000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "At least 4 civilians killed in Houthi missile attack in Yemen’s Taiz - Latest news from Azerbaijan",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxOdV96anRTRE1McXc3ZHJqd1M3NHJMeUJhb2FwY1hHUzVjcHkzTHVIaG1EN0xRQTN5elJlUkpJeWxKTmtucDVqNERoWkxjU290V1prM0dRQUU1ODFicExLaVNoamw0WVByUkRXNzZaeWUxaVhzZkVzRUFxaE40VW9SaFQ0ZTd6QUExaF9LMHg5T09qZw?oc=5\" target=\"_blank\">At least 4 civilians killed in Houthi missile attack in Yemen’s Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdV96anRTRE1McXc3ZHJqd1M3NHJMeUJhb2FwY1hHUzVjcHkzTHVIaG1EN0xRQTN5elJlUkpJeWxKTmtucDVqNERoWkxjU290V1prM0dRQUU1ODFicExLaVNoamw0WVByUkRXNzZaeWUxaVhzZkVzRUFxaE40VW9SaFQ0ZTd6QUExaF9LMHg5T09qZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-05T12:18:21.911Z"
-    },
-    {
-      "id": "rss_323b641d0b17b07e",
-      "timestamp": 1788608448000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "4 civilians killed, 9 injured in Houthi missile attack south of Taiz - Report.az",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOcl9udGRSeU02Yms1S2YtREJ4bGJSS3JLbkF1MjZkNTdwWjhXWTE1WnJzUHRoLVJPRndZNjl6R1V2X0YtSTM2N2VPVjdRUXo4a3JENEVNMUhLa3BNak54S2d1VGlWdDJIRVhQdG1QcXhPZmlrdkk4Mm9rTVZGdUtoTU1hb3NvNjMtSmhld0tTeDJjT20xZENyRDlrM1JyaXpwWFBrYnE5UdIBrAFBVV95cUxNek0zemc0Rkl1SFByLVRfaUdTd0xiT3RCWVJhVFNBYkJVeGNkOXpQc09ia0pMdDFJSTlWUEEtX0t3aDR1dkVIcGR5TzRxbG1iNmFURktDQlJLeGZTbGhVNlNsMWdkR3d2Q3ViX0p3RldocGpfWm1Bb0k3YVVRNkZxbHZEQmt1MkpTTnhNRlNxLTZEWTk1TDJUcVpFUjBrbmhiOWxCUj",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcl9udGRSeU02Yms1S2YtREJ4bGJSS3JLbkF1MjZkNTdwWjhXWTE1WnJzUHRoLVJPRndZNjl6R1V2X0YtSTM2N2VPVjdRUXo4a3JENEVNMUhLa3BNak54S2d1VGlWdDJIRVhQdG1QcXhPZmlrdkk4Mm9rTVZGdUtoTU1hb3NvNjMtSmhld0tTeDJjT20xZENyRDlrM1JyaXpwWFBrYnE5UdIBrAFBVV95cUxNek0zemc0Rkl1SFByLVRfaUdTd0xiT3RCWVJhVFNBYkJVeGNkOXpQc09ia0pMdDFJSTlWUEEtX0t3aDR1dkVIcGR5TzRxbG1iNmFURktDQlJLeGZTbGhVNlNsMWdkR3d2Q3ViX0p3RldocGpfWm1Bb0k3YVVRNkZxbHZEQmt1MkpTTnhNRlNxLTZEWTk1TDJUcVpFUjBrbmhiOWxCUjJ6Q00zS25D?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-05T12:18:21.912Z"
     }
   ]
 }
