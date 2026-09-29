@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-29T07:12:52.474Z",
+  "last_fetch": "2026-09-29T14:11:45.703Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_488977db196cb33f",
+      "timestamp": 1790685778000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "The Mecca alliance meets the Red Sea – Saudi Arabia’s new defense pact faces its first major test - The Conversation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcW5WVTIyal93cEk2MkdTNDZqYTlscVd3dTVVdkpQWlFhUlNNSGFWSk4xN0hHcmVsUVdqbHN0QzRfWVhCa0ZKM3REZlFPQlI0b3AwYzRwbF9EQUMzYUhMVG1LVzNOZ2xpQkx4SC10dlpwdFBHVjZlRE1xM3FXZlRHX25xU00yTGdjR2pORjdGOUhqSkVFbEtzbFk3OHZaNGo5ai0tTGg4cVplcWZnSTB5V0w3THRmd0VXQjd1Q0tkVl9fU3g2cmQwSA?oc=5\" target=\"_blank\">The Mecca alliance meets the Red Sea – Saudi Arabia’s new defense pact faces its first major test</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcW5WVTIyal93cEk2MkdTNDZqYTlscVd3dTVVdkpQWlFhUlNNSGFWSk4xN0hHcmVsUVdqbHN0QzRfWVhCa0ZKM3REZlFPQlI0b3AwYzRwbF9EQUMzYUhMVG1LVzNOZ2xpQkx4SC10dlpwdFBHVjZlRE1xM3FXZlRHX25xU00yTGdjR2pORjdGOUhqSkVFbEtzbFk3OHZaNGo5ai0tTGg4cVplcWZnSTB5V0w3THRmd0VXQjd1Q0tkVl9fU3g2cmQwSA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T14:11:44.128Z"
+    },
     {
       "id": "rss_21845016c947a8ae",
       "timestamp": 1790624979000,
@@ -26,6 +47,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-29T07:12:51.992Z"
+    },
+    {
+      "id": "rss_08336a66a71e7a25",
+      "timestamp": 1790624975000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Naval Mission Aspides: Italy Urges EU to Strengthen Red Sea Protection - Data Portuaria",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPLUQ0cGZFc3U2UmtMbDRKekowem9Yd05ENHJYQ0M4Nm8ya18zSDcxQnpCX056RGQ3d0hrc0c1MVlJQkZ4MzJiMTBxOHg0cllpU1JHX1BiRXMtMDl2NnhDU1VsLUNWSjNaUDh5YmhsWGQtcGN6YzJvaktRV3hoOFYzX256YmRFWjNEY3I1RGJYbmlONXdmWEZQTl9jcUxtakxNN3I0bXpjUFZFenhTR1JHc0dQcXNmanBQ?oc=5\" target=\"_blank\">Naval Mission Aspides: Italy Urges EU to Strengthen Red Sea Protection</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Data Portuaria</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPLUQ0cGZFc3U2UmtMbDRKekowem9Yd05ENHJYQ0M4Nm8ya18zSDcxQnpCX056RGQ3d0hrc0c1MVlJQkZ4MzJiMTBxOHg0cllpU1JHX1BiRXMtMDl2NnhDU1VsLUNWSjNaUDh5YmhsWGQtcGN6YzJvaktRV3hoOFYzX256YmRFWjNEY3I1RGJYbmlONXdmWEZQTl9jcUxtakxNN3I0bXpjUFZFenhTR1JHc0dQcXNmanBQ?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T14:11:45.106Z"
     },
     {
       "id": "rss_050630bda55d470f",
@@ -373,6 +415,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-27T15:43:37.220Z"
+    },
+    {
+      "id": "rss_5e5fc347dc948cfe",
+      "timestamp": 1790510801000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen government forces widen attacks against Houthis: What we know - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxONGVIbjJTVHlFbzBZdEp6ano2SzlFaFBxTXM0YnhrNThlN2dubVFwSmU3RlBHbjVCU056bWxTVVYxTnNZbnFlbFRveUdnM3BMTjMzbEdfVWhKd2ZUalhKTVhpV2RWN2dyY3R6ckdhcmszUGdzYlZRWVJLaVdjUzRENlEyZHdlRzlQZmtseE9oNmtNUlUyZWM2ZDVaX2FvUXBUM2JaNzEta2ZZVTjSAbABQVVfeXFMTmtZQ0p2ajhMWXZxOEFaRFU0b2U2aFZQWGZ4U181ZUJGbDNBcG1rWXlEd0FxdDN0ZTh0S3hnTXctOEk1SkhHaU1qZ0ZYa3drZGtoNUUza2tORGsyY2NaMGJwTG14eHFZZDZHOWJETHlCby1Id1ppRk85aUtkZ0pNNmlOZU1kSVltY3pWNnNzbEtRN2NBaUgwQUhuV0NUdGxCek",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONGVIbjJTVHlFbzBZdEp6ano2SzlFaFBxTXM0YnhrNThlN2dubVFwSmU3RlBHbjVCU056bWxTVVYxTnNZbnFlbFRveUdnM3BMTjMzbEdfVWhKd2ZUalhKTVhpV2RWN2dyY3R6ckdhcmszUGdzYlZRWVJLaVdjUzRENlEyZHdlRzlQZmtseE9oNmtNUlUyZWM2ZDVaX2FvUXBUM2JaNzEta2ZZVTjSAbABQVVfeXFMTmtZQ0p2ajhMWXZxOEFaRFU0b2U2aFZQWGZ4U181ZUJGbDNBcG1rWXlEd0FxdDN0ZTh0S3hnTXctOEk1SkhHaU1qZ0ZYa3drZGtoNUUza2tORGsyY2NaMGJwTG14eHFZZDZHOWJETHlCby1Id1ppRk85aUtkZ0pNNmlOZU1kSVltY3pWNnNzbEtRN2NBaUgwQUhuV0NUdGxCek5qYkpFVjlvcFVmOWI0UlI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-09-29T14:11:44.128Z"
     },
     {
       "id": "rss_69b2aa6adf13e1d4",
@@ -10825,69 +10888,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-05T12:18:21.912Z"
-    },
-    {
-      "id": "rss_c46fa22496b395f3",
-      "timestamp": 1788590451000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi Attack on Western Yemen Tests Readiness of Govt Forces - ASHARQ AL-AWSAT English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNM1FoWGhmZDBYU1ctV1N6Vl9jRERzLW9VemhjLWp0MFNWUm1zci1RdVhWUlVTektkSzA3OEJYX2o1bXJxc01XRUtaa0wtd0FhVUUtYy1Ib3Q3bUtZbUVEOEFhN3ZFQ1JpcmtXRXRoRm4zemRMOGM1RmphdmFubUdsSF9qTTFLdFJILTdIRmVSam81eFNkekM4WFlHT1VGOHFmMkpj?oc=5\" target=\"_blank\">Houthi Attack on Western Yemen Tests Readiness of Govt Forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNM1FoWGhmZDBYU1ctV1N6Vl9jRERzLW9VemhjLWp0MFNWUm1zci1RdVhWUlVTektkSzA3OEJYX2o1bXJxc01XRUtaa0wtd0FhVUUtYy1Ib3Q3bUtZbUVEOEFhN3ZFQ1JpcmtXRXRoRm4zemRMOGM1RmphdmFubUdsSF9qTTFLdFJILTdIRmVSam81eFNkekM4WFlHT1VGOHFmMkpj?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-05T08:45:52.265Z"
-    },
-    {
-      "id": "rss_6d12927878c28486",
-      "timestamp": 1788572203000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen: Fighting Intensifies Amid Houthi Push in the West - Tempo.co English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNck5IRXlXa1BvcmxWMUU1RzVCVm5EUHBhOGJJZ1F6VFQyU1gwNHowYTZQQWp0cERfS0RBaGFROTFsbU9iSnRZMmxWMzBJNWIzLXc2RFZJeWc3YTlSUml3eV9Ka09INTFWZkhidUJyMThvSzBaWjJ1Sk5WT0xEWGo2bGd4MThjLWV1dVMySHNZOHlOdw?oc=5\" target=\"_blank\">Yemen: Fighting Intensifies Amid Houthi Push in the West</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Tempo.co English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNck5IRXlXa1BvcmxWMUU1RzVCVm5EUHBhOGJJZ1F6VFQyU1gwNHowYTZQQWp0cERfS0RBaGFROTFsbU9iSnRZMmxWMzBJNWIzLXc2RFZJeWc3YTlSUml3eV9Ka09INTFWZkhidUJyMThvSzBaWjJ1Sk5WT0xEWGo2bGd4MThjLWV1dVMySHNZOHlOdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-05T04:46:03.037Z"
-    },
-    {
-      "id": "rss_8cd9ca8d58e85d6d",
-      "timestamp": 1788542868000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "RED SEA EXPLODES: 100+ Killed As Houthis Unleash ‘BIGGEST EVER ATTACK’ On Saudi-Backed Forces - The Times of India",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaGdnSUtiLVZWZnpQY2FMZWVrNndnV3VnTGd4aDVkM05rUG1fUHNON1o2LVpwYUFRU1Z1SXE0NW00emZaOXBmLW5Ca0ZHbWE3LXdRNS1RUG16dXBwRnd0VDRxN1NMa1c1ejNxNlNQYmsxVDJibHIwVTJXM0duVzVsa2tNNUJZczNhMVROY3p2cnZrZ01CTllGVGhGZ0xDWHlVTUg5cjVPc0ViU0RlamY5Y0xBVWNkMzcxS1RIZjQ4c3JWXzBOdy1OOXVZSHJ3RmpBYTh4OG05U2owVE01QW9JRC1LbFpUTW5jNTFEd3dYbldxbFotU2ZrY3pVSW9nY03SAYQCQVVfeXFMTVNVX21UR2xHX1Y4NXpuOVpnTHJQWlpQQ1Y0UHRySG5ZR0t2RnlVcXVDQ2FmZUlRbXlIUjFyeUFmMERGYmNLRGtqMFNmQz",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQaGdnSUtiLVZWZnpQY2FMZWVrNndnV3VnTGd4aDVkM05rUG1fUHNON1o2LVpwYUFRU1Z1SXE0NW00emZaOXBmLW5Ca0ZHbWE3LXdRNS1RUG16dXBwRnd0VDRxN1NMa1c1ejNxNlNQYmsxVDJibHIwVTJXM0duVzVsa2tNNUJZczNhMVROY3p2cnZrZ01CTllGVGhGZ0xDWHlVTUg5cjVPc0ViU0RlamY5Y0xBVWNkMzcxS1RIZjQ4c3JWXzBOdy1OOXVZSHJ3RmpBYTh4OG05U2owVE01QW9JRC1LbFpUTW5jNTFEd3dYbldxbFotU2ZrY3pVSW9nY03SAYQCQVVfeXFMTVNVX21UR2xHX1Y4NXpuOVpnTHJQWlpQQ1Y0UHRySG5ZR0t2RnlVcXVDQ2FmZUlRbXlIUjFyeUFmMERGYmNLRGtqMFNmQzU2N0o3SHByaktVSVlBcnQzcmluRzd2bk9tSklvNUZ6dFFXS3p5azI5Y0oxa3NQbk1LdWQtT3FhTWtQVUQyMG5GamlnZXlrUzV3TXo2Yk5JWnhMSlhWTmdGZmdHYkcwSnV4RVdwNE5GS2RWZml1QjYyWm9zRURnN2poanFNTkhJWWJTbUNZRlFSMmRwNF91ZWFQZ0IwZVl5cTdoelNHR3UzTFJNT3hwbFdLMnYtMXJfLWtVV25Sb0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-04T19:45:46.442Z"
     }
   ]
 }
