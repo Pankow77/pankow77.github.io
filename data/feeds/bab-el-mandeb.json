@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-28T21:32:14.831Z",
+  "last_fetch": "2026-09-29T01:25:20.662Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -67,6 +67,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-28T15:43:30.738Z"
+    },
+    {
+      "id": "rss_b137df986ba06df0",
+      "timestamp": 1790598265000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Spain will not send new ships to the European Aspides mission in the Red Sea “under any circumstances” - thediplomatinspain.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxNOE5BVkJ2cGlhdmpNRGFWQ0Yzb0VOU2tSdUlPQ1V0RmhMNW5yUnlIWFRpMmp6VmNYd3pleUloVms1ODVKRURiOUlxSXFCQ0FON3lRQkxBMGgwRl9TbGVvSVZ6dzlldDhKWEtIRC1DWXZnN2dETEYtV2NIclZmak85YmVIbkdJTHcxQlh3Y0E3REFsVGZxMGVpaFQ5bW9LNFpNYlBRYkhDaDJSdmY3ZzBRbEZLUm1QQmdjeEtJZnIzbDM0bXRXMzNPeDYyeFhucVFWakx5WWFkd3JQWFRLX1BR?oc=5\" target=\"_blank\">Spain will not send new ships to the European Aspides mission in the Red Sea “under any circumstances”</a>&nbsp;&nbsp;<font col",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNOE5BVkJ2cGlhdmpNRGFWQ0Yzb0VOU2tSdUlPQ1V0RmhMNW5yUnlIWFRpMmp6VmNYd3pleUloVms1ODVKRURiOUlxSXFCQ0FON3lRQkxBMGgwRl9TbGVvSVZ6dzlldDhKWEtIRC1DWXZnN2dETEYtV2NIclZmak85YmVIbkdJTHcxQlh3Y0E3REFsVGZxMGVpaFQ5bW9LNFpNYlBRYkhDaDJSdmY3ZzBRbEZLUm1QQmdjeEtJZnIzbDM0bXRXMzNPeDYyeFhucVFWakx5WWFkd3JQWFRLX1BR?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-29T01:25:20.115Z"
     },
     {
       "id": "rss_a155a9babf14e02d",
@@ -10864,30 +10887,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-04T19:45:46.441Z"
-    },
-    {
-      "id": "rss_d9dc274a1942027f",
-      "timestamp": 1788541230000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel - News On AIR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5\" target=\"_blank\">Yemen’s Iran-backed Houthi movement claims responsibility for third missile attack on Israel</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">News On AIR</font>",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQcmlRQXl4Y25lYzRCcXBRSUpUdldRUXVuWEh2aEFnM2d3ejYyZUY2WC1TbUpxcDY1dXQwZlN0dVUxN3plb0J4OGFjTEtadmdtY0xISXZ5Y042aDJpVmRVTHFZQjh6ZVNxdE9MSVlHeWxGZW91Zmh1RFdJdUJKSG9Vc0tHNkQxWGxqXzEyVE16el9xakhtb0wwa19DeUg5RUl6QWQ3cENmTnJJdGFGdDdVWTJDZENLR3dX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-04T22:02:37.005Z"
     }
   ]
 }
