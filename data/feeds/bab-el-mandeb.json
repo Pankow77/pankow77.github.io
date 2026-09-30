@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-30T15:32:58.568Z",
+  "last_fetch": "2026-09-30T20:28:45.690Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-30T15:32:56.952Z"
+    },
+    {
+      "id": "rss_de83a165b906a801",
+      "timestamp": 1790753989000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU Demands Increased Naval Presence in the Red Sea - israeldefense.co.il",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9lSG1Hd2dzTk9WSVhYVy1RZXlGemw5YVZWOTV0M3pPY1I0YnFLMEJWOHpFUTRCMzFnM0c1dDFZbWI3blBmVEZCbmJza0dDcGtDRnpDX2U3enc?oc=5\" target=\"_blank\">EU Demands Increased Naval Presence in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">israeldefense.co.il</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9lSG1Hd2dzTk9WSVhYVy1RZXlGemw5YVZWOTV0M3pPY1I0YnFLMEJWOHpFUTRCMzFnM0c1dDFZbWI3blBmVEZCbmJza0dDcGtDRnpDX2U3enc?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-30T20:28:45.107Z"
     },
     {
       "id": "rss_1b1521dbedfc8890",
@@ -10863,27 +10884,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeEFvZ09qQTNFblRvZ2RRYklUUHN6aFJsMzg0RzFCZ2RSV3A1eUMydVhxbUFITmp6eFBuT01SVGxPR05WRDBmbG03U1NEbllGN2Y3OF80ZmUyWHdILUk1cWpQaW9VWG5GdndJU2VHNVpBVVZwakNrWC1qOVZkRmZsampmX1NmN0UwOUhUV3dtNzByWG5YSEpHcUZNMzVONl83ZXFvYWROQ1NJbDVTNUNyenZ5MzNlUWp1VUdFSE9R0gHDAUFVX3lxTE5vTy05eGRRNW53b1dUNHlSUnpmZWJCZDIwZEdqRWVZQmdkZGFWaUZHNTJBNjRyZ0RLVHplSFhVZXdBc3BaWXphZ2twd3dRajkwcnRyMkRCV3drc1BWb25WNFMtSEN6MC1abUtiZ3kyNnBfN2NfMEp5MkhJSU9xYzhmUVFKaTN4bFZlal9QUmZxSmpyajJhRVU1cWYtWFdOSC1iX1VJZ3lUeEZqQUJoMUViN2FsTG9RWEh1SEMwaktSUUFQQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T18:03:03.433Z"
-    },
-    {
-      "id": "rss_683dc3e8faae8492",
-      "timestamp": 1788784216000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi's Jazan refinery reported hit again - qcintel.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPWElvbzhnemRBeG9kZFl0WUJFZ1lkWDBIT1VudnM1V0tDeUN3S0VwNzdPYjlnNkhxMlhJWGR0bE9XSHpyQk1Lcmkwam9ieTJIaGpYcVl4YVBfZ0FWUmRjcmIyeFMxM2J4NV9PZWQyaXJFaDBka1lVVnRJYXRZRTFtN3d2WDJjV3ZKWmQtNw?oc=5\" target=\"_blank\">Saudi's Jazan refinery reported hit again</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">qcintel.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWElvbzhnemRBeG9kZFl0WUJFZ1lkWDBIT1VudnM1V0tDeUN3S0VwNzdPYjlnNkhxMlhJWGR0bE9XSHpyQk1Lcmkwam9ieTJIaGpYcVl4YVBfZ0FWUmRjcmIyeFMxM2J4NV9PZWQyaXJFaDBka1lVVnRJYXRZRTFtN3d2WDJjV3ZKWmQtNw?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
