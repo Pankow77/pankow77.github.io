@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-30T02:15:08.816Z",
+  "last_fetch": "2026-09-30T08:49:21.280Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -112,6 +112,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-29T14:11:45.106Z"
+    },
+    {
+      "id": "rss_04a661a7e15d6fa3",
+      "timestamp": 1790609834000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - Council on Foreign Relations",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-30T08:49:21.276Z"
     },
     {
       "id": "rss_050630bda55d470f",
@@ -10868,29 +10889,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-07T18:03:03.434Z"
-    },
-    {
-      "id": "rss_c44b885ff460dcc1",
-      "timestamp": 1788702438000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis target Saudi forces, claim to strike vehicles using 'domestically manufactured' missiles - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VU3hOY1ItdWx4ZWt4d2p5Uk83djJJbndTX1UwTjVVTEt0aXlRcng3RjR3SnBfbXY3RFI4YmcxX3VQcHJPYmRpUERuMUllTzZudnc1X01DLVdnRGtk?oc=5\" target=\"_blank\">Houthis target Saudi forces, claim to strike vehicles using 'domestically manufactured' missiles</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1VU3hOY1ItdWx4ZWt4d2p5Uk83djJJbndTX1UwTjVVTEt0aXlRcng3RjR3SnBfbXY3RFI4YmcxX3VQcHJPYmRpUERuMUllTzZudnc1X01DLVdnRGtk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T12:52:20.843Z"
     }
   ]
 }
