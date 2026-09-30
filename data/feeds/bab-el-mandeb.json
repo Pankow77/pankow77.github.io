@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-09-30T08:49:21.280Z",
+  "last_fetch": "2026-09-30T15:32:58.568Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ff4664c8e1c61f06",
+      "timestamp": 1790773490000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Old Video Falsely Linked to Houthi Attack on Riyadh - موقع مسبار",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQaE44cVhLX3g2R1JHTXVydW1rTFg1TWZWZE9iMFVXd1ZOZU5WOW42cUQ3dmJLUzlwRFRIaEFvSzI1WmFiOVEtMXFMN1hlYUdkZlYwd05vNTZHWHFsZVpVVnRTSEFKdFp3R04xeGdpR2lITlUxaDlERDRoZ2RFU0xsN0Q0X1pQRzdYQzhsNDIxbVFTTzVHZC1r?oc=5\" target=\"_blank\">Old Video Falsely Linked to Houthi Attack on Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaE44cVhLX3g2R1JHTXVydW1rTFg1TWZWZE9iMFVXd1ZOZU5WOW42cUQ3dmJLUzlwRFRIaEFvSzI1WmFiOVEtMXFMN1hlYUdkZlYwd05vNTZHWHFsZVpVVnRTSEFKdFp3R04xeGdpR2lITlUxaDlERDRoZ2RFU0xsN0Q0X1pQRzdYQzhsNDIxbVFTTzVHZC1r?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-30T15:32:56.952Z"
+    },
+    {
+      "id": "rss_1b1521dbedfc8890",
+      "timestamp": 1790730495000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Exclusive: Iran Denies Involvement in Attack on Saudi Oil Pipeline - الحرة",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE9PWHdOY01aU2ZxTUJ1ckdiMThGSDVieDF2eEtBMFBkWkZnVzdMbU9sa0ZrYndfOU1zeUpDMW5IMkgwQQ?oc=5\" target=\"_blank\">Exclusive: Iran Denies Involvement in Attack on Saudi Oil Pipeline</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9PWHdOY01aU2ZxTUJ1ckdiMThGSDVieDF2eEtBMFBkWkZnVzdMbU9sa0ZrYndfOU1zeUpDMW5IMkgwQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-09-30T15:32:56.952Z"
+    },
     {
       "id": "rss_e51373c707382986",
       "timestamp": 1790699362000,
@@ -10845,50 +10889,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-07T18:03:03.433Z"
-    },
-    {
-      "id": "rss_f285af2d62836a21",
-      "timestamp": 1788776372000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Fighting increases in Yemen as Houthis look to al-Mandab Strait as potential pressure point - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5iczFOUGEwUENHeHZwbnpCYjFYcmlaX2FJOWNZc0UxMUJOeXdzSERfbEhDNWI3Y2IzY0Jjd0ROcV9aeDRmRXB6QndhcVRaY1ZRUGhZTVFZTmhqbDdi?oc=5\" target=\"_blank\">Fighting increases in Yemen as Houthis look to al-Mandab Strait as potential pressure point</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5iczFOUGEwUENHeHZwbnpCYjFYcmlaX2FJOWNZc0UxMUJOeXdzSERfbEhDNWI3Y2IzY0Jjd0ROcV9aeDRmRXB6QndhcVRaY1ZRUGhZTVFZTmhqbDdi?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T18:03:03.433Z"
-    },
-    {
-      "id": "rss_066525dfa7bb9865",
-      "timestamp": 1788712591000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran rebuilding its axis of resistance for attack, Israeli intelligence suggests - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9tbjJBU0JLWHMtWjBZOEZGcGVDUHcwZVgzbFlxb3RPZVJYM3Z6S2ttOGhBZDNwT0Vpc2lxRkRGYUd1bWluWFJlNGtoWVQ0aTB0NTBBRDhuT0Fva3ZX?oc=5\" target=\"_blank\">Iran rebuilding its axis of resistance for attack, Israeli intelligence suggests</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9tbjJBU0JLWHMtWjBZOEZGcGVDUHcwZVgzbFlxb3RPZVJYM3Z6S2ttOGhBZDNwT0Vpc2lxRkRGYUd1bWluWFJlNGtoWVQ0aTB0NTBBRDhuT0Fva3ZX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T18:03:03.434Z"
     }
   ]
 }
