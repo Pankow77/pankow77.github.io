@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-01T00:06:00.456Z",
+  "last_fetch": "2026-10-01T06:17:58.324Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_83e854be045b2c42",
+      "timestamp": 1790809736000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping - アラブニュース",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNNXJkZGxLZ0dEMFZILTk5RkZqenB5UDhickRlMVNZRXBULXUtY2RpY2dQUmtHMzg0TmxTMTN3RTZnamZFUVVPY1d1dTBjcl9FendXTTh5STlUQzNGQXRoV2ZlbjEwaEFzTm9DN0tQNC1idHVJQWZMV3pOQUdVbFZvRjFfandFWUhCdzV5djFZcjhIS1ZKREhOS05BRVlnUDlWSldpTjh2LWFJTHZ0SUlLZzJBWWNXWDFQUTduSUdQZEJ2blBDOFNKSDRmaUhCY2c?oc=5\" target=\"_blank\">Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNXJkZGxLZ0dEMFZILTk5RkZqenB5UDhickRlMVNZRXBULXUtY2RpY2dQUmtHMzg0TmxTMTN3RTZnamZFUVVPY1d1dTBjcl9FendXTTh5STlUQzNGQXRoV2ZlbjEwaEFzTm9DN0tQNC1idHVJQWZMV3pOQUdVbFZvRjFfandFWUhCdzV5djFZcjhIS1ZKREhOS05BRVlnUDlWSldpTjh2LWFJTHZ0SUlLZzJBWWNXWDFQUTduSUdQZEJ2blBDOFNKSDRmaUhCY2c?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-01T06:17:58.318Z"
+    },
     {
       "id": "rss_21b2cefea2da0b48",
       "timestamp": 1790789184000,
@@ -44,6 +67,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-30T15:32:56.952Z"
+    },
+    {
+      "id": "rss_ec0b3d7e61ea0af4",
+      "timestamp": 1790758964000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EU says Aspides needs more than 10 warships amid Houthi threats - وكالة الأنباء السورية – سانا",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1nTjdjeV9JM3RaU1NKMTR3UXVzSmRlR2xlYUJMUnpuU2xiTF8yUTkzY0Qwd3k2bXNDM0VDUjQ2aXdSTl8tT2t6UWdUdy1EMG9SWTFv?oc=5\" target=\"_blank\">EU says Aspides needs more than 10 warships amid Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة الأنباء السورية – سانا</font>",
+      "tags": [
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1nTjdjeV9JM3RaU1NKMTR3UXVzSmRlR2xlYUJMUnpuU2xiTF8yUTkzY0Qwd3k2bXNDM0VDUjQ2aXdSTl8tT2t6UWdUdy1EMG9SWTFv?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-01T06:17:57.843Z"
     },
     {
       "id": "rss_de83a165b906a801",
@@ -10847,48 +10894,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-08T02:48:03.596Z"
-    },
-    {
-      "id": "rss_3d90b0fb7ebf81aa",
-      "timestamp": 1788812208000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen War Escalates As Saudi-aligned Forces And Houthis Clash In Deadly Offensive - i24NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNY2hVbTUyTEl6SnZ2TlVuclh2Mzl5WjllXzZaMl9KX0N1ay1PTDNpa2cwek9WTHZocm9HVkkwT0FRd1VXVEE3TFB5TWloNjM4Q0YzYmR2M2U0clQ4RFF6dlp1RW5KenZUNDRCeE5hMllZbWhPdEdlY3VDcVh0cFhYSGhzcFlIc3pqMUIwS2VYZ0lMcGZnZWJXMEIwN0xIcm1hRHljamZqUkR3NHZlSXZXM1J2VVdvTno2ck0wQjl4WjBqTlRnR25Lc0FHdkpRUzVUdEp6Yw?oc=5\" target=\"_blank\">Yemen War Escalates As Saudi-aligned Forces And Houthis Clash In Deadly Offensive</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNY2hVbTUyTEl6SnZ2TlVuclh2Mzl5WjllXzZaMl9KX0N1ay1PTDNpa2cwek9WTHZocm9HVkkwT0FRd1VXVEE3TFB5TWloNjM4Q0YzYmR2M2U0clQ4RFF6dlp1RW5KenZUNDRCeE5hMllZbWhPdEdlY3VDcVh0cFhYSGhzcFlIc3pqMUIwS2VYZ0lMcGZnZWJXMEIwN0xIcm1hRHljamZqUkR3NHZlSXZXM1J2VVdvTno2ck0wQjl4WjBqTlRnR25Lc0FHdkpRUzVUdEp6Yw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T23:55:13.038Z"
-    },
-    {
-      "id": "rss_f3aabc24466dff78",
-      "timestamp": 1788799229000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen prison strike claim deepens Saudi-Houthi tensions in Jawf - India Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQMnFKUHd6TFloWjdQVUt1WUJsWlZPNDJJOTNuaXI3U1QxQ0Jkd2RuMXRzUkpLWkNZRkVfTVpIVTFvNmdmcDlOS0FNaVFXVGRPOUZGMVA5aVNpcEpBVWE5dTlFd0J2S18zX012RVBPcEN5WVdUaDBJX01maU5xOE1LZnpNSGVQSS0zd1VfbG5WeEpTRDlwNlFCV2p5ajZsWjdFRGRwSzJuTUMtUlNVbHN2RW1rWk9wTElkT3VlR1R5WWVDQVN30gHKAUFVX3lxTE50bU1wWHJkTE9oLU5Za1YwMFFsUGlkV2NwdlQ0ZXdCczF4V0h2QzE1VklFNzRWQWtyWURQTkNUT19LakdyRTlYd2JHM1dkbHdpWDNyLWloTGR3VFlnZmFid0xrZ3NHYUM3Z3NTVHpNanAybkozUF93UTlyaW1lMzNsOG8tVE52SW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMnFKUHd6TFloWjdQVUt1WUJsWlZPNDJJOTNuaXI3U1QxQ0Jkd2RuMXRzUkpLWkNZRkVfTVpIVTFvNmdmcDlOS0FNaVFXVGRPOUZGMVA5aVNpcEpBVWE5dTlFd0J2S18zX012RVBPcEN5WVdUaDBJX01maU5xOE1LZnpNSGVQSS0zd1VfbG5WeEpTRDlwNlFCV2p5ajZsWjdFRGRwSzJuTUMtUlNVbHN2RW1rWk9wTElkT3VlR1R5WWVDQVN30gHKAUFVX3lxTE50bU1wWHJkTE9oLU5Za1YwMFFsUGlkV2NwdlQ0ZXdCczF4V0h2QzE1VklFNzRWQWtyWURQTkNUT19LakdyRTlYd2JHM1dkbHdpWDNyLWloTGR3VFlnZmFid0xrZ3NHYUM3Z3NTVHpNanAybkozUF93UTlyaW1lMzNsOG8tVE52SW5VOFJCT3kyN25Vc01LbTJfdUdscUtERWlSeEo4emFMMnZqRkktMGtNZVo1OWF3Um5WYXlVeHNEYnpsOTlqUDlwYlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-07T18:03:03.434Z"
     }
   ]
 }
