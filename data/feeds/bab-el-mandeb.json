@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-01T06:17:58.324Z",
+  "last_fetch": "2026-10-01T13:41:08.083Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f9eddcce570d1e86",
+      "timestamp": 1790844000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Yemen: Forces thwart large-scale Houthi attack - Breakingthenews.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOX0RZTXFUNjlDMDVQeEgyWG9vbFpyOHAtNHM5RUZlMzlPSFI3b2t3Y1l0Vk9VZTJIYWFuQWpEcnJqZkw4LWhLUzE1eWVhMHlrb3pYN0tXYVZiaTFKb1lFOHV3eS1nem01dEcteUVjYkJWckp1THdnbFVDZURRaTA2bXIzeE5xUFo0S2VQTGFhQzc3eFhhaHc?oc=5\" target=\"_blank\">Yemen: Forces thwart large-scale Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOX0RZTXFUNjlDMDVQeEgyWG9vbFpyOHAtNHM5RUZlMzlPSFI3b2t3Y1l0Vk9VZTJIYWFuQWpEcnJqZkw4LWhLUzE1eWVhMHlrb3pYN0tXYVZiaTFKb1lFOHV3eS1nem01dEcteUVjYkJWckp1THdnbFVDZURRaTA2bXIzeE5xUFo0S2VQTGFhQzc3eFhhaHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-01T13:41:06.404Z"
+    },
+    {
+      "id": "rss_be97e382df9d6f16",
+      "timestamp": 1790843397000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemen forces claim to have thwarted major Houthi attack - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl9JcTdxU3o5STh2QWl4eUlUVkZqRkI1TDY1WC1GQUh6T3cyTDdYNmpjSV94dlRRSmx4cENQWlVCVjFfMWsyYzE0WWtneFZiQ1l4VnlzU2lCa01RRE80YUN5aGlzbnBOaWJsNFJZSDQzQVNoQmRsUk16MHlHczBYc0pB?oc=5\" target=\"_blank\">Yemen forces claim to have thwarted major Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl9JcTdxU3o5STh2QWl4eUlUVkZqRkI1TDY1WC1GQUh6T3cyTDdYNmpjSV94dlRRSmx4cENQWlVCVjFfMWsyYzE0WWtneFZiQ1l4VnlzU2lCa01RRE80YUN5aGlzbnBOaWJsNFJZSDQzQVNoQmRsUk16MHlHczBYc0pB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-01T13:41:06.404Z"
+    },
     {
       "id": "rss_83e854be045b2c42",
       "timestamp": 1790809736000,
@@ -200,6 +242,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-29T14:11:44.128Z"
+    },
+    {
+      "id": "rss_ace55aca01ec2e54",
+      "timestamp": 1790628900000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "EU Needs More Ships for Red Sea; European Navies Adjust Hormuz Deployments - news.usni.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEFWUXZIcFpQR1hLOUpzZDU2SnprZ0loeWVlR1ZheWgtRktnOEtPQXRkOWFTODF6U2J0WVAyRkpyR3RTWnJkQk5tNE4yb0JPNHctaW03LWJCVTZtNjFmOURLQXlDeW96MUpLMk4yLVJhRm1UWC1pVXFQLVU1OTZKNW4yZjd5ejcxa1dDMEVvUnVoMFNuZk9MZW10cFBRZlR1QmJkcVVXNGhRZw?oc=5\" target=\"_blank\">EU Needs More Ships for Red Sea; European Navies Adjust Hormuz Deployments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">news.usni.org</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcEFWUXZIcFpQR1hLOUpzZDU2SnprZ0loeWVlR1ZheWgtRktnOEtPQXRkOWFTODF6U2J0WVAyRkpyR3RTWnJkQk5tNE4yb0JPNHctaW03LWJCVTZtNjFmOURLQXlDeW96MUpLMk4yLVJhRm1UWC1pVXFQLVU1OTZKNW4yZjd5ejcxa1dDMEVvUnVoMFNuZk9MZW10cFBRZlR1QmJkcVVXNGhRZw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-01T13:41:07.412Z"
     },
     {
       "id": "rss_21845016c947a8ae",
@@ -10831,69 +10896,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-08T20:01:30.055Z"
-    },
-    {
-      "id": "rss_4653b48907f1d15b",
-      "timestamp": 1788828600000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil prices hit six-week high after Houthis attack Saudi sites - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNNTBHazRJMEhoZks2V2o5M2loY0UtV3pnUjMweXB6cXZuVjQtYmhTWV9oSnF0cDhRZGVybzBuNk9fYWRJU1diemp5VDFxZWdHYy16a0ctWG9ob0JfMUZqRTIwRnoyeHhxckI4NFZCVmM1MGVRaDFPeWh0MVFKTXYyVURKSWdJZGJ5ZWZWYzdHanhyQTBNTGYyRWF6bXVWSDRZdXdYN0pWdURYU0p6Z1lkVzlRWlF4UEIyY1E?oc=5\" target=\"_blank\">Oil prices hit six-week high after Houthis attack Saudi sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNTBHazRJMEhoZks2V2o5M2loY0UtV3pnUjMweXB6cXZuVjQtYmhTWV9oSnF0cDhRZGVybzBuNk9fYWRJU1diemp5VDFxZWdHYy16a0ctWG9ob0JfMUZqRTIwRnoyeHhxckI4NFZCVmM1MGVRaDFPeWh0MVFKTXYyVURKSWdJZGJ5ZWZWYzdHanhyQTBNTGYyRWF6bXVWSDRZdXdYN0pWdURYU0p6Z1lkVzlRWlF4UEIyY1E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-08T20:01:30.054Z"
-    },
-    {
-      "id": "rss_6f5d0cdd82a1f7ec",
-      "timestamp": 1788825932000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis accuse Saudi Arabia of killing seven in Yemen prison air strike - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxObzd5c2ZDVmdBWDFKWi1SZjE2bGJtTk5MOVJ0YVA0RjVaLVo3TUc0Yjc5Y0RwR3ZYSEV3b2djdE5OVWc1NEp2cjdMUVRMSngtQm9FTU1zeVJOOUZFa1dxdnlseW9pV3BEanJuSU55ZWVCakE5YmEyUzNUeE5YUWhPbjlIQnNJWXctUHFQYUJCVjJDUkdZZV9YcDRlbUZSWjJZRjZpa2hfekpmNU3SAbABQVVfeXFMTm9ER28takNKNnhpQ19kZmt5NmZhRV9IMEw4WkdSM2FnSE01ZmJIMG50R0NocVQ3TVY1UGJkazVTNU1TdmNoMk04UHJnTG1jT0I5M2RaZlN4NmthV0x2b3ppVVZud3gxSlBxZ2NaU3A3cm0wZUtxSG45T2xYRTVLV0hWdktScnBSTEc1a0UzZktfMi0wTk9HV25RQVJtbEhwRD",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObzd5c2ZDVmdBWDFKWi1SZjE2bGJtTk5MOVJ0YVA0RjVaLVo3TUc0Yjc5Y0RwR3ZYSEV3b2djdE5OVWc1NEp2cjdMUVRMSngtQm9FTU1zeVJOOUZFa1dxdnlseW9pV3BEanJuSU55ZWVCakE5YmEyUzNUeE5YUWhPbjlIQnNJWXctUHFQYUJCVjJDUkdZZV9YcDRlbUZSWjJZRjZpa2hfekpmNU3SAbABQVVfeXFMTm9ER28takNKNnhpQ19kZmt5NmZhRV9IMEw4WkdSM2FnSE01ZmJIMG50R0NocVQ3TVY1UGJkazVTNU1TdmNoMk04UHJnTG1jT0I5M2RaZlN4NmthV0x2b3ppVVZud3gxSlBxZ2NaU3A3cm0wZUtxSG45T2xYRTVLV0hWdktScnBSTEc1a0UzZktfMi0wTk9HV25RQVJtbEhwRDNQQ1dyZkszcGU5SU1LcHE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-08T02:48:03.595Z"
-    },
-    {
-      "id": "rss_a8d8b5e6569983db",
-      "timestamp": 1788813960000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis say 7 killed in Saudi strike on Yemen prison as Bab el-Mandeb battle intensifies - timesofisrael.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQXzFDVGNRaXVKTE9NTnFYX0k2T1RSajNPRWtTWlMtM214aldKN1hkN251SzMzN1d2bmdyZ1F4ZTJ4UmVobHI3c0pyMTZUTE9veG1JNnZESkNYdHM3bjBud29tQWswNzM5M0wtSFp2RWhWeF9Oa25SWmpKXzd0NTVqMUdrVTl6Rm9KTFZGVE1ZdUozVUZPZlF5T0hNS2tDRU5zS0tGZ3U4TkFVeU1zUS16UmVON0JNWURCdmdz0gHAAUFVX3lxTE5sc2VzN3ItZXY0emJSUER3a2s5dEJCSXBDNGxjLWg3MHIySHZYaG5Vb0pNYl9lT0R3Q29yQUk1cWpxV0lINXVwdDYwR2dwR1dDU2dvajBhemdJN3lmSktydG0xRnpzMUJYSU0tTmt6Q1lhTlBYc1F6OXBhX2M3Y0dnSEZodlROUkQ0Vm9iSUgzQl",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQXzFDVGNRaXVKTE9NTnFYX0k2T1RSajNPRWtTWlMtM214aldKN1hkN251SzMzN1d2bmdyZ1F4ZTJ4UmVobHI3c0pyMTZUTE9veG1JNnZESkNYdHM3bjBud29tQWswNzM5M0wtSFp2RWhWeF9Oa25SWmpKXzd0NTVqMUdrVTl6Rm9KTFZGVE1ZdUozVUZPZlF5T0hNS2tDRU5zS0tGZ3U4TkFVeU1zUS16UmVON0JNWURCdmdz0gHAAUFVX3lxTE5sc2VzN3ItZXY0emJSUER3a2s5dEJCSXBDNGxjLWg3MHIySHZYaG5Vb0pNYl9lT0R3Q29yQUk1cWpxV0lINXVwdDYwR2dwR1dDU2dvajBhemdJN3lmSktydG0xRnpzMUJYSU0tTmt6Q1lhTlBYc1F6OXBhX2M3Y0dnSEZodlROUkQ0Vm9iSUgzQlVoaWZPeWptc2lZWnJ4czNuSjBSdERBV1daNDdmNUtuWU9ZS0N2VU5PMUhZUXF4Yg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T02:48:03.596Z"
     }
   ]
 }
