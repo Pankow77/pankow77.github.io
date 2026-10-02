@@ -1,8 +1,117 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-02T15:17:25.689Z",
+  "last_fetch": "2026-10-02T20:03:02.764Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_713ca96bf234a96b",
+      "timestamp": 1790966301000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudis Plan Attack on Houthi Rebels to Unblock Red Sea - Nacionale",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxObVJPa3FCT0owWVUyVXkyNUYtajl4bHd3QktYbUQyWFpSZUR0MVd1c0Q5X2NoRW9LOGxISlNLaFJiMXNzTEhyckVFZDUtMmpyM3pCUjY5ZFFYbUdrMmJwcENlTXN2UnJNM2ZZdEhLT0JSSlZ6Z1NEakx4SmFaN2FpU0pNMnFNaVdZOHd3ME1Palp0WjQ0ckNN?oc=5\" target=\"_blank\">Saudis Plan Attack on Houthi Rebels to Unblock Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nacionale</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObVJPa3FCT0owWVUyVXkyNUYtajl4bHd3QktYbUQyWFpSZUR0MVd1c0Q5X2NoRW9LOGxISlNLaFJiMXNzTEhyckVFZDUtMmpyM3pCUjY5ZFFYbUdrMmJwcENlTXN2UnJNM2ZZdEhLT0JSSlZ6Z1NEakx4SmFaN2FpU0pNMnFNaVdZOHd3ME1Palp0WjQ0ckNN?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-02T20:03:01.174Z"
+    },
+    {
+      "id": "rss_49e36c3c540a4a49",
+      "timestamp": 1790964821000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudis plan assault on Houthis to break Red Sea chokehold - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUVJialJyWHg0VzlHXzBiaTU3elZhbWEtQzd0TjhNOGNsWFFZNTYyMGFqODJGcVc3aVBaYVY3QkRzWWpEZDlQNEpJeVp6ZjMxYkZKYi1nZ0FUenFUSFRFRTNCb3NaTmdCaTJ1WWV1RmlqcmhSZGtsZWZobE5jSHp3RkJiVXpueWdVOHJmbDhzUEEzVXB6OF9jYkJHcnpfQklTNDVHZ20yS1J6QQ?oc=5\" target=\"_blank\">Saudis plan assault on Houthis to break Red Sea chokehold</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUVJialJyWHg0VzlHXzBiaTU3elZhbWEtQzd0TjhNOGNsWFFZNTYyMGFqODJGcVc3aVBaYVY3QkRzWWpEZDlQNEpJeVp6ZjMxYkZKYi1nZ0FUenFUSFRFRTNCb3NaTmdCaTJ1WWV1RmlqcmhSZGtsZWZobE5jSHp3RkJiVXpueWdVOHJmbDhzUEEzVXB6OF9jYkJHcnpfQklTNDVHZ20yS1J6QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-02T20:03:01.173Z"
+    },
+    {
+      "id": "rss_4f529770a0292836",
+      "timestamp": 1790959560000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia plans major Yemen offensive against Iran-backed Houthi forces - The Independent",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNaV91bHZYY0Jad2tIR1pvWnZIUWVwZDNiWWstc0doWUwtUTd0RXVUbFVpVHo1NkExNkNvMXNUNG1LT281WHl0azdpdjJLVmZxcEM0RGNrVHFGaTZ3RjhMRlJBSVdJcUlXTW5odmhmUUpSSzRPdUlXalJfUVJGdFRrTTRWMTRRYVlKWVRMTU5pVHFvSXRMMkkwZGhBU1F6M0NsQ2VF?oc=5\" target=\"_blank\">Saudi Arabia plans major Yemen offensive against Iran-backed Houthi forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Independent</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaV91bHZYY0Jad2tIR1pvWnZIUWVwZDNiWWstc0doWUwtUTd0RXVUbFVpVHo1NkExNkNvMXNUNG1LT281WHl0azdpdjJLVmZxcEM0RGNrVHFGaTZ3RjhMRlJBSVdJcUlXTW5odmhmUUpSSzRPdUlXalJfUVJGdFRrTTRWMTRRYVlKWVRMTU5pVHFvSXRMMkkwZGhBU1F6M0NsQ2VF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-02T20:03:01.174Z"
+    },
+    {
+      "id": "rss_3656e836fde53881",
+      "timestamp": 1790958600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Turkey's defence ministry condemns Houthi drone attack on Saudi Arabia - middleeasteye.net",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQelhvbkZvLXlWaGtBOHBTT2g2OEpFX2FMQXRqb05TQVN4TEtjRk1GcVJudG9RZ2llbm5CX1RqUnZkS0pielhVVWM4TGJEaEk0MjJTZUVGTXFqLXZQQm9Lc1R1OXZFU2xNWm5xaEFXMklUaTZlYUtWLWJZYVZpMlBQTEROQnctVjAxU1Y1aTl2Y1ZCTUVUVUhEMktZaF9Ud2oyaTJ6WlRZelYwd2ZsRGpRSjRVSWdTQll5VkpVTDRyeFA?oc=5\" target=\"_blank\">Turkey's defence ministry condemns Houthi drone attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middleeasteye.net</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQelhvbkZvLXlWaGtBOHBTT2g2OEpFX2FMQXRqb05TQVN4TEtjRk1GcVJudG9RZ2llbm5CX1RqUnZkS0pielhVVWM4TGJEaEk0MjJTZUVGTXFqLXZQQm9Lc1R1OXZFU2xNWm5xaEFXMklUaTZlYUtWLWJZYVZpMlBQTEROQnctVjAxU1Y1aTl2Y1ZCTUVUVUhEMktZaF9Ud2oyaTJ6WlRZelYwd2ZsRGpRSjRVSWdTQll5VkpVTDRyeFA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-02T20:03:01.173Z"
+    },
+    {
+      "id": "rss_fbf6d8009a9689e6",
+      "timestamp": 1790958171000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia plans 100,000-troop Yemen offensive to retake Bab el-Mandeb from Houthis - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwX3FYQTBIbWRjQW1LU0lYbFUxaUZKUUJneFBwMjFYWmEydFozeEJBcUctb2JheHpkc1lEdldCRXhZT05ld2prTGFoeXZTS3JOdjA4M3pB?oc=5\" target=\"_blank\">Saudi Arabia plans 100,000-troop Yemen offensive to retake Bab el-Mandeb from Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwX3FYQTBIbWRjQW1LU0lYbFUxaUZKUUJneFBwMjFYWmEydFozeEJBcUctb2JheHpkc1lEdldCRXhZT05ld2prTGFoeXZTS3JOdjA4M3pB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-02T20:03:01.173Z"
+    },
     {
       "id": "rss_dc194a8059e7abaa",
       "timestamp": 1790952630000,
@@ -10802,113 +10911,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-08T20:01:30.054Z"
-    },
-    {
-      "id": "rss_1c422577325e64d1",
-      "timestamp": 1788870382000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen truce unravels as Houthis attack Saudi Arabia and ground fighting intensifies - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5uQVBkVEkzVXF4czdydGpLX3lnSTFURFRESnVqYjJTOWFaWnZwekZuN3hhX1RqOW1aZThLWVAwdXVIdkFQc0hJWHhheTNjaDBHR3RsVjBn?oc=5\" target=\"_blank\">Yemen truce unravels as Houthis attack Saudi Arabia and ground fighting intensifies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5uQVBkVEkzVXF4czdydGpLX3lnSTFURFRESnVqYjJTOWFaWnZwekZuN3hhX1RqOW1aZThLWVAwdXVIdkFQc0hJWHhheTNjaDBHR3RsVjBn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T12:34:17.516Z"
-    },
-    {
-      "id": "rss_2eea820829c27a4e",
-      "timestamp": 1788869731000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNT2RnNWprQ01ScjN2Q05RSHRWdmRqVzh2U01LUVVPVmhiRDVYNER3anQxQlNWV24wS3RZR2ZqS1FxNnFKWFRqSmlYbnQwSFk1eU5Cbnh1SVpxbTZCWUwtelFqbFV6LTNLVHZZbGRaYTVucy1VT1JwNDZPM3gydkZRU2VCWHFoVnpTVU9ILXlfRHpKMnBsT3RJOUlkejRzT1FJa25YekFnMVl6dUJnbERxeXo1UnpOZTVaQ281aFJrbjFEWmN3T2c?oc=5\" target=\"_blank\">Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNT2RnNWprQ01ScjN2Q05RSHRWdmRqVzh2U01LUVVPVmhiRDVYNER3anQxQlNWV24wS3RZR2ZqS1FxNnFKWFRqSmlYbnQwSFk1eU5Cbnh1SVpxbTZCWUwtelFqbFV6LTNLVHZZbGRaYTVucy1VT1JwNDZPM3gydkZRU2VCWHFoVnpTVU9ILXlfRHpKMnBsT3RJOUlkejRzT1FJa25YekFnMVl6dUJnbERxeXo1UnpOZTVaQ281aFJrbjFEWmN3T2c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-08T12:34:17.515Z"
-    },
-    {
-      "id": "rss_ff4b1a18df5de03e",
-      "timestamp": 1788868080000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis strike Saudi Arabian cities in significant expansion of Middle East war - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQYXNxakJXeG11enBnMEtHVzl6UFBpemVCWlJ1TlJBUEpKUmFuYldxaVhZMDM1cFh3cHhnUGNNVklpVkhMUDRpOExlcnJvM3l0S0lfNFB0UFRUZkMzUFNSR0NoRVpIMUlYNl9Bc3RTUWNydEI5UERpVnpjQi1yclkyV2ZHdXo5ZE9DcGFTUEN4NW9QWkFiX2NpOFVpZFptZVp3bGQ5RENob3hoU1Jp?oc=5\" target=\"_blank\">Houthis strike Saudi Arabian cities in significant expansion of Middle East war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYXNxakJXeG11enBnMEtHVzl6UFBpemVCWlJ1TlJBUEpKUmFuYldxaVhZMDM1cFh3cHhnUGNNVklpVkhMUDRpOExlcnJvM3l0S0lfNFB0UFRUZkMzUFNSR0NoRVpIMUlYNl9Bc3RTUWNydEI5UERpVnpjQi1yclkyV2ZHdXo5ZE9DcGFTUEN4NW9QWkFiX2NpOFVpZFptZVp3bGQ5RENob3hoU1Jp?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T12:34:17.515Z"
-    },
-    {
-      "id": "rss_00ffc94d26eca8d6",
-      "timestamp": 1788867925000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Climbs Toward $100 a Barrel Following Houthi Attacks - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE54N3UzSlJaTHRYV1g3cTYtWFctbWtEdGU5eWVBTWlEa0drQkxabDU2VTRtTGJ5OHA1QndlRzB4QS11cWNCcmE0UThzSUNDSVZFQUlYWmtieklycEpOUDVuV0NFREZOaGNFRVZkT05obUljbDV1ZnlJ?oc=5\" target=\"_blank\">Oil Climbs Toward $100 a Barrel Following Houthi Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE54N3UzSlJaTHRYV1g3cTYtWFctbWtEdGU5eWVBTWlEa0drQkxabDU2VTRtTGJ5OHA1QndlRzB4QS11cWNCcmE0UThzSUNDSVZFQUlYWmtieklycEpOUDVuV0NFREZOaGNFRVZkT05obUljbDV1ZnlJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T12:34:17.515Z"
-    },
-    {
-      "id": "rss_7deb4fee7ecc4a25",
-      "timestamp": 1788867624000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi rebels attack several southern cities in Saudi Arabia - WPLG Local 10",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa21lcm1yckpxdjFtOTB4NjlmV3Zmam9ockh6NE5ibkhKYkRaYllCcHV3M1UtaElXWnZTVF9pbUZoTm91X1VzTDBfVTlRR1pZWmF1S29IajFwYWtVeHExU2dXRHR0WkI5d3ZVcGlGYmtxS0VKSXVqQXpNRFJNX2ZPamYyZUh1M0lpZGFlZHR1bENKOFdiZ3JEbEpKVnQ0T2JGemkzTUplVmtPbU0?oc=5\" target=\"_blank\">Houthi rebels attack several southern cities in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WPLG Local 10</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQa21lcm1yckpxdjFtOTB4NjlmV3Zmam9ockh6NE5ibkhKYkRaYllCcHV3M1UtaElXWnZTVF9pbUZoTm91X1VzTDBfVTlRR1pZWmF1S29IajFwYWtVeHExU2dXRHR0WkI5d3ZVcGlGYmtxS0VKSXVqQXpNRFJNX2ZPamYyZUh1M0lpZGFlZHR1bENKOFdiZ3JEbEpKVnQ0T2JGemkzTUplVmtPbU0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T12:34:17.515Z"
     }
   ]
 }
