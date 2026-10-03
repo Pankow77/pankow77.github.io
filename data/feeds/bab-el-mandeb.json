@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-03T09:36:39.482Z",
+  "last_fetch": "2026-10-03T14:31:05.970Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -90,6 +90,30 @@
       "fetched_at": "2026-10-03T09:36:37.546Z"
     },
     {
+      "id": "rss_3d662acd68292037",
+      "timestamp": 1791010500000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Injury, damages in Saudi Arabia after interception of Houthi missiles, drones - Al Arabiya English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOd3ZBLWlQQmpFanZ4OGZ2YU9QMXlWVGVRaGFxVkRHeWFKS0dQazRkMFh2bjdPcEVLd0RIbDlkV3JOX3NRTlpQbUVBUVZfNVVzMHI2RW4wZzRZbElobVNtanlUQ2ItbFBlNlhNbk82eFlhZjFxVHVFeUs4S0FYYi1YT0xwUGRNVm55S1lIOUE1ZzFTXzlBOUd6Y0pTSDBXcWtKaXhxdGp5bmtrbHMtVGJEeEFheGZjVG0tQUZWQkNsM0hab0VIX0ZRcFVOOWwteEnSAdQBQVVfeXFMUGdMa3QtX0VLVllLdFg4ZE1taE1rQjh6LTVUaGc5R1lfSkhvRjdDOGs2ZWUzWVpuVmNDamhtdmkwTkk3OGlsRWw5MWpxYThJems0Tl9obXhwOEZiTEx5MUtJT2pZUnJmQVNuclpfbFNCZ1R0NmhMenQ2YXZCcS",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd3ZBLWlQQmpFanZ4OGZ2YU9QMXlWVGVRaGFxVkRHeWFKS0dQazRkMFh2bjdPcEVLd0RIbDlkV3JOX3NRTlpQbUVBUVZfNVVzMHI2RW4wZzRZbElobVNtanlUQ2ItbFBlNlhNbk82eFlhZjFxVHVFeUs4S0FYYi1YT0xwUGRNVm55S1lIOUE1ZzFTXzlBOUd6Y0pTSDBXcWtKaXhxdGp5bmtrbHMtVGJEeEFheGZjVG0tQUZWQkNsM0hab0VIX0ZRcFVOOWwteEnSAdQBQVVfeXFMUGdMa3QtX0VLVllLdFg4ZE1taE1rQjh6LTVUaGc5R1lfSkhvRjdDOGs2ZWUzWVpuVmNDamhtdmkwTkk3OGlsRWw5MWpxYThJems0Tl9obXhwOEZiTEx5MUtJT2pZUnJmQVNuclpfbFNCZ1R0NmhMenQ2YXZCcS12LVZqa1VzckFhd1ZPcTItWV9uc1JFSW44RjlWMmFvVUZvN2xiVGdaUVp0NTNGcmNzeUpnaFFqNHBIejE3R1JacFZsQXZJdjRDUUh3eHpabzR0YlJib3M?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T14:31:04.531Z"
+    },
+    {
       "id": "rss_b885e5e0b830528d",
       "timestamp": 1791009636000,
       "source": "OSINT",
@@ -151,6 +175,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-03T03:32:02.537Z"
+    },
+    {
+      "id": "rss_6a181073b547c661",
+      "timestamp": 1790967648000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia launched more than 90 attacks in Yemen in 24 hours, Houthis claim - report - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTFB0SFhpbnJyVlFHUGpGMUxaY0tXSDdGQ3ZFZVZ5bGJUNm5KOTNGQnBzU2dNR1hUWG54ZzlQRTc4bnoyQ241MFRKanZIcXQyNG50bTlldWJhZ00wX0ZBZ253NHNDUmtMQmxrMUE?oc=5\" target=\"_blank\">Saudi Arabia launched more than 90 attacks in Yemen in 24 hours, Houthis claim - report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0SFhpbnJyVlFHUGpGMUxaY0tXSDdGQ3ZFZVZ5bGJUNm5KOTNGQnBzU2dNR1hUWG54ZzlQRTc4bnoyQ241MFRKanZIcXQyNG50bTlldWJhZ00wX0ZBZ253NHNDUmtMQmxrMUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T14:31:04.530Z"
     },
     {
       "id": "rss_713ca96bf234a96b",
@@ -391,6 +436,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-02T15:17:23.886Z"
+    },
+    {
+      "id": "rss_9231e4419d9d36ff",
+      "timestamp": 1790929935000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis deny Saudi accusations of targeting Medina's holy sites - Euronews.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPV25MaDF6YVFPZHo5N1VabHlUbmhSbFc4VXk4Rjc5OXhRd1lYbVFuWkhDaTRxZ21lOEZjV1o4ekc0Z2x1VVVoRDR1ZDhFRHNFbUFpZklJalhuM29rQWJyRVVpakwwOERrTTZvcnZ2Y3UxbXl1SEtNZTg4X2RlM1FRS2RuU21qTVFyclBmTy1UZDJiQzMxWXVoMk5DM2R6aUU?oc=5\" target=\"_blank\">Houthis deny Saudi accusations of targeting Medina's holy sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPV25MaDF6YVFPZHo5N1VabHlUbmhSbFc4VXk4Rjc5OXhRd1lYbVFuWkhDaTRxZ21lOEZjV1o4ekc0Z2x1VVVoRDR1ZDhFRHNFbUFpZklJalhuM29rQWJyRVVpakwwOERrTTZvcnZ2Y3UxbXl1SEtNZTg4X2RlM1FRS2RuU21qTVFyclBmTy1UZDJiQzMxWXVoMk5DM2R6aUU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T14:31:04.531Z"
     },
     {
       "id": "rss_b358268e96db4ea2",
@@ -10850,71 +10916,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-09T10:39:50.190Z"
-    },
-    {
-      "id": "rss_7516d3fddc05d252",
-      "timestamp": 1788926133000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Missiles over Saudi, silence in Islamabad: Why Pakistan remains on the sidelines despite defence pact - Firstpost",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNSjI2TGxsVFg1NHhPaE55MjFxWTJtRmkyZ3djaUhZa2hoY2UtZDd5SGxsek92REpqNTk4UEU3TXVvMDEzand3OTM3Q2Z1VTBqOWhxUm41QUdoRTNVek1WM182WEh5SXlGS181ZUMzSmxhbERmZkNxT1hrNXFuWWVDM0dxc1FKRXg3SVpkYzdfVHpmUjVoX2lhMFJGQWxoMlQ5RGtBNThxT1dBM09ralU3ZWxEQ2s0ZmhOLWRyadIBwgFBVV95cUxQZW5jazg1dHZpcDExMlVyX1l3UV9iT1J0eDdLdmpXZDhpTzZfaTM4bFBWR2w3QkF4M2UzT05tWDhwRGJIZ0dPYjdwQ1gtQTRjWDNmZmR3VTRfYXdDMFNtLXN2RkNpMWtQeG9GMkxqalpqTGV2ZkdMXy1zdDh6UjBLQlNaenJkdlpLbzA3YTdqNG",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSjI2TGxsVFg1NHhPaE55MjFxWTJtRmkyZ3djaUhZa2hoY2UtZDd5SGxsek92REpqNTk4UEU3TXVvMDEzand3OTM3Q2Z1VTBqOWhxUm41QUdoRTNVek1WM182WEh5SXlGS181ZUMzSmxhbERmZkNxT1hrNXFuWWVDM0dxc1FKRXg3SVpkYzdfVHpmUjVoX2lhMFJGQWxoMlQ5RGtBNThxT1dBM09ralU3ZWxEQ2s0ZmhOLWRyadIBwgFBVV95cUxQZW5jazg1dHZpcDExMlVyX1l3UV9iT1J0eDdLdmpXZDhpTzZfaTM4bFBWR2w3QkF4M2UzT05tWDhwRGJIZ0dPYjdwQ1gtQTRjWDNmZmR3VTRfYXdDMFNtLXN2RkNpMWtQeG9GMkxqalpqTGV2ZkdMXy1zdDh6UjBLQlNaenJkdlpLbzA3YTdqNGlJUGNzVS1XSlh5ZmIzQl9IZjBxYWNwd0d0b2VRazVmRDBQQlIwT0FRdk9adGtiOEE4Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-09T05:51:38.509Z"
-    },
-    {
-      "id": "rss_43277974936c24b7",
-      "timestamp": 1788913896000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil Rises as Houthi Militants’ Attack Amplifies Supply-Disruption Fears - WSJ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPejBxVFJDamd2bjlxby1vZmhhSXc3bERlOXJLTVdia2dYWUNpdEhNU2Zxdk9mTHV0RFpSY1lSNFFrYXQ3RDZ1QjVWSndZMHFBRERLeEktalp5eDFYRlEzME9ndjZDYzEzSFdCa0s0RGRsQ09wR3V3akg4ejFpaWFSQUwxUFBnSkpXZW1yLVdpZHFwejBFX2pTN1RwNTYzanpaTmhIUEduenY2bUs4Z0NsUlA3SmZxZ0ZYekRnRzkzVHVXUXdZZHc?oc=5\" target=\"_blank\">Oil Rises as Houthi Militants’ Attack Amplifies Supply-Disruption Fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPejBxVFJDamd2bjlxby1vZmhhSXc3bERlOXJLTVdia2dYWUNpdEhNU2Zxdk9mTHV0RFpSY1lSNFFrYXQ3RDZ1QjVWSndZMHFBRERLeEktalp5eDFYRlEzME9ndjZDYzEzSFdCa0s0RGRsQ09wR3V3akg4ejFpaWFSQUwxUFBnSkpXZW1yLVdpZHFwejBFX2pTN1RwNTYzanpaTmhIUEduenY2bUs4Z0NsUlA3SmZxZ0ZYekRnRzkzVHVXUXdZZHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-09T00:59:31.413Z"
-    },
-    {
-      "id": "rss_0fcc857da38d883a",
-      "timestamp": 1788908964000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-Houthi conflict nears full-scale war in Red Sea chokepoint - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQdnNOcUpjZnpQRUFud2NZVTREY3o0SDNMSkw4ckRsTHhZUmxnNTB6b0tqUEdhdkRsUk5yNHdBbEMyUDhUZ1BvVUNYdHEwMmJjc1Jua1Q4aEdZTFNwbUxKSmVtS2J3aHpsTTVwTV9jYlpIbFFSUGY1UTYzUjBmbDN5TVZGZm0?oc=5\" target=\"_blank\">Saudi-Houthi conflict nears full-scale war in Red Sea chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQdnNOcUpjZnpQRUFud2NZVTREY3o0SDNMSkw4ckRsTHhZUmxnNTB6b0tqUEdhdkRsUk5yNHdBbEMyUDhUZ1BvVUNYdHEwMmJjc1Jua1Q4aEdZTFNwbUxKSmVtS2J3aHpsTTVwTV9jYlpIbFFSUGY1UTYzUjBmbDN5TVZGZm0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-09T00:59:31.413Z"
     }
   ]
 }
