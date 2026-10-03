@@ -1,8 +1,115 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-03T03:32:04.041Z",
+  "last_fetch": "2026-10-03T09:36:39.482Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ea52974b8a6f95fc",
+      "timestamp": 1791019685000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Smoke reported over Riyadh after alleged Houthi strike on Aramco refinery - turkiyetoday.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWl9PQVozdzZubGRoZGVaUnFHMmRIRUwyRGJqaGUtR3BmNW5RdDFROVFlWjB0OUphTVRBS2JRT1o5bW1qT2lCc0xEbjRIMjc0VkcxNWl3bHZOb2VjWnd2UTY5SFVOQnFLZC00NWtBUkpSaWVYcmh1M3dfLXBTUmhJS3VzV0R0RzR2ZkhrQXNoRWU2TWwyVWlfUkJ2Y0dkME5nS29JbFpPbTVfM1RLaU5DWVJNMm9UVjB0?oc=5\" target=\"_blank\">Smoke reported over Riyadh after alleged Houthi strike on Aramco refinery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">turkiyetoday.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWl9PQVozdzZubGRoZGVaUnFHMmRIRUwyRGJqaGUtR3BmNW5RdDFROVFlWjB0OUphTVRBS2JRT1o5bW1qT2lCc0xEbjRIMjc0VkcxNWl3bHZOb2VjWnd2UTY5SFVOQnFLZC00NWtBUkpSaWVYcmh1M3dfLXBTUmhJS3VzV0R0RzR2ZkhrQXNoRWU2TWwyVWlfUkJ2Y0dkME5nS29JbFpPbTVfM1RLaU5DWVJNMm9UVjB0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.545Z"
+    },
+    {
+      "id": "rss_dbe5c821ccc41614",
+      "timestamp": 1791017160000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia weighs possible offensive to retake Bab el-Mandeb - Daily Sabah",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPYXVFM1ZlNjJSTXY4b0I0cFpBYjJYVUI0RVA4YVc2MllRQm16S1ZXMlBPZFQwOC1GNF9xNEtCempHdkRwUXF3eGVjYzY2cUoweGpVaENVUVVvUjktNGhEU0tKcnNTWV9GNzU3Vm9reGdtQjVCNFlmWjJiU0pEYXVaemFMZm1CRFhOcHNfaFVLQ3Y2QUV1RExJdmU0MGxyZTlVTmRNT1FnTQ?oc=5\" target=\"_blank\">Saudi Arabia weighs possible offensive to retake Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Daily Sabah</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPYXVFM1ZlNjJSTXY4b0I0cFpBYjJYVUI0RVA4YVc2MllRQm16S1ZXMlBPZFQwOC1GNF9xNEtCempHdkRwUXF3eGVjYzY2cUoweGpVaENVUVVvUjktNGhEU0tKcnNTWV9GNzU3Vm9reGdtQjVCNFlmWjJiU0pEYXVaemFMZm1CRFhOcHNfaFVLQ3Y2QUV1RExJdmU0MGxyZTlVTmRNT1FnTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.545Z"
+    },
+    {
+      "id": "rss_95e5cee35ac52a55",
+      "timestamp": 1791015072000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Al-Shabaab Seeks Drones From Houthis - Eurasia Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOUTdZcXNjOExSRFZ2aEd3a3VrVDl2Y1VzN19GN3JLXzQ1d3V3bWM3ZnpTQVZkM1VQdTlLMnlvaHNxLWIwQ1JWT2ZmdGZtQ0xYbUhyTVhLY1NHMVplX2FhaG55RktHNlVlbUhBZlh4ZUtNQnkwbjVBUlJKRjhTdklXQ0lR?oc=5\" target=\"_blank\">Al-Shabaab Seeks Drones From Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUTdZcXNjOExSRFZ2aEd3a3VrVDl2Y1VzN19GN3JLXzQ1d3V3bWM3ZnpTQVZkM1VQdTlLMnlvaHNxLWIwQ1JWT2ZmdGZtQ0xYbUhyTVhLY1NHMVplX2FhaG55RktHNlVlbUhBZlh4ZUtNQnkwbjVBUlJKRjhTdklXQ0lR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.545Z"
+    },
+    {
+      "id": "rss_cb795d017b8b9c16",
+      "timestamp": 1791013147000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Gulf Security, Houthi Threat, Maritime Chokepoints And Pakistan's Strategic Calculus - OpEd - Eurasia Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQRjYxMkV1cVJmWXBwb0oyTTJiZ2JGdVZvLTBrcnNnM0pwTXRzSDdYbE9fOURDX0hlZU40SzdtQ012T0p2VC1jS1QzNXZQOFdxeU9wWm9MVkh4Qi1KaGZCOHQ3SUphSHBrbjJpZWttNi1QZXZILXFMTlgyRW1qdWwyeVRfQjZwdER3WHgzQk16QVBaaUtER1h5VVBEY1hOWHdCb0Vya2VLQnNwTmR6Vm1hM01YYjA4Ykg3ZUh5UjNSU0xhbXJm?oc=5\" target=\"_blank\">Gulf Security, Houthi Threat, Maritime Chokepoints And Pakistan's Strategic Calculus - OpEd</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQRjYxMkV1cVJmWXBwb0oyTTJiZ2JGdVZvLTBrcnNnM0pwTXRzSDdYbE9fOURDX0hlZU40SzdtQ012T0p2VC1jS1QzNXZQOFdxeU9wWm9MVkh4Qi1KaGZCOHQ3SUphSHBrbjJpZWttNi1QZXZILXFMTlgyRW1qdWwyeVRfQjZwdER3WHgzQk16QVBaaUtER1h5VVBEY1hOWHdCb0Vya2VLQnNwTmR6Vm1hM01YYjA4Ykg3ZUh5UjNSU0xhbXJm?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.546Z"
+    },
+    {
+      "id": "rss_b885e5e0b830528d",
+      "timestamp": 1791009636000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen sees widest escalation in 3 weeks as displacement nears 200,000 - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOTy1OSGc5dFd4aUVtY29oVTk5MXhwZFZuWEE0Wkg1bG9COGFPVlhfTzhaNllhbDdsYzFCQTAtSi11dEFENkRvY3laWmY5cnhjV05OQXpDRi1mNjc4QkZzY1JZdGZVNnh6ZTdOLTE2QUpoVGJCSlBBT25xeFlETEFzSkM0UjJqamEzTGUzMUl4TENObF9EYTlvTVFMRS13eEg5WklzUU1HN1VoV0VfcWItWnlBcUM?oc=5\" target=\"_blank\">Yemen sees widest escalation in 3 weeks as displacement nears 200,000</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTy1OSGc5dFd4aUVtY29oVTk5MXhwZFZuWEE0Wkg1bG9COGFPVlhfTzhaNllhbDdsYzFCQTAtSi11dEFENkRvY3laWmY5cnhjV05OQXpDRi1mNjc4QkZzY1JZdGZVNnh6ZTdOLTE2QUpoVGJCSlBBT25xeFlETEFzSkM0UjJqamEzTGUzMUl4TENObF9EYTlvTVFMRS13eEg5WklzUU1HN1VoV0VfcWItWnlBcUM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.545Z"
+    },
     {
       "id": "rss_08613e11e6d80814",
       "timestamp": 1790994780000,
@@ -174,6 +281,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-02T15:17:23.886Z"
+    },
+    {
+      "id": "rss_0d337b4ef07dbd17",
+      "timestamp": 1790951314000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fighting Intensifies in Yemen, Raising Fresh Fears of All-Out War - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNTmlxQjEtWS04S2hkc2t4a3VKRWxSZUg1SVl2ZE80ZTN2eUdDUTVPTEZPWmJUYWRhMVAySW1JMEcyaUNPRHpDdkZyTTU1YXRWcG05eGU1aUJWeUNCck1PTjNZZHVjUkFrb2FsNGRlSGN1SkxTZ0Z6aWdZLVp3Mm0tQ0ZPV2VMeHE1NVM4Rkc3ZmMtTnFjX201QTFB?oc=5\" target=\"_blank\">Fighting Intensifies in Yemen, Raising Fresh Fears of All-Out War</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTmlxQjEtWS04S2hkc2t4a3VKRWxSZUg1SVl2ZE80ZTN2eUdDUTVPTEZPWmJUYWRhMVAySW1JMEcyaUNPRHpDdkZyTTU1YXRWcG05eGU1aUJWeUNCck1PTjNZZHVjUkFrb2FsNGRlSGN1SkxTZ0Z6aWdZLVp3Mm0tQ0ZPV2VMeHE1NVM4Rkc3ZmMtTnFjX201QTFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:37.545Z"
     },
     {
       "id": "rss_3fe9366457358062",
@@ -829,6 +957,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-30T15:32:56.952Z"
+    },
+    {
+      "id": "rss_55ee25f33b8776d9",
+      "timestamp": 1790768882000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNSl9qS1IzUWRWNGRCeWdRVFpIZlY5NDBRd3BMUHVwcGE4QXlSdm1lWFNYMm9ocWtHMnpaVkh6bVkycWNKSXRacXpQVHNXMGlsOW92MU5ibzBiWW5hQTFxcnEzNFJxY0hOMHFYMThXVkFvSmdFUnROWGVQMXRnZ1VfenF0Rm9fQ0d0djNBUVJCWXlfVkxHMGNFeTBCTl9rMkVwNGo0Z1VJSzNEQU9iczFaSWlXeEJ1ckI3NkQ0SWkxV3JhQWM3YTNkQ0RoSXQ?oc=5\" target=\"_blank\">Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSl9qS1IzUWRWNGRCeWdRVFpIZlY5NDBRd3BMUHVwcGE4QXlSdm1lWFNYMm9ocWtHMnpaVkh6bVkycWNKSXRacXpQVHNXMGlsOW92MU5ibzBiWW5hQTFxcnEzNFJxY0hOMHFYMThXVkFvSmdFUnROWGVQMXRnZ1VfenF0Rm9fQ0d0djNBUVJCWXlfVkxHMGNFeTBCTl9rMkVwNGo0Z1VJSzNEQU9iczFaSWlXeEJ1ckI3NkQ0SWkxV3JhQWM3YTNkQ0RoSXQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T09:36:39.477Z"
     },
     {
       "id": "rss_ec0b3d7e61ea0af4",
@@ -10764,155 +10915,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-09T00:59:31.413Z"
-    },
-    {
-      "id": "rss_214ac20c264eaa0a",
-      "timestamp": 1788904732000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi's Remaining Energy Lifeline To The World Under Threat After Successful Houthi Strikes (Updated) - TWZ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX1c3Mm9fTDRHT093TXhJNWd4cjJuek9lOGdqX3h6RElZaURXaTluOW1DQVZScDlUakJqSzNSNjg2aktiVmI1WDFvZHItcExxUGVJY0M2R0xtX0tZQVRtOHlpS3RPWFdEVjdIeTB0SUd4dnpiZGhtREhRVmV1bWVOLW9FWlExeFNsc0lzTzVmZTRnUHNBbWtLZDF5M1htcWNsNi1hUlV5YXRONW93anlOYXB0a25lTHlTcDlEWFI4dnNOUQ?oc=5\" target=\"_blank\">Saudi's Remaining Energy Lifeline To The World Under Threat After Successful Houthi Strikes (Updated)</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TWZ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX1c3Mm9fTDRHT093TXhJNWd4cjJuek9lOGdqX3h6RElZaURXaTluOW1DQVZScDlUakJqSzNSNjg2aktiVmI1WDFvZHItcExxUGVJY0M2R0xtX0tZQVRtOHlpS3RPWFdEVjdIeTB0SUd4dnpiZGhtREhRVmV1bWVOLW9FWlExeFNsc0lzTzVmZTRnUHNBbWtLZDF5M1htcWNsNi1hUlV5YXRONW93anlOYXB0a25lTHlTcDlEWFI4dnNOUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-09T05:51:38.509Z"
-    },
-    {
-      "id": "rss_379d5188d7761538",
-      "timestamp": 1788902162000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Forces Attack Saudi Aramco's Jazan Refinery - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNdjZ2ZERyM1N3eno3WmphRjZWQ0xKLUdKQ3J0RXlFWHZpU0JHV25MWU1yVEk5YnVPcmhoNGt1a3RWd1FIOEFyREtqRnRpN2IzMWV3WnBIbXo0al9GbmxxTVhHWUJTRGl4YWprWTZSZWVGMzhoYkt6VW16NnRUaGhXOFlsdm9hUWIwdzV4c0lMZlMxLWs?oc=5\" target=\"_blank\">Houthi Forces Attack Saudi Aramco's Jazan Refinery</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdjZ2ZERyM1N3eno3WmphRjZWQ0xKLUdKQ3J0RXlFWHZpU0JHV25MWU1yVEk5YnVPcmhoNGt1a3RWd1FIOEFyREtqRnRpN2IzMWV3WnBIbXo0al9GbmxxTVhHWUJTRGl4YWprWTZSZWVGMzhoYkt6VW16NnRUaGhXOFlsdm9hUWIwdzV4c0lMZlMxLWs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T22:50:57.209Z"
-    },
-    {
-      "id": "rss_969f5afa12589e0f",
-      "timestamp": 1788898996000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attack in Saudi Arabia - Foundation for Defense of Democracies",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE51b1g3WGUteDB3R3NuTEZIRTY0TFN4OFVBS0tnRnFDU01jczJLcDJONmt5S0NiVmd2aGZWb1hlYmJoZzFpVkNOTDFmM3dUUUU5UXRYSWV6OHdzOXc4cEtyU0ViTzQydkJrdHhmUk81NnVvOVNfd2Z6djM3S2V3QQ?oc=5\" target=\"_blank\">Houthi attack in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Foundation for Defense of Democracies</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE51b1g3WGUteDB3R3NuTEZIRTY0TFN4OFVBS0tnRnFDU01jczJLcDJONmt5S0NiVmd2aGZWb1hlYmJoZzFpVkNOTDFmM3dUUUU5UXRYSWV6OHdzOXc4cEtyU0ViTzQydkJrdHhmUk81NnVvOVNfd2Z6djM3S2V3QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T22:50:57.209Z"
-    },
-    {
-      "id": "rss_febfee873c52a060",
-      "timestamp": 1788898736000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "US Equity Markets End Lower After Houthi Attack on Saudi Arabia Energy Facilities - marketscreener.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQb0RSZFVrQVEtdWIydXhWRGNJRTVpalZ6Z1B5d2l5STJzc3FLbnZLOFdwS1JHYUhoX2RnU1pna3RmWFdDRkZpb3B1MmxsdWhGSkhrMnA1TUl5NWJoOW9CR1RqMnZEbHFPTVJPb3dWRklVaThSTm5EcVJVTEI4aDNzeTRsaDFFNTM0cnpHazVOSzRzYVRLRWZ0alBRQ3NrMkwyOW1UOE8wQlNJT2txeFVWSGNtaTBMQk05dWNfOTlWWkxCeW9pNWJfZ3c3UEZaUjQ?oc=5\" target=\"_blank\">US Equity Markets End Lower After Houthi Attack on Saudi Arabia Energy Facilities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">marketscreener.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQb0RSZFVrQVEtdWIydXhWRGNJRTVpalZ6Z1B5d2l5STJzc3FLbnZLOFdwS1JHYUhoX2RnU1pna3RmWFdDRkZpb3B1MmxsdWhGSkhrMnA1TUl5NWJoOW9CR1RqMnZEbHFPTVJPb3dWRklVaThSTm5EcVJVTEI4aDNzeTRsaDFFNTM0cnpHazVOSzRzYVRLRWZ0alBRQ3NrMkwyOW1UOE8wQlNJT2txeFVWSGNtaTBMQk05dWNfOTlWWkxCeW9pNWJfZ3c3UEZaUjQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T22:50:57.210Z"
-    },
-    {
-      "id": "rss_1a50a5b74a3916cf",
-      "timestamp": 1788882456000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil rises to six-week high following Houthi attack on Saudi sites - The Lufkin Daily News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNWRVh1Q1FrZXNjcnAxSHYwMEZGSjl4TFhITDlyOTRJTXEzLXZiaUtraGk4bVU4cTkwRi04MXZtcy1zSEZGcHFJTmRza19YbVV3MkE0Mm5idWFrVkRtczkwdkM0eTNvdE0yMTR5ZUZCeGtDNXZBSGxscnE3Y2hlYkpNLUtZb0xQRTNGV05hZU55d1dlMkJibnlVZzVHWmRQNzN0TmtsX2s1Q0xCVi1kNkVJT2hEYjNnUFFmS0M3Tm8xOXltcWZZQS1WcFJKeG5DUnpkdHhjeFotTlU1aUlvS0NFdFNNMGhfeWtnQVU3MXNwYWZ5aHFDbw?oc=5\" target=\"_blank\">Oil rises to six-week high following Houthi attack on Saudi sites</a>&nbsp;&nbsp;<font color=",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNNmNWRVh1Q1FrZXNjcnAxSHYwMEZGSjl4TFhITDlyOTRJTXEzLXZiaUtraGk4bVU4cTkwRi04MXZtcy1zSEZGcHFJTmRza19YbVV3MkE0Mm5idWFrVkRtczkwdkM0eTNvdE0yMTR5ZUZCeGtDNXZBSGxscnE3Y2hlYkpNLUtZb0xQRTNGV05hZU55d1dlMkJibnlVZzVHWmRQNzN0TmtsX2s1Q0xCVi1kNkVJT2hEYjNnUFFmS0M3Tm8xOXltcWZZQS1WcFJKeG5DUnpkdHhjeFotTlU1aUlvS0NFdFNNMGhfeWtnQVU3MXNwYWZ5aHFDbw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T17:01:55.462Z"
-    },
-    {
-      "id": "rss_5a24a5b1585c06e7",
-      "timestamp": 1788881902000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWS0tX1RjbFdjUHJfYlBROU1HbUgyYnNZVlAyeVhmQnRZNU5SeUZiLThhb1FGZVVOMHhiWjdZdTBydGplM0ZNbi0wb1hWUzFKeC12VzlmbGhoVzdBME51UEtuUnpuRWJRMGpHLWVhbmZ2OW1UbXgwU3RLOVQ5RVVLbms2dDMxNUhUS0NWSjc3Q1VFTDJZaDZWWmVyUE5SbFZOLVNJY0hEaVk2a1hNZG03bEV6WVdzY3A4TzZiMFh1a3A?oc=5\" target=\"_blank\">Iran-backed Houthis attack four Saudi cities in expansion of Middle East war, 73 hurt</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOWS0tX1RjbFdjUHJfYlBROU1HbUgyYnNZVlAyeVhmQnRZNU5SeUZiLThhb1FGZVVOMHhiWjdZdTBydGplM0ZNbi0wb1hWUzFKeC12VzlmbGhoVzdBME51UEtuUnpuRWJRMGpHLWVhbmZ2OW1UbXgwU3RLOVQ5RVVLbms2dDMxNUhUS0NWSjc3Q1VFTDJZaDZWWmVyUE5SbFZOLVNJY0hEaVk2a1hNZG03bEV6WVdzY3A4TzZiMFh1a3A?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T17:01:55.462Z"
-    },
-    {
-      "id": "rss_20b214cdb58d1dd9",
-      "timestamp": 1788879750000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia strikes back after heaviest Houthi attack in years - Euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRW13UkpaWWRUZFkzamNMZUduanM3WGlDcVlCWVkwZ3FUaEV1ZXU1UlRkYlZDa1RUenpGWTlBcnN5M2Jiam5VLWF4M1hrajRCdW1pRkY5VjljS1lqT21BcWVXWXNGdmN4SVY5Y0JvLU8zTkVmV1ZrWlBlcmdqRFMyRUVRZ1RNalZ6N05OUk9fZ0pWN1ZWeHpRVmloN2l1QzRhU280RWQtbEVtTUpXeUxPTDlqb3U2T3Rv?oc=5\" target=\"_blank\">Saudi Arabia strikes back after heaviest Houthi attack in years</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPRW13UkpaWWRUZFkzamNMZUduanM3WGlDcVlCWVkwZ3FUaEV1ZXU1UlRkYlZDa1RUenpGWTlBcnN5M2Jiam5VLWF4M1hrajRCdW1pRkY5VjljS1lqT21BcWVXWXNGdmN4SVY5Y0JvLU8zTkVmV1ZrWlBlcmdqRFMyRUVRZ1RNalZ6N05OUk9fZ0pWN1ZWeHpRVmloN2l1QzRhU280RWQtbEVtTUpXeUxPTDlqb3U2T3Rv?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-08T17:01:55.462Z"
     }
   ]
 }
