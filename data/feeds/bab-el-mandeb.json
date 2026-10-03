@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-03T14:31:05.970Z",
+  "last_fetch": "2026-10-03T18:30:02.511Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -175,6 +175,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-03T03:32:02.537Z"
+    },
+    {
+      "id": "rss_f25c4a638696726f",
+      "timestamp": 1790978410000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Prepares Offensive Against Iran-Backed Houthis To Retake Bab El-Mandeb: 14 outlets compared - newscord.org",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOM2N4R0JIV2FmUmxCYW9EY3dSbElJREpwUzdvZkkxMXpCQVdndVlBRUttaFN3dDJueVVRX0prNnptX2xhT1N5dEVJLThPdUFSaUxNUkF2QmdsYndnM2FPVEZyaDBSM1hTcUF2ZEVrTmJjM2pacGl2NFRyc1ZyMGdrNkVnTUdkdW1OZUJaWkN3bHVySnlPbFU3N3BRTFBWaXg3bWNKSmZHaFN1Y2cxRk5IT3BRbTQ0S1NWMF96YTlpY2MzMGttbWFReXFaNHh0bThVUXdr?oc=5\" target=\"_blank\">Saudi Arabia Prepares Offensive Against Iran-Backed Houthis To Retake Bab El-Mandeb: 14 outlets compared</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">n",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOM2N4R0JIV2FmUmxCYW9EY3dSbElJREpwUzdvZkkxMXpCQVdndVlBRUttaFN3dDJueVVRX0prNnptX2xhT1N5dEVJLThPdUFSaUxNUkF2QmdsYndnM2FPVEZyaDBSM1hTcUF2ZEVrTmJjM2pacGl2NFRyc1ZyMGdrNkVnTUdkdW1OZUJaWkN3bHVySnlPbFU3N3BRTFBWaXg3bWNKSmZHaFN1Y2cxRk5IT3BRbTQ0S1NWMF96YTlpY2MzMGttbWFReXFaNHh0bThVUXdr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-03T18:30:01.032Z"
     },
     {
       "id": "rss_6a181073b547c661",
@@ -10895,27 +10918,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-09T05:51:38.509Z"
-    },
-    {
-      "id": "rss_477641322c19332d",
-      "timestamp": 1788928140000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan Pledges to Honor Security Pact If Saudi Arabia Attacked - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNRVQ5RWZYeXlQRHNzZWxtaXFfdVlGeVkwQWpXY0drbnBDaTJLSVBNRzNRVTNwTi03UVRqSUFmQU5JSWdDdUJENERtREdLTDVPZFhaZ0RTTDZPdzFmdGk4RzB6cnhaQ0tsT25IM3VmZ204RG82U1lXUXZJdWZ5YmR3SG9ha0ZYYkViZXp3LVJGWHJEd3FKNDJqQ1BZblN3Tm1mUEJaVHBMREd1YUs4bTFnSVNLWGhxZw?oc=5\" target=\"_blank\">Pakistan Pledges to Honor Security Pact If Saudi Arabia Attacked</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRVQ5RWZYeXlQRHNzZWxtaXFfdVlGeVkwQWpXY0drbnBDaTJLSVBNRzNRVTNwTi03UVRqSUFmQU5JSWdDdUJENERtREdLTDVPZFhaZ0RTTDZPdzFmdGk4RzB6cnhaQ0tsT25IM3VmZ204RG82U1lXUXZJdWZ5YmR3SG9ha0ZYYkViZXp3LVJGWHJEd3FKNDJqQ1BZblN3Tm1mUEJaVHBMREd1YUs4bTFnSVNLWGhxZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-09T10:39:50.190Z"
     }
   ]
 }
