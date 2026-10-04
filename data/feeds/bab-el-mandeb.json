@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-04T17:15:00.531Z",
+  "last_fetch": "2026-10-04T20:18:31.838Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -805,6 +805,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-03T09:36:37.545Z"
+    },
+    {
+      "id": "rss_4b40338272e991cf",
+      "timestamp": 1790944995000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility - アラブニュース",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeFpYUVkxSEt6NFAxUkdYQ0FjUXR3RWp5NGpaZ290WHZGSWs5aGM3dGZIWEo0eV9sXzYwbWtESk1pc1RjY084RVJBbm1RbnJGUTlRSWxpVF9Ta1FSejhHMTM1YXBCdjlDdDF0a012NXhMWlJZVmdfdkRlcXJsbGtUdDdEcDFHeUpiSzJYbFgwaDVUd1hBdWQ3dlJ1Z1hXLW9fdXpmTmhVMFd1OEhTdENUZk9DMWdXRnYzSjM4?oc=5\" target=\"_blank\">Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeFpYUVkxSEt6NFAxUkdYQ0FjUXR3RWp5NGpaZ290WHZGSWs5aGM3dGZIWEo0eV9sXzYwbWtESk1pc1RjY084RVJBbm1RbnJGUTlRSWxpVF9Ta1FSejhHMTM1YXBCdjlDdDF0a012NXhMWlJZVmdfdkRlcXJsbGtUdDdEcDFHeUpiSzJYbFgwaDVUd1hBdWQ3dlJ1Z1hXLW9fdXpmTmhVMFd1OEhTdENUZk9DMWdXRnYzSjM4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-04T20:18:30.202Z"
     },
     {
       "id": "rss_3fe9366457358062",
@@ -10903,27 +10924,6 @@
       "origin": "rss",
       "confidence": 0.51,
       "source_weight": 0.85,
-      "fetched_at": "2026-09-10T11:37:40.149Z"
-    },
-    {
-      "id": "rss_9db6cc3e9efb1c40",
-      "timestamp": 1789029590000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis seize key Yemeni port, close in on Red Sea chokepoint - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ReHhtV0NaQUctYVdvUGVJSUhxTkhGWXA0MmthNDhuTzhNNWVSMjZCenJQaEREOXlfaFAtX1gycDdXUGxiYXppcE5XVGNsVkNjM1dyc2Jn?oc=5\" target=\"_blank\">Houthis seize key Yemeni port, close in on Red Sea chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ReHhtV0NaQUctYVdvUGVJSUhxTkhGWXA0MmthNDhuTzhNNWVSMjZCenJQaEREOXlfaFAtX1gycDdXUGxiYXppcE5XVGNsVkNjM1dyc2Jn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
       "fetched_at": "2026-09-10T11:37:40.149Z"
     }
   ]
