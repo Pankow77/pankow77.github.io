@@ -1,8 +1,71 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-07T22:34:41.713Z",
+  "last_fetch": "2026-10-08T02:25:06.384Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_dc7de39ed40c26a0",
+      "timestamp": 1791424482000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes on Saudi airports leave 3 dead, dozens wounded - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUFlzcmdscVZKbmllelFKZFlFdW5iQlNSVnVjV3pfTjNTRk5mR3d4OEc3Yk42ZHJCQnd0aTFrZFl1WEJVUFIyZVlHckhZWVBFMzBMb0s3RVpKUV9XOG5Xcm1heVh2SUZIMVFUUTZDN3pabWVmdEN0akI5U1owaHZDNFU0VVA1a2ZxejV2OFlaRTBwbTRTUklYd1V3TVQ2N1lkMmFzODEwUTFWdnZfSEY2Q3hEQUZSX1VP0gG4AUFVX3lxTE5HcEhYUkVmQ3o2MDZoVy0zUGV3YnE1ZFVBTVV0dW1RTEpGNGljYkh4c1NaZTQxbkIzMHpqNmxWVUg2azgzMTdueHZTMWdHbE14UTRWSllkMG93VDRQUk1mLXJrQ3FjQWZ1WTlTZFZMMlNZalNSakRURTNrUzBVLWxZM295THQ5WEFSN0dFcFRody15R0",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUFlzcmdscVZKbmllelFKZFlFdW5iQlNSVnVjV3pfTjNTRk5mR3d4OEc3Yk42ZHJCQnd0aTFrZFl1WEJVUFIyZVlHckhZWVBFMzBMb0s3RVpKUV9XOG5Xcm1heVh2SUZIMVFUUTZDN3pabWVmdEN0akI5U1owaHZDNFU0VVA1a2ZxejV2OFlaRTBwbTRTUklYd1V3TVQ2N1lkMmFzODEwUTFWdnZfSEY2Q3hEQUZSX1VP0gG4AUFVX3lxTE5HcEhYUkVmQ3o2MDZoVy0zUGV3YnE1ZFVBTVV0dW1RTEpGNGljYkh4c1NaZTQxbkIzMHpqNmxWVUg2azgzMTdueHZTMWdHbE14UTRWSllkMG93VDRQUk1mLXJrQ3FjQWZ1WTlTZFZMMlNZalNSakRURTNrUzBVLWxZM295THQ5WEFSN0dFcFRody15R0dIdC05SS1ucXhfbzEtU0JELWxYZndUbTRsUVp6dWl1MUZ1M0U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-08T02:25:04.764Z"
+    },
+    {
+      "id": "rss_c7845b6b843fe4c4",
+      "timestamp": 1791420797000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack targets Yemen airport - PressReader",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBpM1FidThXbXMwN0FxXzJRWDh5d3JkWU43dnBiUVAyTmE4Nms3Mjh5MUwzTzM3MXB6RnVucjJWX0U3eC0zQlVXLW1XM2tfVG9JcEZLWm5Obl9pRU90cWtnS0l0ekFnemFvVHVMRF9WN3hpY0lMb3hRamtJOEoxdw?oc=5\" target=\"_blank\">Houthi attack targets Yemen airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PressReader</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBpM1FidThXbXMwN0FxXzJRWDh5d3JkWU43dnBiUVAyTmE4Nms3Mjh5MUwzTzM3MXB6RnVucjJWX0U3eC0zQlVXLW1XM2tfVG9JcEZLWm5Obl9pRU90cWtnS0l0ekFnemFvVHVMRF9WN3hpY0lMb3hRamtJOEoxdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-08T02:25:04.764Z"
+    },
+    {
+      "id": "rss_a359bd1886d1e6d8",
+      "timestamp": 1791411095000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Deadly Houthi attacks on Saudi airports highlight widening fallout from Yemen civil war - CNN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPTmZiNVlWTk15REFxZ0NHQl85X0RaY1dWeC1OZkZOWklTYWQ3OUVGNEZBY2VrdHo0N2g2X2EzM2hQVXpOVG5TZWtxVEtzZE82ZjVnQ2gzUV9heTdKc2NyREVoRzlHQmZxOWliRGhFb3RWbVZqeFRVMklEdVItSktnbUJPcl9hVkJTenc?oc=5\" target=\"_blank\">Deadly Houthi attacks on Saudi airports highlight widening fallout from Yemen civil war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTmZiNVlWTk15REFxZ0NHQl85X0RaY1dWeC1OZkZOWklTYWQ3OUVGNEZBY2VrdHo0N2g2X2EzM2hQVXpOVG5TZWtxVEtzZE82ZjVnQ2gzUV9heTdKc2NyREVoRzlHQmZxOWliRGhFb3RWbVZqeFRVMklEdVItSktnbUJPcl9hVkJTenc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-08T02:25:04.763Z"
+    },
     {
       "id": "rss_67c76f7767fc9b25",
       "timestamp": 1791406535000,
@@ -25,6 +88,27 @@
       "fetched_at": "2026-10-07T22:34:40.259Z"
     },
     {
+      "id": "rss_4ae78152a6090406",
+      "timestamp": 1791406500000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi forces appear to make slow advance in south-west Yemen - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQlJOTVZkWWx2d3JVRmtTQmlwMVVwelRCSEtZZkU4dkI2cDlPWFpYRk1TeG8yM09iNjYycW5pZzMxY2pXekZmbWU4bE9SSXVob1VZYkdrSEw2ZFN1ZmhsZC1YUXBkLXJlZ1ROV0pqaTVGalp5YjdLX2VaM2pURFEwYXl1dmluOWlqSVh5NWhHTzFzc1BHdG1pam95X3EwRDJXcnhBLXF5YnRPaGs?oc=5\" target=\"_blank\">Houthi forces appear to make slow advance in south-west Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQQlJOTVZkWWx2d3JVRmtTQmlwMVVwelRCSEtZZkU4dkI2cDlPWFpYRk1TeG8yM09iNjYycW5pZzMxY2pXekZmbWU4bE9SSXVob1VZYkdrSEw2ZFN1ZmhsZC1YUXBkLXJlZ1ROV0pqaTVGalp5YjdLX2VaM2pURFEwYXl1dmluOWlqSVh5NWhHTzFzc1BHdG1pam95X3EwRDJXcnhBLXF5YnRPaGs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-08T02:25:04.764Z"
+    },
+    {
       "id": "rss_81d9a6d7b22aa80f",
       "timestamp": 1791404636000,
       "source": "Al Jazeera",
@@ -44,6 +128,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-07T22:34:40.259Z"
+    },
+    {
+      "id": "rss_540fe5c95d3c266a",
+      "timestamp": 1791404451000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Attack Aden’s International Airport - ASHARQ AL-AWSAT English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPb3BnRG1tcHc5UHI1TG9LU1A0YXF0Vmhob1VVbE03djEwZGp5bkZkYmxwY0dqTEZwWnRIYnFNUmgwbkNvcWNRVXYxVmJoODNhT1dPN1E1eGtITlVCTzl3cGwwNlBCZm1sMmRQVWZRVmx3bFBoRTd0OTNoM0pXM2hWY1lhQ1puYV9waHV5RHpaR3RqblBCRVZJMnFaamJBdw?oc=5\" target=\"_blank\">Houthis Attack Aden’s International Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPb3BnRG1tcHc5UHI1TG9LU1A0YXF0Vmhob1VVbE03djEwZGp5bkZkYmxwY0dqTEZwWnRIYnFNUmgwbkNvcWNRVXYxVmJoODNhT1dPN1E1eGtITlVCTzl3cGwwNlBCZm1sMmRQVWZRVmx3bFBoRTd0OTNoM0pXM2hWY1lhQ1puYV9waHV5RHpaR3RqblBCRVZJMnFaamJBdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-08T02:25:04.765Z"
     },
     {
       "id": "rss_8a6665af58ac7795",
@@ -10768,119 +10873,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-12T07:38:08.393Z"
-    },
-    {
-      "id": "rss_5119d6394edcfe98",
-      "timestamp": 1789185630000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "‘A f***-up of epic proportions’: Blame game begins after Iran-backed Houthis’ lightning advance down Red Sea coast - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE1rNC00UEttX2RuYWVWaEl5T2RhZkpyWXFNYzA3MEt0OW9CX25ialVsSkphTk84eGl2R2NXTlhycHJPN1NQNjIwVEZHVGdqeG1vY3dYTmNTcGk3blAxTU1qRmg5WDFUSF8zanU4NHBmS19jYWthUGlSWXJlU2ZWaHc?oc=5\" target=\"_blank\">‘A f***-up of epic proportions’: Blame game begins after Iran-backed Houthis’ lightning advance down Red Sea coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1rNC00UEttX2RuYWVWaEl5T2RhZkpyWXFNYzA3MEt0OW9CX25ialVsSkphTk84eGl2R2NXTlhycHJPN1NQNjIwVEZHVGdqeG1vY3dYTmNTcGk3blAxTU1qRmg5WDFUSF8zanU4NHBmS19jYWthUGlSWXJlU2ZWaHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-12T11:55:35.157Z"
-    },
-    {
-      "id": "rss_e3de89f70aea58f1",
-      "timestamp": 1789174500000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudis shut down oil pipeline as Houthis tighten grip on Red Sea shipping - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQczRVMDVmcFFkMWs3TDRSemk1SnA1SW1NSTRmaGU3VXRmbDlvUnlGTll6VHRRYWxjOTl1N3QzcFhIYWs5RjJaRGRmclRQYmpLdW8tNHNXWExZTnpmSklXaFU4YWJvOC1EcEpvcDdQVnpfWnBYT3l6X1pCRW9Bc19YQzNmYnFrbHBNQXd4aE1nVkpKWktoTjFoM2dSa1BGMnlSb3dVMnJhOFVTRHRrXzlHSFVXTDFvZVNzQ19r?oc=5\" target=\"_blank\">Saudis shut down oil pipeline as Houthis tighten grip on Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQczRVMDVmcFFkMWs3TDRSemk1SnA1SW1NSTRmaGU3VXRmbDlvUnlGTll6VHRRYWxjOTl1N3QzcFhIYWs5RjJaRGRmclRQYmpLdW8tNHNXWExZTnpmSklXaFU4YWJvOC1EcEpvcDdQVnpfWnBYT3l6X1pCRW9Bc19YQzNmYnFrbHBNQXd4aE1nVkpKWktoTjFoM2dSa1BGMnlSb3dVMnJhOFVTRHRrXzlHSFVXTDFvZVNzQ19r?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-12T02:51:25.032Z"
-    },
-    {
-      "id": "rss_72e267e84a741f78",
-      "timestamp": 1789169329000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Oil routes in peril as attacks shut Saudi pipeline and Houthis threaten key waterway - washingtonpost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNVpxYjZ0d1VwNVJKVHFhUFVFRXJGNDRobUxmNjJOUFBWQ1R1THRRdlRFbE9oRVRxaHdRTkw4b3hxV2tIcTZSX1ZCUUZ2SGQtQWJ4akhpSGE5S3p6a1RxSXdwNjlVemJFRWlvMzVzZm10RGJWTVNVM2VhVVZkcU1kRDl2UjJBR191WlppV2p1LTlPdk1Ba2lHV0Y4Ykp6YzU1RmRHdEpOQmxIREU?oc=5\" target=\"_blank\">Oil routes in peril as attacks shut Saudi pipeline and Houthis threaten key waterway</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">washingtonpost.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNVpxYjZ0d1VwNVJKVHFhUFVFRXJGNDRobUxmNjJOUFBWQ1R1THRRdlRFbE9oRVRxaHdRTkw4b3hxV2tIcTZSX1ZCUUZ2SGQtQWJ4akhpSGE5S3p6a1RxSXdwNjlVemJFRWlvMzVzZm10RGJWTVNVM2VhVVZkcU1kRDl2UjJBR191WlppV2p1LTlPdk1Ba2lHV0Y4Ykp6YzU1RmRHdEpOQmxIREU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-11T23:50:01.061Z"
-    },
-    {
-      "id": "rss_86f957da51674dca",
-      "timestamp": 1789168882000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Yemen’s Houthis capture a Red Sea island in a threat to shipping, and other Mideast developments - WTOP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQV3BkT2JpY1VTZ3VINFNXUGtQUnhtdW9sS19pOWNZSm9ZLVViaVdMNUpqZVhjZm5VVFM0UjlVb1ktVGJKdzAxNUxrbDhCSkRaczNHejIxQnFXYkJjQV9TT2dlOC03YjBsT3dIZThiOXNlU2l5dXlmME04ejY5X1B3dVVBVjFxSmcxR1BLQkp2TFRLZHB6cVFrSFpkTGxWWlV3NmpVOFRJQVB0VE5GS2tOZjBFRTV5V2d3bGc?oc=5\" target=\"_blank\">Yemen’s Houthis capture a Red Sea island in a threat to shipping, and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WTOP News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQV3BkT2JpY1VTZ3VINFNXUGtQUnhtdW9sS19pOWNZSm9ZLVViaVdMNUpqZVhjZm5VVFM0UjlVb1ktVGJKdzAxNUxrbDhCSkRaczNHejIxQnFXYkJjQV9TT2dlOC03YjBsT3dIZThiOXNlU2l5dXlmME04ejY5X1B3dVVBVjFxSmcxR1BLQkp2TFRLZHB6cVFrSFpkTGxWWlV3NmpVOFRJQVB0VE5GS2tOZjBFRTV5V2d3bGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-12T02:51:25.032Z"
-    },
-    {
-      "id": "rss_14dbf914ee8be158",
-      "timestamp": 1789167120000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia shuts down a pipeline as Houthis seize an island, opening a new front in the Iran war - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM0JXR25HRTJQajYwc0JCVkd0dnBQdXBiOVRMQjM2RVJYS0gzTmo5Ykg1RGJqYkpVSnBGajJfLWlCYmJWTG5fWlNxcXV3eGN2Z1Jud3VzanpiQ2ZrSzB0bDY3OW5FRzZELVlYMmJfbXpGUXBadWVyOU9Fa0YyYzBqZVByR3BFNnNBdTlGOXlKUGlHaDl0QkJxUmo5LW9SV1htNXlqRy1QNGV6Zw?oc=5\" target=\"_blank\">Saudi Arabia shuts down a pipeline as Houthis seize an island, opening a new front in the Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPM0JXR25HRTJQajYwc0JCVkd0dnBQdXBiOVRMQjM2RVJYS0gzTmo5Ykg1RGJqYkpVSnBGajJfLWlCYmJWTG5fWlNxcXV3eGN2Z1Jud3VzanpiQ2ZrSzB0bDY3OW5FRzZELVlYMmJfbXpGUXBadWVyOU9Fa0YyYzBqZVByR3BFNnNBdTlGOXlKUGlHaDl0QkJxUmo5LW9SV1htNXlqRy1QNGV6Zw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-11T23:50:01.061Z"
     }
   ]
 }
