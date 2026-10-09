@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-08T21:46:04.889Z",
+  "last_fetch": "2026-10-09T01:41:27.182Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_836414e05d6b68d8",
+      "timestamp": 1791501127000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Trump: No Iran attack before midterms; Houthi strikes in Saudi - The New Arab",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNakE5Z1hOSG0xUnNjTjZiUWRWekNUS1p1anhCZk9WMHVhMmtFSnBWQ25mRWFqNlRpYUNHMUI4U1QzNlpUTDZ0WXhpY0l0YkpFTzhUQ3BjNW1XYWJ3Z042bjZnTmNHelQxd3otQ2tGVkJpcFBnMXNicVo5LVhqZE5oSWZGVzJmQQ?oc=5\" target=\"_blank\">Trump: No Iran attack before midterms; Houthi strikes in Saudi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Arab</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNakE5Z1hOSG0xUnNjTjZiUWRWekNUS1p1anhCZk9WMHVhMmtFSnBWQ25mRWFqNlRpYUNHMUI4U1QzNlpUTDZ0WXhpY0l0YkpFTzhUQ3BjNW1XYWJ3Z042bjZnTmNHelQxd3otQ2tGVkJpcFBnMXNicVo5LVhqZE5oSWZGVzJmQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-09T01:41:25.683Z"
+    },
     {
       "id": "rss_ae06128311170796",
       "timestamp": 1791490062000,
@@ -67,6 +90,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-08T21:46:02.934Z"
+    },
+    {
+      "id": "rss_fb70e8da3f541066",
+      "timestamp": 1791478318000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Lufthansa, Indian airlines suspend flights to Riyadh after Houthi attacks - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVXd3SHFQR3NWbldRVWo1OVQtajAyZVYtRzNYcmFzZTR3X2pMaDEzTXJKX3R4aUNPNW9fOEhUalZkVnR3LWtKRWM3VDVqelA0M1QtRlFNOE45ZG16VFVIN0JrbHFQSDFFd0N1OEM5Z3FMS0tnVDJvaEZXSjhSYUVsVWJGWXpBdTdVSjZrVVBEc3JCUzFDQXM4Y2ZjYUpHTWlIb2VtUGFlOWs2djlQYUFZLUZ1X0hSZFJ0?oc=5\" target=\"_blank\">Lufthansa, Indian airlines suspend flights to Riyadh after Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVXd3SHFQR3NWbldRVWo1OVQtajAyZVYtRzNYcmFzZTR3X2pMaDEzTXJKX3R4aUNPNW9fOEhUalZkVnR3LWtKRWM3VDVqelA0M1QtRlFNOE45ZG16VFVIN0JrbHFQSDFFd0N1OEM5Z3FMS0tnVDJvaEZXSjhSYUVsVWJGWXpBdTdVSjZrVVBEc3JCUzFDQXM4Y2ZjYUpHTWlIb2VtUGFlOWs2djlQYUFZLUZ1X0hSZFJ0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-09T01:41:25.684Z"
     },
     {
       "id": "rss_38f3f6cd27904503",
@@ -10818,48 +10862,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-13T10:26:33.599Z"
-    },
-    {
-      "id": "rss_474f35c4093d30ce",
-      "timestamp": 1789286676000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Mocha left vulnerable to Houthi attack by US-Saudi inaction - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvakduR3JfeDBqLTFCSFlkaGFyV3RJRHdaV2xzVU1WeHIyaktVQXVPYVBYYWxtYkpPVXpVZUd4M1NybTdqc09FT21DMkY0RHYyVDFxdGgzWnF1aU91?oc=5\" target=\"_blank\">Yemen's Mocha left vulnerable to Houthi attack by US-Saudi inaction</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvakduR3JfeDBqLTFCSFlkaGFyV3RJRHdaV2xzVU1WeHIyaktVQXVPYVBYYWxtYkpPVXpVZUd4M1NybTdqc09FT21DMkY0RHYyVDFxdGgzWnF1aU91?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-13T10:26:33.598Z"
-    },
-    {
-      "id": "rss_834dc6da88a0992c",
-      "timestamp": 1789281856000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi projectile wounds two, damages mosque in Jazan region, Saudi says - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOYnNBXzZuemprcHVJaWc4RW0yNDVwNk93VFB6VWVwZXRSSjZsQU1CWFI1cjFwNVkyTFpqaExhTjdFSmp6eExzVVdmandxU2F0VGF3TENTR2Y3OUpJTHYzendyQ3pRUUhZRHlxQTVZN3ozTy01SlpoNzVzbGtxY1NLYzhodGRKaHdpUk8yS0hsZ1Z1N2NvQVN5NkFBZFBuSHhBdjVHRWZuVXhnRXNfTGw2OQ?oc=5\" target=\"_blank\">Houthi projectile wounds two, damages mosque in Jazan region, Saudi says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al Jazeera</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYnNBXzZuemprcHVJaWc4RW0yNDVwNk93VFB6VWVwZXRSSjZsQU1CWFI1cjFwNVkyTFpqaExhTjdFSmp6eExzVVdmandxU2F0VGF3TENTR2Y3OUpJTHYzendyQ3pRUUhZRHlxQTVZN3ozTy01SlpoNzVzbGtxY1NLYzhodGRKaHdpUk8yS0hsZ1Z1N2NvQVN5NkFBZFBuSHhBdjVHRWZuVXhnRXNfTGw2OQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-13T14:32:44.067Z"
     }
   ]
 }
