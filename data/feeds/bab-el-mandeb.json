@@ -1,8 +1,94 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-09T15:27:07.415Z",
+  "last_fetch": "2026-10-10T00:11:05.601Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_98dcec6f58583aa1",
+      "timestamp": 1791578489000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "EU Deploys Additional Ships to the Red Sea to Strengthen ‘Aspides’ Naval Mission - يمن مونيتور",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1EMTRCZUU5OWZySkdiWE1aTjZkakJMdFR6a0xYUVNOUGJLRDBUVGpIMlpPZnZTY2pWS3ZPdU5vTTZFVndoc0stbjNyXy1SOXhfNm5MZ1JPdEpOZWlJalVFcm5lZTJjMTJmVWtSamR1b1phX1k5N3c?oc=5\" target=\"_blank\">EU Deploys Additional Ships to the Red Sea to Strengthen ‘Aspides’ Naval Mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">يمن مونيتور</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1EMTRCZUU5OWZySkdiWE1aTjZkakJMdFR6a0xYUVNOUGJLRDBUVGpIMlpPZnZTY2pWS3ZPdU5vTTZFVndoc0stbjNyXy1SOXhfNm5MZ1JPdEpOZWlJalVFcm5lZTJjMTJmVWtSamR1b1phX1k5N3c?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:05.074Z"
+    },
+    {
+      "id": "rss_068e5f2326627a33",
+      "timestamp": 1791575587000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "3 Saudis killed in Houthi attack on Riyadh airport, Saudia plane hit - WRTV",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQZW1Pb3FyQWRDMTRzNlJSWFFtanUwR3loVXJrQkpwTGRzY3diM3BZdV90Q3JfZ25IOFZuS1VJSVZXSERzV0lTWkhOYmQ1MVYtYlhfcll1VmNIbnVtSGg0aUZjQ1pTZUZvcGg3eGRpT0NXOFFWRmhib3VhMlBzeHl2ZFVPTFktVmJLTEVRSjZNSjJhZVVGNk1rbHJraDFfU1ZNTVZMdjJ1OG1aX2tE?oc=5\" target=\"_blank\">3 Saudis killed in Houthi attack on Riyadh airport, Saudia plane hit</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WRTV</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQZW1Pb3FyQWRDMTRzNlJSWFFtanUwR3loVXJrQkpwTGRzY3diM3BZdV90Q3JfZ25IOFZuS1VJSVZXSERzV0lTWkhOYmQ1MVYtYlhfcll1VmNIbnVtSGg0aUZjQ1pTZUZvcGg3eGRpT0NXOFFWRmhib3VhMlBzeHl2ZFVPTFktVmJLTEVRSjZNSjJhZVVGNk1rbHJraDFfU1ZNTVZMdjJ1OG1aX2tE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:04.138Z"
+    },
+    {
+      "id": "rss_2e3b2efe3efe3b34",
+      "timestamp": 1791562669000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi envoy says allied Yemeni forces capture Bab el Mandeb strait from Houthis: What to know - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQmlGdXE3dDhlZUJVX3hNQWNkeVJUOHVGSnY5eTdOQ1dZcDFRSFNaNlVxc1A5Z3RXc1BzZC1CUVpoQW4xQmxqUk5Tb090NV9qWE1QMDUtSDM4ZC0tcVpnT091ZTFacFlNa3p4VnBnMWdpNVpCWTVxMmZ4bzRlTkVZcEppTTBPc0FVVU1JcjMzbGF2QWtXdnRYbEtSRGdMY3h5RUs5a2hhX1lVLWxOT3B3RU8xSjliOVl1YjR0TjlxaENxUQ?oc=5\" target=\"_blank\">Saudi envoy says allied Yemeni forces capture Bab el Mandeb strait from Houthis: What to know</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQmlGdXE3dDhlZUJVX3hNQWNkeVJUOHVGSnY5eTdOQ1dZcDFRSFNaNlVxc1A5Z3RXc1BzZC1CUVpoQW4xQmxqUk5Tb090NV9qWE1QMDUtSDM4ZC0tcVpnT091ZTFacFlNa3p4VnBnMWdpNVpCWTVxMmZ4bzRlTkVZcEppTTBPc0FVVU1JcjMzbGF2QWtXdnRYbEtSRGdMY3h5RUs5a2hhX1lVLWxOT3B3RU8xSjliOVl1YjR0TjlxaENxUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:04.139Z"
+    },
+    {
+      "id": "rss_88620301c225a510",
+      "timestamp": 1791559680000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis attack Saudi Arabian international airport, kill 3 - upi",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNdGRqM29mRUE3eEJyQnpQNHJMQWdpMjAtVkpNU0FIMnUyVndJQnJJNVgwenFpdlFwX3NjLVpjLWV5YzBuMDNBbjhFaVJyaTFMT1FndkE2Q3YwU2JYcDFBY252NEVlVnJzUTBTVFNQejhwT09zSHJGdkcyQjg2NGp4NGR3aHVDSFM4NnJRNElKX3VBSGJ4N2RsRC04dlhnSVp3MXlQRnQyV09KVkJIQTBMMdIBsAFBVV95cUxNdGRqM29mRUE3eEJyQnpQNHJMQWdpMjAtVkpNU0FIMnUyVndJQnJJNVgwenFpdlFwX3NjLVpjLWV5YzBuMDNBbjhFaVJyaTFMT1FndkE2Q3YwU2JYcDFBY252NEVlVnJzUTBTVFNQejhwT09zSHJGdkcyQjg2NGp4NGR3aHVDSFM4NnJRNElKX3VBSGJ4N2RsRC04dl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdGRqM29mRUE3eEJyQnpQNHJMQWdpMjAtVkpNU0FIMnUyVndJQnJJNVgwenFpdlFwX3NjLVpjLWV5YzBuMDNBbjhFaVJyaTFMT1FndkE2Q3YwU2JYcDFBY252NEVlVnJzUTBTVFNQejhwT09zSHJGdkcyQjg2NGp4NGR3aHVDSFM4NnJRNElKX3VBSGJ4N2RsRC04dlhnSVp3MXlQRnQyV09KVkJIQTBMMdIBsAFBVV95cUxNdGRqM29mRUE3eEJyQnpQNHJMQWdpMjAtVkpNU0FIMnUyVndJQnJJNVgwenFpdlFwX3NjLVpjLWV5YzBuMDNBbjhFaVJyaTFMT1FndkE2Q3YwU2JYcDFBY252NEVlVnJzUTBTVFNQejhwT09zSHJGdkcyQjg2NGp4NGR3aHVDSFM4NnJRNElKX3VBSGJ4N2RsRC04dlhnSVp3MXlQRnQyV09KVkJIQTBMMQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:04.138Z"
+    },
     {
       "id": "rss_d28b87abcae0c460",
       "timestamp": 1791557814000,
@@ -23,6 +109,27 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-09T15:27:05.596Z"
+    },
+    {
+      "id": "rss_942bd2d9501496e5",
+      "timestamp": 1791554756000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi-backed forces vow a 'firm' response after a Houthi attack on Riyadh airport kills 3 - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQa0l5RUo5bHNPRHVrV01BdGwtbjl2ZW45ZzlJdmpGd2NrNHJWdWNTQ3BnbFhQX2FlQTJfeVYzNWtxcEpIemRSU0ZNaFlFSDNZR3Rsc0hIOWtHNHllR0xGdDJTRV9jWmlRNFhNM3NoUWRSZDQ4cHVLeVAzckd2UkxTc05mNjFoNkYwWXNBcm9tN3huN0l5M2ZJQkFqU3DSAZwBQVVfeXFMUFlWYzRjWHNnTWtmUWUzSGNUM25ZY0M3aHl4QkstWHVlOFFYQXFzWVZUbWV6VU1CSWwyb1g4aEdiNUJIRmdTTHhqYUpPazlnZ2V5QUJxdTJ6Yzk5VVNSVU5lRHhQOTllMERMYy0yY21iQndTTXg3QWF1T0djQjdKNm5YNHdOVVlqanV3el80WDhaNkJGZ0k0QW1lN3NJ?oc=5\" target=\"_blank\">Sau",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQa0l5RUo5bHNPRHVrV01BdGwtbjl2ZW45ZzlJdmpGd2NrNHJWdWNTQ3BnbFhQX2FlQTJfeVYzNWtxcEpIemRSU0ZNaFlFSDNZR3Rsc0hIOWtHNHllR0xGdDJTRV9jWmlRNFhNM3NoUWRSZDQ4cHVLeVAzckd2UkxTc05mNjFoNkYwWXNBcm9tN3huN0l5M2ZJQkFqU3DSAZwBQVVfeXFMUFlWYzRjWHNnTWtmUWUzSGNUM25ZY0M3aHl4QkstWHVlOFFYQXFzWVZUbWV6VU1CSWwyb1g4aEdiNUJIRmdTTHhqYUpPazlnZ2V5QUJxdTJ6Yzk5VVNSVU5lRHhQOTllMERMYy0yY21iQndTTXg3QWF1T0djQjdKNm5YNHdOVVlqanV3el80WDhaNkJGZ0k0QW1lN3NJ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:04.138Z"
     },
     {
       "id": "rss_d053a9cdb2969175",
@@ -233,6 +340,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-09T15:27:05.597Z"
+    },
+    {
+      "id": "rss_f44fd9aa2721a344",
+      "timestamp": 1791539069000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes on Riyadh airport killed 3 Saudi nationals, officials say - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPaTYwazdWUFRqa1RGZTFjczVDa09Pb1F1bXZUd2hTZXdWS1JjcnZZQ1o2c1lTTHIzdkRwTnViaE4tMVlHd0xIZ0dwSTVnU1FScE9ZdFI5QThEVC04NnlIY3hORXdtYWQwVVRKd0FLcGtBcGJwU0IyamZKWnh0aW9UQTFLWE1qTVhuTFR2bUNzTUUyUWZFRHF6ZHpRX1p1V0hBOFFtd0FMM2xXNEVoa3hSSGFnYw?oc=5\" target=\"_blank\">Houthi strikes on Riyadh airport killed 3 Saudi nationals, officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPaTYwazdWUFRqa1RGZTFjczVDa09Pb1F1bXZUd2hTZXdWS1JjcnZZQ1o2c1lTTHIzdkRwTnViaE4tMVlHd0xIZ0dwSTVnU1FScE9ZdFI5QThEVC04NnlIY3hORXdtYWQwVVRKd0FLcGtBcGJwU0IyamZKWnh0aW9UQTFLWE1qTVhuTFR2bUNzTUUyUWZFRHF6ZHpRX1p1V0hBOFFtd0FMM2xXNEVoa3hSSGFnYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-10T00:11:04.138Z"
     },
     {
       "id": "rss_1f3b2a7a4dd3e93d",
@@ -10717,135 +10845,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-14T11:36:40.381Z"
-    },
-    {
-      "id": "rss_ebb704f50fdb15c3",
-      "timestamp": 1789383992000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis claim major attack on Saudi air base as rebels seize Red Sea islands - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE93aFFOZEF4dERVSDNUajRxbzRSX1pQa2RtTzRTbTJRYUdYUnB5ZHFyTVRGU1QxLVdfRVdsNDMtQTdoeHlGYWJRUTFqQVZmX3VodGlkTFdJWDdoVXMx?oc=5\" target=\"_blank\">Houthis claim major attack on Saudi air base as rebels seize Red Sea islands</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE93aFFOZEF4dERVSDNUajRxbzRSX1pQa2RtTzRTbTJRYUdYUnB5ZHFyTVRGU1QxLVdfRVdsNDMtQTdoeHlGYWJRUTFqQVZmX3VodGlkTFdJWDdoVXMx?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-14T11:36:40.379Z"
-    },
-    {
-      "id": "rss_0eaee3d668fb42db",
-      "timestamp": 1789383611000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis capture more Red Sea islands, tightening grip on Bab el-Mandeb - Euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPdE8zRDROT0V6S2JhaS1JMjNjOFctR2VrdlB2RDJNOS1WOVpqU1hXWW1POFFyVEF3aHJrd252Vlg1S1hFT2U3UTduLUk4NXNXMFl2aTJIdUFLdi1DTFYzMU9ubU5DWnBybGdPT2U1YVgyN0FlTnZfQUE5VEY5YXdUNlJRemptSnpCWGh6SkdveHhKRC1aNEJfX0duVGNpeHE4WEc1UjBXMHFOVkNUWDUwN1NR?oc=5\" target=\"_blank\">Houthis capture more Red Sea islands, tightening grip on Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdE8zRDROT0V6S2JhaS1JMjNjOFctR2VrdlB2RDJNOS1WOVpqU1hXWW1POFFyVEF3aHJrd252Vlg1S1hFT2U3UTduLUk4NXNXMFl2aTJIdUFLdi1DTFYzMU9ubU5DWnBybGdPT2U1YVgyN0FlTnZfQUE5VEY5YXdUNlJRemptSnpCWGh6SkdveHhKRC1aNEJfX0duVGNpeHE4WEc1UjBXMHFOVkNUWDUwN1NR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-14T11:36:40.380Z"
-    },
-    {
-      "id": "rss_c6230a443c6c1246",
-      "timestamp": 1789383600000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "How Escalating Attacks in Yemen Impact Global Oil Trade - Time Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNSlhaWWM5NDhQa0wxSUJZeTNkcGNUM2lNbGZuV3BPdWV3UU45dVB4OUM4T1V1eVlDMGpZRE5OV19xUkVGNjh4R3F6VjNJY0tHcVNIVTh5bE45OG5kQ3IydWduRU1fVzItR3lfNXJ3SDlaNXZ0VU9PRmFGMDlxN0g2OXp4LUxKV25XTl9JTEpXNGJXTHVPdkE?oc=5\" target=\"_blank\">How Escalating Attacks in Yemen Impact Global Oil Trade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Time Magazine</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNSlhaWWM5NDhQa0wxSUJZeTNkcGNUM2lNbGZuV3BPdWV3UU45dVB4OUM4T1V1eVlDMGpZRE5OV19xUkVGNjh4R3F6VjNJY0tHcVNIVTh5bE45OG5kQ3IydWduRU1fVzItR3lfNXJ3SDlaNXZ0VU9PRmFGMDlxN0g2OXp4LUxKV25XTl9JTEpXNGJXTHVPdkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-14T21:21:35.905Z"
-    },
-    {
-      "id": "rss_f5b3325b79660850",
-      "timestamp": 1789378151000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen gov’t forces advance in Taiz as Houthis claim attack on Saudi Arabia - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOUHNjWXRWend3NGxDNEU0NTRuN3JBRDhiUUNaakQxZDRaY0JoVmJwNGhqbFVhSVBTV1Y2VlN5VUwzUDBWcWFWUDBuNW1fcnRhWndjY1psQzRhYWROWnRSSmp4Y3VzdDRycTZObUNzTW1HRy1BRzZpenV2Q2dmdnRqNFJtVGd6TlZVMndaLTFhWG1BZzNHQWVLYUdjLXM4UElYRjNYZHpMLUhyWkNvbW9nU0dtWk7SAboBQVVfeXFMT01fb3U1Ym4xa1lJd3NpcGZ4NHF0QzM3ZktaUVRrLUx4U3E2WmFfYUlzQ0dMZlk4SjR6eEF0NTdzaFJac2RBV1N0ZWJ4LTkwRnZnR2I4dER5Tm1NM2VpZ2VNdW5yTFg2RVdBanpQclUwTHQ3Ym9UY1Qwdlc0TDBGano3NmptaGpqVWxtanNWdG1Zb1hvdllhYU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUHNjWXRWend3NGxDNEU0NTRuN3JBRDhiUUNaakQxZDRaY0JoVmJwNGhqbFVhSVBTV1Y2VlN5VUwzUDBWcWFWUDBuNW1fcnRhWndjY1psQzRhYWROWnRSSmp4Y3VzdDRycTZObUNzTW1HRy1BRzZpenV2Q2dmdnRqNFJtVGd6TlZVMndaLTFhWG1BZzNHQWVLYUdjLXM4UElYRjNYZHpMLUhyWkNvbW9nU0dtWk7SAboBQVVfeXFMT01fb3U1Ym4xa1lJd3NpcGZ4NHF0QzM3ZktaUVRrLUx4U3E2WmFfYUlzQ0dMZlk4SjR6eEF0NTdzaFJac2RBV1N0ZWJ4LTkwRnZnR2I4dER5Tm1NM2VpZ2VNdW5yTFg2RVdBanpQclUwTHQ3Ym9UY1Qwdlc0TDBGano3NmptaGpqVWxtanNWdG1Zb1hvdllhYUZjRFo2bDVKSFNIaHJpU0xwTkxDMm1Hcjk4WXA4X25vT2x3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-14T11:36:40.380Z"
-    },
-    {
-      "id": "rss_a59ebbc9a9d92fbc",
-      "timestamp": 1789377382000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia issues, lifts alerts as Houthi attacks raise security fears - アラブニュース",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOenRxbVNWRlh3U0pBbEF4M3ZKVlpGeTlsQnV1U1FSZFYyU1hhMXhRazVhUExEenJueTlLbnpNLURlZHREdThnNGw1OGItcmRjdW9BRDV5bFhXR3FEa1VnYkhOeU96MnhPcC1xSnNEa0NZSFk0cTRNa2Q0OHBmYXNNMGpsZDRZQnczN25ZN0o2QlFfRmZZNHE3bmtmTUM1dkxTWUEya3Yxa3J6S0dFWndlQkdUV2ZMb08xb05R?oc=5\" target=\"_blank\">Saudi Arabia issues, lifts alerts as Houthi attacks raise security fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOenRxbVNWRlh3U0pBbEF4M3ZKVlpGeTlsQnV1U1FSZFYyU1hhMXhRazVhUExEenJueTlLbnpNLURlZHREdThnNGw1OGItcmRjdW9BRDV5bFhXR3FEa1VnYkhOeU96MnhPcC1xSnNEa0NZSFk0cTRNa2Q0OHBmYXNNMGpsZDRZQnczN25ZN0o2QlFfRmZZNHE3bmtmTUM1dkxTWUEya3Yxa3J6S0dFWndlQkdUV2ZMb08xb05R?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-14T11:36:40.381Z"
-    },
-    {
-      "id": "rss_b4edb438e90c1a87",
-      "timestamp": 1789376679000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis claim large-scale missile, drone attack on King Khalid Air Base in Saudi Arabia - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxQT0JmWE1tRzlHeUZZQ1p4Yy1JdkJLWXFiemMxMmZQVWpjaHFCa2hETVZsQzFUdVBpWXp1ZzBIM25lWW5TMHY2ZlhkLW9hQ2JoQnZPaHN5NFZBUHA1ajdMTElsQ3pKQXc5WW1xN3UxeXZtdEpIWXFWR0VwS0h4c0hRaVJ5T3lwYlh3RGV6Z3ltNS03M0JGNnlpV2RPSEQyNE0xSHBWc2NxM08wWkJ2eWpFVkFKYWdIN2x6bzlUV2V6dlZabDhSaEVONmJTcw?oc=5\" target=\"_blank\">Houthis claim large-scale missile, drone attack on King Khalid Air Base in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQT0JmWE1tRzlHeUZZQ1p4Yy1JdkJLWXFiemMxMmZQVWpjaHFCa2hETVZsQzFUdVBpWXp1ZzBIM25lWW5TMHY2ZlhkLW9hQ2JoQnZPaHN5NFZBUHA1ajdMTElsQ3pKQXc5WW1xN3UxeXZtdEpIWXFWR0VwS0h4c0hRaVJ5T3lwYlh3RGV6Z3ltNS03M0JGNnlpV2RPSEQyNE0xSHBWc2NxM08wWkJ2eWpFVkFKYWdIN2x6bzlUV2V6dlZabDhSaEVONmJTcw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-14T11:36:40.380Z"
     }
   ]
 }
