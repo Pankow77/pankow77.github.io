@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-11T18:15:13.499Z",
+  "last_fetch": "2026-10-11T22:13:51.228Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ba13c41696352bb1",
+      "timestamp": 1791744360000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Iran War Day 226: One American Dead in Houthi Attack on Saudi Airport - The American Conservative",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQX25SYmhHcng5dU0tbHJOMnpIVVpURFlPYkNDbGR1c3ZaMUFQZHpFMXhmNUdJZHd1WnRaRndFcDFLX0dOeDZaY21GcFRseWRfcUZud18yM1lEVUlLTV9zaEI5UUtaN0YtTVFiVnA2X1NkT01tSS1BNW1YeDYzbVZ4WGZEYmx3R2MwRmdWUjM1RVJkZ2lTMmlKNXRMTWhBeTNrWjZ1RFBXVkVXTHlRdnc?oc=5\" target=\"_blank\">Iran War Day 226: One American Dead in Houthi Attack on Saudi Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The American Conservative</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQX25SYmhHcng5dU0tbHJOMnpIVVpURFlPYkNDbGR1c3ZaMUFQZHpFMXhmNUdJZHd1WnRaRndFcDFLX0dOeDZaY21GcFRseWRfcUZud18yM1lEVUlLTV9zaEI5UUtaN0YtTVFiVnA2X1NkT01tSS1BNW1YeDYzbVZ4WGZEYmx3R2MwRmdWUjM1RVJkZ2lTMmlKNXRMTWhBeTNrWjZ1RFBXVkVXTHlRdnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-11T22:13:49.430Z"
+    },
+    {
+      "id": "rss_f716447452e6f802",
+      "timestamp": 1791743909000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi and Yemeni Airports Hit in New Round of Strikes - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPWFJHOWNmYjhtTVdPTWNHd3cyeUtzLVpmNHg5dW40eVN3WkhoVXp1TTFMZmxXOERod1A0ZlItYWlhZ3B3VVNkT0pmS0NDOGYwS19ZX296RkhfSDI1bmhVWVpKdjlPTFdqVG42emhKbnJpRjNyU0NOSHFRRXM4S0lOY2M3VjZOcWZROW15TnV3?oc=5\" target=\"_blank\">Saudi and Yemeni Airports Hit in New Round of Strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWFJHOWNmYjhtTVdPTWNHd3cyeUtzLVpmNHg5dW40eVN3WkhoVXp1TTFMZmxXOERod1A0ZlItYWlhZ3B3VVNkT0pmS0NDOGYwS19ZX296RkhfSDI1bmhVWVpKdjlPTFdqVG42emhKbnJpRjNyU0NOSHFRRXM4S0lOY2M3VjZOcWZROW15TnV3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-11T22:13:49.431Z"
+    },
     {
       "id": "rss_f12ed28994bf6528",
       "timestamp": 1791741342000,
@@ -23,6 +67,27 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-11T18:15:12.171Z"
+    },
+    {
+      "id": "rss_07e5c2b918c2f89f",
+      "timestamp": 1791741166000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Riyadh airport hit by fresh Houthi strike day after deadly attack killed 12 - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPWlN4NkdrSnF3dWhtU0M0TmJ5T2tRNmxyT0tuN09Lb0hyWnhPdW9FbkdNUEMzVU5SY1l2dHJnVE4yMTFSbEtZU3lSeDdTSG5JYjZqTXFsa1piUkV0M0xZMUIwamdKNEZQRWFNQ1lxV011NTN2bEdvQ083V3B0WDZkbmNFTlVYcmtKRUJGSzNPcVdwSDhKQWRCYVc5NmRNNkJ0NTdjM0ktbkY5cVRtQVdpQkQwRUxLaEx1bWdIc3Z0Ny1aZk1lTDBDQWk0ckbSAcwBQVVfeXFMUGx2M1UtQjFSRkpCbmduUEZvLTRjcjZjVTRkQzNEbzBJQzRuaVZWZWtKQ3JIWUlhbk44X0kxZFYtdW1NblJfYmdVSFFkWHBmdkpkdXdkY2FZYy1nOVZ5VzliZDBBSUMwQmhEVlZOZ19iS1lTY3RwcGlCREdsekdJWT",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWlN4NkdrSnF3dWhtU0M0TmJ5T2tRNmxyT0tuN09Lb0hyWnhPdW9FbkdNUEMzVU5SY1l2dHJnVE4yMTFSbEtZU3lSeDdTSG5JYjZqTXFsa1piUkV0M0xZMUIwamdKNEZQRWFNQ1lxV011NTN2bEdvQ083V3B0WDZkbmNFTlVYcmtKRUJGSzNPcVdwSDhKQWRCYVc5NmRNNkJ0NTdjM0ktbkY5cVRtQVdpQkQwRUxLaEx1bWdIc3Z0Ny1aZk1lTDBDQWk0ckbSAcwBQVVfeXFMUGx2M1UtQjFSRkpCbmduUEZvLTRjcjZjVTRkQzNEbzBJQzRuaVZWZWtKQ3JIWUlhbk44X0kxZFYtdW1NblJfYmdVSFFkWHBmdkpkdXdkY2FZYy1nOVZ5VzliZDBBSUMwQmhEVlZOZ19iS1lTY3RwcGlCREdsekdJWTkySXBFaTg3TjlFWUpvM214N1JtT1lpWGNTYy1HY05EajliRUs5M19zYXJlSXNHMHBsN0loQ3hZNnlVWFMzNlVuWnkyS3JxYzFic1BK?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-11T22:13:49.431Z"
     },
     {
       "id": "rss_19f0cc10d81b50df",
@@ -128,6 +193,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T18:15:12.172Z"
+    },
+    {
+      "id": "rss_9094b4bc7821354a",
+      "timestamp": 1791729819000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Why are Houthi missiles breaking through Saudi Arabia’s air defences? - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPT1ZOSzFDM3Yta3pYdDE1N2VlbTBTN0hJaTRJZkUtVGJ4NGY4V0ZwVkMtMmxQQjR1aFhhTk52M1FNeDI4bTlaZFhIMjBBaTV4eXRfaHloN2xrQUprTy1qZnlVa1VPYWZyaGh4MTdzZ2o2QkFZRVJFYVFuYmZRS0ZDR280T2RoaU9yRkI1MW9zV09RdTMzZnFLMHlnS19uMnRnRjIxT0dzWFhSa0J5NmfSAbMBQVVfeXFMUE9VUEo0X1M2UllxWXNLYVd4dGV6UVVjRk5GUVFyWnNpNUVTMFU5Z2dyVm1lZ2R5amJKR3lyTGk0RXpmRmdZN0dLVzNZSVpLUVM2NGFuYXdjU2dLQUdneFVsVjBTUWlvMF9CdXJMQm1QS2lQRm1LQXliajI4M3lZdlZqcXEtOU5aWWowWnZCa0Q1VjBtMG92Rmt5WUdTdW",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT1ZOSzFDM3Yta3pYdDE1N2VlbTBTN0hJaTRJZkUtVGJ4NGY4V0ZwVkMtMmxQQjR1aFhhTk52M1FNeDI4bTlaZFhIMjBBaTV4eXRfaHloN2xrQUprTy1qZnlVa1VPYWZyaGh4MTdzZ2o2QkFZRVJFYVFuYmZRS0ZDR280T2RoaU9yRkI1MW9zV09RdTMzZnFLMHlnS19uMnRnRjIxT0dzWFhSa0J5NmfSAbMBQVVfeXFMUE9VUEo0X1M2UllxWXNLYVd4dGV6UVVjRk5GUVFyWnNpNUVTMFU5Z2dyVm1lZ2R5amJKR3lyTGk0RXpmRmdZN0dLVzNZSVpLUVM2NGFuYXdjU2dLQUdneFVsVjBTUWlvMF9CdXJMQm1QS2lQRm1LQXliajI4M3lZdlZqcXEtOU5aWWowWnZCa0Q1VjBtMG92Rmt5WUdTdWRERmtCMXpJWGZpTW1MY3J6R1J2c1U?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-11T22:13:49.431Z"
     },
     {
       "id": "rss_400c8f1b9065108c",
@@ -237,6 +325,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T18:15:12.172Z"
+    },
+    {
+      "id": "rss_a446d9a108e033f6",
+      "timestamp": 1791717180000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia extends closure of airport after 12 killed in suspected Houthi missile attack - Politico",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxOY05TMnFfX3hxeUpiSmZpd1JGbW10ZmpUWXRxV2l4Z1FpM1UyUzY1ZFRTVUYyTHBHNUFtbTRqSENpeGV4X1NSYUNoZ3JqZDRCcUw4bWxQdGl1TEwzZTBKOTVMSjZSZVJWaXYwWmFpVktXTVBqVXhUWExjeHd2S0k1amxqTXFyWXBRNU5ybDlZVGJBZXZ2ZExLRnZXQThJVVhsdUhpLTdycTZkajRxYS01YWpWeU1aRHJyNUJyV0syWDRlZ1pIbXk2a05TQ2ZUdF9KUnJiMG1vQQ?oc=5\" target=\"_blank\">Saudi Arabia extends closure of airport after 12 killed in suspected Houthi missile attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Politico<",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOY05TMnFfX3hxeUpiSmZpd1JGbW10ZmpUWXRxV2l4Z1FpM1UyUzY1ZFRTVUYyTHBHNUFtbTRqSENpeGV4X1NSYUNoZ3JqZDRCcUw4bWxQdGl1TEwzZTBKOTVMSjZSZVJWaXYwWmFpVktXTVBqVXhUWExjeHd2S0k1amxqTXFyWXBRNU5ybDlZVGJBZXZ2ZExLRnZXQThJVVhsdUhpLTdycTZkajRxYS01YWpWeU1aRHJyNUJyV0syWDRlZ1pIbXk2a05TQ2ZUdF9KUnJiMG1vQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-11T22:13:49.431Z"
     },
     {
       "id": "rss_27856429ee9688e3",
@@ -10722,116 +10833,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-16T08:45:07.563Z"
-    },
-    {
-      "id": "rss_50604f5db125f763",
-      "timestamp": 1789527601000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Answer Saudi Arabia: Israel must take the opportunity presented by the Houthi attack - editorial - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Ua2dfdldxQUpBek1nT2lVYnFocDU1WFJvUnV4N2d6TEtXWkdvN1lhSmY0NWRwQ1MtVlNTTk9vWHdtOFQ0dE5tbHQ2VEQ3VkNsUDl3Y3pySQ?oc=5\" target=\"_blank\">Answer Saudi Arabia: Israel must take the opportunity presented by the Houthi attack - editorial</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Ua2dfdldxQUpBek1nT2lVYnFocDU1WFJvUnV4N2d6TEtXWkdvN1lhSmY0NWRwQ1MtVlNTTk9vWHdtOFQ0dE5tbHQ2VEQ3VkNsUDl3Y3pySQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-16T08:45:07.563Z"
-    },
-    {
-      "id": "rss_4ec549062947b886",
-      "timestamp": 1789525342000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi coalition says Houthi drone destroyed near Mecca - The Mighty 790 KFGO",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOeWJMTGZsa0s3UnNwOWp0RHVGUkdkNzZMVkFGckVZQi1pZW1hM2ptbVZDeUZTd2wtdVRmak93NkRUcG5NYTJhWGZHYmhTXzN1RzBhQ1RZa1UyX3lkZ0ZtNzBVbS1LSW9QTVVSSHdRNWU5UU5lTmRJNHoxR04tbzFicTJNTzBXbHd5b0RN?oc=5\" target=\"_blank\">Saudi coalition says Houthi drone destroyed near Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Mighty 790 KFGO</font>",
-      "tags": [
-        "drone",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOeWJMTGZsa0s3UnNwOWp0RHVGUkdkNzZMVkFGckVZQi1pZW1hM2ptbVZDeUZTd2wtdVRmak93NkRUcG5NYTJhWGZHYmhTXzN1RzBhQ1RZa1UyX3lkZ0ZtNzBVbS1LSW9QTVVSSHdRNWU5UU5lTmRJNHoxR04tbzFicTJNTzBXbHd5b0RN?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-16T03:02:49.215Z"
-    },
-    {
-      "id": "rss_764fe31d956e9831",
-      "timestamp": 1789524867000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis report Saudi strikes as Riyadh accuses them of targeting Mecca - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQR0tRcjc4TmVJSDFyWlN4VncyTmt2cENMSUtPUFNRelZxV3FSNHBCaDR4d19rRkNaNWJJSDRkMzRmbFpETmZSSmtyVm4tQTFMZG96WHJJUU00NE9lUkppRThrbUQzNC0wSXdZOE5FaENRNTMtZ2ctY3JCZmdWdkQ0SEVxZHhjcU1VTW9OTm9hOWEtUVowd3ZMNVpBTWQ2NC0zYTctUXp6Sk9RRnJ5Y3NzQm92cnJiTWlIc296a0FHeGRLXzFfR1FrUXY3aER5SGUyaFdB?oc=5\" target=\"_blank\">Houthis report Saudi strikes as Riyadh accuses them of targeting Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQR0tRcjc4TmVJSDFyWlN4VncyTmt2cENMSUtPUFNRelZxV3FSNHBCaDR4d19rRkNaNWJJSDRkMzRmbFpETmZSSmtyVm4tQTFMZG96WHJJUU00NE9lUkppRThrbUQzNC0wSXdZOE5FaENRNTMtZ2ctY3JCZmdWdkQ0SEVxZHhjcU1VTW9OTm9hOWEtUVowd3ZMNVpBTWQ2NC0zYTctUXp6Sk9RRnJ5Y3NzQm92cnJiTWlIc296a0FHeGRLXzFfR1FrUXY3aER5SGUyaFdB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-17T03:06:34.700Z"
-    },
-    {
-      "id": "rss_9becc6df1cd734b2",
-      "timestamp": 1789524240000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudis pound Yemen as Houthis solidify gains in new theatre of Middle East war - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQNWlDb0szQnNKQUdZZUJXWVN1LW1XODNJeEpLc1F3RFhEZ2pwc085M2NvRWNhMEV4MFhVa1BNWVZUQ3FpTE5pc0EwdVNrcXFMS0tWMF9kVXJfdlZKSFNfQjhkNjAteWVMVHVXR0lnV2hNbkNJX2g3RlJxYmphZDFOZTNQWWpHa2VycGo3VnQ5anhucVpNTmxkZ0hjWC1mNVVxTVZQNV9EUlh6TVlC?oc=5\" target=\"_blank\">Saudis pound Yemen as Houthis solidify gains in new theatre of Middle East war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNWlDb0szQnNKQUdZZUJXWVN1LW1XODNJeEpLc1F3RFhEZ2pwc085M2NvRWNhMEV4MFhVa1BNWVZUQ3FpTE5pc0EwdVNrcXFMS0tWMF9kVXJfdlZKSFNfQjhkNjAteWVMVHVXR0lnV2hNbkNJX2g3RlJxYmphZDFOZTNQWWpHa2VycGo3VnQ5anhucVpNTmxkZ0hjWC1mNVVxTVZQNV9EUlh6TVlC?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-16T13:59:16.827Z"
-    },
-    {
-      "id": "rss_085f3ad213c8d13c",
-      "timestamp": 1789523793000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks expose Iran’s desperation — here’s how Trump must respond - fdd.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQTlE3dEM4T2JhRVhWTkRMTlpsaHY0OTR1aUQ0VE1vZ3BpZDlDV29mMjEyVjlGQ0E3UmNrNUVMWWprcHhlcWwyWTBSclFXSG92NjZjdUhwVm9iNEp6RHlIcWZIY01uXzE4NVpJTGNtZHJ4bEVac2lfRy03d0d2U2lWMWpvRE9CZHVqbGNXRmVXOHlBS1dlNWJBU0pGZ3o3bmEydGJScnlnMzVxdTQ3MkE?oc=5\" target=\"_blank\">Houthi attacks expose Iran’s desperation — here’s how Trump must respond</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">fdd.org</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTlE3dEM4T2JhRVhWTkRMTlpsaHY0OTR1aUQ0VE1vZ3BpZDlDV29mMjEyVjlGQ0E3UmNrNUVMWWprcHhlcWwyWTBSclFXSG92NjZjdUhwVm9iNEp6RHlIcWZIY01uXzE4NVpJTGNtZHJ4bEVac2lfRy03d0d2U2lWMWpvRE9CZHVqbGNXRmVXOHlBS1dlNWJBU0pGZ3o3bmEydGJScnlnMzVxdTQ3MkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-16T03:02:49.214Z"
     }
   ]
 }
