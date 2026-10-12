@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-11T22:13:51.228Z",
+  "last_fetch": "2026-10-12T01:30:03.184Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1c3a8364ef1b185e",
+      "timestamp": 1791766899000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strike on Riyadh airport kills one, injures 11 in second attack in two days - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWE9fVlV1VWUwX2lfQkpnQ0RCbFpzZ1c5V3ZYWjQ1RUwwU19xV2MxeG9mMEgtOURkMm1EY043MXJyT09UUlg3emlvR3JqbUJTaGFad2FSYWpwZVBUeTR3RlpudkVtWWNBbEJiOEloX1BSWlRCeXc1YTNqNVNTMnFQS1F6ejJEVjZZcWhF?oc=5\" target=\"_blank\">Houthi strike on Riyadh airport kills one, injures 11 in second attack in two days</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWE9fVlV1VWUwX2lfQkpnQ0RCbFpzZ1c5V3ZYWjQ1RUwwU19xV2MxeG9mMEgtOURkMm1EY043MXJyT09UUlg3emlvR3JqbUJTaGFad2FSYWpwZVBUeTR3RlpudkVtWWNBbEJiOEloX1BSWlRCeXc1YTNqNVNTMnFQS1F6ejJEVjZZcWhF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-12T01:30:01.539Z"
+    },
     {
       "id": "rss_ba13c41696352bb1",
       "timestamp": 1791744360000,
@@ -10807,27 +10828,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxON2xyODk4Z1c3MG90TmtFNTB1SlN2WVpRN0R0R1NOX3IzbnExUVV1SU5xb0UyNmI3azFxM3FDWE5FNWxzNkJKSFZXOHc3S200T2NjdGtPclVpYnBpck5JbWh2ZllEdWxGek5UV1FVRFJCcEZXdHFXUldPME5lbUk5RGRZZWkxaW05c2dCdA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-16T08:45:07.563Z"
-    },
-    {
-      "id": "rss_7bff1eb45f25a62b",
-      "timestamp": 1789533032000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis have further tightened their grip on the Red Sea. Here’s what it could mean for the world - The Conversation",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxObDhqS0l2d1dVMXJfSG0zdHRpVWt4bHRSd2JrQmFGUGRkOUFIU21rVllfQlNoTDN1M2Npel9lY1VURXcyTmlST2d1NHpoUmNndFhBYUtJNS1LUE84eUZHLTUwano3V2FKVGItQl9UX1RwbnZQQnpCU0Q0cDNrMDQ0QmpNVDUyWWk2NW9yRjY3bmh0d0lsRTdUMEJIMTUtR3lUSGxsZVFSajZJbXlZZEk0MG9lSk1TSVMwanFwQjZXSkdnTkNZRUZyd0JEa1JONHc?oc=5\" target=\"_blank\">The Houthis have further tightened their grip on the Red Sea. Here’s what it could mean for the world</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conve",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObDhqS0l2d1dVMXJfSG0zdHRpVWt4bHRSd2JrQmFGUGRkOUFIU21rVllfQlNoTDN1M2Npel9lY1VURXcyTmlST2d1NHpoUmNndFhBYUtJNS1LUE84eUZHLTUwano3V2FKVGItQl9UX1RwbnZQQnpCU0Q0cDNrMDQ0QmpNVDUyWWk2NW9yRjY3bmh0d0lsRTdUMEJIMTUtR3lUSGxsZVFSajZJbXlZZEk0MG9lSk1TSVMwanFwQjZXSkdnTkNZRUZyd0JEa1JONHc?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
