@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-12T23:42:59.227Z",
+  "last_fetch": "2026-10-13T05:11:01.114Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e7dd423324f71bd0",
+      "timestamp": 1791860915000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attack targets Saudi capital Riyadh for third day in a row - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOanVwNWhNU0N5c0tUNUlMQk84TEVXSlJNZnplNjE1VEhrbDFaZnVPeFN0VURnMXBuWENaR3Y2ODdnY3dIc0xmaHpnUjVXM0dTcFZxcndxamo2VE1VbWsycklpNmVoUGg2MWhzV0I0MzlGVUUzdEVmUWg5bWN4TEk3VzdhaW9JcVR2LU42cm9zeTJ6elVaRmlUU0VHYjVzRHBFVXNtaFdiMTJSS0pHMVAzVVBNaHRhd9IBuwFBVV95cUxPNlVqVV9MaVV3c2VNWG51TWhwQ1k1Y1NxVmlULTdtUmsyRmk5QWFFdGV3Z2RVMEZaQ1RlZzEzYjBKWVBCVmNjcW0yMkotMXk4ekctZ3hrZm5vWXFFYmR0dUpZdHhiRlJyT09nNVRoN2lISWhtemExdHNmajVfZmRSRllma01nRTEzWjdWQml1cTB2OXVPWV",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOanVwNWhNU0N5c0tUNUlMQk84TEVXSlJNZnplNjE1VEhrbDFaZnVPeFN0VURnMXBuWENaR3Y2ODdnY3dIc0xmaHpnUjVXM0dTcFZxcndxamo2VE1VbWsycklpNmVoUGg2MWhzV0I0MzlGVUUzdEVmUWg5bWN4TEk3VzdhaW9JcVR2LU42cm9zeTJ6elVaRmlUU0VHYjVzRHBFVXNtaFdiMTJSS0pHMVAzVVBNaHRhd9IBuwFBVV95cUxPNlVqVV9MaVV3c2VNWG51TWhwQ1k1Y1NxVmlULTdtUmsyRmk5QWFFdGV3Z2RVMEZaQ1RlZzEzYjBKWVBCVmNjcW0yMkotMXk4ekctZ3hrZm5vWXFFYmR0dUpZdHhiRlJyT09nNVRoN2lISWhtemExdHNmajVfZmRSRllma01nRTEzWjdWQml1cTB2OXVPWVI3WHJzVU92VEdYcHFhTlB4QW91WXRaWl9lbmNHQ1k0bVR3Q2xr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-13T05:10:59.710Z"
+    },
     {
       "id": "rss_954824c90d3e3d9b",
       "timestamp": 1791840960000,
@@ -366,6 +389,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-12T17:17:01.461Z"
+    },
+    {
+      "id": "rss_22f9d01c4c83bd50",
+      "timestamp": 1791797398000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Video: Surveillance Footage Shows Moment of Attack on Saudi Airport - The New York Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPR1dHQ1Z4MXRVVVozM05Hd1JDWGVuazQ3aU54TlNpVFZUVFhHOThnUklKYlVNbm02NlBpLS05WURiSWVRbzh4QmVtOGFhbkJqRjcycktuUkpyLWdBVllXWkltNFdIQzlCenR6SHBYcnpjU1EyakV5S0pVWlVxdWdYT0Y3bWhCVmV3R2ViYU5DX1hlUXFPWnFVRlJ3aG9YaDBwTUJBbmo2X3VLUE9sZnc?oc=5\" target=\"_blank\">Video: Surveillance Footage Shows Moment of Attack on Saudi Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPR1dHQ1Z4MXRVVVozM05Hd1JDWGVuazQ3aU54TlNpVFZUVFhHOThnUklKYlVNbm02NlBpLS05WURiSWVRbzh4QmVtOGFhbkJqRjcycktuUkpyLWdBVllXWkltNFdIQzlCenR6SHBYcnpjU1EyakV5S0pVWlVxdWdYT0Y3bWhCVmV3R2ViYU5DX1hlUXFPWnFVRlJ3aG9YaDBwTUJBbmo2X3VLUE9sZnc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-13T05:10:59.711Z"
     },
     {
       "id": "rss_929f56b8644caecf",
@@ -10777,52 +10821,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-17T08:48:45.923Z"
-    },
-    {
-      "id": "rss_22644e0779ebf937",
-      "timestamp": 1789624800000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "World’s 9th strongest military backs Saudi Arabia after Houthi drone attack near Mecca as Yemen militants forge deeper ties with an African terror group - africa.businessinsider.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMG9Na0ptSEhBYWp0al9WaTF1bTUtbWdZYWY3MU1SV0Q3MkFNQ2JNSHBuTXhqb1MzaTVxNkFxYVJnTzdkdkF1NnpoeGFaa1o3SjcxWW9oUGJMMlZfNmJ6b1hCbnhFeUZvWFp3c1ZuRlhrcjJGMkwtajhZOHNfSlFlR3hoZkhFZ2l6V0k1VGtUcURuZ1lCOVlHZFdEYlh2VWZxU014enVlVlljYWdPT2pwNVdiZjhuQ1ZPR1QtOFF4eTRZMlFfT2lMRk9TN0puZjl5LVJWN2YwMHphUQ?oc=5\" target=\"_blank\">World’s 9th strongest military backs Saudi Arabia after Houthi drone attack near Mecca as Yemen militants forge deeper ties with an A",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPMG9Na0ptSEhBYWp0al9WaTF1bTUtbWdZYWY3MU1SV0Q3MkFNQ2JNSHBuTXhqb1MzaTVxNkFxYVJnTzdkdkF1NnpoeGFaa1o3SjcxWW9oUGJMMlZfNmJ6b1hCbnhFeUZvWFp3c1ZuRlhrcjJGMkwtajhZOHNfSlFlR3hoZkhFZ2l6V0k1VGtUcURuZ1lCOVlHZFdEYlh2VWZxU014enVlVlljYWdPT2pwNVdiZjhuQ1ZPR1QtOFF4eTRZMlFfT2lMRk9TN0puZjl5LVJWN2YwMHphUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-17T14:03:18.317Z"
-    },
-    {
-      "id": "rss_99a2cfb661e0b76b",
-      "timestamp": 1789623516000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Houthis release video claiming to show downed Saudi F-15 fighter as Iran-backed rebels press their lightning advance - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNVzlqeTZUN0Vtd1g3cjZKczlGcHc2QVJPak9lWVBvdGNrZjM4TWNZNzN3ZjREWjFtWDlMVnRmcTkxMjR0eXlIb0tfRF9iNjFYVElPX1ZSXzhOVkQ5bjh6VjdCM2JJTFlTM0lyZ1FpQ0gwc1lCTERxMXFaS3VVWHRLVWhiRUNCYlk?oc=5\" target=\"_blank\">Houthis release video claiming to show downed Saudi F-15 fighter as Iran-backed rebels press their lightning advance</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVzlqeTZUN0Vtd1g3cjZKczlGcHc2QVJPak9lWVBvdGNrZjM4TWNZNzN3ZjREWjFtWDlMVnRmcTkxMjR0eXlIb0tfRF9iNjFYVElPX1ZSXzhOVkQ5bjh6VjdCM2JJTFlTM0lyZ1FpQ0gwc1lCTERxMXFaS3VVWHRLVWhiRUNCYlk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-17T08:48:45.922Z"
     }
   ]
 }
