@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-14T18:46:38.097Z",
+  "last_fetch": "2026-10-14T22:01:10.759Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3f9ea9b7774aab75",
+      "timestamp": 1792004757000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "US Weighs Response Following Houthi Airport Attack - Hudson Institute",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNVFJfdVdPcTR6ZENGbVRYZ1JqNTI5dlFxSVNIb2hOLWdQcXIxRXV2Yy1xTnVfZnlFWkNVY2hQM29JbXhpVE9oRmNsT0RLS0o5SUJYMGJ2MGtLako4YjVMRXdJcDBYSms4MUxYXy1ad3BHU0Vnb2RxaEdmMVN2VTFLV0w0QWx0WGtxY0E3a3NGWUY3Z0t2T3JBM1VLODJDaEdq?oc=5\" target=\"_blank\">US Weighs Response Following Houthi Airport Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Hudson Institute</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVFJfdVdPcTR6ZENGbVRYZ1JqNTI5dlFxSVNIb2hOLWdQcXIxRXV2Yy1xTnVfZnlFWkNVY2hQM29JbXhpVE9oRmNsT0RLS0o5SUJYMGJ2MGtLako4YjVMRXdJcDBYSms4MUxYXy1ad3BHU0Vnb2RxaEdmMVN2VTFLV0w0QWx0WGtxY0E3a3NGWUY3Z0t2T3JBM1VLODJDaEdq?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T22:01:09.150Z"
+    },
     {
       "id": "rss_86e787f289747094",
       "timestamp": 1791993823000,
@@ -86,6 +107,30 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-14T14:17:23.181Z"
+    },
+    {
+      "id": "rss_b808c4dd955f4c69",
+      "timestamp": 1791978125000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition intercepts Houthi missile launched towards Riyadh - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNWkdFQnE4VXFUbGJlcS1VaTFHbjQ0RGFIM1Z4SlhUbHlWQXpUTUtHWTB1Z1hZWGg3Y2I5R2lIYzJKUkYwT0VrRVB5Wi1uUkhnTGQxbm9iamMwaktyVnluQlRVdm10bnpMZC1jNUNqQzVfVUNjUnUydm9XR0N4R3NpdUEtNkFKZzdCendFTkRJRWhiMl9CVU5manRteVpYbk9nUEZZamVpTTZLU0xtN1JzNNIBtgFBVV95cUxNUFJyamdZU1BmR2pxcWd1VGQ0aUVEZzhOM292OWMxQ3FfcjNEX19BWEJuMEtnVFNpa3R1RThmQnZCWjNIZnpCNTNTV1NYN1VFVVhIRmQtdjFHNjM1Y0Exc1V5a1hiWkF6bHAzNEh0NGNYZl9ocXhMemxad2tmN0pRN2MyZ1IzZmZXcERxTElEX1FnYnNSMTROZnNUd3",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWkdFQnE4VXFUbGJlcS1VaTFHbjQ0RGFIM1Z4SlhUbHlWQXpUTUtHWTB1Z1hZWGg3Y2I5R2lIYzJKUkYwT0VrRVB5Wi1uUkhnTGQxbm9iamMwaktyVnluQlRVdm10bnpMZC1jNUNqQzVfVUNjUnUydm9XR0N4R3NpdUEtNkFKZzdCendFTkRJRWhiMl9CVU5manRteVpYbk9nUEZZamVpTTZLU0xtN1JzNNIBtgFBVV95cUxNUFJyamdZU1BmR2pxcWd1VGQ0aUVEZzhOM292OWMxQ3FfcjNEX19BWEJuMEtnVFNpa3R1RThmQnZCWjNIZnpCNTNTV1NYN1VFVVhIRmQtdjFHNjM1Y0Exc1V5a1hiWkF6bHAzNEh0NGNYZl9ocXhMemxad2tmN0pRN2MyZ1IzZmZXcERxTElEX1FnYnNSMTROZnNUd3hpbFRmdDlvR3NDUUMzdzRMN0gyZDhyQlZfZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-14T22:01:09.151Z"
     },
     {
       "id": "rss_712a32a5c204602d",
@@ -1057,6 +1102,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-12T17:17:01.461Z"
+    },
+    {
+      "id": "rss_ac0373d43bedd5f0",
+      "timestamp": 1791798586000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Who is Abdul Malik al-Houthi, the rebel leader threatening Saudi Arabia and Red Sea shipping? - Firstpost",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNbG1aaU1oYWZtSzlubHlEODI1amZPZWFGVWVzMExxdkFUYXh1T1h5Q3Zja1h5elJaNDBzRG5Cd1YtVE5wOWtKMnZCTnZZQUVNSEs0VnJPVXN6NnR1Z1FWTE5WMzItamR6WjNYTWhsZ01sV0pyelVmUkJqbVN4U3A5S2JGbVB3TGhMSk5WT3M1eE9sSFBJcG1YU3hBcnBKZGExbHFtdXBVZGYxWTRMem01cHNfNHp1cV9rd2VfXzlzbHFBWml6cGZV0gHMAUFVX3lxTFB3bjdzcWlzRXJSWGJya1BBUUl3VmpuNFlhUktkcjNoLUN2LUF5a0tXSE04T2oxc1dzUHp4cktoOGJJVGhDX3VnUnYwTXhBelN3UjN6MjlSeWV3OVk5UERXQV91RmhEVXJ2ZWVxbmhOaWtBa3VJWkhmX0pzZlJyNGtuMHFiTE",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbG1aaU1oYWZtSzlubHlEODI1amZPZWFGVWVzMExxdkFUYXh1T1h5Q3Zja1h5elJaNDBzRG5Cd1YtVE5wOWtKMnZCTnZZQUVNSEs0VnJPVXN6NnR1Z1FWTE5WMzItamR6WjNYTWhsZ01sV0pyelVmUkJqbVN4U3A5S2JGbVB3TGhMSk5WT3M1eE9sSFBJcG1YU3hBcnBKZGExbHFtdXBVZGYxWTRMem01cHNfNHp1cV9rd2VfXzlzbHFBWml6cGZV0gHMAUFVX3lxTFB3bjdzcWlzRXJSWGJya1BBUUl3VmpuNFlhUktkcjNoLUN2LUF5a0tXSE04T2oxc1dzUHp4cktoOGJJVGhDX3VnUnYwTXhBelN3UjN6MjlSeWV3OVk5UERXQV91RmhEVXJ2ZWVxbmhOaWtBa3VJWkhmX0pzZlJyNGtuMHFiTEQxZ3V6MGhCbm8yMF81dHNIQU5Nd2toeE1nVlMwWVNNREVLYndhWm5mVVZiYVRKN1lScUM0bTgxMnBRbFdINUk4ekRVNHJyTg?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T22:01:10.753Z"
     },
     {
       "id": "rss_22f9d01c4c83bd50",
@@ -10752,71 +10820,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-19T12:13:29.028Z"
-    },
-    {
-      "id": "rss_9c3f19af58e8f11e",
-      "timestamp": 1789794154000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Aspides mission raises readiness level of ships in the Red Sea — Asharq Al-Awsat - UA.NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPanVnVUVEN00zaUlEeUdMazVWcnBCdTBaSVZKbGF4b0k0dXdYSEZOYzZtZm5Kb1Rvc3IxSjRWSlY5TFlqRnVXVUlFMUk0aFp1enhJSmVCV1d4UWtsT0NiSlE2b1hPWXhrTTdOUHB0OUxwU1FjS1BncjRGeXU1V2syblVzODZjRjBjUEpFeEF0U051ajBNSENyTzNJV1FtTmJ2WEJJck85emRQczJQSVZiRXlrMzlPdw?oc=5\" target=\"_blank\">EU Aspides mission raises readiness level of ships in the Red Sea — Asharq Al-Awsat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPanVnVUVEN00zaUlEeUdMazVWcnBCdTBaSVZKbGF4b0k0dXdYSEZOYzZtZm5Kb1Rvc3IxSjRWSlY5TFlqRnVXVUlFMUk0aFp1enhJSmVCV1d4UWtsT0NiSlE2b1hPWXhrTTdOUHB0OUxwU1FjS1BncjRGeXU1V2syblVzODZjRjBjUEpFeEF0U051ajBNSENyTzNJV1FtTmJ2WEJJck85emRQczJQSVZiRXlrMzlPdw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-19T07:45:27.750Z"
-    },
-    {
-      "id": "rss_66816935fbf1483f",
-      "timestamp": 1789793094000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Operation Aspides Raises Alert Level South of Red Sea - شبكة تواصل الإخبارية",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVlRNNkFqVVV5d2R5dWJYTUtJbV91VmY4ZmRrbWh1NGRodjJyRW82UHZpaERaeDczakh4ano5b3RTZmxOaTJDejJEV2RNM0pta3JN?oc=5\" target=\"_blank\">EU Operation Aspides Raises Alert Level South of Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شبكة تواصل الإخبارية</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5BVlRNNkFqVVV5d2R5dWJYTUtJbV91VmY4ZmRrbWh1NGRodjJyRW82UHZpaERaeDczakh4ano5b3RTZmxOaTJDejJEV2RNM0pta3JN?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-19T07:45:27.750Z"
-    },
-    {
-      "id": "rss_ebf63693cf0946c3",
-      "timestamp": 1789791647000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks - bbc.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0YkZPQW9rR2RIWE52My1Bd0VVd0VKc2FORWhuVFJPQ0dFcmd0MTRlOVFrNmd0b200YUI2OFdrUzlXZGxzbWV3RXFCVm1ZZ1lCbVpXZ2ZxTDN2bHc?oc=5\" target=\"_blank\">Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bbc.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB0YkZPQW9rR2RIWE52My1Bd0VVd0VKc2FORWhuVFJPQ0dFcmd0MTRlOVFrNmd0b200YUI2OFdrUzlXZGxzbWV3RXFCVm1ZZ1lCbVpXZ2ZxTDN2bHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-19T07:45:26.583Z"
     }
   ]
 }
