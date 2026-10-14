@@ -1,8 +1,75 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-13T23:33:56.937Z",
+  "last_fetch": "2026-10-14T03:17:00.647Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_700b2b6da08a2f57",
+      "timestamp": 1791941880000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Fire breaks out at a Saudi Aramco building targeted in an attack, energy ministry says - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQR002VVo0b3ZvU0RXV3V5TWdvX0Jmc1NiQjBDNjljbTVWbFZnQ1hIUm5WTUNHZFZSNlV4WWoxZVBDNFhwZUEzZF9kVUlla0dZOWstVWZQQnA1TGpqeXI4Y05KbkpOay00U3NLYkZxZ1BHQWQ4ay14eEk3bHlfSzBMVzlrd2tuQ1hyaHoteGZSZ0pyYjdvYjB1QlEtOTR1YVNZZnZTRw?oc=5\" target=\"_blank\">Fire breaks out at a Saudi Aramco building targeted in an attack, energy ministry says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQR002VVo0b3ZvU0RXV3V5TWdvX0Jmc1NiQjBDNjljbTVWbFZnQ1hIUm5WTUNHZFZSNlV4WWoxZVBDNFhwZUEzZF9kVUlla0dZOWstVWZQQnA1TGpqeXI4Y05KbkpOay00U3NLYkZxZ1BHQWQ4ay14eEk3bHlfSzBMVzlrd2tuQ1hyaHoteGZSZ0pyYjdvYjB1QlEtOTR1YVNZZnZTRw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T03:16:59.091Z"
+    },
+    {
+      "id": "rss_383d5c5f103d8175",
+      "timestamp": 1791938025000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis strike Aramco hours after Saudi-led coalition hits Sanaa oil site - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQdmRBdUZFd2VfLThKOWQ3elR2ZWJzVzFrdDhMMkU2TGlFbnhiR0ZkeVVYOUhhZnNDTFNndHd3azRFZ0lqbG50Z0hlS2tVbkxhRmptNWhVRHJ3aER0WTc4ZXRPSTluRWpjdnVhOEF4bncxU3h6ZTkxSF9OQkduWWxnZTNtOURzQXM5OWRvNWNBUXBEYzlEM0VjR3N0WF9WWDdZU00yd0hR0gGrAUFVX3lxTE9xYjVUdUk4dUhhTmNFYnFCbl9TamRndElPREdPaFM3ZW0zc0NGYjd2aWRlVU1SUGxaS3NsZEY3UDBTaVJaMHZ5YnM2ZmVHNUhmTk9md0xIVzl6WFZTam13bm1iSHpEenFoUkJIcnU4dTBNSnY3NkFLZkhZajdWT2JQRUNCYlh5bWRfTGZJcS1BdEY0VUlCdzlWT1ZnUGQ1Tl9ocEdiUW",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdmRBdUZFd2VfLThKOWQ3elR2ZWJzVzFrdDhMMkU2TGlFbnhiR0ZkeVVYOUhhZnNDTFNndHd3azRFZ0lqbG50Z0hlS2tVbkxhRmptNWhVRHJ3aER0WTc4ZXRPSTluRWpjdnVhOEF4bncxU3h6ZTkxSF9OQkduWWxnZTNtOURzQXM5OWRvNWNBUXBEYzlEM0VjR3N0WF9WWDdZU00yd0hR0gGrAUFVX3lxTE9xYjVUdUk4dUhhTmNFYnFCbl9TamRndElPREdPaFM3ZW0zc0NGYjd2aWRlVU1SUGxaS3NsZEY3UDBTaVJaMHZ5YnM2ZmVHNUhmTk9md0xIVzl6WFZTam13bm1iSHpEenFoUkJIcnU4dTBNSnY3NkFLZkhZajdWT2JQRUNCYlh5bWRfTGZJcS1BdEY0VUlCdzlWT1ZnUGQ1Tl9ocEdiUWZOX2Q4RQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-14T03:16:59.090Z"
+    },
+    {
+      "id": "rss_79faa1b7e02d14a3",
+      "timestamp": 1791932416000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Aramco’s Dhahran headquarters hit during Houthi missile attack on Saudi Arabia - World Oil",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPa25LLXZwQnFiMjdSN0ZxdEVuWC01SWpxME5ZbDFIZ3RaN21keVJ2dk5nRk11MTE1M0J1MjZRYUtESTAzdG53RksxTWpydGVDVjQ2cVE4RXZBdzBPSUxWSVo0Mzc1SHNLZjNVUHVsSnNxc1JEOUhIYTBvN1VCVnktTmVxTURiMEFPQ3pMNGZsampLWVdkS01LcW92Rm9uWDV5WWFuSFdRTUk0Tk1WMHMwVjV4RFNDeDJqZWYyZQ?oc=5\" target=\"_blank\">Aramco’s Dhahran headquarters hit during Houthi missile attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">World Oil</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPa25LLXZwQnFiMjdSN0ZxdEVuWC01SWpxME5ZbDFIZ3RaN21keVJ2dk5nRk11MTE1M0J1MjZRYUtESTAzdG53RksxTWpydGVDVjQ2cVE4RXZBdzBPSUxWSVo0Mzc1SHNLZjNVUHVsSnNxc1JEOUhIYTBvN1VCVnktTmVxTURiMEFPQ3pMNGZsampLWVdkS01LcW92Rm9uWDV5WWFuSFdRTUk0Tk1WMHMwVjV4RFNDeDJqZWYyZQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T03:16:59.091Z"
+    },
     {
       "id": "rss_b1a2791cee1a802f",
       "timestamp": 1791931836000,
@@ -44,6 +111,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-13T23:33:55.464Z"
+    },
+    {
+      "id": "rss_3384e2a63c5713a4",
+      "timestamp": 1791929999000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Headquarters of Saudi Aramco hit as Houthis and Riyadh trade strikes - CNN",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOSHpWMFhzb0VoOFFRUHdHdWlFdDJYelBUYnZzajJqM0xNY1M5d3BqMHU2Y2R1bkdLMmJ0dTlhaGNuNEJ4V1pOOUJsUHBFb1I4SmxSdjFZNVZLMDFWSkVUV0RRS3Y2U0Y4dUFlci1JWVUtU2JQNC0ydTVnUjZnTWM2ampsOXpjYWE3RlFadw?oc=5\" target=\"_blank\">Headquarters of Saudi Aramco hit as Houthis and Riyadh trade strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSHpWMFhzb0VoOFFRUHdHdWlFdDJYelBUYnZzajJqM0xNY1M5d3BqMHU2Y2R1bkdLMmJ0dTlhaGNuNEJ4V1pOOUJsUHBFb1I4SmxSdjFZNVZLMDFWSkVUV0RRS3Y2U0Y4dUFlci1JWVUtU2JQNC0ydTVnUjZnTWM2ampsOXpjYWE3RlFadw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T03:16:59.090Z"
     },
     {
       "id": "rss_20a782a3eb244ccb",
@@ -10729,92 +10817,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-18T19:24:27.392Z"
-    },
-    {
-      "id": "rss_2352a2211eb098e5",
-      "timestamp": 1789732440000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Italian Eurofighter Typhoon Struck In Houthi Attack On Saudi Air Base - The Aviationist",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNckJXWGh4TnROZDRBZk80aUt1WXVCUU5WUENrYk85R0QzX0JwN2lKN0xHWEpzYkRId0pMTnhPNmVKOU9GeDA4QlZkX3c1V0dNZVNoa1RoajdxU0FFN1Zsei1DNEowbzd4emFrX01CTW1ZbEZ6QTFTZFFZaTlTTGlNcg?oc=5\" target=\"_blank\">Italian Eurofighter Typhoon Struck In Houthi Attack On Saudi Air Base</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Aviationist</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNckJXWGh4TnROZDRBZk80aUt1WXVCUU5WUENrYk85R0QzX0JwN2lKN0xHWEpzYkRId0pMTnhPNmVKOU9GeDA4QlZkX3c1V0dNZVNoa1RoajdxU0FFN1Zsei1DNEowbzd4emFrX01CTW1ZbEZ6QTFTZFFZaTlTTGlNcg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T16:54:12.824Z"
-    },
-    {
-      "id": "rss_20f5a55a5c0a95d6",
-      "timestamp": 1789720972000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "From Ta’if to the Red Sea, Italy’s MoD navigates a new Indo-Mediterranean crisis - Decode39",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxQU0VvcmJZb1NfSjUtSWZZeEhGMllRSXlkQUlfNmVfME1RWG5ndmM5VEtuMzF4TzZSNElEaHVnNENDYU9Ddks5Nm1zMHRrWEtpV01EREtUMWxENEdNdDdsTDBkLWw3OXpwZHB0X0tkUEVHbWNGdmRFRThhUDU3YUV4SXVJM3hybkFZTTJDTVNQSzNOMV81Y1d0U29MM2JiSC1Mb1JOZ2lCVmI?oc=5\" target=\"_blank\">From Ta’if to the Red Sea, Italy’s MoD navigates a new Indo-Mediterranean crisis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Decode39</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQU0VvcmJZb1NfSjUtSWZZeEhGMllRSXlkQUlfNmVfME1RWG5ndmM5VEtuMzF4TzZSNElEaHVnNENDYU9Ddks5Nm1zMHRrWEtpV01EREtUMWxENEdNdDdsTDBkLWw3OXpwZHB0X0tkUEVHbWNGdmRFRThhUDU3YUV4SXVJM3hybkFZTTJDTVNQSzNOMV81Y1d0U29MM2JiSC1Mb1JOZ2lCVmI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T12:38:46.353Z"
-    },
-    {
-      "id": "rss_a85203033ee6e0e2",
-      "timestamp": 1789719381000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi leader denies Yemeni group targeted Mecca with drone - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNTzZIODM5UE9Eb0k2dUxveHhnUWxzOTIwVHlUNWpscnhXVlZSWk81akxDWkhRVWFtcmZPV05uaXRROVM0aklJRmV1dXE0cUFCSC15c2NlZWUzUEtPYUpaVVJPWFpjRFFvTFdzU2ZCMERKN2Vyem1ScFV5RHpUUlVhTi1Wa1hHY1BzOXNqMWs3Z1p3T1k?oc=5\" target=\"_blank\">Houthi leader denies Yemeni group targeted Mecca with drone</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTzZIODM5UE9Eb0k2dUxveHhnUWxzOTIwVHlUNWpscnhXVlZSWk81akxDWkhRVWFtcmZPV05uaXRROVM0aklJRmV1dXE0cUFCSC15c2NlZWUzUEtPYUpaVVJPWFpjRFFvTFdzU2ZCMERKN2Vyem1ScFV5RHpUUlVhTi1Wa1hHY1BzOXNqMWs3Z1p3T1k?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T12:38:46.353Z"
-    },
-    {
-      "id": "rss_b4aedbbaba5f5f93",
-      "timestamp": 1789718561000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "What to know after a week of Houthi attacks that threaten Saudi oil - npr.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRy16WGVpZW1tckVwZ3VFZnZ2dGxHT1BEM0VxdVhfRWQ4QUtPeURzR3JCTWlZeFRxWWFZTFJTbWJvTGdsZ2RyblhocjdIS3YyOF8waEFmQjRXNEs2N2k4dDAwV3pNZVdIYTZNVXEzVXFZZ0QtdFlrenVuLW5XLVhTXy0yX0RTZXUxaUJF?oc=5\" target=\"_blank\">What to know after a week of Houthi attacks that threaten Saudi oil</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">npr.org</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNRy16WGVpZW1tckVwZ3VFZnZ2dGxHT1BEM0VxdVhfRWQ4QUtPeURzR3JCTWlZeFRxWWFZTFJTbWJvTGdsZ2RyblhocjdIS3YyOF8waEFmQjRXNEs2N2k4dDAwV3pNZVdIYTZNVXEzVXFZZ0QtdFlrenVuLW5XLVhTXy0yX0RTZXUxaUJF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T12:38:46.352Z"
     }
   ]
 }
