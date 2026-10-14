@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-14T03:17:00.647Z",
+  "last_fetch": "2026-10-14T08:55:18.372Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_349ee560a86335fd",
+      "timestamp": 1791962215000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Watch Saudi Aramco Headquarters Hit in Houthi Attack as Iran Escalates Hormuz Ship Strikes - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNR3VXWi14eGtSd09mdkhVelY4dC1MMXRIM2Q1NDdZNDFqdWFPOFpUTVVETktVWnpKYlI0OEZTZU8tUmRoVG5DWGlQUmJ2cy1zc3BIbnhNVTNlSzR0aDhYVHRvdk9JUmZfNGV4b0hxdjdNcEtTYVhZUnVFUmRKZHdSaWhrcHZlV2ZmSkh1TzdLT01aQkNWeGlOSQ?oc=5\" target=\"_blank\">Watch Saudi Aramco Headquarters Hit in Houthi Attack as Iran Escalates Hormuz Ship Strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNR3VXWi14eGtSd09mdkhVelY4dC1MMXRIM2Q1NDdZNDFqdWFPOFpUTVVETktVWnpKYlI0OEZTZU8tUmRoVG5DWGlQUmJ2cy1zc3BIbnhNVTNlSzR0aDhYVHRvdk9JUmZfNGV4b0hxdjdNcEtTYVhZUnVFUmRKZHdSaWhrcHZlV2ZmSkh1TzdLT01aQkNWeGlOSQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T08:55:16.816Z"
+    },
+    {
+      "id": "rss_45f55ee32eee6958",
+      "timestamp": 1791955788000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Watch Fed Signals Fewer Rate Hikes, Aramco HQ Hit in Houthi Attack - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOdlBJb0pFZTlFdzNJQ2w4aFRSU1pQRkxJbmdyTWRCZWdDczVLdTk1cVNCZE10MXpNbjVSYWdYODNkbEwwS19MaERrSTNxZFRFZ2RVU2FWTlktOVN1NWN5VTBuTDF6M3B1dS1OX3dxMEFTUGxua056TE9ESmZrLTlLR1hlcDF1LWc?oc=5\" target=\"_blank\">Watch Fed Signals Fewer Rate Hikes, Aramco HQ Hit in Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOdlBJb0pFZTlFdzNJQ2w4aFRSU1pQRkxJbmdyTWRCZWdDczVLdTk1cVNCZE10MXpNbjVSYWdYODNkbEwwS19MaERrSTNxZFRFZ2RVU2FWTlktOVN1NWN5VTBuTDF6M3B1dS1OX3dxMEFTUGxua056TE9ESmZrLTlLR1hlcDF1LWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T08:55:16.818Z"
+    },
     {
       "id": "rss_700b2b6da08a2f57",
       "timestamp": 1791941880000,
@@ -23,6 +68,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-14T03:16:59.091Z"
+    },
+    {
+      "id": "rss_c00531dafe8a6986",
+      "timestamp": 1791939389000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis launch fresh wave of missiles across Saudi Arabia - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPbVJ2WVgxOVVKWmpNZjB2MUxXY3pxNmZqVEpvVWw2SVM1UXRZSHljbUVmR0tFUjlTbWJGeDVWSjhwQzliMk9mWVgzVTl6UHZpcHNJbURSWXdJSHJzcWtHQWJLWGFueUxwY0g4cVppeDh5bExmQjdsQkhfSUdHVzlFYWk3VE5oc2RicjByMndCSjFDMWhNU2JodGJNekg?oc=5\" target=\"_blank\">Houthis launch fresh wave of missiles across Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DW.com</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbVJ2WVgxOVVKWmpNZjB2MUxXY3pxNmZqVEpvVWw2SVM1UXRZSHljbUVmR0tFUjlTbWJGeDVWSjhwQzliMk9mWVgzVTl6UHZpcHNJbURSWXdJSHJzcWtHQWJLWGFueUxwY0g4cVppeDh5bExmQjdsQkhfSUdHVzlFYWk3VE5oc2RicjByMndCSjFDMWhNU2JodGJNekg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T08:55:16.817Z"
     },
     {
       "id": "rss_383d5c5f103d8175",
@@ -237,6 +305,27 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-13T19:42:54.535Z"
+    },
+    {
+      "id": "rss_1d02e755601e9b7b",
+      "timestamp": 1791916106000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why Saudi Arabia's military has struggled to defend the country against Houthi attacks - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQTUctdmp3M2tHelJ2UklJUG5WS2dnX3lEYmxoRW1kUE01Zmk2ejZMZ1oxYzZUdTNkUDZ2UFRJeng4M3pybUpXNFppSm5pODVGeGhIaFM5Y3NXcEFEdW5US1lPRXNBalhWTjk2LUdjZ0hFWEVGQTlENVBKeTVDM0R2UHJrS3dVa2ttamJZRjJvTXY5eUs2RlpVRXpXclYyaF9uZTdNalhWNVNtZS1LMEFGcENza0p5Q1pzU29UddIBwgFBVV95cUxPNlNEY3EtaXMyaml2eVNreER5eGdRUDFvWVZkN09oM2RiNUlXcWZab3I4UlhhbEtBYnJIQlhkWWhITU5HUWNCV3VOS1hkOGMwR0V3TjN0SUJURzNGZC12RmdCUHRjNHpzMjMteXRoNEw1bW9LZ18tY3FESFFxak5YZ0RncGxMLUZsTF9FNGdvUC",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQTUctdmp3M2tHelJ2UklJUG5WS2dnX3lEYmxoRW1kUE01Zmk2ejZMZ1oxYzZUdTNkUDZ2UFRJeng4M3pybUpXNFppSm5pODVGeGhIaFM5Y3NXcEFEdW5US1lPRXNBalhWTjk2LUdjZ0hFWEVGQTlENVBKeTVDM0R2UHJrS3dVa2ttamJZRjJvTXY5eUs2RlpVRXpXclYyaF9uZTdNalhWNVNtZS1LMEFGcENza0p5Q1pzU29UddIBwgFBVV95cUxPNlNEY3EtaXMyaml2eVNreER5eGdRUDFvWVZkN09oM2RiNUlXcWZab3I4UlhhbEtBYnJIQlhkWWhITU5HUWNCV3VOS1hkOGMwR0V3TjN0SUJURzNGZC12RmdCUHRjNHpzMjMteXRoNEw1bW9LZ18tY3FESFFxak5YZ0RncGxMLUZsTF9FNGdvUC1VZzlNR3VCYUFJVlJlYy1vOEFHU1Z0Mmx1V0d0R25GYlRGMEwwTkRaZHBOTlR2SWdjQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T08:55:16.817Z"
     },
     {
       "id": "rss_47a8935baf48e00b",
@@ -2825,6 +2914,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-08T21:46:02.935Z"
+    },
+    {
+      "id": "rss_b1610c9e35119c32",
+      "timestamp": 1791487046000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "EU sending extra ships to Red Sea naval mission - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNY0Mzam1BdzdfSnlGQ0Z1UThFYmRCbUZlRzZxT0tKUmJCTU53VGVNUnZTdklqQTJkMTF6Y2M1Rms1SngwcDRRMl9XLXgybXZJUDFFUklwM3JhQUhJRlBQVzUyVmw0Mi02LWVQcU1JZTRBQ0M4TlBNQVlqOHRTYlM1YXdhcDRoaGQ0Tl9aaUphWWhNNjNKZzBV?oc=5\" target=\"_blank\">EU sending extra ships to Red Sea naval mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNY0Mzam1BdzdfSnlGQ0Z1UThFYmRCbUZlRzZxT0tKUmJCTU53VGVNUnZTdklqQTJkMTF6Y2M1Rms1SngwcDRRMl9XLXgybXZJUDFFUklwM3JhQUhJRlBQVzUyVmw0Mi02LWVQcU1JZTRBQ0M4TlBNQVlqOHRTYlM1YXdhcDRoaGQ0Tl9aaUphWWhNNjNKZzBV?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T08:55:17.806Z"
     },
     {
       "id": "rss_ad15e0ea15b0ae1e",
@@ -10706,117 +10818,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-18T19:24:27.393Z"
-    },
-    {
-      "id": "rss_7108b2a4bc82c09d",
-      "timestamp": 1789741453000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Italy to escort its own ships through the Red Sea over Aspides delays - euractiv.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPVzhWZ1hZVEMyaEpRZFVFZGZsc3FpU1QtcGJ0a1djc3hmUHhJbzhBNUdWVnlTU1QzY2lDbGdFZHRMaEJDMVFEdHFkSlhncDkzNW9tNXpIcmJVT3Zod3BkQlVBUm1OaUJkaEtzam5FQWNUR2xJNWdFVlVuNjhjOHNYclhSbFJNLWdrNGREUU15TC1oejQtM2tpcTNYa01jZDItaFE?oc=5\" target=\"_blank\">Italy to escort its own ships through the Red Sea over Aspides delays</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euractiv.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVzhWZ1hZVEMyaEpRZFVFZGZsc3FpU1QtcGJ0a1djc3hmUHhJbzhBNUdWVnlTU1QzY2lDbGdFZHRMaEJDMVFEdHFkSlhncDkzNW9tNXpIcmJVT3Zod3BkQlVBUm1OaUJkaEtzam5FQWNUR2xJNWdFVlVuNjhjOHNYclhSbFJNLWdrNGREUU15TC1oejQtM2tpcTNYa01jZDItaFE?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T16:54:14.289Z"
-    },
-    {
-      "id": "rss_30d0d0378464e353",
-      "timestamp": 1789740725000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Red Sea mission raises alert level as Houthis expand maritime foothold - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBTRTFuQkdZSTFRZVNZcGpseVpTZlV0ZFFndElsVFpySUxKYW1JSGNLZldRWVFVWFVZc2ZxQTRBOXlpMGQ0aldOM0UxSWVhcFJOMVhzV3ZoUDBpWFdB?oc=5\" target=\"_blank\">EU Red Sea mission raises alert level as Houthis expand maritime foothold</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBTRTFuQkdZSTFRZVNZcGpseVpTZlV0ZFFndElsVFpySUxKYW1JSGNLZldRWVFVWFVZc2ZxQTRBOXlpMGQ0aldOM0UxSWVhcFJOMVhzV3ZoUDBpWFdB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T16:54:12.824Z"
-    },
-    {
-      "id": "rss_b470a0864ab4a84c",
-      "timestamp": 1789740647000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The EU naval mission in the Red Sea reinforces the alert of its ships against Houthi attacks. - Demócrata",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0AFBVV95cUxOdU9TYnFVVGotSVNZM2V4OTVqdm1jRHd2MVlYMk9pbVNnUVJodGVBUXBlcjdZRzA2NXc2ajdFa21KNGZ2WGNJQ3dsX1NqZmN1UmhrUS16cFZGcDRpUEZYbWt6czVEVXBKYXE5Tm9oYzBORThpNjF4YmU3UzVQQkg4QTRrM3lKc1Nlb2VlZTN5SUNrMlp6OFJwMlgzeHdiN3VpRjJPajRBZTRGRWdKS1VJNk9sQU13M3o2dERXd195cEZfcDlLOUw1WXZ5UWg4d3Vm0gHWAUFVX3lxTE9KN0pIUk1CVW8zWHdpZ0dzam14TUpJU0I4Zlozekp5YXZ5WW5GVFVTRVc2UUhVdlJrQ1lLT2ZvdVhaZk1PTnNZSU9DZmNkcndvaThOb1hCM0RESmJBa2g0czhhWDdudmtLTTRqUXVURTRLaThsS2lpWFVxQV",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOdU9TYnFVVGotSVNZM2V4OTVqdm1jRHd2MVlYMk9pbVNnUVJodGVBUXBlcjdZRzA2NXc2ajdFa21KNGZ2WGNJQ3dsX1NqZmN1UmhrUS16cFZGcDRpUEZYbWt6czVEVXBKYXE5Tm9oYzBORThpNjF4YmU3UzVQQkg4QTRrM3lKc1Nlb2VlZTN5SUNrMlp6OFJwMlgzeHdiN3VpRjJPajRBZTRGRWdKS1VJNk9sQU13M3o2dERXd195cEZfcDlLOUw1WXZ5UWg4d3Vm0gHWAUFVX3lxTE9KN0pIUk1CVW8zWHdpZ0dzam14TUpJU0I4Zlozekp5YXZ5WW5GVFVTRVc2UUhVdlJrQ1lLT2ZvdVhaZk1PTnNZSU9DZmNkcndvaThOb1hCM0RESmJBa2g0czhhWDdudmtLTTRqUXVURTRLaThsS2lpWFVxQVVTT3prVjhGN2g5WmtVR2xKaUwycktrVVRVMVlmaGVFN3pxR2dLLTZyc2RsZ05qU0tYSlJZVUpUdW1rQTRibEYwZm03eGhIZnh4R2hSU3ZxUGQ2b1ZqRTNrZHc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T16:54:14.289Z"
-    },
-    {
-      "id": "rss_e1f04839fe3e5a36",
-      "timestamp": 1789739324000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Naval Mission Aspides Raises Ship Alert Level in Red Sea - صوت الإمارات",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQOHNGNHhyb0syaGdmNEwzNjVwazVWLVE3dDFLUFQya0RTaDVsRTFKS2pPV2ZBYUtJa2dxY0w2VEJLZnVsZ1ptRGNSZGFkWjk0a1NWZlRyd0JYYnhtZmpoRURHZ0NDdVdldW1LbE5sckxLdExCTEZTV2VVOGFJQnc5dzJELWZFdnVWRHE3NTNJSGloQ0dlc1M5VWFtemZhY3VCbElKaHJpMElfYXZVZHgzQQ?oc=5\" target=\"_blank\">EU Naval Mission Aspides Raises Ship Alert Level in Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">صوت الإمارات</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOHNGNHhyb0syaGdmNEwzNjVwazVWLVE3dDFLUFQya0RTaDVsRTFKS2pPV2ZBYUtJa2dxY0w2VEJLZnVsZ1ptRGNSZGFkWjk0a1NWZlRyd0JYYnhtZmpoRURHZ0NDdVdldW1LbE5sckxLdExCTEZTV2VVOGFJQnc5dzJELWZFdnVWRHE3NTNJSGloQ0dlc1M5VWFtemZhY3VCbElKaHJpMElfYXZVZHgzQQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-18T16:54:14.289Z"
-    },
-    {
-      "id": "rss_bafddfbf8e8515d3",
-      "timestamp": 1789736285000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "As Houthis grab Bab al-Mandeb, US appears willing to watch from sidelines - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPRHBtUU5kYndPUnFFdUpNMmxNS0N2TEFZVGdoRFE3UXFBUVhFQ2djbDVBWkpfWXZFUFluTF9Ic2NwVFJSY3NabmFEWVlkcjhBY3FYMWhkcDZEY1FxQkFTZUxqX3V5dGVsWjI5QkhGMS1iZi05NnRCaDNLVnoyOVBrYzRLWXZsWFBIQURleUl2dGdvclN2TXZYdG5hbWtXWEVUVHdIbmQ3VU5QbVd2LW0zUW00RdIBuAFBVV95cUxQRnNvd0h3X2RPNDhuUGhpS1ctNVo2ZXRIekNYZmt6UlUzblphdGRvNm5IUU9KMzR1MWhILV9Pb3dVcm1FMUtWbEhaX28xb3RPd0p5Mlo0TFpncVN6OVM2QV9SaXRPTm1GVnhEaVNuZU02NkIyVDlLMDNvV0YyY0U1bzJZR2ZWZ2x5VWFLeVRvcHZGdU50YUs5ZW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPRHBtUU5kYndPUnFFdUpNMmxNS0N2TEFZVGdoRFE3UXFBUVhFQ2djbDVBWkpfWXZFUFluTF9Ic2NwVFJSY3NabmFEWVlkcjhBY3FYMWhkcDZEY1FxQkFTZUxqX3V5dGVsWjI5QkhGMS1iZi05NnRCaDNLVnoyOVBrYzRLWXZsWFBIQURleUl2dGdvclN2TXZYdG5hbWtXWEVUVHdIbmQ3VU5QbVd2LW0zUW00RdIBuAFBVV95cUxQRnNvd0h3X2RPNDhuUGhpS1ctNVo2ZXRIekNYZmt6UlUzblphdGRvNm5IUU9KMzR1MWhILV9Pb3dVcm1FMUtWbEhaX28xb3RPd0p5Mlo0TFpncVN6OVM2QV9SaXRPTm1GVnhEaVNuZU02NkIyVDlLMDNvV0YyY0U1bzJZR2ZWZ2x5VWFLeVRvcHZGdU50YUs5ZWN5YW9pSWJpYUNuNHlxZzdzOEJubC1PYm52UGNHMHAw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-18T19:24:27.392Z"
     }
   ]
 }
