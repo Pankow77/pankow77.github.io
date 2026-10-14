@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-14T14:17:24.764Z",
+  "last_fetch": "2026-10-14T18:46:38.097Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_86e787f289747094",
+      "timestamp": 1791993823000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Pilgrims caught up in Houthi strikes on Saudi Arabia - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPTWUzYUQwXzFUVGJsY2RZTUhiY055eFFGRGtYMDR0TkU0TkRLaWZaQ1VLdnhNbTFkOTBFOW1ZVEJTWWEwWDFBZHBPZTgyY19MZURTTVExR1hvRWtub2hZUGtTNWs2Z3JLMFZYVWhvZ0FrQmxSRWVrYkxyc1VzWWk3RUZGajF5OFRxZHJWZTBvdWJ2VFRhM0IyZkZwRXBHd2F1SUE?oc=5\" target=\"_blank\">Pilgrims caught up in Houthi strikes on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTWUzYUQwXzFUVGJsY2RZTUhiY055eFFGRGtYMDR0TkU0TkRLaWZaQ1VLdnhNbTFkOTBFOW1ZVEJTWWEwWDFBZHBPZTgyY19MZURTTVExR1hvRWtub2hZUGtTNWs2Z3JLMFZYVWhvZ0FrQmxSRWVrYkxyc1VzWWk3RUZGajF5OFRxZHJWZTBvdWJ2VFRhM0IyZkZwRXBHd2F1SUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-14T18:46:36.256Z"
+    },
     {
       "id": "rss_d3d9eff2491e4922",
       "timestamp": 1791984057000,
@@ -65,6 +86,27 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-14T14:17:23.181Z"
+    },
+    {
+      "id": "rss_712a32a5c204602d",
+      "timestamp": 1791977098000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Aramco executives' offices damaged in Houthi attack, regional officials say - Ynetnews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvNGEyeXppUk5fY0trSVowd0hOVW9PYnAxbmtIcUhvREpsT1h2UTBCTUI4cHpOVHRqdVVJU0FHN0o0X3FOXzF0cEpYX0FqV2lfUjJrb2NR?oc=5\" target=\"_blank\">Aramco executives' offices damaged in Houthi attack, regional officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvNGEyeXppUk5fY0trSVowd0hOVW9PYnAxbmtIcUhvREpsT1h2UTBCTUI4cHpOVHRqdVVJU0FHN0o0X3FOXzF0cEpYX0FqV2lfUjJrb2NR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-14T18:46:36.256Z"
     },
     {
       "id": "rss_63b0be9000300a83",
@@ -10775,48 +10817,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-19T07:45:26.583Z"
-    },
-    {
-      "id": "rss_5b6f6259af54fa57",
-      "timestamp": 1789790691000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis have further tightened their Grip on the Red Sea. Here’s what it could mean for the World - Informed Comment",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE15X0J1VENIOVpFT1E0dzlJMml1ZzhCQl93ZVRmWEExcHVNM1BuNGVrdnJJajNXZFRKLWdMaDNUaFY3TmNEMmx6TXJwVlQ0ai1zZEVSc3NuTWp2Y1dmQm5NbVZZSURBUGZNSzJaSlQ3MG8?oc=5\" target=\"_blank\">The Houthis have further tightened their Grip on the Red Sea. Here’s what it could mean for the World</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Informed Comment</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE15X0J1VENIOVpFT1E0dzlJMml1ZzhCQl93ZVRmWEExcHVNM1BuNGVrdnJJajNXZFRKLWdMaDNUaFY3TmNEMmx6TXJwVlQ0ai1zZEVSc3NuTWp2Y1dmQm5NbVZZSURBUGZNSzJaSlQ3MG8?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-19T15:58:58.647Z"
-    },
-    {
-      "id": "rss_bbe7516c984fdd4c",
-      "timestamp": 1789778520000,
-      "source": "Reuters",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Flames, smoke seen near Riyadh airport after Saudi warning of aerial attack threat - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYWNnM0NScnlDOXNDY25xQjhZVlRHUUtMOEV3YVZSOW5xekdVelcycGI1VHl3dWpqVGhNM2s1N05NamZxV0hoNVBFN204OHM5dVlQemMySkJGMlpCaURybUY4TVZfd0RDUUxzb3RTeWJVVEI4blFQZFhJekptSHRFUVdqb1pDai1VQ1hPS1JHWk92MEpZYWtESDduUmpwUEg4Nzc4bFp3VDQzM2JMTnRZXzgzbVBvUDk0clU4a3dHMlhuQk0?oc=5\" target=\"_blank\">Flames, smoke seen near Riyadh airport after Saudi warning of aerial attack threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYWNnM0NScnlDOXNDY25xQjhZVlRHUUtMOEV3YVZSOW5xekdVelcycGI1VHl3dWpqVGhNM2s1N05NamZxV0hoNVBFN204OHM5dVlQemMySkJGMlpCaURybUY4TVZfd0RDUUxzb3RTeWJVVEI4blFQZFhJekptSHRFUVdqb1pDai1VQ1hPS1JHWk92MEpZYWtESDduUmpwUEg4Nzc4bFp3VDQzM2JMTnRZXzgzbVBvUDk0clU4a3dHMlhuQk0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-19T15:58:58.647Z"
     }
   ]
 }
