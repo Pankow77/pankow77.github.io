@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-15T22:33:01.799Z",
+  "last_fetch": "2026-10-16T00:58:15.042Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5781089478b7a13a",
+      "timestamp": 1792106183000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi diplomat says Iran is encouraging Houthi escalation of attacks on the kingdom - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNSHdCYjB6dzdtU1BtZlhtakJSSGlELWlVWURncXN0ZnQzRHRuX1N5YmlnRnBoN3lzQWhoWFRFYU9sN0RqTlZVdlJEUFBEQlYtS2Fpam82a0tyVm0wa3ZZZ04teUE0MVU2eEpvNXBCdXBfLThVT3lVZ190TGFicFJ3M3hzejE5UXdoUy0zM21lMVFVWEIydTBNRklpNlZwRlJ4X2FEcHdCcTJYTFdzdDdhUF9CajlKa2NVSnfSAb8BQVVfeXFMT0tBQ1NRMVBfdlh0UzNpd3VHcGZCVXJENWJaRW11dnphV0ZQVVotNmFkMktYUl80azdSemFWNXdneUxJRUFyYjVzVGYxTGFZTDJDdjZrVUFwNzI4QVhHalo2RGhFUUFGLVE0QXJ0dVBhXzR1NHExQXFqVmpPRVpjNUdUUDdYclA2dVlnLXB0UUlpMj",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSHdCYjB6dzdtU1BtZlhtakJSSGlELWlVWURncXN0ZnQzRHRuX1N5YmlnRnBoN3lzQWhoWFRFYU9sN0RqTlZVdlJEUFBEQlYtS2Fpam82a0tyVm0wa3ZZZ04teUE0MVU2eEpvNXBCdXBfLThVT3lVZ190TGFicFJ3M3hzejE5UXdoUy0zM21lMVFVWEIydTBNRklpNlZwRlJ4X2FEcHdCcTJYTFdzdDdhUF9CajlKa2NVSnfSAb8BQVVfeXFMT0tBQ1NRMVBfdlh0UzNpd3VHcGZCVXJENWJaRW11dnphV0ZQVVotNmFkMktYUl80azdSemFWNXdneUxJRUFyYjVzVGYxTGFZTDJDdjZrVUFwNzI4QVhHalo2RGhFUUFGLVE0QXJ0dVBhXzR1NHExQXFqVmpPRVpjNUdUUDdYclA2dVlnLXB0UUlpMjJ0V1lXd2drUGVLbU9SeXZqM3RUNHNkWEtaYzBGUWt4SWtVMWItcE5PVEpLNGs?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-16T00:58:13.384Z"
+    },
     {
       "id": "rss_1cf78879da8e6f9f",
       "timestamp": 1792100583000,
@@ -25,6 +48,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-15T22:33:00.412Z"
+    },
+    {
+      "id": "rss_d4ae499767658cc8",
+      "timestamp": 1792096080000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi missiles strike Saudi-led forces HQ at presidential palace in Aden - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPbkFOY3lPYnZzY2JhR0RfeEUtQU1lZDVLU1N4a254d1Z6ZmlLM25LUm12Q2tudk1VOU9oR0xSaW92aUJEUlgyWWJ5NVQzVEJNb0dzU21MWWlXcU5JNkVKWlE5eVBteEItT3RXSHRvY2djQTFkOGNIUFVuVXRERUItcnMtSl9hdw?oc=5\" target=\"_blank\">Houthi missiles strike Saudi-led forces HQ at presidential palace in Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbkFOY3lPYnZzY2JhR0RfeEUtQU1lZDVLU1N4a254d1Z6ZmlLM25LUm12Q2tudk1VOU9oR0xSaW92aUJEUlgyWWJ5NVQzVEJNb0dzU21MWWlXcU5JNkVKWlE5eVBteEItT3RXSHRvY2djQTFkOGNIUFVuVXRERUItcnMtSl9hdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-16T00:58:13.384Z"
     },
     {
       "id": "rss_a9c6591551b192d1",
@@ -10777,51 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T06:36:45.962Z"
-    },
-    {
-      "id": "rss_d261fb7ec56b85c2",
-      "timestamp": 1789858621000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia says Houthis tried to attack its capital, and o... - seMissourian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVmFaX3pvSXliQVlGS3pYV01SRGhXZjB2VFdraExsYWtsSjZ5WnVuNkpVZ1UtTzQ5eWMzWDhpWFlzV19IaFVQWEpIR2JJTFBwSktNRThBYjN0VzZLalNPdFJSV3hGa0NDZU5iUWFXNHFSRUFfYmUxT29RUHVmbC1VUmVCdTFnM3Nnb2ZEcENKRHp3QUlvWVptZkxmNUM2QndrRjY5YUg2THF3QVptaDJwNDZFN0ZtSG5MSk9zcl9tZGdoRHZNNzgtMw?oc=5\" target=\"_blank\">Saudi Arabia says Houthis tried to attack its capital, and o...</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">seMissourian</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPVmFaX3pvSXliQVlGS3pYV01SRGhXZjB2VFdraExsYWtsSjZ5WnVuNkpVZ1UtTzQ5eWMzWDhpWFlzV19IaFVQWEpIR2JJTFBwSktNRThBYjN0VzZLalNPdFJSV3hGa0NDZU5iUWFXNHFSRUFfYmUxT29RUHVmbC1VUmVCdTFnM3Nnb2ZEcENKRHp3QUlvWVptZkxmNUM2QndrRjY5YUg2THF3QVptaDJwNDZFN0ZtSG5MSk9zcl9tZGdoRHZNNzgtMw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-19T23:17:53.342Z"
-    },
-    {
-      "id": "rss_69adfc091f08e98c",
-      "timestamp": 1789855624000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition says defences intercept Houthi missile fired at Riyadh - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFRmYktSYmFGRVRhRF9lMVBha2RQR1B4dHI2TkRvT1cxOFh3TVB3UXNvVjNfa3UxRGRQSjNiQ1MtYVBqMW9VNXNsTnpRa2JaYlpDWi10U3NwazZDRjJLbVEzYVRzdVdrTnA3LWFVWjlPVTlXbDhSdkJZRUVvZk1MVTdUMk5qZm9rbV9sT3BfeGlFU3FrbG4yTWVxcm90OFRpNC1Pc2pqcHJTYXUwQWdIWV9rU2wtQdIBuwFBVV95cUxPaU9oejdNQ3B1R0FZRS1sQ1FpTmlkNHJ0RFZyOUh5QXNHbzdheGgxeDNOV0dxT3VmR1ZFRDJobTZZV1VXVndOc3Nmb096dlpqMG01RWUzcVhxWDZKX3BkT0dVT3YyYUlPUXpveUYyMEtIU3dSTlVvVEhkZFVUdWNUemlBTVc0OUxJLXh5RHlQSmt3dE8tcT",
-      "tags": [
-        "missile",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPaFRmYktSYmFGRVRhRF9lMVBha2RQR1B4dHI2TkRvT1cxOFh3TVB3UXNvVjNfa3UxRGRQSjNiQ1MtYVBqMW9VNXNsTnpRa2JaYlpDWi10U3NwazZDRjJLbVEzYVRzdVdrTnA3LWFVWjlPVTlXbDhSdkJZRUVvZk1MVTdUMk5qZm9rbV9sT3BfeGlFU3FrbG4yTWVxcm90OFRpNC1Pc2pqcHJTYXUwQWdIWV9rU2wtQdIBuwFBVV95cUxPaU9oejdNQ3B1R0FZRS1sQ1FpTmlkNHJ0RFZyOUh5QXNHbzdheGgxeDNOV0dxT3VmR1ZFRDJobTZZV1VXVndOc3Nmb096dlpqMG01RWUzcVhxWDZKX3BkT0dVT3YyYUlPUXpveUYyMEtIU3dSTlVvVEhkZFVUdWNUemlBTVc0OUxJLXh5RHlQSmt3dE8tcTZOSWFFYnl3ZUJIM0x4cTlsMkJwM3NKRkt4WjZ2TmpXVjFoVHRJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-20T06:36:45.961Z"
     }
   ]
 }
