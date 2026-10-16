@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-16T18:53:03.580Z",
+  "last_fetch": "2026-10-16T21:53:15.953Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2ca8d054e97547e6",
+      "timestamp": 1792179167000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says Houthi attacks violate terms of rapprochement with Iran - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQOUpxeGduTThCLVNjLWsyQTRWME52eEtENkhUMkQycXJQVUJIMTJ2RHdjRzFYQWRTYjVrZ0oyRTNISHQ2V2o0WERwZ0t1YV9WeHVGcExhd1hLWkEyQWE2eTFRS2l6bEhiWndkZ0hNcDhIdEc0UXNVa1laa2ZtR05XRVJHcFZpWFp0UWRJdHZwWUZIelA4Vk1LTXNLbzQ3NGthNHc?oc=5\" target=\"_blank\">Saudi Arabia says Houthi attacks violate terms of rapprochement with Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOUpxeGduTThCLVNjLWsyQTRWME52eEtENkhUMkQycXJQVUJIMTJ2RHdjRzFYQWRTYjVrZ0oyRTNISHQ2V2o0WERwZ0t1YV9WeHVGcExhd1hLWkEyQWE2eTFRS2l6bEhiWndkZ0hNcDhIdEc0UXNVa1laa2ZtR05XRVJHcFZpWFp0UWRJdHZwWUZIelA4Vk1LTXNLbzQ3NGthNHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-16T21:53:14.556Z"
+    },
     {
       "id": "rss_4a85ac82c8bef40f",
       "timestamp": 1792174200000,
@@ -10801,29 +10824,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-20T11:58:22.366Z"
-    },
-    {
-      "id": "rss_fc715119b62d82d3",
-      "timestamp": 1789887600000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Red Sea, Tajani: “Strengthen Aspides.” EU calls for more ships - AdriaPorts",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNTE8xTGFGUFprZW1IUnBlbGw4UE9Ka1ZXdjg1Zmxya2ExNUxFU0hRLW5VRUQyY1F2SVVpRmZFRmV6SjFJZ0ZLLWRCUVlGcE1ERHVjQnNMQ3hfRTNWOFpNeGo2SGpOSkoxd3ZyWmtBSjIzaE53M19UVU9ySXVJVjRmTGFMWGhSV1dvbTRMbEFpQTR5TUVzLWQ5RDFicFk?oc=5\" target=\"_blank\">Red Sea, Tajani: “Strengthen Aspides.” EU calls for more ships</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AdriaPorts</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTE8xTGFGUFprZW1IUnBlbGw4UE9Ka1ZXdjg1Zmxya2ExNUxFU0hRLW5VRUQyY1F2SVVpRmZFRmV6SjFJZ0ZLLWRCUVlGcE1ERHVjQnNMQ3hfRTNWOFpNeGo2SGpOSkoxd3ZyWmtBSjIzaE53M19UVU9ySXVJVjRmTGFMWGhSV1dvbTRMbEFpQTR5TUVzLWQ5RDFicFk?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T20:19:51.133Z"
     }
   ]
 }
