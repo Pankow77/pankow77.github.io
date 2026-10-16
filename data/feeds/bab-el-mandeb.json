@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-16T00:58:15.042Z",
+  "last_fetch": "2026-10-16T05:36:01.373Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -589,6 +589,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-14T14:17:23.181Z"
+    },
+    {
+      "id": "rss_cc52ff124cf83604",
+      "timestamp": 1791980773000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi missile hits Aramco building after Saudi-led coalition strike on Yemen fuel depot - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NTXliU09wdmZTVFFLc3dfamVjQlRpUnNuVXY3QmpLLUVGYjVXZHBZNm8taks5cTJaVUNndmNFZy01WGxNcFp0YzFlb0NZcXBQclBsZFF1T1o2SGM?oc=5\" target=\"_blank\">Houthi missile hits Aramco building after Saudi-led coalition strike on Yemen fuel depot</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1NTXliU09wdmZTVFFLc3dfamVjQlRpUnNuVXY3QmpLLUVGYjVXZHBZNm8taks5cTJaVUNndmNFZy01WGxNcFp0YzFlb0NZcXBQclBsZFF1T1o2SGM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-16T05:35:59.794Z"
     },
     {
       "id": "rss_451945e3e4f3aff7",
@@ -10802,27 +10826,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T06:36:45.961Z"
-    },
-    {
-      "id": "rss_33590567ec0a070b",
-      "timestamp": 1789860232000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthis claim attack on Riyadh, heralding escalation in tensions with Saudi Arabia - China Daily",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFA1a054RXFvZ0d4V2tHVVNEOWRRbmtlLUFuQ08xLVl6THNKeFhiUkFSbThQU3lXLTVkSHF6anV1VFVaZlgtYm1rckMyWXFrU1BOSlprZWZnNEdSTUJzcGdmY0s0cVZsVXB2UWdBbHZoemJKZjljTmJ2Z2tCZExzUQ?oc=5\" target=\"_blank\">Yemen's Houthis claim attack on Riyadh, heralding escalation in tensions with Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">China Daily</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA1a054RXFvZ0d4V2tHVVNEOWRRbmtlLUFuQ08xLVl6THNKeFhiUkFSbThQU3lXLTVkSHF6anV1VFVaZlgtYm1rckMyWXFrU1BOSlprZWZnNEdSTUJzcGdmY0s0cVZsVXB2UWdBbHZoemJKZjljTmJ2Z2tCZExzUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T06:36:45.962Z"
     }
   ]
 }
