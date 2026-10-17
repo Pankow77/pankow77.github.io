@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-17T12:48:00.053Z",
+  "last_fetch": "2026-10-17T16:05:38.495Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_66a1ec95212ade53",
+      "timestamp": 1792248360000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UAE agrees with Saudi Arabia to re-enter Yemen conflict amid Houthi gains - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOWXhkalJBQ2xwVFhIUExTLWw3UTRGbHdXVlhIQ0ZLaEVOREFzNUQ3MkJqSlMtOWQ1aDRwazFhaVA3ajdqNTREZFN1andxLV9QaE4yUWk4T0ZGeXJfZDIwb0JhMDRwOHN4Qlowbl9ET0x4cVMtZU1zdjBXY3J4bEp3VHAtdDItcUhzM3FfWmNaVFljamJ4enBhb1I3dTZUWVl5Z3c?oc=5\" target=\"_blank\">UAE agrees with Saudi Arabia to re-enter Yemen conflict amid Houthi gains</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOWXhkalJBQ2xwVFhIUExTLWw3UTRGbHdXVlhIQ0ZLaEVOREFzNUQ3MkJqSlMtOWQ1aDRwazFhaVA3ajdqNTREZFN1andxLV9QaE4yUWk4T0ZGeXJfZDIwb0JhMDRwOHN4Qlowbl9ET0x4cVMtZU1zdjBXY3J4bEp3VHAtdDItcUhzM3FfWmNaVFljamJ4enBhb1I3dTZUWVl5Z3c?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T16:05:37.137Z"
+    },
+    {
+      "id": "rss_74ef5688029e5553",
+      "timestamp": 1792225983000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran giving Yemen's Houthis target intelligence for drone, missile strikes on Saudi Arabia - report - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkOXRSMkpFckJZaFBzb3I1djN5Q3pQaV9pTVFvYTF5UmR4S2tWVUdnOWpPb0s4SXppV3pzNzNhRkxUOHpoSnEwODNITDVkMzRtUFVua3B5U3U3emRk?oc=5\" target=\"_blank\">Iran giving Yemen's Houthis target intelligence for drone, missile strikes on Saudi Arabia - report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkOXRSMkpFckJZaFBzb3I1djN5Q3pQaV9pTVFvYTF5UmR4S2tWVUdnOWpPb0s4SXppV3pzNzNhRkxUOHpoSnEwODNITDVkMzRtUFVua3B5U3U3emRk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T16:05:37.137Z"
+    },
     {
       "id": "rss_926b36ddd633cc31",
       "timestamp": 1792225340000,
@@ -10786,50 +10832,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T15:44:22.352Z"
-    },
-    {
-      "id": "rss_a3c21fe6804366d1",
-      "timestamp": 1789902713000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Arab States Condemn Houthi Missile Attack Targeting Riyadh - CairoScene",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxOSjNDLWQ0TFN3VHhUS3FMd0tLQTBwODlLbXpyZkE0ajRESXlqWVUyYUNfR0c5UmkxckVROEItZUVnNllIODFlTG1LY3V2U3NjazJpVjBNeWM4eWlmVmhQN0JfQVhzY1l1QTVpLTJSczEwam9rc1VKTnIyR1IxN3J6NWlEMTNiaGxoUWhuSnk0bw?oc=5\" target=\"_blank\">Arab States Condemn Houthi Missile Attack Targeting Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CairoScene</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSjNDLWQ0TFN3VHhUS3FMd0tLQTBwODlLbXpyZkE0ajRESXlqWVUyYUNfR0c5UmkxckVROEItZUVnNllIODFlTG1LY3V2U3NjazJpVjBNeWM4eWlmVmhQN0JfQVhzY1l1QTVpLTJSczEwam9rc1VKTnIyR1IxN3J6NWlEMTNiaGxoUWhuSnk0bw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T11:58:22.367Z"
-    },
-    {
-      "id": "rss_a4d4a077f12d8a1e",
-      "timestamp": 1789900920000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "US issues Middle East alerts after Houthi attacks; Trump cuts short Camp David stay - i24NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxNbHRaUkR1ODdFZUpENXhuOUU3M1BpZWw2dG1YazktRndDbTZOV1Q5TVdId1RGUDRidlV2U1YwZ0dsY2cyV0ZuTVZJMnZjb1ZJYnM5Q1JqbzFPYUdYWXFvcTV3N1Z5cE1pMUpuQjdkMGFoSkZPOHN5c1JUUDFlZkJkWE1hRDg2MzcybGtUR1BfNk5xQ2JUZmZVbjRNVU56dHFFWm5BS3JfczBINU5HYldZNG44ZTN4dnY1QkJxUVVRNGltX2tWOUlMM2o3ODNxX0ljY3VwdWxKVQ?oc=5\" target=\"_blank\">US issues Middle East alerts after Houthi attacks; Trump cuts short Camp David stay</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNbHRaUkR1ODdFZUpENXhuOUU3M1BpZWw2dG1YazktRndDbTZOV1Q5TVdId1RGUDRidlV2U1YwZ0dsY2cyV0ZuTVZJMnZjb1ZJYnM5Q1JqbzFPYUdYWXFvcTV3N1Z5cE1pMUpuQjdkMGFoSkZPOHN5c1JUUDFlZkJkWE1hRDg2MzcybGtUR1BfNk5xQ2JUZmZVbjRNVU56dHFFWm5BS3JfczBINU5HYldZNG44ZTN4dnY1QkJxUVVRNGltX2tWOUlMM2o3ODNxX0ljY3VwdWxKVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.353Z"
     }
   ]
 }
