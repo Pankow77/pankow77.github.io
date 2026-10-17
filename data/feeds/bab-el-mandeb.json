@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-16T21:53:15.953Z",
+  "last_fetch": "2026-10-17T00:07:02.911Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3c5b6de00076d667",
+      "timestamp": 1792192294000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "2 missiles strike the airport in Yemen’s port city of Aden, officials say - Boston Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOSlh6MmtrV1JrMEF4eC1KaUJhZk85aVVBdW4yRi1qM2ZVc0s5bW1JNDFWcW9DY21YbVl6ZDN6RmJqRFAxUTk3cmNnMmIyb3ZjZUtwbW94Z0dUcGhPN0V2bGNRd3JLVFdXZDI3RU9uTjBIUGpqbW5zazAzdkh1RDQtRWNQZTJaVVNfTDRhdkozbXZ3Ri05c1djcjM0S1MxbmpIRUFicDlENDBOYXVNNDJSU2t3?oc=5\" target=\"_blank\">2 missiles strike the airport in Yemen’s port city of Aden, officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston Herald</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOSlh6MmtrV1JrMEF4eC1KaUJhZk85aVVBdW4yRi1qM2ZVc0s5bW1JNDFWcW9DY21YbVl6ZDN6RmJqRFAxUTk3cmNnMmIyb3ZjZUtwbW94Z0dUcGhPN0V2bGNRd3JLVFdXZDI3RU9uTjBIUGpqbW5zazAzdkh1RDQtRWNQZTJaVVNfTDRhdkozbXZ3Ri05c1djcjM0S1MxbmpIRUFicDlENDBOYXVNNDJSU2t3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T00:07:01.331Z"
+    },
     {
       "id": "rss_2ca8d054e97547e6",
       "timestamp": 1792179167000,
@@ -10802,27 +10825,6 @@
       "origin": "rss",
       "confidence": 0.3,
       "source_weight": 0.5,
-      "fetched_at": "2026-09-20T11:58:22.366Z"
-    },
-    {
-      "id": "rss_cb55200e5987ecd0",
-      "timestamp": 1789890981000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Turkiye backs Saudi Arabia’s security amid escalating Houthi attacks: FM - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOSlZ6aEp5bHZZTm0yc3dUaHRHbmRibFBhUVVGa3pzYUJoZXhzcjVKXzk2Y2VQczlpcmZ0ejNseFp0LTlNWnFuelh1Mk5lYk9HTkpwNmgwV0E4VWN3NktxMEMwcVFoV1FsVDZ6cWRMY3pIVmtRV3N3NXdNcFh5RTM0WVhnOVJKVzhMR2tPYUxIdkRpcDRrZGtwQU9KTmlKZndLSjJfZEFRbGxsVm1sYXVhStIBtgFBVV95cUxNZS1jUk01ckNoNTZ6eWh0SS1TYVJjSlprRGdyTVQ2MGxPRFdpT0plR3NXMWpPWE85ZXpyb2lFTUpFNGVScGdWeHFkVzVwbDJEWWQ2NDVNUzlEM0ZoXzlGQTY1R1JaMHl3NTlza19wTjVGcU9QaGd1ZzRicDI5dHpRR0I1SXkzQ2xrQkFqNmFIV1M3Q0tHb29qdDV5dk",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSlZ6aEp5bHZZTm0yc3dUaHRHbmRibFBhUVVGa3pzYUJoZXhzcjVKXzk2Y2VQczlpcmZ0ejNseFp0LTlNWnFuelh1Mk5lYk9HTkpwNmgwV0E4VWN3NktxMEMwcVFoV1FsVDZ6cWRMY3pIVmtRV3N3NXdNcFh5RTM0WVhnOVJKVzhMR2tPYUxIdkRpcDRrZGtwQU9KTmlKZndLSjJfZEFRbGxsVm1sYXVhStIBtgFBVV95cUxNZS1jUk01ckNoNTZ6eWh0SS1TYVJjSlprRGdyTVQ2MGxPRFdpT0plR3NXMWpPWE85ZXpyb2lFTUpFNGVScGdWeHFkVzVwbDJEWWQ2NDVNUzlEM0ZoXzlGQTY1R1JaMHl3NTlza19wTjVGcU9QaGd1ZzRicDI5dHpRR0I1SXkzQ2xrQkFqNmFIV1M3Q0tHb29qdDV5dkh2ZGJsRVlGWDQyTXAxVV9NT3VjcTRkXzdYZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
       "fetched_at": "2026-09-20T11:58:22.366Z"
     }
   ]
