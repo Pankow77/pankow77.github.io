@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-17T04:47:11.810Z",
+  "last_fetch": "2026-10-17T08:58:33.065Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2221ae4426276b57",
+      "timestamp": 1792213425000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Saudi-Led Coalition Claims Attack on Houthi Arms Smuggling Operations - 8AM Media",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPajdhbVRwT2JHQW1IallRSDRNcXdnbWJJNlpET3NLcVR5RTNRRTlrU1hHMHRWTUhzNU12Vkc5WjAwM2hZS3lrelR5SHJCaThicnljVGpyN0ZxTWZQLWs3QUpSMG1YMWFwS2tFUFA0eEI3a0pnNkE1WXZmdGhiRTJIY0VTVVZxT0pOWUJVZ3ZkbGtmWld2U3JB?oc=5\" target=\"_blank\">Saudi-Led Coalition Claims Attack on Houthi Arms Smuggling Operations</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">8AM Media</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPajdhbVRwT2JHQW1IallRSDRNcXdnbWJJNlpET3NLcVR5RTNRRTlrU1hHMHRWTUhzNU12Vkc5WjAwM2hZS3lrelR5SHJCaThicnljVGpyN0ZxTWZQLWs3QUpSMG1YMWFwS2tFUFA0eEI3a0pnNkE1WXZmdGhiRTJIY0VTVVZxT0pOWUJVZ3ZkbGtmWld2U3JB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T08:58:31.565Z"
+    },
+    {
+      "id": "rss_280e8330f3620ddb",
+      "timestamp": 1792212300000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attacks on Saudi Arabia: What the Group Wants - الحرة",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE05Vk1XeHpLb1ZhajFkTU0zLXZXOEhMUHRXQUUtSURyTWt5azdPaDg4dG1wd3JvczdQVjk0Q2pJVWxLdw?oc=5\" target=\"_blank\">Houthi Attacks on Saudi Arabia: What the Group Wants</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE05Vk1XeHpLb1ZhajFkTU0zLXZXOEhMUHRXQUUtSURyTWt5azdPaDg4dG1wd3JvczdQVjk0Q2pJVWxLdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T08:58:31.564Z"
+    },
     {
       "id": "rss_3c5b6de00076d667",
       "timestamp": 1792192294000,
@@ -10783,50 +10827,6 @@
       "origin": "rss",
       "confidence": 0.3,
       "source_weight": 0.5,
-      "fetched_at": "2026-09-20T11:58:22.366Z"
-    },
-    {
-      "id": "rss_17075c601f2a4faf",
-      "timestamp": 1789897828000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they won’t attack US vessels in Red Sea, and other Mideast developments - Pioneer Press",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQdl9aM21nQzFRWWZtWlVBZkhOUW5VWnA1dDI5S05UQTlHTTBSVXFqeTdTbWpQRlhyR2lQRWdlMDlGajhsOTdLNVRpWVg5NnpHU3ZGV3hnN1RMbVlWUVQtVFFzQ05sMWJ1UVM4RUVFaHRzWFFTOWQ1bmo3QVpwclNvWDNqc2x5QjMxaVlzZEoyNE1uNjlmWFRUaTAtTEREV0NsMzZqeDRzVzZIVExQY3drZ0F6TnJmSGN1UTRlOA?oc=5\" target=\"_blank\">Houthis say they won’t attack US vessels in Red Sea, and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Pioneer Press</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdl9aM21nQzFRWWZtWlVBZkhOUW5VWnA1dDI5S05UQTlHTTBSVXFqeTdTbWpQRlhyR2lQRWdlMDlGajhsOTdLNVRpWVg5NnpHU3ZGV3hnN1RMbVlWUVQtVFFzQ05sMWJ1UVM4RUVFaHRzWFFTOWQ1bmo3QVpwclNvWDNqc2x5QjMxaVlzZEoyNE1uNjlmWFRUaTAtTEREV0NsMzZqeDRzVzZIVExQY3drZ0F6TnJmSGN1UTRlOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T13:33:37.380Z"
-    },
-    {
-      "id": "rss_36e6d26a82899708",
-      "timestamp": 1789896661000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "‘There will be a very sizeable Saudi response’ to Houthi attacks - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNLTFSWWdCQVlRRjRVcDZmWFhSOEpMMGFYVG5jNVRPNVJSdXNaXzVBT2tPNE1JdnllN29UdmczT2pMS21XSnJZcHg1TUtrVzdWWkEzZXozTWhsYWhNYlpQNXh1Uk5XNXZ3ZEQtcDFhNlIzOEdJMmpaSng5N0pELUdsM0trTkNDdTgtSUdja3hZY0ZSSkFackxpUGJqODg5OGRyQnpOZEpxSzY2M3ZranEzYXoxMNIBuAFBVV95cUxNbXNIRUZLcndLOXgtVjZXanZwMjBRTC15b3NYYmhpSlhwcURVbGhZczA4S0NNcWpQNHRhai1WQU9jcjFka283UFpMZmR5UVdiNVpFM0pPQ181Ym5RNXJvY3Vlc25sem9Vdk9jdzY5YUtTT2xwOTBHcTNhUXplRlFrRURYdF9seWIxU2RzYzI2V2c4aDNhNWxudG",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNLTFSWWdCQVlRRjRVcDZmWFhSOEpMMGFYVG5jNVRPNVJSdXNaXzVBT2tPNE1JdnllN29UdmczT2pMS21XSnJZcHg1TUtrVzdWWkEzZXozTWhsYWhNYlpQNXh1Uk5XNXZ3ZEQtcDFhNlIzOEdJMmpaSng5N0pELUdsM0trTkNDdTgtSUdja3hZY0ZSSkFackxpUGJqODg5OGRyQnpOZEpxSzY2M3ZranEzYXoxMNIBuAFBVV95cUxNbXNIRUZLcndLOXgtVjZXanZwMjBRTC15b3NYYmhpSlhwcURVbGhZczA4S0NNcWpQNHRhai1WQU9jcjFka283UFpMZmR5UVdiNVpFM0pPQ181Ym5RNXJvY3Vlc25sem9Vdk9jdzY5YUtTT2xwOTBHcTNhUXplRlFrRURYdF9seWIxU2RzYzI2V2c4aDNhNWxudGJFSDRlSm1Jb3dINEVaYmVCV0IzR211bkMyQXRib0xi?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
       "fetched_at": "2026-09-20T11:58:22.366Z"
     }
   ]
