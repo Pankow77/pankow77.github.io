@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-17T08:58:33.065Z",
+  "last_fetch": "2026-10-17T12:48:00.053Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_926b36ddd633cc31",
+      "timestamp": 1792225340000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Red Sea Shipping Under Threat: Tanker Hit by Unknown Projectile Off Saudi Coast - FTL Somalia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd1FkNkxVWUl4U3hlbGh6ZlB3YjZ2MkRoNGZIUF9ZRkVXOGRKN0Z3QjFIbThEejNLMXVlc2w5bFlzWG8tTjl4TlRvbGlRMUgxZUdPUENtekFDNE9tNGxDMkFkSEdnel9KUVQ0TnJXLW0wcGItdDlERzRkaDE1WGdqZUVuZ05YTUR4Ujk3M05MM1hTQ2dTNVhRR3I5TXRyUFd1azByNWNRcUpsQQ?oc=5\" target=\"_blank\">Red Sea Shipping Under Threat: Tanker Hit by Unknown Projectile Off Saudi Coast</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FTL Somalia</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNd1FkNkxVWUl4U3hlbGh6ZlB3YjZ2MkRoNGZIUF9ZRkVXOGRKN0Z3QjFIbThEejNLMXVlc2w5bFlzWG8tTjl4TlRvbGlRMUgxZUdPUENtekFDNE9tNGxDMkFkSEdnel9KUVQ0TnJXLW0wcGItdDlERzRkaDE1WGdqZUVuZ05YTUR4Ujk3M05MM1hTQ2dTNVhRR3I5TXRyUFd1azByNWNRcUpsQQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T12:48:00.046Z"
+    },
     {
       "id": "rss_2221ae4426276b57",
       "timestamp": 1792213425000,
@@ -10807,27 +10830,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T15:44:22.353Z"
-    },
-    {
-      "id": "rss_50d678b5a22880c1",
-      "timestamp": 1789899862000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi Attack on Riyadh: Smoke at King Khalid - MiGFlug",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNOVpqd1dkOHJ0ZVc0enNmSEFwVThQRUxMNk5KbGhDNFFxSUM3alBuN3V1OTdUMjliRU5VejJZX29OUDZLOE5GNW84blNsS0pmbWtfR3ppV2R4NjBBbHFlN0hPeVhrSFJ4ZEU3UC16RG9qSFZfZ1M3czNNVlJOeEVwZ3ViZmkwM3VqXzRmVWVRWUQ1cEtZdFBUcjhYX3JmX0Js?oc=5\" target=\"_blank\">Houthi Attack on Riyadh: Smoke at King Khalid</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MiGFlug</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOVpqd1dkOHJ0ZVc0enNmSEFwVThQRUxMNk5KbGhDNFFxSUM3alBuN3V1OTdUMjliRU5VejJZX29OUDZLOE5GNW84blNsS0pmbWtfR3ppV2R4NjBBbHFlN0hPeVhrSFJ4ZEU3UC16RG9qSFZfZ1M3czNNVlJOeEVwZ3ViZmkwM3VqXzRmVWVRWUQ1cEtZdFBUcjhYX3JmX0Js?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T11:58:22.366Z"
     }
   ]
 }
