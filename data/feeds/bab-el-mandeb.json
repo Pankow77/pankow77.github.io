@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-17T21:11:43.837Z",
+  "last_fetch": "2026-10-17T23:17:00.535Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1e7a1ef9962debd8",
+      "timestamp": 1792271073000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes on Saudi Arabia show the Yemeni rebels' growing strength - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxON3ctZzVVZmROUF9ucW82clpVMWMzUXVUQ0xFendFWlh1U1lEbXRmTlh4TUJKR1lHT0FpLUNiUWZ1aDRkTjM0ak52X0QzR2thSGNKSUptNXdXOTQxM1gtYk9zZkJTN1Jjek9LY2Y5M2RWcERwZ2RheV9DSXBCZEItaFNWYlR2ZXp0c3dMVS1YQnJkY3F1TjVDaEJpZFVCcFYyTTJwNXZmTEvSAa4BQVVfeXFMUFNuYkZZWEZjUnIwMTZCNWVaTXEtMmh4OXZPWjRWVmkwS3liMHVMcEJmeHBocEJFQ2Z5d013RkVZOXQxWjc2emNMNTdTY0N2WDVmVDMzTUNhVkVXU1NQSk9kSUlwdDNibGs5eF91dGNSMVhZV2k3enN0cUE5X0piZ2E3dHlhZTkwOWp0S2FJTkdLd1Zub1lNRmR3WlNPMHBoUElxUm",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxON3ctZzVVZmROUF9ucW82clpVMWMzUXVUQ0xFendFWlh1U1lEbXRmTlh4TUJKR1lHT0FpLUNiUWZ1aDRkTjM0ak52X0QzR2thSGNKSUptNXdXOTQxM1gtYk9zZkJTN1Jjek9LY2Y5M2RWcERwZ2RheV9DSXBCZEItaFNWYlR2ZXp0c3dMVS1YQnJkY3F1TjVDaEJpZFVCcFYyTTJwNXZmTEvSAa4BQVVfeXFMUFNuYkZZWEZjUnIwMTZCNWVaTXEtMmh4OXZPWjRWVmkwS3liMHVMcEJmeHBocEJFQ2Z5d013RkVZOXQxWjc2emNMNTdTY0N2WDVmVDMzTUNhVkVXU1NQSk9kSUlwdDNibGs5eF91dGNSMVhZV2k3enN0cUE5X0piZ2E3dHlhZTkwOWp0S2FJTkdLd1Zub1lNRmR3WlNPMHBoUElxUm0yV1RYaFhkV253?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T23:16:59.191Z"
+    },
     {
       "id": "rss_149a17527b23000b",
       "timestamp": 1792265460000,
@@ -10811,27 +10832,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T15:44:22.352Z"
-    },
-    {
-      "id": "rss_7e96811ddde71fd7",
-      "timestamp": 1789906971000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks bring wider regional war to Saudi capital - The Arab Weekly",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQQ3F4R0dJcmNXclUyQ09sc0gzaGJrSTdfWENoUnhxUmNndko5TEFGeXozUnZ2dGFVa01idVlOQ0p5QWMwUGYyUmFSN2UyWHkwVDlYdHBubFNjMWoweHBjRmt4QWJnbm0zRi12SU83MzBUT2JOSXU3eENkSUM0dDNiN3ROQ2xfQQ?oc=5\" target=\"_blank\">Houthi attacks bring wider regional war to Saudi capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQQ3F4R0dJcmNXclUyQ09sc0gzaGJrSTdfWENoUnhxUmNndko5TEFGeXozUnZ2dGFVa01idVlOQ0p5QWMwUGYyUmFSN2UyWHkwVDlYdHBubFNjMWoweHBjRmt4QWJnbm0zRi12SU83MzBUT2JOSXU3eENkSUM0dDNiN3ROQ2xfQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T18:26:37.539Z"
     }
   ]
 }
