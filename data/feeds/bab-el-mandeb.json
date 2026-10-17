@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-17T18:41:36.614Z",
+  "last_fetch": "2026-10-17T21:11:43.837Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_149a17527b23000b",
+      "timestamp": 1792265460000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Egypt prepared to defend Saudi Arabia after deadly Houthi airport attack - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOc0M0c3ZhV0hVLXBncTRlM0ZPZENVRkUxdmpHWkM2MzhidVluZUkzRW9aQWl5dDNBM09fNW5YcWdzYjQyTWFyTzRjbFRHTDcxSWNnMEhKMG80QkotVWJvdUdCaWc0REVKMUVQR1Y3Z0U2OHNTOFdwVnlwd2U1RUNhR3RGdGV3c2xxcm5EYlA2R29Jd0VocWhuSjJhSUs4R0JuTENhSm4tUGxPTlR5anVqQzl0UkE?oc=5\" target=\"_blank\">Egypt prepared to defend Saudi Arabia after deadly Houthi airport attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOc0M0c3ZhV0hVLXBncTRlM0ZPZENVRkUxdmpHWkM2MzhidVluZUkzRW9aQWl5dDNBM09fNW5YcWdzYjQyTWFyTzRjbFRHTDcxSWNnMEhKMG80QkotVWJvdUdCaWc0REVKMUVQR1Y3Z0U2OHNTOFdwVnlwd2U1RUNhR3RGdGV3c2xxcm5EYlA2R29Jd0VocWhuSjJhSUs4R0JuTENhSm4tUGxPTlR5anVqQzl0UkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T21:11:42.532Z"
+    },
     {
       "id": "rss_66a1ec95212ade53",
       "timestamp": 1792248360000,
@@ -23,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-17T16:05:37.137Z"
+    },
+    {
+      "id": "rss_e5365fc20c88b106",
+      "timestamp": 1792228778000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis strike Yemen’s Aden: What that means - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTlmbG9pRzMxeFVBSVZ4U1RWZHRtS0lzWTduNTVJZWtuc1FDWUM1ZXZwTXFRMl9SSU1NenVEdEI5bVUwTUFVRFE2NEZRNnMydGRDdG50MDRraWQydHpnMS1WUHVNWjhPNmhnOC1GNXEwU0xKQzNjZ25YZ3ZJTmFPRHhsN0ZOUUhxUlotczRnSWdoN0dLZjBIYzQ2Z2nSAaIBQVVfeXFMTk5hTXhPcU82VG9McHB6MmEzRWZYbG9HR19iUmxrYW5ONnY5Q20wRWNzLTk2MlJuWkxDU0lfclNHYkpGMUdOaFN5T01RQ3c0dTkwanpHTlJPZjlVcDU1ajNUU0dJT0dHQ0FPeGswMmRidklOYW5yNjFaZFozM2ZBdXp2eTRUdl80WUtlMTBDX1JGc2xtXzV4alAyUjFIWFdzYmlR?oc=5\" target=\"_bl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPNTlmbG9pRzMxeFVBSVZ4U1RWZHRtS0lzWTduNTVJZWtuc1FDWUM1ZXZwTXFRMl9SSU1NenVEdEI5bVUwTUFVRFE2NEZRNnMydGRDdG50MDRraWQydHpnMS1WUHVNWjhPNmhnOC1GNXEwU0xKQzNjZ25YZ3ZJTmFPRHhsN0ZOUUhxUlotczRnSWdoN0dLZjBIYzQ2Z2nSAaIBQVVfeXFMTk5hTXhPcU82VG9McHB6MmEzRWZYbG9HR19iUmxrYW5ONnY5Q20wRWNzLTk2MlJuWkxDU0lfclNHYkpGMUdOaFN5T01RQ3c0dTkwanpHTlJPZjlVcDU1ajNUU0dJT0dHQ0FPeGswMmRidklOYW5yNjFaZFozM2ZBdXp2eTRUdl80WUtlMTBDX1JGc2xtXzV4alAyUjFIWFdzYmlR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-17T21:11:42.532Z"
     },
     {
       "id": "rss_74ef5688029e5553",
@@ -71,6 +113,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-17T12:48:00.046Z"
+    },
+    {
+      "id": "rss_91b58c44c6095d9f",
+      "timestamp": 1792225100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "The Houthi threat that Saudi Arabia couldn’t end - Lowy Institute",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPNDVfeGxRTGpYb2FYa0VpOVpCOGpuVEhWNThzaERkb0VXdlhwMVBORld2MUMwQUFhZzRFU3hWTWpsVDc2aXFNMU9QekFDdEZPaFZENWtCVDl1SDc4RENGQ2x5ZXlPZG5aUGptdVl5V3M3aHQtV05zVUdLbVp5Z3JRLWVpMWFhaU1zNzhFY2hLc05sNWpIc25EVEV3?oc=5\" target=\"_blank\">The Houthi threat that Saudi Arabia couldn’t end</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lowy Institute</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNDVfeGxRTGpYb2FYa0VpOVpCOGpuVEhWNThzaERkb0VXdlhwMVBORld2MUMwQUFhZzRFU3hWTWpsVDc2aXFNMU9QekFDdEZPaFZENWtCVDl1SDc4RENGQ2x5ZXlPZG5aUGptdVl5V3M3aHQtV05zVUdLbVp5Z3JRLWVpMWFhaU1zNzhFY2hLc05sNWpIc25EVEV3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-17T21:11:42.534Z"
     },
     {
       "id": "rss_2221ae4426276b57",
@@ -10769,69 +10832,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T18:26:37.539Z"
-    },
-    {
-      "id": "rss_e031540451901f3c",
-      "timestamp": 1789906883000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attacks and no Western support: What are Saudi Arabia's options ? - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQOTNfUVAtSVBSVkRuLTlZOXItazh3QTZrWHNFUHFya1BhajZYUWs1TVY2ZW1kNnVEUnllU0xZZEpEYjJnSFJoQVhWZE9ySVFLUFpyX0hYSjJMTV9fRWxfWnZQWjM0QmRPT0tHY2tkRmE4YUR2dzZOOUliMS12VmdMSWhxVnNoSDBNdExyTjZoZnlITU1SRFcwQmJNWk9GZw?oc=5\" target=\"_blank\">Houthi attacks and no Western support: What are Saudi Arabia's options ?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQOTNfUVAtSVBSVkRuLTlZOXItazh3QTZrWHNFUHFya1BhajZYUWs1TVY2ZW1kNnVEUnllU0xZZEpEYjJnSFJoQVhWZE9ySVFLUFpyX0hYSjJMTV9fRWxfWnZQWjM0QmRPT0tHY2tkRmE4YUR2dzZOOUliMS12VmdMSWhxVnNoSDBNdExyTjZoZnlITU1SRFcwQmJNWk9GZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.352Z"
-    },
-    {
-      "id": "rss_85b47e164c3e0158",
-      "timestamp": 1789906637000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why doesn't the US intervene to defend Saudi Arabia against the Houthis? - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQaldxY090enNWMnI1MDdGaFNYSVhYYVFWakVfZUQ0ckFHS0RWQ3UzalY3bnFXemtjQlNTZUtEYmxqVFYtdmtNRXZQN0VPSWNvMUhmSEJ3WWtKRC05cU1weV9ZU0xRTGRjUC1HS3k2cHRZSi1VZ1lIVF9xZGZ5REJSTUl3SkZPWmhmd2hOMWU1aXNaLUxXY3hmb3Y2WEZkODI1?oc=5\" target=\"_blank\">Why doesn't the US intervene to defend Saudi Arabia against the Houthis?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaldxY090enNWMnI1MDdGaFNYSVhYYVFWakVfZUQ0ckFHS0RWQ3UzalY3bnFXemtjQlNTZUtEYmxqVFYtdmtNRXZQN0VPSWNvMUhmSEJ3WWtKRC05cU1weV9ZU0xRTGRjUC1HS3k2cHRZSi1VZ1lIVF9xZGZ5REJSTUl3SkZPWmhmd2hOMWU1aXNaLUxXY3hmb3Y2WEZkODI1?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T23:05:49.124Z"
-    },
-    {
-      "id": "rss_cca801ac2375e983",
-      "timestamp": 1789903456000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi Attack on Riyadh Tests Saudi Defenses, Regional Alliances - The Media Line",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOT2pWRjdCZGtMS2VPTnlWcHFNSUVUYkZvNFVGem12N25ULTROX0VIMV9FX0phUHdYanN3QVFmelAxaDdwQXl5LUxQYzJ0bHU4bG5SZFFkV0RodXhSNFZyMGVpTExCdjVSU2cyZjBlNFhMdWdIRFJFanBibXZ2aTd1bXJBWGhqTXYtREpUaHBHY1R3VV9HNXJsSlI3WHZOeVNWUE1iUWtBYWZnOWxs?oc=5\" target=\"_blank\">Houthi Attack on Riyadh Tests Saudi Defenses, Regional Alliances</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOT2pWRjdCZGtMS2VPTnlWcHFNSUVUYkZvNFVGem12N25ULTROX0VIMV9FX0phUHdYanN3QVFmelAxaDdwQXl5LUxQYzJ0bHU4bG5SZFFkV0RodXhSNFZyMGVpTExCdjVSU2cyZjBlNFhMdWdIRFJFanBibXZ2aTd1bXJBWGhqTXYtREpUaHBHY1R3VV9HNXJsSlI3WHZOeVNWUE1iUWtBYWZnOWxs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.352Z"
     }
   ]
 }
