@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-18T15:16:52.273Z",
+  "last_fetch": "2026-10-18T18:13:35.202Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_690429f81cbd0ac2",
+      "timestamp": 1792344657000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shafaq News..Saudi Arabia: Houthi attack wounds six in Najran - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSklpUnQ0N1lYaVpZdFRCUmtINVF3Z05rUTlzMU0yUE5NN09yOVl5VFVDM2g4X0RVNUhtM1dwVkt5WlZMYU9idFMyYmZrTlRlcks0SjkyZng3dGtsN3JMQm5CczJFNHpTWU5na2QwNTBxZi1iNlhueHAwbE0tZURmbTVqWWltRTA4?oc=5\" target=\"_blank\">Shafaq News..Saudi Arabia: Houthi attack wounds six in Najran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSklpUnQ0N1lYaVpZdFRCUmtINVF3Z05rUTlzMU0yUE5NN09yOVl5VFVDM2g4X0RVNUhtM1dwVkt5WlZMYU9idFMyYmZrTlRlcks0SjkyZng3dGtsN3JMQm5CczJFNHpTWU5na2QwNTBxZi1iNlhueHAwbE0tZURmbTVqWWltRTA4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T18:13:33.698Z"
+    },
     {
       "id": "rss_63bf5aa18249b4cb",
       "timestamp": 1792333702000,
@@ -10809,30 +10830,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T18:26:37.540Z"
-    },
-    {
-      "id": "rss_b2f6d9b39b57f5cd",
-      "timestamp": 1789919869000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Saudi Arabia capital: Yemen's Houthi rebels attempted Riyadh attack with ballistic missile as Iran war continues - ABC7 Los Angeles",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYnBMU1hKQzBpaXprMTFabHJkblE0ejc1dm1IMUpIaFRuRTNkV0tiWTdJek1TSFVodEdWVGdfNUFCWGRheTNacmY4WTl3X205Tm90ZnRTdWVIYTVWV2dfWXN4N09BUFJsTHZPcTZFazZGam9UWGI5N1BnSnJWX19DNERsUWVBSk1jR1cyaGFfRXZXOVVOazJkLTZQU2xWb2xkcXl2UDFzc1UyV3NTQi03SnN6YzRoVWpMMkRGRDFjdTBVVWVISF9PSUJxZFRra1ZRNkNDZnBvNWdlc25Kd0h30gHfAUFVX3lxTFBicExTWEpDMGlpemsxMVpscmRuUTR6NzV2bUgxSkhoVG5FM2RXS2JZN0l6TVNIVWh0R1ZUZ181QUJYZGF5M1pyZjhZOXdfbTlOb3RmdFN1ZUhhNVZXZ19Zc3g3T0FQUmxMdk9xNk",
-      "tags": [
-        "iran-proxy",
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYnBMU1hKQzBpaXprMTFabHJkblE0ejc1dm1IMUpIaFRuRTNkV0tiWTdJek1TSFVodEdWVGdfNUFCWGRheTNacmY4WTl3X205Tm90ZnRTdWVIYTVWV2dfWXN4N09BUFJsTHZPcTZFazZGam9UWGI5N1BnSnJWX19DNERsUWVBSk1jR1cyaGFfRXZXOVVOazJkLTZQU2xWb2xkcXl2UDFzc1UyV3NTQi03SnN6YzRoVWpMMkRGRDFjdTBVVWVISF9PSUJxZFRra1ZRNkNDZnBvNWdlc25Kd0h30gHfAUFVX3lxTFBicExTWEpDMGlpemsxMVpscmRuUTR6NzV2bUgxSkhoVG5FM2RXS2JZN0l6TVNIVWh0R1ZUZ181QUJYZGF5M1pyZjhZOXdfbTlOb3RmdFN1ZUhhNVZXZ19Zc3g3T0FQUmxMdk9xNkVrNkZqb1RYYjk3UGdKclZfX0M0RGxRZUFKTWNHVzJoYV9Fdlc5VU5rMmQtNlBTbFZvbGRxeXZQMXNzVTJXc1NCLTdKc3pjNGhVakwyREZEMWN1MFVVZUhIX09JQnFkVGtrVlE2Q0NmcG81Z2Vzbkp3SHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T18:26:37.539Z"
     }
   ]
 }
