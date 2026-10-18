@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-18T18:13:35.202Z",
+  "last_fetch": "2026-10-18T20:56:20.761Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d366b785ffd2eaef",
+      "timestamp": 1792351363000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Egypt's top security body agrees to help Saudi Arabia defend itself against Houthi attacks - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSExWUWxPbDZ3eVc3aWhxcTkzM2pMMGh3WmtudnlJaGtCMTVFZ09hVUJ4NnU1TVYyVUMzQ25uRG1VcURqb1o1akJRdG5fd0I5Mnd0Yl9YeGZwV1RXejgzUGtDQnJXaTlOUnRYcXZlMTh3NkRRWjBROFU3OWRFREE3WWRtNmpLbTdLZ2ZlSEFOMkp4ZHhnRGRWTnV1c3p3UzNuQnd3cTNvVFcwaWNvdlNBSUM0SUdiTHhldG5xaXlWVEx5QdIBxwFBVV95cUxNdkx4dC1JQTBBTlVIaHVsUGZkeWQzdE1uRWpMWEcycFQ5R0JjRkx5Z25GQ1duTzF2VVYwT2dPMDR5RzhVNThvZ1FBbmh3SURFNDlaR0pjVHk2SmRtanBNUlZnbXViSDJqZmEzSmlxVE1QX3ZEQjNRaUdGSzZ4Z1AzSUMyY3ZIbmYtYk",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSExWUWxPbDZ3eVc3aWhxcTkzM2pMMGh3WmtudnlJaGtCMTVFZ09hVUJ4NnU1TVYyVUMzQ25uRG1VcURqb1o1akJRdG5fd0I5Mnd0Yl9YeGZwV1RXejgzUGtDQnJXaTlOUnRYcXZlMTh3NkRRWjBROFU3OWRFREE3WWRtNmpLbTdLZ2ZlSEFOMkp4ZHhnRGRWTnV1c3p3UzNuQnd3cTNvVFcwaWNvdlNBSUM0SUdiTHhldG5xaXlWVEx5QdIBxwFBVV95cUxNdkx4dC1JQTBBTlVIaHVsUGZkeWQzdE1uRWpMWEcycFQ5R0JjRkx5Z25GQ1duTzF2VVYwT2dPMDR5RzhVNThvZ1FBbmh3SURFNDlaR0pjVHk2SmRtanBNUlZnbXViSDJqZmEzSmlxVE1QX3ZEQjNRaUdGSzZ4Z1AzSUMyY3ZIbmYtYk50XzFIUmR0UHFoUVE2ZXRMOU9xMDlWSE1aOVJyak52RzZXZDQ1V3NkQUhpbndRRkVET29VZVZmNExkdXlv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T20:56:19.362Z"
+    },
     {
       "id": "rss_690429f81cbd0ac2",
       "timestamp": 1792344657000,
@@ -10808,27 +10829,6 @@
       "origin": "rss",
       "confidence": 0.51,
       "source_weight": 0.85,
-      "fetched_at": "2026-09-20T18:26:37.540Z"
-    },
-    {
-      "id": "rss_cd7b1707a549aa3d",
-      "timestamp": 1789925781000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on Saudi Arabia raises new fears for global oil supply - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5FZlF2YzZOcmVyYTNUdkJuTzhwMTRRUDF2VEJVSXRaR18zNkFQY0pTVjNSZW9veDNMQ2hkVl9IdlR1N2dieTdTaGRSVVFlRmVmbTVBaHhB?oc=5\" target=\"_blank\">Houthi attack on Saudi Arabia raises new fears for global oil supply</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fox News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5FZlF2YzZOcmVyYTNUdkJuTzhwMTRRUDF2VEJVSXRaR18zNkFQY0pTVjNSZW9veDNMQ2hkVl9IdlR1N2dieTdTaGRSVVFlRmVmbTVBaHhB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
       "fetched_at": "2026-09-20T18:26:37.540Z"
     }
   ]
