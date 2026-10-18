@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-18T06:17:01.314Z",
+  "last_fetch": "2026-10-18T11:31:16.188Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_23ef9d6bf2e6f226",
+      "timestamp": 1792316723000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi landmark closes offices, chopper pilots killed near Yemen - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPNHlBQXpYSTZUYTJxbi01U3Z4a2NvRF9mQ05FajN6M29IV0N3ekZEVERuVnhJc2pCZG8zTHpuNk9FVXc3MWhyQVBDR3JMa29vNWFTYVRaSDFzYmZtbmhidl9pOTM1RjdUYkpfQUl6LXVxS25hY080X1h5NklING1iQW5MNlJoVFd5UGotdERfd2RzbGZYQ3NmZGtMR0RSQUhpODI5cnNmcWtDOVRCeEE?oc=5\" target=\"_blank\">Saudi landmark closes offices, chopper pilots killed near Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNHlBQXpYSTZUYTJxbi01U3Z4a2NvRF9mQ05FajN6M29IV0N3ekZEVERuVnhJc2pCZG8zTHpuNk9FVXc3MWhyQVBDR3JMa29vNWFTYVRaSDFzYmZtbmhidl9pOTM1RjdUYkpfQUl6LXVxS25hY080X1h5NklING1iQW5MNlJoVFd5UGotdERfd2RzbGZYQ3NmZGtMR0RSQUhpODI5cnNmcWtDOVRCeEE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T11:31:14.643Z"
+    },
     {
       "id": "rss_cf005dcd01e51518",
       "timestamp": 1792290286000,
@@ -27,6 +48,51 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-18T06:17:00.064Z"
+    },
+    {
+      "id": "rss_ac0fa0a45893447e",
+      "timestamp": 1792281900000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia reports incoming fire as Egypt weighs sending help - The Japan Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPdFpwQU1oXzZfbTNtMHd6WVpwd0hOeWNCRmFqSTlZYXE2RDk4Z0V3NUdJbVVFV3lRLXIxN09mTVhhV3l0VWw1TUpTM1dOTlRLUlJPeGdVUWdkY1g4V01Mc2dmVXFLM1NYRmt4YURjT3k1bEFxX3lJMzlJSXloQ1ZQOV9wV1dveDZpY1E?oc=5\" target=\"_blank\">Saudi Arabia reports incoming fire as Egypt weighs sending help</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdFpwQU1oXzZfbTNtMHd6WVpwd0hOeWNCRmFqSTlZYXE2RDk4Z0V3NUdJbVVFV3lRLXIxN09mTVhhV3l0VWw1TUpTM1dOTlRLUlJPeGdVUWdkY1g4V01Mc2dmVXFLM1NYRmt4YURjT3k1bEFxX3lJMzlJSXloQ1ZQOV9wV1dveDZpY1E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T11:31:14.644Z"
+    },
+    {
+      "id": "rss_885b7d3c8ddc6cc6",
+      "timestamp": 1792279613000,
+      "source": "Al Jazeera",
+      "actor": "other",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition intercepts drones as Egypt weighs sending help - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxObzE5OEQ1YmtRaTQzMEN4ZC16UVlZOXRXTm9kZm93dldxWmxwUkMwYVJPMkx4YktUcm15d2ZzbHJVbFNaZUZ5RDl3V1lxVzY2eDA0OHFhT2RINHhNMU9GRFNiQ1RRUmo0akRHOEhieFZiZkYxOEEtSkFWUkMwQ3UxdWF0VVFSanNMY3M1RDVBSzk0ZE5lRVd0R2U1TE9HOTEtRmxEOEduRlowLUpv0gGyAUFVX3lxTFBsajZwTGFfQ0YyU0hzT2drU2xPM1haeGl5V1JOamM5TXFDeGQ0VmlCQnBNWDNkanNELVBBZWJTREhPSVRUd0tJM1d3T1pKRzlvZTk0VVdQTHlJdVJUdWhndUFrbnFvcXJoaWwwVVNDM3kwWEtBdWN5Smt0b1dtZ3lFYkFIbTE2Z0Yzb0FXRVNSVUlhWHRJRENRT21EMnVjN3",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxObzE5OEQ1YmtRaTQzMEN4ZC16UVlZOXRXTm9kZm93dldxWmxwUkMwYVJPMkx4YktUcm15d2ZzbHJVbFNaZUZ5RDl3V1lxVzY2eDA0OHFhT2RINHhNMU9GRFNiQ1RRUmo0akRHOEhieFZiZkYxOEEtSkFWUkMwQ3UxdWF0VVFSanNMY3M1RDVBSzk0ZE5lRVd0R2U1TE9HOTEtRmxEOEduRlowLUpv0gGyAUFVX3lxTFBsajZwTGFfQ0YyU0hzT2drU2xPM1haeGl5V1JOamM5TXFDeGQ0VmlCQnBNWDNkanNELVBBZWJTREhPSVRUd0tJM1d3T1pKRzlvZTk0VVdQTHlJdVJUdWhndUFrbnFvcXJoaWwwVVNDM3kwWEtBdWN5Smt0b1dtZ3lFYkFIbTE2Z0Yzb0FXRVNSVUlhWHRJRENRT21EMnVjN3N0c3IxTjBHT2dqemFJZ1VIeVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-18T11:31:14.643Z"
     },
     {
       "id": "rss_1e7a1ef9962debd8",
@@ -10766,71 +10832,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmQwVzNGWEJuSDlFNmhHRFFzNWxmS1hzeE16NzNKc2QtVlRWWFpVbWl0dkRON1QxZEk5bUIyTTVqMXZ3cFl1UmdVYmtJWTRqd25rT0tJT0p2SDNRdk1nNURsNzJXdDJYUmNlOGJmVGFpQnAxX2NtN2hEblJLM1I2RWxoRXNmM0hfeEZ3dExqeUNGR0VLdDJMYVdESFdOT2Q3dUdTRmYzdEFHdk5QTnd0cQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.353Z"
-    },
-    {
-      "id": "rss_f22e645d81065f45",
-      "timestamp": 1789914000000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "U.S. embassies across Middle East issue security alerts for Americans - CBS News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxON1ROYVJ6T0RNSzVUbXVHZTJTc0NDajFSSzB4VjdJcWVpX2JVVk9KcnpmZHNMZFZxS3pIaTFRMlUzSExKZHBiUlRYa2l2M0s1amg4aTd6alZNLW53cmZsWVhFZFRsUG91NnNLMXNSdnhGckhpTTlRTF9JV0xRS0dDNEh3cUhMcFl3NGNCdQ?oc=5\" target=\"_blank\">U.S. embassies across Middle East issue security alerts for Americans</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxON1ROYVJ6T0RNSzVUbXVHZTJTc0NDajFSSzB4VjdJcWVpX2JVVk9KcnpmZHNMZFZxS3pIaTFRMlUzSExKZHBiUlRYa2l2M0s1amg4aTd6alZNLW53cmZsWVhFZFRsUG91NnNLMXNSdnhGckhpTTlRTF9JV0xRS0dDNEh3cUhMcFl3NGNCdQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T13:33:37.379Z"
-    },
-    {
-      "id": "rss_e993f189e8770de4",
-      "timestamp": 1789911360000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Turkish FM says ready to meet Saudi defence needs – what does that mean? - aljazeera.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPUlU5UVJ5NTRKb21LaXQxN2w4MHZNSVhQM3c5NFZ4aGU1R2JWbVI3Y2UxX1lwSmlwa095d2dITnFqV25QZnhUQlZVanFlY1JReG9VeXBLNlZGOG42NGdBRmtzVm1DMUNJNC1GVU1EM3hQYkdBREhJNlRrY0hJWjBoSHhRWGJSME13YmlOZkZIODUyYmpqTFVWaklGRWtFbEdBWkhjcWprNXA5dW9aZXVN0gG0AUFVX3lxTE1IXy04ZHl6Q21uTVlLMGRPWEJ0MGdUODZKVjUzaDZSUU9WMkZxRTVkVEI5R0t6Sl9PX2FCUXRhalZ4d0RFNWJFWnFaczlzV0hGNjJFeHRfZjBuQVlUdlJhOEJuV3ZuZlB3Zk9qMHpCTVlXY0tybG15RmMteDRib1o1cXkwemdlUHREeThmUHFabk1CaUczY3pmQk9uUV",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUlU5UVJ5NTRKb21LaXQxN2w4MHZNSVhQM3c5NFZ4aGU1R2JWbVI3Y2UxX1lwSmlwa095d2dITnFqV25QZnhUQlZVanFlY1JReG9VeXBLNlZGOG42NGdBRmtzVm1DMUNJNC1GVU1EM3hQYkdBREhJNlRrY0hJWjBoSHhRWGJSME13YmlOZkZIODUyYmpqTFVWaklGRWtFbEdBWkhjcWprNXA5dW9aZXVN0gG0AUFVX3lxTE1IXy04ZHl6Q21uTVlLMGRPWEJ0MGdUODZKVjUzaDZSUU9WMkZxRTVkVEI5R0t6Sl9PX2FCUXRhalZ4d0RFNWJFWnFaczlzV0hGNjJFeHRfZjBuQVlUdlJhOEJuV3ZuZlB3Zk9qMHpCTVlXY0tybG15RmMteDRib1o1cXkwemdlUHREeThmUHFabk1CaUczY3pmQk9uUVZncU9zRDRPdnYtWlRUQWFhMEMzMl9feg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T18:26:37.540Z"
-    },
-    {
-      "id": "rss_dc775045c07531d7",
-      "timestamp": 1789909141000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 3,
-      "text_summary": "US embassies issue warnings after Houthi missile attack on Riyadh - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9EZGthWDdsZG1lbUV3enNaQmwxa0ZERDVKRWNKTmNyWnZ0cUY3WWdDREJ2NW1nOXI1MllLOVhoeWduMHNjNGMwZUZsOWxpTXhXZmtCY01n?oc=5\" target=\"_blank\">US embassies issue warnings after Houthi missile attack on Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Fox News</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9EZGthWDdsZG1lbUV3enNaQmwxa0ZERDVKRWNKTmNyWnZ0cUY3WWdDREJ2NW1nOXI1MllLOVhoeWduMHNjNGMwZUZsOWxpTXhXZmtCY01n?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
