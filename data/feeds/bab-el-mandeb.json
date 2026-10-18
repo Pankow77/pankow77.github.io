@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-18T11:31:16.188Z",
+  "last_fetch": "2026-10-18T15:16:52.273Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_63bf5aa18249b4cb",
+      "timestamp": 1792333702000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 4,
+      "text_summary": "Brussels Hosts High-Level Red Sea Meeting While Aspides Faces Critical Shortfall - FTL Somalia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQdURXWWZHSVVSV2c0MUdjdmxmNUI4dVFONFlfX3NVNHlnRTkwME5SMXF6ZFg5ZEhfbXFGTEhOQVFFbS1KUS1yWEM0X3cwWm5LZlZpbXV5Y1FaTmNWLXRPdUFUM2Zial9SR20yc1FJWXcxeTZTb1FTTVMtQkNaZnNTalNtNWlFSjZuMkJnblA5LWMwbjc3Nk52b1VDM09lZFFzZmhFUUtQRUlySTJm?oc=5\" target=\"_blank\">Brussels Hosts High-Level Red Sea Meeting While Aspides Faces Critical Shortfall</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FTL Somalia</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdURXWWZHSVVSV2c0MUdjdmxmNUI4dVFONFlfX3NVNHlnRTkwME5SMXF6ZFg5ZEhfbXFGTEhOQVFFbS1KUS1yWEM0X3cwWm5LZlZpbXV5Y1FaTmNWLXRPdUFUM2Zial9SR20yc1FJWXcxeTZTb1FTTVMtQkNaZnNTalNtNWlFSjZuMkJnblA5LWMwbjc3Nk52b1VDM09lZFFzZmhFUUtQRUlySTJm?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T15:16:51.697Z"
+    },
+    {
+      "id": "rss_15f2daedeffc378b",
+      "timestamp": 1792322558000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi closes Riyadh skyscraper as chopper pilots killed near Yemen - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaEhRV09mVm1OQVU5M3A5bml4YVotUHZNc0Fta1RKdzNKWTBVMUlLSV93WUE3UXFkZG9MNUlxdDNKSkVXaW9kTW9xUWs3SkVCVzZWX3NSV3BCM3pKOWNLeXlDSGNIS2hockhTeV9aLS1STjhsSE1SUlB0cWhnU0V0SWFGa0NNWndVb0hBTVZsN1hTdEMyN2hOZ3U1ZFl6VTRYZy1RRVppRmFqWlg0ekVaQnNsWmpHejd2MTVYUVIxZFXSAcABQVVfeXFMTk1NLURSb0NGZm1PY0RQczlabmxyaUtiY21GeFUtLUYwQlUwYlRjM2w5QXphSHowdTJmcjJRbFRZYTB0cWRVd1ZyZ0VNWGRDem50aC1nSzBVQmZ1RXREWTA2MHhFbEhYT1E4VFlZcVBlTnVabjMtUFVVWElGWTN1QWxDNXFNMWgwNDZ1MU",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaEhRV09mVm1OQVU5M3A5bml4YVotUHZNc0Fta1RKdzNKWTBVMUlLSV93WUE3UXFkZG9MNUlxdDNKSkVXaW9kTW9xUWs3SkVCVzZWX3NSV3BCM3pKOWNLeXlDSGNIS2hockhTeV9aLS1STjhsSE1SUlB0cWhnU0V0SWFGa0NNWndVb0hBTVZsN1hTdEMyN2hOZ3U1ZFl6VTRYZy1RRVppRmFqWlg0ekVaQnNsWmpHejd2MTVYUVIxZFXSAcABQVVfeXFMTk1NLURSb0NGZm1PY0RQczlabmxyaUtiY21GeFUtLUYwQlUwYlRjM2w5QXphSHowdTJmcjJRbFRZYTB0cWRVd1ZyZ0VNWGRDem50aC1nSzBVQmZ1RXREWTA2MHhFbEhYT1E4VFlZcVBlTnVabjMtUFVVWElGWTN1QWxDNXFNMWgwNDZ1MUtRblZvSXBOX2tOa2pDT0xkaWhyeWxJQ1JUekRHVDZGX2Y5ZHlyZUMtbW1ERG1scXdzRFlr?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-18T15:16:50.700Z"
+    },
     {
       "id": "rss_23ef9d6bf2e6f226",
       "timestamp": 1792316723000,
@@ -10791,52 +10833,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T18:26:37.539Z"
-    },
-    {
-      "id": "rss_f45a9974e9988789",
-      "timestamp": 1789917750000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia confirms Yemen’s Houthi rebels tried to attack its capital with ballistic missile - New York Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQQVNscmQwY3NQYlg1d2l2cko4c3pueHBuV1hDRk1hWDFGZV9UaW5sdzhvQXVMbFlYMmJqX2ZyejdneWlvd0EtT2huVmJPdHlxNl9hSkhhVE13a2JUdW10ekc2RjFIY3JzUXJXX2VCZGFvR2NibWdzeEVzdkpGMFlZRkIxUHVIOTZFR2YzUTRFcmZLeUJYbGhkQm1yMjdRSVpZWkFINkE4bWJKTHBtUDRwVm0yUWQwVmNEdXlySkdPUQ?oc=5\" target=\"_blank\">Saudi Arabia confirms Yemen’s Houthi rebels tried to attack its capital with ballistic missile</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQVNscmQwY3NQYlg1d2l2cko4c3pueHBuV1hDRk1hWDFGZV9UaW5sdzhvQXVMbFlYMmJqX2ZyejdneWlvd0EtT2huVmJPdHlxNl9hSkhhVE13a2JUdW10ekc2RjFIY3JzUXJXX2VCZGFvR2NibWdzeEVzdkpGMFlZRkIxUHVIOTZFR2YzUTRFcmZLeUJYbGhkQm1yMjdRSVpZWkFINkE4bWJKTHBtUDRwVm0yUWQwVmNEdXlySkdPUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.352Z"
-    },
-    {
-      "id": "rss_8c1b3ed4163cbd43",
-      "timestamp": 1789914774000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni forces target Houthis in Al-Bayda, down drone near Bab el-Mandeb - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmQwVzNGWEJuSDlFNmhHRFFzNWxmS1hzeE16NzNKc2QtVlRWWFpVbWl0dkRON1QxZEk5bUIyTTVqMXZ3cFl1UmdVYmtJWTRqd25rT0tJT0p2SDNRdk1nNURsNzJXdDJYUmNlOGJmVGFpQnAxX2NtN2hEblJLM1I2RWxoRXNmM0hfeEZ3dExqeUNGR0VLdDJMYVdESFdOT2Q3dUdTRmYzdEFHdk5QTnd0cQ?oc=5\" target=\"_blank\">Yemeni forces target Houthis in Al-Bayda, down drone near Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmQwVzNGWEJuSDlFNmhHRFFzNWxmS1hzeE16NzNKc2QtVlRWWFpVbWl0dkRON1QxZEk5bUIyTTVqMXZ3cFl1UmdVYmtJWTRqd25rT0tJT0p2SDNRdk1nNURsNzJXdDJYUmNlOGJmVGFpQnAxX2NtN2hEblJLM1I2RWxoRXNmM0hfeEZ3dExqeUNGR0VLdDJMYVdESFdOT2Q3dUdTRmYzdEFHdk5QTnd0cQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T15:44:22.353Z"
     }
   ]
 }
