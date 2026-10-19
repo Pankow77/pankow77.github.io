@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-19T18:22:17.363Z",
+  "last_fetch": "2026-10-19T22:32:14.307Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0f107f090c6b3f31",
+      "timestamp": 1792443600000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "How the Iran war is ruining Saudi Arabia’s plans - Vox",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNd2I2bWZkUTFFRDVvUHYwU0dLS2otVkN3QUVsV3dOMXVvcm42azIzemxjTExOd0ZxTDdTVGN4NVN1bGRrelk5OVo2Tzc4T3lqTUdtalBGX1ZvQmlMUWNTdjV4WjlsQWNCNE40ejRZQThTWUhiNXBoQnhJVzVtUVBtM2NzcjZnZw?oc=5\" target=\"_blank\">How the Iran war is ruining Saudi Arabia’s plans</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Vox</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNd2I2bWZkUTFFRDVvUHYwU0dLS2otVkN3QUVsV3dOMXVvcm42azIzemxjTExOd0ZxTDdTVGN4NVN1bGRrelk5OVo2Tzc4T3lqTUdtalBGX1ZvQmlMUWNTdjV4WjlsQWNCNE40ejRZQThTWUhiNXBoQnhJVzVtUVBtM2NzcjZnZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T22:32:12.643Z"
+    },
     {
       "id": "rss_a3acd85dbbe49190",
       "timestamp": 1792432677000,
@@ -479,6 +502,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-19T11:56:33.006Z"
+    },
+    {
+      "id": "rss_c79f8ccbc2b6d27c",
+      "timestamp": 1792401720000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Damage in Najran following attack amid tensions with Yemen’s Houthi rebels - AP News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxPRVRaYjBhQUlYODBtd0V2dWFMMnZjSmNMaHZxNUY3eEU0T0JiNDItNU9jZ2NWd09FbjM2QVlqV3k1R3NDVjZzMFV6Sk9Db3JjZnJzQm5TeS02TnNJVkZFWFNiY3dJak4xcnY0Q0dhRU52ZTc0eUhsTWZ0YWFWS1FMQktvLUtHTHFnbTJsSndqMExlWVhUTGNjZEY0dWxNTU5XVC1xOEFEUzlYREtzMWdrWk9zUUV3amNxSldKMW1IUk44bngtdFdjN21WMA?oc=5\" target=\"_blank\">Damage in Najran following attack amid tensions with Yemen’s Houthi rebels</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPRVRaYjBhQUlYODBtd0V2dWFMMnZjSmNMaHZxNUY3eEU0T0JiNDItNU9jZ2NWd09FbjM2QVlqV3k1R3NDVjZzMFV6Sk9Db3JjZnJzQm5TeS02TnNJVkZFWFNiY3dJak4xcnY0Q0dhRU52ZTc0eUhsTWZ0YWFWS1FMQktvLUtHTHFnbTJsSndqMExlWVhUTGNjZEY0dWxNTU5XVC1xOEFEUzlYREtzMWdrWk9zUUV3amNxSldKMW1IUk44bngtdFdjN21WMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T22:32:12.644Z"
     },
     {
       "id": "rss_7a093d0480a437df",
@@ -10781,50 +10825,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T12:18:02.234Z"
-    },
-    {
-      "id": "rss_6c0a584512ee7deb",
-      "timestamp": 1790027526000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "UK to offer Saudi Arabia aerial refueling to counter Houthi attacks - ABC News - Breaking News, Latest News and Videos",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXpkaHFFQzFNaE9VREpOcUVDSEtHYTBpcjd1a1gtcjlSX2htOEEzZF9YYkVHRjBXbGlnVnU4amREbkJSNUgzNy1uU2pHcUtFTVFjajN4WjJmalB0OXUtUEhGWmlGQmR6QVlWT2xiTVhEVm5KQnNhZjBnWjg2dGVpLVo2TkFUdkJlaVB0VVEtd3lSNFJKek9Nblo2Ullqa1ExVC1OTXA1c01KZUXSAbABQVVfeXFMTUhXNVIyOWw5ZTQyNHZENkZnQkRKQWh1bWJzQjZkYk5PN2NNYTVhRVJUVFEtSFhXSTltMjJaOXdNTVhWNDlhQm0tbWQwcHF2WHB1dWNYUzJnbGFqNmdxNXRVaHdTN0hwR24zUEVFRi1hdXMzVzQyVGM4Z19xekFieXd5LW5sV0VXdjBmajY2Y0U5OG5MVnpYSnpIaEhOWk5ZQW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWXpkaHFFQzFNaE9VREpOcUVDSEtHYTBpcjd1a1gtcjlSX2htOEEzZF9YYkVHRjBXbGlnVnU4amREbkJSNUgzNy1uU2pHcUtFTVFjajN4WjJmalB0OXUtUEhGWmlGQmR6QVlWT2xiTVhEVm5KQnNhZjBnWjg2dGVpLVo2TkFUdkJlaVB0VVEtd3lSNFJKek9Nblo2Ullqa1ExVC1OTXA1c01KZUXSAbABQVVfeXFMTUhXNVIyOWw5ZTQyNHZENkZnQkRKQWh1bWJzQjZkYk5PN2NNYTVhRVJUVFEtSFhXSTltMjJaOXdNTVhWNDlhQm0tbWQwcHF2WHB1dWNYUzJnbGFqNmdxNXRVaHdTN0hwR24zUEVFRi1hdXMzVzQyVGM4Z19xekFieXd5LW5sV0VXdjBmajY2Y0U5OG5MVnpYSnpIaEhOWk5ZQWZkVUhMUzdUdHNNWnJPMDA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T22:41:38.660Z"
-    },
-    {
-      "id": "rss_baea7cc37dde86a8",
-      "timestamp": 1790020760000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Trump threatens to reignite war on Iran as Houthi/Saudi conflict escalates - wsws.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTE12ZThYODZTN3c4SUF2SEsxZnZ0LU9CZTB3R2kyNDN1eVF1RW1hWjJRYWdSdEppZFhXQUVLQnpPdFpIbFh4SUdoQkpJUWRKOEQ2aE94dUg4ZjAzZE96a1NiU1Q0blZXbkVx?oc=5\" target=\"_blank\">Trump threatens to reignite war on Iran as Houthi/Saudi conflict escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">wsws.org</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE12ZThYODZTN3c4SUF2SEsxZnZ0LU9CZTB3R2kyNDN1eVF1RW1hWjJRYWdSdEppZFhXQUVLQnpPdFpIbFh4SUdoQkpJUWRKOEQ2aE94dUg4ZjAzZE96a1NiU1Q0blZXbkVx?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T06:31:07.859Z"
     }
   ]
 }
