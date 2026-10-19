@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-18T22:46:12.104Z",
+  "last_fetch": "2026-10-19T00:43:27.964Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -44,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-18T18:13:33.698Z"
+    },
+    {
+      "id": "rss_f36fcef0a761636e",
+      "timestamp": 1792341362000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia sends skyscraper employees home amid Houthi threats - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPUmNWR1JhdHgzVXRndW9RX0JYbEh5RV9PeThsVmJrM3AyXzR5WEtmOXN1YkIxWmF0OV8zWlk3X1FMalNwM3BJQTJLWU4yTW13dG1yM1NMcmdnRHRkZnFDUWg0VGZjYXFIdXZBenZVX2lLMUtOSjRvMkZJckVobWhPQU4zX2JkcmgwVVRfOWx6dzJFQTg5ODZEUHJBNWZEZ9IBngFBVV95cUxPZjRmSElfelpyenNzMm1SYUxmel9kQ1JUNkxmMGRLZ3EtTFlrMHQ3aEs4UXdZeGRsajVpUEhIbVNtX1JFbjAzY2xFWTdOSDR6VXdJbGhzUmRUYUk2c0RQVGlSSWJ4YmpGTTdpZkZYZlRBcVBHOHRGV2xUTFlwTjFvd2xIRlZnMHA4UjhJb0JPLXpmNXpjXzQ3d2xFSmdKUQ?oc=5\" target=\"_blan",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUmNWR1JhdHgzVXRndW9RX0JYbEh5RV9PeThsVmJrM3AyXzR5WEtmOXN1YkIxWmF0OV8zWlk3X1FMalNwM3BJQTJLWU4yTW13dG1yM1NMcmdnRHRkZnFDUWg0VGZjYXFIdXZBenZVX2lLMUtOSjRvMkZJckVobWhPQU4zX2JkcmgwVVRfOWx6dzJFQTg5ODZEUHJBNWZEZ9IBngFBVV95cUxPZjRmSElfelpyenNzMm1SYUxmel9kQ1JUNkxmMGRLZ3EtTFlrMHQ3aEs4UXdZeGRsajVpUEhIbVNtX1JFbjAzY2xFWTdOSDR6VXdJbGhzUmRUYUk2c0RQVGlSSWJ4YmpGTTdpZkZYZlRBcVBHOHRGV2xUTFlwTjFvd2xIRlZnMHA4UjhJb0JPLXpmNXpjXzQ3d2xFSmdKUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T00:43:25.819Z"
     },
     {
       "id": "rss_63bf5aa18249b4cb",
@@ -10807,29 +10828,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T18:26:37.539Z"
-    },
-    {
-      "id": "rss_c0665f90c9ac1b41",
-      "timestamp": 1789926417000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Iran and US trade threats after Houthi attacks escalate regional conflict - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxOdWJkS01sRHBUcXZGZVVoTy1zVU04amJ0VUc3WnZ4UkVZd25TTTR6RGY1ZkV5OUtGZzFULVNDcEo4MzlZMmNkamt0VjR5VHg3YzRDaWhEOFAtZklDbFpGSXpCeE9BeGR3UWp3aFN1MVp2aUMyZE93ZnFUN0VTdzdkZGJnMDdrOFNtc1lhZC1UQlNDWFl3dGRWdjZwYkc2SHJGelBn?oc=5\" target=\"_blank\">Iran and US trade threats after Houthi attacks escalate regional conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOdWJkS01sRHBUcXZGZVVoTy1zVU04amJ0VUc3WnZ4UkVZd25TTTR6RGY1ZkV5OUtGZzFULVNDcEo4MzlZMmNkamt0VjR5VHg3YzRDaWhEOFAtZklDbFpGSXpCeE9BeGR3UWp3aFN1MVp2aUMyZE93ZnFUN0VTdzdkZGJnMDdrOFNtc1lhZC1UQlNDWFl3dGRWdjZwYkc2SHJGelBn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-20T18:26:37.540Z"
     }
   ]
 }
