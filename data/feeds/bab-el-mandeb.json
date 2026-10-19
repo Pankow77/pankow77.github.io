@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-19T00:43:27.964Z",
+  "last_fetch": "2026-10-19T05:38:15.884Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7a093d0480a437df",
+      "timestamp": 1792375200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia’s Military Limitations Are Being Exposed by Houthi Attacks - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOM19uejBXQV9UYlQ0ZlFpMFFxYkM3WFY1aWlac3NVWUxFMUxqMzlCTE9DSl9JMlJXRHBPcnN6LVI4Xzl0OHBHYjVKME5jOFcwcFo4VnctUlpRUk1WRkhPczhHWDh2Tl9JeTVaLXU2X2dXVDNKd2dKdU5pcHhOWjRTYktfbV8tRjd3RFpNdXdfZnlxM19QYlRSanZVX0hRUlJBa0V0aFpTNGFUZExoSWs4S0Y0dmZMcUUt?oc=5\" target=\"_blank\">Saudi Arabia’s Military Limitations Are Being Exposed by Houthi Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOM19uejBXQV9UYlQ0ZlFpMFFxYkM3WFY1aWlac3NVWUxFMUxqMzlCTE9DSl9JMlJXRHBPcnN6LVI4Xzl0OHBHYjVKME5jOFcwcFo4VnctUlpRUk1WRkhPczhHWDh2Tl9JeTVaLXU2X2dXVDNKd2dKdU5pcHhOWjRTYktfbV8tRjd3RFpNdXdfZnlxM19QYlRSanZVX0hRUlJBa0V0aFpTNGFUZExoSWs4S0Y0dmZMcUUt?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T05:38:14.132Z"
+    },
     {
       "id": "rss_d366b785ffd2eaef",
       "timestamp": 1792351363000,
@@ -10805,29 +10826,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-20T20:58:55.507Z"
-    },
-    {
-      "id": "rss_1dda1d32defd79da",
-      "timestamp": 1789926796000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthi rebels warn against joining Saudi Arabia in Yemen's growing civil war - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNT2hwVEdxNU9yN1Y3a0ZjU2UwclRMSV9BZUJnUm82WjI0T0c0eXdFMlp6dC0tZTFOV3l5SUp0MWIyYjE1Z0FURW5LWDFuYVdxeXNScXN4V29aaldZWVRfa0o0LXR6QU9feklCNkoyWFVwcGhHd2JlSThoNDFhSmtHdGtaYTZCbWVqMjlZS1l5RmlRM0NxcERjbWx5ZEc4X1c3R3N3YVV5a2YwMDJZRkQ0NEhyYjJGS2JjUFhhZjd2WdIBxAFBVV95cUxPUGFuRkRSbmJzd21ydDVmYjNDa1RQd1dxXzFlOEhEMENHcHBNWHlmbXhPTXlsUXBxZWdZRDlLM0tET19FQ1dFNTBsdlNPeXZaVE5KeVU2cTZqSGU4bkxjczVWbWhJQWhSRlFTOEpVR1pXUUQ5LWpPVFZmaEhJYWIzdE5zWm50QUZ4bmZMRS",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNT2hwVEdxNU9yN1Y3a0ZjU2UwclRMSV9BZUJnUm82WjI0T0c0eXdFMlp6dC0tZTFOV3l5SUp0MWIyYjE1Z0FURW5LWDFuYVdxeXNScXN4V29aaldZWVRfa0o0LXR6QU9feklCNkoyWFVwcGhHd2JlSThoNDFhSmtHdGtaYTZCbWVqMjlZS1l5RmlRM0NxcERjbWx5ZEc4X1c3R3N3YVV5a2YwMDJZRkQ0NEhyYjJGS2JjUFhhZjd2WdIBxAFBVV95cUxPUGFuRkRSbmJzd21ydDVmYjNDa1RQd1dxXzFlOEhEMENHcHBNWHlmbXhPTXlsUXBxZWdZRDlLM0tET19FQ1dFNTBsdlNPeXZaVE5KeVU2cTZqSGU4bkxjczVWbWhJQWhSRlFTOEpVR1pXUUQ5LWpPVFZmaEhJYWIzdE5zWm50QUZ4bmZMRS16cUVWeGdhS1dHN1pNM2dnVDI3T0JTTmZ2aXU0cExMY0NYNWxBbFQ3ZmI0YTRPd3hGcTFZQVFR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-20T18:26:37.539Z"
     }
   ]
 }
