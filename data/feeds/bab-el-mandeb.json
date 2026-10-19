@@ -1,8 +1,290 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-19T11:56:34.483Z",
+  "last_fetch": "2026-10-19T18:22:17.363Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a3acd85dbbe49190",
+      "timestamp": 1792432677000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Live Updates: Latest from Israel, Iran, and the Middle East - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5yS0FDd1duN1hYeEFmX2xiNVVIdTN2bXQ5ZW9rYnpjazhyeHRaSGtEMjVDMXF4OFJyRXBwUDIyNFJLdTY0SFRsUTlxbi1qNW83eHB4VFpXVGRmM2lfVUJOY3lpVS1PckxYQ3BIZmNWMmVYOXRJZXozbTQwUC1JRlE?oc=5\" target=\"_blank\">Live Updates: Latest from Israel, Iran, and the Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5yS0FDd1duN1hYeEFmX2xiNVVIdTN2bXQ5ZW9rYnpjazhyeHRaSGtEMjVDMXF4OFJyRXBwUDIyNFJLdTY0SFRsUTlxbi1qNW83eHB4VFpXVGRmM2lfVUJOY3lpVS1PckxYQ3BIZmNWMmVYOXRJZXozbTQwUC1JRlE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_ca1ec5de4f508fa1",
+      "timestamp": 1792427700000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills 53 in biggest single loss of life since Yemen civil war reignited - The Guardian",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxNbkJSbjJvNXlfZno4WTB1WThtaVBPamI4NU1aanB4TVdGUUtVUzNIX2xObWVuQ1FxZkY0TDVkUlpqRE1sZDRvVFpZMVdidWRRcWpFYXFaZUxrV2JFbklqczBzYk0xRkRoR0t0MEh3LVduQ0lQX3RKQV90bzF1bGhRZEE2aDZHQV9vS1JmNjVMWTF4VS1fZWN4NGxlVmJaeTNqWUREMUs5S3h2bTRMTkgzYWRET2NSTGM?oc=5\" target=\"_blank\">Houthi attack kills 53 in biggest single loss of life since Yemen civil war reignited</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbkJSbjJvNXlfZno4WTB1WThtaVBPamI4NU1aanB4TVdGUUtVUzNIX2xObWVuQ1FxZkY0TDVkUlpqRE1sZDRvVFpZMVdidWRRcWpFYXFaZUxrV2JFbklqczBzYk0xRkRoR0t0MEh3LVduQ0lQX3RKQV90bzF1bGhRZEE2aDZHQV9vS1JmNjVMWTF4VS1fZWN4NGxlVmJaeTNqWUREMUs5S3h2bTRMTkgzYWRET2NSTGM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_ef6315b38e0f9fd2",
+      "timestamp": 1792425870000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Yemen army camp in Shabwa kills at least 53: reports - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNQURxelJpODVFeDRIVWZNaEk5cFZlYXpMdUxxa2owdTRGbmV4SHI2a2JHaDluMzRTNFdobDdNeUN3ZHFuR1hfQ1lmSU1aWXFJc0hVaklCaWw1cEJjUno5Uk1Dc3FCcktyZV9rX3J4Rkd0UDZtMXV5NGhacDRHTTdoZGRkRGJNcG1QajFvYXk0Mkt3MS1UeDN5eW03U05COXVzOWFPbncyZFV2UkZVb1RMadIBtgFBVV95cUxQb1pVOUxXRU1SdmVLRmRkVE5qRDJ1dzdoM3JfZFlZSmxKa2d3a28yTXVReGFyWEtqNVN3ZmRIX1ZseWpsNzRscDVLZWFiellubjJsOW9iM1ZyT0FkUF9MUWljckF4WFdrSmhwd3pBWG15dGl4cXJyV2ZBY2RveFdkS01xT1hkc3JHMXFzNXFfVy1MUk9vNk1ocEVKTG",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNQURxelJpODVFeDRIVWZNaEk5cFZlYXpMdUxxa2owdTRGbmV4SHI2a2JHaDluMzRTNFdobDdNeUN3ZHFuR1hfQ1lmSU1aWXFJc0hVaklCaWw1cEJjUno5Uk1Dc3FCcktyZV9rX3J4Rkd0UDZtMXV5NGhacDRHTTdoZGRkRGJNcG1QajFvYXk0Mkt3MS1UeDN5eW03U05COXVzOWFPbncyZFV2UkZVb1RMadIBtgFBVV95cUxQb1pVOUxXRU1SdmVLRmRkVE5qRDJ1dzdoM3JfZFlZSmxKa2d3a28yTXVReGFyWEtqNVN3ZmRIX1ZseWpsNzRscDVLZWFiellubjJsOW9iM1ZyT0FkUF9MUWljckF4WFdrSmhwd3pBWG15dGl4cXJyV2ZBY2RveFdkS01xT1hkc3JHMXFzNXFfVy1MUk9vNk1ocEVKTGFnMjROcVlMVmF1X3NYcVU4Rkd3TDNsTG1Ldw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_5e942fa791546350",
+      "timestamp": 1792423783000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi rebels strike Yemen's government forces with ballistic missiles, killing at least 53 - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQkRtc1JnYXZzMWNwZEtMLWxiSXZZRDI5c1pnZi1zcWJ3Y1NOSlB2TTZCY2RIc2t4TF9OUXliaWt0QnZwQ2RNekpDU1VzY1A0Ny1TU1ZISkhsVUZTUThuWU1oc2drd1lDaVNLTjRKN1piQVdMR2NEdjdzN3BPdHNvT3o3UE5HUzUtcU5FbHI1eFNxYlJ3QzhKUW03cW9BYXA1dUY0U0pkTzhSSjlFQ3M2SWN5RmVEU04wVzdueUhiRXBVUWlBQjNETklOOE1mamdRMHfSAdcBQVVfeXFMT241UzZrRUlVcFJ0c2RlZnByVG51N0stekJkSmlkZEpwblkxeUtvUDVIVjAzaW91WEVLQmNxeWdualQwMF83UGswa0UzRjY2N19aNEhSTXN0Nm1ZTWFPOTQtYmpCcnprYmhOaVJJX0lOT29mRjdGQl9YWF",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPQkRtc1JnYXZzMWNwZEtMLWxiSXZZRDI5c1pnZi1zcWJ3Y1NOSlB2TTZCY2RIc2t4TF9OUXliaWt0QnZwQ2RNekpDU1VzY1A0Ny1TU1ZISkhsVUZTUThuWU1oc2drd1lDaVNLTjRKN1piQVdMR2NEdjdzN3BPdHNvT3o3UE5HUzUtcU5FbHI1eFNxYlJ3QzhKUW03cW9BYXA1dUY0U0pkTzhSSjlFQ3M2SWN5RmVEU04wVzdueUhiRXBVUWlBQjNETklOOE1mamdRMHfSAdcBQVVfeXFMT241UzZrRUlVcFJ0c2RlZnByVG51N0stekJkSmlkZEpwblkxeUtvUDVIVjAzaW91WEVLQmNxeWdualQwMF83UGswa0UzRjY2N19aNEhSTXN0Nm1ZTWFPOTQtYmpCcnprYmhOaVJJX0lOT29mRjdGQl9YWFY2cF91bDQ3ZnBjR1hyRm5xV2kzMGdVakZqTS1GWGRsMVhSTnN2TTZ3YkJlSXd6VndiSEphb2x6bS1rMVRLUzJVYndvcVpuSlYtVXMwRnNJcTRmYmpDUFpGRFVnMUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_b4b73f906e7dd77c",
+      "timestamp": 1792420912000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemeni recruits killed in missiles strikes by Houthis on government military base - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQVWRha1hyUlFWcjkxNV82eFZFR3BMcGpIUF9WV3M4RUNxUFVld3pxM0U0T0JPZUpUdDF0aE1ldk1HalZmY3E1NUg2ekhSQXZGdkc2QUg5OTlJaWtLSHpmVll0SjNSWjVIOHc1bmxJVHpOVnN5emRjT0xJZkcxQnc0SWRfQThmVjhnQklmNUNpUmxsdzlBWVFnZGdMaGdCN2_SAZ8BQVVfeXFMTzVoYTJwYUxOZW5WYUxfNjg5U3JaS0xGY2plSEtuX3hQUGw1UjB0cjB4Vm5FWTJkUDVSV0RiQ2VIRzhnM25MSkxwM0tTWmVXSlRTUWEwYzh2b1JqdHM3eHUybDdfcHVQU2dVODFMRnRsRG9JbDVVWkVuLVREZ19OMVAydC13X3lOaXl2dU53V3F4VElKSFo3SFZyOFVoRVdF?oc=5\" target=\"_bl",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQVWRha1hyUlFWcjkxNV82eFZFR3BMcGpIUF9WV3M4RUNxUFVld3pxM0U0T0JPZUpUdDF0aE1ldk1HalZmY3E1NUg2ekhSQXZGdkc2QUg5OTlJaWtLSHpmVll0SjNSWjVIOHc1bmxJVHpOVnN5emRjT0xJZkcxQnc0SWRfQThmVjhnQklmNUNpUmxsdzlBWVFnZGdMaGdCN2_SAZ8BQVVfeXFMTzVoYTJwYUxOZW5WYUxfNjg5U3JaS0xGY2plSEtuX3hQUGw1UjB0cjB4Vm5FWTJkUDVSV0RiQ2VIRzhnM25MSkxwM0tTWmVXSlRTUWEwYzh2b1JqdHM3eHUybDdfcHVQU2dVODFMRnRsRG9JbDVVWkVuLVREZ19OMVAydC13X3lOaXl2dU53V3F4VElKSFo3SFZyOFVoRVdF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_8f4edac6ad241b44",
+      "timestamp": 1792419611000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "LIVE: More than 53 killed in Houthi attack on southern Yemen - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNS3FmcmFBdS1RQVhzQzlES0U0Y2N4Yk1reTlsbV9MTldDdDBYdVY1LWlXSXU2WTMyc2x4aGU1UnNWaWRpTHhTUldma1hrZlRNbERSZWlISFU2dHQyOU5IZUtjM2VSdVhjRENSY3V3THBCMS10MHBNRlJURnJLRDlGaWc0MWRZWDQ?oc=5\" target=\"_blank\">LIVE: More than 53 killed in Houthi attack on southern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNS3FmcmFBdS1RQVhzQzlES0U0Y2N4Yk1reTlsbV9MTldDdDBYdVY1LWlXSXU2WTMyc2x4aGU1UnNWaWRpTHhTUldma1hrZlRNbERSZWlISFU2dHQyOU5IZUtjM2VSdVhjRENSY3V3THBCMS10MHBNRlJURnJLRDlGaWc0MWRZWDQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.879Z"
+    },
+    {
+      "id": "rss_733e81883cfc095a",
+      "timestamp": 1792417568000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "More than 53 killed, over 200 wounded in Houthi attack on southern Yemen - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQQ2hPQS16OE5HckVOU21hQWpzRV9HeHBaY2JQTi13NjhwdWxoZ1djbFBEV3NvbFFxbUVteUo5OXRfa1MycVIteVMyTmFxQ2Y4U2RvMUxDbTFQYlhjYWxnNEFuaHNNQ3B3R2xQbE4weVNhLU43MVp1R0lLQmJqLXBwWFU1OTlyMFdMZHRRdkpwSHMxNzlmbUpER3dCc3drY1AyamlJYXN5UERkaXd2dGVwYzZGYncwNUU?oc=5\" target=\"_blank\">More than 53 killed, over 200 wounded in Houthi attack on southern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQ2hPQS16OE5HckVOU21hQWpzRV9HeHBaY2JQTi13NjhwdWxoZ1djbFBEV3NvbFFxbUVteUo5OXRfa1MycVIteVMyTmFxQ2Y4U2RvMUxDbTFQYlhjYWxnNEFuaHNNQ3B3R2xQbE4weVNhLU43MVp1R0lLQmJqLXBwWFU1OTlyMFdMZHRRdkpwSHMxNzlmbUpER3dCc3drY1AyamlJYXN5UERkaXd2dGVwYzZGYncwNUU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.879Z"
+    },
+    {
+      "id": "rss_68b82def49c50fb1",
+      "timestamp": 1792417350000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Aftermath of a Houthi attack on Yemeni government military camp in Shabwa - The Lufkin Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAJBVV95cUxPM3BpQTJKRVhPQ1hJRDA0YzhTYTJjOXdKNFBxSS13U0hSdGVlZndFNC1COXAzRWdYeXNHS0J0UHRnVUQtWWU3bzVibndjcmFsT1U0MUM3c2hZUFRjb2VRaF8zd0lPTmlYVU5ZSlFHVXlVNDROZ29BUm5GNVFyeUtrQWNxTGxEUUJNdzZadEtPMXhxUXpJQkIwVnRjSmFKYjRqSkVpYzhiSGpRMGFoenR3enB1dlhjdkhxNUdCOG5uN0luSVQ5dTNTb0NlQnM4RGlBVkJVZGVNeENrWFlCVmlJYzNyZG9vejh5ejNxMjhfSTZFSkFobWgwWE0wOEVhaDRl?oc=5\" target=\"_blank\">Aftermath of a Houthi attack on Yemeni government military camp in Shabwa</a>&nbsp;",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPM3BpQTJKRVhPQ1hJRDA0YzhTYTJjOXdKNFBxSS13U0hSdGVlZndFNC1COXAzRWdYeXNHS0J0UHRnVUQtWWU3bzVibndjcmFsT1U0MUM3c2hZUFRjb2VRaF8zd0lPTmlYVU5ZSlFHVXlVNDROZ29BUm5GNVFyeUtrQWNxTGxEUUJNdzZadEtPMXhxUXpJQkIwVnRjSmFKYjRqSkVpYzhiSGpRMGFoenR3enB1dlhjdkhxNUdCOG5uN0luSVQ5dTNTb0NlQnM4RGlBVkJVZGVNeENrWFlCVmlJYzNyZG9vejh5ejNxMjhfSTZFSkFobWgwWE0wOEVhaDRl?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.879Z"
+    },
+    {
+      "id": "rss_fe6b47975668bf03",
+      "timestamp": 1792416480000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi missile attack on Saudi-backed Yemeni army base kills 53 - Haaretz",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi9gFBVV95cUxNMTFsV3NBNldsS2dFVDljbkdwREw1dUVSeTB5Mlg0WWVwQmRBaXhjaEhfWlBscEZQNUNrd0JkX2swU1F2R1dMWms4WGdUbDJaMHA4aUdoQjJ5OE8wTnp3Y05aVXNkbU9uMnZOMHY0aFhtU3o5SWU5bjNGeHRUQlhPQlBDSE11VnBfY19zbGRsbjJSeE0zYkxYQVBZM0VhTUYzQmktS3Nianc3RkFQRV9iLTZlTzBnSk53ZDliNmJwdXBMMGp2YzBfY1R0NTgtUFhrOUhSNWxpR3JfUXlCSHR4dDgxa2U2eW5ZNm5iY0tkbV9NT2pwNmc?oc=5\" target=\"_blank\">Houthi missile attack on Saudi-backed Yemeni army base kills 53</a>&nbsp;&nbsp;<font color=\"#6f6",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNMTFsV3NBNldsS2dFVDljbkdwREw1dUVSeTB5Mlg0WWVwQmRBaXhjaEhfWlBscEZQNUNrd0JkX2swU1F2R1dMWms4WGdUbDJaMHA4aUdoQjJ5OE8wTnp3Y05aVXNkbU9uMnZOMHY0aFhtU3o5SWU5bjNGeHRUQlhPQlBDSE11VnBfY19zbGRsbjJSeE0zYkxYQVBZM0VhTUYzQmktS3Nianc3RkFQRV9iLTZlTzBnSk53ZDliNmJwdXBMMGp2YzBfY1R0NTgtUFhrOUhSNWxpR3JfUXlCSHR4dDgxa2U2eW5ZNm5iY0tkbV9NT2pwNmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_b1502d163f7a9a31",
+      "timestamp": 1792416448000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi rebels strike a government military camp in southern Yemen, killing at least 53 fighters - Orlando Sentinel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOWHA3Y2E3RTh0a2xIcGpNYUNZSHUxalRkYk50UG0zb2w5RzQzcVZhWjI5V3RFVlZ1UVdEclRYaUlvQ2FNYkg3Qy1pM0VHSWtsTjdQbnd1OHdCUndneHBReHJ6bG9la0JzeF9MOFVKSHJTOEdlSjhKemdZLXNkbnAzYzg0Ylpia18xQjFkX1dJTnJmbms?oc=5\" target=\"_blank\">Houthi rebels strike a government military camp in southern Yemen, killing at least 53 fighters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Orlando Sentinel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOWHA3Y2E3RTh0a2xIcGpNYUNZSHUxalRkYk50UG0zb2w5RzQzcVZhWjI5V3RFVlZ1UVdEclRYaUlvQ2FNYkg3Qy1pM0VHSWtsTjdQbnd1OHdCUndneHBReHJ6bG9la0JzeF9MOFVKSHJTOEdlSjhKemdZLXNkbnAzYzg0Ylpia18xQjFkX1dJTnJmbms?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.879Z"
+    },
+    {
+      "id": "rss_96578c01d8861374",
+      "timestamp": 1792415908000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Dozens killed or wounded in Houthi attack on Yemen security camp - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxObHRiS3NCbmdRbGx4UUZtYVFZcWVnUjd3NHRxcjlLRllKdVJQeWJCSC1NaEphU3N4YURIRGc3aUU3RTFPOTJRMXFyMXVrN09ENmFyTDBBTFU5QTFpNFpBNElBSHJheEdILXY5SGY4VGxLRC1kM1JDTmc5Z0d6LUZlYnB2UGZCYkpQa0JSVTREVkFYNnp2d3M0?oc=5\" target=\"_blank\">Dozens killed or wounded in Houthi attack on Yemen security camp</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObHRiS3NCbmdRbGx4UUZtYVFZcWVnUjd3NHRxcjlLRllKdVJQeWJCSC1NaEphU3N4YURIRGc3aUU3RTFPOTJRMXFyMXVrN09ENmFyTDBBTFU5QTFpNFpBNElBSHJheEdILXY5SGY4VGxLRC1kM1JDTmc5Z0d6LUZlYnB2UGZCYkpQa0JSVTREVkFYNnp2d3M0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_7aba370d7d0f84a1",
+      "timestamp": 1792415210000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Deaths from attack by Houthi rebels on government military camp in southern Yemen rise to 53, provincial government says - The Killeen Daily Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxNVmtmdER3Nnp2eHlJYkJDclNtdFgtN25wbEJza2xlMGsyUTBtRUE0dmg2Q3FGblBRMFhOY2hFZGN2WldwOV9jRzdOS0d3ZEp2MVJFQzJhc1VhTWEtMVNoVVhLc01JTUJ2b0FVaTVsZlIteXdReHRDemZ2UjJ1OEVQOVQ2WjR5RUNqZkVZbG93QXBnUHlIV0FuakhpT20zRjQ5N0QxeVJJVnV5VDdFdHU4YVFuc1ZhSGFveUU2TnE2MkstNVhVVkpSWldLZkVvREVfdVV2VTM3MWU0NndEdEExWlB1NTRnbG1WUXFiQk5QZEVNeFFvSUVPWEw5OXozMUk?oc=5\" target=\"_blank\">Deaths from attack by Houthi rebels on government military camp in southern Yemen ri",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNVmtmdER3Nnp2eHlJYkJDclNtdFgtN25wbEJza2xlMGsyUTBtRUE0dmg2Q3FGblBRMFhOY2hFZGN2WldwOV9jRzdOS0d3ZEp2MVJFQzJhc1VhTWEtMVNoVVhLc01JTUJ2b0FVaTVsZlIteXdReHRDemZ2UjJ1OEVQOVQ2WjR5RUNqZkVZbG93QXBnUHlIV0FuakhpT20zRjQ5N0QxeVJJVnV5VDdFdHU4YVFuc1ZhSGFveUU2TnE2MkstNVhVVkpSWldLZkVvREVfdVV2VTM3MWU0NndEdEExWlB1NTRnbG1WUXFiQk5QZEVNeFFvSUVPWEw5OXozMUk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.879Z"
+    },
+    {
+      "id": "rss_0301bf77f17ddeb8",
+      "timestamp": 1792412753000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Dozens killed in Houthi attack on Yemeni gov’t military camp - The New Arab",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNR1Vva0VxX01CZDFheGd5VUZOc2puY0F1bHZlcUZEaUk1MjdXTm1fNGVlb1pSZVJYa2VHVnMyZlZGZ0wyS0dPVTAxYVR6VDNFNTFrOVNFTVNMVUl0bUJ3RGtPcEU1d3J1WDZsTWJFTmZqMFNVUjlrTEQta0tEZUhUT0VnemRNTWVqb0E?oc=5\" target=\"_blank\">Dozens killed in Houthi attack on Yemeni gov’t military camp</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Arab</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNR1Vva0VxX01CZDFheGd5VUZOc2puY0F1bHZlcUZEaUk1MjdXTm1fNGVlb1pSZVJYa2VHVnMyZlZGZ0wyS0dPVTAxYVR6VDNFNTFrOVNFTVNMVUl0bUJ3RGtPcEU1d3J1WDZsTWJFTmZqMFNVUjlrTEQta0tEZUhUT0VnemRNTWVqb0E?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
     {
       "id": "rss_b8aa5c25a6878aca",
       "timestamp": 1792410076000,
@@ -111,6 +393,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-19T11:56:33.006Z"
+    },
+    {
+      "id": "rss_dbc1147db0f7ffc5",
+      "timestamp": 1792407422000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran support for Houthis probed as Yemen war re-erupts and Saudi cities hit - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVlNET3hzZkR6WThWY0ZMbkpUYjVCY1pqWG5GQm1CSlNiXzNzWXJTbFAyZEhROXljekhHenNVcEZfVjgyQ3VvcmRuS2VNWjVvYVRMWGxaaXVoUEZPZFZNV1NPUHBtRUFRMUZCTWhTT2g3cEtDZWJabGVLdDhDVGN0UjJwNGVCUWZGVnFYZ2Z3WkZqVllVWDI2eHRZaXozY1dLdVdyUjd5Q2ZuNlJOaTFhUF9pVEF5VnR00gG-AUFVX3lxTFBzaVFoRXFEcWhGVFVLaGo5OGUwWnNicXhwSzdhQ0lJT3VfNk5ySFBXcFhpQkotdnpKNzBSeWVJd3ZKaTBFRE9aRmFfTjcxRk5fLXZfdU5oX205VWVNX1dzS0g1R0RjTG9nTXptLWNKWUcwQW1VN1VwOF9QTkNGaUE2SGFYcFB2N1lDcmdzbzJUS0pMZ0",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVlNET3hzZkR6WThWY0ZMbkpUYjVCY1pqWG5GQm1CSlNiXzNzWXJTbFAyZEhROXljekhHenNVcEZfVjgyQ3VvcmRuS2VNWjVvYVRMWGxaaXVoUEZPZFZNV1NPUHBtRUFRMUZCTWhTT2g3cEtDZWJabGVLdDhDVGN0UjJwNGVCUWZGVnFYZ2Z3WkZqVllVWDI2eHRZaXozY1dLdVdyUjd5Q2ZuNlJOaTFhUF9pVEF5VnR00gG-AUFVX3lxTFBzaVFoRXFEcWhGVFVLaGo5OGUwWnNicXhwSzdhQ0lJT3VfNk5ySFBXcFhpQkotdnpKNzBSeWVJd3ZKaTBFRE9aRmFfTjcxRk5fLXZfdU5oX205VWVNX1dzS0g1R0RjTG9nTXptLWNKWUcwQW1VN1VwOF9QTkNGaUE2SGFYcFB2N1lDcmdzbzJUS0pMZ0tUSkxYNnExMmFrR2NFcktfMC1YS05mOFBnZmN5ZWhMUEQtOF9rYi1IbGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-19T18:22:15.878Z"
     },
     {
       "id": "rss_b9628fd9ba7cf869",
@@ -10520,308 +10825,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T06:31:07.859Z"
-    },
-    {
-      "id": "rss_e7ba70dbf5c7494d",
-      "timestamp": 1790008980000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Americans in Middle East warned to ‘exercise heightened vigilance’ following strikes on Riyadh - The Hill",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPQk1RUGZ1QnExeUMyU3QwUkRDU3l6cEpnU3l2QzhBdnlUZ0FieEl2T0lDZjNhUkRTR2ZwMzFMc1BKYzJLbnBTbG45bEIyM21LNWVPaXMxU2tQX1hnYm5wZk5HbWprMktkUmFGdmN1UFVscWh1YVhfdThGUDkxTUlkd0x1TzROZ9IBiwFBVV95cUxOV2RmeHJWaTlUQXRxQlQ5cWJJQW5IX2dnOGxEXzZIZVhVVW1VQ2dYVVJ1aWRreUFPUTRVeC1sNUFsbHlGWkxZbUh1TFNxSjMzbVMwMndJYWg3aS0tODMxbUJncTlLS0pKNlVLNEx5dDdCWUdPRHE2WVBidnlNR1RaWElUZVlPRWpMQVk0?oc=5\" target=\"_blank\">Americans in Middle East warned to ‘exercise heightened",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPQk1RUGZ1QnExeUMyU3QwUkRDU3l6cEpnU3l2QzhBdnlUZ0FieEl2T0lDZjNhUkRTR2ZwMzFMc1BKYzJLbnBTbG45bEIyM21LNWVPaXMxU2tQX1hnYm5wZk5HbWprMktkUmFGdmN1UFVscWh1YVhfdThGUDkxTUlkd0x1TzROZ9IBiwFBVV95cUxOV2RmeHJWaTlUQXRxQlQ5cWJJQW5IX2dnOGxEXzZIZVhVVW1VQ2dYVVJ1aWRreUFPUTRVeC1sNUFsbHlGWkxZbUh1TFNxSjMzbVMwMndJYWg3aS0tODMxbUJncTlLS0pKNlVLNEx5dDdCWUdPRHE2WVBidnlNR1RaWElUZVlPRWpMQVk0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.426Z"
-    },
-    {
-      "id": "rss_b33c2ce7a34b5e53",
-      "timestamp": 1790004401000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis push for control of Yemen highlands as Trump is said to have called off strikes - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNbHBmWjNkMFR2Skw0MWVFaENxamFwbXN0RGxRei1RenlFVk11R1loSlZtdm16SW5ITGFMalY1bkNBOUVONnVVdENtbDZSdzByT0l0NkJiZUlSSzBvRHBBNWxKd01ja09Eb1Nla205aW5oQkxGVGpiUjZQUTJVYy1EWGx6R2JPN2pGWXVUU29CQ1ZyQmpSMWlzQ1VYUzhidC1SZ3VSMFhyVndUYUZYTXItOGgyTktsQnV1QW1ETzN4NnI2eWhZMXhoZ1h4eEU?oc=5\" target=\"_blank\">Houthis push for control of Yemen highlands as Trump is said to have called off strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNbHBmWjNkMFR2Skw0MWVFaENxamFwbXN0RGxRei1RenlFVk11R1loSlZtdm16SW5ITGFMalY1bkNBOUVONnVVdENtbDZSdzByT0l0NkJiZUlSSzBvRHBBNWxKd01ja09Eb1Nla205aW5oQkxGVGpiUjZQUTJVYy1EWGx6R2JPN2pGWXVUU29CQ1ZyQmpSMWlzQ1VYUzhidC1SZ3VSMFhyVndUYUZYTXItOGgyTktsQnV1QW1ETzN4NnI2eWhZMXhoZ1h4eEU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-21T19:01:00.425Z"
-    },
-    {
-      "id": "rss_ee89a77d98e262be",
-      "timestamp": 1790004309000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Turkey offers military support to Saudi Arabia after Houthi attack on Riyadh - nationalsecuritynews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxONS1oZXhhS0U2QWdxMjhUc1ZEMG1qMGtZTGtiWi1QUzRKZzJtcXY3cmZSQWVNNG5vd2x3UmZIZ0FCcnB5MzNCSi1oSWNIU2MxdGhZbm1SQkVDQ005RVc0MXM5YmIxX3BJWkxUbDI2Yzg3RTgtQ3pKb2hJZ0ExT09yZEYtREhVTEJ0MmFubjRkUTlvSmcwcVJBUjFwa0RzcGV4cGVncVVFTUpWUGFqYmRaVmZJSllkd2t3NGfSAb8BQVVfeXFMUFBEWnhIY1huaVRpT01XOWdBS0VwY3RkczVWTkY3UTZLZm0tTEp4dHVmc21hcGdzaEhaQkpPWGlnZ01CUDdMVFQ1OTFrS2N5Q0xGNzZub3QxY2hzd196anlaUFBVMFVoMkdsQk5hZVhSUmhuY3JkSG9BdnBSdFVkSmYwNWlYUzNOaG83cUpFbUdOZW",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxONS1oZXhhS0U2QWdxMjhUc1ZEMG1qMGtZTGtiWi1QUzRKZzJtcXY3cmZSQWVNNG5vd2x3UmZIZ0FCcnB5MzNCSi1oSWNIU2MxdGhZbm1SQkVDQ005RVc0MXM5YmIxX3BJWkxUbDI2Yzg3RTgtQ3pKb2hJZ0ExT09yZEYtREhVTEJ0MmFubjRkUTlvSmcwcVJBUjFwa0RzcGV4cGVncVVFTUpWUGFqYmRaVmZJSllkd2t3NGfSAb8BQVVfeXFMUFBEWnhIY1huaVRpT01XOWdBS0VwY3RkczVWTkY3UTZLZm0tTEp4dHVmc21hcGdzaEhaQkpPWGlnZ01CUDdMVFQ1OTFrS2N5Q0xGNzZub3QxY2hzd196anlaUFBVMFVoMkdsQk5hZVhSUmhuY3JkSG9BdnBSdFVkSmYwNWlYUzNOaG83cUpFbUdOZWZYckx1bFV5QWtrZUMyMFo4MWhOV1BrMHVYMC0xQnFJQk90MVA0TjctZS1wN0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.426Z"
-    },
-    {
-      "id": "rss_3d750b3e1a6429a8",
-      "timestamp": 1790004199000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Americans warned again to rethink travel as missile attack rattles historic region - Fox News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeURTbTNsRmxhNHZYczJKeUJBaldTMXJUaGJfNTNuellvVHk3a3lQWTJhRld0ZlYzdVY1eDRobEtQNUpybEF3RXZ5eElDOTBiY1lndmlSWjA3WlY3cTZaUGpkMU96MFlDOE84ZVhZbDVsRXpXRm9TNUhVa3dDUUVXZzZVdUtEWUlMNklkd1VpT21LNXlyLTk1MFd3RjdkME1VUnNnSm1JRkJlY3fSAbABQVVfeXFMT2tXVnFadDh5Q29yZWFfU3VqYzJ3ek1hYkN2blg3V2VGRVdCeHRHeWhlQWZ1YWQyVzFTcDlSbGdMZ2V1RmhMX0JDOVQzVmRweVBqYXI0T2JTenRBcHduRVRRYUdFWlFkeFNBQlh5NGxib2JVbFpDblRHWElPelVuZ3NaZmdBZy1kZXdzTEFOOEE1LXRBSHRPeTN0dUhtbjVORm",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPeURTbTNsRmxhNHZYczJKeUJBaldTMXJUaGJfNTNuellvVHk3a3lQWTJhRld0ZlYzdVY1eDRobEtQNUpybEF3RXZ5eElDOTBiY1lndmlSWjA3WlY3cTZaUGpkMU96MFlDOE84ZVhZbDVsRXpXRm9TNUhVa3dDUUVXZzZVdUtEWUlMNklkd1VpT21LNXlyLTk1MFd3RjdkME1VUnNnSm1JRkJlY3fSAbABQVVfeXFMT2tXVnFadDh5Q29yZWFfU3VqYzJ3ek1hYkN2blg3V2VGRVdCeHRHeWhlQWZ1YWQyVzFTcDlSbGdMZ2V1RmhMX0JDOVQzVmRweVBqYXI0T2JTenRBcHduRVRRYUdFWlFkeFNBQlh5NGxib2JVbFpDblRHWElPelVuZ3NaZmdBZy1kZXdzTEFOOEE1LXRBSHRPeTN0dUhtbjVORmItbk9qVnh4ajZUUnE4cGM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.426Z"
-    },
-    {
-      "id": "rss_1ac10b388a722889",
-      "timestamp": 1790002838000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia’s Increasing Isolation Against the Houthis - horn review",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxOaGx2NnFDdGp1amxSY0ZwTlpIWVZwcnFmUnZsN2EzVzRFeTd1ZG9aRS1wc2ZKZFdoWmk4dHpsX0RJNTc1Y2c0X3RQcG9TRmk4UDhiUTlEMTdpdWJkWllBS2U0XzFPQUVKSWF4bExTQU9kX0M3S0tHMU9Cc2NRUnN2VmN2YkdnR1gwdlB1SjZEa25vN0U?oc=5\" target=\"_blank\">Saudi Arabia’s Increasing Isolation Against the Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOaGx2NnFDdGp1amxSY0ZwTlpIWVZwcnFmUnZsN2EzVzRFeTd1ZG9aRS1wc2ZKZFdoWmk4dHpsX0RJNTc1Y2c0X3RQcG9TRmk4UDhiUTlEMTdpdWJkWllBS2U0XzFPQUVKSWF4bExTQU9kX0M3S0tHMU9Cc2NRUnN2VmN2YkdnR1gwdlB1SjZEa25vN0U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.426Z"
-    },
-    {
-      "id": "rss_679f49b1b1dbd824",
-      "timestamp": 1790002291000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Kallas pushes to boost EU mission against Houthis - Euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ2Vfamg3N1J4azBFR2k3U1JuOFlwcVlhU0V4YTd2T1FSUjRsNUE5VldoVW4tSlhaMW43U0cxc0lyOTYzQ2xnUkdRVkxhb29IVTBOc1NaVzJNeHhVcDFOSWVqYzF4M3RfN19UQ0xnNUtWZmdWNU94S1FiZ1RNUHNFQUFuN28xR1hjUFVZbFY5NGFSVFBkM09ONDhiTzFjSlpEaXpPcHQ1MU1NbXdjTmNqenZfNHhmeUtjLWRHeEdRUQ?oc=5\" target=\"_blank\">Kallas pushes to boost EU mission against Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOQ2Vfamg3N1J4azBFR2k3U1JuOFlwcVlhU0V4YTd2T1FSUjRsNUE5VldoVW4tSlhaMW43U0cxc0lyOTYzQ2xnUkdRVkxhb29IVTBOc1NaVzJNeHhVcDFOSWVqYzF4M3RfN19UQ0xnNUtWZmdWNU94S1FiZ1RNUHNFQUFuN28xR1hjUFVZbFY5NGFSVFBkM09ONDhiTzFjSlpEaXpPcHQ1MU1NbXdjTmNqenZfNHhmeUtjLWRHeEdRUQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:01.404Z"
-    },
-    {
-      "id": "rss_82662f3c7543ee62",
-      "timestamp": 1789998673000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Reroutes Oil Exports as Houthi Strikes Target Yanbu - Crude Oil Prices Today | OilPrice.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPZVhKa29YTmVJeFMtQTVkX3YzeFg5M3VKN0FMYnFEVF80c2dVb1l5SDdYbDFnOWtKS3VjSGxSUkExUGtMZUpsTGNwVXd0MVVNQmJYVWJBZ1JWbGtxYlRta0tpSVhkX29JSFppRFF4a3NoZkFpSVNiY210TXZUODNJcFhZVEEzSTU2QkE3ekowTDY5QnRnN094cXB2QTBEVS1LWmFRX2JBWloxUmtLYTFoV3BiLTFYRGFBVHJ5RdIBwgFBVV95cUxPQ0JrbFZ4eHFDNmVmam1IS0RHLVg2RkhGM3YwZV9malhQUzFvYzJHcFc1alVYSUdiWmVRVkZpV2tOOFVsQ21FMFFUWmRQZ2VuSU4zaXFEZTkwcG9fOFFwWTBJQldYTGFqRng3RFkwVWpscXotdzdSTVdhdmVFemhRSlkyN2pLLUdxb2ZKbXNiOH",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZVhKa29YTmVJeFMtQTVkX3YzeFg5M3VKN0FMYnFEVF80c2dVb1l5SDdYbDFnOWtKS3VjSGxSUkExUGtMZUpsTGNwVXd0MVVNQmJYVWJBZ1JWbGtxYlRta0tpSVhkX29JSFppRFF4a3NoZkFpSVNiY210TXZUODNJcFhZVEEzSTU2QkE3ekowTDY5QnRnN094cXB2QTBEVS1LWmFRX2JBWloxUmtLYTFoV3BiLTFYRGFBVHJ5RdIBwgFBVV95cUxPQ0JrbFZ4eHFDNmVmam1IS0RHLVg2RkhGM3YwZV9malhQUzFvYzJHcFc1alVYSUdiWmVRVkZpV2tOOFVsQ21FMFFUWmRQZ2VuSU4zaXFEZTkwcG9fOFFwWTBJQldYTGFqRng3RFkwVWpscXotdzdSTVdhdmVFemhRSlkyN2pLLUdxb2ZKbXNiOHc4aG5Xcm5ESmhsekpoOWU4YjRlMXhYZ05zM3pCWEZyVlpEZ0k2SGJYajdySUJYekJVdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.427Z"
-    },
-    {
-      "id": "rss_c6d9d8c31e1f1ec1",
-      "timestamp": 1789996653000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Vow Not To Attack US Ships In Red Sea, Warn Countries Backing Saudi Arabia - Marine Insight",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNR1pNRlRmamVBMDJRWXd4SUxGYThXa0VFUWFQWEd1YmxyeWRiWHg1eFd6cmd2YzdHSm5yZGxSVjRtaXk3aGVxbWFqTWFBZkc2SG8xQ3M4WHlVZ0FpVmlsa3NBRjlMNXMteW9wTmlsQl9JN0NFQ1k3T2dKX2RoNVFpVk1nUXZNWjJaT1oySTJ1ay0yLWlLWHZETUxjY2ZGNEdiVlpGMm1SRDVlRGV0dnNEUVJR?oc=5\" target=\"_blank\">Houthis Vow Not To Attack US Ships In Red Sea, Warn Countries Backing Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Marine Insight</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNR1pNRlRmamVBMDJRWXd4SUxGYThXa0VFUWFQWEd1YmxyeWRiWHg1eFd6cmd2YzdHSm5yZGxSVjRtaXk3aGVxbWFqTWFBZkc2SG8xQ3M4WHlVZ0FpVmlsa3NBRjlMNXMteW9wTmlsQl9JN0NFQ1k3T2dKX2RoNVFpVk1nUXZNWjJaT1oySTJ1ay0yLWlLWHZETUxjY2ZGNEdiVlpGMm1SRDVlRGV0dnNEUVJR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.426Z"
-    },
-    {
-      "id": "rss_793f8bbbc2055ace",
-      "timestamp": 1789985799000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attack disrupts operations at Riyadh’s King Khalid International Airport - Aviation24.be",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWk5FOE9SdFhJTkVkSlpjMWpHaGdhUGNRUVZ6RWtaWjdfU01hNGhISVhYSnV0bjZvV1N5dUhMTXZiQXhmaUFRNFlCMS1CNGFQSW1hYzhNWjNmYXpkQUpuVV9MUjRwWGVGdGoyeGRtWDJHaW1xaTRHaEJtYmVtYVVxUHJmRUx3bTlYc05MZmJyQVZKUjVrVUxXMEQ4bVBMMU54QzdUR0o5QWxRaHJmUl9tMnhOSW8zMnE1cTc5YzQ1bmtsc0XSAcMDQVVfeXFMUFctODdqQXlMeVVMUF9CcnlBU1RMeEhDdDdVMTVVM014WGxvZVltZmlHOU5JWklReEoxeW03TDU1d0FZZ2hwdlRab1JhVVUtYzQ0X09TOC1GbUh0M2N1V3pRWmQwaDU2VklGTUxWWmw2Um1sSWhqYmZaa3E2OVB1bURjUGppbmZNV2",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWk5FOE9SdFhJTkVkSlpjMWpHaGdhUGNRUVZ6RWtaWjdfU01hNGhISVhYSnV0bjZvV1N5dUhMTXZiQXhmaUFRNFlCMS1CNGFQSW1hYzhNWjNmYXpkQUpuVV9MUjRwWGVGdGoyeGRtWDJHaW1xaTRHaEJtYmVtYVVxUHJmRUx3bTlYc05MZmJyQVZKUjVrVUxXMEQ4bVBMMU54QzdUR0o5QWxRaHJmUl9tMnhOSW8zMnE1cTc5YzQ1bmtsc0XSAcMDQVVfeXFMUFctODdqQXlMeVVMUF9CcnlBU1RMeEhDdDdVMTVVM014WGxvZVltZmlHOU5JWklReEoxeW03TDU1d0FZZ2hwdlRab1JhVVUtYzQ0X09TOC1GbUh0M2N1V3pRWmQwaDU2VklGTUxWWmw2Um1sSWhqYmZaa3E2OVB1bURjUGppbmZNV2pMaG5kQmhQbGtsZlV4TTZpVEd5d1lhMmhPNnl5Rkctc2M2X0pVaFR4cHFWR3RwZHIzTHhqYkZydUZGdjJGOWE3TTJBa3ZWQ1RPUW5jRG5PcXFkMGkxemo2ajJnT0dPeTZmU25EUnJKbjlpSTdXb0xYdFowN2E2TkxZZkg0X2V6b0lUX2ZreWNTaWtqcEtHcURYZ0lCS0hNMkUza0xTZGt5V0RrS0JwS01mREpFZzQ1SEpibHFZUUZ6a0JnWkFyT0MxTUJvZFZYekJZNWZFYm00MU1wMFJiSG5MeUpHaC1QZGt1SFdMem5BRzFTWjVRWTVkVUZCX3lmdEx5Ujdsd01tbUVYcm1pWUJIaDhZMGhzbFdIbXR2bFZGNUF4dDdqLW45bEJ3dnBSWkd5azg5cjBZaWNFM0xQOUxJMA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T19:01:00.427Z"
-    },
-    {
-      "id": "rss_279a5fd0424feaa1",
-      "timestamp": 1789980818000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi Attack on Riyadh Opens New Front - chosun.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQOXlOQm52UnZoQy1aTmRGYjhHbFdPSC0wU3o0bUptRDV5MzRpS0VXM2R2NUhmT1JTZjBuT1l6WHlyV003dURjaXBMVnVWcjJ4bXdlQTNDUHBoc09TOUhyaVpkdHVhMm8xUUNRUmcwR2RFdFNMWHAxN1p1bWRxLUtrVkJEV0Q?oc=5\" target=\"_blank\">Houthi Attack on Riyadh Opens New Front</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chosun.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQOXlOQm52UnZoQy1aTmRGYjhHbFdPSC0wU3o0bUptRDV5MzRpS0VXM2R2NUhmT1JTZjBuT1l6WHlyV003dURjaXBMVnVWcjJ4bXdlQTNDUHBoc09TOUhyaVpkdHVhMm8xUUNRUmcwR2RFdFNMWHAxN1p1bWRxLUtrVkJEV0Q?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T13:33:37.379Z"
-    },
-    {
-      "id": "rss_e919bb93ad9f4fe9",
-      "timestamp": 1789977600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they won't attack US vessels in Red Sea, and other Mideast developments - Temple Daily Telegram",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2ZFZDRidUpwTHZsQm1TM3VNa2ZzdGI5cV9HYVByOWxGaHZFZEMweTN3T2I3bTlEeXpXaG4wTEoydUVtNEJLeEp5LWgxTV9XbHZXR2NnVDRGSEVJZHRlT1k2UGhoMl9KUnZhT1NXUEJtNEd0QXhybEFJWmRzaFVlOEd5NEw?oc=5\" target=\"_blank\">Houthis say they won't attack US vessels in Red Sea, and other Mideast developments</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Temple Daily Telegram</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS2ZFZDRidUpwTHZsQm1TM3VNa2ZzdGI5cV9HYVByOWxGaHZFZEMweTN3T2I3bTlEeXpXaG4wTEoydUVtNEJLeEp5LWgxTV9XbHZXR2NnVDRGSEVJZHRlT1k2UGhoMl9KUnZhT1NXUEJtNEd0QXhybEFJWmRzaFVlOEd5NEw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T13:33:37.379Z"
-    },
-    {
-      "id": "rss_f97e9165ad86d35c",
-      "timestamp": 1789969549000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Arab countries condemn Houthi attack on Saudi capital - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQczc2VEpncW1GZ29DZHZJazFpMDRVV0VXMUtHZ3FGbngxQmdiYks3d3h1YXkwbF9yZE5DZ09ReHNZcXdwT3VhUWpfR2lTdGI1ZExuc1M4U3JoRlV6dWNhY2xkbHU0UWJmOUhEUk5wcXF5emFSNTBBOFZtOUQtOGJmWEU0QXA1Z2ZtSWVfUG5zdzdWalhNdzVVbXZmNG5udFZ2?oc=5\" target=\"_blank\">Arab countries condemn Houthi attack on Saudi capital</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQczc2VEpncW1GZ29DZHZJazFpMDRVV0VXMUtHZ3FGbngxQmdiYks3d3h1YXkwbF9yZE5DZ09ReHNZcXdwT3VhUWpfR2lTdGI1ZExuc1M4U3JoRlV6dWNhY2xkbHU0UWJmOUhEUk5wcXF5emFSNTBBOFZtOUQtOGJmWEU0QXA1Z2ZtSWVfUG5zdzdWalhNdzVVbXZmNG5udFZ2?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T06:43:30.220Z"
-    },
-    {
-      "id": "rss_940317e2f171a61a",
-      "timestamp": 1789968695000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis say they won't attack US vessels in Red Sea, and other Mideast developments - Caledonian Record",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigJBVV95cUxOdTIxRnYxdmJGN25TeUt3RjQzVTFyeUI1dkktellQYncxdDB1bjZjUEdPdGw2SlZHMUxtOWVvNUp2eTFnTnhMOEdoTUFLNmZ1TnltcXhpN2dSMVg5SWVSejBVMllxZFcwMFdzXy1tMzN2ZEtFMTF3dEdYN0hpQkVXOVNYbnlPZEhRa2duTllfbm1OX1FOd2Ewd3pWOVFzMDBtMGZjY2xoS1ZlUUVNdTVNVzRiVTJSdl9RZnpObTVmRjFDY1Fvc0w1X1NvVkhrNklwcmFkSFdRcHhWaFJHRjhRNHpETjZhNG51MXFNUDZKUTdvdmZpNHhLZGU1bDJrY052ZC0xelZKODBDQQ?oc=5\" target=\"_blank\">Houthis say they won't attack US vessels in Red Sea, and other Mideas",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOdTIxRnYxdmJGN25TeUt3RjQzVTFyeUI1dkktellQYncxdDB1bjZjUEdPdGw2SlZHMUxtOWVvNUp2eTFnTnhMOEdoTUFLNmZ1TnltcXhpN2dSMVg5SWVSejBVMllxZFcwMFdzXy1tMzN2ZEtFMTF3dEdYN0hpQkVXOVNYbnlPZEhRa2duTllfbm1OX1FOd2Ewd3pWOVFzMDBtMGZjY2xoS1ZlUUVNdTVNVzRiVTJSdl9RZnpObTVmRjFDY1Fvc0w1X1NvVkhrNklwcmFkSFdRcHhWaFJHRjhRNHpETjZhNG51MXFNUDZKUTdvdmZpNHhLZGU1bDJrY052ZC0xelZKODBDQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T06:43:30.221Z"
-    },
-    {
-      "id": "rss_5beace68e13c6331",
-      "timestamp": 1789963235000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "UN chief condemns Houthi attacks on Saudi Arabia - アラブニュース",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQMHBfMDQwdml4dE42TWgwU0tXcmZaS0JRTlRVeVBUeHFROVc1bm1zQUdXUUVNWWFoRjRHc1hHRTlkVWlfaHRLcWxxSmR0VlBlNm10akplbXQtamN2c09rWVBUM0JCNHFwWlY3S3duNHNleF84ZHVGOGdNbHlfZjNTUGphcVNadU9lQWxCaVdVdDJORWJIYkZ2ZE5TZw?oc=5\" target=\"_blank\">UN chief condemns Houthi attacks on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMHBfMDQwdml4dE42TWgwU0tXcmZaS0JRTlRVeVBUeHFROVc1bm1zQUdXUUVNWWFoRjRHc1hHRTlkVWlfaHRLcWxxSmR0VlBlNm10akplbXQtamN2c09rWVBUM0JCNHFwWlY3S3duNHNleF84ZHVGOGdNbHlfZjNTUGphcVNadU9lQWxCaVdVdDJORWJIYkZ2ZE5TZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-21T06:43:30.220Z"
     }
   ]
 }
