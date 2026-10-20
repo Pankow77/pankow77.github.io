@@ -1,8 +1,134 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-20T06:27:30.997Z",
+  "last_fetch": "2026-10-20T11:57:00.318Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_95f136e15e5ff462",
+      "timestamp": 1792495120000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "At least 53 killed in Houthi attack on military camp in Yemen - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxON3JhMkk0NHYzYl9vTlkwQ1ozMV9ka3Rkb05nSmpyaUpTalVwcEFSWXE2TmJkcnIybkpvUUxXMGVyYjRucXp1VzZxRGRMb2F0MV9iS1pQUkdGNDc2eC1LS0U2bkxrZlhLbDZXVUVoLTYxRy1LUlhRaXZNeXpjYUY1M3R2QXlPUENoMk1YSGdwOA?oc=5\" target=\"_blank\">At least 53 killed in Houthi attack on military camp in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxON3JhMkk0NHYzYl9vTlkwQ1ozMV9ka3Rkb05nSmpyaUpTalVwcEFSWXE2TmJkcnIybkpvUUxXMGVyYjRucXp1VzZxRGRMb2F0MV9iS1pQUkdGNDc2eC1LS0U2bkxrZlhLbDZXVUVoLTYxRy1LUlhRaXZNeXpjYUY1M3R2QXlPUENoMk1YSGdwOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.823Z"
+    },
+    {
+      "id": "rss_11fe8e222693aa2f",
+      "timestamp": 1792494525000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Death toll rises to 73 in Houthi strike on Yemen training camp in deadliest attack in months - Inquirer.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQU1doSUNlQ2k1QW1rQ3lsTm1jZmF1Tjd4RkR2YjllLVp6MmJGR2VCR0R3OVYzNmU1V3F4cUFzQ0tBQmlEZlpXX2FGYW9ZMFVnV2pNcGx2UWVsZEdOWTBLTUNfQk10c0praXJWdFdybUxJRnkxalhFaXJKRzBWU2tTZGhWcFMzOXExSDBGNENHcDlRX2NQ?oc=5\" target=\"_blank\">Death toll rises to 73 in Houthi strike on Yemen training camp in deadliest attack in months</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Inquirer.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQU1doSUNlQ2k1QW1rQ3lsTm1jZmF1Tjd4RkR2YjllLVp6MmJGR2VCR0R3OVYzNmU1V3F4cUFzQ0tBQmlEZlpXX2FGYW9ZMFVnV2pNcGx2UWVsZEdOWTBLTUNfQk10c0praXJWdFdybUxJRnkxalhFaXJKRzBWU2tTZGhWcFMzOXExSDBGNENHcDlRX2NQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
+    },
+    {
+      "id": "rss_9faf3ea07251dcb1",
+      "timestamp": 1792489794000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Brent Crude Hits Five-Month High as Houthi Attack Claims Raise Oil Supply Concerns - Yahoo Finance",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQclZoUTdjU1ZlSUF4TTdNQVgyY3JlOXVYMExpNWtyeW1Ea1dWRDZzVTVzcG5DeHFyNUo2WXIxTlE3bHBCMWZ6ZXJwVXdEMmszSlNCSlN5TGk5UFRDcmRrSTBNYUgtZzNnMmFlZWN0WmhkUmtFVFMxQ2k2VTFBeWtFNmlqR0tHT2tlaG5ycA?oc=5\" target=\"_blank\">Brent Crude Hits Five-Month High as Houthi Attack Claims Raise Oil Supply Concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQclZoUTdjU1ZlSUF4TTdNQVgyY3JlOXVYMExpNWtyeW1Ea1dWRDZzVTVzcG5DeHFyNUo2WXIxTlE3bHBCMWZ6ZXJwVXdEMmszSlNCSlN5TGk5UFRDcmRrSTBNYUgtZzNnMmFlZWN0WmhkUmtFVFMxQ2k2VTFBeWtFNmlqR0tHT2tlaG5ycA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
+    },
+    {
+      "id": "rss_a32ed0583c989a91",
+      "timestamp": 1792489004000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Death Toll from Houthi Attack on Training Center in Yemen’s Shabwa Rises to 63 - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5fLVlGcjAtSUVDNWMtMnBCUG9IVGRKeDBPZmFhSmVEWTBBQjBCOHhvWTctYlBKQVA2N3RIRjNUcG8waDlqWkxwQnJwSTViWDFkYXhSbFdTcERRUQ?oc=5\" target=\"_blank\">Death Toll from Houthi Attack on Training Center in Yemen’s Shabwa Rises to 63</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5fLVlGcjAtSUVDNWMtMnBCUG9IVGRKeDBPZmFhSmVEWTBBQjBCOHhvWTctYlBKQVA2N3RIRjNUcG8waDlqWkxwQnJwSTViWDFkYXhSbFdTcERRUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.823Z"
+    },
+    {
+      "id": "rss_4c3943f01c427c32",
+      "timestamp": 1792488696000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Deadly Houthi strike exposes risks facing Yemen’s government forces - The Arab Weekly",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNZmRaMTB5ZEtYUE1VUldYdzBZVHh2YlpveWNDZk9WS1hxUmVMMnd4RWZ2U3FxZG1OWFJrYXEzZVA2TnhXVkJmVDRhVjlOZjcyWVJwd2xUOXdpWW1nOWVENjdIdTRvVlRfMHJxWm9weHJPWXdJcWNMOWtuYjV1MTJKMzdWdkh2ZE1YeU9kLUFQdFh6LVRmUlpB?oc=5\" target=\"_blank\">Deadly Houthi strike exposes risks facing Yemen’s government forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Arab Weekly</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZmRaMTB5ZEtYUE1VUldYdzBZVHh2YlpveWNDZk9WS1hxUmVMMnd4RWZ2U3FxZG1OWFJrYXEzZVA2TnhXVkJmVDRhVjlOZjcyWVJwd2xUOXdpWW1nOWVENjdIdTRvVlRfMHJxWm9weHJPWXdJcWNMOWtuYjV1MTJKMzdWdkh2ZE1YeU9kLUFQdFh6LVRmUlpB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
+    },
+    {
+      "id": "rss_e3a88e5172cea872",
+      "timestamp": 1792483128000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills 53 in Yemen's deadliest strike - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNM2hRdXN3WDVGN2VLankweGotZ3VsUFVaWjFfNWZ5akJ2NjFRT3BtOElwZ3lWWmFua1hrRU9QcUNrdEhDLUp3b0xqbEpxT3dLaTRJOHNmSHJocWFMU0htTjJqUHZHYXF6czNpRDVBekJ6RnVLTFV0ZTZrQnVFd1VXZUZaYmo?oc=5\" target=\"_blank\">Houthi attack kills 53 in Yemen's deadliest strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM2hRdXN3WDVGN2VLankweGotZ3VsUFVaWjFfNWZ5akJ2NjFRT3BtOElwZ3lWWmFua1hrRU9QcUNrdEhDLUp3b0xqbEpxT3dLaTRJOHNmSHJocWFMU0htTjJqUHZHYXF6czNpRDVBekJ6RnVLTFV0ZTZrQnVFd1VXZUZaYmo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.823Z"
+    },
     {
       "id": "rss_eb2eac9dd80a985a",
       "timestamp": 1792473331000,
@@ -50,6 +176,27 @@
       "fetched_at": "2026-10-20T06:27:29.468Z"
     },
     {
+      "id": "rss_faa0abbbdcebbf41",
+      "timestamp": 1792464840000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi rebels strike Yemen’s government forces, killing at least 53 - NBC News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3B5QUxha3llVXNVMTV2dXF2S243NlpESnJiTnJ5Qk5xZ2VkdmQteTJxb2tYRC1wQVhKa3YycUhtYU1KakRVV1VRcFBKMDZHS2tnS1hPZl8xOFdDUUVDUU45cEJEYTdlZHlGUEh3bHFGbTNlZGhrcG5GV2dpazRlbzcwQzlLMlgzd2dyMXVtT25NaTdMOTRDODFvcFNRQ1daZ3BiUF82NG04X1F1TnphNWxISzk?oc=5\" target=\"_blank\">Houthi rebels strike Yemen’s government forces, killing at least 53</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3B5QUxha3llVXNVMTV2dXF2S243NlpESnJiTnJ5Qk5xZ2VkdmQteTJxb2tYRC1wQVhKa3YycUhtYU1KakRVV1VRcFBKMDZHS2tnS1hPZl8xOFdDUUVDUU45cEJEYTdlZHlGUEh3bHFGbTNlZGhrcG5GV2dpazRlbzcwQzlLMlgzd2dyMXVtT25NaTdMOTRDODFvcFNRQ1daZ3BiUF82NG04X1F1TnphNWxISzk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
+    },
+    {
       "id": "rss_5b8efae0ac48ca69",
       "timestamp": 1792461419000,
       "source": "OSINT",
@@ -90,6 +237,27 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-20T06:27:29.468Z"
+    },
+    {
+      "id": "rss_6c8741a2c6cbfcf1",
+      "timestamp": 1792457880000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Yemen government camp kills over 50, officials say - The Japan Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNOWFoYTdmOHlBN1kwV0RYOFBJaXVhc2M0aXpsUnBCdnhHS082M1ZVVHhES1VDTC05bXc1cHNjcGVwV1VNM25feTRzeVFVaURvT0U2Q0huWUNyVk1BTDdJMFR0dFlMdmNMaFZ2Wjk1RTB2TkE3cm1QS0lOY3FUWUdSZzJ3?oc=5\" target=\"_blank\">Houthi attack on Yemen government camp kills over 50, officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNOWFoYTdmOHlBN1kwV0RYOFBJaXVhc2M0aXpsUnBCdnhHS082M1ZVVHhES1VDTC05bXc1cHNjcGVwV1VNM25feTRzeVFVaURvT0U2Q0huWUNyVk1BTDdJMFR0dFlMdmNMaFZ2Wjk1RTB2TkE3cm1QS0lOY3FUWUdSZzJ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
     },
     {
       "id": "rss_e21c1c2bd4db48e9",
@@ -199,6 +367,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_870a8a6196b9a755",
+      "timestamp": 1792426851000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TZXdMd0l5UkRDUDE2NTlZT3dWa1kweUJMTUt5ZFFWeUFVek9TYkVGYmJyNDlEVlVXS3ZONGVISXZBZ0F4XzdyYms1ZzdidWszdGVuVUNWdTkzYU0?oc=5\" target=\"_blank\">Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5TZXdMd0l5UkRDUDE2NTlZT3dWa1kweUJMTUt5ZFFWeUFVek9TYkVGYmJyNDlEVlVXS3ZONGVISXZBZ0F4XzdyYms1ZzdidWszdGVuVUNWdTkzYU0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T11:56:58.822Z"
     },
     {
       "id": "rss_ef6315b38e0f9fd2",
@@ -10627,203 +10818,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T20:19:51.132Z"
-    },
-    {
-      "id": "rss_0ac8541ac5600e20",
-      "timestamp": 1790077969000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Belgium set to send frigate to EU’s Aspides mission in late October - euractiv.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOUzlJbXkzZ29uTm1ZQXBSVFB5amRGR2RyUU1sbjJKSkc1YXVJZHFRa2RNM3B1VWxNS0I3TlU2N1J0MWF3U0ctdmtSMUxHclF6RnczQ2RZeUw3NlIxNmJGQ0hyYlhualo0UWRkSzlGVkVndFhVTm80SGszT1NId1JYMWJlQ2ExQmFlb2hWTWNRZF90SWwxc3gxYnJBOEN5Zw?oc=5\" target=\"_blank\">Belgium set to send frigate to EU’s Aspides mission in late October</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euractiv.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUzlJbXkzZ29uTm1ZQXBSVFB5amRGR2RyUU1sbjJKSkc1YXVJZHFRa2RNM3B1VWxNS0I3TlU2N1J0MWF3U0ctdmtSMUxHclF6RnczQ2RZeUw3NlIxNmJGQ0hyYlhualo0UWRkSzlGVkVndFhVTm80SGszT1NId1JYMWJlQ2ExQmFlb2hWTWNRZF90SWwxc3gxYnJBOEN5Zw?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:02.234Z"
-    },
-    {
-      "id": "rss_56f127a8915e4174",
-      "timestamp": 1790067815000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen and its allies attack Iran-backed Houthi positions - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQc3VyRGdlNWhtX1MzQWdmWTlWWjA3QTFrbWk2RlRraDNPb18zSHJkaE5vYUZNRUstZDRRUFp4MzB4R3RPT1MzVTNfU0R4eHVLUXRkU0x2U3ZfVlRKUGFnTUduX3FBZVEwTk01WlFpVklTQTJMdkRpYmM0MV9YckVnTmFZSnMtSHdSUGNqbjBzclBGZw?oc=5\" target=\"_blank\">Yemen and its allies attack Iran-backed Houthi positions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQc3VyRGdlNWhtX1MzQWdmWTlWWjA3QTFrbWk2RlRraDNPb18zSHJkaE5vYUZNRUstZDRRUFp4MzB4R3RPT1MzVTNfU0R4eHVLUXRkU0x2U3ZfVlRKUGFnTUduX3FBZVEwTk01WlFpVklTQTJMdkRpYmM0MV9YckVnTmFZSnMtSHdSUGNqbjBzclBGZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:01.290Z"
-    },
-    {
-      "id": "rss_f73c60aa93ddae03",
-      "timestamp": 1790065507000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Red Sea Crisis | EU Aspides Mission | Kaja Kallas | Warships | Houthi Threats - aaj.tv",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MR1BLMWhLR0RmMi1Dc1lycVpScXVIdk1pWXJBQzl4d3hkUG5UVkhQRnNKZ1U5UXZ4aFJuZG4xVFJfMjhOcVM1RlU3cmU?oc=5\" target=\"_blank\">Red Sea Crisis | EU Aspides Mission | Kaja Kallas | Warships | Houthi Threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aaj.tv</font>",
-      "tags": [
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5MR1BLMWhLR0RmMi1Dc1lycVpScXVIdk1pWXJBQzl4d3hkUG5UVkhQRnNKZ1U5UXZ4aFJuZG4xVFJfMjhOcVM1RlU3cmU?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:02.234Z"
-    },
-    {
-      "id": "rss_ae80dadf1973a3df",
-      "timestamp": 1790063356000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "AI-generated clip passed off as Houthi attack on Riyadh airport - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQb3NmdE9xcU1janFRdXIyNkRPN25WNmZvTjVRcEI3UHl5WktBQi03RnU5YlRYb0FxMy1TNEU0QTQxQlhPQ21Rd3ZVdERGaXhBSDVCOUpVNlJvTElqZmFCMDJtT0VBRWU2eExBRGU5VkViMWJnX3pNOGJ1dXg2aE1vQg?oc=5\" target=\"_blank\">AI-generated clip passed off as Houthi attack on Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQb3NmdE9xcU1janFRdXIyNkRPN25WNmZvTjVRcEI3UHl5WktBQi03RnU5YlRYb0FxMy1TNEU0QTQxQlhPQ21Rd3ZVdERGaXhBSDVCOUpVNlJvTElqZmFCMDJtT0VBRWU2eExBRGU5VkViMWJnX3pNOGJ1dXg2aE1vQg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:01.289Z"
-    },
-    {
-      "id": "rss_80a2e083efa83b82",
-      "timestamp": 1790059226000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "G7 leaders call on Yemen's Houthis to stop strikes on Saudi Arabia - euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQkVIaXowV2g3aFpNM0J4VklMQzdGVU9SbVV3Y3E1Rm1vRWI2R1dMZmRYNkxSbTFzRzA4czZ5WU9KLXRTX1dGOTR0WlFoNDBaVUNpQUpuOUtzWTdtNmh6U2hOWlZXa2I5czZnUzNrTmhyLWp0RmJGbXhmazhSdGN4azVpYTZXcmFjcFVsQ3ZoXzhtQjR1eGdZb0ZGOUxvZGlMOGhJamtjenp3dw?oc=5\" target=\"_blank\">G7 leaders call on Yemen's Houthis to stop strikes on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euronews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQkVIaXowV2g3aFpNM0J4VklMQzdGVU9SbVV3Y3E1Rm1vRWI2R1dMZmRYNkxSbTFzRzA4czZ5WU9KLXRTX1dGOTR0WlFoNDBaVUNpQUpuOUtzWTdtNmh6U2hOWlZXa2I5czZnUzNrTmhyLWp0RmJGbXhmazhSdGN4azVpYTZXcmFjcFVsQ3ZoXzhtQjR1eGdZb0ZGOUxvZGlMOGhJamtjenp3dw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:01.290Z"
-    },
-    {
-      "id": "rss_fc01314dbfcc6151",
-      "timestamp": 1790056755000,
-      "source": "OSINT",
-      "actor": "centcom",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "‘Bad idea’ or ‘betrayal’: Pentagon split that led Trump to cancel Houthi strikes - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE9uNHZIQmI5c3ZzTHZfLWF0ZXdjcFhUSm51aVE0alowLWFVdjNDc1dpYjA2ZV9XazJnNGxqYmkzOU5qd0dWSTE1Sk5vVFhiTGJHREN1a1Jn?oc=5\" target=\"_blank\">‘Bad idea’ or ‘betrayal’: Pentagon split that led Trump to cancel Houthi strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9uNHZIQmI5c3ZzTHZfLWF0ZXdjcFhUSm51aVE0alowLWFVdjNDc1dpYjA2ZV9XazJnNGxqYmkzOU5qd0dWSTE1Sk5vVFhiTGJHREN1a1Jn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T06:31:07.859Z"
-    },
-    {
-      "id": "rss_ba5a20ec1f4421e9",
-      "timestamp": 1790054786000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU's Kallas urges more naval assets for Red Sea mission - Yeni Şafak English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQb3VmUHg0RXpBajR6bVBoQ0FZdWJDQzFweEdsaGVUQzR6a1gtaDh3TUx3UVlIdTU5UFlHME9FMWNzUUZrRXdnejZMWXB0dXZTYmFTQ1dpMkxqdGdMUjMwSUgwY0FIMUs2bWNtMzlfX0tndmFRX3hDUVl5cUF1dXVzNGJ3YUtkWl91ZDQtZXh4dWwtclh4S0dYdQ?oc=5\" target=\"_blank\">EU's Kallas urges more naval assets for Red Sea mission</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Şafak English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQb3VmUHg0RXpBajR6bVBoQ0FZdWJDQzFweEdsaGVUQzR6a1gtaDh3TUx3UVlIdTU5UFlHME9FMWNzUUZrRXdnejZMWXB0dXZTYmFTQ1dpMkxqdGdMUjMwSUgwY0FIMUs2bWNtMzlfX0tndmFRX3hDUVl5cUF1dXVzNGJ3YUtkWl91ZDQtZXh4dWwtclh4S0dYdQ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-27T11:16:19.522Z"
-    },
-    {
-      "id": "rss_45abeecf8ffbfdca",
-      "timestamp": 1790052752000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "European Union Red Sea mission is in need of warships, Kallas says - jpost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiX0FVX3lxTE5aLVBmb2xLNFpCWnBIOE5LeE95ajFLMDdSOWdtVENua2NNc2NDWVZrQmJYb0RYVUNYd3NKNXc5VExpUkhUeHFTMXpleTB2QzZ3VDlBWkMtRUhiLXdmNGo4?oc=5\" target=\"_blank\">European Union Red Sea mission is in need of warships, Kallas says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">jpost.com</font>",
-      "tags": [
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5aLVBmb2xLNFpCWnBIOE5LeE95ajFLMDdSOWdtVENua2NNc2NDWVZrQmJYb0RYVUNYd3NKNXc5VExpUkhUeHFTMXpleTB2QzZ3VDlBWkMtRUhiLXdmNGo4?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T15:43:31.748Z"
-    },
-    {
-      "id": "rss_763ffd97e1555f00",
-      "timestamp": 1790049841000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "G7 leaders condemn Houthi strikes on Saudi Arabia - Al-Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPNXBFZmhBNVFYdFNaZ01KR2xJc2VqNnB1X0ZSWklZYVBPMmU1ekQtUTF3cTFUbmVoWmhBRHpUZGJFZndjVFVqZ3pQbl93OGd3TE9xeWc5alhLT3RuN3lOcGc4Mi15RHFWUTh0ZWx0Z05DbXVvU1N5Y1F2TmtsT1FiRkpSLWU2eUlCb2otQjhQRlFlamdkSWc?oc=5\" target=\"_blank\">G7 leaders condemn Houthi strikes on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNXBFZmhBNVFYdFNaZ01KR2xJc2VqNnB1X0ZSWklZYVBPMmU1ekQtUTF3cTFUbmVoWmhBRHpUZGJFZndjVFVqZ3pQbl93OGd3TE9xeWc5alhLT3RuN3lOcGc4Mi15RHFWUTh0ZWx0Z05DbXVvU1N5Y1F2TmtsT1FiRkpSLWU2eUlCb2otQjhQRlFlamdkSWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T06:31:07.858Z"
     }
   ]
 }
