@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-19T22:32:14.307Z",
+  "last_fetch": "2026-10-20T01:29:19.886Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e21c1c2bd4db48e9",
+      "timestamp": 1792443781000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Postpones ‘Davos in the Desert’ Conference; Houthi Strikes Kill 53 in Yemen Military Facility - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxPeWF3RUhHQ1RJVW5UOTliclpqVWI0STIzVXNrSGFIbl8yUGljcmcwUHZDZGhGSFJlQm5JZVIwRzN0VllvS3NqNXQ2MlkzYmZDNUN0bHQtdUhPS1FzSWw1bHlFMjJTcU5aNGI0VkVJYXJ6UzNaQTRodHB1dHdTS3JqVC1qLUFUYmRKSzNsTEtQcHBaNXBxX3Vxb0ZxdUMzdV9qUzJPSGptb1hrc0NxNnZNOG5JamYzYXVxSmg0VXJVSERLdTdCMTNZb1ZkcmFQWmtHRXotN1l3?oc=5\" target=\"_blank\">Saudi Arabia Postpones ‘Davos in the Desert’ Conference; Houthi Strikes Kill 53 in Yemen Military Facility</a>&nbsp;&nbsp;<font color=\"#6f6",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPeWF3RUhHQ1RJVW5UOTliclpqVWI0STIzVXNrSGFIbl8yUGljcmcwUHZDZGhGSFJlQm5JZVIwRzN0VllvS3NqNXQ2MlkzYmZDNUN0bHQtdUhPS1FzSWw1bHlFMjJTcU5aNGI0VkVJYXJ6UzNaQTRodHB1dHdTS3JqVC1qLUFUYmRKSzNsTEtQcHBaNXBxX3Vxb0ZxdUMzdV9qUzJPSGptb1hrc0NxNnZNOG5JamYzYXVxSmg0VXJVSERLdTdCMTNZb1ZkcmFQWmtHRXotN1l3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T01:29:18.189Z"
+    },
     {
       "id": "rss_0f107f090c6b3f31",
       "timestamp": 1792443600000,
@@ -48,6 +69,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-19T18:22:15.878Z"
+    },
+    {
+      "id": "rss_01246ced11000491",
+      "timestamp": 1792427880000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Kills 53 at Yemen Government Training Camp - Algemeiner.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOQTA1MjFNWGZoOFpZNWZJMkxfU3IxSjRDQkg3b1BFVzFfOXV5VnFLMV8tUDVxQm1VMHR0azBuTnNFWUx2aEwtUkhvRFBLbGlPQkNQU2NJeVpMR1JMWkZFRjQzU3YxNlpKNDRTVC1VQUJ1WnJucEdEcVoyaUJTazhqcjBkZHFIWk1TTXdkT004R2MzNl9FclN3?oc=5\" target=\"_blank\">Houthi Attack Kills 53 at Yemen Government Training Camp</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Algemeiner.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQTA1MjFNWGZoOFpZNWZJMkxfU3IxSjRDQkg3b1BFVzFfOXV5VnFLMV8tUDVxQm1VMHR0azBuTnNFWUx2aEwtUkhvRFBLbGlPQkNQU2NJeVpMR1JMWkZFRjQzU3YxNlpKNDRTVC1VQUJ1WnJucEdEcVoyaUJTazhqcjBkZHFIWk1TTXdkT004R2MzNl9FclN3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-20T01:29:18.188Z"
     },
     {
       "id": "rss_ca1ec5de4f508fa1",
@@ -10780,51 +10822,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-22T06:31:07.859Z"
-    },
-    {
-      "id": "rss_224293f6709cea4f",
-      "timestamp": 1790029800000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Red Sea Map Has Changed. Western Strategy Has Not. - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxONFRLd1dfVFM1Wk82VHZCRWNyRVhIN09jN0lyNlpiY29sYTJyRWY0RUdzSkJGd1FpV0wtMEZzMTRXZFBjWkJKeFlWNndDWGZMbWcwYUNPYjZWM3ZUTUU4N2lpYUtMdTkza3RPajZza1FmV1hoejhtV0I0NUFrN0RVdWFIbVQ3MVlYNlZIbEtR?oc=5\" target=\"_blank\">The Red Sea Map Has Changed. Western Strategy Has Not.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxONFRLd1dfVFM1Wk82VHZCRWNyRVhIN09jN0lyNlpiY29sYTJyRWY0RUdzSkJGd1FpV0wtMEZzMTRXZFBjWkJKeFlWNndDWGZMbWcwYUNPYjZWM3ZUTUU4N2lpYUtMdTkza3RPajZza1FmV1hoejhtV0I0NUFrN0RVdWFIbVQ3MVlYNlZIbEtR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T17:07:19.048Z"
-    },
-    {
-      "id": "rss_8fec6f8779d0597c",
-      "timestamp": 1790028347000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Red Sea, Kallas: \"The Aspides mission would require more than 10 warships.\" - Agenzia Nova",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQX2Y0SkN4M1pQMXdzOE1kUk9mM1FiaVg4TFlKVUtmTHZUcnpKUGNsR2RPcktuUXdFN2JBZ0FHSnRoVXdlMFVWaFRocFZVRkM5bkxRT1pnZEFZMFlpSkJJZC0yWnZQZV81a2JjaVRTMTgzaDZnVmN5c0Fld2d2N21IZzB0UWlsWDQ2ZzBiNHNvaG1fUUlTNnVUZmI1LXY4LURrbkE?oc=5\" target=\"_blank\">Red Sea, Kallas: \"The Aspides mission would require more than 10 warships.\"</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Agenzia Nova</font>",
-      "tags": [
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQX2Y0SkN4M1pQMXdzOE1kUk9mM1FiaVg4TFlKVUtmTHZUcnpKUGNsR2RPcktuUXdFN2JBZ0FHSnRoVXdlMFVWaFRocFZVRkM5bkxRT1pnZEFZMFlpSkJJZC0yWnZQZV81a2JjaVRTMTgzaDZnVmN5c0Fld2d2N21IZzB0UWlsWDQ2ZzBiNHNvaG1fUUlTNnVUZmI1LXY4LURrbkE?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-22T12:18:02.234Z"
     }
   ]
 }
