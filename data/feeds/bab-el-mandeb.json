@@ -1,8 +1,121 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-21T06:57:02.281Z",
+  "last_fetch": "2026-10-21T12:44:26.662Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_2442e1c8c3f24783",
+      "timestamp": 1792576073000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "Yemen reports airstrikes on Houthi positions, missile attack on Aden airport - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxONDlmbk1VUUxpX3p3QlpaUnZkSUUtWk1WdFlMRHg3LTdmU1BHZzBUUUl5QV95ZEpyeFRVVm1yS1hKU2N4Q2R2bG52LU5ZWGJmTU1hTGVGdkJqbDRVd0VLeXE2cWwyNGxmY0h4Y0xQOW02dDROZU8xcGxlTG5HcEt3NDY1dUkzMlZGbmdhbFI2NEkzUWtUbTNxVHQ3SzI3Y00xT0xiajdNUkhjWmdiY3lOQXVSaFVwRFVDODZlYg?oc=5\" target=\"_blank\">Yemen reports airstrikes on Houthi positions, missile attack on Aden airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONDlmbk1VUUxpX3p3QlpaUnZkSUUtWk1WdFlMRHg3LTdmU1BHZzBUUUl5QV95ZEpyeFRVVm1yS1hKU2N4Q2R2bG52LU5ZWGJmTU1hTGVGdkJqbDRVd0VLeXE2cWwyNGxmY0h4Y0xQOW02dDROZU8xcGxlTG5HcEt3NDY1dUkzMlZGbmdhbFI2NEkzUWtUbTNxVHQ3SzI3Y00xT0xiajdNUkhjWmdiY3lOQXVSaFVwRFVDODZlYg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.224Z"
+    },
+    {
+      "id": "rss_2f096d11cf4f841f",
+      "timestamp": 1792571873000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemeni Government Forces Repel Triple-Axis Houthi Attack on Taiz - Global Arab Network",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNRXRwUnlnQUZBeGtJTGFjc24ya1RKNnUyWVlZX2N2YnNQc2ZHVTBJdElheEt6MmlmUHNwam5ENEo0bzlXTUtPTkNTNExGRFdvS3M0Y0g1cmozSkRybGk2NDlSa2RicWROMS1pRlBwaHVra3dZX1U0ckJSVEJ3S1JRdDlwY2p3dVlWQi05aGZ6TWRLaGJSeVBoeWdrWC10ZUFYNHJ1SWdtSmcydnEzNC1Ub1BVang?oc=5\" target=\"_blank\">Yemeni Government Forces Repel Triple-Axis Houthi Attack on Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Global Arab Network</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRXRwUnlnQUZBeGtJTGFjc24ya1RKNnUyWVlZX2N2YnNQc2ZHVTBJdElheEt6MmlmUHNwam5ENEo0bzlXTUtPTkNTNExGRFdvS3M0Y0g1cmozSkRybGk2NDlSa2RicWROMS1pRlBwaHVra3dZX1U0ckJSVEJ3S1JRdDlwY2p3dVlWQi05aGZ6TWRLaGJSeVBoeWdrWC10ZUFYNHJ1SWdtSmcydnEzNC1Ub1BVang?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.224Z"
+    },
+    {
+      "id": "rss_3a46f180434f7c87",
+      "timestamp": 1792570711000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pakistan army chief’s latest Iran visit ‘more focused’ on Saudi Arabia-Houthi conflict: Sources - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxOTjhDZkVCNnAwN1A1RUZLUGI0X2g2dUNBX2ZLLW5sSDlyX19sUTgxN3RrTVRhMmU5WFJHSTlzVFJUd1hocEhHN25kUXZLV3hqMTFWZGI1M3A2SUlkeHgxZDdpR000QUcySWM4UkhLSzBjZEpZMkpoMGl3TVB6SndwenB3SkJBdEhlcnRUVkJ3Y0JTd0JDRXhIRkZMc29hVWNDRkNnVElvWWJQZS1FWDcxTmZSM1dvXzZ6MWtUQ3NoNGlsUEZWcnVjVXJua3M1WjA2d1Zn?oc=5\" target=\"_blank\">Pakistan army chief’s latest Iran visit ‘more focused’ on Saudi Arabia-Houthi conflict: Sources</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Aj",
+      "tags": [
+        "iran-proxy",
+        "suez",
+        "cape-route"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOTjhDZkVCNnAwN1A1RUZLUGI0X2g2dUNBX2ZLLW5sSDlyX19sUTgxN3RrTVRhMmU5WFJHSTlzVFJUd1hocEhHN25kUXZLV3hqMTFWZGI1M3A2SUlkeHgxZDdpR000QUcySWM4UkhLSzBjZEpZMkpoMGl3TVB6SndwenB3SkJBdEhlcnRUVkJ3Y0JTd0JDRXhIRkZMc29hVWNDRkNnVElvWWJQZS1FWDcxTmZSM1dvXzZ6MWtUQ3NoNGlsUEZWcnVjVXJua3M1WjA2d1Zn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.223Z"
+    },
+    {
+      "id": "rss_2e11e9363c699514",
+      "timestamp": 1792556700000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "UK to deploy fighter jets, military advisers to Saudi Arabia as defence from Houthi attacks - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ0FlVnJCQi1hVUZVTGVqNTExMTJiRl9RODRza1JrZVEzTE5FdFdObmcwRFd3VlJvelRndXBvZUpuOG05bjVNY0lRYmJsQXA4UVdQNUdONWM3ak12dnp4a1hDaFg3WUxkOVhSVW84UlFFczltS2VFdmJpbC1ESlFBVVpyYTVMTXltVzdtSVpwV2lwcEk4cTFMUEhEYzZhVS1rSTVEWWFZMF9jUkU0bXlqSUppUnRzQkdPYVE5VWFmRnpLekE?oc=5\" target=\"_blank\">UK to deploy fighter jets, military advisers to Saudi Arabia as defence from Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQ0FlVnJCQi1hVUZVTGVqNTExMTJiRl9RODRza1JrZVEzTE5FdFdObmcwRFd3VlJvelRndXBvZUpuOG05bjVNY0lRYmJsQXA4UVdQNUdONWM3ak12dnp4a1hDaFg3WUxkOVhSVW84UlFFczltS2VFdmJpbC1ESlFBVVpyYTVMTXltVzdtSVpwV2lwcEk4cTFMUEhEYzZhVS1rSTVEWWFZMF9jUkU0bXlqSUppUnRzQkdPYVE5VWFmRnpLekE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.224Z"
+    },
+    {
+      "id": "rss_cba25f471fe08c87",
+      "timestamp": 1792549831000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Netanyahu pressing for major new strikes on Iran - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNb1Rrak9DUVcxWUFNREEyZTgtVGRyT1ladW9xeldkR0tadEQxWGFDaS0zR0RrN3U1T3VTNmV2QnVrNHNramJTY0FRZ21IX0FMUWt5N0JGSk5qc2pyQXZBbFFDRkliU3NYanFLbC0tQnNzV0FoaXJuUWoyQ0Z4aDZ0eVY4WmFzbFlwd0JPLTBVNktWYmxQMjlSbzJYY0VtZ28?oc=5\" target=\"_blank\">Middle East latest: Netanyahu pressing for major new strikes on Iran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNb1Rrak9DUVcxWUFNREEyZTgtVGRyT1ladW9xeldkR0tadEQxWGFDaS0zR0RrN3U1T3VTNmV2QnVrNHNramJTY0FRZ21IX0FMUWt5N0JGSk5qc2pyQXZBbFFDRkliU3NYanFLbC0tQnNzV0FoaXJuUWoyQ0Z4aDZ0eVY4WmFzbFlwd0JPLTBVNktWYmxQMjlSbzJYY0VtZ28?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.223Z"
+    },
     {
       "id": "rss_926a6e95b1e16af1",
       "timestamp": 1792545916000,
@@ -130,6 +243,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-20T20:04:06.778Z"
+    },
+    {
+      "id": "rss_ab5f5fac33e25dff",
+      "timestamp": 1792518036000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UN says besieged Yemen city at 'grave risk' as Houthis attack - PBS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPTkVmQ0tEMVFTbTRVTWpPa2wtQWpUaXJndzVCdEtBamY2LWZKYlgtal85d0N5WWhFMjJtNUVROWlBREIwbm0xV1Z6UG1NQ0JuaV9pWWRzeDEwY3FfLUxMcm93NHd2YmJhNEt2dTBhcHFEUGc5bi1UVXJrcFdrZm5Cby1XWXNTcTNIWjBFTWkzeDFMLWxMMnF5Uy1n0gGfAUFVX3lxTE9mTnJLaEhSRjFLTkZCZlIzb1FrQ1NoeDFSVTRNaEpqTl9HeG5qTUZGRFhNUURtQTlMX1Z3SXdLMVh5TjJPR0dtZm1BVGt2MF9TWFJORzNkMDBDWFBETUhQOTJYQTRpZ1dtMmU4TGR4ZllSSkl0ZGVMUGJ1ZHVpaXZ4cDNrRjdqcGVhdUs4X0J3Mk5uMGtUQlczWjl0V1AwRQ?oc=5\" target=\"_blank\">U",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPTkVmQ0tEMVFTbTRVTWpPa2wtQWpUaXJndzVCdEtBamY2LWZKYlgtal85d0N5WWhFMjJtNUVROWlBREIwbm0xV1Z6UG1NQ0JuaV9pWWRzeDEwY3FfLUxMcm93NHd2YmJhNEt2dTBhcHFEUGc5bi1UVXJrcFdrZm5Cby1XWXNTcTNIWjBFTWkzeDFMLWxMMnF5Uy1n0gGfAUFVX3lxTE9mTnJLaEhSRjFLTkZCZlIzb1FrQ1NoeDFSVTRNaEpqTl9HeG5qTUZGRFhNUURtQTlMX1Z3SXdLMVh5TjJPR0dtZm1BVGt2MF9TWFJORzNkMDBDWFBETUhQOTJYQTRpZ1dtMmU4TGR4ZllSSkl0ZGVMUGJ1ZHVpaXZ4cDNrRjdqcGVhdUs4X0J3Mk5uMGtUQlczWjl0V1AwRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T12:44:25.224Z"
     },
     {
       "id": "rss_6ed16b9e1e1ce1dd",
@@ -10682,136 +10816,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-24T18:06:41.300Z"
-    },
-    {
-      "id": "rss_658abe601cc61c62",
-      "timestamp": 1790258326000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Who are the Houthis and what do they want? - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vR2dmcDNUcFVqQzVQVWQ5WFBsUDhkbWNPd1ROOFZpV3pOd184NFIyTnd0THdhNTd0M2RQWWxpdFVBSWJodWVXcms5czFSa1RldlhQZVRzSlRFb0E?oc=5\" target=\"_blank\">Who are the Houthis and what do they want?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vR2dmcDNUcFVqQzVQVWQ5WFBsUDhkbWNPd1ROOFZpV3pOd184NFIyTnd0THdhNTd0M2RQWWxpdFVBSWJodWVXcms5czFSa1RldlhQZVRzSlRFb0E?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-25T10:21:52.462Z"
-    },
-    {
-      "id": "rss_a781d2f9ec9c73ac",
-      "timestamp": 1790254744000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "‘New Front’: Iran Warns New US-Israeli Attack Could Expand War to Red Sea - Palestine Chronicle",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOb05RR3ZMUmhfeWtSN2tNTm5TdUZESDRFTFYzTk1rV1V2Y1ZUdDVBdU91OFFQam1ERWpJZ2hHVzhZV1NKQ0RqeXVRc0U5NU5CZWtQTXlnX01CSzZwQXJpU0tmcjI5eXJLMGszNDBZSUN5VTRqWEdyMkMtaGY2ZFNWWXVJQTZvNF91WHhaUTVVa2Q0a3JjZHBGbnNwaktLblAyZFBfdmVWb2xrUQ?oc=5\" target=\"_blank\">‘New Front’: Iran Warns New US-Israeli Attack Could Expand War to Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Palestine Chronicle</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOb05RR3ZMUmhfeWtSN2tNTm5TdUZESDRFTFYzTk1rV1V2Y1ZUdDVBdU91OFFQam1ERWpJZ2hHVzhZV1NKQ0RqeXVRc0U5NU5CZWtQTXlnX01CSzZwQXJpU0tmcjI5eXJLMGszNDBZSUN5VTRqWEdyMkMtaGY2ZFNWWXVJQTZvNF91WHhaUTVVa2Q0a3JjZHBGbnNwaktLblAyZFBfdmVWb2xrUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T13:40:04.983Z"
-    },
-    {
-      "id": "rss_4b3098c5958f4d93",
-      "timestamp": 1790253049000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Intercepts Houthi Missiles Fired at Cities - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcWtFNy1IWF85ZWlEWlAzOU1KQzBScVRhcUxZcmxoMlpjV0d3Y081R0JTd3lUTWQ1VXlhY01YbE15dzdySlYxOUlvQkZLMUVxbWktQmxvSGU1bE9GN3RzTG5LS1hSaGNJM3lBZWpmYkxaWHJVN3dJQUNUUlMxcW9QZmFPTWxrZGRqdlVJbnRRdVEyVGEyckU4TDRQWGh2bjgwdnRKNzJwYmNudw?oc=5\" target=\"_blank\">Saudi Arabia Intercepts Houthi Missiles Fired at Cities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcWtFNy1IWF85ZWlEWlAzOU1KQzBScVRhcUxZcmxoMlpjV0d3Y081R0JTd3lUTWQ1VXlhY01YbE15dzdySlYxOUlvQkZLMUVxbWktQmxvSGU1bE9GN3RzTG5LS1hSaGNJM3lBZWpmYkxaWHJVN3dJQUNUUlMxcW9QZmFPTWxrZGRqdlVJbnRRdVEyVGEyckU4TDRQWGh2bjgwdnRKNzJwYmNudw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T21:38:54.361Z"
-    },
-    {
-      "id": "rss_f09f55db5b6c9181",
-      "timestamp": 1790250562000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemeni government forces repel Houthi attack on route to Aden — Jerusalem Post - UA.NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxNanl1YURDcEZPWWRCWDZwb19JcjRZRU5BbUZhcHZSU2NsQ2ZrY1ZUNVRlbUhnUVdaMEpVTXc5aWZQak4wRlFYY3lSWnU4a3ZKYzVKRmpBa2pUTXp6dW15eXFNdVktMUlmaFNiOE84b0o0cjJNZWJJTndZcGhwLUVzRXExMkc3aXNYVzJBVVRVYzR4RWQ3RDJqMDB1WENVTlR4ZnNPQzd0MA?oc=5\" target=\"_blank\">Yemeni government forces repel Houthi attack on route to Aden — Jerusalem Post</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNanl1YURDcEZPWWRCWDZwb19JcjRZRU5BbUZhcHZSU2NsQ2ZrY1ZUNVRlbUhnUVdaMEpVTXc5aWZQak4wRlFYY3lSWnU4a3ZKYzVKRmpBa2pUTXp6dW15eXFNdVktMUlmaFNiOE84b0o0cjJNZWJJTndZcGhwLUVzRXExMkc3aXNYVzJBVVRVYzR4RWQ3RDJqMDB1WENVTlR4ZnNPQzd0MA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T13:40:04.984Z"
-    },
-    {
-      "id": "rss_9fb373567ad145bb",
-      "timestamp": 1790244983000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen government repels Houthi attack on crucial Aden-Taiz supply line - jpost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQ2U1TW1xZ1NaXy1iQVQydjE5eVhGY0Vvb2g2d0pHRkYxQ19RbVdWRWpTMEQwOUZta1RPak95bEhTQkpPM0F1TE5NWTJXTDJSMDVLakdoRk9mNVJH?oc=5\" target=\"_blank\">Yemen government repels Houthi attack on crucial Aden-Taiz supply line</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">jpost.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBkQ2U1TW1xZ1NaXy1iQVQydjE5eVhGY0Vvb2g2d0pHRkYxQ19RbVdWRWpTMEQwOUZta1RPak95bEhTQkpPM0F1TE5NWTJXTDJSMDVLakdoRk9mNVJH?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T13:40:04.983Z"
-    },
-    {
-      "id": "rss_17254ebac4b687a1",
-      "timestamp": 1790242966000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 3,
-      "text_summary": "Yemen’s government says it repelled Houthi attack on key supply route to Aden - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNbVhjb3hWRFMwR1o1alJiUGtOZklHRW1CUGxBQVhDX1lFWGpVS0pJc3RtU2JjVC02TGdmQW9PTGQ4UnFwVGNWdTFISHlqYVd2SVRweEpSVlFxVGlQMU8wZTJlWlNnVTdyTzZ2eXhqM1NOaUU4d0xBb0FaejdTZXBYQWZ5cHF0T19CYm9BTjI0c0hPcVdNSjVWcEM2RGxlN2tqRVZrc1NCOTBfMDRTV2NjQ1lPS3VTeUpWT0FReHRobw?oc=5\" target=\"_blank\">Yemen’s government says it repelled Houthi attack on key supply route to Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbVhjb3hWRFMwR1o1alJiUGtOZklHRW1CUGxBQVhDX1lFWGpVS0pJc3RtU2JjVC02TGdmQW9PTGQ4UnFwVGNWdTFISHlqYVd2SVRweEpSVlFxVGlQMU8wZTJlWlNnVTdyTzZ2eXhqM1NOaUU4d0xBb0FaejdTZXBYQWZ5cHF0T19CYm9BTjI0c0hPcVdNSjVWcEM2RGxlN2tqRVZrc1NCOTBfMDRTV2NjQ1lPS3VTeUpWT0FReHRobw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T13:40:04.983Z"
     }
   ]
 }
