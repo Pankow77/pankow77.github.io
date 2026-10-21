@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-20T23:16:20.623Z",
+  "last_fetch": "2026-10-21T01:48:41.286Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_926a6e95b1e16af1",
+      "timestamp": 1792545916000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "UK fighter jets to protect Saudi Arabia from Houthi attacks - DW.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09hOG01THVnWTBtMmVfekx4eUpYdnRtdDJZUVpRZFNuQTh5NlE0RlVaYlhHbVJzRTNXaXd4RURST1ZPTFF5TnJ1ODJCdkRCOENXTVVZd09NZHJjeXktRzZCdlJrbVNFdmYwdXUwOEtycjA1OVBlS3ZTZ25KR0NCNUZWWdIBgwFBVV95cUxNY1lEUHVHNzlwOUNJcW5YeE15RllpRmdVZThBdjlvMjdKY2JqUkxfQmV0QkVXbVNVeGgzalVacXhLMURVclhxVjhIT2JkLTZMVVNrUlkzd1hic3RuV25iWXdtSERockhvcXI3RzJ2eHMwYUpHZ0EzZnUxcVFJYW9XTC1Edw?oc=5\" target=\"_blank\">UK fighter jets to protect Saudi Arabia from Houthi attacks</a>&nbsp;",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09hOG01THVnWTBtMmVfekx4eUpYdnRtdDJZUVpRZFNuQTh5NlE0RlVaYlhHbVJzRTNXaXd4RURST1ZPTFF5TnJ1ODJCdkRCOENXTVVZd09NZHJjeXktRzZCdlJrbVNFdmYwdXUwOEtycjA1OVBlS3ZTZ25KR0NCNUZWWdIBgwFBVV95cUxNY1lEUHVHNzlwOUNJcW5YeE15RllpRmdVZThBdjlvMjdKY2JqUkxfQmV0QkVXbVNVeGgzalVacXhLMURVclhxVjhIT2JkLTZMVVNrUlkzd1hic3RuV25iWXdtSERockhvcXI3RzJ2eHMwYUpHZ0EzZnUxcVFJYW9XTC1Edw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T01:48:39.601Z"
+    },
     {
       "id": "rss_616e8bb056720711",
       "timestamp": 1792529040000,
@@ -10791,29 +10812,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-09-25T05:09:54.490Z"
-    },
-    {
-      "id": "rss_59889c26c9413c1b",
-      "timestamp": 1790180648000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iranian advisers helped Houthis seize Yemen's Red Sea coast in less than 48 hours: report - The Hindu",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVHVhWUpScFk5MTdpVTdmdXp6eEdvaU5KOUgxYXBzSG9MQVFSendpTjdyOFE0aDl1OGEwMFBlNlNWR3Btb05OdDZlYnNScTRDMUdFZndLN21waE0xUWp5RTdGSjdlejBZVzg4MjY2TlRDanFPbXQyd0g4dDgtSWxleXlpM2VNbU5XSFoxblFydkpEd29VbTV1VVUzakY0MjFhTjdfMm8tZVdlWnl6Um5FUEc3dmhLdk40TktheHd2eWFoWFllc3Q2M19fdi1Qd3NkaXRYU003WkpONHZEcWRqdGhIZm1Dd9IB7AFBVV95cUxPRHo2VXd0V3ZrdzAzclhDMUpYbzV1UDZfc0hKV29yM2pISkQ1RnBROVJ5djNZNU9faEZnYzV2d0tQRnhXbjVweFN1bUdoUmd6MXZxNzdNcHktQVp1a2dEZEl5U2NOR2",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPVHVhWUpScFk5MTdpVTdmdXp6eEdvaU5KOUgxYXBzSG9MQVFSendpTjdyOFE0aDl1OGEwMFBlNlNWR3Btb05OdDZlYnNScTRDMUdFZndLN21waE0xUWp5RTdGSjdlejBZVzg4MjY2TlRDanFPbXQyd0g4dDgtSWxleXlpM2VNbU5XSFoxblFydkpEd29VbTV1VVUzakY0MjFhTjdfMm8tZVdlWnl6Um5FUEc3dmhLdk40TktheHd2eWFoWFllc3Q2M19fdi1Qd3NkaXRYU003WkpONHZEcWRqdGhIZm1Dd9IB7AFBVV95cUxPRHo2VXd0V3ZrdzAzclhDMUpYbzV1UDZfc0hKV29yM2pISkQ1RnBROVJ5djNZNU9faEZnYzV2d0tQRnhXbjVweFN1bUdoUmd6MXZxNzdNcHktQVp1a2dEZEl5U2NOR28wa0VfMTg2djRwMzVteUNReF9Bb3pZLWlJUlB3LVR5VGdJaFN2VDEzTTVIRXFiSEFFMUs2bm9DUWpPUTdHaVFSUlNzejZxN1V2c1gzSTBaT0Z1MWpBMkR3ODc5SmtBZTYyVVRZZ3hXU2pLaUhUcjhPQjdBZVlELWpmWGh6WlJXSUtZaTh3SQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-23T17:39:39.801Z"
     }
   ]
 }

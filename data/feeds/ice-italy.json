@@ -1,8 +1,29 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-10-20T23:16:22.981Z",
-  "epoch_count": 86,
+  "last_fetch": "2026-10-21T01:48:43.052Z",
+  "epoch_count": 89,
   "epochs": [
+    {
+      "id": "rss_2d02040ca73e201e",
+      "timestamp": 1792472785000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "SIAL Paris 2026, l’Italia protagonista con 700 aziende e 218 imprese nella collettiva ICE - Beverfood.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE9xaVROMElfNW9FNkFpbS1yREgxUlctNDhVVGR5VXhtbWRGd0s1TDZrRC12OTZYRW9JalhJNnFBeHJHSnMxU3ZTUDBhZThLSWd6elJwempqY0ZubV9yZWhUT0ZJeW5xRUJlU2xmWHBPM2NUVFU?oc=5\" target=\"_blank\">SIAL Paris 2026, l’Italia protagonista con 700 aziende e 218 imprese nella collettiva ICE</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Beverfood.com</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9xaVROMElfNW9FNkFpbS1yREgxUlctNDhVVGR5VXhtbWRGd0s1TDZrRC12OTZYRW9JalhJNnFBeHJHSnMxU3ZTUDBhZThLSWd6elJwempqY0ZubV9yZWhUT0ZJeW5xRUJlU2xmWHBPM2NUVFU?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T01:48:43.051Z"
+    },
     {
       "id": "rss_8cd672a6659ab1a9",
       "timestamp": 1792408679000,
@@ -26,6 +47,48 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-19T11:56:36.714Z"
+    },
+    {
+      "id": "rss_a7c333b7cbdb4bb8",
+      "timestamp": 1792402980000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Al via a Parigi il Salone internazionale dell'alimentazione - ANSA",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggJBVV95cUxQS3ZZMU9HWFVhOW5TREp5NHJENzc3blRhd2RTYjJySXlCcUEySTFkMDI3T1BmNWJPa2R5RjZrYUttYlp2NXY3eERkTXRJWXUwXzhtTDNLWHhMQ2haYkx6TDIydUo2QUREanBVNTZsSk5DWmJtR29nZW4tbmZDQVpkNUVTMXJoamlKYWZoYW0wRFdIQUdoTDJ0S1pVS3Z3UV9HZFZ6RURLcXh0Q2g2MWozYXF3Ui1CeHBEb3Ata3JUeWZJRndKM3ZBbjNxbVRJZ3BxRWI4S0ZEQ1FRRlg1NzIxdXQ2b3h6V2N4d3FPbmhNRTN3WW5fYm9vSnpMLTFrOHBMMHfSAYcCQVVfeXFMTW1pVi1lbWZCLXF1bTZLb05vaHUxU1p0QTJncE9oWHU5T3ZBNUsyeklSZXlTZ2xPcEVfQ0VTem05a204TG1xWEtqNF",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQS3ZZMU9HWFVhOW5TREp5NHJENzc3blRhd2RTYjJySXlCcUEySTFkMDI3T1BmNWJPa2R5RjZrYUttYlp2NXY3eERkTXRJWXUwXzhtTDNLWHhMQ2haYkx6TDIydUo2QUREanBVNTZsSk5DWmJtR29nZW4tbmZDQVpkNUVTMXJoamlKYWZoYW0wRFdIQUdoTDJ0S1pVS3Z3UV9HZFZ6RURLcXh0Q2g2MWozYXF3Ui1CeHBEb3Ata3JUeWZJRndKM3ZBbjNxbVRJZ3BxRWI4S0ZEQ1FRRlg1NzIxdXQ2b3h6V2N4d3FPbmhNRTN3WW5fYm9vSnpMLTFrOHBMMHfSAYcCQVVfeXFMTW1pVi1lbWZCLXF1bTZLb05vaHUxU1p0QTJncE9oWHU5T3ZBNUsyeklSZXlTZ2xPcEVfQ0VTem05a204TG1xWEtqNFZ5dF96V3RabERmTFhqSTlGMUxMTVdRRjBCM01EUDlLYkNuNVIzV01jOWNCdzh3T2JjZG5GOUY4ZmFES1ZmY2I2WUVfeVU4enY3THVJUTFCcE9nQk1wc242TlJIWmxwNDE2bGFjRVhVTFFTb05HNV9zZkRjTnM4NUwtcHVoVVN5eGthb0NEOTdnUG0tTTRjV3ZVb09wN2cxSHhJcXZ5TlVuNmt4aVZfVmV1VjgyUHByT3dXWXFvRm40OUJrclU?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T01:48:43.051Z"
+    },
+    {
+      "id": "rss_3a92f537403fcba7",
+      "timestamp": 1792256968000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "ICE porta 218 imprese italiane al SIAL di Parigi - Italpress",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQb05ibG5UcTk3STNGZm45TEFpa1RuVHNXV3JBZGFGbHkxdDJXczAzRkxCQTJJZkpZNUh3YzdFNWtxbXVJZkJHejAxUlJ4VGlFdmlzbmFVZE1DMnBzbW9NZzZ1aHpoS3ZZODBzSXNBZENCLTY4WFN5Nk1GWmxQQ284Sg?oc=5\" target=\"_blank\">ICE porta 218 imprese italiane al SIAL di Parigi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Italpress</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQb05ibG5UcTk3STNGZm45TEFpa1RuVHNXV3JBZGFGbHkxdDJXczAzRkxCQTJJZkpZNUh3YzdFNWtxbXVJZkJHejAxUlJ4VGlFdmlzbmFVZE1DMnBzbW9NZzZ1aHpoS3ZZODBzSXNBZENCLTY4WFN5Nk1GWmxQQ284Sg?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-21T01:48:43.052Z"
     },
     {
       "id": "rss_cdd8cf1947738949",
