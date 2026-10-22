@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-21T21:09:40.780Z",
+  "last_fetch": "2026-10-22T00:05:12.066Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_98a200b8cf753af5",
+      "timestamp": 1792624349000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "EXCLUSIVE: US orders diplomats to depart Saudi Arabia amid Houthi strikes - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxONDg0WFNBeGFxeHpUVUsya2RYd0k3XzF6bXU3eGpZVnh2T25MWHVsQzVrbE9PNEdaWnpfN1dmRmtxajMtbl8yZ29EWUxYaXAxcnkxcFN1NEVDLVE3bUtkR0NwZDVPN2haVXFERXRUeHRnQ2QyVDhVdjBNa2FIUFVDOWFicGJOQVVWR0JFMnZSM0NLV09nZHk5UzA2LTgtbmFEVnlYZDI1Uk9ic1hyLTZ0Z2NKbWI5QWgtWWE3ZzV4eE11bmpCcGstTFAzQnVGUQ?oc=5\" target=\"_blank\">EXCLUSIVE: US orders diplomats to depart Saudi Arabia amid Houthi strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxONDg0WFNBeGFxeHpUVUsya2RYd0k3XzF6bXU3eGpZVnh2T25MWHVsQzVrbE9PNEdaWnpfN1dmRmtxajMtbl8yZ29EWUxYaXAxcnkxcFN1NEVDLVE3bUtkR0NwZDVPN2haVXFERXRUeHRnQ2QyVDhVdjBNa2FIUFVDOWFicGJOQVVWR0JFMnZSM0NLV09nZHk5UzA2LTgtbmFEVnlYZDI1Uk9ic1hyLTZ0Z2NKbWI5QWgtWWE3ZzV4eE11bmpCcGstTFAzQnVGUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-22T00:05:10.556Z"
+    },
+    {
+      "id": "rss_99394b0c3514774f",
+      "timestamp": 1792604760000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia spends billions on its military. Why can't it stop deadly attacks by Iran's Houthi allies? - CBS News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNWFhHV3RLU0x0aE5pb0d4QmltWmRTalhZMVoyTmJHYTJDd29OSkc2LTNvS2d0bGZpcEIzZXVBWENSSVBaXzRXSzFnYWJOWHBiRTVDS2JEZFF6YXBQRW5YdDl3VTctbFhscGw0WkhIOHZYSk1rcmttcXhvNVRJQThadVdKeUtPZmEwMm9DdkJCZ0lsWlF5a3NabTZmb09LQQ?oc=5\" target=\"_blank\">Saudi Arabia spends billions on its military. Why can't it stop deadly attacks by Iran's Houthi allies?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWFhHV3RLU0x0aE5pb0d4QmltWmRTalhZMVoyTmJHYTJDd29OSkc2LTNvS2d0bGZpcEIzZXVBWENSSVBaXzRXSzFnYWJOWHBiRTVDS2JEZFF6YXBQRW5YdDl3VTctbFhscGw0WkhIOHZYSk1rcmttcXhvNVRJQThadVdKeUtPZmEwMm9DdkJCZ0lsWlF5a3NabTZmb09LQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-22T00:05:10.555Z"
+    },
     {
       "id": "rss_81042fbc1f5089a7",
       "timestamp": 1792598513000,
@@ -132,6 +176,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-21T17:51:03.800Z"
+    },
+    {
+      "id": "rss_01f031542f47cd11",
+      "timestamp": 1792582044000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis deny launching drones towards Saudi Arabia's Medina - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxQc2ZjQXV3eDBJb0ZSQVR6eGFkazItZW9IbnhpQVJESVNVekFRZzJNSFhSRFZjMlRLMmQ0TDFBMHlBQkJ0dlBUY1dVSEQ5Z204MVZ2ODJpQ2xuaVpNb2N3WGdVUExETTdTbXdnMGNYZmVUN1Y2ajZmRUc3ZmZvMFJpT2ozdW85bng5QnRhQVBtUjhocVZwVmt2Q3RIdDdRSU9RcXA1T2JlUmNvVk5vMVk0c21WcDhTbWhIdGdyWnh3?oc=5\" target=\"_blank\">Yemen's Houthis deny launching drones towards Saudi Arabia's Medina</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQc2ZjQXV3eDBJb0ZSQVR6eGFkazItZW9IbnhpQVJESVNVekFRZzJNSFhSRFZjMlRLMmQ0TDFBMHlBQkJ0dlBUY1dVSEQ5Z204MVZ2ODJpQ2xuaVpNb2N3WGdVUExETTdTbXdnMGNYZmVUN1Y2ajZmRUc3ZmZvMFJpT2ozdW85bng5QnRhQVBtUjhocVZwVmt2Q3RIdDdRSU9RcXA1T2JlUmNvVk5vMVk0c21WcDhTbWhIdGdyWnh3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-22T00:05:10.556Z"
     },
     {
       "id": "rss_2442e1c8c3f24783",
@@ -10745,71 +10812,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-25T05:09:54.489Z"
-    },
-    {
-      "id": "rss_cab14270738026e3",
-      "timestamp": 1790282212000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "France to Deploy Forces to Protect Saudi Red Sea Oil Port - WSJ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOMVdValVham5Vb3dTTTc5eHRIS0liNy1MQTNjVjV5T1RBLXlWN3JfaW5vQjRjTWpqTWtkNUFwTS0wZ3dpQ25UeHY2NUMyOWpQbWRqbXpJQXpWRHA5NXROcEZHSHFCWlpCZEJndGRKUkpJaTBOOXFhNGNjblM1YzBobXhYMEpmYUVxUjVYY0xIX0trN2FKTTdQbGh3andkSGlqWndyYVUyWQ?oc=5\" target=\"_blank\">France to Deploy Forces to Protect Saudi Red Sea Oil Port</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOMVdValVham5Vb3dTTTc5eHRIS0liNy1MQTNjVjV5T1RBLXlWN3JfaW5vQjRjTWpqTWtkNUFwTS0wZ3dpQ25UeHY2NUMyOWpQbWRqbXpJQXpWRHA5NXROcEZHSHFCWlpCZEJndGRKUkpJaTBOOXFhNGNjblM1YzBobXhYMEpmYUVxUjVYY0xIX0trN2FKTTdQbGh3andkSGlqWndyYVUyWQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-25T10:21:52.461Z"
-    },
-    {
-      "id": "rss_c28cd36c4b77b985",
-      "timestamp": 1790278138000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil prices settle up about 3% as Houthi attack on Saudi Arabia lifts supply fears - The Lufkin Daily News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAJBVV95cUxNSkZPMXJaX096MUlFbTNXU1hjemdadVk4V2pwVlN2Slcxd1ZNUDh2MHRxME1tbzJVMjl6Z05GMnVVb1EyQklhT0FzNU04QVlpLXBna1VpUlBUaGoyTU1MWGNQUzVXYjVYTzFjaGpJa3NvWl90UjEzVHlEUGVHUnFQdkJ3UUZXMzVsa2tvN1U1aEFBVWxmT3pRUFVCQUhxOWQ5QVJldktNbGJFNTRfaHZNaFpKeHJTejhSSmUwdm9pRHg3TnFfN3FhZDlUYkFNcDJvdHFEOHFxTVJRNklxQTk2U3hUM0loNFV2SERYeVQ4S0VUcVZfaVV6SFFiUW9mOUJueDVQV3RJYkFkaEVf?oc=5\" target=\"_blank\">Oil prices settle up about 3% as Houthi attack on Saudi Arabia lift",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxNSkZPMXJaX096MUlFbTNXU1hjemdadVk4V2pwVlN2Slcxd1ZNUDh2MHRxME1tbzJVMjl6Z05GMnVVb1EyQklhT0FzNU04QVlpLXBna1VpUlBUaGoyTU1MWGNQUzVXYjVYTzFjaGpJa3NvWl90UjEzVHlEUGVHUnFQdkJ3UUZXMzVsa2tvN1U1aEFBVWxmT3pRUFVCQUhxOWQ5QVJldktNbGJFNTRfaHZNaFpKeHJTejhSSmUwdm9pRHg3TnFfN3FhZDlUYkFNcDJvdHFEOHFxTVJRNklxQTk2U3hUM0loNFV2SERYeVQ4S0VUcVZfaVV6SFFiUW9mOUJueDVQV3RJYkFkaEVf?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-24T21:38:54.360Z"
-    },
-    {
-      "id": "rss_dc572cf470ac474d",
-      "timestamp": 1790277766000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Oil prices rise 2% as Houthi missiles add to supply fears By Reuters - Investing.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVkp4c2pSR3J4NDdha09YT2FOdVNXX2xnSk83MDBualFNVjdnMWVMTDJ2NkFFSHM1bVZLSlNyaXFTWGN0WU9FVTA1dUU2MEFfUi1MRTI1c2hzVHpJX3JKX3pCWGhaQ3ROSkg2VU1hYngwU1htR2p3WDR4VEI2YUxGY1hrYm1xTjN6RDVSTEd4eU9XU3lCb3JRR2tZdkstN2NFVFJnY1cya3kyUVNBS0ZuMEsyOGo?oc=5\" target=\"_blank\">Oil prices rise 2% as Houthi missiles add to supply fears By Reuters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVkp4c2pSR3J4NDdha09YT2FOdVNXX2xnSk83MDBualFNVjdnMWVMTDJ2NkFFSHM1bVZLSlNyaXFTWGN0WU9FVTA1dUU2MEFfUi1MRTI1c2hzVHpJX3JKX3pCWGhaQ3ROSkg2VU1hYngwU1htR2p3WDR4VEI2YUxGY1hrYm1xTjN6RDVSTEd4eU9XU3lCb3JRR2tZdkstN2NFVFJnY1cya3kyUVNBS0ZuMEsyOGo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-09-24T21:38:54.361Z"
     }
   ]
 }
