@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-22T19:21:04.191Z",
+  "last_fetch": "2026-10-22T22:34:35.666Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -340,6 +340,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-22T05:09:22.627Z"
+    },
+    {
+      "id": "rss_ae63f158fe06b8ae",
+      "timestamp": 1792629960000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil prices hit five-month high as Houthi attacks stoke Middle East supply fears - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYzBEdGVKYmZ3VVpJajg0TW5DN2VHVEM2aDVTcFJKQVduMnVMTU5NbVcyMGxBanBHY3VvMzJQR1VrQWM4b0hLeG1YaTFWcldTeU9yTlBXc3FiR1FtcUp0SmxhRkJkWmpmZ2x6X3VGZHZEUDNLTE9LTFZNSlBWWjNJVGtaV3YwWkc4QVhxbHozYkx5THpZMVlYVDAtd0dqbUMyOUcyVk91NEYxaFFCZklRWWhjQm5qN2NvVHdWdnZIQVJSMk0?oc=5\" target=\"_blank\">Oil prices hit five-month high as Houthi attacks stoke Middle East supply fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYzBEdGVKYmZ3VVpJajg0TW5DN2VHVEM2aDVTcFJKQVduMnVMTU5NbVcyMGxBanBHY3VvMzJQR1VrQWM4b0hLeG1YaTFWcldTeU9yTlBXc3FiR1FtcUp0SmxhRkJkWmpmZ2x6X3VGZHZEUDNLTE9LTFZNSlBWWjNJVGtaV3YwWkc4QVhxbHozYkx5THpZMVlYVDAtd0dqbUMyOUcyVk91NEYxaFFCZklRWWhjQm5qN2NvVHdWdnZIQVJSMk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-22T22:34:33.751Z"
     },
     {
       "id": "rss_0495e341675b10c2",
@@ -10769,30 +10790,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-26T11:38:15.181Z"
-    },
-    {
-      "id": "rss_68cb03db6e0ce792",
-      "timestamp": 1790417700000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Gulf Cooperation Council condemns Houthi missile, drone attacks on Saudi Arabia - Middle East Monitor",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQdG52TFdJaTBVZ1hKTnl2aVcxWUF3RW9oVk5zWHkzOFlhWmg3TGlnR2FyMjFfLUFnQ2J5eWVuelNNaF9DWUUwcmgxLTZja3RRaW0xd01WS204U3hxbXdmaXJBOXlsbkllOUVEcnhDRWl4ZnhMYzUwdU1MazEzZFplWmdsc1pxZV9mQ2lvcUZMb3VPM3JjcEprZnF1ZlRHY1E0LWVhX000a0JyRzJwdE9LVWFmSG9BSnNsc2hwdnlia9IBxAFBVV95cUxPbno0NTE5YW51bjhTOUQxcVdES0lEcnBlSWM0cFUwTVlEUktvbURvUGFSNTgyc0JiWU5xLTFVckgtVzIwTHg4VmljWGF3bU1zSWltSUllTGplQ1hOUEZkY3ZNbmRWdUdhc3dKSDFqQ2VPdGhlVWVWM3p5ckZybnBCRVhRdTljODBtVUpvV0",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdG52TFdJaTBVZ1hKTnl2aVcxWUF3RW9oVk5zWHkzOFlhWmg3TGlnR2FyMjFfLUFnQ2J5eWVuelNNaF9DWUUwcmgxLTZja3RRaW0xd01WS204U3hxbXdmaXJBOXlsbkllOUVEcnhDRWl4ZnhMYzUwdU1MazEzZFplWmdsc1pxZV9mQ2lvcUZMb3VPM3JjcEprZnF1ZlRHY1E0LWVhX000a0JyRzJwdE9LVWFmSG9BSnNsc2hwdnlia9IBxAFBVV95cUxPbno0NTE5YW51bjhTOUQxcVdES0lEcnBlSWM0cFUwTVlEUktvbURvUGFSNTgyc0JiWU5xLTFVckgtVzIwTHg4VmljWGF3bU1zSWltSUllTGplQ1hOUEZkY3ZNbmRWdUdhc3dKSDFqQ2VPdGhlVWVWM3p5ckZybnBCRVhRdTljODBtVUpvV0w3VlR4TTI0WV9LdlpXV1BYcExqSFBySkhYQjB5M0R2YnBVOHVWOGlzcjdtQ3IxYWxXOGVqOVNm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-29T19:32:05.603Z"
     }
   ]
 }
