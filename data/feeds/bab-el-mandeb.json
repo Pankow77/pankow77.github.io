@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-23T20:00:34.539Z",
+  "last_fetch": "2026-10-23T23:17:43.809Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5917d9839b12600c",
+      "timestamp": 1792787629000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Ethiopian, U.N. and EU envoys warn of Red Sea escalation fallout on Horn of Africa - Sudan Tribune",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqMTBMUjdkc0R0bUMtQUVmVjdVTmVEbUp6ZHgzQ2ZUZnhsVlRheGUzQ3FZbXZlbHAzdUt5dXdTSGEtUDBnRldkUGFyM2gyVGFl?oc=5\" target=\"_blank\">Ethiopian, U.N. and EU envoys warn of Red Sea escalation fallout on Horn of Africa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sudan Tribune</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqMTBMUjdkc0R0bUMtQUVmVjdVTmVEbUp6ZHgzQ2ZUZnhsVlRheGUzQ3FZbXZlbHAzdUt5dXdTSGEtUDBnRldkUGFyM2gyVGFl?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-23T23:17:42.321Z"
+    },
     {
       "id": "rss_ce4697a1d9573dff",
       "timestamp": 1792760814000,
@@ -10773,27 +10794,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-28T01:04:12.135Z"
-    },
-    {
-      "id": "rss_1a5eb81e3c1c3299",
-      "timestamp": 1790525892000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Airstrike Kills Seven, Injures 40 in Taiz Market, Houthi Health Ministry Says: who 13 outlets blamed - NewsCord",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdEtRSDZ1TDJwT0tfWDNFdmZXbHZHVVFfQVdYTUVyLWpYUGc3enFmdTJram9oYllkZml2aWhGVXVmeW0xZE5FS1AzRDhIaUM0c0llV3ZsbS1zUnZiQVEwRXJ1UWxEakY5dXRVZlZ3bXgxbFBZajNHTjZpVUR4MHJidXRSVzFRdHFfRXRzdGxoVkFLLUM5T2dycGFwX1FxZFZYb0N3cVNTVktJcGdjZXFxZFFlbWlKVVFqVm5Rb1UxVkx2SlpSQ2VycVdjbmthVEphTnJkaDdra2wzTG5GREhDME9sd0dZWElCVlE?oc=5\" target=\"_blank\">Saudi Airstrike Kills Seven, Injures 40 in Taiz Market, Houthi Health Ministry Says: who 13 outlets blamed</a>&n",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQdEtRSDZ1TDJwT0tfWDNFdmZXbHZHVVFfQVdYTUVyLWpYUGc3enFmdTJram9oYllkZml2aWhGVXVmeW0xZE5FS1AzRDhIaUM0c0llV3ZsbS1zUnZiQVEwRXJ1UWxEakY5dXRVZlZ3bXgxbFBZajNHTjZpVUR4MHJidXRSVzFRdHFfRXRzdGxoVkFLLUM5T2dycGFwX1FxZFZYb0N3cVNTVktJcGdjZXFxZFFlbWlKVVFqVm5Rb1UxVkx2SlpSQ2VycVdjbmthVEphTnJkaDdra2wzTG5GREhDME9sd0dZWElCVlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-27T19:28:31.592Z"
     }
   ]
 }
