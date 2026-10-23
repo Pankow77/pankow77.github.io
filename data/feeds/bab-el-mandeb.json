@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-23T11:54:14.392Z",
+  "last_fetch": "2026-10-23T16:20:37.129Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -326,6 +326,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-22T15:27:11.618Z"
+    },
+    {
+      "id": "rss_8ce0eefee448962a",
+      "timestamp": 1792669644000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Parliament wants the EU to designate the Houthis as a terrorist group - European Parliament",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNX1FURHlsTk1neUJqME1mNXgxQmFMcTVTQmhySGNnLWh2MzdqMlVVWEw4Qno4WUNRbjdjQXo5V2d1VzJyTWRxekRtX0VDTV9nRmtKWG8wcmRZbU5kZ0dBbnlYeHF6WVB3Qkg0a0RtMmRDOVdnV3RBX3QtSGsxSloyN2l1LTNBYktZVTZWazFMRjVNUUZaMlEwdTZ5dW5HTGlUc3lUUDFtVW9yWFJ1MElQNDdLVGlWNUdYOUVvcE9CV1FGa01qWmU1Rm9ZaW8wcEFxMmc?oc=5\" target=\"_blank\">Parliament wants the EU to designate the Houthis as a terrorist group</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">European Parliament</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNX1FURHlsTk1neUJqME1mNXgxQmFMcTVTQmhySGNnLWh2MzdqMlVVWEw4Qno4WUNRbjdjQXo5V2d1VzJyTWRxekRtX0VDTV9nRmtKWG8wcmRZbU5kZ0dBbnlYeHF6WVB3Qkg0a0RtMmRDOVdnV3RBX3QtSGsxSloyN2l1LTNBYktZVTZWazFMRjVNUUZaMlEwdTZ5dW5HTGlUc3lUUDFtVW9yWFJ1MElQNDdLVGlWNUdYOUVvcE9CV1FGa01qWmU1Rm9ZaW8wcEFxMmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-23T16:20:35.510Z"
     },
     {
       "id": "rss_dd787ecaa1f89662",
@@ -10770,27 +10791,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-27T15:43:37.220Z"
-    },
-    {
-      "id": "rss_5e5fc347dc948cfe",
-      "timestamp": 1790510801000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen government forces widen attacks against Houthis: What we know - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxONGVIbjJTVHlFbzBZdEp6ano2SzlFaFBxTXM0YnhrNThlN2dubVFwSmU3RlBHbjVCU056bWxTVVYxTnNZbnFlbFRveUdnM3BMTjMzbEdfVWhKd2ZUalhKTVhpV2RWN2dyY3R6ckdhcmszUGdzYlZRWVJLaVdjUzRENlEyZHdlRzlQZmtseE9oNmtNUlUyZWM2ZDVaX2FvUXBUM2JaNzEta2ZZVTjSAbABQVVfeXFMTmtZQ0p2ajhMWXZxOEFaRFU0b2U2aFZQWGZ4U181ZUJGbDNBcG1rWXlEd0FxdDN0ZTh0S3hnTXctOEk1SkhHaU1qZ0ZYa3drZGtoNUUza2tORGsyY2NaMGJwTG14eHFZZDZHOWJETHlCby1Id1ppRk85aUtkZ0pNNmlOZU1kSVltY3pWNnNzbEtRN2NBaUgwQUhuV0NUdGxCek",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONGVIbjJTVHlFbzBZdEp6ano2SzlFaFBxTXM0YnhrNThlN2dubVFwSmU3RlBHbjVCU056bWxTVVYxTnNZbnFlbFRveUdnM3BMTjMzbEdfVWhKd2ZUalhKTVhpV2RWN2dyY3R6ckdhcmszUGdzYlZRWVJLaVdjUzRENlEyZHdlRzlQZmtseE9oNmtNUlUyZWM2ZDVaX2FvUXBUM2JaNzEta2ZZVTjSAbABQVVfeXFMTmtZQ0p2ajhMWXZxOEFaRFU0b2U2aFZQWGZ4U181ZUJGbDNBcG1rWXlEd0FxdDN0ZTh0S3hnTXctOEk1SkhHaU1qZ0ZYa3drZGtoNUUza2tORGsyY2NaMGJwTG14eHFZZDZHOWJETHlCby1Id1ppRk85aUtkZ0pNNmlOZU1kSVltY3pWNnNzbEtRN2NBaUgwQUhuV0NUdGxCek5qYkpFVjlvcFVmOWI0UlI?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-09-29T14:11:44.128Z"
     }
   ]
 }
