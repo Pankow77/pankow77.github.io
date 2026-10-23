@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-22T22:34:35.666Z",
+  "last_fetch": "2026-10-23T01:09:21.810Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e678678ee46a799d",
+      "timestamp": 1792698512000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Middle East latest: UAE condemns Houthi attack on Saudi Arabia’s Dammam airport - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOQ2R1cnowWHhzQXdZcXRMWGVEZU83YmJaLUE3bHk1b1hleDhCNmpwcVJDbEg0Zll0LWpjTkhwdE1qc3hUdTJYSjdmMFlMaml2eTBPeHVwWll2bVFsVDJ5REx0RHk3YllpeXZuVVc5enVhS2ZyazlYQ0xGQl9WV0NMM1l0eHM0QQ?oc=5\" target=\"_blank\">Middle East latest: UAE condemns Houthi attack on Saudi Arabia’s Dammam airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQ2R1cnowWHhzQXdZcXRMWGVEZU83YmJaLUE3bHk1b1hleDhCNmpwcVJDbEg0Zll0LWpjTkhwdE1qc3hUdTJYSjdmMFlMaml2eTBPeHVwWll2bVFsVDJ5REx0RHk3YllpeXZuVVc5enVhS2ZyazlYQ0xGQl9WV0NMM1l0eHM0QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-23T01:09:20.134Z"
+    },
     {
       "id": "rss_aff86b05a86051a2",
       "timestamp": 1792695650000,
@@ -10767,29 +10788,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-26T18:56:45.394Z"
-    },
-    {
-      "id": "rss_d90b134a2c84dd78",
-      "timestamp": 1790420405000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Live Updates: Latest from Israel, Iran, and the Middle East - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE8zNFdEUFd3U2hnbDZkU0FjOVZ4Q3ExbHdGS2s0NDJUcDJ1T1FXUHpfdzg1d1V6bFFGY2FtWE1hSHhVT29BOTU2eGJJdXExVzAyMWQ4dkFqN1lGS1dDaEtFZ0xURFE0b3N3dXo4NWdjREIyT05DUXF3bFVoZ1dpVlU?oc=5\" target=\"_blank\">Live Updates: Latest from Israel, Iran, and the Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8zNFdEUFd3U2hnbDZkU0FjOVZ4Q3ExbHdGS2s0NDJUcDJ1T1FXUHpfdzg1d1V6bFFGY2FtWE1hSHhVT29BOTU2eGJJdXExVzAyMWQ4dkFqN1lGS1dDaEtFZ0xURFE0b3N3dXo4NWdjREIyT05DUXF3bFVoZ1dpVlU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-26T11:38:15.181Z"
     }
   ]
 }
