@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-23T06:14:08.729Z",
+  "last_fetch": "2026-10-23T11:54:14.392Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4d4ca3b0c4e6cdc9",
+      "timestamp": 1792749656000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi Attack on Dammam Airport Kills Two and Injures Eight - Travel Radar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQZmE0Tl9YMGxWYUZ1YjJqYkNDZGIwaW14Y3pkSWNOQW5oQjNLbzkzanJzbEl1cW5yTUtvQnViU2p5QUUxOG5remJLbEZBeTg4MEw0VkZYOEZMdmpMclpSOEFjYWNKUlFCRWVIVm1JMk94dkVIX0JrNlBHMlFHYThESnk1QU51WjBhQnhsdVZn?oc=5\" target=\"_blank\">Houthi Attack on Dammam Airport Kills Two and Injures Eight</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Travel Radar</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZmE0Tl9YMGxWYUZ1YjJqYkNDZGIwaW14Y3pkSWNOQW5oQjNLbzkzanJzbEl1cW5yTUtvQnViU2p5QUUxOG5remJLbEZBeTg4MEw0VkZYOEZMdmpMclpSOEFjYWNKUlFCRWVIVm1JMk94dkVIX0JrNlBHMlFHYThESnk1QU51WjBhQnhsdVZn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-23T11:54:12.480Z"
+    },
     {
       "id": "rss_d875e5c0e413a91e",
       "timestamp": 1792735875000,
@@ -10770,27 +10791,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-09-29T14:11:44.128Z"
-    },
-    {
-      "id": "rss_69b2aa6adf13e1d4",
-      "timestamp": 1790500954000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Morocco’s king expresses support for Riyadh after Houthi attacks - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdFYyNEtVXzZ3ZHRkREdfY0hCVDhGU19qQjJpQkl6alZBMVNQNV9vdFhtRFo5RThZV1ZHRGJHbzNrenZXN2hqRG1XUlJxbGhYZnA4OGc0MFl6c0R2bmljZmlXelhoZFh1RXd6cl9hc2FYQS0tYjN6TUcxRHREaEVvdjRXc2dTdy1RU0RBN1lJczUwckJnNTN6TV9HMzIzQUE0TzZ3TzBoUzNSUQ?oc=5\" target=\"_blank\">Morocco’s king expresses support for Riyadh after Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdFYyNEtVXzZ3ZHRkREdfY0hCVDhGU19qQjJpQkl6alZBMVNQNV9vdFhtRFo5RThZV1ZHRGJHbzNrenZXN2hqRG1XUlJxbGhYZnA4OGc0MFl6c0R2bmljZmlXelhoZFh1RXd6cl9hc2FYQS0tYjN6TUcxRHREaEVvdjRXc2dTdy1RU0RBN1lJczUwckJnNTN6TV9HMzIzQUE0TzZ3TzBoUzNSUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-27T11:16:18.561Z"
     }
   ]
 }
