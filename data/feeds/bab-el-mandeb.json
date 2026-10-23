@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-23T16:20:37.129Z",
+  "last_fetch": "2026-10-23T20:00:34.539Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ce4697a1d9573dff",
+      "timestamp": 1792760814000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Coalition air defenses down missiles bound for Riyadh, Khamis Mushait amid ongoing Houthi attacks - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxOSmlfSUVJUXZKd0Y2WTQ0TEpaQnk1cFBlYzZ4dGZqYnBQMG9tcXY3RkRGOXdyQTZlUXEyRWFTQzNQV1BOWlhFX0dLRlQ1Z2N3c1docTMxa2Q0RHBZQlJtVE8tQmhZVVFUMXdJTFBXbVBrUklWdVBkTVloR2RTY3ZhcExtY1lWc0FfenVsQmxpNDJhajJ2a3ZFdmppUkJTbjhTaE5GVHNnSm1JeWVibmE5NTBBY3ZUUkJ6ejFSY1NXQXdFcENDN3RJWF9OblphSEJWa1hweUt2LVRqZw?oc=5\" target=\"_blank\">Coalition air defenses down missiles bound for Riyadh, Khamis Mushait amid ongoing Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOSmlfSUVJUXZKd0Y2WTQ0TEpaQnk1cFBlYzZ4dGZqYnBQMG9tcXY3RkRGOXdyQTZlUXEyRWFTQzNQV1BOWlhFX0dLRlQ1Z2N3c1docTMxa2Q0RHBZQlJtVE8tQmhZVVFUMXdJTFBXbVBrUklWdVBkTVloR2RTY3ZhcExtY1lWc0FfenVsQmxpNDJhajJ2a3ZFdmppUkJTbjhTaE5GVHNnSm1JeWVibmE5NTBBY3ZUUkJ6ejFSY1NXQXdFcENDN3RJWF9OblphSEJWa1hweUt2LVRqZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-23T20:00:32.848Z"
+    },
     {
       "id": "rss_4d4ca3b0c4e6cdc9",
       "timestamp": 1792749656000,
@@ -10770,27 +10794,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-27T19:28:31.592Z"
-    },
-    {
-      "id": "rss_271d50e9d739456d",
-      "timestamp": 1790512263000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Houthis and Bab El-Mandeb: the power of a strategic chokepoint - iari.site",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1RkdFRFZU9NbnlBMVduWHBaSU4xNjd4TGxjVms0N2l0R3VwdVJOUE5YRFpSNE5xc2E0WUwzbTRvODV2dklJd2RxSzNmUHY2M2tGdkVvUXhvR3drMFRVRUliNTJFYVRoX3JQRVFKRmVXVE84Y1lZSW00NFRKenlDRnRTR1BwdERDVTMwQ2lnY3Rid3IxdkwxQVU0MA?oc=5\" target=\"_blank\">The Houthis and Bab El-Mandeb: the power of a strategic chokepoint</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">iari.site</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1RkdFRFZU9NbnlBMVduWHBaSU4xNjd4TGxjVms0N2l0R3VwdVJOUE5YRFpSNE5xc2E0WUwzbTRvODV2dklJd2RxSzNmUHY2M2tGdkVvUXhvR3drMFRVRUliNTJFYVRoX3JQRVFKRmVXVE84Y1lZSW00NFRKenlDRnRTR1BwdERDVTMwQ2lnY3Rid3IxdkwxQVU0MA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-27T15:43:37.220Z"
     }
   ]
 }
