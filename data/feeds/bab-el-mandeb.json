@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-24T01:46:30.144Z",
+  "last_fetch": "2026-10-24T06:48:56.006Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bc717bcb16cbfeb8",
+      "timestamp": 1792817317000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Trump warns of 'another little Epic Fury' amid fears of renewed conflict - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNTngtWlZKb2lHN2huS0pfMUtPZi1SYm0tOHRhMVpRV3ZpbW5ydGZfUVJ2SGtLTGZTR2ZQS1RpZEtzeDhQcUYwOVdyUGZoc1dlQVpUbTdJbGp1UTU4aFplZkJFX0pGMm1JSmVaOVpTN3BVbHZURkpUXzN1b3IyQ05TZ1VkYlp5dlJYTE9aRGZETQ?oc=5\" target=\"_blank\">Middle East latest: Trump warns of 'another little Epic Fury' amid fears of renewed conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNTngtWlZKb2lHN2huS0pfMUtPZi1SYm0tOHRhMVpRV3ZpbW5ydGZfUVJ2SGtLTGZTR2ZQS1RpZEtzeDhQcUYwOVdyUGZoc1dlQVpUbTdJbGp1UTU4aFplZkJFX0pGMm1JSmVaOVpTN3BVbHZURkpUXzN1b3IyQ05TZ1VkYlp5dlJYTE9aRGZETQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-24T06:48:54.411Z"
+    },
+    {
+      "id": "rss_37a321625a62bbd5",
+      "timestamp": 1792807201000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Coalition forces down missile and drone as Houthis keep up strikes on Saudi Arabia - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNTURBeEgzbzVmaEx3ZGNUbkI1Qi04NmMxVFpMd05Dc2dIM01hd3hxTFQ4QkRaOXEyUHRmcEtBRVE4ZmhYMlo2QUF4RGthMVdKZ0RQQXBNc1hWbjRNd2tPcVVXdE1nTU1JYThXelBTaTVwS3ZfZnc3RVVfODdfNEJXMFhRcWIxYnRzcUtBaUFQbXZ2bVNqWkhmQUtLTk5Sb21ZWjNLb19lTk5xSGNYZFNsT3RXSHFOR2dlWlRlTzJTUmZBTVZaM1JZ?oc=5\" target=\"_blank\">Coalition forces down missile and drone as Houthis keep up strikes on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTURBeEgzbzVmaEx3ZGNUbkI1Qi04NmMxVFpMd05Dc2dIM01hd3hxTFQ4QkRaOXEyUHRmcEtBRVE4ZmhYMlo2QUF4RGthMVdKZ0RQQXBNc1hWbjRNd2tPcVVXdE1nTU1JYThXelBTaTVwS3ZfZnc3RVVfODdfNEJXMFhRcWIxYnRzcUtBaUFQbXZ2bVNqWkhmQUtLTk5Sb21ZWjNLb19lTk5xSGNYZFNsT3RXSHFOR2dlWlRlTzJTUmZBTVZaM1JZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-24T06:48:54.412Z"
+    },
     {
       "id": "rss_5917d9839b12600c",
       "timestamp": 1792787629000,
@@ -10752,48 +10798,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-28T07:15:00.788Z"
-    },
-    {
-      "id": "rss_21bc9933dfbd3de2",
-      "timestamp": 1790544302000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Shafaq News..Houthi official cites ‘private channels’ with Iraqi factions - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOUWF6ZnlBMFZIN3ZucmJ6MmNBbWkwbHlRNU9zQWxjb1Q0cEplaGlsbC00UVJkX29mX3VfeGlZX2JENG9kZldQcXNVN2RONjQ1cjE0MXZKUFRDZUlxdlZ1X0NKbERCamhrMVV0RmJud2Y3OVltc0dKNGljWEhsR0NvZlZLcHp6SUxMSzhINndESWQ?oc=5\" target=\"_blank\">Shafaq News..Houthi official cites ‘private channels’ with Iraqi factions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOUWF6ZnlBMFZIN3ZucmJ6MmNBbWkwbHlRNU9zQWxjb1Q0cEplaGlsbC00UVJkX29mX3VfeGlZX2JENG9kZldQcXNVN2RONjQ1cjE0MXZKUFRDZUlxdlZ1X0NKbERCamhrMVV0RmJud2Y3OVltc0dKNGljWEhsR0NvZlZLcHp6SUxMSzhINndESWQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-27T22:28:53.240Z"
-    },
-    {
-      "id": "rss_d68cc06b035e9981",
-      "timestamp": 1790534232000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen: Houthis report deadly Saudi strikes on Taiz market - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2tiTmtOT3NLUTZvN1hYZHlETHUySG5iMnRvU0ltVS03QXAzWmtocndacEhvVGViM2xnbnFFbkhQLWt6eDlkQVhoUWtMRHNrSVBoS2l3VzlCQzVJTXdPTTVNZVg5WHF5eGdSZzN0ZmNBQlRZeDhmSkNOd3VJRElmbDU4aFVCUFFBTDFVLXl2U01OemfSAZMBQVVfeXFMTVJmck1SdmphcTFYLXhiV1U5ZHI5TzZMcVFjZDBZMFk4NTQ5U1RJSHVyM3pFU3pFZTlsTmNiTUQyODU4VFNRU2FOMGZuSVBfVjlfOXpQZk8zZlJWUDBDZmtmVG1CUHhKamZEVnpuTUoyU253U1g3cS05cWZMWHdMZXBkYXEzUTZsT19lNjg0dW1EcVc0?oc=5\" target=\"_blank\">Yemen: Houthis report deadl",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2tiTmtOT3NLUTZvN1hYZHlETHUySG5iMnRvU0ltVS03QXAzWmtocndacEhvVGViM2xnbnFFbkhQLWt6eDlkQVhoUWtMRHNrSVBoS2l3VzlCQzVJTXdPTTVNZVg5WHF5eGdSZzN0ZmNBQlRZeDhmSkNOd3VJRElmbDU4aFVCUFFBTDFVLXl2U01OemfSAZMBQVVfeXFMTVJmck1SdmphcTFYLXhiV1U5ZHI5TzZMcVFjZDBZMFk4NTQ5U1RJSHVyM3pFU3pFZTlsTmNiTUQyODU4VFNRU2FOMGZuSVBfVjlfOXpQZk8zZlJWUDBDZmtmVG1CUHhKamZEVnpuTUoyU253U1g3cS05cWZMWHdMZXBkYXEzUTZsT19lNjg0dW1EcVc0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T01:04:12.135Z"
     }
   ]
 }
