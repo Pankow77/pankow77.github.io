@@ -1,8 +1,29 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-10-24T11:48:38.083Z",
-  "epoch_count": 89,
+  "last_fetch": "2026-10-24T15:17:14.776Z",
+  "epoch_count": 91,
   "epochs": [
+    {
+      "id": "rss_4620fcfeb1df4451",
+      "timestamp": 1792527607000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "SIAL 2026: l’eccellenza agroalimentare italiana protagonista a Parigi - Gazzetta Diplomatica",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxObHdGV2Fmbi1VdXVmNVZ5MEJ6X2RvUzI0YmpHbksyV2d3UUdGWnJaYy1KY1NPbElpM0FhdjdQYmlyS3RUdU5uVk1IY2VxNzNwQ3JCUFUwd09oNFBDSFRqVjBoSHJvVFBlVnRTSUhuZWxvTG9INEVJTWhZOUF0S2gyX0lmekViSTN1MDhDMldLYVhxcGVpamZNam9JdXZELW15?oc=5\" target=\"_blank\">SIAL 2026: l’eccellenza agroalimentare italiana protagonista a Parigi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Gazzetta Diplomatica</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObHdGV2Fmbi1VdXVmNVZ5MEJ6X2RvUzI0YmpHbksyV2d3UUdGWnJaYy1KY1NPbElpM0FhdjdQYmlyS3RUdU5uVk1IY2VxNzNwQ3JCUFUwd09oNFBDSFRqVjBoSHJvVFBlVnRTSUhuZWxvTG9INEVJTWhZOUF0S2gyX0lmekViSTN1MDhDMldLYVhxcGVpamZNam9JdXZELW15?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-24T15:17:14.775Z"
+    },
     {
       "id": "rss_2d02040ca73e201e",
       "timestamp": 1792472785000,
@@ -23,6 +44,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-21T01:48:43.051Z"
+    },
+    {
+      "id": "rss_1cc818493dbf8bf3",
+      "timestamp": 1792415054000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Settimana Cucina Italiana ad Atene con agroalimentare Lombardia - Lombardia Notizie Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE9CaGtvNnBmWi1XR1EySVhtQ01xa0N3UzJYczU2Sld0VUNIOVFJSGdHTVFURkNHUWUtTjFSU1BfbV91WksxMUs3ZUhQWWpKU2Q5aVQteGNhS3BWaDEycFE0M05tX2VaS0dIWFRuWlFwUDJDdngtMDhV?oc=5\" target=\"_blank\">Settimana Cucina Italiana ad Atene con agroalimentare Lombardia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lombardia Notizie Online</font>",
+      "tags": [],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CaGtvNnBmWi1XR1EySVhtQ01xa0N3UzJYczU2Sld0VUNIOVFJSGdHTVFURkNHUWUtTjFSU1BfbV91WksxMUs3ZUhQWWpKU2Q5aVQteGNhS3BWaDEycFE0M05tX2VaS0dIWFRuWlFwUDJDdngtMDhV?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-24T15:17:14.775Z"
     },
     {
       "id": "rss_8cd672a6659ab1a9",
