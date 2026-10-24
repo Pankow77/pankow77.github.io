@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-24T06:48:56.006Z",
+  "last_fetch": "2026-10-24T11:48:36.069Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_6342436e5000f3ca",
+      "timestamp": 1792825453000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels - NPR",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOeWJ2bGllV1N5MGZKTC1hWXRQUmV5U0xTNll5Q1hTVG1sczNVNjZwNDVuX2NmS2swOFJfOUx0bkpVSGJKWENCZ3AwS2czZ2pXZ3lUOVZXelBMaXZRaUZkX1loWjRndjQ3dXcydFRLdVc3cFQ3ZkRVS2szTTc5S0xtU01CT1hQS0lFX1IxbUNNQk81dzFCbk5wTzhwcHptX0RPejd3eENNdGRLZEM5QmtMMmlUWU9nZw?oc=5\" target=\"_blank\">Drinking water supplies dwindle in Yemeni city besieged by Houthi rebels</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOeWJ2bGllV1N5MGZKTC1hWXRQUmV5U0xTNll5Q1hTVG1sczNVNjZwNDVuX2NmS2swOFJfOUx0bkpVSGJKWENCZ3AwS2czZ2pXZ3lUOVZXelBMaXZRaUZkX1loWjRndjQ3dXcydFRLdVc3cFQ3ZkRVS2szTTc5S0xtU01CT1hQS0lFX1IxbUNNQk81dzFCbk5wTzhwcHptX0RPejd3eENNdGRLZEM5QmtMMmlUWU9nZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-24T11:48:34.721Z"
+    },
     {
       "id": "rss_bc717bcb16cbfeb8",
       "timestamp": 1792817317000,
@@ -10775,29 +10796,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-28T21:32:13.159Z"
-    },
-    {
-      "id": "rss_00363928f9d2fdd2",
-      "timestamp": 1790575980000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Old Russian drone attack video falsely linked to Houthi strike on Saudi Arabia - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOTTZyVjdMUmZYdndfRWpkcGVCbm14a21jMWlUQU4tanJRWEtQU2ZUUGhKYlFib0h0UlpnTUV0MENOejB4UkFmd3QwbVllUHc1OEEtMTYwT1IxOTZhS184dEtCVzBoVlNUZW5iV21QZTRTbzZSdmUyWjBfNThnYUh2dWRNNA?oc=5\" target=\"_blank\">Old Russian drone attack video falsely linked to Houthi strike on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTTZyVjdMUmZYdndfRWpkcGVCbm14a21jMWlUQU4tanJRWEtQU2ZUUGhKYlFib0h0UlpnTUV0MENOejB4UkFmd3QwbVllUHc1OEEtMTYwT1IxOTZhS184dEtCVzBoVlNUZW5iV21QZTRTbzZSdmUyWjBfNThnYUh2dWRNNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T07:15:00.788Z"
     }
   ]
 }
