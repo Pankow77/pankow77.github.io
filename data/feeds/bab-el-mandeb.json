@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-25T02:56:14.914Z",
+  "last_fetch": "2026-10-25T08:06:28.811Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4dd75bb8ce613374",
+      "timestamp": 1792913525000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia reopens airport as attacks by Houthi rebels persist, and other Mideast news - Yahoo! Finance Canada",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHRMbkloTllQRUpPTE5tY2FldUx1bzYxX0ZOVlpqQWhfUDdTeG0xNllIMzlfUkZSak5RVEQtNGN5S1p6cWwxNG15RjlSNXFrVzFxTDFjc25iVDFXZHNVbXlYQnotTHFjWVZlSEc3clF0VUhrcEpNekxnZzB3cUgwZFhIYUpLZlNydWtMc3Vn?oc=5\" target=\"_blank\">Saudi Arabia reopens airport as attacks by Houthi rebels persist, and other Mideast news</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo! Finance Canada</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPUHRMbkloTllQRUpPTE5tY2FldUx1bzYxX0ZOVlpqQWhfUDdTeG0xNllIMzlfUkZSak5RVEQtNGN5S1p6cWwxNG15RjlSNXFrVzFxTDFjc25iVDFXZHNVbXlYQnotTHFjWVZlSEc3clF0VUhrcEpNekxnZzB3cUgwZFhIYUpLZlNydWtMc3Vn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T08:06:27.422Z"
+    },
+    {
+      "id": "rss_f3f99daedc7c2c44",
+      "timestamp": 1792910025000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis launch attacks on Saudi Arabia and Yemen’s Aden - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNejJVeno4cmRWUWhlWHZNR2NoWF8xZ19jNnVXTS12b01LRFhpbFdpMUZCTXdJSVk3WFFhSy11dHZlekhOaUxxZTNOR1VObXdtZkQtRVpRZGhQbElmV2dJbzNWSzJpTHlrV0drQ0EtZ2hXVXJmTUZZUklOQlV4NmdoMHV4OUp5MGtXVzdTb19WZzVWTVFaNzNma1J1cWTSAaIBQVVfeXFMTTVxZm9xZlhCcDJhb0p2cV9GeHl2eWFHM28xak5sT2J3cFBiNW5hdk1WamVxdXBiQzd2UmIxcnd0VTNNU3U2MUNZVW1xTmIwMGRsTndWZnZENlR4WlpvZXJUQ2N2LU9LMWRpSURFX091Wkxfd2xFMFM0Yl9uV0xNQTg1cEpZUjE3TG13c1lKU2NIVlFmT2J6b2I4QzNLTDBMVEtR?oc=5\" target=\"_bl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNejJVeno4cmRWUWhlWHZNR2NoWF8xZ19jNnVXTS12b01LRFhpbFdpMUZCTXdJSVk3WFFhSy11dHZlekhOaUxxZTNOR1VObXdtZkQtRVpRZGhQbElmV2dJbzNWSzJpTHlrV0drQ0EtZ2hXVXJmTUZZUklOQlV4NmdoMHV4OUp5MGtXVzdTb19WZzVWTVFaNzNma1J1cWTSAaIBQVVfeXFMTTVxZm9xZlhCcDJhb0p2cV9GeHl2eWFHM28xak5sT2J3cFBiNW5hdk1WamVxdXBiQzd2UmIxcnd0VTNNU3U2MUNZVW1xTmIwMGRsTndWZnZENlR4WlpvZXJUQ2N2LU9LMWRpSURFX091Wkxfd2xFMFM0Yl9uV0xNQTg1cEpZUjE3TG13c1lKU2NIVlFmT2J6b2I4QzNLTDBMVEtR?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-25T08:06:27.421Z"
+    },
     {
       "id": "rss_e11f3d66201bffb0",
       "timestamp": 1792895160000,
@@ -44,6 +86,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-25T02:56:13.509Z"
+    },
+    {
+      "id": "rss_e658b5e299bd0a5b",
+      "timestamp": 1792884874000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis launch new attacks on Saudi Arabia after accusing the kingdom of strikes that killed 17 - Le Monde.fr",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAJBVV95cUxOc1FJSllUcDRqd3g1dzd3cVhyOVZLdzFEMGNqemRNY1c1cVhZemlyd1MxRFM5TlhKZVUwME5TbEIzSklmUHVuMnZhUkdELTM3OGIzaDV1V3ZKUVp1NDllbXlPcmEtRjczdFFNX0RJUEpzODBaQnZPc194MU9sYVEtSTU3VzNYRldMejV1VXRNMlF6VXZ2Y0hRRU9lV2R1NWZ5R3VIVDNfam1uck8tb3FJYmJibXl2WFdYNk04VFBraXRUQjFVR0xZQ182Q0RTdHNxQnN0YjVrTUwwdlBOMjRUUElNVGZsMUppYXNtbmxXZzJGS1dqdWdyQXlEekgxLXduUHo4VXFjd1o?oc=5\" target=\"_blank\">Yemen's Houthis launch new attacks on Saudi Arabia after accusing the ki",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOc1FJSllUcDRqd3g1dzd3cVhyOVZLdzFEMGNqemRNY1c1cVhZemlyd1MxRFM5TlhKZVUwME5TbEIzSklmUHVuMnZhUkdELTM3OGIzaDV1V3ZKUVp1NDllbXlPcmEtRjczdFFNX0RJUEpzODBaQnZPc194MU9sYVEtSTU3VzNYRldMejV1VXRNMlF6VXZ2Y0hRRU9lV2R1NWZ5R3VIVDNfam1uck8tb3FJYmJibXl2WFdYNk04VFBraXRUQjFVR0xZQ182Q0RTdHNxQnN0YjVrTUwwdlBOMjRUUElNVGZsMUppYXNtbmxXZzJGS1dqdWdyQXlEekgxLXduUHo4VXFjd1o?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T08:06:27.421Z"
     },
     {
       "id": "rss_356463326f2e9225",
@@ -10728,71 +10791,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-29T14:11:45.106Z"
-    },
-    {
-      "id": "rss_04a661a7e15d6fa3",
-      "timestamp": 1790609834000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Another Hormuz? What to Know About the Houthi Threat to the Red Sea - Council on Foreign Relations",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5\" target=\"_blank\">Another Hormuz? What to Know About the Houthi Threat to the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Council on Foreign Relations</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPVGJwUm9MbzR1RUREblM3dEQxcEVsSG11NGVPN1JTczJwY1JhNlIwaDE4MVFrTWo2WWZ6RTI0SlBwNGNEV1pjWlJPZmZLUHZpd3RpWjJZWnJRdlV3akNLR2lrS0N0VlFPRWg5OHc1bVhFdWE1NUhzQW8zRVRVdW1fd1J0bWxtdGFTeVNCV1RR?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-30T08:49:21.276Z"
-    },
-    {
-      "id": "rss_050630bda55d470f",
-      "timestamp": 1790603088000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Kallas urges the 27 to reinforce Aspides in the Red Sea and demands more resources for the mission - Demócrata",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQa05lNHZ4RHAwZW1NbUZIM1VLd2prQ094cjIzLVQwbExRWWFWb3poNFFzVm5MeVdNTlZnUThvOGhMWHZGSU43V29fbGJDUWUyZzY1N2IydVZMUUYyNFV6V0R6d1dDclhwMTRYNlJBc1JUMjA2QkpuLWNvUVFqYzExOTZQWU82MWlmWkRRX214eHNUaWRyQkhtQkJkeWFqbExtcXE1Tk5jX0tEVDVHaUU5M3IyNTJLd0x1cDFnNTB2MHhjTlpJc0I2dlRmcktBRjBpUmVHVUJuMWnSAd4BQVVfeXFMTmtSTGtUZ2puUFpQNWZjajdrUWZPdXlKaVZ3T3dEVkQyeVBYWGx0aGxvWHgtNHlCT01Ya014TDg1eHFSU3J0WVo2VUU1Vll0Wjd0TU9hdGtzUGJmZDVibnZaclVvaUJCa0R1M3dyRU84STFKeF",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQa05lNHZ4RHAwZW1NbUZIM1VLd2prQ094cjIzLVQwbExRWWFWb3poNFFzVm5MeVdNTlZnUThvOGhMWHZGSU43V29fbGJDUWUyZzY1N2IydVZMUUYyNFV6V0R6d1dDclhwMTRYNlJBc1JUMjA2QkpuLWNvUVFqYzExOTZQWU82MWlmWkRRX214eHNUaWRyQkhtQkJkeWFqbExtcXE1Tk5jX0tEVDVHaUU5M3IyNTJLd0x1cDFnNTB2MHhjTlpJc0I2dlRmcktBRjBpUmVHVUJuMWnSAd4BQVVfeXFMTmtSTGtUZ2puUFpQNWZjajdrUWZPdXlKaVZ3T3dEVkQyeVBYWGx0aGxvWHgtNHlCT01Ya014TDg1eHFSU3J0WVo2VUU1Vll0Wjd0TU9hdGtzUGJmZDVibnZaclVvaUJCa0R1M3dyRU84STFKeFEzc1hHLXVxLUEyRlBDUkJsYjQ4X0tUZGRmNzlPN3p3SWdfODU3NGg4NzlOV1c1OW44VVpETzl5c1UtMEtjSDdOaWJrRDhuOFBnTmY2WHlOazczT3Z6N3QyaldwZUtoLURIeUVQM1JLcHhR?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T15:43:31.748Z"
-    },
-    {
-      "id": "rss_5e5e9e8c9c5c1057",
-      "timestamp": 1790602892000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU struggles to find more ships for Red Sea mission Aspides - euractiv.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxQb0o5NzRneml3TU1wa3NvVEVrSUdWd0trRFBGUTNPWTdXSkI5U2tHMzJHeF9acGZDc052aE5kODlWbmZqZEZjME5LQktKVU82YWZQR0ZsUVNyWWRqNXV0c1Vsd2daRFFKN0NhMXdWdThuTGtrX1lkbUJtS0I3MDQwcEtXSWY4dXhhV3BHVmZQUkZYMlpJ?oc=5\" target=\"_blank\">EU struggles to find more ships for Red Sea mission Aspides</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">euractiv.com</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb0o5NzRneml3TU1wa3NvVEVrSUdWd0trRFBGUTNPWTdXSkI5U2tHMzJHeF9acGZDc052aE5kODlWbmZqZEZjME5LQktKVU82YWZQR0ZsUVNyWWRqNXV0c1Vsd2daRFFKN0NhMXdWdThuTGtrX1lkbUJtS0I3MDQwcEtXSWY4dXhhV3BHVmZQUkZYMlpJ?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T15:43:31.747Z"
     }
   ]
 }
