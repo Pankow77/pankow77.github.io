@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-25T13:16:48.301Z",
+  "last_fetch": "2026-10-25T17:09:03.193Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_100b5bbd4d9e8fd4",
+      "timestamp": 1792933835000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia intercepts missiles and drones as fighting with Houthis rages - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlpCbHphMHZ1OU9KdDFLVzhKMFR4Q1BxVzBqamJEMjJ1YnF1YXFCYjhEaC1GV3I0N3JpcUp0emRoTHlFV1NFOVpYc2daSmZzS2hlSElXUTd2RFZxaVNoOTVvWGphNlJvQ2RHVzRMWHFzS1ROWVFvNnBrb0phekVsSGg5LVlCbmJmamRBcDU0WWs1Ump3TTV4YnZjd0RyMzUtVmxwcm1meWhULTdVTFEwcS0wQ1JuV3fSAbwBQVVfeXFMT0o3Wlo2OHNpSGl1alBxS1dGcGZyUm8tX0F1aWNKYm1NdUZkaXJSbzNjbmZmSjE5WW1KOUliQVhjQW96d3E3NXBoMjlJZEpjN2Fick1zNTJqVVFwT2NoUTdQSnZsc24tUkYzQm1pVmdxU3RBbWFWRW1hbzdPTGdGQUcxelNPTEdNaWMzZnJMb081dmlNbl",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUlpCbHphMHZ1OU9KdDFLVzhKMFR4Q1BxVzBqamJEMjJ1YnF1YXFCYjhEaC1GV3I0N3JpcUp0emRoTHlFV1NFOVpYc2daSmZzS2hlSElXUTd2RFZxaVNoOTVvWGphNlJvQ2RHVzRMWHFzS1ROWVFvNnBrb0phekVsSGg5LVlCbmJmamRBcDU0WWs1Ump3TTV4YnZjd0RyMzUtVmxwcm1meWhULTdVTFEwcS0wQ1JuV3fSAbwBQVVfeXFMT0o3Wlo2OHNpSGl1alBxS1dGcGZyUm8tX0F1aWNKYm1NdUZkaXJSbzNjbmZmSjE5WW1KOUliQVhjQW96d3E3NXBoMjlJZEpjN2Fick1zNTJqVVFwT2NoUTdQSnZsc24tUkYzQm1pVmdxU3RBbWFWRW1hbzdPTGdGQUcxelNPTEdNaWMzZnJMb081dmlNblpYbnF1Vm9fX2swOGUxTDEwQW0tamh0dHRiTDV2OWNkVXdiUElaT00?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-25T17:09:01.375Z"
+    },
     {
       "id": "rss_0daf795665c1f6f4",
       "timestamp": 1792932050000,
@@ -48,6 +72,27 @@
       "fetched_at": "2026-10-25T13:16:46.835Z"
     },
     {
+      "id": "rss_cfd8c283d8355120",
+      "timestamp": 1792927171000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Pope appeals for end to hostilities in Yemen and prays for Jordan attack victims - Vatican News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOX0FwZlhnb2F1X3hMQU9Ec01tY3ZyYTJEUjFxOGU1SC04eTF5cmpfc1czanBENzY2R0YxSlF6QzhSU3R6eF9OdlVGdFlqczYwejRFdnVYbTc4M0ktdG9rNi1HUUJtcURURkt3dHVHNjJOS19VVEZTOXlmaXJ4Zl9aMTh4MFM3Z19LbkZVckhoZks2ekNVN21jZERsTmY?oc=5\" target=\"_blank\">Pope appeals for end to hostilities in Yemen and prays for Jordan attack victims</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Vatican News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOX0FwZlhnb2F1X3hMQU9Ec01tY3ZyYTJEUjFxOGU1SC04eTF5cmpfc1czanBENzY2R0YxSlF6QzhSU3R6eF9OdlVGdFlqczYwejRFdnVYbTc4M0ktdG9rNi1HUUJtcURURkt3dHVHNjJOS19VVEZTOXlmaXJ4Zl9aMTh4MFM3Z19LbkZVckhoZks2ekNVN21jZERsTmY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T17:09:01.376Z"
+    },
+    {
       "id": "rss_0f886a8c70698a7c",
       "timestamp": 1792923762000,
       "source": "OSINT",
@@ -70,6 +115,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-25T13:16:46.836Z"
+    },
+    {
+      "id": "rss_45e049796e3a3c7b",
+      "timestamp": 1792923060000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks rock Riyadh when Saudi Arabia reopens airport | Daily Sabah - Daily Sabah",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPX2EwQzFPN2EtNE1xNTZHckhCNGZJOEM1eVNidi05eFdjdkY5bXdwX2ZzWTRRMlRRY0NBcDJlRmFsVWdfcWJGajVUcjhkZnpPLXg2SWpPdkwwRFNNazRfM2hoQzhLMm1SVTRxenB5MVRzQnR6TXFvRV9qNHFoTmZWMWs2UTZVYXh0Njd1T1J2cGdiVWFidE92SWtfQTB0RDF5SHZkONIBqgFBVV95cUxQM3dObmprNEpYcmxtdmhUeFdqY2ZvV19iZDg4UTVQMWdWV3BQOWlnVEdpQmhtcEtsUWZZSU0xaVBKUVpyRkU5dDAzTTVkM0x5RFFIdWlrOVZlNTk4YTVfT1BhZUk0bFpleElMVnBmY2pMNV9VYWloUDlFLWNaYmt0X2JDZWlaYmxrLWtUS204Sk9NSDFMZFVlVm5NNVJlR3VVQkhRZWhnX2",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPX2EwQzFPN2EtNE1xNTZHckhCNGZJOEM1eVNidi05eFdjdkY5bXdwX2ZzWTRRMlRRY0NBcDJlRmFsVWdfcWJGajVUcjhkZnpPLXg2SWpPdkwwRFNNazRfM2hoQzhLMm1SVTRxenB5MVRzQnR6TXFvRV9qNHFoTmZWMWs2UTZVYXh0Njd1T1J2cGdiVWFidE92SWtfQTB0RDF5SHZkONIBqgFBVV95cUxQM3dObmprNEpYcmxtdmhUeFdqY2ZvV19iZDg4UTVQMWdWV3BQOWlnVEdpQmhtcEtsUWZZSU0xaVBKUVpyRkU5dDAzTTVkM0x5RFFIdWlrOVZlNTk4YTVfT1BhZUk0bFpleElMVnBmY2pMNV9VYWloUDlFLWNaYmt0X2JDZWlaYmxrLWtUS204Sk9NSDFMZFVlVm5NNVJlR3VVQkhRZWhnX21Jdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T17:09:01.375Z"
     },
     {
       "id": "rss_7862b741f10677bf",
@@ -196,6 +262,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-25T02:56:13.509Z"
+    },
+    {
+      "id": "rss_f8cc388e982b977d",
+      "timestamp": 1792886160000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi says Riyadh airport partly reopens despite renewed Houthi threats - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNT0JBTVByRUdVWnYzNWpyRUlfbGRFR2RnQzZpbTgzR05tX1AzU2VkVC10RUswYWthSGtJa2FZamVSa2E2ckdSeG5FN3VGTFU5SVJfbjY4NEZjR2tQSWJfZmxtbTJvUU5YSEpKWHRQQWpHMGRfR29xeFhkR1BwcHA5NlA3MnJmRnloYzF6Q0tBZG92ZDgzWmRubVNpNi1CajBmdXdNZmNTYnkzLWFnMldvaQ?oc=5\" target=\"_blank\">Saudi says Riyadh airport partly reopens despite renewed Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNT0JBTVByRUdVWnYzNWpyRUlfbGRFR2RnQzZpbTgzR05tX1AzU2VkVC10RUswYWthSGtJa2FZamVSa2E2ckdSeG5FN3VGTFU5SVJfbjY4NEZjR2tQSWJfZmxtbTJvUU5YSEpKWHRQQWpHMGRfR29xeFhkR1BwcHA5NlA3MnJmRnloYzF6Q0tBZG92ZDgzWmRubVNpNi1CajBmdXdNZmNTYnkzLWFnMldvaQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-25T17:09:01.375Z"
     },
     {
       "id": "rss_e658b5e299bd0a5b",
@@ -10693,97 +10780,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaE44cVhLX3g2R1JHTXVydW1rTFg1TWZWZE9iMFVXd1ZOZU5WOW42cUQ3dmJLUzlwRFRIaEFvSzI1WmFiOVEtMXFMN1hlYUdkZlYwd05vNTZHWHFsZVpVVnRTSEFKdFp3R04xeGdpR2lITlUxaDlERDRoZ2RFU0xsN0Q0X1pQRzdYQzhsNDIxbVFTTzVHZC1r?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-30T15:32:56.952Z"
-    },
-    {
-      "id": "rss_55ee25f33b8776d9",
-      "timestamp": 1790768882000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNSl9qS1IzUWRWNGRCeWdRVFpIZlY5NDBRd3BMUHVwcGE4QXlSdm1lWFNYMm9ocWtHMnpaVkh6bVkycWNKSXRacXpQVHNXMGlsOW92MU5ibzBiWW5hQTFxcnEzNFJxY0hOMHFYMThXVkFvSmdFUnROWGVQMXRnZ1VfenF0Rm9fQ0d0djNBUVJCWXlfVkxHMGNFeTBCTl9rMkVwNGo0Z1VJSzNEQU9iczFaSWlXeEJ1ckI3NkQ0SWkxV3JhQWM3YTNkQ0RoSXQ?oc=5\" target=\"_blank\">Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSl9qS1IzUWRWNGRCeWdRVFpIZlY5NDBRd3BMUHVwcGE4QXlSdm1lWFNYMm9ocWtHMnpaVkh6bVkycWNKSXRacXpQVHNXMGlsOW92MU5ibzBiWW5hQTFxcnEzNFJxY0hOMHFYMThXVkFvSmdFUnROWGVQMXRnZ1VfenF0Rm9fQ0d0djNBUVJCWXlfVkxHMGNFeTBCTl9rMkVwNGo0Z1VJSzNEQU9iczFaSWlXeEJ1ckI3NkQ0SWkxV3JhQWM3YTNkQ0RoSXQ?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-03T09:36:39.477Z"
-    },
-    {
-      "id": "rss_ec0b3d7e61ea0af4",
-      "timestamp": 1790758964000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "EU says Aspides needs more than 10 warships amid Houthi threats - وكالة الأنباء السورية – سانا",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiU0FVX3lxTE1nTjdjeV9JM3RaU1NKMTR3UXVzSmRlR2xlYUJMUnpuU2xiTF8yUTkzY0Qwd3k2bXNDM0VDUjQ2aXdSTl8tT2t6UWdUdy1EMG9SWTFv?oc=5\" target=\"_blank\">EU says Aspides needs more than 10 warships amid Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة الأنباء السورية – سانا</font>",
-      "tags": [
-        "shipping",
-        "naval"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1nTjdjeV9JM3RaU1NKMTR3UXVzSmRlR2xlYUJMUnpuU2xiTF8yUTkzY0Qwd3k2bXNDM0VDUjQ2aXdSTl8tT2t6UWdUdy1EMG9SWTFv?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T06:17:57.843Z"
-    },
-    {
-      "id": "rss_de83a165b906a801",
-      "timestamp": 1790753989000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "EU Demands Increased Naval Presence in the Red Sea - israeldefense.co.il",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE9lSG1Hd2dzTk9WSVhYVy1RZXlGemw5YVZWOTV0M3pPY1I0YnFLMEJWOHpFUTRCMzFnM0c1dDFZbWI3blBmVEZCbmJza0dDcGtDRnpDX2U3enc?oc=5\" target=\"_blank\">EU Demands Increased Naval Presence in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">israeldefense.co.il</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9lSG1Hd2dzTk9WSVhYVy1RZXlGemw5YVZWOTV0M3pPY1I0YnFLMEJWOHpFUTRCMzFnM0c1dDFZbWI3blBmVEZCbmJza0dDcGtDRnpDX2U3enc?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-30T20:28:45.107Z"
-    },
-    {
-      "id": "rss_1b1521dbedfc8890",
-      "timestamp": 1790730495000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Exclusive: Iran Denies Involvement in Attack on Saudi Oil Pipeline - الحرة",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE9PWHdOY01aU2ZxTUJ1ckdiMThGSDVieDF2eEtBMFBkWkZnVzdMbU9sa0ZrYndfOU1zeUpDMW5IMkgwQQ?oc=5\" target=\"_blank\">Exclusive: Iran Denies Involvement in Attack on Saudi Oil Pipeline</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9PWHdOY01aU2ZxTUJ1ckdiMThGSDVieDF2eEtBMFBkWkZnVzdMbU9sa0ZrYndfOU1zeUpDMW5IMkgwQQ?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
