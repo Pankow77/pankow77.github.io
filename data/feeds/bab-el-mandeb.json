@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-25T19:50:03.768Z",
+  "last_fetch": "2026-10-25T22:14:43.580Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1cf834bddb179137",
+      "timestamp": 1792965620000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Riyadh airport resumes flights after deadly Houthi attack - Yeni Şafak English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOdjR4dUFiR2ZzVGtyeGplRVYyYk5TcXAyRzRXOE5DclNxdGFVZXg5NTFHOThkNGFYdGlKU09Cekp3M3BWYmxlYmRHQjBCY09BdlFucnhGZ0ptVkhuMFBRaEZ6Rklnb2JZN0tKVkdaRF9JajdCX0FMbkF0TEZMOGFjSlJLNThZTzJYdkQ1NU1EN0Vndi1fWXFsLWNsbEM?oc=5\" target=\"_blank\">Riyadh airport resumes flights after deadly Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Şafak English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdjR4dUFiR2ZzVGtyeGplRVYyYk5TcXAyRzRXOE5DclNxdGFVZXg5NTFHOThkNGFYdGlKU09Cekp3M3BWYmxlYmRHQjBCY09BdlFucnhGZ0ptVkhuMFBRaEZ6Rklnb2JZN0tKVkdaRF9JajdCX0FMbkF0TEZMOGFjSlJLNThZTzJYdkQ1NU1EN0Vndi1fWXFsLWNsbEM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T22:14:41.746Z"
+    },
+    {
+      "id": "rss_456e1d7c1afb9123",
+      "timestamp": 1792937914000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi air defences intercept Houthi barrage near Mecca - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQTllKSThoS2V1TUQ1V2l6aG1fb2ZycUN6M01QYm9mLWQxb2hDYkFjS1B5QWprMzRKY1U0QTBSSFdqT09fWkdZRlVGRXlmWnRGZWphSjh6WlZMTVdJc2RCLVdTaXVlTUlja0ZDMmY0ODZ3WkhwbXA0Mmkyek5aZ2w5ZG15UXlKMkVLdGJsU0lUaVlHdEEzcWl6UTlLWFDSAaIBQVVfeXFMTUwtTjNQSG4yWU5oc1BrS2REcV9nVnE3MU1oZ3ZUYXNteXFqSjhSSlFzekVLYlJJNDVjM1VORGJmSVhDaG5HREZsTGpUdFBuUjYyQmN1bGhVdk1BNl9FR3YzOXRjVUF2QW8tcHVPeUZQNlBhUnhTalhTSVBIZDdUQ3dCdUtqM09oRlBEVW0zYkx4dUwwR28wRHRfTFpHWXhndUZ3?oc=5\" target=\"_bl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQTllKSThoS2V1TUQ1V2l6aG1fb2ZycUN6M01QYm9mLWQxb2hDYkFjS1B5QWprMzRKY1U0QTBSSFdqT09fWkdZRlVGRXlmWnRGZWphSjh6WlZMTVdJc2RCLVdTaXVlTUlja0ZDMmY0ODZ3WkhwbXA0Mmkyek5aZ2w5ZG15UXlKMkVLdGJsU0lUaVlHdEEzcWl6UTlLWFDSAaIBQVVfeXFMTUwtTjNQSG4yWU5oc1BrS2REcV9nVnE3MU1oZ3ZUYXNteXFqSjhSSlFzekVLYlJJNDVjM1VORGJmSVhDaG5HREZsTGpUdFBuUjYyQmN1bGhVdk1BNl9FR3YzOXRjVUF2QW8tcHVPeUZQNlBhUnhTalhTSVBIZDdUQ3dCdUtqM09oRlBEVW0zYkx4dUwwR28wRHRfTFpHWXhndUZ3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-25T22:14:41.746Z"
+    },
     {
       "id": "rss_100b5bbd4d9e8fd4",
       "timestamp": 1792933835000,
@@ -26,6 +68,31 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-25T17:09:01.375Z"
+    },
+    {
+      "id": "rss_aa22fcd5e9021101",
+      "timestamp": 1792932573000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says it intercepted missiles and drones from Iran-backed Houthis - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOdjVjTmdHOUVQdHBNYk9zRUlGWDVXXzRFTmFzUWJaZno0Y2ZkU2ZQcDJ4YUt4Q29lclZwWmw5eTdaWEczNDY4ZTVQNnI5OVFCQjl1VndQVkN6SFM4NzJRb0pfTUVDejVSMktPeENjd3NxVnRTRUpPMWU4OWFKYkhIZkI0UjJDSXVEcG9fY9IBkgFBVV95cUxPQzlTRWw1RFVBdlVvT1VpdkdQSkh3UjhQZURkZElXRTlMWFZQT29UVFJRTXhCbXlEbjY5ZW01dDZnRFBiaWNnbGVrTGtDS0QwRzF6ZGZOYzVtemkzUDVPSlFqbHBsSTZHRnVOazhkNWNaX2NIWmVmcEc2eUlGZ3Z5d01QLXJ0TWxGRjVoa1ZEdG5sdw?oc=5\" target=\"_blank\">Saudi Arabia says it intercepted miss",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdjVjTmdHOUVQdHBNYk9zRUlGWDVXXzRFTmFzUWJaZno0Y2ZkU2ZQcDJ4YUt4Q29lclZwWmw5eTdaWEczNDY4ZTVQNnI5OVFCQjl1VndQVkN6SFM4NzJRb0pfTUVDejVSMktPeENjd3NxVnRTRUpPMWU4OWFKYkhIZkI0UjJDSXVEcG9fY9IBkgFBVV95cUxPQzlTRWw1RFVBdlVvT1VpdkdQSkh3UjhQZURkZElXRTlMWFZQT29UVFJRTXhCbXlEbjY5ZW01dDZnRFBiaWNnbGVrTGtDS0QwRzF6ZGZOYzVtemkzUDVPSlFqbHBsSTZHRnVOazhkNWNaX2NIWmVmcEc2eUlGZ3Z5d01QLXJ0TWxGRjVoa1ZEdG5sdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T22:14:41.745Z"
     },
     {
       "id": "rss_0daf795665c1f6f4",
@@ -10724,71 +10791,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-01T13:41:06.404Z"
-    },
-    {
-      "id": "rss_be97e382df9d6f16",
-      "timestamp": 1790843397000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Yemen forces claim to have thwarted major Houthi attack - Latest news from Azerbaijan",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl9JcTdxU3o5STh2QWl4eUlUVkZqRkI1TDY1WC1GQUh6T3cyTDdYNmpjSV94dlRRSmx4cENQWlVCVjFfMWsyYzE0WWtneFZiQ1l4VnlzU2lCa01RRE80YUN5aGlzbnBOaWJsNFJZSDQzQVNoQmRsUk16MHlHczBYc0pB?oc=5\" target=\"_blank\">Yemen forces claim to have thwarted major Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNYl9JcTdxU3o5STh2QWl4eUlUVkZqRkI1TDY1WC1GQUh6T3cyTDdYNmpjSV94dlRRSmx4cENQWlVCVjFfMWsyYzE0WWtneFZiQ1l4VnlzU2lCa01RRE80YUN5aGlzbnBOaWJsNFJZSDQzQVNoQmRsUk16MHlHczBYc0pB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T13:41:06.404Z"
-    },
-    {
-      "id": "rss_83e854be045b2c42",
-      "timestamp": 1790809736000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping - アラブニュース",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNNXJkZGxLZ0dEMFZILTk5RkZqenB5UDhickRlMVNZRXBULXUtY2RpY2dQUmtHMzg0TmxTMTN3RTZnamZFUVVPY1d1dTBjcl9FendXTTh5STlUQzNGQXRoV2ZlbjEwaEFzTm9DN0tQNC1idHVJQWZMV3pOQUdVbFZvRjFfandFWUhCdzV5djFZcjhIS1ZKREhOS05BRVlnUDlWSldpTjh2LWFJTHZ0SUlLZzJBWWNXWDFQUTduSUdQZEJ2blBDOFNKSDRmaUhCY2c?oc=5\" target=\"_blank\">Analysis: Houthi and Al-Shabab ties raise alarm over widening threat to Red Sea shipping</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNNXJkZGxLZ0dEMFZILTk5RkZqenB5UDhickRlMVNZRXBULXUtY2RpY2dQUmtHMzg0TmxTMTN3RTZnamZFUVVPY1d1dTBjcl9FendXTTh5STlUQzNGQXRoV2ZlbjEwaEFzTm9DN0tQNC1idHVJQWZMV3pOQUdVbFZvRjFfandFWUhCdzV5djFZcjhIS1ZKREhOS05BRVlnUDlWSldpTjh2LWFJTHZ0SUlLZzJBWWNXWDFQUTduSUdQZEJ2blBDOFNKSDRmaUhCY2c?oc=5",
-      "feed_id": "gn-shipping-redsea",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T06:17:58.318Z"
-    },
-    {
-      "id": "rss_21b2cefea2da0b48",
-      "timestamp": 1790789184000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Houthi attacks threaten more than oil infrastructure — but its unclear how the Saudis can stop them. - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxOZW5BdDl0U3JZMUJoMlByaFFRRWhZb1ZhdDVtVmI0YWtEZ01ueDBwSzdjclg3WFBkWHZYVjI3SjFhQmtJUTMyWXNUamdVMHJVaXkxV2htaEtidzVsTGx4TC1hQzE3YWs0QmFHMzNTY1BTNGxFbm1lU1otd19ORHlVQmxHONIBgwFBVV95cUxOb3hwMGQ3aDRCQmVhRjFuNWtGb2Jpd2ticExUVXB6Mk9nZWNNS05wSlBkNVVmeEZjYTA1REU1QmZNeVdZMEtmWFBQUGJiZnl3Ykt1Y3NBOHRlNUpNTS1DYmhjOHlYNWJXWU1hTUVWSldUbE5qUml2QjROM09iQV9ZVlU0Yw?oc=5\" target=\"_blank\">Houthi attacks threaten more than oil infrastructure — but its unclea",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZW5BdDl0U3JZMUJoMlByaFFRRWhZb1ZhdDVtVmI0YWtEZ01ueDBwSzdjclg3WFBkWHZYVjI3SjFhQmtJUTMyWXNUamdVMHJVaXkxV2htaEtidzVsTGx4TC1hQzE3YWs0QmFHMzNTY1BTNGxFbm1lU1otd19ORHlVQmxHONIBgwFBVV95cUxOb3hwMGQ3aDRCQmVhRjFuNWtGb2Jpd2ticExUVXB6Mk9nZWNNS05wSlBkNVVmeEZjYTA1REU1QmZNeVdZMEtmWFBQUGJiZnl3Ykt1Y3NBOHRlNUpNTS1DYmhjOHlYNWJXWU1hTUVWSldUbE5qUml2QjROM09iQV9ZVlU0Yw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T00:05:58.899Z"
     }
   ]
 }
