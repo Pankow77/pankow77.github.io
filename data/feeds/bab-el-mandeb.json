@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-25T17:09:03.193Z",
+  "last_fetch": "2026-10-25T19:50:03.768Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -91,6 +91,31 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-25T17:09:01.376Z"
+    },
+    {
+      "id": "rss_4ece327b7e829e62",
+      "timestamp": 1792926448000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia intercepts Houthi missiles, drones as Yemen fighting continues - Iran International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NWF81NHNuMzBMaE1aSTRmMWdJaTFOcXZKTFlIZXBneXlRc2Y2OFM0LUczd1VqNVotR1lHZzZ1NGZmeG5hUXhuMkE5M3JnekN4WWc?oc=5\" target=\"_blank\">Saudi Arabia intercepts Houthi missiles, drones as Yemen fighting continues</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NWF81NHNuMzBMaE1aSTRmMWdJaTFOcXZKTFlIZXBneXlRc2Y2OFM0LUczd1VqNVotR1lHZzZ1NGZmeG5hUXhuMkE5M3JnekN4WWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T19:50:02.321Z"
     },
     {
       "id": "rss_0f886a8c70698a7c",
@@ -10764,27 +10789,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-01T00:05:58.899Z"
-    },
-    {
-      "id": "rss_ff4664c8e1c61f06",
-      "timestamp": 1790773490000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Old Video Falsely Linked to Houthi Attack on Riyadh - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxQaE44cVhLX3g2R1JHTXVydW1rTFg1TWZWZE9iMFVXd1ZOZU5WOW42cUQ3dmJLUzlwRFRIaEFvSzI1WmFiOVEtMXFMN1hlYUdkZlYwd05vNTZHWHFsZVpVVnRTSEFKdFp3R04xeGdpR2lITlUxaDlERDRoZ2RFU0xsN0Q0X1pQRzdYQzhsNDIxbVFTTzVHZC1r?oc=5\" target=\"_blank\">Old Video Falsely Linked to Houthi Attack on Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaE44cVhLX3g2R1JHTXVydW1rTFg1TWZWZE9iMFVXd1ZOZU5WOW42cUQ3dmJLUzlwRFRIaEFvSzI1WmFiOVEtMXFMN1hlYUdkZlYwd05vNTZHWHFsZVpVVnRTSEFKdFp3R04xeGdpR2lITlUxaDlERDRoZ2RFU0xsN0Q0X1pQRzdYQzhsNDIxbVFTTzVHZC1r?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-30T15:32:56.952Z"
     }
   ]
 }
