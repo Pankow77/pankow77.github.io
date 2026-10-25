@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-24T23:30:28.724Z",
+  "last_fetch": "2026-10-25T02:56:14.914Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e11f3d66201bffb0",
+      "timestamp": 1792895160000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Old Saudi fire photo miscaptioned as recent Houthi attack - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxOVERjMVQxWWxyX0NVYzN6ZHJNTTU5Zm50eGFmdmVOZTVaQjNadHphN0RLZ3JkYXFCU0lBcTNSbU1aMl9zVjF5dHhYWXd5S2JoYWZsLXc4cGh6anRDcS10U0lCUlEwR1Vqc29ZSzQ1S0ZFVVBReUh1YnQzOHBsRVF1YWJqOTAyYkE?oc=5\" target=\"_blank\">Old Saudi fire photo miscaptioned as recent Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVERjMVQxWWxyX0NVYzN6ZHJNTTU5Zm50eGFmdmVOZTVaQjNadHphN0RLZ3JkYXFCU0lBcTNSbU1aMl9zVjF5dHhYWXd5S2JoYWZsLXc4cGh6anRDcS10U0lCUlEwR1Vqc29ZSzQ1S0ZFVVBReUh1YnQzOHBsRVF1YWJqOTAyYkE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T02:56:13.508Z"
+    },
+    {
+      "id": "rss_5e75cfbc441430d9",
+      "timestamp": 1792891163000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Riyadh airport to resume flights despite renewed Houthi threats - Israel National News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTE5UREtMWE9FXzlOVGJTRFlLR3UyQ2d0ZVZlbDZQdkpRRDFPV1hxR0lVbGJ6N2tKOXVwMXBrYXNKMVdQWkh3SGhMVUVNUHhOa0R2YnRzek5NQVFMZw?oc=5\" target=\"_blank\">Riyadh airport to resume flights despite renewed Houthi threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Israel National News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5UREtMWE9FXzlOVGJTRFlLR3UyQ2d0ZVZlbDZQdkpRRDFPV1hxR0lVbGJ6N2tKOXVwMXBrYXNKMVdQWkh3SGhMVUVNUHhOa0R2YnRzek5NQVFMZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T02:56:13.509Z"
+    },
     {
       "id": "rss_356463326f2e9225",
       "timestamp": 1792868175000,
@@ -90,6 +132,29 @@
       "fetched_at": "2026-10-24T21:01:55.002Z"
     },
     {
+      "id": "rss_022678d380520447",
+      "timestamp": 1792859199000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi militia launches multiple missile attacks on Yemen's Aden - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1uMEJsU0ZGUWRVcHFhSjZ4UElJX2FZY25sNDRaV2JmTmhteFB6YkJhd1NXU3hKSFBkT084d0k2WkVSZlRxZTEwNWZCQm5mVXY5WnhVUjk1TE0?oc=5\" target=\"_blank\">Houthi militia launches multiple missile attacks on Yemen's Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1uMEJsU0ZGUWRVcHFhSjZ4UElJX2FZY25sNDRaV2JmTmhteFB6YkJhd1NXU3hKSFBkT084d0k2WkVSZlRxZTEwNWZCQm5mVXY5WnhVUjk1TE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T02:56:13.510Z"
+    },
+    {
       "id": "rss_66c3191079483851",
       "timestamp": 1792857391000,
       "source": "OSINT",
@@ -109,6 +174,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-24T18:16:25.902Z"
+    },
+    {
+      "id": "rss_c2a85406b332c7ff",
+      "timestamp": 1792845741000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Turkey to tell Yemen FM Houthi attacks on civilians ‘unacceptable’ - Turkish Minute",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUnFrWTRjYXI0bWtmZzMxRHViRU10WkFtaTl2V0hqeUhIUmwyN2pOdlhLY09Cd0JYeTgtZ2NreWR1UWI4LXlfV29KdkJxUGNHcUY0RWxRNWVvM2F3ZWo1RUxHdUR2dFZvUldraTdnYTFsei1xYktoMWpJZXNKMkFkYzVVUFdyVjdNekdNcnlWNV9jYVFmeWV2QWg0MkpITlFwa2ZPY3ZUcDZRd9IBrwFBVV95cUxNQ25Td2NOLUx4RWd4MHlxY0JMaC1tQmdHcVh2SEwzaXBvakFnV1IzNnoxcEh2Snl1VEhnM3p3c3FOcFE4Y19zWklUWDNMQ01lSk1uNXBGSGxEbjJDWm9tYmdtSWhnOVdudVNDbEwzeWdidHM0dnpsVTJZckVuV0w2a1JPZFJBV0poX3luUmw0TTl3WV9iMEFfdjgzWlVSY3lwS0",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUnFrWTRjYXI0bWtmZzMxRHViRU10WkFtaTl2V0hqeUhIUmwyN2pOdlhLY09Cd0JYeTgtZ2NreWR1UWI4LXlfV29KdkJxUGNHcUY0RWxRNWVvM2F3ZWo1RUxHdUR2dFZvUldraTdnYTFsei1xYktoMWpJZXNKMkFkYzVVUFdyVjdNekdNcnlWNV9jYVFmeWV2QWg0MkpITlFwa2ZPY3ZUcDZRd9IBrwFBVV95cUxNQ25Td2NOLUx4RWd4MHlxY0JMaC1tQmdHcVh2SEwzaXBvakFnV1IzNnoxcEh2Snl1VEhnM3p3c3FOcFE4Y19zWklUWDNMQ01lSk1uNXBGSGxEbjJDWm9tYmdtSWhnOVdudVNDbEwzeWdidHM0dnpsVTJZckVuV0w2a1JPZFJBV0poX3luUmw0TTl3WV9iMEFfdjgzWlVSY3lwS0pMX2Z4MjM5cE4td0Vz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-25T02:56:13.509Z"
     },
     {
       "id": "rss_6342436e5000f3ca",
@@ -10707,92 +10793,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-09-28T15:43:31.747Z"
-    },
-    {
-      "id": "rss_68bfc5428b8198bd",
-      "timestamp": 1790598869000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi East-West pipeline restarts, but flows remain restricted to 40% of pre-Houthi attack levels - ThePrint",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNNUtLQkE2aGFlYnJnYlAxQlRPNEZ4N1hPMk13UkVaOFZCd1FPaHd1SWtnV2tuZHA0YVFmMUdQemRSaGstRGd3dFNmOE5HSHhuaEVqcVE0YnlXbXF1d1l5a2NqT0dqdng1WlJiTDI2RUVLMnhubW1ZRXVWT0U0QlVTaTFiN25iZEVSQWN1dDBtZDdhMkdId2lacE1xS3l6bVFjenlCbG1pbnd6NFUwVFRIX0dvNWRBTGVXWWdIYmFyWGF5aVFnLWlJWk9R0gHPAUFVX3lxTE51MVotcENWWnp2WEl0RTF6Vk9lcHFsOGktY2JWU3daNTJkWUNncC1ncE52Um9mZEk1WE9iZ0JUV1JTLXk4Y2VGZ0Q3clBQd18wX281Rm9jYVFxWTBzVDVoVUlpandtNzV4U1N3bUZfaFJVZTE4SzU5OE1LVk9nVWs4VT",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNUtLQkE2aGFlYnJnYlAxQlRPNEZ4N1hPMk13UkVaOFZCd1FPaHd1SWtnV2tuZHA0YVFmMUdQemRSaGstRGd3dFNmOE5HSHhuaEVqcVE0YnlXbXF1d1l5a2NqT0dqdng1WlJiTDI2RUVLMnhubW1ZRXVWT0U0QlVTaTFiN25iZEVSQWN1dDBtZDdhMkdId2lacE1xS3l6bVFjenlCbG1pbnd6NFUwVFRIX0dvNWRBTGVXWWdIYmFyWGF5aVFnLWlJWk9R0gHPAUFVX3lxTE51MVotcENWWnp2WEl0RTF6Vk9lcHFsOGktY2JWU3daNTJkWUNncC1ncE52Um9mZEk1WE9iZ0JUV1JTLXk4Y2VGZ0Q3clBQd18wX281Rm9jYVFxWTBzVDVoVUlpandtNzV4U1N3bUZfaFJVZTE4SzU5OE1LVk9nVWs4VTNMcnlYUktfTHdSbkdidGNMWHRCX2RHbERRUWxlMnlqdy0ycG5jU011WE1jeVdiR2daUGlqb1VVYndQbl9oZDJneEFBRmhpMzlKZ3R4aw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T15:43:30.738Z"
-    },
-    {
-      "id": "rss_b137df986ba06df0",
-      "timestamp": 1790598265000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Spain will not send new ships to the European Aspides mission in the Red Sea “under any circumstances” - thediplomatinspain.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxNOE5BVkJ2cGlhdmpNRGFWQ0Yzb0VOU2tSdUlPQ1V0RmhMNW5yUnlIWFRpMmp6VmNYd3pleUloVms1ODVKRURiOUlxSXFCQ0FON3lRQkxBMGgwRl9TbGVvSVZ6dzlldDhKWEtIRC1DWXZnN2dETEYtV2NIclZmak85YmVIbkdJTHcxQlh3Y0E3REFsVGZxMGVpaFQ5bW9LNFpNYlBRYkhDaDJSdmY3ZzBRbEZLUm1QQmdjeEtJZnIzbDM0bXRXMzNPeDYyeFhucVFWakx5WWFkd3JQWFRLX1BR?oc=5\" target=\"_blank\">Spain will not send new ships to the European Aspides mission in the Red Sea “under any circumstances”</a>&nbsp;&nbsp;<font col",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNOE5BVkJ2cGlhdmpNRGFWQ0Yzb0VOU2tSdUlPQ1V0RmhMNW5yUnlIWFRpMmp6VmNYd3pleUloVms1ODVKRURiOUlxSXFCQ0FON3lRQkxBMGgwRl9TbGVvSVZ6dzlldDhKWEtIRC1DWXZnN2dETEYtV2NIclZmak85YmVIbkdJTHcxQlh3Y0E3REFsVGZxMGVpaFQ5bW9LNFpNYlBRYkhDaDJSdmY3ZzBRbEZLUm1QQmdjeEtJZnIzbDM0bXRXMzNPeDYyeFhucVFWakx5WWFkd3JQWFRLX1BR?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-29T01:25:20.115Z"
-    },
-    {
-      "id": "rss_a155a9babf14e02d",
-      "timestamp": 1790592213000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis threaten to strike Saudi bridges in retaliation for airstrikes - report - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE14OUMxZWp4Y3dLNmxLUVBJMXlfZnRQTnRJeTdBRUlxN2NIcUhKRFhBemV1U0syYnBkWVdmWUdmb2N3QWJ0UlpYdUpveWFmY21UVVFYcHBtcnRxUUlm?oc=5\" target=\"_blank\">Yemen's Houthis threaten to strike Saudi bridges in retaliation for airstrikes - report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE14OUMxZWp4Y3dLNmxLUVBJMXlfZnRQTnRJeTdBRUlxN2NIcUhKRFhBemV1U0syYnBkWVdmWUdmb2N3QWJ0UlpYdUpveWFmY21UVVFYcHBtcnRxUUlm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T21:32:13.158Z"
-    },
-    {
-      "id": "rss_45dc6539ac7e5423",
-      "timestamp": 1790586918000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemeni government forces bomb Houthi positions in Taiz as conflict escalates - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQN1dNUU5pdUJ2Z01wNXRlZHJyZlBGdzkyR1hRSEdTM2ZCenc1TmY5T1JWbFlBZG00Vy0yZUJPWWhTWDdMQmtvSF9HTGRCVDN3b1NvazJ6RGVUSVFmNUNGY1BpeUZJd2FxY2FwZF9IcDl3ZERuaG9HUEYxcWNidkRRcnhWeHVsLVk4WW9NSEl4M04wem1QcmhpQXJjMjRmVUlUaGlNazFRQjJxeUJwWGZEQWdReG9WZw?oc=5\" target=\"_blank\">Yemeni government forces bomb Houthi positions in Taiz as conflict escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQN1dNUU5pdUJ2Z01wNXRlZHJyZlBGdzkyR1hRSEdTM2ZCenc1TmY5T1JWbFlBZG00Vy0yZUJPWWhTWDdMQmtvSF9HTGRCVDN3b1NvazJ6RGVUSVFmNUNGY1BpeUZJd2FxY2FwZF9IcDl3ZERuaG9HUEYxcWNidkRRcnhWeHVsLVk4WW9NSEl4M04wem1QcmhpQXJjMjRmVUlUaGlNazFRQjJxeUJwWGZEQWdReG9WZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-09-28T21:32:13.159Z"
     }
   ]
 }
