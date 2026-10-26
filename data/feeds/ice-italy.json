@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-10-26T18:46:22.021Z",
-  "epoch_count": 92,
+  "last_fetch": "2026-10-26T22:59:40.918Z",
+  "epoch_count": 93,
   "epochs": [
     {
       "id": "rss_98d60e9403e62c55",
@@ -44,6 +44,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-24T15:17:14.775Z"
+    },
+    {
+      "id": "rss_8f2beb7bb9079890",
+      "timestamp": 1792496347000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "TG5: Trump attacca: \"Scontri colpa dell'immigrazione\" Video - Mediaset Infinity",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQbkxydnEtNlp6cnhGVHl0M1B5TmJZQWQxTlhnOUgwRzNsY1JFV1NDOW1VNnRqYmtVR2ZEaG5wQWk1NThabnl4MlBkNmkxZnd1OFFaMTFVaGN4ZG5MTW1jSUJwT1ZaWjdRc1YwUFJodlZkenVlUWVuU3RSdjNYX0sxcnZGRnl1cFlrY3NRMklUX3NNUjRFRHNDLTdTTzRFY3F3a0M4R2RFTkVoWUZs?oc=5\" target=\"_blank\">TG5: Trump attacca: \"Scontri colpa dell'immigrazione\" Video</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Mediaset Infinity</font>",
+      "tags": [
+        "immigration",
+        "meloni-trump"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbkxydnEtNlp6cnhGVHl0M1B5TmJZQWQxTlhnOUgwRzNsY1JFV1NDOW1VNnRqYmtVR2ZEaG5wQWk1NThabnl4MlBkNmkxZnd1OFFaMTFVaGN4ZG5MTW1jSUJwT1ZaWjdRc1YwUFJodlZkenVlUWVuU3RSdjNYX0sxcnZGRnl1cFlrY3NRMklUX3NNUjRFRHNDLTdTTzRFY3F3a0M4R2RFTkVoWUZs?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T22:59:40.917Z"
     },
     {
       "id": "rss_2d02040ca73e201e",

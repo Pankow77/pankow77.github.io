@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-26T18:46:19.974Z",
+  "last_fetch": "2026-10-26T22:59:39.053Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-26T18:46:18.308Z"
+    },
+    {
+      "id": "rss_b0396a53e51b1643",
+      "timestamp": 1793019900000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "EU falls short of the 10 warships needed to protect shipping in the Red Sea - Zona Militar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMGNlOFNKa2NLbVI3RjhBR3hmMnRTdk5WeUlRRjRLeEZhSmpIQ3dWZFQwSGxoVFhGMmhUMUZfekZ0N0pHbTE0SjNRODNnWEVRNzc3MmlkNm00VTM5NjFGN3l4MGp1aElxQ2w0VlZlVkc4bWZYUVpIMGV6Q3ctdkFjT2RZVzRYVU9OdEh4NjZ3cWtUb1VMVE5xVlRIZDEwdC1ZTVpncDMzeUV0UDBtTmllOVRGOE1samhJWmo0?oc=5\" target=\"_blank\">EU falls short of the 10 warships needed to protect shipping in the Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Zona Militar</font>",
+      "tags": [
+        "shipping",
+        "naval"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMGNlOFNKa2NLbVI3RjhBR3hmMnRTdk5WeUlRRjRLeEZhSmpIQ3dWZFQwSGxoVFhGMmhUMUZfekZ0N0pHbTE0SjNRODNnWEVRNzc3MmlkNm00VTM5NjFGN3l4MGp1aElxQ2w0VlZlVkc4bWZYUVpIMGV6Q3ctdkFjT2RZVzRYVU9OdEh4NjZ3cWtUb1VMVE5xVlRIZDEwdC1ZTVpncDMzeUV0UDBtTmllOVRGOE1samhJWmo0?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T22:59:38.520Z"
     },
     {
       "id": "rss_230156da28b6a205",
@@ -10778,27 +10802,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-02T08:47:01.560Z"
-    },
-    {
-      "id": "rss_adc8bee00851c95d",
-      "timestamp": 1790909925000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdjdlTWdfMDJQV3RFZmF1UEJXVjAzZk9SbnRHY2VQcE5FWWtkbjBLQVpwZWx6cjJkUzBoOXpDOVlsXzVUa19zTTE4eDlhMG1CQU1TUmRoZ2ZOS1M1Mnhvc3pzaUJJVnR4aXgtX29hcjZOTXY0dVdqWXR3dEFIQ2dWR1gwb194elFnS2ZUam0zYjJjMVNGaW9FclNxclRrQlpseTBmWHZhY1JQc3lxak0zY2YzMVpjcEYz?oc=5\" target=\"_blank\">Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdjdlTWdfMDJQV3RFZmF1UEJXVjAzZk9SbnRHY2VQcE5FWWtkbjBLQVpwZWx6cjJkUzBoOXpDOVlsXzVUa19zTTE4eDlhMG1CQU1TUmRoZ2ZOS1M1Mnhvc3pzaUJJVnR4aXgtX29hcjZOTXY0dVdqWXR3dEFIQ2dWR1gwb194elFnS2ZUam0zYjJjMVNGaW9FclNxclRrQlpseTBmWHZhY1JQc3lxak0zY2YzMVpjcEYz?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T08:47:01.559Z"
     }
   ]
 }
