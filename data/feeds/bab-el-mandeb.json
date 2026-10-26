@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-25T22:14:43.580Z",
+  "last_fetch": "2026-10-26T00:31:12.960Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-25T22:14:41.746Z"
+    },
+    {
+      "id": "rss_6f19effe3953acd3",
+      "timestamp": 1792961037000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "US warns of escalating security threats in Saudi Arabia as Riyadh airport partly reopens - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPcHJZbmRKV040SkU0R2R2SnJ0WEVaUjB3YzNhZXF6UTRLVGZoZWRUaFFKcG9QRXRqRE9KakxsTDJnMGlwQWY3QWZWV0Y1M3QxWDFwLUZldWd5Z1NUUTQwZmV0SXdBTl9lNzlhcTFGVWZUUldZZWhzaU5heG1wOXZGcFgtMUtLZ1dnbklST1c4dEJlTVFlR0ZIaldBMHRtWDNoNXlRcWJnMGc2VXlIVEU0bGtlRURFMUZhdTJGZlRJX000b0J6cm9xNlFB?oc=5\" target=\"_blank\">US warns of escalating security threats in Saudi Arabia as Riyadh airport partly reopens</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcHJZbmRKV040SkU0R2R2SnJ0WEVaUjB3YzNhZXF6UTRLVGZoZWRUaFFKcG9QRXRqRE9KakxsTDJnMGlwQWY3QWZWV0Y1M3QxWDFwLUZldWd5Z1NUUTQwZmV0SXdBTl9lNzlhcTFGVWZUUldZZWhzaU5heG1wOXZGcFgtMUtLZ1dnbklST1c4dEJlTVFlR0ZIaldBMHRtWDNoNXlRcWJnMGc2VXlIVEU0bGtlRURFMUZhdTJGZlRJX000b0J6cm9xNlFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T00:31:11.410Z"
     },
     {
       "id": "rss_456e1d7c1afb9123",
@@ -10770,27 +10791,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-02T08:47:01.559Z"
-    },
-    {
-      "id": "rss_f9eddcce570d1e86",
-      "timestamp": 1790844000000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Yemen: Forces thwart large-scale Houthi attack - Breakingthenews.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxOX0RZTXFUNjlDMDVQeEgyWG9vbFpyOHAtNHM5RUZlMzlPSFI3b2t3Y1l0Vk9VZTJIYWFuQWpEcnJqZkw4LWhLUzE1eWVhMHlrb3pYN0tXYVZiaTFKb1lFOHV3eS1nem01dEcteUVjYkJWckp1THdnbFVDZURRaTA2bXIzeE5xUFo0S2VQTGFhQzc3eFhhaHc?oc=5\" target=\"_blank\">Yemen: Forces thwart large-scale Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOX0RZTXFUNjlDMDVQeEgyWG9vbFpyOHAtNHM5RUZlMzlPSFI3b2t3Y1l0Vk9VZTJIYWFuQWpEcnJqZkw4LWhLUzE1eWVhMHlrb3pYN0tXYVZiaTFKb1lFOHV3eS1nem01dEcteUVjYkJWckp1THdnbFVDZURRaTA2bXIzeE5xUFo0S2VQTGFhQzc3eFhhaHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T13:41:06.404Z"
     }
   ]
 }
