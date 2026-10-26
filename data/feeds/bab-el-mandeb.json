@@ -1,8 +1,77 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-26T12:08:39.681Z",
+  "last_fetch": "2026-10-26T18:46:19.974Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_5fbb22943af18239",
+      "timestamp": 1793035002000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hNkZUQnBpYUlSVDBRWWx0eEJfcnJONUh6ejlkU1N4RDhjaE91c0JLVkNITXM0aHh2MUZmcFI0WmM1UGZBeVFxUDl6aDZGa3B4NmU2VDJ2Uk8?oc=5\" target=\"_blank\">Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5hNkZUQnBpYUlSVDBRWWx0eEJfcnJONUh6ejlkU1N4RDhjaE91c0JLVkNITXM0aHh2MUZmcFI0WmM1UGZBeVFxUDl6aDZGa3B4NmU2VDJ2Uk8?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T18:46:18.308Z"
+    },
+    {
+      "id": "rss_230156da28b6a205",
+      "timestamp": 1793014561000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Coalition Destroys Houthi Missile Launchers in Sanaa After Riyadh Attack - https://houseofsaud.com/",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFA4Ql9uaDFUQkt0aEExQmQ5TUp0a05haVVIRzV0TXo3ZFpFakl4OTBZQ1hpVWVqWTh0c2lOQ3V0OVY4ZkwzYjVQZEMwdHRpaWp0eWl0d21WVWt3YjhmMXF6eVFaamVLTVNhdFp5a19JUVRYdjdXMmlJYUd6d1o?oc=5\" target=\"_blank\">Coalition Destroys Houthi Missile Launchers in Sanaa After Riyadh Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">https://houseofsaud.com/</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA4Ql9uaDFUQkt0aEExQmQ5TUp0a05haVVIRzV0TXo3ZFpFakl4OTBZQ1hpVWVqWTh0c2lOQ3V0OVY4ZkwzYjVQZEMwdHRpaWp0eWl0d21WVWt3YjhmMXF6eVFaamVLTVNhdFp5a19JUVRYdjdXMmlJYUd6d1o?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T18:46:18.309Z"
+    },
+    {
+      "id": "rss_cc443c752515c15a",
+      "timestamp": 1793011614000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it struck Houthi missile facilities - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQV1Y5ZzRwcWM2LTJ1S2sweGU5SmdhRGRyMVNteHRZRWpzM0o1Yks3U3c2clRxdDl0VjRwQ0tWbXZlQ1FobHJ3ajJDS0h0NHhLMlg0Q2hlbUVRSmE2b0MxM1EtZzdmb1B5WjVhRGJIWDg0dUlZN0Y1Y2NkRmFwQTdFTzIwMnZtR0p6dk9GYVo1TF9LNWQ1N0htaGdVN3Y0T0pJZGJHVNIBqgFBVV95cUxQd1hTSTAxQWN3bDhQbmtGYjUyNHUtYUhScXhSMFNIUVYwaV83ZHI4S0E1bG9kWWFWRjRrcENhQlVxZ25YZExCek52eU5RWlk4NjRxUUpsc3YzazRtc3NncllKekNRUnZwbmJjenJhNVhfUk5PYWNaTlY3U2V2dFpsM1pyWjg2YmxwcE1TR0h4TlBqMjJCanhmWklITHlmYU9HQ2pMMnlvem",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQV1Y5ZzRwcWM2LTJ1S2sweGU5SmdhRGRyMVNteHRZRWpzM0o1Yks3U3c2clRxdDl0VjRwQ0tWbXZlQ1FobHJ3ajJDS0h0NHhLMlg0Q2hlbUVRSmE2b0MxM1EtZzdmb1B5WjVhRGJIWDg0dUlZN0Y1Y2NkRmFwQTdFTzIwMnZtR0p6dk9GYVo1TF9LNWQ1N0htaGdVN3Y0T0pJZGJHVNIBqgFBVV95cUxQd1hTSTAxQWN3bDhQbmtGYjUyNHUtYUhScXhSMFNIUVYwaV83ZHI4S0E1bG9kWWFWRjRrcENhQlVxZ25YZExCek52eU5RWlk4NjRxUUpsc3YzazRtc3NncllKekNRUnZwbmJjenJhNVhfUk5PYWNaTlY3U2V2dFpsM1pyWjg2YmxwcE1TR0h4TlBqMjJCanhmWklITHlmYU9HQ2pMMnlvemdkQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-26T18:46:18.307Z"
+    },
     {
       "id": "rss_366fb069d39a7db5",
       "timestamp": 1793010367000,
@@ -23,6 +92,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-26T12:08:38.199Z"
+    },
+    {
+      "id": "rss_7d85a96ab4cc33ea",
+      "timestamp": 1793001100000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led forces strike Houthi missile facilities after Riyadh airport attack - The Japan Times",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQTTNIWHZHSjdPcDZ2eEY1SEdLYVd4a0ktV2U0RUVJVm9KdkVmVmE5TlEyTXdkd3IxOEdjYkE5bS11REcyVjFVVzBYdEllOWgyaHFNZWpZazJ3Sk4xcG0xbENmcVhOVFFySnFnaWxmd1JIZG9WWUxoNTVpX1Z0WlBvMzFqbkdHaTZiVTRxZ3h6TDd3ZWJ2S0o2YnlyZw?oc=5\" target=\"_blank\">Saudi-led forces strike Houthi missile facilities after Riyadh airport attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Japan Times</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTTNIWHZHSjdPcDZ2eEY1SEdLYVd4a0ktV2U0RUVJVm9KdkVmVmE5TlEyTXdkd3IxOEdjYkE5bS11REcyVjFVVzBYdEllOWgyaHFNZWpZazJ3Sk4xcG0xbENmcVhOVFFySnFnaWxmd1JIZG9WWUxoNTVpX1Z0WlBvMzFqbkdHaTZiVTRxZ3h6TDd3ZWJ2S0o2YnlyZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-26T18:46:18.307Z"
     },
     {
       "id": "rss_bbe2ab42f966d237",
@@ -10707,96 +10799,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-02T08:47:01.559Z"
-    },
-    {
-      "id": "rss_9a05daff675c0515",
-      "timestamp": 1790908783000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition accuses Houthis of striking Medina power station - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcmIyOHM4bWtqTGdCenhBd1EwYm9hV21PbmhfWFYwX0lVZlNyYW00Q3JiNldsMEwxcDVzYmdFdEhXc0F0cmp3enEydDk2TVlzOEFuaGlaQlNhN2V1MXNHQ29YNWJmZk9wNXRfeGVIWWwtZWNEX09QUklQTEZUZUR1NVVaLTBjbTFCZ3A4V3hWNGttdjdBMWpuLWN0ajY0UDJFTHZUM3RwWm0ydw?oc=5\" target=\"_blank\">Saudi-led coalition accuses Houthis of striking Medina power station</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcmIyOHM4bWtqTGdCenhBd1EwYm9hV21PbmhfWFYwX0lVZlNyYW00Q3JiNldsMEwxcDVzYmdFdEhXc0F0cmp3enEydDk2TVlzOEFuaGlaQlNhN2V1MXNHQ29YNWJmZk9wNXRfeGVIWWwtZWNEX09QUklQTEZUZUR1NVVaLTBjbTFCZ3A4V3hWNGttdjdBMWpuLWN0ajY0UDJFTHZUM3RwWm0ydw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T08:47:01.559Z"
-    },
-    {
-      "id": "rss_0beb1fe9fb7040c9",
-      "timestamp": 1790895343000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition says Houthis attacked power station in Medina - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnZXZzBwRDQtUGJYZWxuelowY3BQM2prQm43eC0yOTVELWRadi1GRmJWcXAtOU9RXzlrX3ctd3ZmckFmVEtNLXhtQzRhRDNSWkJyc1djUGJ0NFhPUTZPbDR6OVd4QTBlUDh6bEhqUlZEanMzUlRpOVdKeUtyVnRVaHJPT0ZCQy1jcEZwc05aZ0dPY2l3VF9fVmJCZ3BHNGIxUXppQUNlMGlGV1I1SUhPMXYyMHo?oc=5\" target=\"_blank\">Saudi-led coalition says Houthis attacked power station in Medina</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZnZXZzBwRDQtUGJYZWxuelowY3BQM2prQm43eC0yOTVELWRadi1GRmJWcXAtOU9RXzlrX3ctd3ZmckFmVEtNLXhtQzRhRDNSWkJyc1djUGJ0NFhPUTZPbDR6OVd4QTBlUDh6bEhqUlZEanMzUlRpOVdKeUtyVnRVaHJPT0ZCQy1jcEZwc05aZ0dPY2l3VF9fVmJCZ3BHNGIxUXppQUNlMGlGV1I1SUhPMXYyMHo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-01T23:18:39.011Z"
-    },
-    {
-      "id": "rss_a3e54271cf766406",
-      "timestamp": 1790891712000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis Hit Taiba Grid Station In Madinah, Saudi-Led Coalition Says: 13 outlets compared - NewsCord",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPaVdHWmZsNFY3a3U0V1F6NEhDX2xpQTE0NnVHVXYwMWtzd1hfeVRRTEJpd0xMS0ZJdGYxTzBmTjU2Mk0zcG5MLXBhNnJTdW8tSkEySVNwRFdJUktjQWtqT2d1aHo0dTZ3X3hvc0gxNUdZRVJmSFhmY3BZb1YwcmtDdnNQR3B5ampIaDN2VVJMcFFGRy1SRHd2ZGRDSDNNME1STmhsQ1FlajBHZ0Z6cVlidVVraUVhYTNSelJWNQ?oc=5\" target=\"_blank\">Houthis Hit Taiba Grid Station In Madinah, Saudi-Led Coalition Says: 13 outlets compared</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NewsCord</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPaVdHWmZsNFY3a3U0V1F6NEhDX2xpQTE0NnVHVXYwMWtzd1hfeVRRTEJpd0xMS0ZJdGYxTzBmTjU2Mk0zcG5MLXBhNnJTdW8tSkEySVNwRFdJUktjQWtqT2d1aHo0dTZ3X3hvc0gxNUdZRVJmSFhmY3BZb1YwcmtDdnNQR3B5ampIaDN2VVJMcFFGRy1SRHd2ZGRDSDNNME1STmhsQ1FlajBHZ0Z6cVlidVVraUVhYTNSelJWNQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T23:18:39.012Z"
-    },
-    {
-      "id": "rss_8a7db720dad57a1b",
-      "timestamp": 1790891448000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis hit power grid supplying Prophet's Mosque in Madinah - thenationalnews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNM2hrbF9DWWh4MkVsR3hIYUVKaEl1TV9oZzZXUUdPUEdsY3V4bXI0Tm44NXFOclFvVW1EczNrRTdsdllMbk9IeVI4NDEtQzNSOGROb2F2ckxRUkxCSUxJN1B2SDJQSU95RWpFR3BVRmJPRXV3eXJaRVRHOXhfM0U0M3NSUC0wdzE5X3F2YkVSTjdwVC1LX2tFZkVxV3JGSVNVX0JxaVBOUDRqOEdzOWhXbkZrOA?oc=5\" target=\"_blank\">Houthis hit power grid supplying Prophet's Mosque in Madinah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">thenationalnews.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNM2hrbF9DWWh4MkVsR3hIYUVKaEl1TV9oZzZXUUdPUEdsY3V4bXI0Tm44NXFOclFvVW1EczNrRTdsdllMbk9IeVI4NDEtQzNSOGROb2F2ckxRUkxCSUxJN1B2SDJQSU95RWpFR3BVRmJPRXV3eXJaRVRHOXhfM0U0M3NSUC0wdzE5X3F2YkVSTjdwVC1LX2tFZkVxV3JGSVNVX0JxaVBOUDRqOEdzOWhXbkZrOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-01T23:18:39.012Z"
     }
   ]
 }
