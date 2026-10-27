@@ -1,8 +1,98 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-27T13:27:37.310Z",
+  "last_fetch": "2026-10-27T18:51:01.845Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0490579234e66921",
+      "timestamp": 1793119973000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Saudi Arabia reports missile interception damage in Riyadh as Houthis claim more attacks - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQdmN6SzJtQ0JYM2gwc3RFSmQ5V3lFTFVfbk04VEdnUXJDcVRZTE90aDVfSUhvVzFUOExCT0FNd2h5MFFjMlltY3dwd2JUc3ZtM1R6RXRXdldlMUZBSnZrR1pteE4yeGd2Vi1saWwySzh3MTJFQWpsNGFNQ1NQWFRPMmtkMkE4Uko4LUZaZTdUMWFQOWFqRXhSZ0k1ZWVPcmhpc1FXZ0FaYVBxRWFuTkNydzF3?oc=5\" target=\"_blank\">Middle East latest: Saudi Arabia reports missile interception damage in Riyadh as Houthis claim more attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQdmN6SzJtQ0JYM2gwc3RFSmQ5V3lFTFVfbk04VEdnUXJDcVRZTE90aDVfSUhvVzFUOExCT0FNd2h5MFFjMlltY3dwd2JUc3ZtM1R6RXRXdldlMUZBSnZrR1pteE4yeGd2Vi1saWwySzh3MTJFQWpsNGFNQ1NQWFRPMmtkMkE4Uko4LUZaZTdUMWFQOWFqRXhSZ0k1ZWVPcmhpc1FXZ0FaYVBxRWFuTkNydzF3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T18:51:00.363Z"
+    },
+    {
+      "id": "rss_73cacef8b0d56661",
+      "timestamp": 1793116861000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Explosions heard over Riyadh as Saudi authorities say Houthi missiles downed, and other Mideast news - Boston Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxObHhCLVo4TE92cXB6MkdJWk5PejB2dnVWM2JoWVhhWW9TbjFXbmlocjhtZUZqUHZsVEtGc0ROeDg3eDlNV19hVnhFalM3T0RkZlJVZUthd1NoNFFEVWZjSWpiM2NiZlhCRlE1ZHFuOF9JZEkzeEwzbFRlMFBYZUFvRWJoZjZXc3M?oc=5\" target=\"_blank\">Explosions heard over Riyadh as Saudi authorities say Houthi missiles downed, and other Mideast news</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Boston Herald</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObHhCLVo4TE92cXB6MkdJWk5PejB2dnVWM2JoWVhhWW9TbjFXbmlocjhtZUZqUHZsVEtGc0ROeDg3eDlNV19hVnhFalM3T0RkZlJVZUthd1NoNFFEVWZjSWpiM2NiZlhCRlE1ZHFuOF9JZEkzeEwzbFRlMFBYZUFvRWJoZjZXc3M?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T18:51:00.363Z"
+    },
+    {
+      "id": "rss_be5246ed89e96fb1",
+      "timestamp": 1793111046000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Houthi Ballistic Missile Intercepted Near Belgian Minehunter in Bab el-Mandeb - Naval News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamstRDlXZXJUUzNzdTJmUTdkcmtGd3NhT3N4bmNORWRBQ2NJSmU1REJ2SzV6WTRhWUEyZXppMnZYVjVmQ3YyTGxzM19PWFE5Q1FOYnlrZjlCd1RpbkxVTWNSU2VvMnoxVUZNSnFKRXlHdlNqdmE0NUs4bFROell5bFE5cFFuQUM0VXRSVTVyOXVZY0Z5RkE4bzB2WFdhQmMwdU5TRHBUM1F0ZlVab0lfVWFoMnZyQkxNekFFTzRYTFk?oc=5\" target=\"_blank\">Houthi Ballistic Missile Intercepted Near Belgian Minehunter in Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Naval News</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPamstRDlXZXJUUzNzdTJmUTdkcmtGd3NhT3N4bmNORWRBQ2NJSmU1REJ2SzV6WTRhWUEyZXppMnZYVjVmQ3YyTGxzM19PWFE5Q1FOYnlrZjlCd1RpbkxVTWNSU2VvMnoxVUZNSnFKRXlHdlNqdmE0NUs4bFROell5bFE5cFFuQUM0VXRSVTVyOXVZY0Z5RkE4bzB2WFdhQmMwdU5TRHBUM1F0ZlVab0lfVWFoMnZyQkxNekFFTzRYTFk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T18:51:00.363Z"
+    },
+    {
+      "id": "rss_ff7195f6e5dc6fd2",
+      "timestamp": 1793109103000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Yemen's Houthis claim attack on Saudi oil refinery, blasts shake Riyadh - The New Arab",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPWXJiak4wNXlWNExKQ08tcXdrLVcxd1FSWXNLaFFBZFhPdDBmdElrNkJDdnk2bUdNX3JhSHp1QU0ySHp6WGdkRkRCZWFuWFdnekVTU3VLSTlzN01GMlNjTmFZWEFveGx3TUhQaTRfX1RuSXRadU4zbGZiQ1ZSeUw3LUgxdzdmYzZ2LTl1UWNjUGRmQQ?oc=5\" target=\"_blank\">Yemen's Houthis claim attack on Saudi oil refinery, blasts shake Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Arab</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPWXJiak4wNXlWNExKQ08tcXdrLVcxd1FSWXNLaFFBZFhPdDBmdElrNkJDdnk2bUdNX3JhSHp1QU0ySHp6WGdkRkRCZWFuWFdnekVTU3VLSTlzN01GMlNjTmFZWEFveGx3TUhQaTRfX1RuSXRadU4zbGZiQ1ZSeUw3LUgxdzdmYzZ2LTl1UWNjUGRmQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T18:51:00.363Z"
+    },
     {
       "id": "rss_40594e6d57f7b52f",
       "timestamp": 1793100611000,
@@ -10727,92 +10817,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-03T09:36:37.545Z"
-    },
-    {
-      "id": "rss_3e0903e7eb3f5592",
-      "timestamp": 1790946463000,
-      "source": "Reuters",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Italy says EU naval mission in Red Sea still insufficient - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQcWRiOHhGTEtYWUUyOVJ2WHlzZDNzdVJpdTFycHk4aDJwSm9lWFF3VEV4VkFUbmpYbjl1UG1zUTVaMkFyMHgzMm9oTlFxNjA1dDNnYnY4Qjd2S3dWNFBOeFpSMWtxYXVJMEIyeUFxZjdNQnRQV215UkhnMm5TRFlSVHZJYV9jZnRwLWk3UTF5SEJyTjh3V3NtNDlVam8?oc=5\" target=\"_blank\">Italy says EU naval mission in Red Sea still insufficient</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQcWRiOHhGTEtYWUUyOVJ2WHlzZDNzdVJpdTFycHk4aDJwSm9lWFF3VEV4VkFUbmpYbjl1UG1zUTVaMkFyMHgzMm9oTlFxNjA1dDNnYnY4Qjd2S3dWNFBOeFpSMWtxYXVJMEIyeUFxZjdNQnRQV215UkhnMm5TRFlSVHZJYV9jZnRwLWk3UTF5SEJyTjh3V3NtNDlVam8?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-06T14:20:03.699Z"
-    },
-    {
-      "id": "rss_4b40338272e991cf",
-      "timestamp": 1790944995000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility - アラブニュース",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeFpYUVkxSEt6NFAxUkdYQ0FjUXR3RWp5NGpaZ290WHZGSWs5aGM3dGZIWEo0eV9sXzYwbWtESk1pc1RjY084RVJBbm1RbnJGUTlRSWxpVF9Ta1FSejhHMTM1YXBCdjlDdDF0a012NXhMWlJZVmdfdkRlcXJsbGtUdDdEcDFHeUpiSzJYbFgwaDVUd1hBdWQ3dlJ1Z1hXLW9fdXpmTmhVMFd1OEhTdENUZk9DMWdXRnYzSjM4?oc=5\" target=\"_blank\">Yemen’s army strikes Sanaa after Houthi attack on Madinah power facility</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeFpYUVkxSEt6NFAxUkdYQ0FjUXR3RWp5NGpaZ290WHZGSWs5aGM3dGZIWEo0eV9sXzYwbWtESk1pc1RjY084RVJBbm1RbnJGUTlRSWxpVF9Ta1FSejhHMTM1YXBCdjlDdDF0a012NXhMWlJZVmdfdkRlcXJsbGtUdDdEcDFHeUpiSzJYbFgwaDVUd1hBdWQ3dlJ1Z1hXLW9fdXpmTmhVMFd1OEhTdENUZk9DMWdXRnYzSjM4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T20:18:30.202Z"
-    },
-    {
-      "id": "rss_3fe9366457358062",
-      "timestamp": 1790941797000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Lebanon condemns Houthi drone attack on power station in Saudi Arabia - وكالة الأنباء السورية – سانا",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTFBFdGxZMVFGUE9NMjVfUXExdnk1dDRvMnBjNHdSanB2aTRrd2ZTdHpMNTdyVnYxTEY2dUVTZVFnN1Rrb1RpYV9hVjdjd2ctcm9I?oc=5\" target=\"_blank\">Lebanon condemns Houthi drone attack on power station in Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة الأنباء السورية – سانا</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBFdGxZMVFGUE9NMjVfUXExdnk1dDRvMnBjNHdSanB2aTRrd2ZTdHpMNTdyVnYxTEY2dUVTZVFnN1Rrb1RpYV9hVjdjd2ctcm9I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T15:17:23.887Z"
-    },
-    {
-      "id": "rss_29e434459c348abc",
-      "timestamp": 1790941539000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Pakistan condemns Houthi attack on Medina power station - Yeni Şafak English",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGltMElFdjR4dF95YkRCLUxKV2RpN0dMU1FZUmV2Q2hZS28wV3IwYzFYTXp3cVhnT0Fwd2cwcDZzVXVtNU5zU0RsVk5iaFJWZ2FMeFRKdUc5a1VtZHpfcXdGSjlKQk14R3R6YzlsRFNmNUZqdjhoNXRDaktlQTRZUUMxRWRfLW5HTEpnRDM5OUtvMW5ybFpoOXJB?oc=5\" target=\"_blank\">Pakistan condemns Houthi attack on Medina power station</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yeni Şafak English</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdGltMElFdjR4dF95YkRCLUxKV2RpN0dMU1FZUmV2Q2hZS28wV3IwYzFYTXp3cVhnT0Fwd2cwcDZzVXVtNU5zU0RsVk5iaFJWZ2FMeFRKdUc5a1VtZHpfcXdGSjlKQk14R3R6YzlsRFNmNUZqdjhoNXRDaktlQTRZUUMxRWRfLW5HTEpnRDM5OUtvMW5ybFpoOXJB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T15:17:23.886Z"
     }
   ]
 }
