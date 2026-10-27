@@ -1,8 +1,57 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-27T01:57:17.337Z",
+  "last_fetch": "2026-10-27T07:24:57.540Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_519580ae664b6b3f",
+      "timestamp": 1793077225000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Saudi Arabia intercepts missiles and drones after Tehran meeting - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOYXpXeGJySlQxeV9XYjNxYnlSSUVtSEZibERTbTVKcG1seloyZXYyc3JvbEtUT0JtamQ1N2YtbEYxZWR4MW1CTDJrbDUyYzVhOVFocDk1RURYWl82TFZFWmxNRW1UT1EtVE1INjR1bkNrbWhZN1lPSWZtclU0VFA3SXQtdU9Kay11UWI5YzZJaUU3R3MtSnBHdg?oc=5\" target=\"_blank\">Middle East latest: Saudi Arabia intercepts missiles and drones after Tehran meeting</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYXpXeGJySlQxeV9XYjNxYnlSSUVtSEZibERTbTVKcG1seloyZXYyc3JvbEtUT0JtamQ1N2YtbEYxZWR4MW1CTDJrbDUyYzVhOVFocDk1RURYWl82TFZFWmxNRW1UT1EtVE1INjR1bkNrbWhZN1lPSWZtclU0VFA3SXQtdU9Kay11UWI5YzZJaUU3R3MtSnBHdg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T07:24:56.335Z"
+    },
+    {
+      "id": "rss_fae092013c51e8c1",
+      "timestamp": 1793067420000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it intercepted Houthi missiles, drones attacking kingdom - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxQbkE2MkVyd2dKcU5mTWp1VmY5c0pENUN0WjhPTHJDTXZQRENZU2JQa09JbWJaTUpicnN0RkFuTllzRHE0bUtOSjdrSDBiZ3FMYVVhdjVtVFRZLXJoRmRmNldVWXg0SjUxVFppSjQyYXhVajhydnFRRS0yRmNEcW9XWjJZWWpUYjBUR1NCSWFFa3AzNFhDWDVYeVU2VHdQd2ZMcHM1NDhLM3RrTnY5MVlPU0szSWN4ZUlVRmN1OERpcFM3UTBtNGxUNXBVNzltalU?oc=5\" target=\"_blank\">Saudi-led coalition says it intercepted Houthi missiles, drones attacking kingdom</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "missile",
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbkE2MkVyd2dKcU5mTWp1VmY5c0pENUN0WjhPTHJDTXZQRENZU2JQa09JbWJaTUpicnN0RkFuTllzRHE0bUtOSjdrSDBiZ3FMYVVhdjVtVFRZLXJoRmRmNldVWXg0SjUxVFppSjQyYXhVajhydnFRRS0yRmNEcW9XWjJZWWpUYjBUR1NCSWFFa3AzNFhDWDVYeVU2VHdQd2ZMcHM1NDhLM3RrTnY5MVlPU0szSWN4ZUlVRmN1OERpcFM3UTBtNGxUNXBVNzltalU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-27T07:24:56.334Z"
+    },
     {
       "id": "rss_5fbb22943af18239",
       "timestamp": 1793035002000,
@@ -47,6 +96,50 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-26T22:59:38.520Z"
+    },
+    {
+      "id": "rss_8c527de04b9443b6",
+      "timestamp": 1793019229000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis Launch Missile Strike on Saudi-Run Military Training Camp in Yemen: At Least 75 Killed, More Than 200 Wounded - SFG Media",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE02Z1I5MmcxZV8tMEdma1VDRUVaeGdWaGZIQUp6RDEyY2J1c25iM0loTVNlVXZhMGdwMnVQcUY0VWJCb1IxZ0ZPQUFvWE9Uc2RNcW5jX3oxb1JoNHItNzJ0NmZHNnp0WGpHci1OeXpKc2tIQWdVdXB1SlpYcw?oc=5\" target=\"_blank\">Houthis Launch Missile Strike on Saudi-Run Military Training Camp in Yemen: At Least 75 Killed, More Than 200 Wounded</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SFG Media</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE02Z1I5MmcxZV8tMEdma1VDRUVaeGdWaGZIQUp6RDEyY2J1c25iM0loTVNlVXZhMGdwMnVQcUY0VWJCb1IxZ0ZPQUFvWE9Uc2RNcW5jX3oxb1JoNHItNzJ0NmZHNnp0WGpHci1OeXpKc2tIQWdVdXB1SlpYcw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T07:24:56.336Z"
+    },
+    {
+      "id": "rss_4277b0892e6e9872",
+      "timestamp": 1793017682000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Old Video Does Not Show a Recent Houthi Attack on King Fahd International Airport - موقع مسبار",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNa2JuNWF4ZzUxZEplMFBCbmFCZG9xejhWLUVHNThhcF9zdTM1M2NXMklhU05tUXFfZ3lhNXBqWjFxRk9qVFQwZW16YUttRmVjNnFSVm03Q01fVzJLNHRybDNxNjdhR3FxY2hrMjRySURvMnQ2eDN1ZlZPMlpRa1I3OWxVQUY3U0x2akxSYjUzcXItMWIxaThSVGJXcFlOLWVIemNGN0JsNG1BckxnTnJCUzdENC1fSXdfeHdvNm5ha0o?oc=5\" target=\"_blank\">Old Video Does Not Show a Recent Houthi Attack on King Fahd International Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNa2JuNWF4ZzUxZEplMFBCbmFCZG9xejhWLUVHNThhcF9zdTM1M2NXMklhU05tUXFfZ3lhNXBqWjFxRk9qVFQwZW16YUttRmVjNnFSVm03Q01fVzJLNHRybDNxNjdhR3FxY2hrMjRySURvMnQ2eDN1ZlZPMlpRa1I3OWxVQUY3U0x2akxSYjUzcXItMWIxaThSVGJXcFlOLWVIemNGN0JsNG1BckxnTnJCUzdENC1fSXdfeHdvNm5ha0o?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-27T07:24:56.336Z"
     },
     {
       "id": "rss_230156da28b6a205",
@@ -10711,92 +10804,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOTTU1WVRfNWlSY1NTdGE4WWpLMEI1a2hvM1JvdXlzbE1tZ2JXNXlGenVsTjQwdnptX0hCeTRrOTBSRlZVb1dXWWw1Q2FVNF80Snl5NkN2VEc5MG5qeEtUWGVRLWFoU05VSEpfdkRnZWVPSHpkSzk3RGtudnIzTlR6SFpweDZFZll0LTFaelN0aVNUZUJaa3pQWm5GWE1rbDR4VFBTcDlMNHhueEZwU2E1cUFRaFpHeFViZHpJZWZJZjXSAccBQVVfeXFMTjdIdHM1RUgyVWlXdmwwbXRwbnVIRXJyMDhmakJtSnc0VTctejVmRHh5dzQ2SEJyWkowWThXUTFNTXlLblcxZXVxN2E0QWpyUFRVODhxNW8yRUVxUTRDUEI3RGxybDh5Y1BLLVFiQU43aFlINHBxdTNob3NlN01rLXgzeHhWU3RBTmpqbEhieUFsUFpnaEtha04xMjR3WENxMHlKb09vTkpJOW10U2VaZ1VmR1JCdXFxN2NhWEpJVDZQMzJDaHhITQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T08:47:01.560Z"
-    },
-    {
-      "id": "rss_63e54644f02c331b",
-      "timestamp": 1790919272000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Pakistan condemns alleged Houthi attack on Medina substation — Dawn - UA.NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQZGttMXlZNkd2RkpkaFB2WXRIYmx5LU5KX1JLMVdhTi1mU05qZEhTWWJ1U0lrYlloWmdUcS1yNlVxb0FURy00bXk5TFlzTXZJRHRDMDdpX0Utb2o3Y3ZlMk5JbTE5Y19pODc0cFpmY3pZT1ZXWFN0eEtyVW16NmZpMDVPUkFNWXp0SGFEaUhycjZLdDlDbVNNNENyYw?oc=5\" target=\"_blank\">Pakistan condemns alleged Houthi attack on Medina substation — Dawn</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZGttMXlZNkd2RkpkaFB2WXRIYmx5LU5KX1JLMVdhTi1mU05qZEhTWWJ1U0lrYlloWmdUcS1yNlVxb0FURy00bXk5TFlzTXZJRHRDMDdpX0Utb2o3Y3ZlMk5JbTE5Y19pODc0cFpmY3pZT1ZXWFN0eEtyVW16NmZpMDVPUkFNWXp0SGFEaUhycjZLdDlDbVNNNENyYw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T08:47:01.560Z"
-    },
-    {
-      "id": "rss_d90953e189d0fd7e",
-      "timestamp": 1790918348000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia denies suicide bomber attempt claims near Kaaba, Islam’s holiest site - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaEtfc19STmFpZktyRWJENUJ6d296S3F0RjlSZGRUNG0xZlpXWWlreGtGSzV4a1VHelZJb0FwNURPTHJYclhfOW95TjFseldiR1NPVlB2Z0I2MnM0eV83amFpWnBKdHZvLWY1M1M4MmVGVTFmLVFyT1Zxam9xRXpwUE85Q0IxZlN1T2lIY0I5Y3lYeGtOdHlveFJtOGNIeDhIUTBCdVdvN1ZUcW4tRmY1X2YxOXNzRVN4U0F3QTl6dUJSUQ?oc=5\" target=\"_blank\">Saudi Arabia denies suicide bomber attempt claims near Kaaba, Islam’s holiest site</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQaEtfc19STmFpZktyRWJENUJ6d296S3F0RjlSZGRUNG0xZlpXWWlreGtGSzV4a1VHelZJb0FwNURPTHJYclhfOW95TjFseldiR1NPVlB2Z0I2MnM0eV83amFpWnBKdHZvLWY1M1M4MmVGVTFmLVFyT1Zxam9xRXpwUE85Q0IxZlN1T2lIY0I5Y3lYeGtOdHlveFJtOGNIeDhIUTBCdVdvN1ZUcW4tRmY1X2YxOXNzRVN4U0F3QTl6dUJSUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T08:47:01.561Z"
-    },
-    {
-      "id": "rss_b659020698b67adc",
-      "timestamp": 1790917843000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Pakistan condemns Houthi attack on power station supplying Prophet’s Mosque - Iran International",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9VMlN4N1dwMWxtQXl5VHVWQ2g2c2ZNZjE0WFRCbmVMdC1IT0hDcGl0TEpEM3FBUWhlN2dYZVQySUI5YXpVS1Z5bDl3a1JNMnhaNUE?oc=5\" target=\"_blank\">Pakistan condemns Houthi attack on power station supplying Prophet’s Mosque</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9VMlN4N1dwMWxtQXl5VHVWQ2g2c2ZNZjE0WFRCbmVMdC1IT0hDcGl0TEpEM3FBUWhlN2dYZVQySUI5YXpVS1Z5bDl3a1JNMnhaNUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T23:55:02.494Z"
-    },
-    {
-      "id": "rss_cd3a38836896b6de",
-      "timestamp": 1790910885000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "The UAE condemns the Houthi attack on a power station in Medina - Yemen Online",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE9jRVRXdEFMNkdFT2g5X1c0SVdpX2Y0XzlpVFphanFNYXVHRG5ual9jbFQ2UkViYjlMNnQ4R1FEdjdUMXVUclptMDhPa2hkLXA0YWc?oc=5\" target=\"_blank\">The UAE condemns the Houthi attack on a power station in Medina</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9jRVRXdEFMNkdFT2g5X1c0SVdpX2Y0XzlpVFphanFNYXVHRG5ual9jbFQ2UkViYjlMNnQ4R1FEdjdUMXVUclptMDhPa2hkLXA0YWc?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
