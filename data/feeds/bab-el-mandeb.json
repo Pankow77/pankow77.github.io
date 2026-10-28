@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-28T01:59:26.640Z",
+  "last_fetch": "2026-10-28T08:12:19.207Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3f6268e752b5116e",
+      "timestamp": 1793173860000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil Prices Rise as Houthi Militants Target Saudi Energy - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOSlpYejlRTmd1MFprTGxzTHhIQi1taDhJVkMtTThYN1Y5UktONWZxcVM5TEJ2Sy1Jd25QZXFCem5uNDkzOGU3Z0NONzE1V0ZPT2E2QlJTdjZreDg0eXA5Z21MandpYmI3azQ5Q0h4azVTdHpYQnVQVGdYR3pEajBid0QtT0taZl9OVktOSUhIWjl6eGdqYlJ5RFZOd3p1LVRkVjVCVg?oc=5\" target=\"_blank\">Oil Prices Rise as Houthi Militants Target Saudi Energy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOSlpYejlRTmd1MFprTGxzTHhIQi1taDhJVkMtTThYN1Y5UktONWZxcVM5TEJ2Sy1Jd25QZXFCem5uNDkzOGU3Z0NONzE1V0ZPT2E2QlJTdjZreDg0eXA5Z21MandpYmI3azQ5Q0h4azVTdHpYQnVQVGdYR3pEajBid0QtT0taZl9OVktOSUhIWjl6eGdqYlJ5RFZOd3p1LVRkVjVCVg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-28T08:12:17.931Z"
+    },
+    {
+      "id": "rss_b0bcad6049332ca8",
+      "timestamp": 1793171707000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: US warns Gulf allies of possible renewal of Iran war, report says - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxPaFJlRWh6RjRRdWJxRDBZM0lmaW9tOTkxS2JCTnpjSTJ3aGhrd2xJSW1MN2dDeWt6SzNMeWJva3Rhcm80NGx1OHoweGdKSGJZUklZQzliNE94UGVJeEpJdlo5WDlJbFpwRmctMTNIRnZSMEhlRTJoamZlblNtNi1lWjJhdy1aWFhTTk1MeGYtUVFKZw?oc=5\" target=\"_blank\">Middle East latest: US warns Gulf allies of possible renewal of Iran war, report says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaFJlRWh6RjRRdWJxRDBZM0lmaW9tOTkxS2JCTnpjSTJ3aGhrd2xJSW1MN2dDeWt6SzNMeWJva3Rhcm80NGx1OHoweGdKSGJZUklZQzliNE94UGVJeEpJdlo5WDlJbFpwRmctMTNIRnZSMEhlRTJoamZlblNtNi1lWjJhdy1aWFhTTk1MeGYtUVFKZw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-28T08:12:17.931Z"
+    },
+    {
+      "id": "rss_283cf5ebc7db0af9",
+      "timestamp": 1793153558000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare, HRW Says - Eurasia Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVlpFY2RsdnpiV2Q4NzdSb1hMXzlibFVhOGdrT1ZMZWM0UE92RTY2a0czSkthQXhqVGNCS05tMkFNNE50eGl5dUQtNlowczB5Njl4b3oxMVNFaDB6bEJIUTc1NWZESWt4OWtYbXh1a0NKUUV1ZWNlX3BSWldiNTlsRVJIZDAxbElqU04zLWx0ZUhuWTJxWHV0QndUV2ptUFdBTjIybnZDLVZTdw?oc=5\" target=\"_blank\">Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare, HRW Says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Eurasia Review</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVlpFY2RsdnpiV2Q4NzdSb1hMXzlibFVhOGdrT1ZMZWM0UE92RTY2a0czSkthQXhqVGNCS05tMkFNNE50eGl5dUQtNlowczB5Njl4b3oxMVNFaDB6bEJIUTc1NWZESWt4OWtYbXh1a0NKUUV1ZWNlX3BSWldiNTlsRVJIZDAxbElqU04zLWx0ZUhuWTJxWHV0QndUV2ptUFdBTjIybnZDLVZTdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-28T08:12:17.931Z"
+    },
     {
       "id": "rss_36168cfdfa77e943",
       "timestamp": 1793135455000,
@@ -113,6 +178,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-27T18:51:00.363Z"
+    },
+    {
+      "id": "rss_02360c43d0848bc1",
+      "timestamp": 1793110989000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "\"Direct Hit\": Houthis Claim Targeted Saudi Ministry With Ballistic Missile - NDTV",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxNeUZSVU1wakItSGU4ZkphY0ZRWWo5Q2c1d0dXdU5IeWVVR25jNlZZb3JoTWt2NS1hUHZlajh2ZmFIRW9EQ1JwcGtKbF93ZEFUelhLVWFZNzNGZXEtV0RGU3RqaUpmWlhRUlFGcEpWZG5hc1gzaVB2VWd1Zlo5eVZnQkFIVnBYbVFscmJ1cTJaRHJEYy11Z0JEbUtwZm9MV0JEMko2WV9NTFJFaHdwSzMtLWRB0gG6AUFVX3lxTE5yZkk2RVVWS2JpbXh5NHZLT3RZTE5ONk9fVV9vMHNDLThibjlVdkZJaU1sc09DakxNbk9ZdWgxZW5aWGJ0ZTdsVHFGbzY3R1pBbHlrdDlTM2stUmh5dGxGcm1NNTVhVW1vVVd5Rm5pRHMzVzMxd2dNbDh3TkRXcHVXNXpGZDkzT1Q4YUxjdGlEb1RSNnBia1RibH",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeUZSVU1wakItSGU4ZkphY0ZRWWo5Q2c1d0dXdU5IeWVVR25jNlZZb3JoTWt2NS1hUHZlajh2ZmFIRW9EQ1JwcGtKbF93ZEFUelhLVWFZNzNGZXEtV0RGU3RqaUpmWlhRUlFGcEpWZG5hc1gzaVB2VWd1Zlo5eVZnQkFIVnBYbVFscmJ1cTJaRHJEYy11Z0JEbUtwZm9MV0JEMko2WV9NTFJFaHdwSzMtLWRB0gG6AUFVX3lxTE5yZkk2RVVWS2JpbXh5NHZLT3RZTE5ONk9fVV9vMHNDLThibjlVdkZJaU1sc09DakxNbk9ZdWgxZW5aWGJ0ZTdsVHFGbzY3R1pBbHlrdDlTM2stUmh5dGxGcm1NNTVhVW1vVVd5Rm5pRHMzVzMxd2dNbDh3TkRXcHVXNXpGZDkzT1Q4YUxjdGlEb1RSNnBia1RibHIyRDk2Y0FxZ28wM0pBUGxoLV83ellzOUZKVkhHOW84QQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-28T08:12:17.932Z"
     },
     {
       "id": "rss_ff7195f6e5dc6fd2",
@@ -10729,94 +10817,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-03T14:31:04.530Z"
-    },
-    {
-      "id": "rss_713ca96bf234a96b",
-      "timestamp": 1790966301000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Saudis Plan Attack on Houthi Rebels to Unblock Red Sea - Nacionale",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxObVJPa3FCT0owWVUyVXkyNUYtajl4bHd3QktYbUQyWFpSZUR0MVd1c0Q5X2NoRW9LOGxISlNLaFJiMXNzTEhyckVFZDUtMmpyM3pCUjY5ZFFYbUdrMmJwcENlTXN2UnJNM2ZZdEhLT0JSSlZ6Z1NEakx4SmFaN2FpU0pNMnFNaVdZOHd3ME1Palp0WjQ0ckNN?oc=5\" target=\"_blank\">Saudis Plan Attack on Houthi Rebels to Unblock Red Sea</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nacionale</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObVJPa3FCT0owWVUyVXkyNUYtajl4bHd3QktYbUQyWFpSZUR0MVd1c0Q5X2NoRW9LOGxISlNLaFJiMXNzTEhyckVFZDUtMmpyM3pCUjY5ZFFYbUdrMmJwcENlTXN2UnJNM2ZZdEhLT0JSSlZ6Z1NEakx4SmFaN2FpU0pNMnFNaVdZOHd3ME1Palp0WjQ0ckNN?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T20:03:01.174Z"
-    },
-    {
-      "id": "rss_49e36c3c540a4a49",
-      "timestamp": 1790964821000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudis plan assault on Houthis to break Red Sea chokehold - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUVJialJyWHg0VzlHXzBiaTU3elZhbWEtQzd0TjhNOGNsWFFZNTYyMGFqODJGcVc3aVBaYVY3QkRzWWpEZDlQNEpJeVp6ZjMxYkZKYi1nZ0FUenFUSFRFRTNCb3NaTmdCaTJ1WWV1RmlqcmhSZGtsZWZobE5jSHp3RkJiVXpueWdVOHJmbDhzUEEzVXB6OF9jYkJHcnpfQklTNDVHZ20yS1J6QQ?oc=5\" target=\"_blank\">Saudis plan assault on Houthis to break Red Sea chokehold</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUVJialJyWHg0VzlHXzBiaTU3elZhbWEtQzd0TjhNOGNsWFFZNTYyMGFqODJGcVc3aVBaYVY3QkRzWWpEZDlQNEpJeVp6ZjMxYkZKYi1nZ0FUenFUSFRFRTNCb3NaTmdCaTJ1WWV1RmlqcmhSZGtsZWZobE5jSHp3RkJiVXpueWdVOHJmbDhzUEEzVXB6OF9jYkJHcnpfQklTNDVHZ20yS1J6QQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-02T20:03:01.173Z"
-    },
-    {
-      "id": "rss_4f529770a0292836",
-      "timestamp": 1790959560000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia plans major Yemen offensive against Iran-backed Houthi forces - The Independent",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNaV91bHZYY0Jad2tIR1pvWnZIUWVwZDNiWWstc0doWUwtUTd0RXVUbFVpVHo1NkExNkNvMXNUNG1LT281WHl0azdpdjJLVmZxcEM0RGNrVHFGaTZ3RjhMRlJBSVdJcUlXTW5odmhmUUpSSzRPdUlXalJfUVJGdFRrTTRWMTRRYVlKWVRMTU5pVHFvSXRMMkkwZGhBU1F6M0NsQ2VF?oc=5\" target=\"_blank\">Saudi Arabia plans major Yemen offensive against Iran-backed Houthi forces</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Independent</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNaV91bHZYY0Jad2tIR1pvWnZIUWVwZDNiWWstc0doWUwtUTd0RXVUbFVpVHo1NkExNkNvMXNUNG1LT281WHl0azdpdjJLVmZxcEM0RGNrVHFGaTZ3RjhMRlJBSVdJcUlXTW5odmhmUUpSSzRPdUlXalJfUVJGdFRrTTRWMTRRYVlKWVRMTU5pVHFvSXRMMkkwZGhBU1F6M0NsQ2VF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T20:03:01.174Z"
-    },
-    {
-      "id": "rss_3656e836fde53881",
-      "timestamp": 1790958600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Turkey's defence ministry condemns Houthi drone attack on Saudi Arabia - middleeasteye.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQelhvbkZvLXlWaGtBOHBTT2g2OEpFX2FMQXRqb05TQVN4TEtjRk1GcVJudG9RZ2llbm5CX1RqUnZkS0pielhVVWM4TGJEaEk0MjJTZUVGTXFqLXZQQm9Lc1R1OXZFU2xNWm5xaEFXMklUaTZlYUtWLWJZYVZpMlBQTEROQnctVjAxU1Y1aTl2Y1ZCTUVUVUhEMktZaF9Ud2oyaTJ6WlRZelYwd2ZsRGpRSjRVSWdTQll5VkpVTDRyeFA?oc=5\" target=\"_blank\">Turkey's defence ministry condemns Houthi drone attack on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middleeasteye.net</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQelhvbkZvLXlWaGtBOHBTT2g2OEpFX2FMQXRqb05TQVN4TEtjRk1GcVJudG9RZ2llbm5CX1RqUnZkS0pielhVVWM4TGJEaEk0MjJTZUVGTXFqLXZQQm9Lc1R1OXZFU2xNWm5xaEFXMklUaTZlYUtWLWJZYVZpMlBQTEROQnctVjAxU1Y1aTl2Y1ZCTUVUVUhEMktZaF9Ud2oyaTJ6WlRZelYwd2ZsRGpRSjRVSWdTQll5VkpVTDRyeFA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-02T20:03:01.173Z"
     }
   ]
 }
