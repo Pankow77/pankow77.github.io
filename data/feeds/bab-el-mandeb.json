@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-29T19:07:59.621Z",
+  "last_fetch": "2026-10-29T23:28:13.787Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d2e2a9ea93e371da",
+      "timestamp": 1793302865000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Fire 3 Missiles at Saudi Arabia on Oct 29, 2026 - https://houseofsaud.com/",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiY0FVX3lxTE1fTnFic2ZwbWM1TGVWYVhOZ0w3S0xSc0RFbFZGa3pJdW5oVVBHNUZxbVZ4WVpaU3ltUHNHOG5EajBTal9IczlwZm9XVTA2NUtESkFXRjYteWFFd285QmtrOC0taw?oc=5\" target=\"_blank\">Houthis Fire 3 Missiles at Saudi Arabia on Oct 29, 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">https://houseofsaud.com/</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1fTnFic2ZwbWM1TGVWYVhOZ0w3S0xSc0RFbFZGa3pJdW5oVVBHNUZxbVZ4WVpaU3ltUHNHOG5EajBTal9IczlwZm9XVTA2NUtESkFXRjYteWFFd285QmtrOC0taw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T23:28:12.276Z"
+    },
     {
       "id": "rss_3dc8a9513ac419b4",
       "timestamp": 1793280273000,
@@ -10800,29 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T12:41:27.899Z"
-    },
-    {
-      "id": "rss_978722a6bcbef592",
-      "timestamp": 1791094380000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Saudi-led coalition dismisses Houthi claim of attack on Riyadh - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxOdXgyNmxralNSQ2VFMHpTOVoxVXZaQmliVVFQN09aaDBDOEdLQTdpMlBWbVUybnBac2t0QTZTWDVSSG9GWWNDWlpDSW4wc0VHOUxXT1BTbDRsWVF6Y1BCUThfc0ZPMi0xcGl0UHUyMDdfNmVyYlNWel81WnkwQUVySkF6TktLWE9BWU5HdlNLbkNhT3NMTk5tZ3NYQUhCbU9EMnVTRW9aUmFwYk9qdTVEdkFqOA?oc=5\" target=\"_blank\">Saudi-led coalition dismisses Houthi claim of attack on Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdXgyNmxralNSQ2VFMHpTOVoxVXZaQmliVVFQN09aaDBDOEdLQTdpMlBWbVUybnBac2t0QTZTWDVSSG9GWWNDWlpDSW4wc0VHOUxXT1BTbDRsWVF6Y1BCUThfc0ZPMi0xcGl0UHUyMDdfNmVyYlNWel81WnkwQUVySkF6TktLWE9BWU5HdlNLbkNhT3NMTk5tZ3NYQUhCbU9EMnVTRW9aUmFwYk9qdTVEdkFqOA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.898Z"
     }
   ]
 }
