@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-29T13:28:40.993Z",
+  "last_fetch": "2026-10-29T19:07:59.621Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-29T13:28:39.471Z"
+    },
+    {
+      "id": "rss_95121f05a2cc281c",
+      "timestamp": 1793275755000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Oil prices rise after Houthi attack near Saudi Arabia’s Ras Tanura Terminal - safety4sea",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxNYW9TNDJoNjFKMVp6SW1lU0NKUFhDNlFLTzRreEZWZ0liVnpVSVlXWUZDbjNHM0Y3T3hjcnJEMXQzYkFscDhLczFJLVpZeFNnSmx3ei0zMlZ1VEZqaV9HN0pDLWktTnlkMkJpTjNIbEZuY2MxWXlBOWN0N3Z6bGk4OUVRSmtmY2k1b3JldDlSMEpaR0ItZExxRjlmenA5TU0?oc=5\" target=\"_blank\">Oil prices rise after Houthi attack near Saudi Arabia’s Ras Tanura Terminal</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">safety4sea</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNYW9TNDJoNjFKMVp6SW1lU0NKUFhDNlFLTzRreEZWZ0liVnpVSVlXWUZDbjNHM0Y3T3hjcnJEMXQzYkFscDhLczFJLVpZeFNnSmx3ei0zMlZ1VEZqaV9HN0pDLWktTnlkMkJpTjNIbEZuY2MxWXlBOWN0N3Z6bGk4OUVRSmtmY2k1b3JldDlSMEpaR0ItZExxRjlmenA5TU0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T19:07:58.323Z"
     },
     {
       "id": "rss_ff313c5f4fa5a190",
@@ -287,6 +308,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-28T15:17:19.464Z"
+    },
+    {
+      "id": "rss_bc571f260bf0a802",
+      "timestamp": 1793190399000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis strike Aden airport with two ballistic missiles - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxObVJxY2pGRWg2RmNMdWRET2NPMkpCbUJWMTZsSVEwUFI3MnRnZU9HSnpTcWV3QnNfZzVyMENienFRU2NBaThpcVpOTmJxMEdmdy16U240STlwM2NlVl9TRVdkSjVQM0xMOUYweEZja3pTeXhnUUg4bDFSNG41UElabDQtWGNBOHhZaEE5SWJrbFQ2ZnROLTZaZnVzcHJvc01xMFE?oc=5\" target=\"_blank\">Houthis strike Aden airport with two ballistic missiles</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObVJxY2pGRWg2RmNMdWRET2NPMkpCbUJWMTZsSVEwUFI3MnRnZU9HSnpTcWV3QnNfZzVyMENienFRU2NBaThpcVpOTmJxMEdmdy16U240STlwM2NlVl9TRVdkSjVQM0xMOUYweEZja3pTeXhnUUg4bDFSNG41UElabDQtWGNBOHhZaEE5SWJrbFQ2ZnROLTZaZnVzcHJvc01xMFE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T19:07:58.324Z"
     },
     {
       "id": "rss_0c56e87f1ea19f0c",
@@ -10779,48 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T12:41:27.898Z"
-    },
-    {
-      "id": "rss_9e5cc46a0cad04f0",
-      "timestamp": 1791091200000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "What damage resulted from the Houthi attack on Saudi oil infrastructure? - The Business Standard",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQRy0xbi00NEhwSXFEWU9MTndRbTNickk0NnEwcUtBV2pPTmY1eWpRelBtb2hjYXE0RUxQanNRNDhfUTRvWThnd3Zvbms5T3NmR0M1MWRsRnc1OXgxcTczclR0eE5WZVg2VHdBc21DSHJObmpPbG9CUWliZlB3TUdUOTlwU25yQm1FNl82ckJjTWZpanBoQjdybFdxSEtMMFQ5Z0dWS2Nhc21EaVVQ?oc=5\" target=\"_blank\">What damage resulted from the Houthi attack on Saudi oil infrastructure?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Business Standard</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQRy0xbi00NEhwSXFEWU9MTndRbTNickk0NnEwcUtBV2pPTmY1eWpRelBtb2hjYXE0RUxQanNRNDhfUTRvWThnd3Zvbms5T3NmR0M1MWRsRnc1OXgxcTczclR0eE5WZVg2VHdBc21DSHJObmpPbG9CUWliZlB3TUdUOTlwU25yQm1FNl82ckJjTWZpanBoQjdybFdxSEtMMFQ5Z0dWS2Nhc21EaVVQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T06:09:09.139Z"
-    },
-    {
-      "id": "rss_68c4775a91e40d80",
-      "timestamp": 1791090780000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Bangladesh govt slams Houthi attack on Madinah power station - New Age BD",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNeEdEX0wxbW52b0E3R1pybHpOUHdiVWFMQ1pSeldRd0NaTklVX19SWTVqMTJUejFhbjYzOVQxbmFKSVJnbmZ6cFlTYzNESDBBU2x2dlRZZTZMZUpmWVVIWlRuODdfeTY2TTdWajFMWTY4TnlhSmszTTQtS2IzTEFER19GVTQ4UlNJeXhNSGNQWEJhU0xDcC0yQU95SGZjTkZSbW43TndjWmsxZlJaOVN4YzlXNA?oc=5\" target=\"_blank\">Bangladesh govt slams Houthi attack on Madinah power station</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New Age BD</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNeEdEX0wxbW52b0E3R1pybHpOUHdiVWFMQ1pSeldRd0NaTklVX19SWTVqMTJUejFhbjYzOVQxbmFKSVJnbmZ6cFlTYzNESDBBU2x2dlRZZTZMZUpmWVVIWlRuODdfeTY2TTdWajFMWTY4TnlhSmszTTQtS2IzTEFER19GVTQ4UlNJeXhNSGNQWEJhU0xDcC0yQU95SGZjTkZSbW43TndjWmsxZlJaOVN4YzlXNA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T06:09:09.138Z"
     }
   ]
 }
