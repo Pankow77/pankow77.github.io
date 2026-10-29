@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-28T20:26:01.678Z",
+  "last_fetch": "2026-10-29T00:10:22.311Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_b1b5b8040fe3b05b",
+      "timestamp": 1793229300000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi oil exports boom despite relentless Houthi attacks - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxQQjdCVG5hYllpY3VIU3l6bnZRWFQtQmhHYlJValgySjFiMkZBdmRDZzhoN2lNMk1CSUxYQVJFUW4xclM0NHlnNVhqUzBmU3RtZDFKYjhSVzgteDBZUm5wcUVqek5PRUVZNEc2NzJmeURIWXF5WUVFbHJLRGpoNUJyb1FhRU1fVi1QUUZZZmloMVNhZkp1cmxTdnRMeXlLQzg?oc=5\" target=\"_blank\">Saudi oil exports boom despite relentless Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQjdCVG5hYllpY3VIU3l6bnZRWFQtQmhHYlJValgySjFiMkZBdmRDZzhoN2lNMk1CSUxYQVJFUW4xclM0NHlnNVhqUzBmU3RtZDFKYjhSVzgteDBZUm5wcUVqek5PRUVZNEc2NzJmeURIWXF5WUVFbHJLRGpoNUJyb1FhRU1fVi1QUUZZZmloMVNhZkp1cmxTdnRMeXlLQzg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T00:10:20.756Z"
+    },
+    {
+      "id": "rss_6d27ca3673d3ebe4",
+      "timestamp": 1793220731000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Houthi attacks and fears of U.S. attacks on Iran sent oil climbing - Oklahoma Energy Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOREpDLWtrNWpTanB6aUNSODJucTV2ZUdWZnFKZVRvM3lkUUJ4RU1zaUMtREhxLUNUYUxUSUtUWFMxT0dnVFNrUHhxTjNMMVhYZUdjTHc2R0gyTHZGNXZfRy03Y1d3WE1vUFlWTkN2akRzX0N4LS1QSjF2MWZYUldzVzN4M25jZDNMRG10UjQ4bGFIVVVpdnVqQ2ZtdlA2OW1NTHc?oc=5\" target=\"_blank\">Houthi attacks and fears of U.S. attacks on Iran sent oil climbing</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Oklahoma Energy Today</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOREpDLWtrNWpTanB6aUNSODJucTV2ZUdWZnFKZVRvM3lkUUJ4RU1zaUMtREhxLUNUYUxUSUtUWFMxT0dnVFNrUHhxTjNMMVhYZUdjTHc2R0gyTHZGNXZfRy03Y1d3WE1vUFlWTkN2akRzX0N4LS1QSjF2MWZYUldzVzN4M25jZDNMRG10UjQ4bGFIVVVpdnVqQ2ZtdlA2OW1NTHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T00:10:20.756Z"
+    },
     {
       "id": "rss_61454c65aa6373c6",
       "timestamp": 1793206293000,
@@ -268,6 +312,29 @@
       "fetched_at": "2026-10-28T08:12:17.931Z"
     },
     {
+      "id": "rss_4433d21432ee08ea",
+      "timestamp": 1793161586000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Yemen says Houthis attacked Aden airport twice with ballistic missiles - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE1lem9tb1QwUDdzdGVId2ZLZXBTc0tsTGs1aTdHS29mRjR1di1IOThPYVFLQUp6MFdoN3VBZF9GWWZzQVp4RmpRQTFucmhOMEF6eUZpdXpCa05SQjlkVVdhbFJOVnFBMDVXaFg0WDBfZi1nQmsyYnVCdXhFQmVRdw?oc=5\" target=\"_blank\">Middle East latest: Yemen says Houthis attacked Aden airport twice with ballistic missiles</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1lem9tb1QwUDdzdGVId2ZLZXBTc0tsTGs1aTdHS29mRjR1di1IOThPYVFLQUp6MFdoN3VBZF9GWWZzQVp4RmpRQTFucmhOMEF6eUZpdXpCa05SQjlkVVdhbFJOVnFBMDVXaFg0WDBfZi1nQmsyYnVCdXhFQmVRdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T00:10:20.756Z"
+    },
+    {
       "id": "rss_283cf5ebc7db0af9",
       "timestamp": 1793153558000,
       "source": "OSINT",
@@ -287,6 +354,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-28T08:12:17.931Z"
+    },
+    {
+      "id": "rss_853ca3cd8efa9530",
+      "timestamp": 1793151838000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Oil prices rise as Houthi attack on Saudi refinery stokes supply disruption fears - Investing.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPcmt4cjAwb25Xd1FfZXNhX0FVdHNRQTBXZUJROUlaNl94RklwUGZIc0xTMXRKUFFDY25uMTNESUJ3a0RBZW5Dd3J1aGtZSmhQWWNnZjF6Wk9tVGVXWjIxYzdCbmhWUTA4WndBLXRUSTlXX0pOak0xTVgxRXFUai01dV9Jd0FDc3Rocm45R294SzBIbFVWZnpreXlIeXpBT2ZTb3BJc3BSTGROejJTRWxEZXFQWF9XSE1ZSW5xS2FrSTZmSWNBV09XaExHM2o?oc=5\" target=\"_blank\">Oil prices rise as Houthi attack on Saudi refinery stokes supply disruption fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investing.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPcmt4cjAwb25Xd1FfZXNhX0FVdHNRQTBXZUJROUlaNl94RklwUGZIc0xTMXRKUFFDY25uMTNESUJ3a0RBZW5Dd3J1aGtZSmhQWWNnZjF6Wk9tVGVXWjIxYzdCbmhWUTA4WndBLXRUSTlXX0pOak0xTVgxRXFUai01dV9Jd0FDc3Rocm45R294SzBIbFVWZnpreXlIeXpBT2ZTb3BJc3BSTGROejJTRWxEZXFQWF9XSE1ZSW5xS2FrSTZmSWNBV09XaExHM2o?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T00:10:20.757Z"
     },
     {
       "id": "rss_8995224473eac00d",
@@ -10735,93 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T12:41:27.898Z"
-    },
-    {
-      "id": "rss_1ae2091b9cbaabca",
-      "timestamp": 1791067253000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthi rebels claim attack on Saudi oil facility in Riyadh - africanews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOUUhpX29BUTJ6QlBRR1gzMHpkYlNWOU1sSzNKb0tWX2tIai1JMFpIUWZibG9UQmk2OTR1WUtfSWFUNW9WZlB2SXg1TUxXMmRVQmQ3SjVDMW02cHBnWjE3OWkyb3p6WWJIMTdpaGtrS2RwTTkwcWJqdFU1UWhjb2xTQ2l5dnNMNjI0SVNEVzFoS2hSV2dkU1I3LTdHVnc3UdIBowFBVV95cUxNWlI1X2h5QUR0M3RSVDJiYVNYRkt2UkpuNmFPS2JsVndraG9zRjNybU1GNE5DSk5qdzV0alloOHdOcTNhWjczamJPZ2V1cWxWVG43N091SnRTRmFNQVdCZmFTT0lGQXhSenNtZ3o0WXdCN3p2ajViQjdhQ1pTMURWV0lGQnR3NXB6MXhFODlqZ3FJcWFtUlBoUjVNLUxMaVp6ZmJr?oc=5\" target=",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUUhpX29BUTJ6QlBRR1gzMHpkYlNWOU1sSzNKb0tWX2tIai1JMFpIUWZibG9UQmk2OTR1WUtfSWFUNW9WZlB2SXg1TUxXMmRVQmQ3SjVDMW02cHBnWjE3OWkyb3p6WWJIMTdpaGtrS2RwTTkwcWJqdFU1UWhjb2xTQ2l5dnNMNjI0SVNEVzFoS2hSV2dkU1I3LTdHVnc3UdIBowFBVV95cUxNWlI1X2h5QUR0M3RSVDJiYVNYRkt2UkpuNmFPS2JsVndraG9zRjNybU1GNE5DSk5qdzV0alloOHdOcTNhWjczamJPZ2V1cWxWVG43N091SnRTRmFNQVdCZmFTT0lGQXhSenNtZ3o0WXdCN3p2ajViQjdhQ1pTMURWV0lGQnR3NXB6MXhFODlqZ3FJcWFtUlBoUjVNLUxMaVp6ZmJr?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.899Z"
-    },
-    {
-      "id": "rss_f7526f00fb8d9895",
-      "timestamp": 1791064140000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen's Houthi-run Al Masirah TV reports Saudi attack on Sanaa - middleeasteye.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNZDA0Nk1ic1FsV2d6QkViSGhySXZQUXFCWkR6dVNHSnlLdVZrQ3N0NkJ0T3FoMGpaZG1iZUpkZjl2ZWROTXIxWG1DRWlzT0IwUGdsbDIzQ1JiOVM1bUlSdHp3VTcwOEV5YkwxYnVzblBFYWtUVEUzM3BidlZnY0pReWJyNTRsdmVUMERucmpsUjhqNUxYZzU3by1ZSWlxdDlSemFmZ280YzJ4RE1QUGNOeGlyb3BWUQ?oc=5\" target=\"_blank\">Yemen's Houthi-run Al Masirah TV reports Saudi attack on Sanaa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">middleeasteye.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZDA0Nk1ic1FsV2d6QkViSGhySXZQUXFCWkR6dVNHSnlLdVZrQ3N0NkJ0T3FoMGpaZG1iZUpkZjl2ZWROTXIxWG1DRWlzT0IwUGdsbDIzQ1JiOVM1bUlSdHp3VTcwOEV5YkwxYnVzblBFYWtUVEUzM3BidlZnY0pReWJyNTRsdmVUMERucmpsUjhqNUxYZzU3by1ZSWlxdDlSemFmZ280YzJ4RE1QUGNOeGlyb3BWUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T00:19:41.622Z"
-    },
-    {
-      "id": "rss_4bd70bcfbb47bc10",
-      "timestamp": 1791059958000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Houthis claim missile, drone attack on Saudi Aramco in Riyadh - aa.com.tr",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPa1NONEpYek1lUEpkS1ktNlI5VmhtVVR3cmVseDBMWHFwODBSRDRPOFB6dDV4T3l6SnozcEpaTEhMYlZlQnhVTUprRFc0ZnNvdFFvQ25Fa0RoUXc1U0JLTmxDSmVOMzlOUjRZVmhCb0dtV3VteU9WejEyci1iWFJLTU52Q0ZCLXVXeWdqRTdMajlRMUtha0hQaUF3a3Q0NTd5?oc=5\" target=\"_blank\">Houthis claim missile, drone attack on Saudi Aramco in Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aa.com.tr</font>",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPa1NONEpYek1lUEpkS1ktNlI5VmhtVVR3cmVseDBMWHFwODBSRDRPOFB6dDV4T3l6SnozcEpaTEhMYlZlQnhVTUprRFc0ZnNvdFFvQ25Fa0RoUXc1U0JLTmxDSmVOMzlOUjRZVmhCb0dtV3VteU9WejEyci1iWFJLTU52Q0ZCLXVXeWdqRTdMajlRMUtha0hQaUF3a3Q0NTd5?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.899Z"
-    },
-    {
-      "id": "rss_99e3a0d6b6fd3d3b",
-      "timestamp": 1791058740000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Somalia condemns Houthi attack on Madinah power station - وكالة الأنباء السورية – سانا",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GTjFtWFczZEZZLWpGZlJ5SmpaNGVjMTQtYmtTdWhQMnV1QVNJNmlOaVAwcXVRRi05cWhCSUMxMDViWWl6RWc1T05jUWFGQk1p?oc=5\" target=\"_blank\">Somalia condemns Houthi attack on Madinah power station</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">وكالة الأنباء السورية – سانا</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GTjFtWFczZEZZLWpGZlJ5SmpaNGVjMTQtYmtTdWhQMnV1QVNJNmlOaVAwcXVRRi05cWhCSUMxMDViWWl6RWc1T05jUWFGQk1p?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-03T21:41:39.057Z"
     }
   ]
 }
