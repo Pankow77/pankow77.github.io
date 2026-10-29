@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-29T06:09:20.371Z",
+  "last_fetch": "2026-10-29T13:28:40.993Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3dc8a9513ac419b4",
+      "timestamp": 1793280273000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Yemen Reopens Aden Airport After Houthi Attack as Fighting Intensifies Across Multiple Fronts - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE1rMUZSczBfdXZVTVVnS3JOUDY4LTdTRlcxZHZCX0FkeFJNUXo0NkM2LXdJeHN6b20tNlZBLW44QzlGVXlzaHhreWpUYVpjZXFCQzBIb3FXWGo?oc=5\" target=\"_blank\">Yemen Reopens Aden Airport After Houthi Attack as Fighting Intensifies Across Multiple Fronts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1rMUZSczBfdXZVTVVnS3JOUDY4LTdTRlcxZHZCX0FkeFJNUXo0NkM2LXdJeHN6b20tNlZBLW44QzlGVXlzaHhreWpUYVpjZXFCQzBIb3FXWGo?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T13:28:39.471Z"
+    },
+    {
+      "id": "rss_ff313c5f4fa5a190",
+      "timestamp": 1793243738000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "The Riyadh Airport Attack Is a Warning for the Region and Beyond - Australian Institute of International Affairs",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSVZPNDE1dDBYNEw0ZGR4MWRaLXZwREVrNG5wUGJlZFppdk92U2JMeUdzcjJaVUZtWTU3Z3dVbTFEc0VUMEE3N2d4RUpSV3YwTnVvUENmTGU4bnNOYmpxS0Zwd1VwTlc5Ynl1V1NmWktubXdKaTkzazJ3VjNGNGpxMXhxU2IzSDNCLXE4VzhxZTVoZFprV1NsSEZVZG9QdldJSXZYeGdQN2xwbzZVQkhtQnVua196UG5vc0lBMzBWQWg?oc=5\" target=\"_blank\">The Riyadh Airport Attack Is a Warning for the Region and Beyond</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Australian Institute of International Affairs</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSVZPNDE1dDBYNEw0ZGR4MWRaLXZwREVrNG5wUGJlZFppdk92U2JMeUdzcjJaVUZtWTU3Z3dVbTFEc0VUMEE3N2d4RUpSV3YwTnVvUENmTGU4bnNOYmpxS0Zwd1VwTlc5Ynl1V1NmWktubXdKaTkzazJ3VjNGNGpxMXhxU2IzSDNCLXE4VzhxZTVoZFprV1NsSEZVZG9QdldJSXZYeGdQN2xwbzZVQkhtQnVua196UG5vc0lBMzBWQWg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T13:28:39.472Z"
+    },
     {
       "id": "rss_b1b5b8040fe3b05b",
       "timestamp": 1793229300000,
@@ -23,6 +65,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-29T00:10:20.756Z"
+    },
+    {
+      "id": "rss_6f134e25ad56f1d1",
+      "timestamp": 1793220892000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks on Saudi airports raise question of war crimes, UN rights chief tells Arab News - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNU2p3OE1BNnB2bFZ5bndZcnZzSm80RnlKcXNzbEZmLUVhcGpkNWJzWVhWWExIWUpfNm9GeE1kQzBiX2RINUxPSENiS1ZQV0pKN2o3MTF3eTBCMjBEeEJscHkyZFQxS21fU195emt3WEgxc0NQUm5lREJuWTRnYmRPWmZOMzh1N2ZKRE13T19pSlFrNjdKTUUyWXc4M2g4Y1ducE5MdFNocGdfR0Z1S0hKVXRBSHFMM05xOHVBN09zYkk5ZWJiTTVUUEpjRUxqNEtXbThLY2lB?oc=5\" target=\"_blank\">Houthi attacks on Saudi airports raise question of war crimes, UN rights chief tells Arab News</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab Ne",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNU2p3OE1BNnB2bFZ5bndZcnZzSm80RnlKcXNzbEZmLUVhcGpkNWJzWVhWWExIWUpfNm9GeE1kQzBiX2RINUxPSENiS1ZQV0pKN2o3MTF3eTBCMjBEeEJscHkyZFQxS21fU195emt3WEgxc0NQUm5lREJuWTRnYmRPWmZOMzh1N2ZKRE13T19pSlFrNjdKTUUyWXc4M2g4Y1ducE5MdFNocGdfR0Z1S0hKVXRBSHFMM05xOHVBN09zYkk5ZWJiTTVUUEpjRUxqNEtXbThLY2lB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-29T13:28:39.472Z"
     },
     {
       "id": "rss_6d27ca3673d3ebe4",
@@ -10758,71 +10821,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T06:09:09.138Z"
-    },
-    {
-      "id": "rss_0fd41e9f3f60222d",
-      "timestamp": 1791082666000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen’s Houthi-run Al Masirah TV reports Saudi attack on Sanaa - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbVA5TFpyZUhEQmR2S2ZHd0hQdThIVVl0SWZCZVA2X2NTQ0VITFlHMmFycUJqdHJVX2VFUU1HSUR1ekxzbjBCQURwYV8tN19HYkZlWTluREdUSmR6N2ZHOWhyQlFPdXhxWjJNLXBFeUxRQWRLVUxIdGZLQVBFQ3lsRGF3OFAwdUlqcERrbklOZ0w3VFlOMHpZN2ZiOWtCOXdnT1RMOS1xYnBmWHc?oc=5\" target=\"_blank\">Yemen’s Houthi-run Al Masirah TV reports Saudi attack on Sanaa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbVA5TFpyZUhEQmR2S2ZHd0hQdThIVVl0SWZCZVA2X2NTQ0VITFlHMmFycUJqdHJVX2VFUU1HSUR1ekxzbjBCQURwYV8tN19HYkZlWTluREdUSmR6N2ZHOWhyQlFPdXhxWjJNLXBFeUxRQWRLVUxIdGZLQVBFQ3lsRGF3OFAwdUlqcERrbklOZ0w3VFlOMHpZN2ZiOWtCOXdnT1RMOS1xYnBmWHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T06:09:09.138Z"
-    },
-    {
-      "id": "rss_90e8f547e387e670",
-      "timestamp": 1791077700000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis Claim Attack on Riyadh Oil Facilities, Adding Fresh Uncertainty to Middle East Crude Supply Outlook - finance.biggo.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE43dTlXcnlFRmNpNzZ0S3M5NV9Eakx6Z3FQQXVUSnpmeDJJSllQSUJJR1BSWjlsS2c5QVM0U3ZyZ3BUZTA4MnlqZ2JaQ0FXaXVoZmZHMWRsaGV0V01ucm82NThiaEIzVmNHV1hZWmhhV2ZUbWVzaUE?oc=5\" target=\"_blank\">Houthis Claim Attack on Riyadh Oil Facilities, Adding Fresh Uncertainty to Middle East Crude Supply Outlook</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.biggo.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE43dTlXcnlFRmNpNzZ0S3M5NV9Eakx6Z3FQQXVUSnpmeDJJSllQSUJJR1BSWjlsS2c5QVM0U3ZyZ3BUZTA4MnlqZ2JaQ0FXaXVoZmZHMWRsaGV0V01ucm82NThiaEIzVmNHV1hZWmhhV2ZUbWVzaUE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T06:09:09.140Z"
-    },
-    {
-      "id": "rss_64dacfd58e5c61a8",
-      "timestamp": 1791071697000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran Update, October 3, 2026 - Institute for the Study of War",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxQNElzQUVqQS1xMk1ORmVrQlE4LXpsdUh0TkQ0RnlHYTM5VXZndWNrMUdEYXFudm1PT0JmM3N3MEU5eFViVVdESEVsdjdTT1lqWUw1T2IxLTVPMUdIRlBtRWUtUWRSY0cwNFJjRXN6UTQ1ajZSR2VtR1M2YUY5TWptODlvWQ?oc=5\" target=\"_blank\">Iran Update, October 3, 2026</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Institute for the Study of War</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNElzQUVqQS1xMk1ORmVrQlE4LXpsdUh0TkQ0RnlHYTM5VXZndWNrMUdEYXFudm1PT0JmM3N3MEU5eFViVVdESEVsdjdTT1lqWUw1T2IxLTVPMUdIRlBtRWUtUWRSY0cwNFJjRXN6UTQ1ajZSR2VtR1M2YUY5TWptODlvWQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.898Z"
     }
   ]
 }
