@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-30T16:29:02.911Z",
+  "last_fetch": "2026-10-30T20:58:44.398Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a639c0cd9aa3252a",
+      "timestamp": 1793388886000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen : Houthi Ballistic Missile Attack targets aden airport - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5Obmx0dmU4VFd3aHZzMUdaR08tRVdYdHktS1RCY2pfOEVwTy1JbmhkenY1QjBha05McGZnVHFzUUtwdEUxWkY3ME5yRzlVbjR6NE5KeXNHMzA?oc=5\" target=\"_blank\">Yemen : Houthi Ballistic Missile Attack targets aden airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5Obmx0dmU4VFd3aHZzMUdaR08tRVdYdHktS1RCY2pfOEVwTy1JbmhkenY1QjBha05McGZnVHFzUUtwdEUxWkY3ME5yRzlVbjR6NE5KeXNHMzA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T20:58:43.065Z"
+    },
+    {
+      "id": "rss_c1def6634d3c9c98",
+      "timestamp": 1793387323000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Qatari mediators in Tehran again with latest proposal to end regional war - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcUJqUkM5anZjdXlzaUJZQkZVQ2lUVmZpT3JSMmFQdmUwT21UYkR6aVNmUXFBMHJkRXMtXy1yVWt4cUx3a2dkM1FRLVdHOEh4eTNrUVRoNmpkaW1laENrbzY2ZHNaeWJVQnNmWkNzRER2SWxlTEZBMGpVc3BoVzdkWEhGaW1GNzEt?oc=5\" target=\"_blank\">Middle East latest: Qatari mediators in Tehran again with latest proposal to end regional war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcUJqUkM5anZjdXlzaUJZQkZVQ2lUVmZpT3JSMmFQdmUwT21UYkR6aVNmUXFBMHJkRXMtXy1yVWt4cUx3a2dkM1FRLVdHOEh4eTNrUVRoNmpkaW1laENrbzY2ZHNaeWJVQnNmWkNzRER2SWxlTEZBMGpVc3BoVzdkWEhGaW1GNzEt?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T20:58:43.064Z"
+    },
     {
       "id": "rss_0a889d0f58ac6482",
       "timestamp": 1793369000000,
@@ -10779,52 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T23:24:46.369Z"
-    },
-    {
-      "id": "rss_9ab7a7cad9ed33a4",
-      "timestamp": 1791111150000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition dismisses ‘misleading’ Houthi claim of Riyadh attack - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxNR2UxTng5TmFXNVZNcHBNT3BOVHlLN0djMkJJUHhQa19lV1hjTWw0a2ZzaXBiWDlfam5XOTRzdTZqd3NVYzAxU0xXc0htOEI5M0hYSENiM1RkNzFxaDJzRWJSQTZJLU83MVJOakhRVG9KN0ZCR3M5TU9MT3RvaWdXNEJVa0VvbktwLXdiYlFQVWVRNVZJMjlYUmtDUDhOU2Zs0gGmAUFVX3lxTE0wTjlFb1FMSXBZS21QVGNvUE9JTXY4cUhONEtxWnNQR0FTUVBpdVpzMTd4VzhucWxWejNUTzU2N2ZDbWVNZldfS1VQT05ETDl1ZjU2cDU2TUlueXgtUk9Dd1o2NGF2VEQtNnM2Y05xVWxCQUxQVGJDRnM0c3gzd3g2MzlZcnk1cTk2ZFpPeWxNd1V2cXp5SUk3UFYxZjZGMVY3UGx6UFE?oc=5\" ",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNR2UxTng5TmFXNVZNcHBNT3BOVHlLN0djMkJJUHhQa19lV1hjTWw0a2ZzaXBiWDlfam5XOTRzdTZqd3NVYzAxU0xXc0htOEI5M0hYSENiM1RkNzFxaDJzRWJSQTZJLU83MVJOakhRVG9KN0ZCR3M5TU9MT3RvaWdXNEJVa0VvbktwLXdiYlFQVWVRNVZJMjlYUmtDUDhOU2Zs0gGmAUFVX3lxTE0wTjlFb1FMSXBZS21QVGNvUE9JTXY4cUhONEtxWnNQR0FTUVBpdVpzMTd4VzhucWxWejNUTzU2N2ZDbWVNZldfS1VQT05ETDl1ZjU2cDU2TUlueXgtUk9Dd1o2NGF2VEQtNnM2Y05xVWxCQUxQVGJDRnM0c3gzd3g2MzlZcnk1cTk2ZFpPeWxNd1V2cXp5SUk3UFYxZjZGMVY3UGx6UFE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-04T12:41:27.898Z"
-    },
-    {
-      "id": "rss_68488d4ef20a40e8",
-      "timestamp": 1791111021000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Bangladesh condemns alleged Houthi drone attack in Medina - Latest news from Azerbaijan",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQWUowTnNGX05ZLWxiMWlZRm5RNmpsOEYySkpUaGhCSmRBNERuc252UERLeXNuRWNFNlpKRlh3QW5kVTdJb3ZoUGVvMW9mYXlsQ19CTmhIRmtKQ3lnTlhFV3pfWXU3SHVYZ2E5UXQ4dVExbjBXUlI4Uy1DOGk5V20xa2VGaDQ?oc=5\" target=\"_blank\">Bangladesh condemns alleged Houthi drone attack in Medina</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWUowTnNGX05ZLWxiMWlZRm5RNmpsOEYySkpUaGhCSmRBNERuc252UERLeXNuRWNFNlpKRlh3QW5kVTdJb3ZoUGVvMW9mYXlsQ19CTmhIRmtKQ3lnTlhFV3pfWXU3SHVYZ2E5UXQ4dVExbjBXUlI4Uy1DOGk5V20xa2VGaDQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.899Z"
     }
   ]
 }
