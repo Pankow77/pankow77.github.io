@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-30T09:30:30.662Z",
+  "last_fetch": "2026-10-30T16:29:02.911Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0a889d0f58ac6482",
+      "timestamp": 1793369000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Famine Declared in Yemeni City of Taiz Amid Houthi Siege - Democracy Now!",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUkJSV1U0Nm1HWmw0b1dFa2x1YkxvOVVuV3B4ZTZtUDRSb0twRDluVEZfWlppMkRyb2NRTmhVcGlLdWhMeEdzSHNXYjNsQXNENjBfanhwQ3FIT0NSdG1UOHVLZVJRaUNwV3ZpaXlKXzFoSTM5SVVXT0hWWWFsdmticThnYzZfOGo3cGdFMmh6T0NBRTVkV3BLU3BBWEtxc2I2MkoyOFhtR0JDQQ?oc=5\" target=\"_blank\">Famine Declared in Yemeni City of Taiz Amid Houthi Siege</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Democracy Now!</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUkJSV1U0Nm1HWmw0b1dFa2x1YkxvOVVuV3B4ZTZtUDRSb0twRDluVEZfWlppMkRyb2NRTmhVcGlLdWhMeEdzSHNXYjNsQXNENjBfanhwQ3FIT0NSdG1UOHVLZVJRaUNwV3ZpaXlKXzFoSTM5SVVXT0hWWWFsdmticThnYzZfOGo3cGdFMmh6T0NBRTVkV3BLU3BBWEtxc2I2MkoyOFhtR0JDQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T16:29:01.421Z"
+    },
+    {
+      "id": "rss_58a2cd745fc99ec5",
+      "timestamp": 1793356320000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Says Houthi Missiles Intercepted Over Riyadh - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxPWHBWTmpIcUZoSG9RM0p3N01COTRibUN2UjJpNDhVSjJxVDV0eDJ5ZGhaTTJDR0dHamp0WXVDUEFzMzViTndiMVJ0ZWQ4Y0xmTjJTRkxoQkcxTXBMclR1RW05SkRXMXh0bVNNTUt6ajJVTUlQYXBNTVJWNWdOYl9tSDQyX2xMY0kyd2JVVHF3UHBIWmNTLUpzRmV3TnI4SVo1c05r?oc=5\" target=\"_blank\">Saudi Arabia Says Houthi Missiles Intercepted Over Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWHBWTmpIcUZoSG9RM0p3N01COTRibUN2UjJpNDhVSjJxVDV0eDJ5ZGhaTTJDR0dHamp0WXVDUEFzMzViTndiMVJ0ZWQ4Y0xmTjJTRkxoQkcxTXBMclR1RW05SkRXMXh0bVNNTUt6ajJVTUlQYXBNTVJWNWdOYl9tSDQyX2xMY0kyd2JVVHF3UHBIWmNTLUpzRmV3TnI4SVo1c05r?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T16:29:01.422Z"
+    },
     {
       "id": "rss_33e0bf94f606259a",
       "timestamp": 1793346900000,
@@ -25,6 +69,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-30T09:30:29.332Z"
+    },
+    {
+      "id": "rss_3720db5e7b7d4f6b",
+      "timestamp": 1793310180000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudis intercept Houthi missiles, blasts heard in Riyadh; 12 reported killed in Yemen - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOM0xUYzd4cnlSeldOSWpsSlhDVjlSS0s3aVRRTmZHYnNHa3pfeFR3WFV6YmlYQnFTWWVEMC16U3JrZlVRZ3M1VVlEbTdZTk9BYXFrcnhQLVd2UVgyZ1RPR2xjYjhMYnoyY3JKWmtNWkIzM3h3UjFDdUhlbUFIbTBYWUI1Q0xQTUdkeW1JTUg3UkFyYUxISXVBTkhuX2YtTnJXemRnS1lEaURyTDAybDgxYVZsYnbSAboBQVVfeXFMTTZiTExQeTFEUWhUb2lZWUMxWXo2ZmlBUnh2OG04Tnhzb0J1NzBValpNR3RxQktVLU5IVk1Nd1FOWnBacXFIcHlSRE9obDZzbWxwajVDYWRSLWpoNDN0WlVmTklGX3lSSXc5QWp4eDk1eWZZZnFGM2p2NDRlTjdUS2V2eWJqcGdIS0dPSXgtejZreU9XNHEzX2",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM0xUYzd4cnlSeldOSWpsSlhDVjlSS0s3aVRRTmZHYnNHa3pfeFR3WFV6YmlYQnFTWWVEMC16U3JrZlVRZ3M1VVlEbTdZTk9BYXFrcnhQLVd2UVgyZ1RPR2xjYjhMYnoyY3JKWmtNWkIzM3h3UjFDdUhlbUFIbTBYWUI1Q0xQTUdkeW1JTUg3UkFyYUxISXVBTkhuX2YtTnJXemRnS1lEaURyTDAybDgxYVZsYnbSAboBQVVfeXFMTTZiTExQeTFEUWhUb2lZWUMxWXo2ZmlBUnh2OG04Tnhzb0J1NzBValpNR3RxQktVLU5IVk1Nd1FOWnBacXFIcHlSRE9obDZzbWxwajVDYWRSLWpoNDN0WlVmTklGX3lSSXc5QWp4eDk1eWZZZnFGM2p2NDRlTjdUS2V2eWJqcGdIS0dPSXgtejZreU9XNHEzX25NdU5QUm56aVFvekR4YzFoX2dFZGdqTXJ5X096bjctUFNB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T16:29:01.422Z"
     },
     {
       "id": "rss_d2e2a9ea93e371da",
@@ -10758,71 +10825,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T12:41:27.899Z"
-    },
-    {
-      "id": "rss_8fc2a832a4a82bba",
-      "timestamp": 1791110750000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthis Claim Attack on Aramco as Yemen Conflict Escalates - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOdC1jenhXS0RLMXFaaTNaUTVsTVJrcDNLdDZKLVR6SWVYOEdRNWdqRjktRktWSEFRTG1DbEhYd3ZvSGpGd1ZtTEVNNDdMd09SQ3pXdHJMMXlodWVQRjlySVBpNXVlTlRZUDVDdlpjTk12TEw4WVhUaU9rODlnV3RRVUR1OE1UVlJVUjlKa0NNV2MzN2dQUldvUzFn?oc=5\" target=\"_blank\">Houthis Claim Attack on Aramco as Yemen Conflict Escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdC1jenhXS0RLMXFaaTNaUTVsTVJrcDNLdDZKLVR6SWVYOEdRNWdqRjktRktWSEFRTG1DbEhYd3ZvSGpGd1ZtTEVNNDdMd09SQ3pXdHJMMXlodWVQRjlySVBpNXVlTlRZUDVDdlpjTk12TEw4WVhUaU9rODlnV3RRVUR1OE1UVlJVUjlKa0NNV2MzN2dQUldvUzFn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.898Z"
-    },
-    {
-      "id": "rss_3932a521246400f4",
-      "timestamp": 1791107668000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis claim strike on Aramco site as Yemen fighting intensifies - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxONmY5RE5ILWt6MWtRZTJBS2VXVzdQdERuNHZFbk9PVHVuZFNfTVhjdm1yTWdUSTR0Q0xlNTN2eGhOUkE2WThVcXdDZ1pEcDAtQWJWWUFQbUM2RE9pbmtCa2lfM2t2RUxxVF9kUkJxd0htRjA0aXprc0NEQWZlNHVQTWpPVDdPNDVmZ25sNXFISGhaa0MxdEJzNEQxekE1ZVRoZWFkVEZsOElNR1g1amRXRFdkZm85RnPSAbwBQVVfeXFMUHdUakUzMklBc1VSRGZwMXN1X2M1NVg3b1dmUFZ5aXUtX2tmbW84UHNSckw2TlBmS1pXdmx1VE4tclZ6cGpSSFU1WTZRRmg3c3V2N3lYME1BRmUwa0RHZS1rd1BINkowa0xrMHNReUxXdmZyRzduTkN0TTlpVWV4c0p2Um5uWHRlNG14b0MwNF8zd2JTMH",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONmY5RE5ILWt6MWtRZTJBS2VXVzdQdERuNHZFbk9PVHVuZFNfTVhjdm1yTWdUSTR0Q0xlNTN2eGhOUkE2WThVcXdDZ1pEcDAtQWJWWUFQbUM2RE9pbmtCa2lfM2t2RUxxVF9kUkJxd0htRjA0aXprc0NEQWZlNHVQTWpPVDdPNDVmZ25sNXFISGhaa0MxdEJzNEQxekE1ZVRoZWFkVEZsOElNR1g1amRXRFdkZm85RnPSAbwBQVVfeXFMUHdUakUzMklBc1VSRGZwMXN1X2M1NVg3b1dmUFZ5aXUtX2tmbW84UHNSckw2TlBmS1pXdmx1VE4tclZ6cGpSSFU1WTZRRmg3c3V2N3lYME1BRmUwa0RHZS1rd1BINkowa0xrMHNReUxXdmZyRzduTkN0TTlpVWV4c0p2Um5uWHRlNG14b0MwNF8zd2JTMHppaHlnN0tHMWJJTlhKMTltOE5MN0ktQVdoNGhRekg1RmhoVVBrdGM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-04T12:41:27.899Z"
-    },
-    {
-      "id": "rss_e16c579647ebddd8",
-      "timestamp": 1791103860000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthi claims of attack on Saudi capital 'misleading', coalition says - Naharnet",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQcWdmRU9DUF81UURha1lmNEdQSTBNTGNJOXlJRGFDSWdXc002NEJjeDZ6N3FoTjhOODdDbjRDS1ROMkNqMloyeTY3V3k5SC1OUEplamFGa1UtVWZwY3dESUt3NVMzSmNWb21EaWpEWmFlMlR1cmJSR01GbmdORlB5SkluWkFCWWZ1SE5LZ01IYUloM2NJTnlKdnpzS2ctX25veUhmZUw0bGE3aVNJSkE?oc=5\" target=\"_blank\">Houthi claims of attack on Saudi capital 'misleading', coalition says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Naharnet</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQcWdmRU9DUF81UURha1lmNEdQSTBNTGNJOXlJRGFDSWdXc002NEJjeDZ6N3FoTjhOODdDbjRDS1ROMkNqMloyeTY3V3k5SC1OUEplamFGa1UtVWZwY3dESUt3NVMzSmNWb21EaWpEWmFlMlR1cmJSR01GbmdORlB5SkluWkFCWWZ1SE5LZ01IYUloM2NJTnlKdnpzS2ctX25veUhmZUw0bGE3aVNJSkE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T17:14:59.115Z"
     }
   ]
 }
