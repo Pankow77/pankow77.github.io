@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-30T02:48:36.536Z",
+  "last_fetch": "2026-10-30T09:30:30.662Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_33e0bf94f606259a",
+      "timestamp": 1793346900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Oil Prices Rise After Hormuz Tanker Attack, Houthi Claims Stoke Supply Fears - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPUnhpZVZHQUliUnJIQUJWb3JmbVl6VV9GZ3NJN0M3X0EzZU9pa2N4SEcybGNlakZkcmxyeVNqV0E5LWRxTU1VZUM4Uk9TdGZTS0RJLU1CZ1JVVFBlM0pTcWFPd2U0b1RFTkVyV2oxSzNwZzYzMjBwVmRtbUFvWUowS1RPSEQ3eE1Qa2ZQQVJ5SExsbzVXQTQtNlZYRC1Bbnh2YmpnZ2VGaHZLQlJDRWJRZEZOU2VCZ1hPcENQcTUtYw?oc=5\" target=\"_blank\">Oil Prices Rise After Hormuz Tanker Attack, Houthi Claims Stoke Supply Fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUnhpZVZHQUliUnJIQUJWb3JmbVl6VV9GZ3NJN0M3X0EzZU9pa2N4SEcybGNlakZkcmxyeVNqV0E5LWRxTU1VZUM4Uk9TdGZTS0RJLU1CZ1JVVFBlM0pTcWFPd2U0b1RFTkVyV2oxSzNwZzYzMjBwVmRtbUFvWUowS1RPSEQ3eE1Qa2ZQQVJ5SExsbzVXQTQtNlZYRC1Bbnh2YmpnZ2VGaHZLQlJDRWJRZEZOU2VCZ1hPcENQcTUtYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-30T09:30:29.332Z"
+    },
     {
       "id": "rss_d2e2a9ea93e371da",
       "timestamp": 1793302865000,
@@ -10800,29 +10823,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T17:14:59.115Z"
-    },
-    {
-      "id": "rss_91590c98125390b7",
-      "timestamp": 1791097238000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Bangladesh condemns alleged Houthi drone attack on power station in Medina - aa.com.tr",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOczlEcEVCT01XQ192VDBUTVVVXzFPTm0zUmpZLVZMd2RPUGVjYWwzWW1kYXVCdGZ6T2JPVmlvNE1QUWxUYUs3cGxYd0RNdTJ1V1pUX19jeHNUTTNvbXNlQ2JKOWxlSnVWbXIzRl9SUWlvZE9idHlnOWRZdDRlbHA1aUdtRzJZUEsxS3hpSHFGZHVUUTlkcmM0RFlnaG5CTkJEWVItd3hYN2xTLU5Kb041ZzRJeW9OcWtKQjNPRA?oc=5\" target=\"_blank\">Bangladesh condemns alleged Houthi drone attack on power station in Medina</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">aa.com.tr</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOczlEcEVCT01XQ192VDBUTVVVXzFPTm0zUmpZLVZMd2RPUGVjYWwzWW1kYXVCdGZ6T2JPVmlvNE1QUWxUYUs3cGxYd0RNdTJ1V1pUX19jeHNUTTNvbXNlQ2JKOWxlSnVWbXIzRl9SUWlvZE9idHlnOWRZdDRlbHA1aUdtRzJZUEsxS3hpSHFGZHVUUTlkcmM0RFlnaG5CTkJEWVItd3hYN2xTLU5Kb041ZzRJeW9OcWtKQjNPRA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T12:41:27.899Z"
     }
   ]
 }
