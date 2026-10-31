@@ -1,8 +1,99 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-31T00:34:37.813Z",
+  "last_fetch": "2026-10-31T06:34:01.227Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_40d89140c9ca2a47",
+      "timestamp": 1793425642000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Targets Aden Airport, Presidential Palace - ASHARQ AL-AWSAT English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQSkJOQS1keVAybnk5WkMwU1hqRXJKam5hMmo1QlpDZ0JSVktLbG9fbjhUeFltVE42MW5teVlBNUJnSlBJMExtTERrRVMzM1hCVkVPRXpNeG5JNFdHQklJbGRmdHB5OHlDTGRzeDAxYmlralFUZ0JyV25QRjhBZ2ZCYzFlZEtjZUpjdXNNR2FZeDJzb3BzTTVKTy1XdkNqWEdScUE?oc=5\" target=\"_blank\">Houthi Attack Targets Aden Airport, Presidential Palace</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ASHARQ AL-AWSAT English</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSkJOQS1keVAybnk5WkMwU1hqRXJKam5hMmo1QlpDZ0JSVktLbG9fbjhUeFltVE42MW5teVlBNUJnSlBJMExtTERrRVMzM1hCVkVPRXpNeG5JNFdHQklJbGRmdHB5OHlDTGRzeDAxYmlralFUZ0JyV25QRjhBZ2ZCYzFlZEtjZUpjdXNNR2FZeDJzb3BzTTVKTy1XdkNqWEdScUE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.188Z"
+    },
+    {
+      "id": "rss_3805f8e6ebe82f09",
+      "timestamp": 1793422662000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Attacks on ships transiting Hormuz in October highest since start of war - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQVzF0OTFEeDd6NkxQYjVkWnpCRmQ1cEtKaVJZNWdaaDFySGVQOHY4cklQUXhQSUMxNjRXRFpjcFZhTFBud0ZyQmp4SlM5OGxqY3YtNzRTdGczNXVDRnpKRWJrN1A1TnZaY0pEVEkxRUJCZWtaS1dYT3llWnZIZGswajFiWXZveGhnUFpFZg?oc=5\" target=\"_blank\">Middle East latest: Attacks on ships transiting Hormuz in October highest since start of war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVzF0OTFEeDd6NkxQYjVkWnpCRmQ1cEtKaVJZNWdaaDFySGVQOHY4cklQUXhQSUMxNjRXRFpjcFZhTFBud0ZyQmp4SlM5OGxqY3YtNzRTdGczNXVDRnpKRWJrN1A1TnZaY0pEVEkxRUJCZWtaS1dYT3llWnZIZGswajFiWXZveGhnUFpFZg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.188Z"
+    },
+    {
+      "id": "rss_4162eeda88a758dd",
+      "timestamp": 1793414973000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis fire missiles at Yemen's Presidential Palace: 15 days after 4 killed in earlier attack; Saudi Arabi... - Bhaskar English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQWGg2Smh5SF9NTVRMUVY5TmhmVm1FVTRabUR5Q2N6TktLR2tDOC1mNmhXcWRJbm1BN255WEU3aVN1Y2wwZ1MzQXVqTGVST1pJal9TOEVlNHNrNERjUlpUR3M4WlgwMmRvdTBfc0poRXk3c0NZdlB5Wnp1aDlLNmdaWVRJUDRnRi1VWVBPODNFd2hYRkk0aDhBd2E5R0lPMzBJZXZidTJoTUlSemVkUkI0ZzNMU3hhQlNRU2xYOGlhNVlJTGZsZER30gHMAUFVX3lxTE5VTnE2RElnZDhCMWw4SjYtTDN5dG1tWEx6MVBBRnpsWTNkV18tNEUxRE1fQUtVMnBwS2lJMlVNNjZMMmdwQk5YQjZuQWVENS1RV284dGc2R1RBbGZSUHJlSFpWTkZwWXBCSFUwcnRiSXBiY012aC05UmF0cnhYTUtaRnViWn",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWGg2Smh5SF9NTVRMUVY5TmhmVm1FVTRabUR5Q2N6TktLR2tDOC1mNmhXcWRJbm1BN255WEU3aVN1Y2wwZ1MzQXVqTGVST1pJal9TOEVlNHNrNERjUlpUR3M4WlgwMmRvdTBfc0poRXk3c0NZdlB5Wnp1aDlLNmdaWVRJUDRnRi1VWVBPODNFd2hYRkk0aDhBd2E5R0lPMzBJZXZidTJoTUlSemVkUkI0ZzNMU3hhQlNRU2xYOGlhNVlJTGZsZER30gHMAUFVX3lxTE5VTnE2RElnZDhCMWw4SjYtTDN5dG1tWEx6MVBBRnpsWTNkV18tNEUxRE1fQUtVMnBwS2lJMlVNNjZMMmdwQk5YQjZuQWVENS1RV284dGc2R1RBbGZSUHJlSFpWTkZwWXBCSFUwcnRiSXBiY012aC05UmF0cnhYTUtaRnViWnFXZUF2WlNVQTNMQUtPcjVtbWNzTWlyS0RMRVNfZURlMjM4SUFiTGJmclhnWmpsaTdEQjRfQ08zM08xRE1Ic2NnRTRJaDJIQg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.189Z"
+    },
+    {
+      "id": "rss_5b2ea9e15007812e",
+      "timestamp": 1793407974000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Coalition says it destroyed Houthi drone in Medina — Anadolu Agency - UA.NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPblRZa1d5NVMwZ3JXQTFQYXlzUzM4cUJVSWRtdkRtZzgzYTJobW52VGxucnNiN0p3eVlZX0tBVFU5TW1zbG1mcW1EZHdKeDJvd1F0dEdtMlBJeWgyTndYUXhWcEVEREgzb3J3bG9vUW8xMk9HSzZfd2g0UFFZNmY1ZW5CbjZ6YjdaQXUtQ3NpVGR2Z3ZaNjJZcG1rOUpFRG1seHBPQWtCNTgxU1ly?oc=5\" target=\"_blank\">Coalition says it destroyed Houthi drone in Medina — Anadolu Agency</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPblRZa1d5NVMwZ3JXQTFQYXlzUzM4cUJVSWRtdkRtZzgzYTJobW52VGxucnNiN0p3eVlZX0tBVFU5TW1zbG1mcW1EZHdKeDJvd1F0dEdtMlBJeWgyTndYUXhWcEVEREgzb3J3bG9vUW8xMk9HSzZfd2g0UFFZNmY1ZW5CbjZ6YjdaQXUtQ3NpVGR2Z3ZaNjJZcG1rOUpFRG1seHBPQWtCNTgxU1ly?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.189Z"
+    },
     {
       "id": "rss_d9ac4c67de6d1a36",
       "timestamp": 1793392426000,
@@ -91,6 +182,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-30T16:29:01.421Z"
+    },
+    {
+      "id": "rss_950f8a34b62047ab",
+      "timestamp": 1793368218000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis continue to engage in ‘fierce battles’ in mountains near Aden, Taiz - report - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oUVk3dVBqWTF3aGNyUEM4YUNMTVhlZUdZbS1vN25hQ2psZGwtN2taQ1hzLXZNeVNMNXJnRm9XdTVDakR2UUg1cVRRS2dJYk1KclEyN2FfdnVNbTZG?oc=5\" target=\"_blank\">Houthis continue to engage in ‘fierce battles’ in mountains near Aden, Taiz - report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9oUVk3dVBqWTF3aGNyUEM4YUNMTVhlZUdZbS1vN25hQ2psZGwtN2taQ1hzLXZNeVNMNXJnRm9XdTVDakR2UUg1cVRRS2dJYk1KclEyN2FfdnVNbTZG?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.188Z"
     },
     {
       "id": "rss_58a2cd745fc99ec5",
@@ -554,6 +666,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-28T15:17:19.465Z"
+    },
+    {
+      "id": "rss_cd6c50e00354200f",
+      "timestamp": 1793186454000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Fed Likely To Hold Rates Steady, Says Wolfe Research’s Roth — Analysts See Inflation Risks Keeping December Hike In Play - Yahoo Finance",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVh5a1d4VjQwY2FneGJocS1XanVQbkxSLU1iclpKN2h3SXhNR0U3a0JJU1A4VDVtd3g2MTNVQXZQTFdvaTNhQXhnLW9PV1NHNVVadlpoWUxnT0JoUXE0bWd2Qm9Ob19EMGQ1LU5sTC1rXzY4QldzMkhvRktHZFRVd0t6bkJadHlBdXZ1Tk5LeWYtTDJJX2R3ZA?oc=5\" target=\"_blank\">Fed Likely To Hold Rates Steady, Says Wolfe Research’s Roth — Analysts See Inflation Risks Keeping December Hike In Play</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOcVh5a1d4VjQwY2FneGJocS1XanVQbkxSLU1iclpKN2h3SXhNR0U3a0JJU1A4VDVtd3g2MTNVQXZQTFdvaTNhQXhnLW9PV1NHNVVadlpoWUxnT0JoUXE0bWd2Qm9Ob19EMGQ1LU5sTC1rXzY4QldzMkhvRktHZFRVd0t6bkJadHlBdXZ1Tk5LeWYtTDJJX2R3ZA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T06:34:00.189Z"
     },
     {
       "id": "rss_bc93c8b22234a330",
@@ -10698,134 +10831,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-05T09:23:54.035Z"
-    },
-    {
-      "id": "rss_a7f488a1741a57bd",
-      "timestamp": 1791162126000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "The Video Shows the 2003 Bombing of Baghdad, Not a Houthi Attack on Dammam - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNS2JyYVp4RkRkYmthSHhJWGVVTnJDTEkxMzRhTXdNdXpSR1c4ZW0wWDM1M08zS05pNDdsdVNZQ2Y1VDBKcE51UUh5NGZjN0RYWkhhSzM1N2dTR1pGaXgzdUxwZ0JLbmJwLXdPUWJLSy1Rc2VxSzVfYkk1RE5kVEluRkFuRVpQc19mNlhyMzVCTHdSWXgyTTRfNF8yZkJHcGZLSnZUOTl1ZGR5azdM?oc=5\" target=\"_blank\">The Video Shows the 2003 Bombing of Baghdad, Not a Houthi Attack on Dammam</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNS2JyYVp4RkRkYmthSHhJWGVVTnJDTEkxMzRhTXdNdXpSR1c4ZW0wWDM1M08zS05pNDdsdVNZQ2Y1VDBKcE51UUh5NGZjN0RYWkhhSzM1N2dTR1pGaXgzdUxwZ0JLbmJwLXdPUWJLSy1Rc2VxSzVfYkk1RE5kVEluRkFuRVpQc19mNlhyMzVCTHdSWXgyTTRfNF8yZkJHcGZLSnZUOTl1ZGR5azdM?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T09:23:54.035Z"
-    },
-    {
-      "id": "rss_74394e887543826c",
-      "timestamp": 1791153095000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil climbs after Houthi attack on Aramco sites - Egyptian Gazette",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNLUpUUWQ1VERTT0tsRC1vdDE3SjFLeGViNHEtLVRUMGNPbnRUX3RZdS1rSXg3UUxmY2J3VUxTZl9hU3Q3bnNreEJOa0E3cm5sTDlHb2M4ZWU3VGExNE5BNFNteFU1cUNETHlEVF9DSm1mM2ZhZk50NTRfVDR3SDZnTmdfV0hZVEhxX3RvWFpn?oc=5\" target=\"_blank\">Oil climbs after Houthi attack on Aramco sites</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Egyptian Gazette</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNLUpUUWQ1VERTT0tsRC1vdDE3SjFLeGViNHEtLVRUMGNPbnRUX3RZdS1rSXg3UUxmY2J3VUxTZl9hU3Q3bnNreEJOa0E3cm5sTDlHb2M4ZWU3VGExNE5BNFNteFU1cUNETHlEVF9DSm1mM2ZhZk50NTRfVDR3SDZnTmdfV0hZVEhxX3RvWFpn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T23:24:46.371Z"
-    },
-    {
-      "id": "rss_02d38f3b1d0dead4",
-      "timestamp": 1791148462000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Tanker Reports Attack South of Bab el-Mandeb - The Maritime Executive",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaDdxZk9CREJ5dnV4RXh5Q2VtQk5IM1pVNVJkNmlIS29pdGdjbEI3amNpTWxNTXQ2QVQ3akNnTnRvTnJXN2VDQkFuR0NOemhVLVpDUlpPMXFEczhaRmU3UzJ4RGlmeDRiTlZFekFOTnMtTkxlRjA4cjBJaGNVUk9reWl4c053UjZDaEdz?oc=5\" target=\"_blank\">Tanker Reports Attack South of Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNaDdxZk9CREJ5dnV4RXh5Q2VtQk5IM1pVNVJkNmlIS29pdGdjbEI3amNpTWxNTXQ2QVQ3akNnTnRvTnJXN2VDQkFuR0NOemhVLVpDUlpPMXFEczhaRmU3UzJ4RGlmeDRiTlZFekFOTnMtTkxlRjA4cjBJaGNVUk9reWl4c053UjZDaEdz?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T09:23:54.034Z"
-    },
-    {
-      "id": "rss_f4fe6b6bbf9bb845",
-      "timestamp": 1791132690000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen government announces major operation to retake Houthi territory - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IY2NtNkk3M0NNM3RyRmFuelR3bVQtdXZ5LXIwaTQxTGFDTGY0QWViREVaYlE0aW15RVJPOGluVFRGYXIzcmgzQW4ycmFreTkyanRjZzQ0V19Fanc?oc=5\" target=\"_blank\">Yemen government announces major operation to retake Houthi territory</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IY2NtNkk3M0NNM3RyRmFuelR3bVQtdXZ5LXIwaTQxTGFDTGY0QWViREVaYlE0aW15RVJPOGluVFRGYXIzcmgzQW4ycmFreTkyanRjZzQ0V19Fanc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T02:13:40.221Z"
-    },
-    {
-      "id": "rss_dcc5c654e38340a7",
-      "timestamp": 1791131992000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen Forces Backed by Riyadh Strike Houthi Targets in Sanaa and Saada: who 11 outlets blamed - newscord.org",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNU3BFdjg5UW9CbW95TUNlci1NWTR3V05VTW5KdmdYTGhLNm1mWmpJWHliblZ0UlY5aXdKZ1Y4OE95c0NSZGZMRXdKT2NDeERVZGhuX0lvMmRqcFF0bVBIWVl4YktnbHhZT000VTJBOTIwWmc1TE9Qa0VuaUVQWXVzQTVSU3h2MU56N3hyWE1EOVJBck5uUnZtTEFhN1I0WTYyS09qTnQ5czJjSzdRQlRkTUxEU0lDTV9TWTZvS2RWNU40dw?oc=5\" target=\"_blank\">Yemen Forces Backed by Riyadh Strike Houthi Targets in Sanaa and Saada: who 11 outlets blamed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">newscord.org</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNU3BFdjg5UW9CbW95TUNlci1NWTR3V05VTW5KdmdYTGhLNm1mWmpJWHliblZ0UlY5aXdKZ1Y4OE95c0NSZGZMRXdKT2NDeERVZGhuX0lvMmRqcFF0bVBIWVl4YktnbHhZT000VTJBOTIwWmc1TE9Qa0VuaUVQWXVzQTVSU3h2MU56N3hyWE1EOVJBck5uUnZtTEFhN1I0WTYyS09qTnQ5czJjSzdRQlRkTUxEU0lDTV9TWTZvS2RWNU40dw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T17:14:59.114Z"
-    },
-    {
-      "id": "rss_23aee3a4917d82f5",
-      "timestamp": 1791125284000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on Medina power station causes outage, but grid unaffected - bastillepost.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPR0xBV200amhGQzBUV1hwZWdwUWFLS3Z2bVBQZXFBUkZXT0VjRk5tbkxjOGdIaVFrNVI5c2NrcXphckxReEFNamI1Q1BmdmtMVkxoSEhKa1FaeUNzQkd4ODMyb3hsWUlieDZLY3hKRkRrcndDNUZQeWFiN05tWThqLWJYWHZGWEdKMzFLNGg3a3pUMy1TVHdDX213WFBoaEFvNGx6bnN5VmZBZFY0TGt5YllPLVVYS3VMWktIYmVIYVA?oc=5\" target=\"_blank\">Houthi attack on Medina power station causes outage, but grid unaffected</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">bastillepost.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPR0xBV200amhGQzBUV1hwZWdwUWFLS3Z2bVBQZXFBUkZXT0VjRk5tbkxjOGdIaVFrNVI5c2NrcXphckxReEFNamI1Q1BmdmtMVkxoSEhKa1FaeUNzQkd4ODMyb3hsWUlieDZLY3hKRkRrcndDNUZQeWFiN05tWThqLWJYWHZGWEdKMzFLNGg3a3pUMy1TVHdDX213WFBoaEFvNGx6bnN5VmZBZFY0TGt5YllPLVVYS3VMWktIYmVIYVA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T17:14:59.114Z"
     }
   ]
 }
