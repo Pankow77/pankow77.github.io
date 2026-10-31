@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-30T20:58:44.398Z",
+  "last_fetch": "2026-10-31T00:34:37.813Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d9ac4c67de6d1a36",
+      "timestamp": 1793392426000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it downs Houthi drone over Medina; Houthis deny attack - Al-Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdi0tc1MtQmdVdjRWRnhacFhMMFpTbDBCcUszZlZVbHB0WE9KS0ZGV25HZExTdUxXUWEwLWk2N1NSOFI4STZsekxoNEo1VkIyVzBBVzhFYi1VMFlSTDhaR0s5ZzU1cUVic3JNb3BOdEJIVEJDenNBNU95d3BpSU1EZjUtbFNDTG5jY1hKWXlfOXVZSXlkdmpZWHd3T1lvcVctdXl4UG5rVENjZUI0Z0dkS2l0YXpUdUd5Q01nTHVPbkk?oc=5\" target=\"_blank\">Saudi-led coalition says it downs Houthi drone over Medina; Houthis deny attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Al-Monitor</font>",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdi0tc1MtQmdVdjRWRnhacFhMMFpTbDBCcUszZlZVbHB0WE9KS0ZGV25HZExTdUxXUWEwLWk2N1NSOFI4STZsekxoNEo1VkIyVzBBVzhFYi1VMFlSTDhaR0s5ZzU1cUVic3JNb3BOdEJIVEJDenNBNU95d3BpSU1EZjUtbFNDTG5jY1hKWXlfOXVZSXlkdmpZWHd3T1lvcVctdXl4UG5rVENjZUI0Z0dkS2l0YXpUdUd5Q01nTHVPbkk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T00:34:36.457Z"
+    },
     {
       "id": "rss_a639c0cd9aa3252a",
       "timestamp": 1793388886000,
@@ -113,6 +137,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-30T09:30:29.332Z"
+    },
+    {
+      "id": "rss_150f6dbc8d6525e8",
+      "timestamp": 1793319313000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Houthi forces claim six attacks on Saudi airports, oil facilities - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTEhERlpWem04ZnozTFJCeEcwbmNLVkN6eUtjUFgtdDJnNU1iVFVWWExvTU9WQ09EQ3g0SmJYZ011OWh4TTlUd2pKLURkQUljS3VDNzNmcktLMEZYZTRydklucHl3RF9PeDF1VW5QTlFCbEs0U2ZfbEtqdlpVczB5VTBiUFM0VnZ3Mkl6dVdoZWRvanJCS3VmUW9Ma2hwQ18zbFA3T2lmMU5Hd9IBrwFBVV95cUxNNDBlaUpwVUU2NTFwc0ZhYXdwUmxTa2JjdklXNUVudHZDa25DV29LMUZWa2hRRTBtWml6QTA3Y2ZPNEJOMHo3c2RVSDdYbkNLTzBLbWJXczlBZEY4bWQ3dlZ4amtOOGVtUm90MFpXZWQ2cXZSdk1RNnU0R1BQNWtGRG5YUW5ibVBUa2hPSHA0eEVYVGRNS2Nta3V3bE1mTU4zNl",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQTEhERlpWem04ZnozTFJCeEcwbmNLVkN6eUtjUFgtdDJnNU1iVFVWWExvTU9WQ09EQ3g0SmJYZ011OWh4TTlUd2pKLURkQUljS3VDNzNmcktLMEZYZTRydklucHl3RF9PeDF1VW5QTlFCbEs0U2ZfbEtqdlpVczB5VTBiUFM0VnZ3Mkl6dVdoZWRvanJCS3VmUW9Ma2hwQ18zbFA3T2lmMU5Hd9IBrwFBVV95cUxNNDBlaUpwVUU2NTFwc0ZhYXdwUmxTa2JjdklXNUVudHZDa25DV29LMUZWa2hRRTBtWml6QTA3Y2ZPNEJOMHo3c2RVSDdYbkNLTzBLbWJXczlBZEY4bWQ3dlZ4amtOOGVtUm90MFpXZWQ2cXZSdk1RNnU0R1BQNWtGRG5YUW5ibVBUa2hPSHA0eEVYVGRNS2Nta3V3bE1mTU4zNllDOEV1N2J6MWd2ODlv?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-10-31T00:34:36.457Z"
     },
     {
       "id": "rss_3720db5e7b7d4f6b",
@@ -10781,48 +10826,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-04T17:14:59.114Z"
-    },
-    {
-      "id": "rss_192a96491160cb37",
-      "timestamp": 1791122915000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-backed Yemeni forces attack Houthis near key global trade route - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE5hdkdCTGNrOXhaMEo4eEsxbk1jSVhhTjVfcTdDMWpXWmFZTTZJMzNvVGtlZUtuSTNKWXdZaFhCcUhmc0ZsTF9NMG94YkxPQmhVaDRxX0FzNmtoQ3NBSUJkWEJ2OV9fOUttWnpKSjFvUXRfMGJJMFpHaVhR?oc=5\" target=\"_blank\">Saudi-backed Yemeni forces attack Houthis near key global trade route</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5hdkdCTGNrOXhaMEo4eEsxbk1jSVhhTjVfcTdDMWpXWmFZTTZJMzNvVGtlZUtuSTNKWXdZaFhCcUhmc0ZsTF9NMG94YkxPQmhVaDRxX0FzNmtoQ3NBSUJkWEJ2OV9fOUttWnpKSjFvUXRfMGJJMFpHaVhR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T07:07:20.410Z"
-    },
-    {
-      "id": "rss_02d1b538d44f7700",
-      "timestamp": 1791113046000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 3,
-      "text_summary": "Houthi claims of attack on Saudi capital ’misleading’ - The New Arab",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE9OYkVYQll3UWJKSEpJdEFtUmcxazEydTdDMGg1NEVrZTVpVklxS2dEdm1tSjl0amJXMHFoVnhuMDdCRkZoWGFIdDlNOVNQdWpwczN2S1psLW5WaGNib3J4b3B4REpUSnNPR2tXUUx2WmozdnJLZ2JvQ3VoRWNnMzA?oc=5\" target=\"_blank\">Houthi claims of attack on Saudi capital ’misleading’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New Arab</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OYkVYQll3UWJKSEpJdEFtUmcxazEydTdDMGg1NEVrZTVpVklxS2dEdm1tSjl0amJXMHFoVnhuMDdCRkZoWGFIdDlNOVNQdWpwczN2S1psLW5WaGNib3J4b3B4REpUSnNPR2tXUUx2WmozdnJLZ2JvQ3VoRWNnMzA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-04T23:24:46.369Z"
     }
   ]
 }
