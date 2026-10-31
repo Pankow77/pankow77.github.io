@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-31T06:34:01.227Z",
+  "last_fetch": "2026-10-31T13:15:24.002Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4000db8c25e19a01",
+      "timestamp": 1793433591000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia condemns Houthi attacks, calls for security in Hormuz and Bab el-Mandeb - Iran International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKTS1oYkdPbVotSklUYW02ZkxlcUNrNUlYVmhncV9Pb0hhZERFOTg3UHYtOVpPeldPaHRRSG1wNnpjd3lpTHVaQ2V0MWc3WGEzSXc?oc=5\" target=\"_blank\">Saudi Arabia condemns Houthi attacks, calls for security in Hormuz and Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKTS1oYkdPbVotSklUYW02ZkxlcUNrNUlYVmhncV9Pb0hhZERFOTg3UHYtOVpPeldPaHRRSG1wNnpjd3lpTHVaQ2V0MWc3WGEzSXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T13:15:22.621Z"
+    },
     {
       "id": "rss_40d89140c9ca2a47",
       "timestamp": 1793425642000,
@@ -95,6 +118,30 @@
       "fetched_at": "2026-10-31T06:34:00.189Z"
     },
     {
+      "id": "rss_5a2e913fa914f919",
+      "timestamp": 1793406955000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it downs Houthi drone over Medina; Houthis deny attack - Deccan Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNZFFsMi1qTl9yWFp3Tld3XzFidnNGWHMyM0xfYjFfM0o2aUlocUEzaUlTTS05b29LRFZrZE81Q0ZPb1Z5ZkhWUUlBX0JBbDZJRFJ1bnA2MWVVblN6OVFaTGhDaGk2OTIzMFpfTXhGblZwNl85eGhZZXpqUzVxNHRNaTN5SXR6Yjl4aXNxYWJpcVdCOWUxY1h6em9aZmkwdzcwcWYwOXlwSVhtckVfY0FfcHNvbWk0QXVPUm5NUnlGUXZVOUQ3MEE?oc=5\" target=\"_blank\">Saudi-led coalition says it downs Houthi drone over Medina; Houthis deny attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Deccan Herald</font>",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZFFsMi1qTl9yWFp3Tld3XzFidnNGWHMyM0xfYjFfM0o2aUlocUEzaUlTTS05b29LRFZrZE81Q0ZPb1Z5ZkhWUUlBX0JBbDZJRFJ1bnA2MWVVblN6OVFaTGhDaGk2OTIzMFpfTXhGblZwNl85eGhZZXpqUzVxNHRNaTN5SXR6Yjl4aXNxYWJpcVdCOWUxY1h6em9aZmkwdzcwcWYwOXlwSVhtckVfY0FfcHNvbWk0QXVPUm5NUnlGUXZVOUQ3MEE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-10-31T13:15:22.622Z"
+    },
+    {
       "id": "rss_d9ac4c67de6d1a36",
       "timestamp": 1793392426000,
       "source": "OSINT",
@@ -117,6 +164,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-31T00:34:36.457Z"
+    },
+    {
+      "id": "rss_6d2c4c11c3ace9c0",
+      "timestamp": 1793389020000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it downs drone over oil-rich Eastern Region - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdTZlcVd4TG9tTWJjN0dRNEZ4enV5NHc1bGpzWnZjSjVwcGhuM3M3V2pERWNoNW9QLVFzTE9uVXhJb1lBOWFmMEhCRVZNeFdZX0ZFR21LcnlTLTRwemdlTzZ2OHlidndqVEJKaXJEMDRuVEo1V0xMVlpwWVF3LWVOTmJuOHAyTG9RTFhhUW9mcXVRR0N2dXJxQVRqdVVQQnZqdHFRdVdiZ1dvVzFrWWhHai1JSFhsdzhVcjlCU05IVXg?oc=5\" target=\"_blank\">Saudi-led coalition says it downs drone over oil-rich Eastern Region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdTZlcVd4TG9tTWJjN0dRNEZ4enV5NHc1bGpzWnZjSjVwcGhuM3M3V2pERWNoNW9QLVFzTE9uVXhJb1lBOWFmMEhCRVZNeFdZX0ZFR21LcnlTLTRwemdlTzZ2OHlidndqVEJKaXJEMDRuVEo1V0xMVlpwWVF3LWVOTmJuOHAyTG9RTFhhUW9mcXVRR0N2dXJxQVRqdVVQQnZqdHFRdVdiZ1dvVzFrWWhHai1JSFhsdzhVcjlCU05IVXg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-10-31T13:15:22.621Z"
     },
     {
       "id": "rss_a639c0cd9aa3252a",
@@ -10766,71 +10837,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-05T09:23:54.034Z"
-    },
-    {
-      "id": "rss_3e84b3fc4614331c",
-      "timestamp": 1791182728000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Does the Video Show a Houthi Attack on an Aramco Facility in Riyadh? - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxONTY1dmJHMEs4RVQ0SjdmTy12WDdPVW1kY1RWbm94TGNOdVBicW5OOTIzZlowME5QeVhTLU9YN18xWjBvam50LXJmYmlmcmgwOFM2QllVRW5rN3Z0RUFNNkd2b3pjNGFjNG9rQjJCbDhLdS1MSkd6RF9NZTJXNmR1a05oQWZncmVYUkkzYVBpUU1jUm5HOFVXY3ZNRjNBMTFq?oc=5\" target=\"_blank\">Does the Video Show a Houthi Attack on an Aramco Facility in Riyadh?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONTY1dmJHMEs4RVQ0SjdmTy12WDdPVW1kY1RWbm94TGNOdVBicW5OOTIzZlowME5QeVhTLU9YN18xWjBvam50LXJmYmlmcmgwOFM2QllVRW5rN3Z0RUFNNkd2b3pjNGFjNG9rQjJCbDhLdS1MSkd6RF9NZTJXNmR1a05oQWZncmVYUkkzYVBpUU1jUm5HOFVXY3ZNRjNBMTFq?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T09:23:54.034Z"
-    },
-    {
-      "id": "rss_d1e247060e3712ea",
-      "timestamp": 1791182679000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "The Saudi-backed government of Yemen on Sunday announced a major military campaign against the Houthi militia, a key Iranian ally, plunging the Middle East even deeper into war. The Iran-backed Houthi militia said it had targeted a refinery in Riyadh belo - facebook.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM1hIelNvY0VfUTdRNlBzV09yNmV0dFN0d2FVdXNrazBidjVWYkFwMTVNXzZXNHdabFNMSkcxZHlzVWNmeDU5LTdhcUpzNkt5MGUxZUhjWUx6VXJnRU8xelRTM0paZl84dUVaUk1EQmwzUEFNNWxaaEg5QXhBV2pYYUprLUpaM2Jwb2I5bmZvUmF5ZjRkdXdhVG9JUzJtMHJiMy1aQ0tKUUxUckxadTJmWkJ3Z2pVTDFLREVUWTQzOHpMZlhtdGVwYm9RbllEdmVKdlBJ?oc=5\" target=\"_blank\">The Saudi-backed government of Yemen on Sunday announced a major military campaign against the Houthi militia, a key Iranian ally, plunging the",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQM1hIelNvY0VfUTdRNlBzV09yNmV0dFN0d2FVdXNrazBidjVWYkFwMTVNXzZXNHdabFNMSkcxZHlzVWNmeDU5LTdhcUpzNkt5MGUxZUhjWUx6VXJnRU8xelRTM0paZl84dUVaUk1EQmwzUEFNNWxaaEg5QXhBV2pYYUprLUpaM2Jwb2I5bmZvUmF5ZjRkdXdhVG9JUzJtMHJiMy1aQ0tKUUxUckxadTJmWkJ3Z2pVTDFLREVUWTQzOHpMZlhtdGVwYm9RbllEdmVKdlBJ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T09:23:54.033Z"
-    },
-    {
-      "id": "rss_1335187a96b4d7f1",
-      "timestamp": 1791166302000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "The Video Shows a Fire in Jeddah, Not a Houthi Attack on Riyadh Airport - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNYkJWT0Q4UTlFOUdGZnJUejZLUWt1OV93OEtza24zMjFHVmo4X05Gc3U2aERWRWhueDRQdTZ3MXpkSzcta0tSdDZ5ejBKdkM3cTh4Qi1leUpSNHp4Yy1zME5EZmtYY1dLUUJmS0tfYlh2SWplV2pqMzRmMlBqVk5XUTd6SUhZSkR5bV9jZFY1VURJaW1iMFAwSl9rQUpkZHppY1VWQm1n?oc=5\" target=\"_blank\">The Video Shows a Fire in Jeddah, Not a Houthi Attack on Riyadh Airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYkJWT0Q4UTlFOUdGZnJUejZLUWt1OV93OEtza24zMjFHVmo4X05Gc3U2aERWRWhueDRQdTZ3MXpkSzcta0tSdDZ5ejBKdkM3cTh4Qi1leUpSNHp4Yy1zME5EZmtYY1dLUUJmS0tfYlh2SWplV2pqMzRmMlBqVk5XUTd6SUhZSkR5bV9jZFY1VURJaW1iMFAwSl9rQUpkZHppY1VWQm1n?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T09:23:54.035Z"
     }
   ]
 }
