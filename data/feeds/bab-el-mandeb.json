@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-01T11:08:53.972Z",
+  "last_fetch": "2026-11-01T21:18:30.080Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3d1c183c0a33b780",
+      "timestamp": 1793562147000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Houthi missile attack thwarted, ballistic missile intercepted in southern Saudi Arabia - صوت الإمارات",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxQLTJIcl9lUDJJV3lXbXdDM2lEcnJtbThvelVna09TOUlGdW9XVEdveVpqSmFaSEtsUklDTFpaSEpia3JfNG1vaHQ0LTE5d0dJRDlvTmdseUhuZS04UEt3cEpmTXBQeEVEOGVFcEdSb1U3UGFGODJUSEpDWE1fMy1iVU8wQ3lTZnlLTW0wdlBneFVPQUc0S3Y0ZUJuWW9BZDM2TGQ5M29kLW82TFV1elh3V2tOZG1zZ3VhelZTa25lTEJ2a1RURkpsS042ZU14b1pHNVRZ?oc=5\" target=\"_blank\">Houthi missile attack thwarted, ballistic missile intercepted in southern Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">صوت الإمارات</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQLTJIcl9lUDJJV3lXbXdDM2lEcnJtbThvelVna09TOUlGdW9XVEdveVpqSmFaSEtsUklDTFpaSEpia3JfNG1vaHQ0LTE5d0dJRDlvTmdseUhuZS04UEt3cEpmTXBQeEVEOGVFcEdSb1U3UGFGODJUSEpDWE1fMy1iVU8wQ3lTZnlLTW0wdlBneFVPQUc0S3Y0ZUJuWW9BZDM2TGQ5M29kLW82TFV1elh3V2tOZG1zZ3VhelZTa25lTEJ2a1RURkpsS042ZU14b1pHNVRZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-01T21:18:28.439Z"
+    },
+    {
+      "id": "rss_d32468a028ec6dbf",
+      "timestamp": 1793540892000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Coalition says it targeted Houthi resources used to attack civilians - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEVWVHNZTlVlUkFBZE15NGRzUnZxa2stV3RqeEFmZDlSbkhsdjVTN29LVzZUSzJ2Tko3dWxDb3dQeUxxYW13ZTV6dDJIb08zQVJBdnBGc2ZTVm5qdTFMZlFfYkN4UmxQTWhMWlVkLS1jangyN2dBRklaSDRBVjN0WWZiaDhkanJfb1FMR1JHWWN0ZkhCN1RWRGx1ZUktVzBYc1pWcTFKZ2FOUVhFTERTcmRMYw?oc=5\" target=\"_blank\">Coalition says it targeted Houthi resources used to attack civilians</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEVWVHNZTlVlUkFBZE15NGRzUnZxa2stV3RqeEFmZDlSbkhsdjVTN29LVzZUSzJ2Tko3dWxDb3dQeUxxYW13ZTV6dDJIb08zQVJBdnBGc2ZTVm5qdTFMZlFfYkN4UmxQTWhMWlVkLS1jangyN2dBRklaSDRBVjN0WWZiaDhkanJfb1FMR1JHWWN0ZkhCN1RWRGx1ZUktVzBYc1pWcTFKZ2FOUVhFTERTcmRMYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-01T21:18:28.438Z"
+    },
     {
       "id": "rss_b706cfb2b00681a5",
       "timestamp": 1793524275000,
@@ -10795,48 +10841,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-05T18:41:45.742Z"
-    },
-    {
-      "id": "rss_184f24f8787cb352",
-      "timestamp": 1791213021000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni government forces attack Houthi positions near Bab el-Mandeb - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQQmdVdk5ma0VmcHZQVVpfMDFFVmlocEI1dS1jMkNXYVRzRTVvV3VuRFQwUXNuajhRcG1nWGNGVGQ1aEltVms0T1pCcU1TQUhyeXdHb01tYU1Fb01kVkdCMnBldXpUZ1pDSkstOE5taTlfTFZocXNaRUxndnF1XzZpbXJIUEJvZ21nMkRRZEFVaF9mSzZOTkZiLWxaVHVCMEI3UFBUelBHb3h3T3ZRaDRmemlDRQ?oc=5\" target=\"_blank\">Yemeni government forces attack Houthi positions near Bab el-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQmdVdk5ma0VmcHZQVVpfMDFFVmlocEI1dS1jMkNXYVRzRTVvV3VuRFQwUXNuajhRcG1nWGNGVGQ1aEltVms0T1pCcU1TQUhyeXdHb01tYU1Fb01kVkdCMnBldXpUZ1pDSkstOE5taTlfTFZocXNaRUxndnF1XzZpbXJIUEJvZ21nMkRRZEFVaF9mSzZOTkZiLWxaVHVCMEI3UFBUelBHb3h3T3ZRaDRmemlDRQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T00:32:48.481Z"
-    },
-    {
-      "id": "rss_1890de372d5ca2ef",
-      "timestamp": 1791210840000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia has right to defend itself from Houthi attacks, says Rubio - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOW5qU3c5UmVyY3BlZGtHQThpWDQxM0tPZTZta1pwei0tZ3p6OEs5anFhUXpfcDBzUmNfdF9OeExjLVVqSy1rYXhqWnlZb0NWbTFLRGUzU25EUEZHbU9QQS0waXZpVDJzY21xWGc2c3BLRG8zbFdnSllHcXI0d1BUNk1HLUdDOWRtTHdLTnVjdnVzQ3M3WHNfN1dZTkhIYVlWdGw0NG9sb1Rqcm5ZbGJaa2o4c3VhSVF2ODFn?oc=5\" target=\"_blank\">Saudi Arabia has right to defend itself from Houthi attacks, says Rubio</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOW5qU3c5UmVyY3BlZGtHQThpWDQxM0tPZTZta1pwei0tZ3p6OEs5anFhUXpfcDBzUmNfdF9OeExjLVVqSy1rYXhqWnlZb0NWbTFLRGUzU25EUEZHbU9QQS0waXZpVDJzY21xWGc2c3BLRG8zbFdnSllHcXI0d1BUNk1HLUdDOWRtTHdLTnVjdnVzQ3M3WHNfN1dZTkhIYVlWdGw0NG9sb1Rqcm5ZbGJaa2o4c3VhSVF2ODFn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T18:41:45.741Z"
     }
   ]
 }
