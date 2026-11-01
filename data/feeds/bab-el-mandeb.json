@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-10-31T23:54:57.712Z",
+  "last_fetch": "2026-11-01T03:58:56.540Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -111,6 +111,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-31T06:34:00.188Z"
+    },
+    {
+      "id": "rss_35597d81f0428d48",
+      "timestamp": 1793419803000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Qatari mediators return to Tehran with latest proposal to end war - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnZLTm9HNUpSbUNocng0VDBfQkRsbjFKajRDRTJSLUJrLXpCYktWaE94MWc1TzVJQlY1OEpaTDRRa2tLWlI4bTAyV1dZeDgtaE5maDQyVnYwN2lxZ29UYUdUXzZrejZJY0lqczlsZGRjUC0wTGtwQWotR3A3eHMwaG1ydFdGMkhO?oc=5\" target=\"_blank\">Middle East latest: Qatari mediators return to Tehran with latest proposal to end war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWnZLTm9HNUpSbUNocng0VDBfQkRsbjFKajRDRTJSLUJrLXpCYktWaE94MWc1TzVJQlY1OEpaTDRRa2tLWlI4bTAyV1dZeDgtaE5maDQyVnYwN2lxZ29UYUdUXzZrejZJY0lqczlsZGRjUC0wTGtwQWotR3A3eHMwaG1ydFdGMkhO?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-01T03:58:55.166Z"
     },
     {
       "id": "rss_4162eeda88a758dd",
@@ -10816,27 +10837,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-05T18:41:45.742Z"
-    },
-    {
-      "id": "rss_fc998fe6f1d1186a",
-      "timestamp": 1791187974000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthis claim attacks on Riyadh airport as Saudi-led forces strike Yemen - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3AFBVV95cUxQLXNvdU5Wd2Z4T1pjOGN0MVQ1LWxSTTdDMXZadEFIYXIySWJmSktWWEViZ2NSbGpZRUwzbGNsTXlLamItZjYxR2I4QTA5WDJOSVVzdzA4RTlybWUzM2puRTlvWENRd2txYy1Pc3NDV19XVXNNQVJCWTRSZUxrSFJDSDJaMldaejdGTDc3WEViNl85X3lqQWR5djF5MWZaNnBLY09jY1hjLUxzdzJLel84a0Nwd3lmMWNxOUF0bmNHMjgzdkh1b2J5by1Zd0JrUjZzT1hjcTZaR2hVUFJs?oc=5\" target=\"_blank\">Houthis claim attacks on Riyadh airport as Saudi-led forces strike Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQLXNvdU5Wd2Z4T1pjOGN0MVQ1LWxSTTdDMXZadEFIYXIySWJmSktWWEViZ2NSbGpZRUwzbGNsTXlLamItZjYxR2I4QTA5WDJOSVVzdzA4RTlybWUzM2puRTlvWENRd2txYy1Pc3NDV19XVXNNQVJCWTRSZUxrSFJDSDJaMldaejdGTDc3WEViNl85X3lqQWR5djF5MWZaNnBLY09jY1hjLUxzdzJLel84a0Nwd3lmMWNxOUF0bmNHMjgzdkh1b2J5by1Zd0JrUjZzT1hjcTZaR2hVUFJs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T07:07:20.411Z"
     }
   ]
 }
