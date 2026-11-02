@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-02T07:18:01.971Z",
+  "last_fetch": "2026-11-02T17:18:31.317Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_90192a6368810096",
+      "timestamp": 1793626529000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Deadly missile attack by Houthi militia hits health centre in Yemen's Lahj - TRT World",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE42ZEJIMEVpcEpOazRMaTE1dTJ4Y1hqTGhXcmJUa01rRDBsUVRIcExveDRldjFOU0ZtbW9jQmRoMC00LXlfTVlnSUZSbHgwOGd5ZkdkX2VxZnE?oc=5\" target=\"_blank\">Deadly missile attack by Houthi militia hits health centre in Yemen's Lahj</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">TRT World</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE42ZEJIMEVpcEpOazRMaTE1dTJ4Y1hqTGhXcmJUa01rRDBsUVRIcExveDRldjFOU0ZtbW9jQmRoMC00LXlfTVlnSUZSbHgwOGd5ZkdkX2VxZnE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-02T17:18:30.008Z"
+    },
+    {
+      "id": "rss_337d39de5ddba133",
+      "timestamp": 1793613991000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Misbar Detects New Military Activity North of Jabal Al-Omari Near Bab El-Mandeb - موقع مسبار",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRUZ6WlBuYjZZZDVCRmx2MjBmazA4TllmU2p5eVhuRHFHa1Z6TGpPOVVpOUxMcm5yVFB6SUpyS3dqS3pDZ2pVUW5zZzhiLWFVbWIySUx0cnNCT1VWa2N1SVo2NWlXZ2R3MThLdHJONlpneEVVcjA3ZVNxNmlTSjZBejhBTVhIWXNTbm5FNVRQQjBEX3VxMUU0dGRXMy1IbVEydXNuMzg1dzMwaTR1LWtsZUZPWExRWUFNNTNjWlQ1Si0?oc=5\" target=\"_blank\">Misbar Detects New Military Activity North of Jabal Al-Omari Near Bab El-Mandeb</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRUZ6WlBuYjZZZDVCRmx2MjBmazA4TllmU2p5eVhuRHFHa1Z6TGpPOVVpOUxMcm5yVFB6SUpyS3dqS3pDZ2pVUW5zZzhiLWFVbWIySUx0cnNCT1VWa2N1SVo2NWlXZ2R3MThLdHJONlpneEVVcjA3ZVNxNmlTSjZBejhBTVhIWXNTbm5FNVRQQjBEX3VxMUU0dGRXMy1IbVEydXNuMzg1dzMwaTR1LWtsZUZPWExRWUFNNTNjWlQ1Si0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-02T17:18:30.008Z"
+    },
+    {
+      "id": "rss_53fb72f922317bdc",
+      "timestamp": 1793604120000,
+      "source": "Reuters",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi civil defence sounds all-clear after alerts in southern cities - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTmhEQmdqTzRHX3pXZXZRZC1WYXhvUHVtcTJEcS1UMUZWYnZUcTZtdS1fekpDdTNrWXJzSWp5LTBRUHpaTVdTOVlHeFZraWNiT1RnRmgtcTkxZ0pvaUR2VkRZV2d1ZVZTdjJMQklhcGlhbWR0aC1HV3I3bDdsRkN2dVpiZ1N5V3N1Z1pBSVExdlh1VldUSmNYWUV6SGhlV3UtMHZJMWtDRGR1ZkNWRWcyVTh6TlpCYmpxazc4?oc=5\" target=\"_blank\">Saudi civil defence sounds all-clear after alerts in southern cities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOTmhEQmdqTzRHX3pXZXZRZC1WYXhvUHVtcTJEcS1UMUZWYnZUcTZtdS1fekpDdTNrWXJzSWp5LTBRUHpaTVdTOVlHeFZraWNiT1RnRmgtcTkxZ0pvaUR2VkRZV2d1ZVZTdjJMQklhcGlhbWR0aC1HV3I3bDdsRkN2dVpiZ1N5V3N1Z1pBSVExdlh1VldUSmNYWUV6SGhlV3UtMHZJMWtDRGR1ZkNWRWcyVTh6TlpCYmpxazc4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-02T17:18:30.008Z"
+    },
     {
       "id": "rss_3946041a1be99f65",
       "timestamp": 1793593193000,
@@ -519,6 +584,30 @@
       "fetched_at": "2026-10-30T09:30:29.332Z"
     },
     {
+      "id": "rss_682af743277faa4a",
+      "timestamp": 1793340720000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Yemen's Houthis deny launching drone after coalition reports interception in Mecca region - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxPanlQaWczZ25iem9Yem9mcmYzRGxNbU1pcmZXVkpFUU5YYk5tWUJMNm1MdWdmUkxaMXQzdHJ3RHY2c1pWMVU4eXhfT3VMcUgzNUpHTUhSUWJvUXdQeDl3UklYUzFLSnNrcHRkd01ldEZSNDBuVjViSUtDTFJVcElQVFl2OGltV1FnX1hZMTFNRkxTTG9NZU9QaVJlZ0tWMXU1Vk1wS3E5TEtvVXF4OGotNWZRVjVwUWtqYjdrbVNsQVlxMTg3NkR4Y1ZqWEM?oc=5\" target=\"_blank\">Yemen's Houthis deny launching drone after coalition reports interception in Mecca region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "drone",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPanlQaWczZ25iem9Yem9mcmYzRGxNbU1pcmZXVkpFUU5YYk5tWUJMNm1MdWdmUkxaMXQzdHJ3RHY2c1pWMVU4eXhfT3VMcUgzNUpHTUhSUWJvUXdQeDl3UklYUzFLSnNrcHRkd01ldEZSNDBuVjViSUtDTFJVcElQVFl2OGltV1FnX1hZMTFNRkxTTG9NZU9QaVJlZ0tWMXU1Vk1wS3E5TEtvVXF4OGotNWZRVjVwUWtqYjdrbVNsQVlxMTg3NkR4Y1ZqWEM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-02T17:18:30.009Z"
+    },
+    {
       "id": "rss_150f6dbc8d6525e8",
       "timestamp": 1793319313000,
       "source": "Al Jazeera",
@@ -626,6 +715,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-29T19:07:58.323Z"
+    },
+    {
+      "id": "rss_f377990b9b6b77b4",
+      "timestamp": 1793246883000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 3,
+      "text_summary": "Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare - Informed Comment",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE50MlVMWEJZVFhTNW5rdEVIajdkZTE1T1NxU0VRVnhxUEk2SlBhOFRMOVMzR0xlalF0LWFLU2tqMjJlTUZBOWoxYmxWdTNKU0ZPTFFMOUJ0NkxKNDllWGJUT1p2LTRFR0RYN2E5Mm51SQ?oc=5\" target=\"_blank\">Yemen: Houthi Attack on Taizz Road Threatens Lives, Welfare</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Informed Comment</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE50MlVMWEJZVFhTNW5rdEVIajdkZTE1T1NxU0VRVnhxUEk2SlBhOFRMOVMzR0xlalF0LWFLU2tqMjJlTUZBOWoxYmxWdTNKU0ZPTFFMOUJ0NkxKNDllWGJUT1p2LTRFR0RYN2E5Mm51SQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-02T17:18:30.008Z"
     },
     {
       "id": "rss_ff313c5f4fa5a190",
@@ -10740,111 +10850,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-05T18:41:45.740Z"
-    },
-    {
-      "id": "rss_2dbaa2f5198b7f80",
-      "timestamp": 1791220090000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Turkey, Pakistan to deploy forces to Saudi Arabia amid Houthi attacks - al-monitor.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSE51WVRpNUNhYUV3dnFrcHlrN2xrUV8tWjZrbTI5NUNmTk5CX3RIWG5PSkZmekRFLUYtWU51M2NKZm0xMUJHOXNUTThzVU5JLXBTVWp3VUxJNUZReWticnBtQUpQZHQ2WVA0aU9zb1E0Mkl6WV9MaXdsczdGekltQnAxU1NMeHdhMWRzbEZGQjEySDJSbXFSc19qUkl5Ykd1R1UyalZoc1RGWG8?oc=5\" target=\"_blank\">Turkey, Pakistan to deploy forces to Saudi Arabia amid Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">al-monitor.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSE51WVRpNUNhYUV3dnFrcHlrN2xrUV8tWjZrbTI5NUNmTk5CX3RIWG5PSkZmekRFLUYtWU51M2NKZm0xMUJHOXNUTThzVU5JLXBTVWp3VUxJNUZReWticnBtQUpQZHQ2WVA0aU9zb1E0Mkl6WV9MaXdsczdGekltQnAxU1NMeHdhMWRzbEZGQjEySDJSbXFSc19qUkl5Ykd1R1UyalZoc1RGWG8?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T14:20:02.841Z"
-    },
-    {
-      "id": "rss_7017590eeefa5e1b",
-      "timestamp": 1791218029000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni government forces drive Houthis from Bab el-Mandeb Strait - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSVotTm16YzZEU2xvWHNOcjllZVU1RlNYZjBoUnMzWThDbHRLUmJpUE16d0lSR00xcXRBNXppSGcwZHpjNGd6azFjeVBWSHV5T3lZWG9mZEdMRmhBYzVhMF9seTQ2UnZTa201X3hHb2o1ZHN5alNJRmFPcUdvaWVnX1ZKWFZVYmwyS2huNHg2bG1TNlVNT3RuUk5Mbi1naHRFaFQ0YjRKZ0YtVVUta3V2Q1dmQzN5bTlkZmpV?oc=5\" target=\"_blank\">Yemeni government forces drive Houthis from Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSVotTm16YzZEU2xvWHNOcjllZVU1RlNYZjBoUnMzWThDbHRLUmJpUE16d0lSR00xcXRBNXppSGcwZHpjNGd6azFjeVBWSHV5T3lZWG9mZEdMRmhBYzVhMF9seTQ2UnZTa201X3hHb2o1ZHN5alNJRmFPcUdvaWVnX1ZKWFZVYmwyS2huNHg2bG1TNlVNT3RuUk5Mbi1naHRFaFQ0YjRKZ0YtVVUta3V2Q1dmQzN5bTlkZmpV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-05T18:41:45.741Z"
-    },
-    {
-      "id": "rss_842b646aea69adef",
-      "timestamp": 1791216540000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia, Yemen launch Operation Yemeni Dawn to retake Bab el-Mandeb from Houthis - i24news.tv",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxPaENsSEhNd0Q0QXo3Q0hhVXFBSzY1MjJGbndXOGU5d1hvMi1QVnN5NHJySzRNY0FfcXlZQ28yYnZTbGNnajRxU1dWWGFfcnl4ZTRxb0hQRHREX2plVEJGNEUtaThLUHM0eHE5NE5zbE01cHF1eDBLZS1ubmp5T1h4TUR6ajFfSlhLd3FCQnRIUXhnMVdmc0JJektUWTNnSFdFOEtSRVdSN0wzaEstN3ZEWFBTbmNQTlY4WndnTzdqWUNaVWtaWndIczhTWEl5NUVSU2JpSUZWV3I?oc=5\" target=\"_blank\">Saudi Arabia, Yemen launch Operation Yemeni Dawn to retake Bab el-Mandeb from Houthis</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24news.tv</f",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPaENsSEhNd0Q0QXo3Q0hhVXFBSzY1MjJGbndXOGU5d1hvMi1QVnN5NHJySzRNY0FfcXlZQ28yYnZTbGNnajRxU1dWWGFfcnl4ZTRxb0hQRHREX2plVEJGNEUtaThLUHM0eHE5NE5zbE01cHF1eDBLZS1ubmp5T1h4TUR6ajFfSlhLd3FCQnRIUXhnMVdmc0JJektUWTNnSFdFOEtSRVdSN0wzaEstN3ZEWFBTbmNQTlY4WndnTzdqWUNaVWtaWndIczhTWEl5NUVSU2JpSUZWV3I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T18:41:45.741Z"
-    },
-    {
-      "id": "rss_381fd62e55387159",
-      "timestamp": 1791216263000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Saudi-Backed Forces Claim Control of Bab el-Mandeb Strait - gCaptain",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxOd2NVTXlfSEExZnMtVEFLbXB4eXNnRGFtNklQTG5iQ3hWMi1tUWRPWjJuZzU3Ymg1QXQxRHlFTmw5d1ZFLWtFT2Jjam01cEZvRlRkRy1DU1htNy1HcUR1Wmhuc0UxM042YklTTk1Ia3V0ZEJ0TjFxeHc2ZWlkSW5wQ0J3N2FKQQ?oc=5\" target=\"_blank\">Saudi-Backed Forces Claim Control of Bab el-Mandeb Strait</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gCaptain</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOd2NVTXlfSEExZnMtVEFLbXB4eXNnRGFtNklQTG5iQ3hWMi1tUWRPWjJuZzU3Ymg1QXQxRHlFTmw5d1ZFLWtFT2Jjam01cEZvRlRkRy1DU1htNy1HcUR1Wmhuc0UxM042YklTTk1Ia3V0ZEJ0TjFxeHc2ZWlkSW5wQ0J3N2FKQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T18:41:45.741Z"
-    },
-    {
-      "id": "rss_da16db33123ccabd",
-      "timestamp": 1791215908000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia, Yemen launch major assault on Houthi-held territories - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XRnFPSG5BSkhvUXNKYVAxVGdYUHFaY3pfRGFVSk1tLURDMWZZZjQ5NmhFcUJOX2Npa2ozcTNQVFhzZktUTHdHZmlPSzktUGVFSXdiT2NzQTd3bjVV?oc=5\" target=\"_blank\">Saudi Arabia, Yemen launch major assault on Houthi-held territories</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9XRnFPSG5BSkhvUXNKYVAxVGdYUHFaY3pfRGFVSk1tLURDMWZZZjQ5NmhFcUJOX2Npa2ozcTNQVFhzZktUTHdHZmlPSzktUGVFSXdiT2NzQTd3bjVV?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-05T18:41:45.742Z"
     }
   ]
 }
