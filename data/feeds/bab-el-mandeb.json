@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-01T21:18:30.080Z",
+  "last_fetch": "2026-11-02T00:56:53.168Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bedfd2a9a55c76cb",
+      "timestamp": 1793570939000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 3,
+      "text_summary": "A Houthi missile attack targeted a health unit in Lahj amid ongoing military escalation - صوت الإمارات",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdlV4YjBaU2dsalJFWmZLSEVCOHpYMDVXSWk5R3pGemdlMlRJdERDUXhBZHBzQ0V3M05pTzltZ0FCcC1DSXR6U3dGaHF0Q0ptZGQtOTAzUkNzanJ5b25oWEdNSGFqY3VzUUpOM3duYTlPNGFrVy04YjY1VV93dkxGSWFZLURJZjFrbGNISGJFbEZnallNc0R1ZGxlbXRNNVRjUk5JRjFuNlZQNWZoYzNRYVA1dlpiRjNZZ1VBT2JoQVByMEZvNlRsTVNQNjMzWC1ZeThJSUlB?oc=5\" target=\"_blank\">A Houthi missile attack targeted a health unit in Lahj amid ongoing military escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">صوت الإمارات</",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPdlV4YjBaU2dsalJFWmZLSEVCOHpYMDVXSWk5R3pGemdlMlRJdERDUXhBZHBzQ0V3M05pTzltZ0FCcC1DSXR6U3dGaHF0Q0ptZGQtOTAzUkNzanJ5b25oWEdNSGFqY3VzUUpOM3duYTlPNGFrVy04YjY1VV93dkxGSWFZLURJZjFrbGNISGJFbEZnallNc0R1ZGxlbXRNNVRjUk5JRjFuNlZQNWZoYzNRYVA1dlpiRjNZZ1VBT2JoQVByMEZvNlRsTVNQNjMzWC1ZeThJSUlB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-02T00:56:51.689Z"
+    },
     {
       "id": "rss_3d1c183c0a33b780",
       "timestamp": 1793562147000,
@@ -10819,27 +10842,6 @@
       "origin": "rss",
       "confidence": 0.3,
       "source_weight": 0.5,
-      "fetched_at": "2026-10-05T18:41:45.742Z"
-    },
-    {
-      "id": "rss_83448361e8487565",
-      "timestamp": 1791215593000,
-      "source": "Al Jazeera",
-      "actor": "other",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Yemen war: What’s the latest, as government forces claim advances? - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQMDdyRHphbXllR19WLS1xNmFsdDJ1OHIxb1IyQkYzLThPMXpJaDI2ZWxuMjhLS1BlRkxZZVZkX3JjRjJNUTJGMTJRY3BSRlN0bFQyWHFPdzdfUkZ6Sm8zeGdfdjZibUJmVG5Renpob3FlN21PRHBoand5cmwzVFBhX3lDNUxtYzg2MVVpbHBqb0JDWG9IQTkxVUxmcFTSAaIBQVVfeXFMUHJQMVJBN0RLaVRhQ01ya0oxZU55NnplbkU3SjB5YnJTbEhHeHBXVkZETDdwUlBDT29YWkdEbjE0TE9CdGswejl6YWk5cXRQOGJkR0FfVG5EeGNUQzBHa3lEQmFBMkZab1labHN3OG4xNnByMUpubkh3VFUyOENXc0t1TGhhTkg3VmNBdk9TeWZmaERYTHdqLUl6ZmlqUzFEM0pB?oc=5\" target=\"_bl",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQMDdyRHphbXllR19WLS1xNmFsdDJ1OHIxb1IyQkYzLThPMXpJaDI2ZWxuMjhLS1BlRkxZZVZkX3JjRjJNUTJGMTJRY3BSRlN0bFQyWHFPdzdfUkZ6Sm8zeGdfdjZibUJmVG5Renpob3FlN21PRHBoand5cmwzVFBhX3lDNUxtYzg2MVVpbHBqb0JDWG9IQTkxVUxmcFTSAaIBQVVfeXFMUHJQMVJBN0RLaVRhQ01ya0oxZU55NnplbkU3SjB5YnJTbEhHeHBXVkZETDdwUlBDT29YWkdEbjE0TE9CdGswejl6YWk5cXRQOGJkR0FfVG5EeGNUQzBHa3lEQmFBMkZab1labHN3OG4xNnByMUpubkh3VFUyOENXc0t1TGhhTkg3VmNBdk9TeWZmaERYTHdqLUl6ZmlqUzFEM0pB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
       "fetched_at": "2026-10-05T18:41:45.742Z"
     }
   ]
