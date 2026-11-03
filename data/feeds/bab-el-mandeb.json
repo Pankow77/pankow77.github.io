@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-02T23:58:17.565Z",
+  "last_fetch": "2026-11-03T05:53:16.353Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f0f4abca39ab70ae",
+      "timestamp": 1793673671000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Iran war latest: US strikes Qeshm Island in Strait of Hormuz - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxONEdGYmtVNkIyRGM4VzRZYTU3OHN4amJnWWFWWk91Y3Z5ZGJNQ3dmMEdBMXZIMnJCOFBseFdpTFpmTVFQanFvc2Fpd1ltQnNPekpwT2xCMUdqeC1GTGVyWlg4VlF6cW80R01udWQ0Q3F6cmdyV0d2OHdpM2FfeEZ3MU9iQ1ExUHlkTjJ6SGtJLXlfMTVFRWc?oc=5\" target=\"_blank\">Iran war latest: US strikes Qeshm Island in Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxONEdGYmtVNkIyRGM4VzRZYTU3OHN4amJnWWFWWk91Y3Z5ZGJNQ3dmMEdBMXZIMnJCOFBseFdpTFpmTVFQanFvc2Fpd1ltQnNPekpwT2xCMUdqeC1GTGVyWlg4VlF6cW80R01udWQ0Q3F6cmdyV0d2OHdpM2FfeEZ3MU9iQ1ExUHlkTjJ6SGtJLXlfMTVFRWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-03T05:53:15.108Z"
+    },
+    {
+      "id": "rss_a386cdef33719bc7",
+      "timestamp": 1793657780000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi rebels have advanced to within 80 kilometers of Aden, sources say - Nacionale",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxPaXBXYXNVelFUbFRjbGJ6NlBFeGpTbUlLeXhEWUFtckJuOTlpUWFZUXRMSHpXUllVTHZ3VE1XSVhjRzZ1T0lRalhoejRjRFZ4bGZDTmJ5WFlZTElVb282SHNPQnBqTTF5TVpjSU9seXo1Y1JEbzdYcTREYkw3dDgzRXJtYTJaTDVkQ2VwRWVB?oc=5\" target=\"_blank\">Houthi rebels have advanced to within 80 kilometers of Aden, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nacionale</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPaXBXYXNVelFUbFRjbGJ6NlBFeGpTbUlLeXhEWUFtckJuOTlpUWFZUXRMSHpXUllVTHZ3VE1XSVhjRzZ1T0lRalhoejRjRFZ4bGZDTmJ5WFlZTElVb282SHNPQnBqTTF5TVpjSU9seXo1Y1JEbzdYcTREYkw3dDgzRXJtYTJaTDVkQ2VwRWVB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-03T05:53:15.109Z"
+    },
     {
       "id": "rss_0e33a55da7a6f6ec",
       "timestamp": 1793655057000,
@@ -329,6 +373,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-31T06:34:00.188Z"
+    },
+    {
+      "id": "rss_5e31345dc32897b0",
+      "timestamp": 1793422800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi-Saudi conflict - Britannica",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBtZjBjM2FwVjR4Z1ByMlZZUUNEeG5MUlVwaDY1YmlaWWhWdHlvaVlqdFdpRkQ0VGdSVTMyc0lKeUdFV19nOExLcE05dnlkSk1oMlg4d19uTk5qdnhlVklzdDZGVTY?oc=5\" target=\"_blank\">Houthi-Saudi conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Britannica</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBtZjBjM2FwVjR4Z1ByMlZZUUNEeG5MUlVwaDY1YmlaWWhWdHlvaVlqdFdpRkQ0VGdSVTMyc0lKeUdFV19nOExLcE05dnlkSk1oMlg4d19uTk5qdnhlVklzdDZGVTY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-03T05:53:15.109Z"
     },
     {
       "id": "rss_3805f8e6ebe82f09",
@@ -1260,6 +1325,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-28T15:17:19.464Z"
+    },
+    {
+      "id": "rss_60386035e6ee86b1",
+      "timestamp": 1793138087000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "French Frigate Downed Red Sea Missile Approaching Belgian Minehunter - The Maritime Executive",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxONG1OaTJFUWc4Q3Y4X2ZhYjlaUk5VX2J1eXRaSFNRU3ZDMk9ZOHlrWWVDMW11S1VHWHl2LUtkWmZRR293eUVGd21tZV9PaXFvelVWMGpRS29DbmhUdTRtQzV5TVRLaTJ2UWJUSDhqTHFTSmFES0JSZ2hETVEzcElaRFExaE52YXRYY1ZYT05qclJkN1h2VEtOVklsN2FJTGo4cDF2TTV4WVRpZFF1?oc=5\" target=\"_blank\">French Frigate Downed Red Sea Missile Approaching Belgian Minehunter</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Maritime Executive</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONG1OaTJFUWc4Q3Y4X2ZhYjlaUk5VX2J1eXRaSFNRU3ZDMk9ZOHlrWWVDMW11S1VHWHl2LUtkWmZRR293eUVGd21tZV9PaXFvelVWMGpRS29DbmhUdTRtQzV5TVRLaTJ2UWJUSDhqTHFTSmFES0JSZ2hETVEzcElaRFExaE52YXRYY1ZYT05qclJkN1h2VEtOVklsN2FJTGo4cDF2TTV4WVRpZFF1?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-03T05:53:16.347Z"
     },
     {
       "id": "rss_a56169c79da6a881",
@@ -10764,92 +10852,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-06T00:32:48.482Z"
-    },
-    {
-      "id": "rss_9e1ae0eda4f436b3",
-      "timestamp": 1791232463000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen launches major military operation against Houthis - dw.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNUHhzeUhmTmlidXNXYnlfXzJHNXNwUlAxWHNGSEEtNnkzS1gzR2hCeFpNWDczWWxnQ0EwRDVNYlljN3ZDM0xzcjJTUlBIc3JVcXpZX01NNU80VGRfY3F6bUlnZVVDNUZCWmZlWVZ6SS14MjdrSXRFdEE4WkQ4WGpxMmEzUnYtYVl1SFYzWDF2SWNTZ9IBkgFBVV95cUxPMFZaaWJ4a3lyb2FoQjZzUEJFakZqV2xYdmFjdWJxaWhIQkZxQWJDM1IwblhXbTdZaWpvMVpwVzJiS2VBYUpCZUNDcGExTTFfS3ZGdGFUcnMwYlk2ZG15bkwzd1dyQk9naDZzNHc5b2twbjJTcGdIMnZzNGRoYlFoRl9IVzJ1cXhpRmgwU2dLOXVJZw?oc=5\" target=\"_blank\">Yemen launches major military",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNUHhzeUhmTmlidXNXYnlfXzJHNXNwUlAxWHNGSEEtNnkzS1gzR2hCeFpNWDczWWxnQ0EwRDVNYlljN3ZDM0xzcjJTUlBIc3JVcXpZX01NNU80VGRfY3F6bUlnZVVDNUZCWmZlWVZ6SS14MjdrSXRFdEE4WkQ4WGpxMmEzUnYtYVl1SFYzWDF2SWNTZ9IBkgFBVV95cUxPMFZaaWJ4a3lyb2FoQjZzUEJFakZqV2xYdmFjdWJxaWhIQkZxQWJDM1IwblhXbTdZaWpvMVpwVzJiS2VBYUpCZUNDcGExTTFfS3ZGdGFUcnMwYlk2ZG15bkwzd1dyQk9naDZzNHc5b2twbjJTcGdIMnZzNGRoYlFoRl9IVzJ1cXhpRmgwU2dLOXVJZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T07:07:20.410Z"
-    },
-    {
-      "id": "rss_c3c12932f1995c83",
-      "timestamp": 1791229560000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "deployment",
-      "intensity": 2,
-      "text_summary": "Mecca Pact Allies Pledge Rapid Military Deployment To Saudi Arabia - i24NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTE1hdDlRU3BDcF96a2dIRDl6cTZRTGlXU3dfT01qVDU3QmwxckpRUERad0ZONnp5MFBmVXdpME5Dbkd0RTVHa0QwQW14UC0zR254N0JZcl9rREx4a2ZkWTg2R1ZrSVdkZm9Jc3BVN3BTSGhzc3NreGs1aVl0QWJ6eVEzTVVzbE0xTlFKUlBKTUVQU2MtRHJ3elNORVhINkVrZ2JxT1h2VGEzdkJ1RFctMy1VTVJnaUpka05VT0tLUUY?oc=5\" target=\"_blank\">Mecca Pact Allies Pledge Rapid Military Deployment To Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">i24NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPTE1hdDlRU3BDcF96a2dIRDl6cTZRTGlXU3dfT01qVDU3QmwxckpRUERad0ZONnp5MFBmVXdpME5Dbkd0RTVHa0QwQW14UC0zR254N0JZcl9rREx4a2ZkWTg2R1ZrSVdkZm9Jc3BVN3BTSGhzc3NreGs1aVl0QWJ6eVEzTVVzbE0xTlFKUlBKTUVQU2MtRHJ3elNORVhINkVrZ2JxT1h2VGEzdkJ1RFctMy1VTVJnaUpka05VT0tLUUY?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T00:32:48.482Z"
-    },
-    {
-      "id": "rss_9201670928de54b8",
-      "timestamp": 1791225022000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni forces launch massive new offensive against Houthis, will it succeed? - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1haVFNeTZTRmdkcDVNY2RGYmlJaHVCRE1HaUU5VzI2Y091bE1EbFUwbTliVldIcGF6WDBNemtWaXlpbUFhX1QtT1NZQk9id0lQV285YXBhelduQzBt?oc=5\" target=\"_blank\">Yemeni forces launch massive new offensive against Houthis, will it succeed?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1haVFNeTZTRmdkcDVNY2RGYmlJaHVCRE1HaUU5VzI2Y091bE1EbFUwbTliVldIcGF6WDBNemtWaXlpbUFhX1QtT1NZQk9id0lQV285YXBhelduQzBt?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T00:32:48.481Z"
-    },
-    {
-      "id": "rss_ba4edc2e85491aa6",
-      "timestamp": 1791224934000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-backed coalition forces Houthis from several areas around key strait, Yemeni officials say - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxOSkdJSGtLU3lyZlZPRjFCREhEWXRkc2VsSmpTOFN4bmxLVnV3YzRtMU5jbk12TDhQSUJhUXdORDhNRW82UF9nMG5zdEdHSGF2V2d5UW8zV19CZTJVMDBYUGlobFFiaFpDbTVfeV9UMVZMRWRfQ08xb2dTcHBJYndsX3paQnZTNEFERW5Ua240OHhkRDE2d0NNWlJVREJaX29TMFVBcWMzNXE2a19VdTdQR2dSakpOZnBfNFZhXzBieGJFUkFoV21Yckpn0gHPAUFVX3lxTFBrVldLWFhmTTZrbVlpWjNvaGhaNmN6RFlWdTZPNmtad2NlUEFlMTFLVlpaYWFIMVNMbWw1d0dWQWdvY1hFeEpscmNKRE90RkEyQjNSaWI5WV9oRkppT0duWmFqdjFIX2RCek1TN3J1Q3pQOTBiQ0I3YldKX1d0ai1RZn",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOSkdJSGtLU3lyZlZPRjFCREhEWXRkc2VsSmpTOFN4bmxLVnV3YzRtMU5jbk12TDhQSUJhUXdORDhNRW82UF9nMG5zdEdHSGF2V2d5UW8zV19CZTJVMDBYUGlobFFiaFpDbTVfeV9UMVZMRWRfQ08xb2dTcHBJYndsX3paQnZTNEFERW5Ua240OHhkRDE2d0NNWlJVREJaX29TMFVBcWMzNXE2a19VdTdQR2dSakpOZnBfNFZhXzBieGJFUkFoV21Yckpn0gHPAUFVX3lxTFBrVldLWFhmTTZrbVlpWjNvaGhaNmN6RFlWdTZPNmtad2NlUEFlMTFLVlpaYWFIMVNMbWw1d0dWQWdvY1hFeEpscmNKRE90RkEyQjNSaWI5WV9oRkppT0duWmFqdjFIX2RCek1TN3J1Q3pQOTBiQ0I3YldKX1d0ai1RZnRQanFoMk9Hdk5hblRTdHhXQ2J3cXd6alJrWVhBbVFPeHBhcFFBemFuVUZOU2o0c3RIV0swWjZ1VmlqX2NCZ3BpSk5HV1UzUEI2SEF1TQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T00:32:48.481Z"
     }
   ]
 }
