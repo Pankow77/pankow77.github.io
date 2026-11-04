@@ -1,8 +1,52 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-04T00:45:06.768Z",
+  "last_fetch": "2026-11-04T07:11:17.536Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c61badca71877dd5",
+      "timestamp": 1793768615000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Houthis claim Saudi airport, airbase attacks, '3 drones intercepted' - chinadailyhk",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE43U3VLNFdKVy1ZV3hQekdKaF9fMjJzelNMZmx3QU9EMEd2VVdXUVAyZlFOYjJDQ24wdjRyZ01EM1Q4YUg3VmhvVUE5aUN5dksxdG85TmxhX0o?oc=5\" target=\"_blank\">Houthis claim Saudi airport, airbase attacks, '3 drones intercepted'</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">chinadailyhk</font>",
+      "tags": [
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE43U3VLNFdKVy1ZV3hQekdKaF9fMjJzelNMZmx3QU9EMEd2VVdXUVAyZlFOYjJDQ24wdjRyZ01EM1Q4YUg3VmhvVUE5aUN5dksxdG85TmxhX0o?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-04T07:11:16.216Z"
+    },
+    {
+      "id": "rss_d7800e558fa0800f",
+      "timestamp": 1793736000000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Fighters Launch Ground Incursions Into Saudi Arabia - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNWnhLd2dqb3pLUS1xdXBRc0pjXzBZT1lHd0J5ZXBvVnhfWjROMEU4T1AyTjFqUXVzbDdPVVlTd0dEMHNNdWJHVzd1al9kcUdRUTJqQzdCaHRKd3NINktIQ3JrdXRHMmlKNE9tZDdRdmViOXBncHdZVkdmbEYwNHByelJKNGd5QmlOUXVJeGM0Mmx6TkpvbTZfbUJNOHlnQQ?oc=5\" target=\"_blank\">Houthi Fighters Launch Ground Incursions Into Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWnhLd2dqb3pLUS1xdXBRc0pjXzBZT1lHd0J5ZXBvVnhfWjROMEU4T1AyTjFqUXVzbDdPVVlTd0dEMHNNdWJHVzd1al9kcUdRUTJqQzdCaHRKd3NINktIQ3JrdXRHMmlKNE9tZDdRdmViOXBncHdZVkdmbEYwNHByelJKNGd5QmlOUXVJeGM0Mmx6TkpvbTZfbUJNOHlnQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-04T07:11:16.217Z"
+    },
     {
       "id": "rss_bbbd515416d4bc3d",
       "timestamp": 1793723295000,
@@ -10807,48 +10851,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-06T14:20:02.839Z"
-    },
-    {
-      "id": "rss_3e73b79093fe3176",
-      "timestamp": 1791276521000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Video Does Not Show Houthi Attack on King Abdulaziz International Airport in Jeddah - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOY3Fod3FxdmU0RlFnYkR6N091T2F0dUs5UkJGdloyQWVucWtHYlRDQW82RlNiY04tUVZ1RFlOSWI5M0h3MXJ5Y3ROWWFkaUJvUXVWZEFad0tsdGpTU0VUR1ZfbjBtZVJMVmsxSk5CY1RDY2lzTFFlcnNxMlJVaDZ6RURucGg1Q0Uxal96NW41QlpiMy1sN21KT2JhMjIwNnF3ZWdET3JNS1d5TUNLaEExWWdnQWRfVWZkaUt5SHhPVnpTUQ?oc=5\" target=\"_blank\">Video Does Not Show Houthi Attack on King Abdulaziz International Airport in Jeddah</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOY3Fod3FxdmU0RlFnYkR6N091T2F0dUs5UkJGdloyQWVucWtHYlRDQW82RlNiY04tUVZ1RFlOSWI5M0h3MXJ5Y3ROWWFkaUJvUXVWZEFad0tsdGpTU0VUR1ZfbjBtZVJMVmsxSk5CY1RDY2lzTFFlcnNxMlJVaDZ6RURucGg1Q0Uxal96NW41QlpiMy1sN21KT2JhMjIwNnF3ZWdET3JNS1d5TUNLaEExWWdnQWRfVWZkaUt5SHhPVnpTUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T14:20:02.839Z"
-    },
-    {
-      "id": "rss_44bbae689b89e885",
-      "timestamp": 1791268242000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Video Shows Fire in Malaysia, Not Houthi Attack on Dammam - موقع مسبار",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxQc0pmV25HRlhQaDUzS2Vla2RwSTY3ZlhRWmlvN25ObDMzUzVUdEt5bk5Hc0JySzluTWFQNEdnYnpzdVlqUGZGci1tcHd3NFFTVnd4ZW1VTXZjcmYtR2ItM1RlRDNYRFV6R3FmaGJqNVNLMUVqamJBeEticmo3dnp1dTRtLXBDY0Rmd1BtVXBQb2U5eURIYWkya05RQ2VzZw?oc=5\" target=\"_blank\">Video Shows Fire in Malaysia, Not Houthi Attack on Dammam</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">موقع مسبار</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQc0pmV25HRlhQaDUzS2Vla2RwSTY3ZlhRWmlvN25ObDMzUzVUdEt5bk5Hc0JySzluTWFQNEdnYnpzdVlqUGZGci1tcHd3NFFTVnd4ZW1VTXZjcmYtR2ItM1RlRDNYRFV6R3FmaGJqNVNLMUVqamJBeEticmo3dnp1dTRtLXBDY0Rmd1BtVXBQb2U5eURIYWkya05RQ2VzZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T14:20:02.841Z"
     }
   ]
 }
