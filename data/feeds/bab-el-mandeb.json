@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-04T15:38:13.943Z",
+  "last_fetch": "2026-11-04T21:41:08.482Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3bb0e1d8866864d0",
+      "timestamp": 1793805062000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Shafaq News..Houthis: Missile caused significant damage to Riyadh airport - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPdjlHOGFmeWpMNHI3LVBUQWhSUDVYN1lkX1RzRldpRGctdFRTZXBaLTRsYVZOVjhhenZ5TExDM3dGRDVITkZpMzQzNTFuWE9Ma3ZDRVpJamNHWDJyYkxGU1hXZjRVLXJuaG1DLXNkclZoVzl3YW9pQ0lJdTlvUUQtbWt6MmpZd01oYU9oVnY2MzBiUkdkRk5xWQ?oc=5\" target=\"_blank\">Shafaq News..Houthis: Missile caused significant damage to Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPdjlHOGFmeWpMNHI3LVBUQWhSUDVYN1lkX1RzRldpRGctdFRTZXBaLTRsYVZOVjhhenZ5TExDM3dGRDVITkZpMzQzNTFuWE9Ma3ZDRVpJamNHWDJyYkxGU1hXZjRVLXJuaG1DLXNkclZoVzl3YW9pQ0lJdTlvUUQtbWt6MmpZd01oYU9oVnY2MzBiUkdkRk5xWQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-04T21:41:06.957Z"
+    },
     {
       "id": "rss_02f4b58b79bad460",
       "timestamp": 1793802512000,
@@ -10836,27 +10859,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-06T23:31:15.106Z"
-    },
-    {
-      "id": "rss_1f20cb5bdcf9cf5c",
-      "timestamp": 1791311143000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia says 3 injured in attacks on its airports as fighting with Houthis reignites - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZzRtUlJJNEV3MVBMZTUzMjZQNi13a2VqbHhPTWg0UktMTEJUOGpQdFdaQnltWkNNblRFb0VaNjRHRzEtVTFCam4zQkczUWc0clZqZjRBV3daOWg4cGViY3pkRHVQV1RkckVTZC1kQ2Y3bXRQYUtfVnlPaFFXTTQ3UHRJUXpJNFRxQ0Q1LVBiUHVVb0ZDV1RwNlNPM0RUQTV2SGYxdl9aUGJyeEZ2Uk9xZ1JGRGZYZzRUbE5JX2FQdThQQdIBxwFBVV95cUxPeXRfWHYtUUdoSmZjd3hLdll6U2d2NU5uR1JpMGhXQ2xHY1lHUFpFNWcyQTltZUFJektNZFhiMlQ2TlRlS3FjSFFDYkV4TVBRd1l3SkwxSUowTlJXYUR1RXZBR1BkUEMwOFZvRFZHdm5PTlZ4X29Ga2RoZ0FCSGs3aHFMZXc5dFFhVX",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZzRtUlJJNEV3MVBMZTUzMjZQNi13a2VqbHhPTWg0UktMTEJUOGpQdFdaQnltWkNNblRFb0VaNjRHRzEtVTFCam4zQkczUWc0clZqZjRBV3daOWg4cGViY3pkRHVQV1RkckVTZC1kQ2Y3bXRQYUtfVnlPaFFXTTQ3UHRJUXpJNFRxQ0Q1LVBiUHVVb0ZDV1RwNlNPM0RUQTV2SGYxdl9aUGJyeEZ2Uk9xZ1JGRGZYZzRUbE5JX2FQdThQQdIBxwFBVV95cUxPeXRfWHYtUUdoSmZjd3hLdll6U2d2NU5uR1JpMGhXQ2xHY1lHUFpFNWcyQTltZUFJektNZFhiMlQ2TlRlS3FjSFFDYkV4TVBRd1l3SkwxSUowTlJXYUR1RXZBR1BkUEMwOFZvRFZHdm5PTlZ4X29Ga2RoZ0FCSGs3aHFMZXc5dFFhVXVJY3Ftc0hINkt3WjRjZUZ5THFCQ0o3TnQ1NHFpaWZycU83T0J5Q3NTYy1aa1E3WDNQQkMyWnY3NEo2aFpB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T22:34:40.259Z"
     }
   ]
 }
