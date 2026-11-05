@@ -1,8 +1,76 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-05T01:57:34.963Z",
+  "last_fetch": "2026-11-05T09:06:15.103Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_87900914fe66345f",
+      "timestamp": 1793865804000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Iran war latest: IRGC claims two tankers and tugboat caught fire in Strait of Hormuz - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQa3prTFlUbjIxSUVNV3VDVHNEb1Nkb0ZqSDVTZkJwMng0YmQ2dFhmVDNYdlB4WGlQU1NMU3J5VWg3a1NTcjBoTm9oZ2piVXlKc29ZSTNzcHRHUHFNVmxzRDhRS2ZXUXI2RW1nU1hGZnI5U0RKeXR6NDJ5T2k2a1gtbXRCSFY1VUdJY1NUaXU5V2YzWE0?oc=5\" target=\"_blank\">Iran war latest: IRGC claims two tankers and tugboat caught fire in Strait of Hormuz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy",
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQa3prTFlUbjIxSUVNV3VDVHNEb1Nkb0ZqSDVTZkJwMng0YmQ2dFhmVDNYdlB4WGlQU1NMU3J5VWg3a1NTcjBoTm9oZ2piVXlKc29ZSTNzcHRHUHFNVmxzRDhRS2ZXUXI2RW1nU1hGZnI5U0RKeXR6NDJ5T2k2a1gtbXRCSFY1VUdJY1NUaXU5V2YzWE0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T09:06:13.769Z"
+    },
+    {
+      "id": "rss_7ccfa184254e50bd",
+      "timestamp": 1793864760000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Footage of Iranian attack misrepresented as Houthi strikes on Saudi airport - Yahoo",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQdzZjajRlMGhMU3hMNGhPLUhULVoxeldZV0NldmlwbWFseU9Ydkd0U05TaF9tTXMwODJZQ2JsTVJRSlZLeTVNTTYzTTYyUklBOTlvNW4zczRXNjZXcFBPeWpDSnk5TkJVYWVOb3c5d05CT2l1Y2NKb28wcEhiYTBtbm5qZVVnbDBVaXc0QWphTnRhSjRuY1k5SXo5cjFaYW8wbVNF?oc=5\" target=\"_blank\">Footage of Iranian attack misrepresented as Houthi strikes on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdzZjajRlMGhMU3hMNGhPLUhULVoxeldZV0NldmlwbWFseU9Ydkd0U05TaF9tTXMwODJZQ2JsTVJRSlZLeTVNTTYzTTYyUklBOTlvNW4zczRXNjZXcFBPeWpDSnk5TkJVYWVOb3c5d05CT2l1Y2NKb28wcEhiYTBtbm5qZVVnbDBVaXc0QWphTnRhSjRuY1k5SXo5cjFaYW8wbVNF?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T09:06:13.769Z"
+    },
+    {
+      "id": "rss_855167e8de7da964",
+      "timestamp": 1793847600000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Has No Easy Choices as It Weighs How to Combat Houthi Threat - WSJ",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQVVhxQjdGQlQ0S0NwQjVReFpaVlpSOUM3c1I4YTVMS0FhWC1zYmQ0YTEwclNHRl9uaFdseHJtenlvM2tJakhPeENNWW1hSWtfQXlBOGs5NFFQUlZHVHgzeTF2SnV2SUxUalVuT0JLRWVOeDQxdGJGTUVOTGwtc1ROcmF2VFhUaVNJUnp3TDdWU2U4bzB4M1dsR0o5VVd1OHNaOHJrYkxGLXcxV2hmeG5XOG96UGtnTlVVMDN3Wg?oc=5\" target=\"_blank\">Saudi Arabia Has No Easy Choices as It Weighs How to Combat Houthi Threat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVVhxQjdGQlQ0S0NwQjVReFpaVlpSOUM3c1I4YTVMS0FhWC1zYmQ0YTEwclNHRl9uaFdseHJtenlvM2tJakhPeENNWW1hSWtfQXlBOGs5NFFQUlZHVHgzeTF2SnV2SUxUalVuT0JLRWVOeDQxdGJGTUVOTGwtc1ROcmF2VFhUaVNJUnp3TDdWU2U4bzB4M1dsR0o5VVd1OHNaOHJrYkxGLXcxV2hmeG5XOG96UGtnTlVVMDN3Wg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T09:06:13.768Z"
+    },
     {
       "id": "rss_a4bbe663b673e465",
       "timestamp": 1793835360000,
@@ -10796,69 +10864,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-07T03:59:33.999Z"
-    },
-    {
-      "id": "rss_9a8159ad1ed6cf66",
-      "timestamp": 1791327900000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Yemeni government forces repel Houthi attack - Breakingthenews.net",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQa0wzN2N4X2E1YlMzS2ZuVUk4a2t4eERocGgxc2k4MXQ0UmNjTEdMUk5kS3gtOFZlQmFiQjFfbmtiMkZiaUt4WEs5VElTMjFCcXRPTkZPdzFHdWM2TG1yT1hSdE1HQ2RaZ1NOMUNaMDFVOE5nOW1rOWs3cDlzeUdZWlNKZzRzUURTa253T2xIczJ1Unc?oc=5\" target=\"_blank\">Yemeni government forces repel Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Breakingthenews.net</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQa0wzN2N4X2E1YlMzS2ZuVUk4a2t4eERocGgxc2k4MXQ0UmNjTEdMUk5kS3gtOFZlQmFiQjFfbmtiMkZiaUt4WEs5VElTMjFCcXRPTkZPdzFHdWM2TG1yT1hSdE1HQ2RaZ1NOMUNaMDFVOE5nOW1rOWs3cDlzeUdZWlNKZzRzUURTa253T2xIczJ1Unc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-06T23:31:15.106Z"
-    },
-    {
-      "id": "rss_682abffe27aed80b",
-      "timestamp": 1791319430000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni government fighters shown driving vehicles over Houthi opponents - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNdTUtR05NTWVJVFBWcjJmSVZRb0RuVXl6Zk5ocVBacHBIMm1yeWo2VWQ4U2ZqNVFPcTFqeExXUjFyMlpONkU5blQyekxfbGpwM3ZBay05dFU4WkRqZ3lIcmw3VG9UQ3NxSWczQU9qMjFRbHV3QVd3LXl3ZElxaHVRMkFVdHVfajl5SV81YkF1X1ZYX0ZNbW0yMFdjUWFnY3JTLXhZd1gzSU5pNTR5MU1mT0RneVlsLU1uaVdEd1lSRnd0M19Yd1JF?oc=5\" target=\"_blank\">Yemeni government fighters shown driving vehicles over Houthi opponents</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdTUtR05NTWVJVFBWcjJmSVZRb0RuVXl6Zk5ocVBacHBIMm1yeWo2VWQ4U2ZqNVFPcTFqeExXUjFyMlpONkU5blQyekxfbGpwM3ZBay05dFU4WkRqZ3lIcmw3VG9UQ3NxSWczQU9qMjFRbHV3QVd3LXl3ZElxaHVRMkFVdHVfajl5SV81YkF1X1ZYX0ZNbW0yMFdjUWFnY3JTLXhZd1gzSU5pNTR5MU1mT0RneVlsLU1uaVdEd1lSRnd0M19Yd1JF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-07T03:59:33.997Z"
-    },
-    {
-      "id": "rss_f201366d67fac25b",
-      "timestamp": 1791316253000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen’s government is on the attack against the Houthis. What has changed? - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxQaThtX2toODBiR0cwUE9HbWJLZWJ4RUp2b1BMM2lDTElvaDBGMXVOUHhHb2JJM2U3QTliQkd2azZrNllrR192aEN2SHZzMGNKNno3ZExhZkJ6dUR1VkJ5UWJiSzRjUXFMb2VNSkVhbFc0SVFGUmZnVDVkMEVEY1F6d29rVmRQZm9HRWc5U0dfa1VnUTFLLS1hRjdQVVF0TDJ1MUw3cVJzUGxzNDhMcHUwbXNyLVROdGc1MlZhNdIBwgFBVV95cUxNMkxlblBfbTNVQnRfOUZVWWpubklValNYVGxULVBLeHJwMjI2clplNWNKSWhQRjFmYk5jZkdNQXdsa2J0RFM1dE5LNk9DSzdBbVZzSWJJWF9WWkhRLV9iNW02WHdWVFptN3kzZllWdkw3cEwxZW9sSDlqU2JjU09jaGw3TFBSUU9OUlpNY040LX",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaThtX2toODBiR0cwUE9HbWJLZWJ4RUp2b1BMM2lDTElvaDBGMXVOUHhHb2JJM2U3QTliQkd2azZrNllrR192aEN2SHZzMGNKNno3ZExhZkJ6dUR1VkJ5UWJiSzRjUXFMb2VNSkVhbFc0SVFGUmZnVDVkMEVEY1F6d29rVmRQZm9HRWc5U0dfa1VnUTFLLS1hRjdQVVF0TDJ1MUw3cVJzUGxzNDhMcHUwbXNyLVROdGc1MlZhNdIBwgFBVV95cUxNMkxlblBfbTNVQnRfOUZVWWpubklValNYVGxULVBLeHJwMjI2clplNWNKSWhQRjFmYk5jZkdNQXdsa2J0RFM1dE5LNk9DSzdBbVZzSWJJWF9WWkhRLV9iNW02WHdWVFptN3kzZllWdkw3cEwxZW9sSDlqU2JjU09jaGw3TFBSUU9OUlpNY040LXU3a3ZCRzBFaGNLbVdmTmJoemlJclhKSXI3MVYwVkNVMmIxdnpYSGd2alktRTk3MWxtUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-06T23:31:15.106Z"
     }
   ]
 }
