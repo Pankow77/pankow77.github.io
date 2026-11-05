@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-04T21:41:08.482Z",
+  "last_fetch": "2026-11-05T01:57:34.963Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a4bbe663b673e465",
+      "timestamp": 1793835360000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack kills four people as Yemeni government forces make gains in al-Jawf and Taiz - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPbnpJNENaWXBXRzAzNUFuODFobWtBNU1FWUxDa0tIMVRibU56WV9yLVdiWW1BNW5sWUIwZDhiaW9YdXpqbTB1VmRoalBBaUFCN1B2YmwzOEd3dGpZOXVadldIa0d5M0lOdEkwOFFsR3RVQTB3blBSQXRrSkNfOFdWdmxwakQ2VFVhUzBJVXF1Q3FKTVAwRG5hN1dsOVhZMUVQdlJBTjlfNm5VUE4ySUZVcEZadi1WQll0OGNmTlFSUW9TeVhWWEE?oc=5\" target=\"_blank\">Houthi attack kills four people as Yemeni government forces make gains in al-Jawf and Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPbnpJNENaWXBXRzAzNUFuODFobWtBNU1FWUxDa0tIMVRibU56WV9yLVdiWW1BNW5sWUIwZDhiaW9YdXpqbTB1VmRoalBBaUFCN1B2YmwzOEd3dGpZOXVadldIa0d5M0lOdEkwOFFsR3RVQTB3blBSQXRrSkNfOFdWdmxwakQ2VFVhUzBJVXF1Q3FKTVAwRG5hN1dsOVhZMUVQdlJBTjlfNm5VUE4ySUZVcEZadi1WQll0OGNmTlFSUW9TeVhWWEE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T01:57:33.716Z"
+    },
     {
       "id": "rss_3bb0e1d8866864d0",
       "timestamp": 1793805062000,
@@ -10837,27 +10858,6 @@
       "origin": "rss",
       "confidence": 0.48,
       "source_weight": 0.8,
-      "fetched_at": "2026-10-06T23:31:15.106Z"
-    },
-    {
-      "id": "rss_caae3254e8da9982",
-      "timestamp": 1791315264000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen forces run armored vehicles over Houthi fighters as fighting escalates - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTE43LUJBY1lVUGU3VzgtYjlRS3ZINENKZjctUmFKaExFOXhvMjAwYnRRY3VXRWxtZmhNeG9OUFZjblJRbFd4VHlIZGNqSWlDVm9mT1VDV3Ntaw?oc=5\" target=\"_blank\">Yemen forces run armored vehicles over Houthi fighters as fighting escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE43LUJBY1lVUGU3VzgtYjlRS3ZINENKZjctUmFKaExFOXhvMjAwYnRRY3VXRWxtZmhNeG9OUFZjblJRbFd4VHlIZGNqSWlDVm9mT1VDV3Ntaw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
       "fetched_at": "2026-10-06T23:31:15.106Z"
     }
   ]
