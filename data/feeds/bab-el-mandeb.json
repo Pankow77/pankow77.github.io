@@ -1,8 +1,95 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-05T09:06:15.103Z",
+  "last_fetch": "2026-11-05T17:30:49.326Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_cae10312d8f9306e",
+      "timestamp": 1793888751000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen targets Houthi finances with new customs and import rules - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE5TaHhGSUREb1NTRURkb3poN0J0dHVQczlzV2dPSkRGYWJ0Y1F5b010aHRkMUMtOUJScUEtWlFPSDVxWmxybHRQamswV0NXZmtBWmJ6R3IyVmpiaGEx?oc=5\" target=\"_blank\">Yemen targets Houthi finances with new customs and import rules</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5TaHhGSUREb1NTRURkb3poN0J0dHVQczlzV2dPSkRGYWJ0Y1F5b010aHRkMUMtOUJScUEtWlFPSDVxWmxybHRQamswV0NXZmtBWmJ6R3IyVmpiaGEx?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.666Z"
+    },
+    {
+      "id": "rss_110d0612ae258978",
+      "timestamp": 1793876842000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Houthi missiles fired at Medina intercepted, Saudi coalition says - France 24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNclAwYXFkMFBGTlo4dTFsUkVDR0VrckJnSVM0Z2FTMXJkcW9mMVVVSEptYXV0Mm5Xc3NxcEhaR3JjcUs1Y08yMjU0Y2VzLVlVMGR6Yk03ZFdoQUtSY1RhVEdYbmVHcXR0N01jU1VvN2ZZZV9ocWk5TENlNmU2NjNZWmYwN2FkSVNuYWZKVXF2QVNhWHM3T0J0dGRvVVZaQUhYdzZPUmxTREpuSUcxR3BBTkVzbw?oc=5\" target=\"_blank\">Houthi missiles fired at Medina intercepted, Saudi coalition says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNclAwYXFkMFBGTlo4dTFsUkVDR0VrckJnSVM0Z2FTMXJkcW9mMVVVSEptYXV0Mm5Xc3NxcEhaR3JjcUs1Y08yMjU0Y2VzLVlVMGR6Yk03ZFdoQUtSY1RhVEdYbmVHcXR0N01jU1VvN2ZZZV9ocWk5TENlNmU2NjNZWmYwN2FkSVNuYWZKVXF2QVNhWHM3T0J0dGRvVVZaQUhYdzZPUmxTREpuSUcxR3BBTkVzbw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.666Z"
+    },
+    {
+      "id": "rss_8fc7a22ad88fca83",
+      "timestamp": 1793872141000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "WSJ: Houthis Demand $51 Billion From Saudi Arabia - Kurdistan24",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWRBaFRwOGtUSHBRZmt3MXoxbFY2SDFkMm5lQ1huUlpJOC1JalJ3NjBGMjhHWlZYYkljalpWclhkREo4UWU4TDVGcE93T012Wjg1QWhINDd4cHpwTTRNMDFfZ2ZVanMwY0ZvX3NmZVNrVHZTZ3pKVGtGUkVnUWVkdjZrZ25HMDllYUxGQk84V3BoODd3VVE?oc=5\" target=\"_blank\">WSJ: Houthis Demand $51 Billion From Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMWRBaFRwOGtUSHBRZmt3MXoxbFY2SDFkMm5lQ1huUlpJOC1JalJ3NjBGMjhHWlZYYkljalpWclhkREo4UWU4TDVGcE93T012Wjg1QWhINDd4cHpwTTRNMDFfZ2ZVanMwY0ZvX3NmZVNrVHZTZ3pKVGtGUkVnUWVkdjZrZ25HMDllYUxGQk84V3BoODd3VVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.666Z"
+    },
+    {
+      "id": "rss_ab32c6f372fae455",
+      "timestamp": 1793866732000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis Demand $51 Billion, Recognition as Yemen’s Rulers To End Attacks on Saudi Arabia - The Media Line",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPbGFfSEw2OTl0YWNPZ1Nyb2dpNjJaeDl3NnE3OXZlMVpSTXN5dUlvZkhSeXUtT3JKb2dZVnltYXZfdk9vMzJlREdPSXY4cUJtWlhvSy03Sk1Na1NGamd2NHZSUktMMnpmR1FkN1lXSVlpamNEaExDaUp3ZE83cW1vQkNiZ2xnVTkzMG5qeUhMbDR3SmNYTXdPaU5wSGpTWTBYSFZ0YU91aDZfYlY2aU8zT0dyUFRCcUtXcjZ6YTFB?oc=5\" target=\"_blank\">Houthis Demand $51 Billion, Recognition as Yemen’s Rulers To End Attacks on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Media Line</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbGFfSEw2OTl0YWNPZ1Nyb2dpNjJaeDl3NnE3OXZlMVpSTXN5dUlvZkhSeXUtT3JKb2dZVnltYXZfdk9vMzJlREdPSXY4cUJtWlhvSy03Sk1Na1NGamd2NHZSUktMMnpmR1FkN1lXSVlpamNEaExDaUp3ZE83cW1vQkNiZ2xnVTkzMG5qeUhMbDR3SmNYTXdPaU5wSGpTWTBYSFZ0YU91aDZfYlY2aU8zT0dyUFRCcUtXcjZ6YTFB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.666Z"
+    },
     {
       "id": "rss_87900914fe66345f",
       "timestamp": 1793865804000,
@@ -51,6 +138,27 @@
       "fetched_at": "2026-11-05T09:06:13.769Z"
     },
     {
+      "id": "rss_9b8b6cffd48526a3",
+      "timestamp": 1793860178000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemen reports airstrikes, clashes with Houthi rebels on several fronts - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOdUphc0stRVU0VldxMDUtSEY4Sy1iWVFhUm1BSVY4Zzh1YU1GSnFwVTFuTF90WjJmb3A3UmtaTXExcjhYM203aXZYTnV4NDhJMXZIT2FYM2VxR0dZa3AtaktXMjZ1SFp2R3RGQ2xiaWtHcmJwZG4zQ1k2S1JGVWRESndoUE94NktPM3dxS3RTVEZNNnNJUEk1NVlWMGFIajRQN1NSLW9CUQ?oc=5\" target=\"_blank\">Yemen reports airstrikes, clashes with Houthi rebels on several fronts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdUphc0stRVU0VldxMDUtSEY4Sy1iWVFhUm1BSVY4Zzh1YU1GSnFwVTFuTF90WjJmb3A3UmtaTXExcjhYM203aXZYTnV4NDhJMXZIT2FYM2VxR0dZa3AtaktXMjZ1SFp2R3RGQ2xiaWtHcmJwZG4zQ1k2S1JGVWRESndoUE94NktPM3dxS3RTVEZNNnNJUEk1NVlWMGFIajRQN1NSLW9CUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.666Z"
+    },
+    {
       "id": "rss_855167e8de7da964",
       "timestamp": 1793847600000,
       "source": "OSINT",
@@ -70,6 +178,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-05T09:06:13.768Z"
+    },
+    {
+      "id": "rss_d66d4cdac30dd9a9",
+      "timestamp": 1793841412000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "GACA Extends KKIA Suspension After Houthi Missile Claim, No Saudi Confirmation - https://houseofsaud.com/",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTFB5SUc2XzVqQ0NaUGdGZ3M0M3ZOOEU1S29SbWhESWlNMVFmM25rNlVkSGdjYmM5Ni1MYjNjbGZGczlyZVZNWk1aTlFaNzRjZ21fV0s3X29hZnhMN29CNWY1enJ1OEFtZ2l4OUgw?oc=5\" target=\"_blank\">GACA Extends KKIA Suspension After Houthi Missile Claim, No Saudi Confirmation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">https://houseofsaud.com/</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB5SUc2XzVqQ0NaUGdGZ3M0M3ZOOEU1S29SbWhESWlNMVFmM25rNlVkSGdjYmM5Ni1MYjNjbGZGczlyZVZNWk1aTlFaNzRjZ21fV0s3X29hZnhMN29CNWY1enJ1OEFtZ2l4OUgw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-05T17:30:47.668Z"
     },
     {
       "id": "rss_a4bbe663b673e465",
@@ -10731,139 +10862,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-07T10:57:04.838Z"
-    },
-    {
-      "id": "rss_3980d8af18de1d0f",
-      "timestamp": 1791353040000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis deny losing ground in Yemen as oil prices ease despite fierce fighting - CBS News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQczhsWnBDYVFqOGRhcWt5dS1WUy01WWZyWjV0UEIxVTZwUVV0RlBlcnpwbnhhRHVEZG83dE5HS05LWUxKWWR2MG9oWDVNQzE1aElqVkN3Tzc4Mjl4ZTQtTmNJVXMyTWVESmJ5MEJIZ2RWME13WGszcEhmUENQUmdLdEkxRXJ1TWszcnZiUklfblBaVVQ1RVRWUDRXS3BfQ1BhTlhHSA?oc=5\" target=\"_blank\">Iran-backed Houthis deny losing ground in Yemen as oil prices ease despite fierce fighting</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQczhsWnBDYVFqOGRhcWt5dS1WUy01WWZyWjV0UEIxVTZwUVV0RlBlcnpwbnhhRHVEZG83dE5HS05LWUxKWWR2MG9oWDVNQzE1aElqVkN3Tzc4Mjl4ZTQtTmNJVXMyTWVESmJ5MEJIZ2RWME13WGszcEhmUENQUmdLdEkxRXJ1TWszcnZiUklfblBaVVQ1RVRWUDRXS3BfQ1BhTlhHSA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T17:40:51.246Z"
-    },
-    {
-      "id": "rss_3efc8ad10481d56c",
-      "timestamp": 1791351042000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Video of Mecca thunderstorm falsely shared as Houthi attack - AFP Fact Check",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE12cjVHUmZyVGptU2JXQURXQkdHNDV3YV9sVHZyVkhxRWpmeHZ2cDI2ZklwTUt3bGRPUlQ2b0pwYjI3YnRsVlZxRlAxeHVkMVFnbF9aU3RhMGU?oc=5\" target=\"_blank\">Video of Mecca thunderstorm falsely shared as Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AFP Fact Check</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12cjVHUmZyVGptU2JXQURXQkdHNDV3YV9sVHZyVkhxRWpmeHZ2cDI2ZklwTUt3bGRPUlQ2b0pwYjI3YnRsVlZxRlAxeHVkMVFnbF9aU3RhMGU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T10:57:04.837Z"
-    },
-    {
-      "id": "rss_5647c61fabae797e",
-      "timestamp": 1791349435000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemen’s Transport Ministry reports Houthi attack on Aden airport — Cyprus Mail - UA.NEWS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxNM2tUQjBRZ2diRmE0NmNNZURnSFpYaHpxNnlfNFJ1dk5ydC1NTFZDaEtuYVZid3VoakVjLTFqQWpLSkRvX3FfUDBKYlBrU1NwWDZ0SUtvTlpnSW9iMUdJbDRyOExUSUg4d2JCYlF6MndIX3BsZE1JUUJDT0hoZnpvaUl6YkhjMDJDUGxtdHZhcEh6NFY0MHVfRFZwMzE?oc=5\" target=\"_blank\">Yemen’s Transport Ministry reports Houthi attack on Aden airport — Cyprus Mail</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM2tUQjBRZ2diRmE0NmNNZURnSFpYaHpxNnlfNFJ1dk5ydC1NTFZDaEtuYVZid3VoakVjLTFqQWpLSkRvX3FfUDBKYlBrU1NwWDZ0SUtvTlpnSW9iMUdJbDRyOExUSUg4d2JCYlF6MndIX3BsZE1JUUJDT0hoZnpvaUl6YkhjMDJDUGxtdHZhcEh6NFY0MHVfRFZwMzE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T10:57:04.837Z"
-    },
-    {
-      "id": "rss_071dbbd1eef1a9f0",
-      "timestamp": 1791347760000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi coalition says shot down Houthi missile - Yahoo",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQbXJMd3pwdUpIYThjM0pJSnVSWm0xR0VCN2hlLTVjMWpKM0F6SG1VMlAzNktWMjdMeXJZV2Y4cm4zQi16aEU3UWZ0WWFJWDJQUTVReUt4cWFxTjV1NFVSYTlWWXRiaUg1TVh1MXVOblB2YjJ5UkRNV3A2T3pfZDAyWTNRbzZzcU9fN1FvbktjcFFKbUt6dlE?oc=5\" target=\"_blank\">Saudi coalition says shot down Houthi missile</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo</font>",
-      "tags": [
-        "missile",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbXJMd3pwdUpIYThjM0pJSnVSWm0xR0VCN2hlLTVjMWpKM0F6SG1VMlAzNktWMjdMeXJZV2Y4cm4zQi16aEU3UWZ0WWFJWDJQUTVReUt4cWFxTjV1NFVSYTlWWXRiaUg1TVh1MXVOblB2YjJ5UkRNV3A2T3pfZDAyWTNRbzZzcU9fN1FvbktjcFFKbUt6dlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T22:34:40.259Z"
-    },
-    {
-      "id": "rss_c58a5b1ad4d2a99f",
-      "timestamp": 1791336060000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Aden airport as fighting intensifies in Yemen - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNNjcwdDdFSmxISzN2RWdiODU1ZjlXODFLZGRiVmxTeW94dnI1T1VsNnhlU1NJMTZXajJoVlE0VnpzVDlmMmJQUjYzN21Tamk5YWZhazdRSzd5MTJndURBTjNQTC0yd2I2ZDhIazZlNUJUYjAyZHVwZFRCMER1OGZLS2pZRmRQTjlrSlVyLUd3N1dnUUxrM2NBSERSd3VmYkJBNnpzT1I4RmhwMWhHbHQyN1ZOWkxCclZBV3c?oc=5\" target=\"_blank\">Houthis attack Aden airport as fighting intensifies in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNjcwdDdFSmxISzN2RWdiODU1ZjlXODFLZGRiVmxTeW94dnI1T1VsNnhlU1NJMTZXajJoVlE0VnpzVDlmMmJQUjYzN21Tamk5YWZhazdRSzd5MTJndURBTjNQTC0yd2I2ZDhIazZlNUJUYjAyZHVwZFRCMER1OGZLS2pZRmRQTjlrSlVyLUd3N1dnUUxrM2NBSERSd3VmYkJBNnpzT1I4RmhwMWhHbHQyN1ZOWkxCclZBV3c?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-07T10:57:04.837Z"
-    },
-    {
-      "id": "rss_772ce5e997443a45",
-      "timestamp": 1791334705000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "2 Houthi missiles target Aden International Airport in southern Yemen - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPTi12T3RCaHZLWm5HZzJ0X244V19QaV90TF9NOXRDbjlaNFFOYV9lbEV5OVlLTGQ3elJEYzFlR2JwRmwzZ2pMSmswOEJYa1FUQ2J1Y1l6X3YyOGZtb3lmSkVrakZVX0I5NGNSU05HT2RXekkxOFYzN05lWkl1ZDE5dElvbnhqQTR6YzBNek5OVkxyNHhxb0lpSEVYbDduOEpfZ2NsZ2NoSE9CTlZzMnIweE1DTFc?oc=5\" target=\"_blank\">2 Houthi missiles target Aden International Airport in southern Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPTi12T3RCaHZLWm5HZzJ0X244V19QaV90TF9NOXRDbjlaNFFOYV9lbEV5OVlLTGQ3elJEYzFlR2JwRmwzZ2pMSmswOEJYa1FUQ2J1Y1l6X3YyOGZtb3lmSkVrakZVX0I5NGNSU05HT2RXekkxOFYzN05lWkl1ZDE5dElvbnhqQTR6YzBNek5OVkxyNHhxb0lpSEVYbDduOEpfZ2NsZ2NoSE9CTlZzMnIweE1DTFc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T03:59:33.999Z"
     }
   ]
 }
