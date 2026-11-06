@@ -1,8 +1,98 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-06T03:30:29.881Z",
+  "last_fetch": "2026-11-06T11:44:22.304Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_1a9d34353bc28dcd",
+      "timestamp": 1793961494000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "deployment",
+      "intensity": 2,
+      "text_summary": "Iran war latest: Tehran reportedly sent nuclear proposal to the US via Qatar - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxQaFNGVjU3UzU0cjFEQUhzeDVsZGJsRUsxeTVNUHNRbldqRWtZVFhiejFqNEZFMEs3T2luRkhkVXNmRkx4RVMyR2hjOUEzMXIyZU9Pak9KOU9WcVJCWEFnQUd2MVZhUWxIaWtwOHczMHRkaWwtZC1ua3VWU0R0ZEhIXzdBUENXN3NlT2pkYlJzdWg?oc=5\" target=\"_blank\">Iran war latest: Tehran reportedly sent nuclear proposal to the US via Qatar</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQaFNGVjU3UzU0cjFEQUhzeDVsZGJsRUsxeTVNUHNRbldqRWtZVFhiejFqNEZFMEs3T2luRkhkVXNmRkx4RVMyR2hjOUEzMXIyZU9Pak9KOU9WcVJCWEFnQUd2MVZhUWxIaWtwOHczMHRkaWwtZC1ua3VWU0R0ZEhIXzdBUENXN3NlT2pkYlJzdWg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T11:44:21.128Z"
+    },
+    {
+      "id": "rss_ae8ac4856992b68e",
+      "timestamp": 1793951041000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "4 Arab States Condemn Houthi Missile Attack on Madinah Region - https://houseofsaud.com/",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBJWFJ0UVJKT3hZVkZQNnp5dXh2VGhJQXVQcWx6cHRXM0Y3dGlxOTF4cHlMc0NHNzl3ZmJ4NGdZdUlRQnVyOUtWRlJyYy11RlFVSXRlM09oZS1JbXZBOEx0X1BCd3BRT3NKRC0yVEpWSHFSc1BKUkdQVW9XUzk?oc=5\" target=\"_blank\">4 Arab States Condemn Houthi Missile Attack on Madinah Region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">https://houseofsaud.com/</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBJWFJ0UVJKT3hZVkZQNnp5dXh2VGhJQXVQcWx6cHRXM0Y3dGlxOTF4cHlMc0NHNzl3ZmJ4NGdZdUlRQnVyOUtWRlJyYy11RlFVSXRlM09oZS1JbXZBOEx0X1BCd3BRT3NKRC0yVEpWSHFSc1BKUkdQVW9XUzk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T11:44:21.128Z"
+    },
+    {
+      "id": "rss_65e7873d9a85c94f",
+      "timestamp": 1793940659000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 3,
+      "text_summary": "Houthi militia claims responsibility for missile attack on Riyadh airport - Aviation.Direct",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNdTE5NURpVEpmc3ItUWZuTE1JMXlrVDZhNi1NdkdzZEhkNnp4NkVBT1g4bTNQVDNDUVhSMXdmcnJYSDE4RnQyNmZFajJxOFJ5VHdPVEN3Mk1ZMUdTN05KUXZkcFZOLVJFY1RmVVV6YXJKVTlMd0dWNEI0ZUE3d0tXbUJyNV9jVUJfQUtTRkVJWnhWakhOSFFReU5JOVljdw?oc=5\" target=\"_blank\">Houthi militia claims responsibility for missile attack on Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Aviation.Direct</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdTE5NURpVEpmc3ItUWZuTE1JMXlrVDZhNi1NdkdzZEhkNnp4NkVBT1g4bTNQVDNDUVhSMXdmcnJYSDE4RnQyNmZFajJxOFJ5VHdPVEN3Mk1ZMUdTN05KUXZkcFZOLVJFY1RmVVV6YXJKVTlMd0dWNEI0ZUE3d0tXbUJyNV9jVUJfQUtTRkVJWnhWakhOSFFReU5JOVljdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T11:44:21.128Z"
+    },
+    {
+      "id": "rss_04c91930f326eacf",
+      "timestamp": 1793938055000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Arab countries condemn Houthi attempt to target Saudi Arabia’s Madinah region - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWpzSzZVQWdGOXJhV2NGZml0d0xRX0tSTXdQZXV4SVRxOXlHQ25FdWVhS3BVekhXWGRWcTdSa0E5NjNjSUNfMkZraXkyMURPYUZXZWZCZ01HM294a096UGRYU2NDUlBVUGNHZXN2ZnpMY2xzekdxWVlhck9kdnduamlHZ1M5TWNEQW5IR0VqNHd6MnRVQ0FtS3ZPZ2hzY05KVE9ZbUZxOFdROVBDTDcyel9PMUFPc0ZPNU1fVmsxMA?oc=5\" target=\"_blank\">Arab countries condemn Houthi attempt to target Saudi Arabia’s Madinah region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUWpzSzZVQWdGOXJhV2NGZml0d0xRX0tSTXdQZXV4SVRxOXlHQ25FdWVhS3BVekhXWGRWcTdSa0E5NjNjSUNfMkZraXkyMURPYUZXZWZCZ01HM294a096UGRYU2NDUlBVUGNHZXN2ZnpMY2xzekdxWVlhck9kdnduamlHZ1M5TWNEQW5IR0VqNHd6MnRVQ0FtS3ZPZ2hzY05KVE9ZbUZxOFdROVBDTDcyel9PMUFPc0ZPNU1fVmsxMA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T11:44:21.127Z"
+    },
     {
       "id": "rss_141bb637330e02a4",
       "timestamp": 1793910547000,
@@ -10771,97 +10861,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-07T17:40:51.246Z"
-    },
-    {
-      "id": "rss_42cb5d54a1b37f19",
-      "timestamp": 1791367322000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis claim strikes on Aden, Riyadh airports - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNUW1EeUJGZ3paZ1AwaTJxOE1PaEY0ZGYybXR0R0wxM2NxZkVVZnR6aGFFandKajZlazV5M0ZuejhqRk1id0lTblJ1V1lzeU5FMm5TS3dieklZZHVxMXZ1T3NYb0Zpbm5sZVIxY2MweHV6RG9vOENPcWl4aERtdzQ0TDA5Y3M4Z3JqNVBDNENR0gGOAUFVX3lxTE5pV2RiQ3Fzc0x3bm5scEdaS25sTWh3MWI2blZKWmZUa2RENjBTTmZXWXQyVHM5Vmk0Wm9yNzRaM3RoRThXd3NqTTFOQ0Y4NVFSVklVMHBEdzJyV0c1RnFzU05XTjB0ZTR5dmxiZUhobTlVYmlpOUlUUXJXczZMbGhjUHNmRWtuNnRWdkF5MGc?oc=5\" target=\"_blank\">Yemen's Houthis claim strikes on Aden, R",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUW1EeUJGZ3paZ1AwaTJxOE1PaEY0ZGYybXR0R0wxM2NxZkVVZnR6aGFFandKajZlazV5M0ZuejhqRk1id0lTblJ1V1lzeU5FMm5TS3dieklZZHVxMXZ1T3NYb0Zpbm5sZVIxY2MweHV6RG9vOENPcWl4aERtdzQ0TDA5Y3M4Z3JqNVBDNENR0gGOAUFVX3lxTE5pV2RiQ3Fzc0x3bm5scEdaS25sTWh3MWI2blZKWmZUa2RENjBTTmZXWXQyVHM5Vmk0Wm9yNzRaM3RoRThXd3NqTTFOQ0Y4NVFSVklVMHBEdzJyV0c1RnFzU05XTjB0ZTR5dmxiZUhobTlVYmlpOUlUUXJXczZMbGhjUHNmRWtuNnRWdkF5MGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T10:57:04.837Z"
-    },
-    {
-      "id": "rss_d675aadc478e4d39",
-      "timestamp": 1791365469000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 3,
-      "text_summary": "Yemen government forces launch drone attack on Houthi position in Taiz - Latest news from Azerbaijan",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNdURMYzd1dDBIQzhUemkwN3daMzJReEY3VU84TEJZODY4WjRzY3FKbXdQQnBTOHdDajFMTXJmZHlfUl92MTNWa2I4aWdMMXMwOHJ6SXp0WVl3Vy1CYVNZY2Z3VmdLWGtkN3F5d0VzbkRkdHZnZmtkNGowdVR2bUdOMG9nRUg1MEdOU3k5MEFHOXlHUWx0Zmc?oc=5\" target=\"_blank\">Yemen government forces launch drone attack on Houthi position in Taiz</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
-      "tags": [
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdURMYzd1dDBIQzhUemkwN3daMzJReEY3VU84TEJZODY4WjRzY3FKbXdQQnBTOHdDajFMTXJmZHlfUl92MTNWa2I4aWdMMXMwOHJ6SXp0WVl3Vy1CYVNZY2Z3VmdLWGtkN3F5d0VzbkRkdHZnZmtkNGowdVR2bUdOMG9nRUg1MEdOU3k5MEFHOXlHUWx0Zmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T10:57:04.838Z"
-    },
-    {
-      "id": "rss_5d94b2243bc1dfdb",
-      "timestamp": 1791364891000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Iran-backed Houthis claim new attacks on Saudi Arabia and Yemen’s Aden airport - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNN3ZPU0o1Qmh4WTVYSXA1SXBORHc1Q1FfZjhyZ3pyN25INjByV2o3Y2dEcEh6Sm15VEZWSXllQW81d01TX2pDMXFVVDY3RS1ZSVZkX1lCMUtIM1JUUWIxeDJWMW9lZnQ3MWJxejA5V0ZwT1R2Ml9KZ3dDOHZUX3gyYk1pSkhmcGdMeE1jQ3dWZVZBeTZPVWpkZE02RFdkY0dfdUpDcFUzcE1YY0lub1BISDUwN2E4cDRDR3Nnbk9sSVk?oc=5\" target=\"_blank\">Iran-backed Houthis claim new attacks on Saudi Arabia and Yemen’s Aden airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNN3ZPU0o1Qmh4WTVYSXA1SXBORHc1Q1FfZjhyZ3pyN25INjByV2o3Y2dEcEh6Sm15VEZWSXllQW81d01TX2pDMXFVVDY3RS1ZSVZkX1lCMUtIM1JUUWIxeDJWMW9lZnQ3MWJxejA5V0ZwT1R2Ml9KZ3dDOHZUX3gyYk1pSkhmcGdMeE1jQ3dWZVZBeTZPVWpkZE02RFdkY0dfdUpDcFUzcE1YY0lub1BISDUwN2E4cDRDR3Nnbk9sSVk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T17:40:51.245Z"
-    },
-    {
-      "id": "rss_cadcca684c67e778",
-      "timestamp": 1791358741000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack Aden airport with missiles and drones, amid Yemen government counteroffensive - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPbndkUlZZOXF6VlRTNkljWmxNY3JJaVdtX3RZcUVhN0JTUXJEbVRURWh0UmhKeXNidV9kQ0dLbHpiMGxMbnFReFZjRUxnLTZkSkt4Zk9VQUdRaktLQnROakV1bW5pc0kxY25yT20tZTR2bnZrMm9KSVRLVHA5c3lkRTZVQUFtNjZzSDNEclpmOUpUTXNCY29LZE03bW50SHdxeVZPS2JhX1NNWVVTT1ZVT1pXa3RCVFcyLWRFaVh3RdIBxAFBVV95cUxQZm9nMmZPRVl3ai04U21ldVFMcjB4ekJPTWhFOHFWVGR4UjgwMXYwRW5KYjl0VUMtRHFxSEVRRFAxM1lRa3NuQzg0S1pkZWc5OGpHM3JzRDdWOHFReVVhWFhPOXBIcVZCdHhjdXhTZkxrUGctTGhkNWM3b2VHUVlfOFdTaElnRDFIdmZtb1",
-      "tags": [
-        "missile",
-        "drone"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbndkUlZZOXF6VlRTNkljWmxNY3JJaVdtX3RZcUVhN0JTUXJEbVRURWh0UmhKeXNidV9kQ0dLbHpiMGxMbnFReFZjRUxnLTZkSkt4Zk9VQUdRaktLQnROakV1bW5pc0kxY25yT20tZTR2bnZrMm9KSVRLVHA5c3lkRTZVQUFtNjZzSDNEclpmOUpUTXNCY29LZE03bW50SHdxeVZPS2JhX1NNWVVTT1ZVT1pXa3RCVFcyLWRFaVh3RdIBxAFBVV95cUxQZm9nMmZPRVl3ai04U21ldVFMcjB4ekJPTWhFOHFWVGR4UjgwMXYwRW5KYjl0VUMtRHFxSEVRRFAxM1lRa3NuQzg0S1pkZWc5OGpHM3JzRDdWOHFReVVhWFhPOXBIcVZCdHhjdXhTZkxrUGctTGhkNWM3b2VHUVlfOFdTaElnRDFIdmZtb1dITHhEa1NpYmd3MkdUVzZGZ2ZWTi1yRlkwbzhqVldPbV9UOFhjb3g0bWRLLXdObDFGSXI2RDM5?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-07T10:57:04.837Z"
     }
   ]
 }
