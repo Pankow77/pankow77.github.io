@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-06T18:48:02.326Z",
+  "last_fetch": "2026-11-06T23:36:32.101Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8425e3f5e83f7ccb",
+      "timestamp": 1793995049000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "At least 30 killed in disputed attack on Yemen market - Latest news from Azerbaijan",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE4wS2EwbTB5V3B0T215XzVsTDZUclZoX1hhdVBMZkZNb2U2MVVrUzIzQzhZdWV4QXFvWFBpUVNrTGlEN1N4MXZ1M1lxbTdJcUM0SnJDdE5QYzFlT1lVVHF2OFJ3elAxQnI2ZHlXYnBsWk9aZV9oSkFmbF91RFlEbTQ?oc=5\" target=\"_blank\">At least 30 killed in disputed attack on Yemen market</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Latest news from Azerbaijan</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4wS2EwbTB5V3B0T215XzVsTDZUclZoX1hhdVBMZkZNb2U2MVVrUzIzQzhZdWV4QXFvWFBpUVNrTGlEN1N4MXZ1M1lxbTdJcUM0SnJDdE5QYzFlT1lVVHF2OFJ3elAxQnI2ZHlXYnBsWk9aZV9oSkFmbF91RFlEbTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T23:36:30.872Z"
+    },
     {
       "id": "rss_2a4312b22c5e8524",
       "timestamp": 1793987419000,
@@ -90,6 +111,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-06T18:48:00.784Z"
+    },
+    {
+      "id": "rss_ba69ae453dffa199",
+      "timestamp": 1793979127000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "At least 20 killed in Yemen market attack as Houthis blame Saudi Arabia - Türkiye Today",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQTmhtYnB0T0dTRkxESlBQN2FlQkNjSEZKdnU0QXlaWW1WcjNIblB4aHd6VlM3RTR2UWIzbnF1bV9YMGZZamxUZmNfU0ZvdHNpckJiRDBUVDhTcE1hTTloZGw4Qm5CX0Z1M00wSFRWY3REMmJiT2c5c2FJZF93b0FFQl96a1c2SHZLMkExOEpmTGJqTFhuSm9MMHI3bmVUdXNISHRlNHJrbjh5RFVBWjB4aXJFcjRzUQ?oc=5\" target=\"_blank\">At least 20 killed in Yemen market attack as Houthis blame Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTmhtYnB0T0dTRkxESlBQN2FlQkNjSEZKdnU0QXlaWW1WcjNIblB4aHd6VlM3RTR2UWIzbnF1bV9YMGZZamxUZmNfU0ZvdHNpckJiRDBUVDhTcE1hTTloZGw4Qm5CX0Z1M00wSFRWY3REMmJiT2c5c2FJZF93b0FFQl96a1c2SHZLMkExOEpmTGJqTFhuSm9MMHI3bmVUdXNISHRlNHJrbjh5RFVBWjB4aXJFcjRzUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-06T23:36:30.872Z"
     },
     {
       "id": "rss_d3d029f54b4bfd69",
@@ -10831,48 +10873,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-08T09:17:11.691Z"
-    },
-    {
-      "id": "rss_a359bd1886d1e6d8",
-      "timestamp": 1791411095000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Deadly Houthi attacks on Saudi airports highlight widening fallout from Yemen civil war - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPTmZiNVlWTk15REFxZ0NHQl85X0RaY1dWeC1OZkZOWklTYWQ3OUVGNEZBY2VrdHo0N2g2X2EzM2hQVXpOVG5TZWtxVEtzZE82ZjVnQ2gzUV9heTdKc2NyREVoRzlHQmZxOWliRGhFb3RWbVZqeFRVMklEdVItSktnbUJPcl9hVkJTenc?oc=5\" target=\"_blank\">Deadly Houthi attacks on Saudi airports highlight widening fallout from Yemen civil war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTmZiNVlWTk15REFxZ0NHQl85X0RaY1dWeC1OZkZOWklTYWQ3OUVGNEZBY2VrdHo0N2g2X2EzM2hQVXpOVG5TZWtxVEtzZE82ZjVnQ2gzUV9heTdKc2NyREVoRzlHQmZxOWliRGhFb3RWbVZqeFRVMklEdVItSktnbUJPcl9hVkJTenc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-08T02:25:04.763Z"
-    },
-    {
-      "id": "rss_6790a8963c79353e",
-      "timestamp": 1791411095000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Pakistan confirms it has troops in Saudi as conflict with Yemen’s Houthi rebels escalates - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxNS0ZWY0YzMy0xTkpGOUs1ZXNGUDZ1X0l1dmp3RElxZVNLZklvSHlvSDFpak8tUVVqa2NqSEVBaHVaU0U1Z0J4d0hITEpzUlBCOWNRUk1yOHE4VjgzcFNHOHd6eFZiUVNrQ2RobFozb21VVVQ5d01oSHRlWHptSFdmc3hMRHJ4cHpwZ0RKbFVIYw?oc=5\" target=\"_blank\">Pakistan confirms it has troops in Saudi as conflict with Yemen’s Houthi rebels escalates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNS0ZWY0YzMy0xTkpGOUs1ZXNGUDZ1X0l1dmp3RElxZVNLZklvSHlvSDFpak8tUVVqa2NqSEVBaHVaU0U1Z0J4d0hITEpzUlBCOWNRUk1yOHE4VjgzcFNHOHd6eFZiUVNrQ2RobFozb21VVVQ5d01oSHRlWHptSFdmc3hMRHJ4cHpwZ0RKbFVIYw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T17:36:17.598Z"
     }
   ]
 }
