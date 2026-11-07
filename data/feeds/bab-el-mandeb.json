@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-07T04:21:19.270Z",
+  "last_fetch": "2026-11-07T11:13:52.473Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_76e3d4f404f18d91",
+      "timestamp": 1794034406000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Yemeni gov’t forces, Houthis trade blame for deadly strikes on Taiz market - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQWUFFT1gtN2l4YndNOENnbWhZbE84UWpJM0dsWU1CNzJQbjRFTWZIZFh0b01wb0QxUTVleklRZWVJaEgxcExlVWhDWFFVMEVIaFZhVHF4S3RQOFZTRnNQWXRHRGY4VTZLZkc1Z3hFQVkxTHN6S0hheURfZFJaTjRKdjRlclpwQnU4cDhSNXJCR1RuOVl0N3k5Vlc1Qkt3dGhNY1FMNFhYaXlHRmFsZ0hva0hjRdIBuAFBVV95cUxNUWFDV1ZCNEtVOHVHWXVQbVctNEhueXlfazF3cHk5UnBIWWhLU01wN1UtZTNwcllVdWw5NGpFY2tzcEJDMXIyRXktYVJkcjc1NlV0MndQYnB1a3dHd3Ixc0VqeHNCLXQzc1dUaGpycklSdjNDZ2RfNEs3U1l2Z29NMGVUVFk5cFNRdWhtdjZSa0Zva29tZE5Od3",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWUFFT1gtN2l4YndNOENnbWhZbE84UWpJM0dsWU1CNzJQbjRFTWZIZFh0b01wb0QxUTVleklRZWVJaEgxcExlVWhDWFFVMEVIaFZhVHF4S3RQOFZTRnNQWXRHRGY4VTZLZkc1Z3hFQVkxTHN6S0hheURfZFJaTjRKdjRlclpwQnU4cDhSNXJCR1RuOVl0N3k5Vlc1Qkt3dGhNY1FMNFhYaXlHRmFsZ0hva0hjRdIBuAFBVV95cUxNUWFDV1ZCNEtVOHVHWXVQbVctNEhueXlfazF3cHk5UnBIWWhLU01wN1UtZTNwcllVdWw5NGpFY2tzcEJDMXIyRXktYVJkcjc1NlV0MndQYnB1a3dHd3Ixc0VqeHNCLXQzc1dUaGpycklSdjNDZ2RfNEs3U1l2Z29NMGVUVFk5cFNRdWhtdjZSa0Zva29tZE5Od3FuOHFVdWVfWnRnZTlIUVFzUlVZcEk5ZnJCUGhtdjNB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-11-07T11:13:51.322Z"
+    },
     {
       "id": "rss_da7658ec68900f94",
       "timestamp": 1794007704000,
@@ -153,6 +174,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-06T23:36:30.872Z"
+    },
+    {
+      "id": "rss_17c9f4fc13a5430d",
+      "timestamp": 1793978671000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shippers wishing to cross Bab al-Mandab email Houthis for permits, sign up for alerts - report - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1FeVBlR2x6T01JRENicGZpZENvNDRUNHB3b2RlQkVXY1JMemxZZHVncmkyLTdRX09tQnJLRXJvSElIaDNfOFJ4YXBXM0JpZzI5Q3A5Vk8yQ3BjQ1lz?oc=5\" target=\"_blank\">Shippers wishing to cross Bab al-Mandab email Houthis for permits, sign up for alerts - report</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1FeVBlR2x6T01JRENicGZpZENvNDRUNHB3b2RlQkVXY1JMemxZZHVncmkyLTdRX09tQnJLRXJvSElIaDNfOFJ4YXBXM0JpZzI5Q3A5Vk8yQ3BjQ1lz?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-07T11:13:51.323Z"
     },
     {
       "id": "rss_d3d029f54b4bfd69",
@@ -10831,48 +10875,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-08T02:25:04.764Z"
-    },
-    {
-      "id": "rss_c7845b6b843fe4c4",
-      "timestamp": 1791420797000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi attack targets Yemen airport - PressReader",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTFBpM1FidThXbXMwN0FxXzJRWDh5d3JkWU43dnBiUVAyTmE4Nms3Mjh5MUwzTzM3MXB6RnVucjJWX0U3eC0zQlVXLW1XM2tfVG9JcEZLWm5Obl9pRU90cWtnS0l0ekFnemFvVHVMRF9WN3hpY0lMb3hRamtJOEoxdw?oc=5\" target=\"_blank\">Houthi attack targets Yemen airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">PressReader</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBpM1FidThXbXMwN0FxXzJRWDh5d3JkWU43dnBiUVAyTmE4Nms3Mjh5MUwzTzM3MXB6RnVucjJWX0U3eC0zQlVXLW1XM2tfVG9JcEZLWm5Obl9pRU90cWtnS0l0ekFnemFvVHVMRF9WN3hpY0lMb3hRamtJOEoxdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-08T02:25:04.764Z"
-    },
-    {
-      "id": "rss_a5efa018e853a6d0",
-      "timestamp": 1791418599000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia confirms three dead in Houthi strikes on its airports - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbHdRemZWWkEzdDBwRmFBaVFadkxJN0Zza2VFUnIzU1JjX1VHT1MyUlVEcjNMR0xfZDJZTVk5TWVVVV90WlFSX0RNbDh2Zk5nUS16elpCOGFDTkY4ejlYakI0MXpSMVh0enAyQk9sQldpRnZ6dXVSQmxVQWZpT1FOMm1Nb3R0WnVnbHd6eWN5RHlYakpnRUJKeEVBa3ZCeG1FZjJKY18xbFBnNm5UVlVGNTVoZ2lPZUxB0gG-AUFVX3lxTE9MRmhCeGNhNVp0dWZSWWhWNlVUVTRETmNkblB6ZXRUYTNTdERyWTZGbjFTWG1XTlBPb0NYTXBvb29fRC1fNEY0d1BrZTM5U0ttSlY1TzVXMGV2ekxqQ3dlakhrUkZxZ2JFdDhyOGltSlFfLVBiSUp2UWJrU2ZFdGpfMjlOdGRhS1JLRlAxZG1iUThZZF",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbHdRemZWWkEzdDBwRmFBaVFadkxJN0Zza2VFUnIzU1JjX1VHT1MyUlVEcjNMR0xfZDJZTVk5TWVVVV90WlFSX0RNbDh2Zk5nUS16elpCOGFDTkY4ejlYakI0MXpSMVh0enAyQk9sQldpRnZ6dXVSQmxVQWZpT1FOMm1Nb3R0WnVnbHd6eWN5RHlYakpnRUJKeEVBa3ZCeG1FZjJKY18xbFBnNm5UVlVGNTVoZ2lPZUxB0gG-AUFVX3lxTE9MRmhCeGNhNVp0dWZSWWhWNlVUVTRETmNkblB6ZXRUYTNTdERyWTZGbjFTWG1XTlBPb0NYTXBvb29fRC1fNEY0d1BrZTM5U0ttSlY1TzVXMGV2ekxqQ3dlakhrUkZxZ2JFdDhyOGltSlFfLVBiSUp2UWJrU2ZFdGpfMjlOdGRhS1JLRlAxZG1iUThZZFgtWFNZaG9wc280U3ZOX29xZXJTd0k3S1NmUHdIejVXMVQzNzZ3TUZGalE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-08T16:44:05.095Z"
     }
   ]
 }
