@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-06T23:36:32.101Z",
+  "last_fetch": "2026-11-07T04:21:19.270Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_da7658ec68900f94",
+      "timestamp": 1794007704000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Is WWE Crown Jewel 2026 still happening? Yes, Saturday in Riyadh, despite Houthi attack fears - Nacionale",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPeXJJUzFxZFRJLTl6OGxjUGJGdlVnNEg2UUVHSmdGazllY29NRlRiTGJNS1RoYTRVYUJXZWoyTFpwUHRZbkYxM09SSWtDaC1LNlhua285TEJqVHZMN1RsWElGbHZPbmc0aEEwWjhnZnhBY0JJZExsbjNBLXpxRUpIaHRKeWZaRlp3UkVIV2ZsRU5DMHExY1VmWkY0VEpmd1FpOWRCVlFyZ25FU2ZwbUt3bmpBSFJaTXc?oc=5\" target=\"_blank\">Is WWE Crown Jewel 2026 still happening? Yes, Saturday in Riyadh, despite Houthi attack fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nacionale</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPeXJJUzFxZFRJLTl6OGxjUGJGdlVnNEg2UUVHSmdGazllY29NRlRiTGJNS1RoYTRVYUJXZWoyTFpwUHRZbkYxM09SSWtDaC1LNlhua285TEJqVHZMN1RsWElGbHZPbmc0aEEwWjhnZnhBY0JJZExsbjNBLXpxRUpIaHRKeWZaRlp3UkVIV2ZsRU5DMHExY1VmWkY0VEpmd1FpOWRCVlFyZ25FU2ZwbUt3bmpBSFJaTXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-07T04:21:18.108Z"
+    },
     {
       "id": "rss_8425e3f5e83f7ccb",
       "timestamp": 1793995049000,
@@ -10852,27 +10873,6 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-10-08T16:44:05.095Z"
-    },
-    {
-      "id": "rss_8438ee5cf3a1f8fa",
-      "timestamp": 1791413280000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Attacks on Saudi airports claimed by Houthi rebels kill 3 people, officials say - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPSUpvM0tkSFpDT2ZLRGFMcjJjVHdTcHFEc19valhyWEVFanpGWTNRa3hxVkRnRVpMY1BEendVZXRyS2lmSUd6NERTUWl1Q0ZtWU5NMGFfalhWS3M0MVFzTjNrSVJ6ZDBCc3FuR2FJcW1kWnc1amZZZGlkMkRzUlhpTUxVdXRUenR1Wndfd1EwcVNtSXBvVUk1ajJVUlBMUjJF?oc=5\" target=\"_blank\">Attacks on Saudi airports claimed by Houthi rebels kill 3 people, officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPSUpvM0tkSFpDT2ZLRGFMcjJjVHdTcHFEc19valhyWEVFanpGWTNRa3hxVkRnRVpMY1BEendVZXRyS2lmSUd6NERTUWl1Q0ZtWU5NMGFfalhWS3M0MVFzTjNrSVJ6ZDBCc3FuR2FJcW1kWnc1amZZZGlkMkRzUlhpTUxVdXRUenR1Wndfd1EwcVNtSXBvVUk1ajJVUlBMUjJF?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-08T09:17:11.691Z"
     }
   ]
 }
