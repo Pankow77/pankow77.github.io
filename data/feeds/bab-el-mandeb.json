@@ -1,8 +1,139 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-08T18:37:14.972Z",
+  "last_fetch": "2026-11-08T22:37:49.249Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_a0b27d02cd9c66fb",
+      "timestamp": 1794175500000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Aramco tower damaged in Houthi missiles attack on heart of capital’s financial district - New York Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPcFExa2tKc0U4VnBvLU9pUlhiRkhyVjEzc3JZbGxnVFpzRUlrUWpTRjNLcmtZLUxFRm1XVXlvX0FacWEwN2FaT0JaZ2FuYnNHR25lSTFyd2psSVo0OWU4RWs1alZVeTFPWjJYRVV0UzR4c1B4OWtwNXBxNUJUMmc3QXY3U0J6aGpOY003dkRQOVlySmVmNnhZSlNwV0ZDWThvTFJsSV9yRWNnMFhrMk5vTS10SklKMDUzQmc?oc=5\" target=\"_blank\">Saudi Aramco tower damaged in Houthi missiles attack on heart of capital’s financial district</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">New York Post</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcFExa2tKc0U4VnBvLU9pUlhiRkhyVjEzc3JZbGxnVFpzRUlrUWpTRjNLcmtZLUxFRm1XVXlvX0FacWEwN2FaT0JaZ2FuYnNHR25lSTFyd2psSVo0OWU4RWs1alZVeTFPWjJYRVV0UzR4c1B4OWtwNXBxNUJUMmc3QXY3U0J6aGpOY003dkRQOVlySmVmNnhZSlNwV0ZDWThvTFJsSV9yRWNnMFhrMk5vTS10SklKMDUzQmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.189Z"
+    },
+    {
+      "id": "rss_c39385e3681de25a",
+      "timestamp": 1794173856000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes - BBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3VFhjNFMxVXpNZWhoTnJhcEs4clhMM3BveHNLUkpSUGhubGF5VDdWemd5aTVWLVY1aWNoT1l2Tm5kTWczXzVCTUoyMjJXcGtFdXVzZjgxcHVrYzg?oc=5\" target=\"_blank\">Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3VFhjNFMxVXpNZWhoTnJhcEs4clhMM3BveHNLUkpSUGhubGF5VDdWemd5aTVWLVY1aWNoT1l2Tm5kTWczXzVCTUoyMjJXcGtFdXVzZjgxcHVrYzg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.189Z"
+    },
+    {
+      "id": "rss_8d8d5e7367802525",
+      "timestamp": 1794172950000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack damages Aramco building in Riyadh’s financial district By Reuters - Investing.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNOHdyVVE1M0VmQ0g4MVNtVzBydzdmaVVRbjA2czlVM2hHcmd2RTZWQ2s4SlhwUXhnVTRjVjlmVVFCTlUwNUR4VzhPaFVQRWt2UlBBWUUzLVFnTXNPdW54OVF3UUJvakFHRGIwNE1tbV84Y1F2VzBURkw2WUlsTGQ0X3FIc3QyZUFGTUhQZm82NEIxNWc3d2pJUVN3OFpJRFlwMnl1Y0QzajBkZ1BuYkJUcHVKMXE5LXlzUEtIMDltSlBBLVFMN3NNNkowaWVNdmt3UTlKd2k4NGhZdDlDY2p4YnZuaXc?oc=5\" target=\"_blank\">Houthi attack damages Aramco building in Riyadh’s financial district By Reuters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Inv",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNOHdyVVE1M0VmQ0g4MVNtVzBydzdmaVVRbjA2czlVM2hHcmd2RTZWQ2s4SlhwUXhnVTRjVjlmVVFCTlUwNUR4VzhPaFVQRWt2UlBBWUUzLVFnTXNPdW54OVF3UUJvakFHRGIwNE1tbV84Y1F2VzBURkw2WUlsTGQ0X3FIc3QyZUFGTUhQZm82NEIxNWc3d2pJUVN3OFpJRFlwMnl1Y0QzajBkZ1BuYkJUcHVKMXE5LXlzUEtIMDltSlBBLVFMN3NNNkowaWVNdmt3UTlKd2k4NGhZdDlDY2p4YnZuaXc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-08T22:37:48.189Z"
+    },
+    {
+      "id": "rss_4e0eb18eaf991d09",
+      "timestamp": 1794167158000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi Attack Damages Aramco Headquarters in Saudi Arabia’s Riyadh - Morocco World News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNMFMtSDZUaGVId0p4MTcxTDBmcGw5NkF1YVJzRm55d0tISUtwRGZHTEdwUmh3cFotbWo4NkdFWS1sa1E3ZDVZcTNFRzVrQmJ2eUdiVFJnclVwQVNMTWRQQXhjd0kzblB6NU41RHRXSXRrQ2x0ODdDOWVzaktFZHpFNnlLZWtHamxSaEtPZjg4eUl0VlNFclhqWlVIZFVFM3ViN3U1OGxPVmkwbmRuLWx3TnpMR0s?oc=5\" target=\"_blank\">Houthi Attack Damages Aramco Headquarters in Saudi Arabia’s Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Morocco World News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMFMtSDZUaGVId0p4MTcxTDBmcGw5NkF1YVJzRm55d0tISUtwRGZHTEdwUmh3cFotbWo4NkdFWS1sa1E3ZDVZcTNFRzVrQmJ2eUdiVFJnclVwQVNMTWRQQXhjd0kzblB6NU41RHRXSXRrQ2x0ODdDOWVzaktFZHpFNnlLZWtHamxSaEtPZjg4eUl0VlNFclhqWlVIZFVFM3ViN3U1OGxPVmkwbmRuLWx3TnpMR0s?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.190Z"
+    },
+    {
+      "id": "rss_9fae9bfc4a01f722",
+      "timestamp": 1794166158000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Aramco tower damaged in Houthi attack - Peoples Gazette Nigeria",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTFA0UXFleFlsNDM2Wm12TGpxZmE3aVNBZmk0eFJ2V0Z0Ql9ER0VNWjBwQzBCcnNVT211TnhwaTJ3d1Z1T1VWc19rTUZkNkdWSEFYR3NZYlhTdWxiUHR5SnhfZlRCUU4zZHpmR0RNUlNKMDNZd2x4cGc?oc=5\" target=\"_blank\">Saudi Aramco tower damaged in Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Peoples Gazette Nigeria</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA0UXFleFlsNDM2Wm12TGpxZmE3aVNBZmk0eFJ2V0Z0Ql9ER0VNWjBwQzBCcnNVT211TnhwaTJ3d1Z1T1VWc19rTUZkNkdWSEFYR3NZYlhTdWxiUHR5SnhfZlRCUU4zZHpmR0RNUlNKMDNZd2x4cGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.190Z"
+    },
+    {
+      "id": "rss_0ae08c6979afd868",
+      "timestamp": 1794164280000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it destroyed Houthi missile launchpads in Yemen's Sanaa - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQUF90SlFiWTlvZDBEdFdEcWV0Wnkwakx0a2R2bG4yLVZ1Qi1ZalJrYnhwejdwejY0X2hjenpCWTNHeldybGNuQVEtNWJOcDhIUFdienhpWlRZSXhuSWJFRWNja0N5QVd3ZFVEYVZMRHRMSXJHbGJIS0NCVDNLa3pnWFRGeWNBSkg4VTZ1VU9JUkVQb3JHMjEwUjN1Y0p0cXpabXVnbmgzVG8xXzJvNFJQS3ozSmZjNV9BbE1QWlVCd1ctS3dhZmc?oc=5\" target=\"_blank\">Saudi-led coalition says it destroyed Houthi missile launchpads in Yemen's Sanaa</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUF90SlFiWTlvZDBEdFdEcWV0Wnkwakx0a2R2bG4yLVZ1Qi1ZalJrYnhwejdwejY0X2hjenpCWTNHeldybGNuQVEtNWJOcDhIUFdienhpWlRZSXhuSWJFRWNja0N5QVd3ZFVEYVZMRHRMSXJHbGJIS0NCVDNLa3pnWFRGeWNBSkg4VTZ1VU9JUkVQb3JHMjEwUjN1Y0p0cXpabXVnbmgzVG8xXzJvNFJQS3ozSmZjNV9BbE1QWlVCd1ctS3dhZmc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.190Z"
+    },
     {
       "id": "rss_948c46ca8880c76b",
       "timestamp": 1794159353000,
@@ -44,6 +175,48 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-08T18:37:13.808Z"
+    },
+    {
+      "id": "rss_e49e02ba75ef4673",
+      "timestamp": 1794158142000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi Aramco Tower Targeted in Rare Strike on Riyadh Finance Hub - Bloomberg",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOLUpUaXJBZU5CYXNqcDJjZkEtUlc5MWZRcVlsWmFWaWhDcHRJMTNLM05iV25SMEtHTGZyTTZHN3NlaGlGY1dwUFUxQmxXcFNxdmt5R3J1MVJGbmdjblFVMmR0UldtU2M3b0htSGE0YmNBSnNpd1JtVnJHTWlMMnRycHdYUFR1WGN5ck1rdjM0ZmtjNEstR1ZjZjh5X1d2M3g4RUY0bXVoR1VOOUNuWllTVm9qVzJuQQ?oc=5\" target=\"_blank\">Saudi Aramco Tower Targeted in Rare Strike on Riyadh Finance Hub</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLUpUaXJBZU5CYXNqcDJjZkEtUlc5MWZRcVlsWmFWaWhDcHRJMTNLM05iV25SMEtHTGZyTTZHN3NlaGlGY1dwUFUxQmxXcFNxdmt5R3J1MVJGbmdjblFVMmR0UldtU2M3b0htSGE0YmNBSnNpd1JtVnJHTWlMMnRycHdYUFR1WGN5ck1rdjM0ZmtjNEstR1ZjZjh5X1d2M3g4RUY0bXVoR1VOOUNuWllTVm9qVzJuQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.189Z"
+    },
+    {
+      "id": "rss_05012e9a77c008e5",
+      "timestamp": 1794157201000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Africa’s most powerful military joins Bahrain, Kuwait and Syria in fierce backlash over Houthi attacks on Saudi Arabia’s $1.7 trillion oil giant, Aramco - Business Insider Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxORTZJY2VTeGl1Tkd5SkwzbV9PVjRnWXp6TXNqTGJtNFJCOUtSSzNkazBzQ3MxMHotM29TS1BOcHJnMThnbnEzR2lOSlZRcmtRU2ZhM2hCS05PYThfR2lkcmVfcEZNNE9YNUJ0clhSQkRNRks5dExnYVdNNU5YWGRLU3RaWXliT2ZJRENzODlPaUFhNUpQZ01tZ01lTmRzQnk3RnB4RHFyNDhlQnFmZTVQSGUtRkg0RExteEZSYlJnZjk3NFRGOFBCX2ZLdUdRYl83OHRkYW1YTHJ1UQ?oc=5\" target=\"_blank\">Africa’s most powerful military joins Bahrain, Kuwait and Syria in fierce backlash over Houthi attacks on Saudi Arabia’s $1.7 trillio",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxORTZJY2VTeGl1Tkd5SkwzbV9PVjRnWXp6TXNqTGJtNFJCOUtSSzNkazBzQ3MxMHotM29TS1BOcHJnMThnbnEzR2lOSlZRcmtRU2ZhM2hCS05PYThfR2lkcmVfcEZNNE9YNUJ0clhSQkRNRks5dExnYVdNNU5YWGRLU3RaWXliT2ZJRENzODlPaUFhNUpQZ01tZ01lTmRzQnk3RnB4RHFyNDhlQnFmZTVQSGUtRkg0RExteEZSYlJnZjk3NFRGOFBCX2ZLdUdRYl83OHRkYW1YTHJ1UQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.190Z"
     },
     {
       "id": "rss_c98332511d7fec6d",
@@ -1638,6 +1811,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-03T20:22:33.661Z"
+    },
+    {
+      "id": "rss_f0ce354aebea5e94",
+      "timestamp": 1793692800000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "EU raises threat assessment for transiting North Red Sea to medium - Shipping Telegraph",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5\" target=\"_blank\">EU raises threat assessment for transiting North Red Sea to medium</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Shipping Telegraph</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMk01N0NvcHpsRUNlZ2xNaDk3V3N2LXZxb2p1Z2N6MTVOSzM2SXhpbzJJcTQtLTZiRGJCaWhiaWVTdW9DdVhRdnk2b2xoOUVrSGVMVWJBUE9UVlZXN1M5V203dHVFZUVvOUd2Q1FPeFZsT2FIR3Jnck90ZkVJc1JleW1Nd2piRDVpVVd0S29tckp5U3AzRXU5dzZ5XzRvMEZ4bDlTcElJSzZub0RUNkxFT3Mtc0s?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-08T22:37:48.883Z"
     },
     {
       "id": "rss_36361c420379f5cd",
@@ -10669,195 +10865,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPb0MtOFlNWi1mcnROSTYxUl9MbmNkbVJ1cGJMMGlVclp6WlpMMHRDYzhScHlKSXQzSHdINm5BQ3FkVFctVzhnVDBGbndLQ0xEajh1RmYwSVEzZ1FENndkYnAzVVJGSlZVeDJ1YzJNMVprRE91VmZKbU40TjVzUFNFOUJPMERFRVVVTHB4YUp6czNGRjdLRDJQSXBab1pmc0RRbkd0dzNnTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.596Z"
-    },
-    {
-      "id": "rss_93b1fe8022858ce7",
-      "timestamp": 1791548376000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Airline pilot among 3 killed in Houthi attacks at Saudi capital's main airport - CBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOd1RQSlBLT3FRMi1ETFg1UzlqWEVHOW9aV0tLN25oekV2Z09UaW9nb3Ezc2NnU3EtNEtwbk5mNVhsZUFjMktHSEp6QXMwT3ZQWU9WaTllM1Z3SHlHMUY0aExjbW90dVBCUmhNX01LeDNYR0R2RWhMd2RoQjNhODRCa0dB?oc=5\" target=\"_blank\">Airline pilot among 3 killed in Houthi attacks at Saudi capital's main airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOd1RQSlBLT3FRMi1ETFg1UzlqWEVHOW9aV0tLN25oekV2Z09UaW9nb3Ezc2NnU3EtNEtwbk5mNVhsZUFjMktHSEp6QXMwT3ZQWU9WaTllM1Z3SHlHMUY0aExjbW90dVBCUmhNX01LeDNYR0R2RWhMd2RoQjNhODRCa0dB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.597Z"
-    },
-    {
-      "id": "rss_c447ccde015b60cd",
-      "timestamp": 1791547385000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia reopens Riyadh airport after Houthi attack kills three - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPaEs0b2JJSTY4WW14cmV3aC1STjd5QzhRNTE0MC10RmRyRkljdmdKcFlNQWtpSWtIVmczWk11czRkQzhRS3MybWpDeWdMQmQ3d25fczh1Y19oSmY3Y3NDTDVvSkZGOHVEajJPbkd0X2RxR3hhMWFJcmxmM0hCcHZZUU1seHNMcHE1azhRYkVQY2tlN3ptM0hSQVg5SUlUci0zWUZua3pTZXJjVW9x0gGyAUFVX3lxTE03WmdZZThkRU9KRFlCWTBxaDd3c3FEVW9pdUxRX3BTSWhvdGM4LVlGZXI3VnFJOXZyUmkxanlYaDhfbE1JZjVsSzNWYzVjUVFlMGdQWWxZblctd0UxU0JxdFRJRTk1b2lRRDBNdGJZaC10MmlPU2FwYkJEZ1pLcHpuQ2o3ZmdYTVdXRF9na2s4dHNKQkdfQzJEcXZ4TENZR3",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPaEs0b2JJSTY4WW14cmV3aC1STjd5QzhRNTE0MC10RmRyRkljdmdKcFlNQWtpSWtIVmczWk11czRkQzhRS3MybWpDeWdMQmQ3d25fczh1Y19oSmY3Y3NDTDVvSkZGOHVEajJPbkd0X2RxR3hhMWFJcmxmM0hCcHZZUU1seHNMcHE1azhRYkVQY2tlN3ptM0hSQVg5SUlUci0zWUZua3pTZXJjVW9x0gGyAUFVX3lxTE03WmdZZThkRU9KRFlCWTBxaDd3c3FEVW9pdUxRX3BTSWhvdGM4LVlGZXI3VnFJOXZyUmkxanlYaDhfbE1JZjVsSzNWYzVjUVFlMGdQWWxZblctd0UxU0JxdFRJRTk1b2lRRDBNdGJZaC10MmlPU2FwYkJEZ1pLcHpuQ2o3ZmdYTVdXRF9na2s4dHNKQkdfQzJEcXZ4TENZR3VZYmVabURFMU1MVDJWTF9sQXc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-09T15:27:05.597Z"
-    },
-    {
-      "id": "rss_a91ddb3ff5122602",
-      "timestamp": 1791546720000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "U.S. issues regional security alert after Houthi strikes on Riyadh kill three - Haaretz",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwJBVV95cUxOWGdobGI4TWpMd2szUDczNVNwcVZXVUstbjFOTTk0S0EtQ1NQbi1LS3oxcW5TeFpoQUh5NzViTHRuNjVZX2hVbkNFVkRrN3dlQlZFTmc5ejNsbG1VX0xtaUd2OV9SeUxGNGp1RmkxVllKWEFKWlJEWUVwa1ctNG1jRndqYkg1bDdLX1FIaWs5blFOdTdBRWljcmJLRGdyRDBoSTYyd01VdFBDZElZNDBvSG5LaEdRaDEyU1E1UHhaeHI1bktlSkh1YUtKaHRyWTh3UWJwSzlLV2hzd2pZTTdrN0lnLVF2YnZRaEV3TTF3SkRuSmlsRGpjdnBpMDQ4Ukhxc2F0eWpSTQ?oc=5\" target=\"_blank\">U.S. issues regional security alert after Houthi strikes on Riyadh kill t",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOWGdobGI4TWpMd2szUDczNVNwcVZXVUstbjFOTTk0S0EtQ1NQbi1LS3oxcW5TeFpoQUh5NzViTHRuNjVZX2hVbkNFVkRrN3dlQlZFTmc5ejNsbG1VX0xtaUd2OV9SeUxGNGp1RmkxVllKWEFKWlJEWUVwa1ctNG1jRndqYkg1bDdLX1FIaWs5blFOdTdBRWljcmJLRGdyRDBoSTYyd01VdFBDZElZNDBvSG5LaEdRaDEyU1E1UHhaeHI1bktlSkh1YUtKaHRyWTh3UWJwSzlLV2hzd2pZTTdrN0lnLVF2YnZRaEV3TTF3SkRuSmlsRGpjdnBpMDQ4Ukhxc2F0eWpSTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.598Z"
-    },
-    {
-      "id": "rss_8bdff086939cafc7",
-      "timestamp": 1791545946000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "US Embassy in Jordan, EU aviation group warn against traveling to Middle East - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTFBCQVA2dG5sZzBRRkM0TU1PUjZTeTVsTUhDal8xQVdRQUtLS3k5ZHhIbXNHUS0yNUtsRXlXZDB0XzZVTzR2TDBFaE8wS21jeEFRNnBpLXBTSUNTcFZ4?oc=5\" target=\"_blank\">US Embassy in Jordan, EU aviation group warn against traveling to Middle East</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBCQVA2dG5sZzBRRkM0TU1PUjZTeTVsTUhDal8xQVdRQUtLS3k5ZHhIbXNHUS0yNUtsRXlXZDB0XzZVTzR2TDBFaE8wS21jeEFRNnBpLXBTSUNTcFZ4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.598Z"
-    },
-    {
-      "id": "rss_2b5a08778cc9d315",
-      "timestamp": 1791545510000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Bab el-Mandeb 'cleared of Houthi remnants,' Saudi envoy to Yemen says - Anadolu Ajansı",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWFZPNm8wMDgxc1ZjSk96ekhzdjVEejFVVngzSjhoQUNVYlQ5akNhTG1fX0FyRkVGZkJLS3JER1RRM1hHM3Z1TWUwWVlrRXYtUWFZRzNWWGFkMGM5NFBqMHllQlp2dlJ3Sm1wSXRHVGtIXzF4QmozYnF2ejJxQmRJSmVrS1dzd2drUnJjME00X25KMG9mdWZGS3BSWktFWkI4bmhDNmpsQ0hDUHc?oc=5\" target=\"_blank\">Bab el-Mandeb 'cleared of Houthi remnants,' Saudi envoy to Yemen says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWFZPNm8wMDgxc1ZjSk96ekhzdjVEejFVVngzSjhoQUNVYlQ5akNhTG1fX0FyRkVGZkJLS3JER1RRM1hHM3Z1TWUwWVlrRXYtUWFZRzNWWGFkMGM5NFBqMHllQlp2dlJ3Sm1wSXRHVGtIXzF4QmozYnF2ejJxQmRJSmVrS1dzd2drUnJjME00X25KMG9mdWZGS3BSWktFWkI4bmhDNmpsQ0hDUHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.597Z"
-    },
-    {
-      "id": "rss_6cbea02c4a63fdb3",
-      "timestamp": 1791540424000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia says three nationals killed in Houthi attacks on Riyadh airport. - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE92am4zWndmemw0Yk5TY3hGVVc0dTZPb2hSeXBCYUtkbE42aENGenFSWUh6UWtLVG9vX0JXMktWdVpDc2stc0ZQV1MzOXZNS2hvOW9uX09rS2xFNWc?oc=5\" target=\"_blank\">Saudi Arabia says three nationals killed in Houthi attacks on Riyadh airport.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE92am4zWndmemw0Yk5TY3hGVVc0dTZPb2hSeXBCYUtkbE42aENGenFSWUh6UWtLVG9vX0JXMktWdVpDc2stc0ZQV1MzOXZNS2hvOW9uX09rS2xFNWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.596Z"
-    },
-    {
-      "id": "rss_1449029b6c70cca3",
-      "timestamp": 1791539596000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Three killed, several injured in Houthi attack on Saudi airport - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiV0FVX3lxTFBCSVlsQkZZSkJfa0NlRlZLQlVCTUxnZWhIa2JwRlZPNFYxcExqU2pZTFJ1RlNVcFZLblJiZXpjYlQ2SWlFeVhkcmpxT2VRVkoxTUhGNTAzUQ?oc=5\" target=\"_blank\">Three killed, several injured in Houthi attack on Saudi airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBCSVlsQkZZSkJfa0NlRlZLQlVCTUxnZWhIa2JwRlZPNFYxcExqU2pZTFJ1RlNVcFZLblJiZXpjYlQ2SWlFeVhkcmpxT2VRVkoxTUhGNTAzUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-09T15:27:05.597Z"
-    },
-    {
-      "id": "rss_f44fd9aa2721a344",
-      "timestamp": 1791539069000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi strikes on Riyadh airport killed 3 Saudi nationals, officials say - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxPaTYwazdWUFRqa1RGZTFjczVDa09Pb1F1bXZUd2hTZXdWS1JjcnZZQ1o2c1lTTHIzdkRwTnViaE4tMVlHd0xIZ0dwSTVnU1FScE9ZdFI5QThEVC04NnlIY3hORXdtYWQwVVRKd0FLcGtBcGJwU0IyamZKWnh0aW9UQTFLWE1qTVhuTFR2bUNzTUUyUWZFRHF6ZHpRX1p1V0hBOFFtd0FMM2xXNEVoa3hSSGFnYw?oc=5\" target=\"_blank\">Houthi strikes on Riyadh airport killed 3 Saudi nationals, officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPaTYwazdWUFRqa1RGZTFjczVDa09Pb1F1bXZUd2hTZXdWS1JjcnZZQ1o2c1lTTHIzdkRwTnViaE4tMVlHd0xIZ0dwSTVnU1FScE9ZdFI5QThEVC04NnlIY3hORXdtYWQwVVRKd0FLcGtBcGJwU0IyamZKWnh0aW9UQTFLWE1qTVhuTFR2bUNzTUUyUWZFRHF6ZHpRX1p1V0hBOFFtd0FMM2xXNEVoa3hSSGFnYw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T00:11:04.138Z"
-    },
-    {
-      "id": "rss_1f3b2a7a4dd3e93d",
-      "timestamp": 1791537958000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Three Saudis killed in Houthi attack on Riyadh airport - Financial Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOM3l0X05TLS1rSU1CbUR5X0dFTTBSLWZFdDFpMUJFZC12R3lzS2FqbHB5RXdiVk5OUlJMV3RXQmhYX3h1LXRYOGhWVkhMemliWUxaRVZuOVZsZm1qUUVDREUxbEZEaTBUX2FVZHVrVjJrNzBxV2NldWFwMW9qUTJ1bnNkdVc?oc=5\" target=\"_blank\">Three Saudis killed in Houthi attack on Riyadh airport</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOM3l0X05TLS1rSU1CbUR5X0dFTTBSLWZFdDFpMUJFZC12R3lzS2FqbHB5RXdiVk5OUlJMV3RXQmhYX3h1LXRYOGhWVkhMemliWUxaRVZuOVZsZm1qUUVDREUxbEZEaTBUX2FVZHVrVjJrNzBxV2NldWFwMW9qUTJ1bnNkdVc?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
