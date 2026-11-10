@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-10T11:29:02.979Z",
+  "last_fetch": "2026-11-10T18:45:44.470Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_7d7e9584a4238bf7",
+      "timestamp": 1794318321000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Container lines drive sharp Bab el Mandeb traffic rebound despite renewed Houthi escalation - Lloyd's List",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPbU8xLWk0MkQ1ZElScHctNkJUZ0VDVVRJSnFPVkhWWE9KQ2NCbjJOc0ZUWVgxOU80NkxrZ2Iybm9uVVAyWm1pNGRabGNiX1BrY3RZRHNGZU9HZ3J1WlhEdGdDMXVqNjlkRHhsd3NfOFJqNjc4UGNGQlc0YmJxN3FSWHNCeno4alR0QWhIWWlpTnJsN2phVzhhRlNMUU5DZDdKNVB6NnNMelhsckJTVEl2WDJnVnNzXzFYZG5ZbEVrWU9YQVl0NWZB?oc=5\" target=\"_blank\">Container lines drive sharp Bab el Mandeb traffic rebound despite renewed Houthi escalation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Lloyd's List</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbU8xLWk0MkQ1ZElScHctNkJUZ0VDVVRJSnFPVkhWWE9KQ2NCbjJOc0ZUWVgxOU80NkxrZ2Iybm9uVVAyWm1pNGRabGNiX1BrY3RZRHNGZU9HZ3J1WlhEdGdDMXVqNjlkRHhsd3NfOFJqNjc4UGNGQlc0YmJxN3FSWHNCeno4alR0QWhIWWlpTnJsN2phVzhhRlNMUU5DZDdKNVB6NnNMelhsckJTVEl2WDJnVnNzXzFYZG5ZbEVrWU9YQVl0NWZB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-10T18:45:42.617Z"
+    },
     {
       "id": "rss_dcdfd5ba4fc1dd7a",
       "timestamp": 1794291765000,
@@ -88,6 +109,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-10T11:29:01.472Z"
+    },
+    {
+      "id": "rss_27f559c7706c033d",
+      "timestamp": 1794277783000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Ship attacked in UAE waters, says operator Adnoc - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPdTMwLTRPRTZsZHJPR0lQTVNtNHdyWWxZNHMydXJzUjEySVZIZzJfUFlvbXZfQWJPc25aSm5kM3lzNmxFMFVMdFl3NTZLZWVjZnZPaTFyWjZtcl9peGd6ZlpDU2hnQmxDVFBLRlF1cVR3U2QwR2R4dWRRNEFDaDBzSTY2YUFWZEsyZ3dIOGQwX2tudV81a1pRRXQtVzl0TWYw?oc=5\" target=\"_blank\">Middle East latest: Ship attacked in UAE waters, says operator Adnoc</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdTMwLTRPRTZsZHJPR0lQTVNtNHdyWWxZNHMydXJzUjEySVZIZzJfUFlvbXZfQWJPc25aSm5kM3lzNmxFMFVMdFl3NTZLZWVjZnZPaTFyWjZtcl9peGd6ZlpDU2hnQmxDVFBLRlF1cVR3U2QwR2R4dWRRNEFDaDBzSTY2YUFWZEsyZ3dIOGQwX2tudV81a1pRRXQtVzl0TWYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-10T18:45:42.617Z"
     },
     {
       "id": "rss_c5cdada86596a749",
@@ -10841,50 +10885,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T00:18:24.748Z"
-    },
-    {
-      "id": "rss_65953366a63a1b5e",
-      "timestamp": 1791652080000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Missile strikes passenger terminal at Riyadh airport and many are wounded, official says - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNUGZwcDY1YlloN3oyNzFVMFZTcExnWXZqTzVQNEFkNnBoN2xGR0FEWEVjeUU2OVFEQ21hLUtXRzF2WHVnMzFuVUoxWGQzUFBVTjV2cWNmeFhmWTVvQ19iZ0xxV1c2OXRWMjBFOURBSzc2TWlaQUxENnpCU1ptX0Rna0E4Sl8zNE5aRmpNVkhrclRWUFdIcElCMg?oc=5\" target=\"_blank\">Missile strikes passenger terminal at Riyadh airport and many are wounded, official says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNUGZwcDY1YlloN3oyNzFVMFZTcExnWXZqTzVQNEFkNnBoN2xGR0FEWEVjeUU2OVFEQ21hLUtXRzF2WHVnMzFuVUoxWGQzUFBVTjV2cWNmeFhmWTVvQ19iZ0xxV1c2OXRWMjBFOURBSzc2TWlaQUxENnpCU1ptX0Rna0E4Sl8zNE5aRmpNVkhrclRWUFdIcElCMg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T17:36:17.597Z"
-    },
-    {
-      "id": "rss_0d3970d1d035f6d5",
-      "timestamp": 1791651420000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Closes Airport in Riyadh After Damaging New Houthi Attack - WSJ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOY3A1N0dSaEowdHRsQm11d1EzUnJneHRRYWRYa2NWU0ZfeUgwOUNzMHpNN2dVWFJQeVRZRDdYTTJ5YUtwX2YwUEprdWowUW1hYXplbjlsbnBuaTk1RUc3ZnBseDgyMFI2Q09BNllMRXVUWm52RXQ1R3ViSEZpZW1OOWlqenhMSDlPMXY2NWVzOEpHTkctQld3WWJaNVh0M05rdUhTQlBCNGl2SXVqR29UbkVNMm8wR00?oc=5\" target=\"_blank\">Saudi Arabia Closes Airport in Riyadh After Damaging New Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOY3A1N0dSaEowdHRsQm11d1EzUnJneHRRYWRYa2NWU0ZfeUgwOUNzMHpNN2dVWFJQeVRZRDdYTTJ5YUtwX2YwUEprdWowUW1hYXplbjlsbnBuaTk1RUc3ZnBseDgyMFI2Q09BNllMRXVUWm52RXQ1R3ViSEZpZW1OOWlqenhMSDlPMXY2NWVzOEpHTkctQld3WWJaNVh0M05rdUhTQlBCNGl2SXVqR29UbkVNMm8wR00?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T17:36:17.596Z"
     }
   ]
 }
