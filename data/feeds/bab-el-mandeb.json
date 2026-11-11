@@ -1,8 +1,71 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-11T04:24:46.795Z",
+  "last_fetch": "2026-11-11T12:00:07.335Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d9ad42ab1d9675c0",
+      "timestamp": 1794387518000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "claim",
+      "intensity": 2,
+      "text_summary": "Yemeni forces, Houthis exchange attacks, claim to inflict heavy losses - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQbnJlaDBPVHFnakdjcW9wclBST3dmUFdIX2lRY3F4eWwtX3pmNWtQbVZFOURieHdsUTdxLXJIY20zYVp2eFNXNk00NnhxZ21DMmRnWTJualhnWml6SUxKYWlza0NiZmVkdUF0Mjl3VGtRUHZ1WlVrMm1XMm90Wk11UDA4aDFNbDFpdUFNMll2Q3pVUWpYdEVBY1Jnc0FSR1BhcW13X1lZZEtCWmRYM1Fz0gG0AUFVX3lxTFBkLVo4clNIWUgxSlBVR1E0YjJEYU9KdWRCa1pTSENmNl96SEtRWFJKVmc3ZERyYkY2b084eWxibE5tcUhQdkNSOWk4Yk92WWJiZjRvZ2sxTU5wdTRmWDJCWkdFaEFmX0hqMURBZEVGTzFPaURCR3kxZ1h0T21fMkJodXF2RUZMektmdEVDaTJRNmMwbmg3MzE3UFZ1N1",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQbnJlaDBPVHFnakdjcW9wclBST3dmUFdIX2lRY3F4eWwtX3pmNWtQbVZFOURieHdsUTdxLXJIY20zYVp2eFNXNk00NnhxZ21DMmRnWTJualhnWml6SUxKYWlza0NiZmVkdUF0Mjl3VGtRUHZ1WlVrMm1XMm90Wk11UDA4aDFNbDFpdUFNMll2Q3pVUWpYdEVBY1Jnc0FSR1BhcW13X1lZZEtCWmRYM1Fz0gG0AUFVX3lxTFBkLVo4clNIWUgxSlBVR1E0YjJEYU9KdWRCa1pTSENmNl96SEtRWFJKVmc3ZERyYkY2b084eWxibE5tcUhQdkNSOWk4Yk92WWJiZjRvZ2sxTU5wdTRmWDJCWkdFaEFmX0hqMURBZEVGTzFPaURCR3kxZ1h0T21fMkJodXF2RUZMektmdEVDaTJRNmMwbmg3MzE3UFZ1N1hHWkpDT3RPeDdySE1qZ19rVExRTk55VQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-11-11T12:00:05.992Z"
+    },
+    {
+      "id": "rss_81f0795c3549485a",
+      "timestamp": 1794382860000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "US embassy issues alert over Houthi attack threats - AzerNews",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE5OV21ZTjRrMWhabkpoNGtlT2dHMXkwcXQ4T3o5dGZXd2RzQlV2VDFvaTFvQVhhWXVXNk9ZNmFzSVljRGNPSFRucGdDRFdZS1U1ZjdDQw?oc=5\" target=\"_blank\">US embassy issues alert over Houthi attack threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AzerNews</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5OV21ZTjRrMWhabkpoNGtlT2dHMXkwcXQ4T3o5dGZXd2RzQlV2VDFvaTFvQVhhWXVXNk9ZNmFzSVljRGNPSFRucGdDRFdZS1U1ZjdDQw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-11T12:00:05.992Z"
+    },
+    {
+      "id": "rss_e3bbf7cd23a18c79",
+      "timestamp": 1794381081000,
+      "source": "OSINT",
+      "actor": "eunavfor",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea: Crosetto urges EU countries to strengthen the Aspides mission. ‘Still nothing concrete’ - Il Sole 24 ORE",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTlhLN29IQjF5M1BNd3Y4eDFpTGdKVG1sNzgzbDJjMy1XaDZ3NDdtbzFBUS1Cb1V2ZjNOcGJuUzFINWhXYmxDMkNZWU5wWXFGZ1lLS3diUktNaGQ5cnFRMGNHdDZhbjU0czAtZEQyaGRlUERwU0V6VGVETEdWY01DZ1Y2SW5UVmF2QThDazF6ak9nMGdZWXhQUmZyZ2x2VHRVN2tfOGZtTHRKZjJnVUluNWhmTW9kd2VGU2FaQjJBdjBOVlIwUHpSTC00TFRzc2RSZzRjZjJLYw?oc=5\" target=\"_blank\">Red Sea: Crosetto urges EU countries to strengthen the Aspides mission. ‘Still nothing concrete’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Il ",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPTlhLN29IQjF5M1BNd3Y4eDFpTGdKVG1sNzgzbDJjMy1XaDZ3NDdtbzFBUS1Cb1V2ZjNOcGJuUzFINWhXYmxDMkNZWU5wWXFGZ1lLS3diUktNaGQ5cnFRMGNHdDZhbjU0czAtZEQyaGRlUERwU0V6VGVETEdWY01DZ1Y2SW5UVmF2QThDazF6ak9nMGdZWXhQUmZyZ2x2VHRVN2tfOGZtTHRKZjJnVUluNWhmTW9kd2VGU2FaQjJBdjBOVlIwUHpSTC00TFRzc2RSZzRjZjJLYw?oc=5",
+      "feed_id": "gn-eunavfor-aspides",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-11T12:00:06.770Z"
+    },
     {
       "id": "rss_7a8d8782d5ea7016",
       "timestamp": 1794344400000,
@@ -10820,71 +10883,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-10T21:03:36.011Z"
-    },
-    {
-      "id": "rss_1fa946bde644657b",
-      "timestamp": 1791659560000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Riyadh airport grounds flights following Houthi airstrikes, several injured - The Jerusalem Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1DRTB2RzVMUXU3b0EyNm94a0pza0E2anJzOGFHeXZWTWcwZGRySnp0Z2lYd1JoUGN2ZzhaOTRpOGliUDh1dVlXU01MS0pnQmw3VHoxU2FLMWx5RF8z?oc=5\" target=\"_blank\">Riyadh airport grounds flights following Houthi airstrikes, several injured</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1DRTB2RzVMUXU3b0EyNm94a0pza0E2anJzOGFHeXZWTWcwZGRySnp0Z2lYd1JoUGN2ZzhaOTRpOGliUDh1dVlXU01MS0pnQmw3VHoxU2FLMWx5RF8z?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T21:03:36.012Z"
-    },
-    {
-      "id": "rss_ff0fbdb4473bfdb6",
-      "timestamp": 1791657780000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "At least 12 killed, more than 300 hurt in Houthi attack on Riyadh airport - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQbDFmVEJ6WXZkaG9fN0pMVnpNeGJudDYyaE01RFAxNkhGR3c0LTFkMVE2WmpHZHZlWXU0ZGw4bWRPaGVTMElzOTVBa01pNWNydFhkV0RPM2w1alNWVzdCVlIzQUN3a1l6c25mX3Rpd2ZMVHZ5UEt5QUZKR3FjTGtCRnhiOTNBUldsbGxwS1FaUkY4bGw0QnBuQlpCQU9Lb1VGcV9OMllrWdIBrAFBVV95cUxNWkhpVXk0VWZVamdRZDEzVzNvN0o1c0VYWGYySUhjbWFWMjlsT3libERrOFppLW41M2hYcmFsLVFlWGZWSFB0dVNOekxSMFNQek5vU05zbzlwbnJ6ZFlMX2NfNmxobGliaWNsZlBKcEdrUGxUSTRmcTJlVGd3XzBGZzFUWWNqQmVwVnJBeldHYWdfQzVnM2t0X2ExZVNNSlZYNGMzTV",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbDFmVEJ6WXZkaG9fN0pMVnpNeGJudDYyaE01RFAxNkhGR3c0LTFkMVE2WmpHZHZlWXU0ZGw4bWRPaGVTMElzOTVBa01pNWNydFhkV0RPM2w1alNWVzdCVlIzQUN3a1l6c25mX3Rpd2ZMVHZ5UEt5QUZKR3FjTGtCRnhiOTNBUldsbGxwS1FaUkY4bGw0QnBuQlpCQU9Lb1VGcV9OMllrWdIBrAFBVV95cUxNWkhpVXk0VWZVamdRZDEzVzNvN0o1c0VYWGYySUhjbWFWMjlsT3libERrOFppLW41M2hYcmFsLVFlWGZWSFB0dVNOekxSMFNQek5vU05zbzlwbnJ6ZFlMX2NfNmxobGliaWNsZlBKcEdrUGxUSTRmcTJlVGd3XzBGZzFUWWNqQmVwVnJBeldHYWdfQzVnM2t0X2ExZVNNSlZYNGMzTVRjMFM0b0ZX?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T06:07:40.092Z"
-    },
-    {
-      "id": "rss_3a6c3ce19cb58b14",
-      "timestamp": 1791657600000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi Missile Attack Hits Riyadh Airport, Wounding Dozens and Suspending Flights - Kurdistan24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZGVIMUY1RkFZTF85STRJaXpxMC0zRFl4bkpxcExZWGRhaTkyMnRoa0lrVjR0V2tibGhDX2ZDM1lUbTdKTUQzWnJnRllZZ21LYklySXFmakxUYXQ4dks1T2pON1VvUG1mOWtGa3BHT1N3SUNjVE94aFpuLTJjUWR1MGEtekxGenJQeEhYRU16TUplbmpyVnBKVFE3bEtwbkRkUTVUVkVPS2hhaW5wR2Fuc2FHVGtlbmpoSlZqUFFmQnRoQQ?oc=5\" target=\"_blank\">Houthi Missile Attack Hits Riyadh Airport, Wounding Dozens and Suspending Flights</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kurdistan24</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZGVIMUY1RkFZTF85STRJaXpxMC0zRFl4bkpxcExZWGRhaTkyMnRoa0lrVjR0V2tibGhDX2ZDM1lUbTdKTUQzWnJnRllZZ21LYklySXFmakxUYXQ4dks1T2pON1VvUG1mOWtGa3BHT1N3SUNjVE94aFpuLTJjUWR1MGEtekxGenJQeEhYRU16TUplbmpyVnBKVFE3bEtwbkRkUTVUVkVPS2hhaW5wR2Fuc2FHVGtlbmpoSlZqUFFmQnRoQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T21:03:36.012Z"
     }
   ]
 }
