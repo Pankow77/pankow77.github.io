@@ -1,8 +1,54 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-11T12:00:07.335Z",
+  "last_fetch": "2026-11-11T19:29:40.360Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_c18bab0a5ab87a85",
+      "timestamp": 1794423387000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Iran warns of domestic gas shortages from war this winter - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOX1E2VFlpWERDcU1PanZ2RkFFbXN6OFJvZ2ljaUdxVjAzemJXZFlRcTFpMEZyc1FBWE9zQ1JWUy1kUHBpdHZYM2xUbDVWUHRiUEZLRjBFWGtYMUFYeExqQzdXa2lqbWl0clBvLVRXZGZqRzZ2Uk00WmlGT1hnSEZBdWFOa1ljT045RUthemFUcDhjdm1EODNtNDUtdW5SOWxpeFZPMQ?oc=5\" target=\"_blank\">Middle East latest: Iran warns of domestic gas shortages from war this winter</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX1E2VFlpWERDcU1PanZ2RkFFbXN6OFJvZ2ljaUdxVjAzemJXZFlRcTFpMEZyc1FBWE9zQ1JWUy1kUHBpdHZYM2xUbDVWUHRiUEZLRjBFWGtYMUFYeExqQzdXa2lqbWl0clBvLVRXZGZqRzZ2Uk00WmlGT1hnSEZBdWFOa1ljT045RUthemFUcDhjdm1EODNtNDUtdW5SOWxpeFZPMQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-11T19:29:38.886Z"
+    },
+    {
+      "id": "rss_60d1562882032384",
+      "timestamp": 1794409620000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi air defences intercept Houthi cruise missiles launched toward Riyadh - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS3l2UFJMU2VNbFVKZFNyckZZNTFUOEVHcXJmTXFkaHN1djZzb3RKM1hma0RQUDU4MjNtNDl1NmkzVVBOc0wzbjZRXzVlUU1KTW5CUmZ0aDQtLXU3VXBhd2ZzcWZ5aUhfSkJDdl9WRnlGSElsUjNoYnlzWXIzeFdRaE9MOTdjZG55VUVOTThQSFpyaXhXNWYtSk9pVmtpRjVhUHFtLU5wWDg1MU02cmxuSEZUdndBU0dSMVVmcU9maVhSdw?oc=5\" target=\"_blank\">Saudi air defences intercept Houthi cruise missiles launched toward Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPS3l2UFJMU2VNbFVKZFNyckZZNTFUOEVHcXJmTXFkaHN1djZzb3RKM1hma0RQUDU4MjNtNDl1NmkzVVBOc0wzbjZRXzVlUU1KTW5CUmZ0aDQtLXU3VXBhd2ZzcWZ5aUhfSkJDdl9WRnlGSElsUjNoYnlzWXIzeFdRaE9MOTdjZG55VUVOTThQSFpyaXhXNWYtSk9pVmtpRjVhUHFtLU5wWDg1MU02cmxuSEZUdndBU0dSMVVmcU9maVhSdw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-11T19:29:38.885Z"
+    },
     {
       "id": "rss_d9ad42ab1d9675c0",
       "timestamp": 1794387518000,
@@ -10839,50 +10885,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T00:18:24.747Z"
-    },
-    {
-      "id": "rss_d88f3e0f5336f70c",
-      "timestamp": 1791667327000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Trump Says U.S. May Join Saudi Strikes on Houthis After Riyadh Airport Attacks - Time Magazine",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxQcGphX1dFR19QNXZWNDE0eGd6WEd2bmRmc2x4dVJUZjIteXJxMFd5SFJWSnJ1T043RXExRmc0bTZhRkZ1V2UtN01JcG0wbDVJa3k1RmNscHEwVmp2X3JFUUtNLUd1VjljdjVqUmxweGQxcDVweExMbTVqb3NLaTYxYnZ4NVBpaXhYbUMtUnAyVnlqTDJrTGRIWUhTSTljc3Rub21IY3JDR05jZDU5by1udFJfMDY?oc=5\" target=\"_blank\">Trump Says U.S. May Join Saudi Strikes on Houthis After Riyadh Airport Attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Time Magazine</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQcGphX1dFR19QNXZWNDE0eGd6WEd2bmRmc2x4dVJUZjIteXJxMFd5SFJWSnJ1T043RXExRmc0bTZhRkZ1V2UtN01JcG0wbDVJa3k1RmNscHEwVmp2X3JFUUtNLUd1VjljdjVqUmxweGQxcDVweExMbTVqb3NLaTYxYnZ4NVBpaXhYbUMtUnAyVnlqTDJrTGRIWUhTSTljc3Rub21IY3JDR05jZDU5by1udFJfMDY?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T00:18:24.747Z"
-    },
-    {
-      "id": "rss_97ac5a933a7e4a30",
-      "timestamp": 1791660759000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia faces new level of peril in Houthi attacks, amid wider Iran war - The Washington Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxQX1ZaSjhHakhEb2hLUXUxdWZVb1pVQXJicTgtVENldndaRTI4VG5iaFJyV0sxSTRieVliX0c3SV81SEYtNmFxOXd2YUM2bDh6Tjk0cnBCVWM0RWNJeE4xLUVKXy10ZUM5cVNHc2tZYXR2R1A5U21MRVVjb0hMcHp5VTNfc29FTWFUaW51MVhnemJfRW9CMk8wb29HWVpzQ3pENDZscW43SEVxNHhUcUxrN3JBaUo4bWtENEE?oc=5\" target=\"_blank\">Saudi Arabia faces new level of peril in Houthi attacks, amid wider Iran war</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQX1ZaSjhHakhEb2hLUXUxdWZVb1pVQXJicTgtVENldndaRTI4VG5iaFJyV0sxSTRieVliX0c3SV81SEYtNmFxOXd2YUM2bDh6Tjk0cnBCVWM0RWNJeE4xLUVKXy10ZUM5cVNHc2tZYXR2R1A5U21MRVVjb0hMcHp5VTNfc29FTWFUaW51MVhnemJfRW9CMk8wb29HWVpzQ3pENDZscW43SEVxNHhUcUxrN3JBaUo4bWtENEE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-10T21:03:36.011Z"
     }
   ]
 }
