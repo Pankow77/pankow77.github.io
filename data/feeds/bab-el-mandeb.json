@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-12T01:37:48.711Z",
+  "last_fetch": "2026-11-12T09:09:38.513Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_0e7da0fc4db92ada",
+      "timestamp": 1794469108000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi-Saudi conflict edges closer to Mecca after missile attack - Middle East Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1ZrYmNNUDVEV0ZON2dvbnFaM0RTSHdTdmNPTHQ2dDlBOGRsTFVId1lyLUI5RGRvdXloWWllLXNSRjZvLWk3RGF1Z0FZWngtWENYOFBTZHEtekhCdVV4ZEtaNkxrWk9maklRUkN4YTJvLXBrUEdjSzhUdnVCdlpEN0lIbUNQVEFNOVItRlRMZFVHT1NWVGN2V2JUYw?oc=5\" target=\"_blank\">Houthi-Saudi conflict edges closer to Mecca after missile attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Online</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOV1ZrYmNNUDVEV0ZON2dvbnFaM0RTSHdTdmNPTHQ2dDlBOGRsTFVId1lyLUI5RGRvdXloWWllLXNSRjZvLWk3RGF1Z0FZWngtWENYOFBTZHEtekhCdVV4ZEtaNkxrWk9maklRUkN4YTJvLXBrUEdjSzhUdnVCdlpEN0lIbUNQVEFNOVItRlRMZFVHT1NWVGN2V2JUYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-12T09:09:37.296Z"
+    },
     {
       "id": "rss_e498b4f3aab464ea",
       "timestamp": 1794445156000,
@@ -10872,27 +10895,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-11T00:18:24.747Z"
-    },
-    {
-      "id": "rss_20e652b8c4c2e6b7",
-      "timestamp": 1791672383000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Major Houthi attack on Saudi airport kills at least 12, hundreds wounded - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQWllnQmd5NHZkdUxzQlE3NmlXUWJlTl93UGhxVHVCMnVEQXRyMDFDTkdMZGhxWHVFUUNlWGZTRXlnVzc1Vm5lQWNWb09ESkt3ek1jY3lnZ1h5d3ZZX1hMcXlVdUgtY3dGU2ptaHRlX2MzWWF0aTNGNXN3enlxckRZaC05aDJaUQ?oc=5\" target=\"_blank\">Major Houthi attack on Saudi airport kills at least 12, hundreds wounded</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWllnQmd5NHZkdUxzQlE3NmlXUWJlTl93UGhxVHVCMnVEQXRyMDFDTkdMZGhxWHVFUUNlWGZTRXlnVzc1Vm5lQWNWb09ESkt3ek1jY3lnZ1h5d3ZZX1hMcXlVdUgtY3dGU2ptaHRlX2MzWWF0aTNGNXN3enlxckRZaC05aDJaUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T18:15:12.172Z"
     }
   ]
 }
