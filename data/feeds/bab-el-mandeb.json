@@ -1,8 +1,79 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-11T19:29:40.360Z",
+  "last_fetch": "2026-11-12T01:37:48.711Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e498b4f3aab464ea",
+      "timestamp": 1794445156000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says debris from intercepted missiles falls in Mecca region - Deccan Herald",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPOThqR0JiN3JLYVRVUDFMSnR0eWlQQXphMUtyU2wyV3NsNEZtUTlleWlMVURCODNUTUZWZ2xKVmxwclpUUzFvMnkxR0FiemVremtQdmNuT1dwZ0Z5dmZpSHB2X09iV1NKMlpYNThSZWJWRWRFcmxkLVBjX1pQVkk3akhiTWloWHZ2YkhZRnlLNHl2X09xZDRYODllS1ByMXlpcUliQXNIRlAzWVZQNUhyZlVTZ1dwemN5VzJoMVVB?oc=5\" target=\"_blank\">Saudi Arabia says debris from intercepted missiles falls in Mecca region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Deccan Herald</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPOThqR0JiN3JLYVRVUDFMSnR0eWlQQXphMUtyU2wyV3NsNEZtUTlleWlMVURCODNUTUZWZ2xKVmxwclpUUzFvMnkxR0FiemVremtQdmNuT1dwZ0Z5dmZpSHB2X09iV1NKMlpYNThSZWJWRWRFcmxkLVBjX1pQVkk3akhiTWloWHZ2YkhZRnlLNHl2X09xZDRYODllS1ByMXlpcUliQXNIRlAzWVZQNUhyZlVTZ1dwemN5VzJoMVVB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-12T01:37:47.442Z"
+    },
+    {
+      "id": "rss_f2e6a9816f510a81",
+      "timestamp": 1794441542000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says it intercepted Houthi missiles and drones — Cyprus Mail - UA.NEWS",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOMy0zeU1ORnU1SHk3OEVEZ0I3Vk5YSXJHVC1NNmkyVXZHYjNzRnpnYnNzaXRLcEpuMkhPSlhxVVY5WXU1d0ZXUThEcVU1ZDR6SXhvc25PN2RnaWM4VU9DWW05Ni1oMFJRTWRFdldZSGdxZDN2YzF4LUhvREJnOGJLQ3NrV2lXNjdFV3lDbzRNNU5ONTFWRjhhTExJQXFEVFA4N0VUV2MzNHZnMGd3TVJvUnZycmk?oc=5\" target=\"_blank\">Saudi Arabia says it intercepted Houthi missiles and drones — Cyprus Mail</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">UA.NEWS</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMy0zeU1ORnU1SHk3OEVEZ0I3Vk5YSXJHVC1NNmkyVXZHYjNzRnpnYnNzaXRLcEpuMkhPSlhxVVY5WXU1d0ZXUThEcVU1ZDR6SXhvc25PN2RnaWM4VU9DWW05Ni1oMFJRTWRFdldZSGdxZDN2YzF4LUhvREJnOGJLQ3NrV2lXNjdFV3lDbzRNNU5ONTFWRjhhTExJQXFEVFA4N0VUV2MzNHZnMGd3TVJvUnZycmk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-12T01:37:47.441Z"
+    },
+    {
+      "id": "rss_bd700543ee564562",
+      "timestamp": 1794430671000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia intercepts Houthi missiles, drones; group denies targeting Mecca - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNa0VablB0SWViZWpCRFg4bC0yX2ZTM19HNmFFVUdqVVlwbWRuRjdpSnNXZ3liU04zeTYyZWJPSlhLeEVRTUlMS0N2SnlPdEpINzVHUTJjRXJjd3RKdEZMLS14czdZSlpjcWlJWm95bFpTNHgxblNSVlFyLWhsQ0JncVFZRGRmQ0p6cDZQRGRtNlh6LWxnVXlLRkJyelFzdTFoM285d2tQZTJvS1BkYkRzLVZwUERKc2pHbVBqOUZDSmFRbGJ4TmpmQVExbnEzOTQ?oc=5\" target=\"_blank\">Saudi Arabia intercepts Houthi missiles, drones; group denies targeting Mecca</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNa0VablB0SWViZWpCRFg4bC0yX2ZTM19HNmFFVUdqVVlwbWRuRjdpSnNXZ3liU04zeTYyZWJPSlhLeEVRTUlMS0N2SnlPdEpINzVHUTJjRXJjd3RKdEZMLS14czdZSlpjcWlJWm95bFpTNHgxblNSVlFyLWhsQ0JncVFZRGRmQ0p6cDZQRGRtNlh6LWxnVXlLRkJyelFzdTFoM285d2tQZTJvS1BkYkRzLVZwUERKc2pHbVBqOUZDSmFRbGJ4TmpmQVExbnEzOTQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-12T01:37:47.440Z"
+    },
     {
       "id": "rss_c18bab0a5ab87a85",
       "timestamp": 1794423387000,
@@ -10822,69 +10893,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T18:15:12.172Z"
-    },
-    {
-      "id": "rss_57fc6811ce022611",
-      "timestamp": 1791670603000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemeni government’s military says its forces advancing against Houthis - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxPc1huUXdhTWlXdUx1anQxb1d2Y3gxUmVuTlc2N0huMndXUXBSak10Y183S3QzM0FFNU9ndzRaS21MTHpyWllxVUVRVzE0U1RwejJlRk16azRPNXpPRjB2QzJYTU9kVjh0Q0x3MFlibHd6RUVfVXh3aVp5d2ZrS1JhQm5ZUHEyOFB6RWJrbEtOdURqajQ1cEJ5VjdvbGpsQ0xRNnk2RTNMWGlVQ0pOYzRfRNIBtgFBVV95cUxNYjE0Mm9waTkycmVZT0ZzeXlMaDdBcGtlbzVmMnhrZEFjYk5RZkVaT3l0QVBoSHFSZTFpclBZUUlEeFBudkZtRG9DbjVwX2dvc0szTXRrMV9iM0d2d0paSnByVWxnYi1aNU1CX2hTYWlYTzJld0NnMEEwU2hhdWtENGJCSXhwX0I3dXVHOEFJdDUtbFRqaU9nTVF5dX",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPc1huUXdhTWlXdUx1anQxb1d2Y3gxUmVuTlc2N0huMndXUXBSak10Y183S3QzM0FFNU9ndzRaS21MTHpyWllxVUVRVzE0U1RwejJlRk16azRPNXpPRjB2QzJYTU9kVjh0Q0x3MFlibHd6RUVfVXh3aVp5d2ZrS1JhQm5ZUHEyOFB6RWJrbEtOdURqajQ1cEJ5VjdvbGpsQ0xRNnk2RTNMWGlVQ0pOYzRfRNIBtgFBVV95cUxNYjE0Mm9waTkycmVZT0ZzeXlMaDdBcGtlbzVmMnhrZEFjYk5RZkVaT3l0QVBoSHFSZTFpclBZUUlEeFBudkZtRG9DbjVwX2dvc0szTXRrMV9iM0d2d0paSnByVWxnYi1aNU1CX2hTYWlYTzJld0NnMEEwU2hhdWtENGJCSXhwX0I3dXVHOEFJdDUtbFRqaU9nTVF5dXd3bTVWNjJLSVFUd3lkaHItRnFwY2FVd0RaQQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-11T00:18:24.747Z"
-    },
-    {
-      "id": "rss_a4062de5fd4a5fbd",
-      "timestamp": 1791670257000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia: 12 killed, hundreds injured in Riyadh strike - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNWnJqS1AxU1J5RGRyZUhiUmt1OHNfTWdNVVZVU21EbU9UT1VtLVZ1dXlLazE0UVFjR1NzWFY5b19PY3dlTld3SlQwTUpqSGp2Wi12eWVGMlc3dUhlNzZ2Rmd3RDRBa0NpYVctYVJIZmw0bG5vZjdjeF9vY3pMTjd6M3BwMExUUHFiU1pSbFJuRlJMOW14TlZoeHFCdWNXd9IBngFBVV95cUxNMm1SZUpJTHMxeXV0aExOOGQ0YXpzUk5WLVJFNUxfaHRPM2VqTHFmQnBTZlhXM2tTX0p2Sm9FTmd2UFRCRV95VTQ1TE8xcHlmVFhhUjJiaHFlaW9hVzRVMHU5WWZjcDZPeXF5dDFvNFhLX2xoTHVHQURJeTNiYTFybjdkYjFhbHZTWFczSWRaVnkyWnctVGlUUHNJOHNUZw?oc=5\" target=\"_blan",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWnJqS1AxU1J5RGRyZUhiUmt1OHNfTWdNVVZVU21EbU9UT1VtLVZ1dXlLazE0UVFjR1NzWFY5b19PY3dlTld3SlQwTUpqSGp2Wi12eWVGMlc3dUhlNzZ2Rmd3RDRBa0NpYVctYVJIZmw0bG5vZjdjeF9vY3pMTjd6M3BwMExUUHFiU1pSbFJuRlJMOW14TlZoeHFCdWNXd9IBngFBVV95cUxNMm1SZUpJTHMxeXV0aExOOGQ0YXpzUk5WLVJFNUxfaHRPM2VqTHFmQnBTZlhXM2tTX0p2Sm9FTmd2UFRCRV95VTQ1TE8xcHlmVFhhUjJiaHFlaW9hVzRVMHU5WWZjcDZPeXF5dDFvNFhLX2xoTHVHQURJeTNiYTFybjdkYjFhbHZTWFczSWRaVnkyWnctVGlUUHNJOHNUZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T00:18:24.748Z"
-    },
-    {
-      "id": "rss_226ea5669c65661c",
-      "timestamp": 1791667973000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Trump weighs joining the fight against Houthis after Riyadh airport attack - NPR",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNTHppNFllbVBxRmdxSUhRdWhDeGNyTkNEMnpYY1hxU2RSb2JRd3J2Q0poWk1xWlZ0M2xkdzhqNkFxa2tSMk9CTzFMTXk3OVNzVHphb0NBUGhhZXdTbloyQ3lacGdwbE5ZU0lxdDFmYXZ1RXg0WGxOVkltNVpLdmRNOFVoSF9sd2NBZ29odHdaRnY?oc=5\" target=\"_blank\">Trump weighs joining the fight against Houthis after Riyadh airport attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NPR</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTHppNFllbVBxRmdxSUhRdWhDeGNyTkNEMnpYY1hxU2RSb2JRd3J2Q0poWk1xWlZ0M2xkdzhqNkFxa2tSMk9CTzFMTXk3OVNzVHphb0NBUGhhZXdTbloyQ3lacGdwbE5ZU0lxdDFmYXZ1RXg0WGxOVkltNVpLdmRNOFVoSF9sd2NBZ29odHdaRnY?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T00:18:24.747Z"
     }
   ]
 }
