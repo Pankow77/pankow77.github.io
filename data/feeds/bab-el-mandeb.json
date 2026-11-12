@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-12T17:40:17.624Z",
+  "last_fetch": "2026-11-12T23:07:38.572Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -513,6 +513,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-10T03:06:44.034Z"
+    },
+    {
+      "id": "rss_8884796fd8240b84",
+      "timestamp": 1794254400000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Aramco Tower Targeted - Rigzone",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNEFsZW9TNnZoOW51bndpYktLWU95Z2g3d215TEFYejNtRTZNeHpOQjV3Mmppbi10U2lYOWhPOGpWUFN5bDFCZ3p1Qnltc3dJZWV2QzhQMC1mS1NfUl9IMEdOSW9HR0gzdDJRRENrUTg5YjFucHZmSHAtSzdzcUdKMWNXSldSUlZqOUtn?oc=5\" target=\"_blank\">Aramco Tower Targeted</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Rigzone</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNEFsZW9TNnZoOW51bndpYktLWU95Z2g3d215TEFYejNtRTZNeHpOQjV3Mmppbi10U2lYOWhPOGpWUFN5bDFCZ3p1Qnltc3dJZWV2QzhQMC1mS1NfUl9IMEdOSW9HR0gzdDJRRENrUTg5YjFucHZmSHAtSzdzcUdKMWNXSldSUlZqOUtn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-12T23:07:37.336Z"
     },
     {
       "id": "rss_3156e6c972df6828",
@@ -10876,27 +10897,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T06:07:40.093Z"
-    },
-    {
-      "id": "rss_47fdd9bf16783ec4",
-      "timestamp": 1791677545000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "12 killed, 300 injured in Houthi attack on Saudi airport - upi",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQQWVLOEpoYjJTU2U5MDRRcERuSjZDeWRBM0FhbV9aaGJjUjRlVkZudXNqRFNYMi10OGU2OC1aSXhod0cxWUgxaDJvemlQb2NEcWk3a2phc3UtOHRSdkpxdGdUV00wZmkzdjJVNzFSMXdOQ2NjWnA1TUZRdks3WFdlTHJldWNuZ0pkVWZXUDRvblpaM0Yxb004U3JDdHpEeWhRaVNv0gGoAUFVX3lxTFBSVlZnWWN3MUs3MnNUNkdJazk1eUMxcHVBbmVEZEtmMWRWVEplX2E3b09VajNCSUVZdzktTGYxM0NISWxSRDM4X0lSbHkxUmJIM3hkekp2aEpzNkVqU1VocE5kUlBkY2NQVGRUOTRjR0FIaWNrZWZWY2dZSEVyVVc1Z21oMW5obVRSVzk5VHBORDROZTZRZ0Qzd2RTUmZoejNjNFJ1czZnUA",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQQWVLOEpoYjJTU2U5MDRRcERuSjZDeWRBM0FhbV9aaGJjUjRlVkZudXNqRFNYMi10OGU2OC1aSXhod0cxWUgxaDJvemlQb2NEcWk3a2phc3UtOHRSdkpxdGdUV00wZmkzdjJVNzFSMXdOQ2NjWnA1TUZRdks3WFdlTHJldWNuZ0pkVWZXUDRvblpaM0Yxb004U3JDdHpEeWhRaVNv0gGoAUFVX3lxTFBSVlZnWWN3MUs3MnNUNkdJazk1eUMxcHVBbmVEZEtmMWRWVEplX2E3b09VajNCSUVZdzktTGYxM0NISWxSRDM4X0lSbHkxUmJIM3hkekp2aEpzNkVqU1VocE5kUlBkY2NQVGRUOTRjR0FIaWNrZWZWY2dZSEVyVVc1Z21oMW5obVRSVzk5VHBORDROZTZRZ0Qzd2RTUmZoejNjNFJ1czZnUA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T00:18:24.747Z"
     }
   ]
 }
