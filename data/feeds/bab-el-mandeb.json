@@ -1,6 +1,6 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-13T22:04:18.233Z",
+  "last_fetch": "2026-11-14T02:34:16.243Z",
   "epoch_count": 500,
   "epochs": [
     {
@@ -23,6 +23,30 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-13T18:38:50.274Z"
+    },
+    {
+      "id": "rss_a2de37127baf6015",
+      "timestamp": 1794561063000,
+      "source": "OSINT",
+      "actor": "iran",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Middle East latest: US says it shot down Iranian drones launched toward Bahrain - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPbHpya1kzWkI5N2YyUmx5cl9nOGJWV1lldzUyN0ZqcVRyQW11LW00TVRJQjA4d2ExS1VGWXduYmxPZjBOclZXamg1TWFHZ3FnSHpDcXRrd3RwUE5mQjhVYWhQdGsxcFBVaXpfdmJmcDc3T052cHFvUGN1RUJqZ1NiZ01WNFFIam1KZlFtRDRJMDRVclRJTmU4?oc=5\" target=\"_blank\">Middle East latest: US says it shot down Iranian drones launched toward Bahrain</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "iran-proxy",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbHpya1kzWkI5N2YyUmx5cl9nOGJWV1lldzUyN0ZqcVRyQW11LW00TVRJQjA4d2ExS1VGWXduYmxPZjBOclZXamg1TWFHZ3FnSHpDcXRrd3RwUE5mQjhVYWhQdGsxcFBVaXpfdmJmcDc3T052cHFvUGN1RUJqZ1NiZ01WNFFIam1KZlFtRDRJMDRVclRJTmU4?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-14T02:34:14.889Z"
     },
     {
       "id": "rss_9e52b317858b0215",
@@ -10874,27 +10898,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T18:15:12.171Z"
-    },
-    {
-      "id": "rss_f5c7911161b26ecc",
-      "timestamp": 1791723403000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthi forces warn against use of Saudi airports following Riyadh attack - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPZGlJelVzSFFGMFlZSHNWLWloWWYwY3RfTFBvS0tsVlJIU0NtTDM0RTU0R1BYbUNXWmJBZGNBRDJxNzJ0WFJjM0NKQlBhdWtVeVREbjNaMlNkMGwwQndLd0NsOHlNeWZhQ3Y0M19jZE50RkFmbU5ZcUJzZDZDdU1KS0pGNlZ1MXEwcVJpbHRrUUpIYlRLSGk0ZlRxZ2h1MEttNDU1dFQ3QzlxUEo3RWhTYlVR?oc=5\" target=\"_blank\">Houthi forces warn against use of Saudi airports following Riyadh attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZGlJelVzSFFGMFlZSHNWLWloWWYwY3RfTFBvS0tsVlJIU0NtTDM0RTU0R1BYbUNXWmJBZGNBRDJxNzJ0WFJjM0NKQlBhdWtVeVREbjNaMlNkMGwwQndLd0NsOHlNeWZhQ3Y0M19jZE50RkFmbU5ZcUJzZDZDdU1KS0pGNlZ1MXEwcVJpbHRrUUpIYlRLSGk0ZlRxZ2h1MEttNDU1dFQ3QzlxUEo3RWhTYlVR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T18:15:12.172Z"
     }
   ]
 }
