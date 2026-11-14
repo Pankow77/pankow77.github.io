@@ -1,8 +1,50 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-14T09:45:40.941Z",
+  "last_fetch": "2026-11-14T16:19:34.049Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4bfcc7ca709cbaa2",
+      "timestamp": 1794660566000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Clashes Escalate in Southern Yemen as Gov’t Forces Repel Houthi Attack - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWkFVX3lxTFBUeTJZMHBKMTBlVFdiNi12OUlLc1ZLa2hWOVZLME9iR3dsQlhfbTl2Wk1jUWFNRjN4clFUa09PSVctWV8xYU5kS2VXaVp3UDdycV9COVRXWkNoQQ?oc=5\" target=\"_blank\">Clashes Escalate in Southern Yemen as Gov’t Forces Repel Houthi Attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBUeTJZMHBKMTBlVFdiNi12OUlLc1ZLa2hWOVZLME9iR3dsQlhfbTl2Wk1jUWFNRjN4clFUa09PSVctWV8xYU5kS2VXaVp3UDdycV9COVRXWkNoQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-14T16:19:32.826Z"
+    },
+    {
+      "id": "rss_2a48d03b25fa51b4",
+      "timestamp": 1794653700000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen’s government-aligned forces repel Houthi attack as fighting has displaced over 340,000 people - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNjNQN2x2ejV0WUg4dXowRG9MZHltQjJEbGcxWFB0ekhRR0R6bTNENWhqVnJCUnBpWmlEbFpldUF4dnhJTXdUb1Jqa20tX1RJUVRTWGp3ZVBST3hWbl90UThCNExnRS1UXzFMWjY5dldJaDF2c0hfSzAyR1N5QlNUU0ExbTh5ZWdvSkZRcm9HQk5vOW82T2R4cjFtd20wV0t6bFF2ZVpwd2JWa1VIaTVxZVFDekFGbldaYlk4Q3NwazU2UG5lcXlPcFNDQlRkQjhpODBqNktiVnXSAd4BQVVfeXFMTnNEcHBmall0NFJwRFVwUGFrOWVUU040WG4xU2hieFVpdEFwcmt3ZkFRODJCMWNtMS0wNHY5M3NaTWY3ZnZ6NU41cE91aTBLbDdBdlNwU1pQSTFXazJUR2dSaDVoZm9fWGxtUVUyZDhFZUx2OH",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQNjNQN2x2ejV0WUg4dXowRG9MZHltQjJEbGcxWFB0ekhRR0R6bTNENWhqVnJCUnBpWmlEbFpldUF4dnhJTXdUb1Jqa20tX1RJUVRTWGp3ZVBST3hWbl90UThCNExnRS1UXzFMWjY5dldJaDF2c0hfSzAyR1N5QlNUU0ExbTh5ZWdvSkZRcm9HQk5vOW82T2R4cjFtd20wV0t6bFF2ZVpwd2JWa1VIaTVxZVFDekFGbldaYlk4Q3NwazU2UG5lcXlPcFNDQlRkQjhpODBqNktiVnXSAd4BQVVfeXFMTnNEcHBmall0NFJwRFVwUGFrOWVUU040WG4xU2hieFVpdEFwcmt3ZkFRODJCMWNtMS0wNHY5M3NaTWY3ZnZ6NU41cE91aTBLbDdBdlNwU1pQSTFXazJUR2dSaDVoZm9fWGxtUVUyZDhFZUx2OHJvVENQMnhIampFa0pVODhwQ2t4WTFhRWNwQzZ3T3RnU1dLcGhCLXJGeC0xd2IwYUZLY2dBVzZlQl9HRXAyMGFFeWdmaU9JNV9IZWZLRmJwd0YzRlN3UnBYN2MxdU0zdEdJSVVBNFh6Q2hB?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-14T16:19:32.826Z"
+    },
     {
       "id": "rss_62e4e5436524a696",
       "timestamp": 1794648328000,
@@ -67,6 +109,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-14T09:45:39.795Z"
+    },
+    {
+      "id": "rss_4c696aa09dca2b56",
+      "timestamp": 1794640574000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Global Oil Supply Set to Outpace Demand in Fourth Quarter: IEA - The Diplomatic Insight",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWUNmYk9EbjVoNjZlei10cl9oeE1qSWt4NVp4RkhIVGkzSWFqb0xMaW9aaURoS3FMWnpLVkFwbWo4SVB4UlJHN1pueUZKTXVGaTF3cDVUTDdCc2RBMHlIZ0VuNFA1SjN4UDR1QjhVd0tzSWQzZFV1THdmVDJiMnI1aVh5Snp2WFRE?oc=5\" target=\"_blank\">Global Oil Supply Set to Outpace Demand in Fourth Quarter: IEA</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Diplomatic Insight</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWUNmYk9EbjVoNjZlei10cl9oeE1qSWt4NVp4RkhIVGkzSWFqb0xMaW9aaURoS3FMWnpLVkFwbWo4SVB4UlJHN1pueUZKTXVGaTF3cDVUTDdCc2RBMHlIZ0VuNFA1SjN4UDR1QjhVd0tzSWQzZFV1THdmVDJiMnI1aVh5Snp2WFRE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-14T16:19:32.827Z"
     },
     {
       "id": "rss_0705bc22433c4332",
@@ -10834,71 +10897,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-11T18:15:12.171Z"
-    },
-    {
-      "id": "rss_0e87cdd54df500ab",
-      "timestamp": 1791732752000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Riyadh airport attacks another dangerous moment in already tense conflict - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE93bDNBV3ZyNnNzVFliNVdRTUhsVks5T0VaSlgtb2twRFVYbDRacnBzSmxUY3FLUXFtUzNHdHlTdElGX0t1ODRFYXlVZkU5d3ZTRV9fbldnaWE0OHc?oc=5\" target=\"_blank\">Riyadh airport attacks another dangerous moment in already tense conflict</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE93bDNBV3ZyNnNzVFliNVdRTUhsVks5T0VaSlgtb2twRFVYbDRacnBzSmxUY3FLUXFtUzNHdHlTdElGX0t1ODRFYXlVZkU5d3ZTRV9fbldnaWE0OHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T18:15:12.172Z"
-    },
-    {
-      "id": "rss_6d412ef377401c58",
-      "timestamp": 1791730228000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia will have to respond to Houthi airport attack - but the choices are stark - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPMWFHWG5oa1FEYjBYQk52N3BjUHY5bDhwVnUtdzZGaGduc2YxdV9UbEFPNkZIdVhCM0EzemFCQjNIUlJSb01nZUZFR005UzVmM0VvcUpkNG1kTXdaOU9pa2RHY0ZlRzZHak5sQXcxa2JUemhrR3RLTmFMODZPRm9uaEF1UlA?oc=5\" target=\"_blank\">Saudi Arabia will have to respond to Houthi airport attack - but the choices are stark</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPMWFHWG5oa1FEYjBYQk52N3BjUHY5bDhwVnUtdzZGaGduc2YxdV9UbEFPNkZIdVhCM0EzemFCQjNIUlJSb01nZUZFR005UzVmM0VvcUpkNG1kTXdaOU9pa2RHY0ZlRzZHak5sQXcxa2JUemhrR3RLTmFMODZPRm9uaEF1UlA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-11T18:15:12.172Z"
-    },
-    {
-      "id": "rss_9094b4bc7821354a",
-      "timestamp": 1791729819000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Why are Houthi missiles breaking through Saudi Arabia’s air defences? - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPT1ZOSzFDM3Yta3pYdDE1N2VlbTBTN0hJaTRJZkUtVGJ4NGY4V0ZwVkMtMmxQQjR1aFhhTk52M1FNeDI4bTlaZFhIMjBBaTV4eXRfaHloN2xrQUprTy1qZnlVa1VPYWZyaGh4MTdzZ2o2QkFZRVJFYVFuYmZRS0ZDR280T2RoaU9yRkI1MW9zV09RdTMzZnFLMHlnS19uMnRnRjIxT0dzWFhSa0J5NmfSAbMBQVVfeXFMUE9VUEo0X1M2UllxWXNLYVd4dGV6UVVjRk5GUVFyWnNpNUVTMFU5Z2dyVm1lZ2R5amJKR3lyTGk0RXpmRmdZN0dLVzNZSVpLUVM2NGFuYXdjU2dLQUdneFVsVjBTUWlvMF9CdXJMQm1QS2lQRm1LQXliajI4M3lZdlZqcXEtOU5aWWowWnZCa0Q1VjBtMG92Rmt5WUdTdW",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPT1ZOSzFDM3Yta3pYdDE1N2VlbTBTN0hJaTRJZkUtVGJ4NGY4V0ZwVkMtMmxQQjR1aFhhTk52M1FNeDI4bTlaZFhIMjBBaTV4eXRfaHloN2xrQUprTy1qZnlVa1VPYWZyaGh4MTdzZ2o2QkFZRVJFYVFuYmZRS0ZDR280T2RoaU9yRkI1MW9zV09RdTMzZnFLMHlnS19uMnRnRjIxT0dzWFhSa0J5NmfSAbMBQVVfeXFMUE9VUEo0X1M2UllxWXNLYVd4dGV6UVVjRk5GUVFyWnNpNUVTMFU5Z2dyVm1lZ2R5amJKR3lyTGk0RXpmRmdZN0dLVzNZSVpLUVM2NGFuYXdjU2dLQUdneFVsVjBTUWlvMF9CdXJMQm1QS2lQRm1LQXliajI4M3lZdlZqcXEtOU5aWWowWnZCa0Q1VjBtMG92Rmt5WUdTdWRERmtCMXpJWGZpTW1MY3J6R1J2c1U?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-11T22:13:49.431Z"
     }
   ]
 }
