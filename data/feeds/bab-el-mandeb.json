@@ -1,8 +1,94 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-16T06:59:50.588Z",
+  "last_fetch": "2026-11-16T16:55:17.606Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_3c514b760bdca02a",
+      "timestamp": 1794847670000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Tanker struck by unknown projectile in Strait of Hormuz, UKMTO says - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQWUhsb2pnODdZNmUya1pnTkFma1Rsb0ozYnVkNGRzd0M0Q0VHT2xuVHhkaFc1NlREdnBiT2d0aW1oTjNRXzVOWkxnRmdzX1pvcmx4dWRIQmJySzFSOG52ZHZ3S0FpWTZOcFllRFRaaTg0ZEFsam8zdHlkME9rdFZGbWdxaVZtMDB6THQ2aGdCaEdLZjRMeTZfNURNZEUyWGoycVBkTg?oc=5\" target=\"_blank\">Middle East latest: Tanker struck by unknown projectile in Strait of Hormuz, UKMTO says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "shipping"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWUhsb2pnODdZNmUya1pnTkFma1Rsb0ozYnVkNGRzd0M0Q0VHT2xuVHhkaFc1NlREdnBiT2d0aW1oTjNRXzVOWkxnRmdzX1pvcmx4dWRIQmJySzFSOG52ZHZ3S0FpWTZOcFllRFRaaTg0ZEFsam8zdHlkME9rdFZGbWdxaVZtMDB6THQ2aGdCaEdLZjRMeTZfNURNZEUyWGoycVBkTg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-16T16:55:16.060Z"
+    },
+    {
+      "id": "rss_cdb7a9436d138a0c",
+      "timestamp": 1794838587000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi forces take over from Dhubab to Bab el-Mandeb after Saudi-backed forces withdraw from the area, in Taiz Governorate - The Lufkin Daily News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxORG5fQl9tTVRZazQwenlwQTlWenRhUzRnaWgwWmdLUFF3UzZXMVFUaUx1c25YS1pRMUdpc2Z5WXduelFKZlp1a2YzT0Q2MGdvN1hFc1huZUhUZm4weW9TVTZ6REI5UUR6b1k3MWRvVlA3eWhZbTlUY1BvS0M5TEpyYUNGMzNqZENxRlZHWF9lNW0tUDZJbEhjWlFucEduOTJncHFnLW42cHZzaURwdXhvaFRwQVJWTVpRaHdMNXp2RXNFYzRrRU1MSV9SY3lURGltdEpXYU5seVZfaVJZRERfQTVwSkpoQmNGNWlTTE1UYnlqeUV1OHpyVFgxOWh0ZkExZW5KYjIxWm0yZ2NCckR6UXNXRQ?oc=5\" target=\"_blank\">Houthi forces take over from Dhubab to Bab el-Mandeb afte",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxORG5fQl9tTVRZazQwenlwQTlWenRhUzRnaWgwWmdLUFF3UzZXMVFUaUx1c25YS1pRMUdpc2Z5WXduelFKZlp1a2YzT0Q2MGdvN1hFc1huZUhUZm4weW9TVTZ6REI5UUR6b1k3MWRvVlA3eWhZbTlUY1BvS0M5TEpyYUNGMzNqZENxRlZHWF9lNW0tUDZJbEhjWlFucEduOTJncHFnLW42cHZzaURwdXhvaFRwQVJWTVpRaHdMNXp2RXNFYzRrRU1MSV9SY3lURGltdEpXYU5seVZfaVJZRERfQTVwSkpoQmNGNWlTTE1UYnlqeUV1OHpyVFgxOWh0ZkExZW5KYjIxWm0yZ2NCckR6UXNXRQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-16T16:55:16.061Z"
+    },
+    {
+      "id": "rss_defdb07f3e64c2a6",
+      "timestamp": 1794838282000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthis seize ground on Yemen's southern coast, edge closer to Aden - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQbllfNkZoYzF4U1ZLdmUtaGE2VnZsblBfeXMyV0xFSEVwcDRya3hzTG1jR2JVS08zYUFBR1laaGhkTVhyZ3hueTl5N1k5ZkFTc3V0blFaUm02WFd0Y2Y2bTR5Rm53XzhTZV8wYy1YWVRNQWo3Vjc5VF9GeXJMaU9zZnhOV3N4aDNkbmcyalJnenlReWFCamtKS0NPZWNLRV9EQ1A3SEVLeU9BNjBvYzd6VzNnQQ?oc=5\" target=\"_blank\">Houthis seize ground on Yemen's southern coast, edge closer to Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbllfNkZoYzF4U1ZLdmUtaGE2VnZsblBfeXMyV0xFSEVwcDRya3hzTG1jR2JVS08zYUFBR1laaGhkTVhyZ3hueTl5N1k5ZkFTc3V0blFaUm02WFd0Y2Y2bTR5Rm53XzhTZV8wYy1YWVRNQWo3Vjc5VF9GeXJMaU9zZnhOV3N4aDNkbmcyalJnenlReWFCamtKS0NPZWNLRV9EQ1A3SEVLeU9BNjBvYzd6VzNnQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-16T16:55:16.060Z"
+    },
+    {
+      "id": "rss_337cb24bc820ab5b",
+      "timestamp": 1794834398000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemeni Forces Repel Houthi Attack in Taiz as Rights Groups Report Civilian Casualties - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5mejBvaDZ1eUNFZ2lVblQ4WWNsSEtld0dYY0dMY3kxQU91SldFWW1pZEl2ZE8tVnRBSTJLT29abGVLSzR6M3JjMWV4SmRHcEc5ZktSdXlycVE?oc=5\" target=\"_blank\">Yemeni Forces Repel Houthi Attack in Taiz as Rights Groups Report Civilian Casualties</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5mejBvaDZ1eUNFZ2lVblQ4WWNsSEtld0dYY0dMY3kxQU91SldFWW1pZEl2ZE8tVnRBSTJLT29abGVLSzR6M3JjMWV4SmRHcEc5ZktSdXlycVE?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-16T16:55:16.060Z"
+    },
     {
       "id": "rss_f0f9f019e362e30a",
       "timestamp": 1794808336000,
@@ -10837,90 +10923,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-13T19:42:54.535Z"
-    },
-    {
-      "id": "rss_a5f87e880f284f1e",
-      "timestamp": 1791905169000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Why billions spent on defense haven’t shielded Saudi Arabia from Houthi attacks - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxOalAxZ2ZJLU1qbnBGcDh3OHRPWnhxUDI2dGNYb2N0ejZ2YVFhYXBTQWJ4WGhBbzl0ZXhVT3hZU2tYSy1hNjlOb2pZSDZyb0lKSmtjRWZKcDNCM0NBUmRVRWZ4VTNWbURIa0FBbzF0NmNiMDhEQ0UxVHYxOWQtc1U4SmV2cVdPVkhmYlE?oc=5\" target=\"_blank\">Why billions spent on defense haven’t shielded Saudi Arabia from Houthi attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOalAxZ2ZJLU1qbnBGcDh3OHRPWnhxUDI2dGNYb2N0ejZ2YVFhYXBTQWJ4WGhBbzl0ZXhVT3hZU2tYSy1hNjlOb2pZSDZyb0lKSmtjRWZKcDNCM0NBUmRVRWZ4VTNWbURIa0FBbzF0NmNiMDhEQ0UxVHYxOWQtc1U4SmV2cVdPVkhmYlE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-13T19:42:54.536Z"
-    },
-    {
-      "id": "rss_13fa31e0503c8570",
-      "timestamp": 1791896405000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Could Pakistan’s Chinese-made weapons help protect Saudi Arabia from Houthi attacks? - South China Morning Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHpxVkc5cHlMdVk4ZGdFQklNSHNYZGUwRXFZdUhNalhwdS0walBkN3hZVjBRSEg2T0xqRXJJZ1EtRElleUpLSVJFRzByRUt3dm1iTmVGcVhPa1dWRC0yS0ZYa3N1ZTJfWTBWd29BZVNWc1FvQ3kxa09lczhTdFFxRVFUSm5UZDdDVTBrZi1pLTZzX3dfRXpCMzVZUWNMWWlJd1lhdVZYdk9PRWVSOUdBVTNrWlFlVkZHUWNWOW5kWDc5dEVVbkxvN3V3UjhLLUXSAc8BQVVfeXFMTmNoc0ZGUzRGeS1VWlZPWEtwMnZFbmxhbXF2T3JRamJDaVJmVVhfUThmem5pcGNTWGxKVWpsTDZMLW5KSzF1RW5DbVpKTEFkb3FvQ0gxYVhYZ3FIMURCMGhvMFhvOFpEWlFrU3VXcnhNa2FuOVZUOFlfd0p5V2",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNRHpxVkc5cHlMdVk4ZGdFQklNSHNYZGUwRXFZdUhNalhwdS0walBkN3hZVjBRSEg2T0xqRXJJZ1EtRElleUpLSVJFRzByRUt3dm1iTmVGcVhPa1dWRC0yS0ZYa3N1ZTJfWTBWd29BZVNWc1FvQ3kxa09lczhTdFFxRVFUSm5UZDdDVTBrZi1pLTZzX3dfRXpCMzVZUWNMWWlJd1lhdVZYdk9PRWVSOUdBVTNrWlFlVkZHUWNWOW5kWDc5dEVVbkxvN3V3UjhLLUXSAc8BQVVfeXFMTmNoc0ZGUzRGeS1VWlZPWEtwMnZFbmxhbXF2T3JRamJDaVJmVVhfUThmem5pcGNTWGxKVWpsTDZMLW5KSzF1RW5DbVpKTEFkb3FvQ0gxYVhYZ3FIMURCMGhvMFhvOFpEWlFrU3VXcnhNa2FuOVZUOFlfd0p5V2xwVXN3ZDFZbmlxZjQ3R2s5cngtNDd2SHJ3OHVGWnBVZURiaTZsSE9HcjhkTHBHa1ZBbDV4N1NpU0ppYUw0bmxXeVFOcURZWW1BNDI0a1JTMzZZ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-13T19:42:54.535Z"
-    },
-    {
-      "id": "rss_49b5cad3e5ab27de",
-      "timestamp": 1791891373000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "UAE condemns Houthi attack on Saudi airport, backs Kingdom’s security measures - アラブニュース",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRUc1Zm5ESUV2OTV3dGgwdDhtdnp3QmU5Z3VGWXdpQ1F6ZUp4cTBKY2ppNmFtX01fLVMzRTdjSDNfRWRDenN2QVA3M1NTalhuZ2t2RHFQS2doWVVOdGZBM0RpU2tQNVlILTRTLWdBQ1lDbzVLWHFnWm1aTFhkTlI0UktpTFlxWXBHMGJ5a1lHREZKemxCRmZ0Z2R2UVdWS0RGWjBaX0RmWXROaVBwamttMFZ2Ym5lV1YxN1EtQThvZ3Mzdw?oc=5\" target=\"_blank\">UAE condemns Houthi attack on Saudi airport, backs Kingdom’s security measures</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">アラブニュース</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRUc1Zm5ESUV2OTV3dGgwdDhtdnp3QmU5Z3VGWXdpQ1F6ZUp4cTBKY2ppNmFtX01fLVMzRTdjSDNfRWRDenN2QVA3M1NTalhuZ2t2RHFQS2doWVVOdGZBM0RpU2tQNVlILTRTLWdBQ1lDbzVLWHFnWm1aTFhkTlI0UktpTFlxWXBHMGJ5a1lHREZKemxCRmZ0Z2R2UVdWS0RGWjBaX0RmWXROaVBwamttMFZ2Ym5lV1YxN1EtQThvZ3Mzdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-13T12:51:07.747Z"
-    },
-    {
-      "id": "rss_cc7674a83670d85d",
-      "timestamp": 1791884084000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "defensive",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia Intercepts New Houthi Attacks as Conflict Drags On - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNMmFPdkk2bElFdDJEQ3l3NWdMWGwzSEEyNWVLb0pHajNQSGlQMDdHblpDX2pSVzZoRG96MzU5TzA2clhlWWxHcGxQUkh4UmlRbkJBelRkZks1dlQxOWhQZFpMNVRDano4MWpSQ0N2c1dndksyYk1wUU40MVcwMFQ3Q0dhaUVubjlrUjR0Z01NY2ZJZ1ZncFo5TXkzbzVLRFpkdnJYSDdvcWlpclV0eVJZb2R2blc?oc=5\" target=\"_blank\">Saudi Arabia Intercepts New Houthi Attacks as Conflict Drags On</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNMmFPdkk2bElFdDJEQ3l3NWdMWGwzSEEyNWVLb0pHajNQSGlQMDdHblpDX2pSVzZoRG96MzU5TzA2clhlWWxHcGxQUkh4UmlRbkJBelRkZks1dlQxOWhQZFpMNVRDano4MWpSQ0N2c1dndksyYk1wUU40MVcwMFQ3Q0dhaUVubjlrUjR0Z01NY2ZJZ1ZncFo5TXkzbzVLRFpkdnJYSDdvcWlpclV0eVJZb2R2blc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-13T12:51:07.747Z"
     }
   ]
 }
