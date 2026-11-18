@@ -1,7 +1,7 @@
 {
   "theater": "ice-italy",
-  "last_fetch": "2026-11-18T17:44:59.516Z",
-  "epoch_count": 98,
+  "last_fetch": "2026-11-18T23:49:42.530Z",
+  "epoch_count": 99,
   "epochs": [
     {
       "id": "rss_a69d416579ec8e68",
@@ -23,6 +23,29 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-18T08:49:04.990Z"
+    },
+    {
+      "id": "rss_3795306edbbeb2fa",
+      "timestamp": 1794663421000,
+      "source": "OSINT",
+      "actor": "media",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Hacker e crash informatici, \"la soluzione è la sovranità digitale europa\" - L'Unione Sarda",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVEV2UFpGZThUT1Q0MzJSdFlrdFJPd3NiR25VRDM5aUNkc0dnNmljQVpFU1d3eVV4U0x1Nm9KNTBuV2QyanFEbDZ6NTlWZklIUjhrWmZfYkN3OEQ4U1BRaXN3V2swbk5iRjFuVmswYktObVU0c0FxVWlzTkZnQVRhYmFraEpNc3B5eUxVMFNsZVFKWE1FUWIxc3VES1ROTlhBbzFqZ0ZKUC05akhZWXd0bDdXSXAxUktx0gHAAUFVX3lxTFBPLUlXbHdZdS1WbV9iTlZDX2YzWE9MTmM5YTZmQUpsQWFhRmdyZWJ3R25mOXc2QUV6SmVvbzRfMjc0ZVFUWWFSRHdwaDlKNEdtdC1sTnBqdjc0cXNBYmFZZjdTY1lZRkNUX2hFOERYTlhaRmN2OTBCME5qUldLcS15TG5wSlBRdVlOSmdVZkZvOWkwbn",
+      "tags": [
+        "sovereignty"
+      ],
+      "domains": [
+        "sovereignty",
+        "civil_rights"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVEV2UFpGZThUT1Q0MzJSdFlrdFJPd3NiR25VRDM5aUNkc0dnNmljQVpFU1d3eVV4U0x1Nm9KNTBuV2QyanFEbDZ6NTlWZklIUjhrWmZfYkN3OEQ4U1BRaXN3V2swbk5iRjFuVmswYktObVU0c0FxVWlzTkZnQVRhYmFraEpNc3B5eUxVMFNsZVFKWE1FUWIxc3VES1ROTlhBbzFqZ0ZKUC05akhZWXd0bDdXSXAxUktx0gHAAUFVX3lxTFBPLUlXbHdZdS1WbV9iTlZDX2YzWE9MTmM5YTZmQUpsQWFhRmdyZWJ3R25mOXc2QUV6SmVvbzRfMjc0ZVFUWWFSRHdwaDlKNEdtdC1sTnBqdjc0cXNBYmFZZjdTY1lZRkNUX2hFOERYTlhaRmN2OTBCME5qUldLcS15TG5wSlBRdVlOSmdVZkZvOWkwbngxX1lYNVdEM2JCOXVFRXMwMHMxWkhWYm1UZTdwaG0yWlNiTUFxZ2pxeWxCTg?oc=5",
+      "feed_id": "gn-sovranita-italia",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-18T23:49:42.530Z"
     },
     {
       "id": "rss_0159abf4cc9883f5",
