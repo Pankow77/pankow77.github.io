@@ -1,8 +1,307 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-19T15:07:31.506Z",
+  "last_fetch": "2026-11-19T22:42:46.039Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bae88ed8a44ca398",
+      "timestamp": 1795127776000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi's tallest skyscraper damaged in Houthi attack - Sky News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxORThXT3I5QnpTVGwxaTdQek9zdk1MUUxYTWhqbTItZFNHNGZZMFdGdVpURWRSdE1NbDBZQmVxVkV6MF9BSHBFRWpIQ1Zlb2NoSFRTM09ldmRlTEU5U3FTUzFvUEtTTnMtZjMtM1M1WTNfWmxpMVdNbXhKeGJ3OTdUVTJQN0I5NnFFdmN0ZnpxYw?oc=5\" target=\"_blank\">Saudi's tallest skyscraper damaged in Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Sky News</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORThXT3I5QnpTVGwxaTdQek9zdk1MUUxYTWhqbTItZFNHNGZZMFdGdVpURWRSdE1NbDBZQmVxVkV6MF9BSHBFRWpIQ1Zlb2NoSFRTM09ldmRlTEU5U3FTUzFvUEtTTnMtZjMtM1M1WTNfWmxpMVdNbXhKeGJ3OTdUVTJQN0I5NnFFdmN0ZnpxYw?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.887Z"
+    },
+    {
+      "id": "rss_3d404ce1a90203b2",
+      "timestamp": 1795124618000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strike damages Riyadh’s tallest skyscraper - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBlellNcl9iOFk5YURTaUJXSTRKZkVTWk13NUhyS3ptX3VUOVMzVkV4VFdGQjZpQU9DMFdkNUNXMUZuNWl5SWxxdTZUcXIyNE1NM3VaOHBGWG41RThNQjJ3WjA1Tm0zU28?oc=5\" target=\"_blank\">Houthi strike damages Riyadh’s tallest skyscraper</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBlellNcl9iOFk5YURTaUJXSTRKZkVTWk13NUhyS3ptX3VUOVMzVkV4VFdGQjZpQU9DMFdkNUNXMUZuNWl5SWxxdTZUcXIyNE1NM3VaOHBGWG41RThNQjJ3WjA1Tm0zU28?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_b649b43ffea8b5d9",
+      "timestamp": 1795124058000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack damages one of Riyadh’s tallest skyscrapers - Qazinform",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxOVkxxZUhOUkcwaFZZdHVXZE5iU1VpTWtfOFdXRkpwd01vZnVmdWF2THdHQi1IZWhTa0tZSURPdXJKcjB1Ulk4cU9KMEh5cGk0bFozaE83Q2ZVTmZqc1k2UFRiRUhZeHllaHdqTUlyZjhsaFVUUFdvRkdiclhUc0hFc2lOalphQURydkpRRGZqSG1Gb3ll0gGUAUFVX3lxTE1WVUFxX0ZYb0FVT2gzdUJQS3dBQXRpTHc2VFBlVU1xZl9LeWdSMTVCdDRkNVhnSEVERVFJSFdYSjJnMXdBTkxSazZXclZmV0tIV19BZnhuTW5MdUtFeWZYX1NxclFkTW1ham5NRVV1clJxZUd5aUEzZDBDTXdlQ3Z6M09aV2RmVVlyNnlSTVVyUXFLZXk?oc=5\" target=\"_blank\">Houthi attack damages on",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOVkxxZUhOUkcwaFZZdHVXZE5iU1VpTWtfOFdXRkpwd01vZnVmdWF2THdHQi1IZWhTa0tZSURPdXJKcjB1Ulk4cU9KMEh5cGk0bFozaE83Q2ZVTmZqc1k2UFRiRUhZeHllaHdqTUlyZjhsaFVUUFdvRkdiclhUc0hFc2lOalphQURydkpRRGZqSG1Gb3ll0gGUAUFVX3lxTE1WVUFxX0ZYb0FVT2gzdUJQS3dBQXRpTHc2VFBlVU1xZl9LeWdSMTVCdDRkNVhnSEVERVFJSFdYSjJnMXdBTkxSazZXclZmV0tIV19BZnhuTW5MdUtFeWZYX1NxclFkTW1ham5NRVV1clJxZUd5aUEzZDBDTXdlQ3Z6M09aV2RmVVlyNnlSTVVyUXFLZXk?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.887Z"
+    },
+    {
+      "id": "rss_b514b40ce3e4df7c",
+      "timestamp": 1795116788000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi missile attack damages Riyadh’s tallest building - Iran International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTFBtM0pINzl0MlU5X0prTF96Rk1KaTdBMmNZQ3FKN2tTQklWSzRyMFdUNjM0dmpIWk9wYmdsWklXdmZVS1lWQWMwTlplbkRaaXpmaWc?oc=5\" target=\"_blank\">Houthi missile attack damages Riyadh’s tallest building</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Iran International</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBtM0pINzl0MlU5X0prTF96Rk1KaTdBMmNZQ3FKN2tTQklWSzRyMFdUNjM0dmpIWk9wYmdsWklXdmZVS1lWQWMwTlplbkRaaXpmaWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_3e4601de54ca6e48",
+      "timestamp": 1795113840000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack damages tower in Riyadh’s financial district: Saudi Civil Defense - Middle East Monitor",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2xYNjZSWDQ5Y3BnOVk5cExzSGRiS1BfdFVWbVpJMXFUdVAtUFFpRU9ZWVNUWGg3MFNBSzk1ZGVmTjJZSUc3bTBoUllGNFE2c3lTY2hiWXZEOWtSTWh2MDZDNEI2V1pvNV94WmhtZVZoZDUzTmhmSU1VRWh1bkxFdmhTa2FOQ2dvVEMzMHlLSVEyUENWXzI3TE5oeUV1OHc1QkFKUnVvaFdvZ21GOXFvXzl4cG5DUGlxZEJLRmZn0gHDAUFVX3lxTE96UnVJenliRkFrNF9Belg4VndiT29zb05aVlBveVZxUFIwLUJuUDNZRDhlSWVQSFNxdUdESDZEV0JDenE4TXdKRHFTQzBCVVp1bGtEaERBMmZfTUFXNVJYUzZLS29oalRSNnVCc1dMN3pCbjJUNzlTX2tGaDhBS1duZmlpWk1xbGJ4bDQ2cG",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNR2xYNjZSWDQ5Y3BnOVk5cExzSGRiS1BfdFVWbVpJMXFUdVAtUFFpRU9ZWVNUWGg3MFNBSzk1ZGVmTjJZSUc3bTBoUllGNFE2c3lTY2hiWXZEOWtSTWh2MDZDNEI2V1pvNV94WmhtZVZoZDUzTmhmSU1VRWh1bkxFdmhTa2FOQ2dvVEMzMHlLSVEyUENWXzI3TE5oeUV1OHc1QkFKUnVvaFdvZ21GOXFvXzl4cG5DUGlxZEJLRmZn0gHDAUFVX3lxTE96UnVJenliRkFrNF9Belg4VndiT29zb05aVlBveVZxUFIwLUJuUDNZRDhlSWVQSFNxdUdESDZEV0JDenE4TXdKRHFTQzBCVVp1bGtEaERBMmZfTUFXNVJYUzZLS29oalRSNnVCc1dMN3pCbjJUNzlTX2tGaDhBS1duZmlpWk1xbGJ4bDQ2cG5JVFJNNVk3X2ZQUDhBOElSQTItNmQ1S3o1am5DTFNXaFR5bG4xcGR0a2NmMGU3ZjJFVXdBOA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_023154e6ba37cc0e",
+      "timestamp": 1795113137000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Iran-backed Houthi 'terrorist attack' hits Riyadh's tallest skyscraper and HQ of Saudi Public Investment Fund - Fox News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxPcUFEc1E0bk1uQktYdVhFYS1CSzVtNFVDaE1DUHV4QVBXUUZnckxQLS0xZVJ3enVwbW9NSnd6ODkwN0dtTkFzSUlZQjJrNzZoYXAtbjF5aVlXWE0weEE4Ulk1eFBJTC1ZaWdTeTlBMDZQLTFtcnVMTVJ6dzREVXd5Z0ZTWS1zcFdqMk9lRzE0WHdGcFd4QmtJWGJwTTY5c0N6aEI2UVhGSmoxOW5TWF9QdEJtQVJFWDZQRjVqZzUzYmREZ2xiMks40gHMAUFVX3lxTE5hZlhkY2pqSGhGa3RGUUF2NnhhbDIteG9id1FMcURCVXQ4SEFKUEZWamZOOVZPSXdmMnpmQjhZMndPZm5oWVdzTG5IVnZHYzg3UTJ3ejEzZVk0NjJ5Wkg5aC1UTlZrd3ZfTWFQQkdhV2F5UlRzV1J6WDdaQjVhQlI2U3hDQj",
+      "tags": [
+        "iran-proxy"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcUFEc1E0bk1uQktYdVhFYS1CSzVtNFVDaE1DUHV4QVBXUUZnckxQLS0xZVJ3enVwbW9NSnd6ODkwN0dtTkFzSUlZQjJrNzZoYXAtbjF5aVlXWE0weEE4Ulk1eFBJTC1ZaWdTeTlBMDZQLTFtcnVMTVJ6dzREVXd5Z0ZTWS1zcFdqMk9lRzE0WHdGcFd4QmtJWGJwTTY5c0N6aEI2UVhGSmoxOW5TWF9QdEJtQVJFWDZQRjVqZzUzYmREZ2xiMks40gHMAUFVX3lxTE5hZlhkY2pqSGhGa3RGUUF2NnhhbDIteG9id1FMcURCVXQ4SEFKUEZWamZOOVZPSXdmMnpmQjhZMndPZm5oWVdzTG5IVnZHYzg3UTJ3ejEzZVk0NjJ5Wkg5aC1UTlZrd3ZfTWFQQkdhV2F5UlRzV1J6WDdaQjVhQlI2U3hDQjU5eUxxb0d3MXJSak4wUG4xLUE2MVBwUGpkZVhlOHZBM0t2QTJDLUtpU0lYOXdubnZxNm4wbHV2S1NUQ2NHZkRENFlVYWpPcA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_1883809363f8c244",
+      "timestamp": 1795111095000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Yemen : Houthi Attack Targets Financial District Tower in Riyadh, No Casualties Reported - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTFBSalB6V3FWMDllc1lNM01kRlpqWERITWtGakFySTR4aU9Yby0wTTc1SXdid1RQeFN2TWQzU2F2R0ZmWUtIbTZYRmoxRWpVVDZpSFJiNG1ESkM?oc=5\" target=\"_blank\">Yemen : Houthi Attack Targets Financial District Tower in Riyadh, No Casualties Reported</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBSalB6V3FWMDllc1lNM01kRlpqWERITWtGakFySTR4aU9Yby0wTTc1SXdid1RQeFN2TWQzU2F2R0ZmWUtIbTZYRmoxRWpVVDZpSFJiNG1ESkM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_08257e923c37fcb4",
+      "timestamp": 1795110934000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia says Houthi attack damaged Riyadh tower - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPN2dSRXcyNzdIa2VEZW4zd1NlS2pyb2gwaTkzVUw1aDQ5VDVsdjJDeFJfekYtekhlNFgzRHE0VnNxVXN6dC1ZNUoxaXA1SDZ5VW9QLUl2REU0d3VDdEpFSXNCWDJIaWZtMUJKanU4amNhWExFY29pZzE0RXpnQmVhbFQySl90STgxdkFzTzllTkNUYnBlWWhGSXdOaWRmS0hQUVFVZkw5S0dNbXpZSXpBd184Yll6QdIBuwFBVV95cUxQYmoxb3ZGV0R2YVcycm1LM3phc2FRaWJoTXhMc19TVjhISWJ1ZERTNE9Ra2Exbjg3QjNuZEJMcGltNWZ6Y2N2cHJ4bUcxcWw0aU04Y1RPV3l4dEh6cXVLRDlxSGJubGloeGVSbGZrUTRJcjk2YlRiWGVTT1Znb19xdmgyYlZHYVZua2NvcXlfNW1TdHJ3Ym",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN2dSRXcyNzdIa2VEZW4zd1NlS2pyb2gwaTkzVUw1aDQ5VDVsdjJDeFJfekYtekhlNFgzRHE0VnNxVXN6dC1ZNUoxaXA1SDZ5VW9QLUl2REU0d3VDdEpFSXNCWDJIaWZtMUJKanU4amNhWExFY29pZzE0RXpnQmVhbFQySl90STgxdkFzTzllTkNUYnBlWWhGSXdOaWRmS0hQUVFVZkw5S0dNbXpZSXpBd184Yll6QdIBuwFBVV95cUxQYmoxb3ZGV0R2YVcycm1LM3phc2FRaWJoTXhMc19TVjhISWJ1ZERTNE9Ra2Exbjg3QjNuZEJMcGltNWZ6Y2N2cHJ4bUcxcWw0aU04Y1RPV3l4dEh6cXVLRDlxSGJubGloeGVSbGZrUTRJcjk2YlRiWGVTT1Znb19xdmgyYlZHYVZua2NvcXlfNW1TdHJ3YmhEOHRzOVpKMkpObTh4Qkw3RUp5OHBlMDRIZ1ZYTVo0X1dxa2s0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_be2cb80676ea055b",
+      "timestamp": 1795105238000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks on Saudi Arabia - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTXVIQUMwVTA5TllQb203X3V6XzNUVlNqaHhXd3NlNjJ0VF9rVUp1OTdRRjBWaVFMREswSVlfNjVESFAwb2w0NGMyVk5LeWNjTU42RnBIOWRsR05kWFktNFhrNnJtMm84cGNmekdUYmlvREJLQkt6NjUxMEZ2Sy1wUjVQbnhMS2JG?oc=5\" target=\"_blank\">Houthi attacks on Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTXVIQUMwVTA5TllQb203X3V6XzNUVlNqaHhXd3NlNjJ0VF9rVUp1OTdRRjBWaVFMREswSVlfNjVESFAwb2w0NGMyVk5LeWNjTU42RnBIOWRsR05kWFktNFhrNnJtMm84cGNmekdUYmlvREJLQkt6NjUxMEZ2Sy1wUjVQbnhMS2JG?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_31b665fb61d59ba4",
+      "timestamp": 1795105114000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Crown Prince Meets US CENTCOM Chief Amid Escalating Houthi Hostilities - EnergyNow.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLUNVWF9MdU10Nlo0RVhEV2h3aDVYU0U1WERvSVgtQjFFa1hFNV9ZRVhwVlEwXy1WSXotZldKU1U5aVZsczUyT3B0dFdqQlpUZDQ0dkZFTmpSTEU5c2x1T29vOFh3QWlqdEdWNjBqbllJdU1jeGs3cFY0R3U2UEFXYksxc3Brakd6azdjWnp2Q1dLQjU1WG90djVqZXZ5U2FkUW9IRHIydW1vZHc?oc=5\" target=\"_blank\">Saudi Crown Prince Meets US CENTCOM Chief Amid Escalating Houthi Hostilities</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EnergyNow.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQLUNVWF9MdU10Nlo0RVhEV2h3aDVYU0U1WERvSVgtQjFFa1hFNV9ZRVhwVlEwXy1WSXotZldKU1U5aVZsczUyT3B0dFdqQlpUZDQ0dkZFTmpSTEU5c2x1T29vOFh3QWlqdEdWNjBqbllJdU1jeGs3cFY0R3U2UEFXYksxc3Brakd6azdjWnp2Q1dLQjU1WG90djVqZXZ5U2FkUW9IRHIydW1vZHc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.887Z"
+    },
+    {
+      "id": "rss_6dd71217e1abe274",
+      "timestamp": 1795103752000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Shafaq News..Houthi attack damages Riyadh wealth fund tower - شفق نيوز",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxQY1poZG03ODhuZkJveUZwY2pnWHhUb3RUMGZPSHllN3pzcFVzN0drdGE0enE4Ty1PU2QtYnVEREw0VHNqenZxM1QtYVVUWDQ1eWlTdjRjVGd3V1dvRHVaV0M1YWJOSmVBUDBqaFZTNU9rM0xodU9MazE3NnJCczl5Sml3eDlrUUU?oc=5\" target=\"_blank\">Shafaq News..Houthi attack damages Riyadh wealth fund tower</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY1poZG03ODhuZkJveUZwY2pnWHhUb3RUMGZPSHllN3pzcFVzN0drdGE0enE4Ty1PU2QtYnVEREw0VHNqenZxM1QtYVVUWDQ1eWlTdjRjVGd3V1dvRHVaV0M1YWJOSmVBUDBqaFZTNU9rM0xodU9MazE3NnJCczl5Sml3eDlrUUU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_ed625680de74d302",
+      "timestamp": 1795102771000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia confirms Houthi attack damaged Riyadh’s tallest building; no casualties - The Times of Israel",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQLXBFaU9aQmdCV01XbHVIVE45S0duY1ZVTEZZOTkyVlVuN2p0ZDNreExFbV92MURsN2xFcUh4WnAyM1prQTQ2TTdsUUJEYUZJbXl6TWtBS3pmcUozNmdoWnVhT3k1VGFJRGFveWN4b1k3ZlFzMEZtb2JxcnFtS0Jtc29URl8xTklIeGZqSVN1V0Q2dWk1bDhqdXA2bml3SnVQTndoelkyOGEybDloa0RoZ2FPVkpGTFdjdERnZi1sdXh6Z0xTSHhZ?oc=5\" target=\"_blank\">Saudi Arabia confirms Houthi attack damaged Riyadh’s tallest building; no casualties</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQLXBFaU9aQmdCV01XbHVIVE45S0duY1ZVTEZZOTkyVlVuN2p0ZDNreExFbV92MURsN2xFcUh4WnAyM1prQTQ2TTdsUUJEYUZJbXl6TWtBS3pmcUozNmdoWnVhT3k1VGFJRGFveWN4b1k3ZlFzMEZtb2JxcnFtS0Jtc29URl8xTklIeGZqSVN1V0Q2dWk1bDhqdXA2bml3SnVQTndoelkyOGEybDloa0RoZ2FPVkpGTFdjdERnZi1sdXh6Z0xTSHhZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_6ab68261677446df",
+      "timestamp": 1795102200000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attack damages tower in Riyadh financial centre - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQSkR0d3FmaUx1b3VWUnlWTVh0amoyMXlWVHpiQldFc2hvQUdZckVzdkZNWFdYNW44VldyN0t3QUdYTF9BblU0LTBhVUxJUVdiM1RvalV3RE1XRjNCQkJrMndnOUwyeGZJZVBSTkRVQm1ULVAxNVY3dUhXMm9tcU1rVURZU0c5TUEyRXZUTHd6SzB4VjBvZWNlVzBrb1VuY3V0MjVTUmRMclRhSWdi?oc=5\" target=\"_blank\">Houthi attack damages tower in Riyadh financial centre</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSkR0d3FmaUx1b3VWUnlWTVh0amoyMXlWVHpiQldFc2hvQUdZckVzdkZNWFdYNW44VldyN0t3QUdYTF9BblU0LTBhVUxJUVdiM1RvalV3RE1XRjNCQkJrMndnOUwyeGZJZVBSTkRVQm1ULVAxNVY3dUhXMm9tcU1rVURZU0c5TUEyRXZUTHd6SzB4VjBvZWNlVzBrb1VuY3V0MjVTUmRMclRhSWdi?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
+    {
+      "id": "rss_560cd99e07d68025",
+      "timestamp": 1795101664000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says Houthi attack hit wealth fund PIF tower in Riyadh - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQcnJpVEVtcm54VjNDYUMwVllhUVJnRElXT1pPLXZ3UllTVzlYV0dPWkJjLWx3X055c0Z6MXNNc0h2OXdkdFh0RVE3Yk96NkZHWHloY0xzS1VzVkJLbkdsamtUWEpOQ1EwWTRjQ3VENXlFVG5DVGVnVTZ0cUpWUEhhR2FlU1Y4cTE0Q0hINzc4WllJVWQ4ZElXSjM1VjlvTGdqTnYtYzlCYlM4emozU2JvaTl4M0pGZDlkQXRiYVA0NA?oc=5\" target=\"_blank\">Saudi Arabia says Houthi attack hit wealth fund PIF tower in Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcnJpVEVtcm54VjNDYUMwVllhUVJnRElXT1pPLXZ3UllTVzlYV0dPWkJjLWx3X055c0Z6MXNNc0h2OXdkdFh0RVE3Yk96NkZHWHloY0xzS1VzVkJLbkdsamtUWEpOQ1EwWTRjQ3VENXlFVG5DVGVnVTZ0cUpWUEhhR2FlU1Y4cTE0Q0hINzc4WllJVWQ4ZElXSjM1VjlvTGdqTnYtYzlCYlM4emozU2JvaTl4M0pGZDlkQXRiYVA0NA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
+    },
     {
       "id": "rss_e6390694efa0faf2",
       "timestamp": 1795099980000,
@@ -46,6 +345,27 @@
       "fetched_at": "2026-11-19T15:07:29.959Z"
     },
     {
+      "id": "rss_81af2e2f5ab1e631",
+      "timestamp": 1795096548000,
+      "source": "OSINT",
+      "actor": "other",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Major Pressure Points in the Bab el-Mandeb and Its Implications for Ethiopian Trade Security - horn review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxNTWpTQm1iYkhPN0dyeTdQQmVTLU9TQ0k5eEN5dllJalpNS1lsSW0ySllLcEVCd1RzSXV5bHdkTWc2LTJaOHZLR3ZCd3Y5RndTMnBfd01kUHRSMDEwME0yVnNSa2pEdEFsWlBoNUxZeWlsczBaQjBMaHAtUkZ0LVR5Z1daUUYwQ0hIcWl1U3JEanZ4Sy1KSmtuTWY0bU9kMHN4N1ctaThKSHl2ZENIdTZTTm1OQm93WWRxUmMzQjFQaTJ3TVhiaGc?oc=5\" target=\"_blank\">Major Pressure Points in the Bab el-Mandeb and Its Implications for Ethiopian Trade Security</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">horn review</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTWpTQm1iYkhPN0dyeTdQQmVTLU9TQ0k5eEN5dllJalpNS1lsSW0ySllLcEVCd1RzSXV5bHdkTWc2LTJaOHZLR3ZCd3Y5RndTMnBfd01kUHRSMDEwME0yVnNSa2pEdEFsWlBoNUxZeWlsczBaQjBMaHAtUkZ0LVR5Z1daUUYwQ0hIcWl1U3JEanZ4Sy1KSmtuTWY0bU9kMHN4N1ctaThKSHl2ZENIdTZTTm1OQm93WWRxUmMzQjFQaTJ3TVhiaGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.887Z"
+    },
+    {
       "id": "rss_44c9a3d105cde38f",
       "timestamp": 1795095473000,
       "source": "OSINT",
@@ -67,6 +387,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-19T15:07:29.960Z"
+    },
+    {
+      "id": "rss_c3b6a8c865247b1f",
+      "timestamp": 1795092969000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthis hit Riyadh’s tallest skyscraper in strike on Saudi wealth fund HQ - South China Morning Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQR1ZuMVM2bVRCbkYwTWFqaFZYWlR4VmE3U1hoZkdTVTFrajZBTlJNcksyeEx6VkthR2RvQlZzU1R1VmlhMS1BdWt6YkxDQzlGZkRCbVRkRFhYb1BTdE5kbEFhZFlzTF9QZ25vVmpXNXU0VXlLa2YwZFpXQ2x1Sk1ZM2l4Z1lNZUl3bmZQWHlhMU5lQlFDb29fblNOejFvTThMNnRQUmdJdTJUd05zRU4zbmdmSWFTWmdGdndWYkhYaXRlTC0w0gHEAUFVX3lxTE1Nbk0yend5RzlodTlYcFRKOHAyY2RQR2ZkZnp6V2trVHI5STVVcTNUa1hjQ2VPTV9CWDF5MHJ0NGtYNWl3emE5QmEwZFNXamRBdnRXV25LZVp0YWI5QXVsMUhKZmpXYmdjWmpfRHBBUFJBM0xyQV9Jc1lrak1ESFFDTmVnaDI5d0",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQR1ZuMVM2bVRCbkYwTWFqaFZYWlR4VmE3U1hoZkdTVTFrajZBTlJNcksyeEx6VkthR2RvQlZzU1R1VmlhMS1BdWt6YkxDQzlGZkRCbVRkRFhYb1BTdE5kbEFhZFlzTF9QZ25vVmpXNXU0VXlLa2YwZFpXQ2x1Sk1ZM2l4Z1lNZUl3bmZQWHlhMU5lQlFDb29fblNOejFvTThMNnRQUmdJdTJUd05zRU4zbmdmSWFTWmdGdndWYkhYaXRlTC0w0gHEAUFVX3lxTE1Nbk0yend5RzlodTlYcFRKOHAyY2RQR2ZkZnp6V2trVHI5STVVcTNUa1hjQ2VPTV9CWDF5MHJ0NGtYNWl3emE5QmEwZFNXamRBdnRXV25LZVp0YWI5QXVsMUhKZmpXYmdjWmpfRHBBUFJBM0xyQV9Jc1lrak1ESFFDTmVnaDI5d0h0akpoek5fTkdNMGs4eGZzTmk2YUEzQ1dCdzhPLWVQdDAzMW1DQWhwcnhsbW9Walp1RXYxN2oycmduYjU?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T22:42:44.886Z"
     },
     {
       "id": "rss_830672dd01867a6b",
@@ -10566,362 +10907,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-16T15:07:50.443Z"
-    },
-    {
-      "id": "rss_847072ef7c7dee75",
-      "timestamp": 1792146660000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Ships in Strait of Hormuz still face \"indiscriminate attacks,\" maritime monitor warns - CBS News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQT1N6LVU4X3R3a3ljSC1KY3BYOGI1bFVCWjA0bnM1WjE2eDRZQW43VVUxMnhFbThpcDdGSUdneU03ZFFjeFFmVWczeDVaelRBeXZGekhFdmNxeWZzUHlHNUpseS0tN09GMWtkSzB2WnJEV3ZnUXhqQnlyMEY3VVl0bA?oc=5\" target=\"_blank\">Ships in Strait of Hormuz still face \"indiscriminate attacks,\" maritime monitor warns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CBS News</font>",
-      "tags": [
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQT1N6LVU4X3R3a3ljSC1KY3BYOGI1bFVCWjA0bnM1WjE2eDRZQW43VVUxMnhFbThpcDdGSUdneU03ZFFjeFFmVWczeDVaelRBeXZGekhFdmNxeWZzUHlHNUpseS0tN09GMWtkSzB2WnJEV3ZnUXhqQnlyMEY3VVl0bA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-16T15:07:50.442Z"
-    },
-    {
-      "id": "rss_8ccdf5cfde8da5b6",
-      "timestamp": 1792135777000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Video. Houthi missile attack targets Yemeni presidential palace in Aden - Euronews.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3FuSHMtRWlTYXhKN2Y5cTB4UUhvN2oyMzdVVk5SbE5GM1BRa1RpR3pkUV9NMWoxc0ktc3NIWktXREJyN3VNYUtrLW5WMWJpSEtFTUYwNUM2Q1JHSU85NUZidDVBY2FXalNKcUs4SkZLZmItYTBkUmxXb1Y5clpMMllSQWpxaDRhMFFyREtWTF9NTHh2cjRwSXpJbGN3T05KTGZHVS1jOHVzZw?oc=5\" target=\"_blank\">Video. Houthi missile attack targets Yemeni presidential palace in Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Euronews.com</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOS3FuSHMtRWlTYXhKN2Y5cTB4UUhvN2oyMzdVVk5SbE5GM1BRa1RpR3pkUV9NMWoxc0ktc3NIWktXREJyN3VNYUtrLW5WMWJpSEtFTUYwNUM2Q1JHSU85NUZidDVBY2FXalNKcUs4SkZLZmItYTBkUmxXb1Y5clpMMllSQWpxaDRhMFFyREtWTF9NTHh2cjRwSXpJbGN3T05KTGZHVS1jOHVzZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-16T10:33:36.714Z"
-    },
-    {
-      "id": "rss_5781089478b7a13a",
-      "timestamp": 1792106183000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Saudi diplomat says Iran is encouraging Houthi escalation of attacks on the kingdom - PBS",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNSHdCYjB6dzdtU1BtZlhtakJSSGlELWlVWURncXN0ZnQzRHRuX1N5YmlnRnBoN3lzQWhoWFRFYU9sN0RqTlZVdlJEUFBEQlYtS2Fpam82a0tyVm0wa3ZZZ04teUE0MVU2eEpvNXBCdXBfLThVT3lVZ190TGFicFJ3M3hzejE5UXdoUy0zM21lMVFVWEIydTBNRklpNlZwRlJ4X2FEcHdCcTJYTFdzdDdhUF9CajlKa2NVSnfSAb8BQVVfeXFMT0tBQ1NRMVBfdlh0UzNpd3VHcGZCVXJENWJaRW11dnphV0ZQVVotNmFkMktYUl80azdSemFWNXdneUxJRUFyYjVzVGYxTGFZTDJDdjZrVUFwNzI4QVhHalo2RGhFUUFGLVE0QXJ0dVBhXzR1NHExQXFqVmpPRVpjNUdUUDdYclA2dVlnLXB0UUlpMj",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSHdCYjB6dzdtU1BtZlhtakJSSGlELWlVWURncXN0ZnQzRHRuX1N5YmlnRnBoN3lzQWhoWFRFYU9sN0RqTlZVdlJEUFBEQlYtS2Fpam82a0tyVm0wa3ZZZ04teUE0MVU2eEpvNXBCdXBfLThVT3lVZ190TGFicFJ3M3hzejE5UXdoUy0zM21lMVFVWEIydTBNRklpNlZwRlJ4X2FEcHdCcTJYTFdzdDdhUF9CajlKa2NVSnfSAb8BQVVfeXFMT0tBQ1NRMVBfdlh0UzNpd3VHcGZCVXJENWJaRW11dnphV0ZQVVotNmFkMktYUl80azdSemFWNXdneUxJRUFyYjVzVGYxTGFZTDJDdjZrVUFwNzI4QVhHalo2RGhFUUFGLVE0QXJ0dVBhXzR1NHExQXFqVmpPRVpjNUdUUDdYclA2dVlnLXB0UUlpMjJ0V1lXd2drUGVLbU9SeXZqM3RUNHNkWEtaYzBGUWt4SWtVMWItcE5PVEpLNGs?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-16T00:58:13.384Z"
-    },
-    {
-      "id": "rss_1cf78879da8e6f9f",
-      "timestamp": 1792100583000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Missiles Strike Government Headquarters in Yemen - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRWFDdHFfLVg4dEdlTkhlN2NxQ3lnbEZvX3hRQ2FUU2ktTzFfQnFpd001ZzJMU01tcjNpaThxVGI2VFBLLV8xQTFfNFQzZHE4ZWU1OGdRV25rYU5uanhVblVfN2FFZ0JLeXljTC1qRUl5eV9MZ3JYQ3lkbFd4cE9TVEdwODhobzZB?oc=5\" target=\"_blank\">Houthi Missiles Strike Government Headquarters in Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRWFDdHFfLVg4dEdlTkhlN2NxQ3lnbEZvX3hRQ2FUU2ktTzFfQnFpd001ZzJMU01tcjNpaThxVGI2VFBLLV8xQTFfNFQzZHE4ZWU1OGdRV25rYU5uanhVblVfN2FFZ0JLeXljTC1qRUl5eV9MZ3JYQ3lkbFd4cE9TVEdwODhobzZB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T22:33:00.412Z"
-    },
-    {
-      "id": "rss_d4ae499767658cc8",
-      "timestamp": 1792096080000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi missiles strike Saudi-led forces HQ at presidential palace in Aden - The Guardian",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxPbkFOY3lPYnZzY2JhR0RfeEUtQU1lZDVLU1N4a254d1Z6ZmlLM25LUm12Q2tudk1VOU9oR0xSaW92aUJEUlgyWWJ5NVQzVEJNb0dzU21MWWlXcU5JNkVKWlE5eVBteEItT3RXSHRvY2djQTFkOGNIUFVuVXRERUItcnMtSl9hdw?oc=5\" target=\"_blank\">Houthi missiles strike Saudi-led forces HQ at presidential palace in Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPbkFOY3lPYnZzY2JhR0RfeEUtQU1lZDVLU1N4a254d1Z6ZmlLM25LUm12Q2tudk1VOU9oR0xSaW92aUJEUlgyWWJ5NVQzVEJNb0dzU21MWWlXcU5JNkVKWlE5eVBteEItT3RXSHRvY2djQTFkOGNIUFVuVXRERUItcnMtSl9hdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-16T00:58:13.384Z"
-    },
-    {
-      "id": "rss_a9c6591551b192d1",
-      "timestamp": 1792095975000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "At least 5 killed in Houthi attack on Yemen’s presidential palace in Aden - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRHZJUmhnT0VWMDRFLVVBX3ZVeDFPQVphWWhLWndQWFgydVNCUGswZU81U2tKc2MzRl9BcFlCLWw3WnZwR013MXBxQ2czQ3BNYno3Y2VTeUhyQkUwVGN4SEVOLUd1Q3ptT2FWRDRPd1VEVWVyM1NrOE9lWFpGbDVhQks3MndlQXBEZTZrNTd2X181ZDlLYzZyOFhrVDNFS1NyMzRJR3ZXYWnSAa4BQVVfeXFMTVVpdThSSzRBSGdub3dMa1RPX0hIRFRUOFVIdnZZalZPTWR3cmxiMlM3MDVtdk4wR0Izb3V4OXBYMFptN2otc1YtUm1mdm10cVQ1Sko3MlVWb2pzZ2tWMjF3aF9VeFctOU00Ukdaa0luall1aTVTenRkS0V4RnNGMy1lSjE1N1NqSVdPN0dZUzQ0eEFKaW1VN2JOb1dIQk1nT09DNz",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRHZJUmhnT0VWMDRFLVVBX3ZVeDFPQVphWWhLWndQWFgydVNCUGswZU81U2tKc2MzRl9BcFlCLWw3WnZwR013MXBxQ2czQ3BNYno3Y2VTeUhyQkUwVGN4SEVOLUd1Q3ptT2FWRDRPd1VEVWVyM1NrOE9lWFpGbDVhQks3MndlQXBEZTZrNTd2X181ZDlLYzZyOFhrVDNFS1NyMzRJR3ZXYWnSAa4BQVVfeXFMTVVpdThSSzRBSGdub3dMa1RPX0hIRFRUOFVIdnZZalZPTWR3cmxiMlM3MDVtdk4wR0Izb3V4OXBYMFptN2otc1YtUm1mdm10cVQ1Sko3MlVWb2pzZ2tWMjF3aF9VeFctOU00Ukdaa0luall1aTVTenRkS0V4RnNGMy1lSjE1N1NqSVdPN0dZUzQ0eEFKaW1VN2JOb1dIQk1nT09DNzgzVGdKYXJQZUt3?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-15T22:33:00.412Z"
-    },
-    {
-      "id": "rss_ee2ce81bcb064930",
-      "timestamp": 1792094268000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on palace used by Yemen government in Aden kills five - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPVkxNNUd2SGxhYk9hVkI4RVllZWs4alYyX1FGUTY5N1MtVUhhVkdjZ2I4ejFXeGF2NEJFUFFFcXkwQmRmcUNTTFpqZjNaSGFyd1FmYnZiZk5PekhTQnpiQzgyMUFTeHk3TmhFRF9kRTVYTnNWX0pJLWMxMFhSY3RiNlJ1NlV5aHFxQ0JXV19uYnVZSkxnYVlhbC01cnNhc3ZlMVB5S3hhdk9SWTB0ZmtvSmw5cG5LczA?oc=5\" target=\"_blank\">Houthi attack on palace used by Yemen government in Aden kills five</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVkxNNUd2SGxhYk9hVkI4RVllZWs4alYyX1FGUTY5N1MtVUhhVkdjZ2I4ejFXeGF2NEJFUFFFcXkwQmRmcUNTTFpqZjNaSGFyd1FmYnZiZk5PekhTQnpiQzgyMUFTeHk3TmhFRF9kRTVYTnNWX0pJLWMxMFhSY3RiNlJ1NlV5aHFxQ0JXV19uYnVZSkxnYVlhbC01cnNhc3ZlMVB5S3hhdk9SWTB0ZmtvSmw5cG5LczA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T22:33:00.412Z"
-    },
-    {
-      "id": "rss_bd5e7edffec6f1ff",
-      "timestamp": 1792090307000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "2 killed in explosions near palace used by Yemen’s government in latest Houthi attack - Washington Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxNblh5dk5ZU2QxUmRleVZValllZmYzNXFkMFpGNW9Lbmt2MF9Gb0YwQUxNcWFTYVF6d1VIdkd2MG5oRXFhSTljb3JhdHVqNDBQVFM4b1BDcnFsZUdBc05MX3lobjRkQTE1a3FtODQ4NGl3Y3MtNDFvYWJJUUdOV1J5V2tLZVVuNEpSd2V1MzhsQU1adUVXZng1N0ZOZzY4dm5fdFRpaDNmem1BVUpLZFh2WkVnTQ?oc=5\" target=\"_blank\">2 killed in explosions near palace used by Yemen’s government in latest Houthi attack</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Washington Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNblh5dk5ZU2QxUmRleVZValllZmYzNXFkMFpGNW9Lbmt2MF9Gb0YwQUxNcWFTYVF6d1VIdkd2MG5oRXFhSTljb3JhdHVqNDBQVFM4b1BDcnFsZUdBc05MX3lobjRkQTE1a3FtODQ4NGl3Y3MtNDFvYWJJUUdOV1J5V2tLZVVuNEpSd2V1MzhsQU1adUVXZng1N0ZOZzY4dm5fdFRpaDNmem1BVUpLZFh2WkVnTQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-16T10:33:36.712Z"
-    },
-    {
-      "id": "rss_2af6544fed46428f",
-      "timestamp": 1792089840000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition command centre in Aden hit in alleged Houthi attack - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxOSVRlYUZxbGZ1eGZORWtSaG50NnNhQS1aMC1CQ01VNS1Wem1lelJhNGtRUzhKOEhDS1RZdUlzV2lXTEVXZlcxSjdFVkZ1VnFiZ1RqOWxnZ3l4Sy0yaGRRQjlZeHhoRTBsMzZVYk1zU0w4cWpXWVlMS21XeTh6ajZNR2lyYW8wUWhRTWtEU1hYVUkxUG1fajh6MmlGOWJtQUFwdUlFd2hZcFJrZURERW00LWFGSi1BVzhpZUxldmdoWVZpUjVMb2JEUGJPb2J2WU5KcTQ3emg2OUlWc0o0ai1sQ2V5bnNlbC1IYnJ5OGdsV0tBaUJGVEZMdTdIbndqRm8?oc=5\" target=\"_blank\">Saudi-led coalition command centre in Aden hit in alleged Houthi attack</a>&nbsp;&nb",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOSVRlYUZxbGZ1eGZORWtSaG50NnNhQS1aMC1CQ01VNS1Wem1lelJhNGtRUzhKOEhDS1RZdUlzV2lXTEVXZlcxSjdFVkZ1VnFiZ1RqOWxnZ3l4Sy0yaGRRQjlZeHhoRTBsMzZVYk1zU0w4cWpXWVlMS21XeTh6ajZNR2lyYW8wUWhRTWtEU1hYVUkxUG1fajh6MmlGOWJtQUFwdUlFd2hZcFJrZURERW00LWFGSi1BVzhpZUxldmdoWVZpUjVMb2JEUGJPb2J2WU5KcTQ3emg2OUlWc0o0ai1sQ2V5bnNlbC1IYnJ5OGdsV0tBaUJGVEZMdTdIbndqRm8?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.923Z"
-    },
-    {
-      "id": "rss_7cd5f282dd93d5f1",
-      "timestamp": 1792089715000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthis launch deadly attack on presidential palace in Yemen’s Aden - South China Morning Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxPcmZtUEtSZGJ1U0loaG1zeWQtOXhpQUlMQ2FHQ005VFpQZjVYSTZhU1hpM3FkSUg1emF5bTJkRkdvVzZhMTZUWFQxSS1nTzJWVmVKSFVMU2wyeTBaOHJZVmphOHpJQjZDbjdEajRySUU0TFRYQ2FlOXJaalpFdWZPaU80dXJ1SDBYbVZEMlpxaS1nQmZaMlROS2JCNzM1UXM0OEFMOWFtaVdYYTdDQWRHV09nTUpkbTBWTlUxSg?oc=5\" target=\"_blank\">Houthis launch deadly attack on presidential palace in Yemen’s Aden</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">South China Morning Post</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcmZtUEtSZGJ1U0loaG1zeWQtOXhpQUlMQ2FHQ005VFpQZjVYSTZhU1hpM3FkSUg1emF5bTJkRkdvVzZhMTZUWFQxSS1nTzJWVmVKSFVMU2wyeTBaOHJZVmphOHpJQjZDbjdEajRySUU0TFRYQ2FlOXJaalpFdWZPaU80dXJ1SDBYbVZEMlpxaS1nQmZaMlROS2JCNzM1UXM0OEFMOWFtaVdYYTdDQWRHV09nTUpkbTBWTlUxSg?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.922Z"
-    },
-    {
-      "id": "rss_72b2165287187bb6",
-      "timestamp": 1792086627000,
-      "source": "Reuters",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Yemen's Houthis hit palace in Aden, coalition details attacks on Saudi infrastructure - Reuters",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxQODZXb0UtbHJiTHdmLTZhUENYcXNNeVptZDFGV1pUUEpuS3A0RzROVlBWSGw2V2tvdjNabmlnX1llVmh1Tno5TW5jUjhLWm5BY3VOREdYTnd5Q2RpdmdyVnVzR0lFTlp4SDV4a3JzNWo0US1xdER1eUkybkRtOHlBT2U4RE43NFI2dGVnb29fSmdPVmVPaDY3NG5fNXRabFR5dkJBU0pwNDFZSkN0NkxaU2lEd2c1Mk9HbUNUYTROV3BJUnh3TEE?oc=5\" target=\"_blank\">Yemen's Houthis hit palace in Aden, coalition details attacks on Saudi infrastructure</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
-      "tags": [
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQODZXb0UtbHJiTHdmLTZhUENYcXNNeVptZDFGV1pUUEpuS3A0RzROVlBWSGw2V2tvdjNabmlnX1llVmh1Tno5TW5jUjhLWm5BY3VOREdYTnd5Q2RpdmdyVnVzR0lFTlp4SDV4a3JzNWo0US1xdER1eUkybkRtOHlBT2U4RE43NFI2dGVnb29fSmdPVmVPaDY3NG5fNXRabFR5dkJBU0pwNDFZSkN0NkxaU2lEd2c1Mk9HbUNUYTROV3BJUnh3TEE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.51,
-      "source_weight": 0.85,
-      "fetched_at": "2026-10-15T19:18:48.921Z"
-    },
-    {
-      "id": "rss_b88b4d823b633039",
-      "timestamp": 1792084768000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Aden presidential palace kills 2 as Taiz battles intensify - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxNT2NFckpxTGZOYjNXZy1EandUQ1FldGNTb2RnVE56ejdXdDB1YXFYSGZDanVUZGZRcFVpZVZLMS1zOXpNekxPRXVQTlVKNTlyVlhiTWJDQ0U3Q3RnalVuWGhMam9rMTk4YnR6VFhPcnZvNW5UbnE0U3VkT2pPY0wxd0pDRTgtTUduem14NEhlUno5SE1QMklPRDJCVUItR3NzTnJmUzRJemJsa1ktSG5qN3JfbEhlUnZMUGZLNDVEMVV3eElDSjQ0?oc=5\" target=\"_blank\">Houthi missile attack on Aden presidential palace kills 2 as Taiz battles intensify</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNT2NFckpxTGZOYjNXZy1EandUQ1FldGNTb2RnVE56ejdXdDB1YXFYSGZDanVUZGZRcFVpZVZLMS1zOXpNekxPRXVQTlVKNTlyVlhiTWJDQ0U3Q3RnalVuWGhMam9rMTk4YnR6VFhPcnZvNW5UbnE0U3VkT2pPY0wxd0pDRTgtTUduem14NEhlUno5SE1QMklPRDJCVUItR3NzTnJmUzRJemJsa1ktSG5qN3JfbEhlUnZMUGZLNDVEMVV3eElDSjQ0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.923Z"
-    },
-    {
-      "id": "rss_084b5f609ae73cd1",
-      "timestamp": 1792084729000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi missile attack on Yemeni presidential palace kills two, minister says - BBC",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiW0FVX3lxTE9fNUFycEtoM2tnclA4RkVaZHh0bkZJanktTm9YdmdEYkI2WFJMQTBaOS1BS19uZ3c2a18tMS1BSFpqcGlfUkRuaVlOWkNNZlBvcTNNWWxJbjFqblU?oc=5\" target=\"_blank\">Houthi missile attack on Yemeni presidential palace kills two, minister says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BBC</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9fNUFycEtoM2tnclA4RkVaZHh0bkZJanktTm9YdmdEYkI2WFJMQTBaOS1BS19uZ3c2a18tMS1BSFpqcGlfUkRuaVlOWkNNZlBvcTNNWWxJbjFqblU?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.921Z"
-    },
-    {
-      "id": "rss_3a7913312bab3b2f",
-      "timestamp": 1792081860000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Yemeni government-allied forces say they are repelling Houthi attack on Dhubab airport - Middle East Eye",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwJBVV95cUxPdzA2a0pLbDEybmRRbEtfZ09FdFdVNklVQlJrLVgxMGl4VnJNMjIybTR2X2hKZTYyN3Nack1VeGoxSEpKaDJVMU9MZlVwNndQQ3ZLSFoxVlVoVDIyWXBXdHRPNjhOZUx4N1BMb1IyZnJNbGhWMWlyQ3ZhdHVfenlwbjdqa1Rjc1RCVFBDQUd6TFpTNGZkdVByZ2U3NjB4TlBTUUUxRDZzaXlNdDN1V1kzY05fTHBzOWdma0pTLWxHWHp6RW9ZQTZPUjZwa3NYSmljX1dRT0hOenZZUFZhcWFiS0VUZkdDRkVFN2VBSG5iSTlMVDVDc1pHcHdxWUhSa2o0ZUhn?oc=5\" target=\"_blank\">Yemeni government-allied forces say they are repelling Houthi attack on Dhubab ",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPdzA2a0pLbDEybmRRbEtfZ09FdFdVNklVQlJrLVgxMGl4VnJNMjIybTR2X2hKZTYyN3Nack1VeGoxSEpKaDJVMU9MZlVwNndQQ3ZLSFoxVlVoVDIyWXBXdHRPNjhOZUx4N1BMb1IyZnJNbGhWMWlyQ3ZhdHVfenlwbjdqa1Rjc1RCVFBDQUd6TFpTNGZkdVByZ2U3NjB4TlBTUUUxRDZzaXlNdDN1V1kzY05fTHBzOWdma0pTLWxHWHp6RW9ZQTZPUjZwa3NYSmljX1dRT0hOenZZUFZhcWFiS0VUZkdDRkVFN2VBSG5iSTlMVDVDc1pHcHdxWUhSa2o0ZUhn?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.923Z"
-    },
-    {
-      "id": "rss_b81eb06874a16a2e",
-      "timestamp": 1792079528000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Iran-aligned Houthis launch deadly attack on Yemeni presidential palace in escalating campaign against Saudi Arabia - CNN",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQWFJPaFEtMXN4ZWhQY0w5bUNGZWREUTVXcEJxWUdDOEJveWFtcjRHS1dlMVRXOGRrRGpsYm5xbUFUNTVQcnVLZEo3d0NReVcyek5hMWlwYklDVUtyQ0pqX2h1Nnp2UmYtUzZKXzVSanM0ZnNRTUlXZFdQTHNsSkZOb0xsZ1R3VUxBSzJNaUV5ZkRkSk5rY1JJWlNaTTRKUVdsRnpWMGNkSk4zajBLczJaUA?oc=5\" target=\"_blank\">Iran-aligned Houthis launch deadly attack on Yemeni presidential palace in escalating campaign against Saudi Arabia</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNN</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWFJPaFEtMXN4ZWhQY0w5bUNGZWREUTVXcEJxWUdDOEJveWFtcjRHS1dlMVRXOGRrRGpsYm5xbUFUNTVQcnVLZEo3d0NReVcyek5hMWlwYklDVUtyQ0pqX2h1Nnp2UmYtUzZKXzVSanM0ZnNRTUlXZFdQTHNsSkZOb0xsZ1R3VUxBSzJNaUV5ZkRkSk5rY1JJWlNaTTRKUVdsRnpWMGNkSk4zajBLczJaUA?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T22:33:00.414Z"
-    },
-    {
-      "id": "rss_f8316cbf1d52c998",
-      "timestamp": 1792078754000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Houthi attack on presidential palace in Yemen’s Aden kills 4 — government sources - The Times of Israel",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxNc3h1eG1hcERjZmUxWG4ybWdlWVBRMVFFTTZrNlhhTUw4ZUEtVUU1UU5qS3hMMlNBSmpqbGJlR05YVkJQbmRBQmhkWmVTaXY1X1NpVDRQNWcxeDh2YzFJemJ0eElsaFhxY3NvNERuVkVzUl9PQWNWS2t4QmctcEVmQnRiUWMyRXFUaE1BNEIxQUJkMXBQZG5ucFpVVzdEQm0zcmlZU1FJcEdJOGVPbDU0dDRKQTE4QWJjUTF2dTZnWGMtZw?oc=5\" target=\"_blank\">Houthi attack on presidential palace in Yemen’s Aden kills 4 — government sources</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Times of Israel</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNc3h1eG1hcERjZmUxWG4ybWdlWVBRMVFFTTZrNlhhTUw4ZUEtVUU1UU5qS3hMMlNBSmpqbGJlR05YVkJQbmRBQmhkWmVTaXY1X1NpVDRQNWcxeDh2YzFJemJ0eElsaFhxY3NvNERuVkVzUl9PQWNWS2t4QmctcEVmQnRiUWMyRXFUaE1BNEIxQUJkMXBQZG5ucFpVVzdEQm0zcmlZU1FJcEdJOGVPbDU0dDRKQTE4QWJjUTF2dTZnWGMtZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-15T19:18:48.922Z"
     }
   ]
 }
