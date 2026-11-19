@@ -1,8 +1,100 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-18T23:49:41.281Z",
+  "last_fetch": "2026-11-19T05:40:45.557Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f8317c0ba7d7c5d5",
+      "timestamp": 1795059106000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Coalition forces intercept Houthi missile launched towards Riyadh, debris causes damage - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQa1k5ZGNHU2J3TkNRSFpMaTVWSjdvbG4wcUpubFh4Nnltb2MxYnBXQVhHaEpBSHRvQkpkYVFQSkpwUDVKWE50ZW5IRGs0TVZNM09zRVhHUk1iMUNnTG0tUm9jb0UzejVOXzJsYlpQRzJ1dWpwcFhNMHgxZUVjZjlXMFZfSWVORFVKUVFVNFptTzE0eDZXUExwaWF1RDZoZUZxTW9TLTNWRVF2WWNLWUMxS2RHbWZpU0JHNlpQamJNOHpyME9SX0YtY1JKejY?oc=5\" target=\"_blank\">Coalition forces intercept Houthi missile launched towards Riyadh, debris causes damage</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQa1k5ZGNHU2J3TkNRSFpMaTVWSjdvbG4wcUpubFh4Nnltb2MxYnBXQVhHaEpBSHRvQkpkYVFQSkpwUDVKWE50ZW5IRGs0TVZNM09zRVhHUk1iMUNnTG0tUm9jb0UzejVOXzJsYlpQRzJ1dWpwcFhNMHgxZUVjZjlXMFZfSWVORFVKUVFVNFptTzE0eDZXUExwaWF1RDZoZUZxTW9TLTNWRVF2WWNLWUMxS2RHbWZpU0JHNlpQamJNOHpyME9SX0YtY1JKejY?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T05:40:44.173Z"
+    },
+    {
+      "id": "rss_7e87050a41b086b4",
+      "timestamp": 1795050346000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says it intercepted Houthi ballistic missile, destroyed launcher - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOVkNnajc5RnF0bW5jX3VkdzZaNjdBOTRPNnlWUE1WUWtXX3I2NXZORFlxYmVUeHg2WW9ySUJGcFQybjZVR05ndUplcmdvOUZ1aTVLQkMtLVVoaXVReVNyV2FqQmJNMWJ6bEVldkhJWGZIbUFLOTV3WTByTmFEZUtoYjhES3MzcDBmUTFpQUpMb25CMDdIb0tpRWpqY3ozN29iYmd3VHdnOVRpWmFLbHpJRXlBQ2lMOV9OcXF5RTg4czN5VkdDRHRZ?oc=5\" target=\"_blank\">Saudi-led coalition says it intercepted Houthi ballistic missile, destroyed launcher</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOVkNnajc5RnF0bW5jX3VkdzZaNjdBOTRPNnlWUE1WUWtXX3I2NXZORFlxYmVUeHg2WW9ySUJGcFQybjZVR05ndUplcmdvOUZ1aTVLQkMtLVVoaXVReVNyV2FqQmJNMWJ6bEVldkhJWGZIbUFLOTV3WTByTmFEZUtoYjhES3MzcDBmUTFpQUpMb25CMDdIb0tpRWpqY3ozN29iYmd3VHdnOVRpWmFLbHpJRXlBQ2lMOV9OcXF5RTg4czN5VkdDRHRZ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T05:40:44.172Z"
+    },
+    {
+      "id": "rss_d47668747dc79af1",
+      "timestamp": 1795047900000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi strikes target Riyadh airport with cruise missiles, group says - DNE Africa",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE9sVzY0eW5FeG45VTRVV1NmbV9RNVZORFdzcWo3ckNXRkE2bTN3S1pQTDY0RE9jNFl3dzlOR29ua2pialU5aWNhTDdOdmJ0bUlGMmlNVEQtZHFKRG5wMzkyT3ZibmJQOEVIRkRqdGRBdGhqUQ?oc=5\" target=\"_blank\">Houthi strikes target Riyadh airport with cruise missiles, group says</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DNE Africa</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9sVzY0eW5FeG45VTRVV1NmbV9RNVZORFdzcWo3ckNXRkE2bTN3S1pQTDY0RE9jNFl3dzlOR29ua2pialU5aWNhTDdOdmJ0bUlGMmlNVEQtZHFKRG5wMzkyT3ZibmJQOEVIRkRqdGRBdGhqUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T05:40:44.172Z"
+    },
+    {
+      "id": "rss_50ccacf886f7ce5f",
+      "timestamp": 1795037885000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi-backed forces launch a major attack on Houthi rebels in Yemen, and other Mideast news - Ottumwa Courier",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxNZFBBUG5XTUtRX3pBWmhZaTRQWndSTmxwSkNXMVR6anFJZHJpX3lHSl9wUjEtX1g4ZzJTYlVMZUl5VG13a0szVnVqc25pblFjVWxsMTFyUWdVMTlLMWt3M2R4c2RsSE95Z1NzR29Cc2M4eVVRSnRWSlkzRDhqVm83REVoYVFvNmxuVFhCUi1rYTRBSWtKVmxITkdtRFJseldkcUhKX2VPMFpKWTRqQ2hVamdOSDdEN0dmWjRqRXJKQUtSUHB2VzkzSmJKZ19NUjdIQUNZSHliNzdSektLWm42cGRoQ0E4Y0QwTmpmc2k5Y0V0eGxZbm1mSHN5UmJKaW9qby1kc0pwQkNxanZVdXFvT2Y4VQ?oc=5\" target=\"_blank\">Saudi-backed forces launch a major attack on Houthi rebel",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNZFBBUG5XTUtRX3pBWmhZaTRQWndSTmxwSkNXMVR6anFJZHJpX3lHSl9wUjEtX1g4ZzJTYlVMZUl5VG13a0szVnVqc25pblFjVWxsMTFyUWdVMTlLMWt3M2R4c2RsSE95Z1NzR29Cc2M4eVVRSnRWSlkzRDhqVm83REVoYVFvNmxuVFhCUi1rYTRBSWtKVmxITkdtRFJseldkcUhKX2VPMFpKWTRqQ2hVamdOSDdEN0dmWjRqRXJKQUtSUHB2VzkzSmJKZ19NUjdIQUNZSHliNzdSektLWm42cGRoQ0E4Y0QwTmpmc2k5Y0V0eGxZbm1mSHN5UmJKaW9qby1kc0pwQkNxanZVdXFvT2Y4VQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-19T05:40:44.172Z"
+    },
     {
       "id": "rss_dcc0fd24bb6347b1",
       "timestamp": 1795031191000,
@@ -10831,96 +10923,6 @@
       "confidence": 0.51,
       "source_weight": 0.85,
       "fetched_at": "2026-10-14T14:17:23.181Z"
-    },
-    {
-      "id": "rss_b808c4dd955f4c69",
-      "timestamp": 1791978125000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Saudi-led coalition intercepts Houthi missile launched towards Riyadh - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNWkdFQnE4VXFUbGJlcS1VaTFHbjQ0RGFIM1Z4SlhUbHlWQXpUTUtHWTB1Z1hZWGg3Y2I5R2lIYzJKUkYwT0VrRVB5Wi1uUkhnTGQxbm9iamMwaktyVnluQlRVdm10bnpMZC1jNUNqQzVfVUNjUnUydm9XR0N4R3NpdUEtNkFKZzdCendFTkRJRWhiMl9CVU5manRteVpYbk9nUEZZamVpTTZLU0xtN1JzNNIBtgFBVV95cUxNUFJyamdZU1BmR2pxcWd1VGQ0aUVEZzhOM292OWMxQ3FfcjNEX19BWEJuMEtnVFNpa3R1RThmQnZCWjNIZnpCNTNTV1NYN1VFVVhIRmQtdjFHNjM1Y0Exc1V5a1hiWkF6bHAzNEh0NGNYZl9ocXhMemxad2tmN0pRN2MyZ1IzZmZXcERxTElEX1FnYnNSMTROZnNUd3",
-      "tags": [
-        "missile",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNWkdFQnE4VXFUbGJlcS1VaTFHbjQ0RGFIM1Z4SlhUbHlWQXpUTUtHWTB1Z1hZWGg3Y2I5R2lIYzJKUkYwT0VrRVB5Wi1uUkhnTGQxbm9iamMwaktyVnluQlRVdm10bnpMZC1jNUNqQzVfVUNjUnUydm9XR0N4R3NpdUEtNkFKZzdCendFTkRJRWhiMl9CVU5manRteVpYbk9nUEZZamVpTTZLU0xtN1JzNNIBtgFBVV95cUxNUFJyamdZU1BmR2pxcWd1VGQ0aUVEZzhOM292OWMxQ3FfcjNEX19BWEJuMEtnVFNpa3R1RThmQnZCWjNIZnpCNTNTV1NYN1VFVVhIRmQtdjFHNjM1Y0Exc1V5a1hiWkF6bHAzNEh0NGNYZl9ocXhMemxad2tmN0pRN2MyZ1IzZmZXcERxTElEX1FnYnNSMTROZnNUd3hpbFRmdDlvR3NDUUMzdzRMN0gyZDhyQlZfZw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-14T22:01:09.151Z"
-    },
-    {
-      "id": "rss_712a32a5c204602d",
-      "timestamp": 1791977098000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Aramco executives' offices damaged in Houthi attack, regional officials say - Ynetnews",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvNGEyeXppUk5fY0trSVowd0hOVW9PYnAxbmtIcUhvREpsT1h2UTBCTUI4cHpOVHRqdVVJU0FHN0o0X3FOXzF0cEpYX0FqV2lfUjJrb2NR?oc=5\" target=\"_blank\">Aramco executives' offices damaged in Houthi attack, regional officials say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ynetnews</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvNGEyeXppUk5fY0trSVowd0hOVW9PYnAxbmtIcUhvREpsT1h2UTBCTUI4cHpOVHRqdVVJU0FHN0o0X3FOXzF0cEpYX0FqV2lfUjJrb2NR?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-14T18:46:36.256Z"
-    },
-    {
-      "id": "rss_63b0be9000300a83",
-      "timestamp": 1791973372000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Strike Hits Building at Saudi Aramco Headquarters - WSJ",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNZUVrZjZFRVVJejMtQVh3OUE1MmtBdk9Ed1JTZ1JyV1B6UlFITDVCUVVIcGlpUEhZMDdrQzVaeDN6TnFjNVNSSVNMUS03V005UXhSNEYzaXZIZmo2WENzU2hMdVBtWjJ6YUlfTFE0VUdyWU9tcW9YRFMwdVBVc3YxYWpkcUQyTHllTnR2WUFESHRZNF9DeVhveVpRbjRMQXNVdkFFck1B?oc=5\" target=\"_blank\">Houthi Strike Hits Building at Saudi Aramco Headquarters</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">WSJ</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNZUVrZjZFRVVJejMtQVh3OUE1MmtBdk9Ed1JTZ1JyV1B6UlFITDVCUVVIcGlpUEhZMDdrQzVaeDN6TnFjNVNSSVNMUS03V005UXhSNEYzaXZIZmo2WENzU2hMdVBtWjJ6YUlfTFE0VUdyWU9tcW9YRFMwdVBVc3YxYWpkcUQyTHllTnR2WUFESHRZNF9DeVhveVpRbjRMQXNVdkFFck1B?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-14T14:17:23.181Z"
-    },
-    {
-      "id": "rss_349ee560a86335fd",
-      "timestamp": 1791962215000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Watch Saudi Aramco Headquarters Hit in Houthi Attack as Iran Escalates Hormuz Ship Strikes - Bloomberg.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNR3VXWi14eGtSd09mdkhVelY4dC1MMXRIM2Q1NDdZNDFqdWFPOFpUTVVETktVWnpKYlI0OEZTZU8tUmRoVG5DWGlQUmJ2cy1zc3BIbnhNVTNlSzR0aDhYVHRvdk9JUmZfNGV4b0hxdjdNcEtTYVhZUnVFUmRKZHdSaWhrcHZlV2ZmSkh1TzdLT01aQkNWeGlOSQ?oc=5\" target=\"_blank\">Watch Saudi Aramco Headquarters Hit in Houthi Attack as Iran Escalates Hormuz Ship Strikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "tags": [
-        "iran-proxy",
-        "shipping"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNR3VXWi14eGtSd09mdkhVelY4dC1MMXRIM2Q1NDdZNDFqdWFPOFpUTVVETktVWnpKYlI0OEZTZU8tUmRoVG5DWGlQUmJ2cy1zc3BIbnhNVTNlSzR0aDhYVHRvdk9JUmZfNGV4b0hxdjdNcEtTYVhZUnVFUmRKZHdSaWhrcHZlV2ZmSkh1TzdLT01aQkNWeGlOSQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-14T08:55:16.816Z"
     }
   ]
 }
