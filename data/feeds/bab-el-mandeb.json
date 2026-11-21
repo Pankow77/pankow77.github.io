@@ -1,8 +1,57 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-21T01:56:24.161Z",
+  "last_fetch": "2026-11-21T09:13:11.085Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_d3c44516b4f417fb",
+      "timestamp": 1795240221000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 3,
+      "text_summary": "The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fired towards Riyadh, marking the second Houthi attack on the Saudi capital in a few days, after its tallest skyscraper was str - Facebook",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmtqRC1zWkhPVUpyQTdzcXhyMDhxX3JHd2ExMHE3VzRXeFlaYmRTTnQzLWVNcFhhbktVT2d2ZGtDNUlhTVBXMUdBU0l1c3FXbDVSVXdPWjMwQkd4OF82OVltbWU5aWoxd3pEcU9RMWNwU0VVd19yUDFxZ3BiRE10WHBKemhNU2JSUncyQldBZW1oMmE1ZW11TGNtRk9MRFVVQVFmbmNZWVpOQl80Mm5kN2dKUEF4VnZEbFItS0luc1Q5cWVYSDZVQUxPX0hNNnotb3JWRg?oc=5\" target=\"_blank\">The Saudi-led coalition fighting Yemen's Iran-aligned Houthis said on Saturday it had intercepted and destroyed three ballistic missiles fire",
+      "tags": [
+        "iran-proxy",
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcmtqRC1zWkhPVUpyQTdzcXhyMDhxX3JHd2ExMHE3VzRXeFlaYmRTTnQzLWVNcFhhbktVT2d2ZGtDNUlhTVBXMUdBU0l1c3FXbDVSVXdPWjMwQkd4OF82OVltbWU5aWoxd3pEcU9RMWNwU0VVd19yUDFxZ3BiRE10WHBKemhNU2JSUncyQldBZW1oMmE1ZW11TGNtRk9MRFVVQVFmbmNZWVpOQl80Mm5kN2dKUEF4VnZEbFItS0luc1Q5cWVYSDZVQUxPX0hNNnotb3JWRg?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-21T09:13:09.764Z"
+    },
+    {
+      "id": "rss_ef28b6334afcd671",
+      "timestamp": 1795236012000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition intercepts three Houthi missiles headed for Riyadh - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxQZ3ZhbEhHbVN4RWdTZWVLWGlFQnl1UlkySGFjTEd3NEJHaHBDeXZuclpCc1ZLNy1Fa0oxSlVJQlRLVmhCV1hkdFpPUVZ6Y2JXcDlhMDExaGpIOHM1RUhHVmlOMmV2SXVydFU3UWtvdVUxalkxUHRNdXg2Q2JZVG1WN3otT1lKaU4yVGwyUUJVVnJ4QkREb0tnVGZCdG5TQTFyUk1SSWZHMEhrclVTeVlUenVR0gG3AUFVX3lxTFBVWGExdVo0WFJQdkYxTTRNRVpBaFdBSzdObGNjOWZQVDJtTVZyNW9yQUEwbGtHU092TW1BY0FSY3dBc25wZVp2QjFIZnRLOE9RMFhLMWpjY0R1TVhUUWhubENJaE44Z1JMdDBXQWJqMDlGNVhzT2pHWEpONXhZUFcwWWE0bUtRb2xZV1VkUXZVS00xVmcwa0x1eW",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQZ3ZhbEhHbVN4RWdTZWVLWGlFQnl1UlkySGFjTEd3NEJHaHBDeXZuclpCc1ZLNy1Fa0oxSlVJQlRLVmhCV1hkdFpPUVZ6Y2JXcDlhMDExaGpIOHM1RUhHVmlOMmV2SXVydFU3UWtvdVUxalkxUHRNdXg2Q2JZVG1WN3otT1lKaU4yVGwyUUJVVnJ4QkREb0tnVGZCdG5TQTFyUk1SSWZHMEhrclVTeVlUenVR0gG3AUFVX3lxTFBVWGExdVo0WFJQdkYxTTRNRVpBaFdBSzdObGNjOWZQVDJtTVZyNW9yQUEwbGtHU092TW1BY0FSY3dBc25wZVp2QjFIZnRLOE9RMFhLMWpjY0R1TVhUUWhubENJaE44Z1JMdDBXQWJqMDlGNVhzT2pHWEpONXhZUFcwWWE0bUtRb2xZV1VkUXZVS00xVmcwa0x1eWx5dHpES2FwcUQwV043NExycnNQb0ltbWw2QlF6OA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-11-21T09:13:09.762Z"
+    },
     {
       "id": "rss_745075e6f8ffb291",
       "timestamp": 1795221334000,
@@ -25,6 +74,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-21T01:56:22.946Z"
+    },
+    {
+      "id": "rss_fc4f88488b840256",
+      "timestamp": 1795212904000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Why the Saudis Find the Houthis So Hard to Defeat - Bloomberg.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWVJtZHNEeHFsOERJVHRnZnV4Qy11aHNRMTZrSV9mTkV5VGlzUW11OWJBc0FGQkREZEJ3dngwalJqTDJramc4NUI0QVJvVVppaktQLVJKMHRTSDkzeHlsQ2RxYXlhNlgzelR3VHlYVXVaY1lwT3lxLW5rS3lYZzF1c05iTFFYbGVDWXFyd2M5aDc5OUJldy13N21JQzVtSGdwUmoteEJucGc?oc=5\" target=\"_blank\">Why the Saudis Find the Houthis So Hard to Defeat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWVJtZHNEeHFsOERJVHRnZnV4Qy11aHNRMTZrSV9mTkV5VGlzUW11OWJBc0FGQkREZEJ3dngwalJqTDJramc4NUI0QVJvVVppaktQLVJKMHRTSDkzeHlsQ2RxYXlhNlgzelR3VHlYVXVaY1lwT3lxLW5rS3lYZzF1c05iTFFYbGVDWXFyd2M5aDc5OUJldy13N21JQzVtSGdwUmoteEJucGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-21T09:13:09.763Z"
     },
     {
       "id": "rss_993fbe9ac802c11b",
@@ -70,6 +140,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-20T20:37:51.574Z"
+    },
+    {
+      "id": "rss_2cb493d1a2e2b513",
+      "timestamp": 1795199371000,
+      "source": "Reuters",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Houthi attacks add to worries over Trump Saudi nuclear power pact - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOeERTd2VXX21mYUpEQUFyRjN2dk5Hdkl3RTZLTDUzbV9HRzE5cy1CcThnQkF3WVNsMDR0bWsxZDMxTlI1d0o2dFZwNjEtX0ZKSVBYQmFycVN2dGNYaXVTRnh3a2Y2M09uM0RkQU4wSDdGWEo3TF94ZlVySy1RNTNEaGhjZmlQZFJ4VjNzM094Rmp4Y0RJZHJZZG5MZVB1VHBkUjJxTmUwUlpBc1JFa2NhQkdGTVhOcGc?oc=5\" target=\"_blank\">Houthi attacks add to worries over Trump Saudi nuclear power pact</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeERTd2VXX21mYUpEQUFyRjN2dk5Hdkl3RTZLTDUzbV9HRzE5cy1CcThnQkF3WVNsMDR0bWsxZDMxTlI1d0o2dFZwNjEtX0ZKSVBYQmFycVN2dGNYaXVTRnh3a2Y2M09uM0RkQU4wSDdGWEo3TF94ZlVySy1RNTNEaGhjZmlQZFJ4VjNzM094Rmp4Y0RJZHJZZG5MZVB1VHBkUjJxTmUwUlpBc1JFa2NhQkdGTVhOcGc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.51,
+      "source_weight": 0.85,
+      "fetched_at": "2026-11-21T09:13:09.763Z"
     },
     {
       "id": "rss_ae2325d5c528899c",
@@ -10820,90 +10911,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-18T18:13:33.698Z"
-    },
-    {
-      "id": "rss_f36fcef0a761636e",
-      "timestamp": 1792341362000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "warning",
-      "intensity": 2,
-      "text_summary": "Saudi Arabia sends skyscraper employees home amid Houthi threats - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPUmNWR1JhdHgzVXRndW9RX0JYbEh5RV9PeThsVmJrM3AyXzR5WEtmOXN1YkIxWmF0OV8zWlk3X1FMalNwM3BJQTJLWU4yTW13dG1yM1NMcmdnRHRkZnFDUWg0VGZjYXFIdXZBenZVX2lLMUtOSjRvMkZJckVobWhPQU4zX2JkcmgwVVRfOWx6dzJFQTg5ODZEUHJBNWZEZ9IBngFBVV95cUxPZjRmSElfelpyenNzMm1SYUxmel9kQ1JUNkxmMGRLZ3EtTFlrMHQ3aEs4UXdZeGRsajVpUEhIbVNtX1JFbjAzY2xFWTdOSDR6VXdJbGhzUmRUYUk2c0RQVGlSSWJ4YmpGTTdpZkZYZlRBcVBHOHRGV2xUTFlwTjFvd2xIRlZnMHA4UjhJb0JPLXpmNXpjXzQ3d2xFSmdKUQ?oc=5\" target=\"_blan",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUmNWR1JhdHgzVXRndW9RX0JYbEh5RV9PeThsVmJrM3AyXzR5WEtmOXN1YkIxWmF0OV8zWlk3X1FMalNwM3BJQTJLWU4yTW13dG1yM1NMcmdnRHRkZnFDUWg0VGZjYXFIdXZBenZVX2lLMUtOSjRvMkZJckVobWhPQU4zX2JkcmgwVVRfOWx6dzJFQTg5ODZEUHJBNWZEZ9IBngFBVV95cUxPZjRmSElfelpyenNzMm1SYUxmel9kQ1JUNkxmMGRLZ3EtTFlrMHQ3aEs4UXdZeGRsajVpUEhIbVNtX1JFbjAzY2xFWTdOSDR6VXdJbGhzUmRUYUk2c0RQVGlSSWJ4YmpGTTdpZkZYZlRBcVBHOHRGV2xUTFlwTjFvd2xIRlZnMHA4UjhJb0JPLXpmNXpjXzQ3d2xFSmdKUQ?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-19T00:43:25.819Z"
-    },
-    {
-      "id": "rss_63bf5aa18249b4cb",
-      "timestamp": 1792333702000,
-      "source": "OSINT",
-      "actor": "eunavfor",
-      "action_type": "statement",
-      "intensity": 4,
-      "text_summary": "Brussels Hosts High-Level Red Sea Meeting While Aspides Faces Critical Shortfall - FTL Somalia",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQdURXWWZHSVVSV2c0MUdjdmxmNUI4dVFONFlfX3NVNHlnRTkwME5SMXF6ZFg5ZEhfbXFGTEhOQVFFbS1KUS1yWEM0X3cwWm5LZlZpbXV5Y1FaTmNWLXRPdUFUM2Zial9SR20yc1FJWXcxeTZTb1FTTVMtQkNaZnNTalNtNWlFSjZuMkJnblA5LWMwbjc3Nk52b1VDM09lZFFzZmhFUUtQRUlySTJm?oc=5\" target=\"_blank\">Brussels Hosts High-Level Red Sea Meeting While Aspides Faces Critical Shortfall</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FTL Somalia</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQdURXWWZHSVVSV2c0MUdjdmxmNUI4dVFONFlfX3NVNHlnRTkwME5SMXF6ZFg5ZEhfbXFGTEhOQVFFbS1KUS1yWEM0X3cwWm5LZlZpbXV5Y1FaTmNWLXRPdUFUM2Zial9SR20yc1FJWXcxeTZTb1FTTVMtQkNaZnNTalNtNWlFSjZuMkJnblA5LWMwbjc3Nk52b1VDM09lZFFzZmhFUUtQRUlySTJm?oc=5",
-      "feed_id": "gn-eunavfor-aspides",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-18T15:16:51.697Z"
-    },
-    {
-      "id": "rss_15f2daedeffc378b",
-      "timestamp": 1792322558000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi closes Riyadh skyscraper as chopper pilots killed near Yemen - South China Morning Post",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaEhRV09mVm1OQVU5M3A5bml4YVotUHZNc0Fta1RKdzNKWTBVMUlLSV93WUE3UXFkZG9MNUlxdDNKSkVXaW9kTW9xUWs3SkVCVzZWX3NSV3BCM3pKOWNLeXlDSGNIS2hockhTeV9aLS1STjhsSE1SUlB0cWhnU0V0SWFGa0NNWndVb0hBTVZsN1hTdEMyN2hOZ3U1ZFl6VTRYZy1RRVppRmFqWlg0ekVaQnNsWmpHejd2MTVYUVIxZFXSAcABQVVfeXFMTk1NLURSb0NGZm1PY0RQczlabmxyaUtiY21GeFUtLUYwQlUwYlRjM2w5QXphSHowdTJmcjJRbFRZYTB0cWRVd1ZyZ0VNWGRDem50aC1nSzBVQmZ1RXREWTA2MHhFbEhYT1E4VFlZcVBlTnVabjMtUFVVWElGWTN1QWxDNXFNMWgwNDZ1MU",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaEhRV09mVm1OQVU5M3A5bml4YVotUHZNc0Fta1RKdzNKWTBVMUlLSV93WUE3UXFkZG9MNUlxdDNKSkVXaW9kTW9xUWs3SkVCVzZWX3NSV3BCM3pKOWNLeXlDSGNIS2hockhTeV9aLS1STjhsSE1SUlB0cWhnU0V0SWFGa0NNWndVb0hBTVZsN1hTdEMyN2hOZ3U1ZFl6VTRYZy1RRVppRmFqWlg0ekVaQnNsWmpHejd2MTVYUVIxZFXSAcABQVVfeXFMTk1NLURSb0NGZm1PY0RQczlabmxyaUtiY21GeFUtLUYwQlUwYlRjM2w5QXphSHowdTJmcjJRbFRZYTB0cWRVd1ZyZ0VNWGRDem50aC1nSzBVQmZ1RXREWTA2MHhFbEhYT1E4VFlZcVBlTnVabjMtUFVVWElGWTN1QWxDNXFNMWgwNDZ1MUtRblZvSXBOX2tOa2pDT0xkaWhyeWxJQ1JUekRHVDZGX2Y5ZHlyZUMtbW1ERG1scXdzRFlr?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-18T15:16:50.700Z"
-    },
-    {
-      "id": "rss_23ef9d6bf2e6f226",
-      "timestamp": 1792316723000,
-      "source": "OSINT",
-      "actor": "other",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi landmark closes offices, chopper pilots killed near Yemen - France 24",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPNHlBQXpYSTZUYTJxbi01U3Z4a2NvRF9mQ05FajN6M29IV0N3ekZEVERuVnhJc2pCZG8zTHpuNk9FVXc3MWhyQVBDR3JMa29vNWFTYVRaSDFzYmZtbmhidl9pOTM1RjdUYkpfQUl6LXVxS25hY080X1h5NklING1iQW5MNlJoVFd5UGotdERfd2RzbGZYQ3NmZGtMR0RSQUhpODI5cnNmcWtDOVRCeEE?oc=5\" target=\"_blank\">Saudi landmark closes offices, chopper pilots killed near Yemen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">France 24</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPNHlBQXpYSTZUYTJxbi01U3Z4a2NvRF9mQ05FajN6M29IV0N3ekZEVERuVnhJc2pCZG8zTHpuNk9FVXc3MWhyQVBDR3JMa29vNWFTYVRaSDFzYmZtbmhidl9pOTM1RjdUYkpfQUl6LXVxS25hY080X1h5NklING1iQW5MNlJoVFd5UGotdERfd2RzbGZYQ3NmZGtMR0RSQUhpODI5cnNmcWtDOVRCeEE?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-18T11:31:14.643Z"
     }
   ]
 }
