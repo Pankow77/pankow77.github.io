@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-20T20:37:52.801Z",
+  "last_fetch": "2026-11-21T01:56:24.161Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_745075e6f8ffb291",
+      "timestamp": 1795221334000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE80ZjRCNEE2cHY4aFNLRml5eVhmaTFYakU1eWhWdmx5ZUk1SG41TFRJU1NyTy1WNWFRSkkzNG9PYmhRZ0dWd2lNbndqMWFQZURLYUpQMmQwM2dhU09J?oc=5\" target=\"_blank\">Saudi Arabia says it intercepts three Houthi missiles targeting Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE80ZjRCNEE2cHY4aFNLRml5eVhmaTFYakU1eWhWdmx5ZUk1SG41TFRJU1NyTy1WNWFRSkkzNG9PYmhRZ0dWd2lNbndqMWFQZURLYUpQMmQwM2dhU09J?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-21T01:56:22.946Z"
+    },
     {
       "id": "rss_993fbe9ac802c11b",
       "timestamp": 1795205943000,
@@ -10881,31 +10904,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-18T11:31:14.643Z"
-    },
-    {
-      "id": "rss_cf005dcd01e51518",
-      "timestamp": 1792290286000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Coalition destroy incoming Houthi missiles, drones amid renewed attacks - Arab News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ0ZrdDQ4cnh0U2xCVi1GVlZsRWl4QW9XNjVWUnVGWGdmYTZ1dHJmVFhHUEhFRE5SNmhkTWJnRVJlcmJhOFoyX2FJS3NSaHZyTjkwLTYwUkc1TW1pVGNSMFRwRkJ6anVXN20zVmpCTDV3ZzZhTjlOUmlveEw5dlEyMGY3WVhVeEdMNHhhUDVVcG5ON1NxOUxpMTljUTNvQi1weGlzVVZIX3pEb19lcGRZYXBfejh2bEk?oc=5\" target=\"_blank\">Coalition destroy incoming Houthi missiles, drones amid renewed attacks</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
-      "tags": [
-        "missile",
-        "drone",
-        "coalition"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZ0ZrdDQ4cnh0U2xCVi1GVlZsRWl4QW9XNjVWUnVGWGdmYTZ1dHJmVFhHUEhFRE5SNmhkTWJnRVJlcmJhOFoyX2FJS3NSaHZyTjkwLTYwUkc1TW1pVGNSMFRwRkJ6anVXN20zVmpCTDV3ZzZhTjlOUmlveEw5dlEyMGY3WVhVeEdMNHhhUDVVcG5ON1NxOUxpMTljUTNvQi1weGlzVVZIX3pEb19lcGRZYXBfejh2bEk?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-18T06:17:00.064Z"
     }
   ]
 }
