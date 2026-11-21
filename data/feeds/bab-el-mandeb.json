@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-21T09:13:11.085Z",
+  "last_fetch": "2026-11-21T16:53:13.860Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_18d9c74a26e3097c",
+      "timestamp": 1795271159000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi Arabia Announces Interception of 3 Houthi Ballistic Missiles , Drone - Yemen Online",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiUkFVX3lxTE5DaUliZHVIMTlvU21hVmV0OUxMel9uZXVVMElwWElVdV9wRTBsWDU3NVFNbXBhel9vWTlQallLcjZWbjU2VTF4SzBiQnMtY0xGTWc?oc=5\" target=\"_blank\">Saudi Arabia Announces Interception of 3 Houthi Ballistic Missiles , Drone</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yemen Online</font>",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5DaUliZHVIMTlvU21hVmV0OUxMel9uZXVVMElwWElVdV9wRTBsWDU3NVFNbXBhel9vWTlQallLcjZWbjU2VTF4SzBiQnMtY0xGTWc?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-21T16:53:12.716Z"
+    },
     {
       "id": "rss_d3c44516b4f417fb",
       "timestamp": 1795240221000,
@@ -51,6 +75,29 @@
       "confidence": 0.48,
       "source_weight": 0.8,
       "fetched_at": "2026-11-21T09:13:09.762Z"
+    },
+    {
+      "id": "rss_95a88cfaf77faaae",
+      "timestamp": 1795221467000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-Led Coalition Strikes Hodeidah as Houthis Threaten Jeddah, Other Red Sea Ports - الحرة",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiQkFVX3lxTE1lcVBHYUNqT3FSbUd4NnVtUXc0UnJZRjBtNGs2N2V0X0FLSzNpV3BiYk5PYU4xU3Q3MlVFRFVhWFdxUQ?oc=5\" target=\"_blank\">Saudi-Led Coalition Strikes Hodeidah as Houthis Threaten Jeddah, Other Red Sea Ports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">الحرة</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1lcVBHYUNqT3FSbUd4NnVtUXc0UnJZRjBtNGs2N2V0X0FLSzNpV3BiYk5PYU4xU3Q3MlVFRFVhWFdxUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-21T16:53:12.715Z"
     },
     {
       "id": "rss_745075e6f8ffb291",
@@ -10869,48 +10916,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-18T20:56:19.362Z"
-    },
-    {
-      "id": "rss_fcac20ca7b859918",
-      "timestamp": 1792349747000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "GCC condemns Houthi attacks on Saudi Arabia as Yemen fighting intensifies - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxNRHJ3dEdCUGlGZm5HdVp3X0czYnJoMm5UMk5seFBHYTBqSlNfb3IxWXg3a1c4UmRGVDdxLWdWQ2tFLUdiWGF6S1A4NXNHWUg0czBhQWNHYkZEZUVNTV90Y3lWTjJwSnBkdGF6Wk1mTzd3andpbG5NQlpHcDVvLU4zM3E4MHhIa1h5ZlZpR3FhQUVLQjRnUFVKM1E0VWRpVGU3SDhGNmszc1ZBS25xTkdOUDNKUnVnQdIBuwFBVV95cUxNTHFsSHVrVWoxZXpaUGdYUm44UV9ad252MjhWcTJ0djNhUVNJN2tIeHZlcGgybEVsQnFWX3A4RVBkOGNOOVNMWDFJRWxwQlh4R3pneFlPT3JvU0Z6UXUyNXB3dkIycVNZY1ZJbGJRRURFbXE5TGZjVy1oWU1nTHplU0U1b25DbklqSDNSMTNGdHZ2eTdjN3",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRHJ3dEdCUGlGZm5HdVp3X0czYnJoMm5UMk5seFBHYTBqSlNfb3IxWXg3a1c4UmRGVDdxLWdWQ2tFLUdiWGF6S1A4NXNHWUg0czBhQWNHYkZEZUVNTV90Y3lWTjJwSnBkdGF6Wk1mTzd3andpbG5NQlpHcDVvLU4zM3E4MHhIa1h5ZlZpR3FhQUVLQjRnUFVKM1E0VWRpVGU3SDhGNmszc1ZBS25xTkdOUDNKUnVnQdIBuwFBVV95cUxNTHFsSHVrVWoxZXpaUGdYUm44UV9ad252MjhWcTJ0djNhUVNJN2tIeHZlcGgybEVsQnFWX3A4RVBkOGNOOVNMWDFJRWxwQlh4R3pneFlPT3JvU0Z6UXUyNXB3dkIycVNZY1ZJbGJRRURFbXE5TGZjVy1oWU1nTHplU0U1b25DbklqSDNSMTNGdHZ2eTdjN3FvakxmSzNDMlliN29VSE43a2ZCUG8xdVpIdEdpY0NIUElYU180?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-19T11:56:33.006Z"
-    },
-    {
-      "id": "rss_690429f81cbd0ac2",
-      "timestamp": 1792344657000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Shafaq News..Saudi Arabia: Houthi attack wounds six in Najran - شفق نيوز",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSklpUnQ0N1lYaVpZdFRCUmtINVF3Z05rUTlzMU0yUE5NN09yOVl5VFVDM2g4X0RVNUhtM1dwVkt5WlZMYU9idFMyYmZrTlRlcks0SjkyZng3dGtsN3JMQm5CczJFNHpTWU5na2QwNTBxZi1iNlhueHAwbE0tZURmbTVqWWltRTA4?oc=5\" target=\"_blank\">Shafaq News..Saudi Arabia: Houthi attack wounds six in Najran</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">شفق نيوز</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSklpUnQ0N1lYaVpZdFRCUmtINVF3Z05rUTlzMU0yUE5NN09yOVl5VFVDM2g4X0RVNUhtM1dwVkt5WlZMYU9idFMyYmZrTlRlcks0SjkyZng3dGtsN3JMQm5CczJFNHpTWU5na2QwNTBxZi1iNlhueHAwbE0tZURmbTVqWWltRTA4?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-18T18:13:33.698Z"
     }
   ]
 }
