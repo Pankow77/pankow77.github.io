@@ -1,8 +1,53 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-22T10:02:21.578Z",
+  "last_fetch": "2026-11-22T17:57:05.051Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ab9fd6a739283c0a",
+      "timestamp": 1795359720000,
+      "source": "OSINT",
+      "actor": "centcom",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Top Pakistani, Saudi diplomats discuss regional situation after Houthi attack - A News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNQllGdUhneXZyLW43UnVzUVFWV2FHTUhnSUx5MDhVRjhxT21IR0lXQjZhQ1RLR0lVcF9Rd01vTzhkdi1OeE1WejNaNXR5RThaZTZYVjlfUXNaVi1oOHNhZkNBNGNRRzVCR1Z5QzFoMEVsSEFGX3pDWkIxaUh6UkMyYjF3eEZVMlJPcElnWWZqRk83QkIyNzViRC1aOG1fU3VWNGxmcE94VnZEcnd5czM5V3p5aUM1OVNOVXfSAb8BQVVfeXFMT2xlX3dQTzZScDZ2UnNCLUNpR3lWZDd0LW80bHE4Y1ZOTHdJbU92T0k0cmw5VGpPQlRPMkVYUmdVMHVqdU5wczEwSzlMSFdkN1FFd01QWWFrblk3c1JpNVI1dUE4Qjd0dWt1WUQtTFBxekstQlJfVGpZM25hWWlFYVMwa0FnVGJhM2YyWnlyNUhhaD",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNQllGdUhneXZyLW43UnVzUVFWV2FHTUhnSUx5MDhVRjhxT21IR0lXQjZhQ1RLR0lVcF9Rd01vTzhkdi1OeE1WejNaNXR5RThaZTZYVjlfUXNaVi1oOHNhZkNBNGNRRzVCR1Z5QzFoMEVsSEFGX3pDWkIxaUh6UkMyYjF3eEZVMlJPcElnWWZqRk83QkIyNzViRC1aOG1fU3VWNGxmcE94VnZEcnd5czM5V3p5aUM1OVNOVXfSAb8BQVVfeXFMT2xlX3dQTzZScDZ2UnNCLUNpR3lWZDd0LW80bHE4Y1ZOTHdJbU92T0k0cmw5VGpPQlRPMkVYUmdVMHVqdU5wczEwSzlMSFdkN1FFd01QWWFrblk3c1JpNVI1dUE4Qjd0dWt1WUQtTFBxekstQlJfVGpZM25hWWlFYVMwa0FnVGJhM2YyWnlyNUhhaDBlTGNhNWdfWENQdmtDQV9sclZTMHNNemUxejJ2TEg1dFFfT3l0QjNWbURDcjQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-22T17:57:03.756Z"
+    },
+    {
+      "id": "rss_23d3f535a91d8131",
+      "timestamp": 1795353436000,
+      "source": "Al Jazeera",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 3,
+      "text_summary": "Saudi Arabia intercepts drone, missile as Houthis report attack on Sanaa - Al Jazeera",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcndOTTl3bzZwNVZ4ZWstZXBZdnVkbUhPanQ5VlhUVEJaSTRVdnc1YzVUdEhEd2M0QXdFVGxzRFVLeThYd0FfaGEzMnQzbWIzemFuZzRqSGJCQ2M5LVBzV0dadVlwUXpXR1hfMTllR2NsWmNuRnk4RmRSVVlraElfS3NjNFlJa0FWTGNRRS1XQTFxM3JoTVRYZEluNkVJUXZSdk1TSmFfWUfSAa4BQVVfeXFMTmplOTVHYzVsandyeWw3aS1QcWJiLWt5NXNnWHhYazFVV1pMZmdWdFdIdWxYSTRXNDJkWlYxdXJpOW1scUJTVUxJOWlqbDVST3VZcmR4U2RSdXVpc3NZczU2RVlZc0Jrd3BFcVQ3djE0TldnZk9KWi1ybXlwM0Ryb2NvWmJCRFZOX19xd0JDT2xPQy1VSDZBQ283ZUF1Z3JRaTRJd0",
+      "tags": [
+        "missile",
+        "drone"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOcndOTTl3bzZwNVZ4ZWstZXBZdnVkbUhPanQ5VlhUVEJaSTRVdnc1YzVUdEhEd2M0QXdFVGxzRFVLeThYd0FfaGEzMnQzbWIzemFuZzRqSGJCQ2M5LVBzV0dadVlwUXpXR1hfMTllR2NsWmNuRnk4RmRSVVlraElfS3NjNFlJa0FWTGNRRS1XQTFxM3JoTVRYZEluNkVJUXZSdk1TSmFfWUfSAa4BQVVfeXFMTmplOTVHYzVsandyeWw3aS1QcWJiLWt5NXNnWHhYazFVV1pMZmdWdFdIdWxYSTRXNDJkWlYxdXJpOW1scUJTVUxJOWlqbDVST3VZcmR4U2RSdXVpc3NZczU2RVlZc0Jrd3BFcVQ3djE0TldnZk9KWi1ybXlwM0Ryb2NvWmJCRFZOX19xd0JDT2xPQy1VSDZBQ283ZUF1Z3JRaTRJd0VoYzF1SXVDdktn?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.48,
+      "source_weight": 0.8,
+      "fetched_at": "2026-11-22T17:57:03.757Z"
+    },
     {
       "id": "rss_6cb38978b28a4ed5",
       "timestamp": 1795327108000,
@@ -10876,50 +10921,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0xQi1lUVhkd2xpd1locFVZRUV5YURqX1pzNjRDZ1NQT2JCZnkyWkRqT29Mc2lJYm40X1phanp4Nkw1RzAteFlrUkw2QjFUdThPMjN6bC03cw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-19T11:56:33.006Z"
-    },
-    {
-      "id": "rss_dbc1147db0f7ffc5",
-      "timestamp": 1792407422000,
-      "source": "Al Jazeera",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Iran support for Houthis probed as Yemen war re-erupts and Saudi cities hit - Al Jazeera",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVlNET3hzZkR6WThWY0ZMbkpUYjVCY1pqWG5GQm1CSlNiXzNzWXJTbFAyZEhROXljekhHenNVcEZfVjgyQ3VvcmRuS2VNWjVvYVRMWGxaaXVoUEZPZFZNV1NPUHBtRUFRMUZCTWhTT2g3cEtDZWJabGVLdDhDVGN0UjJwNGVCUWZGVnFYZ2Z3WkZqVllVWDI2eHRZaXozY1dLdVdyUjd5Q2ZuNlJOaTFhUF9pVEF5VnR00gG-AUFVX3lxTFBzaVFoRXFEcWhGVFVLaGo5OGUwWnNicXhwSzdhQ0lJT3VfNk5ySFBXcFhpQkotdnpKNzBSeWVJd3ZKaTBFRE9aRmFfTjcxRk5fLXZfdU5oX205VWVNX1dzS0g1R0RjTG9nTXptLWNKWUcwQW1VN1VwOF9QTkNGaUE2SGFYcFB2N1lDcmdzbzJUS0pMZ0",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVlNET3hzZkR6WThWY0ZMbkpUYjVCY1pqWG5GQm1CSlNiXzNzWXJTbFAyZEhROXljekhHenNVcEZfVjgyQ3VvcmRuS2VNWjVvYVRMWGxaaXVoUEZPZFZNV1NPUHBtRUFRMUZCTWhTT2g3cEtDZWJabGVLdDhDVGN0UjJwNGVCUWZGVnFYZ2Z3WkZqVllVWDI2eHRZaXozY1dLdVdyUjd5Q2ZuNlJOaTFhUF9pVEF5VnR00gG-AUFVX3lxTFBzaVFoRXFEcWhGVFVLaGo5OGUwWnNicXhwSzdhQ0lJT3VfNk5ySFBXcFhpQkotdnpKNzBSeWVJd3ZKaTBFRE9aRmFfTjcxRk5fLXZfdU5oX205VWVNX1dzS0g1R0RjTG9nTXptLWNKWUcwQW1VN1VwOF9QTkNGaUE2SGFYcFB2N1lDcmdzbzJUS0pMZ0tUSkxYNnExMmFrR2NFcktfMC1YS05mOFBnZmN5ZWhMUEQtOF9rYi1IbGc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.48,
-      "source_weight": 0.8,
-      "fetched_at": "2026-10-19T18:22:15.878Z"
-    },
-    {
-      "id": "rss_b9628fd9ba7cf869",
-      "timestamp": 1792407415000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "At least 18 reported dead in Houthi attack on Yemeni military camp - The National",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxQaDBNcE5sZEMwNzJ0R3NKSWpCN2x5Q09NTW9PdDNnMWp3anh6SFBpVE11YUJOdk9jS29tWmhCeS01SkZDR1JJRkZUSTkwMzFkYTM2dFhzTEJrWGpaQkxlWXBwQWFqclpWSEtzaG5KWWQxUnQ2U1llODl0ckpSeVpaS18weGp5anNBRzNpZ2YtdHBYOWM0SzJ6QmZNTnRtXzA1YlByOFNFdm84TmEtMjEwZHE4VzlONFhLeHNIbmtXVmZoOW1nM2JFT2tmUGJBTl9ZbzQ5LXEtN1BqVW52alI0?oc=5\" target=\"_blank\">At least 18 reported dead in Houthi attack on Yemeni military camp</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQaDBNcE5sZEMwNzJ0R3NKSWpCN2x5Q09NTW9PdDNnMWp3anh6SFBpVE11YUJOdk9jS29tWmhCeS01SkZDR1JJRkZUSTkwMzFkYTM2dFhzTEJrWGpaQkxlWXBwQWFqclpWSEtzaG5KWWQxUnQ2U1llODl0ckpSeVpaS18weGp5anNBRzNpZ2YtdHBYOWM0SzJ6QmZNTnRtXzA1YlByOFNFdm84TmEtMjEwZHE4VzlONFhLeHNIbmtXVmZoOW1nM2JFT2tmUGJBTl9ZbzQ5LXEtN1BqVW52alI0?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
