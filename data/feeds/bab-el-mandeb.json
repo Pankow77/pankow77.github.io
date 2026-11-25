@@ -1,8 +1,73 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-24T21:55:19.908Z",
+  "last_fetch": "2026-11-25T04:44:56.955Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_f9db0c223d944ac2",
+      "timestamp": 1795573800000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Houthi attack on Saudi Arabian sovereign wealth fund PIF's tower injures 11 - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxPSExVNjdwSUdhRzd4aHlwMWR6NklEdWV3bVptbElRRzdMRW1uQ2RzdFF4MFlHWkttR2tERy11ZnphRHY2d0d1ZHVNZ0g4OEpRRjU4VTctUFVlaDI2T0czSTVLNjhwdXoxbUtIdXhfZ00tejBhR2Itc3BPOWZsYUF2cEVDeFlVQ0Rid1VFVNIBkgFBVV95cUxNbG9HeEFpQkxXZjNsR0pobEI1SS1QaDRNdG9jRlltcEVXMHFQUlFFdHJpWndBdzZ5ZUZmakpiYzlUeE1CTWFnX21fc2w2UGhOMDZlTTRIT0lVeDVpekRoYWlTekptX3h3QXYyS29SNEdERno1c0p6Z2xMalJMMWtONjdZQzlFS2xCWENvcWstWWFCQQ?oc=5\" target=\"_blank\">Houthi attack on Saudi Arabian sovere",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSExVNjdwSUdhRzd4aHlwMWR6NklEdWV3bVptbElRRzdMRW1uQ2RzdFF4MFlHWkttR2tERy11ZnphRHY2d0d1ZHVNZ0g4OEpRRjU4VTctUFVlaDI2T0czSTVLNjhwdXoxbUtIdXhfZ00tejBhR2Itc3BPOWZsYUF2cEVDeFlVQ0Rid1VFVNIBkgFBVV95cUxNbG9HeEFpQkxXZjNsR0pobEI1SS1QaDRNdG9jRlltcEVXMHFQUlFFdHJpWndBdzZ5ZUZmakpiYzlUeE1CTWFnX21fc2w2UGhOMDZlTTRIT0lVeDVpekRoYWlTekptX3h3QXYyS29SNEdERno1c0p6Z2xMalJMMWtONjdZQzlFS2xCWENvcWstWWFCQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-25T04:44:55.739Z"
+    },
+    {
+      "id": "rss_aaf9033074f8bd06",
+      "timestamp": 1795567442000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition says Houthi attack struck tower in Riyadh’s business district - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOYmlfczBDdEdZdnE2S0E2ejBKXzRsYm1FRG12bEVhdnBubXJaOHBnLXBUOUpnVHVUVFA4VUl4endUZXdFYVYyT0o3Qks4eUtPZGx0SDdqSFBBR2cwdHFOanBsNXVuS1o0UzRPMl9iOUxxOU5uVWVoZU9IYXZIQWJKWUtQX2VWNUt1UzFjMUFsZmVpUzFZX1FEXzdJb0lTUXdrb0lubTdFMW96NjZROE5KOGplOU5PN3BoZGVYUQ?oc=5\" target=\"_blank\">Saudi-led coalition says Houthi attack struck tower in Riyadh’s business district</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYmlfczBDdEdZdnE2S0E2ejBKXzRsYm1FRG12bEVhdnBubXJaOHBnLXBUOUpnVHVUVFA4VUl4endUZXdFYVYyT0o3Qks4eUtPZGx0SDdqSFBBR2cwdHFOanBsNXVuS1o0UzRPMl9iOUxxOU5uVWVoZU9IYXZIQWJKWUtQX2VWNUt1UzFjMUFsZmVpUzFZX1FEXzdJb0lTUXdrb0lubTdFMW96NjZROE5KOGplOU5PN3BoZGVYUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-25T04:44:55.740Z"
+    },
+    {
+      "id": "rss_9cd0f72be521068b",
+      "timestamp": 1795560816000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "warning",
+      "intensity": 2,
+      "text_summary": "Houthis threaten to attack Red Sea ports, Saudis issue warning - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nRXZjbTNfeVEzNE5Wa3BMcmZIZGRocUhjSm85V211c3NIcG1ySjFKRkZVT0twRVVTbjFfT1hUZk5wNlItOWNuWllFNkRlc1NnVWxQMHFoN01ibm82?oc=5\" target=\"_blank\">Houthis threaten to attack Red Sea ports, Saudis issue warning</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nRXZjbTNfeVEzNE5Wa3BMcmZIZGRocUhjSm85V211c3NIcG1ySjFKRkZVT0twRVVTbjFfT1hUZk5wNlItOWNuWllFNkRlc1NnVWxQMHFoN01ibm82?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-25T04:44:55.740Z"
+    },
     {
       "id": "rss_15b2edb42a30b12e",
       "timestamp": 1795555995000,
@@ -71,6 +136,27 @@
       "fetched_at": "2026-11-24T21:55:18.186Z"
     },
     {
+      "id": "rss_ea1279658323f458",
+      "timestamp": 1795552680000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Lebanese prime minister condemns Houthi attack on Riyadh - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxPaWt1S0laLWtDQV81SXRRb1hsVFM1d0xDV3lwalZIbHRpZmFvcmtNQW10R0t5UjVkcURDRkNXQ2pXeEw2ZTNsLTFKcEVnZUE1SzVVQlluUC1tY0ZhazF3clFDQ0xmWTdfaU1kbmsxQ2pZNnZqLXA5ZnpZNUs0azJCX0tLX19ManNnVVVtbmNyOGVRWUYzUFpBNHNhbEl3R2VGQ3ZKTXBmZ3ZMcm84NXV3?oc=5\" target=\"_blank\">Lebanese prime minister condemns Houthi attack on Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaWt1S0laLWtDQV81SXRRb1hsVFM1d0xDV3lwalZIbHRpZmFvcmtNQW10R0t5UjVkcURDRkNXQ2pXeEw2ZTNsLTFKcEVnZUE1SzVVQlluUC1tY0ZhazF3clFDQ0xmWTdfaU1kbmsxQ2pZNnZqLXA5ZnpZNUs0azJCX0tLX19ManNnVVVtbmNyOGVRWUYzUFpBNHNhbEl3R2VGQ3ZKTXBmZ3ZMcm84NXV3?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-25T04:44:55.740Z"
+    },
+    {
       "id": "rss_fc50b4e4fa925f95",
       "timestamp": 1795552618000,
       "source": "OSINT",
@@ -111,6 +197,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-24T21:55:18.186Z"
+    },
+    {
+      "id": "rss_867c9950208531fb",
+      "timestamp": 1795545675000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 3,
+      "text_summary": "Saudi civil defense says 11 people injured in Houthi attack on Riyadh's financial district - Xinhua",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBsWldHZm5pQ2hpNHlRVXNUT05pQ1ZDMTZuaFN4N2NBM1FEOVpLRmZ3cS15VEhyd3NGNWdvMFUyN2hra2VBejR2VGpmUHBYM3pMbUhVN2h4Um0zbllIbGQ3djMxdEtCNGlIM2tlWWxDMlZNNHZIZzh2dGFTMjM?oc=5\" target=\"_blank\">Saudi civil defense says 11 people injured in Houthi attack on Riyadh's financial district</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Xinhua</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBsWldHZm5pQ2hpNHlRVXNUT05pQ1ZDMTZuaFN4N2NBM1FEOVpLRmZ3cS15VEhyd3NGNWdvMFUyN2hra2VBejR2VGpmUHBYM3pMbUhVN2h4Um0zbllIbGQ3djMxdEtCNGlIM2tlWWxDMlZNNHZIZzh2dGFTMjM?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-25T04:44:55.740Z"
     },
     {
       "id": "rss_374913fa82bcac6b",
@@ -10805,115 +10912,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZmRaMTB5ZEtYUE1VUldYdzBZVHh2YlpveWNDZk9WS1hxUmVMMnd4RWZ2U3FxZG1OWFJrYXEzZVA2TnhXVkJmVDRhVjlOZjcyWVJwd2xUOXdpWW1nOWVENjdIdTRvVlRfMHJxWm9weHJPWXdJcWNMOWtuYjV1MTJKMzdWdkh2ZE1YeU9kLUFQdFh6LVRmUlpB?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T11:56:58.822Z"
-    },
-    {
-      "id": "rss_0f44e945a1d47008",
-      "timestamp": 1792486380000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Strikes Kill Dozens in Yemeni Desert Military Camp, Officials Say - The New York Times",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNVWkyRTdNT1dhank1THc2cElOelBLdnR5MHZBajFsVTFKOEY1T0U5UllMVWlxOXlkOGNjaVZCLTFKM1lERUlpaTljdWtQcC13bzZHRTQ5dzc2UVhRRmNLWV9EcEM0dDhGVG9yWnZBdEpHbUIzSnVTVGM2ZGJBaHJMOHNJeTQyRlRockNjd2lMT2NGOEZPUWc?oc=5\" target=\"_blank\">Houthi Strikes Kill Dozens in Yemeni Desert Military Camp, Officials Say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVWkyRTdNT1dhank1THc2cElOelBLdnR5MHZBajFsVTFKOEY1T0U5UllMVWlxOXlkOGNjaVZCLTFKM1lERUlpaTljdWtQcC13bzZHRTQ5dzc2UVhRRmNLWV9EcEM0dDhGVG9yWnZBdEpHbUIzSnVTVGM2ZGJBaHJMOHNJeTQyRlRockNjd2lMT2NGOEZPUWc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T16:26:14.427Z"
-    },
-    {
-      "id": "rss_e3a88e5172cea872",
-      "timestamp": 1792483128000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi attack kills 53 in Yemen's deadliest strike - 조선일보",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxNM2hRdXN3WDVGN2VLankweGotZ3VsUFVaWjFfNWZ5akJ2NjFRT3BtOElwZ3lWWmFua1hrRU9QcUNrdEhDLUp3b0xqbEpxT3dLaTRJOHNmSHJocWFMU0htTjJqUHZHYXF6czNpRDVBekJ6RnVLTFV0ZTZrQnVFd1VXZUZaYmo?oc=5\" target=\"_blank\">Houthi attack kills 53 in Yemen's deadliest strike</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNM2hRdXN3WDVGN2VLankweGotZ3VsUFVaWjFfNWZ5akJ2NjFRT3BtOElwZ3lWWmFua1hrRU9QcUNrdEhDLUp3b0xqbEpxT3dLaTRJOHNmSHJocWFMU0htTjJqUHZHYXF6czNpRDVBekJ6RnVLTFV0ZTZrQnVFd1VXZUZaYmo?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T11:56:58.823Z"
-    },
-    {
-      "id": "rss_eb2eac9dd80a985a",
-      "timestamp": 1792473331000,
-      "source": "OSINT",
-      "actor": "iran",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Oil near $110 after Houthi attack claims and Iranian threats - Arabian Gulf Business Insight | AGBI",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNREJ3aE90cWpEeC1Wb09wbVdpdkc0YzRQa2N0MU5XVEZ3WDlETTA2WHdqaU5jR2pNRHpGRzdDRzBpc0VjenliVlZFekJfNW8tMjh2dDE4OG5RVW4tN2lFd25GVWtseVQzZ1dtbHlPa0F2YXQxQmhvM2NwSllyd3hUZ1V2b2ZHdkFwdTBlb2IwNTZBeGszMVE3RjI1ZnVwM3ZiQzRYWnp6S2I?oc=5\" target=\"_blank\">Oil near $110 after Houthi attack claims and Iranian threats</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arabian Gulf Business Insight | AGBI</font>",
-      "tags": [
-        "iran-proxy"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNREJ3aE90cWpEeC1Wb09wbVdpdkc0YzRQa2N0MU5XVEZ3WDlETTA2WHdqaU5jR2pNRHpGRzdDRzBpc0VjenliVlZFekJfNW8tMjh2dDE4OG5RVW4tN2lFd25GVWtseVQzZ1dtbHlPa0F2YXQxQmhvM2NwSllyd3hUZ1V2b2ZHdkFwdTBlb2IwNTZBeGszMVE3RjI1ZnVwM3ZiQzRYWnp6S2I?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T06:27:29.468Z"
-    },
-    {
-      "id": "rss_e1588f685d1af121",
-      "timestamp": 1792470694000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi Missiles Kill 58 Recruits at Shabwa Base in Deadliest Strike Since September - The SOFX Report",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSFVCcHQ2UUJJX1kwT3RGa21jd1hDc2dkZkhrTjEyUVY2SFpOUkFMTjc4VUdLakRoLVp6bnFnVXhKQndQekJTbWp3ZHhoYTIzbnY4RmF3Y0Y5QjM3TTFyNUd5UVZVSy14bnl5eEhLV0gwX3FRMzllblNMRUYxdllnQlliZnVKaTVDUUROa1VkQVJ6MzRBU2x2X1dBc09OOVlnWElLWmJWd0g?oc=5\" target=\"_blank\">Houthi Missiles Kill 58 Recruits at Shabwa Base in Deadliest Strike Since September</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The SOFX Report</font>",
-      "tags": [
-        "missile"
-      ],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPSFVCcHQ2UUJJX1kwT3RGa21jd1hDc2dkZkhrTjEyUVY2SFpOUkFMTjc4VUdLakRoLVp6bnFnVXhKQndQekJTbWp3ZHhoYTIzbnY4RmF3Y0Y5QjM3TTFyNUd5UVZVSy14bnl5eEhLV0gwX3FRMzllblNMRUYxdllnQlliZnVKaTVDUUROa1VkQVJ6MzRBU2x2X1dBc09OOVlnWElLWmJWd0g?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T06:27:29.468Z"
-    },
-    {
-      "id": "rss_faa0abbbdcebbf41",
-      "timestamp": 1792464840000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "strike",
-      "intensity": 2,
-      "text_summary": "Houthi rebels strike Yemen’s government forces, killing at least 53 - NBC News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3B5QUxha3llVXNVMTV2dXF2S243NlpESnJiTnJ5Qk5xZ2VkdmQteTJxb2tYRC1wQVhKa3YycUhtYU1KakRVV1VRcFBKMDZHS2tnS1hPZl8xOFdDUUVDUU45cEJEYTdlZHlGUEh3bHFGbTNlZGhrcG5GV2dpazRlbzcwQzlLMlgzd2dyMXVtT25NaTdMOTRDODFvcFNRQ1daZ3BiUF82NG04X1F1TnphNWxISzk?oc=5\" target=\"_blank\">Houthi rebels strike Yemen’s government forces, killing at least 53</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NBC News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3B5QUxha3llVXNVMTV2dXF2S243NlpESnJiTnJ5Qk5xZ2VkdmQteTJxb2tYRC1wQVhKa3YycUhtYU1KakRVV1VRcFBKMDZHS2tnS1hPZl8xOFdDUUVDUU45cEJEYTdlZHlGUEh3bHFGbTNlZGhrcG5GV2dpazRlbzcwQzlLMlgzd2dyMXVtT25NaTdMOTRDODFvcFNRQ1daZ3BiUF82NG04X1F1TnphNWxISzk?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
