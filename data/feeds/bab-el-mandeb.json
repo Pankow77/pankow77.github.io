@@ -1,8 +1,29 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-25T23:42:44.501Z",
+  "last_fetch": "2026-11-26T06:34:40.671Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_8ef3535575b1a430",
+      "timestamp": 1795651292000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Houthi militia threatens all Saudi ports on the Red Sea as Hodeidah bombed - Riviera Maritime Media",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZVJJdlZiSjhQSmIzZEhubFJXUmxvdFZuUlFGRXkyZVJVajd0MHFZMGh1OUU2cVpsenl6emFNSFFLU3N4T0EwWmFYYVJsbVZ3YlF0TWpGS0VERlFPd3VXLUJ3MlFlM2VnTXMtLUhBOU9vb01sNlIxYlN4NXBxb3d0THY1a0pFaTRNaWxWcUU1WlJScGgxOE5hRXp0UDlqSFhuYkxBWjZPRTB3elNmTlpOTTRhUEQ2TlVOTHg5ZktsYkI?oc=5\" target=\"_blank\">Houthi militia threatens all Saudi ports on the Red Sea as Hodeidah bombed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Riviera Maritime Media</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNZVJJdlZiSjhQSmIzZEhubFJXUmxvdFZuUlFGRXkyZVJVajd0MHFZMGh1OUU2cVpsenl6emFNSFFLU3N4T0EwWmFYYVJsbVZ3YlF0TWpGS0VERlFPd3VXLUJ3MlFlM2VnTXMtLUhBOU9vb01sNlIxYlN4NXBxb3d0THY1a0pFaTRNaWxWcUU1WlJScGgxOE5hRXp0UDlqSFhuYkxBWjZPRTB3elNmTlpOTTRhUEQ2TlVOTHg5ZktsYkI?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-26T06:34:39.492Z"
+    },
     {
       "id": "rss_54b89285c3045fba",
       "timestamp": 1795649702000,
@@ -46,6 +67,29 @@
       "fetched_at": "2026-11-25T23:42:43.086Z"
     },
     {
+      "id": "rss_0eda7df5b09e63e0",
+      "timestamp": 1795646258000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Red Sea War Insurance Costs Rise After Houthi Blockade, Sources Say - EnergyNow.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxON0NERGpwbGs2bFVWUG04cXBHQkd5NEptTkFmLW5lSnBwdko0UEVNMnpFUkd2UFBVVGJzUmpCX1hmbWtyNnlYWmp4Wm1aVkRGZHhHT082a29fSlduT0VncmQ4RFhRR0kzMU9McmR4NzFfZk5BR3lScEpoTDZ6cko2QlZTeGNackZSeDdPRVd1TDZOQzl5LVFVSzRydWpuQQ?oc=5\" target=\"_blank\">Red Sea War Insurance Costs Rise After Houthi Blockade, Sources Say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EnergyNow.com</font>",
+      "tags": [
+        "insurance"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMingFBVV95cUxON0NERGpwbGs2bFVWUG04cXBHQkd5NEptTkFmLW5lSnBwdko0UEVNMnpFUkd2UFBVVGJzUmpCX1hmbWtyNnlYWmp4Wm1aVkRGZHhHT082a29fSlduT0VncmQ4RFhRR0kzMU9McmR4NzFfZk5BR3lScEpoTDZ6cko2QlZTeGNackZSeDdPRVd1TDZOQzl5LVFVSzRydWpuQQ?oc=5",
+      "feed_id": "gn-shipping-redsea",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-26T06:34:40.667Z"
+    },
+    {
       "id": "rss_3dd40594b50326bb",
       "timestamp": 1795644253000,
       "source": "OSINT",
@@ -68,6 +112,27 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-11-25T23:42:43.085Z"
+    },
+    {
+      "id": "rss_bd6c49d8c1d22237",
+      "timestamp": 1795642920000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "statement",
+      "intensity": 2,
+      "text_summary": "Loud explosions rock Riyadh as Houthis attack Saudi ports - Middle East Eye",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxOQjByX1BDT2k0SkpyMlo2X3FPbEFnR0sxM2lmMUZOZk5tc1FzR3djTmNDLVRZS25wZVBwcld6dkZQdHZHOE9CcHBfYVR2RXZYY1QwWDdtTDdYQzlSM2dGcVd0U2V2dFAxVmJLc0Q2Xy1GamdldzZOaWZwOWtKSjJNbDNJR1E2enI1SU10cA?oc=5\" target=\"_blank\">Loud explosions rock Riyadh as Houthis attack Saudi ports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Middle East Eye</font>",
+      "tags": [],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQjByX1BDT2k0SkpyMlo2X3FPbEFnR0sxM2lmMUZOZk5tc1FzR3djTmNDLVRZS25wZVBwcld6dkZQdHZHOE9CcHBfYVR2RXZYY1QwWDdtTDdYQzlSM2dGcVd0U2V2dFAxVmJLc0Q2Xy1GamdldzZOaWZwOWtKSjJNbDNJR1E2enI1SU10cA?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-26T06:34:39.491Z"
     },
     {
       "id": "rss_acf9f7b00e33c9a3",
@@ -10865,69 +10930,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-21T12:44:25.223Z"
-    },
-    {
-      "id": "rss_926a6e95b1e16af1",
-      "timestamp": 1792545916000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "UK fighter jets to protect Saudi Arabia from Houthi attacks - DW.com",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09hOG01THVnWTBtMmVfekx4eUpYdnRtdDJZUVpRZFNuQTh5NlE0RlVaYlhHbVJzRTNXaXd4RURST1ZPTFF5TnJ1ODJCdkRCOENXTVVZd09NZHJjeXktRzZCdlJrbVNFdmYwdXUwOEtycjA1OVBlS3ZTZ25KR0NCNUZWWdIBgwFBVV95cUxNY1lEUHVHNzlwOUNJcW5YeE15RllpRmdVZThBdjlvMjdKY2JqUkxfQmV0QkVXbVNVeGgzalVacXhLMURVclhxVjhIT2JkLTZMVVNrUlkzd1hic3RuV25iWXdtSERockhvcXI3RzJ2eHMwYUpHZ0EzZnUxcVFJYW9XTC1Edw?oc=5\" target=\"_blank\">UK fighter jets to protect Saudi Arabia from Houthi attacks</a>&nbsp;",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPX09hOG01THVnWTBtMmVfekx4eUpYdnRtdDJZUVpRZFNuQTh5NlE0RlVaYlhHbVJzRTNXaXd4RURST1ZPTFF5TnJ1ODJCdkRCOENXTVVZd09NZHJjeXktRzZCdlJrbVNFdmYwdXUwOEtycjA1OVBlS3ZTZ25KR0NCNUZWWdIBgwFBVV95cUxNY1lEUHVHNzlwOUNJcW5YeE15RllpRmdVZThBdjlvMjdKY2JqUkxfQmV0QkVXbVNVeGgzalVacXhLMURVclhxVjhIT2JkLTZMVVNrUlkzd1hic3RuV25iWXdtSERockhvcXI3RzJ2eHMwYUpHZ0EzZnUxcVFJYW9XTC1Edw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-21T01:48:39.601Z"
-    },
-    {
-      "id": "rss_616e8bb056720711",
-      "timestamp": 1792529040000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Houthis attack besieged city in Yemen that UN says is at ‘grave risk’ - AP News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQVWhUMVdSQUxmTWt2cWRQZndBeHU4MnlxMkJ1d3dhb2U3LUctcUNzLXR0OGJ6STFtalFnS3JhRTc4bE9PMXI2emZoakN6LWxLc3k5Z2NvRzV2amItdmhkek01ZDlBMWJDZ01iUWZGNjdnbjdIR3JHOXc5LTVnR3hlU3c2NU1SVEIxSW5UY0JQRWRUdw?oc=5\" target=\"_blank\">Houthis attack besieged city in Yemen that UN says is at ‘grave risk’</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">AP News</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVWhUMVdSQUxmTWt2cWRQZndBeHU4MnlxMkJ1d3dhb2U3LUctcUNzLXR0OGJ6STFtalFnS3JhRTc4bE9PMXI2emZoakN6LWxLc3k5Z2NvRzV2amItdmhkek01ZDlBMWJDZ01iUWZGNjdnbjdIR3JHOXc5LTVnR3hlU3c2NU1SVEIxSW5UY0JQRWRUdw?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T23:16:18.960Z"
-    },
-    {
-      "id": "rss_9866454e549af386",
-      "timestamp": 1792525963000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "claim",
-      "intensity": 2,
-      "text_summary": "Oil prices ease from five-month high amid Houthi attack claims - The Journal Record",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUVlRTXE0d3JrVjdSQURXdmxMNnNnSHpURklmaGdBbkd5ajBpMnBwRkZmWEYtUGhsZ1l6M3A0TVJaOE0zbXRyN1dMaldZck1ac0FxQUk3QW1rd1ZSUm9fWXZ6NjFTUU02NDlLS3ZYZkJweVZ1Wi1DYWFwTVFaZ0VNMkdqd2Z6WnBlS2U0?oc=5\" target=\"_blank\">Oil prices ease from five-month high amid Houthi attack claims</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Journal Record</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNUVlRTXE0d3JrVjdSQURXdmxMNnNnSHpURklmaGdBbkd5ajBpMnBwRkZmWEYtUGhsZ1l6M3A0TVJaOE0zbXRyN1dMaldZck1ac0FxQUk3QW1rd1ZSUm9fWXZ6NjFTUU02NDlLS3ZYZkJweVZ1Wi1DYWFwTVFaZ0VNMkdqd2Z6WnBlS2U0?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-20T23:16:18.960Z"
     }
   ]
 }
