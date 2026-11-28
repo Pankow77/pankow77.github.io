@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-28T11:04:27.291Z",
+  "last_fetch": "2026-11-28T11:32:50.826Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_4e7222bec96dc270",
+      "timestamp": 1795859010000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Air defenses intercept Houthi ballistic missile targeting Saudi Arabia’s southern region - Arab News",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxOUmRDVXQzS2ZBQjM5NUtnVzhxOXFKcVF5ZC1zZ2c4R1dvU2xjaG9vbFNYZm9UanNJUHZJQlhsYW5mUWRmdzE4aE56WXR1ZW4wbnlvaFZvNmdiUUZUdHNXMm5aRkszX3loTlVkZ0daclA5Uk5yVTFWODBHYWgzX2xZaklCTlVENlpkb0g1YWdkcGRCcV9rSDNKb1JtN3hYMFFCcW5FSVE3STRWcW84RTE2WVluQTBldnZOdjJDRnNUMUstWlJmUXAzOWRQQWRwUQ?oc=5\" target=\"_blank\">Air defenses intercept Houthi ballistic missile targeting Saudi Arabia’s southern region</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Arab News</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUmRDVXQzS2ZBQjM5NUtnVzhxOXFKcVF5ZC1zZ2c4R1dvU2xjaG9vbFNYZm9UanNJUHZJQlhsYW5mUWRmdzE4aE56WXR1ZW4wbnlvaFZvNmdiUUZUdHNXMm5aRkszX3loTlVkZ0daclA5Uk5yVTFWODBHYWgzX2xZaklCTlVENlpkb0g1YWdkcGRCcV9rSDNKb1JtN3hYMFFCcW5FSVE3STRWcW84RTE2WVluQTBldnZOdjJDRnNUMUstWlJmUXAzOWRQQWRwUQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-28T11:32:49.398Z"
+    },
     {
       "id": "rss_bb8584f78df95e89",
       "timestamp": 1795843889000,
@@ -10916,27 +10939,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-22T15:27:11.619Z"
-    },
-    {
-      "id": "rss_0cba0acec9ed44f5",
-      "timestamp": 1792672680000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Saudi Aramco tells staff to evacuate Dhahran as clashes with Yemen's Houthis continue - The Detroit News",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZTZHSVZBN3V1dEpqTnJUeGJrelVkLV9zUFl0WDByMUlXSHRRdXVoTDF2Y1JtUEc1NmROSzJEV0tiV3pTVU4xRF9TdzhZbFB3TDFTeUN6dXBGS3phMVdjV0pmQjBMNzM1SWhMTDgtYnJiRnBTZGFQWlVuWDZ0QTZyTGN4STlOUzNGQV90Ulo0VmZKRXV0c3JoSFc2cnJJY1NZRm9LQU1US0NZbDBEeGI1T1Bmc2hBaElWQTU1Z1VOQV9DaUtCcmF3SnItVkN3NTlueHc?oc=5\" target=\"_blank\">Saudi Aramco tells staff to evacuate Dhahran as clashes with Yemen's Houthis continue</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Detroit News</fon",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPZTZHSVZBN3V1dEpqTnJUeGJrelVkLV9zUFl0WDByMUlXSHRRdXVoTDF2Y1JtUEc1NmROSzJEV0tiV3pTVU4xRF9TdzhZbFB3TDFTeUN6dXBGS3phMVdjV0pmQjBMNzM1SWhMTDgtYnJiRnBTZGFQWlVuWDZ0QTZyTGN4STlOUzNGQV90Ulo0VmZKRXV0c3JoSFc2cnJJY1NZRm9LQU1US0NZbDBEeGI1T1Bmc2hBaElWQTU1Z1VOQV9DaUtCcmF3SnItVkN3NTlueHc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-22T15:27:11.618Z"
     }
   ]
 }
