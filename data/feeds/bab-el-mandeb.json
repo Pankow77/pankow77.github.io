@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-28T05:32:54.126Z",
+  "last_fetch": "2026-11-28T06:08:31.078Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_e937fe5f6c01729d",
+      "timestamp": 1795840452000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudis intercept Houthi cruise missile fired from Yemen in latest attack from Iran-backed group - The Jerusalem Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiXEFVX3lxTE1hWm5UOUp3blJaY0dNbzFPUEd3ekljYzhUanJQdmNaV29zWTdZY2xib3lUQ0J2eXVZNUxLYUo2cmRROGZib1hYdDhGQ1ZNSS0tX3JtRTRoaVJRbEli?oc=5\" target=\"_blank\">Saudis intercept Houthi cruise missile fired from Yemen in latest attack from Iran-backed group</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Jerusalem Post</font>",
+      "tags": [
+        "iran-proxy",
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1hWm5UOUp3blJaY0dNbzFPUEd3ekljYzhUanJQdmNaV29zWTdZY2xib3lUQ0J2eXVZNUxLYUo2cmRROGZib1hYdDhGQ1ZNSS0tX3JtRTRoaVJRbEli?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-28T06:08:29.796Z"
+    },
     {
       "id": "rss_ad06e45207a31f2e",
       "timestamp": 1795838979000,
@@ -10911,27 +10935,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-23T16:20:35.510Z"
-    },
-    {
-      "id": "rss_dd787ecaa1f89662",
-      "timestamp": 1792661060000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "Oil prices jump 3% after deadly Houthi attack on Saudi Shaybah oil field - Türkiye Today",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY19iQjJYbzVPSU1VRnpVb0VHaFBJX1dPekpqbzM3UTBKdElTMWdKX3hFeEgxaVVNa2tZRzZHdk5KdHJaU0kxaWQ4TnJ6MGNKWm14QU1ndEFXMlZnVkFQM0g1ZFdkb2otemFkdlZXdnN0emxUVWt3ZksyUU5CUWNVZXZUTGhabUpoZGs4d1RSRFlfanh0OU0xeVl5NndmeUdGUkJzdWE3Z1FZaWppNnVaYnVEV0hGSnNm?oc=5\" target=\"_blank\">Oil prices jump 3% after deadly Houthi attack on Saudi Shaybah oil field</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Türkiye Today</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY19iQjJYbzVPSU1VRnpVb0VHaFBJX1dPekpqbzM3UTBKdElTMWdKX3hFeEgxaVVNa2tZRzZHdk5KdHJaU0kxaWQ4TnJ6MGNKWm14QU1ndEFXMlZnVkFQM0g1ZFdkb2otemFkdlZXdnN0emxUVWt3ZksyUU5CUWNVZXZUTGhabUpoZGs4d1RSRFlfanh0OU0xeVl5NndmeUdGUkJzdWE3Z1FZaWppNnVaYnVEV0hGSnNm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-22T10:23:53.473Z"
     }
   ]
 }
