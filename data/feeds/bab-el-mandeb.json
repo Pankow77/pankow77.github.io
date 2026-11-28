@@ -1,8 +1,31 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-28T07:05:03.725Z",
+  "last_fetch": "2026-11-28T07:32:48.214Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_bb8584f78df95e89",
+      "timestamp": 1795843889000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "strike",
+      "intensity": 2,
+      "text_summary": "Middle East latest: Saudi Arabia intercepts Houthi cruise missile launched at Riyadh - The National",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNT3ZyS1JmQzZjVFBiWkpZNnJoTkNBSlFkajR3THFUT0RieVFPTnVaOF9PdEU2aXU4LUFJUkExbks5dnp2WGFFRHFPVFpONEFZejVjWk1GUWdxSjBrZnlxb0JLUWZuR2x4MVdmb1R4TnhSSlpCS1N4c0p3TmZXbTdLU0V3MzFPVFV0cmxuUEtYVkNpQQ?oc=5\" target=\"_blank\">Middle East latest: Saudi Arabia intercepts Houthi cruise missile launched at Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The National</font>",
+      "tags": [
+        "missile"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNT3ZyS1JmQzZjVFBiWkpZNnJoTkNBSlFkajR3THFUT0RieVFPTnVaOF9PdEU2aXU4LUFJUkExbks5dnp2WGFFRHFPVFpONEFZejVjWk1GUWdxSjBrZnlxb0JLUWZuR2x4MVdmb1R4TnhSSlpCS1N4c0p3TmZXbTdLU0V3MzFPVFV0cmxuUEtYVkNpQQ?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-28T07:32:47.213Z"
+    },
     {
       "id": "rss_e937fe5f6c01729d",
       "timestamp": 1795840452000,
@@ -10914,27 +10937,6 @@
       "confidence": 0.3,
       "source_weight": 0.5,
       "fetched_at": "2026-10-22T15:27:11.618Z"
-    },
-    {
-      "id": "rss_8ce0eefee448962a",
-      "timestamp": 1792669644000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 2,
-      "text_summary": "Parliament wants the EU to designate the Houthis as a terrorist group - European Parliament",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxNX1FURHlsTk1neUJqME1mNXgxQmFMcTVTQmhySGNnLWh2MzdqMlVVWEw4Qno4WUNRbjdjQXo5V2d1VzJyTWRxekRtX0VDTV9nRmtKWG8wcmRZbU5kZ0dBbnlYeHF6WVB3Qkg0a0RtMmRDOVdnV3RBX3QtSGsxSloyN2l1LTNBYktZVTZWazFMRjVNUUZaMlEwdTZ5dW5HTGlUc3lUUDFtVW9yWFJ1MElQNDdLVGlWNUdYOUVvcE9CV1FGa01qWmU1Rm9ZaW8wcEFxMmc?oc=5\" target=\"_blank\">Parliament wants the EU to designate the Houthis as a terrorist group</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">European Parliament</font>",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNX1FURHlsTk1neUJqME1mNXgxQmFMcTVTQmhySGNnLWh2MzdqMlVVWEw4Qno4WUNRbjdjQXo5V2d1VzJyTWRxekRtX0VDTV9nRmtKWG8wcmRZbU5kZ0dBbnlYeHF6WVB3Qkg0a0RtMmRDOVdnV3RBX3QtSGsxSloyN2l1LTNBYktZVTZWazFMRjVNUUZaMlEwdTZ5dW5HTGlUc3lUUDFtVW9yWFJ1MElQNDdLVGlWNUdYOUVvcE9CV1FGa01qWmU1Rm9ZaW8wcEFxMmc?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-23T16:20:35.510Z"
     }
   ]
 }
