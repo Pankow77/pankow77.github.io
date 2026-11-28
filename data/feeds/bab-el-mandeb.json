@@ -1,8 +1,32 @@
 {
   "theater": "bab-el-mandeb",
-  "last_fetch": "2026-11-28T05:04:51.892Z",
+  "last_fetch": "2026-11-28T05:32:54.126Z",
   "epoch_count": 500,
   "epochs": [
+    {
+      "id": "rss_ad06e45207a31f2e",
+      "timestamp": 1795838979000,
+      "source": "OSINT",
+      "actor": "houthi",
+      "action_type": "defensive",
+      "intensity": 2,
+      "text_summary": "Saudi-led coalition intercepts Houthi cruise missile fired toward capital Riyadh - Anadolu Ajansı",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVm13eFdjV0FEcHZWZlJJcjBDN2FSNVlFQzFldFk4NGhzZzFEcHBXWWRlUzlOMndwdnVZOTl3bHZKRWttZVNrNnpKQUVsWDRONFJiS2Y0cjhrclBCRXN2Y3JJd1RGVkpOX1BLNTFicEVuSEpPWm9kbklsN25fYWFQZVdWXzlScTNpRzdXbWQ5M1ZRYlNsRWhSaDlGblN4cWtZcVBCQ2p5WFE4VndEQjRsYlhJWkF2dGpuVFRYRnZnVFVOQk0?oc=5\" target=\"_blank\">Saudi-led coalition intercepts Houthi cruise missile fired toward capital Riyadh</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Anadolu Ajansı</font>",
+      "tags": [
+        "missile",
+        "coalition"
+      ],
+      "domains": [
+        "military",
+        "geo"
+      ],
+      "article_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPVm13eFdjV0FEcHZWZlJJcjBDN2FSNVlFQzFldFk4NGhzZzFEcHBXWWRlUzlOMndwdnVZOTl3bHZKRWttZVNrNnpKQUVsWDRONFJiS2Y0cjhrclBCRXN2Y3JJd1RGVkpOX1BLNTFicEVuSEpPWm9kbklsN25fYWFQZVdWXzlScTNpRzdXbWQ5M1ZRYlNsRWhSaDlGblN4cWtZcVBCQ2p5WFE4VndEQjRsYlhJWkF2dGpuVFRYRnZnVFVOQk0?oc=5",
+      "feed_id": "gn-redsea-houthi",
+      "origin": "rss",
+      "confidence": 0.3,
+      "source_weight": 0.5,
+      "fetched_at": "2026-11-28T05:32:53.124Z"
+    },
     {
       "id": "rss_601ed1af344f4ec2",
       "timestamp": 1795818034000,
@@ -10903,27 +10927,6 @@
         "geo"
       ],
       "article_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY19iQjJYbzVPSU1VRnpVb0VHaFBJX1dPekpqbzM3UTBKdElTMWdKX3hFeEgxaVVNa2tZRzZHdk5KdHJaU0kxaWQ4TnJ6MGNKWm14QU1ndEFXMlZnVkFQM0g1ZFdkb2otemFkdlZXdnN0emxUVWt3ZksyUU5CUWNVZXZUTGhabUpoZGs4d1RSRFlfanh0OU0xeVl5NndmeUdGUkJzdWE3Z1FZaWppNnVaYnVEV0hGSnNm?oc=5",
-      "feed_id": "gn-redsea-houthi",
-      "origin": "rss",
-      "confidence": 0.3,
-      "source_weight": 0.5,
-      "fetched_at": "2026-10-22T10:23:53.473Z"
-    },
-    {
-      "id": "rss_bda41ea56b242f83",
-      "timestamp": 1792654320000,
-      "source": "OSINT",
-      "actor": "houthi",
-      "action_type": "statement",
-      "intensity": 3,
-      "text_summary": "At least 2 killed in Houthi attack on Saudi Arabia’s Dammam airport | Daily Sabah - Daily Sabah",
-      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNdnlRLWJwYUVHNzBRWWV3Wm5QU1dHOHhCWHJQZUN4SE9MQk9GM21jQWdpVi1lN0N5SnhtYjFPcEZsVk1MakY5R29FYTJ2Y2t1bmgxc1lCdGhzdVpaTXFqY1hLbTczNkxEc01hWWwtTXdMdFFRNUZNU3hnZVY2UlZhZWJWWUlpeWVsRW1NR2M0VlhUNE5UWXZJRVNOMXBITDJkZ1Q2c0YxYnIxbURD0gGyAUFVX3lxTE00NTByRk5zaEcyam0wVXdoemowMXprclRyUTJmcHpmNVNlZXVLY2FJOWNUZ1F2akFQRV9QWWU5ei02OF9RSnVTUnZoWHg3Y2JYWmZIVWt2am4wQjQyS2pIaHljMHN0S09NczNtZm1wVmVLMW14cHltYW8tMUdZNnpYY3lxaWR0S1dzUVdLSW0tNVhFV0gwWklxbTEzVHBTel",
-      "tags": [],
-      "domains": [
-        "military",
-        "geo"
-      ],
-      "article_url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNdnlRLWJwYUVHNzBRWWV3Wm5QU1dHOHhCWHJQZUN4SE9MQk9GM21jQWdpVi1lN0N5SnhtYjFPcEZsVk1MakY5R29FYTJ2Y2t1bmgxc1lCdGhzdVpaTXFqY1hLbTczNkxEc01hWWwtTXdMdFFRNUZNU3hnZVY2UlZhZWJWWUlpeWVsRW1NR2M0VlhUNE5UWXZJRVNOMXBITDJkZ1Q2c0YxYnIxbURD0gGyAUFVX3lxTE00NTByRk5zaEcyam0wVXdoemowMXprclRyUTJmcHpmNVNlZXVLY2FJOWNUZ1F2akFQRV9QWWU5ei02OF9RSnVTUnZoWHg3Y2JYWmZIVWt2am4wQjQyS2pIaHljMHN0S09NczNtZm1wVmVLMW14cHltYW8tMUdZNnpYY3lxaWR0S1dzUVdLSW0tNVhFV0gwWklxbTEzVHBTelVHb2JUa09VSW54dnpmeU05SGc?oc=5",
       "feed_id": "gn-redsea-houthi",
       "origin": "rss",
       "confidence": 0.3,
